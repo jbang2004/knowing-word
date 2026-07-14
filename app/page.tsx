@@ -866,11 +866,11 @@ function HomeHub({
             <h2>跟着课文，一课一课往前走</h2>
           </div>
           <div className="lesson-dots">
-            {lessonList.map((lesson, index) => {
+            {lessonList.map((lesson) => {
               const progress = trackProgress(profile, "words", lesson.id);
               return (
                 <button key={lesson.id} onClick={onCourse}>
-                  <span>0{index + 1}</span>
+                  <span>{String(lesson.position).padStart(2, "0")}</span>
                   <strong>{lesson.title}</strong>
                   <small>{progress.completed} / {progress.total} 字</small>
                 </button>
