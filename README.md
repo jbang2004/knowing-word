@@ -1,25 +1,29 @@
 # Knowing Word
 
-Knowing Word is a story-first Chinese character learning experience. It turns a
-course of characters into a calm, playful study space: learn a character's
-structure and original meaning, trace its components, practise with feedback,
-and keep a private progress trail on the device.
+Knowing Word is a course-first Chinese character learning experience. It keeps
+the learning rhythm of a planned Chinese course: start from a lesson’s word
+list, understand one character, complete its ordered mini-quiz, then revisit
+the same characters through three focused practice routes.
 
 ![Knowing Word social card](public/og.png)
 
 ## What is included
 
-- 80 character learning cards across three Grade 5 Chinese lessons
-- 416 interactive prompts covering word meaning, structure, components, and
-  writing practice
-- A browsable catalog of 79 Chinese character components
-- Character search, lesson filters, favorites, pronunciation playback, and
-  focused practice rounds
-- A browser-only handwriting pad and device-local learning history
-- Responsive UI with day/night reading modes
+- A course map for three Grade 5 Chinese lessons and their word lists
+- 80 character entries and 416 ordered practice prompts
+- Four aligned learning routes: word-list mini quizzes, character assembly,
+  radical-color recognition, and spatial-structure recognition
+- A component studio that ranks 79 components by their course appearance
+- Per-question attempts, last-answer status, character-level completion, and
+  resume points for each route
+- Pronunciation, browser-only handwriting, local read-aloud recording, and
+  responsive day/night modes
 
 The application deliberately uses its own visual language and generated
 illustration rather than copying the original site's artwork.
+
+See [the course-flow alignment notes](docs/course-flow-alignment.md) for the
+implemented learning sequence and each route's completion rule.
 
 ## Run locally
 

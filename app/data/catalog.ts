@@ -8,7 +8,7 @@ export type Exercise = {
   kind: ExerciseKind;
   questionType: string;
   prompt: string;
-  options: { id: string; text: string; correct: boolean; radical: boolean }[];
+  options: { id: string; text: string; correct: boolean; radical: boolean; idcCode: string }[];
   explanation: string;
 };
 
@@ -99,19 +99,22 @@ export const catalog = {
               "id": "019f140f-d764-7510-b938-f076f8dce58b-0",
               "text": "警告，规劝，让人有所警觉注意",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d764-7510-b938-f076f8dce58b-1",
               "text": "细丝",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d764-7510-b938-f076f8dce58b-2",
               "text": "肉桂",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -127,25 +130,29 @@ export const catalog = {
               "id": "019f140f-d764-7510-b938-f7aac77a3f5c-0",
               "text": "左中右结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿲"
             },
             {
               "id": "019f140f-d764-7510-b938-f7aac77a3f5c-1",
               "text": "上中下结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿳"
             },
             {
               "id": "019f140f-d764-7510-b938-f7aac77a3f5c-2",
               "text": "左右结构",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿰"
             },
             {
               "id": "019f140f-d764-7510-b938-f7aac77a3f5c-3",
               "text": "半包围结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿸"
             }
           ],
           "explanation": "让我们来看看“桂”字的结构吧。"
@@ -159,21 +166,24 @@ export const catalog = {
           "options": [
             {
               "id": "019f140f-d764-7510-b938-f8a402d03c0a-0",
-              "text": "选项 1",
+              "text": "",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d764-7510-b938-f8a402d03c0a-1",
-              "text": "选项 2",
+              "text": "",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d764-7510-b938-f8a402d03c0a-2",
-              "text": "选项 3",
+              "text": "",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": "“桂”的本义是肉桂哟。"
@@ -189,25 +199,29 @@ export const catalog = {
               "id": "019f140f-d764-7510-b938-ff1eafb966b3-0",
               "text": "圭",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d764-7510-b938-ff1eafb966b3-1",
               "text": "予",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d764-7510-b938-ff1eafb966b3-2",
               "text": "奉",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d764-7510-b938-ff1eafb966b3-3",
               "text": "木",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -232,25 +246,29 @@ export const catalog = {
               "id": "019f140f-d772-740e-8e05-508632a7c8ca-0",
               "text": "木",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d772-740e-8e05-508632a7c8ca-1",
               "text": "叚",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d772-740e-8e05-508632a7c8ca-2",
               "text": "圭",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d772-740e-8e05-508632a7c8ca-3",
               "text": "身",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -266,7 +284,7 @@ export const catalog = {
         },
         {
           "id": "019f140f-d76d-70b8-a564-509ee7aba6a6",
-          "origin": "间架结构",
+          "origin": "空间结构",
           "kind": "structure",
           "questionType": "character_structure_select",
           "prompt": "“桂”是什么结构?",
@@ -275,25 +293,29 @@ export const catalog = {
               "id": "019f140f-d76d-70b8-a564-509ee7aba6a6-0",
               "text": "上中下结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿳"
             },
             {
               "id": "019f140f-d76d-70b8-a564-509ee7aba6a6-1",
               "text": "左中右结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿲"
             },
             {
               "id": "019f140f-d76d-70b8-a564-509ee7aba6a6-2",
               "text": "半包围结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿸"
             },
             {
               "id": "019f140f-d76d-70b8-a564-509ee7aba6a6-3",
               "text": "左右结构",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿰"
             }
           ],
           "explanation": ""
@@ -309,25 +331,29 @@ export const catalog = {
               "id": "019f140f-d754-762c-bdec-85b673d3a65c-0",
               "text": "圭",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d754-762c-bdec-85b673d3a65c-1",
               "text": "木",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d754-762c-bdec-85b673d3a65c-2",
               "text": "女",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d754-762c-bdec-85b673d3a65c-3",
               "text": "寸",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -389,19 +415,22 @@ export const catalog = {
               "id": "019f140f-d767-735e-8064-fe71d3ec0881-0",
               "text": "婴儿",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d767-735e-8064-fe71d3ec0881-1",
               "text": "花朵",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d767-735e-8064-fe71d3ec0881-2",
               "text": "大声呼喝",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -417,25 +446,29 @@ export const catalog = {
               "id": "019f140f-d767-735e-8065-00c832c8ddad-0",
               "text": "全包围结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿴"
             },
             {
               "id": "019f140f-d767-735e-8065-00c832c8ddad-1",
               "text": "上下结构",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿱"
             },
             {
               "id": "019f140f-d767-735e-8065-00c832c8ddad-2",
               "text": "左中右结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿲"
             },
             {
               "id": "019f140f-d767-735e-8065-00c832c8ddad-3",
               "text": "半包围结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿸"
             }
           ],
           "explanation": "让我们来看看“花”字的结构吧。"
@@ -449,21 +482,24 @@ export const catalog = {
           "options": [
             {
               "id": "019f140f-d767-735e-8065-05681be565aa-0",
-              "text": "选项 1",
+              "text": "",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d767-735e-8065-05681be565aa-1",
-              "text": "选项 2",
+              "text": "",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d767-735e-8065-05681be565aa-2",
-              "text": "选项 3",
+              "text": "",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": "“花”的本义是花朵哟。"
@@ -479,25 +515,29 @@ export const catalog = {
               "id": "019f140f-d767-735e-8065-0a85d7556f3c-0",
               "text": "卓",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d767-735e-8065-0a85d7556f3c-1",
               "text": "化",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d767-735e-8065-0a85d7556f3c-2",
               "text": "折",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d767-735e-8065-0a85d7556f3c-3",
               "text": "艹",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -522,25 +562,29 @@ export const catalog = {
               "id": "019f140f-d774-749d-a748-030e9463a109-0",
               "text": "艹",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d774-749d-a748-030e9463a109-1",
               "text": "亚",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d774-749d-a748-030e9463a109-2",
               "text": "化",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d774-749d-a748-030e9463a109-3",
               "text": "夋",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -556,7 +600,7 @@ export const catalog = {
         },
         {
           "id": "019f140f-d76e-70ba-96a6-c97ad3cd6354",
-          "origin": "间架结构",
+          "origin": "空间结构",
           "kind": "structure",
           "questionType": "character_structure_select",
           "prompt": "“花”是什么结构?",
@@ -565,25 +609,29 @@ export const catalog = {
               "id": "019f140f-d76e-70ba-96a6-c97ad3cd6354-0",
               "text": "全包围结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿴"
             },
             {
               "id": "019f140f-d76e-70ba-96a6-c97ad3cd6354-1",
               "text": "上下结构",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿱"
             },
             {
               "id": "019f140f-d76e-70ba-96a6-c97ad3cd6354-2",
               "text": "左右结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿰"
             },
             {
               "id": "019f140f-d76e-70ba-96a6-c97ad3cd6354-3",
               "text": "左中右结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿲"
             }
           ],
           "explanation": ""
@@ -599,25 +647,29 @@ export const catalog = {
               "id": "019f140f-d756-764a-a49b-33315b21de09-0",
               "text": "扌",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d756-764a-a49b-33315b21de09-1",
               "text": "化",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d756-764a-a49b-33315b21de09-2",
               "text": "艹",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d756-764a-a49b-33315b21de09-3",
               "text": "欠",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -679,19 +731,22 @@ export const catalog = {
               "id": "019f140f-d762-75c4-8f47-d28af829f539-0",
               "text": "向上或向前移动，前行（与“退”相对）",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d762-75c4-8f47-d28af829f539-1",
               "text": "背着、背负",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d762-75c4-8f47-d28af829f539-2",
               "text": "使人做事",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -707,25 +762,29 @@ export const catalog = {
               "id": "019f140f-d762-75c4-8f47-d4a10efdc59e-0",
               "text": "左右结构",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿰"
             },
             {
               "id": "019f140f-d762-75c4-8f47-d4a10efdc59e-1",
               "text": "上下结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿱"
             },
             {
               "id": "019f140f-d762-75c4-8f47-d4a10efdc59e-2",
               "text": "上中下结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿳"
             },
             {
               "id": "019f140f-d762-75c4-8f47-d4a10efdc59e-3",
               "text": "左中右结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿲"
             }
           ],
           "explanation": "让我们来看看“故”字的结构吧。"
@@ -739,21 +798,24 @@ export const catalog = {
           "options": [
             {
               "id": "019f140f-d762-75c4-8f47-daebab48b494-0",
-              "text": "选项 1",
+              "text": "",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d762-75c4-8f47-daebab48b494-1",
-              "text": "选项 2",
+              "text": "",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d762-75c4-8f47-daebab48b494-2",
-              "text": "选项 3",
+              "text": "",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": "“故”的本义是使人做事哟。"
@@ -769,25 +831,29 @@ export const catalog = {
               "id": "019f140f-d762-75c4-8f47-dfc011dfa490-0",
               "text": "古",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d762-75c4-8f47-dfc011dfa490-1",
               "text": "亍",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d762-75c4-8f47-dfc011dfa490-2",
               "text": "片",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d762-75c4-8f47-dfc011dfa490-3",
               "text": "攵",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -812,25 +878,29 @@ export const catalog = {
               "id": "019f140f-d772-740e-8e05-3cfca38075d4-0",
               "text": "古",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d772-740e-8e05-3cfca38075d4-1",
               "text": "攵",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d772-740e-8e05-3cfca38075d4-2",
               "text": "儿",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d772-740e-8e05-3cfca38075d4-3",
               "text": "爿",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -855,25 +925,29 @@ export const catalog = {
               "id": "019f140f-d772-740e-8e05-44d614c334b8-0",
               "text": "扁",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d772-740e-8e05-44d614c334b8-1",
               "text": "乙",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d772-740e-8e05-44d614c334b8-2",
               "text": "口",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d772-740e-8e05-44d614c334b8-3",
               "text": "十",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -889,7 +963,7 @@ export const catalog = {
         },
         {
           "id": "019f140f-d76d-70b8-a564-4b113fb202af",
-          "origin": "间架结构",
+          "origin": "空间结构",
           "kind": "structure",
           "questionType": "character_structure_select",
           "prompt": "“故”是什么结构?",
@@ -898,25 +972,29 @@ export const catalog = {
               "id": "019f140f-d76d-70b8-a564-4b113fb202af-0",
               "text": "左右结构",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿰"
             },
             {
               "id": "019f140f-d76d-70b8-a564-4b113fb202af-1",
               "text": "上中下结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿳"
             },
             {
               "id": "019f140f-d76d-70b8-a564-4b113fb202af-2",
               "text": "上下结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿱"
             },
             {
               "id": "019f140f-d76d-70b8-a564-4b113fb202af-3",
               "text": "左中右结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿲"
             }
           ],
           "explanation": ""
@@ -932,25 +1010,29 @@ export const catalog = {
               "id": "019f140f-d752-73f0-a037-77ecb471d72d-0",
               "text": "古",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d752-73f0-a037-77ecb471d72d-1",
               "text": "月",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d752-73f0-a037-77ecb471d72d-2",
               "text": "攵",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d752-73f0-a037-77ecb471d72d-3",
               "text": "吏",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -992,19 +1074,22 @@ export const catalog = {
               "id": "019f140f-d759-749d-a8f3-ff4eb79869ef-0",
               "text": "大地",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d759-749d-a8f3-ff4eb79869ef-1",
               "text": "二人相向对食",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d759-749d-a8f3-ff4eb79869ef-2",
               "text": "放，放下",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -1020,25 +1105,29 @@ export const catalog = {
               "id": "019f140f-d759-749d-a8f4-02466c164130-0",
               "text": "半包围结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿸"
             },
             {
               "id": "019f140f-d759-749d-a8f4-02466c164130-1",
               "text": "独体字",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": "□"
             },
             {
               "id": "019f140f-d759-749d-a8f4-02466c164130-2",
               "text": "上下结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿱"
             },
             {
               "id": "019f140f-d759-749d-a8f4-02466c164130-3",
               "text": "全包围结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿴"
             }
           ],
           "explanation": "让我们来看看“乡”字的结构吧。"
@@ -1052,21 +1141,24 @@ export const catalog = {
           "options": [
             {
               "id": "019f140f-d759-749d-a8f4-047a5112e2bc-0",
-              "text": "选项 1",
+              "text": "",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d759-749d-a8f4-047a5112e2bc-1",
-              "text": "选项 2",
+              "text": "",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d759-749d-a8f4-047a5112e2bc-2",
-              "text": "选项 3",
+              "text": "",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": "“乡”的本义是二人相向对食哟。"
@@ -1091,7 +1183,7 @@ export const catalog = {
         },
         {
           "id": "019f140f-d76b-71c4-b8ea-48896604c012",
-          "origin": "间架结构",
+          "origin": "空间结构",
           "kind": "structure",
           "questionType": "character_structure_select",
           "prompt": "“乡”是什么结构?",
@@ -1100,25 +1192,29 @@ export const catalog = {
               "id": "019f140f-d76b-71c4-b8ea-48896604c012-0",
               "text": "左中右结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿲"
             },
             {
               "id": "019f140f-d76b-71c4-b8ea-48896604c012-1",
               "text": "全包围结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿴"
             },
             {
               "id": "019f140f-d76b-71c4-b8ea-48896604c012-2",
               "text": "上中下结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿳"
             },
             {
               "id": "019f140f-d76b-71c4-b8ea-48896604c012-3",
               "text": "独体字",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": "□"
             }
           ],
           "explanation": ""
@@ -1134,25 +1230,29 @@ export const catalog = {
               "id": "019f140f-d749-7728-bf2e-1b9b45dd0d2f-0",
               "text": "乡",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d749-7728-bf2e-1b9b45dd0d2f-1",
               "text": "氵",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d749-7728-bf2e-1b9b45dd0d2f-2",
               "text": "欠",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d749-7728-bf2e-1b9b45dd0d2f-3",
               "text": "斤",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -1211,19 +1311,22 @@ export const catalog = {
               "id": "019f140f-d769-70e8-bd35-8ab70253f500-0",
               "text": "奖励，赐予，赠予",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d769-70e8-bd35-8ab70253f500-1",
               "text": "花朵",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d769-70e8-bd35-8ab70253f500-2",
               "text": "按着、凭借",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -1239,25 +1342,29 @@ export const catalog = {
               "id": "019f140f-d769-70e8-bd35-8fbf2b8b20ba-0",
               "text": "上下结构",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿱"
             },
             {
               "id": "019f140f-d769-70e8-bd35-8fbf2b8b20ba-1",
               "text": "半包围结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿸"
             },
             {
               "id": "019f140f-d769-70e8-bd35-8fbf2b8b20ba-2",
               "text": "左中右结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿲"
             },
             {
               "id": "019f140f-d769-70e8-bd35-8fbf2b8b20ba-3",
               "text": "全包围结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿴"
             }
           ],
           "explanation": "让我们来看看“赏”字的结构吧。"
@@ -1271,21 +1378,24 @@ export const catalog = {
           "options": [
             {
               "id": "019f140f-d769-70e8-bd35-92f7ea289fdf-0",
-              "text": "选项 1",
+              "text": "",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d769-70e8-bd35-92f7ea289fdf-1",
-              "text": "选项 2",
+              "text": "",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d769-70e8-bd35-92f7ea289fdf-2",
-              "text": "选项 3",
+              "text": "",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": "“赏”的本义是奖励，赐予，赠予哟。"
@@ -1301,25 +1411,29 @@ export const catalog = {
               "id": "019f140f-d769-70e8-bd35-9408942fbd62-0",
               "text": "乂",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d769-70e8-bd35-9408942fbd62-1",
               "text": "氵",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d769-70e8-bd35-9408942fbd62-2",
               "text": "贝",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d769-70e8-bd35-9408942fbd62-3",
               "text": "尚",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -1344,25 +1458,29 @@ export const catalog = {
               "id": "019f140f-d774-749d-a748-1a73b9473580-0",
               "text": "尚",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d774-749d-a748-1a73b9473580-1",
               "text": "贝",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d774-749d-a748-1a73b9473580-2",
               "text": "多",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d774-749d-a748-1a73b9473580-3",
               "text": "去",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -1378,7 +1496,7 @@ export const catalog = {
         },
         {
           "id": "019f140f-d76f-75fe-8b38-d62f9135f1da",
-          "origin": "间架结构",
+          "origin": "空间结构",
           "kind": "structure",
           "questionType": "character_structure_select",
           "prompt": "“赏”是什么结构?",
@@ -1387,25 +1505,29 @@ export const catalog = {
               "id": "019f140f-d76f-75fe-8b38-d62f9135f1da-0",
               "text": "左右结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿰"
             },
             {
               "id": "019f140f-d76f-75fe-8b38-d62f9135f1da-1",
               "text": "上下结构",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿱"
             },
             {
               "id": "019f140f-d76f-75fe-8b38-d62f9135f1da-2",
               "text": "左中右结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿲"
             },
             {
               "id": "019f140f-d76f-75fe-8b38-d62f9135f1da-3",
               "text": "全包围结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿴"
             }
           ],
           "explanation": ""
@@ -1421,25 +1543,29 @@ export const catalog = {
               "id": "019f140f-d757-7663-bd21-4f4cdbcda512-0",
               "text": "贝",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d757-7663-bd21-4f4cdbcda512-1",
               "text": "尚",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d757-7663-bd21-4f4cdbcda512-2",
               "text": "攵",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d757-7663-bd21-4f4cdbcda512-3",
               "text": "禾",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -1498,19 +1624,22 @@ export const catalog = {
               "id": "019f140f-d765-7578-94e7-77f0ef3dbcb9-0",
               "text": "开阔",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d765-7578-94e7-77f0ef3dbcb9-1",
               "text": "喜悦，快乐",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d765-7578-94e7-77f0ef3dbcb9-2",
               "text": "山体倒塌",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -1526,25 +1655,29 @@ export const catalog = {
               "id": "019f140f-d765-7578-94e7-7bdaa0394aa4-0",
               "text": "全包围结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿴"
             },
             {
               "id": "019f140f-d765-7578-94e7-7bdaa0394aa4-1",
               "text": "左右结构",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿰"
             },
             {
               "id": "019f140f-d765-7578-94e7-7bdaa0394aa4-2",
               "text": "上下结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿱"
             },
             {
               "id": "019f140f-d765-7578-94e7-7bdaa0394aa4-3",
               "text": "半包围结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿸"
             }
           ],
           "explanation": "让我们来看看“欣”字的结构吧。"
@@ -1558,21 +1691,24 @@ export const catalog = {
           "options": [
             {
               "id": "019f140f-d765-7578-94e7-7ea3c5d08fa2-0",
-              "text": "选项 1",
+              "text": "",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d765-7578-94e7-7ea3c5d08fa2-1",
-              "text": "选项 2",
+              "text": "",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d765-7578-94e7-7ea3c5d08fa2-2",
-              "text": "选项 3",
+              "text": "",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": "“欣”的本义是喜悦，快乐哟。"
@@ -1588,25 +1724,29 @@ export const catalog = {
               "id": "019f140f-d765-7578-94e7-833df82e7c60-0",
               "text": "欠",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d765-7578-94e7-833df82e7c60-1",
               "text": "屯",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d765-7578-94e7-833df82e7c60-2",
               "text": "川",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d765-7578-94e7-833df82e7c60-3",
               "text": "斤",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -1631,25 +1771,29 @@ export const catalog = {
               "id": "019f140f-d773-70dc-80c7-c1bc6b52fbe0-0",
               "text": "欠",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d773-70dc-80c7-c1bc6b52fbe0-1",
               "text": "斤",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d773-70dc-80c7-c1bc6b52fbe0-2",
               "text": "束",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d773-70dc-80c7-c1bc6b52fbe0-3",
               "text": "其",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -1665,7 +1809,7 @@ export const catalog = {
         },
         {
           "id": "019f140f-d76e-70ba-96a6-bc53a8e08512",
-          "origin": "间架结构",
+          "origin": "空间结构",
           "kind": "structure",
           "questionType": "character_structure_select",
           "prompt": "“欣”是什么结构?",
@@ -1674,25 +1818,29 @@ export const catalog = {
               "id": "019f140f-d76e-70ba-96a6-bc53a8e08512-0",
               "text": "左中右结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿲"
             },
             {
               "id": "019f140f-d76e-70ba-96a6-bc53a8e08512-1",
               "text": "上中下结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿳"
             },
             {
               "id": "019f140f-d76e-70ba-96a6-bc53a8e08512-2",
               "text": "上下结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿱"
             },
             {
               "id": "019f140f-d76e-70ba-96a6-bc53a8e08512-3",
               "text": "左右结构",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿰"
             }
           ],
           "explanation": ""
@@ -1708,25 +1856,29 @@ export const catalog = {
               "id": "019f140f-d754-762c-bdec-8b08a3b75991-0",
               "text": "忄",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d754-762c-bdec-8b08a3b75991-1",
               "text": "扌",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d754-762c-bdec-8b08a3b75991-2",
               "text": "斤",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d754-762c-bdec-8b08a3b75991-3",
               "text": "欠",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -1788,19 +1940,22 @@ export const catalog = {
               "id": "019f140f-d767-735e-8064-fe71d3ec0881-0",
               "text": "婴儿",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d767-735e-8064-fe71d3ec0881-1",
               "text": "花朵",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d767-735e-8064-fe71d3ec0881-2",
               "text": "大声呼喝",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -1816,25 +1971,29 @@ export const catalog = {
               "id": "019f140f-d767-735e-8065-00c832c8ddad-0",
               "text": "全包围结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿴"
             },
             {
               "id": "019f140f-d767-735e-8065-00c832c8ddad-1",
               "text": "上下结构",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿱"
             },
             {
               "id": "019f140f-d767-735e-8065-00c832c8ddad-2",
               "text": "左中右结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿲"
             },
             {
               "id": "019f140f-d767-735e-8065-00c832c8ddad-3",
               "text": "半包围结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿸"
             }
           ],
           "explanation": "让我们来看看“花”字的结构吧。"
@@ -1848,21 +2007,24 @@ export const catalog = {
           "options": [
             {
               "id": "019f140f-d767-735e-8065-05681be565aa-0",
-              "text": "选项 1",
+              "text": "",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d767-735e-8065-05681be565aa-1",
-              "text": "选项 2",
+              "text": "",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d767-735e-8065-05681be565aa-2",
-              "text": "选项 3",
+              "text": "",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": "“花”的本义是花朵哟。"
@@ -1878,25 +2040,29 @@ export const catalog = {
               "id": "019f140f-d767-735e-8065-0a85d7556f3c-0",
               "text": "卓",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d767-735e-8065-0a85d7556f3c-1",
               "text": "化",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d767-735e-8065-0a85d7556f3c-2",
               "text": "折",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d767-735e-8065-0a85d7556f3c-3",
               "text": "艹",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -1921,25 +2087,29 @@ export const catalog = {
               "id": "019f140f-d774-749d-a748-030e9463a109-0",
               "text": "艹",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d774-749d-a748-030e9463a109-1",
               "text": "亚",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d774-749d-a748-030e9463a109-2",
               "text": "化",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d774-749d-a748-030e9463a109-3",
               "text": "夋",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -1955,7 +2125,7 @@ export const catalog = {
         },
         {
           "id": "019f140f-d76e-70ba-96a6-c97ad3cd6354",
-          "origin": "间架结构",
+          "origin": "空间结构",
           "kind": "structure",
           "questionType": "character_structure_select",
           "prompt": "“花”是什么结构?",
@@ -1964,25 +2134,29 @@ export const catalog = {
               "id": "019f140f-d76e-70ba-96a6-c97ad3cd6354-0",
               "text": "全包围结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿴"
             },
             {
               "id": "019f140f-d76e-70ba-96a6-c97ad3cd6354-1",
               "text": "上下结构",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿱"
             },
             {
               "id": "019f140f-d76e-70ba-96a6-c97ad3cd6354-2",
               "text": "左右结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿰"
             },
             {
               "id": "019f140f-d76e-70ba-96a6-c97ad3cd6354-3",
               "text": "左中右结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿲"
             }
           ],
           "explanation": ""
@@ -1998,25 +2172,29 @@ export const catalog = {
               "id": "019f140f-d756-764a-a49b-33315b21de09-0",
               "text": "扌",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d756-764a-a49b-33315b21de09-1",
               "text": "化",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d756-764a-a49b-33315b21de09-2",
               "text": "艹",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d756-764a-a49b-33315b21de09-3",
               "text": "欠",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -2071,19 +2249,22 @@ export const catalog = {
               "id": "019f140f-d75c-73ff-b09c-804dcbd2622f-0",
               "text": "树",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d75c-73ff-b09c-804dcbd2622f-1",
               "text": "兰草",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d75c-73ff-b09c-804dcbd2622f-2",
               "text": "古代的一种兵器",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -2099,25 +2280,29 @@ export const catalog = {
               "id": "019f140f-d75c-73ff-b09c-861c5a3a8c8a-0",
               "text": "上中下结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿳"
             },
             {
               "id": "019f140f-d75c-73ff-b09c-861c5a3a8c8a-1",
               "text": "半包围结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿸"
             },
             {
               "id": "019f140f-d75c-73ff-b09c-861c5a3a8c8a-2",
               "text": "独体字",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "□"
             },
             {
               "id": "019f140f-d75c-73ff-b09c-861c5a3a8c8a-3",
               "text": "上下结构",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿱"
             }
           ],
           "explanation": "让我们来看看“兰”字的结构吧。"
@@ -2131,21 +2316,24 @@ export const catalog = {
           "options": [
             {
               "id": "019f140f-d75c-73ff-b09c-89a1b3de5515-0",
-              "text": "选项 1",
+              "text": "",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d75c-73ff-b09c-89a1b3de5515-1",
-              "text": "选项 2",
+              "text": "",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d75c-73ff-b09c-89a1b3de5515-2",
-              "text": "选项 3",
+              "text": "",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": "“兰”的本义是兰草哟。"
@@ -2170,7 +2358,7 @@ export const catalog = {
         },
         {
           "id": "019f140f-d76b-71c4-b8ea-51d43767b3e7",
-          "origin": "间架结构",
+          "origin": "空间结构",
           "kind": "structure",
           "questionType": "character_structure_select",
           "prompt": "“兰”是什么结构?",
@@ -2179,25 +2367,29 @@ export const catalog = {
               "id": "019f140f-d76b-71c4-b8ea-51d43767b3e7-0",
               "text": "上下结构",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿱"
             },
             {
               "id": "019f140f-d76b-71c4-b8ea-51d43767b3e7-1",
               "text": "左中右结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿲"
             },
             {
               "id": "019f140f-d76b-71c4-b8ea-51d43767b3e7-2",
               "text": "独体字",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "□"
             },
             {
               "id": "019f140f-d76b-71c4-b8ea-51d43767b3e7-3",
               "text": "全包围结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿴"
             }
           ],
           "explanation": ""
@@ -2213,25 +2405,29 @@ export const catalog = {
               "id": "019f140f-d74d-74aa-9b36-4de908a19421-0",
               "text": "果",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d74d-74aa-9b36-4de908a19421-1",
               "text": "兰",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d74d-74aa-9b36-4de908a19421-2",
               "text": "生",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d74d-74aa-9b36-4de908a19421-3",
               "text": "刀",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -2273,19 +2469,22 @@ export const catalog = {
               "id": "019f140f-d763-70a0-a0cb-436873f6d04e-0",
               "text": "依靠",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d763-70a0-a0cb-436873f6d04e-1",
               "text": "树",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d763-70a0-a0cb-436873f6d04e-2",
               "text": "禾麦吐穗上平整",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -2301,25 +2500,29 @@ export const catalog = {
               "id": "019f140f-d763-70a0-a0cb-471532cf30b5-0",
               "text": "上中下结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿳"
             },
             {
               "id": "019f140f-d763-70a0-a0cb-471532cf30b5-1",
               "text": "上下结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿱"
             },
             {
               "id": "019f140f-d763-70a0-a0cb-471532cf30b5-2",
               "text": "独体字",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": "□"
             },
             {
               "id": "019f140f-d763-70a0-a0cb-471532cf30b5-3",
               "text": "半包围结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿸"
             }
           ],
           "explanation": "让我们来看看“木”字的结构吧。"
@@ -2333,21 +2536,24 @@ export const catalog = {
           "options": [
             {
               "id": "019f140f-d763-70a0-a0cb-4b5f8e0539ad-0",
-              "text": "选项 1",
+              "text": "",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d763-70a0-a0cb-4b5f8e0539ad-1",
-              "text": "选项 2",
+              "text": "",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d763-70a0-a0cb-4b5f8e0539ad-2",
-              "text": "选项 3",
+              "text": "",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": "“木”的本义是树哟。"
@@ -2372,7 +2578,7 @@ export const catalog = {
         },
         {
           "id": "019f140f-d76d-70b8-a564-4d5b5c480453",
-          "origin": "间架结构",
+          "origin": "空间结构",
           "kind": "structure",
           "questionType": "character_structure_select",
           "prompt": "“木”是什么结构?",
@@ -2381,25 +2587,29 @@ export const catalog = {
               "id": "019f140f-d76d-70b8-a564-4d5b5c480453-0",
               "text": "半包围结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿸"
             },
             {
               "id": "019f140f-d76d-70b8-a564-4d5b5c480453-1",
               "text": "独体字",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": "□"
             },
             {
               "id": "019f140f-d76d-70b8-a564-4d5b5c480453-2",
               "text": "全包围结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿴"
             },
             {
               "id": "019f140f-d76d-70b8-a564-4d5b5c480453-3",
               "text": "上中下结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿳"
             }
           ],
           "explanation": ""
@@ -2415,25 +2625,29 @@ export const catalog = {
               "id": "019f140f-d753-770f-a172-5d5be17d7b00-0",
               "text": "木",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d753-770f-a172-5d5be17d7b00-1",
               "text": "人",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d753-770f-a172-5d5be17d7b00-2",
               "text": "马",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d753-770f-a172-5d5be17d7b00-3",
               "text": "口",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -2479,19 +2693,22 @@ export const catalog = {
               "id": "019f140f-d769-70e8-bd35-9cbac8086326-0",
               "text": "日落、傍晚（“暮”的本字）",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d769-70e8-bd35-9cbac8086326-1",
               "text": "放，放下",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d769-70e8-bd35-9cbac8086326-2",
               "text": "因气压差异而产生的与地面大致平行的空气流动现象",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -2507,25 +2724,29 @@ export const catalog = {
               "id": "019f140f-d769-70e8-bd35-a1b3cd943e46-0",
               "text": "左右结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿰"
             },
             {
               "id": "019f140f-d769-70e8-bd35-a1b3cd943e46-1",
               "text": "上下结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿱"
             },
             {
               "id": "019f140f-d769-70e8-bd35-a1b3cd943e46-2",
               "text": "半包围结构",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿵"
             },
             {
               "id": "019f140f-d769-70e8-bd35-a1b3cd943e46-3",
               "text": "左中右结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿲"
             }
           ],
           "explanation": "让我们来看看“风”字的结构吧。"
@@ -2539,21 +2760,24 @@ export const catalog = {
           "options": [
             {
               "id": "019f140f-d769-70e8-bd35-a58e06c35664-0",
-              "text": "选项 1",
+              "text": "",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d769-70e8-bd35-a58e06c35664-1",
-              "text": "选项 2",
+              "text": "",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d769-70e8-bd35-a58e06c35664-2",
-              "text": "选项 3",
+              "text": "",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": "“风”的本义是因气压差异而产生的与地面大致平行的空气流动现象哟。"
@@ -2578,7 +2802,7 @@ export const catalog = {
         },
         {
           "id": "019f140f-d76f-75fe-8b38-d9458b9012e6",
-          "origin": "间架结构",
+          "origin": "空间结构",
           "kind": "structure",
           "questionType": "character_structure_select",
           "prompt": "“风”是什么结构?",
@@ -2587,25 +2811,29 @@ export const catalog = {
               "id": "019f140f-d76f-75fe-8b38-d9458b9012e6-0",
               "text": "全包围结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿴"
             },
             {
               "id": "019f140f-d76f-75fe-8b38-d9458b9012e6-1",
               "text": "上下结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿱"
             },
             {
               "id": "019f140f-d76f-75fe-8b38-d9458b9012e6-2",
               "text": "半包围结构",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿵"
             },
             {
               "id": "019f140f-d76f-75fe-8b38-d9458b9012e6-3",
               "text": "左右结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿰"
             }
           ],
           "explanation": ""
@@ -2621,25 +2849,29 @@ export const catalog = {
               "id": "019f140f-d758-7073-a513-caf683553aa6-0",
               "text": "氵",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d758-7073-a513-caf683553aa6-1",
               "text": "几",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d758-7073-a513-caf683553aa6-2",
               "text": "欠",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d758-7073-a513-caf683553aa6-3",
               "text": "乂",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -2681,19 +2913,22 @@ export const catalog = {
               "id": "019f140f-d75e-76b0-8e7c-6ebd08ecb722-0",
               "text": "怀胎",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d75e-76b0-8e7c-6ebd08ecb722-1",
               "text": "多条河水合流，水势盛大",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d75e-76b0-8e7c-6ebd08ecb722-2",
               "text": "辈分，特指人与人之间长幼尊卑的关系",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -2709,25 +2944,29 @@ export const catalog = {
               "id": "019f140f-d75e-76b0-8e7c-72aa6244fc05-0",
               "text": "独体字",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "□"
             },
             {
               "id": "019f140f-d75e-76b0-8e7c-72aa6244fc05-1",
               "text": "左中右结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿲"
             },
             {
               "id": "019f140f-d75e-76b0-8e7c-72aa6244fc05-2",
               "text": "上下结构",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿱"
             },
             {
               "id": "019f140f-d75e-76b0-8e7c-72aa6244fc05-3",
               "text": "半包围结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿸"
             }
           ],
           "explanation": "让我们来看看“台”字的结构吧。"
@@ -2741,21 +2980,24 @@ export const catalog = {
           "options": [
             {
               "id": "019f140f-d75e-76b0-8e7c-77edd11ce11c-0",
-              "text": "选项 1",
+              "text": "",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d75e-76b0-8e7c-77edd11ce11c-1",
-              "text": "选项 2",
+              "text": "",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d75e-76b0-8e7c-77edd11ce11c-2",
-              "text": "选项 3",
+              "text": "",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": "“台”的本义是怀胎哟。"
@@ -2771,25 +3013,29 @@ export const catalog = {
               "id": "019f140f-d75e-76b0-8e7c-7b7fbe92075a-0",
               "text": "卩又",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d75e-76b0-8e7c-7b7fbe92075a-1",
               "text": "厶",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d75e-76b0-8e7c-7b7fbe92075a-2",
               "text": "心",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d75e-76b0-8e7c-7b7fbe92075a-3",
               "text": "口",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -2814,25 +3060,29 @@ export const catalog = {
               "id": "019f140f-d770-730c-964c-c70eaf08e4a2-0",
               "text": "古",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d770-730c-964c-c70eaf08e4a2-1",
               "text": "口",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d770-730c-964c-c70eaf08e4a2-2",
               "text": "癶",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d770-730c-964c-c70eaf08e4a2-3",
               "text": "厶",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -2848,7 +3098,7 @@ export const catalog = {
         },
         {
           "id": "019f140f-d76c-7013-8010-7b80aa9f5daa",
-          "origin": "间架结构",
+          "origin": "空间结构",
           "kind": "structure",
           "questionType": "character_structure_select",
           "prompt": "“台”是什么结构?",
@@ -2857,25 +3107,29 @@ export const catalog = {
               "id": "019f140f-d76c-7013-8010-7b80aa9f5daa-0",
               "text": "独体字",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "□"
             },
             {
               "id": "019f140f-d76c-7013-8010-7b80aa9f5daa-1",
               "text": "全包围结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿴"
             },
             {
               "id": "019f140f-d76c-7013-8010-7b80aa9f5daa-2",
               "text": "上下结构",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿱"
             },
             {
               "id": "019f140f-d76c-7013-8010-7b80aa9f5daa-3",
               "text": "上中下结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿳"
             }
           ],
           "explanation": ""
@@ -2891,25 +3145,29 @@ export const catalog = {
               "id": "019f140f-d74f-748b-a4b3-392d882b0475-0",
               "text": "厶",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d74f-748b-a4b3-392d882b0475-1",
               "text": "又",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d74f-748b-a4b3-392d882b0475-2",
               "text": "口",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d74f-748b-a4b3-392d882b0475-3",
               "text": "米",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -2955,19 +3213,22 @@ export const catalog = {
               "id": "019f140f-d766-70dd-b8ff-286959f41045-0",
               "text": "年岁大的人",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d766-70dd-b8ff-286959f41045-1",
               "text": "马鸣",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d766-70dd-b8ff-286959f41045-2",
               "text": "水流滚动的样子",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -2983,25 +3244,29 @@ export const catalog = {
               "id": "019f140f-d766-70dd-b8ff-2e3cfd5fa306-0",
               "text": "半包围结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿸"
             },
             {
               "id": "019f140f-d766-70dd-b8ff-2e3cfd5fa306-1",
               "text": "上中下结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿳"
             },
             {
               "id": "019f140f-d766-70dd-b8ff-2e3cfd5fa306-2",
               "text": "全包围结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿴"
             },
             {
               "id": "019f140f-d766-70dd-b8ff-2e3cfd5fa306-3",
               "text": "独体字",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": "□"
             }
           ],
           "explanation": "让我们来看看“老”字的结构吧。"
@@ -3015,21 +3280,24 @@ export const catalog = {
           "options": [
             {
               "id": "019f140f-d766-70dd-b8ff-326e2ffaed20-0",
-              "text": "选项 1",
+              "text": "",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d766-70dd-b8ff-326e2ffaed20-1",
-              "text": "选项 2",
+              "text": "",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d766-70dd-b8ff-326e2ffaed20-2",
-              "text": "选项 3",
+              "text": "",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": "“老”的本义是年岁大的人哟。"
@@ -3054,7 +3322,7 @@ export const catalog = {
         },
         {
           "id": "019f140f-d76e-70ba-96a6-c555342cd799",
-          "origin": "间架结构",
+          "origin": "空间结构",
           "kind": "structure",
           "questionType": "character_structure_select",
           "prompt": "“老”是什么结构?",
@@ -3063,25 +3331,29 @@ export const catalog = {
               "id": "019f140f-d76e-70ba-96a6-c555342cd799-0",
               "text": "左右结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿰"
             },
             {
               "id": "019f140f-d76e-70ba-96a6-c555342cd799-1",
               "text": "半包围结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿸"
             },
             {
               "id": "019f140f-d76e-70ba-96a6-c555342cd799-2",
               "text": "上下结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿱"
             },
             {
               "id": "019f140f-d76e-70ba-96a6-c555342cd799-3",
               "text": "独体字",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": "□"
             }
           ],
           "explanation": ""
@@ -3097,25 +3369,29 @@ export const catalog = {
               "id": "019f140f-d756-764a-a49b-2f967b9b7784-0",
               "text": "生",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d756-764a-a49b-2f967b9b7784-1",
               "text": "耂",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d756-764a-a49b-2f967b9b7784-2",
               "text": "页",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d756-764a-a49b-2f967b9b7784-3",
               "text": "匕",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -3177,19 +3453,22 @@ export const catalog = {
               "id": "019f140f-d760-7539-8a5e-605a80c2bb5e-0",
               "text": "大地",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d760-7539-8a5e-605a80c2bb5e-1",
               "text": "头部",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d760-7539-8a5e-605a80c2bb5e-2",
               "text": "母亲或与母亲一辈的女子",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -3205,25 +3484,29 @@ export const catalog = {
               "id": "019f140f-d760-7539-8a5e-67ee010329c9-0",
               "text": "上中下结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿳"
             },
             {
               "id": "019f140f-d760-7539-8a5e-67ee010329c9-1",
               "text": "半包围结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿸"
             },
             {
               "id": "019f140f-d760-7539-8a5e-67ee010329c9-2",
               "text": "上下结构",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿱"
             },
             {
               "id": "019f140f-d760-7539-8a5e-67ee010329c9-3",
               "text": "独体字",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "□"
             }
           ],
           "explanation": "让我们来看看“婆”字的结构吧。"
@@ -3237,21 +3520,24 @@ export const catalog = {
           "options": [
             {
               "id": "019f140f-d760-7539-8a5e-6a02ba8645f0-0",
-              "text": "选项 1",
+              "text": "",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d760-7539-8a5e-6a02ba8645f0-1",
-              "text": "选项 2",
+              "text": "",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d760-7539-8a5e-6a02ba8645f0-2",
-              "text": "选项 3",
+              "text": "",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": "“婆”的本义是母亲或与母亲一辈的女子哟。"
@@ -3267,25 +3553,29 @@ export const catalog = {
               "id": "019f140f-d760-7539-8a5e-6fd0908066ea-0",
               "text": "女",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d760-7539-8a5e-6fd0908066ea-1",
               "text": "田",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d760-7539-8a5e-6fd0908066ea-2",
               "text": "波",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d760-7539-8a5e-6fd0908066ea-3",
               "text": "戌",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -3310,25 +3600,29 @@ export const catalog = {
               "id": "019f140f-d771-71ef-8e81-816eb9c79e47-0",
               "text": "左",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d771-71ef-8e81-816eb9c79e47-1",
               "text": "女",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d771-71ef-8e81-816eb9c79e47-2",
               "text": "波",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d771-71ef-8e81-816eb9c79e47-3",
               "text": "而",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -3344,7 +3638,7 @@ export const catalog = {
         },
         {
           "id": "019f140f-d76c-7013-8010-81d19a0a6559",
-          "origin": "间架结构",
+          "origin": "空间结构",
           "kind": "structure",
           "questionType": "character_structure_select",
           "prompt": "“婆”是什么结构?",
@@ -3353,25 +3647,29 @@ export const catalog = {
               "id": "019f140f-d76c-7013-8010-81d19a0a6559-0",
               "text": "左右结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿰"
             },
             {
               "id": "019f140f-d76c-7013-8010-81d19a0a6559-1",
               "text": "独体字",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "□"
             },
             {
               "id": "019f140f-d76c-7013-8010-81d19a0a6559-2",
               "text": "上下结构",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿱"
             },
             {
               "id": "019f140f-d76c-7013-8010-81d19a0a6559-3",
               "text": "左中右结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿲"
             }
           ],
           "explanation": ""
@@ -3387,25 +3685,29 @@ export const catalog = {
               "id": "019f140f-d751-714b-b28e-d0e239734f15-0",
               "text": "波",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d751-714b-b28e-d0e239734f15-1",
               "text": "土",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d751-714b-b28e-d0e239734f15-2",
               "text": "女",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d751-714b-b28e-d0e239734f15-3",
               "text": "日",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -3467,19 +3769,22 @@ export const catalog = {
               "id": "019f140f-d760-7539-8a5e-605a80c2bb5e-0",
               "text": "大地",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d760-7539-8a5e-605a80c2bb5e-1",
               "text": "头部",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d760-7539-8a5e-605a80c2bb5e-2",
               "text": "母亲或与母亲一辈的女子",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -3495,25 +3800,29 @@ export const catalog = {
               "id": "019f140f-d760-7539-8a5e-67ee010329c9-0",
               "text": "上中下结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿳"
             },
             {
               "id": "019f140f-d760-7539-8a5e-67ee010329c9-1",
               "text": "半包围结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿸"
             },
             {
               "id": "019f140f-d760-7539-8a5e-67ee010329c9-2",
               "text": "上下结构",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿱"
             },
             {
               "id": "019f140f-d760-7539-8a5e-67ee010329c9-3",
               "text": "独体字",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "□"
             }
           ],
           "explanation": "让我们来看看“婆”字的结构吧。"
@@ -3527,21 +3836,24 @@ export const catalog = {
           "options": [
             {
               "id": "019f140f-d760-7539-8a5e-6a02ba8645f0-0",
-              "text": "选项 1",
+              "text": "",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d760-7539-8a5e-6a02ba8645f0-1",
-              "text": "选项 2",
+              "text": "",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d760-7539-8a5e-6a02ba8645f0-2",
-              "text": "选项 3",
+              "text": "",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": "“婆”的本义是母亲或与母亲一辈的女子哟。"
@@ -3557,25 +3869,29 @@ export const catalog = {
               "id": "019f140f-d760-7539-8a5e-6fd0908066ea-0",
               "text": "女",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d760-7539-8a5e-6fd0908066ea-1",
               "text": "田",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d760-7539-8a5e-6fd0908066ea-2",
               "text": "波",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d760-7539-8a5e-6fd0908066ea-3",
               "text": "戌",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -3600,25 +3916,29 @@ export const catalog = {
               "id": "019f140f-d771-71ef-8e81-816eb9c79e47-0",
               "text": "左",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d771-71ef-8e81-816eb9c79e47-1",
               "text": "女",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d771-71ef-8e81-816eb9c79e47-2",
               "text": "波",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d771-71ef-8e81-816eb9c79e47-3",
               "text": "而",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -3634,7 +3954,7 @@ export const catalog = {
         },
         {
           "id": "019f140f-d76c-7013-8010-81d19a0a6559",
-          "origin": "间架结构",
+          "origin": "空间结构",
           "kind": "structure",
           "questionType": "character_structure_select",
           "prompt": "“婆”是什么结构?",
@@ -3643,25 +3963,29 @@ export const catalog = {
               "id": "019f140f-d76c-7013-8010-81d19a0a6559-0",
               "text": "左右结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿰"
             },
             {
               "id": "019f140f-d76c-7013-8010-81d19a0a6559-1",
               "text": "独体字",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "□"
             },
             {
               "id": "019f140f-d76c-7013-8010-81d19a0a6559-2",
               "text": "上下结构",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿱"
             },
             {
               "id": "019f140f-d76c-7013-8010-81d19a0a6559-3",
               "text": "左中右结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿲"
             }
           ],
           "explanation": ""
@@ -3677,25 +4001,29 @@ export const catalog = {
               "id": "019f140f-d751-714b-b28e-d0e239734f15-0",
               "text": "波",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d751-714b-b28e-d0e239734f15-1",
               "text": "土",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d751-714b-b28e-d0e239734f15-2",
               "text": "女",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d751-714b-b28e-d0e239734f15-3",
               "text": "日",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -3757,19 +4085,22 @@ export const catalog = {
               "id": "019f140f-d76a-75c9-a35b-68c405345f88-0",
               "text": "烤熟或者蒸熟的面食",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d76a-75c9-a35b-68c405345f88-1",
               "text": "古人居住的半地下土窖。地室",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d76a-75c9-a35b-68c405345f88-2",
               "text": "细丝",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -3785,25 +4116,29 @@ export const catalog = {
               "id": "019f140f-d76a-75c9-a35b-6c608b3e83d2-0",
               "text": "左右结构",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿰"
             },
             {
               "id": "019f140f-d76a-75c9-a35b-6c608b3e83d2-1",
               "text": "半包围结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿸"
             },
             {
               "id": "019f140f-d76a-75c9-a35b-6c608b3e83d2-2",
               "text": "独体字",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "□"
             },
             {
               "id": "019f140f-d76a-75c9-a35b-6c608b3e83d2-3",
               "text": "上中下结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿳"
             }
           ],
           "explanation": "让我们来看看“饼”字的结构吧。"
@@ -3817,21 +4152,24 @@ export const catalog = {
           "options": [
             {
               "id": "019f140f-d76a-75c9-a35b-732ea530d37d-0",
-              "text": "选项 1",
+              "text": "",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d76a-75c9-a35b-732ea530d37d-1",
-              "text": "选项 2",
+              "text": "",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d76a-75c9-a35b-732ea530d37d-2",
-              "text": "选项 3",
+              "text": "",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": "“饼”的本义是烤熟或者蒸熟的面食哟。"
@@ -3847,25 +4185,29 @@ export const catalog = {
               "id": "019f140f-d76a-75c9-a35b-76e406b3f959-0",
               "text": "饣",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d76a-75c9-a35b-76e406b3f959-1",
               "text": "卉",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d76a-75c9-a35b-76e406b3f959-2",
               "text": "并",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d76a-75c9-a35b-76e406b3f959-3",
               "text": "廴",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -3890,25 +4232,29 @@ export const catalog = {
               "id": "019f140f-d775-76ac-a59c-4cf69eea0480-0",
               "text": "饣",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d775-76ac-a59c-4cf69eea0480-1",
               "text": "儿",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d775-76ac-a59c-4cf69eea0480-2",
               "text": "并",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d775-76ac-a59c-4cf69eea0480-3",
               "text": "止",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -3924,7 +4270,7 @@ export const catalog = {
         },
         {
           "id": "019f140f-d76f-75fe-8b38-decc15c8f066",
-          "origin": "间架结构",
+          "origin": "空间结构",
           "kind": "structure",
           "questionType": "character_structure_select",
           "prompt": "“饼”是什么结构?",
@@ -3933,25 +4279,29 @@ export const catalog = {
               "id": "019f140f-d76f-75fe-8b38-decc15c8f066-0",
               "text": "左右结构",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿰"
             },
             {
               "id": "019f140f-d76f-75fe-8b38-decc15c8f066-1",
               "text": "左中右结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿲"
             },
             {
               "id": "019f140f-d76f-75fe-8b38-decc15c8f066-2",
               "text": "半包围结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿸"
             },
             {
               "id": "019f140f-d76f-75fe-8b38-decc15c8f066-3",
               "text": "上中下结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿳"
             }
           ],
           "explanation": ""
@@ -3967,25 +4317,29 @@ export const catalog = {
               "id": "019f140f-d758-7073-a513-cd7b257bd7c0-0",
               "text": "并",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d758-7073-a513-cd7b257bd7c0-1",
               "text": "口",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d758-7073-a513-cd7b257bd7c0-2",
               "text": "⺈",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d758-7073-a513-cd7b257bd7c0-3",
               "text": "饣",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -4047,19 +4401,22 @@ export const catalog = {
               "id": "019f140f-d765-7578-94e7-88f5da02cc59-0",
               "text": "用动物的皮、角、骨熬制的有黏性的物质",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d765-7578-94e7-88f5da02cc59-1",
               "text": "经过，经历",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d765-7578-94e7-88f5da02cc59-2",
               "text": "糕饼",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -4075,25 +4432,29 @@ export const catalog = {
               "id": "019f140f-d765-7578-94e7-8f4e6942ad97-0",
               "text": "独体字",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "□"
             },
             {
               "id": "019f140f-d765-7578-94e7-8f4e6942ad97-1",
               "text": "全包围结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿴"
             },
             {
               "id": "019f140f-d765-7578-94e7-8f4e6942ad97-2",
               "text": "上中下结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿳"
             },
             {
               "id": "019f140f-d765-7578-94e7-8f4e6942ad97-3",
               "text": "左右结构",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿰"
             }
           ],
           "explanation": "让我们来看看“糕”字的结构吧。"
@@ -4107,21 +4468,24 @@ export const catalog = {
           "options": [
             {
               "id": "019f140f-d765-7578-94e7-90b5c301340c-0",
-              "text": "选项 1",
+              "text": "",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d765-7578-94e7-90b5c301340c-1",
-              "text": "选项 2",
+              "text": "",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d765-7578-94e7-90b5c301340c-2",
-              "text": "选项 3",
+              "text": "",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": "“糕”的本义是糕饼哟。"
@@ -4137,25 +4501,29 @@ export const catalog = {
               "id": "019f140f-d765-7578-94e7-952065dbfa0d-0",
               "text": "羔",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d765-7578-94e7-952065dbfa0d-1",
               "text": "豆",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d765-7578-94e7-952065dbfa0d-2",
               "text": "米",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d765-7578-94e7-952065dbfa0d-3",
               "text": "歹",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -4180,25 +4548,29 @@ export const catalog = {
               "id": "019f140f-d773-70dc-80c7-ca6096d35a31-0",
               "text": "羔",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d773-70dc-80c7-ca6096d35a31-1",
               "text": "米",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d773-70dc-80c7-ca6096d35a31-2",
               "text": "关",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d773-70dc-80c7-ca6096d35a31-3",
               "text": "忄",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -4214,7 +4586,7 @@ export const catalog = {
         },
         {
           "id": "019f140f-d76e-70ba-96a6-c3d410a6149a",
-          "origin": "间架结构",
+          "origin": "空间结构",
           "kind": "structure",
           "questionType": "character_structure_select",
           "prompt": "“糕”是什么结构?",
@@ -4223,25 +4595,29 @@ export const catalog = {
               "id": "019f140f-d76e-70ba-96a6-c3d410a6149a-0",
               "text": "半包围结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿸"
             },
             {
               "id": "019f140f-d76e-70ba-96a6-c3d410a6149a-1",
               "text": "左中右结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿲"
             },
             {
               "id": "019f140f-d76e-70ba-96a6-c3d410a6149a-2",
               "text": "左右结构",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿰"
             },
             {
               "id": "019f140f-d76e-70ba-96a6-c3d410a6149a-3",
               "text": "独体字",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "□"
             }
           ],
           "explanation": ""
@@ -4257,25 +4633,29 @@ export const catalog = {
               "id": "019f140f-d755-736f-8e35-d565705ab09a-0",
               "text": "米",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d755-736f-8e35-d565705ab09a-1",
               "text": "羔",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d755-736f-8e35-d565705ab09a-2",
               "text": "女",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d755-736f-8e35-d565705ab09a-3",
               "text": "亻",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -4317,19 +4697,22 @@ export const catalog = {
               "id": "019f140f-d75c-73ff-b09c-94138bcad921-0",
               "text": "簸箕",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d75c-73ff-b09c-94138bcad921-1",
               "text": "编排完整，有次序条理",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d75c-73ff-b09c-94138bcad921-2",
               "text": "母亲或与母亲一辈的女子",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -4345,25 +4728,29 @@ export const catalog = {
               "id": "019f140f-d75c-73ff-b09c-9bc8f4dbd712-0",
               "text": "上下结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿱"
             },
             {
               "id": "019f140f-d75c-73ff-b09c-9bc8f4dbd712-1",
               "text": "左中右结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿲"
             },
             {
               "id": "019f140f-d75c-73ff-b09c-9bc8f4dbd712-2",
               "text": "上中下结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿳"
             },
             {
               "id": "019f140f-d75c-73ff-b09c-9bc8f4dbd712-3",
               "text": "独体字",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": "□"
             }
           ],
           "explanation": "让我们来看看“其”字的结构吧。"
@@ -4377,21 +4764,24 @@ export const catalog = {
           "options": [
             {
               "id": "019f140f-d75c-73ff-b09c-9f18ce695ca7-0",
-              "text": "选项 1",
+              "text": "",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d75c-73ff-b09c-9f18ce695ca7-1",
-              "text": "选项 2",
+              "text": "",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d75c-73ff-b09c-9f18ce695ca7-2",
-              "text": "选项 3",
+              "text": "",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": "“其”的本义是簸箕哟。"
@@ -4416,7 +4806,7 @@ export const catalog = {
         },
         {
           "id": "019f140f-d76b-71c4-b8ea-5671595bff17",
-          "origin": "间架结构",
+          "origin": "空间结构",
           "kind": "structure",
           "questionType": "character_structure_select",
           "prompt": "“其”是什么结构?",
@@ -4425,25 +4815,29 @@ export const catalog = {
               "id": "019f140f-d76b-71c4-b8ea-5671595bff17-0",
               "text": "上下结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿱"
             },
             {
               "id": "019f140f-d76b-71c4-b8ea-5671595bff17-1",
               "text": "全包围结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿴"
             },
             {
               "id": "019f140f-d76b-71c4-b8ea-5671595bff17-2",
               "text": "独体字",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": "□"
             },
             {
               "id": "019f140f-d76b-71c4-b8ea-5671595bff17-3",
               "text": "左中右结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿲"
             }
           ],
           "explanation": ""
@@ -4459,25 +4853,29 @@ export const catalog = {
               "id": "019f140f-d74e-71be-9f1e-c1d5f783402d-0",
               "text": "禾",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d74e-71be-9f1e-c1d5f783402d-1",
               "text": "衤",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d74e-71be-9f1e-c1d5f783402d-2",
               "text": "吏",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d74e-71be-9f1e-c1d5f783402d-3",
               "text": "其",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -4519,19 +4917,22 @@ export const catalog = {
               "id": "019f140f-d761-70eb-9cbf-7e759afd865b-0",
               "text": "古代祭祀时用的半只牲口",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d761-70eb-9cbf-7e759afd865b-1",
               "text": "毛驴，一种像马而小、耳朵较长的家畜",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d761-70eb-9cbf-7e759afd865b-2",
               "text": "赘疣",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -4547,25 +4948,29 @@ export const catalog = {
               "id": "019f140f-d761-70eb-9cbf-836045fe9464-0",
               "text": "上中下结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿳"
             },
             {
               "id": "019f140f-d761-70eb-9cbf-836045fe9464-1",
               "text": "独体字",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": "□"
             },
             {
               "id": "019f140f-d761-70eb-9cbf-836045fe9464-2",
               "text": "全包围结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿴"
             },
             {
               "id": "019f140f-d761-70eb-9cbf-836045fe9464-3",
               "text": "左右结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿰"
             }
           ],
           "explanation": "让我们来看看“尤”字的结构吧。"
@@ -4579,21 +4984,24 @@ export const catalog = {
           "options": [
             {
               "id": "019f140f-d761-70eb-9cbf-85b1437b8cb1-0",
-              "text": "选项 1",
+              "text": "",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d761-70eb-9cbf-85b1437b8cb1-1",
-              "text": "选项 2",
+              "text": "",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d761-70eb-9cbf-85b1437b8cb1-2",
-              "text": "选项 3",
+              "text": "",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": "“尤”的本义是赘疣哟。"
@@ -4618,7 +5026,7 @@ export const catalog = {
         },
         {
           "id": "019f140f-d76c-7013-8010-859a06d854ec",
-          "origin": "间架结构",
+          "origin": "空间结构",
           "kind": "structure",
           "questionType": "character_structure_select",
           "prompt": "“尤”是什么结构?",
@@ -4627,25 +5035,29 @@ export const catalog = {
               "id": "019f140f-d76c-7013-8010-859a06d854ec-0",
               "text": "全包围结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿴"
             },
             {
               "id": "019f140f-d76c-7013-8010-859a06d854ec-1",
               "text": "半包围结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿸"
             },
             {
               "id": "019f140f-d76c-7013-8010-859a06d854ec-2",
               "text": "独体字",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": "□"
             },
             {
               "id": "019f140f-d76c-7013-8010-859a06d854ec-3",
               "text": "左右结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿰"
             }
           ],
           "explanation": ""
@@ -4661,25 +5073,29 @@ export const catalog = {
               "id": "019f140f-d751-714b-b28e-d445d3fa1281-0",
               "text": "寸",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d751-714b-b28e-d445d3fa1281-1",
               "text": "衣",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d751-714b-b28e-d445d3fa1281-2",
               "text": "吏",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d751-714b-b28e-d445d3fa1281-3",
               "text": "尤",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -4738,19 +5154,22 @@ export const catalog = {
               "id": "019f140f-d75d-747b-b8df-16cf2a3492e0-0",
               "text": "兰草",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d75d-747b-b8df-16cf2a3492e0-1",
               "text": "(弓)强有力",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d75d-747b-b8df-16cf2a3492e0-2",
               "text": "衣服套在胳膊上的部分，即衣袖",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -4766,25 +5185,29 @@ export const catalog = {
               "id": "019f140f-d75d-747b-b8df-182a2d0b322a-0",
               "text": "上下结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿱"
             },
             {
               "id": "019f140f-d75d-747b-b8df-182a2d0b322a-1",
               "text": "上中下结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿳"
             },
             {
               "id": "019f140f-d75d-747b-b8df-182a2d0b322a-2",
               "text": "左右结构",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿰"
             },
             {
               "id": "019f140f-d75d-747b-b8df-182a2d0b322a-3",
               "text": "独体字",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "□"
             }
           ],
           "explanation": "让我们来看看“劲”字的结构吧。"
@@ -4798,21 +5221,24 @@ export const catalog = {
           "options": [
             {
               "id": "019f140f-d75d-747b-b8df-1e7f03f5d5a1-0",
-              "text": "选项 1",
+              "text": "",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d75d-747b-b8df-1e7f03f5d5a1-1",
-              "text": "选项 2",
+              "text": "",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d75d-747b-b8df-1e7f03f5d5a1-2",
-              "text": "选项 3",
+              "text": "",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": "“劲”的本义是(弓)强有力哟。"
@@ -4828,25 +5254,29 @@ export const catalog = {
               "id": "019f140f-d75d-747b-b8df-202ee6ad5a2d-0",
               "text": "力",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d75d-747b-b8df-202ee6ad5a2d-1",
               "text": "肀",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d75d-747b-b8df-202ee6ad5a2d-2",
               "text": "古",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d75d-747b-b8df-202ee6ad5a2d-3",
               "text": "巠",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -4871,25 +5301,29 @@ export const catalog = {
               "id": "019f140f-d770-730c-964c-bce78044a567-0",
               "text": "戒",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d770-730c-964c-bce78044a567-1",
               "text": "力",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d770-730c-964c-bce78044a567-2",
               "text": "虫",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d770-730c-964c-bce78044a567-3",
               "text": "巠",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -4905,7 +5339,7 @@ export const catalog = {
         },
         {
           "id": "019f140f-d76c-7013-8010-775c1f737818",
-          "origin": "间架结构",
+          "origin": "空间结构",
           "kind": "structure",
           "questionType": "character_structure_select",
           "prompt": "“劲”是什么结构?",
@@ -4914,25 +5348,29 @@ export const catalog = {
               "id": "019f140f-d76c-7013-8010-775c1f737818-0",
               "text": "左右结构",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿰"
             },
             {
               "id": "019f140f-d76c-7013-8010-775c1f737818-1",
               "text": "独体字",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "□"
             },
             {
               "id": "019f140f-d76c-7013-8010-775c1f737818-2",
               "text": "全包围结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿴"
             },
             {
               "id": "019f140f-d76c-7013-8010-775c1f737818-3",
               "text": "上中下结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿳"
             }
           ],
           "explanation": ""
@@ -4948,25 +5386,29 @@ export const catalog = {
               "id": "019f140f-d74f-748b-a4b3-34620256d1a9-0",
               "text": "辛",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d74f-748b-a4b3-34620256d1a9-1",
               "text": "贝",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d74f-748b-a4b3-34620256d1a9-2",
               "text": "巠",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d74f-748b-a4b3-34620256d1a9-3",
               "text": "力",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -5028,19 +5470,22 @@ export const catalog = {
               "id": "019f140f-d75a-743e-884a-ea802e0b3078-0",
               "text": "古代计时的漏壶",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d75a-743e-884a-ea802e0b3078-1",
               "text": "差遣，指派",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d75a-743e-884a-ea802e0b3078-2",
               "text": "烤熟或者蒸熟的面食",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -5056,25 +5501,29 @@ export const catalog = {
               "id": "019f140f-d75a-743e-884a-efd622ea8c3c-0",
               "text": "半包围结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿸"
             },
             {
               "id": "019f140f-d75a-743e-884a-efd622ea8c3c-1",
               "text": "左右结构",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿰"
             },
             {
               "id": "019f140f-d75a-743e-884a-efd622ea8c3c-2",
               "text": "上中下结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿳"
             },
             {
               "id": "019f140f-d75a-743e-884a-efd622ea8c3c-3",
               "text": "独体字",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "□"
             }
           ],
           "explanation": "让我们来看看“使”字的结构吧。"
@@ -5088,21 +5537,24 @@ export const catalog = {
           "options": [
             {
               "id": "019f140f-d75a-743e-884a-f06f294929d9-0",
-              "text": "选项 1",
+              "text": "",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d75a-743e-884a-f06f294929d9-1",
-              "text": "选项 2",
+              "text": "",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d75a-743e-884a-f06f294929d9-2",
-              "text": "选项 3",
+              "text": "",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": "“使”的本义是差遣，指派哟。"
@@ -5118,25 +5570,29 @@ export const catalog = {
               "id": "019f140f-d75a-743e-884a-f62e4efaa897-0",
               "text": "亻",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d75a-743e-884a-f62e4efaa897-1",
               "text": "吏",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d75a-743e-884a-f62e4efaa897-2",
               "text": "可",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d75a-743e-884a-f62e4efaa897-3",
               "text": "卩又",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -5161,25 +5617,29 @@ export const catalog = {
               "id": "019f140f-d76f-75fe-8b38-e75c26442c94-0",
               "text": "言",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d76f-75fe-8b38-e75c26442c94-1",
               "text": "巛",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d76f-75fe-8b38-e75c26442c94-2",
               "text": "亻",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d76f-75fe-8b38-e75c26442c94-3",
               "text": "吏",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -5195,7 +5655,7 @@ export const catalog = {
         },
         {
           "id": "019f140f-d76b-71c4-b8ea-4cf208466d79",
-          "origin": "间架结构",
+          "origin": "空间结构",
           "kind": "structure",
           "questionType": "character_structure_select",
           "prompt": "“使”是什么结构?",
@@ -5204,25 +5664,29 @@ export const catalog = {
               "id": "019f140f-d76b-71c4-b8ea-4cf208466d79-0",
               "text": "左中右结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿲"
             },
             {
               "id": "019f140f-d76b-71c4-b8ea-4cf208466d79-1",
               "text": "左右结构",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿰"
             },
             {
               "id": "019f140f-d76b-71c4-b8ea-4cf208466d79-2",
               "text": "上中下结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿳"
             },
             {
               "id": "019f140f-d76b-71c4-b8ea-4cf208466d79-3",
               "text": "半包围结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿸"
             }
           ],
           "explanation": ""
@@ -5238,25 +5702,29 @@ export const catalog = {
               "id": "019f140f-d74c-76bf-807a-aabee53784e8-0",
               "text": "氵",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d74c-76bf-807a-aabee53784e8-1",
               "text": "门",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d74c-76bf-807a-aabee53784e8-2",
               "text": "吏",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d74c-76bf-807a-aabee53784e8-3",
               "text": "亻",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -5315,19 +5783,22 @@ export const catalog = {
               "id": "019f140f-d768-71ac-a4d1-d6e64b41973b-0",
               "text": "水势盛大",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d768-71ac-a4d1-d6e64b41973b-1",
               "text": "用手轻触",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d768-71ac-a4d1-d6e64b41973b-2",
               "text": "茶树",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -5343,25 +5814,29 @@ export const catalog = {
               "id": "019f140f-d768-71ac-a4d1-dbd94f508ab4-0",
               "text": "半包围结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿸"
             },
             {
               "id": "019f140f-d768-71ac-a4d1-dbd94f508ab4-1",
               "text": "上中下结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿳"
             },
             {
               "id": "019f140f-d768-71ac-a4d1-dbd94f508ab4-2",
               "text": "上下结构",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿱"
             },
             {
               "id": "019f140f-d768-71ac-a4d1-dbd94f508ab4-3",
               "text": "左中右结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿲"
             }
           ],
           "explanation": "让我们来看看“茶”字的结构吧。"
@@ -5375,21 +5850,24 @@ export const catalog = {
           "options": [
             {
               "id": "019f140f-d768-71ac-a4d1-dd5087e9cd67-0",
-              "text": "选项 1",
+              "text": "",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d768-71ac-a4d1-dd5087e9cd67-1",
-              "text": "选项 2",
+              "text": "",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d768-71ac-a4d1-dd5087e9cd67-2",
-              "text": "选项 3",
+              "text": "",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": "“茶”的本义是茶树哟。"
@@ -5405,25 +5883,29 @@ export const catalog = {
               "id": "019f140f-d768-71ac-a4d1-e19ba84c0127-0",
               "text": "余",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d768-71ac-a4d1-e19ba84c0127-1",
               "text": "昜",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d768-71ac-a4d1-e19ba84c0127-2",
               "text": "艹",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d768-71ac-a4d1-e19ba84c0127-3",
               "text": "北",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -5448,25 +5930,29 @@ export const catalog = {
               "id": "019f140f-d774-749d-a748-1272be0596e0-0",
               "text": "艹",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d774-749d-a748-1272be0596e0-1",
               "text": "办",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d774-749d-a748-1272be0596e0-2",
               "text": "余",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d774-749d-a748-1272be0596e0-3",
               "text": "壬",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -5482,7 +5968,7 @@ export const catalog = {
         },
         {
           "id": "019f140f-d76e-70ba-96a6-ceb0bed8063c",
-          "origin": "间架结构",
+          "origin": "空间结构",
           "kind": "structure",
           "questionType": "character_structure_select",
           "prompt": "“茶”是什么结构?",
@@ -5491,25 +5977,29 @@ export const catalog = {
               "id": "019f140f-d76e-70ba-96a6-ceb0bed8063c-0",
               "text": "全包围结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿴"
             },
             {
               "id": "019f140f-d76e-70ba-96a6-ceb0bed8063c-1",
               "text": "半包围结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿸"
             },
             {
               "id": "019f140f-d76e-70ba-96a6-ceb0bed8063c-2",
               "text": "左右结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿰"
             },
             {
               "id": "019f140f-d76e-70ba-96a6-ceb0bed8063c-3",
               "text": "上下结构",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿱"
             }
           ],
           "explanation": ""
@@ -5525,25 +6015,29 @@ export const catalog = {
               "id": "019f140f-d757-7663-bd21-4a13a3b5a92e-0",
               "text": "余",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d757-7663-bd21-4a13a3b5a92e-1",
               "text": "艹",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d757-7663-bd21-4a13a3b5a92e-2",
               "text": "马",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d757-7663-bd21-4a13a3b5a92e-3",
               "text": "十",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -5589,19 +6083,22 @@ export const catalog = {
               "id": "019f140f-d75f-7543-9e68-8ef749c498d4-0",
               "text": "树上很多叶子的形状，一种植物",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d75f-7543-9e68-8ef749c498d4-1",
               "text": "古人居住的半地下土窖。地室",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d75f-7543-9e68-8ef749c498d4-2",
               "text": "背着、背负",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -5617,25 +6114,29 @@ export const catalog = {
               "id": "019f140f-d75f-7543-9e68-91e81de02641-0",
               "text": "左中右结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿲"
             },
             {
               "id": "019f140f-d75f-7543-9e68-91e81de02641-1",
               "text": "独体字",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "□"
             },
             {
               "id": "019f140f-d75f-7543-9e68-91e81de02641-2",
               "text": "半包围结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿸"
             },
             {
               "id": "019f140f-d75f-7543-9e68-91e81de02641-3",
               "text": "左右结构",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿰"
             }
           ],
           "explanation": "让我们来看看“叶”字的结构吧。"
@@ -5649,21 +6150,24 @@ export const catalog = {
           "options": [
             {
               "id": "019f140f-d75f-7543-9e68-94c5986972a0-0",
-              "text": "选项 1",
+              "text": "",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d75f-7543-9e68-94c5986972a0-1",
-              "text": "选项 2",
+              "text": "",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d75f-7543-9e68-94c5986972a0-2",
-              "text": "选项 3",
+              "text": "",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": "“叶”的本义是树上很多叶子的形状，一种植物哟。"
@@ -5688,7 +6192,7 @@ export const catalog = {
         },
         {
           "id": "019f140f-d76c-7013-8010-7f71cba2aa5e",
-          "origin": "间架结构",
+          "origin": "空间结构",
           "kind": "structure",
           "questionType": "character_structure_select",
           "prompt": "“叶”是什么结构?",
@@ -5697,25 +6201,29 @@ export const catalog = {
               "id": "019f140f-d76c-7013-8010-7f71cba2aa5e-0",
               "text": "左中右结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿲"
             },
             {
               "id": "019f140f-d76c-7013-8010-7f71cba2aa5e-1",
               "text": "独体字",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "□"
             },
             {
               "id": "019f140f-d76c-7013-8010-7f71cba2aa5e-2",
               "text": "左右结构",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿰"
             },
             {
               "id": "019f140f-d76c-7013-8010-7f71cba2aa5e-3",
               "text": "上下结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿱"
             }
           ],
           "explanation": ""
@@ -5731,25 +6239,29 @@ export const catalog = {
               "id": "019f140f-d750-752c-8071-d9c54e0146cd-0",
               "text": "口",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d750-752c-8071-d9c54e0146cd-1",
               "text": "并",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d750-752c-8071-d9c54e0146cd-2",
               "text": "十",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f140f-d750-752c-8071-d9c54e0146cd-3",
               "text": "厶",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -5811,19 +6323,22 @@ export const catalog = {
               "id": "019f3890-3a2a-73f2-8aef-292de7b737f1-0",
               "text": "山脊",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f3890-3a2a-73f2-8aef-292de7b737f1-1",
               "text": "系物的大绳",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f3890-3a2a-73f2-8aef-292de7b737f1-2",
               "text": "用水灌溉",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -5839,25 +6354,29 @@ export const catalog = {
               "id": "019f3890-3a2a-73f2-8aef-2d98c01fd18e-0",
               "text": "左右结构",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿰"
             },
             {
               "id": "019f3890-3a2a-73f2-8aef-2d98c01fd18e-1",
               "text": "左中右结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿲"
             },
             {
               "id": "019f3890-3a2a-73f2-8aef-2d98c01fd18e-2",
               "text": "上下结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿱"
             },
             {
               "id": "019f3890-3a2a-73f2-8aef-2d98c01fd18e-3",
               "text": "半包围结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿸"
             }
           ],
           "explanation": "让我们来看看“浇”字的结构吧。"
@@ -5871,21 +6390,24 @@ export const catalog = {
           "options": [
             {
               "id": "019f3890-3a2a-73f2-8aef-334dfcace2a3-0",
-              "text": "选项 1",
+              "text": "",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f3890-3a2a-73f2-8aef-334dfcace2a3-1",
-              "text": "选项 2",
+              "text": "",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f3890-3a2a-73f2-8aef-334dfcace2a3-2",
-              "text": "选项 3",
+              "text": "",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": "“浇”的本义是用水灌溉哟。"
@@ -5901,25 +6423,29 @@ export const catalog = {
               "id": "019f3890-3a2a-73f2-8aef-3733a432a9c1-0",
               "text": "七",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f3890-3a2a-73f2-8aef-3733a432a9c1-1",
               "text": "氵",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f3890-3a2a-73f2-8aef-3733a432a9c1-2",
               "text": "丁",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f3890-3a2a-73f2-8aef-3733a432a9c1-3",
               "text": "尧",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -5944,25 +6470,29 @@ export const catalog = {
               "id": "019f3890-3a32-729b-9c74-d41b9ebd95bb-0",
               "text": "厷",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f3890-3a32-729b-9c74-d41b9ebd95bb-1",
               "text": "羊",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f3890-3a32-729b-9c74-d41b9ebd95bb-2",
               "text": "尧",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f3890-3a32-729b-9c74-d41b9ebd95bb-3",
               "text": "氵",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -5978,7 +6508,7 @@ export const catalog = {
         },
         {
           "id": "019f1453-00df-7407-8dda-5125b7100eb8",
-          "origin": "间架结构",
+          "origin": "空间结构",
           "kind": "structure",
           "questionType": "character_structure_select",
           "prompt": "“浇”是什么结构?",
@@ -5987,25 +6517,29 @@ export const catalog = {
               "id": "019f1453-00df-7407-8dda-5125b7100eb8-0",
               "text": "上下结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿱"
             },
             {
               "id": "019f1453-00df-7407-8dda-5125b7100eb8-1",
               "text": "独体字",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "□"
             },
             {
               "id": "019f1453-00df-7407-8dda-5125b7100eb8-2",
               "text": "全包围结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿴"
             },
             {
               "id": "019f1453-00df-7407-8dda-5125b7100eb8-3",
               "text": "左右结构",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿰"
             }
           ],
           "explanation": ""
@@ -6021,25 +6555,29 @@ export const catalog = {
               "id": "019f1455-aaa6-77bd-88ba-c6a3d7c73591-0",
               "text": "尧",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aaa6-77bd-88ba-c6a3d7c73591-1",
               "text": "氵",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aaa6-77bd-88ba-c6a3d7c73591-2",
               "text": "叔",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aaa6-77bd-88ba-c6a3d7c73591-3",
               "text": "衣",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -6081,19 +6619,22 @@ export const catalog = {
               "id": "019f310c-3f0c-72e3-a1d9-e82d89af3611-0",
               "text": "按规定的标准考核、考验",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f310c-3f0c-72e3-a1d9-e82d89af3611-1",
               "text": "劈开",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f310c-3f0c-72e3-a1d9-e82d89af3611-2",
               "text": "河流",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -6109,25 +6650,29 @@ export const catalog = {
               "id": "019f310c-3f0c-72e3-a1d9-edb105d126e7-0",
               "text": "独体字",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": "□"
             },
             {
               "id": "019f310c-3f0c-72e3-a1d9-edb105d126e7-1",
               "text": "上中下结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿳"
             },
             {
               "id": "019f310c-3f0c-72e3-a1d9-edb105d126e7-2",
               "text": "左中右结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿲"
             },
             {
               "id": "019f310c-3f0c-72e3-a1d9-edb105d126e7-3",
               "text": "左右结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿰"
             }
           ],
           "explanation": "让我们来看看“水”字的结构吧。"
@@ -6141,21 +6686,24 @@ export const catalog = {
           "options": [
             {
               "id": "019f310c-3f0c-72e3-a1d9-f268fe325bf9-0",
-              "text": "选项 1",
+              "text": "",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f310c-3f0c-72e3-a1d9-f268fe325bf9-1",
-              "text": "选项 2",
+              "text": "",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f310c-3f0c-72e3-a1d9-f268fe325bf9-2",
-              "text": "选项 3",
+              "text": "",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": "“水”的本义是河流哟。"
@@ -6180,7 +6728,7 @@ export const catalog = {
         },
         {
           "id": "019f1453-00df-7407-8dda-4c99b8bdb630",
-          "origin": "间架结构",
+          "origin": "空间结构",
           "kind": "structure",
           "questionType": "character_structure_select",
           "prompt": "“水”是什么结构?",
@@ -6189,25 +6737,29 @@ export const catalog = {
               "id": "019f1453-00df-7407-8dda-4c99b8bdb630-0",
               "text": "上中下结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿳"
             },
             {
               "id": "019f1453-00df-7407-8dda-4c99b8bdb630-1",
               "text": "全包围结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿴"
             },
             {
               "id": "019f1453-00df-7407-8dda-4c99b8bdb630-2",
               "text": "左中右结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿲"
             },
             {
               "id": "019f1453-00df-7407-8dda-4c99b8bdb630-3",
               "text": "独体字",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": "□"
             }
           ],
           "explanation": ""
@@ -6223,25 +6775,29 @@ export const catalog = {
               "id": "019f1455-aaa6-77bd-88ba-c285880c9a9d-0",
               "text": "龙",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aaa6-77bd-88ba-c285880c9a9d-1",
               "text": "方",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aaa6-77bd-88ba-c285880c9a9d-2",
               "text": "页",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aaa6-77bd-88ba-c285880c9a9d-3",
               "text": "水",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -6310,19 +6866,22 @@ export const catalog = {
               "id": "019f310c-3f09-7721-9c61-2841e9f753f2-0",
               "text": "众多",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f310c-3f09-7721-9c61-2841e9f753f2-1",
               "text": "劳作时加油鼓劲儿的歌声",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f310c-3f09-7721-9c61-2841e9f753f2-2",
               "text": "头部",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -6338,25 +6897,29 @@ export const catalog = {
               "id": "019f310c-3f09-7721-9c61-2ef6b4600526-0",
               "text": "半包围结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿸"
             },
             {
               "id": "019f310c-3f09-7721-9c61-2ef6b4600526-1",
               "text": "左中右结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿲"
             },
             {
               "id": "019f310c-3f09-7721-9c61-2ef6b4600526-2",
               "text": "全包围结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿴"
             },
             {
               "id": "019f310c-3f09-7721-9c61-2ef6b4600526-3",
               "text": "上下结构",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿱"
             }
           ],
           "explanation": "让我们来看看“品”字的结构吧。"
@@ -6370,21 +6933,24 @@ export const catalog = {
           "options": [
             {
               "id": "019f310c-3f09-7721-9c61-328f96730704-0",
-              "text": "选项 1",
+              "text": "",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f310c-3f09-7721-9c61-328f96730704-1",
-              "text": "选项 2",
+              "text": "",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f310c-3f09-7721-9c61-328f96730704-2",
-              "text": "选项 3",
+              "text": "",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": "“品”的本义是众多哟。"
@@ -6409,7 +6975,7 @@ export const catalog = {
         },
         {
           "id": "019f1453-00df-7407-8dda-46447f18e0aa",
-          "origin": "间架结构",
+          "origin": "空间结构",
           "kind": "structure",
           "questionType": "character_structure_select",
           "prompt": "“品”是什么结构?",
@@ -6418,25 +6984,29 @@ export const catalog = {
               "id": "019f1453-00df-7407-8dda-46447f18e0aa-0",
               "text": "左中右结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿲"
             },
             {
               "id": "019f1453-00df-7407-8dda-46447f18e0aa-1",
               "text": "上下结构",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿱"
             },
             {
               "id": "019f1453-00df-7407-8dda-46447f18e0aa-2",
               "text": "独体字",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "□"
             },
             {
               "id": "019f1453-00df-7407-8dda-46447f18e0aa-3",
               "text": "左右结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿰"
             }
           ],
           "explanation": ""
@@ -6452,25 +7022,29 @@ export const catalog = {
               "id": "019f1455-aaa5-76df-a98c-3ddb35420641-0",
               "text": "口",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aaa5-76df-a98c-3ddb35420641-1",
               "text": "口",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aaa5-76df-a98c-3ddb35420641-2",
               "text": "凡",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aaa5-76df-a98c-3ddb35420641-3",
               "text": "口",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -6529,19 +7103,22 @@ export const catalog = {
               "id": "019f310c-3f11-715e-90fe-5b60a72480f0-0",
               "text": "张口吃饭",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f310c-3f11-715e-90fe-5b60a72480f0-1",
               "text": "按着、凭借",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f310c-3f11-715e-90fe-5b60a72480f0-2",
               "text": "山体倒塌",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -6557,25 +7134,29 @@ export const catalog = {
               "id": "019f310c-3f11-715e-90fe-5fdd8b01db91-0",
               "text": "半包围结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿸"
             },
             {
               "id": "019f310c-3f11-715e-90fe-5fdd8b01db91-1",
               "text": "上下结构",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿱"
             },
             {
               "id": "019f310c-3f11-715e-90fe-5fdd8b01db91-2",
               "text": "独体字",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "□"
             },
             {
               "id": "019f310c-3f11-715e-90fe-5fdd8b01db91-3",
               "text": "左右结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿰"
             }
           ],
           "explanation": "让我们来看看“食”字的结构吧。"
@@ -6589,21 +7170,24 @@ export const catalog = {
           "options": [
             {
               "id": "019f310c-3f11-715e-90fe-62af3366c2ec-0",
-              "text": "选项 1",
+              "text": "",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f310c-3f11-715e-90fe-62af3366c2ec-1",
-              "text": "选项 2",
+              "text": "",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f310c-3f11-715e-90fe-62af3366c2ec-2",
-              "text": "选项 3",
+              "text": "",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": "“食”的本义是张口吃饭哟。"
@@ -6619,25 +7203,29 @@ export const catalog = {
               "id": "019f310c-3f11-715e-90fe-67e8f42d45fd-0",
               "text": "父",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f310c-3f11-715e-90fe-67e8f42d45fd-1",
               "text": "亼",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f310c-3f11-715e-90fe-67e8f42d45fd-2",
               "text": "畺",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f310c-3f11-715e-90fe-67e8f42d45fd-3",
               "text": "皀",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -6662,25 +7250,29 @@ export const catalog = {
               "id": "019f310c-407b-711c-86be-351a9351a58f-0",
               "text": "厃",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f310c-407b-711c-86be-351a9351a58f-1",
               "text": "北",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f310c-407b-711c-86be-351a9351a58f-2",
               "text": "皀",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f310c-407b-711c-86be-351a9351a58f-3",
               "text": "亼",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -6696,7 +7288,7 @@ export const catalog = {
         },
         {
           "id": "019f1453-00e0-75c9-a876-b6a5c3c13fe8",
-          "origin": "间架结构",
+          "origin": "空间结构",
           "kind": "structure",
           "questionType": "character_structure_select",
           "prompt": "“食”是什么结构?",
@@ -6705,25 +7297,29 @@ export const catalog = {
               "id": "019f1453-00e0-75c9-a876-b6a5c3c13fe8-0",
               "text": "全包围结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿴"
             },
             {
               "id": "019f1453-00e0-75c9-a876-b6a5c3c13fe8-1",
               "text": "上下结构",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿱"
             },
             {
               "id": "019f1453-00e0-75c9-a876-b6a5c3c13fe8-2",
               "text": "独体字",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "□"
             },
             {
               "id": "019f1453-00e0-75c9-a876-b6a5c3c13fe8-3",
               "text": "左右结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿰"
             }
           ],
           "explanation": ""
@@ -6739,25 +7335,29 @@ export const catalog = {
               "id": "019f1455-aaa7-7549-b1a4-2569d5d9beed-0",
               "text": "石",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aaa7-7549-b1a4-2569d5d9beed-1",
               "text": "皀",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aaa7-7549-b1a4-2569d5d9beed-2",
               "text": "王",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aaa7-7549-b1a4-2569d5d9beed-3",
               "text": "亼",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -6819,19 +7419,22 @@ export const catalog = {
               "id": "019f3890-3a23-750a-b089-1fc884f0c0c1-0",
               "text": "干活、做事",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f3890-3a23-750a-b089-1fc884f0c0c1-1",
               "text": "（在“吩咐”中）用嘴巴发出命令",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f3890-3a23-750a-b089-1fc884f0c0c1-2",
               "text": "母亲",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -6847,25 +7450,29 @@ export const catalog = {
               "id": "019f3890-3a24-742c-8210-c075534f6837-0",
               "text": "上中下结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿳"
             },
             {
               "id": "019f3890-3a24-742c-8210-c075534f6837-1",
               "text": "左中右结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿲"
             },
             {
               "id": "019f3890-3a24-742c-8210-c075534f6837-2",
               "text": "半包围结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿸"
             },
             {
               "id": "019f3890-3a24-742c-8210-c075534f6837-3",
               "text": "左右结构",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿰"
             }
           ],
           "explanation": "让我们来看看“吩”字的结构吧。"
@@ -6879,21 +7486,24 @@ export const catalog = {
           "options": [
             {
               "id": "019f3890-3a24-742c-8210-c719a9d55d5a-0",
-              "text": "选项 1",
+              "text": "",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f3890-3a24-742c-8210-c719a9d55d5a-1",
-              "text": "选项 2",
+              "text": "",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f3890-3a24-742c-8210-c719a9d55d5a-2",
-              "text": "选项 3",
+              "text": "",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": "“吩”的本义是（在“吩咐”中）用嘴巴发出命令哟。"
@@ -6909,25 +7519,29 @@ export const catalog = {
               "id": "019f3890-3a24-742c-8210-cbc6f49ceac7-0",
               "text": "乍",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f3890-3a24-742c-8210-cbc6f49ceac7-1",
               "text": "分",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f3890-3a24-742c-8210-cbc6f49ceac7-2",
               "text": "入",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f3890-3a24-742c-8210-cbc6f49ceac7-3",
               "text": "口",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -6952,25 +7566,29 @@ export const catalog = {
               "id": "019f3890-3a30-76f6-9c37-d0040163d76a-0",
               "text": "口",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f3890-3a30-76f6-9c37-d0040163d76a-1",
               "text": "分",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f3890-3a30-76f6-9c37-d0040163d76a-2",
               "text": "手",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f3890-3a30-76f6-9c37-d0040163d76a-3",
               "text": "先",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -6986,7 +7604,7 @@ export const catalog = {
         },
         {
           "id": "019f1453-00de-702f-8567-81364f0a553a",
-          "origin": "间架结构",
+          "origin": "空间结构",
           "kind": "structure",
           "questionType": "character_structure_select",
           "prompt": "“吩”是什么结构?",
@@ -6995,25 +7613,29 @@ export const catalog = {
               "id": "019f1453-00de-702f-8567-81364f0a553a-0",
               "text": "上中下结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿳"
             },
             {
               "id": "019f1453-00de-702f-8567-81364f0a553a-1",
               "text": "独体字",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "□"
             },
             {
               "id": "019f1453-00de-702f-8567-81364f0a553a-2",
               "text": "上下结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿱"
             },
             {
               "id": "019f1453-00de-702f-8567-81364f0a553a-3",
               "text": "左右结构",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿰"
             }
           ],
           "explanation": ""
@@ -7029,25 +7651,29 @@ export const catalog = {
               "id": "019f1455-aaa5-76df-a98c-374d0d39d2ce-0",
               "text": "口",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aaa5-76df-a98c-374d0d39d2ce-1",
               "text": "主",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aaa5-76df-a98c-374d0d39d2ce-2",
               "text": "业",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aaa5-76df-a98c-374d0d39d2ce-3",
               "text": "分",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -7109,19 +7735,22 @@ export const catalog = {
               "id": "019f3890-3a27-72e9-a963-3de7bdc4e23e-0",
               "text": "获得",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f3890-3a27-72e9-a963-3de7bdc4e23e-1",
               "text": "用来让出行的人临时休息的地方",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f3890-3a27-72e9-a963-3de7bdc4e23e-2",
               "text": "嘘气",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -7137,25 +7766,29 @@ export const catalog = {
               "id": "019f3890-3a27-72e9-a963-4327346131f0-0",
               "text": "上下结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿱"
             },
             {
               "id": "019f3890-3a27-72e9-a963-4327346131f0-1",
               "text": "半包围结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿸"
             },
             {
               "id": "019f3890-3a27-72e9-a963-4327346131f0-2",
               "text": "左中右结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿲"
             },
             {
               "id": "019f3890-3a27-72e9-a963-4327346131f0-3",
               "text": "左右结构",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿰"
             }
           ],
           "explanation": "让我们来看看“咐”字的结构吧。"
@@ -7169,21 +7802,24 @@ export const catalog = {
           "options": [
             {
               "id": "019f3890-3a27-72e9-a963-44922c338324-0",
-              "text": "选项 1",
+              "text": "",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f3890-3a27-72e9-a963-44922c338324-1",
-              "text": "选项 2",
+              "text": "",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f3890-3a27-72e9-a963-44922c338324-2",
-              "text": "选项 3",
+              "text": "",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": "“咐”的本义是嘘气哟。"
@@ -7199,25 +7835,29 @@ export const catalog = {
               "id": "019f3890-3a27-72e9-a963-4aa9a22627a1-0",
               "text": "子",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f3890-3a27-72e9-a963-4aa9a22627a1-1",
               "text": "付",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f3890-3a27-72e9-a963-4aa9a22627a1-2",
               "text": "口",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f3890-3a27-72e9-a963-4aa9a22627a1-3",
               "text": "每",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -7242,25 +7882,29 @@ export const catalog = {
               "id": "019f3890-3a31-714d-a5e8-3342726a7554-0",
               "text": "办",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f3890-3a31-714d-a5e8-3342726a7554-1",
               "text": "付",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f3890-3a31-714d-a5e8-3342726a7554-2",
               "text": "兄",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f3890-3a31-714d-a5e8-3342726a7554-3",
               "text": "口",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -7276,7 +7920,7 @@ export const catalog = {
         },
         {
           "id": "019f1453-00df-7407-8dda-43ab7920c0f6",
-          "origin": "间架结构",
+          "origin": "空间结构",
           "kind": "structure",
           "questionType": "character_structure_select",
           "prompt": "“咐”是什么结构?",
@@ -7285,25 +7929,29 @@ export const catalog = {
               "id": "019f1453-00df-7407-8dda-43ab7920c0f6-0",
               "text": "独体字",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "□"
             },
             {
               "id": "019f1453-00df-7407-8dda-43ab7920c0f6-1",
               "text": "左右结构",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿰"
             },
             {
               "id": "019f1453-00df-7407-8dda-43ab7920c0f6-2",
               "text": "左中右结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿲"
             },
             {
               "id": "019f1453-00df-7407-8dda-43ab7920c0f6-3",
               "text": "上中下结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿳"
             }
           ],
           "explanation": ""
@@ -7319,25 +7967,29 @@ export const catalog = {
               "id": "019f1455-aaa5-76df-a98c-382d95ea4746-0",
               "text": "口",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aaa5-76df-a98c-382d95ea4746-1",
               "text": "非",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aaa5-76df-a98c-382d95ea4746-2",
               "text": "付",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aaa5-76df-a98c-382d95ea4746-3",
               "text": "矢",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -7396,19 +8048,22 @@ export const catalog = {
               "id": "019f310c-3f0d-7549-8585-79afd7716756-0",
               "text": "原始狩猎工具",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f310c-3f0d-7549-8585-79afd7716756-1",
               "text": "茅草",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f310c-3f0d-7549-8585-79afd7716756-2",
               "text": "事物初生柔弱的样子",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -7424,25 +8079,29 @@ export const catalog = {
               "id": "019f310c-3f0d-7549-8585-7f500fa495de-0",
               "text": "左中右结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿲"
             },
             {
               "id": "019f310c-3f0d-7549-8585-7f500fa495de-1",
               "text": "半包围结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿸"
             },
             {
               "id": "019f310c-3f0d-7549-8585-7f500fa495de-2",
               "text": "左右结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿰"
             },
             {
               "id": "019f310c-3f0d-7549-8585-7f500fa495de-3",
               "text": "上下结构",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿱"
             }
           ],
           "explanation": "让我们来看看“茅”字的结构吧。"
@@ -7456,21 +8115,24 @@ export const catalog = {
           "options": [
             {
               "id": "019f310c-3f0d-7549-8585-83edccaebd16-0",
-              "text": "选项 1",
+              "text": "",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f310c-3f0d-7549-8585-83edccaebd16-1",
-              "text": "选项 2",
+              "text": "",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f310c-3f0d-7549-8585-83edccaebd16-2",
-              "text": "选项 3",
+              "text": "",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": "“茅”的本义是茅草哟。"
@@ -7486,25 +8148,29 @@ export const catalog = {
               "id": "019f310c-3f0d-7549-8585-874a3f3f3af1-0",
               "text": "夬",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f310c-3f0d-7549-8585-874a3f3f3af1-1",
               "text": "矛",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f310c-3f0d-7549-8585-874a3f3f3af1-2",
               "text": "光",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f310c-3f0d-7549-8585-874a3f3f3af1-3",
               "text": "艹",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -7529,25 +8195,29 @@ export const catalog = {
               "id": "019f310c-4079-71d9-a605-96b83d6f17d0-0",
               "text": "矛",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f310c-4079-71d9-a605-96b83d6f17d0-1",
               "text": "韦",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f310c-4079-71d9-a605-96b83d6f17d0-2",
               "text": "艹",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f310c-4079-71d9-a605-96b83d6f17d0-3",
               "text": "车",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -7563,7 +8233,7 @@ export const catalog = {
         },
         {
           "id": "019f1453-00e0-75c9-a876-a9862b422b24",
-          "origin": "间架结构",
+          "origin": "空间结构",
           "kind": "structure",
           "questionType": "character_structure_select",
           "prompt": "“茅”是什么结构?",
@@ -7572,25 +8242,29 @@ export const catalog = {
               "id": "019f1453-00e0-75c9-a876-a9862b422b24-0",
               "text": "全包围结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿴"
             },
             {
               "id": "019f1453-00e0-75c9-a876-a9862b422b24-1",
               "text": "上中下结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿳"
             },
             {
               "id": "019f1453-00e0-75c9-a876-a9862b422b24-2",
               "text": "左中右结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿲"
             },
             {
               "id": "019f1453-00e0-75c9-a876-a9862b422b24-3",
               "text": "上下结构",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿱"
             }
           ],
           "explanation": ""
@@ -7606,25 +8280,29 @@ export const catalog = {
               "id": "019f1455-aaa6-77bd-88ba-cdd6f3756042-0",
               "text": "小",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aaa6-77bd-88ba-cdd6f3756042-1",
               "text": "勺",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aaa6-77bd-88ba-cdd6f3756042-2",
               "text": "矛",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aaa6-77bd-88ba-cdd6f3756042-3",
               "text": "艹",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -7683,19 +8361,22 @@ export const catalog = {
               "id": "019f310c-3f01-74d6-beb4-7144b87ff51d-0",
               "text": "用来让出行的人临时休息的地方",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f310c-3f01-74d6-beb4-7144b87ff51d-1",
               "text": "张口吃饭",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f310c-3f01-74d6-beb4-7144b87ff51d-2",
               "text": "从事耕种的劳作",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -7711,25 +8392,29 @@ export const catalog = {
               "id": "019f310c-3f02-77c6-a420-1fad1ad349d1-0",
               "text": "上下结构",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿱"
             },
             {
               "id": "019f310c-3f02-77c6-a420-1fad1ad349d1-1",
               "text": "独体字",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "□"
             },
             {
               "id": "019f310c-3f02-77c6-a420-1fad1ad349d1-2",
               "text": "左中右结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿲"
             },
             {
               "id": "019f310c-3f02-77c6-a420-1fad1ad349d1-3",
               "text": "全包围结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿴"
             }
           ],
           "explanation": "让我们来看看“亭”字的结构吧。"
@@ -7743,21 +8428,24 @@ export const catalog = {
           "options": [
             {
               "id": "019f310c-3f02-77c6-a420-20f6925f5f4d-0",
-              "text": "选项 1",
+              "text": "",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f310c-3f02-77c6-a420-20f6925f5f4d-1",
-              "text": "选项 2",
+              "text": "",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f310c-3f02-77c6-a420-20f6925f5f4d-2",
-              "text": "选项 3",
+              "text": "",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": "“亭”的本义是用来让出行的人临时休息的地方哟。"
@@ -7773,25 +8461,29 @@ export const catalog = {
               "id": "019f310c-3f02-77c6-a420-24fef35946e7-0",
               "text": "丁",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f310c-3f02-77c6-a420-24fef35946e7-1",
               "text": "高",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f310c-3f02-77c6-a420-24fef35946e7-2",
               "text": "舀",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f310c-3f02-77c6-a420-24fef35946e7-3",
               "text": "而",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -7816,25 +8508,29 @@ export const catalog = {
               "id": "019f310c-4073-7777-8b77-b3da3079f979-0",
               "text": "昔",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f310c-4073-7777-8b77-b3da3079f979-1",
               "text": "丁",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f310c-4073-7777-8b77-b3da3079f979-2",
               "text": "高",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f310c-4073-7777-8b77-b3da3079f979-3",
               "text": "斥",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -7850,7 +8546,7 @@ export const catalog = {
         },
         {
           "id": "019f1453-00de-702f-8567-76ca56042597",
-          "origin": "间架结构",
+          "origin": "空间结构",
           "kind": "structure",
           "questionType": "character_structure_select",
           "prompt": "“亭”是什么结构?",
@@ -7859,25 +8555,29 @@ export const catalog = {
               "id": "019f1453-00de-702f-8567-76ca56042597-0",
               "text": "上下结构",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿱"
             },
             {
               "id": "019f1453-00de-702f-8567-76ca56042597-1",
               "text": "半包围结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿸"
             },
             {
               "id": "019f1453-00de-702f-8567-76ca56042597-2",
               "text": "左右结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿰"
             },
             {
               "id": "019f1453-00de-702f-8567-76ca56042597-3",
               "text": "全包围结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿴"
             }
           ],
           "explanation": ""
@@ -7893,25 +8593,29 @@ export const catalog = {
               "id": "019f1455-aaa4-706e-8bfe-5dd914912a2c-0",
               "text": "丁",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aaa4-706e-8bfe-5dd914912a2c-1",
               "text": "采",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aaa4-706e-8bfe-5dd914912a2c-2",
               "text": "从",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aaa4-706e-8bfe-5dd914912a2c-3",
               "text": "高",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -7970,19 +8674,22 @@ export const catalog = {
               "id": "019f310c-3f0e-73fc-b4c9-a4f50fcd0a02-0",
               "text": "价格高",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f310c-3f0e-73fc-b4c9-a4f50fcd0a02-1",
               "text": "色彩分布适当",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f310c-3f0e-73fc-b4c9-a4f50fcd0a02-2",
               "text": "有三排尖齿的武器",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -7998,25 +8705,29 @@ export const catalog = {
               "id": "019f310c-3f0e-73fc-b4c9-ab5909e41b89-0",
               "text": "左右结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿰"
             },
             {
               "id": "019f310c-3f0e-73fc-b4c9-ab5909e41b89-1",
               "text": "左中右结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿲"
             },
             {
               "id": "019f310c-3f0e-73fc-b4c9-ab5909e41b89-2",
               "text": "上下结构",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿱"
             },
             {
               "id": "019f310c-3f0e-73fc-b4c9-ab5909e41b89-3",
               "text": "独体字",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "□"
             }
           ],
           "explanation": "让我们来看看“贵”字的结构吧。"
@@ -8030,21 +8741,24 @@ export const catalog = {
           "options": [
             {
               "id": "019f310c-3f0e-73fc-b4c9-acad83f92f18-0",
-              "text": "选项 1",
+              "text": "",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f310c-3f0e-73fc-b4c9-acad83f92f18-1",
-              "text": "选项 2",
+              "text": "",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f310c-3f0e-73fc-b4c9-acad83f92f18-2",
-              "text": "选项 3",
+              "text": "",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": "“贵”的本义是价格高哟。"
@@ -8060,25 +8774,29 @@ export const catalog = {
               "id": "019f310c-3f0e-73fc-b4c9-b0ace954f88d-0",
               "text": "皮",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f310c-3f0e-73fc-b4c9-b0ace954f88d-1",
               "text": "奏",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f310c-3f0e-73fc-b4c9-b0ace954f88d-2",
               "text": "贝",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f310c-3f0e-73fc-b4c9-b0ace954f88d-3",
               "text": "臾",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -8103,25 +8821,29 @@ export const catalog = {
               "id": "019f310c-407a-767a-8d9e-fec45caa0b79-0",
               "text": "臾",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f310c-407a-767a-8d9e-fec45caa0b79-1",
               "text": "区",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f310c-407a-767a-8d9e-fec45caa0b79-2",
               "text": "贝",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f310c-407a-767a-8d9e-fec45caa0b79-3",
               "text": "止",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -8137,7 +8859,7 @@ export const catalog = {
         },
         {
           "id": "019f1453-00e0-75c9-a876-ad9bdd0c9b6b",
-          "origin": "间架结构",
+          "origin": "空间结构",
           "kind": "structure",
           "questionType": "character_structure_select",
           "prompt": "“贵”是什么结构?",
@@ -8146,25 +8868,29 @@ export const catalog = {
               "id": "019f1453-00e0-75c9-a876-ad9bdd0c9b6b-0",
               "text": "独体字",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "□"
             },
             {
               "id": "019f1453-00e0-75c9-a876-ad9bdd0c9b6b-1",
               "text": "上下结构",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿱"
             },
             {
               "id": "019f1453-00e0-75c9-a876-ad9bdd0c9b6b-2",
               "text": "全包围结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿴"
             },
             {
               "id": "019f1453-00e0-75c9-a876-ad9bdd0c9b6b-3",
               "text": "半包围结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿸"
             }
           ],
           "explanation": ""
@@ -8180,25 +8906,29 @@ export const catalog = {
               "id": "019f1455-aaa7-7549-b1a4-1c800560f1bf-0",
               "text": "臾",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aaa7-7549-b1a4-1c800560f1bf-1",
               "text": "小",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aaa7-7549-b1a4-1c800560f1bf-2",
               "text": "贝",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aaa7-7549-b1a4-1c800560f1bf-3",
               "text": "用",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -8257,19 +8987,22 @@ export const catalog = {
               "id": "019f310c-3f07-71c3-87a2-3ac462815c22-0",
               "text": "事物初生柔弱的样子",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f310c-3f07-71c3-87a2-3ac462815c22-1",
               "text": "赘疣",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f310c-3f07-71c3-87a2-3ac462815c22-2",
               "text": "劳作时加油鼓劲儿的歌声",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -8285,25 +9018,29 @@ export const catalog = {
               "id": "019f310c-3f07-71c3-87a2-3d02230b6b83-0",
               "text": "上中下结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿳"
             },
             {
               "id": "019f310c-3f07-71c3-87a2-3d02230b6b83-1",
               "text": "独体字",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "□"
             },
             {
               "id": "019f310c-3f07-71c3-87a2-3d02230b6b83-2",
               "text": "半包围结构",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿹"
             },
             {
               "id": "019f310c-3f07-71c3-87a2-3d02230b6b83-3",
               "text": "左中右结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿲"
             }
           ],
           "explanation": "让我们来看看“可”字的结构吧。"
@@ -8317,21 +9054,24 @@ export const catalog = {
           "options": [
             {
               "id": "019f310c-3f07-71c3-87a2-4046cb0bd7a5-0",
-              "text": "选项 1",
+              "text": "",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f310c-3f07-71c3-87a2-4046cb0bd7a5-1",
-              "text": "选项 2",
+              "text": "",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f310c-3f07-71c3-87a2-4046cb0bd7a5-2",
-              "text": "选项 3",
+              "text": "",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": "“可”的本义是劳作时加油鼓劲儿的歌声哟。"
@@ -8347,25 +9087,29 @@ export const catalog = {
               "id": "019f310c-3f07-71c3-87a2-47cfb51ec6fd-0",
               "text": "口",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f310c-3f07-71c3-87a2-47cfb51ec6fd-1",
               "text": "包",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f310c-3f07-71c3-87a2-47cfb51ec6fd-2",
               "text": "丂",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f310c-3f07-71c3-87a2-47cfb51ec6fd-3",
               "text": "人彡",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -8390,25 +9134,29 @@ export const catalog = {
               "id": "019f310c-4076-72ec-9251-ae8d81b7db21-0",
               "text": "区",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f310c-4076-72ec-9251-ae8d81b7db21-1",
               "text": "旦",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f310c-4076-72ec-9251-ae8d81b7db21-2",
               "text": "口",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f310c-4076-72ec-9251-ae8d81b7db21-3",
               "text": "丂",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -8424,7 +9172,7 @@ export const catalog = {
         },
         {
           "id": "019f1453-00de-702f-8567-7f97ad8bbd49",
-          "origin": "间架结构",
+          "origin": "空间结构",
           "kind": "structure",
           "questionType": "character_structure_select",
           "prompt": "“可”是什么结构?",
@@ -8433,25 +9181,29 @@ export const catalog = {
               "id": "019f1453-00de-702f-8567-7f97ad8bbd49-0",
               "text": "独体字",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "□"
             },
             {
               "id": "019f1453-00de-702f-8567-7f97ad8bbd49-1",
               "text": "半包围结构",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿹"
             },
             {
               "id": "019f1453-00de-702f-8567-7f97ad8bbd49-2",
               "text": "上中下结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿳"
             },
             {
               "id": "019f1453-00de-702f-8567-7f97ad8bbd49-3",
               "text": "左中右结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿲"
             }
           ],
           "explanation": ""
@@ -8467,25 +9219,29 @@ export const catalog = {
               "id": "019f1455-aaa5-76df-a98c-32af5aff3aef-0",
               "text": "丂",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aaa5-76df-a98c-32af5aff3aef-1",
               "text": "犭",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aaa5-76df-a98c-32af5aff3aef-2",
               "text": "口",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aaa5-76df-a98c-32af5aff3aef-3",
               "text": "仓",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -8544,19 +9300,22 @@ export const catalog = {
               "id": "019f3890-3a2b-71f9-86d2-d2cd198e8f9c-0",
               "text": "背诵、朗读",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f3890-3a2b-71f9-86d2-d2cd198e8f9c-1",
               "text": "錾凿一类的工具",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f3890-3a2b-71f9-86d2-d2cd198e8f9c-2",
               "text": "绿色",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -8572,25 +9331,29 @@ export const catalog = {
               "id": "019f3890-3a2b-71f9-86d2-d7804250af22-0",
               "text": "半包围结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿸"
             },
             {
               "id": "019f3890-3a2b-71f9-86d2-d7804250af22-1",
               "text": "上中下结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿳"
             },
             {
               "id": "019f3890-3a2b-71f9-86d2-d7804250af22-2",
               "text": "全包围结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿴"
             },
             {
               "id": "019f3890-3a2b-71f9-86d2-d7804250af22-3",
               "text": "左右结构",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿰"
             }
           ],
           "explanation": "让我们来看看“绿”字的结构吧。"
@@ -8604,21 +9367,24 @@ export const catalog = {
           "options": [
             {
               "id": "019f3890-3a2b-71f9-86d2-db74937e5b84-0",
-              "text": "选项 1",
+              "text": "",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f3890-3a2b-71f9-86d2-db74937e5b84-1",
-              "text": "选项 2",
+              "text": "",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f3890-3a2b-71f9-86d2-db74937e5b84-2",
-              "text": "选项 3",
+              "text": "",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": "“绿”的本义是绿色哟。"
@@ -8634,25 +9400,29 @@ export const catalog = {
               "id": "019f3890-3a2b-71f9-86d2-dd0a045e5ebd-0",
               "text": "纟",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f3890-3a2b-71f9-86d2-dd0a045e5ebd-1",
               "text": "尸",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f3890-3a2b-71f9-86d2-dd0a045e5ebd-2",
               "text": "录",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f3890-3a2b-71f9-86d2-dd0a045e5ebd-3",
               "text": "用",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -8677,25 +9447,29 @@ export const catalog = {
               "id": "019f3890-3a32-729b-9c74-ddc2a67326e4-0",
               "text": "周",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f3890-3a32-729b-9c74-ddc2a67326e4-1",
               "text": "录",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f3890-3a32-729b-9c74-ddc2a67326e4-2",
               "text": "屮",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f3890-3a32-729b-9c74-ddc2a67326e4-3",
               "text": "纟",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -8711,7 +9485,7 @@ export const catalog = {
         },
         {
           "id": "019f1453-00df-7407-8dda-57bbe290bc0f",
-          "origin": "间架结构",
+          "origin": "空间结构",
           "kind": "structure",
           "questionType": "character_structure_select",
           "prompt": "“绿”是什么结构?",
@@ -8720,25 +9494,29 @@ export const catalog = {
               "id": "019f1453-00df-7407-8dda-57bbe290bc0f-0",
               "text": "全包围结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿴"
             },
             {
               "id": "019f1453-00df-7407-8dda-57bbe290bc0f-1",
               "text": "上下结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿱"
             },
             {
               "id": "019f1453-00df-7407-8dda-57bbe290bc0f-2",
               "text": "独体字",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "□"
             },
             {
               "id": "019f1453-00df-7407-8dda-57bbe290bc0f-3",
               "text": "左右结构",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿰"
             }
           ],
           "explanation": ""
@@ -8754,25 +9532,29 @@ export const catalog = {
               "id": "019f1455-aaa6-77bd-88ba-cb29e83031c1-0",
               "text": "录",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aaa6-77bd-88ba-cb29e83031c1-1",
               "text": "竹",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aaa6-77bd-88ba-cb29e83031c1-2",
               "text": "纟",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aaa6-77bd-88ba-cb29e83031c1-3",
               "text": "世",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -8834,19 +9616,22 @@ export const catalog = {
               "id": "019f310c-3f0b-733e-8a13-c3f52a4a7c57-0",
               "text": "事物初生柔弱的样子",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f310c-3f0b-733e-8a13-c3f52a4a7c57-1",
               "text": "古人居住的半地下土窖。地室",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f310c-3f0b-733e-8a13-c3f52a4a7c57-2",
               "text": "空气中降落的白色冰晶体",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -8862,25 +9647,29 @@ export const catalog = {
               "id": "019f310c-3f0b-733e-8a13-c45f31cfec8f-0",
               "text": "半包围结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿸"
             },
             {
               "id": "019f310c-3f0b-733e-8a13-c45f31cfec8f-1",
               "text": "独体字",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "□"
             },
             {
               "id": "019f310c-3f0b-733e-8a13-c45f31cfec8f-2",
               "text": "上下结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿱"
             },
             {
               "id": "019f310c-3f0b-733e-8a13-c45f31cfec8f-3",
               "text": "左右结构",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿰"
             }
           ],
           "explanation": "让我们来看看“嫩”字的结构吧。"
@@ -8894,21 +9683,24 @@ export const catalog = {
           "options": [
             {
               "id": "019f310c-3f0b-733e-8a13-c8fca51d3df7-0",
-              "text": "选项 1",
+              "text": "",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f310c-3f0b-733e-8a13-c8fca51d3df7-1",
-              "text": "选项 2",
+              "text": "",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f310c-3f0b-733e-8a13-c8fca51d3df7-2",
-              "text": "选项 3",
+              "text": "",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": "“嫩”的本义是事物初生柔弱的样子哟。"
@@ -8924,25 +9716,29 @@ export const catalog = {
               "id": "019f310c-3f0b-733e-8a13-ce9f20c8bb58-0",
               "text": "句",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f310c-3f0b-733e-8a13-ce9f20c8bb58-1",
               "text": "弱",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f310c-3f0b-733e-8a13-ce9f20c8bb58-2",
               "text": "女",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f310c-3f0b-733e-8a13-ce9f20c8bb58-3",
               "text": "敕",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -8967,25 +9763,29 @@ export const catalog = {
               "id": "019f310c-4078-743d-8ce9-55428e7969e5-0",
               "text": "巳",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f310c-4078-743d-8ce9-55428e7969e5-1",
               "text": "女",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f310c-4078-743d-8ce9-55428e7969e5-2",
               "text": "敕",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f310c-4078-743d-8ce9-55428e7969e5-3",
               "text": "佥",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -9001,7 +9801,7 @@ export const catalog = {
         },
         {
           "id": "019f1453-00df-7407-8dda-4831977123f8",
-          "origin": "间架结构",
+          "origin": "空间结构",
           "kind": "structure",
           "questionType": "character_structure_select",
           "prompt": "“嫩”是什么结构?",
@@ -9010,25 +9810,29 @@ export const catalog = {
               "id": "019f1453-00df-7407-8dda-4831977123f8-0",
               "text": "独体字",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "□"
             },
             {
               "id": "019f1453-00df-7407-8dda-4831977123f8-1",
               "text": "左右结构",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿰"
             },
             {
               "id": "019f1453-00df-7407-8dda-4831977123f8-2",
               "text": "左中右结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿲"
             },
             {
               "id": "019f1453-00df-7407-8dda-4831977123f8-3",
               "text": "全包围结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿴"
             }
           ],
           "explanation": ""
@@ -9044,25 +9848,29 @@ export const catalog = {
               "id": "019f1455-aaa6-77bd-88ba-bd7c3f2cc76e-0",
               "text": "敕",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aaa6-77bd-88ba-bd7c3f2cc76e-1",
               "text": "阝",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aaa6-77bd-88ba-bd7c3f2cc76e-2",
               "text": "玉",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aaa6-77bd-88ba-bd7c3f2cc76e-3",
               "text": "女",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -9104,19 +9912,22 @@ export const catalog = {
               "id": "019f310c-3f0f-7239-acbe-4fe087904c43-0",
               "text": "古代计时的漏壶",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f310c-3f0f-7239-acbe-4fe087904c43-1",
               "text": "山脊",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f310c-3f0f-7239-acbe-4fe087904c43-2",
               "text": "脸",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -9132,25 +9943,29 @@ export const catalog = {
               "id": "019f310c-3f0f-7239-acbe-5399e16513f7-0",
               "text": "独体字",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": "□"
             },
             {
               "id": "019f310c-3f0f-7239-acbe-5399e16513f7-1",
               "text": "上中下结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿳"
             },
             {
               "id": "019f310c-3f0f-7239-acbe-5399e16513f7-2",
               "text": "全包围结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿴"
             },
             {
               "id": "019f310c-3f0f-7239-acbe-5399e16513f7-3",
               "text": "半包围结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿸"
             }
           ],
           "explanation": "让我们来看看“面”字的结构吧。"
@@ -9164,21 +9979,24 @@ export const catalog = {
           "options": [
             {
               "id": "019f310c-3f0f-7239-acbe-5528514fcb09-0",
-              "text": "选项 1",
+              "text": "",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f310c-3f0f-7239-acbe-5528514fcb09-1",
-              "text": "选项 2",
+              "text": "",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f310c-3f0f-7239-acbe-5528514fcb09-2",
-              "text": "选项 3",
+              "text": "",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": "“面”的本义是脸哟。"
@@ -9203,7 +10021,7 @@ export const catalog = {
         },
         {
           "id": "019f1453-00e0-75c9-a876-b1f56e8994b0",
-          "origin": "间架结构",
+          "origin": "空间结构",
           "kind": "structure",
           "questionType": "character_structure_select",
           "prompt": "“面”是什么结构?",
@@ -9212,25 +10030,29 @@ export const catalog = {
               "id": "019f1453-00e0-75c9-a876-b1f56e8994b0-0",
               "text": "独体字",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": "□"
             },
             {
               "id": "019f1453-00e0-75c9-a876-b1f56e8994b0-1",
               "text": "全包围结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿴"
             },
             {
               "id": "019f1453-00e0-75c9-a876-b1f56e8994b0-2",
               "text": "左右结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿰"
             },
             {
               "id": "019f1453-00e0-75c9-a876-b1f56e8994b0-3",
               "text": "半包围结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿸"
             }
           ],
           "explanation": ""
@@ -9246,25 +10068,29 @@ export const catalog = {
               "id": "019f1455-aaa7-7549-b1a4-216bc6cde641-0",
               "text": "甬",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aaa7-7549-b1a4-216bc6cde641-1",
               "text": "面",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aaa7-7549-b1a4-216bc6cde641-2",
               "text": "同",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aaa7-7549-b1a4-216bc6cde641-3",
               "text": "娄",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -9323,19 +10149,22 @@ export const catalog = {
               "id": "019f310c-3f05-77fe-b934-84a8a2c3321c-0",
               "text": "身体",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f310c-3f05-77fe-b934-84a8a2c3321c-1",
               "text": "能容纳众多河流的广阔水域",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f310c-3f05-77fe-b934-84a8a2c3321c-2",
               "text": "警告，规劝",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -9351,25 +10180,29 @@ export const catalog = {
               "id": "019f310c-3f05-77fe-b934-8a92121c987c-0",
               "text": "上下结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿱"
             },
             {
               "id": "019f310c-3f05-77fe-b934-8a92121c987c-1",
               "text": "半包围结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿸"
             },
             {
               "id": "019f310c-3f05-77fe-b934-8a92121c987c-2",
               "text": "左右结构",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿰"
             },
             {
               "id": "019f310c-3f05-77fe-b934-8a92121c987c-3",
               "text": "独体字",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "□"
             }
           ],
           "explanation": "让我们来看看“体”字的结构吧。"
@@ -9383,21 +10216,24 @@ export const catalog = {
           "options": [
             {
               "id": "019f310c-3f05-77fe-b934-8f8aec4e9538-0",
-              "text": "选项 1",
+              "text": "",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f310c-3f05-77fe-b934-8f8aec4e9538-1",
-              "text": "选项 2",
+              "text": "",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f310c-3f05-77fe-b934-8f8aec4e9538-2",
-              "text": "选项 3",
+              "text": "",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": "“体”的本义是身体哟。"
@@ -9413,25 +10249,29 @@ export const catalog = {
               "id": "019f310c-3f05-77fe-b934-93447cb7fc49-0",
               "text": "欠",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f310c-3f05-77fe-b934-93447cb7fc49-1",
               "text": "本",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f310c-3f05-77fe-b934-93447cb7fc49-2",
               "text": "一口",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f310c-3f05-77fe-b934-93447cb7fc49-3",
               "text": "亻",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -9456,25 +10296,29 @@ export const catalog = {
               "id": "019f310c-4075-7382-bdf3-344f279b8d5e-0",
               "text": "夆",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f310c-4075-7382-bdf3-344f279b8d5e-1",
               "text": "本",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f310c-4075-7382-bdf3-344f279b8d5e-2",
               "text": "亻",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f310c-4075-7382-bdf3-344f279b8d5e-3",
               "text": "正",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -9490,7 +10334,7 @@ export const catalog = {
         },
         {
           "id": "019f1453-00de-702f-8567-7bc8e361c76c",
-          "origin": "间架结构",
+          "origin": "空间结构",
           "kind": "structure",
           "questionType": "character_structure_select",
           "prompt": "“体”是什么结构?",
@@ -9499,25 +10343,29 @@ export const catalog = {
               "id": "019f1453-00de-702f-8567-7bc8e361c76c-0",
               "text": "左中右结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿲"
             },
             {
               "id": "019f1453-00de-702f-8567-7bc8e361c76c-1",
               "text": "全包围结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿴"
             },
             {
               "id": "019f1453-00de-702f-8567-7bc8e361c76c-2",
               "text": "上下结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿱"
             },
             {
               "id": "019f1453-00de-702f-8567-7bc8e361c76c-3",
               "text": "左右结构",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿰"
             }
           ],
           "explanation": ""
@@ -9533,25 +10381,29 @@ export const catalog = {
               "id": "019f1455-aaa4-706e-8bfe-636bf80abc05-0",
               "text": "鸟",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aaa4-706e-8bfe-636bf80abc05-1",
               "text": "亻",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aaa4-706e-8bfe-636bf80abc05-2",
               "text": "本",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aaa4-706e-8bfe-636bf80abc05-3",
               "text": "弓",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -9593,19 +10445,22 @@ export const catalog = {
               "id": "019f5658-69c7-7019-a8d5-62983081eafe-0",
               "text": "说个没完没了",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f5658-69c7-7019-a8d5-62983081eafe-1",
               "text": "语气平和舒顺",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f5658-69c7-7019-a8d5-62983081eafe-2",
               "text": "言语、话语",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -9621,25 +10476,29 @@ export const catalog = {
               "id": "019f5658-69c7-7019-a8d5-67dae0173651-0",
               "text": "全包围结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿴"
             },
             {
               "id": "019f5658-69c7-7019-a8d5-67dae0173651-1",
               "text": "左右结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿰"
             },
             {
               "id": "019f5658-69c7-7019-a8d5-67dae0173651-2",
               "text": "独体字",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": "□"
             },
             {
               "id": "019f5658-69c7-7019-a8d5-67dae0173651-3",
               "text": "上下结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿱"
             }
           ],
           "explanation": "让我们来看看“平”字的结构吧。"
@@ -9653,21 +10512,24 @@ export const catalog = {
           "options": [
             {
               "id": "019f5658-69c7-7019-a8d5-6b463b575640-0",
-              "text": "选项 1",
+              "text": "",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f5658-69c7-7019-a8d5-6b463b575640-1",
-              "text": "选项 2",
+              "text": "",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f5658-69c7-7019-a8d5-6b463b575640-2",
-              "text": "选项 3",
+              "text": "",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": "“平”的本义是语气平和舒顺哟。"
@@ -9692,7 +10554,7 @@ export const catalog = {
         },
         {
           "id": "019f1453-00e3-766e-ad65-64e19b977eb7",
-          "origin": "间架结构",
+          "origin": "空间结构",
           "kind": "structure",
           "questionType": "character_structure_select",
           "prompt": "“平”是什么结构?",
@@ -9701,25 +10563,29 @@ export const catalog = {
               "id": "019f1453-00e3-766e-ad65-64e19b977eb7-0",
               "text": "独体字",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": "□"
             },
             {
               "id": "019f1453-00e3-766e-ad65-64e19b977eb7-1",
               "text": "左右结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿰"
             },
             {
               "id": "019f1453-00e3-766e-ad65-64e19b977eb7-2",
               "text": "上中下结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿳"
             },
             {
               "id": "019f1453-00e3-766e-ad65-64e19b977eb7-3",
               "text": "上下结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿱"
             }
           ],
           "explanation": ""
@@ -9735,25 +10601,29 @@ export const catalog = {
               "id": "019f1455-aaad-724a-a0b5-ce50d65618f4-0",
               "text": "不",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aaad-724a-a0b5-ce50d65618f4-1",
               "text": "平",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aaad-724a-a0b5-ce50d65618f4-2",
               "text": "寺",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aaad-724a-a0b5-ce50d65618f4-3",
               "text": "内",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -9803,7 +10673,7 @@ export const catalog = {
       "exercises": [
         {
           "id": "019f1453-00e1-731a-a12d-7ebe9d1546c7",
-          "origin": "间架结构",
+          "origin": "空间结构",
           "kind": "structure",
           "questionType": "character_structure_select",
           "prompt": "“原”是什么结构?",
@@ -9812,25 +10682,29 @@ export const catalog = {
               "id": "019f1453-00e1-731a-a12d-7ebe9d1546c7-0",
               "text": "独体字",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "□"
             },
             {
               "id": "019f1453-00e1-731a-a12d-7ebe9d1546c7-1",
               "text": "左右结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿰"
             },
             {
               "id": "019f1453-00e1-731a-a12d-7ebe9d1546c7-2",
               "text": "半包围结构",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿸"
             },
             {
               "id": "019f1453-00e1-731a-a12d-7ebe9d1546c7-3",
               "text": "上中下结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿳"
             }
           ],
           "explanation": ""
@@ -9846,25 +10720,29 @@ export const catalog = {
               "id": "019f1455-aaab-70a3-bc5f-ce4600f61ce6-0",
               "text": "厂",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aaab-70a3-bc5f-ce4600f61ce6-1",
               "text": "丸",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aaab-70a3-bc5f-ce4600f61ce6-2",
               "text": "泉",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aaab-70a3-bc5f-ce4600f61ce6-3",
               "text": "几",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -9917,7 +10795,7 @@ export const catalog = {
       "exercises": [
         {
           "id": "019f1453-00e2-7739-af2a-173950c0f146",
-          "origin": "间架结构",
+          "origin": "空间结构",
           "kind": "structure",
           "questionType": "character_structure_select",
           "prompt": "“封”是什么结构?",
@@ -9926,25 +10804,29 @@ export const catalog = {
               "id": "019f1453-00e2-7739-af2a-173950c0f146-0",
               "text": "上中下结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿳"
             },
             {
               "id": "019f1453-00e2-7739-af2a-173950c0f146-1",
               "text": "左右结构",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿰"
             },
             {
               "id": "019f1453-00e2-7739-af2a-173950c0f146-2",
               "text": "半包围结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿸"
             },
             {
               "id": "019f1453-00e2-7739-af2a-173950c0f146-3",
               "text": "全包围结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿴"
             }
           ],
           "explanation": ""
@@ -9960,25 +10842,29 @@ export const catalog = {
               "id": "019f1455-aaac-7418-b6e6-fb56152ce1a1-0",
               "text": "气",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aaac-7418-b6e6-fb56152ce1a1-1",
               "text": "⺮",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aaac-7418-b6e6-fb56152ce1a1-2",
               "text": "圭",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aaac-7418-b6e6-fb56152ce1a1-3",
               "text": "寸",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -10027,7 +10913,7 @@ export const catalog = {
       "exercises": [
         {
           "id": "019f1453-00e7-75e9-bbfb-79f10963e2bd",
-          "origin": "间架结构",
+          "origin": "空间结构",
           "kind": "structure",
           "questionType": "character_structure_select",
           "prompt": "“锁”是什么结构?",
@@ -10036,25 +10922,29 @@ export const catalog = {
               "id": "019f1453-00e7-75e9-bbfb-79f10963e2bd-0",
               "text": "上下结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿱"
             },
             {
               "id": "019f1453-00e7-75e9-bbfb-79f10963e2bd-1",
               "text": "上中下结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿳"
             },
             {
               "id": "019f1453-00e7-75e9-bbfb-79f10963e2bd-2",
               "text": "左右结构",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿰"
             },
             {
               "id": "019f1453-00e7-75e9-bbfb-79f10963e2bd-3",
               "text": "全包围结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿴"
             }
           ],
           "explanation": ""
@@ -10070,25 +10960,29 @@ export const catalog = {
               "id": "019f1455-aab3-75c3-b03d-486b40c17664-0",
               "text": "夫",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aab3-75c3-b03d-486b40c17664-1",
               "text": "钅",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aab3-75c3-b03d-486b40c17664-2",
               "text": "讠",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aab3-75c3-b03d-486b40c17664-3",
               "text": "⺌贝",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -10141,7 +11035,7 @@ export const catalog = {
       "exercises": [
         {
           "id": "019f1453-00e6-71a2-ac7b-64be16d0fe94",
-          "origin": "间架结构",
+          "origin": "空间结构",
           "kind": "structure",
           "questionType": "character_structure_select",
           "prompt": "“粉”是什么结构?",
@@ -10150,25 +11044,29 @@ export const catalog = {
               "id": "019f1453-00e6-71a2-ac7b-64be16d0fe94-0",
               "text": "半包围结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿸"
             },
             {
               "id": "019f1453-00e6-71a2-ac7b-64be16d0fe94-1",
               "text": "左右结构",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿰"
             },
             {
               "id": "019f1453-00e6-71a2-ac7b-64be16d0fe94-2",
               "text": "全包围结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿴"
             },
             {
               "id": "019f1453-00e6-71a2-ac7b-64be16d0fe94-3",
               "text": "左中右结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿲"
             }
           ],
           "explanation": ""
@@ -10184,25 +11082,29 @@ export const catalog = {
               "id": "019f1455-aab2-722a-a2af-12211cae2ccb-0",
               "text": "并",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aab2-722a-a2af-12211cae2ccb-1",
               "text": "占",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aab2-722a-a2af-12211cae2ccb-2",
               "text": "分",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aab2-722a-a2af-12211cae2ccb-3",
               "text": "米",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -10252,7 +11154,7 @@ export const catalog = {
       "exercises": [
         {
           "id": "019f1453-00e5-7269-b6ed-362476108432",
-          "origin": "间架结构",
+          "origin": "空间结构",
           "kind": "structure",
           "questionType": "character_structure_select",
           "prompt": "“碎”是什么结构?",
@@ -10261,25 +11163,29 @@ export const catalog = {
               "id": "019f1453-00e5-7269-b6ed-362476108432-0",
               "text": "全包围结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿴"
             },
             {
               "id": "019f1453-00e5-7269-b6ed-362476108432-1",
               "text": "半包围结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿸"
             },
             {
               "id": "019f1453-00e5-7269-b6ed-362476108432-2",
               "text": "左右结构",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿰"
             },
             {
               "id": "019f1453-00e5-7269-b6ed-362476108432-3",
               "text": "左中右结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿲"
             }
           ],
           "explanation": ""
@@ -10295,25 +11201,29 @@ export const catalog = {
               "id": "019f1455-aab1-7046-91e0-6ca5649b9bc4-0",
               "text": "卒",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aab1-7046-91e0-6ca5649b9bc4-1",
               "text": "灬",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aab1-7046-91e0-6ca5649b9bc4-2",
               "text": "石",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aab1-7046-91e0-6ca5649b9bc4-3",
               "text": "覀",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -10365,7 +11275,7 @@ export const catalog = {
       "exercises": [
         {
           "id": "019f1453-00e6-71a2-ac7b-60c39e225027",
-          "origin": "间架结构",
+          "origin": "空间结构",
           "kind": "structure",
           "questionType": "character_structure_select",
           "prompt": "“简”是什么结构?",
@@ -10374,25 +11284,29 @@ export const catalog = {
               "id": "019f1453-00e6-71a2-ac7b-60c39e225027-0",
               "text": "全包围结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿴"
             },
             {
               "id": "019f1453-00e6-71a2-ac7b-60c39e225027-1",
               "text": "半包围结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿸"
             },
             {
               "id": "019f1453-00e6-71a2-ac7b-60c39e225027-2",
               "text": "左中右结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿲"
             },
             {
               "id": "019f1453-00e6-71a2-ac7b-60c39e225027-3",
               "text": "上下结构",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿱"
             }
           ],
           "explanation": ""
@@ -10408,25 +11322,29 @@ export const catalog = {
               "id": "019f1455-aab2-722a-a2af-0cf3fbe44375-0",
               "text": "二",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aab2-722a-a2af-0cf3fbe44375-1",
               "text": "间",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aab2-722a-a2af-0cf3fbe44375-2",
               "text": "尧",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aab2-722a-a2af-0cf3fbe44375-3",
               "text": "⺮",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -10478,7 +11396,7 @@ export const catalog = {
       "exercises": [
         {
           "id": "019f1453-00e5-7269-b6ed-2ae5e755b138",
-          "origin": "间架结构",
+          "origin": "空间结构",
           "kind": "structure",
           "questionType": "character_structure_select",
           "prompt": "“直”是什么结构?",
@@ -10487,25 +11405,29 @@ export const catalog = {
               "id": "019f1453-00e5-7269-b6ed-2ae5e755b138-0",
               "text": "半包围结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿸"
             },
             {
               "id": "019f1453-00e5-7269-b6ed-2ae5e755b138-1",
               "text": "上中下结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿳"
             },
             {
               "id": "019f1453-00e5-7269-b6ed-2ae5e755b138-2",
               "text": "全包围结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿴"
             },
             {
               "id": "019f1453-00e5-7269-b6ed-2ae5e755b138-3",
               "text": "上下结构",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿱"
             }
           ],
           "explanation": ""
@@ -10521,25 +11443,29 @@ export const catalog = {
               "id": "019f1455-aab0-751a-bfbc-56074eb45d2f-0",
               "text": "同",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aab0-751a-bfbc-56074eb45d2f-1",
               "text": "咅",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aab0-751a-bfbc-56074eb45d2f-2",
               "text": "直",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aab0-751a-bfbc-56074eb45d2f-3",
               "text": "矢",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -10572,7 +11498,7 @@ export const catalog = {
       "exercises": [
         {
           "id": "019f1453-00e3-766e-ad65-6a564f932287",
-          "origin": "间架结构",
+          "origin": "空间结构",
           "kind": "structure",
           "questionType": "character_structure_select",
           "prompt": "“广”是什么结构?",
@@ -10581,25 +11507,29 @@ export const catalog = {
               "id": "019f1453-00e3-766e-ad65-6a564f932287-0",
               "text": "半包围结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿸"
             },
             {
               "id": "019f1453-00e3-766e-ad65-6a564f932287-1",
               "text": "左右结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿰"
             },
             {
               "id": "019f1453-00e3-766e-ad65-6a564f932287-2",
               "text": "左中右结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿲"
             },
             {
               "id": "019f1453-00e3-766e-ad65-6a564f932287-3",
               "text": "独体字",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": "□"
             }
           ],
           "explanation": ""
@@ -10615,25 +11545,29 @@ export const catalog = {
               "id": "019f1455-aaad-724a-a0b5-d19d8eb5b3c0-0",
               "text": "糸",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aaad-724a-a0b5-d19d8eb5b3c0-1",
               "text": "广",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aaad-724a-a0b5-d19d8eb5b3c0-2",
               "text": "直",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aaad-724a-a0b5-d19d8eb5b3c0-3",
               "text": "区",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -10695,19 +11629,22 @@ export const catalog = {
               "id": "019f5658-69cc-72cc-86ad-3f47fc9cce91-0",
               "text": "开阔",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f5658-69cc-72cc-86ad-3f47fc9cce91-1",
               "text": "讲述",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f5658-69cc-72cc-86ad-3f47fc9cce91-2",
               "text": "举手挥动叫人来",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -10723,25 +11660,29 @@ export const catalog = {
               "id": "019f5658-69cc-72cc-86ad-415d84f6dabe-0",
               "text": "左中右结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿲"
             },
             {
               "id": "019f5658-69cc-72cc-86ad-415d84f6dabe-1",
               "text": "左右结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿰"
             },
             {
               "id": "019f5658-69cc-72cc-86ad-415d84f6dabe-2",
               "text": "半包围结构",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿵"
             },
             {
               "id": "019f5658-69cc-72cc-86ad-415d84f6dabe-3",
               "text": "上下结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿱"
             }
           ],
           "explanation": "让我们来看看“阔”字的结构吧。"
@@ -10755,21 +11696,24 @@ export const catalog = {
           "options": [
             {
               "id": "019f5658-69cc-72cc-86ad-456ae7821710-0",
-              "text": "选项 1",
+              "text": "",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f5658-69cc-72cc-86ad-456ae7821710-1",
-              "text": "选项 2",
+              "text": "",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f5658-69cc-72cc-86ad-456ae7821710-2",
-              "text": "选项 3",
+              "text": "",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": "“阔”的本义是开阔哟。"
@@ -10785,25 +11729,29 @@ export const catalog = {
               "id": "019f5658-69cc-72cc-86ad-4b198f7cf8a1-0",
               "text": "大",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f5658-69cc-72cc-86ad-4b198f7cf8a1-1",
               "text": "门",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f5658-69cc-72cc-86ad-4b198f7cf8a1-2",
               "text": "活",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f5658-69cc-72cc-86ad-4b198f7cf8a1-3",
               "text": "矛",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -10828,25 +11776,29 @@ export const catalog = {
               "id": "019f5658-69d3-73fd-9bc2-9dee345d8666-0",
               "text": "活",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f5658-69d3-73fd-9bc2-9dee345d8666-1",
               "text": "父",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f5658-69d3-73fd-9bc2-9dee345d8666-2",
               "text": "门",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f5658-69d3-73fd-9bc2-9dee345d8666-3",
               "text": "则",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -10862,7 +11814,7 @@ export const catalog = {
         },
         {
           "id": "019f1453-00e7-75e9-bbfb-7db37577cd4b",
-          "origin": "间架结构",
+          "origin": "空间结构",
           "kind": "structure",
           "questionType": "character_structure_select",
           "prompt": "“阔”是什么结构?",
@@ -10871,25 +11823,29 @@ export const catalog = {
               "id": "019f1453-00e7-75e9-bbfb-7db37577cd4b-0",
               "text": "上中下结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿳"
             },
             {
               "id": "019f1453-00e7-75e9-bbfb-7db37577cd4b-1",
               "text": "独体字",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "□"
             },
             {
               "id": "019f1453-00e7-75e9-bbfb-7db37577cd4b-2",
               "text": "半包围结构",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿵"
             },
             {
               "id": "019f1453-00e7-75e9-bbfb-7db37577cd4b-3",
               "text": "左右结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿰"
             }
           ],
           "explanation": ""
@@ -10905,25 +11861,29 @@ export const catalog = {
               "id": "019f1455-aab4-7551-89ef-153d3a5f0810-0",
               "text": "冖",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aab4-7551-89ef-153d3a5f0810-1",
               "text": "活",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aab4-7551-89ef-153d3a5f0810-2",
               "text": "门",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aab4-7551-89ef-153d3a5f0810-3",
               "text": "石",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -10973,7 +11933,7 @@ export const catalog = {
       "exercises": [
         {
           "id": "019f1453-00e3-766e-ad65-6328601120c8",
-          "origin": "间架结构",
+          "origin": "空间结构",
           "kind": "structure",
           "questionType": "character_structure_select",
           "prompt": "“常”是什么结构?",
@@ -10982,25 +11942,29 @@ export const catalog = {
               "id": "019f1453-00e3-766e-ad65-6328601120c8-0",
               "text": "全包围结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿴"
             },
             {
               "id": "019f1453-00e3-766e-ad65-6328601120c8-1",
               "text": "独体字",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "□"
             },
             {
               "id": "019f1453-00e3-766e-ad65-6328601120c8-2",
               "text": "上下结构",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿱"
             },
             {
               "id": "019f1453-00e3-766e-ad65-6328601120c8-3",
               "text": "半包围结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿸"
             }
           ],
           "explanation": ""
@@ -11016,25 +11980,29 @@ export const catalog = {
               "id": "019f1455-aaad-724a-a0b5-c95823a3f422-0",
               "text": "开",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aaad-724a-a0b5-c95823a3f422-1",
               "text": "尚",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aaad-724a-a0b5-c95823a3f422-2",
               "text": "巾",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aaad-724a-a0b5-c95823a3f422-3",
               "text": "小",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -11087,7 +12055,7 @@ export const catalog = {
       "exercises": [
         {
           "id": "019f1453-00e5-7269-b6ed-277054d08b40",
-          "origin": "间架结构",
+          "origin": "空间结构",
           "kind": "structure",
           "questionType": "character_structure_select",
           "prompt": "“照”是什么结构?",
@@ -11096,25 +12064,29 @@ export const catalog = {
               "id": "019f1453-00e5-7269-b6ed-277054d08b40-0",
               "text": "独体字",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "□"
             },
             {
               "id": "019f1453-00e5-7269-b6ed-277054d08b40-1",
               "text": "左中右结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿲"
             },
             {
               "id": "019f1453-00e5-7269-b6ed-277054d08b40-2",
               "text": "左右结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿰"
             },
             {
               "id": "019f1453-00e5-7269-b6ed-277054d08b40-3",
               "text": "上下结构",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿱"
             }
           ],
           "explanation": ""
@@ -11130,25 +12102,29 @@ export const catalog = {
               "id": "019f1455-aab0-751a-bfbc-523bd2b8ece5-0",
               "text": "⺍",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aab0-751a-bfbc-523bd2b8ece5-1",
               "text": "昭",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aab0-751a-bfbc-523bd2b8ece5-2",
               "text": "灬",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aab0-751a-bfbc-523bd2b8ece5-3",
               "text": "夌",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -11181,7 +12157,7 @@ export const catalog = {
       "exercises": [
         {
           "id": "019f1453-00e1-731a-a12d-7709185b976a",
-          "origin": "间架结构",
+          "origin": "空间结构",
           "kind": "structure",
           "questionType": "character_structure_select",
           "prompt": "“击”是什么结构?",
@@ -11190,25 +12166,29 @@ export const catalog = {
               "id": "019f1453-00e1-731a-a12d-7709185b976a-0",
               "text": "半包围结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿸"
             },
             {
               "id": "019f1453-00e1-731a-a12d-7709185b976a-1",
               "text": "左中右结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿲"
             },
             {
               "id": "019f1453-00e1-731a-a12d-7709185b976a-2",
               "text": "独体字",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": "□"
             },
             {
               "id": "019f1453-00e1-731a-a12d-7709185b976a-3",
               "text": "左右结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿰"
             }
           ],
           "explanation": ""
@@ -11224,25 +12204,29 @@ export const catalog = {
               "id": "019f1455-aaaa-730d-8f55-0307ed351e2e-0",
               "text": "击",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aaaa-730d-8f55-0307ed351e2e-1",
               "text": "曾",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aaaa-730d-8f55-0307ed351e2e-2",
               "text": "午",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aaaa-730d-8f55-0307ed351e2e-3",
               "text": "厂",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -11295,7 +12279,7 @@ export const catalog = {
       "exercises": [
         {
           "id": "019f1453-00e5-7269-b6ed-231d036680a7",
-          "origin": "间架结构",
+          "origin": "空间结构",
           "kind": "structure",
           "questionType": "character_structure_select",
           "prompt": "“游”是什么结构?",
@@ -11304,25 +12288,29 @@ export const catalog = {
               "id": "019f1453-00e5-7269-b6ed-231d036680a7-0",
               "text": "左中右结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿲"
             },
             {
               "id": "019f1453-00e5-7269-b6ed-231d036680a7-1",
               "text": "独体字",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "□"
             },
             {
               "id": "019f1453-00e5-7269-b6ed-231d036680a7-2",
               "text": "左右结构",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿰"
             },
             {
               "id": "019f1453-00e5-7269-b6ed-231d036680a7-3",
               "text": "全包围结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿴"
             }
           ],
           "explanation": ""
@@ -11338,25 +12326,29 @@ export const catalog = {
               "id": "019f1455-aab0-751a-bfbc-4d96d80ff8b4-0",
               "text": "斿",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aab0-751a-bfbc-4d96d80ff8b4-1",
               "text": "巠",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aab0-751a-bfbc-4d96d80ff8b4-2",
               "text": "卩",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aab0-751a-bfbc-4d96d80ff8b4-3",
               "text": "氵",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -11409,7 +12401,7 @@ export const catalog = {
       "exercises": [
         {
           "id": "019f1453-00e3-766e-ad65-70ed23845c9f",
-          "origin": "间架结构",
+          "origin": "空间结构",
           "kind": "structure",
           "questionType": "character_structure_select",
           "prompt": "“战”是什么结构?",
@@ -11418,25 +12410,29 @@ export const catalog = {
               "id": "019f1453-00e3-766e-ad65-70ed23845c9f-0",
               "text": "左右结构",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿰"
             },
             {
               "id": "019f1453-00e3-766e-ad65-70ed23845c9f-1",
               "text": "上中下结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿳"
             },
             {
               "id": "019f1453-00e3-766e-ad65-70ed23845c9f-2",
               "text": "左中右结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿲"
             },
             {
               "id": "019f1453-00e3-766e-ad65-70ed23845c9f-3",
               "text": "半包围结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿸"
             }
           ],
           "explanation": ""
@@ -11452,25 +12448,29 @@ export const catalog = {
               "id": "019f1455-aaae-73c9-a3fa-c6de7680d280-0",
               "text": "丂",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aaae-73c9-a3fa-c6de7680d280-1",
               "text": "戈",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aaae-73c9-a3fa-c6de7680d280-2",
               "text": "古",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aaae-73c9-a3fa-c6de7680d280-3",
               "text": "占",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -11503,7 +12503,7 @@ export const catalog = {
       "exercises": [
         {
           "id": "019f1453-00e0-75c9-a876-bb55655d0875",
-          "origin": "间架结构",
+          "origin": "空间结构",
           "kind": "structure",
           "questionType": "character_structure_select",
           "prompt": "“争”是什么结构?",
@@ -11512,25 +12512,29 @@ export const catalog = {
               "id": "019f1453-00e0-75c9-a876-bb55655d0875-0",
               "text": "上下结构",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿱"
             },
             {
               "id": "019f1453-00e0-75c9-a876-bb55655d0875-1",
               "text": "左右结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿰"
             },
             {
               "id": "019f1453-00e0-75c9-a876-bb55655d0875-2",
               "text": "上中下结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿳"
             },
             {
               "id": "019f1453-00e0-75c9-a876-bb55655d0875-3",
               "text": "左中右结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿲"
             }
           ],
           "explanation": ""
@@ -11546,25 +12550,29 @@ export const catalog = {
               "id": "019f1455-aaaa-730d-8f54-f320129c8bf4-0",
               "text": "⺈",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aaaa-730d-8f54-f320129c8bf4-1",
               "text": "彐亅",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aaaa-730d-8f54-f320129c8bf4-2",
               "text": "戈",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aaaa-730d-8f54-f320129c8bf4-3",
               "text": "宀",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -11613,7 +12621,7 @@ export const catalog = {
       "exercises": [
         {
           "id": "019f1453-00e5-7269-b6ed-333a09b772c0",
-          "origin": "间架结构",
+          "origin": "空间结构",
           "kind": "structure",
           "questionType": "character_structure_select",
           "prompt": "“碍”是什么结构?",
@@ -11622,25 +12630,29 @@ export const catalog = {
               "id": "019f1453-00e5-7269-b6ed-333a09b772c0-0",
               "text": "半包围结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿸"
             },
             {
               "id": "019f1453-00e5-7269-b6ed-333a09b772c0-1",
               "text": "全包围结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿴"
             },
             {
               "id": "019f1453-00e5-7269-b6ed-333a09b772c0-2",
               "text": "独体字",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "□"
             },
             {
               "id": "019f1453-00e5-7269-b6ed-333a09b772c0-3",
               "text": "左右结构",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿰"
             }
           ],
           "explanation": ""
@@ -11656,25 +12668,29 @@ export const catalog = {
               "id": "019f1455-aab1-7046-91e0-681bbfa2140c-0",
               "text": "牛",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aab1-7046-91e0-681bbfa2140c-1",
               "text": "石",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aab1-7046-91e0-681bbfa2140c-2",
               "text": "⺮",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aab1-7046-91e0-681bbfa2140c-3",
               "text": "㝵",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -11724,7 +12740,7 @@ export const catalog = {
       "exercises": [
         {
           "id": "019f1453-00e2-7739-af2a-0c1e30378179",
-          "origin": "间架结构",
+          "origin": "空间结构",
           "kind": "structure",
           "questionType": "character_structure_select",
           "prompt": "“妨”是什么结构?",
@@ -11733,25 +12749,29 @@ export const catalog = {
               "id": "019f1453-00e2-7739-af2a-0c1e30378179-0",
               "text": "上下结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿱"
             },
             {
               "id": "019f1453-00e2-7739-af2a-0c1e30378179-1",
               "text": "左中右结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿲"
             },
             {
               "id": "019f1453-00e2-7739-af2a-0c1e30378179-2",
               "text": "左右结构",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿰"
             },
             {
               "id": "019f1453-00e2-7739-af2a-0c1e30378179-3",
               "text": "半包围结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿸"
             }
           ],
           "explanation": ""
@@ -11767,25 +12787,29 @@ export const catalog = {
               "id": "019f1455-aaac-7418-b6e6-f3ce2d3fff15-0",
               "text": "干",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aaac-7418-b6e6-f3ce2d3fff15-1",
               "text": "方",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aaac-7418-b6e6-f3ce2d3fff15-2",
               "text": "钅",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aaac-7418-b6e6-f3ce2d3fff15-3",
               "text": "女",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -11844,19 +12868,22 @@ export const catalog = {
               "id": "019f5658-69cb-722b-be29-e1a9233fb0de-0",
               "text": "成年人一手持筑杵用力夯筑之意。矩（画直角用的曲尺）",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f5658-69cb-722b-be29-e1a9233fb0de-1",
               "text": "两处相隔开的那段长度（距离）",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f5658-69cb-722b-be29-e1a9233fb0de-2",
               "text": "疯狗",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -11872,25 +12899,29 @@ export const catalog = {
               "id": "019f5658-69cb-722b-be29-e5bf8622371d-0",
               "text": "左中右结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿲"
             },
             {
               "id": "019f5658-69cb-722b-be29-e5bf8622371d-1",
               "text": "全包围结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿴"
             },
             {
               "id": "019f5658-69cb-722b-be29-e5bf8622371d-2",
               "text": "上下结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿱"
             },
             {
               "id": "019f5658-69cb-722b-be29-e5bf8622371d-3",
               "text": "左右结构",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿰"
             }
           ],
           "explanation": "让我们来看看“距”字的结构吧。"
@@ -11904,21 +12935,24 @@ export const catalog = {
           "options": [
             {
               "id": "019f5658-69cb-722b-be29-e80a92442da0-0",
-              "text": "选项 1",
+              "text": "",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f5658-69cb-722b-be29-e80a92442da0-1",
-              "text": "选项 2",
+              "text": "",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f5658-69cb-722b-be29-e80a92442da0-2",
-              "text": "选项 3",
+              "text": "",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": "“距”的本义是两处相隔开的那段长度（距离）哟。"
@@ -11934,25 +12968,29 @@ export const catalog = {
               "id": "019f5658-69cb-722b-be29-ecf13ceac638-0",
               "text": "周",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f5658-69cb-722b-be29-ecf13ceac638-1",
               "text": "七",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f5658-69cb-722b-be29-ecf13ceac638-2",
               "text": "巨",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f5658-69cb-722b-be29-ecf13ceac638-3",
               "text": "足",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -11977,25 +13015,29 @@ export const catalog = {
               "id": "019f5658-69d3-73fd-9bc2-964e7e38a66e-0",
               "text": "若",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f5658-69d3-73fd-9bc2-964e7e38a66e-1",
               "text": "足",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f5658-69d3-73fd-9bc2-964e7e38a66e-2",
               "text": "巨",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f5658-69d3-73fd-9bc2-964e7e38a66e-3",
               "text": "曳",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -12011,7 +13053,7 @@ export const catalog = {
         },
         {
           "id": "019f1453-00e6-71a2-ac7b-6c599661bdd7",
-          "origin": "间架结构",
+          "origin": "空间结构",
           "kind": "structure",
           "questionType": "character_structure_select",
           "prompt": "“距”是什么结构?",
@@ -12020,25 +13062,29 @@ export const catalog = {
               "id": "019f1453-00e6-71a2-ac7b-6c599661bdd7-0",
               "text": "半包围结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿸"
             },
             {
               "id": "019f1453-00e6-71a2-ac7b-6c599661bdd7-1",
               "text": "上下结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿱"
             },
             {
               "id": "019f1453-00e6-71a2-ac7b-6c599661bdd7-2",
               "text": "左中右结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿲"
             },
             {
               "id": "019f1453-00e6-71a2-ac7b-6c599661bdd7-3",
               "text": "左右结构",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿰"
             }
           ],
           "explanation": ""
@@ -12054,25 +13100,29 @@ export const catalog = {
               "id": "019f1455-aab3-75c3-b03d-3fb268fd4ba3-0",
               "text": "斥",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aab3-75c3-b03d-3fb268fd4ba3-1",
               "text": "足",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aab3-75c3-b03d-3fb268fd4ba3-2",
               "text": "巨",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aab3-75c3-b03d-3fb268fd4ba3-3",
               "text": "长",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -12122,7 +13172,7 @@ export const catalog = {
       "exercises": [
         {
           "id": "019f1453-00e6-71a2-ac7b-5987c9dc431a",
-          "origin": "间架结构",
+          "origin": "空间结构",
           "kind": "structure",
           "questionType": "character_structure_select",
           "prompt": "“离”是什么结构?",
@@ -12131,25 +13181,29 @@ export const catalog = {
               "id": "019f1453-00e6-71a2-ac7b-5987c9dc431a-0",
               "text": "左中右结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿲"
             },
             {
               "id": "019f1453-00e6-71a2-ac7b-5987c9dc431a-1",
               "text": "左右结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿰"
             },
             {
               "id": "019f1453-00e6-71a2-ac7b-5987c9dc431a-2",
               "text": "上下结构",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿱"
             },
             {
               "id": "019f1453-00e6-71a2-ac7b-5987c9dc431a-3",
               "text": "上中下结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿳"
             }
           ],
           "explanation": ""
@@ -12165,25 +13219,29 @@ export const catalog = {
               "id": "019f1455-aab1-7046-91e0-712df7aa00c6-0",
               "text": "艮",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aab1-7046-91e0-712df7aa00c6-1",
               "text": "亠凶",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aab1-7046-91e0-712df7aa00c6-2",
               "text": "戈",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aab1-7046-91e0-712df7aa00c6-3",
               "text": "禸",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -12236,7 +13294,7 @@ export const catalog = {
       "exercises": [
         {
           "id": "019f1453-00e1-731a-a12d-7a36f617c94b",
-          "origin": "间架结构",
+          "origin": "空间结构",
           "kind": "structure",
           "questionType": "character_structure_select",
           "prompt": "“厕”是什么结构?",
@@ -12245,25 +13303,29 @@ export const catalog = {
               "id": "019f1453-00e1-731a-a12d-7a36f617c94b-0",
               "text": "上下结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿱"
             },
             {
               "id": "019f1453-00e1-731a-a12d-7a36f617c94b-1",
               "text": "左中右结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿲"
             },
             {
               "id": "019f1453-00e1-731a-a12d-7a36f617c94b-2",
               "text": "上中下结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿳"
             },
             {
               "id": "019f1453-00e1-731a-a12d-7a36f617c94b-3",
               "text": "半包围结构",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿸"
             }
           ],
           "explanation": ""
@@ -12279,25 +13341,29 @@ export const catalog = {
               "id": "019f1455-aaab-70a3-bc5f-c8910b409fce-0",
               "text": "厂",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aaab-70a3-bc5f-c8910b409fce-1",
               "text": "勹",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aaab-70a3-bc5f-c8910b409fce-2",
               "text": "则",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aaab-70a3-bc5f-c8910b409fce-3",
               "text": "攵",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -12347,7 +13413,7 @@ export const catalog = {
       "exercises": [
         {
           "id": "019f1453-00e3-766e-ad65-761039c3f351",
-          "origin": "间架结构",
+          "origin": "空间结构",
           "kind": "structure",
           "questionType": "character_structure_select",
           "prompt": "“所”是什么结构?",
@@ -12356,25 +13422,29 @@ export const catalog = {
               "id": "019f1453-00e3-766e-ad65-761039c3f351-0",
               "text": "全包围结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿴"
             },
             {
               "id": "019f1453-00e3-766e-ad65-761039c3f351-1",
               "text": "上下结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿱"
             },
             {
               "id": "019f1453-00e3-766e-ad65-761039c3f351-2",
               "text": "半包围结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿸"
             },
             {
               "id": "019f1453-00e3-766e-ad65-761039c3f351-3",
               "text": "左右结构",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿰"
             }
           ],
           "explanation": ""
@@ -12390,25 +13460,29 @@ export const catalog = {
               "id": "019f1455-aaae-73c9-a3fa-cbaba090603d-0",
               "text": "其",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aaae-73c9-a3fa-cbaba090603d-1",
               "text": "舌",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aaae-73c9-a3fa-cbaba090603d-2",
               "text": "斤",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aaae-73c9-a3fa-cbaba090603d-3",
               "text": "户",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -12458,7 +13532,7 @@ export const catalog = {
       "exercises": [
         {
           "id": "019f1453-00e1-731a-a12d-6ef91e5c7f47",
-          "origin": "间架结构",
+          "origin": "空间结构",
           "kind": "structure",
           "questionType": "character_structure_select",
           "prompt": "“光”是什么结构?",
@@ -12467,25 +13541,29 @@ export const catalog = {
               "id": "019f1453-00e1-731a-a12d-6ef91e5c7f47-0",
               "text": "独体字",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "□"
             },
             {
               "id": "019f1453-00e1-731a-a12d-6ef91e5c7f47-1",
               "text": "上下结构",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿱"
             },
             {
               "id": "019f1453-00e1-731a-a12d-6ef91e5c7f47-2",
               "text": "左中右结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿲"
             },
             {
               "id": "019f1453-00e1-731a-a12d-6ef91e5c7f47-3",
               "text": "半包围结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿸"
             }
           ],
           "explanation": ""
@@ -12501,25 +13579,29 @@ export const catalog = {
               "id": "019f1455-aaaa-730d-8f54-fad91b94c4f1-0",
               "text": "⺌",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aaaa-730d-8f54-fad91b94c4f1-1",
               "text": "目",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aaaa-730d-8f54-fad91b94c4f1-2",
               "text": "兀",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aaaa-730d-8f54-fad91b94c4f1-3",
               "text": "虍",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -12569,7 +13651,7 @@ export const catalog = {
       "exercises": [
         {
           "id": "019f1453-00e6-71a2-ac7b-6a4c4ab9f2e4",
-          "origin": "间架结构",
+          "origin": "空间结构",
           "kind": "structure",
           "questionType": "character_structure_select",
           "prompt": "“线”是什么结构?",
@@ -12578,25 +13660,29 @@ export const catalog = {
               "id": "019f1453-00e6-71a2-ac7b-6a4c4ab9f2e4-0",
               "text": "独体字",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "□"
             },
             {
               "id": "019f1453-00e6-71a2-ac7b-6a4c4ab9f2e4-1",
               "text": "上下结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿱"
             },
             {
               "id": "019f1453-00e6-71a2-ac7b-6a4c4ab9f2e4-2",
               "text": "左中右结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿲"
             },
             {
               "id": "019f1453-00e6-71a2-ac7b-6a4c4ab9f2e4-3",
               "text": "左右结构",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿰"
             }
           ],
           "explanation": ""
@@ -12612,25 +13698,29 @@ export const catalog = {
               "id": "019f1455-aab2-722a-a2af-14433cd9ad2f-0",
               "text": "于",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aab2-722a-a2af-14433cd9ad2f-1",
               "text": "戋",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aab2-722a-a2af-14433cd9ad2f-2",
               "text": "糸",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aab2-722a-a2af-14433cd9ad2f-3",
               "text": "纟",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -12680,7 +13770,7 @@ export const catalog = {
       "exercises": [
         {
           "id": "019f1453-00e2-7739-af2a-093089c8e35d",
-          "origin": "间架结构",
+          "origin": "空间结构",
           "kind": "structure",
           "questionType": "character_structure_select",
           "prompt": "“坑”是什么结构?",
@@ -12689,25 +13779,29 @@ export const catalog = {
               "id": "019f1453-00e2-7739-af2a-093089c8e35d-0",
               "text": "全包围结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿴"
             },
             {
               "id": "019f1453-00e2-7739-af2a-093089c8e35d-1",
               "text": "左右结构",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿰"
             },
             {
               "id": "019f1453-00e2-7739-af2a-093089c8e35d-2",
               "text": "上中下结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿳"
             },
             {
               "id": "019f1453-00e2-7739-af2a-093089c8e35d-3",
               "text": "独体字",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "□"
             }
           ],
           "explanation": ""
@@ -12723,25 +13817,29 @@ export const catalog = {
               "id": "019f1455-aaac-7418-b6e6-eec359d273b2-0",
               "text": "咅",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aaac-7418-b6e6-eec359d273b2-1",
               "text": "土",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aaac-7418-b6e6-eec359d273b2-2",
               "text": "亢",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aaac-7418-b6e6-eec359d273b2-3",
               "text": "夌",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -12791,7 +13889,7 @@ export const catalog = {
       "exercises": [
         {
           "id": "019f1453-00e7-75e9-bbfb-8044c986788d",
-          "origin": "间架结构",
+          "origin": "空间结构",
           "kind": "structure",
           "questionType": "character_structure_select",
           "prompt": "“陷”是什么结构?",
@@ -12800,25 +13898,29 @@ export const catalog = {
               "id": "019f1453-00e7-75e9-bbfb-8044c986788d-0",
               "text": "上下结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿱"
             },
             {
               "id": "019f1453-00e7-75e9-bbfb-8044c986788d-1",
               "text": "全包围结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿴"
             },
             {
               "id": "019f1453-00e7-75e9-bbfb-8044c986788d-2",
               "text": "左右结构",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿰"
             },
             {
               "id": "019f1453-00e7-75e9-bbfb-8044c986788d-3",
               "text": "独体字",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "□"
             }
           ],
           "explanation": ""
@@ -12834,25 +13936,29 @@ export const catalog = {
               "id": "019f1455-aab4-7551-89ef-1b9231790daa-0",
               "text": "莫",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aab4-7551-89ef-1b9231790daa-1",
               "text": "令",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aab4-7551-89ef-1b9231790daa-2",
               "text": "阝",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aab4-7551-89ef-1b9231790daa-3",
               "text": "臽",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -12902,7 +14008,7 @@ export const catalog = {
       "exercises": [
         {
           "id": "019f1453-00e1-731a-a12d-702a68512e60",
-          "origin": "间架结构",
+          "origin": "空间结构",
           "kind": "structure",
           "questionType": "character_structure_select",
           "prompt": "“兵”是什么结构?",
@@ -12911,25 +14017,29 @@ export const catalog = {
               "id": "019f1453-00e1-731a-a12d-702a68512e60-0",
               "text": "上中下结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿳"
             },
             {
               "id": "019f1453-00e1-731a-a12d-702a68512e60-1",
               "text": "左中右结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿲"
             },
             {
               "id": "019f1453-00e1-731a-a12d-702a68512e60-2",
               "text": "上下结构",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿱"
             },
             {
               "id": "019f1453-00e1-731a-a12d-702a68512e60-3",
               "text": "左右结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿰"
             }
           ],
           "explanation": ""
@@ -12945,25 +14055,29 @@ export const catalog = {
               "id": "019f1455-aaaa-730d-8f54-fc675ff55fea-0",
               "text": "丘",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aaaa-730d-8f54-fc675ff55fea-1",
               "text": "头",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aaaa-730d-8f54-fc675ff55fea-2",
               "text": "八",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aaaa-730d-8f54-fc675ff55fea-3",
               "text": "由",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -12996,7 +14110,7 @@ export const catalog = {
       "exercises": [
         {
           "id": "019f1453-00e5-7269-b6ed-1ebf30a7e36d",
-          "origin": "间架结构",
+          "origin": "空间结构",
           "kind": "structure",
           "questionType": "character_structure_select",
           "prompt": "“民”是什么结构?",
@@ -13005,25 +14119,29 @@ export const catalog = {
               "id": "019f1453-00e5-7269-b6ed-1ebf30a7e36d-0",
               "text": "独体字",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": "□"
             },
             {
               "id": "019f1453-00e5-7269-b6ed-1ebf30a7e36d-1",
               "text": "左中右结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿲"
             },
             {
               "id": "019f1453-00e5-7269-b6ed-1ebf30a7e36d-2",
               "text": "上中下结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿳"
             },
             {
               "id": "019f1453-00e5-7269-b6ed-1ebf30a7e36d-3",
               "text": "上下结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿱"
             }
           ],
           "explanation": ""
@@ -13039,25 +14157,29 @@ export const catalog = {
               "id": "019f1455-aab0-751a-bfbc-4bb97ca1e6a8-0",
               "text": "民",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aab0-751a-bfbc-4bb97ca1e6a8-1",
               "text": "穴",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aab0-751a-bfbc-4bb97ca1e6a8-2",
               "text": "见",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aab0-751a-bfbc-4bb97ca1e6a8-3",
               "text": "卒",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -13107,7 +14229,7 @@ export const catalog = {
       "exercises": [
         {
           "id": "019f1453-00e4-70da-a1f1-307a894e395e",
-          "origin": "间架结构",
+          "origin": "空间结构",
           "kind": "structure",
           "questionType": "character_structure_select",
           "prompt": "“拐”是什么结构?",
@@ -13116,25 +14238,29 @@ export const catalog = {
               "id": "019f1453-00e4-70da-a1f1-307a894e395e-0",
               "text": "左右结构",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿰"
             },
             {
               "id": "019f1453-00e4-70da-a1f1-307a894e395e-1",
               "text": "左中右结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿲"
             },
             {
               "id": "019f1453-00e4-70da-a1f1-307a894e395e-2",
               "text": "独体字",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "□"
             },
             {
               "id": "019f1453-00e4-70da-a1f1-307a894e395e-3",
               "text": "全包围结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿴"
             }
           ],
           "explanation": ""
@@ -13150,25 +14276,29 @@ export const catalog = {
               "id": "019f1455-aaae-73c9-a3fa-d327462dcf08-0",
               "text": "另",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aaae-73c9-a3fa-d327462dcf08-1",
               "text": "虫",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aaae-73c9-a3fa-d327462dcf08-2",
               "text": "丬",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aaae-73c9-a3fa-d327462dcf08-3",
               "text": "扌",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -13218,7 +14348,7 @@ export const catalog = {
       "exercises": [
         {
           "id": "019f1453-00e3-766e-ad65-6da5a82cd107",
-          "origin": "间架结构",
+          "origin": "空间结构",
           "kind": "structure",
           "questionType": "character_structure_select",
           "prompt": "“弯”是什么结构?",
@@ -13227,25 +14357,29 @@ export const catalog = {
               "id": "019f1453-00e3-766e-ad65-6da5a82cd107-0",
               "text": "左中右结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿲"
             },
             {
               "id": "019f1453-00e3-766e-ad65-6da5a82cd107-1",
               "text": "全包围结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿴"
             },
             {
               "id": "019f1453-00e3-766e-ad65-6da5a82cd107-2",
               "text": "上下结构",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿱"
             },
             {
               "id": "019f1453-00e3-766e-ad65-6da5a82cd107-3",
               "text": "左右结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿰"
             }
           ],
           "explanation": ""
@@ -13261,25 +14395,29 @@ export const catalog = {
               "id": "019f1455-aaad-724a-a0b5-d71f07264915-0",
               "text": "吉",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aaad-724a-a0b5-d71f07264915-1",
               "text": "弓",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aaad-724a-a0b5-d71f07264915-2",
               "text": "韦",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aaad-724a-a0b5-d71f07264915-3",
               "text": "亦",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -13329,7 +14467,7 @@ export const catalog = {
       "exercises": [
         {
           "id": "019f1453-00e4-70da-a1f1-403232100db7",
-          "origin": "间架结构",
+          "origin": "空间结构",
           "kind": "structure",
           "questionType": "character_structure_select",
           "prompt": "“棒”是什么结构?",
@@ -13338,25 +14476,29 @@ export const catalog = {
               "id": "019f1453-00e4-70da-a1f1-403232100db7-0",
               "text": "左右结构",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿰"
             },
             {
               "id": "019f1453-00e4-70da-a1f1-403232100db7-1",
               "text": "左中右结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿲"
             },
             {
               "id": "019f1453-00e4-70da-a1f1-403232100db7-2",
               "text": "上下结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿱"
             },
             {
               "id": "019f1453-00e4-70da-a1f1-403232100db7-3",
               "text": "上中下结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿳"
             }
           ],
           "explanation": ""
@@ -13372,25 +14514,29 @@ export const catalog = {
               "id": "019f1455-aaaf-71b4-bc87-c7a654afa0d1-0",
               "text": "子",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aaaf-71b4-bc87-c7a654afa0d1-1",
               "text": "奉",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aaaf-71b4-bc87-c7a654afa0d1-2",
               "text": "果",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aaaf-71b4-bc87-c7a654afa0d1-3",
               "text": "木",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -13432,19 +14578,22 @@ export const catalog = {
               "id": "019f5658-69ca-717d-8e76-f035a5e2de1e-0",
               "text": "兽蹄印",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f5658-69ca-717d-8e76-f035a5e2de1e-1",
               "text": "用泥土修筑、高而平坦的建筑，也就是高台",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f5658-69ca-717d-8e76-f035a5e2de1e-2",
               "text": "树",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -13460,25 +14609,29 @@ export const catalog = {
               "id": "019f5658-69ca-717d-8e76-f421cfd9e92f-0",
               "text": "独体字",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": "□"
             },
             {
               "id": "019f5658-69ca-717d-8e76-f421cfd9e92f-1",
               "text": "左中右结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿲"
             },
             {
               "id": "019f5658-69ca-717d-8e76-f421cfd9e92f-2",
               "text": "半包围结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿸"
             },
             {
               "id": "019f5658-69ca-717d-8e76-f421cfd9e92f-3",
               "text": "全包围结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿴"
             }
           ],
           "explanation": "让我们来看看“木”字的结构吧。"
@@ -13492,21 +14645,24 @@ export const catalog = {
           "options": [
             {
               "id": "019f5658-69ca-717d-8e76-f8a3f1e51568-0",
-              "text": "选项 1",
+              "text": "",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f5658-69ca-717d-8e76-f8a3f1e51568-1",
-              "text": "选项 2",
+              "text": "",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f5658-69ca-717d-8e76-f8a3f1e51568-2",
-              "text": "选项 3",
+              "text": "",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": "“木”的本义是树哟。"
@@ -13531,7 +14687,7 @@ export const catalog = {
         },
         {
           "id": "019f1453-00e4-70da-a1f1-3f48ad5c9387",
-          "origin": "间架结构",
+          "origin": "空间结构",
           "kind": "structure",
           "questionType": "character_structure_select",
           "prompt": "“木”是什么结构?",
@@ -13540,25 +14696,29 @@ export const catalog = {
               "id": "019f1453-00e4-70da-a1f1-3f48ad5c9387-0",
               "text": "全包围结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿴"
             },
             {
               "id": "019f1453-00e4-70da-a1f1-3f48ad5c9387-1",
               "text": "独体字",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": "□"
             },
             {
               "id": "019f1453-00e4-70da-a1f1-3f48ad5c9387-2",
               "text": "上下结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿱"
             },
             {
               "id": "019f1453-00e4-70da-a1f1-3f48ad5c9387-3",
               "text": "左右结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿰"
             }
           ],
           "explanation": ""
@@ -13574,25 +14734,29 @@ export const catalog = {
               "id": "019f1455-aaaf-71b4-bc87-c195c6f9ebf3-0",
               "text": "厶",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aaaf-71b4-bc87-c195c6f9ebf3-1",
               "text": "木",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aaaf-71b4-bc87-c195c6f9ebf3-2",
               "text": "采",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aaaf-71b4-bc87-c195c6f9ebf3-3",
               "text": "亢",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -13642,7 +14806,7 @@ export const catalog = {
       "exercises": [
         {
           "id": "019f1453-00e2-7739-af2a-07545c018de3",
-          "origin": "间架结构",
+          "origin": "空间结构",
           "kind": "structure",
           "questionType": "character_structure_select",
           "prompt": "“坏”是什么结构?",
@@ -13651,25 +14815,29 @@ export const catalog = {
               "id": "019f1453-00e2-7739-af2a-07545c018de3-0",
               "text": "上下结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿱"
             },
             {
               "id": "019f1453-00e2-7739-af2a-07545c018de3-1",
               "text": "上中下结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿳"
             },
             {
               "id": "019f1453-00e2-7739-af2a-07545c018de3-2",
               "text": "独体字",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "□"
             },
             {
               "id": "019f1453-00e2-7739-af2a-07545c018de3-3",
               "text": "左右结构",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿰"
             }
           ],
           "explanation": ""
@@ -13685,25 +14853,29 @@ export const catalog = {
               "id": "019f1455-aaab-70a3-bc5f-d0057bcdede4-0",
               "text": "不",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aaab-70a3-bc5f-d0057bcdede4-1",
               "text": "土",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aaab-70a3-bc5f-d0057bcdede4-2",
               "text": "雨",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aaab-70a3-bc5f-d0057bcdede4-3",
               "text": "林",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -13753,7 +14925,7 @@ export const catalog = {
       "exercises": [
         {
           "id": "019f1453-00e5-7269-b6ed-2c5da0251412",
-          "origin": "间架结构",
+          "origin": "空间结构",
           "kind": "structure",
           "questionType": "character_structure_select",
           "prompt": "“破”是什么结构?",
@@ -13762,25 +14934,29 @@ export const catalog = {
               "id": "019f1453-00e5-7269-b6ed-2c5da0251412-0",
               "text": "独体字",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "□"
             },
             {
               "id": "019f1453-00e5-7269-b6ed-2c5da0251412-1",
               "text": "左中右结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿲"
             },
             {
               "id": "019f1453-00e5-7269-b6ed-2c5da0251412-2",
               "text": "左右结构",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿰"
             },
             {
               "id": "019f1453-00e5-7269-b6ed-2c5da0251412-3",
               "text": "上中下结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿳"
             }
           ],
           "explanation": ""
@@ -13796,25 +14972,29 @@ export const catalog = {
               "id": "019f1455-aab1-7046-91e0-6783c8c2d277-0",
               "text": "风",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aab1-7046-91e0-6783c8c2d277-1",
               "text": "石",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aab1-7046-91e0-6783c8c2d277-2",
               "text": "比",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aab1-7046-91e0-6783c8c2d277-3",
               "text": "皮",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -13864,7 +15044,7 @@ export const catalog = {
       "exercises": [
         {
           "id": "019f1453-00e2-7739-af2a-117f8a79cd71",
-          "origin": "间架结构",
+          "origin": "空间结构",
           "kind": "structure",
           "questionType": "character_structure_select",
           "prompt": "“对”是什么结构?",
@@ -13873,25 +15053,29 @@ export const catalog = {
               "id": "019f1453-00e2-7739-af2a-117f8a79cd71-0",
               "text": "左右结构",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿰"
             },
             {
               "id": "019f1453-00e2-7739-af2a-117f8a79cd71-1",
               "text": "左中右结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿲"
             },
             {
               "id": "019f1453-00e2-7739-af2a-117f8a79cd71-2",
               "text": "上中下结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿳"
             },
             {
               "id": "019f1453-00e2-7739-af2a-117f8a79cd71-3",
               "text": "全包围结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿴"
             }
           ],
           "explanation": ""
@@ -13907,25 +15091,29 @@ export const catalog = {
               "id": "019f1455-aaac-7418-b6e6-f67da2574b66-0",
               "text": "寸",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aaac-7418-b6e6-f67da2574b66-1",
               "text": "又",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aaac-7418-b6e6-f67da2574b66-2",
               "text": "辛",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aaac-7418-b6e6-f67da2574b66-3",
               "text": "北",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -13975,7 +15163,7 @@ export const catalog = {
       "exercises": [
         {
           "id": "019f1453-00e0-75c9-a876-bdbb6478d338",
-          "origin": "间架结构",
+          "origin": "空间结构",
           "kind": "structure",
           "questionType": "character_structure_select",
           "prompt": "“付”是什么结构?",
@@ -13984,25 +15172,29 @@ export const catalog = {
               "id": "019f1453-00e0-75c9-a876-bdbb6478d338-0",
               "text": "独体字",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "□"
             },
             {
               "id": "019f1453-00e0-75c9-a876-bdbb6478d338-1",
               "text": "全包围结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿴"
             },
             {
               "id": "019f1453-00e0-75c9-a876-bdbb6478d338-2",
               "text": "左右结构",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿰"
             },
             {
               "id": "019f1453-00e0-75c9-a876-bdbb6478d338-3",
               "text": "左中右结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿲"
             }
           ],
           "explanation": ""
@@ -14018,25 +15210,29 @@ export const catalog = {
               "id": "019f1455-aaaa-730d-8f54-f42829eadcdd-0",
               "text": "亻",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aaaa-730d-8f54-f42829eadcdd-1",
               "text": "巾",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aaaa-730d-8f54-f42829eadcdd-2",
               "text": "乂",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aaaa-730d-8f54-f42829eadcdd-3",
               "text": "寸",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -14089,7 +15285,7 @@ export const catalog = {
       "exercises": [
         {
           "id": "019f1453-00e7-75e9-bbfb-716dc9645c5e",
-          "origin": "间架结构",
+          "origin": "空间结构",
           "kind": "structure",
           "questionType": "character_structure_select",
           "prompt": "“铃”是什么结构?",
@@ -14098,25 +15294,29 @@ export const catalog = {
               "id": "019f1453-00e7-75e9-bbfb-716dc9645c5e-0",
               "text": "左右结构",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿰"
             },
             {
               "id": "019f1453-00e7-75e9-bbfb-716dc9645c5e-1",
               "text": "半包围结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿸"
             },
             {
               "id": "019f1453-00e7-75e9-bbfb-716dc9645c5e-2",
               "text": "独体字",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "□"
             },
             {
               "id": "019f1453-00e7-75e9-bbfb-716dc9645c5e-3",
               "text": "上中下结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿳"
             }
           ],
           "explanation": ""
@@ -14132,25 +15332,29 @@ export const catalog = {
               "id": "019f1455-aab3-75c3-b03d-425aa0754d2f-0",
               "text": "斥",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aab3-75c3-b03d-425aa0754d2f-1",
               "text": "生",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aab3-75c3-b03d-425aa0754d2f-2",
               "text": "令",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aab3-75c3-b03d-425aa0754d2f-3",
               "text": "钅",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -14203,7 +15407,7 @@ export const catalog = {
       "exercises": [
         {
           "id": "019f1453-00e7-75e9-bbfb-7471f78d8e62",
-          "origin": "间架结构",
+          "origin": "空间结构",
           "kind": "structure",
           "questionType": "character_structure_select",
           "prompt": "“铜”是什么结构?",
@@ -14212,25 +15416,29 @@ export const catalog = {
               "id": "019f1453-00e7-75e9-bbfb-7471f78d8e62-0",
               "text": "全包围结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿴"
             },
             {
               "id": "019f1453-00e7-75e9-bbfb-7471f78d8e62-1",
               "text": "上下结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿱"
             },
             {
               "id": "019f1453-00e7-75e9-bbfb-7471f78d8e62-2",
               "text": "左右结构",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿰"
             },
             {
               "id": "019f1453-00e7-75e9-bbfb-7471f78d8e62-3",
               "text": "上中下结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿳"
             }
           ],
           "explanation": ""
@@ -14246,25 +15454,29 @@ export const catalog = {
               "id": "019f1455-aab3-75c3-b03d-466de9828508-0",
               "text": "玉",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aab3-75c3-b03d-466de9828508-1",
               "text": "同",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aab3-75c3-b03d-466de9828508-2",
               "text": "钅",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aab3-75c3-b03d-466de9828508-3",
               "text": "各",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -14313,7 +15525,7 @@ export const catalog = {
       "exercises": [
         {
           "id": "019f1453-00e2-7739-af2a-18aeeda7dbce",
-          "origin": "间架结构",
+          "origin": "空间结构",
           "kind": "structure",
           "questionType": "character_structure_select",
           "prompt": "“尽”是什么结构?",
@@ -14322,25 +15534,29 @@ export const catalog = {
               "id": "019f1453-00e2-7739-af2a-18aeeda7dbce-0",
               "text": "左中右结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿲"
             },
             {
               "id": "019f1453-00e2-7739-af2a-18aeeda7dbce-1",
               "text": "上下结构",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿱"
             },
             {
               "id": "019f1453-00e2-7739-af2a-18aeeda7dbce-2",
               "text": "独体字",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "□"
             },
             {
               "id": "019f1453-00e2-7739-af2a-18aeeda7dbce-3",
               "text": "左右结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿰"
             }
           ],
           "explanation": ""
@@ -14356,25 +15572,29 @@ export const catalog = {
               "id": "019f1455-aaad-724a-a0b5-c5c472f0260f-0",
               "text": "尺",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aaad-724a-a0b5-c5c472f0260f-1",
               "text": "⺀",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aaad-724a-a0b5-c5c472f0260f-2",
               "text": "士",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aaad-724a-a0b5-c5c472f0260f-3",
               "text": "吉",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -14424,7 +15644,7 @@ export const catalog = {
       "exercises": [
         {
           "id": "019f1453-00e6-71a2-ac7b-5d89cb04359f",
-          "origin": "间架结构",
+          "origin": "空间结构",
           "kind": "structure",
           "questionType": "character_structure_select",
           "prompt": "“穷”是什么结构?",
@@ -14433,25 +15653,29 @@ export const catalog = {
               "id": "019f1453-00e6-71a2-ac7b-5d89cb04359f-0",
               "text": "上中下结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿳"
             },
             {
               "id": "019f1453-00e6-71a2-ac7b-5d89cb04359f-1",
               "text": "半包围结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿸"
             },
             {
               "id": "019f1453-00e6-71a2-ac7b-5d89cb04359f-2",
               "text": "上下结构",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿱"
             },
             {
               "id": "019f1453-00e6-71a2-ac7b-5d89cb04359f-3",
               "text": "全包围结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿴"
             }
           ],
           "explanation": ""
@@ -14467,25 +15691,29 @@ export const catalog = {
               "id": "019f1455-aab2-722a-a2af-09490ac20f24-0",
               "text": "力",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aab2-722a-a2af-09490ac20f24-1",
               "text": "冗",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aab2-722a-a2af-09490ac20f24-2",
               "text": "穴",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aab2-722a-a2af-09490ac20f24-3",
               "text": "石",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -14518,7 +15746,7 @@ export const catalog = {
       "exercises": [
         {
           "id": "019f1453-00e4-70da-a1f1-342586ce996b",
-          "origin": "间架结构",
+          "origin": "空间结构",
           "kind": "structure",
           "questionType": "character_structure_select",
           "prompt": "“无”是什么结构?",
@@ -14527,25 +15755,29 @@ export const catalog = {
               "id": "019f1453-00e4-70da-a1f1-342586ce996b-0",
               "text": "上下结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿱"
             },
             {
               "id": "019f1453-00e4-70da-a1f1-342586ce996b-1",
               "text": "上中下结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿳"
             },
             {
               "id": "019f1453-00e4-70da-a1f1-342586ce996b-2",
               "text": "左右结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿰"
             },
             {
               "id": "019f1453-00e4-70da-a1f1-342586ce996b-3",
               "text": "独体字",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": "□"
             }
           ],
           "explanation": ""
@@ -14561,25 +15793,29 @@ export const catalog = {
               "id": "019f1455-aaaf-71b4-bc87-bb03790696cc-0",
               "text": "亦",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aaaf-71b4-bc87-bb03790696cc-1",
               "text": "无",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aaaf-71b4-bc87-bb03790696cc-2",
               "text": "米",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aaaf-71b4-bc87-bb03790696cc-3",
               "text": "斤",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -14612,7 +15848,7 @@ export const catalog = {
       "exercises": [
         {
           "id": "019f1453-00e4-70da-a1f1-342586ce996b",
-          "origin": "间架结构",
+          "origin": "空间结构",
           "kind": "structure",
           "questionType": "character_structure_select",
           "prompt": "“无”是什么结构?",
@@ -14621,25 +15857,29 @@ export const catalog = {
               "id": "019f1453-00e4-70da-a1f1-342586ce996b-0",
               "text": "上下结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿱"
             },
             {
               "id": "019f1453-00e4-70da-a1f1-342586ce996b-1",
               "text": "上中下结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿳"
             },
             {
               "id": "019f1453-00e4-70da-a1f1-342586ce996b-2",
               "text": "左右结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿰"
             },
             {
               "id": "019f1453-00e4-70da-a1f1-342586ce996b-3",
               "text": "独体字",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": "□"
             }
           ],
           "explanation": ""
@@ -14655,25 +15895,29 @@ export const catalog = {
               "id": "019f1455-aaaf-71b4-bc87-bb03790696cc-0",
               "text": "亦",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aaaf-71b4-bc87-bb03790696cc-1",
               "text": "无",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aaaf-71b4-bc87-bb03790696cc-2",
               "text": "米",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aaaf-71b4-bc87-bb03790696cc-3",
               "text": "斤",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -14723,7 +15967,7 @@ export const catalog = {
       "exercises": [
         {
           "id": "019f1453-00e4-70da-a1f1-2eeffdf13103",
-          "origin": "间架结构",
+          "origin": "空间结构",
           "kind": "structure",
           "questionType": "character_structure_select",
           "prompt": "“抗”是什么结构?",
@@ -14732,25 +15976,29 @@ export const catalog = {
               "id": "019f1453-00e4-70da-a1f1-2eeffdf13103-0",
               "text": "上中下结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿳"
             },
             {
               "id": "019f1453-00e4-70da-a1f1-2eeffdf13103-1",
               "text": "左中右结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿲"
             },
             {
               "id": "019f1453-00e4-70da-a1f1-2eeffdf13103-2",
               "text": "全包围结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿴"
             },
             {
               "id": "019f1453-00e4-70da-a1f1-2eeffdf13103-3",
               "text": "左右结构",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿰"
             }
           ],
           "explanation": ""
@@ -14766,25 +16014,29 @@ export const catalog = {
               "id": "019f1455-aaae-73c9-a3fa-cca1580e2004-0",
               "text": "亢",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aaae-73c9-a3fa-cca1580e2004-1",
               "text": "上",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aaae-73c9-a3fa-cca1580e2004-2",
               "text": "扌",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aaae-73c9-a3fa-cca1580e2004-3",
               "text": "寺",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             }
           ],
           "explanation": ""
@@ -14817,7 +16069,7 @@ export const catalog = {
       "exercises": [
         {
           "id": "019f1453-00e4-70da-a1f1-38ec588bc4c4",
-          "origin": "间架结构",
+          "origin": "空间结构",
           "kind": "structure",
           "questionType": "character_structure_select",
           "prompt": "“日”是什么结构?",
@@ -14826,25 +16078,29 @@ export const catalog = {
               "id": "019f1453-00e4-70da-a1f1-38ec588bc4c4-0",
               "text": "左中右结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿲"
             },
             {
               "id": "019f1453-00e4-70da-a1f1-38ec588bc4c4-1",
               "text": "上中下结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿳"
             },
             {
               "id": "019f1453-00e4-70da-a1f1-38ec588bc4c4-2",
               "text": "独体字",
               "correct": true,
-              "radical": false
+              "radical": false,
+              "idcCode": "□"
             },
             {
               "id": "019f1453-00e4-70da-a1f1-38ec588bc4c4-3",
               "text": "全包围结构",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": "⿴"
             }
           ],
           "explanation": ""
@@ -14860,25 +16116,29 @@ export const catalog = {
               "id": "019f1455-aaaf-71b4-bc87-bcfd9146d21b-0",
               "text": "龙",
               "correct": false,
-              "radical": false
+              "radical": false,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aaaf-71b4-bc87-bcfd9146d21b-1",
               "text": "日",
               "correct": true,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aaaf-71b4-bc87-bcfd9146d21b-2",
               "text": "兰",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             },
             {
               "id": "019f1455-aaaf-71b4-bc87-bcfd9146d21b-3",
               "text": "矢",
               "correct": false,
-              "radical": true
+              "radical": true,
+              "idcCode": ""
             }
           ],
           "explanation": ""
