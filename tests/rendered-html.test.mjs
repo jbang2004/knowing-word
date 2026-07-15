@@ -335,3 +335,29 @@ test("localized historical glyph, red-blue, pronunciation, and timing resources 
   const source = await readFile(new URL("../app/data/heritage-assets.ts", import.meta.url), "utf8");
   assert.doesNotMatch(source, /auth_key|access_token|authorization|password|13928119432/i);
 });
+
+test("narration timing becomes a punctuated, persistent reading transcript", async () => {
+  const { buildNarrationTokens } = await import(
+    new URL("../app/lib/narration.ts", import.meta.url).href,
+  );
+  const marks = [
+    { char: "封", start: 0.42, end: 0.68 },
+    { char: "封", start: 1.3, end: 1.46 },
+    { char: "锁", start: 1.54, end: 1.62 },
+    { char: "的", start: 1.68, end: 1.74 },
+    { char: "封", start: 1.82, end: 2 },
+    { char: "会", start: 2.82, end: 2.98 },
+    { char: "意", start: 3.06, end: 3.12 },
+    { char: "字", start: 3.26, end: 3.38 },
+  ];
+  const tokens = buildNarrationTokens(marks);
+
+  assert.equal(tokens.map((token) => token.text).join(""), "封，封锁的封。会意字。");
+  assert.equal(tokens.filter((token) => token.kind === "character").length, marks.length);
+  assert.ok(tokens.every((token) => token.completionTime >= 0));
+
+  const pageSource = await readFile(new URL("../app/page.tsx", import.meta.url), "utf8");
+  assert.match(pageSource, /requestAnimationFrame\(sampleAudioTime\)/);
+  assert.match(pageSource, /is-complete/);
+  assert.doesNotMatch(pageSource, /onEnded=\{\(\) => \{[\s\S]*setElapsed\(0\)/);
+});

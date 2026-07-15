@@ -41,6 +41,7 @@ import {
   nextResumeIndex,
   updateCompletion,
 } from "./lib/progress-model";
+import { buildNarrationTokens } from "./lib/narration";
 
 type Screen =
   | "home"
@@ -1380,6 +1381,22 @@ function NarratedDescription({ character }: { character: CharacterItem }) {
   const [playing, setPlaying] = useState(false);
 
   useEffect(() => {
+    if (!playing || !asset?.audio) return;
+    let frame = 0;
+    let lastSample = 0;
+    const sampleAudioTime = (timestamp: number) => {
+      const audio = audioRef.current;
+      if (audio && !audio.paused && timestamp - lastSample >= 32) {
+        setElapsed(audio.currentTime);
+        lastSample = timestamp;
+      }
+      frame = window.requestAnimationFrame(sampleAudioTime);
+    };
+    frame = window.requestAnimationFrame(sampleAudioTime);
+    return () => window.cancelAnimationFrame(frame);
+  }, [asset?.audio, playing]);
+
+  useEffect(() => {
     if (!asset?.audioMarks) return;
     const controller = new AbortController();
     const audio = audioRef.current;
@@ -1403,6 +1420,11 @@ function NarratedDescription({ character }: { character: CharacterItem }) {
       return;
     }
     if (audio.paused) {
+      const audioDuration = Number.isFinite(audio.duration) ? audio.duration : duration;
+      if (audio.ended || (audioDuration > 0 && audio.currentTime >= audioDuration - 0.08)) {
+        audio.currentTime = 0;
+        setElapsed(0);
+      }
       void audio.play().then(() => setPlaying(true)).catch(() => {
         setPlaying(true);
         speak(character.description, () => setPlaying(false));
@@ -1414,28 +1436,53 @@ function NarratedDescription({ character }: { character: CharacterItem }) {
   }
 
   const activeIndex = marks.findIndex((mark) => elapsed >= mark.start && elapsed < mark.end);
-  const progress = duration > 0 ? Math.min(100, (elapsed / duration) * 100) : 0;
+  const transcript = useMemo(() => buildNarrationTokens(marks), [marks]);
+  const timelineDuration = duration || marks.at(-1)?.end || 0;
+  const completedCount = marks.reduce((count, mark) => count + (mark.end <= elapsed ? 1 : 0), 0);
+  const finished = marks.length > 0 && completedCount === marks.length && !playing;
+  const progress = timelineDuration > 0 ? Math.min(100, (elapsed / timelineDuration) * 100) : 0;
+  const narrationStatus = finished
+    ? "讲解完成 · 点击可重听"
+    : playing && marks.length
+      ? `正在跟读 · ${completedCount} / ${marks.length} 字`
+      : playing
+        ? "正在讲解"
+      : elapsed > 0 && marks.length
+        ? `已读 ${completedCount} / ${marks.length} 字 · 点击继续`
+        : marks.length
+          ? "逐字跟读已就绪"
+          : "标准普通话讲解";
 
   return (
-    <div className="narrated-description">
+    <div className={`narrated-description${playing ? " is-playing" : ""}${finished ? " is-finished" : ""}`}>
       <div className="narration-toolbar">
         <button className={playing ? "listen-button is-playing" : "listen-button"} onClick={toggleNarration} aria-pressed={playing}>
           <span aria-hidden="true">{playing ? "Ⅱ" : "▶"}</span>
-          {playing ? "暂停讲解" : "听字义讲解"}
+          {playing ? "暂停讲解" : finished ? "重新播放" : "听字义讲解"}
         </button>
-        <span>{marks.length ? "逐字跟读已开启" : "标准普通话讲解"}</span>
+        <span className="narration-status" aria-hidden="true">
+          <i className="narration-equalizer"><b /><b /><b /></i>
+          {narrationStatus}
+        </span>
       </div>
       {marks.length ? (
-        <p className="narration-transcript" aria-label={marks.map((mark) => mark.char).join("")}>
-          {marks.map((mark, index) => (
-            <span
-              className={index === activeIndex ? "is-active" : mark.end <= elapsed ? "is-past" : ""}
-              key={`${mark.index}-${index}`}
-              aria-hidden="true"
-            >
-              {mark.char}
-            </span>
-          ))}
+        <p className="narration-transcript" aria-label={transcript.map((token) => token.text).join("")}>
+          {transcript.map((token, index) => {
+            if (token.kind === "punctuation") return null;
+            const completed = token.completionTime <= elapsed;
+            const punctuation = transcript[index + 1]?.kind === "punctuation" ? transcript[index + 1] : null;
+            const className = `narration-token${token.markIndex === activeIndex ? " is-active" : completed ? " is-complete" : " is-upcoming"}`;
+            return (
+              <span className="narration-unit" key={`${token.kind}-${token.markIndex}-${index}`} aria-hidden="true">
+                <span className={className}>{token.text}</span>
+                {punctuation && (
+                  <span className={`narration-token is-punctuation${completed ? " is-complete" : ""}`}>
+                    {punctuation.text}
+                  </span>
+                )}
+              </span>
+            );
+          })}
         </p>
       ) : (
         <p>{character.description}</p>
@@ -1448,11 +1495,17 @@ function NarratedDescription({ character }: { character: CharacterItem }) {
           preload="metadata"
           onLoadedMetadata={(event) => setDuration(event.currentTarget.duration || 0)}
           onTimeUpdate={(event) => setElapsed(event.currentTarget.currentTime)}
-          onPlay={() => setPlaying(true)}
-          onPause={() => setPlaying(false)}
-          onEnded={() => {
+          onPlay={(event) => {
+            setElapsed(event.currentTarget.currentTime);
+            setPlaying(true);
+          }}
+          onPause={(event) => {
+            setElapsed(event.currentTarget.currentTime);
             setPlaying(false);
-            setElapsed(0);
+          }}
+          onEnded={(event) => {
+            setPlaying(false);
+            setElapsed(event.currentTarget.duration || marks.at(-1)?.end || 0);
           }}
         />
       )}
