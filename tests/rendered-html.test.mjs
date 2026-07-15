@@ -2,13 +2,16 @@ import assert from "node:assert/strict";
 import { access, readFile } from "node:fs/promises";
 import test from "node:test";
 
-async function render() {
+let workerPromise;
+
+async function render(pathname = "/") {
   const workerUrl = new URL("../dist/server/index.js", import.meta.url);
-  workerUrl.searchParams.set("test", String(Date.now()));
-  const { default: worker } = await import(workerUrl.href);
+  workerUrl.searchParams.set("test", "route-suite");
+  workerPromise ||= import(workerUrl.href).then((module) => module.default);
+  const worker = await workerPromise;
 
   return worker.fetch(
-    new Request("http://localhost/", { headers: { accept: "text/html" } }),
+    new Request(`http://localhost${pathname}`, { headers: { accept: "text/html" } }),
     {
       ASSETS: {
         fetch: async () => new Response("Not found", { status: 404 }),
@@ -33,6 +36,59 @@ test("server-renders the course-first Knowing Word learning experience", async (
   assert.match(html, /红蓝练习/);
   assert.match(html, /空间结构/);
   assert.match(html, /日日朗读/);
+});
+
+test("all 210 source routes server-render with real, shareable URLs", async () => {
+  const { characters, lessons } = await import(
+    new URL("../app/data/catalog.ts", import.meta.url).href,
+  );
+  const sourceCharacters = characters.filter((character) => character.primary && character.ready);
+  const routes = [
+    "/",
+    "/account",
+    "/lessons",
+    "/records",
+    "/bujian",
+    "/honglan-exercise",
+    "/split-exercise",
+    "/space-structure-exercise",
+    "/read-aloud",
+    "/playground/kit",
+    "/playground/lesson",
+    "/playground/puzzle",
+    "/playground/quiz",
+  ];
+
+  for (const lesson of lessons) {
+    routes.push(
+      `/lessons/${lesson.id}`,
+      `/honglan-exercise/${lesson.id}`,
+      `/split-exercise/${lesson.id}`,
+      `/space-structure-exercise/${lesson.id}`,
+    );
+  }
+  for (const character of sourceCharacters) {
+    routes.push(
+      `/lessons/${character.lessonId}/words/${character.id}`,
+      `/lessons/${character.lessonId}/words/${character.id}/quizzes`,
+      `/honglan-exercise/${character.lessonId}/lesson_words/${character.id}`,
+      `/split-exercise/${character.lessonId}/words/${character.id}`,
+      `/space-structure-exercise/${character.lessonId}/lesson_words/${character.id}`,
+    );
+  }
+
+  assert.equal(sourceCharacters.length, 37);
+  assert.equal(routes.length, 210);
+  assert.equal(new Set(routes).size, routes.length);
+
+  for (let offset = 0; offset < routes.length; offset += 20) {
+    const batch = routes.slice(offset, offset + 20);
+    const responses = await Promise.all(batch.map((route) => render(route)));
+    responses.forEach((response, index) => {
+      assert.equal(response.status, 200, `route failed: ${batch[index]}`);
+      assert.match(response.headers.get("content-type") ?? "", /^text\/html\b/i);
+    });
+  }
 });
 
 test("every image-based literacy question has a generated visual asset", async () => {
@@ -171,4 +227,24 @@ test("the public learning catalog preserves the course and practice-route struct
     assert.ok(kinds.has("structure"));
     assert.ok(kinds.has("write"));
   }
+});
+
+test("localized historical glyph, red-blue, and pronunciation resources are complete and unsigned", async () => {
+  const { heritageAssets } = await import(
+    new URL("../app/data/heritage-assets.ts", import.meta.url).href,
+  );
+  const records = Object.values(heritageAssets);
+  const paths = records.flatMap((record) => [
+    ...record.stages.map((stage) => stage.src),
+    ...(record.redBlue ? [record.redBlue] : []),
+    ...(record.audio ? [record.audio] : []),
+  ]);
+
+  assert.equal(records.length, 58);
+  assert.equal(paths.length, 385);
+  assert.equal(new Set(paths).size, paths.length);
+  for (const path of paths) await access(new URL(`../public${path}`, import.meta.url));
+
+  const source = await readFile(new URL("../app/data/heritage-assets.ts", import.meta.url), "utf8");
+  assert.doesNotMatch(source, /auth_key|access_token|authorization|password|13928119432/i);
 });

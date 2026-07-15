@@ -1,8 +1,10 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import {
   type PointerEvent as ReactPointerEvent,
+  useCallback,
   useEffect,
   useMemo,
   useRef,
@@ -22,6 +24,13 @@ import {
   getVisualOption,
   lessonVisuals,
 } from "./data/illustrations";
+import { heritageAssets } from "./data/heritage-assets";
+import {
+  isQuestionSetComplete,
+  nextCandidateId,
+  nextResumeIndex,
+  updateCompletion,
+} from "./lib/progress-model";
 
 type Screen =
   | "home"
@@ -35,7 +44,8 @@ type Screen =
   | "records"
   | "recordDetail"
   | "read"
-  | "profile";
+  | "profile"
+  | "playground";
 
 type TrackId = "words" | "split" | "honglan" | "structure";
 
@@ -53,15 +63,35 @@ type ResumePoint = {
 };
 
 type StudyProfile = {
-  version: 2;
+  version: 3;
   name: string;
+  grade: number;
+  courseId: string;
   theme: "light" | "night";
   favorites: string[];
   completed: Record<TrackId, string[]>;
   last: Record<TrackId, ResumePoint | null>;
   answers: Record<string, AnswerStat>;
   learnedComponents: string[];
+  recentComponents: string[];
+  daily: Record<string, { attempts: number; correct: number; skips: number; readSessions: number }>;
   readSessions: number;
+};
+
+type AccountIdentity = {
+  displayName: string;
+  email: string | null;
+  mode: "workspace" | "device";
+};
+
+type PlaygroundKind = "kit" | "lesson" | "puzzle" | "quiz";
+
+type AppRoute = {
+  screen: Screen;
+  lessonId?: string;
+  characterId?: string;
+  track?: TrackId;
+  playground?: PlaygroundKind;
 };
 
 type TrackMeta = {
@@ -84,7 +114,9 @@ const initialCharacter =
   allCharacters.find((item) => item.lessonId === initialLesson.id && item.primary) ||
   allCharacters[0];
 const trackIds: TrackId[] = ["words", "split", "honglan", "structure"];
-const STORAGE_KEY = "knowing-word:course-progress:v2";
+const STORAGE_KEY = "knowing-word:course-progress:v3";
+const STORAGE_UPDATED_KEY = "knowing-word:course-progress:updated-at";
+const VERSION_TWO_STORAGE_KEY = "knowing-word:course-progress:v2";
 const LEGACY_STORAGE_KEY = "knowing-word:local-profile:v1";
 
 const trackMeta: Record<TrackId, TrackMeta> = {
@@ -134,10 +166,96 @@ const trackMeta: Record<TrackId, TrackMeta> = {
   },
 };
 
+const trackBase: Record<Exclude<TrackId, "words">, string> = {
+  split: "/split-exercise",
+  honglan: "/honglan-exercise",
+  structure: "/space-structure-exercise",
+};
+
+function routeForTrack(track: TrackId, lessonId?: string, characterId?: string) {
+  if (track === "words") {
+    if (lessonId && characterId) return `/lessons/${lessonId}/words/${characterId}/quizzes`;
+    if (lessonId) return `/lessons/${lessonId}`;
+    return "/lessons";
+  }
+  const base = trackBase[track];
+  if (!lessonId) return base;
+  if (!characterId) return `${base}/${lessonId}`;
+  const segment = track === "split" ? "words" : "lesson_words";
+  return `${base}/${lessonId}/${segment}/${characterId}`;
+}
+
+function resolveAppRoute(pathValue: string): AppRoute {
+  const pathname = pathValue.split("?")[0].replace(/\/+$/, "") || "/";
+  const parts = pathname.split("/").filter(Boolean);
+  if (!parts.length) return { screen: "home" };
+  if (parts[0] === "account") return { screen: "profile" };
+  if (parts[0] === "records") {
+    const track = trackIds.includes(parts[1] as TrackId) ? parts[1] as TrackId : undefined;
+    const character = allCharacters.find((item) => item.id === parts[2]);
+    return character && track
+      ? { screen: "recordDetail", track, lessonId: character.lessonId, characterId: character.id }
+      : { screen: "records", track };
+  }
+  if (parts[0] === "bujian") return { screen: "components" };
+  if (parts[0] === "read-aloud") return { screen: "read" };
+  if (parts[0] === "playground") {
+    const playground = (["kit", "lesson", "puzzle", "quiz"].includes(parts[1]) ? parts[1] : "kit") as PlaygroundKind;
+    return { screen: "playground", playground };
+  }
+  if (parts[0] === "lessons") {
+    if (!parts[1]) return { screen: "course" };
+    const lesson = lessonList.find((item) => item.id === parts[1]);
+    if (!lesson) return { screen: "course" };
+    const character = allCharacters.find((item) => item.id === parts[3] && item.lessonId === lesson.id);
+    if (parts[2] === "words" && character) {
+      return {
+        screen: parts[4] === "quizzes" ? "challenge" : "character",
+        track: "words",
+        lessonId: lesson.id,
+        characterId: character.id,
+      };
+    }
+    return { screen: "lesson", lessonId: lesson.id };
+  }
+
+  const routeTrack: TrackId | undefined =
+    parts[0] === "split-exercise"
+      ? "split"
+      : parts[0] === "honglan-exercise"
+        ? "honglan"
+        : parts[0] === "space-structure-exercise"
+          ? "structure"
+          : undefined;
+  if (routeTrack) {
+    if (!parts[1]) return { screen: "trackMap", track: routeTrack };
+    const lesson = lessonList.find((item) => item.id === parts[1]);
+    const character = allCharacters.find((item) => item.id === parts[3] && item.lessonId === lesson?.id);
+    if (lesson && character) {
+      return { screen: "challenge", track: routeTrack, lessonId: lesson.id, characterId: character.id };
+    }
+    return lesson
+      ? { screen: "trackLesson", track: routeTrack, lessonId: lesson.id }
+      : { screen: "trackMap", track: routeTrack };
+  }
+  return { screen: "home" };
+}
+
+function todayKey() {
+  return new Intl.DateTimeFormat("en-CA", {
+    timeZone: "Asia/Shanghai",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+  }).format(new Date());
+}
+
 function emptyProfile(): StudyProfile {
   return {
-    version: 2,
+    version: 3,
     name: "",
+    grade: course.grade,
+    courseId: "chinese-grade-5-volume-1",
     theme: "light",
     favorites: [],
     completed: {
@@ -154,6 +272,8 @@ function emptyProfile(): StudyProfile {
     },
     answers: {},
     learnedComponents: [],
+    recentComponents: [],
+    daily: {},
     readSessions: 0,
   };
 }
@@ -185,8 +305,10 @@ function normalizeProfile(value: unknown): StudyProfile {
 
   return {
     ...fallback,
-    version: 2,
+    version: 3,
     name: typeof raw.name === "string" ? raw.name.slice(0, 18) : "",
+    grade: typeof raw.grade === "number" ? raw.grade : course.grade,
+    courseId: typeof raw.courseId === "string" ? raw.courseId : "chinese-grade-5-volume-1",
     theme: raw.theme === "night" ? "night" : "light",
     favorites: Array.isArray(raw.favorites)
       ? raw.favorites.filter((item): item is string => typeof item === "string")
@@ -198,6 +320,10 @@ function normalizeProfile(value: unknown): StudyProfile {
     learnedComponents: Array.isArray(raw.learnedComponents)
       ? raw.learnedComponents.filter((item): item is string => typeof item === "string")
       : [],
+    recentComponents: Array.isArray(raw.recentComponents)
+      ? raw.recentComponents.filter((item): item is string => typeof item === "string").slice(0, 24)
+      : [],
+    daily: raw.daily && typeof raw.daily === "object" ? raw.daily : {},
     readSessions:
       typeof raw.readSessions === "number" && Number.isFinite(raw.readSessions)
         ? raw.readSessions
@@ -297,14 +423,12 @@ function getNextCharacter(
   const candidates = getTrackCharacters(track, lessonId);
   if (!candidates.length) return undefined;
   const last = profile.last[track];
-  const lastIndex = last
-    ? candidates.findIndex((item) => item.id === last.characterId)
-    : -1;
-  const ordered =
-    lastIndex >= 0
-      ? [...candidates.slice(lastIndex + 1), ...candidates.slice(0, lastIndex + 1)]
-      : candidates;
-  return ordered.find((item) => !profile.completed[track].includes(item.id)) || ordered[0];
+  const nextId = nextCandidateId(
+    candidates.map((item) => item.id),
+    profile.completed[track],
+    last?.characterId,
+  );
+  return candidates.find((item) => item.id === nextId);
 }
 
 function trackProgress(profile: StudyProfile, track: TrackId, lessonId?: string) {
@@ -333,42 +457,128 @@ function speak(text: string, onEnd?: () => void) {
   window.speechSynthesis.speak(utterance);
 }
 
-export default function Home() {
-  const [screen, setScreen] = useState<Screen>("home");
+function speakCharacter(character: CharacterItem) {
+  const audioPath = heritageAssets[character.id]?.audio;
+  if (audioPath) {
+    const audio = new Audio(audioPath);
+    void audio.play().catch(() => speak(character.hanzi));
+    return;
+  }
+  speak(character.hanzi);
+}
+
+export default function Home({ initialPath = "/" }: { initialPath?: string }) {
+  const initialRoute = useMemo(() => resolveAppRoute(initialPath), [initialPath]);
+  const [screen, setScreen] = useState<Screen>(initialRoute.screen);
   const [profile, setProfile] = useState<StudyProfile>(emptyProfile);
-  const [selectedLessonId, setSelectedLessonId] = useState(initialLesson.id);
-  const [selectedCharacterId, setSelectedCharacterId] = useState(initialCharacter.id);
-  const [selectedTrack, setSelectedTrack] = useState<TrackId>("words");
+  const [selectedLessonId, setSelectedLessonId] = useState(initialRoute.lessonId || initialLesson.id);
+  const [selectedCharacterId, setSelectedCharacterId] = useState(initialRoute.characterId || initialCharacter.id);
+  const [selectedTrack, setSelectedTrack] = useState<TrackId>(initialRoute.track || "words");
   const [selectedComponentId, setSelectedComponentId] = useState(allComponents[0]?.id || "");
   const [componentSearch, setComponentSearch] = useState("");
-  const [recordTrack, setRecordTrack] = useState<TrackId>("words");
+  const [recordTrack, setRecordTrack] = useState<TrackId>(initialRoute.track || "words");
+  const [playgroundKind, setPlaygroundKind] = useState<PlaygroundKind>(initialRoute.playground || "kit");
   const [questionIndex, setQuestionIndex] = useState(0);
   const [selectedOptions, setSelectedOptions] = useState<string[]>([]);
   const [wrote, setWrote] = useState(false);
   const [result, setResult] = useState<boolean | null>(null);
   const [hydrated, setHydrated] = useState(false);
+  const [identity, setIdentity] = useState<AccountIdentity | null>(null);
+  const [syncState, setSyncState] = useState<"loading" | "synced" | "local">("loading");
+
+  const applyRoute = useCallback((route: AppRoute) => {
+    setScreen(route.screen);
+    if (route.lessonId) setSelectedLessonId(route.lessonId);
+    if (route.characterId) setSelectedCharacterId(route.characterId);
+    if (route.track) {
+      setSelectedTrack(route.track);
+      if (route.screen === "records" || route.screen === "recordDetail") setRecordTrack(route.track);
+    }
+    if (route.playground) setPlaygroundKind(route.playground);
+    if (route.screen === "challenge") {
+      setQuestionIndex(0);
+      setSelectedOptions([]);
+      setWrote(false);
+      setResult(null);
+    }
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
 
   useEffect(() => {
-    const timer = window.setTimeout(() => {
+    let active = true;
+    const timer = window.setTimeout(async () => {
+      let localProfile: StudyProfile | null = null;
+      let localUpdatedAt = 0;
       try {
         const stored =
           window.localStorage.getItem(STORAGE_KEY) ||
+          window.localStorage.getItem(VERSION_TWO_STORAGE_KEY) ||
           window.localStorage.getItem(LEGACY_STORAGE_KEY);
-        if (stored) setProfile(normalizeProfile(JSON.parse(stored)));
+        if (stored) localProfile = normalizeProfile(JSON.parse(stored));
+        localUpdatedAt = Date.parse(window.localStorage.getItem(STORAGE_UPDATED_KEY) || "") || 0;
       } catch {
         window.localStorage.removeItem(STORAGE_KEY);
+      }
+      try {
+        const response = await fetch("/api/profile", { cache: "no-store" });
+        if (!response.ok) throw new Error("profile unavailable");
+        const payload = await response.json() as {
+          identity?: AccountIdentity;
+          profile?: unknown;
+          updatedAt?: string | null;
+        };
+        if (!active) return;
+        if (payload.identity) setIdentity(payload.identity);
+        const serverUpdatedAt = Date.parse(payload.updatedAt || "") || 0;
+        if (payload.profile && (!localProfile || serverUpdatedAt >= localUpdatedAt)) {
+          setProfile(normalizeProfile(payload.profile));
+        } else if (localProfile) {
+          setProfile(localProfile);
+          void fetch("/api/profile", {
+            method: "PUT",
+            headers: { "content-type": "application/json" },
+            body: JSON.stringify(localProfile),
+          });
+        }
+        setSyncState("synced");
+      } catch {
+        if (active && localProfile) setProfile(localProfile);
+        if (active) setSyncState("local");
       } finally {
-        setHydrated(true);
+        if (active) setHydrated(true);
       }
     }, 0);
-    return () => window.clearTimeout(timer);
+    return () => {
+      active = false;
+      window.clearTimeout(timer);
+    };
   }, []);
 
   useEffect(() => {
     if (!hydrated) return;
     window.localStorage.setItem(STORAGE_KEY, JSON.stringify(profile));
+    window.localStorage.setItem(STORAGE_UPDATED_KEY, new Date().toISOString());
     document.documentElement.dataset.theme = profile.theme;
+    const timer = window.setTimeout(async () => {
+      try {
+        const response = await fetch("/api/profile", {
+          method: "PUT",
+          headers: { "content-type": "application/json" },
+          body: JSON.stringify(profile),
+        });
+        setSyncState(response.ok ? "synced" : "local");
+      } catch {
+        setSyncState("local");
+      }
+    }, 650);
+    return () => window.clearTimeout(timer);
   }, [hydrated, profile]);
+
+  useEffect(() => {
+    const onPopState = () => applyRoute(resolveAppRoute(window.location.pathname));
+    window.addEventListener("popstate", onPopState);
+    return () => window.removeEventListener("popstate", onPopState);
+  }, [applyRoute]);
 
   const selectedLesson =
     lessonList.find((lesson) => lesson.id === selectedLessonId) || initialLesson;
@@ -380,9 +590,28 @@ export default function Home() {
   const currentQuestion = challengeExercises[questionIndex];
   const favoriteSet = useMemo(() => new Set(profile.favorites), [profile.favorites]);
 
+  function navigatePath(path: string, replace = false) {
+    const route = resolveAppRoute(path);
+    window.history[replace ? "replaceState" : "pushState"]({}, "", path);
+    applyRoute(route);
+  }
+
   function navigate(next: Screen) {
-    setScreen(next);
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    const path =
+      next === "home" ? "/" :
+      next === "course" ? "/lessons" :
+      next === "lesson" ? `/lessons/${selectedLessonId}` :
+      next === "character" ? `/lessons/${selectedLessonId}/words/${selectedCharacterId}` :
+      next === "trackMap" ? routeForTrack(selectedTrack === "words" ? "split" : selectedTrack) :
+      next === "trackLesson" ? routeForTrack(selectedTrack, selectedLessonId) :
+      next === "challenge" ? routeForTrack(selectedTrack, selectedLessonId, selectedCharacterId) :
+      next === "components" ? "/bujian" :
+      next === "records" ? "/records" :
+      next === "recordDetail" ? `/records/${recordTrack}/${selectedCharacterId}` :
+      next === "read" ? "/read-aloud" :
+      next === "playground" ? `/playground/${playgroundKind}` :
+      "/account";
+    navigatePath(path);
   }
 
   function updateProfile(updater: (previous: StudyProfile) => StudyProfile) {
@@ -390,46 +619,30 @@ export default function Home() {
   }
 
   function openLesson(lessonId: string) {
-    setSelectedLessonId(lessonId);
-    navigate("lesson");
+    navigatePath(`/lessons/${lessonId}`);
   }
 
   function openCharacter(character: CharacterItem) {
-    setSelectedLessonId(character.lessonId);
-    setSelectedCharacterId(character.id);
-    navigate("character");
+    navigatePath(`/lessons/${character.lessonId}/words/${character.id}`);
   }
 
   function openTrackMap(track: TrackId) {
-    setSelectedTrack(track);
-    navigate("trackMap");
+    navigatePath(routeForTrack(track));
   }
 
   function openTrackLesson(track: TrackId, lessonId: string) {
-    setSelectedTrack(track);
-    setSelectedLessonId(lessonId);
-    navigate("trackLesson");
+    navigatePath(routeForTrack(track, lessonId));
   }
 
   function openRecordDetail(character: CharacterItem, track: TrackId) {
-    setRecordTrack(track);
-    setSelectedTrack(track);
-    setSelectedLessonId(character.lessonId);
-    setSelectedCharacterId(character.id);
-    navigate("recordDetail");
+    navigatePath(`/records/${track}/${character.id}`);
   }
 
   function openChallenge(track: TrackId, character: CharacterItem, index = 0) {
     const questions = getTrackExercises(character, track);
     if (!questions.length) return;
-    setSelectedTrack(track);
-    setSelectedLessonId(character.lessonId);
-    setSelectedCharacterId(character.id);
+    navigatePath(routeForTrack(track, character.lessonId, character.id));
     setQuestionIndex(Math.min(Math.max(index, 0), questions.length - 1));
-    setSelectedOptions([]);
-    setWrote(false);
-    setResult(null);
-    navigate("challenge");
   }
 
   function continueTrack(track: TrackId) {
@@ -468,6 +681,14 @@ export default function Home() {
     setSelectedOptions((previous) => previous.filter((item) => item !== optionId));
   }
 
+  function logLearningEvent(payload: Record<string, unknown>) {
+    void fetch("/api/events", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify(payload),
+    }).catch(() => undefined);
+  }
+
   function checkAnswer() {
     if (!currentQuestion || result !== null) return;
     const correct = isAnswerCorrect(
@@ -480,6 +701,15 @@ export default function Home() {
     const questionIds = challengeExercises.map((item) => item.id);
     const now = new Date().toISOString();
     setResult(correct);
+    logLearningEvent({
+      action: "answer",
+      track: selectedTrack,
+      lessonId: selectedCharacter.lessonId,
+      characterId: selectedCharacter.id,
+      questionId: currentQuestion.id,
+      correct,
+      selected: currentQuestion.kind === "write" ? ["written"] : selectedOptions,
+    });
 
     updateProfile((previous) => {
       const prior = previous.answers[currentQuestion.id];
@@ -492,28 +722,51 @@ export default function Home() {
           lastAt: now,
         },
       };
-      const allCorrect = questionIds.every(
-        (id) => id === currentQuestion.id ? correct : answers[id]?.lastCorrect,
+      const allCorrect = isQuestionSetComplete(
+        questionIds,
+        currentQuestion.id,
+        correct,
+        answers,
       );
       const completed = { ...previous.completed };
-      if (allCorrect && !completed[selectedTrack].includes(selectedCharacter.id)) {
-        completed[selectedTrack] = [...completed[selectedTrack], selectedCharacter.id];
-      }
+      completed[selectedTrack] = updateCompletion(
+        completed[selectedTrack],
+        selectedCharacter.id,
+        allCorrect,
+      );
+      const date = todayKey();
+      const day = previous.daily[date] || { attempts: 0, correct: 0, skips: 0, readSessions: 0 };
 
       return {
         ...previous,
         answers,
         completed,
+        daily: {
+          ...previous.daily,
+          [date]: {
+            ...day,
+            attempts: day.attempts + 1,
+            correct: day.correct + (correct ? 1 : 0),
+          },
+        },
         last: {
           ...previous.last,
           [selectedTrack]: {
             lessonId: selectedCharacter.lessonId,
             characterId: selectedCharacter.id,
-            questionIndex,
+            questionIndex: nextResumeIndex(questionIndex, challengeExercises.length, correct),
           },
         },
       };
     });
+  }
+
+  function setChallengeStep(index: number) {
+    setQuestionIndex(Math.min(Math.max(index, 0), challengeExercises.length - 1));
+    setSelectedOptions([]);
+    setWrote(false);
+    setResult(null);
+    window.scrollTo({ top: 0, behavior: "smooth" });
   }
 
   function nextChallengeStep() {
@@ -526,11 +779,49 @@ export default function Home() {
     }
 
     if (questionIndex < challengeExercises.length - 1) {
-      openChallenge(selectedTrack, selectedCharacter, questionIndex + 1);
+      setChallengeStep(questionIndex + 1);
       return;
     }
 
     if (selectedTrack === "words") {
+      openLesson(selectedCharacter.lessonId);
+    } else {
+      openTrackLesson(selectedTrack, selectedCharacter.lessonId);
+    }
+  }
+
+  function previousChallengeStep() {
+    if (questionIndex > 0) setChallengeStep(questionIndex - 1);
+  }
+
+  function skipChallengeStep() {
+    if (!currentQuestion) return;
+    logLearningEvent({
+      action: "skip",
+      track: selectedTrack,
+      lessonId: selectedCharacter.lessonId,
+      characterId: selectedCharacter.id,
+      questionId: currentQuestion.id,
+    });
+    updateProfile((previous) => {
+      const date = todayKey();
+      const day = previous.daily[date] || { attempts: 0, correct: 0, skips: 0, readSessions: 0 };
+      return {
+        ...previous,
+        daily: { ...previous.daily, [date]: { ...day, skips: day.skips + 1 } },
+        last: {
+          ...previous.last,
+          [selectedTrack]: {
+            lessonId: selectedCharacter.lessonId,
+            characterId: selectedCharacter.id,
+            questionIndex: Math.min(questionIndex + 1, Math.max(0, challengeExercises.length - 1)),
+          },
+        },
+      };
+    });
+    if (questionIndex < challengeExercises.length - 1) {
+      setChallengeStep(questionIndex + 1);
+    } else if (selectedTrack === "words") {
       openLesson(selectedCharacter.lessonId);
     } else {
       openTrackLesson(selectedTrack, selectedCharacter.lessonId);
@@ -543,12 +834,36 @@ export default function Home() {
       learnedComponents: previous.learnedComponents.includes(componentId)
         ? previous.learnedComponents
         : [...previous.learnedComponents, componentId],
+      recentComponents: [componentId, ...previous.recentComponents.filter((id) => id !== componentId)].slice(0, 24),
     }));
   }
 
   function resetProfile() {
-    if (!window.confirm("清除这台设备上的学习足迹吗？课程内容不会受影响。")) return;
-    setProfile((previous) => ({ ...emptyProfile(), theme: previous.theme }));
+    if (!window.confirm("清除你的学习足迹吗？课程内容不会受影响。")) return;
+    const next = { ...emptyProfile(), theme: profile.theme };
+    setSyncState("loading");
+    void (async () => {
+      try {
+        await fetch("/api/profile", { method: "DELETE" });
+      } finally {
+        window.localStorage.removeItem(STORAGE_KEY);
+        window.localStorage.removeItem(STORAGE_UPDATED_KEY);
+        setProfile(next);
+      }
+    })();
+  }
+
+  function completeReadSession() {
+    logLearningEvent({ action: "read", lessonId: selectedLessonId });
+    updateProfile((previous) => {
+      const date = todayKey();
+      const day = previous.daily[date] || { attempts: 0, correct: 0, skips: 0, readSessions: 0 };
+      return {
+        ...previous,
+        readSessions: previous.readSessions + 1,
+        daily: { ...previous.daily, [date]: { ...day, readSessions: day.readSessions + 1 } },
+      };
+    });
   }
 
   return (
@@ -564,6 +879,7 @@ export default function Home() {
         <HomeHub
           profile={profile}
           hydrated={hydrated}
+          syncState={syncState}
           onCourse={() => navigate("course")}
           onTrackMap={openTrackMap}
           onContinue={continueTrack}
@@ -597,12 +913,13 @@ export default function Home() {
           favorite={favoriteSet.has(selectedCharacter.id)}
           onBack={() => openLesson(selectedCharacter.lessonId)}
           onFavorite={() => toggleFavorite(selectedCharacter.id)}
-          onSpeak={() => speak(selectedCharacter.hanzi)}
+          onSpeak={() => speakCharacter(selectedCharacter)}
           onStart={() => openChallenge("words", selectedCharacter)}
           onComponent={(glyph) => {
             const component = allComponents.find((item) => item.glyph === glyph);
             if (component) {
               setSelectedComponentId(component.id);
+              markComponentLearned(component.id);
               navigate("components");
             }
           }}
@@ -651,6 +968,8 @@ export default function Home() {
           onClearWrite={() => setWrote(false)}
           onCheck={checkAnswer}
           onNext={nextChallengeStep}
+          onPrevious={previousChallengeStep}
+          onSkip={skipChallengeStep}
         />
       )}
 
@@ -674,7 +993,7 @@ export default function Home() {
           profile={profile}
           track={recordTrack}
           onBack={() => navigate("home")}
-          onTrack={setRecordTrack}
+          onTrack={(track) => navigatePath(`/records/${track}`)}
           onDetail={(character) => openRecordDetail(character, recordTrack)}
         />
       )}
@@ -684,7 +1003,7 @@ export default function Home() {
           character={selectedCharacter}
           profile={profile}
           track={recordTrack}
-          onBack={() => navigate("records")}
+          onBack={() => navigatePath(`/records/${recordTrack}`)}
           onPractice={(index) => openChallenge(recordTrack, selectedCharacter, index)}
         />
       )}
@@ -693,20 +1012,18 @@ export default function Home() {
         <ReadAloud
           profile={profile}
           onBack={() => navigate("home")}
-          onSession={() =>
-            updateProfile((previous) => ({
-              ...previous,
-              readSessions: previous.readSessions + 1,
-            }))
-          }
+          onSession={completeReadSession}
         />
       )}
 
       {screen === "profile" && (
         <ProfilePanel
           profile={profile}
+          identity={identity}
+          syncState={syncState}
           onBack={() => navigate("home")}
           onName={(name) => updateProfile((previous) => ({ ...previous, name }))}
+          onGrade={(grade) => updateProfile((previous) => ({ ...previous, grade }))}
           onTheme={() =>
             updateProfile((previous) => ({
               ...previous,
@@ -714,6 +1031,14 @@ export default function Home() {
             }))
           }
           onReset={resetProfile}
+        />
+      )}
+
+      {screen === "playground" && (
+        <Playground
+          kind={playgroundKind}
+          onBack={() => navigate("home")}
+          onKind={(kind) => navigatePath(`/playground/${kind}`)}
         />
       )}
     </main>
@@ -767,6 +1092,7 @@ function TopNavigation({
 function HomeHub({
   profile,
   hydrated,
+  syncState,
   onCourse,
   onTrackMap,
   onContinue,
@@ -775,6 +1101,7 @@ function HomeHub({
 }: {
   profile: StudyProfile;
   hydrated: boolean;
+  syncState: "loading" | "synced" | "local";
   onCourse: () => void;
   onTrackMap: (track: TrackId) => void;
   onContinue: (track: TrackId) => void;
@@ -784,12 +1111,18 @@ function HomeHub({
   const nextWord = getNextCharacter("words", profile);
   const wordProgress = trackProgress(profile, "words");
   const name = profile.name || "小探险家";
+  const today = profile.daily[todayKey()] || { attempts: 0, correct: 0, skips: 0, readSessions: 0 };
 
   return (
     <div className="page home-page">
       <section className="home-hero">
         <div className="hero-copy">
-          <p className="kicker">语文 · 五年级上册</p>
+          <label className="course-selector">
+            <span>当前课程</span>
+            <select aria-label="选择课程" value={profile.courseId} onChange={() => undefined}>
+              <option value="chinese-grade-5-volume-1">语文 · 五年级上册</option>
+            </select>
+          </label>
           <h1>你好，{name}！<br />今天从一个字出发。</h1>
           <p>
             每个学习区都在训练不同能力：先懂字义，再会拆字、分部首、认结构。
@@ -802,7 +1135,11 @@ function HomeHub({
           </div>
           <div className="hero-status">
             <span className="pulse-dot" />
-            {hydrated ? "你的学习足迹只保存在这台设备" : "正在准备学习空间"}
+            {!hydrated
+              ? "正在准备学习空间"
+              : syncState === "synced"
+                ? `今天已作答 ${today.attempts} 次 · 云端已同步`
+                : `今天已作答 ${today.attempts} 次 · 当前离线，稍后自动同步`}
           </div>
         </div>
         <div className="hero-illustration">
@@ -996,14 +1333,14 @@ function LessonWordMap({
                     className={
                       "word-chip " +
                       (completed.has(character.id) ? "is-complete " : "") +
-                      (!character.ready ? "is-extension" : "")
+                      (!getTrackExercises(character, "words").length ? "is-extension" : "")
                     }
                     key={character.id}
                     onClick={() => onCharacter(character)}
                   >
                     <strong>{character.hanzi}</strong>
                     {completed.has(character.id) && <small>✓</small>}
-                    {!character.ready && !completed.has(character.id) && <em>荐</em>}
+                    {!getTrackExercises(character, "words").length && !completed.has(character.id) && <em>拓</em>}
                   </button>
                 ))}
               </div>
@@ -1058,6 +1395,8 @@ function CharacterStudy({
   const isComplete = profile.completed.words.includes(character.id);
   const completedQuestions = exercises.filter((question) => profile.answers[question.id]?.lastCorrect).length;
   const illustration = characterVisuals[character.hanzi];
+  const heritage = heritageAssets[character.id];
+  const hasExercises = exercises.length > 0;
 
   return (
     <div className="page character-page">
@@ -1087,14 +1426,18 @@ function CharacterStudy({
             <span>本义：{character.originalMeaning}</span>
           </div>
           <p>{character.description}</p>
-          <div className="script-line" aria-label="字形演变线索">
-            {["古字线索", "篆书", "隶书", "楷书"].map((stage, index) => (
-              <div key={stage}>
-                <strong className={"script-stage stage-" + index}>{character.hanzi}</strong>
-                <small>{stage}</small>
-              </div>
-            ))}
-          </div>
+          {heritage?.stages.length ? (
+            <div className="script-line" aria-label="真实字形演变资料">
+              {heritage.stages.map((stage) => (
+                <div key={stage.src}>
+                  <span className="script-image"><Image src={stage.src} alt={`${character.hanzi}的${stage.label}字形`} fill sizes="74px" /></span>
+                  <small>{stage.label}</small>
+                </div>
+              ))}
+            </div>
+          ) : (
+            <div className="script-note">本字暂无可靠的古文字图版，保留现代楷书，不虚构演变形态。</div>
+          )}
           <blockquote>课文原文：{character.originalText}</blockquote>
         </div>
         <figure className="story-meaning-visual">
@@ -1146,7 +1489,9 @@ function CharacterStudy({
         <div>
           <p className="kicker">识字闯关</p>
           <h2>理解过后，马上练一练</h2>
-          <p>按照“本义 → 结构 → 图意 → 组字 → 书写”的顺序完成 {exercises.length} 题。</p>
+          <p>{hasExercises
+            ? `按照“本义 → 结构 → 图意 → 组字 → 书写”的顺序完成 ${exercises.length} 题。`
+            : "这个拓展字已开放字义故事、红蓝和结构练习，完整识字小测稍后开放。"}</p>
           <div className="quest-dots">
             {exercises.map((exercise) => (
               <span className={profile.answers[exercise.id]?.lastCorrect ? "is-done" : ""} key={exercise.id} title={questionTypeLabel(exercise, "words")} />
@@ -1154,8 +1499,8 @@ function CharacterStudy({
             <small>{completedQuestions} / {exercises.length}</small>
           </div>
         </div>
-        <button className="game-button primary" onClick={onStart}>
-          {isComplete ? "再练一轮" : "学会了，练习一下"} →
+        <button className="game-button primary" onClick={onStart} disabled={!hasExercises}>
+          {hasExercises ? (isComplete ? "再练一轮" : "学会了，练习一下") + " →" : "识字小测暂未开放"}
         </button>
       </section>
     </div>
@@ -1286,6 +1631,8 @@ function ChallengeRoom({
   onClearWrite,
   onCheck,
   onNext,
+  onPrevious,
+  onSkip,
 }: {
   track: TrackId;
   character: CharacterItem;
@@ -1303,6 +1650,8 @@ function ChallengeRoom({
   onClearWrite: () => void;
   onCheck: () => void;
   onNext: () => void;
+  onPrevious: () => void;
+  onSkip: () => void;
 }) {
   const meta = trackMeta[track];
   const expected = getExpectedIds(question, character, track);
@@ -1368,9 +1717,11 @@ function ChallengeRoom({
 
         <div className="challenge-footer">
           {result === null ? (
-            <button className="game-button primary" disabled={!ready} onClick={onCheck}>
-              核对答案 →
-            </button>
+            <div className="question-navigation">
+              <button className="game-button ghost" disabled={questionIndex === 0} onClick={onPrevious}>← 上一题</button>
+              <button className="text-button" onClick={onSkip}>跳过这一题 →</button>
+              <button className="game-button primary" disabled={!ready} onClick={onCheck}>核对答案 →</button>
+            </div>
           ) : (
             <div className={"answer-feedback " + (result ? "is-correct" : "is-wrong")}>
               <span>{result ? "✓" : "!"}</span>
@@ -1417,7 +1768,7 @@ function ChoiceExercise({
           .slice(0, index)
           .filter((item) => !item.correct).length;
         const illustration = visual
-          ? getVisualOption(character.hanzi, question.id, option.correct, wrongSlot)
+          ? getVisualOption(character.hanzi, question.id, option.correct, wrongSlot, option.text)
           : null;
         const state =
           result === null
@@ -1537,13 +1888,20 @@ function RedBlueExercise({
   result: boolean | null;
   onChoose: (id: string) => void;
 }) {
+  const redBlueAsset = heritageAssets[character.id]?.redBlue;
   return (
     <div className="redblue-exercise">
-      <div className="redblue-word" aria-label={"“" + character.hanzi + "”的红蓝字形"}>
-        {(character.parts.length ? character.parts : [{ char: character.hanzi, radical: true }]).map((part, index) => (
-          <span className={part.radical ? "is-red" : "is-blue"} key={part.char + index}>{part.char}</span>
-        ))}
-      </div>
+      {redBlueAsset ? (
+        <div className="redblue-word is-composed" aria-label={"“" + character.hanzi + "”的红蓝合字"}>
+          <Image src={redBlueAsset} alt={`${character.hanzi}字中部首与其他部件的红蓝标记`} fill sizes="190px" />
+        </div>
+      ) : (
+        <div className="redblue-word" aria-label={"“" + character.hanzi + "”的红蓝字形"}>
+          {(character.parts.length ? character.parts : [{ char: character.hanzi, radical: true }]).map((part, index) => (
+            <span className={part.radical ? "is-red" : "is-blue"} key={part.char + index}>{part.char}</span>
+          ))}
+        </div>
+      )}
       <p><i className="red-key" /> 表意部首　<i className="blue-key" /> 其他部件</p>
       <div className="redblue-options">
         {question.options.map((option, index) => {
@@ -1695,6 +2053,7 @@ function ComponentStudio({
   onSelect: (component: ComponentItem) => void;
   onCharacter: (character: CharacterItem) => void;
 }) {
+  const [sortMode, setSortMode] = useState<"frequency" | "recent">("frequency");
   const useCount = useMemo(() => {
     const map = new Map<string, number>();
     allCharacters.forEach((character) =>
@@ -1707,8 +2066,18 @@ function ComponentStudio({
       const term = search.trim().toLocaleLowerCase();
       return !term || [component.title, component.glyph, component.examples.join(" ")].join(" ").toLocaleLowerCase().includes(term);
     })
-    .sort((a, b) => (useCount.get(b.glyph) || 0) - (useCount.get(a.glyph) || 0) || a.sequence - b.sequence);
+    .sort((a, b) => {
+      if (sortMode === "recent") {
+        const aIndex = profile.recentComponents.indexOf(a.id);
+        const bIndex = profile.recentComponents.indexOf(b.id);
+        const aRank = aIndex < 0 ? Number.MAX_SAFE_INTEGER : aIndex;
+        const bRank = bIndex < 0 ? Number.MAX_SAFE_INTEGER : bIndex;
+        return aRank - bRank || a.sequence - b.sequence;
+      }
+      return (useCount.get(b.glyph) || 0) - (useCount.get(a.glyph) || 0) || a.sequence - b.sequence;
+    });
   const connected = allCharacters.filter((character) => character.parts.some((part) => part.char === selected.glyph));
+  const recent = allComponents.find((component) => component.id === profile.recentComponents[0]);
 
   return (
     <div className="page components-page">
@@ -1718,10 +2087,19 @@ function ComponentStudio({
         copy="先按课内出现次数排序，再把一个部件放回真实的词语中理解。"
         onBack={onBack}
       />
+      {recent && (
+        <section className="component-resume">
+          <span>上次学到</span><strong>{recent.glyph}</strong><p>{recent.title}</p>
+          <button className="game-button ghost" onClick={() => onSelect(recent)}>继续 →</button>
+        </section>
+      )}
       <div className="component-layout">
         <section className="component-browser">
           <div className="component-browser-toolbar">
-            <span>按出现次数</span>
+            <div className="component-sort-tabs">
+              <button className={sortMode === "frequency" ? "is-active" : ""} onClick={() => setSortMode("frequency")}>按出现次数</button>
+              <button className={sortMode === "recent" ? "is-active" : ""} onClick={() => setSortMode("recent")}>最近学习</button>
+            </div>
             <label>
               <i>⌕</i>
               <input value={search} onChange={(event) => onSearch(event.target.value)} placeholder="搜部件或例字" />
@@ -1932,6 +2310,7 @@ function ReadAloud({
   const [speaking, setSpeaking] = useState(false);
   const [recording, setRecording] = useState(false);
   const [recordingUrl, setRecordingUrl] = useState<string | null>(null);
+  const [recordingStatus, setRecordingStatus] = useState<"idle" | "saving" | "saved" | "local">("idle");
   const recorderRef = useRef<MediaRecorder | null>(null);
   const streamRef = useRef<MediaStream | null>(null);
   const chunksRef = useRef<Blob[]>([]);
@@ -1941,14 +2320,37 @@ function ReadAloud({
   useEffect(() => {
     return () => {
       streamRef.current?.getTracks().forEach((track) => track.stop());
-      if (recordingUrl) URL.revokeObjectURL(recordingUrl);
+      if (recordingUrl?.startsWith("blob:")) URL.revokeObjectURL(recordingUrl);
     };
   }, [recordingUrl]);
+
+  useEffect(() => {
+    let active = true;
+    void fetch(`/api/recordings?lessonId=${encodeURIComponent(lessonId)}`, { cache: "no-store" })
+      .then((response) => response.ok ? response.json() : Promise.reject())
+      .then((payload: { recordings?: { url: string }[] }) => {
+        if (active && payload.recordings?.[0]) {
+          setRecordingUrl(payload.recordings[0].url);
+          setRecordingStatus("saved");
+        } else if (active) {
+          setRecordingUrl(null);
+          setRecordingStatus("idle");
+        }
+      })
+      .catch(() => undefined);
+    return () => { active = false; };
+  }, [lessonId]);
 
   function play(text: string) {
     setActiveText(text);
     setSpeaking(true);
     speak(text, () => setSpeaking(false));
+  }
+
+  function selectLesson(nextLessonId: string) {
+    setRecordingUrl(null);
+    setRecordingStatus("idle");
+    setLessonId(nextLessonId);
   }
 
   async function toggleRecording() {
@@ -1965,13 +2367,30 @@ function ReadAloud({
       recorder.ondataavailable = (event) => {
         if (event.data.size) chunksRef.current.push(event.data);
       };
-      recorder.onstop = () => {
-        const blob = new Blob(chunksRef.current, { type: "audio/webm" });
-        if (recordingUrl) URL.revokeObjectURL(recordingUrl);
-        setRecordingUrl(URL.createObjectURL(blob));
+      recorder.onstop = async () => {
+        const contentType = recorder.mimeType || chunksRef.current[0]?.type || "audio/webm";
+        const blob = new Blob(chunksRef.current, { type: contentType });
+        if (recordingUrl?.startsWith("blob:")) URL.revokeObjectURL(recordingUrl);
+        const localUrl = URL.createObjectURL(blob);
+        setRecordingUrl(localUrl);
+        setRecordingStatus("saving");
         setRecording(false);
         stream.getTracks().forEach((track) => track.stop());
         onSession();
+        try {
+          const response = await fetch(`/api/recordings?lessonId=${encodeURIComponent(lesson.id)}`, {
+            method: "POST",
+            headers: { "content-type": blob.type || "audio/webm" },
+            body: blob,
+          });
+          if (!response.ok) throw new Error("save failed");
+          const payload = await response.json() as { recording: { url: string } };
+          URL.revokeObjectURL(localUrl);
+          setRecordingUrl(payload.recording.url);
+          setRecordingStatus("saved");
+        } catch {
+          setRecordingStatus("local");
+        }
       };
       recorder.start();
       setRecording(true);
@@ -1985,12 +2404,12 @@ function ReadAloud({
       <PageHeading
         kicker="日日朗读"
         title="先听一遍，再把句子读出来"
-        copy={"已完成 " + profile.readSessions + " 次本机朗读练习。录音仅留在当前浏览器页面。"}
+        copy={"已完成 " + profile.readSessions + " 次朗读练习。登录状态下，录音可跨设备回听。"}
         onBack={onBack}
       />
       <div className="read-lesson-tabs">
         {lessonList.map((item) => (
-          <button className={item.id === lesson.id ? "is-active" : ""} key={item.id} onClick={() => setLessonId(item.id)}>
+          <button className={item.id === lesson.id ? "is-active" : ""} key={item.id} onClick={() => selectLesson(item.id)}>
             第 {item.position} 课 · {item.title}
           </button>
         ))}
@@ -2017,7 +2436,7 @@ function ReadAloud({
       {recordingUrl && (
         <section className="recording-result">
           <span>✓</span>
-          <div><strong>这次朗读已经录好</strong><p>你可以在这里回听，刷新页面后录音会自动清除。</p></div>
+          <div><strong>{recordingStatus === "saving" ? "正在保存录音…" : "这次朗读已经录好"}</strong><p>{recordingStatus === "saved" ? "录音已安全同步，可以稍后回来继续听。" : recordingStatus === "local" ? "当前网络不可用，录音暂存在本页。" : "你可以在这里回听。"}</p></div>
           <audio controls src={recordingUrl} />
         </section>
       )}
@@ -2027,14 +2446,20 @@ function ReadAloud({
 
 function ProfilePanel({
   profile,
+  identity,
+  syncState,
   onBack,
   onName,
+  onGrade,
   onTheme,
   onReset,
 }: {
   profile: StudyProfile;
+  identity: AccountIdentity | null;
+  syncState: "loading" | "synced" | "local";
   onBack: () => void;
   onName: (name: string) => void;
+  onGrade: (grade: number) => void;
   onTheme: () => void;
   onReset: () => void;
 }) {
@@ -2042,22 +2467,91 @@ function ProfilePanel({
   return (
     <div className="page profile-page">
       <PageHeading
-        kicker="我的书包"
+        kicker="我的账户"
         title="这是属于你的学习空间"
-        copy="名字、主题和学习记录都保存在当前设备，不会上传到服务器。"
+        copy={syncState === "synced" ? "学习进度已经安全同步，换设备后也能从上次的位置继续。" : "当前处于离线模式，恢复网络后会自动同步。"}
         onBack={onBack}
       />
+      <section className="account-identity-card">
+        <div><span>{identity?.mode === "workspace" ? "已登录账户" : "本设备学习身份"}</span><strong>{identity?.email || identity?.displayName || "小探险家"}</strong></div>
+        <i className={syncState === "synced" ? "is-synced" : ""}>{syncState === "synced" ? "● 已同步" : "○ 离线"}</i>
+      </section>
       <section className="profile-card">
         <div className="profile-avatar">{profile.name ? profile.name.slice(0, 1) : "学"}</div>
         <div>
           <label>学习小名<input value={profile.name} onChange={(event) => onName(event.target.value)} placeholder="给自己取一个名字" maxLength={18} /></label>
+          <label>孩子年级
+            <select value={profile.grade} onChange={(event) => onGrade(Number(event.target.value))}>
+              {[1, 2, 3, 4, 5, 6].map((grade) => <option value={grade} key={grade}>{grade} 年级</option>)}
+            </select>
+          </label>
           <p>已完成 {totalCompleted} 个学习关卡 · 认识 {profile.learnedComponents.length} 个部件</p>
         </div>
       </section>
       <div className="profile-actions">
         <button onClick={onTheme}><span>{profile.theme === "light" ? "◐" : "◑"}</span>{profile.theme === "light" ? "切换夜读模式" : "切换日间模式"}</button>
-        <button className="is-danger" onClick={onReset}><span>↺</span>清除本机学习记录</button>
+        <button className="is-danger" onClick={onReset}><span>↺</span>清除学习记录</button>
+        {identity?.mode === "workspace" && <Link className="account-signout" href="/signout-with-chatgpt?return_to=%2F"><span>↗</span>退出登录</Link>}
       </div>
+    </div>
+  );
+}
+
+function Playground({
+  kind,
+  onBack,
+  onKind,
+}: {
+  kind: PlaygroundKind;
+  onBack: () => void;
+  onKind: (kind: PlaygroundKind) => void;
+}) {
+  const [presses, setPresses] = useState(0);
+  const [grade, setGrade] = useState("一年级");
+  const [puzzle, setPuzzle] = useState<string[]>([]);
+  const [quiz, setQuiz] = useState<string | null>(null);
+  const labels: Record<PlaygroundKind, string> = { kit: "组件 Kit", lesson: "课程动效", puzzle: "拆字拼图", quiz: "答题反馈" };
+  return (
+    <div className="page playground-page">
+      <PageHeading kicker="设计实验室" title={labels[kind]} copy="用于验证游戏化组件、动效、触控和学习反馈的内部体验页面。" onBack={onBack} />
+      <nav className="playground-tabs" aria-label="实验页面">
+        {(Object.keys(labels) as PlaygroundKind[]).map((id) => <button className={id === kind ? "is-active" : ""} key={id} onClick={() => onKind(id)}>{labels[id]}</button>)}
+      </nav>
+      {kind === "kit" && (
+        <section className="playground-board">
+          <h2>GameButton · 变体</h2>
+          <div className="kit-buttons">
+            <button className="game-button primary" onClick={() => setPresses((value) => value + 1)}>🚀 开始啦</button>
+            <button className="game-button success">✓ 正确</button>
+            <button className="game-button ghost">☁ 天空</button>
+            <button className="game-button ghost" disabled>禁用</button>
+          </div>
+          <p>主按钮被按了 {presses} 次</p>
+          <label>Selector · 年级<select value={grade} onChange={(event) => setGrade(event.target.value)}>{["一年级", "二年级", "三年级"].map((item) => <option key={item}>{item}</option>)}</select></label>
+        </section>
+      )}
+      {kind === "lesson" && (
+        <section className="playground-board lesson-demo">
+          <span className="demo-sun">日</span><span className="demo-arrow">→</span><span className="demo-glyph">字</span>
+          <h2>一句讲清字形，再把线索放回课文</h2>
+          <p>动效遵循“出现—聚焦—连接—完成”的节奏，不让装饰抢走学习注意力。</p>
+        </section>
+      )}
+      {kind === "puzzle" && (
+        <section className="playground-board puzzle-demo">
+          <h2>把“桂”字搭出来</h2>
+          <div className="puzzle-slots"><span>{puzzle[0] || "?"}</span><b>＋</b><span>{puzzle[1] || "?"}</span></div>
+          <div className="kit-buttons">{["木", "圭", "女", "寸"].map((part) => <button className={puzzle.includes(part) ? "is-selected" : ""} key={part} disabled={puzzle.length >= 2 && !puzzle.includes(part)} onClick={() => setPuzzle((value) => value.includes(part) ? value.filter((item) => item !== part) : [...value, part])}>{part}</button>)}</div>
+          <p>{puzzle.join("") === "木圭" ? "✓ 搭对了！木表意，圭提示读音。" : "选择两个部件，顺序也很重要。"}</p>
+        </section>
+      )}
+      {kind === "quiz" && (
+        <section className="playground-board quiz-demo">
+          <h2>“桂”是什么结构？</h2>
+          <div className="kit-buttons">{["左右结构", "上下结构", "独体字", "半包围结构"].map((option) => <button className={quiz === option ? (option === "左右结构" ? "is-correct" : "is-wrong") : ""} key={option} onClick={() => setQuiz(option)}>{option}</button>)}</div>
+          {quiz && <p>{quiz === "左右结构" ? "✓ 正确，木和圭左右站立。" : "再看看两个部件的位置。"}</p>}
+        </section>
+      )}
     </div>
   );
 }

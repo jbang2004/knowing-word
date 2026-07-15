@@ -8,9 +8,10 @@ visual teaching pattern is concentrated in four places:
 3. two three-option picture questions for each core character;
 4. diagrammatic red/blue, assembly, and spatial-structure exercises.
 
-The last group is already represented by interactive HTML and CSS, so it does
-not need raster artwork. The rebuilt app uses newly generated artwork for the
-first three groups and does not copy or publish the source site's signed media.
+The last group is represented by interactive HTML and CSS plus the factual
+red-blue diagram from the teaching package. The rebuilt app uses newly
+generated artwork for semantic scenes and localized, unsigned copies of the
+historical teaching resources required for accurate instruction.
 
 ## Generated asset set
 
@@ -39,3 +40,12 @@ non-graphic, historically framed, and age appropriate.
 Assets are stored as optimized 1024-pixel JPEG files under
 `public/illustrations` and loaded responsively through the framework image
 component.
+
+## Factual teaching resources
+
+The source package was refreshed through an authorized session during the
+import, then stripped of every temporary signed URL. The repository contains
+385 stable local files under `public/heritage`: 274 historical-script SVGs, 58
+red-blue diagrams, and 53 MP3 pronunciations across 58 character packages. The
+reproducible import script accepts credentials only through environment
+variables and never writes them to source files.

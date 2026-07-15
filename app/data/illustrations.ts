@@ -139,7 +139,16 @@ export function getVisualOption(
   questionId: string,
   correct: boolean,
   wrongSlot: number,
+  optionText = "",
 ) {
   if (correct) return characterVisuals[hanzi];
+  const normalized = optionText.replace(/[，。、；：\s]/g, "");
+  if (normalized) {
+    const semantic = [...Object.values(characterVisuals), ...supplementalVisuals].find((item) => {
+      const label = item.label.replace(/[，。、；：\s]/g, "");
+      return label.includes(normalized) || normalized.includes(label);
+    });
+    if (semantic) return semantic;
+  }
   return getVisualDistractors(hanzi, questionId)[wrongSlot % 2];
 }
