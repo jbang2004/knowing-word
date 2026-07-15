@@ -1,0 +1,982 @@
+{
+  "marks": [
+    {
+      "index": 0,
+      "char": "争",
+      "start": 0.44,
+      "end": 0.68
+    },
+    {
+      "index": 1,
+      "char": "战",
+      "start": 1.46,
+      "end": 1.62
+    },
+    {
+      "index": 2,
+      "char": "争",
+      "start": 1.72,
+      "end": 1.86
+    },
+    {
+      "index": 3,
+      "char": "的",
+      "start": 1.9,
+      "end": 1.94
+    },
+    {
+      "index": 4,
+      "char": "争",
+      "start": 2.02,
+      "end": 2.18
+    },
+    {
+      "index": 5,
+      "char": "会",
+      "start": 3,
+      "end": 3.16
+    },
+    {
+      "index": 6,
+      "char": "意",
+      "start": 3.26,
+      "end": 3.34
+    },
+    {
+      "index": 7,
+      "char": "字",
+      "start": 3.48,
+      "end": 3.58
+    },
+    {
+      "index": 8,
+      "char": "上",
+      "start": 4.34,
+      "end": 4.5
+    },
+    {
+      "index": 9,
+      "char": "下",
+      "start": 4.58,
+      "end": 4.68
+    },
+    {
+      "index": 10,
+      "char": "结",
+      "start": 4.82,
+      "end": 4.92
+    },
+    {
+      "index": 11,
+      "char": "构",
+      "start": 5.04,
+      "end": 5.18
+    },
+    {
+      "index": 12,
+      "char": "本",
+      "start": 5.94,
+      "end": 6.08
+    },
+    {
+      "index": 13,
+      "char": "义",
+      "start": 6.16,
+      "end": 6.24
+    },
+    {
+      "index": 14,
+      "char": "是",
+      "start": 6.4,
+      "end": 6.48
+    },
+    {
+      "index": 15,
+      "char": "争",
+      "start": 6.62,
+      "end": 6.8
+    },
+    {
+      "index": 16,
+      "char": "夺",
+      "start": 6.88,
+      "end": 7.02
+    },
+    {
+      "index": 17,
+      "char": "它",
+      "start": 7.96,
+      "end": 8.02
+    },
+    {
+      "index": 18,
+      "char": "的",
+      "start": 8.12,
+      "end": 8.16
+    },
+    {
+      "index": 19,
+      "char": "小",
+      "start": 8.24,
+      "end": 8.42
+    },
+    {
+      "index": 20,
+      "char": "篆",
+      "start": 8.5,
+      "end": 8.68
+    },
+    {
+      "index": 21,
+      "char": "字",
+      "start": 8.76,
+      "end": 8.82
+    },
+    {
+      "index": 22,
+      "char": "形",
+      "start": 8.94,
+      "end": 9.08
+    },
+    {
+      "index": 23,
+      "char": "上",
+      "start": 9.14,
+      "end": 9.28
+    },
+    {
+      "index": 24,
+      "char": "面",
+      "start": 9.32,
+      "end": 9.46
+    },
+    {
+      "index": 25,
+      "char": "是",
+      "start": 9.54,
+      "end": 9.62
+    },
+    {
+      "index": 26,
+      "char": "爪",
+      "start": 9.72,
+      "end": 9.86
+    },
+    {
+      "index": 27,
+      "char": "字",
+      "start": 10.08,
+      "end": 10.2
+    },
+    {
+      "index": 28,
+      "char": "本",
+      "start": 11.08,
+      "end": 11.22
+    },
+    {
+      "index": 29,
+      "char": "义",
+      "start": 11.32,
+      "end": 11.38
+    },
+    {
+      "index": 30,
+      "char": "是",
+      "start": 11.58,
+      "end": 11.66
+    },
+    {
+      "index": 31,
+      "char": "向",
+      "start": 11.8,
+      "end": 11.96
+    },
+    {
+      "index": 32,
+      "char": "下",
+      "start": 12.02,
+      "end": 12.12
+    },
+    {
+      "index": 33,
+      "char": "的",
+      "start": 12.2,
+      "end": 12.26
+    },
+    {
+      "index": 34,
+      "char": "手",
+      "start": 12.38,
+      "end": 12.6
+    },
+    {
+      "index": 35,
+      "char": "爪",
+      "start": 13.56,
+      "end": 13.66
+    },
+    {
+      "index": 36,
+      "char": "字",
+      "start": 13.8,
+      "end": 13.86
+    },
+    {
+      "index": 37,
+      "char": "后",
+      "start": 13.96,
+      "end": 14.1
+    },
+    {
+      "index": 38,
+      "char": "面",
+      "start": 14.18,
+      "end": 14.34
+    },
+    {
+      "index": 39,
+      "char": "被",
+      "start": 14.66,
+      "end": 14.76
+    },
+    {
+      "index": 40,
+      "char": "替",
+      "start": 14.82,
+      "end": 14.9
+    },
+    {
+      "index": 41,
+      "char": "换",
+      "start": 15.02,
+      "end": 15.14
+    },
+    {
+      "index": 42,
+      "char": "成",
+      "start": 15.22,
+      "end": 15.36
+    },
+    {
+      "index": 43,
+      "char": "了",
+      "start": 15.42,
+      "end": 15.58
+    },
+    {
+      "index": 44,
+      "char": "写",
+      "start": 15.82,
+      "end": 15.92
+    },
+    {
+      "index": 45,
+      "char": "法",
+      "start": 16.04,
+      "end": 16.12
+    },
+    {
+      "index": 46,
+      "char": "更",
+      "start": 16.3,
+      "end": 16.46
+    },
+    {
+      "index": 47,
+      "char": "简",
+      "start": 16.54,
+      "end": 16.7
+    },
+    {
+      "index": 48,
+      "char": "单",
+      "start": 16.8,
+      "end": 16.9
+    },
+    {
+      "index": 49,
+      "char": "的",
+      "start": 16.96,
+      "end": 17
+    },
+    {
+      "index": 50,
+      "char": "下",
+      "start": 18.28,
+      "end": 18.38
+    },
+    {
+      "index": 51,
+      "char": "面",
+      "start": 18.52,
+      "end": 18.68
+    },
+    {
+      "index": 52,
+      "char": "是",
+      "start": 18.8,
+      "end": 18.86
+    },
+    {
+      "index": 53,
+      "char": "又",
+      "start": 18.96,
+      "end": 19.12
+    },
+    {
+      "index": 54,
+      "char": "字",
+      "start": 19.22,
+      "end": 19.32
+    },
+    {
+      "index": 55,
+      "char": "本",
+      "start": 20.12,
+      "end": 20.28
+    },
+    {
+      "index": 56,
+      "char": "义",
+      "start": 20.38,
+      "end": 20.44
+    },
+    {
+      "index": 57,
+      "char": "是",
+      "start": 20.6,
+      "end": 20.66
+    },
+    {
+      "index": 58,
+      "char": "右",
+      "start": 20.76,
+      "end": 20.9
+    },
+    {
+      "index": 59,
+      "char": "手",
+      "start": 21.02,
+      "end": 21.22
+    },
+    {
+      "index": 60,
+      "char": "中",
+      "start": 22.08,
+      "end": 22.22
+    },
+    {
+      "index": 61,
+      "char": "间",
+      "start": 22.28,
+      "end": 22.4
+    },
+    {
+      "index": 62,
+      "char": "那",
+      "start": 22.46,
+      "end": 22.52
+    },
+    {
+      "index": 63,
+      "char": "一",
+      "start": 22.6,
+      "end": 22.64
+    },
+    {
+      "index": 64,
+      "char": "竖",
+      "start": 22.78,
+      "end": 22.86
+    },
+    {
+      "index": 65,
+      "char": "弯",
+      "start": 22.96,
+      "end": 23.08
+    },
+    {
+      "index": 66,
+      "char": "笔",
+      "start": 23.16,
+      "end": 23.26
+    },
+    {
+      "index": 67,
+      "char": "是",
+      "start": 23.68,
+      "end": 23.76
+    },
+    {
+      "index": 68,
+      "char": "被",
+      "start": 23.84,
+      "end": 23.94
+    },
+    {
+      "index": 69,
+      "char": "抢",
+      "start": 24.04,
+      "end": 24.3
+    },
+    {
+      "index": 70,
+      "char": "的",
+      "start": 24.36,
+      "end": 24.4
+    },
+    {
+      "index": 71,
+      "char": "东",
+      "start": 24.48,
+      "end": 24.62
+    },
+    {
+      "index": 72,
+      "char": "西",
+      "start": 24.7,
+      "end": 24.8
+    },
+    {
+      "index": 73,
+      "char": "两",
+      "start": 25.68,
+      "end": 25.84
+    },
+    {
+      "index": 74,
+      "char": "只",
+      "start": 25.88,
+      "end": 25.96
+    },
+    {
+      "index": 75,
+      "char": "手",
+      "start": 26.06,
+      "end": 26.26
+    },
+    {
+      "index": 76,
+      "char": "夺",
+      "start": 26.52,
+      "end": 26.6
+    },
+    {
+      "index": 77,
+      "char": "取",
+      "start": 26.74,
+      "end": 26.82
+    },
+    {
+      "index": 78,
+      "char": "同",
+      "start": 26.96,
+      "end": 27.14
+    },
+    {
+      "index": 79,
+      "char": "一",
+      "start": 27.2,
+      "end": 27.22
+    },
+    {
+      "index": 80,
+      "char": "件",
+      "start": 27.32,
+      "end": 27.44
+    },
+    {
+      "index": 81,
+      "char": "东",
+      "start": 27.52,
+      "end": 27.66
+    },
+    {
+      "index": 82,
+      "char": "西",
+      "start": 27.74,
+      "end": 27.82
+    },
+    {
+      "index": 83,
+      "char": "就",
+      "start": 28.2,
+      "end": 28.3
+    },
+    {
+      "index": 84,
+      "char": "是",
+      "start": 28.38,
+      "end": 28.44
+    },
+    {
+      "index": 85,
+      "char": "争",
+      "start": 28.56,
+      "end": 28.72
+    },
+    {
+      "index": 86,
+      "char": "夺",
+      "start": 28.8,
+      "end": 28.92
+    },
+    {
+      "index": 87,
+      "char": "我",
+      "start": 29.68,
+      "end": 29.72
+    },
+    {
+      "index": 88,
+      "char": "们",
+      "start": 29.78,
+      "end": 29.84
+    },
+    {
+      "index": 89,
+      "char": "根",
+      "start": 29.9,
+      "end": 29.98
+    },
+    {
+      "index": 90,
+      "char": "据",
+      "start": 30.06,
+      "end": 30.12
+    },
+    {
+      "index": 91,
+      "char": "争",
+      "start": 30.24,
+      "end": 30.4
+    },
+    {
+      "index": 92,
+      "char": "的",
+      "start": 30.46,
+      "end": 30.54
+    },
+    {
+      "index": 93,
+      "char": "小",
+      "start": 30.7,
+      "end": 30.86
+    },
+    {
+      "index": 94,
+      "char": "篆",
+      "start": 30.96,
+      "end": 31.1
+    },
+    {
+      "index": 95,
+      "char": "字",
+      "start": 31.18,
+      "end": 31.26
+    },
+    {
+      "index": 96,
+      "char": "形",
+      "start": 31.38,
+      "end": 31.56
+    },
+    {
+      "index": 97,
+      "char": "就",
+      "start": 31.96,
+      "end": 32.06
+    },
+    {
+      "index": 98,
+      "char": "可",
+      "start": 32.14,
+      "end": 32.18
+    },
+    {
+      "index": 99,
+      "char": "以",
+      "start": 32.24,
+      "end": 32.28
+    },
+    {
+      "index": 100,
+      "char": "很",
+      "start": 32.36,
+      "end": 32.48
+    },
+    {
+      "index": 101,
+      "char": "形",
+      "start": 32.58,
+      "end": 32.74
+    },
+    {
+      "index": 102,
+      "char": "象",
+      "start": 32.84,
+      "end": 32.96
+    },
+    {
+      "index": 103,
+      "char": "地",
+      "start": 33.02,
+      "end": 33.06
+    },
+    {
+      "index": 104,
+      "char": "记",
+      "start": 33.14,
+      "end": 33.2
+    },
+    {
+      "index": 105,
+      "char": "住",
+      "start": 33.32,
+      "end": 33.4
+    },
+    {
+      "index": 106,
+      "char": "争",
+      "start": 33.54,
+      "end": 33.68
+    },
+    {
+      "index": 107,
+      "char": "的",
+      "start": 33.72,
+      "end": 33.76
+    },
+    {
+      "index": 108,
+      "char": "含",
+      "start": 33.86,
+      "end": 34.04
+    },
+    {
+      "index": 109,
+      "char": "义",
+      "start": 34.14,
+      "end": 34.2
+    },
+    {
+      "index": 110,
+      "char": "和",
+      "start": 34.54,
+      "end": 34.6
+    },
+    {
+      "index": 111,
+      "char": "写",
+      "start": 34.74,
+      "end": 34.86
+    },
+    {
+      "index": 112,
+      "char": "法",
+      "start": 34.98,
+      "end": 35.08
+    },
+    {
+      "index": 113,
+      "char": "课",
+      "start": 36.08,
+      "end": 36.16
+    },
+    {
+      "index": 114,
+      "char": "文",
+      "start": 36.26,
+      "end": 36.38
+    },
+    {
+      "index": 115,
+      "char": "词",
+      "start": 36.44,
+      "end": 36.54
+    },
+    {
+      "index": 116,
+      "char": "语",
+      "start": 36.68,
+      "end": 36.76
+    },
+    {
+      "index": 117,
+      "char": "战",
+      "start": 37.12,
+      "end": 37.28
+    },
+    {
+      "index": 118,
+      "char": "争",
+      "start": 37.38,
+      "end": 37.52
+    },
+    {
+      "index": 119,
+      "char": "中",
+      "start": 37.58,
+      "end": 37.72
+    },
+    {
+      "index": 120,
+      "char": "的",
+      "start": 37.76,
+      "end": 37.82
+    },
+    {
+      "index": 121,
+      "char": "争",
+      "start": 37.92,
+      "end": 38.1
+    },
+    {
+      "index": 122,
+      "char": "就",
+      "start": 38.52,
+      "end": 38.62
+    },
+    {
+      "index": 123,
+      "char": "是",
+      "start": 38.7,
+      "end": 38.76
+    },
+    {
+      "index": 124,
+      "char": "争",
+      "start": 38.88,
+      "end": 39.04
+    },
+    {
+      "index": 125,
+      "char": "夺",
+      "start": 39.14,
+      "end": 39.26
+    },
+    {
+      "index": 126,
+      "char": "争",
+      "start": 39.66,
+      "end": 39.82
+    },
+    {
+      "index": 127,
+      "char": "抢",
+      "start": 39.9,
+      "end": 40.1
+    },
+    {
+      "index": 128,
+      "char": "的",
+      "start": 40.16,
+      "end": 40.22
+    },
+    {
+      "index": 129,
+      "char": "意",
+      "start": 40.28,
+      "end": 40.34
+    },
+    {
+      "index": 130,
+      "char": "思",
+      "start": 40.5,
+      "end": 40.58
+    },
+    {
+      "index": 131,
+      "char": "课",
+      "start": 41.38,
+      "end": 41.46
+    },
+    {
+      "index": 132,
+      "char": "文",
+      "start": 41.56,
+      "end": 41.66
+    },
+    {
+      "index": 133,
+      "char": "里",
+      "start": 41.72,
+      "end": 41.78
+    },
+    {
+      "index": 134,
+      "char": "说",
+      "start": 41.9,
+      "end": 42
+    },
+    {
+      "index": 135,
+      "char": "靠",
+      "start": 42.62,
+      "end": 42.8
+    },
+    {
+      "index": 136,
+      "char": "着",
+      "start": 42.86,
+      "end": 42.98
+    },
+    {
+      "index": 137,
+      "char": "地",
+      "start": 43.02,
+      "end": 43.06
+    },
+    {
+      "index": 138,
+      "char": "道",
+      "start": 43.22,
+      "end": 43.4
+    },
+    {
+      "index": 139,
+      "char": "这",
+      "start": 43.5,
+      "end": 43.56
+    },
+    {
+      "index": 140,
+      "char": "种",
+      "start": 43.64,
+      "end": 43.74
+    },
+    {
+      "index": 141,
+      "char": "坚",
+      "start": 43.82,
+      "end": 43.98
+    },
+    {
+      "index": 142,
+      "char": "强",
+      "start": 44.06,
+      "end": 44.22
+    },
+    {
+      "index": 143,
+      "char": "的",
+      "start": 44.26,
+      "end": 44.32
+    },
+    {
+      "index": 144,
+      "char": "堡",
+      "start": 44.38,
+      "end": 44.54
+    },
+    {
+      "index": 145,
+      "char": "垒",
+      "start": 44.6,
+      "end": 44.66
+    },
+    {
+      "index": 146,
+      "char": "冀",
+      "start": 45.3,
+      "end": 45.4
+    },
+    {
+      "index": 147,
+      "char": "中",
+      "start": 45.52,
+      "end": 45.64
+    },
+    {
+      "index": 148,
+      "char": "平",
+      "start": 45.68,
+      "end": 45.84
+    },
+    {
+      "index": 149,
+      "char": "原",
+      "start": 45.9,
+      "end": 46.02
+    },
+    {
+      "index": 150,
+      "char": "上",
+      "start": 46.1,
+      "end": 46.22
+    },
+    {
+      "index": 151,
+      "char": "的",
+      "start": 46.26,
+      "end": 46.3
+    },
+    {
+      "index": 152,
+      "char": "人",
+      "start": 46.36,
+      "end": 46.48
+    },
+    {
+      "index": 153,
+      "char": "民",
+      "start": 46.54,
+      "end": 46.7
+    },
+    {
+      "index": 154,
+      "char": "坚",
+      "start": 47.02,
+      "end": 47.16
+    },
+    {
+      "index": 155,
+      "char": "持",
+      "start": 47.24,
+      "end": 47.32
+    },
+    {
+      "index": 156,
+      "char": "了",
+      "start": 47.4,
+      "end": 47.52
+    },
+    {
+      "index": 157,
+      "char": "敌",
+      "start": 47.56,
+      "end": 47.62
+    },
+    {
+      "index": 158,
+      "char": "后",
+      "start": 47.78,
+      "end": 47.92
+    },
+    {
+      "index": 159,
+      "char": "游",
+      "start": 48,
+      "end": 48.14
+    },
+    {
+      "index": 160,
+      "char": "击",
+      "start": 48.22,
+      "end": 48.28
+    },
+    {
+      "index": 161,
+      "char": "战",
+      "start": 48.38,
+      "end": 48.52
+    },
+    {
+      "index": 162,
+      "char": "争",
+      "start": 48.6,
+      "end": 49.24
+    }
+  ]
+}

@@ -1,0 +1,970 @@
+{
+  "marks": [
+    {
+      "index": 0,
+      "char": "日",
+      "start": 0.42,
+      "end": 0.52
+    },
+    {
+      "index": 1,
+      "char": "抗",
+      "start": 1.14,
+      "end": 1.34
+    },
+    {
+      "index": 2,
+      "char": "日",
+      "start": 1.42,
+      "end": 1.5
+    },
+    {
+      "index": 3,
+      "char": "的",
+      "start": 1.6,
+      "end": 1.64
+    },
+    {
+      "index": 4,
+      "char": "日",
+      "start": 1.74,
+      "end": 1.82
+    },
+    {
+      "index": 5,
+      "char": "象",
+      "start": 2.44,
+      "end": 2.64
+    },
+    {
+      "index": 6,
+      "char": "形",
+      "start": 2.7,
+      "end": 2.86
+    },
+    {
+      "index": 7,
+      "char": "字",
+      "start": 2.92,
+      "end": 3.02
+    },
+    {
+      "index": 8,
+      "char": "独",
+      "start": 3.44,
+      "end": 3.5
+    },
+    {
+      "index": 9,
+      "char": "体",
+      "start": 3.66,
+      "end": 3.78
+    },
+    {
+      "index": 10,
+      "char": "字",
+      "start": 3.9,
+      "end": 3.98
+    },
+    {
+      "index": 11,
+      "char": "本",
+      "start": 4.72,
+      "end": 4.88
+    },
+    {
+      "index": 12,
+      "char": "义",
+      "start": 4.96,
+      "end": 5.04
+    },
+    {
+      "index": 13,
+      "char": "是",
+      "start": 5.24,
+      "end": 5.3
+    },
+    {
+      "index": 14,
+      "char": "太",
+      "start": 5.38,
+      "end": 5.6
+    },
+    {
+      "index": 15,
+      "char": "阳",
+      "start": 5.66,
+      "end": 5.86
+    },
+    {
+      "index": 16,
+      "char": "古",
+      "start": 6.7,
+      "end": 6.76
+    },
+    {
+      "index": 17,
+      "char": "人",
+      "start": 6.88,
+      "end": 7.02
+    },
+    {
+      "index": 18,
+      "char": "照",
+      "start": 7.12,
+      "end": 7.24
+    },
+    {
+      "index": 19,
+      "char": "着",
+      "start": 7.28,
+      "end": 7.34
+    },
+    {
+      "index": 20,
+      "char": "太",
+      "start": 7.38,
+      "end": 7.5
+    },
+    {
+      "index": 21,
+      "char": "阳",
+      "start": 7.56,
+      "end": 7.66
+    },
+    {
+      "index": 22,
+      "char": "的",
+      "start": 7.7,
+      "end": 7.72
+    },
+    {
+      "index": 23,
+      "char": "样",
+      "start": 7.78,
+      "end": 7.94
+    },
+    {
+      "index": 24,
+      "char": "子",
+      "start": 8.02,
+      "end": 8.1
+    },
+    {
+      "index": 25,
+      "char": "画",
+      "start": 8.32,
+      "end": 8.4
+    },
+    {
+      "index": 26,
+      "char": "了",
+      "start": 8.44,
+      "end": 8.5
+    },
+    {
+      "index": 27,
+      "char": "一",
+      "start": 8.6,
+      "end": 8.62
+    },
+    {
+      "index": 28,
+      "char": "个",
+      "start": 8.7,
+      "end": 8.74
+    },
+    {
+      "index": 29,
+      "char": "圆",
+      "start": 8.8,
+      "end": 8.94
+    },
+    {
+      "index": 30,
+      "char": "圈",
+      "start": 9,
+      "end": 9.2
+    },
+    {
+      "index": 31,
+      "char": "又",
+      "start": 9.92,
+      "end": 10.04
+    },
+    {
+      "index": 32,
+      "char": "怕",
+      "start": 10.1,
+      "end": 10.18
+    },
+    {
+      "index": 33,
+      "char": "它",
+      "start": 10.28,
+      "end": 10.36
+    },
+    {
+      "index": 34,
+      "char": "和",
+      "start": 10.5,
+      "end": 10.56
+    },
+    {
+      "index": 35,
+      "char": "普",
+      "start": 10.68,
+      "end": 10.76
+    },
+    {
+      "index": 36,
+      "char": "通",
+      "start": 10.84,
+      "end": 10.94
+    },
+    {
+      "index": 37,
+      "char": "的",
+      "start": 10.98,
+      "end": 11.02
+    },
+    {
+      "index": 38,
+      "char": "圆",
+      "start": 11.08,
+      "end": 11.18
+    },
+    {
+      "index": 39,
+      "char": "圈",
+      "start": 11.24,
+      "end": 11.38
+    },
+    {
+      "index": 40,
+      "char": "弄",
+      "start": 11.44,
+      "end": 11.54
+    },
+    {
+      "index": 41,
+      "char": "混",
+      "start": 11.62,
+      "end": 11.84
+    },
+    {
+      "index": 42,
+      "char": "就",
+      "start": 12.38,
+      "end": 12.48
+    },
+    {
+      "index": 43,
+      "char": "在",
+      "start": 12.54,
+      "end": 12.64
+    },
+    {
+      "index": 44,
+      "char": "中",
+      "start": 12.7,
+      "end": 12.82
+    },
+    {
+      "index": 45,
+      "char": "间",
+      "start": 12.88,
+      "end": 13.06
+    },
+    {
+      "index": 46,
+      "char": "加",
+      "start": 13.22,
+      "end": 13.32
+    },
+    {
+      "index": 47,
+      "char": "了",
+      "start": 13.42,
+      "end": 13.5
+    },
+    {
+      "index": 48,
+      "char": "一",
+      "start": 13.54,
+      "end": 13.58
+    },
+    {
+      "index": 49,
+      "char": "点",
+      "start": 13.7,
+      "end": 13.88
+    },
+    {
+      "index": 50,
+      "char": "或",
+      "start": 14.08,
+      "end": 14.14
+    },
+    {
+      "index": 51,
+      "char": "一",
+      "start": 14.24,
+      "end": 14.3
+    },
+    {
+      "index": 52,
+      "char": "横",
+      "start": 14.42,
+      "end": 14.62
+    },
+    {
+      "index": 53,
+      "char": "进",
+      "start": 14.9,
+      "end": 15.02
+    },
+    {
+      "index": 54,
+      "char": "行",
+      "start": 15.1,
+      "end": 15.24
+    },
+    {
+      "index": 55,
+      "char": "区",
+      "start": 15.3,
+      "end": 15.38
+    },
+    {
+      "index": 56,
+      "char": "分",
+      "start": 15.5,
+      "end": 15.66
+    },
+    {
+      "index": 57,
+      "char": "后",
+      "start": 16.62,
+      "end": 16.76
+    },
+    {
+      "index": 58,
+      "char": "来",
+      "start": 16.82,
+      "end": 16.96
+    },
+    {
+      "index": 59,
+      "char": "为",
+      "start": 17.04,
+      "end": 17.12
+    },
+    {
+      "index": 60,
+      "char": "了",
+      "start": 17.16,
+      "end": 17.26
+    },
+    {
+      "index": 61,
+      "char": "书",
+      "start": 17.3,
+      "end": 17.36
+    },
+    {
+      "index": 62,
+      "char": "写",
+      "start": 17.44,
+      "end": 17.52
+    },
+    {
+      "index": 63,
+      "char": "方",
+      "start": 17.6,
+      "end": 17.74
+    },
+    {
+      "index": 64,
+      "char": "便",
+      "start": 17.8,
+      "end": 18
+    },
+    {
+      "index": 65,
+      "char": "圆",
+      "start": 18.5,
+      "end": 18.64
+    },
+    {
+      "index": 66,
+      "char": "圆",
+      "start": 18.7,
+      "end": 18.82
+    },
+    {
+      "index": 67,
+      "char": "的",
+      "start": 18.88,
+      "end": 18.92
+    },
+    {
+      "index": 68,
+      "char": "形",
+      "start": 19,
+      "end": 19.14
+    },
+    {
+      "index": 69,
+      "char": "状",
+      "start": 19.2,
+      "end": 19.42
+    },
+    {
+      "index": 70,
+      "char": "慢",
+      "start": 19.58,
+      "end": 19.72
+    },
+    {
+      "index": 71,
+      "char": "慢",
+      "start": 19.8,
+      "end": 19.94
+    },
+    {
+      "index": 72,
+      "char": "变",
+      "start": 20.02,
+      "end": 20.14
+    },
+    {
+      "index": 73,
+      "char": "成",
+      "start": 20.2,
+      "end": 20.32
+    },
+    {
+      "index": 74,
+      "char": "了",
+      "start": 20.36,
+      "end": 20.42
+    },
+    {
+      "index": 75,
+      "char": "方",
+      "start": 20.46,
+      "end": 20.64
+    },
+    {
+      "index": 76,
+      "char": "形",
+      "start": 20.72,
+      "end": 20.96
+    },
+    {
+      "index": 77,
+      "char": "就",
+      "start": 21.54,
+      "end": 21.66
+    },
+    {
+      "index": 78,
+      "char": "成",
+      "start": 21.74,
+      "end": 21.86
+    },
+    {
+      "index": 79,
+      "char": "了",
+      "start": 21.9,
+      "end": 21.98
+    },
+    {
+      "index": 80,
+      "char": "今",
+      "start": 22.02,
+      "end": 22.12
+    },
+    {
+      "index": 81,
+      "char": "天",
+      "start": 22.2,
+      "end": 22.34
+    },
+    {
+      "index": 82,
+      "char": "的",
+      "start": 22.38,
+      "end": 22.44
+    },
+    {
+      "index": 83,
+      "char": "日",
+      "start": 22.54,
+      "end": 22.62
+    },
+    {
+      "index": 84,
+      "char": "字",
+      "start": 22.78,
+      "end": 22.88
+    },
+    {
+      "index": 85,
+      "char": "在",
+      "start": 23.84,
+      "end": 23.96
+    },
+    {
+      "index": 86,
+      "char": "这",
+      "start": 24.02,
+      "end": 24.1
+    },
+    {
+      "index": 87,
+      "char": "里",
+      "start": 24.24,
+      "end": 24.32
+    },
+    {
+      "index": 88,
+      "char": "日",
+      "start": 24.7,
+      "end": 24.76
+    },
+    {
+      "index": 89,
+      "char": "是",
+      "start": 25.16,
+      "end": 25.24
+    },
+    {
+      "index": 90,
+      "char": "日",
+      "start": 25.36,
+      "end": 25.4
+    },
+    {
+      "index": 91,
+      "char": "本",
+      "start": 25.52,
+      "end": 25.62
+    },
+    {
+      "index": 92,
+      "char": "的",
+      "start": 25.68,
+      "end": 25.72
+    },
+    {
+      "index": 93,
+      "char": "简",
+      "start": 25.8,
+      "end": 25.94
+    },
+    {
+      "index": 94,
+      "char": "称",
+      "start": 26.04,
+      "end": 26.24
+    },
+    {
+      "index": 95,
+      "char": "日",
+      "start": 27.18,
+      "end": 27.24
+    },
+    {
+      "index": 96,
+      "char": "本",
+      "start": 27.38,
+      "end": 27.46
+    },
+    {
+      "index": 97,
+      "char": "的",
+      "start": 27.52,
+      "end": 27.56
+    },
+    {
+      "index": 98,
+      "char": "国",
+      "start": 27.64,
+      "end": 27.72
+    },
+    {
+      "index": 99,
+      "char": "旗",
+      "start": 27.86,
+      "end": 27.98
+    },
+    {
+      "index": 100,
+      "char": "也",
+      "start": 28.26,
+      "end": 28.34
+    },
+    {
+      "index": 101,
+      "char": "是",
+      "start": 28.48,
+      "end": 28.54
+    },
+    {
+      "index": 102,
+      "char": "个",
+      "start": 28.62,
+      "end": 28.66
+    },
+    {
+      "index": 103,
+      "char": "太",
+      "start": 28.72,
+      "end": 28.86
+    },
+    {
+      "index": 104,
+      "char": "阳",
+      "start": 28.92,
+      "end": 29.08
+    },
+    {
+      "index": 105,
+      "char": "抗",
+      "start": 29.88,
+      "end": 30.08
+    },
+    {
+      "index": 106,
+      "char": "日",
+      "start": 30.18,
+      "end": 30.24
+    },
+    {
+      "index": 107,
+      "char": "就",
+      "start": 30.58,
+      "end": 30.7
+    },
+    {
+      "index": 108,
+      "char": "是",
+      "start": 30.8,
+      "end": 30.86
+    },
+    {
+      "index": 109,
+      "char": "抵",
+      "start": 30.94,
+      "end": 31
+    },
+    {
+      "index": 110,
+      "char": "抗",
+      "start": 31.12,
+      "end": 31.28
+    },
+    {
+      "index": 111,
+      "char": "日",
+      "start": 31.32,
+      "end": 31.38
+    },
+    {
+      "index": 112,
+      "char": "本",
+      "start": 31.5,
+      "end": 31.58
+    },
+    {
+      "index": 113,
+      "char": "侵",
+      "start": 31.68,
+      "end": 31.82
+    },
+    {
+      "index": 114,
+      "char": "略",
+      "start": 31.88,
+      "end": 31.98
+    },
+    {
+      "index": 115,
+      "char": "者",
+      "start": 32.1,
+      "end": 32.18
+    },
+    {
+      "index": 116,
+      "char": "课",
+      "start": 33.28,
+      "end": 33.36
+    },
+    {
+      "index": 117,
+      "char": "文",
+      "start": 33.44,
+      "end": 33.54
+    },
+    {
+      "index": 118,
+      "char": "里",
+      "start": 33.6,
+      "end": 33.64
+    },
+    {
+      "index": 119,
+      "char": "说",
+      "start": 33.74,
+      "end": 33.84
+    },
+    {
+      "index": 120,
+      "char": "冀",
+      "start": 34.4,
+      "end": 34.5
+    },
+    {
+      "index": 121,
+      "char": "中",
+      "start": 34.6,
+      "end": 34.74
+    },
+    {
+      "index": 122,
+      "char": "平",
+      "start": 34.8,
+      "end": 34.94
+    },
+    {
+      "index": 123,
+      "char": "原",
+      "start": 35,
+      "end": 35.12
+    },
+    {
+      "index": 124,
+      "char": "上",
+      "start": 35.2,
+      "end": 35.32
+    },
+    {
+      "index": 125,
+      "char": "的",
+      "start": 35.36,
+      "end": 35.38
+    },
+    {
+      "index": 126,
+      "char": "人",
+      "start": 35.44,
+      "end": 35.56
+    },
+    {
+      "index": 127,
+      "char": "民",
+      "start": 35.62,
+      "end": 35.78
+    },
+    {
+      "index": 128,
+      "char": "不",
+      "start": 35.98,
+      "end": 36.04
+    },
+    {
+      "index": 129,
+      "char": "但",
+      "start": 36.14,
+      "end": 36.28
+    },
+    {
+      "index": 130,
+      "char": "坚",
+      "start": 36.36,
+      "end": 36.52
+    },
+    {
+      "index": 131,
+      "char": "持",
+      "start": 36.58,
+      "end": 36.66
+    },
+    {
+      "index": 132,
+      "char": "了",
+      "start": 36.72,
+      "end": 36.8
+    },
+    {
+      "index": 133,
+      "char": "生",
+      "start": 36.84,
+      "end": 36.98
+    },
+    {
+      "index": 134,
+      "char": "产",
+      "start": 37.04,
+      "end": 37.3
+    },
+    {
+      "index": 135,
+      "char": "还",
+      "start": 37.78,
+      "end": 37.92
+    },
+    {
+      "index": 136,
+      "char": "有",
+      "start": 38,
+      "end": 38.12
+    },
+    {
+      "index": 137,
+      "char": "力",
+      "start": 38.22,
+      "end": 38.3
+    },
+    {
+      "index": 138,
+      "char": "地",
+      "start": 38.44,
+      "end": 38.5
+    },
+    {
+      "index": 139,
+      "char": "打",
+      "start": 38.64,
+      "end": 38.7
+    },
+    {
+      "index": 140,
+      "char": "击",
+      "start": 38.84,
+      "end": 38.92
+    },
+    {
+      "index": 141,
+      "char": "了",
+      "start": 39.02,
+      "end": 39.1
+    },
+    {
+      "index": 142,
+      "char": "敌",
+      "start": 39.14,
+      "end": 39.2
+    },
+    {
+      "index": 143,
+      "char": "人",
+      "start": 39.36,
+      "end": 39.5
+    },
+    {
+      "index": 144,
+      "char": "在",
+      "start": 40.14,
+      "end": 40.28
+    },
+    {
+      "index": 145,
+      "char": "我",
+      "start": 40.34,
+      "end": 40.4
+    },
+    {
+      "index": 146,
+      "char": "国",
+      "start": 40.5,
+      "end": 40.56
+    },
+    {
+      "index": 147,
+      "char": "抗",
+      "start": 40.68,
+      "end": 40.84
+    },
+    {
+      "index": 148,
+      "char": "日",
+      "start": 40.88,
+      "end": 40.92
+    },
+    {
+      "index": 149,
+      "char": "战",
+      "start": 41,
+      "end": 41.1
+    },
+    {
+      "index": 150,
+      "char": "争",
+      "start": 41.16,
+      "end": 41.28
+    },
+    {
+      "index": 151,
+      "char": "史",
+      "start": 41.36,
+      "end": 41.42
+    },
+    {
+      "index": 152,
+      "char": "上",
+      "start": 41.54,
+      "end": 41.74
+    },
+    {
+      "index": 153,
+      "char": "留",
+      "start": 41.98,
+      "end": 42.12
+    },
+    {
+      "index": 154,
+      "char": "下",
+      "start": 42.2,
+      "end": 42.28
+    },
+    {
+      "index": 155,
+      "char": "了",
+      "start": 42.38,
+      "end": 42.5
+    },
+    {
+      "index": 156,
+      "char": "惊",
+      "start": 42.6,
+      "end": 42.7
+    },
+    {
+      "index": 157,
+      "char": "人",
+      "start": 42.76,
+      "end": 42.86
+    },
+    {
+      "index": 158,
+      "char": "的",
+      "start": 42.92,
+      "end": 42.96
+    },
+    {
+      "index": 159,
+      "char": "奇",
+      "start": 43.06,
+      "end": 43.16
+    },
+    {
+      "index": 160,
+      "char": "迹",
+      "start": 43.26,
+      "end": 43.82
+    }
+  ]
+}

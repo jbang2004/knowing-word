@@ -1,0 +1,836 @@
+{
+  "marks": [
+    {
+      "index": 0,
+      "char": "茶",
+      "start": 0.38,
+      "end": 0.54
+    },
+    {
+      "index": 1,
+      "char": "茶",
+      "start": 1.22,
+      "end": 1.36
+    },
+    {
+      "index": 2,
+      "char": "叶",
+      "start": 1.54,
+      "end": 1.6
+    },
+    {
+      "index": 3,
+      "char": "的",
+      "start": 1.7,
+      "end": 1.74
+    },
+    {
+      "index": 4,
+      "char": "茶",
+      "start": 1.82,
+      "end": 1.92
+    },
+    {
+      "index": 5,
+      "char": "形",
+      "start": 2.82,
+      "end": 3
+    },
+    {
+      "index": 6,
+      "char": "声",
+      "start": 3.06,
+      "end": 3.22
+    },
+    {
+      "index": 7,
+      "char": "字",
+      "start": 3.3,
+      "end": 3.42
+    },
+    {
+      "index": 8,
+      "char": "上",
+      "start": 3.84,
+      "end": 4
+    },
+    {
+      "index": 9,
+      "char": "下",
+      "start": 4.08,
+      "end": 4.16
+    },
+    {
+      "index": 10,
+      "char": "结",
+      "start": 4.26,
+      "end": 4.36
+    },
+    {
+      "index": 11,
+      "char": "构",
+      "start": 4.48,
+      "end": 4.62
+    },
+    {
+      "index": 12,
+      "char": "本",
+      "start": 5.12,
+      "end": 5.26
+    },
+    {
+      "index": 13,
+      "char": "义",
+      "start": 5.36,
+      "end": 5.42
+    },
+    {
+      "index": 14,
+      "char": "是",
+      "start": 5.56,
+      "end": 5.62
+    },
+    {
+      "index": 15,
+      "char": "茶",
+      "start": 5.7,
+      "end": 5.82
+    },
+    {
+      "index": 16,
+      "char": "树",
+      "start": 6.02,
+      "end": 6.12
+    },
+    {
+      "index": 17,
+      "char": "上",
+      "start": 6.84,
+      "end": 7
+    },
+    {
+      "index": 18,
+      "char": "面",
+      "start": 7.04,
+      "end": 7.12
+    },
+    {
+      "index": 19,
+      "char": "的",
+      "start": 7.18,
+      "end": 7.22
+    },
+    {
+      "index": 20,
+      "char": "艹",
+      "start": 7.3,
+      "end": 7.56
+    },
+    {
+      "index": 21,
+      "char": "本",
+      "start": 7.84,
+      "end": 7.96
+    },
+    {
+      "index": 22,
+      "char": "义",
+      "start": 8.04,
+      "end": 8.1
+    },
+    {
+      "index": 23,
+      "char": "是",
+      "start": 8.22,
+      "end": 8.28
+    },
+    {
+      "index": 24,
+      "char": "草",
+      "start": 8.36,
+      "end": 8.64
+    },
+    {
+      "index": 25,
+      "char": "表",
+      "start": 9.14,
+      "end": 9.3
+    },
+    {
+      "index": 26,
+      "char": "示",
+      "start": 9.42,
+      "end": 9.52
+    },
+    {
+      "index": 27,
+      "char": "茶",
+      "start": 9.68,
+      "end": 9.82
+    },
+    {
+      "index": 28,
+      "char": "树",
+      "start": 9.98,
+      "end": 10.06
+    },
+    {
+      "index": 29,
+      "char": "是",
+      "start": 10.2,
+      "end": 10.26
+    },
+    {
+      "index": 30,
+      "char": "一",
+      "start": 10.32,
+      "end": 10.36
+    },
+    {
+      "index": 31,
+      "char": "种",
+      "start": 10.44,
+      "end": 10.56
+    },
+    {
+      "index": 32,
+      "char": "植",
+      "start": 10.64,
+      "end": 10.76
+    },
+    {
+      "index": 33,
+      "char": "物",
+      "start": 10.88,
+      "end": 10.96
+    },
+    {
+      "index": 34,
+      "char": "下",
+      "start": 11.64,
+      "end": 11.74
+    },
+    {
+      "index": 35,
+      "char": "面",
+      "start": 11.84,
+      "end": 11.94
+    },
+    {
+      "index": 36,
+      "char": "的",
+      "start": 12,
+      "end": 12.02
+    },
+    {
+      "index": 37,
+      "char": "余",
+      "start": 12.12,
+      "end": 12.22
+    },
+    {
+      "index": 38,
+      "char": "本",
+      "start": 12.64,
+      "end": 12.78
+    },
+    {
+      "index": 39,
+      "char": "义",
+      "start": 12.84,
+      "end": 12.9
+    },
+    {
+      "index": 40,
+      "char": "是",
+      "start": 13,
+      "end": 13.06
+    },
+    {
+      "index": 41,
+      "char": "房",
+      "start": 13.14,
+      "end": 13.32
+    },
+    {
+      "index": 42,
+      "char": "屋",
+      "start": 13.38,
+      "end": 13.44
+    },
+    {
+      "index": 43,
+      "char": "在",
+      "start": 14.02,
+      "end": 14.14
+    },
+    {
+      "index": 44,
+      "char": "这",
+      "start": 14.2,
+      "end": 14.28
+    },
+    {
+      "index": 45,
+      "char": "里",
+      "start": 14.4,
+      "end": 14.48
+    },
+    {
+      "index": 46,
+      "char": "提",
+      "start": 14.94,
+      "end": 15.04
+    },
+    {
+      "index": 47,
+      "char": "示",
+      "start": 15.18,
+      "end": 15.24
+    },
+    {
+      "index": 48,
+      "char": "读",
+      "start": 15.34,
+      "end": 15.4
+    },
+    {
+      "index": 49,
+      "char": "音",
+      "start": 15.52,
+      "end": 15.68
+    },
+    {
+      "index": 50,
+      "char": "不",
+      "start": 16.38,
+      "end": 16.44
+    },
+    {
+      "index": 51,
+      "char": "过",
+      "start": 16.58,
+      "end": 16.66
+    },
+    {
+      "index": 52,
+      "char": "我",
+      "start": 17,
+      "end": 17.04
+    },
+    {
+      "index": 53,
+      "char": "们",
+      "start": 17.1,
+      "end": 17.18
+    },
+    {
+      "index": 54,
+      "char": "可",
+      "start": 17.22,
+      "end": 17.28
+    },
+    {
+      "index": 55,
+      "char": "以",
+      "start": 17.34,
+      "end": 17.36
+    },
+    {
+      "index": 56,
+      "char": "这",
+      "start": 17.44,
+      "end": 17.52
+    },
+    {
+      "index": 57,
+      "char": "样",
+      "start": 17.62,
+      "end": 17.72
+    },
+    {
+      "index": 58,
+      "char": "联",
+      "start": 17.76,
+      "end": 17.88
+    },
+    {
+      "index": 59,
+      "char": "想",
+      "start": 17.96,
+      "end": 18.14
+    },
+    {
+      "index": 60,
+      "char": "茶",
+      "start": 18.9,
+      "end": 19.02
+    },
+    {
+      "index": 61,
+      "char": "树",
+      "start": 19.16,
+      "end": 19.22
+    },
+    {
+      "index": 62,
+      "char": "的",
+      "start": 19.3,
+      "end": 19.34
+    },
+    {
+      "index": 63,
+      "char": "叶",
+      "start": 19.44,
+      "end": 19.52
+    },
+    {
+      "index": 64,
+      "char": "子",
+      "start": 19.66,
+      "end": 19.74
+    },
+    {
+      "index": 65,
+      "char": "是",
+      "start": 20.26,
+      "end": 20.34
+    },
+    {
+      "index": 66,
+      "char": "古",
+      "start": 20.42,
+      "end": 20.5
+    },
+    {
+      "index": 67,
+      "char": "代",
+      "start": 20.6,
+      "end": 20.72
+    },
+    {
+      "index": 68,
+      "char": "一",
+      "start": 20.76,
+      "end": 20.78
+    },
+    {
+      "index": 69,
+      "char": "种",
+      "start": 20.86,
+      "end": 20.98
+    },
+    {
+      "index": 70,
+      "char": "常",
+      "start": 21.02,
+      "end": 21.24
+    },
+    {
+      "index": 71,
+      "char": "见",
+      "start": 21.3,
+      "end": 21.42
+    },
+    {
+      "index": 72,
+      "char": "的",
+      "start": 21.48,
+      "end": 21.52
+    },
+    {
+      "index": 73,
+      "char": "饮",
+      "start": 21.58,
+      "end": 21.7
+    },
+    {
+      "index": 74,
+      "char": "品",
+      "start": 21.78,
+      "end": 21.9
+    },
+    {
+      "index": 75,
+      "char": "材",
+      "start": 21.98,
+      "end": 22.14
+    },
+    {
+      "index": 76,
+      "char": "料",
+      "start": 22.2,
+      "end": 22.36
+    },
+    {
+      "index": 77,
+      "char": "也",
+      "start": 22.86,
+      "end": 22.92
+    },
+    {
+      "index": 78,
+      "char": "可",
+      "start": 23.02,
+      "end": 23.08
+    },
+    {
+      "index": 79,
+      "char": "以",
+      "start": 23.16,
+      "end": 23.2
+    },
+    {
+      "index": 80,
+      "char": "卖",
+      "start": 23.26,
+      "end": 23.38
+    },
+    {
+      "index": 81,
+      "char": "钱",
+      "start": 23.44,
+      "end": 23.68
+    },
+    {
+      "index": 82,
+      "char": "是",
+      "start": 24.14,
+      "end": 24.2
+    },
+    {
+      "index": 83,
+      "char": "一",
+      "start": 24.26,
+      "end": 24.3
+    },
+    {
+      "index": 84,
+      "char": "种",
+      "start": 24.38,
+      "end": 24.5
+    },
+    {
+      "index": 85,
+      "char": "经",
+      "start": 24.56,
+      "end": 24.72
+    },
+    {
+      "index": 86,
+      "char": "济",
+      "start": 24.78,
+      "end": 24.84
+    },
+    {
+      "index": 87,
+      "char": "作",
+      "start": 24.94,
+      "end": 25.04
+    },
+    {
+      "index": 88,
+      "char": "物",
+      "start": 25.18,
+      "end": 25.24
+    },
+    {
+      "index": 89,
+      "char": "所",
+      "start": 25.92,
+      "end": 26.02
+    },
+    {
+      "index": 90,
+      "char": "以",
+      "start": 26.16,
+      "end": 26.26
+    },
+    {
+      "index": 91,
+      "char": "古",
+      "start": 26.66,
+      "end": 26.74
+    },
+    {
+      "index": 92,
+      "char": "人",
+      "start": 26.86,
+      "end": 26.96
+    },
+    {
+      "index": 93,
+      "char": "会",
+      "start": 27.04,
+      "end": 27.12
+    },
+    {
+      "index": 94,
+      "char": "在",
+      "start": 27.16,
+      "end": 27.26
+    },
+    {
+      "index": 95,
+      "char": "房",
+      "start": 27.32,
+      "end": 27.52
+    },
+    {
+      "index": 96,
+      "char": "屋",
+      "start": 27.58,
+      "end": 27.66
+    },
+    {
+      "index": 97,
+      "char": "余",
+      "start": 28.06,
+      "end": 28.14
+    },
+    {
+      "index": 98,
+      "char": "后",
+      "start": 28.34,
+      "end": 28.54
+    },
+    {
+      "index": 99,
+      "char": "栽",
+      "start": 28.9,
+      "end": 29.04
+    },
+    {
+      "index": 100,
+      "char": "种",
+      "start": 29.08,
+      "end": 29.2
+    },
+    {
+      "index": 101,
+      "char": "茶",
+      "start": 29.26,
+      "end": 29.34
+    },
+    {
+      "index": 102,
+      "char": "树",
+      "start": 29.52,
+      "end": 29.6
+    },
+    {
+      "index": 103,
+      "char": "所",
+      "start": 30.34,
+      "end": 30.44
+    },
+    {
+      "index": 104,
+      "char": "以",
+      "start": 30.58,
+      "end": 30.68
+    },
+    {
+      "index": 105,
+      "char": "艹",
+      "start": 31.04,
+      "end": 31.26
+    },
+    {
+      "index": 106,
+      "char": "下",
+      "start": 31.34,
+      "end": 31.42
+    },
+    {
+      "index": 107,
+      "char": "配",
+      "start": 31.52,
+      "end": 31.64
+    },
+    {
+      "index": 108,
+      "char": "上",
+      "start": 31.74,
+      "end": 31.9
+    },
+    {
+      "index": 109,
+      "char": "表",
+      "start": 32.02,
+      "end": 32.2
+    },
+    {
+      "index": 110,
+      "char": "示",
+      "start": 32.28,
+      "end": 32.34
+    },
+    {
+      "index": 111,
+      "char": "房",
+      "start": 32.42,
+      "end": 32.56
+    },
+    {
+      "index": 112,
+      "char": "屋",
+      "start": 32.6,
+      "end": 32.66
+    },
+    {
+      "index": 113,
+      "char": "的",
+      "start": 32.76,
+      "end": 32.8
+    },
+    {
+      "index": 114,
+      "char": "余",
+      "start": 32.9,
+      "end": 32.98
+    },
+    {
+      "index": 115,
+      "char": "帮",
+      "start": 33.64,
+      "end": 33.8
+    },
+    {
+      "index": 116,
+      "char": "我",
+      "start": 33.84,
+      "end": 33.9
+    },
+    {
+      "index": 117,
+      "char": "们",
+      "start": 33.96,
+      "end": 34.04
+    },
+    {
+      "index": 118,
+      "char": "记",
+      "start": 34.1,
+      "end": 34.16
+    },
+    {
+      "index": 119,
+      "char": "住",
+      "start": 34.28,
+      "end": 34.34
+    },
+    {
+      "index": 120,
+      "char": "这",
+      "start": 34.42,
+      "end": 34.48
+    },
+    {
+      "index": 121,
+      "char": "种",
+      "start": 34.6,
+      "end": 34.8
+    },
+    {
+      "index": 122,
+      "char": "在",
+      "start": 35.06,
+      "end": 35.18
+    },
+    {
+      "index": 123,
+      "char": "古",
+      "start": 35.24,
+      "end": 35.3
+    },
+    {
+      "index": 124,
+      "char": "代",
+      "start": 35.4,
+      "end": 35.52
+    },
+    {
+      "index": 125,
+      "char": "生",
+      "start": 35.6,
+      "end": 35.74
+    },
+    {
+      "index": 126,
+      "char": "活",
+      "start": 35.8,
+      "end": 35.86
+    },
+    {
+      "index": 127,
+      "char": "中",
+      "start": 35.96,
+      "end": 36.14
+    },
+    {
+      "index": 128,
+      "char": "非",
+      "start": 36.42,
+      "end": 36.56
+    },
+    {
+      "index": 129,
+      "char": "常",
+      "start": 36.66,
+      "end": 36.8
+    },
+    {
+      "index": 130,
+      "char": "重",
+      "start": 36.86,
+      "end": 36.96
+    },
+    {
+      "index": 131,
+      "char": "要",
+      "start": 37,
+      "end": 37.1
+    },
+    {
+      "index": 132,
+      "char": "的",
+      "start": 37.16,
+      "end": 37.2
+    },
+    {
+      "index": 133,
+      "char": "植",
+      "start": 37.26,
+      "end": 37.34
+    },
+    {
+      "index": 134,
+      "char": "物",
+      "start": 37.48,
+      "end": 38
+    }
+  ],
+  "component_image_timeline": {
+    "final": true,
+    "source": "draft",
+    "segments": [
+      {
+        "color": "red",
+        "component": "艹",
+        "image": "illustration_red_word_image_path",
+        "image_path": "/character-resources/019f04a5-3fb2-7436-8a25-95c52fa5f8d5/illustration_red_word.png",
+        "anchor": "上面的“艹",
+        "start": 6.62,
+        "end": 11.24
+      },
+      {
+        "phase": "full_word",
+        "image": "illustration_full_word_image_path",
+        "image_path": "/character-resources/019f04a5-3fb2-7436-8a25-95c52fa5f8d5/illustration_full_word.png",
+        "anchor": "下面的“余",
+        "start": 11.24
+      }
+    ]
+  }
+}
