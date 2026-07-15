@@ -1564,10 +1564,11 @@ html[data-theme="night"] .hero-illustration img {
 
 .mnemonic-scene {
   position: relative;
-  min-height: 540px;
+  display: grid;
+  grid-template-rows: minmax(540px, 1fr) auto;
   margin: 0;
   overflow: hidden;
-  background: #18223a;
+  background: #f0e5ce;
   outline: none;
 }
 
@@ -1575,43 +1576,58 @@ html[data-theme="night"] .hero-illustration img {
   box-shadow: inset 0 0 0 4px var(--saffron);
 }
 
-.mnemonic-scene > img {
+.mnemonic-art-frame {
+  position: relative;
+  min-width: 0;
+  min-height: 540px;
+  overflow: hidden;
+  isolation: isolate;
+  background: #e6d7ba;
+}
+
+.mnemonic-art-frame > img {
+  transition: filter 360ms ease, opacity 360ms ease;
+}
+
+.mnemonic-scene-backdrop {
+  z-index: 0;
   object-fit: cover;
-  transition: filter 360ms ease, transform 900ms cubic-bezier(0.2, 0.8, 0.2, 1);
+  opacity: 0.42;
+  filter: blur(26px) saturate(0.72) brightness(0.82);
+  transform: scale(1.12);
 }
 
-.mnemonic-scene.stage-0 > img {
-  transform: scale(1.015);
+.mnemonic-scene-art {
+  z-index: 1;
+  object-fit: contain;
+  object-position: center;
 }
 
-.mnemonic-scene.stage-1 > img,
-.mnemonic-scene.stage-2 > img,
-.mnemonic-scene.stage-3 > img {
+.mnemonic-scene.stage-1 .mnemonic-scene-art,
+.mnemonic-scene.stage-2 .mnemonic-scene-art,
+.mnemonic-scene.stage-3 .mnemonic-scene-art {
   filter: saturate(0.94) brightness(0.9);
-  transform: scale(1.035);
 }
 
 .mnemonic-vignette {
   position: absolute;
-  z-index: 1;
+  z-index: 2;
   inset: 0;
   background:
-    linear-gradient(180deg, rgba(8, 22, 40, 0.04) 45%, rgba(8, 22, 40, 0.72)),
-    radial-gradient(circle at 50% 52%, transparent 27%, rgba(8, 22, 40, 0.14));
+    linear-gradient(90deg, rgba(8, 22, 40, 0.1), transparent 18%, transparent 82%, rgba(8, 22, 40, 0.1)),
+    radial-gradient(circle at 50% 52%, transparent 38%, rgba(8, 22, 40, 0.08));
   pointer-events: none;
 }
 
 .mnemonic-scene figcaption {
-  position: absolute;
-  z-index: 4;
-  right: 25px;
-  bottom: 22px;
-  left: 25px;
   display: flex;
-  align-items: end;
+  min-height: 54px;
+  align-items: center;
   justify-content: space-between;
   gap: 18px;
+  padding: 12px 22px;
   color: #fff;
+  background: #18223a;
   pointer-events: none;
 }
 
@@ -2602,16 +2618,16 @@ html[data-theme="night"] .hero-illustration img {
   aspect-ratio: 1;
   overflow: hidden;
   border-radius: 13px;
-  background: var(--paper);
+  background: #efe4cc;
 }
 
 .meaning-illustration img {
-  object-fit: cover;
-  transition: transform 220ms ease, filter 220ms ease;
+  object-fit: contain;
+  object-position: center;
+  transition: filter 220ms ease;
 }
 
 .choice-card:hover .meaning-illustration img {
-  transform: scale(1.035);
   filter: saturate(1.05);
 }
 
@@ -4361,7 +4377,22 @@ html[data-theme="night"] .hero-illustration img {
   }
 
   .mnemonic-scene {
-    min-height: 410px;
+    grid-template-rows: auto auto;
+  }
+
+  .mnemonic-art-frame {
+    width: 100%;
+    min-height: 0;
+    aspect-ratio: 1;
+  }
+
+  .mnemonic-scene-backdrop {
+    display: none;
+  }
+
+  .mnemonic-scene figcaption {
+    min-height: 50px;
+    padding: 11px 17px;
   }
 
   .mnemonic-story {
@@ -4729,10 +4760,6 @@ html[data-theme="night"] .hero-illustration img {
     flex-direction: column;
   }
 
-  .mnemonic-scene {
-    min-height: 345px;
-  }
-
   .mnemonic-steps button {
     grid-template-columns: 29px minmax(0, 1fr);
     padding: 15px 8px 10px;
@@ -4756,7 +4783,7 @@ html[data-theme="night"] .hero-illustration img {
     animation: none;
   }
 
-  .mnemonic-scene > img,
+  .mnemonic-art-frame > img,
   .narration-transcript span,
   .narration-progress i {
     transition: none;

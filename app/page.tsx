@@ -1537,9 +1537,27 @@ function MnemonicMemory({
           }}
           aria-label={`图中嵌字演示，当前是第${stage + 1}步：${mnemonicStageLabels[stage]}。可使用左右方向键切换。`}
         >
-          <Image src={visual.src} alt={`${visual.alt}。${scene.scene}`} fill priority sizes="(max-width: 760px) 100vw, 720px" />
-          <div className="mnemonic-vignette" aria-hidden="true" />
-          <MnemonicSceneFocus character={character} stage={stage} />
+          <div className="mnemonic-art-frame">
+            <Image
+              className="mnemonic-scene-backdrop"
+              src={visual.src}
+              alt=""
+              fill
+              aria-hidden="true"
+              sizes="(max-width: 760px) 100vw, 720px"
+            />
+            <Image
+              className="mnemonic-scene-art"
+              src={visual.src}
+              alt={`${visual.alt}。${scene.scene}`}
+              fill
+              priority
+              sizes="(max-width: 760px) 100vw, 720px"
+              style={{ objectFit: "contain", objectPosition: "center" }}
+            />
+            <div className="mnemonic-vignette" aria-hidden="true" />
+            <MnemonicSceneFocus character={character} stage={stage} />
+          </div>
           <figcaption><span>画面本身就是字形</span><strong>{visual.label}</strong></figcaption>
         </figure>
 
@@ -1640,7 +1658,15 @@ function CharacterStudy({
             <div className="script-line" aria-label="真实字形演变资料">
               {heritage.stages.map((stage) => (
                 <div key={stage.src}>
-                  <span className="script-image"><Image src={stage.src} alt={`${character.hanzi}的${stage.label}字形`} fill sizes="74px" /></span>
+                  <span className="script-image">
+                    <Image
+                      src={stage.src}
+                      alt={`${character.hanzi}的${stage.label}字形`}
+                      fill
+                      sizes="74px"
+                      style={{ objectFit: "contain", objectPosition: "center" }}
+                    />
+                  </span>
                   <small>{stage.label}</small>
                 </div>
               ))}
@@ -1996,6 +2022,7 @@ function ChoiceExercise({
                   alt={illustration!.alt}
                   fill
                   sizes="(max-width: 760px) 82vw, 220px"
+                  style={{ objectFit: "contain", objectPosition: "center" }}
                 />
                 {option.correct && result !== null && (
                   <MnemonicSceneFocus character={character} stage={3} compact />
@@ -2098,7 +2125,13 @@ function RedBlueExercise({
     <div className="redblue-exercise">
       {redBlueAsset ? (
         <div className="redblue-word is-composed" aria-label={"“" + character.hanzi + "”的红蓝合字"}>
-          <Image src={redBlueAsset} alt={`${character.hanzi}字中部首与其他部件的红蓝标记`} fill sizes="190px" />
+          <Image
+            src={redBlueAsset}
+            alt={`${character.hanzi}字中部首与其他部件的红蓝标记`}
+            fill
+            sizes="190px"
+            style={{ objectFit: "contain", objectPosition: "center" }}
+          />
         </div>
       ) : (
         <div className="redblue-word" aria-label={"“" + character.hanzi + "”的红蓝字形"}>

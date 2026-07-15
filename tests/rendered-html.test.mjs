@@ -232,6 +232,30 @@ test("every source character has a complete, authored object-shaped mnemonic", a
   }
 });
 
+test("mnemonic artwork is never cropped or hidden by its caption", async () => {
+  const pageSource = await readFile(
+    new URL("../app/page.tsx", import.meta.url),
+    "utf8",
+  );
+  const stylesheet = await readFile(
+    new URL("../app/globals.css", import.meta.url),
+    "utf8",
+  );
+
+  assert.match(pageSource, /className="mnemonic-art-frame"/);
+  assert.match(pageSource, /className="mnemonic-scene-art"/);
+  assert.equal(
+    (pageSource.match(/objectFit: "contain", objectPosition: "center"/g) ?? []).length,
+    4,
+    "all full-view learning image families need an inline contain override",
+  );
+  assert.match(stylesheet, /\.mnemonic-scene-art\s*\{[^}]*object-fit:\s*contain/s);
+  assert.match(stylesheet, /\.meaning-illustration img\s*\{[^}]*object-fit:\s*contain/s);
+  assert.doesNotMatch(stylesheet, /\.mnemonic-scene\.stage-[^{]+\{[^}]*transform:\s*scale/s);
+  assert.doesNotMatch(stylesheet, /\.choice-card:hover \.meaning-illustration img\s*\{[^}]*transform:/s);
+  assert.match(stylesheet, /\.mnemonic-scene figcaption\s*\{[^}]*background:\s*#18223a/s);
+});
+
 test("the public learning catalog preserves the course and practice-route structure", async () => {
   const catalog = await readFile(
     new URL("../app/data/catalog.ts", import.meta.url),
