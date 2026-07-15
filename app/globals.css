@@ -764,7 +764,7 @@ html[data-theme="night"] .hero-illustration img {
 .lesson-route-card {
   --route: var(--coral);
   display: grid;
-  grid-template-columns: 96px 160px minmax(0, 1fr) 42px;
+  grid-template-columns: 96px 180px minmax(0, 1fr) 42px;
   align-items: center;
   gap: 23px;
   width: 100%;
@@ -806,6 +806,50 @@ html[data-theme="night"] .hero-illustration img {
   gap: 3px;
   align-items: center;
   justify-content: center;
+}
+
+.route-scene {
+  position: relative;
+  width: 180px;
+  height: 105px;
+  overflow: hidden;
+  border: 1px solid color-mix(in srgb, var(--route) 28%, var(--line));
+  border-radius: 17px;
+  background: var(--paper-soft);
+  box-shadow: 0 9px 20px color-mix(in srgb, var(--route) 14%, transparent);
+}
+
+.route-scene > img {
+  object-fit: cover;
+  transition: transform 260ms ease;
+}
+
+.lesson-route-card:hover .route-scene > img {
+  transform: scale(1.04);
+}
+
+.route-scene .route-character-cloud {
+  position: absolute;
+  z-index: 2;
+  right: 7px;
+  bottom: 7px;
+  gap: 2px;
+}
+
+.route-scene .route-character-cloud i {
+  width: 27px;
+  height: 30px;
+  border-color: rgba(255, 255, 255, 0.72);
+  border-radius: 8px;
+  color: var(--navy);
+  font-size: 0.94rem;
+  background: rgba(255, 255, 255, 0.88);
+  box-shadow: 0 4px 10px rgba(23, 49, 93, 0.16);
+  backdrop-filter: blur(5px);
+}
+
+.route-scene .route-character-cloud i:nth-child(even) {
+  transform: translateY(-4px);
 }
 
 .route-character-cloud i {
@@ -879,6 +923,58 @@ html[data-theme="night"] .hero-illustration img {
 }
 
 /* Lesson word map */
+
+.lesson-scene-banner {
+  position: relative;
+  max-width: 920px;
+  height: 280px;
+  margin-bottom: 17px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 25px;
+  background: var(--paper-soft);
+  box-shadow: var(--shadow-xs);
+}
+
+.lesson-scene-banner::after {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(17, 38, 73, 0.76), rgba(17, 38, 73, 0.08) 65%, transparent);
+  content: "";
+}
+
+.lesson-scene-banner > img {
+  object-fit: cover;
+  object-position: center 48%;
+}
+
+.lesson-scene-banner > div {
+  position: absolute;
+  z-index: 2;
+  left: 27px;
+  bottom: 25px;
+  display: grid;
+  color: #fff;
+}
+
+.lesson-scene-banner span {
+  color: #d7e7ff;
+  font-size: 0.67rem;
+  font-weight: 820;
+  letter-spacing: 0.12em;
+}
+
+.lesson-scene-banner strong {
+  margin-top: 4px;
+  font-family: var(--serif);
+  font-size: 2rem;
+}
+
+.lesson-scene-banner small {
+  margin-top: 5px;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 0.72rem;
+}
 
 .word-map-board {
   padding: 27px;
@@ -1121,8 +1217,8 @@ html[data-theme="night"] .hero-illustration img {
 
 .character-story-card {
   display: grid;
-  grid-template-columns: 214px minmax(0, 1fr);
-  gap: 35px;
+  grid-template-columns: 190px minmax(0, 1fr) minmax(245px, 0.55fr);
+  gap: 25px;
   padding: 30px;
   border: 1px solid rgba(129, 91, 232, 0.25);
   border-radius: 27px;
@@ -1258,6 +1354,52 @@ html[data-theme="night"] .hero-illustration img {
   font-size: 0.79rem;
   line-height: 1.65;
   background: var(--saffron-soft);
+}
+
+.story-meaning-visual {
+  position: relative;
+  min-height: 330px;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid rgba(242, 181, 63, 0.42);
+  border-radius: 22px;
+  background: var(--saffron-soft);
+  box-shadow: 0 13px 28px rgba(31, 62, 103, 0.13);
+}
+
+.story-meaning-visual::after {
+  position: absolute;
+  inset: 42% 0 0;
+  background: linear-gradient(transparent, rgba(12, 30, 55, 0.84));
+  content: "";
+}
+
+.story-meaning-visual > img {
+  object-fit: cover;
+}
+
+.story-meaning-visual figcaption {
+  position: absolute;
+  z-index: 2;
+  right: 17px;
+  bottom: 16px;
+  left: 17px;
+  display: grid;
+  color: #fff;
+}
+
+.story-meaning-visual figcaption span {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+}
+
+.story-meaning-visual figcaption strong {
+  margin-top: 3px;
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  line-height: 1.28;
 }
 
 .character-map-card {
@@ -1868,39 +2010,37 @@ html[data-theme="night"] .hero-illustration img {
   border-radius: 50%;
 }
 
-.meaning-symbol {
-  display: grid;
-  flex: 0 0 auto;
-  width: 45px;
-  height: 45px;
-  place-items: center;
+.meaning-illustration {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 1;
+  overflow: hidden;
   border-radius: 13px;
-  color: var(--track);
-  font-family: var(--serif);
-  font-size: 1.6rem;
-  background: color-mix(in srgb, var(--track) 11%, var(--paper));
+  background: var(--paper);
 }
 
-.symbol-1 {
-  color: var(--lapis);
+.meaning-illustration img {
+  object-fit: cover;
+  transition: transform 220ms ease, filter 220ms ease;
 }
 
-.symbol-2 {
-  color: var(--violet);
-}
-
-.symbol-3 {
-  color: var(--saffron);
+.choice-card:hover .meaning-illustration img {
+  transform: scale(1.035);
+  filter: saturate(1.05);
 }
 
 .choice-grid.is-visual .choice-card {
   flex-direction: column;
   align-items: stretch;
-  min-height: 158px;
+  min-height: 270px;
+  padding: 10px;
 }
 
 .choice-grid.is-visual .choice-card strong {
-  font-size: 0.77rem;
+  padding: 2px 3px 3px;
+  font-size: 0.76rem;
+  text-align: center;
 }
 
 .structure-shape {
@@ -3059,6 +3199,15 @@ html[data-theme="night"] .hero-illustration img {
     grid-template-columns: 1fr;
   }
 
+  .character-story-card {
+    grid-template-columns: 190px minmax(0, 1fr);
+  }
+
+  .story-meaning-visual {
+    grid-column: 1 / -1;
+    min-height: 430px;
+  }
+
   .track-character-grid {
     grid-template-columns: repeat(6, minmax(0, 1fr));
   }
@@ -3205,13 +3354,23 @@ html[data-theme="night"] .hero-illustration img {
   }
 
   .lesson-route-card {
-    grid-template-columns: 76px minmax(0, 1fr) 26px;
+    grid-template-columns: 88px minmax(0, 1fr) 26px;
     gap: 14px;
     min-height: 117px;
     padding: 16px;
   }
 
-  .route-character-cloud {
+  .route-index {
+    display: none;
+  }
+
+  .route-scene {
+    width: 88px;
+    height: 78px;
+    border-radius: 13px;
+  }
+
+  .route-scene .route-character-cloud {
     display: none;
   }
 
@@ -3221,6 +3380,10 @@ html[data-theme="night"] .hero-illustration img {
 
   .word-map-board {
     padding: 19px;
+  }
+
+  .lesson-scene-banner {
+    height: 245px;
   }
 
   .word-groups {
@@ -3260,6 +3423,11 @@ html[data-theme="night"] .hero-illustration img {
     grid-template-columns: 1fr;
     gap: 22px;
     padding: 21px;
+  }
+
+  .story-meaning-visual {
+    grid-column: auto;
+    min-height: 360px;
   }
 
   .story-character-column {
@@ -3358,8 +3526,20 @@ html[data-theme="night"] .hero-illustration img {
   }
 
   .choice-grid.is-visual .choice-card {
-    flex-direction: row;
-    min-height: 77px;
+    display: grid;
+    grid-template-columns: 116px minmax(0, 1fr);
+    align-items: center;
+    min-height: 136px;
+    padding: 9px;
+  }
+
+  .choice-grid.is-visual.no-visual-captions {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .choice-grid.is-visual.no-visual-captions .choice-card {
+    display: flex;
+    min-height: 0;
   }
 
   .assembly-exercise {
@@ -3488,6 +3668,27 @@ html[data-theme="night"] .hero-illustration img {
 
   .word-groups {
     grid-template-columns: 1fr;
+  }
+
+  .lesson-scene-banner {
+    height: 220px;
+  }
+
+  .lesson-scene-banner > div {
+    left: 20px;
+    bottom: 19px;
+  }
+
+  .lesson-scene-banner strong {
+    font-size: 1.55rem;
+  }
+
+  .choice-grid.is-visual.no-visual-captions {
+    grid-template-columns: 1fr;
+  }
+
+  .choice-grid.is-visual.no-visual-captions .choice-card {
+    display: block;
   }
 
   .word-group {

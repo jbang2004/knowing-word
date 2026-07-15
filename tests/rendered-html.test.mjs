@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { readFile } from "node:fs/promises";
+import { access, readFile } from "node:fs/promises";
 import test from "node:test";
 
 async function render() {
@@ -35,6 +35,98 @@ test("server-renders the course-first Knowing Word learning experience", async (
   assert.match(html, /日日朗读/);
 });
 
+test("every image-based literacy question has a generated visual asset", async () => {
+  const { characters, lessons } = await import(
+    new URL("../app/data/catalog.ts", import.meta.url).href,
+  );
+  const { characterVisuals, supplementalVisuals, lessonVisuals, getVisualOption } = await import(
+    new URL("../app/data/illustrations.ts", import.meta.url).href,
+  );
+
+  const visualCharacters = characters.filter(
+    (character) =>
+      character.primary &&
+      character.exercises.some(
+        (exercise) => exercise.questionType === "image_single_select",
+      ),
+  );
+  const uniqueGlyphs = new Set(visualCharacters.map((character) => character.hanzi));
+  const allGlyphs = new Set(characters.map((character) => character.hanzi));
+
+  assert.equal(uniqueGlyphs.size, 37);
+  assert.equal(allGlyphs.size, 76);
+  assert.equal(Object.keys(characterVisuals).length, allGlyphs.size);
+  assert.deepEqual(new Set(Object.keys(characterVisuals)), allGlyphs);
+  assert.equal(
+    new Set(Object.values(characterVisuals).map((visual) => visual.src)).size,
+    allGlyphs.size,
+  );
+  assert.equal(supplementalVisuals.length, 6);
+  assert.equal(
+    new Set([
+      ...Object.values(characterVisuals).map((visual) => visual.src),
+      ...supplementalVisuals.map((visual) => visual.src),
+    ]).size,
+    allGlyphs.size + supplementalVisuals.length,
+  );
+  assert.equal(Object.keys(lessonVisuals).length, lessons.length);
+
+  for (const glyph of allGlyphs) {
+    const visual = characterVisuals[glyph];
+    assert.ok(visual, `missing character-study visual for ${glyph}`);
+    await access(new URL(`../public${visual.src}`, import.meta.url));
+  }
+
+  for (const visual of supplementalVisuals) {
+    await access(new URL(`../public${visual.src}`, import.meta.url));
+  }
+
+  const supplementalSources = new Set(
+    supplementalVisuals.map((visual) => visual.src),
+  );
+  const usedSupplementalSources = new Set();
+
+  for (const character of visualCharacters) {
+    assert.ok(characterVisuals[character.hanzi], `missing visual for ${character.hanzi}`);
+    for (const exercise of character.exercises.filter(
+      (item) => item.questionType === "image_single_select",
+    )) {
+      let wrongSlot = 0;
+      for (const option of exercise.options) {
+        const visual = getVisualOption(
+          character.hanzi,
+          exercise.id,
+          option.correct,
+          wrongSlot,
+        );
+        assert.ok(visual?.src, `missing option visual for ${character.hanzi}`);
+        await access(new URL(`../public${visual.src}`, import.meta.url));
+        if (supplementalSources.has(visual.src)) {
+          usedSupplementalSources.add(visual.src);
+        }
+        if (!option.correct) wrongSlot += 1;
+      }
+    }
+  }
+
+  assert.equal(usedSupplementalSources.size, supplementalVisuals.length);
+
+  for (const lesson of lessons) {
+    const visual = lessonVisuals[lesson.id];
+    assert.ok(visual, `missing lesson visual for ${lesson.title}`);
+    await access(new URL(`../public${visual.src}`, import.meta.url));
+  }
+
+  const illustrationSource = await readFile(
+    new URL("../app/data/illustrations.ts", import.meta.url),
+    "utf8",
+  );
+  assert.doesNotMatch(
+    illustrationSource,
+    /auth_key|course-assets|access_token|password\s*[:=]/i,
+  );
+});
+
 test("the public learning catalog preserves the course and practice-route structure", async () => {
   const catalog = await readFile(
     new URL("../app/data/catalog.ts", import.meta.url),
@@ -48,7 +140,7 @@ test("the public learning catalog preserves the course and practice-route struct
   assert.match(catalog, /"红蓝字"/);
   assert.match(catalog, /"空间结构"/);
   assert.doesNotMatch(catalog, /auth_key|course-assets|access_token/i);
-  assert.doesNotMatch(catalog, /REDACTED_ACCOUNT|REDACTED_PASSWORD/i);
+  assert.doesNotMatch(catalog, /password\s*[:=]|account\s*[:=]/i);
 
   const { characters, components, lessons } = await import(
     new URL("../app/data/catalog.ts", import.meta.url).href,

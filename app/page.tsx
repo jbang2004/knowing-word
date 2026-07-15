@@ -17,6 +17,11 @@ import {
   type ComponentItem,
   type Exercise,
 } from "./data/catalog";
+import {
+  characterVisuals,
+  getVisualOption,
+  lessonVisuals,
+} from "./data/illustrations";
 
 type Screen =
   | "home"
@@ -802,8 +807,8 @@ function HomeHub({
         </div>
         <div className="hero-illustration">
           <Image
-            src="/og.png"
-            alt=""
+            src="/illustrations/system/home-hero.jpg"
+            alt="两名孩子跟随蓝金色喜鹊，在桂花与书卷之间探索汉字"
             fill
             priority
             sizes="(max-width: 760px) 100vw, 46vw"
@@ -911,11 +916,15 @@ function CourseMap({
         {lessonList.map((lesson, index) => {
           const chars = getLessonCharacters(lesson.id);
           const progress = trackProgress(profile, "words", lesson.id);
+          const illustration = lessonVisuals[lesson.id];
           return (
             <button className={"lesson-route-card lesson-tone-" + index} key={lesson.id} onClick={() => onLesson(lesson.id)}>
               <span className="route-index">第 {lesson.position} 课</span>
-              <div className="route-character-cloud" aria-hidden="true">
-                {chars.slice(0, 4).map((character) => <i key={character.id}>{character.hanzi}</i>)}
+              <div className="route-scene">
+                <Image src={illustration.src} alt={illustration.alt} fill sizes="180px" />
+                <div className="route-character-cloud" aria-hidden="true">
+                  {chars.slice(0, 4).map((character) => <i key={character.id}>{character.hanzi}</i>)}
+                </div>
               </div>
               <div className="route-copy">
                 <h2>{lesson.title}</h2>
@@ -949,6 +958,7 @@ function LessonWordMap({
   const groups = getWordGroups(lesson.id);
   const completed = new Set(profile.completed.words);
   const progress = trackProgress(profile, "words", lesson.id);
+  const illustration = lessonVisuals[lesson.id];
 
   return (
     <div className="page lesson-page">
@@ -958,6 +968,21 @@ function LessonWordMap({
         copy={"词语表 · " + progress.completed + " / " + progress.total + " 个字已完成整套识字小测"}
         onBack={onBack}
       />
+
+      <section className="lesson-scene-banner">
+        <Image
+          src={illustration.src}
+          alt={illustration.alt}
+          fill
+          priority
+          sizes="(max-width: 760px) 100vw, 920px"
+        />
+        <div>
+          <span>课文场景</span>
+          <strong>{lesson.title}</strong>
+          <small>先进入画面，再从词语认识汉字</small>
+        </div>
+      </section>
 
       <section className="word-map-board">
         <div className="board-title"><span>词语表</span><i>把词语拆成一个个可理解的汉字</i></div>
@@ -1032,6 +1057,7 @@ function CharacterStudy({
   const exercises = getTrackExercises(character, "words");
   const isComplete = profile.completed.words.includes(character.id);
   const completedQuestions = exercises.filter((question) => profile.answers[question.id]?.lastCorrect).length;
+  const illustration = characterVisuals[character.hanzi];
 
   return (
     <div className="page character-page">
@@ -1071,6 +1097,16 @@ function CharacterStudy({
           </div>
           <blockquote>课文原文：{character.originalText}</blockquote>
         </div>
+        <figure className="story-meaning-visual">
+          <Image
+            src={illustration.src}
+            alt={illustration.alt}
+            fill
+            priority
+            sizes="(max-width: 760px) 100vw, 300px"
+          />
+          <figcaption><span>看图记本义</span><strong>{illustration.label}</strong></figcaption>
+        </figure>
       </section>
 
       <section className="character-map-card">
@@ -1272,11 +1308,13 @@ function ChallengeRoom({
   const expected = getExpectedIds(question, character, track);
   const needsMultiple = expected.length > 1;
   const ready = question.kind === "write" ? wrote : selected.length > 0;
-  const answerText = expected
-    .map((id) => question.options.find((option) => option.id === id))
-    .filter(Boolean)
-    .map((option) => optionText(option as Exercise["options"][number], character, 0))
-    .join("、");
+  const answerText = question.questionType === "image_single_select"
+    ? (characterVisuals[character.hanzi]?.label || character.originalMeaning)
+    : expected
+        .map((id) => question.options.find((option) => option.id === id))
+        .filter(Boolean)
+        .map((option) => optionText(option as Exercise["options"][number], character, 0))
+        .join("、");
   const finalStep = questionIndex === total - 1;
   const record = profile.answers[question.id];
 
@@ -1370,10 +1408,17 @@ function ChoiceExercise({
   onChoose: (id: string) => void;
 }) {
   const visual = question.questionType === "image_single_select";
+  const showVisualCaption = question.options.some((item) => Boolean(item.text));
   return (
-    <div className={"choice-grid " + (visual ? "is-visual" : "")}>
+    <div className={"choice-grid " + (visual ? "is-visual " : "") + (visual && !showVisualCaption ? "no-visual-captions" : "")}>
       {question.options.map((option, index) => {
         const isSelected = selected.includes(option.id);
+        const wrongSlot = question.options
+          .slice(0, index)
+          .filter((item) => !item.correct).length;
+        const illustration = visual
+          ? getVisualOption(character.hanzi, question.id, option.correct, wrongSlot)
+          : null;
         const state =
           result === null
             ? isSelected
@@ -1392,13 +1437,24 @@ function ChoiceExercise({
             aria-pressed={isSelected}
           >
             {visual ? (
-              <span className={"meaning-symbol symbol-" + index}>{option.correct ? character.hanzi : "？"}</span>
+              <span className="meaning-illustration">
+                <Image
+                  src={illustration!.src}
+                  alt={illustration!.alt}
+                  fill
+                  sizes="(max-width: 760px) 82vw, 220px"
+                />
+              </span>
             ) : question.kind === "structure" ? (
               <StructureShape code={option.idcCode} />
             ) : (
               <span className="choice-dot" />
             )}
-            <strong>{optionText(option, character, index)}</strong>
+            {visual ? (
+              showVisualCaption && <strong>{illustration!.label}</strong>
+            ) : (
+              <strong>{optionText(option, character, index)}</strong>
+            )}
             {question.kind === "structure" && <small>{option.idcCode}</small>}
           </button>
         );

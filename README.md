@@ -18,12 +18,17 @@ the same characters through three focused practice routes.
   resume points for each route
 - Pronunciation, browser-only handwriting, local read-aloud recording, and
   responsive day/night modes
+- 86 original generated illustrations: a unique scene for all 76 catalog
+  characters, six supplemental semantic scenes, all three lessons, and the home
+  learning journey
 
 The application deliberately uses its own visual language and generated
 illustration rather than copying the original site's artwork.
 
 See [the course-flow alignment notes](docs/course-flow-alignment.md) for the
 implemented learning sequence and each route's completion rule.
+See [the illustration system](docs/illustration-system.md) for the source-page
+visual audit, asset coverage, and art direction.
 
 ## Run locally
 
