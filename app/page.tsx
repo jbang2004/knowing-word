@@ -3,7 +3,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import {
-  type CSSProperties,
   type PointerEvent as ReactPointerEvent,
   useCallback,
   useEffect,
@@ -27,8 +26,12 @@ import {
 } from "./data/illustrations";
 import { heritageAssets, type AudioMark } from "./data/heritage-assets";
 import {
-  getMnemonicAnchors,
+  getMnemonicLayout,
+  getMnemonicScene,
+} from "./data/mnemonic-scenes";
+import {
   getMnemonicStageCopy,
+  getMnemonicStagePartIndices,
   mnemonicStageLabels,
   type MnemonicStage,
 } from "./data/mnemonics";
@@ -1457,53 +1460,26 @@ function NarratedDescription({ character }: { character: CharacterItem }) {
   );
 }
 
-function MnemonicGlyphLayer({
+function MnemonicSceneFocus({
   character,
   stage,
   compact = false,
-  onComponent,
 }: {
   character: CharacterItem;
   stage: MnemonicStage;
   compact?: boolean;
-  onComponent?: (glyph: string) => void;
 }) {
-  const parts = character.parts.length ? character.parts : [{ char: character.hanzi, radical: true }];
-  const anchors = getMnemonicAnchors(character);
-  const hasBluePart = parts.some((part) => !part.radical);
+  const layout = getMnemonicLayout(character);
 
   return (
-    <div className={compact ? "mnemonic-glyph-layer is-compact" : "mnemonic-glyph-layer"} aria-label={`“${character.hanzi}”的图中字形线索`}>
-      {parts.map((part, index) => {
-        const showRadical = stage === 1 && part.radical;
-        const showBlue = stage === 2 && (!part.radical || !hasBluePart);
-        const showCombined = stage === 3;
-        if (!showRadical && !showBlue && !showCombined) return null;
-        const anchor = anchors[index] || anchors[0];
-        const blueFallback = stage === 2 && !hasBluePart;
-        const className = `memory-part ${part.radical && !blueFallback ? "is-radical" : "is-component"}`;
-        const style = {
-          left: `${anchor.x}%`,
-          top: `${anchor.y}%`,
-          "--memory-scale": anchor.scale,
-          "--memory-rotate": `${anchor.rotate}deg`,
-        } as CSSProperties;
-        const label = part.radical ? `表意部首“${part.char}”` : `字形部件“${part.char}”`;
-        return onComponent ? (
-          <button className={className} key={`${part.char}-${index}`} style={style} onClick={() => onComponent(part.char)} aria-label={`${label}，查看来历`}>
-            {part.char}<small>{part.radical ? "表意" : "线索"}</small>
-          </button>
-        ) : (
-          <span className={className} key={`${part.char}-${index}`} style={style} aria-label={label}>
-            {part.char}
-          </span>
-        );
-      })}
-      {stage === 3 && (
-        <span className="memory-whole-glyph" aria-label={`合成完整的“${character.hanzi}”字`}>
-          <small>合成</small>{character.hanzi}
-        </span>
-      )}
+    <div
+      className={`mnemonic-scene-focus layout-${layout} focus-${stage}${compact ? " is-compact" : ""}`}
+      aria-hidden="true"
+    >
+      {!compact && stage > 0 && stage < 3 && <span className="mnemonic-focus-wash" />}
+      {!compact && stage === 0 && <span className="scene-hunt-badge">先找物体轮廓</span>}
+      {!compact && stage === 3 && <span className="scene-resolved-badge">物象已经合拢</span>}
+      {compact && <span className="meaning-match-badge">图形即字形 <b>✓</b></span>}
     </div>
   );
 }
@@ -1518,7 +1494,12 @@ function MnemonicMemory({
   const [stage, setStage] = useState<MnemonicStage>(0);
   const [autoPlay, setAutoPlay] = useState(false);
   const visual = characterVisuals[character.hanzi];
+  const scene = getMnemonicScene(character);
   const copy = getMnemonicStageCopy(character, stage);
+  const activePartIndices = getMnemonicStagePartIndices(character, stage);
+  const parts = character.parts.length
+    ? character.parts
+    : [{ char: character.hanzi, radical: true }];
 
   useEffect(() => {
     if (!autoPlay) return;
@@ -1537,9 +1518,9 @@ function MnemonicMemory({
     <section className="mnemonic-card" aria-labelledby={`mnemonic-title-${character.id}`}>
       <div className="mnemonic-heading">
         <div>
-          <p className="kicker">图中嵌字 · 四步记忆法</p>
+          <p className="kicker">图中嵌字 · 物象四步记忆法</p>
           <h2 id={`mnemonic-title-${character.id}`}>让“{character.hanzi}”长进画面里</h2>
-          <p>先看本义场景，再依次找红色部首、蓝色部件，最后把整字合起来。</p>
+          <p>先看本义场景，再观察物体本身怎样长成部首和部件；暖红、靛蓝只负责聚焦，不把大字贴在画面上。</p>
         </div>
         <button className={autoPlay ? "memory-autoplay is-playing" : "memory-autoplay"} onClick={() => setAutoPlay((value) => !value)} aria-pressed={autoPlay}>
           <span aria-hidden="true">{autoPlay ? "Ⅱ" : "▶"}</span>{autoPlay ? "暂停演示" : "自动演示"}
@@ -1556,10 +1537,10 @@ function MnemonicMemory({
           }}
           aria-label={`图中嵌字演示，当前是第${stage + 1}步：${mnemonicStageLabels[stage]}。可使用左右方向键切换。`}
         >
-          <Image src={visual.src} alt={visual.alt} fill priority sizes="(max-width: 760px) 100vw, 720px" />
+          <Image src={visual.src} alt={`${visual.alt}。${scene.scene}`} fill priority sizes="(max-width: 760px) 100vw, 720px" />
           <div className="mnemonic-vignette" aria-hidden="true" />
-          <MnemonicGlyphLayer character={character} stage={stage} onComponent={onComponent} />
-          <figcaption><span>场景本义</span><strong>{visual.label}</strong></figcaption>
+          <MnemonicSceneFocus character={character} stage={stage} />
+          <figcaption><span>画面本身就是字形</span><strong>{visual.label}</strong></figcaption>
         </figure>
 
         <aside className={`mnemonic-story stage-${stage}`} aria-live="polite">
@@ -1567,25 +1548,36 @@ function MnemonicMemory({
           <p>{copy.eyebrow}</p>
           <h3>{copy.title}</h3>
           <p className="memory-step-copy">{copy.body}</p>
+          {stage === 3 && (
+            <div className="memory-equation" aria-label={`完整字形：${parts.map((part) => part.char).join("加")}等于${character.hanzi}`}>
+              <div>{parts.map((part, index) => <span key={`${part.char}-${index}`}>{part.char}</span>)}</div>
+              <b aria-hidden="true">→</b>
+              <strong>{character.hanzi}</strong>
+            </div>
+          )}
           <div className="memory-part-list">
-            {(character.parts.length ? character.parts : [{ char: character.hanzi, radical: true }]).map((part, index) => {
-              const composition = character.compositions.find((item) => item.char === part.char);
+            {parts.map((part, index) => {
+              const isActive = activePartIndices.includes(index);
               return (
-                <button className={part.radical ? "is-radical" : "is-component"} key={`${part.char}-${index}`} onClick={() => onComponent(part.char)}>
+                <button
+                  className={`${part.radical ? "is-radical" : "is-component"}${stage > 0 && isActive ? " is-active" : ""}${stage > 0 && !isActive ? " is-muted" : ""}`}
+                  key={`${part.char}-${index}`}
+                  onClick={() => onComponent(part.char)}
+                >
                   <span>{part.char}</span>
-                  <span><strong>{part.radical ? "表意部首" : "其他部件"}</strong><small>{composition?.description || "点击继续探索这个部件"}</small></span>
+                  <span><strong>{part.radical ? "表意部首" : "字形 / 读音线索"}</strong><small>{scene.cues[index] || "顺着画面中的物体轮廓找到这个部件。"}</small></span>
                 </button>
               );
             })}
           </div>
-          <p className="memory-keyboard-tip">提示：点击图中的字形可查看部件来历；键盘可用 ← → 切换。</p>
+          <p className="memory-keyboard-tip">提示：点击右侧部件卡可继续查看来历；键盘可用 ← → 切换观察步骤。</p>
         </aside>
       </div>
 
       <nav className="mnemonic-steps" aria-label="图中嵌字演示步骤">
         {mnemonicStageLabels.map((label, index) => (
           <button className={stage === index ? "is-active" : stage > index ? "is-past" : ""} key={label} onClick={() => selectStage(index as MnemonicStage)} aria-current={stage === index ? "step" : undefined}>
-            <span>{index + 1}</span><strong>{label}</strong><small>{index === 0 ? "先懂图意" : index === 1 ? "红色表意" : index === 2 ? "蓝色补形" : "图字合一"}</small>
+            <span>{index + 1}</span><strong>{label}</strong><small>{index === 0 ? "先找物象" : index === 1 ? "暖红表意" : index === 2 ? "靛蓝补形" : "离图回忆"}</small>
           </button>
         ))}
       </nav>
@@ -2006,7 +1998,7 @@ function ChoiceExercise({
                   sizes="(max-width: 760px) 82vw, 220px"
                 />
                 {option.correct && result !== null && (
-                  <MnemonicGlyphLayer character={character} stage={3} compact />
+                  <MnemonicSceneFocus character={character} stage={3} compact />
                 )}
               </span>
             ) : question.kind === "structure" ? (

@@ -9,31 +9,40 @@ visual teaching pattern is concentrated in four places:
 4. diagrammatic red/blue, assembly, and spatial-structure exercises.
 
 The last group is represented by interactive HTML and CSS plus the factual
-red-blue diagram from the teaching package. The rebuilt app uses newly
-generated artwork for semantic scenes and localized, unsigned copies of the
-historical teaching resources required for accurate instruction.
+red-blue diagram from the teaching package. The rebuilt app uses two
+complementary generated sets: literal semantic scenes for meaning questions
+and object-shaped mnemonic scenes for character study. Localized, unsigned
+historical resources remain the factual reference layer.
 
 ## Generated asset set
 
-- 76 character meaning illustrations, one for every unique character in the
-  public course catalog; every character-study page therefore has its own scene
+- 76 object-shaped mnemonic illustrations, one for every unique character in
+  the public catalog; trees, tools, water, architecture, hands, and negative
+  space directly carry the component geometry
+- 76 character meaning illustrations retained as the literal semantic set
 - 3 lesson scenes: `桂花雨`, `落花生`, and `冀中的地道战`
 - 1 home learning scene with an original blue-and-gold magpie guide
 - 6 additional reusable semantic distractor illustrations
 
-This produces 86 optimized assets in total. For the 37 characters that include
-picture questions, the same canonical meaning illustration is used on the
-study page and as the correct answer in both questions. Distractors are chosen
-deterministically from other character meanings, and their captions follow the
-image being shown. This keeps every option semantically truthful while making
-the question set stable across visits.
+This produces 162 optimized assets in total. The 76 active character visuals
+are the object-shaped mnemonic set. For picture questions, the correct image
+therefore reinforces both meaning and structure; supplemental distractors are
+chosen deterministically and remain semantically truthful.
+
+Each character also has an authored scene script in
+`app/data/mnemonic-scenes.ts`. The script names what the whole scene means and
+what physical form carries every catalog component. Tests require one script,
+one cue per component, and one unique image for every character, preventing a
+generic fallback from silently entering the course.
 
 ## Art direction
 
 All images use an original contemporary children's-book language: tactile
-gouache, layered paper-collage depth, warm cream grounds, jade, coral, saffron,
-lapis, and deep navy. Scenes have one clear focal action, generous crop safety,
-and no embedded words, characters, logos, or watermarks. Potentially sensitive
+watercolor and gouache, warm cream grounds, jade, coral, saffron, lapis, and
+deep navy. Mnemonic scenes have one clear structural silhouette and no pasted
+or printed words, glyph overlays, logos, or watermarks. The learning UI reveals
+the native image with warm-red and indigo focus regions, then moves the actual
+character equation into the explanation panel. Potentially sensitive
 concepts such as `尤`, `民`, `离`, and `战` are intentionally calm,
 non-graphic, historically framed, and age appropriate.
 

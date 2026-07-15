@@ -23,14 +23,15 @@ the same characters through three focused practice routes.
   responsive day/night modes
 - 385 localized teaching resources: 274 historical glyph stages, 58 red-blue
   character diagrams, and 53 pronunciation recordings
-- 86 original generated illustrations: a unique scene for all 76 catalog
-  characters, six supplemental semantic scenes, all three lessons, and the home
-  learning journey
+- 162 original generated illustrations: 76 object-shaped character mnemonics,
+  76 semantic reference scenes, six supplemental scenes, all three lessons,
+  and the home learning journey
 
-The application uses its own visual language and generated semantic
-illustrations. Source teaching resources that are needed for factual accuracy
-are localized under `public/heritage`, so no temporary signed URL is required
-at runtime.
+The application uses its own visual language and a fully authored mnemonic
+system: natural objects carry the component geometry instead of placing large
+glyphs over pictures. Source teaching resources that are needed for factual
+accuracy are localized under `public/heritage`, so no temporary signed URL is
+required at runtime.
 
 See [the course-flow alignment notes](docs/course-flow-alignment.md) for the
 implemented learning sequence and each route's completion rule.

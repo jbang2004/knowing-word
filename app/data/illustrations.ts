@@ -5,6 +5,12 @@ export type LearningVisual = {
 };
 
 const visual = (id: string, label: string, alt: string): LearningVisual => ({
+  src: `/illustrations/mnemonics/${id}.jpg`,
+  label,
+  alt,
+});
+
+const semanticVisual = (id: string, label: string, alt: string): LearningVisual => ({
   src: `/illustrations/meanings/${id}.jpg`,
   label,
   alt,
@@ -90,12 +96,12 @@ export const characterVisuals: Record<string, LearningVisual> = {
 };
 
 export const supplementalVisuals: LearningVisual[] = [
-  visual("m03", "检查、验证", "孩子用放大镜仔细检查一件物品"),
-  visual("m04", "倚靠、凭借", "行路的人稳稳倚靠一根手杖"),
-  visual("m05", "朗声诵读", "孩子面向同伴清楚地朗读"),
-  visual("m06", "背负、承载", "孩子把行囊稳稳背在背上"),
-  visual("m07", "一代又一代", "祖辈、父母和孩子三代人相聚"),
-  visual("m08", "整齐有序", "竹简按照次序整齐排列"),
+  semanticVisual("m03", "检查、验证", "孩子用放大镜仔细检查一件物品"),
+  semanticVisual("m04", "倚靠、凭借", "行路的人稳稳倚靠一根手杖"),
+  semanticVisual("m05", "朗声诵读", "孩子面向同伴清楚地朗读"),
+  semanticVisual("m06", "背负、承载", "孩子把行囊稳稳背在背上"),
+  semanticVisual("m07", "一代又一代", "祖辈、父母和孩子三代人相聚"),
+  semanticVisual("m08", "整齐有序", "竹简按照次序整齐排列"),
 ];
 
 export const lessonVisuals: Record<string, LearningVisual> = {

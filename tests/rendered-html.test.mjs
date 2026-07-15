@@ -145,6 +145,7 @@ test("every image-based literacy question has a generated visual asset", async (
   for (const glyph of allGlyphs) {
     const visual = characterVisuals[glyph];
     assert.ok(visual, `missing character-study visual for ${glyph}`);
+    assert.match(visual.src, /^\/illustrations\/mnemonics\/m\d+\.jpg$/);
     await access(new URL(`../public${visual.src}`, import.meta.url));
   }
 
@@ -198,29 +199,35 @@ test("every image-based literacy question has a generated visual asset", async (
   );
 });
 
-test("every source character has a bounded, complete mnemonic overlay", async () => {
+test("every source character has a complete, authored object-shaped mnemonic", async () => {
   const { characters } = await import(
     new URL("../app/data/catalog.ts", import.meta.url).href,
   );
-  const { getMnemonicAnchors, getMnemonicStageCopy, mnemonicStageLabels } = await import(
+  const { getMnemonicStageCopy, getMnemonicStagePartIndices, mnemonicStageLabels } = await import(
     new URL("../app/data/mnemonics.ts", import.meta.url).href,
   );
-  const sourceCharacters = characters.filter((character) => character.primary && character.ready);
+  const { getMnemonicLayout, getMnemonicScene, mnemonicScenes } = await import(
+    new URL("../app/data/mnemonic-scenes.ts", import.meta.url).href,
+  );
+  const sourceCharacters = [...new Map(
+    characters.map((character) => [character.hanzi, character]),
+  ).values()];
 
-  assert.deepEqual(mnemonicStageLabels, ["看场景", "找部首", "找部件", "合成字"]);
-  assert.equal(sourceCharacters.length, 37);
+  assert.deepEqual(mnemonicStageLabels, ["看意象", "找部首", "找部件", "合成字"]);
+  assert.equal(sourceCharacters.length, 76);
+  assert.equal(Object.keys(mnemonicScenes).length, sourceCharacters.length);
   for (const character of sourceCharacters) {
     const parts = character.parts.length || 1;
-    const anchors = getMnemonicAnchors(character);
-    assert.equal(anchors.length, parts, `wrong mnemonic part count for ${character.hanzi}`);
-    for (const anchor of anchors) {
-      assert.ok(anchor.x >= 12 && anchor.x <= 88, `x anchor outside scene for ${character.hanzi}`);
-      assert.ok(anchor.y >= 12 && anchor.y <= 88, `y anchor outside scene for ${character.hanzi}`);
-      assert.ok(anchor.scale >= 0.6 && anchor.scale <= 1.3, `scale outside range for ${character.hanzi}`);
-    }
+    const scene = getMnemonicScene(character);
+    assert.equal(scene, mnemonicScenes[character.hanzi], `generic mnemonic fallback for ${character.hanzi}`);
+    assert.equal(scene.cues.length, parts, `wrong mnemonic cue count for ${character.hanzi}`);
+    assert.ok(scene.scene.length >= 18, `mnemonic scene is too vague for ${character.hanzi}`);
+    assert.ok(["left-right", "top-bottom", "surround", "single"].includes(getMnemonicLayout(character)));
     for (let stage = 0; stage < 4; stage += 1) {
       const copy = getMnemonicStageCopy(character, stage);
       assert.ok(copy.eyebrow && copy.title && copy.body, `missing stage copy for ${character.hanzi}`);
+      const activeParts = getMnemonicStagePartIndices(character, stage);
+      assert.ok(activeParts.every((index) => index >= 0 && index < parts));
     }
   }
 });
