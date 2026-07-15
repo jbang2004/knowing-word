@@ -1,0 +1,956 @@
+{
+  "marks": [
+    {
+      "index": 0,
+      "char": "距",
+      "start": 0.6,
+      "end": 0.7
+    },
+    {
+      "index": 1,
+      "char": "距",
+      "start": 1.46,
+      "end": 1.56
+    },
+    {
+      "index": 2,
+      "char": "离",
+      "start": 1.66,
+      "end": 1.84
+    },
+    {
+      "index": 3,
+      "char": "的",
+      "start": 1.98,
+      "end": 2.02
+    },
+    {
+      "index": 4,
+      "char": "距",
+      "start": 2.12,
+      "end": 2.24
+    },
+    {
+      "index": 5,
+      "char": "形",
+      "start": 3.26,
+      "end": 3.42
+    },
+    {
+      "index": 6,
+      "char": "声",
+      "start": 3.5,
+      "end": 3.66
+    },
+    {
+      "index": 7,
+      "char": "字",
+      "start": 3.74,
+      "end": 3.82
+    },
+    {
+      "index": 8,
+      "char": "左",
+      "start": 4.54,
+      "end": 4.64
+    },
+    {
+      "index": 9,
+      "char": "右",
+      "start": 4.76,
+      "end": 4.9
+    },
+    {
+      "index": 10,
+      "char": "结",
+      "start": 4.96,
+      "end": 5.06
+    },
+    {
+      "index": 11,
+      "char": "构",
+      "start": 5.18,
+      "end": 5.34
+    },
+    {
+      "index": 12,
+      "char": "左",
+      "start": 6.1,
+      "end": 6.2
+    },
+    {
+      "index": 13,
+      "char": "边",
+      "start": 6.3,
+      "end": 6.42
+    },
+    {
+      "index": 14,
+      "char": "的",
+      "start": 6.46,
+      "end": 6.52
+    },
+    {
+      "index": 15,
+      "char": "足",
+      "start": 6.62,
+      "end": 6.7
+    },
+    {
+      "index": 16,
+      "char": "本",
+      "start": 7.14,
+      "end": 7.28
+    },
+    {
+      "index": 17,
+      "char": "义",
+      "start": 7.36,
+      "end": 7.42
+    },
+    {
+      "index": 18,
+      "char": "是",
+      "start": 7.58,
+      "end": 7.66
+    },
+    {
+      "index": 19,
+      "char": "包",
+      "start": 7.78,
+      "end": 7.92
+    },
+    {
+      "index": 20,
+      "char": "括",
+      "start": 8,
+      "end": 8.08
+    },
+    {
+      "index": 21,
+      "char": "膝",
+      "start": 8.22,
+      "end": 8.3
+    },
+    {
+      "index": 22,
+      "char": "盖",
+      "start": 8.42,
+      "end": 8.6
+    },
+    {
+      "index": 23,
+      "char": "和",
+      "start": 8.7,
+      "end": 8.78
+    },
+    {
+      "index": 24,
+      "char": "脚",
+      "start": 8.88,
+      "end": 9.08
+    },
+    {
+      "index": 25,
+      "char": "在",
+      "start": 9.16,
+      "end": 9.3
+    },
+    {
+      "index": 26,
+      "char": "内",
+      "start": 9.38,
+      "end": 9.5
+    },
+    {
+      "index": 27,
+      "char": "的",
+      "start": 9.58,
+      "end": 9.66
+    },
+    {
+      "index": 28,
+      "char": "整",
+      "start": 9.82,
+      "end": 9.96
+    },
+    {
+      "index": 29,
+      "char": "个",
+      "start": 10.04,
+      "end": 10.1
+    },
+    {
+      "index": 30,
+      "char": "小",
+      "start": 10.24,
+      "end": 10.4
+    },
+    {
+      "index": 31,
+      "char": "腿",
+      "start": 10.46,
+      "end": 10.62
+    },
+    {
+      "index": 32,
+      "char": "右",
+      "start": 11.48,
+      "end": 11.6
+    },
+    {
+      "index": 33,
+      "char": "边",
+      "start": 11.66,
+      "end": 11.76
+    },
+    {
+      "index": 34,
+      "char": "的",
+      "start": 11.82,
+      "end": 11.86
+    },
+    {
+      "index": 35,
+      "char": "巨",
+      "start": 11.96,
+      "end": 12.06
+    },
+    {
+      "index": 36,
+      "char": "本",
+      "start": 12.54,
+      "end": 12.66
+    },
+    {
+      "index": 37,
+      "char": "义",
+      "start": 12.74,
+      "end": 12.78
+    },
+    {
+      "index": 38,
+      "char": "是",
+      "start": 12.94,
+      "end": 13.04
+    },
+    {
+      "index": 39,
+      "char": "画",
+      "start": 13.26,
+      "end": 13.34
+    },
+    {
+      "index": 40,
+      "char": "直",
+      "start": 13.52,
+      "end": 13.6
+    },
+    {
+      "index": 41,
+      "char": "角",
+      "start": 13.72,
+      "end": 13.88
+    },
+    {
+      "index": 42,
+      "char": "用",
+      "start": 13.96,
+      "end": 14.08
+    },
+    {
+      "index": 43,
+      "char": "的",
+      "start": 14.14,
+      "end": 14.18
+    },
+    {
+      "index": 44,
+      "char": "曲",
+      "start": 14.26,
+      "end": 14.38
+    },
+    {
+      "index": 45,
+      "char": "尺",
+      "start": 14.54,
+      "end": 14.68
+    },
+    {
+      "index": 46,
+      "char": "在",
+      "start": 15.3,
+      "end": 15.42
+    },
+    {
+      "index": 47,
+      "char": "这",
+      "start": 15.46,
+      "end": 15.54
+    },
+    {
+      "index": 48,
+      "char": "里",
+      "start": 15.64,
+      "end": 15.72
+    },
+    {
+      "index": 49,
+      "char": "提",
+      "start": 15.86,
+      "end": 15.96
+    },
+    {
+      "index": 50,
+      "char": "示",
+      "start": 16.08,
+      "end": 16.16
+    },
+    {
+      "index": 51,
+      "char": "读",
+      "start": 16.24,
+      "end": 16.32
+    },
+    {
+      "index": 52,
+      "char": "音",
+      "start": 16.44,
+      "end": 16.58
+    },
+    {
+      "index": 53,
+      "char": "不",
+      "start": 17.46,
+      "end": 17.52
+    },
+    {
+      "index": 54,
+      "char": "过",
+      "start": 17.6,
+      "end": 17.7
+    },
+    {
+      "index": 55,
+      "char": "我",
+      "start": 18.08,
+      "end": 18.14
+    },
+    {
+      "index": 56,
+      "char": "们",
+      "start": 18.2,
+      "end": 18.28
+    },
+    {
+      "index": 57,
+      "char": "可",
+      "start": 18.34,
+      "end": 18.38
+    },
+    {
+      "index": 58,
+      "char": "以",
+      "start": 18.44,
+      "end": 18.48
+    },
+    {
+      "index": 59,
+      "char": "这",
+      "start": 18.56,
+      "end": 18.62
+    },
+    {
+      "index": 60,
+      "char": "样",
+      "start": 18.7,
+      "end": 18.84
+    },
+    {
+      "index": 61,
+      "char": "联",
+      "start": 18.88,
+      "end": 19.02
+    },
+    {
+      "index": 62,
+      "char": "想",
+      "start": 19.1,
+      "end": 19.34
+    },
+    {
+      "index": 63,
+      "char": "一",
+      "start": 19.98,
+      "end": 20.04
+    },
+    {
+      "index": 64,
+      "char": "个",
+      "start": 20.16,
+      "end": 20.22
+    },
+    {
+      "index": 65,
+      "char": "人",
+      "start": 20.32,
+      "end": 20.48
+    },
+    {
+      "index": 66,
+      "char": "拿",
+      "start": 20.58,
+      "end": 20.64
+    },
+    {
+      "index": 67,
+      "char": "着",
+      "start": 20.76,
+      "end": 20.82
+    },
+    {
+      "index": 68,
+      "char": "这",
+      "start": 20.86,
+      "end": 20.92
+    },
+    {
+      "index": 69,
+      "char": "把",
+      "start": 21.02,
+      "end": 21.06
+    },
+    {
+      "index": 70,
+      "char": "曲",
+      "start": 21.18,
+      "end": 21.28
+    },
+    {
+      "index": 71,
+      "char": "尺",
+      "start": 21.44,
+      "end": 21.58
+    },
+    {
+      "index": 72,
+      "char": "去",
+      "start": 21.98,
+      "end": 22.08
+    },
+    {
+      "index": 73,
+      "char": "测",
+      "start": 22.18,
+      "end": 22.28
+    },
+    {
+      "index": 74,
+      "char": "量",
+      "start": 22.4,
+      "end": 22.54
+    },
+    {
+      "index": 75,
+      "char": "一",
+      "start": 22.58,
+      "end": 22.62
+    },
+    {
+      "index": 76,
+      "char": "个",
+      "start": 22.72,
+      "end": 22.76
+    },
+    {
+      "index": 77,
+      "char": "人",
+      "start": 22.84,
+      "end": 23
+    },
+    {
+      "index": 78,
+      "char": "迈",
+      "start": 23.12,
+      "end": 23.28
+    },
+    {
+      "index": 79,
+      "char": "了",
+      "start": 23.34,
+      "end": 23.42
+    },
+    {
+      "index": 80,
+      "char": "一",
+      "start": 23.46,
+      "end": 23.5
+    },
+    {
+      "index": 81,
+      "char": "步",
+      "start": 23.62,
+      "end": 23.68
+    },
+    {
+      "index": 82,
+      "char": "的",
+      "start": 23.78,
+      "end": 23.84
+    },
+    {
+      "index": 83,
+      "char": "距",
+      "start": 23.92,
+      "end": 24
+    },
+    {
+      "index": 84,
+      "char": "离",
+      "start": 24.06,
+      "end": 24.22
+    },
+    {
+      "index": 85,
+      "char": "这",
+      "start": 24.9,
+      "end": 24.96
+    },
+    {
+      "index": 86,
+      "char": "就",
+      "start": 25.12,
+      "end": 25.2
+    },
+    {
+      "index": 87,
+      "char": "是",
+      "start": 25.28,
+      "end": 25.34
+    },
+    {
+      "index": 88,
+      "char": "距",
+      "start": 25.42,
+      "end": 25.52
+    },
+    {
+      "index": 89,
+      "char": "指",
+      "start": 26.28,
+      "end": 26.36
+    },
+    {
+      "index": 90,
+      "char": "两",
+      "start": 26.46,
+      "end": 26.64
+    },
+    {
+      "index": 91,
+      "char": "处",
+      "start": 26.72,
+      "end": 26.82
+    },
+    {
+      "index": 92,
+      "char": "相",
+      "start": 26.98,
+      "end": 27.14
+    },
+    {
+      "index": 93,
+      "char": "隔",
+      "start": 27.22,
+      "end": 27.28
+    },
+    {
+      "index": 94,
+      "char": "开",
+      "start": 27.38,
+      "end": 27.56
+    },
+    {
+      "index": 95,
+      "char": "的",
+      "start": 27.64,
+      "end": 27.7
+    },
+    {
+      "index": 96,
+      "char": "那",
+      "start": 27.82,
+      "end": 27.88
+    },
+    {
+      "index": 97,
+      "char": "段",
+      "start": 27.96,
+      "end": 28.04
+    },
+    {
+      "index": 98,
+      "char": "长",
+      "start": 28.1,
+      "end": 28.34
+    },
+    {
+      "index": 99,
+      "char": "度",
+      "start": 28.44,
+      "end": 28.5
+    },
+    {
+      "index": 100,
+      "char": "在",
+      "start": 29.36,
+      "end": 29.48
+    },
+    {
+      "index": 101,
+      "char": "每",
+      "start": 29.56,
+      "end": 29.7
+    },
+    {
+      "index": 102,
+      "char": "隔",
+      "start": 29.78,
+      "end": 29.84
+    },
+    {
+      "index": 103,
+      "char": "一",
+      "start": 29.94,
+      "end": 29.98
+    },
+    {
+      "index": 104,
+      "char": "段",
+      "start": 30.06,
+      "end": 30.18
+    },
+    {
+      "index": 105,
+      "char": "距",
+      "start": 30.24,
+      "end": 30.3
+    },
+    {
+      "index": 106,
+      "char": "离",
+      "start": 30.38,
+      "end": 30.5
+    },
+    {
+      "index": 107,
+      "char": "里",
+      "start": 30.62,
+      "end": 30.7
+    },
+    {
+      "index": 108,
+      "char": "指",
+      "start": 31.18,
+      "end": 31.28
+    },
+    {
+      "index": 109,
+      "char": "一",
+      "start": 31.36,
+      "end": 31.38
+    },
+    {
+      "index": 110,
+      "char": "个",
+      "start": 31.48,
+      "end": 31.54
+    },
+    {
+      "index": 111,
+      "char": "大",
+      "start": 31.62,
+      "end": 31.68
+    },
+    {
+      "index": 112,
+      "char": "洞",
+      "start": 31.84,
+      "end": 32
+    },
+    {
+      "index": 113,
+      "char": "和",
+      "start": 32.2,
+      "end": 32.28
+    },
+    {
+      "index": 114,
+      "char": "下",
+      "start": 32.4,
+      "end": 32.5
+    },
+    {
+      "index": 115,
+      "char": "一",
+      "start": 32.62,
+      "end": 32.64
+    },
+    {
+      "index": 116,
+      "char": "个",
+      "start": 32.72,
+      "end": 32.76
+    },
+    {
+      "index": 117,
+      "char": "大",
+      "start": 32.84,
+      "end": 32.9
+    },
+    {
+      "index": 118,
+      "char": "洞",
+      "start": 33.02,
+      "end": 33.14
+    },
+    {
+      "index": 119,
+      "char": "之",
+      "start": 33.22,
+      "end": 33.28
+    },
+    {
+      "index": 120,
+      "char": "间",
+      "start": 33.38,
+      "end": 33.54
+    },
+    {
+      "index": 121,
+      "char": "相",
+      "start": 33.66,
+      "end": 33.84
+    },
+    {
+      "index": 122,
+      "char": "隔",
+      "start": 33.9,
+      "end": 33.96
+    },
+    {
+      "index": 123,
+      "char": "的",
+      "start": 34.04,
+      "end": 34.08
+    },
+    {
+      "index": 124,
+      "char": "远",
+      "start": 34.16,
+      "end": 34.32
+    },
+    {
+      "index": 125,
+      "char": "近",
+      "start": 34.4,
+      "end": 34.6
+    },
+    {
+      "index": 126,
+      "char": "课",
+      "start": 35.36,
+      "end": 35.46
+    },
+    {
+      "index": 127,
+      "char": "文",
+      "start": 35.56,
+      "end": 35.68
+    },
+    {
+      "index": 128,
+      "char": "里",
+      "start": 35.74,
+      "end": 35.8
+    },
+    {
+      "index": 129,
+      "char": "说",
+      "start": 35.94,
+      "end": 36.06
+    },
+    {
+      "index": 130,
+      "char": "地",
+      "start": 36.72,
+      "end": 36.78
+    },
+    {
+      "index": 131,
+      "char": "道",
+      "start": 36.9,
+      "end": 37.06
+    },
+    {
+      "index": 132,
+      "char": "里",
+      "start": 37.12,
+      "end": 37.2
+    },
+    {
+      "index": 133,
+      "char": "每",
+      "start": 37.54,
+      "end": 37.68
+    },
+    {
+      "index": 134,
+      "char": "隔",
+      "start": 37.76,
+      "end": 37.82
+    },
+    {
+      "index": 135,
+      "char": "一",
+      "start": 37.92,
+      "end": 37.96
+    },
+    {
+      "index": 136,
+      "char": "段",
+      "start": 38.04,
+      "end": 38.16
+    },
+    {
+      "index": 137,
+      "char": "距",
+      "start": 38.22,
+      "end": 38.3
+    },
+    {
+      "index": 138,
+      "char": "离",
+      "start": 38.36,
+      "end": 38.52
+    },
+    {
+      "index": 139,
+      "char": "就",
+      "start": 38.82,
+      "end": 38.92
+    },
+    {
+      "index": 140,
+      "char": "有",
+      "start": 38.98,
+      "end": 39.04
+    },
+    {
+      "index": 141,
+      "char": "一",
+      "start": 39.08,
+      "end": 39.1
+    },
+    {
+      "index": 142,
+      "char": "个",
+      "start": 39.2,
+      "end": 39.24
+    },
+    {
+      "index": 143,
+      "char": "大",
+      "start": 39.3,
+      "end": 39.36
+    },
+    {
+      "index": 144,
+      "char": "洞",
+      "start": 39.5,
+      "end": 39.68
+    },
+    {
+      "index": 145,
+      "char": "洞",
+      "start": 40.34,
+      "end": 40.5
+    },
+    {
+      "index": 146,
+      "char": "顶",
+      "start": 40.58,
+      "end": 40.8
+    },
+    {
+      "index": 147,
+      "char": "用",
+      "start": 40.92,
+      "end": 41.04
+    },
+    {
+      "index": 148,
+      "char": "木",
+      "start": 41.08,
+      "end": 41.12
+    },
+    {
+      "index": 149,
+      "char": "料",
+      "start": 41.22,
+      "end": 41.34
+    },
+    {
+      "index": 150,
+      "char": "撑",
+      "start": 41.4,
+      "end": 41.6
+    },
+    {
+      "index": 151,
+      "char": "住",
+      "start": 41.68,
+      "end": 41.76
+    },
+    {
+      "index": 152,
+      "char": "很",
+      "start": 42.1,
+      "end": 42.22
+    },
+    {
+      "index": 153,
+      "char": "牢",
+      "start": 42.3,
+      "end": 42.46
+    },
+    {
+      "index": 154,
+      "char": "靠",
+      "start": 42.52,
+      "end": 43.16
+    }
+  ],
+  "component_image_timeline": {
+    "final": true,
+    "source": "draft",
+    "segments": [
+      {
+        "color": "red",
+        "component": "足",
+        "image": "illustration_red_word_image_path",
+        "image_path": "/character-resources/019f04a5-3fb7-7718-9ce1-8f14cbc11d6d/illustration_red_word.png",
+        "anchor": "左边的“足",
+        "start": 6.1,
+        "end": 11.48
+      },
+      {
+        "phase": "full_word",
+        "image": "illustration_full_word_image_path",
+        "image_path": "/character-resources/019f04a5-3fb7-7718-9ce1-8f14cbc11d6d/illustration_full_word.png",
+        "anchor": "右边的“巨",
+        "start": 11.48
+      }
+    ]
+  }
+}

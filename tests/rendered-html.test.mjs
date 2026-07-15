@@ -38,6 +38,21 @@ test("server-renders the course-first Knowing Word learning experience", async (
   assert.match(html, /日日朗读/);
 });
 
+test("character pages render the complete picture-to-character memory flow", async () => {
+  const response = await render(
+    "/lessons/019f0523-819f-7702-89a2-75f13809d57a/words/019f0554-ea21-740f-af56-8f5393f25abc",
+  );
+  assert.equal(response.status, 200);
+  const html = await response.text();
+  assert.match(html, /图中嵌字/);
+  assert.match(html, /长进画面里/);
+  assert.match(html, /先看本义场景/);
+  assert.match(html, /找部首/);
+  assert.match(html, /找部件/);
+  assert.match(html, /合成字/);
+  assert.match(html, /听字义讲解/);
+});
+
 test("all 210 source routes server-render with real, shareable URLs", async () => {
   const { characters, lessons } = await import(
     new URL("../app/data/catalog.ts", import.meta.url).href,
@@ -183,6 +198,33 @@ test("every image-based literacy question has a generated visual asset", async (
   );
 });
 
+test("every source character has a bounded, complete mnemonic overlay", async () => {
+  const { characters } = await import(
+    new URL("../app/data/catalog.ts", import.meta.url).href,
+  );
+  const { getMnemonicAnchors, getMnemonicStageCopy, mnemonicStageLabels } = await import(
+    new URL("../app/data/mnemonics.ts", import.meta.url).href,
+  );
+  const sourceCharacters = characters.filter((character) => character.primary && character.ready);
+
+  assert.deepEqual(mnemonicStageLabels, ["看场景", "找部首", "找部件", "合成字"]);
+  assert.equal(sourceCharacters.length, 37);
+  for (const character of sourceCharacters) {
+    const parts = character.parts.length || 1;
+    const anchors = getMnemonicAnchors(character);
+    assert.equal(anchors.length, parts, `wrong mnemonic part count for ${character.hanzi}`);
+    for (const anchor of anchors) {
+      assert.ok(anchor.x >= 12 && anchor.x <= 88, `x anchor outside scene for ${character.hanzi}`);
+      assert.ok(anchor.y >= 12 && anchor.y <= 88, `y anchor outside scene for ${character.hanzi}`);
+      assert.ok(anchor.scale >= 0.6 && anchor.scale <= 1.3, `scale outside range for ${character.hanzi}`);
+    }
+    for (let stage = 0; stage < 4; stage += 1) {
+      const copy = getMnemonicStageCopy(character, stage);
+      assert.ok(copy.eyebrow && copy.title && copy.body, `missing stage copy for ${character.hanzi}`);
+    }
+  }
+});
+
 test("the public learning catalog preserves the course and practice-route structure", async () => {
   const catalog = await readFile(
     new URL("../app/data/catalog.ts", import.meta.url),
@@ -229,7 +271,7 @@ test("the public learning catalog preserves the course and practice-route struct
   }
 });
 
-test("localized historical glyph, red-blue, and pronunciation resources are complete and unsigned", async () => {
+test("localized historical glyph, red-blue, pronunciation, and timing resources are complete and unsigned", async () => {
   const { heritageAssets } = await import(
     new URL("../app/data/heritage-assets.ts", import.meta.url).href,
   );
@@ -238,12 +280,26 @@ test("localized historical glyph, red-blue, and pronunciation resources are comp
     ...record.stages.map((stage) => stage.src),
     ...(record.redBlue ? [record.redBlue] : []),
     ...(record.audio ? [record.audio] : []),
+    ...(record.audioMarks ? [record.audioMarks] : []),
   ]);
 
   assert.equal(records.length, 58);
-  assert.equal(paths.length, 385);
+  assert.equal(paths.length, 438);
   assert.equal(new Set(paths).size, paths.length);
   for (const path of paths) await access(new URL(`../public${path}`, import.meta.url));
+
+  const markedRecords = records.filter((record) => record.audioMarks);
+  assert.equal(markedRecords.length, 53);
+  for (const record of markedRecords) {
+    const payload = JSON.parse(
+      await readFile(new URL(`../public${record.audioMarks}`, import.meta.url), "utf8"),
+    );
+    assert.ok(Array.isArray(payload.marks) && payload.marks.length > 0);
+    payload.marks.forEach((mark, index) => {
+      assert.equal(typeof mark.char, "string");
+      assert.ok(mark.end >= mark.start, `invalid timing mark ${index}`);
+    });
+  }
 
   const source = await readFile(new URL("../app/data/heritage-assets.ts", import.meta.url), "utf8");
   assert.doesNotMatch(source, /auth_key|access_token|authorization|password|13928119432/i);

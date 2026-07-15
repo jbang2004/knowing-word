@@ -32,6 +32,14 @@ const worker = {
     const url = new URL(request.url);
 
     if (url.pathname === "/_vinext/image") {
+      // The local Vite preview does not expose the production ASSETS/IMAGES
+      // bindings. Fall back to the public source file so visual QA still uses
+      // the real project imagery instead of opening the development overlay.
+      if (!env.ASSETS || !env.IMAGES) {
+        const source = url.searchParams.get("url");
+        if (!source || !source.startsWith("/")) return new Response("Invalid image source", { status: 400 });
+        return Response.redirect(new URL(source, request.url), 307);
+      }
       const allowedWidths = [...DEFAULT_DEVICE_SIZES, ...DEFAULT_IMAGE_SIZES];
       return handleImageOptimization(request, {
         fetchAsset: (path) => env.ASSETS.fetch(new Request(new URL(path, request.url))),

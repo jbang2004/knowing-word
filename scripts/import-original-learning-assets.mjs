@@ -59,9 +59,14 @@ for (const file of files) {
     audio = `/heritage/${characterId}/audio.mp3`;
     await download(payload.audio_path, join(folder, "audio.mp3"));
   }
-  records[characterId] = { stages, redBlue, audio };
+  let audioMarks;
+  if (payload.audio_marks_path) {
+    audioMarks = `/heritage/${characterId}/audio-marks.json`;
+    await download(payload.audio_marks_path, join(folder, "audio-marks.json"));
+  }
+  records[characterId] = { stages, redBlue, audio, audioMarks };
 }
 
-const source = `export type HeritageAsset = {\n  stages: { label: string; src: string }[];\n  redBlue?: string;\n  audio?: string;\n};\n\nexport const heritageAssets: Record<string, HeritageAsset> = ${JSON.stringify(records, null, 2)};\n`;
+const source = `export type AudioMark = {\n  index: number;\n  char: string;\n  start: number;\n  end: number;\n};\n\nexport type HeritageAsset = {\n  stages: { label: string; src: string }[];\n  redBlue?: string;\n  audio?: string;\n  audioMarks?: string;\n};\n\nexport const heritageAssets: Record<string, HeritageAsset> = ${JSON.stringify(records, null, 2)};\n`;
 await writeFile(modulePath, source);
 process.stdout.write(`Imported ${Object.keys(records).length} character asset sets.\n`);

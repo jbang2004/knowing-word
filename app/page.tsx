@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import {
+  type CSSProperties,
   type PointerEvent as ReactPointerEvent,
   useCallback,
   useEffect,
@@ -24,7 +25,13 @@ import {
   getVisualOption,
   lessonVisuals,
 } from "./data/illustrations";
-import { heritageAssets } from "./data/heritage-assets";
+import { heritageAssets, type AudioMark } from "./data/heritage-assets";
+import {
+  getMnemonicAnchors,
+  getMnemonicStageCopy,
+  mnemonicStageLabels,
+  type MnemonicStage,
+} from "./data/mnemonics";
 import {
   isQuestionSetComplete,
   nextCandidateId,
@@ -455,16 +462,6 @@ function speak(text: string, onEnd?: () => void) {
   utterance.onend = () => onEnd?.();
   utterance.onerror = () => onEnd?.();
   window.speechSynthesis.speak(utterance);
-}
-
-function speakCharacter(character: CharacterItem) {
-  const audioPath = heritageAssets[character.id]?.audio;
-  if (audioPath) {
-    const audio = new Audio(audioPath);
-    void audio.play().catch(() => speak(character.hanzi));
-    return;
-  }
-  speak(character.hanzi);
 }
 
 export default function Home({ initialPath = "/" }: { initialPath?: string }) {
@@ -913,7 +910,6 @@ export default function Home({ initialPath = "/" }: { initialPath?: string }) {
           favorite={favoriteSet.has(selectedCharacter.id)}
           onBack={() => openLesson(selectedCharacter.lessonId)}
           onFavorite={() => toggleFavorite(selectedCharacter.id)}
-          onSpeak={() => speakCharacter(selectedCharacter)}
           onStart={() => openChallenge("words", selectedCharacter)}
           onComponent={(glyph) => {
             const component = allComponents.find((item) => item.glyph === glyph);
@@ -1372,13 +1368,237 @@ function LessonWordMap({
   );
 }
 
+function NarratedDescription({ character }: { character: CharacterItem }) {
+  const asset = heritageAssets[character.id];
+  const audioRef = useRef<HTMLAudioElement>(null);
+  const [marks, setMarks] = useState<AudioMark[]>([]);
+  const [elapsed, setElapsed] = useState(0);
+  const [duration, setDuration] = useState(0);
+  const [playing, setPlaying] = useState(false);
+
+  useEffect(() => {
+    if (!asset?.audioMarks) return;
+    const controller = new AbortController();
+    const audio = audioRef.current;
+    void fetch(asset.audioMarks, { signal: controller.signal })
+      .then((response) => response.ok ? response.json() : Promise.reject(new Error("marks unavailable")))
+      .then((payload: { marks?: AudioMark[] }) => {
+        setMarks((payload.marks || []).filter((mark) => Number.isFinite(mark.start) && Number.isFinite(mark.end)));
+      })
+      .catch(() => undefined);
+    return () => {
+      controller.abort();
+      audio?.pause();
+    };
+  }, [asset?.audioMarks]);
+
+  function toggleNarration() {
+    const audio = audioRef.current;
+    if (!asset?.audio || !audio) {
+      setPlaying(true);
+      speak(character.description, () => setPlaying(false));
+      return;
+    }
+    if (audio.paused) {
+      void audio.play().then(() => setPlaying(true)).catch(() => {
+        setPlaying(true);
+        speak(character.description, () => setPlaying(false));
+      });
+    } else {
+      audio.pause();
+      setPlaying(false);
+    }
+  }
+
+  const activeIndex = marks.findIndex((mark) => elapsed >= mark.start && elapsed < mark.end);
+  const progress = duration > 0 ? Math.min(100, (elapsed / duration) * 100) : 0;
+
+  return (
+    <div className="narrated-description">
+      <div className="narration-toolbar">
+        <button className={playing ? "listen-button is-playing" : "listen-button"} onClick={toggleNarration} aria-pressed={playing}>
+          <span aria-hidden="true">{playing ? "Ⅱ" : "▶"}</span>
+          {playing ? "暂停讲解" : "听字义讲解"}
+        </button>
+        <span>{marks.length ? "逐字跟读已开启" : "标准普通话讲解"}</span>
+      </div>
+      {marks.length ? (
+        <p className="narration-transcript" aria-label={marks.map((mark) => mark.char).join("")}>
+          {marks.map((mark, index) => (
+            <span
+              className={index === activeIndex ? "is-active" : mark.end <= elapsed ? "is-past" : ""}
+              key={`${mark.index}-${index}`}
+              aria-hidden="true"
+            >
+              {mark.char}
+            </span>
+          ))}
+        </p>
+      ) : (
+        <p>{character.description}</p>
+      )}
+      <div className="narration-progress" aria-hidden="true"><i style={{ width: `${progress}%` }} /></div>
+      {asset?.audio && (
+        <audio
+          ref={audioRef}
+          src={asset.audio}
+          preload="metadata"
+          onLoadedMetadata={(event) => setDuration(event.currentTarget.duration || 0)}
+          onTimeUpdate={(event) => setElapsed(event.currentTarget.currentTime)}
+          onPlay={() => setPlaying(true)}
+          onPause={() => setPlaying(false)}
+          onEnded={() => {
+            setPlaying(false);
+            setElapsed(0);
+          }}
+        />
+      )}
+    </div>
+  );
+}
+
+function MnemonicGlyphLayer({
+  character,
+  stage,
+  compact = false,
+  onComponent,
+}: {
+  character: CharacterItem;
+  stage: MnemonicStage;
+  compact?: boolean;
+  onComponent?: (glyph: string) => void;
+}) {
+  const parts = character.parts.length ? character.parts : [{ char: character.hanzi, radical: true }];
+  const anchors = getMnemonicAnchors(character);
+  const hasBluePart = parts.some((part) => !part.radical);
+
+  return (
+    <div className={compact ? "mnemonic-glyph-layer is-compact" : "mnemonic-glyph-layer"} aria-label={`“${character.hanzi}”的图中字形线索`}>
+      {parts.map((part, index) => {
+        const showRadical = stage === 1 && part.radical;
+        const showBlue = stage === 2 && (!part.radical || !hasBluePart);
+        const showCombined = stage === 3;
+        if (!showRadical && !showBlue && !showCombined) return null;
+        const anchor = anchors[index] || anchors[0];
+        const blueFallback = stage === 2 && !hasBluePart;
+        const className = `memory-part ${part.radical && !blueFallback ? "is-radical" : "is-component"}`;
+        const style = {
+          left: `${anchor.x}%`,
+          top: `${anchor.y}%`,
+          "--memory-scale": anchor.scale,
+          "--memory-rotate": `${anchor.rotate}deg`,
+        } as CSSProperties;
+        const label = part.radical ? `表意部首“${part.char}”` : `字形部件“${part.char}”`;
+        return onComponent ? (
+          <button className={className} key={`${part.char}-${index}`} style={style} onClick={() => onComponent(part.char)} aria-label={`${label}，查看来历`}>
+            {part.char}<small>{part.radical ? "表意" : "线索"}</small>
+          </button>
+        ) : (
+          <span className={className} key={`${part.char}-${index}`} style={style} aria-label={label}>
+            {part.char}
+          </span>
+        );
+      })}
+      {stage === 3 && (
+        <span className="memory-whole-glyph" aria-label={`合成完整的“${character.hanzi}”字`}>
+          <small>合成</small>{character.hanzi}
+        </span>
+      )}
+    </div>
+  );
+}
+
+function MnemonicMemory({
+  character,
+  onComponent,
+}: {
+  character: CharacterItem;
+  onComponent: (glyph: string) => void;
+}) {
+  const [stage, setStage] = useState<MnemonicStage>(0);
+  const [autoPlay, setAutoPlay] = useState(false);
+  const visual = characterVisuals[character.hanzi];
+  const copy = getMnemonicStageCopy(character, stage);
+
+  useEffect(() => {
+    if (!autoPlay) return;
+    const timer = window.setInterval(() => {
+      setStage((current) => ((current + 1) % mnemonicStageLabels.length) as MnemonicStage);
+    }, 2100);
+    return () => window.clearInterval(timer);
+  }, [autoPlay]);
+
+  function selectStage(next: MnemonicStage) {
+    setAutoPlay(false);
+    setStage(next);
+  }
+
+  return (
+    <section className="mnemonic-card" aria-labelledby={`mnemonic-title-${character.id}`}>
+      <div className="mnemonic-heading">
+        <div>
+          <p className="kicker">图中嵌字 · 四步记忆法</p>
+          <h2 id={`mnemonic-title-${character.id}`}>让“{character.hanzi}”长进画面里</h2>
+          <p>先看本义场景，再依次找红色部首、蓝色部件，最后把整字合起来。</p>
+        </div>
+        <button className={autoPlay ? "memory-autoplay is-playing" : "memory-autoplay"} onClick={() => setAutoPlay((value) => !value)} aria-pressed={autoPlay}>
+          <span aria-hidden="true">{autoPlay ? "Ⅱ" : "▶"}</span>{autoPlay ? "暂停演示" : "自动演示"}
+        </button>
+      </div>
+
+      <div className="mnemonic-layout">
+        <figure
+          className={`mnemonic-scene stage-${stage}`}
+          tabIndex={0}
+          onKeyDown={(event) => {
+            if (event.key === "ArrowLeft") selectStage(Math.max(0, stage - 1) as MnemonicStage);
+            if (event.key === "ArrowRight") selectStage(Math.min(3, stage + 1) as MnemonicStage);
+          }}
+          aria-label={`图中嵌字演示，当前是第${stage + 1}步：${mnemonicStageLabels[stage]}。可使用左右方向键切换。`}
+        >
+          <Image src={visual.src} alt={visual.alt} fill priority sizes="(max-width: 760px) 100vw, 720px" />
+          <div className="mnemonic-vignette" aria-hidden="true" />
+          <MnemonicGlyphLayer character={character} stage={stage} onComponent={onComponent} />
+          <figcaption><span>场景本义</span><strong>{visual.label}</strong></figcaption>
+        </figure>
+
+        <aside className={`mnemonic-story stage-${stage}`} aria-live="polite">
+          <div className="memory-step-number"><span>0{stage + 1}</span><small>/ 04</small></div>
+          <p>{copy.eyebrow}</p>
+          <h3>{copy.title}</h3>
+          <p className="memory-step-copy">{copy.body}</p>
+          <div className="memory-part-list">
+            {(character.parts.length ? character.parts : [{ char: character.hanzi, radical: true }]).map((part, index) => {
+              const composition = character.compositions.find((item) => item.char === part.char);
+              return (
+                <button className={part.radical ? "is-radical" : "is-component"} key={`${part.char}-${index}`} onClick={() => onComponent(part.char)}>
+                  <span>{part.char}</span>
+                  <span><strong>{part.radical ? "表意部首" : "其他部件"}</strong><small>{composition?.description || "点击继续探索这个部件"}</small></span>
+                </button>
+              );
+            })}
+          </div>
+          <p className="memory-keyboard-tip">提示：点击图中的字形可查看部件来历；键盘可用 ← → 切换。</p>
+        </aside>
+      </div>
+
+      <nav className="mnemonic-steps" aria-label="图中嵌字演示步骤">
+        {mnemonicStageLabels.map((label, index) => (
+          <button className={stage === index ? "is-active" : stage > index ? "is-past" : ""} key={label} onClick={() => selectStage(index as MnemonicStage)} aria-current={stage === index ? "step" : undefined}>
+            <span>{index + 1}</span><strong>{label}</strong><small>{index === 0 ? "先懂图意" : index === 1 ? "红色表意" : index === 2 ? "蓝色补形" : "图字合一"}</small>
+          </button>
+        ))}
+      </nav>
+    </section>
+  );
+}
+
 function CharacterStudy({
   character,
   profile,
   favorite,
   onBack,
   onFavorite,
-  onSpeak,
   onStart,
   onComponent,
 }: {
@@ -1387,14 +1607,12 @@ function CharacterStudy({
   favorite: boolean;
   onBack: () => void;
   onFavorite: () => void;
-  onSpeak: () => void;
   onStart: () => void;
   onComponent: (glyph: string) => void;
 }) {
   const exercises = getTrackExercises(character, "words");
   const isComplete = profile.completed.words.includes(character.id);
   const completedQuestions = exercises.filter((question) => profile.answers[question.id]?.lastCorrect).length;
-  const illustration = characterVisuals[character.hanzi];
   const heritage = heritageAssets[character.id];
   const hasExercises = exercises.length > 0;
 
@@ -1414,7 +1632,7 @@ function CharacterStudy({
       <section className="character-story-card">
         <div className="story-character-column">
           <div className="story-glyph">{character.hanzi}</div>
-          <button className="listen-button" onClick={onSpeak}>▷ 听一听</button>
+          <span className="character-pinyin">{character.pinyin}</span>
           <span className={isComplete ? "learned-badge is-complete" : "learned-badge"}>
             {isComplete ? "✓ 已学会" : "正在认识"}
           </span>
@@ -1425,7 +1643,7 @@ function CharacterStudy({
             <span>{character.decomposition}</span>
             <span>本义：{character.originalMeaning}</span>
           </div>
-          <p>{character.description}</p>
+          <NarratedDescription character={character} key={character.id} />
           {heritage?.stages.length ? (
             <div className="script-line" aria-label="真实字形演变资料">
               {heritage.stages.map((stage) => (
@@ -1440,17 +1658,9 @@ function CharacterStudy({
           )}
           <blockquote>课文原文：{character.originalText}</blockquote>
         </div>
-        <figure className="story-meaning-visual">
-          <Image
-            src={illustration.src}
-            alt={illustration.alt}
-            fill
-            priority
-            sizes="(max-width: 760px) 100vw, 300px"
-          />
-          <figcaption><span>看图记本义</span><strong>{illustration.label}</strong></figcaption>
-        </figure>
       </section>
+
+      <MnemonicMemory character={character} key={character.id} onComponent={onComponent} />
 
       <section className="character-map-card">
         <div className="map-card-heading">
@@ -1795,6 +2005,9 @@ function ChoiceExercise({
                   fill
                   sizes="(max-width: 760px) 82vw, 220px"
                 />
+                {option.correct && result !== null && (
+                  <MnemonicGlyphLayer character={character} stage={3} compact />
+                )}
               </span>
             ) : question.kind === "structure" ? (
               <StructureShape code={option.idcCode} />
@@ -1956,6 +2169,11 @@ function WritingPad({
 }) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const drawingRef = useRef(false);
+  const lastPointRef = useRef<{ x: number; y: number } | null>(null);
+  const strokeLengthRef = useRef(0);
+  const totalLengthRef = useRef(0);
+  const acceptedRef = useRef(false);
+  const [strokeCount, setStrokeCount] = useState(0);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -1989,10 +2207,11 @@ function WritingPad({
     if (!context) return;
     const point = position(event);
     drawingRef.current = true;
+    lastPointRef.current = point;
+    strokeLengthRef.current = 0;
     event.currentTarget.setPointerCapture(event.pointerId);
     context.beginPath();
     context.moveTo(point.x, point.y);
-    onWrite();
   }
 
   function draw(event: ReactPointerEvent<HTMLCanvasElement>) {
@@ -2000,12 +2219,28 @@ function WritingPad({
     const context = canvasRef.current?.getContext("2d");
     if (!context) return;
     const point = position(event);
+    const previous = lastPointRef.current;
+    if (previous) {
+      const distance = Math.hypot(point.x - previous.x, point.y - previous.y);
+      strokeLengthRef.current += distance;
+      totalLengthRef.current += distance;
+      if (!acceptedRef.current && totalLengthRef.current >= 34) {
+        acceptedRef.current = true;
+        onWrite();
+      }
+    }
+    lastPointRef.current = point;
     context.lineTo(point.x, point.y);
     context.stroke();
   }
 
   function stop() {
+    if (drawingRef.current && strokeLengthRef.current >= 7) {
+      setStrokeCount((count) => count + 1);
+    }
     drawingRef.current = false;
+    lastPointRef.current = null;
+    strokeLengthRef.current = 0;
   }
 
   function clear() {
@@ -2013,6 +2248,12 @@ function WritingPad({
     const context = canvas?.getContext("2d");
     if (!canvas || !context) return;
     context.clearRect(0, 0, canvas.width, canvas.height);
+    drawingRef.current = false;
+    lastPointRef.current = null;
+    strokeLengthRef.current = 0;
+    totalLengthRef.current = 0;
+    acceptedRef.current = false;
+    setStrokeCount(0);
     onClear();
   }
 
@@ -2029,7 +2270,9 @@ function WritingPad({
         onPointerCancel={stop}
       />
       <div className="writing-footer">
-        <span>在方格中写一写，笔迹不会上传</span>
+        <span className={strokeCount ? "writing-status has-ink" : "writing-status"}>
+          {strokeCount ? `已记录 ${strokeCount} 笔，继续把字写完整` : "沿着浅色字形认真描写，轻点一下不会算作完成"}
+        </span>
         <button onClick={clear}>重新写</button>
       </div>
     </div>
