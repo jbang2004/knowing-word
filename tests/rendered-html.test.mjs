@@ -365,12 +365,78 @@ test("narration timing becomes a punctuated, persistent reading transcript", asy
   assert.doesNotMatch(pageSource, /onEnded=\{\(\) => \{[\s\S]*setElapsed\(0\)/);
 });
 
+test("all narration scripts use the child-first four-beat teaching structure", async () => {
+  const { characters } = await import(
+    new URL("../app/data/catalog.ts", import.meta.url).href,
+  );
+  const { heritageAssets } = await import(
+    new URL("../app/data/heritage-assets.ts", import.meta.url).href,
+  );
+  const { narrationScripts } = await import(
+    new URL("../app/data/narration-scripts.ts", import.meta.url).href,
+  );
+  const { buildNarrationTokens } = await import(
+    new URL("../app/lib/narration.ts", import.meta.url).href,
+  );
+
+  const uniqueCharacters = [...new Map(
+    characters.map((character) => [character.hanzi, character]),
+  ).values()];
+  assert.equal(uniqueCharacters.length, 76);
+  assert.deepEqual(new Set(Object.keys(narrationScripts)), new Set(uniqueCharacters.map((item) => item.hanzi)));
+
+  const longestSharedSpan = (left, right) => {
+    const a = Array.from(left);
+    const b = Array.from(right);
+    const previous = new Uint16Array(b.length + 1);
+    const current = new Uint16Array(b.length + 1);
+    let longest = 0;
+    for (let row = 1; row <= a.length; row += 1) {
+      current.fill(0);
+      for (let column = 1; column <= b.length; column += 1) {
+        if (a[row - 1] === b[column - 1]) {
+          current[column] = previous[column - 1] + 1;
+          longest = Math.max(longest, current[column]);
+        }
+      }
+      previous.set(current);
+    }
+    return longest;
+  };
+
+  for (const character of uniqueCharacters) {
+    const script = narrationScripts[character.hanzi];
+    const length = Array.from(script).length;
+    assert.ok(length >= 80 && length <= 115, `wrong child-first length for ${character.hanzi}: ${length}`);
+    assert.ok(script.startsWith(`${character.hanzi}，`), `missing spoken opening for ${character.hanzi}`);
+    assert.ok((script.match(/[。！？]/gu) || []).length >= 4, `missing four teaching beats for ${character.hanzi}`);
+    assert.ok(longestSharedSpan(script, character.description) <= 12, `catalog prose copied into ${character.hanzi}`);
+    assert.doesNotMatch(script, /声符[“"]?貧|刺瞎|就是这样造出来|真正的造字过程/u);
+
+    const sourceMarksPath = heritageAssets[character.id]?.audioMarks;
+    if (sourceMarksPath) {
+      const payload = JSON.parse(
+        await readFile(new URL(`../public${sourceMarksPath}`, import.meta.url), "utf8"),
+      );
+      const sourceTranscript = buildNarrationTokens(payload.marks).map((token) => token.text).join("");
+      assert.ok(longestSharedSpan(script, sourceTranscript) <= 12, `source narration copied into ${character.hanzi}`);
+    }
+  }
+
+  for (const character of characters) {
+    assert.ok(narrationScripts[character.hanzi].includes(character.word), `missing course word ${character.word}`);
+  }
+});
+
 test("every character record has a complete Feng-voice narration and authored timeline", async () => {
   const { characters } = await import(
     new URL("../app/data/catalog.ts", import.meta.url).href,
   );
   const { narrationAssets } = await import(
     new URL("../app/data/narration-assets.ts", import.meta.url).href,
+  );
+  const { narrationScripts } = await import(
+    new URL("../app/data/narration-scripts.ts", import.meta.url).href,
   );
   const { buildNarrationTokens } = await import(
     new URL("../app/lib/narration.ts", import.meta.url).href,
@@ -396,6 +462,8 @@ test("every character record has a complete Feng-voice narration and authored ti
       await readFile(new URL(`../public${asset.audioMarks}`, import.meta.url), "utf8"),
     );
     assert.equal(payload.voice_reference, "封");
+    assert.equal(payload.script_version, "child-first-v1");
+    assert.equal(payload.transcript, narrationScripts[character.hanzi]);
     assert.ok(Array.isArray(payload.marks) && payload.marks.length > 0, `missing marks for ${character.hanzi}`);
     assert.ok(typeof payload.transcript === "string" && payload.transcript.length > 0);
     assert.match(payload.transcript, /[，。！？；：、]/u, `missing punctuation for ${character.hanzi}`);
@@ -420,6 +488,6 @@ test("every character record has a complete Feng-voice narration and authored ti
   const feng = characters.find((character) => character.hanzi === "封");
   assert.equal(
     narrationAssets[feng.id].audio,
-    "/heritage/019f0554-ea22-762e-966c-32d678fd6bf6/audio.mp3",
+    "/narration/019f0554-ea22-762e-966c-32d678fd6bf6/audio.mp3",
   );
 });

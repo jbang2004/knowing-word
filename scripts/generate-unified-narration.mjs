@@ -4,8 +4,7 @@ import { promisify } from "node:util";
 import { join, resolve } from "node:path";
 import { homedir, tmpdir } from "node:os";
 import { characters } from "../app/data/catalog.ts";
-import { heritageAssets } from "../app/data/heritage-assets.ts";
-import { buildNarrationTokens } from "../app/lib/narration.ts";
+import { narrationScripts } from "../app/data/narration-scripts.ts";
 
 const run = promisify(execFile);
 const projectRoot = resolve(import.meta.dirname, "..");
@@ -18,10 +17,10 @@ const serviceControl = process.env.VOXCPM_CONTROL
   || join(homedir(), "Services", "voxcpm-mlx-service", "bin", "voxcpm-mlxctl");
 const referenceCharacterId = "019f0554-ea22-762e-966c-32d678fd6bf6";
 const referenceAudio = join(publicRoot, "heritage", referenceCharacterId, "audio.mp3");
-const referenceMarks = join(publicRoot, "heritage", referenceCharacterId, "audio-marks.json");
 const referenceWav = join(tmpdir(), "knowing-word-feng-reference.wav");
 const referenceText = "封，封锁的封。会意字，左右结构，本义是地界，左边的圭。";
 const narrationBitrate = process.env.NARRATION_BITRATE || "48k";
+const scriptVersion = "child-first-v1";
 const requestedGlyph = process.argv.find((arg) => arg.startsWith("--glyph="))?.slice(8);
 const force = process.argv.includes("--force");
 
@@ -63,10 +62,6 @@ async function ensureService() {
   if (!warmup.ok) throw new Error(`VoxCPM warmup failed: ${warmup.status}`);
 }
 
-function punctuatedTextFromMarks(marks) {
-  return buildNarrationTokens(marks).map((token) => token.text).join("");
-}
-
 function createEstimatedMarks(text, duration) {
   const characters = Array.from(text);
   const spokenCount = characters.filter((char) => spokenPattern.test(char)).length;
@@ -104,17 +99,6 @@ function createEstimatedMarks(text, duration) {
   return marks;
 }
 
-function scaleMarks(marks, duration) {
-  const finalEnd = marks.at(-1)?.end || duration;
-  const scale = finalEnd > 0 ? Math.max(0.1, duration - 0.08) / finalEnd : 1;
-  return marks.map((mark, index) => ({
-    index,
-    char: mark.char,
-    start: Number((mark.start * scale).toFixed(3)),
-    end: Number((mark.end * scale).toFixed(3)),
-  }));
-}
-
 async function durationOf(path) {
   const { stdout } = await run("ffprobe", [
     "-v", "error",
@@ -137,22 +121,14 @@ async function prepareReference() {
   ]);
 }
 
-async function loadSourceForGlyph(glyph, records) {
-  for (const record of records) {
-    const marksPath = heritageAssets[record.id]?.audioMarks;
-    if (!marksPath) continue;
-    const payload = JSON.parse(await readFile(join(publicRoot, marksPath), "utf8"));
-    if (Array.isArray(payload.marks) && payload.marks.length) {
-      return {
-        text: punctuatedTextFromMarks(payload.marks),
-        sourceMarks: payload.marks,
-      };
-    }
+async function outputMatchesScript(mp3Path, marksPath, text) {
+  if (!(await exists(mp3Path)) || !(await exists(marksPath))) return false;
+  try {
+    const payload = JSON.parse(await readFile(marksPath, "utf8"));
+    return payload.transcript === text && payload.script_version === scriptVersion;
+  } catch {
+    return false;
   }
-  const preferred = records.find((record) => record.primary && record.ready)
-    || records.find((record) => record.primary)
-    || records[0];
-  return { text: preferred.description.trim(), sourceMarks: null };
 }
 
 async function synthesize(text, wavPath) {
@@ -226,45 +202,35 @@ for (let offset = 0; offset < glyphEntries.length; offset += 1) {
     || records.find((record) => record.primary)
     || records[0];
   const folder = join(outputRoot, canonical.id);
-  const mp3Path = glyph === "封" ? referenceAudio : join(folder, "audio.mp3");
+  const mp3Path = join(folder, "audio.mp3");
   const marksPath = join(folder, "audio-marks.json");
   const wavPath = join(tmpdir(), `knowing-word-${canonical.id}.wav`);
   await mkdir(folder, { recursive: true });
-  const source = await loadSourceForGlyph(glyph, records);
+  const text = narrationScripts[glyph];
+  if (!text) throw new Error(`Missing child-first narration script for ${glyph}`);
+  const matchesScript = !force && await outputMatchesScript(mp3Path, marksPath, text);
 
-  if (glyph !== "封" && (force || !(await exists(mp3Path)) || !(await exists(marksPath)))) {
-    process.stdout.write(`[${offset + 1}/${glyphEntries.length}] ${glyph} · generating ${Array.from(source.text).length} chars\n`);
-    const meta = await synthesize(source.text, wavPath);
+  if (!matchesScript) {
+    process.stdout.write(`[${offset + 1}/${glyphEntries.length}] ${glyph} · generating ${Array.from(text).length} chars\n`);
+    const meta = await synthesize(text, wavPath);
     await encodeMp3(wavPath, mp3Path);
     const duration = await durationOf(mp3Path);
-    const marks = source.sourceMarks
-      ? scaleMarks(source.sourceMarks, duration)
-      : createEstimatedMarks(source.text, duration);
+    const marks = createEstimatedMarks(text, duration);
     await writeFile(marksPath, JSON.stringify({
       marks,
-      transcript: source.text,
+      transcript: text,
       voice_reference: "封",
-      timing_source: source.sourceMarks ? "scaled-source-marks" : "punctuation-weighted-estimate",
+      timing_source: "punctuation-weighted-estimate",
+      script_version: scriptVersion,
       duration,
     }, null, 2) + "\n");
     process.stdout.write(`[${offset + 1}/${glyphEntries.length}] ${glyph} · ${duration.toFixed(2)}s audio · ${marks.length} marks · ${meta.inferSec}s infer\n`);
-  } else if (glyph === "封" && (force || !(await exists(marksPath)))) {
-    const payload = JSON.parse(await readFile(referenceMarks, "utf8"));
-    await writeFile(marksPath, JSON.stringify({
-      ...payload,
-      transcript: source.text,
-      voice_reference: "封",
-      timing_source: "original-source-marks",
-    }, null, 2) + "\n");
-    process.stdout.write(`[${offset + 1}/${glyphEntries.length}] 封 · preserved original reference audio\n`);
   } else {
     process.stdout.write(`[${offset + 1}/${glyphEntries.length}] ${glyph} · existing output reused\n`);
   }
 
   generatedByGlyph.set(glyph, {
-    audio: glyph === "封"
-      ? `/heritage/${referenceCharacterId}/audio.mp3`
-      : `/${mp3Path.slice(publicRoot.length + 1)}`,
+    audio: `/${mp3Path.slice(publicRoot.length + 1)}`,
     audioMarks: `/${marksPath.slice(publicRoot.length + 1)}`,
     voice: "封",
   });

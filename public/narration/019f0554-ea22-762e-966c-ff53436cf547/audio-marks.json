@@ -2,733 +2,506 @@
   "marks": [
     {
       "index": 0,
-      "char": "形",
-      "start": 0.293,
-      "end": 0.481
+      "char": "铜",
+      "start": 0.295,
+      "end": 0.498
     },
     {
       "index": 1,
-      "char": "声",
-      "start": 0.517,
-      "end": 0.705
+      "char": "铜",
+      "start": 0.716,
+      "end": 0.919
     },
     {
       "index": 2,
-      "char": "字",
-      "start": 0.741,
-      "end": 0.929
+      "char": "铃",
+      "start": 0.958,
+      "end": 1.161
     },
     {
       "index": 3,
-      "char": "左",
-      "start": 1.145,
-      "end": 1.333
+      "char": "的",
+      "start": 1.2,
+      "end": 1.403
     },
     {
       "index": 4,
-      "char": "右",
-      "start": 1.369,
-      "end": 1.557
+      "char": "铜",
+      "start": 1.441,
+      "end": 1.644
     },
     {
       "index": 5,
-      "char": "结",
-      "start": 1.592,
-      "end": 1.78
+      "char": "它",
+      "start": 2.023,
+      "end": 2.226
     },
     {
       "index": 6,
-      "char": "构",
-      "start": 1.816,
-      "end": 2.004
+      "char": "是",
+      "start": 2.265,
+      "end": 2.468
     },
     {
       "index": 7,
-      "char": "本",
-      "start": 2.22,
-      "end": 2.408
+      "char": "左",
+      "start": 2.506,
+      "end": 2.709
     },
     {
       "index": 8,
-      "char": "义",
-      "start": 2.444,
-      "end": 2.632
+      "char": "右",
+      "start": 2.748,
+      "end": 2.951
     },
     {
       "index": 9,
-      "char": "是",
-      "start": 2.668,
-      "end": 2.856
+      "char": "结",
+      "start": 2.99,
+      "end": 3.193
     },
     {
       "index": 10,
-      "char": "赤",
-      "start": 2.891,
-      "end": 3.079
+      "char": "构",
+      "start": 3.231,
+      "end": 3.434
     },
     {
       "index": 11,
       "char": "金",
-      "start": 3.115,
-      "end": 3.303
+      "start": 3.653,
+      "end": 3.856
     },
     {
       "index": 12,
-      "char": "也",
-      "start": 3.519,
-      "end": 3.707
+      "char": "字",
+      "start": 3.895,
+      "end": 4.098
     },
     {
       "index": 13,
-      "char": "就",
-      "start": 3.743,
-      "end": 3.931
+      "char": "旁",
+      "start": 4.136,
+      "end": 4.339
     },
     {
       "index": 14,
-      "char": "是",
-      "start": 3.967,
-      "end": 4.155
+      "char": "说",
+      "start": 4.378,
+      "end": 4.581
     },
     {
       "index": 15,
-      "char": "铜",
-      "start": 4.19,
-      "end": 4.378
+      "char": "明",
+      "start": 4.62,
+      "end": 4.823
     },
     {
       "index": 16,
-      "char": "这",
-      "start": 4.414,
-      "end": 4.602
+      "char": "铜",
+      "start": 4.862,
+      "end": 5.065
     },
     {
       "index": 17,
-      "char": "种",
-      "start": 4.638,
-      "end": 4.826
+      "char": "是",
+      "start": 5.103,
+      "end": 5.306
     },
     {
       "index": 18,
-      "char": "金",
-      "start": 4.862,
-      "end": 5.05
+      "char": "一",
+      "start": 5.345,
+      "end": 5.548
     },
     {
       "index": 19,
-      "char": "属",
-      "start": 5.086,
-      "end": 5.274
+      "char": "种",
+      "start": 5.587,
+      "end": 5.79
     },
     {
       "index": 20,
-      "char": "左",
-      "start": 5.649,
-      "end": 5.837
+      "char": "金",
+      "start": 5.828,
+      "end": 6.031
     },
     {
       "index": 21,
-      "char": "边",
-      "start": 5.873,
-      "end": 6.061
+      "char": "属",
+      "start": 6.07,
+      "end": 6.273
     },
     {
       "index": 22,
-      "char": "的",
-      "start": 6.097,
-      "end": 6.285
+      "char": "右",
+      "start": 6.492,
+      "end": 6.695
     },
     {
       "index": 23,
-      "char": "钅",
-      "start": 6.321,
-      "end": 6.509
+      "char": "边",
+      "start": 6.733,
+      "end": 6.936
     },
     {
       "index": 24,
-      "char": "本",
-      "start": 6.545,
-      "end": 6.733
+      "char": "的",
+      "start": 6.975,
+      "end": 7.178
     },
     {
       "index": 25,
-      "char": "义",
-      "start": 6.769,
-      "end": 6.957
+      "char": "同",
+      "start": 7.217,
+      "end": 7.42
     },
     {
       "index": 26,
-      "char": "是",
-      "start": 6.992,
-      "end": 7.18
+      "char": "帮",
+      "start": 7.458,
+      "end": 7.661
     },
     {
       "index": 27,
-      "char": "铜",
-      "start": 7.216,
-      "end": 7.404
+      "char": "助",
+      "start": 7.7,
+      "end": 7.903
     },
     {
       "index": 28,
-      "char": "也",
-      "start": 7.62,
-      "end": 7.808
+      "char": "记",
+      "start": 7.942,
+      "end": 8.145
     },
     {
       "index": 29,
-      "char": "泛",
-      "start": 7.844,
-      "end": 8.032
+      "char": "住",
+      "start": 8.183,
+      "end": 8.386
     },
     {
       "index": 30,
-      "char": "指",
-      "start": 8.068,
-      "end": 8.256
+      "char": "读",
+      "start": 8.425,
+      "end": 8.628
     },
     {
       "index": 31,
-      "char": "金",
-      "start": 8.291,
-      "end": 8.479
+      "char": "音",
+      "start": 8.667,
+      "end": 8.87
     },
     {
       "index": 32,
-      "char": "属",
-      "start": 8.515,
-      "end": 8.703
+      "char": "看",
+      "start": 9.249,
+      "end": 9.452
     },
     {
       "index": 33,
-      "char": "表",
-      "start": 8.919,
-      "end": 9.107
+      "char": "图",
+      "start": 9.49,
+      "end": 9.693
     },
     {
       "index": 34,
-      "char": "示",
-      "start": 9.143,
-      "end": 9.331
+      "char": "时",
+      "start": 9.732,
+      "end": 9.935
     },
     {
       "index": 35,
       "char": "铜",
-      "start": 9.367,
-      "end": 9.555
+      "start": 10.154,
+      "end": 10.357
     },
     {
       "index": 36,
-      "char": "是",
-      "start": 9.59,
-      "end": 9.778
+      "char": "匠",
+      "start": 10.395,
+      "end": 10.598
     },
     {
       "index": 37,
-      "char": "一",
-      "start": 9.814,
-      "end": 10.002
+      "char": "把",
+      "start": 10.637,
+      "end": 10.84
     },
     {
       "index": 38,
-      "char": "种",
-      "start": 10.038,
-      "end": 10.226
+      "char": "发",
+      "start": 10.879,
+      "end": 11.082
     },
     {
       "index": 39,
-      "char": "金",
-      "start": 10.262,
-      "end": 10.45
+      "char": "亮",
+      "start": 11.12,
+      "end": 11.323
     },
     {
       "index": 40,
-      "char": "属",
-      "start": 10.486,
-      "end": 10.674
+      "char": "的",
+      "start": 11.362,
+      "end": 11.565
     },
     {
       "index": 41,
-      "char": "右",
-      "start": 10.889,
-      "end": 11.077
+      "char": "铜",
+      "start": 11.604,
+      "end": 11.807
     },
     {
       "index": 42,
-      "char": "边",
-      "start": 11.113,
-      "end": 11.301
+      "char": "液",
+      "start": 11.845,
+      "end": 12.048
     },
     {
       "index": 43,
-      "char": "的",
-      "start": 11.337,
-      "end": 11.525
+      "char": "倒",
+      "start": 12.087,
+      "end": 12.29
     },
     {
       "index": 44,
-      "char": "同",
-      "start": 11.561,
-      "end": 11.749
+      "char": "进",
+      "start": 12.329,
+      "end": 12.532
     },
     {
       "index": 45,
-      "char": "本",
-      "start": 11.785,
-      "end": 11.973
+      "char": "模",
+      "start": 12.571,
+      "end": 12.774
     },
     {
       "index": 46,
-      "char": "义",
-      "start": 12.008,
-      "end": 12.196
+      "char": "具",
+      "start": 12.812,
+      "end": 13.015
     },
     {
       "index": 47,
-      "char": "是",
-      "start": 12.232,
-      "end": 12.42
+      "char": "冷",
+      "start": 13.234,
+      "end": 13.437
     },
     {
       "index": 48,
-      "char": "聚",
-      "start": 12.456,
-      "end": 12.644
+      "char": "却",
+      "start": 13.476,
+      "end": 13.679
     },
     {
       "index": 49,
-      "char": "合",
-      "start": 12.68,
-      "end": 12.868
+      "char": "后",
+      "start": 13.717,
+      "end": 13.92
     },
     {
       "index": 50,
-      "char": "众",
-      "start": 12.904,
-      "end": 13.092
+      "char": "做",
+      "start": 13.959,
+      "end": 14.162
     },
     {
       "index": 51,
-      "char": "人",
-      "start": 13.127,
-      "end": 13.315
+      "char": "成",
+      "start": 14.201,
+      "end": 14.404
     },
     {
       "index": 52,
-      "char": "之",
-      "start": 13.351,
-      "end": 13.539
+      "char": "器",
+      "start": 14.442,
+      "end": 14.645
     },
     {
       "index": 53,
-      "char": "力",
-      "start": 13.575,
-      "end": 13.763
+      "char": "物",
+      "start": 14.684,
+      "end": 14.887
     },
     {
       "index": 54,
-      "char": "在",
-      "start": 13.979,
-      "end": 14.167
+      "char": "铜",
+      "start": 15.266,
+      "end": 15.469
     },
     {
       "index": 55,
-      "char": "这",
-      "start": 14.203,
-      "end": 14.391
+      "char": "颜",
+      "start": 15.507,
+      "end": 15.71
     },
     {
       "index": 56,
-      "char": "里",
-      "start": 14.426,
-      "end": 14.614
+      "char": "色",
+      "start": 15.749,
+      "end": 15.952
     },
     {
       "index": 57,
-      "char": "提",
-      "start": 14.65,
-      "end": 14.838
+      "char": "偏",
+      "start": 15.991,
+      "end": 16.194
     },
     {
       "index": 58,
-      "char": "示",
-      "start": 14.874,
-      "end": 15.062
+      "char": "红",
+      "start": 16.232,
+      "end": 16.435
     },
     {
       "index": 59,
-      "char": "读",
-      "start": 15.098,
-      "end": 15.286
+      "char": "能",
+      "start": 16.654,
+      "end": 16.857
     },
     {
       "index": 60,
-      "char": "音",
-      "start": 15.322,
-      "end": 15.51
+      "char": "导",
+      "start": 16.896,
+      "end": 17.099
     },
     {
       "index": 61,
-      "char": "不",
-      "start": 15.885,
-      "end": 16.073
+      "char": "电",
+      "start": 17.138,
+      "end": 17.341
     },
     {
       "index": 62,
-      "char": "过",
-      "start": 16.109,
-      "end": 16.297
+      "char": "也",
+      "start": 17.559,
+      "end": 17.762
     },
     {
       "index": 63,
-      "char": "我",
-      "start": 16.333,
-      "end": 16.521
+      "char": "能",
+      "start": 17.801,
+      "end": 18.004
     },
     {
       "index": 64,
-      "char": "们",
-      "start": 16.557,
-      "end": 16.745
+      "char": "和",
+      "start": 18.043,
+      "end": 18.246
     },
     {
       "index": 65,
-      "char": "可",
-      "start": 16.781,
-      "end": 16.969
+      "char": "其",
+      "start": 18.284,
+      "end": 18.487
     },
     {
       "index": 66,
-      "char": "以",
-      "start": 17.004,
-      "end": 17.192
+      "char": "他",
+      "start": 18.526,
+      "end": 18.729
     },
     {
       "index": 67,
-      "char": "这",
-      "start": 17.228,
-      "end": 17.416
+      "char": "金",
+      "start": 18.768,
+      "end": 18.971
     },
     {
       "index": 68,
-      "char": "样",
-      "start": 17.452,
-      "end": 17.64
+      "char": "属",
+      "start": 19.009,
+      "end": 19.212
     },
     {
       "index": 69,
-      "char": "联",
-      "start": 17.676,
-      "end": 17.864
+      "char": "制",
+      "start": 19.251,
+      "end": 19.454
     },
     {
       "index": 70,
-      "char": "想",
-      "start": 17.9,
-      "end": 18.088
+      "char": "成",
+      "start": 19.493,
+      "end": 19.696
     },
     {
       "index": 71,
-      "char": "古",
-      "start": 18.303,
-      "end": 18.491
+      "char": "合",
+      "start": 19.734,
+      "end": 19.937
     },
     {
       "index": 72,
-      "char": "人",
-      "start": 18.527,
-      "end": 18.715
+      "char": "金",
+      "start": 19.976,
+      "end": 20.179
     },
     {
       "index": 73,
-      "char": "把",
-      "start": 18.751,
-      "end": 18.939
+      "char": "铜",
+      "start": 20.558,
+      "end": 20.761
     },
     {
       "index": 74,
-      "char": "铜",
-      "start": 18.975,
-      "end": 19.163
+      "char": "铃",
+      "start": 20.799,
+      "end": 21.003
     },
     {
       "index": 75,
-      "char": "和",
-      "start": 19.199,
-      "end": 19.387
+      "char": "就",
+      "start": 21.221,
+      "end": 21.424
     },
     {
       "index": 76,
-      "char": "锡",
-      "start": 19.422,
-      "end": 19.61
+      "char": "是",
+      "start": 21.463,
+      "end": 21.666
     },
     {
       "index": 77,
-      "char": "一",
-      "start": 19.646,
-      "end": 19.834
+      "char": "用",
+      "start": 21.705,
+      "end": 21.908
     },
     {
       "index": 78,
-      "char": "同",
-      "start": 19.87,
-      "end": 20.058
+      "char": "铜",
+      "start": 21.946,
+      "end": 22.149
     },
     {
       "index": 79,
-      "char": "放",
-      "start": 20.094,
-      "end": 20.282
+      "char": "制",
+      "start": 22.188,
+      "end": 22.391
     },
     {
       "index": 80,
-      "char": "进",
-      "start": 20.318,
-      "end": 20.506
+      "char": "作",
+      "start": 22.43,
+      "end": 22.633
     },
     {
       "index": 81,
-      "char": "熔",
-      "start": 20.541,
-      "end": 20.729
+      "char": "的",
+      "start": 22.671,
+      "end": 22.874
     },
     {
       "index": 82,
-      "char": "炉",
-      "start": 20.765,
-      "end": 20.953
-    },
-    {
-      "index": 83,
-      "char": "合",
-      "start": 21.169,
-      "end": 21.357
-    },
-    {
-      "index": 84,
-      "char": "到",
-      "start": 21.393,
-      "end": 21.581
-    },
-    {
-      "index": 85,
-      "char": "一",
-      "start": 21.617,
-      "end": 21.805
-    },
-    {
-      "index": 86,
-      "char": "处",
-      "start": 21.84,
-      "end": 22.028
-    },
-    {
-      "index": 87,
-      "char": "熔",
-      "start": 22.064,
-      "end": 22.252
-    },
-    {
-      "index": 88,
-      "char": "铸",
-      "start": 22.288,
-      "end": 22.476
-    },
-    {
-      "index": 89,
-      "char": "成",
-      "start": 22.512,
-      "end": 22.7
-    },
-    {
-      "index": 90,
-      "char": "青",
-      "start": 22.736,
-      "end": 22.924
-    },
-    {
-      "index": 91,
-      "char": "铜",
-      "start": 22.96,
-      "end": 23.148
-    },
-    {
-      "index": 92,
-      "char": "器",
-      "start": 23.183,
-      "end": 23.371
-    },
-    {
-      "index": 93,
-      "char": "同",
-      "start": 23.587,
-      "end": 23.775
-    },
-    {
-      "index": 94,
-      "char": "正",
-      "start": 23.811,
-      "end": 23.999
-    },
-    {
-      "index": 95,
-      "char": "是",
-      "start": 24.035,
-      "end": 24.223
-    },
-    {
-      "index": 96,
-      "char": "把",
-      "start": 24.259,
-      "end": 24.447
-    },
-    {
-      "index": 97,
-      "char": "东",
-      "start": 24.482,
-      "end": 24.67
-    },
-    {
-      "index": 98,
-      "char": "西",
-      "start": 24.706,
-      "end": 24.894
-    },
-    {
-      "index": 99,
-      "char": "合",
-      "start": 24.93,
-      "end": 25.118
-    },
-    {
-      "index": 100,
-      "char": "到",
-      "start": 25.154,
-      "end": 25.342
-    },
-    {
-      "index": 101,
-      "char": "一",
-      "start": 25.378,
-      "end": 25.566
-    },
-    {
-      "index": 102,
-      "char": "处",
-      "start": 25.601,
-      "end": 25.789
-    },
-    {
-      "index": 103,
-      "char": "的",
-      "start": 25.825,
-      "end": 26.013
-    },
-    {
-      "index": 104,
-      "char": "意",
-      "start": 26.049,
-      "end": 26.237
-    },
-    {
-      "index": 105,
-      "char": "思",
-      "start": 26.273,
-      "end": 26.461
-    },
-    {
-      "index": 106,
-      "char": "让",
-      "start": 26.677,
-      "end": 26.865
-    },
-    {
-      "index": 107,
-      "char": "人",
-      "start": 26.9,
-      "end": 27.088
-    },
-    {
-      "index": 108,
-      "char": "想",
-      "start": 27.124,
-      "end": 27.312
-    },
-    {
-      "index": 109,
-      "char": "到",
-      "start": 27.348,
-      "end": 27.536
-    },
-    {
-      "index": 110,
-      "char": "铜",
-      "start": 27.572,
-      "end": 27.76
-    },
-    {
-      "index": 111,
-      "char": "常",
-      "start": 27.796,
-      "end": 27.984
-    },
-    {
-      "index": 112,
-      "char": "和",
-      "start": 28.019,
-      "end": 28.207
-    },
-    {
-      "index": 113,
-      "char": "别",
-      "start": 28.243,
-      "end": 28.431
-    },
-    {
-      "index": 114,
-      "char": "的",
-      "start": 28.467,
-      "end": 28.655
-    },
-    {
-      "index": 115,
-      "char": "金",
-      "start": 28.691,
-      "end": 28.879
-    },
-    {
-      "index": 116,
-      "char": "属",
-      "start": 28.915,
-      "end": 29.103
-    },
-    {
-      "index": 117,
-      "char": "合",
-      "start": 29.138,
-      "end": 29.326
-    },
-    {
-      "index": 118,
-      "char": "在",
-      "start": 29.362,
-      "end": 29.55
-    },
-    {
-      "index": 119,
-      "char": "一",
-      "start": 29.586,
-      "end": 29.774
-    },
-    {
-      "index": 120,
-      "char": "起",
-      "start": 29.81,
-      "end": 29.998
+      "char": "铃",
+      "start": 22.913,
+      "end": 23.116
     }
   ],
-  "transcript": "形声字，左右结构，本义是赤金，也就是铜这种金属。左边的“钅”本义是铜、也泛指金属，表示铜是一种金属；右边的“同”本义是聚合众人之力，在这里提示读音。不过我们可以这样联想：古人把铜和锡一同放进熔炉，合到一处熔铸成青铜器，“同”正是把东西合到一处的意思，让人想到铜常和别的金属合在一起。",
+  "transcript": "铜，铜铃的铜。它是左右结构，金字旁说明铜是一种金属，右边的同帮助记住读音。看图时，铜匠把发亮的铜液倒进模具，冷却后做成器物。铜颜色偏红，能导电，也能和其他金属制成合金。铜铃，就是用铜制作的铃。",
   "voice_reference": "封",
   "timing_source": "punctuation-weighted-estimate",
-  "duration": 30.560181
+  "script_version": "child-first-v1",
+  "duration": 23.680181
 }

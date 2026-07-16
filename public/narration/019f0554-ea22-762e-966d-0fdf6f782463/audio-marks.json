@@ -2,889 +2,512 @@
   "marks": [
     {
       "index": 0,
-      "char": "会",
+      "char": "穷",
       "start": 0.295,
-      "end": 0.5
+      "end": 0.507
     },
     {
       "index": 1,
-      "char": "意",
-      "start": 0.539,
-      "end": 0.744
+      "char": "无",
+      "start": 0.727,
+      "end": 0.939
     },
     {
       "index": 2,
-      "char": "兼",
-      "start": 0.783,
-      "end": 0.987
+      "char": "穷",
+      "start": 0.979,
+      "end": 1.191
     },
     {
       "index": 3,
-      "char": "形",
-      "start": 1.026,
-      "end": 1.231
+      "char": "无",
+      "start": 1.231,
+      "end": 1.442
     },
     {
       "index": 4,
-      "char": "声",
-      "start": 1.27,
-      "end": 1.475
+      "char": "尽",
+      "start": 1.483,
+      "end": 1.694
     },
     {
       "index": 5,
-      "char": "字",
-      "start": 1.514,
-      "end": 1.719
+      "char": "的",
+      "start": 1.735,
+      "end": 1.946
     },
     {
       "index": 6,
-      "char": "上",
-      "start": 1.938,
-      "end": 2.143
+      "char": "穷",
+      "start": 1.987,
+      "end": 2.198
     },
     {
       "index": 7,
-      "char": "下",
-      "start": 2.182,
-      "end": 2.387
+      "char": "它",
+      "start": 2.578,
+      "end": 2.79
     },
     {
       "index": 8,
-      "char": "结",
-      "start": 2.426,
-      "end": 2.631
+      "char": "是",
+      "start": 2.83,
+      "end": 3.042
     },
     {
       "index": 9,
-      "char": "构",
-      "start": 2.67,
-      "end": 2.875
+      "char": "上",
+      "start": 3.082,
+      "end": 3.294
     },
     {
       "index": 10,
-      "char": "本",
-      "start": 3.094,
-      "end": 3.299
+      "char": "下",
+      "start": 3.334,
+      "end": 3.546
     },
     {
       "index": 11,
-      "char": "义",
-      "start": 3.338,
-      "end": 3.543
+      "char": "结",
+      "start": 3.586,
+      "end": 3.798
     },
     {
       "index": 12,
-      "char": "是",
-      "start": 3.582,
-      "end": 3.787
+      "char": "构",
+      "start": 3.838,
+      "end": 4.05
     },
     {
       "index": 13,
-      "char": "达",
-      "start": 3.826,
-      "end": 4.031
+      "char": "上",
+      "start": 4.27,
+      "end": 4.482
     },
     {
       "index": 14,
-      "char": "到",
-      "start": 4.07,
-      "end": 4.275
+      "char": "面",
+      "start": 4.522,
+      "end": 4.733
     },
     {
       "index": 15,
-      "char": "尽",
-      "start": 4.314,
-      "end": 4.519
+      "char": "是",
+      "start": 4.774,
+      "end": 4.985
     },
     {
       "index": 16,
-      "char": "头",
-      "start": 4.558,
-      "end": 4.763
+      "char": "穴",
+      "start": 5.026,
+      "end": 5.237
     },
     {
       "index": 17,
-      "char": "穷",
-      "start": 5.142,
-      "end": 5.347
+      "char": "下",
+      "start": 5.458,
+      "end": 5.669
     },
     {
       "index": 18,
-      "char": "的",
-      "start": 5.386,
-      "end": 5.591
+      "char": "面",
+      "start": 5.709,
+      "end": 5.921
     },
     {
       "index": 19,
-      "char": "繁",
-      "start": 5.63,
-      "end": 5.835
+      "char": "是",
+      "start": 5.961,
+      "end": 6.173
     },
     {
       "index": 20,
-      "char": "体",
-      "start": 5.874,
-      "end": 6.079
+      "char": "力",
+      "start": 6.213,
+      "end": 6.425
     },
     {
       "index": 21,
-      "char": "写",
-      "start": 6.118,
-      "end": 6.323
+      "char": "想",
+      "start": 6.805,
+      "end": 7.017
     },
     {
       "index": 22,
-      "char": "作",
-      "start": 6.362,
-      "end": 6.567
+      "char": "象",
+      "start": 7.057,
+      "end": 7.269
     },
     {
       "index": 23,
-      "char": "窮",
-      "start": 6.606,
-      "end": 6.81
+      "char": "一",
+      "start": 7.309,
+      "end": 7.521
     },
     {
       "index": 24,
-      "char": "由",
-      "start": 7.03,
-      "end": 7.234
+      "char": "个",
+      "start": 7.561,
+      "end": 7.772
     },
     {
       "index": 25,
-      "char": "穴",
-      "start": 7.273,
-      "end": 7.478
+      "char": "人",
+      "start": 7.813,
+      "end": 8.024
     },
     {
       "index": 26,
-      "char": "和",
-      "start": 7.517,
-      "end": 7.722
+      "char": "钻",
+      "start": 8.065,
+      "end": 8.276
     },
     {
       "index": 27,
-      "char": "躬",
-      "start": 7.761,
-      "end": 7.966
+      "char": "进",
+      "start": 8.317,
+      "end": 8.528
     },
     {
       "index": 28,
-      "char": "组",
-      "start": 8.005,
-      "end": 8.21
+      "char": "洞",
+      "start": 8.569,
+      "end": 8.78
     },
     {
       "index": 29,
-      "char": "成",
-      "start": 8.249,
-      "end": 8.454
+      "char": "穴",
+      "start": 8.82,
+      "end": 9.032
     },
     {
       "index": 30,
-      "char": "穴",
-      "start": 8.673,
-      "end": 8.878
+      "char": "一",
+      "start": 9.252,
+      "end": 9.464
     },
     {
       "index": 31,
-      "char": "是",
-      "start": 8.917,
-      "end": 9.122
+      "char": "直",
+      "start": 9.504,
+      "end": 9.716
     },
     {
       "index": 32,
-      "char": "洞",
-      "start": 9.161,
-      "end": 9.366
+      "char": "用",
+      "start": 9.756,
+      "end": 9.968
     },
     {
       "index": 33,
-      "char": "穴",
-      "start": 9.405,
-      "end": 9.61
+      "char": "力",
+      "start": 10.008,
+      "end": 10.22
     },
     {
       "index": 34,
-      "char": "躬",
-      "start": 9.829,
-      "end": 10.034
+      "char": "向",
+      "start": 10.26,
+      "end": 10.472
     },
     {
       "index": 35,
-      "char": "是",
-      "start": 10.073,
-      "end": 10.278
+      "char": "前",
+      "start": 10.512,
+      "end": 10.723
     },
     {
       "index": 36,
-      "char": "弯",
-      "start": 10.317,
-      "end": 10.522
+      "char": "走",
+      "start": 10.944,
+      "end": 11.155
     },
     {
       "index": 37,
-      "char": "着",
-      "start": 10.561,
-      "end": 10.766
+      "char": "到",
+      "start": 11.196,
+      "end": 11.407
     },
     {
       "index": 38,
-      "char": "的",
-      "start": 10.805,
-      "end": 11.01
+      "char": "最",
+      "start": 11.448,
+      "end": 11.659
     },
     {
       "index": 39,
-      "char": "身",
-      "start": 11.049,
-      "end": 11.254
+      "char": "深",
+      "start": 11.699,
+      "end": 11.911
     },
     {
       "index": 40,
-      "char": "体",
-      "start": 11.293,
-      "end": 11.498
+      "char": "处",
+      "start": 11.951,
+      "end": 12.163
     },
     {
       "index": 41,
-      "char": "合",
-      "start": 11.717,
-      "end": 11.922
+      "char": "再",
+      "start": 12.383,
+      "end": 12.595
     },
     {
       "index": 42,
-      "char": "起",
-      "start": 11.961,
-      "end": 12.166
+      "char": "也",
+      "start": 12.635,
+      "end": 12.847
     },
     {
       "index": 43,
-      "char": "来",
-      "start": 12.205,
-      "end": 12.41
+      "char": "没",
+      "start": 12.887,
+      "end": 13.099
     },
     {
       "index": 44,
-      "char": "就",
-      "start": 12.449,
-      "end": 12.653
+      "char": "有",
+      "start": 13.139,
+      "end": 13.351
     },
     {
       "index": 45,
-      "char": "是",
-      "start": 12.693,
-      "end": 12.897
+      "char": "路",
+      "start": 13.391,
+      "end": 13.603
     },
     {
       "index": 46,
-      "char": "人",
-      "start": 12.936,
-      "end": 13.141
+      "char": "了",
+      "start": 13.643,
+      "end": 13.854
     },
     {
       "index": 47,
-      "char": "弯",
-      "start": 13.18,
-      "end": 13.385
+      "char": "这",
+      "start": 14.235,
+      "end": 14.446
     },
     {
       "index": 48,
-      "char": "身",
-      "start": 13.424,
-      "end": 13.629
+      "char": "个",
+      "start": 14.487,
+      "end": 14.698
     },
     {
       "index": 49,
-      "char": "钻",
-      "start": 13.668,
-      "end": 13.873
+      "char": "画",
+      "start": 14.739,
+      "end": 14.95
     },
     {
       "index": 50,
-      "char": "进",
-      "start": 13.912,
-      "end": 14.117
+      "char": "面",
+      "start": 14.99,
+      "end": 15.202
     },
     {
       "index": 51,
-      "char": "洞",
-      "start": 14.156,
-      "end": 14.361
+      "char": "帮",
+      "start": 15.242,
+      "end": 15.454
     },
     {
       "index": 52,
-      "char": "穴",
-      "start": 14.4,
-      "end": 14.605
+      "char": "助",
+      "start": 15.494,
+      "end": 15.706
     },
     {
       "index": 53,
-      "char": "一",
-      "start": 14.824,
-      "end": 15.029
+      "char": "记",
+      "start": 15.746,
+      "end": 15.958
     },
     {
       "index": 54,
-      "char": "直",
-      "start": 15.068,
-      "end": 15.273
+      "char": "住",
+      "start": 15.998,
+      "end": 16.21
     },
     {
       "index": 55,
-      "char": "钻",
-      "start": 15.312,
-      "end": 15.517
+      "char": "达",
+      "start": 16.25,
+      "end": 16.462
     },
     {
       "index": 56,
       "char": "到",
-      "start": 15.556,
-      "end": 15.761
+      "start": 16.502,
+      "end": 16.714
     },
     {
       "index": 57,
-      "char": "最",
-      "start": 15.8,
-      "end": 16.005
+      "char": "尽",
+      "start": 16.754,
+      "end": 16.965
     },
     {
       "index": 58,
-      "char": "深",
-      "start": 16.044,
-      "end": 16.249
+      "char": "头",
+      "start": 17.006,
+      "end": 17.217
     },
     {
       "index": 59,
-      "char": "再",
-      "start": 16.468,
-      "end": 16.673
+      "char": "的",
+      "start": 17.258,
+      "end": 17.469
     },
     {
       "index": 60,
-      "char": "也",
-      "start": 16.712,
-      "end": 16.917
+      "char": "意",
+      "start": 17.51,
+      "end": 17.721
     },
     {
       "index": 61,
-      "char": "走",
-      "start": 16.956,
-      "end": 17.161
+      "char": "思",
+      "start": 17.761,
+      "end": 17.973
     },
     {
       "index": 62,
-      "char": "不",
-      "start": 17.2,
-      "end": 17.405
+      "char": "穷",
+      "start": 18.353,
+      "end": 18.565
     },
     {
       "index": 63,
-      "char": "动",
-      "start": 17.444,
-      "end": 17.649
+      "char": "可",
+      "start": 18.605,
+      "end": 18.817
     },
     {
       "index": 64,
-      "char": "的",
-      "start": 17.688,
-      "end": 17.893
+      "char": "以",
+      "start": 18.857,
+      "end": 19.069
     },
     {
       "index": 65,
-      "char": "尽",
-      "start": 17.932,
-      "end": 18.136
+      "char": "表",
+      "start": 19.109,
+      "end": 19.321
     },
     {
       "index": 66,
-      "char": "头",
-      "start": 18.176,
-      "end": 18.38
+      "char": "示",
+      "start": 19.361,
+      "end": 19.573
     },
     {
       "index": 67,
-      "char": "简",
-      "start": 18.759,
-      "end": 18.964
+      "char": "尽",
+      "start": 19.613,
+      "end": 19.824
     },
     {
       "index": 68,
-      "char": "体",
-      "start": 19.003,
-      "end": 19.208
+      "char": "头",
+      "start": 19.865,
+      "end": 20.076
     },
     {
       "index": 69,
-      "char": "穷",
-      "start": 19.247,
-      "end": 19.452
+      "char": "也",
+      "start": 20.297,
+      "end": 20.508
     },
     {
       "index": 70,
-      "char": "由",
-      "start": 19.491,
-      "end": 19.696
+      "char": "可",
+      "start": 20.549,
+      "end": 20.76
     },
     {
       "index": 71,
-      "char": "穴",
-      "start": 19.735,
-      "end": 19.94
+      "char": "以",
+      "start": 20.801,
+      "end": 21.012
     },
     {
       "index": 72,
-      "char": "和",
-      "start": 19.979,
-      "end": 20.184
+      "char": "表",
+      "start": 21.052,
+      "end": 21.264
     },
     {
       "index": 73,
-      "char": "力",
-      "start": 20.223,
-      "end": 20.428
+      "char": "示",
+      "start": 21.304,
+      "end": 21.516
     },
     {
       "index": 74,
-      "char": "组",
-      "start": 20.467,
-      "end": 20.672
+      "char": "贫",
+      "start": 21.556,
+      "end": 21.768
     },
     {
       "index": 75,
-      "char": "成",
-      "start": 20.711,
-      "end": 20.916
+      "char": "困",
+      "start": 21.808,
+      "end": 22.02
     },
     {
       "index": 76,
-      "char": "穴",
-      "start": 21.135,
-      "end": 21.34
+      "char": "无",
+      "start": 22.4,
+      "end": 22.612
     },
     {
       "index": 77,
-      "char": "是",
-      "start": 21.379,
-      "end": 21.584
+      "char": "穷",
+      "start": 22.652,
+      "end": 22.864
     },
     {
       "index": 78,
-      "char": "洞",
-      "start": 21.623,
-      "end": 21.828
+      "char": "就",
+      "start": 23.084,
+      "end": 23.295
     },
     {
       "index": 79,
-      "char": "穴",
-      "start": 21.867,
-      "end": 22.072
+      "char": "是",
+      "start": 23.336,
+      "end": 23.547
     },
     {
       "index": 80,
-      "char": "力",
-      "start": 22.291,
-      "end": 22.496
+      "char": "没",
+      "start": 23.588,
+      "end": 23.799
     },
     {
       "index": 81,
-      "char": "是",
-      "start": 22.535,
-      "end": 22.74
+      "char": "有",
+      "start": 23.84,
+      "end": 24.051
     },
     {
       "index": 82,
-      "char": "力",
-      "start": 22.779,
-      "end": 22.984
+      "char": "尽",
+      "start": 24.091,
+      "end": 24.303
     },
     {
       "index": 83,
-      "char": "气",
-      "start": 23.023,
-      "end": 23.228
-    },
-    {
-      "index": 84,
-      "char": "我",
-      "start": 23.447,
-      "end": 23.652
-    },
-    {
-      "index": 85,
-      "char": "们",
-      "start": 23.691,
-      "end": 23.896
-    },
-    {
-      "index": 86,
-      "char": "可",
-      "start": 23.935,
-      "end": 24.14
-    },
-    {
-      "index": 87,
-      "char": "以",
-      "start": 24.179,
-      "end": 24.383
-    },
-    {
-      "index": 88,
-      "char": "这",
-      "start": 24.422,
-      "end": 24.627
-    },
-    {
-      "index": 89,
-      "char": "样",
-      "start": 24.666,
-      "end": 24.871
-    },
-    {
-      "index": 90,
-      "char": "联",
-      "start": 24.91,
-      "end": 25.115
-    },
-    {
-      "index": 91,
-      "char": "想",
-      "start": 25.154,
-      "end": 25.359
-    },
-    {
-      "index": 92,
-      "char": "一",
-      "start": 25.578,
-      "end": 25.783
-    },
-    {
-      "index": 93,
-      "char": "个",
-      "start": 25.822,
-      "end": 26.027
-    },
-    {
-      "index": 94,
-      "char": "人",
-      "start": 26.066,
-      "end": 26.271
-    },
-    {
-      "index": 95,
-      "char": "钻",
-      "start": 26.31,
-      "end": 26.515
-    },
-    {
-      "index": 96,
-      "char": "进",
-      "start": 26.554,
-      "end": 26.759
-    },
-    {
-      "index": 97,
-      "char": "洞",
-      "start": 26.798,
-      "end": 27.003
-    },
-    {
-      "index": 98,
-      "char": "穴",
-      "start": 27.042,
-      "end": 27.247
-    },
-    {
-      "index": 99,
-      "char": "一",
-      "start": 27.466,
-      "end": 27.671
-    },
-    {
-      "index": 100,
-      "char": "直",
-      "start": 27.71,
-      "end": 27.915
-    },
-    {
-      "index": 101,
-      "char": "往",
-      "start": 27.954,
-      "end": 28.159
-    },
-    {
-      "index": 102,
-      "char": "深",
-      "start": 28.198,
-      "end": 28.403
-    },
-    {
-      "index": 103,
-      "char": "处",
-      "start": 28.442,
-      "end": 28.647
-    },
-    {
-      "index": 104,
-      "char": "使",
-      "start": 28.686,
-      "end": 28.891
-    },
-    {
-      "index": 105,
-      "char": "劲",
-      "start": 28.93,
-      "end": 29.135
-    },
-    {
-      "index": 106,
-      "char": "力",
-      "start": 29.354,
-      "end": 29.559
-    },
-    {
-      "index": 107,
-      "char": "气",
-      "start": 29.598,
-      "end": 29.803
-    },
-    {
-      "index": 108,
-      "char": "用",
-      "start": 29.842,
-      "end": 30.046
-    },
-    {
-      "index": 109,
-      "char": "到",
-      "start": 30.085,
-      "end": 30.29
-    },
-    {
-      "index": 110,
       "char": "头",
-      "start": 30.329,
-      "end": 30.534
-    },
-    {
-      "index": 111,
-      "char": "洞",
-      "start": 30.753,
-      "end": 30.958
-    },
-    {
-      "index": 112,
-      "char": "也",
-      "start": 30.997,
-      "end": 31.202
-    },
-    {
-      "index": 113,
-      "char": "到",
-      "start": 31.241,
-      "end": 31.446
-    },
-    {
-      "index": 114,
-      "char": "了",
-      "start": 31.485,
-      "end": 31.69
-    },
-    {
-      "index": 115,
-      "char": "尽",
-      "start": 31.729,
-      "end": 31.934
-    },
-    {
-      "index": 116,
-      "char": "头",
-      "start": 31.973,
-      "end": 32.178
-    },
-    {
-      "index": 117,
-      "char": "再",
-      "start": 32.397,
-      "end": 32.602
-    },
-    {
-      "index": 118,
-      "char": "也",
-      "start": 32.641,
-      "end": 32.846
-    },
-    {
-      "index": 119,
-      "char": "走",
-      "start": 32.885,
-      "end": 33.09
-    },
-    {
-      "index": 120,
-      "char": "不",
-      "start": 33.129,
-      "end": 33.334
-    },
-    {
-      "index": 121,
-      "char": "动",
-      "start": 33.373,
-      "end": 33.578
-    },
-    {
-      "index": 122,
-      "char": "所",
-      "start": 33.797,
-      "end": 34.002
-    },
-    {
-      "index": 123,
-      "char": "以",
-      "start": 34.041,
-      "end": 34.246
-    },
-    {
-      "index": 124,
-      "char": "穷",
-      "start": 34.285,
-      "end": 34.49
-    },
-    {
-      "index": 125,
-      "char": "本",
-      "start": 34.529,
-      "end": 34.734
-    },
-    {
-      "index": 126,
-      "char": "义",
-      "start": 34.773,
-      "end": 34.978
-    },
-    {
-      "index": 127,
-      "char": "是",
-      "start": 35.017,
-      "end": 35.222
-    },
-    {
-      "index": 128,
-      "char": "达",
-      "start": 35.261,
-      "end": 35.466
-    },
-    {
-      "index": 129,
-      "char": "到",
-      "start": 35.505,
-      "end": 35.709
-    },
-    {
-      "index": 130,
-      "char": "尽",
-      "start": 35.749,
-      "end": 35.953
-    },
-    {
-      "index": 131,
-      "char": "头",
-      "start": 35.992,
-      "end": 36.197
-    },
-    {
-      "index": 132,
-      "char": "又",
-      "start": 36.416,
-      "end": 36.621
-    },
-    {
-      "index": 133,
-      "char": "引",
-      "start": 36.66,
-      "end": 36.865
-    },
-    {
-      "index": 134,
-      "char": "申",
-      "start": 36.904,
-      "end": 37.109
-    },
-    {
-      "index": 135,
-      "char": "出",
-      "start": 37.148,
-      "end": 37.353
-    },
-    {
-      "index": 136,
-      "char": "走",
-      "start": 37.392,
-      "end": 37.597
-    },
-    {
-      "index": 137,
-      "char": "投",
-      "start": 37.636,
-      "end": 37.841
-    },
-    {
-      "index": 138,
-      "char": "无",
-      "start": 37.88,
-      "end": 38.085
-    },
-    {
-      "index": 139,
-      "char": "路",
-      "start": 38.124,
-      "end": 38.329
-    },
-    {
-      "index": 140,
-      "char": "贫",
-      "start": 38.548,
-      "end": 38.753
-    },
-    {
-      "index": 141,
-      "char": "困",
-      "start": 38.792,
-      "end": 38.997
-    },
-    {
-      "index": 142,
-      "char": "困",
-      "start": 39.216,
-      "end": 39.421
-    },
-    {
-      "index": 143,
-      "char": "窘",
-      "start": 39.46,
-      "end": 39.665
-    },
-    {
-      "index": 144,
-      "char": "的",
-      "start": 39.704,
-      "end": 39.909
-    },
-    {
-      "index": 145,
-      "char": "意",
-      "start": 39.948,
-      "end": 40.153
-    },
-    {
-      "index": 146,
-      "char": "思",
-      "start": 40.192,
-      "end": 40.397
+      "start": 24.343,
+      "end": 24.555
     }
   ],
-  "transcript": "会意兼形声字，上下结构，本义是达到尽头。穷的繁体写作“窮”，由“穴”和“躬”组成，“穴”是洞穴，“躬”是弯着的身体，合起来就是人弯身钻进洞穴，一直钻到最深、再也走不动的尽头。简体“穷”由“穴”和“力”组成，“穴”是洞穴，“力”是力气，我们可以这样联想：一个人钻进洞穴，一直往深处使劲，力气用到头、洞也到了尽头，再也走不动，所以“穷”本义是达到尽头，又引申出走投无路、贫困、困窘的意思。",
+  "transcript": "穷，无穷无尽的穷。它是上下结构，上面是穴，下面是力。想象一个人钻进洞穴，一直用力向前，走到最深处，再也没有路了。这个画面帮助记住达到尽头的意思。穷可以表示尽头，也可以表示贫困。无穷，就是没有尽头。",
   "voice_reference": "封",
   "timing_source": "punctuation-weighted-estimate",
-  "duration": 40.961066
+  "script_version": "child-first-v1",
+  "duration": 25.120181
 }

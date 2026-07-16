@@ -196,7 +196,7 @@ export const narrationAssets: Record<string, NarrationAsset> = {
     "voice": "封"
   },
   "019f0554-ea22-762e-966c-32d678fd6bf6": {
-    "audio": "/heritage/019f0554-ea22-762e-966c-32d678fd6bf6/audio.mp3",
+    "audio": "/narration/019f0554-ea22-762e-966c-32d678fd6bf6/audio.mp3",
     "audioMarks": "/narration/019f0554-ea22-762e-966c-32d678fd6bf6/audio-marks.json",
     "voice": "封"
   },

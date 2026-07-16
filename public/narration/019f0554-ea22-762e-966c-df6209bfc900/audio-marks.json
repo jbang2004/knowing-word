@@ -2,691 +2,488 @@
   "marks": [
     {
       "index": 0,
-      "char": "形",
-      "start": 0.293,
-      "end": 0.481
+      "char": "棒",
+      "start": 0.294,
+      "end": 0.497
     },
     {
       "index": 1,
-      "char": "声",
-      "start": 0.517,
-      "end": 0.705
+      "char": "木",
+      "start": 0.715,
+      "end": 0.917
     },
     {
       "index": 2,
-      "char": "字",
-      "start": 0.741,
-      "end": 0.929
+      "char": "棒",
+      "start": 0.956,
+      "end": 1.158
     },
     {
       "index": 3,
-      "char": "左",
-      "start": 1.144,
-      "end": 1.332
+      "char": "的",
+      "start": 1.197,
+      "end": 1.399
     },
     {
       "index": 4,
-      "char": "右",
-      "start": 1.368,
-      "end": 1.556
+      "char": "棒",
+      "start": 1.437,
+      "end": 1.64
     },
     {
       "index": 5,
-      "char": "结",
-      "start": 1.592,
-      "end": 1.78
+      "char": "它",
+      "start": 2.018,
+      "end": 2.22
     },
     {
       "index": 6,
-      "char": "构",
-      "start": 1.816,
-      "end": 2.003
+      "char": "是",
+      "start": 2.259,
+      "end": 2.461
     },
     {
       "index": 7,
-      "char": "本",
-      "start": 2.219,
-      "end": 2.407
+      "char": "左",
+      "start": 2.5,
+      "end": 2.702
     },
     {
       "index": 8,
-      "char": "义",
-      "start": 2.443,
-      "end": 2.631
+      "char": "右",
+      "start": 2.74,
+      "end": 2.943
     },
     {
       "index": 9,
-      "char": "是",
-      "start": 2.667,
-      "end": 2.854
+      "char": "结",
+      "start": 2.981,
+      "end": 3.183
     },
     {
       "index": 10,
-      "char": "棍",
-      "start": 2.89,
-      "end": 3.078
+      "char": "构",
+      "start": 3.222,
+      "end": 3.424
     },
     {
       "index": 11,
-      "char": "子",
-      "start": 3.114,
-      "end": 3.302
+      "char": "木",
+      "start": 3.643,
+      "end": 3.845
     },
     {
       "index": 12,
-      "char": "左",
-      "start": 3.678,
-      "end": 3.866
+      "char": "字",
+      "start": 3.883,
+      "end": 4.086
     },
     {
       "index": 13,
-      "char": "边",
-      "start": 3.901,
-      "end": 4.089
+      "char": "旁",
+      "start": 4.124,
+      "end": 4.326
     },
     {
       "index": 14,
-      "char": "的",
-      "start": 4.125,
-      "end": 4.313
+      "char": "说",
+      "start": 4.365,
+      "end": 4.567
     },
     {
       "index": 15,
-      "char": "木",
-      "start": 4.349,
-      "end": 4.537
+      "char": "明",
+      "start": 4.606,
+      "end": 4.808
     },
     {
       "index": 16,
-      "char": "本",
-      "start": 4.572,
-      "end": 4.76
+      "char": "棒",
+      "start": 4.846,
+      "end": 5.049
     },
     {
       "index": 17,
-      "char": "义",
-      "start": 4.796,
-      "end": 4.984
+      "char": "多",
+      "start": 5.087,
+      "end": 5.289
     },
     {
       "index": 18,
-      "char": "是",
-      "start": 5.02,
-      "end": 5.208
+      "char": "用",
+      "start": 5.328,
+      "end": 5.53
     },
     {
       "index": 19,
-      "char": "树",
-      "start": 5.243,
-      "end": 5.431
+      "char": "木",
+      "start": 5.569,
+      "end": 5.771
     },
     {
       "index": 20,
-      "char": "表",
-      "start": 5.647,
-      "end": 5.835
+      "char": "头",
+      "start": 5.809,
+      "end": 6.012
     },
     {
       "index": 21,
-      "char": "示",
-      "start": 5.871,
-      "end": 6.059
+      "char": "制",
+      "start": 6.05,
+      "end": 6.252
     },
     {
       "index": 22,
-      "char": "棍",
-      "start": 6.095,
-      "end": 6.282
+      "char": "成",
+      "start": 6.291,
+      "end": 6.493
     },
     {
       "index": 23,
-      "char": "子",
-      "start": 6.318,
-      "end": 6.506
+      "char": "右",
+      "start": 6.712,
+      "end": 6.914
     },
     {
       "index": 24,
-      "char": "是",
-      "start": 6.542,
-      "end": 6.73
+      "char": "边",
+      "start": 6.952,
+      "end": 7.155
     },
     {
       "index": 25,
-      "char": "用",
-      "start": 6.766,
-      "end": 6.953
+      "char": "的",
+      "start": 7.193,
+      "end": 7.395
     },
     {
       "index": 26,
-      "char": "木",
-      "start": 6.989,
-      "end": 7.177
+      "char": "奉",
+      "start": 7.434,
+      "end": 7.636
     },
     {
       "index": 27,
-      "char": "头",
-      "start": 7.213,
-      "end": 7.401
+      "char": "帮",
+      "start": 7.675,
+      "end": 7.877
     },
     {
       "index": 28,
-      "char": "做",
-      "start": 7.437,
-      "end": 7.625
+      "char": "助",
+      "start": 7.916,
+      "end": 8.118
     },
     {
       "index": 29,
-      "char": "的",
-      "start": 7.66,
-      "end": 7.848
+      "char": "记",
+      "start": 8.156,
+      "end": 8.358
     },
     {
       "index": 30,
-      "char": "右",
-      "start": 8.064,
-      "end": 8.252
+      "char": "住",
+      "start": 8.397,
+      "end": 8.599
     },
     {
       "index": 31,
-      "char": "边",
-      "start": 8.288,
-      "end": 8.476
+      "char": "读",
+      "start": 8.638,
+      "end": 8.84
     },
     {
       "index": 32,
-      "char": "的",
-      "start": 8.511,
-      "end": 8.699
+      "char": "音",
+      "start": 8.879,
+      "end": 9.081
     },
     {
       "index": 33,
-      "char": "奉",
-      "start": 8.735,
-      "end": 8.923
+      "char": "看",
+      "start": 9.459,
+      "end": 9.662
     },
     {
       "index": 34,
-      "char": "本",
-      "start": 8.959,
-      "end": 9.147
+      "char": "图",
+      "start": 9.7,
+      "end": 9.902
     },
     {
       "index": 35,
-      "char": "义",
-      "start": 9.182,
-      "end": 9.37
+      "char": "时",
+      "start": 9.941,
+      "end": 10.143
     },
     {
       "index": 36,
-      "char": "是",
-      "start": 9.406,
-      "end": 9.594
+      "char": "左",
+      "start": 10.362,
+      "end": 10.564
     },
     {
       "index": 37,
-      "char": "双",
-      "start": 9.63,
-      "end": 9.818
+      "char": "边",
+      "start": 10.602,
+      "end": 10.805
     },
     {
       "index": 38,
-      "char": "手",
-      "start": 9.853,
-      "end": 10.041
+      "char": "的",
+      "start": 10.843,
+      "end": 11.045
     },
     {
       "index": 39,
-      "char": "捧",
-      "start": 10.077,
-      "end": 10.265
+      "char": "大",
+      "start": 11.084,
+      "end": 11.286
     },
     {
       "index": 40,
-      "char": "着",
-      "start": 10.301,
-      "end": 10.489
+      "char": "树",
+      "start": 11.325,
+      "end": 11.527
     },
     {
       "index": 41,
-      "char": "东",
-      "start": 10.525,
-      "end": 10.712
+      "char": "提",
+      "start": 11.565,
+      "end": 11.768
     },
     {
       "index": 42,
-      "char": "西",
-      "start": 10.748,
-      "end": 10.936
+      "char": "供",
+      "start": 11.806,
+      "end": 12.008
     },
     {
       "index": 43,
-      "char": "祭",
-      "start": 10.972,
-      "end": 11.16
+      "char": "木",
+      "start": 12.047,
+      "end": 12.249
     },
     {
       "index": 44,
-      "char": "献",
-      "start": 11.196,
-      "end": 11.383
+      "char": "材",
+      "start": 12.288,
+      "end": 12.49
     },
     {
       "index": 45,
-      "char": "在",
-      "start": 11.599,
-      "end": 11.787
+      "char": "右",
+      "start": 12.708,
+      "end": 12.911
     },
     {
       "index": 46,
-      "char": "这",
-      "start": 11.823,
-      "end": 12.011
+      "char": "边",
+      "start": 12.949,
+      "end": 13.151
     },
     {
       "index": 47,
-      "char": "里",
-      "start": 12.047,
-      "end": 12.235
+      "char": "双",
+      "start": 13.19,
+      "end": 13.392
     },
     {
       "index": 48,
-      "char": "提",
-      "start": 12.27,
-      "end": 12.458
+      "char": "手",
+      "start": 13.431,
+      "end": 13.633
     },
     {
       "index": 49,
-      "char": "示",
-      "start": 12.494,
-      "end": 12.682
+      "char": "举",
+      "start": 13.671,
+      "end": 13.874
     },
     {
       "index": 50,
-      "char": "读",
-      "start": 12.718,
-      "end": 12.906
+      "char": "起",
+      "start": 13.912,
+      "end": 14.114
     },
     {
       "index": 51,
-      "char": "音",
-      "start": 12.941,
-      "end": 13.129
+      "char": "一",
+      "start": 14.153,
+      "end": 14.355
     },
     {
       "index": 52,
-      "char": "不",
-      "start": 13.505,
-      "end": 13.693
+      "char": "根",
+      "start": 14.394,
+      "end": 14.596
     },
     {
       "index": 53,
-      "char": "过",
-      "start": 13.729,
-      "end": 13.917
+      "char": "长",
+      "start": 14.634,
+      "end": 14.837
     },
     {
       "index": 54,
-      "char": "我",
-      "start": 13.952,
-      "end": 14.14
+      "char": "棒",
+      "start": 14.875,
+      "end": 15.077
     },
     {
       "index": 55,
-      "char": "们",
-      "start": 14.176,
-      "end": 14.364
+      "char": "木",
+      "start": 15.456,
+      "end": 15.658
     },
     {
       "index": 56,
-      "char": "可",
-      "start": 14.4,
-      "end": 14.588
+      "char": "头",
+      "start": 15.697,
+      "end": 15.899
     },
     {
       "index": 57,
-      "char": "以",
-      "start": 14.624,
-      "end": 14.811
+      "char": "做",
+      "start": 15.937,
+      "end": 16.14
     },
     {
       "index": 58,
-      "char": "这",
-      "start": 14.847,
-      "end": 15.035
+      "char": "成",
+      "start": 16.178,
+      "end": 16.38
     },
     {
       "index": 59,
-      "char": "样",
-      "start": 15.071,
-      "end": 15.259
+      "char": "的",
+      "start": 16.419,
+      "end": 16.621
     },
     {
       "index": 60,
-      "char": "联",
-      "start": 15.295,
-      "end": 15.482
+      "char": "长",
+      "start": 16.66,
+      "end": 16.862
     },
     {
       "index": 61,
-      "char": "想",
-      "start": 15.518,
-      "end": 15.706
+      "char": "棍",
+      "start": 16.9,
+      "end": 17.103
     },
     {
       "index": 62,
-      "char": "舂",
-      "start": 15.922,
-      "end": 16.11
+      "char": "就",
+      "start": 17.321,
+      "end": 17.523
     },
     {
       "index": 63,
-      "char": "米",
-      "start": 16.146,
-      "end": 16.334
+      "char": "是",
+      "start": 17.562,
+      "end": 17.764
     },
     {
       "index": 64,
-      "char": "捣",
-      "start": 16.549,
-      "end": 16.737
+      "char": "棒",
+      "start": 17.803,
+      "end": 18.005
     },
     {
       "index": 65,
-      "char": "药",
-      "start": 16.773,
-      "end": 16.961
+      "char": "木",
+      "start": 18.383,
+      "end": 18.586
     },
     {
       "index": 66,
-      "char": "用",
-      "start": 16.997,
-      "end": 17.185
+      "char": "棒",
+      "start": 18.624,
+      "end": 18.826
     },
     {
       "index": 67,
-      "char": "的",
-      "start": 17.22,
-      "end": 17.408
+      "char": "就",
+      "start": 19.045,
+      "end": 19.247
     },
     {
       "index": 68,
-      "char": "木",
-      "start": 17.444,
-      "end": 17.632
+      "char": "是",
+      "start": 19.286,
+      "end": 19.488
     },
     {
       "index": 69,
-      "char": "杵",
-      "start": 17.668,
-      "end": 17.856
+      "char": "较",
+      "start": 19.526,
+      "end": 19.729
     },
     {
       "index": 70,
-      "char": "就",
-      "start": 17.891,
-      "end": 18.079
+      "char": "粗",
+      "start": 19.767,
+      "end": 19.969
     },
     {
       "index": 71,
-      "char": "是",
-      "start": 18.115,
-      "end": 18.303
+      "char": "可",
+      "start": 20.188,
+      "end": 20.39
     },
     {
       "index": 72,
-      "char": "一",
-      "start": 18.339,
-      "end": 18.527
+      "char": "以",
+      "start": 20.429,
+      "end": 20.631
     },
     {
       "index": 73,
-      "char": "根",
-      "start": 18.562,
-      "end": 18.75
+      "char": "握",
+      "start": 20.669,
+      "end": 20.872
     },
     {
       "index": 74,
-      "char": "粗",
-      "start": 18.786,
-      "end": 18.974
+      "char": "在",
+      "start": 20.91,
+      "end": 21.112
     },
     {
       "index": 75,
-      "char": "木",
-      "start": 19.01,
-      "end": 19.198
+      "char": "手",
+      "start": 21.151,
+      "end": 21.353
     },
     {
       "index": 76,
-      "char": "棒",
-      "start": 19.234,
-      "end": 19.421
+      "char": "里",
+      "start": 21.392,
+      "end": 21.594
     },
     {
       "index": 77,
-      "char": "要",
-      "start": 19.637,
-      "end": 19.825
+      "char": "的",
+      "start": 21.632,
+      "end": 21.835
     },
     {
       "index": 78,
-      "char": "双",
-      "start": 19.861,
-      "end": 20.049
+      "char": "木",
+      "start": 21.873,
+      "end": 22.075
     },
     {
       "index": 79,
-      "char": "手",
-      "start": 20.085,
-      "end": 20.272
-    },
-    {
-      "index": 80,
-      "char": "捧",
-      "start": 20.308,
-      "end": 20.496
-    },
-    {
-      "index": 81,
-      "char": "握",
-      "start": 20.532,
-      "end": 20.72
-    },
-    {
-      "index": 82,
-      "char": "着",
-      "start": 20.756,
-      "end": 20.944
-    },
-    {
-      "index": 83,
-      "char": "一",
-      "start": 20.979,
-      "end": 21.167
-    },
-    {
-      "index": 84,
-      "char": "下",
-      "start": 21.203,
-      "end": 21.391
-    },
-    {
-      "index": 85,
-      "char": "一",
-      "start": 21.427,
-      "end": 21.615
-    },
-    {
-      "index": 86,
-      "char": "下",
-      "start": 21.65,
-      "end": 21.838
-    },
-    {
-      "index": 87,
-      "char": "地",
-      "start": 21.874,
-      "end": 22.062
-    },
-    {
-      "index": 88,
-      "char": "舂",
-      "start": 22.098,
-      "end": 22.286
-    },
-    {
-      "index": 89,
-      "char": "捣",
-      "start": 22.321,
-      "end": 22.509
-    },
-    {
-      "index": 90,
-      "char": "正",
-      "start": 22.725,
-      "end": 22.913
-    },
-    {
-      "index": 91,
-      "char": "像",
-      "start": 22.949,
-      "end": 23.137
-    },
-    {
-      "index": 92,
-      "char": "奉",
-      "start": 23.173,
-      "end": 23.36
-    },
-    {
-      "index": 93,
-      "char": "两",
-      "start": 23.396,
-      "end": 23.584
-    },
-    {
-      "index": 94,
-      "char": "手",
-      "start": 23.62,
-      "end": 23.808
-    },
-    {
-      "index": 95,
-      "char": "捧",
-      "start": 23.844,
-      "end": 24.031
-    },
-    {
-      "index": 96,
-      "char": "持",
-      "start": 24.067,
-      "end": 24.255
-    },
-    {
-      "index": 97,
-      "char": "的",
-      "start": 24.291,
-      "end": 24.479
-    },
-    {
-      "index": 98,
-      "char": "样",
-      "start": 24.515,
-      "end": 24.703
-    },
-    {
-      "index": 99,
-      "char": "子",
-      "start": 24.738,
-      "end": 24.926
-    },
-    {
-      "index": 100,
-      "char": "捧",
-      "start": 25.142,
-      "end": 25.33
-    },
-    {
-      "index": 101,
-      "char": "在",
-      "start": 25.366,
-      "end": 25.554
-    },
-    {
-      "index": 102,
-      "char": "手",
-      "start": 25.589,
-      "end": 25.777
-    },
-    {
-      "index": 103,
-      "char": "里",
-      "start": 25.813,
-      "end": 26.001
-    },
-    {
-      "index": 104,
-      "char": "干",
-      "start": 26.037,
-      "end": 26.225
-    },
-    {
-      "index": 105,
-      "char": "活",
-      "start": 26.26,
-      "end": 26.448
-    },
-    {
-      "index": 106,
-      "char": "的",
-      "start": 26.484,
-      "end": 26.672
-    },
-    {
-      "index": 107,
-      "char": "这",
-      "start": 26.708,
-      "end": 26.896
-    },
-    {
-      "index": 108,
-      "char": "根",
-      "start": 26.931,
-      "end": 27.119
-    },
-    {
-      "index": 109,
-      "char": "木",
-      "start": 27.155,
-      "end": 27.343
-    },
-    {
-      "index": 110,
-      "char": "头",
-      "start": 27.379,
-      "end": 27.567
-    },
-    {
-      "index": 111,
-      "char": "就",
-      "start": 27.603,
-      "end": 27.79
-    },
-    {
-      "index": 112,
-      "char": "是",
-      "start": 27.826,
-      "end": 28.014
-    },
-    {
-      "index": 113,
-      "char": "棒",
-      "start": 28.05,
-      "end": 28.238
+      "char": "棍",
+      "start": 22.114,
+      "end": 22.316
     }
   ],
-  "transcript": "形声字，左右结构，本义是棍子。左边的“木”本义是树，表示棍子是用木头做的；右边的“奉”本义是双手捧着东西祭献，在这里提示读音。不过我们可以这样联想：舂米、捣药用的木杵就是一根粗木棒，要双手捧握着一下一下地舂捣，正像“奉”两手捧持的样子，捧在手里干活的这根木头就是棒。",
+  "transcript": "棒，木棒的棒。它是左右结构，木字旁说明棒多用木头制成，右边的奉帮助记住读音。看图时，左边的大树提供木材，右边双手举起一根长棒。木头做成的长棍，就是棒。木棒，就是较粗、可以握在手里的木棍。",
   "voice_reference": "封",
   "timing_source": "punctuation-weighted-estimate",
-  "duration": 28.800181
+  "script_version": "child-first-v1",
+  "duration": 22.880181
 }

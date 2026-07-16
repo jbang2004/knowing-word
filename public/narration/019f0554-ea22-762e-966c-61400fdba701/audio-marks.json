@@ -2,1003 +2,530 @@
   "marks": [
     {
       "index": 0,
-      "char": "形",
+      "char": "照",
       "start": 0.292,
-      "end": 0.457
+      "end": 0.463
     },
     {
       "index": 1,
-      "char": "声",
-      "start": 0.489,
-      "end": 0.654
+      "char": "照",
+      "start": 0.675,
+      "end": 0.846
     },
     {
       "index": 2,
-      "char": "兼",
-      "start": 0.685,
-      "end": 0.851
+      "char": "常",
+      "start": 0.879,
+      "end": 1.049
     },
     {
       "index": 3,
-      "char": "会",
-      "start": 0.882,
-      "end": 1.047
+      "char": "的",
+      "start": 1.082,
+      "end": 1.253
     },
     {
       "index": 4,
-      "char": "意",
-      "start": 1.079,
-      "end": 1.244
+      "char": "照",
+      "start": 1.285,
+      "end": 1.456
     },
     {
       "index": 5,
-      "char": "字",
-      "start": 1.276,
-      "end": 1.441
+      "char": "它",
+      "start": 1.828,
+      "end": 1.999
     },
     {
       "index": 6,
-      "char": "上",
-      "start": 1.652,
-      "end": 1.818
+      "char": "是",
+      "start": 2.032,
+      "end": 2.202
     },
     {
       "index": 7,
-      "char": "下",
-      "start": 1.849,
-      "end": 2.014
+      "char": "上",
+      "start": 2.235,
+      "end": 2.405
     },
     {
       "index": 8,
-      "char": "结",
-      "start": 2.046,
-      "end": 2.211
+      "char": "下",
+      "start": 2.438,
+      "end": 2.609
     },
     {
       "index": 9,
-      "char": "构",
-      "start": 2.243,
-      "end": 2.408
+      "char": "结",
+      "start": 2.641,
+      "end": 2.812
     },
     {
       "index": 10,
-      "char": "本",
-      "start": 2.619,
-      "end": 2.785
+      "char": "构",
+      "start": 2.844,
+      "end": 3.015
     },
     {
       "index": 11,
-      "char": "义",
-      "start": 2.816,
-      "end": 2.981
+      "char": "上",
+      "start": 3.228,
+      "end": 3.398
     },
     {
       "index": 12,
-      "char": "是",
-      "start": 3.013,
-      "end": 3.178
+      "char": "面",
+      "start": 3.431,
+      "end": 3.602
     },
     {
       "index": 13,
-      "char": "光",
-      "start": 3.21,
-      "end": 3.375
+      "char": "的",
+      "start": 3.634,
+      "end": 3.805
     },
     {
       "index": 14,
-      "char": "线",
-      "start": 3.406,
-      "end": 3.572
+      "char": "昭",
+      "start": 3.837,
+      "end": 4.008
     },
     {
       "index": 15,
-      "char": "射",
-      "start": 3.603,
-      "end": 3.768
+      "char": "让",
+      "start": 4.041,
+      "end": 4.211
     },
     {
       "index": 16,
-      "char": "向",
-      "start": 3.8,
-      "end": 3.965
+      "char": "人",
+      "start": 4.244,
+      "end": 4.414
     },
     {
       "index": 17,
-      "char": "物",
-      "start": 3.997,
-      "end": 4.162
+      "char": "想",
+      "start": 4.447,
+      "end": 4.618
     },
     {
       "index": 18,
-      "char": "体",
-      "start": 4.193,
-      "end": 4.359
+      "char": "到",
+      "start": 4.65,
+      "end": 4.821
     },
     {
       "index": 19,
-      "char": "上",
-      "start": 4.73,
-      "end": 4.895
+      "char": "明",
+      "start": 4.853,
+      "end": 5.024
     },
     {
       "index": 20,
-      "char": "边",
-      "start": 4.927,
-      "end": 5.092
+      "char": "亮",
+      "start": 5.057,
+      "end": 5.227
     },
     {
       "index": 21,
       "char": "的",
-      "start": 5.124,
-      "end": 5.289
+      "start": 5.26,
+      "end": 5.431
     },
     {
       "index": 22,
-      "char": "昭",
-      "start": 5.32,
-      "end": 5.486
+      "char": "日",
+      "start": 5.463,
+      "end": 5.634
     },
     {
       "index": 23,
-      "char": "本",
-      "start": 5.517,
-      "end": 5.682
+      "char": "光",
+      "start": 5.666,
+      "end": 5.837
     },
     {
       "index": 24,
-      "char": "义",
-      "start": 5.714,
-      "end": 5.879
+      "char": "下",
+      "start": 6.049,
+      "end": 6.22
     },
     {
       "index": 25,
-      "char": "是",
-      "start": 5.911,
-      "end": 6.076
+      "char": "面",
+      "start": 6.253,
+      "end": 6.423
     },
     {
       "index": 26,
-      "char": "日",
-      "start": 6.107,
-      "end": 6.273
+      "char": "四",
+      "start": 6.456,
+      "end": 6.627
     },
     {
       "index": 27,
-      "char": "光",
-      "start": 6.304,
-      "end": 6.469
+      "char": "点",
+      "start": 6.659,
+      "end": 6.83
     },
     {
       "index": 28,
-      "char": "明",
-      "start": 6.501,
-      "end": 6.666
+      "char": "底",
+      "start": 6.862,
+      "end": 7.033
     },
     {
       "index": 29,
-      "char": "亮",
-      "start": 6.697,
-      "end": 6.863
+      "char": "像",
+      "start": 7.066,
+      "end": 7.236
     },
     {
       "index": 30,
-      "char": "在",
-      "start": 7.074,
-      "end": 7.24
+      "char": "一",
+      "start": 7.269,
+      "end": 7.44
     },
     {
       "index": 31,
-      "char": "这",
-      "start": 7.271,
-      "end": 7.436
+      "char": "排",
+      "start": 7.472,
+      "end": 7.643
     },
     {
       "index": 32,
-      "char": "里",
-      "start": 7.468,
-      "end": 7.633
+      "char": "火",
+      "start": 7.675,
+      "end": 7.846
     },
     {
       "index": 33,
-      "char": "提",
-      "start": 7.664,
-      "end": 7.83
+      "char": "光",
+      "start": 7.878,
+      "end": 8.049
     },
     {
       "index": 34,
-      "char": "示",
-      "start": 7.861,
-      "end": 8.027
+      "char": "太",
+      "start": 8.422,
+      "end": 8.592
     },
     {
       "index": 35,
-      "char": "读",
-      "start": 8.058,
-      "end": 8.223
+      "char": "阳",
+      "start": 8.625,
+      "end": 8.796
     },
     {
       "index": 36,
-      "char": "音",
-      "start": 8.255,
-      "end": 8.42
+      "char": "和",
+      "start": 8.828,
+      "end": 8.999
     },
     {
       "index": 37,
-      "char": "也",
-      "start": 8.631,
-      "end": 8.797
+      "char": "火",
+      "start": 9.031,
+      "end": 9.202
     },
     {
       "index": 38,
-      "char": "表",
-      "start": 8.828,
-      "end": 8.994
+      "char": "焰",
+      "start": 9.235,
+      "end": 9.405
     },
     {
       "index": 39,
-      "char": "意",
-      "start": 9.025,
-      "end": 9.19
+      "char": "一",
+      "start": 9.438,
+      "end": 9.608
     },
     {
       "index": 40,
-      "char": "太",
-      "start": 9.402,
-      "end": 9.567
+      "char": "起",
+      "start": 9.641,
+      "end": 9.812
     },
     {
       "index": 41,
-      "char": "阳",
-      "start": 9.598,
-      "end": 9.764
+      "char": "把",
+      "start": 9.844,
+      "end": 10.015
     },
     {
       "index": 42,
-      "char": "的",
-      "start": 9.795,
-      "end": 9.96
+      "char": "周",
+      "start": 10.047,
+      "end": 10.218
     },
     {
       "index": 43,
-      "char": "光",
-      "start": 9.992,
-      "end": 10.157
+      "char": "围",
+      "start": 10.251,
+      "end": 10.421
     },
     {
       "index": 44,
-      "char": "又",
-      "start": 10.189,
-      "end": 10.354
+      "char": "照",
+      "start": 10.454,
+      "end": 10.625
     },
     {
       "index": 45,
       "char": "亮",
-      "start": 10.385,
-      "end": 10.551
+      "start": 10.657,
+      "end": 10.828
     },
     {
       "index": 46,
-      "char": "又",
-      "start": 10.582,
-      "end": 10.747
+      "char": "就",
+      "start": 11.04,
+      "end": 11.211
     },
     {
       "index": 47,
-      "char": "强",
-      "start": 10.779,
-      "end": 10.944
+      "char": "是",
+      "start": 11.244,
+      "end": 11.414
     },
     {
       "index": 48,
-      "char": "正",
-      "start": 11.156,
-      "end": 11.321
+      "char": "照",
+      "start": 11.447,
+      "end": 11.617
     },
     {
       "index": 49,
-      "char": "和",
-      "start": 11.352,
-      "end": 11.518
+      "char": "的",
+      "start": 11.65,
+      "end": 11.821
     },
     {
       "index": 50,
-      "char": "照",
-      "start": 11.549,
-      "end": 11.714
+      "char": "记",
+      "start": 11.853,
+      "end": 12.024
     },
     {
       "index": 51,
-      "char": "射",
-      "start": 11.746,
-      "end": 11.911
+      "char": "忆",
+      "start": 12.056,
+      "end": 12.227
     },
     {
       "index": 52,
-      "char": "有",
-      "start": 11.943,
-      "end": 12.108
+      "char": "画",
+      "start": 12.26,
+      "end": 12.43
     },
     {
       "index": 53,
-      "char": "关",
-      "start": 12.139,
-      "end": 12.305
+      "char": "面",
+      "start": 12.463,
+      "end": 12.634
     },
     {
       "index": 54,
-      "char": "下",
-      "start": 12.516,
-      "end": 12.681
+      "char": "照",
+      "start": 13.006,
+      "end": 13.177
     },
     {
       "index": 55,
-      "char": "边",
-      "start": 12.713,
-      "end": 12.878
+      "char": "有",
+      "start": 13.209,
+      "end": 13.38
     },
     {
       "index": 56,
-      "char": "的",
-      "start": 12.91,
-      "end": 13.075
+      "char": "照",
+      "start": 13.413,
+      "end": 13.583
     },
     {
       "index": 57,
-      "char": "灬",
-      "start": 13.106,
-      "end": 13.272
+      "char": "射",
+      "start": 13.616,
+      "end": 13.786
     },
     {
       "index": 58,
-      "char": "是",
-      "start": 13.303,
-      "end": 13.468
+      "char": "依",
+      "start": 13.999,
+      "end": 14.17
     },
     {
       "index": 59,
-      "char": "火",
-      "start": 13.5,
-      "end": 13.665
+      "char": "照",
+      "start": 14.202,
+      "end": 14.373
     },
     {
       "index": 60,
-      "char": "作",
-      "start": 13.697,
-      "end": 13.862
+      "char": "的",
+      "start": 14.405,
+      "end": 14.576
     },
     {
       "index": 61,
-      "char": "偏",
-      "start": 13.893,
-      "end": 14.059
+      "char": "意",
+      "start": 14.609,
+      "end": 14.779
     },
     {
       "index": 62,
-      "char": "旁",
-      "start": 14.09,
-      "end": 14.255
+      "char": "思",
+      "start": 14.812,
+      "end": 14.983
     },
     {
       "index": 63,
-      "char": "时",
-      "start": 14.287,
-      "end": 14.452
+      "char": "照",
+      "start": 15.355,
+      "end": 15.526
     },
     {
       "index": 64,
-      "char": "的",
-      "start": 14.484,
-      "end": 14.649
+      "char": "常",
+      "start": 15.558,
+      "end": 15.729
     },
     {
       "index": 65,
-      "char": "写",
-      "start": 14.68,
-      "end": 14.846
+      "char": "里",
+      "start": 15.762,
+      "end": 15.932
     },
     {
       "index": 66,
-      "char": "法",
-      "start": 14.877,
-      "end": 15.042
+      "char": "的",
+      "start": 15.965,
+      "end": 16.135
     },
     {
       "index": 67,
-      "char": "本",
-      "start": 15.254,
-      "end": 15.419
+      "char": "照",
+      "start": 16.168,
+      "end": 16.339
     },
     {
       "index": 68,
-      "char": "义",
-      "start": 15.451,
-      "end": 15.616
+      "char": "表",
+      "start": 16.371,
+      "end": 16.542
     },
     {
       "index": 69,
-      "char": "是",
-      "start": 15.647,
-      "end": 15.813
+      "char": "示",
+      "start": 16.574,
+      "end": 16.745
     },
     {
       "index": 70,
-      "char": "火",
-      "start": 15.844,
-      "end": 16.009
+      "char": "按",
+      "start": 16.778,
+      "end": 16.948
     },
     {
       "index": 71,
-      "char": "焰",
-      "start": 16.041,
-      "end": 16.206
+      "char": "照",
+      "start": 16.981,
+      "end": 17.152
     },
     {
       "index": 72,
-      "char": "表",
-      "start": 16.418,
-      "end": 16.583
+      "char": "照",
+      "start": 17.364,
+      "end": 17.535
     },
     {
       "index": 73,
-      "char": "示",
-      "start": 16.614,
-      "end": 16.78
+      "char": "常",
+      "start": 17.567,
+      "end": 17.738
     },
     {
       "index": 74,
-      "char": "照",
-      "start": 16.811,
-      "end": 16.976
+      "char": "就",
+      "start": 17.951,
+      "end": 18.121
     },
     {
       "index": 75,
-      "char": "跟",
-      "start": 17.008,
-      "end": 17.173
+      "char": "是",
+      "start": 18.154,
+      "end": 18.324
     },
     {
       "index": 76,
-      "char": "火",
-      "start": 17.205,
-      "end": 17.37
+      "char": "按",
+      "start": 18.357,
+      "end": 18.528
     },
     {
       "index": 77,
-      "char": "光",
-      "start": 17.401,
-      "end": 17.567
+      "char": "照",
+      "start": 18.56,
+      "end": 18.731
     },
     {
       "index": 78,
-      "char": "光",
-      "start": 17.778,
-      "end": 17.943
+      "char": "平",
+      "start": 18.763,
+      "end": 18.934
     },
     {
       "index": 79,
-      "char": "亮",
-      "start": 17.975,
-      "end": 18.14
+      "char": "时",
+      "start": 18.967,
+      "end": 19.137
     },
     {
       "index": 80,
-      "char": "有",
-      "start": 18.172,
-      "end": 18.337
+      "char": "那",
+      "start": 19.17,
+      "end": 19.341
     },
     {
       "index": 81,
-      "char": "关",
-      "start": 18.368,
-      "end": 18.534
+      "char": "样",
+      "start": 19.373,
+      "end": 19.544
     },
     {
       "index": 82,
-      "char": "上",
-      "start": 18.905,
-      "end": 19.07
+      "char": "生",
+      "start": 19.576,
+      "end": 19.747
     },
     {
       "index": 83,
-      "char": "有",
-      "start": 19.102,
-      "end": 19.267
+      "char": "活",
+      "start": 19.779,
+      "end": 19.95
     },
     {
       "index": 84,
-      "char": "明",
-      "start": 19.299,
-      "end": 19.464
+      "char": "和",
+      "start": 19.983,
+      "end": 20.153
     },
     {
       "index": 85,
-      "char": "亮",
-      "start": 19.495,
-      "end": 19.661
+      "char": "做",
+      "start": 20.186,
+      "end": 20.357
     },
     {
       "index": 86,
-      "char": "的",
-      "start": 19.692,
-      "end": 19.857
-    },
-    {
-      "index": 87,
-      "char": "日",
-      "start": 19.889,
-      "end": 20.054
-    },
-    {
-      "index": 88,
-      "char": "光",
-      "start": 20.086,
-      "end": 20.251
-    },
-    {
-      "index": 89,
-      "char": "下",
-      "start": 20.462,
-      "end": 20.628
-    },
-    {
-      "index": 90,
-      "char": "有",
-      "start": 20.659,
-      "end": 20.824
-    },
-    {
-      "index": 91,
-      "char": "燃",
-      "start": 20.856,
-      "end": 21.021
-    },
-    {
-      "index": 92,
-      "char": "烧",
-      "start": 21.053,
-      "end": 21.218
-    },
-    {
-      "index": 93,
-      "char": "的",
-      "start": 21.249,
-      "end": 21.415
-    },
-    {
-      "index": 94,
-      "char": "火",
-      "start": 21.446,
-      "end": 21.611
-    },
-    {
-      "index": 95,
-      "char": "焰",
-      "start": 21.643,
-      "end": 21.808
-    },
-    {
-      "index": 96,
-      "char": "这",
-      "start": 22.02,
-      "end": 22.185
-    },
-    {
-      "index": 97,
-      "char": "样",
-      "start": 22.216,
-      "end": 22.382
-    },
-    {
-      "index": 98,
-      "char": "的",
-      "start": 22.413,
-      "end": 22.578
-    },
-    {
-      "index": 99,
-      "char": "光",
-      "start": 22.61,
-      "end": 22.775
-    },
-    {
-      "index": 100,
-      "char": "射",
-      "start": 22.807,
-      "end": 22.972
-    },
-    {
-      "index": 101,
-      "char": "向",
-      "start": 23.003,
-      "end": 23.169
-    },
-    {
-      "index": 102,
-      "char": "物",
-      "start": 23.2,
-      "end": 23.365
-    },
-    {
-      "index": 103,
-      "char": "体",
-      "start": 23.397,
-      "end": 23.562
-    },
-    {
-      "index": 104,
-      "char": "就",
-      "start": 23.774,
-      "end": 23.939
-    },
-    {
-      "index": 105,
-      "char": "是",
-      "start": 23.97,
-      "end": 24.136
-    },
-    {
-      "index": 106,
-      "char": "照",
-      "start": 24.167,
-      "end": 24.332
-    },
-    {
-      "index": 107,
-      "char": "光",
-      "start": 24.704,
-      "end": 24.869
-    },
-    {
-      "index": 108,
-      "char": "射",
-      "start": 24.901,
-      "end": 25.066
-    },
-    {
-      "index": 109,
-      "char": "到",
-      "start": 25.097,
-      "end": 25.263
-    },
-    {
-      "index": 110,
-      "char": "物",
-      "start": 25.294,
-      "end": 25.459
-    },
-    {
-      "index": 111,
-      "char": "体",
-      "start": 25.491,
-      "end": 25.656
-    },
-    {
-      "index": 112,
-      "char": "上",
-      "start": 25.688,
-      "end": 25.853
-    },
-    {
-      "index": 113,
-      "char": "能",
-      "start": 26.064,
-      "end": 26.23
-    },
-    {
-      "index": 114,
-      "char": "让",
-      "start": 26.261,
-      "end": 26.426
-    },
-    {
-      "index": 115,
-      "char": "人",
-      "start": 26.458,
-      "end": 26.623
-    },
-    {
-      "index": 116,
-      "char": "把",
-      "start": 26.655,
-      "end": 26.82
-    },
-    {
-      "index": 117,
-      "char": "东",
-      "start": 26.851,
-      "end": 27.017
-    },
-    {
-      "index": 118,
-      "char": "西",
-      "start": 27.048,
-      "end": 27.213
-    },
-    {
-      "index": 119,
-      "char": "看",
-      "start": 27.245,
-      "end": 27.41
-    },
-    {
-      "index": 120,
-      "char": "得",
-      "start": 27.442,
-      "end": 27.607
-    },
-    {
-      "index": 121,
-      "char": "清",
-      "start": 27.638,
-      "end": 27.804
-    },
-    {
-      "index": 122,
-      "char": "清",
-      "start": 27.835,
-      "end": 28
-    },
-    {
-      "index": 123,
-      "char": "楚",
-      "start": 28.032,
-      "end": 28.197
-    },
-    {
-      "index": 124,
-      "char": "楚",
-      "start": 28.229,
-      "end": 28.394
-    },
-    {
-      "index": 125,
-      "char": "看",
-      "start": 28.605,
-      "end": 28.771
-    },
-    {
-      "index": 126,
-      "char": "清",
-      "start": 28.802,
-      "end": 28.967
-    },
-    {
-      "index": 127,
-      "char": "楚",
-      "start": 28.999,
-      "end": 29.164
-    },
-    {
-      "index": 128,
-      "char": "了",
-      "start": 29.196,
-      "end": 29.361
-    },
-    {
-      "index": 129,
-      "char": "就",
-      "start": 29.392,
-      "end": 29.558
-    },
-    {
-      "index": 130,
-      "char": "知",
-      "start": 29.589,
-      "end": 29.754
-    },
-    {
-      "index": 131,
-      "char": "道",
-      "start": 29.786,
-      "end": 29.951
-    },
-    {
-      "index": 132,
-      "char": "该",
-      "start": 29.983,
-      "end": 30.148
-    },
-    {
-      "index": 133,
-      "char": "照",
-      "start": 30.179,
-      "end": 30.345
-    },
-    {
-      "index": 134,
-      "char": "着",
-      "start": 30.376,
-      "end": 30.541
-    },
-    {
-      "index": 135,
-      "char": "什",
-      "start": 30.573,
-      "end": 30.738
-    },
-    {
-      "index": 136,
-      "char": "么",
-      "start": 30.77,
-      "end": 30.935
-    },
-    {
-      "index": 137,
-      "char": "去",
-      "start": 30.966,
-      "end": 31.132
-    },
-    {
-      "index": 138,
-      "char": "做",
-      "start": 31.163,
-      "end": 31.328
-    },
-    {
-      "index": 139,
-      "char": "慢",
-      "start": 31.54,
-      "end": 31.705
-    },
-    {
-      "index": 140,
-      "char": "慢",
-      "start": 31.737,
-      "end": 31.902
-    },
-    {
-      "index": 141,
-      "char": "有",
-      "start": 31.933,
-      "end": 32.099
-    },
-    {
-      "index": 142,
-      "char": "了",
-      "start": 32.13,
-      "end": 32.295
-    },
-    {
-      "index": 143,
-      "char": "依",
-      "start": 32.327,
-      "end": 32.492
-    },
-    {
-      "index": 144,
-      "char": "照",
-      "start": 32.524,
-      "end": 32.689
-    },
-    {
-      "index": 145,
-      "char": "按",
-      "start": 32.9,
-      "end": 33.066
-    },
-    {
-      "index": 146,
-      "char": "照",
-      "start": 33.097,
-      "end": 33.262
-    },
-    {
-      "index": 147,
-      "char": "的",
-      "start": 33.294,
-      "end": 33.459
-    },
-    {
-      "index": 148,
-      "char": "意",
-      "start": 33.491,
-      "end": 33.656
-    },
-    {
-      "index": 149,
-      "char": "思",
-      "start": 33.687,
-      "end": 33.853
-    },
-    {
-      "index": 150,
-      "char": "在",
-      "start": 34.064,
-      "end": 34.229
-    },
-    {
-      "index": 151,
-      "char": "照",
-      "start": 34.261,
-      "end": 34.426
-    },
-    {
-      "index": 152,
-      "char": "常",
-      "start": 34.458,
-      "end": 34.623
-    },
-    {
-      "index": 153,
-      "char": "里",
-      "start": 34.654,
-      "end": 34.82
-    },
-    {
-      "index": 154,
-      "char": "就",
-      "start": 34.851,
-      "end": 35.016
-    },
-    {
-      "index": 155,
-      "char": "是",
-      "start": 35.048,
-      "end": 35.213
-    },
-    {
-      "index": 156,
-      "char": "依",
-      "start": 35.245,
-      "end": 35.41
-    },
-    {
-      "index": 157,
-      "char": "照",
-      "start": 35.441,
-      "end": 35.607
-    },
-    {
-      "index": 158,
-      "char": "往",
-      "start": 35.638,
-      "end": 35.803
-    },
-    {
-      "index": 159,
-      "char": "常",
-      "start": 35.835,
-      "end": 36
-    },
-    {
-      "index": 160,
-      "char": "跟",
-      "start": 36.211,
-      "end": 36.377
-    },
-    {
-      "index": 161,
-      "char": "平",
-      "start": 36.408,
-      "end": 36.574
-    },
-    {
-      "index": 162,
-      "char": "时",
-      "start": 36.605,
-      "end": 36.77
-    },
-    {
-      "index": 163,
-      "char": "一",
-      "start": 36.802,
-      "end": 36.967
-    },
-    {
-      "index": 164,
-      "char": "个",
-      "start": 36.998,
-      "end": 37.164
-    },
-    {
-      "index": 165,
-      "char": "样",
-      "start": 37.195,
-      "end": 37.361
+      "char": "事",
+      "start": 20.389,
+      "end": 20.56
     }
   ],
-  "transcript": "形声兼会意字，上下结构，本义是光线射向物体。上边的“昭”本义是日光明亮，在这里提示读音、也表意：太阳的光又亮又强，正和照射有关；下边的“灬”是“火”作偏旁时的写法，本义是火焰，表示照跟火光、光亮有关。上有明亮的日光、下有燃烧的火焰，这样的光射向物体，就是“照”。光射到物体上，能让人把东西看得清清楚楚；看清楚了就知道该照着什么去做，慢慢有了依照、按照的意思，在“照常”里就是依照往常，跟平时一个样。",
+  "transcript": "照，照常的照。它是上下结构，上面的昭让人想到明亮的日光，下面四点底像一排火光。太阳和火焰一起把周围照亮，就是照的记忆画面。照有照射、依照的意思。照常里的照表示按照；照常，就是按照平时那样生活和做事。",
   "voice_reference": "封",
   "timing_source": "punctuation-weighted-estimate",
-  "duration": 37.920181
+  "script_version": "child-first-v1",
+  "duration": 21.120181
 }
