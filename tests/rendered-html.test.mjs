@@ -601,3 +601,11 @@ test("every character record has a complete Feng-voice narration and authored ti
     "/narration/019f0554-ea22-762e-966c-32d678fd6bf6/audio.mp3",
   );
 });
+
+test("production output excludes superseded heritage narration copies", async () => {
+  const { readdir } = await import("node:fs/promises");
+  const heritageRoot = new URL("../dist/client/heritage/", import.meta.url);
+  const entries = await readdir(heritageRoot, { recursive: true });
+  assert.ok(entries.length > 0, "heritage glyph assets are missing");
+  assert.ok(!entries.some((entry) => /(^|\/)audio(?:-marks\.json|\.mp3)$/u.test(entry)));
+});
