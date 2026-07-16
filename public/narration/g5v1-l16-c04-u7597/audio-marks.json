@@ -1,0 +1,165 @@
+{
+  "marks": [
+    {
+      "index": 0,
+      "char": "疗",
+      "start": 0.173,
+      "end": 0.361
+    },
+    {
+      "index": 1,
+      "char": "治",
+      "start": 0.577,
+      "end": 0.765
+    },
+    {
+      "index": 2,
+      "char": "疗",
+      "start": 0.801,
+      "end": 0.989
+    },
+    {
+      "index": 3,
+      "char": "的",
+      "start": 1.025,
+      "end": 1.213
+    },
+    {
+      "index": 4,
+      "char": "疗",
+      "start": 1.249,
+      "end": 1.437
+    },
+    {
+      "index": 5,
+      "char": "它",
+      "start": 1.813,
+      "end": 2.001
+    },
+    {
+      "index": 6,
+      "char": "是",
+      "start": 2.037,
+      "end": 2.225
+    },
+    {
+      "index": 7,
+      "char": "左",
+      "start": 2.26,
+      "end": 2.448
+    },
+    {
+      "index": 8,
+      "char": "上",
+      "start": 2.484,
+      "end": 2.672
+    },
+    {
+      "index": 9,
+      "char": "包",
+      "start": 2.708,
+      "end": 2.896
+    },
+    {
+      "index": 10,
+      "char": "围",
+      "start": 2.932,
+      "end": 3.12
+    },
+    {
+      "index": 11,
+      "char": "结",
+      "start": 3.156,
+      "end": 3.344
+    },
+    {
+      "index": 12,
+      "char": "构",
+      "start": 3.38,
+      "end": 3.568
+    },
+    {
+      "index": 13,
+      "char": "看",
+      "start": 3.944,
+      "end": 4.132
+    },
+    {
+      "index": 14,
+      "char": "图",
+      "start": 4.167,
+      "end": 4.355
+    },
+    {
+      "index": 15,
+      "char": "找",
+      "start": 4.391,
+      "end": 4.579
+    },
+    {
+      "index": 16,
+      "char": "部",
+      "start": 4.615,
+      "end": 4.803
+    },
+    {
+      "index": 17,
+      "char": "件",
+      "start": 4.839,
+      "end": 5.027
+    },
+    {
+      "index": 18,
+      "char": "合",
+      "start": 5.243,
+      "end": 5.431
+    },
+    {
+      "index": 19,
+      "char": "成",
+      "start": 5.467,
+      "end": 5.655
+    },
+    {
+      "index": 20,
+      "char": "字",
+      "start": 5.69,
+      "end": 5.879
+    },
+    {
+      "index": 21,
+      "char": "形",
+      "start": 5.914,
+      "end": 6.102
+    },
+    {
+      "index": 22,
+      "char": "再",
+      "start": 6.478,
+      "end": 6.666
+    },
+    {
+      "index": 23,
+      "char": "读",
+      "start": 6.702,
+      "end": 6.89
+    },
+    {
+      "index": 24,
+      "char": "治",
+      "start": 7.106,
+      "end": 7.294
+    },
+    {
+      "index": 25,
+      "char": "疗",
+      "start": 7.33,
+      "end": 7.518
+    }
+  ],
+  "transcript": "疗，“治疗”的“疗”。它是左上包围结构。看图找部件，合成字形。再读：治疗。",
+  "voice_reference": "封",
+  "timing_source": "punctuation-weighted-estimate",
+  "script_version": "child-first-v1",
+  "duration": 8.000181
+}

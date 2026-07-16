@@ -1,0 +1,153 @@
+{
+  "marks": [
+    {
+      "index": 0,
+      "char": "筷",
+      "start": 0.146,
+      "end": 0.307
+    },
+    {
+      "index": 1,
+      "char": "筷",
+      "start": 0.516,
+      "end": 0.677
+    },
+    {
+      "index": 2,
+      "char": "子",
+      "start": 0.708,
+      "end": 0.869
+    },
+    {
+      "index": 3,
+      "char": "的",
+      "start": 0.9,
+      "end": 1.061
+    },
+    {
+      "index": 4,
+      "char": "筷",
+      "start": 1.091,
+      "end": 1.253
+    },
+    {
+      "index": 5,
+      "char": "它",
+      "start": 1.62,
+      "end": 1.781
+    },
+    {
+      "index": 6,
+      "char": "是",
+      "start": 1.812,
+      "end": 1.973
+    },
+    {
+      "index": 7,
+      "char": "上",
+      "start": 2.004,
+      "end": 2.165
+    },
+    {
+      "index": 8,
+      "char": "下",
+      "start": 2.195,
+      "end": 2.356
+    },
+    {
+      "index": 9,
+      "char": "结",
+      "start": 2.387,
+      "end": 2.548
+    },
+    {
+      "index": 10,
+      "char": "构",
+      "start": 2.579,
+      "end": 2.74
+    },
+    {
+      "index": 11,
+      "char": "看",
+      "start": 3.107,
+      "end": 3.269
+    },
+    {
+      "index": 12,
+      "char": "图",
+      "start": 3.299,
+      "end": 3.46
+    },
+    {
+      "index": 13,
+      "char": "找",
+      "start": 3.491,
+      "end": 3.652
+    },
+    {
+      "index": 14,
+      "char": "部",
+      "start": 3.683,
+      "end": 3.844
+    },
+    {
+      "index": 15,
+      "char": "件",
+      "start": 3.875,
+      "end": 4.036
+    },
+    {
+      "index": 16,
+      "char": "合",
+      "start": 4.245,
+      "end": 4.406
+    },
+    {
+      "index": 17,
+      "char": "成",
+      "start": 4.437,
+      "end": 4.598
+    },
+    {
+      "index": 18,
+      "char": "字",
+      "start": 4.628,
+      "end": 4.789
+    },
+    {
+      "index": 19,
+      "char": "形",
+      "start": 4.82,
+      "end": 4.981
+    },
+    {
+      "index": 20,
+      "char": "再",
+      "start": 5.349,
+      "end": 5.51
+    },
+    {
+      "index": 21,
+      "char": "读",
+      "start": 5.54,
+      "end": 5.702
+    },
+    {
+      "index": 22,
+      "char": "筷",
+      "start": 5.911,
+      "end": 6.072
+    },
+    {
+      "index": 23,
+      "char": "子",
+      "start": 6.102,
+      "end": 6.263
+    }
+  ],
+  "transcript": "筷，“筷子”的“筷”。它是上下结构。看图找部件，合成字形。再读：筷子。",
+  "voice_reference": "封",
+  "timing_source": "punctuation-weighted-estimate",
+  "script_version": "child-first-v1",
+  "duration": 6.720181
+}

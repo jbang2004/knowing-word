@@ -1,0 +1,153 @@
+{
+  "marks": [
+    {
+      "index": 0,
+      "char": "寇",
+      "start": 0.157,
+      "end": 0.34
+    },
+    {
+      "index": 1,
+      "char": "敌",
+      "start": 0.555,
+      "end": 0.738
+    },
+    {
+      "index": 2,
+      "char": "寇",
+      "start": 0.773,
+      "end": 0.956
+    },
+    {
+      "index": 3,
+      "char": "的",
+      "start": 0.991,
+      "end": 1.174
+    },
+    {
+      "index": 4,
+      "char": "寇",
+      "start": 1.208,
+      "end": 1.391
+    },
+    {
+      "index": 5,
+      "char": "它",
+      "start": 1.766,
+      "end": 1.949
+    },
+    {
+      "index": 6,
+      "char": "是",
+      "start": 1.984,
+      "end": 2.167
+    },
+    {
+      "index": 7,
+      "char": "上",
+      "start": 2.202,
+      "end": 2.385
+    },
+    {
+      "index": 8,
+      "char": "下",
+      "start": 2.42,
+      "end": 2.603
+    },
+    {
+      "index": 9,
+      "char": "结",
+      "start": 2.638,
+      "end": 2.821
+    },
+    {
+      "index": 10,
+      "char": "构",
+      "start": 2.855,
+      "end": 3.038
+    },
+    {
+      "index": 11,
+      "char": "顺",
+      "start": 3.413,
+      "end": 3.596
+    },
+    {
+      "index": 12,
+      "char": "着",
+      "start": 3.631,
+      "end": 3.814
+    },
+    {
+      "index": 13,
+      "char": "图",
+      "start": 3.849,
+      "end": 4.032
+    },
+    {
+      "index": 14,
+      "char": "记",
+      "start": 4.067,
+      "end": 4.25
+    },
+    {
+      "index": 15,
+      "char": "住",
+      "start": 4.285,
+      "end": 4.468
+    },
+    {
+      "index": 16,
+      "char": "整",
+      "start": 4.503,
+      "end": 4.686
+    },
+    {
+      "index": 17,
+      "char": "体",
+      "start": 4.72,
+      "end": 4.903
+    },
+    {
+      "index": 18,
+      "char": "轮",
+      "start": 4.938,
+      "end": 5.121
+    },
+    {
+      "index": 19,
+      "char": "廓",
+      "start": 5.156,
+      "end": 5.339
+    },
+    {
+      "index": 20,
+      "char": "再",
+      "start": 5.714,
+      "end": 5.897
+    },
+    {
+      "index": 21,
+      "char": "读",
+      "start": 5.932,
+      "end": 6.115
+    },
+    {
+      "index": 22,
+      "char": "敌",
+      "start": 6.33,
+      "end": 6.513
+    },
+    {
+      "index": 23,
+      "char": "寇",
+      "start": 6.547,
+      "end": 6.73
+    }
+  ],
+  "transcript": "寇，“敌寇”的“寇”。它是上下结构。顺着图记住整体轮廓。再读：敌寇。",
+  "voice_reference": "封",
+  "timing_source": "punctuation-weighted-estimate",
+  "script_version": "child-first-v1",
+  "duration": 7.200181
+}

@@ -1,0 +1,153 @@
+{
+  "marks": [
+    {
+      "index": 0,
+      "char": "鉴",
+      "start": 0.272,
+      "end": 0.628
+    },
+    {
+      "index": 1,
+      "char": "鉴",
+      "start": 0.876,
+      "end": 1.231
+    },
+    {
+      "index": 2,
+      "char": "赏",
+      "start": 1.299,
+      "end": 1.655
+    },
+    {
+      "index": 3,
+      "char": "的",
+      "start": 1.723,
+      "end": 2.079
+    },
+    {
+      "index": 4,
+      "char": "鉴",
+      "start": 2.147,
+      "end": 2.503
+    },
+    {
+      "index": 5,
+      "char": "它",
+      "start": 2.91,
+      "end": 3.266
+    },
+    {
+      "index": 6,
+      "char": "是",
+      "start": 3.334,
+      "end": 3.69
+    },
+    {
+      "index": 7,
+      "char": "上",
+      "start": 3.758,
+      "end": 4.114
+    },
+    {
+      "index": 8,
+      "char": "下",
+      "start": 4.181,
+      "end": 4.537
+    },
+    {
+      "index": 9,
+      "char": "结",
+      "start": 4.605,
+      "end": 4.961
+    },
+    {
+      "index": 10,
+      "char": "构",
+      "start": 5.029,
+      "end": 5.385
+    },
+    {
+      "index": 11,
+      "char": "顺",
+      "start": 5.793,
+      "end": 6.149
+    },
+    {
+      "index": 12,
+      "char": "着",
+      "start": 6.216,
+      "end": 6.572
+    },
+    {
+      "index": 13,
+      "char": "图",
+      "start": 6.64,
+      "end": 6.996
+    },
+    {
+      "index": 14,
+      "char": "记",
+      "start": 7.064,
+      "end": 7.42
+    },
+    {
+      "index": 15,
+      "char": "住",
+      "start": 7.487,
+      "end": 7.843
+    },
+    {
+      "index": 16,
+      "char": "整",
+      "start": 7.911,
+      "end": 8.267
+    },
+    {
+      "index": 17,
+      "char": "体",
+      "start": 8.335,
+      "end": 8.691
+    },
+    {
+      "index": 18,
+      "char": "轮",
+      "start": 8.759,
+      "end": 9.114
+    },
+    {
+      "index": 19,
+      "char": "廓",
+      "start": 9.182,
+      "end": 9.538
+    },
+    {
+      "index": 20,
+      "char": "再",
+      "start": 9.946,
+      "end": 10.302
+    },
+    {
+      "index": 21,
+      "char": "读",
+      "start": 10.37,
+      "end": 10.726
+    },
+    {
+      "index": 22,
+      "char": "鉴",
+      "start": 10.973,
+      "end": 11.329
+    },
+    {
+      "index": 23,
+      "char": "赏",
+      "start": 11.397,
+      "end": 11.753
+    }
+  ],
+  "transcript": "鉴，“鉴赏”的“鉴”。它是上下结构。顺着图记住整体轮廓。再读：鉴赏。",
+  "voice_reference": "封",
+  "timing_source": "punctuation-weighted-estimate",
+  "script_version": "child-first-v1",
+  "duration": 12.320181
+}

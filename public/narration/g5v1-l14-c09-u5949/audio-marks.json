@@ -1,0 +1,153 @@
+{
+  "marks": [
+    {
+      "index": 0,
+      "char": "奉",
+      "start": 0.203,
+      "end": 0.45
+    },
+    {
+      "index": 1,
+      "char": "奉",
+      "start": 0.677,
+      "end": 0.924
+    },
+    {
+      "index": 2,
+      "char": "命",
+      "start": 0.971,
+      "end": 1.218
+    },
+    {
+      "index": 3,
+      "char": "的",
+      "start": 1.265,
+      "end": 1.512
+    },
+    {
+      "index": 4,
+      "char": "奉",
+      "start": 1.559,
+      "end": 1.806
+    },
+    {
+      "index": 5,
+      "char": "它",
+      "start": 2.193,
+      "end": 2.44
+    },
+    {
+      "index": 6,
+      "char": "是",
+      "start": 2.487,
+      "end": 2.734
+    },
+    {
+      "index": 7,
+      "char": "上",
+      "start": 2.781,
+      "end": 3.028
+    },
+    {
+      "index": 8,
+      "char": "下",
+      "start": 3.075,
+      "end": 3.322
+    },
+    {
+      "index": 9,
+      "char": "结",
+      "start": 3.369,
+      "end": 3.616
+    },
+    {
+      "index": 10,
+      "char": "构",
+      "start": 3.663,
+      "end": 3.91
+    },
+    {
+      "index": 11,
+      "char": "看",
+      "start": 4.297,
+      "end": 4.544
+    },
+    {
+      "index": 12,
+      "char": "图",
+      "start": 4.591,
+      "end": 4.838
+    },
+    {
+      "index": 13,
+      "char": "找",
+      "start": 4.885,
+      "end": 5.132
+    },
+    {
+      "index": 14,
+      "char": "部",
+      "start": 5.179,
+      "end": 5.426
+    },
+    {
+      "index": 15,
+      "char": "件",
+      "start": 5.473,
+      "end": 5.72
+    },
+    {
+      "index": 16,
+      "char": "合",
+      "start": 5.947,
+      "end": 6.194
+    },
+    {
+      "index": 17,
+      "char": "成",
+      "start": 6.241,
+      "end": 6.488
+    },
+    {
+      "index": 18,
+      "char": "字",
+      "start": 6.535,
+      "end": 6.782
+    },
+    {
+      "index": 19,
+      "char": "形",
+      "start": 6.829,
+      "end": 7.076
+    },
+    {
+      "index": 20,
+      "char": "再",
+      "start": 7.463,
+      "end": 7.71
+    },
+    {
+      "index": 21,
+      "char": "读",
+      "start": 7.757,
+      "end": 8.004
+    },
+    {
+      "index": 22,
+      "char": "奉",
+      "start": 8.231,
+      "end": 8.478
+    },
+    {
+      "index": 23,
+      "char": "命",
+      "start": 8.525,
+      "end": 8.772
+    }
+  ],
+  "transcript": "奉，“奉命”的“奉”。它是上下结构。看图找部件，合成字形。再读：奉命。",
+  "voice_reference": "封",
+  "timing_source": "punctuation-weighted-estimate",
+  "script_version": "child-first-v1",
+  "duration": 9.280181
+}

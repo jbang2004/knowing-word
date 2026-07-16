@@ -1,0 +1,165 @@
+{
+  "marks": [
+    {
+      "index": 0,
+      "char": "席",
+      "start": 0.217,
+      "end": 0.47
+    },
+    {
+      "index": 1,
+      "char": "草",
+      "start": 0.699,
+      "end": 0.952
+    },
+    {
+      "index": 2,
+      "char": "席",
+      "start": 1.001,
+      "end": 1.254
+    },
+    {
+      "index": 3,
+      "char": "的",
+      "start": 1.303,
+      "end": 1.556
+    },
+    {
+      "index": 4,
+      "char": "席",
+      "start": 1.605,
+      "end": 1.858
+    },
+    {
+      "index": 5,
+      "char": "它",
+      "start": 2.247,
+      "end": 2.5
+    },
+    {
+      "index": 6,
+      "char": "是",
+      "start": 2.549,
+      "end": 2.802
+    },
+    {
+      "index": 7,
+      "char": "左",
+      "start": 2.851,
+      "end": 3.104
+    },
+    {
+      "index": 8,
+      "char": "上",
+      "start": 3.153,
+      "end": 3.407
+    },
+    {
+      "index": 9,
+      "char": "包",
+      "start": 3.455,
+      "end": 3.709
+    },
+    {
+      "index": 10,
+      "char": "围",
+      "start": 3.757,
+      "end": 4.011
+    },
+    {
+      "index": 11,
+      "char": "结",
+      "start": 4.059,
+      "end": 4.313
+    },
+    {
+      "index": 12,
+      "char": "构",
+      "start": 4.361,
+      "end": 4.615
+    },
+    {
+      "index": 13,
+      "char": "顺",
+      "start": 5.003,
+      "end": 5.257
+    },
+    {
+      "index": 14,
+      "char": "着",
+      "start": 5.305,
+      "end": 5.559
+    },
+    {
+      "index": 15,
+      "char": "图",
+      "start": 5.607,
+      "end": 5.861
+    },
+    {
+      "index": 16,
+      "char": "记",
+      "start": 5.909,
+      "end": 6.163
+    },
+    {
+      "index": 17,
+      "char": "住",
+      "start": 6.211,
+      "end": 6.465
+    },
+    {
+      "index": 18,
+      "char": "整",
+      "start": 6.513,
+      "end": 6.767
+    },
+    {
+      "index": 19,
+      "char": "体",
+      "start": 6.815,
+      "end": 7.069
+    },
+    {
+      "index": 20,
+      "char": "轮",
+      "start": 7.117,
+      "end": 7.371
+    },
+    {
+      "index": 21,
+      "char": "廓",
+      "start": 7.419,
+      "end": 7.673
+    },
+    {
+      "index": 22,
+      "char": "再",
+      "start": 8.061,
+      "end": 8.315
+    },
+    {
+      "index": 23,
+      "char": "读",
+      "start": 8.363,
+      "end": 8.617
+    },
+    {
+      "index": 24,
+      "char": "草",
+      "start": 8.845,
+      "end": 9.099
+    },
+    {
+      "index": 25,
+      "char": "席",
+      "start": 9.147,
+      "end": 9.401
+    }
+  ],
+  "transcript": "席，“草席”的“席”。它是左上包围结构。顺着图记住整体轮廓。再读：草席。",
+  "voice_reference": "封",
+  "timing_source": "punctuation-weighted-estimate",
+  "script_version": "child-first-v1",
+  "duration": 9.920181
+}

@@ -1,0 +1,153 @@
+{
+  "marks": [
+    {
+      "index": 0,
+      "char": "纠",
+      "start": 0.275,
+      "end": 0.63
+    },
+    {
+      "index": 1,
+      "char": "纠",
+      "start": 0.878,
+      "end": 1.233
+    },
+    {
+      "index": 2,
+      "char": "正",
+      "start": 1.3,
+      "end": 1.655
+    },
+    {
+      "index": 3,
+      "char": "的",
+      "start": 1.723,
+      "end": 2.078
+    },
+    {
+      "index": 4,
+      "char": "纠",
+      "start": 2.146,
+      "end": 2.501
+    },
+    {
+      "index": 5,
+      "char": "它",
+      "start": 2.908,
+      "end": 3.263
+    },
+    {
+      "index": 6,
+      "char": "是",
+      "start": 3.331,
+      "end": 3.686
+    },
+    {
+      "index": 7,
+      "char": "左",
+      "start": 3.753,
+      "end": 4.108
+    },
+    {
+      "index": 8,
+      "char": "右",
+      "start": 4.176,
+      "end": 4.531
+    },
+    {
+      "index": 9,
+      "char": "结",
+      "start": 4.599,
+      "end": 4.954
+    },
+    {
+      "index": 10,
+      "char": "构",
+      "start": 5.021,
+      "end": 5.376
+    },
+    {
+      "index": 11,
+      "char": "看",
+      "start": 5.784,
+      "end": 6.139
+    },
+    {
+      "index": 12,
+      "char": "图",
+      "start": 6.207,
+      "end": 6.562
+    },
+    {
+      "index": 13,
+      "char": "找",
+      "start": 6.629,
+      "end": 6.984
+    },
+    {
+      "index": 14,
+      "char": "部",
+      "start": 7.052,
+      "end": 7.407
+    },
+    {
+      "index": 15,
+      "char": "件",
+      "start": 7.475,
+      "end": 7.83
+    },
+    {
+      "index": 16,
+      "char": "合",
+      "start": 8.077,
+      "end": 8.432
+    },
+    {
+      "index": 17,
+      "char": "成",
+      "start": 8.5,
+      "end": 8.855
+    },
+    {
+      "index": 18,
+      "char": "字",
+      "start": 8.922,
+      "end": 9.278
+    },
+    {
+      "index": 19,
+      "char": "形",
+      "start": 9.345,
+      "end": 9.7
+    },
+    {
+      "index": 20,
+      "char": "再",
+      "start": 10.108,
+      "end": 10.463
+    },
+    {
+      "index": 21,
+      "char": "读",
+      "start": 10.53,
+      "end": 10.885
+    },
+    {
+      "index": 22,
+      "char": "纠",
+      "start": 11.133,
+      "end": 11.488
+    },
+    {
+      "index": 23,
+      "char": "正",
+      "start": 11.556,
+      "end": 11.911
+    }
+  ],
+  "transcript": "纠，“纠正”的“纠”。它是左右结构。看图找部件，合成字形。再读：纠正。",
+  "voice_reference": "封",
+  "timing_source": "punctuation-weighted-estimate",
+  "script_version": "child-first-v1",
+  "duration": 12.480181
+}

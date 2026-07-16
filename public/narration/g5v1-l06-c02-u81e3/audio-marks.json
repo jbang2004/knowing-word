@@ -1,0 +1,165 @@
+{
+  "marks": [
+    {
+      "index": 0,
+      "char": "臣",
+      "start": 0.209,
+      "end": 0.453
+    },
+    {
+      "index": 1,
+      "char": "大",
+      "start": 0.68,
+      "end": 0.923
+    },
+    {
+      "index": 2,
+      "char": "臣",
+      "start": 0.97,
+      "end": 1.213
+    },
+    {
+      "index": 3,
+      "char": "的",
+      "start": 1.26,
+      "end": 1.504
+    },
+    {
+      "index": 4,
+      "char": "臣",
+      "start": 1.55,
+      "end": 1.794
+    },
+    {
+      "index": 5,
+      "char": "它",
+      "start": 2.18,
+      "end": 2.424
+    },
+    {
+      "index": 6,
+      "char": "是",
+      "start": 2.47,
+      "end": 2.714
+    },
+    {
+      "index": 7,
+      "char": "左",
+      "start": 2.761,
+      "end": 3.004
+    },
+    {
+      "index": 8,
+      "char": "三",
+      "start": 3.051,
+      "end": 3.294
+    },
+    {
+      "index": 9,
+      "char": "包",
+      "start": 3.341,
+      "end": 3.585
+    },
+    {
+      "index": 10,
+      "char": "围",
+      "start": 3.631,
+      "end": 3.875
+    },
+    {
+      "index": 11,
+      "char": "结",
+      "start": 3.921,
+      "end": 4.165
+    },
+    {
+      "index": 12,
+      "char": "构",
+      "start": 4.211,
+      "end": 4.455
+    },
+    {
+      "index": 13,
+      "char": "顺",
+      "start": 4.842,
+      "end": 5.085
+    },
+    {
+      "index": 14,
+      "char": "着",
+      "start": 5.132,
+      "end": 5.375
+    },
+    {
+      "index": 15,
+      "char": "图",
+      "start": 5.422,
+      "end": 5.666
+    },
+    {
+      "index": 16,
+      "char": "记",
+      "start": 5.712,
+      "end": 5.956
+    },
+    {
+      "index": 17,
+      "char": "住",
+      "start": 6.002,
+      "end": 6.246
+    },
+    {
+      "index": 18,
+      "char": "整",
+      "start": 6.292,
+      "end": 6.536
+    },
+    {
+      "index": 19,
+      "char": "体",
+      "start": 6.582,
+      "end": 6.826
+    },
+    {
+      "index": 20,
+      "char": "轮",
+      "start": 6.873,
+      "end": 7.116
+    },
+    {
+      "index": 21,
+      "char": "廓",
+      "start": 7.163,
+      "end": 7.407
+    },
+    {
+      "index": 22,
+      "char": "再",
+      "start": 7.793,
+      "end": 8.037
+    },
+    {
+      "index": 23,
+      "char": "读",
+      "start": 8.083,
+      "end": 8.327
+    },
+    {
+      "index": 24,
+      "char": "大",
+      "start": 8.553,
+      "end": 8.797
+    },
+    {
+      "index": 25,
+      "char": "臣",
+      "start": 8.843,
+      "end": 9.087
+    }
+  ],
+  "transcript": "臣，“大臣”的“臣”。它是左三包围结构。顺着图记住整体轮廓。再读：大臣。",
+  "voice_reference": "封",
+  "timing_source": "punctuation-weighted-estimate",
+  "script_version": "child-first-v1",
+  "duration": 9.600181
+}

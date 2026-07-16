@@ -1,0 +1,165 @@
+{
+  "marks": [
+    {
+      "index": 0,
+      "char": "廉",
+      "start": 0.202,
+      "end": 0.43
+    },
+    {
+      "index": 1,
+      "char": "廉",
+      "start": 0.653,
+      "end": 0.881
+    },
+    {
+      "index": 2,
+      "char": "颇",
+      "start": 0.925,
+      "end": 1.153
+    },
+    {
+      "index": 3,
+      "char": "的",
+      "start": 1.196,
+      "end": 1.424
+    },
+    {
+      "index": 4,
+      "char": "廉",
+      "start": 1.467,
+      "end": 1.695
+    },
+    {
+      "index": 5,
+      "char": "它",
+      "start": 2.079,
+      "end": 2.307
+    },
+    {
+      "index": 6,
+      "char": "是",
+      "start": 2.35,
+      "end": 2.578
+    },
+    {
+      "index": 7,
+      "char": "左",
+      "start": 2.621,
+      "end": 2.849
+    },
+    {
+      "index": 8,
+      "char": "上",
+      "start": 2.893,
+      "end": 3.121
+    },
+    {
+      "index": 9,
+      "char": "包",
+      "start": 3.164,
+      "end": 3.392
+    },
+    {
+      "index": 10,
+      "char": "围",
+      "start": 3.435,
+      "end": 3.663
+    },
+    {
+      "index": 11,
+      "char": "结",
+      "start": 3.707,
+      "end": 3.935
+    },
+    {
+      "index": 12,
+      "char": "构",
+      "start": 3.978,
+      "end": 4.206
+    },
+    {
+      "index": 13,
+      "char": "看",
+      "start": 4.59,
+      "end": 4.818
+    },
+    {
+      "index": 14,
+      "char": "图",
+      "start": 4.861,
+      "end": 5.089
+    },
+    {
+      "index": 15,
+      "char": "找",
+      "start": 5.132,
+      "end": 5.36
+    },
+    {
+      "index": 16,
+      "char": "部",
+      "start": 5.404,
+      "end": 5.632
+    },
+    {
+      "index": 17,
+      "char": "件",
+      "start": 5.675,
+      "end": 5.903
+    },
+    {
+      "index": 18,
+      "char": "合",
+      "start": 6.126,
+      "end": 6.354
+    },
+    {
+      "index": 19,
+      "char": "成",
+      "start": 6.398,
+      "end": 6.626
+    },
+    {
+      "index": 20,
+      "char": "字",
+      "start": 6.669,
+      "end": 6.897
+    },
+    {
+      "index": 21,
+      "char": "形",
+      "start": 6.94,
+      "end": 7.168
+    },
+    {
+      "index": 22,
+      "char": "再",
+      "start": 7.552,
+      "end": 7.78
+    },
+    {
+      "index": 23,
+      "char": "读",
+      "start": 7.823,
+      "end": 8.051
+    },
+    {
+      "index": 24,
+      "char": "廉",
+      "start": 8.275,
+      "end": 8.502
+    },
+    {
+      "index": 25,
+      "char": "颇",
+      "start": 8.546,
+      "end": 8.774
+    }
+  ],
+  "transcript": "廉，“廉颇”的“廉”。它是左上包围结构。看图找部件，合成字形。再读：廉颇。",
+  "voice_reference": "封",
+  "timing_source": "punctuation-weighted-estimate",
+  "script_version": "child-first-v1",
+  "duration": 9.280181
+}

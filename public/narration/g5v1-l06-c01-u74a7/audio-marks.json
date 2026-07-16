@@ -1,0 +1,165 @@
+{
+  "marks": [
+    {
+      "index": 0,
+      "char": "璧",
+      "start": 0.191,
+      "end": 0.404
+    },
+    {
+      "index": 1,
+      "char": "和",
+      "start": 0.625,
+      "end": 0.838
+    },
+    {
+      "index": 2,
+      "char": "氏",
+      "start": 0.878,
+      "end": 1.091
+    },
+    {
+      "index": 3,
+      "char": "璧",
+      "start": 1.132,
+      "end": 1.345
+    },
+    {
+      "index": 4,
+      "char": "的",
+      "start": 1.385,
+      "end": 1.598
+    },
+    {
+      "index": 5,
+      "char": "璧",
+      "start": 1.639,
+      "end": 1.852
+    },
+    {
+      "index": 6,
+      "char": "它",
+      "start": 2.232,
+      "end": 2.445
+    },
+    {
+      "index": 7,
+      "char": "是",
+      "start": 2.486,
+      "end": 2.699
+    },
+    {
+      "index": 8,
+      "char": "上",
+      "start": 2.74,
+      "end": 2.953
+    },
+    {
+      "index": 9,
+      "char": "下",
+      "start": 2.993,
+      "end": 3.206
+    },
+    {
+      "index": 10,
+      "char": "结",
+      "start": 3.247,
+      "end": 3.46
+    },
+    {
+      "index": 11,
+      "char": "构",
+      "start": 3.5,
+      "end": 3.713
+    },
+    {
+      "index": 12,
+      "char": "看",
+      "start": 4.094,
+      "end": 4.307
+    },
+    {
+      "index": 13,
+      "char": "图",
+      "start": 4.347,
+      "end": 4.56
+    },
+    {
+      "index": 14,
+      "char": "找",
+      "start": 4.601,
+      "end": 4.814
+    },
+    {
+      "index": 15,
+      "char": "部",
+      "start": 4.854,
+      "end": 5.067
+    },
+    {
+      "index": 16,
+      "char": "件",
+      "start": 5.108,
+      "end": 5.321
+    },
+    {
+      "index": 17,
+      "char": "合",
+      "start": 5.541,
+      "end": 5.754
+    },
+    {
+      "index": 18,
+      "char": "成",
+      "start": 5.795,
+      "end": 6.008
+    },
+    {
+      "index": 19,
+      "char": "字",
+      "start": 6.049,
+      "end": 6.262
+    },
+    {
+      "index": 20,
+      "char": "形",
+      "start": 6.302,
+      "end": 6.515
+    },
+    {
+      "index": 21,
+      "char": "再",
+      "start": 6.896,
+      "end": 7.109
+    },
+    {
+      "index": 22,
+      "char": "读",
+      "start": 7.149,
+      "end": 7.362
+    },
+    {
+      "index": 23,
+      "char": "和",
+      "start": 7.583,
+      "end": 7.796
+    },
+    {
+      "index": 24,
+      "char": "氏",
+      "start": 7.836,
+      "end": 8.049
+    },
+    {
+      "index": 25,
+      "char": "璧",
+      "start": 8.09,
+      "end": 8.303
+    }
+  ],
+  "transcript": "璧，“和氏璧”的“璧”。它是上下结构。看图找部件，合成字形。再读：和氏璧。",
+  "voice_reference": "封",
+  "timing_source": "punctuation-weighted-estimate",
+  "script_version": "child-first-v1",
+  "duration": 8.800181
+}

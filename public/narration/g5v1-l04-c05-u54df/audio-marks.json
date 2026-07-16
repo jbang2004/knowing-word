@@ -1,0 +1,141 @@
+{
+  "marks": [
+    {
+      "index": 0,
+      "char": "哟",
+      "start": 0.19,
+      "end": 0.436
+    },
+    {
+      "index": 1,
+      "char": "哟",
+      "start": 0.663,
+      "end": 0.909
+    },
+    {
+      "index": 2,
+      "char": "的",
+      "start": 0.956,
+      "end": 1.201
+    },
+    {
+      "index": 3,
+      "char": "哟",
+      "start": 1.248,
+      "end": 1.494
+    },
+    {
+      "index": 4,
+      "char": "它",
+      "start": 1.881,
+      "end": 2.127
+    },
+    {
+      "index": 5,
+      "char": "是",
+      "start": 2.173,
+      "end": 2.419
+    },
+    {
+      "index": 6,
+      "char": "左",
+      "start": 2.466,
+      "end": 2.712
+    },
+    {
+      "index": 7,
+      "char": "右",
+      "start": 2.759,
+      "end": 3.005
+    },
+    {
+      "index": 8,
+      "char": "结",
+      "start": 3.051,
+      "end": 3.297
+    },
+    {
+      "index": 9,
+      "char": "构",
+      "start": 3.344,
+      "end": 3.59
+    },
+    {
+      "index": 10,
+      "char": "看",
+      "start": 3.977,
+      "end": 4.222
+    },
+    {
+      "index": 11,
+      "char": "图",
+      "start": 4.269,
+      "end": 4.515
+    },
+    {
+      "index": 12,
+      "char": "找",
+      "start": 4.562,
+      "end": 4.808
+    },
+    {
+      "index": 13,
+      "char": "部",
+      "start": 4.855,
+      "end": 5.1
+    },
+    {
+      "index": 14,
+      "char": "件",
+      "start": 5.147,
+      "end": 5.393
+    },
+    {
+      "index": 15,
+      "char": "合",
+      "start": 5.62,
+      "end": 5.866
+    },
+    {
+      "index": 16,
+      "char": "成",
+      "start": 5.912,
+      "end": 6.158
+    },
+    {
+      "index": 17,
+      "char": "字",
+      "start": 6.205,
+      "end": 6.451
+    },
+    {
+      "index": 18,
+      "char": "形",
+      "start": 6.498,
+      "end": 6.743
+    },
+    {
+      "index": 19,
+      "char": "再",
+      "start": 7.13,
+      "end": 7.376
+    },
+    {
+      "index": 20,
+      "char": "读",
+      "start": 7.423,
+      "end": 7.669
+    },
+    {
+      "index": 21,
+      "char": "哟",
+      "start": 7.896,
+      "end": 8.141
+    }
+  ],
+  "transcript": "哟，“哟”的“哟”。它是左右结构。看图找部件，合成字形。再读：哟。",
+  "voice_reference": "封",
+  "timing_source": "punctuation-weighted-estimate",
+  "script_version": "child-first-v1",
+  "duration": 8.640181
+}

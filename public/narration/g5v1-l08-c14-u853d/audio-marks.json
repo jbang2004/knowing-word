@@ -1,0 +1,153 @@
+{
+  "marks": [
+    {
+      "index": 0,
+      "char": "蔽",
+      "start": 0.21,
+      "end": 0.468
+    },
+    {
+      "index": 1,
+      "char": "隐",
+      "start": 0.697,
+      "end": 0.955
+    },
+    {
+      "index": 2,
+      "char": "蔽",
+      "start": 1.004,
+      "end": 1.262
+    },
+    {
+      "index": 3,
+      "char": "的",
+      "start": 1.311,
+      "end": 1.569
+    },
+    {
+      "index": 4,
+      "char": "蔽",
+      "start": 1.618,
+      "end": 1.876
+    },
+    {
+      "index": 5,
+      "char": "它",
+      "start": 2.265,
+      "end": 2.522
+    },
+    {
+      "index": 6,
+      "char": "是",
+      "start": 2.571,
+      "end": 2.829
+    },
+    {
+      "index": 7,
+      "char": "上",
+      "start": 2.878,
+      "end": 3.136
+    },
+    {
+      "index": 8,
+      "char": "下",
+      "start": 3.185,
+      "end": 3.443
+    },
+    {
+      "index": 9,
+      "char": "结",
+      "start": 3.492,
+      "end": 3.75
+    },
+    {
+      "index": 10,
+      "char": "构",
+      "start": 3.799,
+      "end": 4.057
+    },
+    {
+      "index": 11,
+      "char": "看",
+      "start": 4.446,
+      "end": 4.703
+    },
+    {
+      "index": 12,
+      "char": "图",
+      "start": 4.753,
+      "end": 5.01
+    },
+    {
+      "index": 13,
+      "char": "找",
+      "start": 5.059,
+      "end": 5.317
+    },
+    {
+      "index": 14,
+      "char": "部",
+      "start": 5.366,
+      "end": 5.624
+    },
+    {
+      "index": 15,
+      "char": "件",
+      "start": 5.673,
+      "end": 5.931
+    },
+    {
+      "index": 16,
+      "char": "合",
+      "start": 6.16,
+      "end": 6.418
+    },
+    {
+      "index": 17,
+      "char": "成",
+      "start": 6.467,
+      "end": 6.724
+    },
+    {
+      "index": 18,
+      "char": "字",
+      "start": 6.774,
+      "end": 7.031
+    },
+    {
+      "index": 19,
+      "char": "形",
+      "start": 7.08,
+      "end": 7.338
+    },
+    {
+      "index": 20,
+      "char": "再",
+      "start": 7.727,
+      "end": 7.985
+    },
+    {
+      "index": 21,
+      "char": "读",
+      "start": 8.034,
+      "end": 8.292
+    },
+    {
+      "index": 22,
+      "char": "隐",
+      "start": 8.521,
+      "end": 8.779
+    },
+    {
+      "index": 23,
+      "char": "蔽",
+      "start": 8.828,
+      "end": 9.085
+    }
+  ],
+  "transcript": "蔽，“隐蔽”的“蔽”。它是上下结构。看图找部件，合成字形。再读：隐蔽。",
+  "voice_reference": "封",
+  "timing_source": "punctuation-weighted-estimate",
+  "script_version": "child-first-v1",
+  "duration": 9.600181
+}

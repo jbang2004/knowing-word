@@ -1,0 +1,153 @@
+{
+  "marks": [
+    {
+      "index": 0,
+      "char": "魄",
+      "start": 0.164,
+      "end": 0.351
+    },
+    {
+      "index": 1,
+      "char": "魂",
+      "start": 0.567,
+      "end": 0.754
+    },
+    {
+      "index": 2,
+      "char": "魄",
+      "start": 0.79,
+      "end": 0.978
+    },
+    {
+      "index": 3,
+      "char": "的",
+      "start": 1.013,
+      "end": 1.201
+    },
+    {
+      "index": 4,
+      "char": "魄",
+      "start": 1.237,
+      "end": 1.424
+    },
+    {
+      "index": 5,
+      "char": "它",
+      "start": 1.8,
+      "end": 1.987
+    },
+    {
+      "index": 6,
+      "char": "是",
+      "start": 2.023,
+      "end": 2.211
+    },
+    {
+      "index": 7,
+      "char": "左",
+      "start": 2.246,
+      "end": 2.434
+    },
+    {
+      "index": 8,
+      "char": "右",
+      "start": 2.469,
+      "end": 2.657
+    },
+    {
+      "index": 9,
+      "char": "结",
+      "start": 2.693,
+      "end": 2.88
+    },
+    {
+      "index": 10,
+      "char": "构",
+      "start": 2.916,
+      "end": 3.103
+    },
+    {
+      "index": 11,
+      "char": "看",
+      "start": 3.479,
+      "end": 3.667
+    },
+    {
+      "index": 12,
+      "char": "图",
+      "start": 3.702,
+      "end": 3.89
+    },
+    {
+      "index": 13,
+      "char": "找",
+      "start": 3.925,
+      "end": 4.113
+    },
+    {
+      "index": 14,
+      "char": "部",
+      "start": 4.149,
+      "end": 4.336
+    },
+    {
+      "index": 15,
+      "char": "件",
+      "start": 4.372,
+      "end": 4.559
+    },
+    {
+      "index": 16,
+      "char": "合",
+      "start": 4.775,
+      "end": 4.963
+    },
+    {
+      "index": 17,
+      "char": "成",
+      "start": 4.998,
+      "end": 5.186
+    },
+    {
+      "index": 18,
+      "char": "字",
+      "start": 5.222,
+      "end": 5.409
+    },
+    {
+      "index": 19,
+      "char": "形",
+      "start": 5.445,
+      "end": 5.632
+    },
+    {
+      "index": 20,
+      "char": "再",
+      "start": 6.008,
+      "end": 6.195
+    },
+    {
+      "index": 21,
+      "char": "读",
+      "start": 6.231,
+      "end": 6.419
+    },
+    {
+      "index": 22,
+      "char": "魂",
+      "start": 6.634,
+      "end": 6.822
+    },
+    {
+      "index": 23,
+      "char": "魄",
+      "start": 6.858,
+      "end": 7.045
+    }
+  ],
+  "transcript": "魄，“魂魄”的“魄”。它是左右结构。看图找部件，合成字形。再读：魂魄。",
+  "voice_reference": "封",
+  "timing_source": "punctuation-weighted-estimate",
+  "script_version": "child-first-v1",
+  "duration": 7.520181
+}

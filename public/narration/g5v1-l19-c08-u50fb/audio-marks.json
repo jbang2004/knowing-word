@@ -1,0 +1,153 @@
+{
+  "marks": [
+    {
+      "index": 0,
+      "char": "僻",
+      "start": 0.178,
+      "end": 0.387
+    },
+    {
+      "index": 1,
+      "char": "偏",
+      "start": 0.607,
+      "end": 0.816
+    },
+    {
+      "index": 2,
+      "char": "僻",
+      "start": 0.856,
+      "end": 1.065
+    },
+    {
+      "index": 3,
+      "char": "的",
+      "start": 1.105,
+      "end": 1.314
+    },
+    {
+      "index": 4,
+      "char": "僻",
+      "start": 1.354,
+      "end": 1.563
+    },
+    {
+      "index": 5,
+      "char": "它",
+      "start": 1.943,
+      "end": 2.152
+    },
+    {
+      "index": 6,
+      "char": "是",
+      "start": 2.192,
+      "end": 2.401
+    },
+    {
+      "index": 7,
+      "char": "左",
+      "start": 2.441,
+      "end": 2.65
+    },
+    {
+      "index": 8,
+      "char": "右",
+      "start": 2.69,
+      "end": 2.899
+    },
+    {
+      "index": 9,
+      "char": "结",
+      "start": 2.939,
+      "end": 3.148
+    },
+    {
+      "index": 10,
+      "char": "构",
+      "start": 3.188,
+      "end": 3.397
+    },
+    {
+      "index": 11,
+      "char": "看",
+      "start": 3.776,
+      "end": 3.986
+    },
+    {
+      "index": 12,
+      "char": "图",
+      "start": 4.025,
+      "end": 4.235
+    },
+    {
+      "index": 13,
+      "char": "找",
+      "start": 4.274,
+      "end": 4.483
+    },
+    {
+      "index": 14,
+      "char": "部",
+      "start": 4.523,
+      "end": 4.732
+    },
+    {
+      "index": 15,
+      "char": "件",
+      "start": 4.772,
+      "end": 4.981
+    },
+    {
+      "index": 16,
+      "char": "合",
+      "start": 5.201,
+      "end": 5.41
+    },
+    {
+      "index": 17,
+      "char": "成",
+      "start": 5.45,
+      "end": 5.659
+    },
+    {
+      "index": 18,
+      "char": "字",
+      "start": 5.699,
+      "end": 5.908
+    },
+    {
+      "index": 19,
+      "char": "形",
+      "start": 5.948,
+      "end": 6.157
+    },
+    {
+      "index": 20,
+      "char": "再",
+      "start": 6.537,
+      "end": 6.746
+    },
+    {
+      "index": 21,
+      "char": "读",
+      "start": 6.786,
+      "end": 6.995
+    },
+    {
+      "index": 22,
+      "char": "偏",
+      "start": 7.215,
+      "end": 7.424
+    },
+    {
+      "index": 23,
+      "char": "僻",
+      "start": 7.464,
+      "end": 7.673
+    }
+  ],
+  "transcript": "僻，“偏僻”的“僻”。它是左右结构。看图找部件，合成字形。再读：偏僻。",
+  "voice_reference": "封",
+  "timing_source": "punctuation-weighted-estimate",
+  "script_version": "child-first-v1",
+  "duration": 8.160181
+}

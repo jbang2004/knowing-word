@@ -1,0 +1,153 @@
+{
+  "marks": [
+    {
+      "index": 0,
+      "char": "脊",
+      "start": 0.171,
+      "end": 0.369
+    },
+    {
+      "index": 1,
+      "char": "脊",
+      "start": 0.587,
+      "end": 0.785
+    },
+    {
+      "index": 2,
+      "char": "背",
+      "start": 0.823,
+      "end": 1.021
+    },
+    {
+      "index": 3,
+      "char": "的",
+      "start": 1.059,
+      "end": 1.257
+    },
+    {
+      "index": 4,
+      "char": "脊",
+      "start": 1.295,
+      "end": 1.494
+    },
+    {
+      "index": 5,
+      "char": "它",
+      "start": 1.871,
+      "end": 2.07
+    },
+    {
+      "index": 6,
+      "char": "是",
+      "start": 2.107,
+      "end": 2.306
+    },
+    {
+      "index": 7,
+      "char": "上",
+      "start": 2.343,
+      "end": 2.542
+    },
+    {
+      "index": 8,
+      "char": "下",
+      "start": 2.58,
+      "end": 2.778
+    },
+    {
+      "index": 9,
+      "char": "结",
+      "start": 2.816,
+      "end": 3.014
+    },
+    {
+      "index": 10,
+      "char": "构",
+      "start": 3.052,
+      "end": 3.25
+    },
+    {
+      "index": 11,
+      "char": "看",
+      "start": 3.628,
+      "end": 3.826
+    },
+    {
+      "index": 12,
+      "char": "图",
+      "start": 3.864,
+      "end": 4.062
+    },
+    {
+      "index": 13,
+      "char": "找",
+      "start": 4.1,
+      "end": 4.298
+    },
+    {
+      "index": 14,
+      "char": "部",
+      "start": 4.336,
+      "end": 4.534
+    },
+    {
+      "index": 15,
+      "char": "件",
+      "start": 4.572,
+      "end": 4.77
+    },
+    {
+      "index": 16,
+      "char": "合",
+      "start": 4.988,
+      "end": 5.186
+    },
+    {
+      "index": 17,
+      "char": "成",
+      "start": 5.224,
+      "end": 5.423
+    },
+    {
+      "index": 18,
+      "char": "字",
+      "start": 5.46,
+      "end": 5.659
+    },
+    {
+      "index": 19,
+      "char": "形",
+      "start": 5.696,
+      "end": 5.895
+    },
+    {
+      "index": 20,
+      "char": "再",
+      "start": 6.272,
+      "end": 6.471
+    },
+    {
+      "index": 21,
+      "char": "读",
+      "start": 6.509,
+      "end": 6.707
+    },
+    {
+      "index": 22,
+      "char": "脊",
+      "start": 6.925,
+      "end": 7.123
+    },
+    {
+      "index": 23,
+      "char": "背",
+      "start": 7.161,
+      "end": 7.359
+    }
+  ],
+  "transcript": "脊，“脊背”的“脊”。它是上下结构。看图找部件，合成字形。再读：脊背。",
+  "voice_reference": "封",
+  "timing_source": "punctuation-weighted-estimate",
+  "script_version": "child-first-v1",
+  "duration": 7.840181
+}

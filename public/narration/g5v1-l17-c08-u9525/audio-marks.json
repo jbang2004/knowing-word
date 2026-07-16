@@ -1,0 +1,153 @@
+{
+  "marks": [
+    {
+      "index": 0,
+      "char": "锥",
+      "start": 0.236,
+      "end": 0.531
+    },
+    {
+      "index": 1,
+      "char": "圆",
+      "start": 0.767,
+      "end": 1.063
+    },
+    {
+      "index": 2,
+      "char": "锥",
+      "start": 1.119,
+      "end": 1.415
+    },
+    {
+      "index": 3,
+      "char": "的",
+      "start": 1.471,
+      "end": 1.767
+    },
+    {
+      "index": 4,
+      "char": "锥",
+      "start": 1.823,
+      "end": 2.119
+    },
+    {
+      "index": 5,
+      "char": "它",
+      "start": 2.515,
+      "end": 2.81
+    },
+    {
+      "index": 6,
+      "char": "是",
+      "start": 2.867,
+      "end": 3.162
+    },
+    {
+      "index": 7,
+      "char": "左",
+      "start": 3.219,
+      "end": 3.514
+    },
+    {
+      "index": 8,
+      "char": "右",
+      "start": 3.571,
+      "end": 3.866
+    },
+    {
+      "index": 9,
+      "char": "结",
+      "start": 3.922,
+      "end": 4.218
+    },
+    {
+      "index": 10,
+      "char": "构",
+      "start": 4.274,
+      "end": 4.57
+    },
+    {
+      "index": 11,
+      "char": "看",
+      "start": 4.966,
+      "end": 5.262
+    },
+    {
+      "index": 12,
+      "char": "图",
+      "start": 5.318,
+      "end": 5.614
+    },
+    {
+      "index": 13,
+      "char": "找",
+      "start": 5.67,
+      "end": 5.965
+    },
+    {
+      "index": 14,
+      "char": "部",
+      "start": 6.022,
+      "end": 6.317
+    },
+    {
+      "index": 15,
+      "char": "件",
+      "start": 6.374,
+      "end": 6.669
+    },
+    {
+      "index": 16,
+      "char": "合",
+      "start": 6.905,
+      "end": 7.201
+    },
+    {
+      "index": 17,
+      "char": "成",
+      "start": 7.257,
+      "end": 7.553
+    },
+    {
+      "index": 18,
+      "char": "字",
+      "start": 7.609,
+      "end": 7.905
+    },
+    {
+      "index": 19,
+      "char": "形",
+      "start": 7.961,
+      "end": 8.257
+    },
+    {
+      "index": 20,
+      "char": "再",
+      "start": 8.653,
+      "end": 8.949
+    },
+    {
+      "index": 21,
+      "char": "读",
+      "start": 9.005,
+      "end": 9.3
+    },
+    {
+      "index": 22,
+      "char": "圆",
+      "start": 9.537,
+      "end": 9.832
+    },
+    {
+      "index": 23,
+      "char": "锥",
+      "start": 9.889,
+      "end": 10.184
+    }
+  ],
+  "transcript": "锥，“圆锥”的“锥”。它是左右结构。看图找部件，合成字形。再读：圆锥。",
+  "voice_reference": "封",
+  "timing_source": "punctuation-weighted-estimate",
+  "script_version": "child-first-v1",
+  "duration": 10.720181
+}

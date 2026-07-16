@@ -1,0 +1,153 @@
+{
+  "marks": [
+    {
+      "index": 0,
+      "char": "妻",
+      "start": 0.197,
+      "end": 0.439
+    },
+    {
+      "index": 1,
+      "char": "妻",
+      "start": 0.665,
+      "end": 0.908
+    },
+    {
+      "index": 2,
+      "char": "子",
+      "start": 0.954,
+      "end": 1.196
+    },
+    {
+      "index": 3,
+      "char": "的",
+      "start": 1.242,
+      "end": 1.485
+    },
+    {
+      "index": 4,
+      "char": "妻",
+      "start": 1.531,
+      "end": 1.774
+    },
+    {
+      "index": 5,
+      "char": "它",
+      "start": 2.16,
+      "end": 2.402
+    },
+    {
+      "index": 6,
+      "char": "是",
+      "start": 2.448,
+      "end": 2.691
+    },
+    {
+      "index": 7,
+      "char": "上",
+      "start": 2.737,
+      "end": 2.979
+    },
+    {
+      "index": 8,
+      "char": "下",
+      "start": 3.026,
+      "end": 3.268
+    },
+    {
+      "index": 9,
+      "char": "结",
+      "start": 3.314,
+      "end": 3.557
+    },
+    {
+      "index": 10,
+      "char": "构",
+      "start": 3.603,
+      "end": 3.845
+    },
+    {
+      "index": 11,
+      "char": "顺",
+      "start": 4.232,
+      "end": 4.474
+    },
+    {
+      "index": 12,
+      "char": "着",
+      "start": 4.52,
+      "end": 4.763
+    },
+    {
+      "index": 13,
+      "char": "图",
+      "start": 4.809,
+      "end": 5.051
+    },
+    {
+      "index": 14,
+      "char": "记",
+      "start": 5.098,
+      "end": 5.34
+    },
+    {
+      "index": 15,
+      "char": "住",
+      "start": 5.386,
+      "end": 5.629
+    },
+    {
+      "index": 16,
+      "char": "整",
+      "start": 5.675,
+      "end": 5.917
+    },
+    {
+      "index": 17,
+      "char": "体",
+      "start": 5.963,
+      "end": 6.206
+    },
+    {
+      "index": 18,
+      "char": "轮",
+      "start": 6.252,
+      "end": 6.495
+    },
+    {
+      "index": 19,
+      "char": "廓",
+      "start": 6.541,
+      "end": 6.783
+    },
+    {
+      "index": 20,
+      "char": "再",
+      "start": 7.169,
+      "end": 7.412
+    },
+    {
+      "index": 21,
+      "char": "读",
+      "start": 7.458,
+      "end": 7.7
+    },
+    {
+      "index": 22,
+      "char": "妻",
+      "start": 7.927,
+      "end": 8.169
+    },
+    {
+      "index": 23,
+      "char": "子",
+      "start": 8.215,
+      "end": 8.458
+    }
+  ],
+  "transcript": "妻，“妻子”的“妻”。它是上下结构。顺着图记住整体轮廓。再读：妻子。",
+  "voice_reference": "封",
+  "timing_source": "punctuation-weighted-estimate",
+  "script_version": "child-first-v1",
+  "duration": 8.961066
+}

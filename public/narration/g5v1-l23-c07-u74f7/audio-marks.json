@@ -1,0 +1,153 @@
+{
+  "marks": [
+    {
+      "index": 0,
+      "char": "瓷",
+      "start": 0.189,
+      "end": 0.414
+    },
+    {
+      "index": 1,
+      "char": "瓷",
+      "start": 0.637,
+      "end": 0.862
+    },
+    {
+      "index": 2,
+      "char": "器",
+      "start": 0.905,
+      "end": 1.131
+    },
+    {
+      "index": 3,
+      "char": "的",
+      "start": 1.174,
+      "end": 1.399
+    },
+    {
+      "index": 4,
+      "char": "瓷",
+      "start": 1.442,
+      "end": 1.667
+    },
+    {
+      "index": 5,
+      "char": "它",
+      "start": 2.05,
+      "end": 2.275
+    },
+    {
+      "index": 6,
+      "char": "是",
+      "start": 2.318,
+      "end": 2.544
+    },
+    {
+      "index": 7,
+      "char": "上",
+      "start": 2.587,
+      "end": 2.812
+    },
+    {
+      "index": 8,
+      "char": "下",
+      "start": 2.855,
+      "end": 3.08
+    },
+    {
+      "index": 9,
+      "char": "结",
+      "start": 3.123,
+      "end": 3.348
+    },
+    {
+      "index": 10,
+      "char": "构",
+      "start": 3.391,
+      "end": 3.617
+    },
+    {
+      "index": 11,
+      "char": "看",
+      "start": 4,
+      "end": 4.225
+    },
+    {
+      "index": 12,
+      "char": "图",
+      "start": 4.268,
+      "end": 4.493
+    },
+    {
+      "index": 13,
+      "char": "找",
+      "start": 4.536,
+      "end": 4.761
+    },
+    {
+      "index": 14,
+      "char": "部",
+      "start": 4.804,
+      "end": 5.03
+    },
+    {
+      "index": 15,
+      "char": "件",
+      "start": 5.073,
+      "end": 5.298
+    },
+    {
+      "index": 16,
+      "char": "合",
+      "start": 5.521,
+      "end": 5.746
+    },
+    {
+      "index": 17,
+      "char": "成",
+      "start": 5.789,
+      "end": 6.014
+    },
+    {
+      "index": 18,
+      "char": "字",
+      "start": 6.057,
+      "end": 6.283
+    },
+    {
+      "index": 19,
+      "char": "形",
+      "start": 6.325,
+      "end": 6.551
+    },
+    {
+      "index": 20,
+      "char": "再",
+      "start": 6.934,
+      "end": 7.159
+    },
+    {
+      "index": 21,
+      "char": "读",
+      "start": 7.202,
+      "end": 7.427
+    },
+    {
+      "index": 22,
+      "char": "瓷",
+      "start": 7.65,
+      "end": 7.876
+    },
+    {
+      "index": 23,
+      "char": "器",
+      "start": 7.918,
+      "end": 8.144
+    }
+  ],
+  "transcript": "瓷，“瓷器”的“瓷”。它是上下结构。看图找部件，合成字形。再读：瓷器。",
+  "voice_reference": "封",
+  "timing_source": "punctuation-weighted-estimate",
+  "script_version": "child-first-v1",
+  "duration": 8.640181
+}

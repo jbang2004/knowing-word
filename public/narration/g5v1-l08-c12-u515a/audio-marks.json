@@ -1,0 +1,153 @@
+{
+  "marks": [
+    {
+      "index": 0,
+      "char": "党",
+      "start": 0.218,
+      "end": 0.486
+    },
+    {
+      "index": 1,
+      "char": "党",
+      "start": 0.717,
+      "end": 0.986
+    },
+    {
+      "index": 2,
+      "char": "员",
+      "start": 1.037,
+      "end": 1.306
+    },
+    {
+      "index": 3,
+      "char": "的",
+      "start": 1.357,
+      "end": 1.625
+    },
+    {
+      "index": 4,
+      "char": "党",
+      "start": 1.676,
+      "end": 1.945
+    },
+    {
+      "index": 5,
+      "char": "它",
+      "start": 2.336,
+      "end": 2.605
+    },
+    {
+      "index": 6,
+      "char": "是",
+      "start": 2.656,
+      "end": 2.924
+    },
+    {
+      "index": 7,
+      "char": "穿",
+      "start": 2.976,
+      "end": 3.244
+    },
+    {
+      "index": 8,
+      "char": "插",
+      "start": 3.295,
+      "end": 3.564
+    },
+    {
+      "index": 9,
+      "char": "结",
+      "start": 3.615,
+      "end": 3.884
+    },
+    {
+      "index": 10,
+      "char": "构",
+      "start": 3.935,
+      "end": 4.203
+    },
+    {
+      "index": 11,
+      "char": "看",
+      "start": 4.594,
+      "end": 4.863
+    },
+    {
+      "index": 12,
+      "char": "图",
+      "start": 4.914,
+      "end": 5.183
+    },
+    {
+      "index": 13,
+      "char": "找",
+      "start": 5.234,
+      "end": 5.502
+    },
+    {
+      "index": 14,
+      "char": "部",
+      "start": 5.553,
+      "end": 5.822
+    },
+    {
+      "index": 15,
+      "char": "件",
+      "start": 5.873,
+      "end": 6.142
+    },
+    {
+      "index": 16,
+      "char": "合",
+      "start": 6.373,
+      "end": 6.641
+    },
+    {
+      "index": 17,
+      "char": "成",
+      "start": 6.693,
+      "end": 6.961
+    },
+    {
+      "index": 18,
+      "char": "字",
+      "start": 7.012,
+      "end": 7.281
+    },
+    {
+      "index": 19,
+      "char": "形",
+      "start": 7.332,
+      "end": 7.601
+    },
+    {
+      "index": 20,
+      "char": "再",
+      "start": 7.992,
+      "end": 8.26
+    },
+    {
+      "index": 21,
+      "char": "读",
+      "start": 8.311,
+      "end": 8.58
+    },
+    {
+      "index": 22,
+      "char": "党",
+      "start": 8.811,
+      "end": 9.08
+    },
+    {
+      "index": 23,
+      "char": "员",
+      "start": 9.131,
+      "end": 9.399
+    }
+  ],
+  "transcript": "党，“党员”的“党”。它是穿插结构。看图找部件，合成字形。再读：党员。",
+  "voice_reference": "封",
+  "timing_source": "punctuation-weighted-estimate",
+  "script_version": "child-first-v1",
+  "duration": 9.920181
+}

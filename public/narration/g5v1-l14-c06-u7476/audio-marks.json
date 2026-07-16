@@ -1,0 +1,153 @@
+{
+  "marks": [
+    {
+      "index": 0,
+      "char": "瑶",
+      "start": 0.225,
+      "end": 0.511
+    },
+    {
+      "index": 1,
+      "char": "瑶",
+      "start": 0.745,
+      "end": 1.031
+    },
+    {
+      "index": 2,
+      "char": "台",
+      "start": 1.085,
+      "end": 1.371
+    },
+    {
+      "index": 3,
+      "char": "的",
+      "start": 1.426,
+      "end": 1.711
+    },
+    {
+      "index": 4,
+      "char": "瑶",
+      "start": 1.766,
+      "end": 2.051
+    },
+    {
+      "index": 5,
+      "char": "它",
+      "start": 2.446,
+      "end": 2.731
+    },
+    {
+      "index": 6,
+      "char": "是",
+      "start": 2.786,
+      "end": 3.072
+    },
+    {
+      "index": 7,
+      "char": "左",
+      "start": 3.126,
+      "end": 3.412
+    },
+    {
+      "index": 8,
+      "char": "右",
+      "start": 3.466,
+      "end": 3.752
+    },
+    {
+      "index": 9,
+      "char": "结",
+      "start": 3.806,
+      "end": 4.092
+    },
+    {
+      "index": 10,
+      "char": "构",
+      "start": 4.146,
+      "end": 4.432
+    },
+    {
+      "index": 11,
+      "char": "顺",
+      "start": 4.826,
+      "end": 5.112
+    },
+    {
+      "index": 12,
+      "char": "着",
+      "start": 5.167,
+      "end": 5.452
+    },
+    {
+      "index": 13,
+      "char": "图",
+      "start": 5.507,
+      "end": 5.792
+    },
+    {
+      "index": 14,
+      "char": "记",
+      "start": 5.847,
+      "end": 6.132
+    },
+    {
+      "index": 15,
+      "char": "住",
+      "start": 6.187,
+      "end": 6.473
+    },
+    {
+      "index": 16,
+      "char": "整",
+      "start": 6.527,
+      "end": 6.813
+    },
+    {
+      "index": 17,
+      "char": "体",
+      "start": 6.867,
+      "end": 7.153
+    },
+    {
+      "index": 18,
+      "char": "轮",
+      "start": 7.207,
+      "end": 7.493
+    },
+    {
+      "index": 19,
+      "char": "廓",
+      "start": 7.547,
+      "end": 7.833
+    },
+    {
+      "index": 20,
+      "char": "再",
+      "start": 8.227,
+      "end": 8.513
+    },
+    {
+      "index": 21,
+      "char": "读",
+      "start": 8.568,
+      "end": 8.853
+    },
+    {
+      "index": 22,
+      "char": "瑶",
+      "start": 9.088,
+      "end": 9.373
+    },
+    {
+      "index": 23,
+      "char": "台",
+      "start": 9.428,
+      "end": 9.713
+    }
+  ],
+  "transcript": "瑶，“瑶台”的“瑶”。它是左右结构。顺着图记住整体轮廓。再读：瑶台。",
+  "voice_reference": "封",
+  "timing_source": "punctuation-weighted-estimate",
+  "script_version": "child-first-v1",
+  "duration": 10.241066
+}

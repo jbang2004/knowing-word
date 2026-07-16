@@ -1,0 +1,153 @@
+{
+  "marks": [
+    {
+      "index": 0,
+      "char": "磁",
+      "start": 0.139,
+      "end": 0.292
+    },
+    {
+      "index": 1,
+      "char": "磁",
+      "start": 0.491,
+      "end": 0.645
+    },
+    {
+      "index": 2,
+      "char": "铁",
+      "start": 0.674,
+      "end": 0.828
+    },
+    {
+      "index": 3,
+      "char": "的",
+      "start": 0.857,
+      "end": 1.01
+    },
+    {
+      "index": 4,
+      "char": "磁",
+      "start": 1.04,
+      "end": 1.193
+    },
+    {
+      "index": 5,
+      "char": "它",
+      "start": 1.543,
+      "end": 1.696
+    },
+    {
+      "index": 6,
+      "char": "是",
+      "start": 1.726,
+      "end": 1.879
+    },
+    {
+      "index": 7,
+      "char": "左",
+      "start": 1.908,
+      "end": 2.062
+    },
+    {
+      "index": 8,
+      "char": "右",
+      "start": 2.091,
+      "end": 2.245
+    },
+    {
+      "index": 9,
+      "char": "结",
+      "start": 2.274,
+      "end": 2.427
+    },
+    {
+      "index": 10,
+      "char": "构",
+      "start": 2.456,
+      "end": 2.61
+    },
+    {
+      "index": 11,
+      "char": "看",
+      "start": 2.96,
+      "end": 3.113
+    },
+    {
+      "index": 12,
+      "char": "图",
+      "start": 3.143,
+      "end": 3.296
+    },
+    {
+      "index": 13,
+      "char": "找",
+      "start": 3.325,
+      "end": 3.479
+    },
+    {
+      "index": 14,
+      "char": "部",
+      "start": 3.508,
+      "end": 3.661
+    },
+    {
+      "index": 15,
+      "char": "件",
+      "start": 3.691,
+      "end": 3.844
+    },
+    {
+      "index": 16,
+      "char": "合",
+      "start": 4.043,
+      "end": 4.197
+    },
+    {
+      "index": 17,
+      "char": "成",
+      "start": 4.226,
+      "end": 4.379
+    },
+    {
+      "index": 18,
+      "char": "字",
+      "start": 4.409,
+      "end": 4.562
+    },
+    {
+      "index": 19,
+      "char": "形",
+      "start": 4.591,
+      "end": 4.745
+    },
+    {
+      "index": 20,
+      "char": "再",
+      "start": 5.095,
+      "end": 5.248
+    },
+    {
+      "index": 21,
+      "char": "读",
+      "start": 5.277,
+      "end": 5.431
+    },
+    {
+      "index": 22,
+      "char": "磁",
+      "start": 5.63,
+      "end": 5.783
+    },
+    {
+      "index": 23,
+      "char": "铁",
+      "start": 5.813,
+      "end": 5.966
+    }
+  ],
+  "transcript": "磁，“磁铁”的“磁”。它是左右结构。看图找部件，合成字形。再读：磁铁。",
+  "voice_reference": "封",
+  "timing_source": "punctuation-weighted-estimate",
+  "script_version": "child-first-v1",
+  "duration": 6.401066
+}

@@ -1,0 +1,153 @@
+{
+  "marks": [
+    {
+      "index": 0,
+      "char": "桨",
+      "start": 0.214,
+      "end": 0.484
+    },
+    {
+      "index": 1,
+      "char": "船",
+      "start": 0.715,
+      "end": 0.985
+    },
+    {
+      "index": 2,
+      "char": "桨",
+      "start": 1.036,
+      "end": 1.305
+    },
+    {
+      "index": 3,
+      "char": "的",
+      "start": 1.357,
+      "end": 1.626
+    },
+    {
+      "index": 4,
+      "char": "桨",
+      "start": 1.678,
+      "end": 1.947
+    },
+    {
+      "index": 5,
+      "char": "它",
+      "start": 2.338,
+      "end": 2.608
+    },
+    {
+      "index": 6,
+      "char": "是",
+      "start": 2.659,
+      "end": 2.929
+    },
+    {
+      "index": 7,
+      "char": "上",
+      "start": 2.98,
+      "end": 3.249
+    },
+    {
+      "index": 8,
+      "char": "下",
+      "start": 3.301,
+      "end": 3.57
+    },
+    {
+      "index": 9,
+      "char": "结",
+      "start": 3.621,
+      "end": 3.891
+    },
+    {
+      "index": 10,
+      "char": "构",
+      "start": 3.942,
+      "end": 4.212
+    },
+    {
+      "index": 11,
+      "char": "顺",
+      "start": 4.603,
+      "end": 4.872
+    },
+    {
+      "index": 12,
+      "char": "着",
+      "start": 4.924,
+      "end": 5.193
+    },
+    {
+      "index": 13,
+      "char": "图",
+      "start": 5.245,
+      "end": 5.514
+    },
+    {
+      "index": 14,
+      "char": "记",
+      "start": 5.565,
+      "end": 5.835
+    },
+    {
+      "index": 15,
+      "char": "住",
+      "start": 5.886,
+      "end": 6.156
+    },
+    {
+      "index": 16,
+      "char": "整",
+      "start": 6.207,
+      "end": 6.476
+    },
+    {
+      "index": 17,
+      "char": "体",
+      "start": 6.528,
+      "end": 6.797
+    },
+    {
+      "index": 18,
+      "char": "轮",
+      "start": 6.848,
+      "end": 7.118
+    },
+    {
+      "index": 19,
+      "char": "廓",
+      "start": 7.169,
+      "end": 7.439
+    },
+    {
+      "index": 20,
+      "char": "再",
+      "start": 7.83,
+      "end": 8.099
+    },
+    {
+      "index": 21,
+      "char": "读",
+      "start": 8.151,
+      "end": 8.42
+    },
+    {
+      "index": 22,
+      "char": "船",
+      "start": 8.651,
+      "end": 8.921
+    },
+    {
+      "index": 23,
+      "char": "桨",
+      "start": 8.972,
+      "end": 9.242
+    }
+  ],
+  "transcript": "桨，“船桨”的“桨”。它是上下结构。顺着图记住整体轮廓。再读：船桨。",
+  "voice_reference": "封",
+  "timing_source": "punctuation-weighted-estimate",
+  "script_version": "child-first-v1",
+  "duration": 9.760181
+}

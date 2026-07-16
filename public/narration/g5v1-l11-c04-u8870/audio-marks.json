@@ -1,0 +1,153 @@
+{
+  "marks": [
+    {
+      "index": 0,
+      "char": "衰",
+      "start": 0.204,
+      "end": 0.457
+    },
+    {
+      "index": 1,
+      "char": "衰",
+      "start": 0.685,
+      "end": 0.938
+    },
+    {
+      "index": 2,
+      "char": "老",
+      "start": 0.987,
+      "end": 1.24
+    },
+    {
+      "index": 3,
+      "char": "的",
+      "start": 1.288,
+      "end": 1.541
+    },
+    {
+      "index": 4,
+      "char": "衰",
+      "start": 1.59,
+      "end": 1.843
+    },
+    {
+      "index": 5,
+      "char": "它",
+      "start": 2.231,
+      "end": 2.484
+    },
+    {
+      "index": 6,
+      "char": "是",
+      "start": 2.533,
+      "end": 2.786
+    },
+    {
+      "index": 7,
+      "char": "穿",
+      "start": 2.834,
+      "end": 3.087
+    },
+    {
+      "index": 8,
+      "char": "插",
+      "start": 3.135,
+      "end": 3.389
+    },
+    {
+      "index": 9,
+      "char": "结",
+      "start": 3.437,
+      "end": 3.69
+    },
+    {
+      "index": 10,
+      "char": "构",
+      "start": 3.738,
+      "end": 3.992
+    },
+    {
+      "index": 11,
+      "char": "顺",
+      "start": 4.38,
+      "end": 4.633
+    },
+    {
+      "index": 12,
+      "char": "着",
+      "start": 4.681,
+      "end": 4.935
+    },
+    {
+      "index": 13,
+      "char": "图",
+      "start": 4.983,
+      "end": 5.236
+    },
+    {
+      "index": 14,
+      "char": "记",
+      "start": 5.284,
+      "end": 5.538
+    },
+    {
+      "index": 15,
+      "char": "住",
+      "start": 5.586,
+      "end": 5.839
+    },
+    {
+      "index": 16,
+      "char": "整",
+      "start": 5.887,
+      "end": 6.141
+    },
+    {
+      "index": 17,
+      "char": "体",
+      "start": 6.189,
+      "end": 6.442
+    },
+    {
+      "index": 18,
+      "char": "轮",
+      "start": 6.49,
+      "end": 6.743
+    },
+    {
+      "index": 19,
+      "char": "廓",
+      "start": 6.792,
+      "end": 7.045
+    },
+    {
+      "index": 20,
+      "char": "再",
+      "start": 7.433,
+      "end": 7.686
+    },
+    {
+      "index": 21,
+      "char": "读",
+      "start": 7.735,
+      "end": 7.988
+    },
+    {
+      "index": 22,
+      "char": "衰",
+      "start": 8.216,
+      "end": 8.469
+    },
+    {
+      "index": 23,
+      "char": "老",
+      "start": 8.518,
+      "end": 8.771
+    }
+  ],
+  "transcript": "衰，“衰老”的“衰”。它是穿插结构。顺着图记住整体轮廓。再读：衰老。",
+  "voice_reference": "封",
+  "timing_source": "punctuation-weighted-estimate",
+  "script_version": "child-first-v1",
+  "duration": 9.280181
+}

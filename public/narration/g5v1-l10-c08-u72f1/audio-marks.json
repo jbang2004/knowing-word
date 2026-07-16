@@ -1,0 +1,153 @@
+{
+  "marks": [
+    {
+      "index": 0,
+      "char": "狱",
+      "start": 0.243,
+      "end": 0.556
+    },
+    {
+      "index": 1,
+      "char": "监",
+      "start": 0.795,
+      "end": 1.108
+    },
+    {
+      "index": 2,
+      "char": "狱",
+      "start": 1.168,
+      "end": 1.48
+    },
+    {
+      "index": 3,
+      "char": "的",
+      "start": 1.54,
+      "end": 1.853
+    },
+    {
+      "index": 4,
+      "char": "狱",
+      "start": 1.912,
+      "end": 2.225
+    },
+    {
+      "index": 5,
+      "char": "它",
+      "start": 2.624,
+      "end": 2.937
+    },
+    {
+      "index": 6,
+      "char": "是",
+      "start": 2.997,
+      "end": 3.309
+    },
+    {
+      "index": 7,
+      "char": "左",
+      "start": 3.369,
+      "end": 3.682
+    },
+    {
+      "index": 8,
+      "char": "右",
+      "start": 3.741,
+      "end": 4.054
+    },
+    {
+      "index": 9,
+      "char": "结",
+      "start": 4.113,
+      "end": 4.426
+    },
+    {
+      "index": 10,
+      "char": "构",
+      "start": 4.486,
+      "end": 4.798
+    },
+    {
+      "index": 11,
+      "char": "顺",
+      "start": 5.198,
+      "end": 5.51
+    },
+    {
+      "index": 12,
+      "char": "着",
+      "start": 5.57,
+      "end": 5.883
+    },
+    {
+      "index": 13,
+      "char": "图",
+      "start": 5.942,
+      "end": 6.255
+    },
+    {
+      "index": 14,
+      "char": "记",
+      "start": 6.315,
+      "end": 6.627
+    },
+    {
+      "index": 15,
+      "char": "住",
+      "start": 6.687,
+      "end": 6.999
+    },
+    {
+      "index": 16,
+      "char": "整",
+      "start": 7.059,
+      "end": 7.372
+    },
+    {
+      "index": 17,
+      "char": "体",
+      "start": 7.431,
+      "end": 7.744
+    },
+    {
+      "index": 18,
+      "char": "轮",
+      "start": 7.803,
+      "end": 8.116
+    },
+    {
+      "index": 19,
+      "char": "廓",
+      "start": 8.176,
+      "end": 8.488
+    },
+    {
+      "index": 20,
+      "char": "再",
+      "start": 8.888,
+      "end": 9.201
+    },
+    {
+      "index": 21,
+      "char": "读",
+      "start": 9.26,
+      "end": 9.573
+    },
+    {
+      "index": 22,
+      "char": "监",
+      "start": 9.812,
+      "end": 10.125
+    },
+    {
+      "index": 23,
+      "char": "狱",
+      "start": 10.185,
+      "end": 10.497
+    }
+  ],
+  "transcript": "狱，“监狱”的“狱”。它是左右结构。顺着图记住整体轮廓。再读：监狱。",
+  "voice_reference": "封",
+  "timing_source": "punctuation-weighted-estimate",
+  "script_version": "child-first-v1",
+  "duration": 11.040181
+}

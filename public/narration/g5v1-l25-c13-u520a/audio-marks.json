@@ -1,0 +1,153 @@
+{
+  "marks": [
+    {
+      "index": 0,
+      "char": "刊",
+      "start": 0.232,
+      "end": 0.522
+    },
+    {
+      "index": 1,
+      "char": "刊",
+      "start": 0.757,
+      "end": 1.048
+    },
+    {
+      "index": 2,
+      "char": "物",
+      "start": 1.103,
+      "end": 1.393
+    },
+    {
+      "index": 3,
+      "char": "的",
+      "start": 1.448,
+      "end": 1.738
+    },
+    {
+      "index": 4,
+      "char": "刊",
+      "start": 1.794,
+      "end": 2.084
+    },
+    {
+      "index": 5,
+      "char": "它",
+      "start": 2.479,
+      "end": 2.769
+    },
+    {
+      "index": 6,
+      "char": "是",
+      "start": 2.825,
+      "end": 3.115
+    },
+    {
+      "index": 7,
+      "char": "左",
+      "start": 3.17,
+      "end": 3.46
+    },
+    {
+      "index": 8,
+      "char": "右",
+      "start": 3.515,
+      "end": 3.806
+    },
+    {
+      "index": 9,
+      "char": "结",
+      "start": 3.861,
+      "end": 4.151
+    },
+    {
+      "index": 10,
+      "char": "构",
+      "start": 4.206,
+      "end": 4.497
+    },
+    {
+      "index": 11,
+      "char": "看",
+      "start": 4.892,
+      "end": 5.182
+    },
+    {
+      "index": 12,
+      "char": "图",
+      "start": 5.237,
+      "end": 5.527
+    },
+    {
+      "index": 13,
+      "char": "找",
+      "start": 5.583,
+      "end": 5.873
+    },
+    {
+      "index": 14,
+      "char": "部",
+      "start": 5.928,
+      "end": 6.218
+    },
+    {
+      "index": 15,
+      "char": "件",
+      "start": 6.274,
+      "end": 6.564
+    },
+    {
+      "index": 16,
+      "char": "合",
+      "start": 6.799,
+      "end": 7.089
+    },
+    {
+      "index": 17,
+      "char": "成",
+      "start": 7.144,
+      "end": 7.435
+    },
+    {
+      "index": 18,
+      "char": "字",
+      "start": 7.49,
+      "end": 7.78
+    },
+    {
+      "index": 19,
+      "char": "形",
+      "start": 7.835,
+      "end": 8.125
+    },
+    {
+      "index": 20,
+      "char": "再",
+      "start": 8.521,
+      "end": 8.811
+    },
+    {
+      "index": 21,
+      "char": "读",
+      "start": 8.866,
+      "end": 9.156
+    },
+    {
+      "index": 22,
+      "char": "刊",
+      "start": 9.392,
+      "end": 9.682
+    },
+    {
+      "index": 23,
+      "char": "物",
+      "start": 9.737,
+      "end": 10.027
+    }
+  ],
+  "transcript": "刊，“刊物”的“刊”。它是左右结构。看图找部件，合成字形。再读：刊物。",
+  "voice_reference": "封",
+  "timing_source": "punctuation-weighted-estimate",
+  "script_version": "child-first-v1",
+  "duration": 10.560181
+}

@@ -1,0 +1,153 @@
+{
+  "marks": [
+    {
+      "index": 0,
+      "char": "鼠",
+      "start": 0.168,
+      "end": 0.367
+    },
+    {
+      "index": 1,
+      "char": "松",
+      "start": 0.585,
+      "end": 0.784
+    },
+    {
+      "index": 2,
+      "char": "鼠",
+      "start": 0.822,
+      "end": 1.021
+    },
+    {
+      "index": 3,
+      "char": "的",
+      "start": 1.059,
+      "end": 1.259
+    },
+    {
+      "index": 4,
+      "char": "鼠",
+      "start": 1.297,
+      "end": 1.496
+    },
+    {
+      "index": 5,
+      "char": "它",
+      "start": 1.874,
+      "end": 2.073
+    },
+    {
+      "index": 6,
+      "char": "是",
+      "start": 2.111,
+      "end": 2.31
+    },
+    {
+      "index": 7,
+      "char": "上",
+      "start": 2.348,
+      "end": 2.547
+    },
+    {
+      "index": 8,
+      "char": "下",
+      "start": 2.585,
+      "end": 2.784
+    },
+    {
+      "index": 9,
+      "char": "结",
+      "start": 2.822,
+      "end": 3.022
+    },
+    {
+      "index": 10,
+      "char": "构",
+      "start": 3.06,
+      "end": 3.259
+    },
+    {
+      "index": 11,
+      "char": "顺",
+      "start": 3.637,
+      "end": 3.836
+    },
+    {
+      "index": 12,
+      "char": "着",
+      "start": 3.874,
+      "end": 4.073
+    },
+    {
+      "index": 13,
+      "char": "图",
+      "start": 4.111,
+      "end": 4.31
+    },
+    {
+      "index": 14,
+      "char": "记",
+      "start": 4.348,
+      "end": 4.548
+    },
+    {
+      "index": 15,
+      "char": "住",
+      "start": 4.585,
+      "end": 4.785
+    },
+    {
+      "index": 16,
+      "char": "整",
+      "start": 4.823,
+      "end": 5.022
+    },
+    {
+      "index": 17,
+      "char": "体",
+      "start": 5.06,
+      "end": 5.259
+    },
+    {
+      "index": 18,
+      "char": "轮",
+      "start": 5.297,
+      "end": 5.496
+    },
+    {
+      "index": 19,
+      "char": "廓",
+      "start": 5.534,
+      "end": 5.733
+    },
+    {
+      "index": 20,
+      "char": "再",
+      "start": 6.111,
+      "end": 6.311
+    },
+    {
+      "index": 21,
+      "char": "读",
+      "start": 6.349,
+      "end": 6.548
+    },
+    {
+      "index": 22,
+      "char": "松",
+      "start": 6.766,
+      "end": 6.965
+    },
+    {
+      "index": 23,
+      "char": "鼠",
+      "start": 7.003,
+      "end": 7.202
+    }
+  ],
+  "transcript": "鼠，“松鼠”的“鼠”。它是上下结构。顺着图记住整体轮廓。再读：松鼠。",
+  "voice_reference": "封",
+  "timing_source": "punctuation-weighted-estimate",
+  "script_version": "child-first-v1",
+  "duration": 7.681066
+}

@@ -1,0 +1,165 @@
+{
+  "marks": [
+    {
+      "index": 0,
+      "char": "疼",
+      "start": 0.195,
+      "end": 0.413
+    },
+    {
+      "index": 1,
+      "char": "疼",
+      "start": 0.634,
+      "end": 0.852
+    },
+    {
+      "index": 2,
+      "char": "爱",
+      "start": 0.894,
+      "end": 1.112
+    },
+    {
+      "index": 3,
+      "char": "的",
+      "start": 1.153,
+      "end": 1.371
+    },
+    {
+      "index": 4,
+      "char": "疼",
+      "start": 1.413,
+      "end": 1.631
+    },
+    {
+      "index": 5,
+      "char": "它",
+      "start": 2.012,
+      "end": 2.23
+    },
+    {
+      "index": 6,
+      "char": "是",
+      "start": 2.272,
+      "end": 2.49
+    },
+    {
+      "index": 7,
+      "char": "左",
+      "start": 2.531,
+      "end": 2.749
+    },
+    {
+      "index": 8,
+      "char": "上",
+      "start": 2.791,
+      "end": 3.009
+    },
+    {
+      "index": 9,
+      "char": "包",
+      "start": 3.05,
+      "end": 3.268
+    },
+    {
+      "index": 10,
+      "char": "围",
+      "start": 3.31,
+      "end": 3.528
+    },
+    {
+      "index": 11,
+      "char": "结",
+      "start": 3.569,
+      "end": 3.787
+    },
+    {
+      "index": 12,
+      "char": "构",
+      "start": 3.829,
+      "end": 4.047
+    },
+    {
+      "index": 13,
+      "char": "看",
+      "start": 4.429,
+      "end": 4.647
+    },
+    {
+      "index": 14,
+      "char": "图",
+      "start": 4.688,
+      "end": 4.906
+    },
+    {
+      "index": 15,
+      "char": "找",
+      "start": 4.948,
+      "end": 5.166
+    },
+    {
+      "index": 16,
+      "char": "部",
+      "start": 5.207,
+      "end": 5.425
+    },
+    {
+      "index": 17,
+      "char": "件",
+      "start": 5.467,
+      "end": 5.685
+    },
+    {
+      "index": 18,
+      "char": "合",
+      "start": 5.906,
+      "end": 6.124
+    },
+    {
+      "index": 19,
+      "char": "成",
+      "start": 6.166,
+      "end": 6.384
+    },
+    {
+      "index": 20,
+      "char": "字",
+      "start": 6.425,
+      "end": 6.643
+    },
+    {
+      "index": 21,
+      "char": "形",
+      "start": 6.685,
+      "end": 6.903
+    },
+    {
+      "index": 22,
+      "char": "再",
+      "start": 7.284,
+      "end": 7.502
+    },
+    {
+      "index": 23,
+      "char": "读",
+      "start": 7.544,
+      "end": 7.762
+    },
+    {
+      "index": 24,
+      "char": "疼",
+      "start": 7.983,
+      "end": 8.201
+    },
+    {
+      "index": 25,
+      "char": "爱",
+      "start": 8.243,
+      "end": 8.461
+    }
+  ],
+  "transcript": "疼，“疼爱”的“疼”。它是左上包围结构。看图找部件，合成字形。再读：疼爱。",
+  "voice_reference": "封",
+  "timing_source": "punctuation-weighted-estimate",
+  "script_version": "child-first-v1",
+  "duration": 8.961066
+}

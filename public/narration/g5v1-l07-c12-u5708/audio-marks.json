@@ -1,0 +1,159 @@
+{
+  "marks": [
+    {
+      "index": 0,
+      "char": "圈",
+      "start": 0.21,
+      "end": 0.457
+    },
+    {
+      "index": 1,
+      "char": "圆",
+      "start": 0.684,
+      "end": 0.932
+    },
+    {
+      "index": 2,
+      "char": "圈",
+      "start": 0.979,
+      "end": 1.226
+    },
+    {
+      "index": 3,
+      "char": "的",
+      "start": 1.273,
+      "end": 1.521
+    },
+    {
+      "index": 4,
+      "char": "圈",
+      "start": 1.568,
+      "end": 1.815
+    },
+    {
+      "index": 5,
+      "char": "它",
+      "start": 2.203,
+      "end": 2.45
+    },
+    {
+      "index": 6,
+      "char": "是",
+      "start": 2.497,
+      "end": 2.745
+    },
+    {
+      "index": 7,
+      "char": "全",
+      "start": 2.792,
+      "end": 3.039
+    },
+    {
+      "index": 8,
+      "char": "包",
+      "start": 3.086,
+      "end": 3.334
+    },
+    {
+      "index": 9,
+      "char": "围",
+      "start": 3.381,
+      "end": 3.628
+    },
+    {
+      "index": 10,
+      "char": "结",
+      "start": 3.675,
+      "end": 3.923
+    },
+    {
+      "index": 11,
+      "char": "构",
+      "start": 3.97,
+      "end": 4.217
+    },
+    {
+      "index": 12,
+      "char": "看",
+      "start": 4.604,
+      "end": 4.852
+    },
+    {
+      "index": 13,
+      "char": "图",
+      "start": 4.899,
+      "end": 5.146
+    },
+    {
+      "index": 14,
+      "char": "找",
+      "start": 5.194,
+      "end": 5.441
+    },
+    {
+      "index": 15,
+      "char": "部",
+      "start": 5.488,
+      "end": 5.736
+    },
+    {
+      "index": 16,
+      "char": "件",
+      "start": 5.783,
+      "end": 6.03
+    },
+    {
+      "index": 17,
+      "char": "合",
+      "start": 6.257,
+      "end": 6.505
+    },
+    {
+      "index": 18,
+      "char": "成",
+      "start": 6.552,
+      "end": 6.799
+    },
+    {
+      "index": 19,
+      "char": "字",
+      "start": 6.846,
+      "end": 7.094
+    },
+    {
+      "index": 20,
+      "char": "形",
+      "start": 7.141,
+      "end": 7.388
+    },
+    {
+      "index": 21,
+      "char": "再",
+      "start": 7.776,
+      "end": 8.023
+    },
+    {
+      "index": 22,
+      "char": "读",
+      "start": 8.07,
+      "end": 8.318
+    },
+    {
+      "index": 23,
+      "char": "圆",
+      "start": 8.545,
+      "end": 8.792
+    },
+    {
+      "index": 24,
+      "char": "圈",
+      "start": 8.839,
+      "end": 9.087
+    }
+  ],
+  "transcript": "圈，“圆圈”的“圈”。它是全包围结构。看图找部件，合成字形。再读：圆圈。",
+  "voice_reference": "封",
+  "timing_source": "punctuation-weighted-estimate",
+  "script_version": "child-first-v1",
+  "duration": 9.600181
+}

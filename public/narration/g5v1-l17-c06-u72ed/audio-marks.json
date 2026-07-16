@@ -1,0 +1,153 @@
+{
+  "marks": [
+    {
+      "index": 0,
+      "char": "狭",
+      "start": 0.253,
+      "end": 0.576
+    },
+    {
+      "index": 1,
+      "char": "狭",
+      "start": 0.818,
+      "end": 1.14
+    },
+    {
+      "index": 2,
+      "char": "窄",
+      "start": 1.202,
+      "end": 1.524
+    },
+    {
+      "index": 3,
+      "char": "的",
+      "start": 1.586,
+      "end": 1.908
+    },
+    {
+      "index": 4,
+      "char": "狭",
+      "start": 1.97,
+      "end": 2.292
+    },
+    {
+      "index": 5,
+      "char": "它",
+      "start": 2.694,
+      "end": 3.016
+    },
+    {
+      "index": 6,
+      "char": "是",
+      "start": 3.078,
+      "end": 3.401
+    },
+    {
+      "index": 7,
+      "char": "左",
+      "start": 3.462,
+      "end": 3.785
+    },
+    {
+      "index": 8,
+      "char": "右",
+      "start": 3.846,
+      "end": 4.169
+    },
+    {
+      "index": 9,
+      "char": "结",
+      "start": 4.23,
+      "end": 4.553
+    },
+    {
+      "index": 10,
+      "char": "构",
+      "start": 4.614,
+      "end": 4.937
+    },
+    {
+      "index": 11,
+      "char": "看",
+      "start": 5.338,
+      "end": 5.661
+    },
+    {
+      "index": 12,
+      "char": "图",
+      "start": 5.722,
+      "end": 6.045
+    },
+    {
+      "index": 13,
+      "char": "找",
+      "start": 6.106,
+      "end": 6.429
+    },
+    {
+      "index": 14,
+      "char": "部",
+      "start": 6.491,
+      "end": 6.813
+    },
+    {
+      "index": 15,
+      "char": "件",
+      "start": 6.875,
+      "end": 7.197
+    },
+    {
+      "index": 16,
+      "char": "合",
+      "start": 7.439,
+      "end": 7.761
+    },
+    {
+      "index": 17,
+      "char": "成",
+      "start": 7.823,
+      "end": 8.145
+    },
+    {
+      "index": 18,
+      "char": "字",
+      "start": 8.207,
+      "end": 8.529
+    },
+    {
+      "index": 19,
+      "char": "形",
+      "start": 8.591,
+      "end": 8.914
+    },
+    {
+      "index": 20,
+      "char": "再",
+      "start": 9.315,
+      "end": 9.638
+    },
+    {
+      "index": 21,
+      "char": "读",
+      "start": 9.699,
+      "end": 10.022
+    },
+    {
+      "index": 22,
+      "char": "狭",
+      "start": 10.263,
+      "end": 10.586
+    },
+    {
+      "index": 23,
+      "char": "窄",
+      "start": 10.647,
+      "end": 10.97
+    }
+  ],
+  "transcript": "狭，“狭窄”的“狭”。它是左右结构。看图找部件，合成字形。再读：狭窄。",
+  "voice_reference": "封",
+  "timing_source": "punctuation-weighted-estimate",
+  "script_version": "child-first-v1",
+  "duration": 11.521066
+}

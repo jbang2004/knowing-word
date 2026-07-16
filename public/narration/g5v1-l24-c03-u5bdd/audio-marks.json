@@ -1,0 +1,153 @@
+{
+  "marks": [
+    {
+      "index": 0,
+      "char": "寝",
+      "start": 0.254,
+      "end": 0.583
+    },
+    {
+      "index": 1,
+      "char": "就",
+      "start": 0.825,
+      "end": 1.154
+    },
+    {
+      "index": 2,
+      "char": "寝",
+      "start": 1.217,
+      "end": 1.546
+    },
+    {
+      "index": 3,
+      "char": "的",
+      "start": 1.609,
+      "end": 1.938
+    },
+    {
+      "index": 4,
+      "char": "寝",
+      "start": 2,
+      "end": 2.329
+    },
+    {
+      "index": 5,
+      "char": "它",
+      "start": 2.732,
+      "end": 3.061
+    },
+    {
+      "index": 6,
+      "char": "是",
+      "start": 3.123,
+      "end": 3.452
+    },
+    {
+      "index": 7,
+      "char": "上",
+      "start": 3.515,
+      "end": 3.844
+    },
+    {
+      "index": 8,
+      "char": "下",
+      "start": 3.907,
+      "end": 4.235
+    },
+    {
+      "index": 9,
+      "char": "结",
+      "start": 4.298,
+      "end": 4.627
+    },
+    {
+      "index": 10,
+      "char": "构",
+      "start": 4.69,
+      "end": 5.019
+    },
+    {
+      "index": 11,
+      "char": "顺",
+      "start": 5.421,
+      "end": 5.75
+    },
+    {
+      "index": 12,
+      "char": "着",
+      "start": 5.813,
+      "end": 6.142
+    },
+    {
+      "index": 13,
+      "char": "图",
+      "start": 6.204,
+      "end": 6.533
+    },
+    {
+      "index": 14,
+      "char": "记",
+      "start": 6.596,
+      "end": 6.925
+    },
+    {
+      "index": 15,
+      "char": "住",
+      "start": 6.988,
+      "end": 7.316
+    },
+    {
+      "index": 16,
+      "char": "整",
+      "start": 7.379,
+      "end": 7.708
+    },
+    {
+      "index": 17,
+      "char": "体",
+      "start": 7.771,
+      "end": 8.1
+    },
+    {
+      "index": 18,
+      "char": "轮",
+      "start": 8.162,
+      "end": 8.491
+    },
+    {
+      "index": 19,
+      "char": "廓",
+      "start": 8.554,
+      "end": 8.883
+    },
+    {
+      "index": 20,
+      "char": "再",
+      "start": 9.285,
+      "end": 9.614
+    },
+    {
+      "index": 21,
+      "char": "读",
+      "start": 9.677,
+      "end": 10.006
+    },
+    {
+      "index": 22,
+      "char": "就",
+      "start": 10.249,
+      "end": 10.578
+    },
+    {
+      "index": 23,
+      "char": "寝",
+      "start": 10.64,
+      "end": 10.969
+    }
+  ],
+  "transcript": "寝，“就寝”的“寝”。它是上下结构。顺着图记住整体轮廓。再读：就寝。",
+  "voice_reference": "封",
+  "timing_source": "punctuation-weighted-estimate",
+  "script_version": "child-first-v1",
+  "duration": 11.521066
+}

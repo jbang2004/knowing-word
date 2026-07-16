@@ -1,0 +1,153 @@
+{
+  "marks": [
+    {
+      "index": 0,
+      "char": "兼",
+      "start": 0.286,
+      "end": 0.657
+    },
+    {
+      "index": 1,
+      "char": "兼",
+      "start": 0.908,
+      "end": 1.279
+    },
+    {
+      "index": 2,
+      "char": "职",
+      "start": 1.35,
+      "end": 1.721
+    },
+    {
+      "index": 3,
+      "char": "的",
+      "start": 1.792,
+      "end": 2.163
+    },
+    {
+      "index": 4,
+      "char": "兼",
+      "start": 2.233,
+      "end": 2.605
+    },
+    {
+      "index": 5,
+      "char": "它",
+      "start": 3.015,
+      "end": 3.387
+    },
+    {
+      "index": 6,
+      "char": "是",
+      "start": 3.457,
+      "end": 3.829
+    },
+    {
+      "index": 7,
+      "char": "上",
+      "start": 3.899,
+      "end": 4.271
+    },
+    {
+      "index": 8,
+      "char": "下",
+      "start": 4.341,
+      "end": 4.712
+    },
+    {
+      "index": 9,
+      "char": "结",
+      "start": 4.783,
+      "end": 5.154
+    },
+    {
+      "index": 10,
+      "char": "构",
+      "start": 5.225,
+      "end": 5.596
+    },
+    {
+      "index": 11,
+      "char": "看",
+      "start": 6.007,
+      "end": 6.378
+    },
+    {
+      "index": 12,
+      "char": "图",
+      "start": 6.449,
+      "end": 6.82
+    },
+    {
+      "index": 13,
+      "char": "找",
+      "start": 6.891,
+      "end": 7.262
+    },
+    {
+      "index": 14,
+      "char": "部",
+      "start": 7.333,
+      "end": 7.704
+    },
+    {
+      "index": 15,
+      "char": "件",
+      "start": 7.775,
+      "end": 8.146
+    },
+    {
+      "index": 16,
+      "char": "合",
+      "start": 8.397,
+      "end": 8.768
+    },
+    {
+      "index": 17,
+      "char": "成",
+      "start": 8.839,
+      "end": 9.21
+    },
+    {
+      "index": 18,
+      "char": "字",
+      "start": 9.281,
+      "end": 9.652
+    },
+    {
+      "index": 19,
+      "char": "形",
+      "start": 9.723,
+      "end": 10.094
+    },
+    {
+      "index": 20,
+      "char": "再",
+      "start": 10.505,
+      "end": 10.876
+    },
+    {
+      "index": 21,
+      "char": "读",
+      "start": 10.946,
+      "end": 11.318
+    },
+    {
+      "index": 22,
+      "char": "兼",
+      "start": 11.568,
+      "end": 11.94
+    },
+    {
+      "index": 23,
+      "char": "职",
+      "start": 12.01,
+      "end": 12.382
+    }
+  ],
+  "transcript": "兼，“兼职”的“兼”。它是上下结构。看图找部件，合成字形。再读：兼职。",
+  "voice_reference": "封",
+  "timing_source": "punctuation-weighted-estimate",
+  "script_version": "child-first-v1",
+  "duration": 12.960181
+}

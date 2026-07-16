@@ -1,0 +1,165 @@
+{
+  "marks": [
+    {
+      "index": 0,
+      "char": "跷",
+      "start": 0.188,
+      "end": 0.396
+    },
+    {
+      "index": 1,
+      "char": "跷",
+      "start": 0.615,
+      "end": 0.823
+    },
+    {
+      "index": 2,
+      "char": "跷",
+      "start": 0.863,
+      "end": 1.071
+    },
+    {
+      "index": 3,
+      "char": "板",
+      "start": 1.11,
+      "end": 1.318
+    },
+    {
+      "index": 4,
+      "char": "的",
+      "start": 1.358,
+      "end": 1.566
+    },
+    {
+      "index": 5,
+      "char": "跷",
+      "start": 1.606,
+      "end": 1.814
+    },
+    {
+      "index": 6,
+      "char": "它",
+      "start": 2.193,
+      "end": 2.401
+    },
+    {
+      "index": 7,
+      "char": "是",
+      "start": 2.441,
+      "end": 2.649
+    },
+    {
+      "index": 8,
+      "char": "左",
+      "start": 2.689,
+      "end": 2.897
+    },
+    {
+      "index": 9,
+      "char": "右",
+      "start": 2.936,
+      "end": 3.144
+    },
+    {
+      "index": 10,
+      "char": "结",
+      "start": 3.184,
+      "end": 3.392
+    },
+    {
+      "index": 11,
+      "char": "构",
+      "start": 3.431,
+      "end": 3.639
+    },
+    {
+      "index": 12,
+      "char": "看",
+      "start": 4.019,
+      "end": 4.227
+    },
+    {
+      "index": 13,
+      "char": "图",
+      "start": 4.267,
+      "end": 4.475
+    },
+    {
+      "index": 14,
+      "char": "找",
+      "start": 4.514,
+      "end": 4.722
+    },
+    {
+      "index": 15,
+      "char": "部",
+      "start": 4.762,
+      "end": 4.97
+    },
+    {
+      "index": 16,
+      "char": "件",
+      "start": 5.009,
+      "end": 5.217
+    },
+    {
+      "index": 17,
+      "char": "合",
+      "start": 5.437,
+      "end": 5.645
+    },
+    {
+      "index": 18,
+      "char": "成",
+      "start": 5.685,
+      "end": 5.893
+    },
+    {
+      "index": 19,
+      "char": "字",
+      "start": 5.932,
+      "end": 6.14
+    },
+    {
+      "index": 20,
+      "char": "形",
+      "start": 6.18,
+      "end": 6.388
+    },
+    {
+      "index": 21,
+      "char": "再",
+      "start": 6.767,
+      "end": 6.975
+    },
+    {
+      "index": 22,
+      "char": "读",
+      "start": 7.015,
+      "end": 7.223
+    },
+    {
+      "index": 23,
+      "char": "跷",
+      "start": 7.443,
+      "end": 7.651
+    },
+    {
+      "index": 24,
+      "char": "跷",
+      "start": 7.69,
+      "end": 7.898
+    },
+    {
+      "index": 25,
+      "char": "板",
+      "start": 7.938,
+      "end": 8.146
+    }
+  ],
+  "transcript": "跷，“跷跷板”的“跷”。它是左右结构。看图找部件，合成字形。再读：跷跷板。",
+  "voice_reference": "封",
+  "timing_source": "punctuation-weighted-estimate",
+  "script_version": "child-first-v1",
+  "duration": 8.640181
+}

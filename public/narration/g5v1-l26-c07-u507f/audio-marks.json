@@ -1,0 +1,153 @@
+{
+  "marks": [
+    {
+      "index": 0,
+      "char": "偿",
+      "start": 0.228,
+      "end": 0.513
+    },
+    {
+      "index": 1,
+      "char": "补",
+      "start": 0.747,
+      "end": 1.032
+    },
+    {
+      "index": 2,
+      "char": "偿",
+      "start": 1.086,
+      "end": 1.371
+    },
+    {
+      "index": 3,
+      "char": "的",
+      "start": 1.425,
+      "end": 1.71
+    },
+    {
+      "index": 4,
+      "char": "偿",
+      "start": 1.764,
+      "end": 2.049
+    },
+    {
+      "index": 5,
+      "char": "它",
+      "start": 2.443,
+      "end": 2.728
+    },
+    {
+      "index": 6,
+      "char": "是",
+      "start": 2.782,
+      "end": 3.067
+    },
+    {
+      "index": 7,
+      "char": "左",
+      "start": 3.121,
+      "end": 3.406
+    },
+    {
+      "index": 8,
+      "char": "右",
+      "start": 3.46,
+      "end": 3.745
+    },
+    {
+      "index": 9,
+      "char": "结",
+      "start": 3.799,
+      "end": 4.084
+    },
+    {
+      "index": 10,
+      "char": "构",
+      "start": 4.138,
+      "end": 4.423
+    },
+    {
+      "index": 11,
+      "char": "看",
+      "start": 4.817,
+      "end": 5.102
+    },
+    {
+      "index": 12,
+      "char": "图",
+      "start": 5.156,
+      "end": 5.441
+    },
+    {
+      "index": 13,
+      "char": "找",
+      "start": 5.495,
+      "end": 5.78
+    },
+    {
+      "index": 14,
+      "char": "部",
+      "start": 5.834,
+      "end": 6.119
+    },
+    {
+      "index": 15,
+      "char": "件",
+      "start": 6.173,
+      "end": 6.458
+    },
+    {
+      "index": 16,
+      "char": "合",
+      "start": 6.692,
+      "end": 6.977
+    },
+    {
+      "index": 17,
+      "char": "成",
+      "start": 7.031,
+      "end": 7.316
+    },
+    {
+      "index": 18,
+      "char": "字",
+      "start": 7.37,
+      "end": 7.655
+    },
+    {
+      "index": 19,
+      "char": "形",
+      "start": 7.709,
+      "end": 7.994
+    },
+    {
+      "index": 20,
+      "char": "再",
+      "start": 8.388,
+      "end": 8.673
+    },
+    {
+      "index": 21,
+      "char": "读",
+      "start": 8.727,
+      "end": 9.012
+    },
+    {
+      "index": 22,
+      "char": "补",
+      "start": 9.247,
+      "end": 9.531
+    },
+    {
+      "index": 23,
+      "char": "偿",
+      "start": 9.586,
+      "end": 9.87
+    }
+  ],
+  "transcript": "偿，“补偿”的“偿”。它是左右结构。看图找部件，合成字形。再读：补偿。",
+  "voice_reference": "封",
+  "timing_source": "punctuation-weighted-estimate",
+  "script_version": "child-first-v1",
+  "duration": 10.400181
+}

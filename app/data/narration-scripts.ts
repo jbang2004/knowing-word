@@ -1,3 +1,5 @@
+import { grade5NarrationScripts } from "./grade5-volume1-narration.generated.ts";
+
 /*
  * Child-first narration scripts.
  *
@@ -6,7 +8,7 @@
  * the word's meaning in context. Mnemonic scenes are explicitly presented as
  * memory aids rather than historical claims about how a character was formed.
  */
-export const narrationScripts = {
+const legacyNarrationScripts = {
   桂: "桂，桂花的桂。它是左右结构。左边的木字旁提醒我们，桂是一种树；右边的圭帮助记住读音。看图时，把左边认成枝叶舒展的桂树，把右边认成立在两层土台上的玉圭。树和圭并排站好，就是桂。课文里的桂花，就是桂树开的花。",
   花: "花，桂花和木兰花的花。它是上下结构。上面的草字头告诉我们，花和植物有关；下面的化帮助记住读音。想象花圃里，草叶在上方展开，花下的人影慢慢转身，合成一个花字。桂花是桂树开的花，木兰花是木兰树开的花。",
   故: "故，故乡的故。它是左右结构，左边是古，右边是反文旁。为了好记，可以想象一块写着往事的旧石碑，旁边有人轻轻敲着讲故事。故事说的是很久以前，于是故常有从前、原来的意思。故乡，就是自己出生或长大的家乡。",
@@ -84,3 +86,8 @@ export const narrationScripts = {
   抗: "抗，抗日的抗。它是左右结构，提手旁让人想到用手顶住外力，右边的亢帮助记住读音。看图时，一只手牢牢撑住立柱，亭架迎着强风仍不后退。抗就是抵挡、反抗。抗日，指中国人民抵抗日本侵略者的斗争。",
   日: "日，抗日的日。日是独体字，古字形像太阳：外框是日轮，中间一横像太阳中央的光。看图时，一轮方正的太阳从云带后升起，就能记住日。日通常表示太阳或一天；在抗日这个历史词语里，日是日本的简称。",
 } satisfies Record<string, string>;
+
+export const narrationScripts: Record<string, string> = {
+  ...(grade5NarrationScripts as unknown as Record<string, string>),
+  ...legacyNarrationScripts,
+};

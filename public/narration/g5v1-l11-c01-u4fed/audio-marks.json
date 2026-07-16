@@ -1,0 +1,153 @@
+{
+  "marks": [
+    {
+      "index": 0,
+      "char": "俭",
+      "start": 0.167,
+      "end": 0.36
+    },
+    {
+      "index": 1,
+      "char": "节",
+      "start": 0.577,
+      "end": 0.77
+    },
+    {
+      "index": 2,
+      "char": "俭",
+      "start": 0.807,
+      "end": 1
+    },
+    {
+      "index": 3,
+      "char": "的",
+      "start": 1.036,
+      "end": 1.229
+    },
+    {
+      "index": 4,
+      "char": "俭",
+      "start": 1.266,
+      "end": 1.459
+    },
+    {
+      "index": 5,
+      "char": "它",
+      "start": 1.836,
+      "end": 2.029
+    },
+    {
+      "index": 6,
+      "char": "是",
+      "start": 2.065,
+      "end": 2.258
+    },
+    {
+      "index": 7,
+      "char": "左",
+      "start": 2.295,
+      "end": 2.488
+    },
+    {
+      "index": 8,
+      "char": "右",
+      "start": 2.525,
+      "end": 2.718
+    },
+    {
+      "index": 9,
+      "char": "结",
+      "start": 2.754,
+      "end": 2.947
+    },
+    {
+      "index": 10,
+      "char": "构",
+      "start": 2.984,
+      "end": 3.177
+    },
+    {
+      "index": 11,
+      "char": "看",
+      "start": 3.554,
+      "end": 3.747
+    },
+    {
+      "index": 12,
+      "char": "图",
+      "start": 3.784,
+      "end": 3.976
+    },
+    {
+      "index": 13,
+      "char": "找",
+      "start": 4.013,
+      "end": 4.206
+    },
+    {
+      "index": 14,
+      "char": "部",
+      "start": 4.243,
+      "end": 4.436
+    },
+    {
+      "index": 15,
+      "char": "件",
+      "start": 4.473,
+      "end": 4.665
+    },
+    {
+      "index": 16,
+      "char": "合",
+      "start": 4.882,
+      "end": 5.075
+    },
+    {
+      "index": 17,
+      "char": "成",
+      "start": 5.112,
+      "end": 5.305
+    },
+    {
+      "index": 18,
+      "char": "字",
+      "start": 5.342,
+      "end": 5.535
+    },
+    {
+      "index": 19,
+      "char": "形",
+      "start": 5.571,
+      "end": 5.764
+    },
+    {
+      "index": 20,
+      "char": "再",
+      "start": 6.141,
+      "end": 6.334
+    },
+    {
+      "index": 21,
+      "char": "读",
+      "start": 6.371,
+      "end": 6.564
+    },
+    {
+      "index": 22,
+      "char": "节",
+      "start": 6.78,
+      "end": 6.973
+    },
+    {
+      "index": 23,
+      "char": "俭",
+      "start": 7.01,
+      "end": 7.203
+    }
+  ],
+  "transcript": "俭，“节俭”的“俭”。它是左右结构。看图找部件，合成字形。再读：节俭。",
+  "voice_reference": "封",
+  "timing_source": "punctuation-weighted-estimate",
+  "script_version": "child-first-v1",
+  "duration": 7.681066
+}

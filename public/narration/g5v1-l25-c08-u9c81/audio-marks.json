@@ -1,0 +1,153 @@
+{
+  "marks": [
+    {
+      "index": 0,
+      "char": "鲁",
+      "start": 0.185,
+      "end": 0.405
+    },
+    {
+      "index": 1,
+      "char": "鲁",
+      "start": 0.627,
+      "end": 0.847
+    },
+    {
+      "index": 2,
+      "char": "莽",
+      "start": 0.889,
+      "end": 1.109
+    },
+    {
+      "index": 3,
+      "char": "的",
+      "start": 1.151,
+      "end": 1.371
+    },
+    {
+      "index": 4,
+      "char": "鲁",
+      "start": 1.413,
+      "end": 1.632
+    },
+    {
+      "index": 5,
+      "char": "它",
+      "start": 2.014,
+      "end": 2.234
+    },
+    {
+      "index": 6,
+      "char": "是",
+      "start": 2.276,
+      "end": 2.496
+    },
+    {
+      "index": 7,
+      "char": "上",
+      "start": 2.538,
+      "end": 2.758
+    },
+    {
+      "index": 8,
+      "char": "下",
+      "start": 2.8,
+      "end": 3.02
+    },
+    {
+      "index": 9,
+      "char": "结",
+      "start": 3.062,
+      "end": 3.281
+    },
+    {
+      "index": 10,
+      "char": "构",
+      "start": 3.323,
+      "end": 3.543
+    },
+    {
+      "index": 11,
+      "char": "看",
+      "start": 3.925,
+      "end": 4.145
+    },
+    {
+      "index": 12,
+      "char": "图",
+      "start": 4.187,
+      "end": 4.407
+    },
+    {
+      "index": 13,
+      "char": "找",
+      "start": 4.449,
+      "end": 4.669
+    },
+    {
+      "index": 14,
+      "char": "部",
+      "start": 4.711,
+      "end": 4.931
+    },
+    {
+      "index": 15,
+      "char": "件",
+      "start": 4.972,
+      "end": 5.192
+    },
+    {
+      "index": 16,
+      "char": "合",
+      "start": 5.414,
+      "end": 5.634
+    },
+    {
+      "index": 17,
+      "char": "成",
+      "start": 5.676,
+      "end": 5.896
+    },
+    {
+      "index": 18,
+      "char": "字",
+      "start": 5.938,
+      "end": 6.158
+    },
+    {
+      "index": 19,
+      "char": "形",
+      "start": 6.2,
+      "end": 6.42
+    },
+    {
+      "index": 20,
+      "char": "再",
+      "start": 6.801,
+      "end": 7.021
+    },
+    {
+      "index": 21,
+      "char": "读",
+      "start": 7.063,
+      "end": 7.283
+    },
+    {
+      "index": 22,
+      "char": "鲁",
+      "start": 7.505,
+      "end": 7.725
+    },
+    {
+      "index": 23,
+      "char": "莽",
+      "start": 7.767,
+      "end": 7.987
+    }
+  ],
+  "transcript": "鲁，“鲁莽”的“鲁”。它是上下结构。看图找部件，合成字形。再读：鲁莽。",
+  "voice_reference": "封",
+  "timing_source": "punctuation-weighted-estimate",
+  "script_version": "child-first-v1",
+  "duration": 8.480181
+}

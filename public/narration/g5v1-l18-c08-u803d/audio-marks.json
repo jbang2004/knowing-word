@@ -1,0 +1,153 @@
+{
+  "marks": [
+    {
+      "index": 0,
+      "char": "耽",
+      "start": 0.2,
+      "end": 0.441
+    },
+    {
+      "index": 1,
+      "char": "耽",
+      "start": 0.667,
+      "end": 0.909
+    },
+    {
+      "index": 2,
+      "char": "误",
+      "start": 0.955,
+      "end": 1.196
+    },
+    {
+      "index": 3,
+      "char": "的",
+      "start": 1.242,
+      "end": 1.484
+    },
+    {
+      "index": 4,
+      "char": "耽",
+      "start": 1.53,
+      "end": 1.771
+    },
+    {
+      "index": 5,
+      "char": "它",
+      "start": 2.157,
+      "end": 2.399
+    },
+    {
+      "index": 6,
+      "char": "是",
+      "start": 2.445,
+      "end": 2.686
+    },
+    {
+      "index": 7,
+      "char": "左",
+      "start": 2.732,
+      "end": 2.974
+    },
+    {
+      "index": 8,
+      "char": "右",
+      "start": 3.02,
+      "end": 3.262
+    },
+    {
+      "index": 9,
+      "char": "结",
+      "start": 3.308,
+      "end": 3.549
+    },
+    {
+      "index": 10,
+      "char": "构",
+      "start": 3.595,
+      "end": 3.837
+    },
+    {
+      "index": 11,
+      "char": "看",
+      "start": 4.223,
+      "end": 4.464
+    },
+    {
+      "index": 12,
+      "char": "图",
+      "start": 4.51,
+      "end": 4.752
+    },
+    {
+      "index": 13,
+      "char": "找",
+      "start": 4.798,
+      "end": 5.039
+    },
+    {
+      "index": 14,
+      "char": "部",
+      "start": 5.085,
+      "end": 5.327
+    },
+    {
+      "index": 15,
+      "char": "件",
+      "start": 5.373,
+      "end": 5.614
+    },
+    {
+      "index": 16,
+      "char": "合",
+      "start": 5.84,
+      "end": 6.082
+    },
+    {
+      "index": 17,
+      "char": "成",
+      "start": 6.128,
+      "end": 6.369
+    },
+    {
+      "index": 18,
+      "char": "字",
+      "start": 6.415,
+      "end": 6.657
+    },
+    {
+      "index": 19,
+      "char": "形",
+      "start": 6.703,
+      "end": 6.944
+    },
+    {
+      "index": 20,
+      "char": "再",
+      "start": 7.33,
+      "end": 7.572
+    },
+    {
+      "index": 21,
+      "char": "读",
+      "start": 7.618,
+      "end": 7.86
+    },
+    {
+      "index": 22,
+      "char": "耽",
+      "start": 8.086,
+      "end": 8.327
+    },
+    {
+      "index": 23,
+      "char": "误",
+      "start": 8.373,
+      "end": 8.615
+    }
+  ],
+  "transcript": "耽，“耽误”的“耽”。它是左右结构。看图找部件，合成字形。再读：耽误。",
+  "voice_reference": "封",
+  "timing_source": "punctuation-weighted-estimate",
+  "script_version": "child-first-v1",
+  "duration": 9.120181
+}

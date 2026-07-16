@@ -1,0 +1,153 @@
+{
+  "marks": [
+    {
+      "index": 0,
+      "char": "秀",
+      "start": 0.311,
+      "end": 0.749
+    },
+    {
+      "index": 1,
+      "char": "清",
+      "start": 1.012,
+      "end": 1.45
+    },
+    {
+      "index": 2,
+      "char": "秀",
+      "start": 1.533,
+      "end": 1.97
+    },
+    {
+      "index": 3,
+      "char": "的",
+      "start": 2.054,
+      "end": 2.491
+    },
+    {
+      "index": 4,
+      "char": "秀",
+      "start": 2.575,
+      "end": 3.012
+    },
+    {
+      "index": 5,
+      "char": "它",
+      "start": 3.435,
+      "end": 3.873
+    },
+    {
+      "index": 6,
+      "char": "是",
+      "start": 3.956,
+      "end": 4.394
+    },
+    {
+      "index": 7,
+      "char": "上",
+      "start": 4.477,
+      "end": 4.915
+    },
+    {
+      "index": 8,
+      "char": "下",
+      "start": 4.998,
+      "end": 5.435
+    },
+    {
+      "index": 9,
+      "char": "结",
+      "start": 5.519,
+      "end": 5.956
+    },
+    {
+      "index": 10,
+      "char": "构",
+      "start": 6.04,
+      "end": 6.477
+    },
+    {
+      "index": 11,
+      "char": "看",
+      "start": 6.901,
+      "end": 7.338
+    },
+    {
+      "index": 12,
+      "char": "图",
+      "start": 7.421,
+      "end": 7.859
+    },
+    {
+      "index": 13,
+      "char": "找",
+      "start": 7.942,
+      "end": 8.38
+    },
+    {
+      "index": 14,
+      "char": "部",
+      "start": 8.463,
+      "end": 8.901
+    },
+    {
+      "index": 15,
+      "char": "件",
+      "start": 8.984,
+      "end": 9.421
+    },
+    {
+      "index": 16,
+      "char": "合",
+      "start": 9.685,
+      "end": 10.122
+    },
+    {
+      "index": 17,
+      "char": "成",
+      "start": 10.206,
+      "end": 10.643
+    },
+    {
+      "index": 18,
+      "char": "字",
+      "start": 10.726,
+      "end": 11.164
+    },
+    {
+      "index": 19,
+      "char": "形",
+      "start": 11.247,
+      "end": 11.685
+    },
+    {
+      "index": 20,
+      "char": "再",
+      "start": 12.108,
+      "end": 12.546
+    },
+    {
+      "index": 21,
+      "char": "读",
+      "start": 12.629,
+      "end": 13.066
+    },
+    {
+      "index": 22,
+      "char": "清",
+      "start": 13.33,
+      "end": 13.767
+    },
+    {
+      "index": 23,
+      "char": "秀",
+      "start": 13.851,
+      "end": 14.288
+    }
+  ],
+  "transcript": "秀，“清秀”的“秀”。它是上下结构。看图找部件，合成字形。再读：清秀。",
+  "voice_reference": "封",
+  "timing_source": "punctuation-weighted-estimate",
+  "script_version": "child-first-v1",
+  "duration": 14.880181
+}

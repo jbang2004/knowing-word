@@ -1,0 +1,153 @@
+{
+  "marks": [
+    {
+      "index": 0,
+      "char": "娥",
+      "start": 0.214,
+      "end": 0.477
+    },
+    {
+      "index": 1,
+      "char": "嫦",
+      "start": 0.707,
+      "end": 0.97
+    },
+    {
+      "index": 2,
+      "char": "娥",
+      "start": 1.021,
+      "end": 1.284
+    },
+    {
+      "index": 3,
+      "char": "的",
+      "start": 1.334,
+      "end": 1.597
+    },
+    {
+      "index": 4,
+      "char": "娥",
+      "start": 1.647,
+      "end": 1.91
+    },
+    {
+      "index": 5,
+      "char": "它",
+      "start": 2.3,
+      "end": 2.564
+    },
+    {
+      "index": 6,
+      "char": "是",
+      "start": 2.614,
+      "end": 2.877
+    },
+    {
+      "index": 7,
+      "char": "左",
+      "start": 2.927,
+      "end": 3.19
+    },
+    {
+      "index": 8,
+      "char": "右",
+      "start": 3.24,
+      "end": 3.503
+    },
+    {
+      "index": 9,
+      "char": "结",
+      "start": 3.553,
+      "end": 3.817
+    },
+    {
+      "index": 10,
+      "char": "构",
+      "start": 3.867,
+      "end": 4.13
+    },
+    {
+      "index": 11,
+      "char": "看",
+      "start": 4.52,
+      "end": 4.783
+    },
+    {
+      "index": 12,
+      "char": "图",
+      "start": 4.833,
+      "end": 5.096
+    },
+    {
+      "index": 13,
+      "char": "找",
+      "start": 5.147,
+      "end": 5.41
+    },
+    {
+      "index": 14,
+      "char": "部",
+      "start": 5.46,
+      "end": 5.723
+    },
+    {
+      "index": 15,
+      "char": "件",
+      "start": 5.773,
+      "end": 6.036
+    },
+    {
+      "index": 16,
+      "char": "合",
+      "start": 6.266,
+      "end": 6.53
+    },
+    {
+      "index": 17,
+      "char": "成",
+      "start": 6.58,
+      "end": 6.843
+    },
+    {
+      "index": 18,
+      "char": "字",
+      "start": 6.893,
+      "end": 7.156
+    },
+    {
+      "index": 19,
+      "char": "形",
+      "start": 7.206,
+      "end": 7.469
+    },
+    {
+      "index": 20,
+      "char": "再",
+      "start": 7.859,
+      "end": 8.123
+    },
+    {
+      "index": 21,
+      "char": "读",
+      "start": 8.173,
+      "end": 8.436
+    },
+    {
+      "index": 22,
+      "char": "嫦",
+      "start": 8.666,
+      "end": 8.929
+    },
+    {
+      "index": 23,
+      "char": "娥",
+      "start": 8.979,
+      "end": 9.242
+    }
+  ],
+  "transcript": "娥，“嫦娥”的“娥”。它是左右结构。看图找部件，合成字形。再读：嫦娥。",
+  "voice_reference": "封",
+  "timing_source": "punctuation-weighted-estimate",
+  "script_version": "child-first-v1",
+  "duration": 9.760181
+}

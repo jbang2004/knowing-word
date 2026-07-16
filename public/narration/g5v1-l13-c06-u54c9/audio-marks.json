@@ -1,0 +1,165 @@
+{
+  "marks": [
+    {
+      "index": 0,
+      "char": "哉",
+      "start": 0.177,
+      "end": 0.37
+    },
+    {
+      "index": 1,
+      "char": "美",
+      "start": 0.587,
+      "end": 0.78
+    },
+    {
+      "index": 2,
+      "char": "哉",
+      "start": 0.817,
+      "end": 1.01
+    },
+    {
+      "index": 3,
+      "char": "的",
+      "start": 1.046,
+      "end": 1.239
+    },
+    {
+      "index": 4,
+      "char": "哉",
+      "start": 1.276,
+      "end": 1.469
+    },
+    {
+      "index": 5,
+      "char": "它",
+      "start": 1.846,
+      "end": 2.039
+    },
+    {
+      "index": 6,
+      "char": "是",
+      "start": 2.076,
+      "end": 2.269
+    },
+    {
+      "index": 7,
+      "char": "右",
+      "start": 2.306,
+      "end": 2.499
+    },
+    {
+      "index": 8,
+      "char": "上",
+      "start": 2.535,
+      "end": 2.728
+    },
+    {
+      "index": 9,
+      "char": "包",
+      "start": 2.765,
+      "end": 2.958
+    },
+    {
+      "index": 10,
+      "char": "围",
+      "start": 2.995,
+      "end": 3.188
+    },
+    {
+      "index": 11,
+      "char": "结",
+      "start": 3.225,
+      "end": 3.418
+    },
+    {
+      "index": 12,
+      "char": "构",
+      "start": 3.454,
+      "end": 3.648
+    },
+    {
+      "index": 13,
+      "char": "看",
+      "start": 4.024,
+      "end": 4.217
+    },
+    {
+      "index": 14,
+      "char": "图",
+      "start": 4.254,
+      "end": 4.447
+    },
+    {
+      "index": 15,
+      "char": "找",
+      "start": 4.484,
+      "end": 4.677
+    },
+    {
+      "index": 16,
+      "char": "部",
+      "start": 4.714,
+      "end": 4.907
+    },
+    {
+      "index": 17,
+      "char": "件",
+      "start": 4.943,
+      "end": 5.136
+    },
+    {
+      "index": 18,
+      "char": "合",
+      "start": 5.353,
+      "end": 5.546
+    },
+    {
+      "index": 19,
+      "char": "成",
+      "start": 5.583,
+      "end": 5.776
+    },
+    {
+      "index": 20,
+      "char": "字",
+      "start": 5.813,
+      "end": 6.006
+    },
+    {
+      "index": 21,
+      "char": "形",
+      "start": 6.043,
+      "end": 6.236
+    },
+    {
+      "index": 22,
+      "char": "再",
+      "start": 6.612,
+      "end": 6.805
+    },
+    {
+      "index": 23,
+      "char": "读",
+      "start": 6.842,
+      "end": 7.035
+    },
+    {
+      "index": 24,
+      "char": "美",
+      "start": 7.252,
+      "end": 7.445
+    },
+    {
+      "index": 25,
+      "char": "哉",
+      "start": 7.482,
+      "end": 7.675
+    }
+  ],
+  "transcript": "哉，“美哉”的“哉”。它是右上包围结构。看图找部件，合成字形。再读：美哉。",
+  "voice_reference": "封",
+  "timing_source": "punctuation-weighted-estimate",
+  "script_version": "child-first-v1",
+  "duration": 8.160181
+}

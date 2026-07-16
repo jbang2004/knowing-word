@@ -1,0 +1,165 @@
+{
+  "marks": [
+    {
+      "index": 0,
+      "char": "匣",
+      "start": 0.22,
+      "end": 0.473
+    },
+    {
+      "index": 1,
+      "char": "匣",
+      "start": 0.701,
+      "end": 0.954
+    },
+    {
+      "index": 2,
+      "char": "子",
+      "start": 1.002,
+      "end": 1.255
+    },
+    {
+      "index": 3,
+      "char": "的",
+      "start": 1.303,
+      "end": 1.556
+    },
+    {
+      "index": 4,
+      "char": "匣",
+      "start": 1.604,
+      "end": 1.857
+    },
+    {
+      "index": 5,
+      "char": "它",
+      "start": 2.245,
+      "end": 2.498
+    },
+    {
+      "index": 6,
+      "char": "是",
+      "start": 2.546,
+      "end": 2.799
+    },
+    {
+      "index": 7,
+      "char": "左",
+      "start": 2.847,
+      "end": 3.1
+    },
+    {
+      "index": 8,
+      "char": "三",
+      "start": 3.148,
+      "end": 3.401
+    },
+    {
+      "index": 9,
+      "char": "包",
+      "start": 3.449,
+      "end": 3.702
+    },
+    {
+      "index": 10,
+      "char": "围",
+      "start": 3.75,
+      "end": 4.003
+    },
+    {
+      "index": 11,
+      "char": "结",
+      "start": 4.051,
+      "end": 4.304
+    },
+    {
+      "index": 12,
+      "char": "构",
+      "start": 4.352,
+      "end": 4.605
+    },
+    {
+      "index": 13,
+      "char": "看",
+      "start": 4.993,
+      "end": 5.246
+    },
+    {
+      "index": 14,
+      "char": "图",
+      "start": 5.294,
+      "end": 5.547
+    },
+    {
+      "index": 15,
+      "char": "找",
+      "start": 5.595,
+      "end": 5.848
+    },
+    {
+      "index": 16,
+      "char": "部",
+      "start": 5.897,
+      "end": 6.149
+    },
+    {
+      "index": 17,
+      "char": "件",
+      "start": 6.198,
+      "end": 6.45
+    },
+    {
+      "index": 18,
+      "char": "合",
+      "start": 6.679,
+      "end": 6.932
+    },
+    {
+      "index": 19,
+      "char": "成",
+      "start": 6.98,
+      "end": 7.233
+    },
+    {
+      "index": 20,
+      "char": "字",
+      "start": 7.281,
+      "end": 7.534
+    },
+    {
+      "index": 21,
+      "char": "形",
+      "start": 7.582,
+      "end": 7.835
+    },
+    {
+      "index": 22,
+      "char": "再",
+      "start": 8.223,
+      "end": 8.476
+    },
+    {
+      "index": 23,
+      "char": "读",
+      "start": 8.524,
+      "end": 8.777
+    },
+    {
+      "index": 24,
+      "char": "匣",
+      "start": 9.005,
+      "end": 9.258
+    },
+    {
+      "index": 25,
+      "char": "子",
+      "start": 9.306,
+      "end": 9.559
+    }
+  ],
+  "transcript": "匣，“匣子”的“匣”。它是左三包围结构。看图找部件，合成字形。再读：匣子。",
+  "voice_reference": "封",
+  "timing_source": "punctuation-weighted-estimate",
+  "script_version": "child-first-v1",
+  "duration": 10.080181
+}

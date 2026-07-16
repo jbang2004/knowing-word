@@ -1,0 +1,153 @@
+{
+  "marks": [
+    {
+      "index": 0,
+      "char": "陵",
+      "start": 0.239,
+      "end": 0.54
+    },
+    {
+      "index": 1,
+      "char": "陵",
+      "start": 0.777,
+      "end": 1.078
+    },
+    {
+      "index": 2,
+      "char": "园",
+      "start": 1.136,
+      "end": 1.437
+    },
+    {
+      "index": 3,
+      "char": "的",
+      "start": 1.494,
+      "end": 1.795
+    },
+    {
+      "index": 4,
+      "char": "陵",
+      "start": 1.852,
+      "end": 2.153
+    },
+    {
+      "index": 5,
+      "char": "它",
+      "start": 2.551,
+      "end": 2.852
+    },
+    {
+      "index": 6,
+      "char": "是",
+      "start": 2.909,
+      "end": 3.21
+    },
+    {
+      "index": 7,
+      "char": "左",
+      "start": 3.267,
+      "end": 3.568
+    },
+    {
+      "index": 8,
+      "char": "右",
+      "start": 3.626,
+      "end": 3.927
+    },
+    {
+      "index": 9,
+      "char": "结",
+      "start": 3.984,
+      "end": 4.285
+    },
+    {
+      "index": 10,
+      "char": "构",
+      "start": 4.342,
+      "end": 4.643
+    },
+    {
+      "index": 11,
+      "char": "看",
+      "start": 5.04,
+      "end": 5.341
+    },
+    {
+      "index": 12,
+      "char": "图",
+      "start": 5.399,
+      "end": 5.7
+    },
+    {
+      "index": 13,
+      "char": "找",
+      "start": 5.757,
+      "end": 6.058
+    },
+    {
+      "index": 14,
+      "char": "部",
+      "start": 6.115,
+      "end": 6.416
+    },
+    {
+      "index": 15,
+      "char": "件",
+      "start": 6.474,
+      "end": 6.775
+    },
+    {
+      "index": 16,
+      "char": "合",
+      "start": 7.012,
+      "end": 7.313
+    },
+    {
+      "index": 17,
+      "char": "成",
+      "start": 7.37,
+      "end": 7.671
+    },
+    {
+      "index": 18,
+      "char": "字",
+      "start": 7.729,
+      "end": 8.03
+    },
+    {
+      "index": 19,
+      "char": "形",
+      "start": 8.087,
+      "end": 8.388
+    },
+    {
+      "index": 20,
+      "char": "再",
+      "start": 8.785,
+      "end": 9.086
+    },
+    {
+      "index": 21,
+      "char": "读",
+      "start": 9.144,
+      "end": 9.445
+    },
+    {
+      "index": 22,
+      "char": "陵",
+      "start": 9.682,
+      "end": 9.983
+    },
+    {
+      "index": 23,
+      "char": "园",
+      "start": 10.04,
+      "end": 10.341
+    }
+  ],
+  "transcript": "陵，“陵园”的“陵”。它是左右结构。看图找部件，合成字形。再读：陵园。",
+  "voice_reference": "封",
+  "timing_source": "punctuation-weighted-estimate",
+  "script_version": "child-first-v1",
+  "duration": 10.880181
+}

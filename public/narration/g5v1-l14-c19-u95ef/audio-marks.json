@@ -1,0 +1,165 @@
+{
+  "marks": [
+    {
+      "index": 0,
+      "char": "闯",
+      "start": 0.255,
+      "end": 0.558
+    },
+    {
+      "index": 1,
+      "char": "闯",
+      "start": 0.796,
+      "end": 1.098
+    },
+    {
+      "index": 2,
+      "char": "入",
+      "start": 1.156,
+      "end": 1.459
+    },
+    {
+      "index": 3,
+      "char": "的",
+      "start": 1.517,
+      "end": 1.819
+    },
+    {
+      "index": 4,
+      "char": "闯",
+      "start": 1.877,
+      "end": 2.18
+    },
+    {
+      "index": 5,
+      "char": "它",
+      "start": 2.577,
+      "end": 2.88
+    },
+    {
+      "index": 6,
+      "char": "是",
+      "start": 2.938,
+      "end": 3.241
+    },
+    {
+      "index": 7,
+      "char": "上",
+      "start": 3.298,
+      "end": 3.601
+    },
+    {
+      "index": 8,
+      "char": "三",
+      "start": 3.659,
+      "end": 3.961
+    },
+    {
+      "index": 9,
+      "char": "包",
+      "start": 4.019,
+      "end": 4.322
+    },
+    {
+      "index": 10,
+      "char": "围",
+      "start": 4.38,
+      "end": 4.682
+    },
+    {
+      "index": 11,
+      "char": "结",
+      "start": 4.74,
+      "end": 5.043
+    },
+    {
+      "index": 12,
+      "char": "构",
+      "start": 5.1,
+      "end": 5.403
+    },
+    {
+      "index": 13,
+      "char": "看",
+      "start": 5.801,
+      "end": 6.104
+    },
+    {
+      "index": 14,
+      "char": "图",
+      "start": 6.161,
+      "end": 6.464
+    },
+    {
+      "index": 15,
+      "char": "找",
+      "start": 6.522,
+      "end": 6.825
+    },
+    {
+      "index": 16,
+      "char": "部",
+      "start": 6.882,
+      "end": 7.185
+    },
+    {
+      "index": 17,
+      "char": "件",
+      "start": 7.243,
+      "end": 7.545
+    },
+    {
+      "index": 18,
+      "char": "合",
+      "start": 7.783,
+      "end": 8.086
+    },
+    {
+      "index": 19,
+      "char": "成",
+      "start": 8.144,
+      "end": 8.446
+    },
+    {
+      "index": 20,
+      "char": "字",
+      "start": 8.504,
+      "end": 8.807
+    },
+    {
+      "index": 21,
+      "char": "形",
+      "start": 8.864,
+      "end": 9.167
+    },
+    {
+      "index": 22,
+      "char": "再",
+      "start": 9.565,
+      "end": 9.868
+    },
+    {
+      "index": 23,
+      "char": "读",
+      "start": 9.925,
+      "end": 10.228
+    },
+    {
+      "index": 24,
+      "char": "闯",
+      "start": 10.466,
+      "end": 10.768
+    },
+    {
+      "index": 25,
+      "char": "入",
+      "start": 10.826,
+      "end": 11.129
+    }
+  ],
+  "transcript": "闯，“闯入”的“闯”。它是上三包围结构。看图找部件，合成字形。再读：闯入。",
+  "voice_reference": "封",
+  "timing_source": "punctuation-weighted-estimate",
+  "script_version": "child-first-v1",
+  "duration": 11.680181
+}

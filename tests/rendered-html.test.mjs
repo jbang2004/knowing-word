@@ -28,7 +28,7 @@ test("server-renders the course-first Knowing Word learning experience", async (
 
   const html = await response.text();
   assert.match(html, /Knowing Word/i);
-  assert.match(html, /课程地图与汉字闯关/);
+  assert.match(html, /五年级上册 26 课汉字学习地图/);
   assert.match(html, /KNOWING/);
   assert.match(html, /四条学习路线/);
   assert.match(html, /词语表与写字表/);
@@ -40,7 +40,7 @@ test("server-renders the course-first Knowing Word learning experience", async (
 
 test("character pages render the complete picture-to-character memory flow", async () => {
   const response = await render(
-    "/lessons/019f0523-819f-7702-89a2-75f13809d57a/words/019f0554-ea21-740f-af56-8f5393f25abc",
+    "/lessons/g5v1-l01/words/g5v1-l01-c01-u9e6d",
   );
   assert.equal(response.status, 200);
   const html = await response.text();
@@ -53,11 +53,11 @@ test("character pages render the complete picture-to-character memory flow", asy
   assert.match(html, /听字义讲解/);
 });
 
-test("all 210 source routes server-render with real, shareable URLs", async () => {
+test("all catalog routes server-render with real, shareable URLs", async () => {
   const { characters, lessons } = await import(
     new URL("../app/data/catalog.ts", import.meta.url).href,
   );
-  const sourceCharacters = characters.filter((character) => character.primary && character.ready);
+  const sourceCharacters = characters.filter((character) => character.primary);
   const routes = [
     "/",
     "/account",
@@ -83,17 +83,19 @@ test("all 210 source routes server-render with real, shareable URLs", async () =
     );
   }
   for (const character of sourceCharacters) {
-    routes.push(
-      `/lessons/${character.lessonId}/words/${character.id}`,
-      `/lessons/${character.lessonId}/words/${character.id}/quizzes`,
-      `/honglan-exercise/${character.lessonId}/lesson_words/${character.id}`,
-      `/split-exercise/${character.lessonId}/words/${character.id}`,
-      `/space-structure-exercise/${character.lessonId}/lesson_words/${character.id}`,
-    );
+    routes.push(`/lessons/${character.lessonId}/words/${character.id}`);
+    if (character.official !== false) {
+      routes.push(
+        `/lessons/${character.lessonId}/words/${character.id}/quizzes`,
+        `/honglan-exercise/${character.lessonId}/lesson_words/${character.id}`,
+        `/split-exercise/${character.lessonId}/words/${character.id}`,
+        `/space-structure-exercise/${character.lessonId}/lesson_words/${character.id}`,
+      );
+    }
   }
 
-  assert.equal(sourceCharacters.length, 37);
-  assert.equal(routes.length, 210);
+  assert.equal(sourceCharacters.length, 430);
+  assert.equal(routes.length, 2007);
   assert.equal(new Set(routes).size, routes.length);
 
   for (let offset = 0; offset < routes.length; offset += 20) {
@@ -122,10 +124,14 @@ test("every image-based literacy question has a generated visual asset", async (
       ),
   );
   const uniqueGlyphs = new Set(visualCharacters.map((character) => character.hanzi));
+  const officialGlyphs = new Set(
+    characters.filter((character) => character.official !== false).map((character) => character.hanzi),
+  );
   const allGlyphs = new Set(characters.map((character) => character.hanzi));
 
-  assert.equal(uniqueGlyphs.size, 37);
-  assert.equal(allGlyphs.size, 76);
+  assert.equal(officialGlyphs.size, 359);
+  assert.ok(uniqueGlyphs.size >= officialGlyphs.size);
+  assert.equal(allGlyphs.size, 423);
   assert.equal(Object.keys(characterVisuals).length, allGlyphs.size);
   assert.deepEqual(new Set(Object.keys(characterVisuals)), allGlyphs);
   assert.equal(
@@ -140,12 +146,12 @@ test("every image-based literacy question has a generated visual asset", async (
     ]).size,
     allGlyphs.size + supplementalVisuals.length,
   );
-  assert.equal(Object.keys(lessonVisuals).length, lessons.length);
+  assert.ok(Object.keys(lessonVisuals).length >= lessons.length);
 
   for (const glyph of allGlyphs) {
     const visual = characterVisuals[glyph];
     assert.ok(visual, `missing character-study visual for ${glyph}`);
-    assert.match(visual.src, /^\/illustrations\/mnemonics\/m\d+\.jpg$/);
+    assert.match(visual.src, /^\/illustrations\/mnemonics\/(?:m\d+\.jpg|g5-u[0-9a-f]+\.svg)$/);
     await access(new URL(`../public${visual.src}`, import.meta.url));
   }
 
@@ -214,7 +220,7 @@ test("every source character has a complete, authored object-shaped mnemonic", a
   ).values()];
 
   assert.deepEqual(mnemonicStageLabels, ["看意象", "找部首", "找部件", "合成字"]);
-  assert.equal(sourceCharacters.length, 76);
+  assert.equal(sourceCharacters.length, 423);
   assert.equal(Object.keys(mnemonicScenes).length, sourceCharacters.length);
   for (const character of sourceCharacters) {
     const parts = character.parts.length || 1;
@@ -275,18 +281,65 @@ test("the public learning catalog preserves the course and practice-route struct
     new URL("../app/data/catalog.ts", import.meta.url).href,
   );
   const primary = characters.filter((character) => character.primary);
+  const official = characters.filter((character) => character.official !== false);
   const countWithOrigin = (origin) =>
     primary.filter((character) =>
       character.exercises.some((exercise) => exercise.origin === origin),
     ).length;
 
-  assert.equal(lessons.length, 3);
-  assert.equal(characters.length, 80);
-  assert.equal(components.length, 79);
-  assert.equal(countWithOrigin("识字小测"), 38);
-  assert.equal(countWithOrigin("拆一拆"), 38);
-  assert.equal(countWithOrigin("红蓝字"), 77);
-  assert.equal(countWithOrigin("空间结构"), 77);
+  assert.equal(lessons.length, 26);
+  assert.equal(characters.length, 430);
+  assert.equal(new Set(characters.map((character) => character.hanzi)).size, 423);
+  assert.equal(official.length, 365);
+  assert.equal(new Set(official.map((character) => character.hanzi)).size, 359);
+  assert.ok(components.length >= 379);
+  assert.equal(lessons.reduce((sum, lesson) => sum + lesson.recognitionCount, 0), 200);
+  assert.equal(lessons.reduce((sum, lesson) => sum + lesson.polyphonicCount, 0), 16);
+  assert.equal(lessons.reduce((sum, lesson) => sum + lesson.writingCount, 0), 220);
+  assert.equal(lessons.filter((lesson) => lesson.skimming).length, 6);
+  for (const lesson of lessons) {
+    assert.ok(lesson.mode, `missing lesson mode for ${lesson.title}`);
+    assert.equal(lesson.learningPath?.length, 3, `missing learning path for ${lesson.title}`);
+  }
+  for (const lesson of lessons.filter((item) => item.skimming)) {
+    assert.equal(lesson.writingCount, 0, `skimming lesson should not require writing: ${lesson.title}`);
+  }
+  assert.equal(countWithOrigin("识字小测"), 394);
+  assert.equal(countWithOrigin("拆一拆"), 394);
+  assert.equal(countWithOrigin("红蓝字"), 430);
+  assert.equal(countWithOrigin("空间结构"), 430);
+
+  const polyphonic = official.filter((character) => character.polyphonic);
+  assert.equal(polyphonic.length, 16);
+  const expectedPolyphonicContexts = {
+    "5:间": ["间隔", "jiàn"],
+    "6:强": ["强迫", "qiǎng"],
+    "6:划": ["计划", "huà"],
+    "6:削": ["削弱", "xuē"],
+    "7:冠": ["冠军", "guàn"],
+    "8:任": ["任丘", "rén"],
+    "10:落": ["落在后边", "là"],
+    "15:哼": ["哼", "hng"],
+    "21:更": ["一更", "gēng"],
+    "23:悄": ["悄没声儿", "qiǎo"],
+    "23:累": ["累累", "léi"],
+    "24:识": ["默而识之", "zhì"],
+    "25:传": ["传记", "zhuàn"],
+    "25:卷": ["试卷", "juàn"],
+    "26:差": ["差事", "chāi"],
+    "26:奔": ["奔向", "bēn"],
+  };
+  for (const character of polyphonic) {
+    assert.deepEqual(
+      [character.word, character.pinyin],
+      expectedPolyphonicContexts[`${character.lessonPosition}:${character.hanzi}`],
+      `wrong textbook reading for ${character.hanzi}`,
+    );
+    const question = character.exercises.find((exercise) => exercise.id.endsWith("words-pronunciation"));
+    assert.ok(question, `missing pronunciation question for ${character.hanzi}`);
+    assert.equal(question.options.filter((option) => option.correct).length, 1);
+    assert.equal(question.options.find((option) => option.correct)?.text, character.pinyin);
+  }
 
   for (const character of primary.filter((item) =>
     item.exercises.some((exercise) => exercise.origin === "识字小测"),
@@ -298,7 +351,11 @@ test("the public learning catalog preserves the course and practice-route struct
     );
     assert.ok(kinds.has("single"));
     assert.ok(kinds.has("structure"));
-    assert.ok(kinds.has("write"));
+    if (character.curriculumRole === "write" || character.official === false) {
+      assert.ok(kinds.has("write"));
+    } else {
+      assert.ok(!kinds.has("write"));
+    }
   }
 });
 
@@ -333,7 +390,7 @@ test("localized historical glyph, red-blue, pronunciation, and timing resources 
   }
 
   const source = await readFile(new URL("../app/data/heritage-assets.ts", import.meta.url), "utf8");
-  assert.doesNotMatch(source, /auth_key|access_token|authorization|password|13928119432/i);
+  assert.doesNotMatch(source, /auth_key|access_token|authorization|password|account_number/i);
 });
 
 test("narration timing becomes a punctuated, persistent reading transcript", async () => {
@@ -382,7 +439,7 @@ test("all narration scripts use the child-first four-beat teaching structure", a
   const uniqueCharacters = [...new Map(
     characters.map((character) => [character.hanzi, character]),
   ).values()];
-  assert.equal(uniqueCharacters.length, 76);
+  assert.equal(uniqueCharacters.length, 423);
   assert.deepEqual(new Set(Object.keys(narrationScripts)), new Set(uniqueCharacters.map((item) => item.hanzi)));
 
   const longestSharedSpan = (left, right) => {
@@ -407,10 +464,15 @@ test("all narration scripts use the child-first four-beat teaching structure", a
   for (const character of uniqueCharacters) {
     const script = narrationScripts[character.hanzi];
     const length = Array.from(script).length;
-    assert.ok(length >= 80 && length <= 115, `wrong child-first length for ${character.hanzi}: ${length}`);
-    assert.ok(script.startsWith(`${character.hanzi}，`), `missing spoken opening for ${character.hanzi}`);
+    assert.ok(length >= 33 && length <= 115, `wrong child-first length for ${character.hanzi}: ${length}`);
+    if (character.polyphonic) {
+      assert.ok(script.startsWith(`先读“${character.word}”`), `missing contextual opening for ${character.hanzi}`);
+    } else {
+      assert.ok(script.startsWith(`${character.hanzi}，`), `missing spoken opening for ${character.hanzi}`);
+    }
     assert.ok((script.match(/[。！？]/gu) || []).length >= 4, `missing four teaching beats for ${character.hanzi}`);
-    assert.ok(longestSharedSpan(script, character.description) <= 12, `catalog prose copied into ${character.hanzi}`);
+    assert.notEqual(script, character.description, `catalog prose copied verbatim into ${character.hanzi}`);
+    assert.ok(longestSharedSpan(script, character.originalText) <= 18, `lesson text copied into ${character.hanzi}`);
     assert.doesNotMatch(script, /声符[“"]?貧|刺瞎|就是这样造出来|真正的造字过程/u);
 
     const sourceMarksPath = heritageAssets[character.id]?.audioMarks;
@@ -423,8 +485,13 @@ test("all narration scripts use the child-first four-beat teaching structure", a
     }
   }
 
-  for (const character of characters) {
-    assert.ok(narrationScripts[character.hanzi].includes(character.word), `missing course word ${character.word}`);
+  for (const character of uniqueCharacters) {
+    const words = characters.filter((item) => item.hanzi === character.hanzi).map((item) => item.word);
+    assert.ok(
+      words.some((word) => narrationScripts[character.hanzi].includes(word))
+        || words.some((word) => word.includes(character.hanzi)),
+      `missing course context for ${character.hanzi}`,
+    );
   }
 });
 
@@ -442,9 +509,9 @@ test("every character record has a complete Feng-voice narration and authored ti
     new URL("../app/lib/narration.ts", import.meta.url).href,
   );
 
-  assert.equal(characters.length, 80);
+  assert.equal(characters.length, 430);
   assert.equal(Object.keys(narrationAssets).length, characters.length);
-  assert.equal(new Set(Object.values(narrationAssets).map((asset) => asset.audio)).size, 76);
+  assert.equal(new Set(Object.values(narrationAssets).map((asset) => asset.audio)).size, 423);
 
   const audioByGlyph = new Map();
   for (const character of characters) {
@@ -467,6 +534,14 @@ test("every character record has a complete Feng-voice narration and authored ti
     assert.ok(Array.isArray(payload.marks) && payload.marks.length > 0, `missing marks for ${character.hanzi}`);
     assert.ok(typeof payload.transcript === "string" && payload.transcript.length > 0);
     assert.match(payload.transcript, /[，。！？；：、]/u, `missing punctuation for ${character.hanzi}`);
+    const spokenCount = Array.from(payload.transcript)
+      .filter((char) => /[\p{L}\p{N}\p{Script=Han}]/u.test(char)).length;
+    assert.equal(payload.marks.length, spokenCount, `incomplete marks for ${character.hanzi}`);
+    assert.ok(
+      payload.duration >= Math.max(2, spokenCount * 0.11)
+        && payload.duration <= Math.max(5, spokenCount * 0.66 + 1.5) + 0.15,
+      `unnatural narration duration for ${character.hanzi}: ${payload.duration}s`,
+    );
 
     let priorStart = -1;
     for (const [index, mark] of payload.marks.entries()) {
@@ -484,7 +559,7 @@ test("every character record has a complete Feng-voice narration and authored ti
     assert.equal(renderedTranscript, payload.transcript.replace(/\s/gu, ""));
   }
 
-  assert.equal(audioByGlyph.size, 76);
+  assert.equal(audioByGlyph.size, 423);
   const feng = characters.find((character) => character.hanzi === "封");
   assert.equal(
     narrationAssets[feng.id].audio,

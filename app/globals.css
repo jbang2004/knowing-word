@@ -678,9 +678,14 @@ html[data-theme="night"] .hero-illustration img {
   display: flex;
   align-items: end;
   gap: 12px;
+  max-width: 760px;
+  padding: 4px 2px 8px;
+  overflow-x: auto;
+  scrollbar-color: color-mix(in srgb, var(--violet) 35%, transparent) transparent;
 }
 
 .lesson-dots button {
+  flex: 0 0 92px;
   display: flex;
   flex-direction: column;
   gap: 3px;
@@ -781,19 +786,20 @@ html[data-theme="night"] .hero-illustration img {
 
 .lesson-route {
   display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 14px;
-  max-width: 920px;
+  max-width: 1180px;
 }
 
 .lesson-route-card {
   --route: var(--coral);
   display: grid;
-  grid-template-columns: 96px 180px minmax(0, 1fr) 42px;
+  grid-template-columns: 68px 132px minmax(0, 1fr) 34px;
   align-items: center;
   gap: 23px;
   width: 100%;
-  min-height: 145px;
-  padding: 20px 25px;
+  min-height: 128px;
+  padding: 16px 18px;
   overflow: hidden;
   border: 1px solid color-mix(in srgb, var(--route) 28%, var(--line));
   border-radius: 23px;
@@ -819,6 +825,14 @@ html[data-theme="night"] .hero-illustration img {
   --route: var(--jade);
 }
 
+.lesson-route-card:nth-child(4n) {
+  --route: var(--saffron);
+}
+
+.lesson-route-card.is-skimming {
+  border-style: dashed;
+}
+
 .route-index {
   color: var(--route);
   font-size: 0.74rem;
@@ -834,8 +848,8 @@ html[data-theme="night"] .hero-illustration img {
 
 .route-scene {
   position: relative;
-  width: 180px;
-  height: 105px;
+  width: 132px;
+  height: 92px;
   overflow: hidden;
   border: 1px solid color-mix(in srgb, var(--route) 28%, var(--line));
   border-radius: 17px;
@@ -899,7 +913,7 @@ html[data-theme="night"] .hero-illustration img {
   margin: 0;
   color: var(--navy);
   font-family: var(--serif);
-  font-size: 1.56rem;
+  font-size: 1.3rem;
   letter-spacing: -0.04em;
 }
 
@@ -907,6 +921,7 @@ html[data-theme="night"] .hero-illustration img {
   margin: 6px 0 0;
   color: var(--ink-soft);
   font-size: 0.8rem;
+  line-height: 1.5;
 }
 
 .route-arrow {
@@ -995,9 +1010,93 @@ html[data-theme="night"] .hero-illustration img {
 }
 
 .lesson-scene-banner small {
+  max-width: 620px;
   margin-top: 5px;
   color: rgba(255, 255, 255, 0.82);
   font-size: 0.72rem;
+  line-height: 1.55;
+}
+
+.lesson-learning-path {
+  max-width: 920px;
+  margin: 0 0 17px;
+  padding: 22px 24px;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: linear-gradient(135deg, color-mix(in srgb, var(--paper) 91%, #dcecff), var(--paper));
+  box-shadow: var(--shadow-xs);
+}
+
+.learning-path-heading {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.learning-path-heading > span {
+  flex: 0 0 auto;
+  padding: 7px 11px;
+  border-radius: 999px;
+  color: var(--lapis);
+  font-size: 0.68rem;
+  font-weight: 850;
+  background: var(--lapis-soft);
+}
+
+.learning-path-heading > div {
+  display: grid;
+  gap: 2px;
+}
+
+.learning-path-heading strong {
+  color: var(--navy);
+  font-family: var(--serif);
+  font-size: 1.05rem;
+}
+
+.learning-path-heading small {
+  color: var(--ink-soft);
+  font-size: 0.7rem;
+}
+
+.lesson-learning-path ol {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.lesson-learning-path li {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 63px;
+  gap: 10px;
+  padding: 11px 13px;
+  border: 1px solid color-mix(in srgb, var(--line) 80%, transparent);
+  border-radius: 15px;
+  color: var(--ink);
+  font-size: 0.75rem;
+  font-weight: 720;
+  line-height: 1.5;
+  background: color-mix(in srgb, var(--paper-soft) 82%, white);
+}
+
+.lesson-learning-path li i {
+  display: grid;
+  flex: 0 0 28px;
+  width: 28px;
+  height: 28px;
+  place-items: center;
+  border-radius: 50%;
+  color: white;
+  font-size: 0.7rem;
+  font-style: normal;
+  background: var(--lapis);
+  box-shadow: 0 5px 12px rgba(41, 90, 170, 0.2);
 }
 
 .word-map-board {
@@ -1008,6 +1107,14 @@ html[data-theme="night"] .hero-illustration img {
     radial-gradient(circle at 94% 5%, rgba(129, 91, 232, 0.09), transparent 16rem),
     var(--paper);
   box-shadow: var(--shadow-xs);
+}
+
+.word-map-board.extension-board {
+  margin-top: 17px;
+  border-style: dashed;
+  background:
+    radial-gradient(circle at 94% 5%, rgba(45, 154, 120, 0.11), transparent 16rem),
+    var(--paper);
 }
 
 .board-title {
@@ -1328,6 +1435,23 @@ html[data-theme="night"] .hero-illustration img {
   font-size: 0.66rem;
   font-weight: 780;
   background: var(--violet-soft);
+}
+
+.story-meta .curriculum-role {
+  color: #fff;
+  background: var(--coral);
+}
+
+.story-meta .role-recognize {
+  background: var(--lapis);
+}
+
+.story-meta .role-polyphonic {
+  background: var(--violet);
+}
+
+.story-meta .role-extension {
+  background: var(--jade);
 }
 
 .story-copy > p {
@@ -4215,6 +4339,11 @@ html[data-theme="night"] .hero-illustration img {
     grid-template-columns: 1fr;
   }
 
+  .lesson-route {
+    grid-template-columns: 1fr;
+    max-width: 920px;
+  }
+
   .character-story-card {
     grid-template-columns: 190px minmax(0, 1fr);
   }
@@ -4396,6 +4525,18 @@ html[data-theme="night"] .hero-illustration img {
 
   .word-map-board {
     padding: 19px;
+  }
+
+  .lesson-learning-path {
+    padding: 18px;
+  }
+
+  .learning-path-heading {
+    align-items: flex-start;
+  }
+
+  .lesson-learning-path ol {
+    grid-template-columns: 1fr;
   }
 
   .lesson-scene-banner {

@@ -1,0 +1,153 @@
+{
+  "marks": [
+    {
+      "index": 0,
+      "char": "酬",
+      "start": 0.279,
+      "end": 0.639
+    },
+    {
+      "index": 1,
+      "char": "酬",
+      "start": 0.888,
+      "end": 1.248
+    },
+    {
+      "index": 2,
+      "char": "谢",
+      "start": 1.317,
+      "end": 1.677
+    },
+    {
+      "index": 3,
+      "char": "的",
+      "start": 1.746,
+      "end": 2.106
+    },
+    {
+      "index": 4,
+      "char": "酬",
+      "start": 2.175,
+      "end": 2.535
+    },
+    {
+      "index": 5,
+      "char": "它",
+      "start": 2.944,
+      "end": 3.304
+    },
+    {
+      "index": 6,
+      "char": "是",
+      "start": 3.373,
+      "end": 3.733
+    },
+    {
+      "index": 7,
+      "char": "左",
+      "start": 3.802,
+      "end": 4.162
+    },
+    {
+      "index": 8,
+      "char": "右",
+      "start": 4.231,
+      "end": 4.592
+    },
+    {
+      "index": 9,
+      "char": "结",
+      "start": 4.66,
+      "end": 5.021
+    },
+    {
+      "index": 10,
+      "char": "构",
+      "start": 5.089,
+      "end": 5.45
+    },
+    {
+      "index": 11,
+      "char": "看",
+      "start": 5.858,
+      "end": 6.219
+    },
+    {
+      "index": 12,
+      "char": "图",
+      "start": 6.287,
+      "end": 6.648
+    },
+    {
+      "index": 13,
+      "char": "找",
+      "start": 6.717,
+      "end": 7.077
+    },
+    {
+      "index": 14,
+      "char": "部",
+      "start": 7.146,
+      "end": 7.506
+    },
+    {
+      "index": 15,
+      "char": "件",
+      "start": 7.575,
+      "end": 7.935
+    },
+    {
+      "index": 16,
+      "char": "合",
+      "start": 8.184,
+      "end": 8.544
+    },
+    {
+      "index": 17,
+      "char": "成",
+      "start": 8.613,
+      "end": 8.973
+    },
+    {
+      "index": 18,
+      "char": "字",
+      "start": 9.042,
+      "end": 9.402
+    },
+    {
+      "index": 19,
+      "char": "形",
+      "start": 9.471,
+      "end": 9.831
+    },
+    {
+      "index": 20,
+      "char": "再",
+      "start": 10.24,
+      "end": 10.6
+    },
+    {
+      "index": 21,
+      "char": "读",
+      "start": 10.669,
+      "end": 11.03
+    },
+    {
+      "index": 22,
+      "char": "酬",
+      "start": 11.278,
+      "end": 11.639
+    },
+    {
+      "index": 23,
+      "char": "谢",
+      "start": 11.707,
+      "end": 12.068
+    }
+  ],
+  "transcript": "酬，“酬谢”的“酬”。它是左右结构。看图找部件，合成字形。再读：酬谢。",
+  "voice_reference": "封",
+  "timing_source": "punctuation-weighted-estimate",
+  "script_version": "child-first-v1",
+  "duration": 12.640181
+}

@@ -1,0 +1,153 @@
+{
+  "marks": [
+    {
+      "index": 0,
+      "char": "衡",
+      "start": 0.153,
+      "end": 0.331
+    },
+    {
+      "index": 1,
+      "char": "平",
+      "start": 0.545,
+      "end": 0.722
+    },
+    {
+      "index": 2,
+      "char": "衡",
+      "start": 0.756,
+      "end": 0.934
+    },
+    {
+      "index": 3,
+      "char": "的",
+      "start": 0.968,
+      "end": 1.145
+    },
+    {
+      "index": 4,
+      "char": "衡",
+      "start": 1.179,
+      "end": 1.357
+    },
+    {
+      "index": 5,
+      "char": "它",
+      "start": 1.731,
+      "end": 1.908
+    },
+    {
+      "index": 6,
+      "char": "是",
+      "start": 1.942,
+      "end": 2.12
+    },
+    {
+      "index": 7,
+      "char": "穿",
+      "start": 2.153,
+      "end": 2.331
+    },
+    {
+      "index": 8,
+      "char": "插",
+      "start": 2.365,
+      "end": 2.542
+    },
+    {
+      "index": 9,
+      "char": "结",
+      "start": 2.576,
+      "end": 2.754
+    },
+    {
+      "index": 10,
+      "char": "构",
+      "start": 2.788,
+      "end": 2.965
+    },
+    {
+      "index": 11,
+      "char": "顺",
+      "start": 3.339,
+      "end": 3.517
+    },
+    {
+      "index": 12,
+      "char": "着",
+      "start": 3.55,
+      "end": 3.728
+    },
+    {
+      "index": 13,
+      "char": "图",
+      "start": 3.762,
+      "end": 3.939
+    },
+    {
+      "index": 14,
+      "char": "记",
+      "start": 3.973,
+      "end": 4.151
+    },
+    {
+      "index": 15,
+      "char": "住",
+      "start": 4.185,
+      "end": 4.362
+    },
+    {
+      "index": 16,
+      "char": "整",
+      "start": 4.396,
+      "end": 4.574
+    },
+    {
+      "index": 17,
+      "char": "体",
+      "start": 4.607,
+      "end": 4.785
+    },
+    {
+      "index": 18,
+      "char": "轮",
+      "start": 4.819,
+      "end": 4.996
+    },
+    {
+      "index": 19,
+      "char": "廓",
+      "start": 5.03,
+      "end": 5.208
+    },
+    {
+      "index": 20,
+      "char": "再",
+      "start": 5.582,
+      "end": 5.759
+    },
+    {
+      "index": 21,
+      "char": "读",
+      "start": 5.793,
+      "end": 5.971
+    },
+    {
+      "index": 22,
+      "char": "平",
+      "start": 6.184,
+      "end": 6.362
+    },
+    {
+      "index": 23,
+      "char": "衡",
+      "start": 6.396,
+      "end": 6.573
+    }
+  ],
+  "transcript": "衡，“平衡”的“衡”。它是穿插结构。顺着图记住整体轮廓。再读：平衡。",
+  "voice_reference": "封",
+  "timing_source": "punctuation-weighted-estimate",
+  "script_version": "child-first-v1",
+  "duration": 7.040181
+}

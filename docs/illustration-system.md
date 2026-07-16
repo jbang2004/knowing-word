@@ -16,24 +16,28 @@ historical resources remain the factual reference layer.
 
 ## Generated asset set
 
-- 76 object-shaped mnemonic illustrations, one for every unique character in
-  the public catalog; trees, tools, water, architecture, hands, and negative
-  space directly carry the component geometry
-- 76 character meaning illustrations retained as the literal semantic set
-- 3 lesson scenes: `桂花雨`, `落花生`, and `冀中的地道战`
+- 359 responsive official-character SVG illustrations, one for every unique
+  curriculum glyph. The character silhouette works as a mask for the lesson
+  scene while labelled component objects and warm-red/indigo roles make the
+  structure readable at card and full-study sizes.
+- 26 original 16:9 lesson scenes covering the complete current volume.
+- 76 hand-directed object-shaped deep-dive mnemonic illustrations retained
+  for the original extension catalog.
+- 76 character meaning illustrations retained as the literal semantic set.
 - 1 home learning scene with an original blue-and-gold magpie guide
 - 6 additional reusable semantic distractor illustrations
+- 1 original 1672 × 941 social sharing card
 
-This produces 162 optimized assets in total. The 76 active character visuals
-are the object-shaped mnemonic set. For picture questions, the correct image
-therefore reinforces both meaning and structure; supplemental distractors are
-chosen deterministically and remain semantically truthful.
+For picture questions, the correct image reinforces both meaning and
+structure; supplemental distractors are chosen deterministically and remain
+semantically truthful. The official SVG set uses a 1200 × 900 view box, safe
+margins and contained rendering, so complex characters are never cropped.
 
 Each character also has an authored scene script in
 `app/data/mnemonic-scenes.ts`. The script names what the whole scene means and
 what physical form carries every catalog component. Tests require one script,
-one cue per component, and one unique image for every character, preventing a
-generic fallback from silently entering the course.
+one cue per component, and one unique image for all 423 learnable glyphs,
+preventing a generic fallback from silently entering the course.
 
 ## Art direction
 
@@ -46,9 +50,8 @@ character equation into the explanation panel. Potentially sensitive
 concepts such as `尤`, `民`, `离`, and `战` are intentionally calm,
 non-graphic, historically framed, and age appropriate.
 
-Assets are stored as optimized 1024-pixel JPEG files under
-`public/illustrations` and loaded responsively through the framework image
-component.
+Assets are stored as optimized JPEG and SVG files under `public/illustrations`
+and loaded responsively through the framework image component.
 
 ## Factual teaching resources
 

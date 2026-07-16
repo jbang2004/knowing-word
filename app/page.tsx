@@ -18,6 +18,7 @@ import {
   type CharacterItem,
   type ComponentItem,
   type Exercise,
+  type LessonItem,
 } from "./data/catalog";
 import {
   characterVisuals,
@@ -120,7 +121,7 @@ type TrackMeta = {
 
 const allCharacters = characters as unknown as CharacterItem[];
 const allComponents = components as unknown as ComponentItem[];
-const lessonList = lessons as unknown as { id: string; title: string; position: number }[];
+const lessonList = lessons as unknown as LessonItem[];
 const initialLesson = lessonList[0];
 const initialCharacter =
   allCharacters.find((item) => item.lessonId === initialLesson.id && item.primary) ||
@@ -347,6 +348,14 @@ function getLessonCharacters(lessonId: string) {
   return allCharacters.filter((item) => item.lessonId === lessonId && item.primary);
 }
 
+function getOfficialLessonCharacters(lessonId: string) {
+  return getLessonCharacters(lessonId).filter((item) => item.official !== false);
+}
+
+function getExtensionLessonCharacters(lessonId: string) {
+  return getLessonCharacters(lessonId).filter((item) => item.official === false);
+}
+
 function getTrackExercises(character: CharacterItem, track: TrackId) {
   return character.exercises.filter((exercise) => exercise.origin === trackMeta[track].origin);
 }
@@ -355,14 +364,20 @@ function getTrackCharacters(track: TrackId, lessonId?: string) {
   return allCharacters.filter(
     (item) =>
       item.primary &&
+      item.official !== false &&
       (!lessonId || item.lessonId === lessonId) &&
       getTrackExercises(item, track).length > 0,
   );
 }
 
-function getWordGroups(lessonId: string) {
+function getWordGroups(lessonId: string, tier: "all" | "curriculum" | "extension" = "all") {
   const map = new Map<string, CharacterItem[]>();
-  for (const item of getLessonCharacters(lessonId)) {
+  const source = tier === "curriculum"
+    ? getOfficialLessonCharacters(lessonId)
+    : tier === "extension"
+      ? getExtensionLessonCharacters(lessonId)
+      : getLessonCharacters(lessonId);
+  for (const item of source) {
     const key = String(item.wordPosition) + "-" + item.word;
     const existing = map.get(key) || [];
     existing.push(item);
@@ -1247,17 +1262,18 @@ function CourseMap({
       <PageHeading
         kicker="课程地图"
         title={course.title}
-        copy="按课文进入词语表：先认识词语里的每个字，再用后续专项反复巩固。"
+        copy="新版五年级上册共 26 课：按官方会认、会写和多音字清单学习，再用专项关卡反复巩固。"
         onBack={onBack}
       />
       <div className="lesson-route">
         {lessonList.map((lesson, index) => {
-          const chars = getLessonCharacters(lesson.id);
+          const chars = getOfficialLessonCharacters(lesson.id);
+          const extensionCount = getExtensionLessonCharacters(lesson.id).length;
           const progress = trackProgress(profile, "words", lesson.id);
           const illustration = lessonVisuals[lesson.id];
           return (
-            <button className={"lesson-route-card lesson-tone-" + index} key={lesson.id} onClick={() => onLesson(lesson.id)}>
-              <span className="route-index">第 {lesson.position} 课</span>
+            <button className={`lesson-route-card lesson-tone-${index}${lesson.skimming ? " is-skimming" : ""}`} key={lesson.id} onClick={() => onLesson(lesson.id)}>
+              <span className="route-index">第 {lesson.position} 课{lesson.skimming ? " · 略读" : ""}</span>
               <div className="route-scene">
                 <Image src={illustration.src} alt={illustration.alt} fill sizes="180px" />
                 <div className="route-character-cloud" aria-hidden="true">
@@ -1266,7 +1282,7 @@ function CourseMap({
               </div>
               <div className="route-copy">
                 <h2>{lesson.title}</h2>
-                <p>{chars.length} 个核心字 · 已完成 {progress.completed} 个</p>
+                <p>{chars.length} 个课内字 · 已完成 {progress.completed} 个{extensionCount ? ` · ${extensionCount} 个拓展字` : ""}</p>
               </div>
               <span className="route-arrow">→</span>
             </button>
@@ -1274,7 +1290,7 @@ function CourseMap({
         })}
       </div>
       <section className="course-method-card">
-        <span>01</span><p>词语表中完成“认识 → 理解 → 小测”，再进入三条专项关卡重复提取记忆。</p>
+        <span>26</span><p>精读课分会认、会写与多音字；略读课以会认和理解为主。教材正文不复制，所有讲解和练习都经过重新组织。</p>
       </section>
     </div>
   );
@@ -1287,13 +1303,14 @@ function LessonWordMap({
   onCharacter,
   onTrackLesson,
 }: {
-  lesson: { id: string; title: string; position: number };
+  lesson: LessonItem;
   profile: StudyProfile;
   onBack: () => void;
   onCharacter: (character: CharacterItem) => void;
   onTrackLesson: (track: TrackId, lessonId: string) => void;
 }) {
-  const groups = getWordGroups(lesson.id);
+  const groups = getWordGroups(lesson.id, "curriculum");
+  const extensionGroups = getWordGroups(lesson.id, "extension");
   const completed = new Set(profile.completed.words);
   const progress = trackProgress(profile, "words", lesson.id);
   const illustration = lessonVisuals[lesson.id];
@@ -1301,9 +1318,9 @@ function LessonWordMap({
   return (
     <div className="page lesson-page">
       <PageHeading
-        kicker={"第 " + lesson.position + " 课"}
+        kicker={"第 " + lesson.position + " 课" + (lesson.skimming ? " · 略读" : "")}
         title={lesson.title}
-        copy={"词语表 · " + progress.completed + " / " + progress.total + " 个字已完成整套识字小测"}
+        copy={`${lesson.skimming ? "会认字" : "识字写字表"} · ${progress.completed} / ${progress.total} 个课内字已完成整套识字小测`}
         onBack={onBack}
       />
 
@@ -1318,12 +1335,24 @@ function LessonWordMap({
         <div>
           <span>课文场景</span>
           <strong>{lesson.title}</strong>
-          <small>先进入画面，再从词语认识汉字</small>
+          <small>{lesson.context || "先进入画面，再从词语认识汉字"}</small>
         </div>
       </section>
 
+      <section className="lesson-learning-path" aria-label={`${lesson.title}内容理解路线`}>
+        <div className="learning-path-heading">
+          <span>{lesson.mode || "课文理解"}</span>
+          <div><strong>先读懂课文，再把字放回故事里</strong><small>{lesson.skimming ? "略读课：抓住关键变化，练习复述" : "精读课：沿内容顺序理解、识字、巩固"}</small></div>
+        </div>
+        <ol>
+          {(lesson.learningPath || []).map((step, index) => (
+            <li key={step}><i>{index + 1}</i><span>{step}</span></li>
+          ))}
+        </ol>
+      </section>
+
       <section className="word-map-board">
-        <div className="board-title"><span>词语表</span><i>把词语拆成一个个可理解的汉字</i></div>
+        <div className="board-title"><span>{lesson.skimming ? "课内会认字" : "课内识字写字表"}</span><i>把官方字表放回词语，区分会认、会写与多音字</i></div>
         <div className="word-groups">
           {groups.map((group) => (
             <article className="word-group" key={group[0].id}>
@@ -1341,7 +1370,7 @@ function LessonWordMap({
                   >
                     <strong>{character.hanzi}</strong>
                     {completed.has(character.id) && <small>✓</small>}
-                    {!getTrackExercises(character, "words").length && !completed.has(character.id) && <em>拓</em>}
+                    {!completed.has(character.id) && <em>{character.polyphonic ? "多" : character.curriculumRole === "write" ? "写" : "认"}</em>}
                   </button>
                 ))}
               </div>
@@ -1349,6 +1378,26 @@ function LessonWordMap({
           ))}
         </div>
       </section>
+
+      {extensionGroups.length > 0 && (
+        <section className="word-map-board extension-board">
+          <div className="board-title"><span>课文语境拓展</span><i>保留原有深度字卡，不计入官方字表进度</i></div>
+          <div className="word-groups">
+            {extensionGroups.map((group) => (
+              <article className="word-group" key={group[0].id}>
+                <p>{group[0].word}</p>
+                <div>
+                  {group.map((character) => (
+                    <button className="word-chip is-extension" key={character.id} onClick={() => onCharacter(character)}>
+                      <strong>{character.hanzi}</strong><em>拓</em>
+                    </button>
+                  ))}
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+      )}
 
       <section className="lesson-practice-strip">
         <div>
@@ -1684,6 +1733,13 @@ function CharacterStudy({
   const completedQuestions = exercises.filter((question) => profile.answers[question.id]?.lastCorrect).length;
   const heritage = heritageAssets[character.id];
   const hasExercises = exercises.length > 0;
+  const roleLabel = character.official === false
+    ? "语境拓展"
+    : character.polyphonic
+      ? character.curriculumRole === "write" ? "会写 · 多音字" : "会认 · 多音字"
+      : character.curriculumRole === "write"
+        ? "课内会写"
+        : "课内会认";
 
   return (
     <div className="page character-page">
@@ -1708,9 +1764,10 @@ function CharacterStudy({
         </div>
         <div className="story-copy">
           <div className="story-meta">
+            <span className={`curriculum-role role-${character.curriculumRole || "extension"}`}>{roleLabel}</span>
             <span>{character.charType}</span>
             <span>{character.decomposition}</span>
-            <span>本义：{character.originalMeaning}</span>
+            <span>{character.official === false ? "本义" : "本课词语"}：{character.originalMeaning}</span>
           </div>
           <NarratedDescription character={character} key={character.id} />
           {heritage?.stages.length ? (
@@ -1733,7 +1790,7 @@ function CharacterStudy({
           ) : (
             <div className="script-note">本字暂无可靠的古文字图版，保留现代楷书，不虚构演变形态。</div>
           )}
-          <blockquote>课文原文：{character.originalText}</blockquote>
+          <blockquote>{character.official === false ? "课文语境" : "学习语境"}：{character.originalText}</blockquote>
         </div>
       </section>
 

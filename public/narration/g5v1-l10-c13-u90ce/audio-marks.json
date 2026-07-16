@@ -1,0 +1,153 @@
+{
+  "marks": [
+    {
+      "index": 0,
+      "char": "郎",
+      "start": 0.193,
+      "end": 0.43
+    },
+    {
+      "index": 1,
+      "char": "牛",
+      "start": 0.655,
+      "end": 0.892
+    },
+    {
+      "index": 2,
+      "char": "郎",
+      "start": 0.937,
+      "end": 1.174
+    },
+    {
+      "index": 3,
+      "char": "的",
+      "start": 1.219,
+      "end": 1.456
+    },
+    {
+      "index": 4,
+      "char": "郎",
+      "start": 1.502,
+      "end": 1.739
+    },
+    {
+      "index": 5,
+      "char": "它",
+      "start": 2.124,
+      "end": 2.361
+    },
+    {
+      "index": 6,
+      "char": "是",
+      "start": 2.406,
+      "end": 2.643
+    },
+    {
+      "index": 7,
+      "char": "左",
+      "start": 2.688,
+      "end": 2.925
+    },
+    {
+      "index": 8,
+      "char": "右",
+      "start": 2.97,
+      "end": 3.207
+    },
+    {
+      "index": 9,
+      "char": "结",
+      "start": 3.252,
+      "end": 3.49
+    },
+    {
+      "index": 10,
+      "char": "构",
+      "start": 3.535,
+      "end": 3.772
+    },
+    {
+      "index": 11,
+      "char": "顺",
+      "start": 4.157,
+      "end": 4.394
+    },
+    {
+      "index": 12,
+      "char": "着",
+      "start": 4.439,
+      "end": 4.676
+    },
+    {
+      "index": 13,
+      "char": "图",
+      "start": 4.721,
+      "end": 4.958
+    },
+    {
+      "index": 14,
+      "char": "记",
+      "start": 5.003,
+      "end": 5.24
+    },
+    {
+      "index": 15,
+      "char": "住",
+      "start": 5.286,
+      "end": 5.523
+    },
+    {
+      "index": 16,
+      "char": "整",
+      "start": 5.568,
+      "end": 5.805
+    },
+    {
+      "index": 17,
+      "char": "体",
+      "start": 5.85,
+      "end": 6.087
+    },
+    {
+      "index": 18,
+      "char": "轮",
+      "start": 6.132,
+      "end": 6.369
+    },
+    {
+      "index": 19,
+      "char": "廓",
+      "start": 6.414,
+      "end": 6.651
+    },
+    {
+      "index": 20,
+      "char": "再",
+      "start": 7.036,
+      "end": 7.273
+    },
+    {
+      "index": 21,
+      "char": "读",
+      "start": 7.319,
+      "end": 7.556
+    },
+    {
+      "index": 22,
+      "char": "牛",
+      "start": 7.781,
+      "end": 8.018
+    },
+    {
+      "index": 23,
+      "char": "郎",
+      "start": 8.063,
+      "end": 8.3
+    }
+  ],
+  "transcript": "郎，“牛郎”的“郎”。它是左右结构。顺着图记住整体轮廓。再读：牛郎。",
+  "voice_reference": "封",
+  "timing_source": "punctuation-weighted-estimate",
+  "script_version": "child-first-v1",
+  "duration": 8.800181
+}

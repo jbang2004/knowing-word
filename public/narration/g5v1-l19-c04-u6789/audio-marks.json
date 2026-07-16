@@ -1,0 +1,153 @@
+{
+  "marks": [
+    {
+      "index": 0,
+      "char": "枉",
+      "start": 0.257,
+      "end": 0.585
+    },
+    {
+      "index": 1,
+      "char": "冤",
+      "start": 0.828,
+      "end": 1.156
+    },
+    {
+      "index": 2,
+      "char": "枉",
+      "start": 1.218,
+      "end": 1.546
+    },
+    {
+      "index": 3,
+      "char": "的",
+      "start": 1.608,
+      "end": 1.936
+    },
+    {
+      "index": 4,
+      "char": "枉",
+      "start": 1.999,
+      "end": 2.327
+    },
+    {
+      "index": 5,
+      "char": "它",
+      "start": 2.729,
+      "end": 3.057
+    },
+    {
+      "index": 6,
+      "char": "是",
+      "start": 3.12,
+      "end": 3.448
+    },
+    {
+      "index": 7,
+      "char": "左",
+      "start": 3.51,
+      "end": 3.838
+    },
+    {
+      "index": 8,
+      "char": "右",
+      "start": 3.901,
+      "end": 4.229
+    },
+    {
+      "index": 9,
+      "char": "结",
+      "start": 4.291,
+      "end": 4.619
+    },
+    {
+      "index": 10,
+      "char": "构",
+      "start": 4.682,
+      "end": 5.01
+    },
+    {
+      "index": 11,
+      "char": "看",
+      "start": 5.412,
+      "end": 5.74
+    },
+    {
+      "index": 12,
+      "char": "图",
+      "start": 5.803,
+      "end": 6.131
+    },
+    {
+      "index": 13,
+      "char": "找",
+      "start": 6.193,
+      "end": 6.521
+    },
+    {
+      "index": 14,
+      "char": "部",
+      "start": 6.584,
+      "end": 6.912
+    },
+    {
+      "index": 15,
+      "char": "件",
+      "start": 6.974,
+      "end": 7.302
+    },
+    {
+      "index": 16,
+      "char": "合",
+      "start": 7.545,
+      "end": 7.873
+    },
+    {
+      "index": 17,
+      "char": "成",
+      "start": 7.935,
+      "end": 8.263
+    },
+    {
+      "index": 18,
+      "char": "字",
+      "start": 8.326,
+      "end": 8.654
+    },
+    {
+      "index": 19,
+      "char": "形",
+      "start": 8.716,
+      "end": 9.044
+    },
+    {
+      "index": 20,
+      "char": "再",
+      "start": 9.447,
+      "end": 9.775
+    },
+    {
+      "index": 21,
+      "char": "读",
+      "start": 9.837,
+      "end": 10.165
+    },
+    {
+      "index": 22,
+      "char": "冤",
+      "start": 10.407,
+      "end": 10.735
+    },
+    {
+      "index": 23,
+      "char": "枉",
+      "start": 10.798,
+      "end": 11.126
+    }
+  ],
+  "transcript": "枉，“冤枉”的“枉”。它是左右结构。看图找部件，合成字形。再读：冤枉。",
+  "voice_reference": "封",
+  "timing_source": "punctuation-weighted-estimate",
+  "script_version": "child-first-v1",
+  "duration": 11.680181
+}

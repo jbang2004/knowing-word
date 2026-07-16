@@ -1,0 +1,153 @@
+{
+  "marks": [
+    {
+      "index": 0,
+      "char": "烬",
+      "start": 0.293,
+      "end": 0.675
+    },
+    {
+      "index": 1,
+      "char": "灰",
+      "start": 0.928,
+      "end": 1.31
+    },
+    {
+      "index": 2,
+      "char": "烬",
+      "start": 1.383,
+      "end": 1.765
+    },
+    {
+      "index": 3,
+      "char": "的",
+      "start": 1.837,
+      "end": 2.219
+    },
+    {
+      "index": 4,
+      "char": "烬",
+      "start": 2.292,
+      "end": 2.674
+    },
+    {
+      "index": 5,
+      "char": "它",
+      "start": 3.087,
+      "end": 3.469
+    },
+    {
+      "index": 6,
+      "char": "是",
+      "start": 3.542,
+      "end": 3.924
+    },
+    {
+      "index": 7,
+      "char": "左",
+      "start": 3.997,
+      "end": 4.379
+    },
+    {
+      "index": 8,
+      "char": "右",
+      "start": 4.451,
+      "end": 4.833
+    },
+    {
+      "index": 9,
+      "char": "结",
+      "start": 4.906,
+      "end": 5.288
+    },
+    {
+      "index": 10,
+      "char": "构",
+      "start": 5.361,
+      "end": 5.743
+    },
+    {
+      "index": 11,
+      "char": "看",
+      "start": 6.156,
+      "end": 6.538
+    },
+    {
+      "index": 12,
+      "char": "图",
+      "start": 6.611,
+      "end": 6.993
+    },
+    {
+      "index": 13,
+      "char": "找",
+      "start": 7.065,
+      "end": 7.447
+    },
+    {
+      "index": 14,
+      "char": "部",
+      "start": 7.52,
+      "end": 7.902
+    },
+    {
+      "index": 15,
+      "char": "件",
+      "start": 7.975,
+      "end": 8.357
+    },
+    {
+      "index": 16,
+      "char": "合",
+      "start": 8.61,
+      "end": 8.992
+    },
+    {
+      "index": 17,
+      "char": "成",
+      "start": 9.065,
+      "end": 9.447
+    },
+    {
+      "index": 18,
+      "char": "字",
+      "start": 9.519,
+      "end": 9.901
+    },
+    {
+      "index": 19,
+      "char": "形",
+      "start": 9.974,
+      "end": 10.356
+    },
+    {
+      "index": 20,
+      "char": "再",
+      "start": 10.769,
+      "end": 11.151
+    },
+    {
+      "index": 21,
+      "char": "读",
+      "start": 11.224,
+      "end": 11.606
+    },
+    {
+      "index": 22,
+      "char": "灰",
+      "start": 11.859,
+      "end": 12.241
+    },
+    {
+      "index": 23,
+      "char": "烬",
+      "start": 12.313,
+      "end": 12.695
+    }
+  ],
+  "transcript": "烬，“灰烬”的“烬”。它是左右结构。看图找部件，合成字形。再读：灰烬。",
+  "voice_reference": "封",
+  "timing_source": "punctuation-weighted-estimate",
+  "script_version": "child-first-v1",
+  "duration": 13.280181
+}

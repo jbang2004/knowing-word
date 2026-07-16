@@ -1,0 +1,153 @@
+{
+  "marks": [
+    {
+      "index": 0,
+      "char": "炭",
+      "start": 0.192,
+      "end": 0.423
+    },
+    {
+      "index": 1,
+      "char": "煤",
+      "start": 0.647,
+      "end": 0.878
+    },
+    {
+      "index": 2,
+      "char": "炭",
+      "start": 0.922,
+      "end": 1.153
+    },
+    {
+      "index": 3,
+      "char": "的",
+      "start": 1.197,
+      "end": 1.427
+    },
+    {
+      "index": 4,
+      "char": "炭",
+      "start": 1.471,
+      "end": 1.702
+    },
+    {
+      "index": 5,
+      "char": "它",
+      "start": 2.086,
+      "end": 2.317
+    },
+    {
+      "index": 6,
+      "char": "是",
+      "start": 2.361,
+      "end": 2.591
+    },
+    {
+      "index": 7,
+      "char": "上",
+      "start": 2.635,
+      "end": 2.866
+    },
+    {
+      "index": 8,
+      "char": "下",
+      "start": 2.91,
+      "end": 3.141
+    },
+    {
+      "index": 9,
+      "char": "结",
+      "start": 3.185,
+      "end": 3.415
+    },
+    {
+      "index": 10,
+      "char": "构",
+      "start": 3.459,
+      "end": 3.69
+    },
+    {
+      "index": 11,
+      "char": "看",
+      "start": 4.074,
+      "end": 4.305
+    },
+    {
+      "index": 12,
+      "char": "图",
+      "start": 4.349,
+      "end": 4.579
+    },
+    {
+      "index": 13,
+      "char": "找",
+      "start": 4.623,
+      "end": 4.854
+    },
+    {
+      "index": 14,
+      "char": "部",
+      "start": 4.898,
+      "end": 5.129
+    },
+    {
+      "index": 15,
+      "char": "件",
+      "start": 5.173,
+      "end": 5.403
+    },
+    {
+      "index": 16,
+      "char": "合",
+      "start": 5.627,
+      "end": 5.858
+    },
+    {
+      "index": 17,
+      "char": "成",
+      "start": 5.902,
+      "end": 6.133
+    },
+    {
+      "index": 18,
+      "char": "字",
+      "start": 6.177,
+      "end": 6.407
+    },
+    {
+      "index": 19,
+      "char": "形",
+      "start": 6.451,
+      "end": 6.682
+    },
+    {
+      "index": 20,
+      "char": "再",
+      "start": 7.066,
+      "end": 7.297
+    },
+    {
+      "index": 21,
+      "char": "读",
+      "start": 7.341,
+      "end": 7.571
+    },
+    {
+      "index": 22,
+      "char": "煤",
+      "start": 7.795,
+      "end": 8.026
+    },
+    {
+      "index": 23,
+      "char": "炭",
+      "start": 8.07,
+      "end": 8.301
+    }
+  ],
+  "transcript": "炭，“煤炭”的“炭”。它是上下结构。看图找部件，合成字形。再读：煤炭。",
+  "voice_reference": "封",
+  "timing_source": "punctuation-weighted-estimate",
+  "script_version": "child-first-v1",
+  "duration": 8.800181
+}

@@ -1,0 +1,153 @@
+{
+  "marks": [
+    {
+      "index": 0,
+      "char": "酿",
+      "start": 0.129,
+      "end": 0.27
+    },
+    {
+      "index": 1,
+      "char": "酿",
+      "start": 0.455,
+      "end": 0.596
+    },
+    {
+      "index": 2,
+      "char": "酒",
+      "start": 0.624,
+      "end": 0.765
+    },
+    {
+      "index": 3,
+      "char": "的",
+      "start": 0.792,
+      "end": 0.934
+    },
+    {
+      "index": 4,
+      "char": "酿",
+      "start": 0.961,
+      "end": 1.103
+    },
+    {
+      "index": 5,
+      "char": "它",
+      "start": 1.427,
+      "end": 1.569
+    },
+    {
+      "index": 6,
+      "char": "是",
+      "start": 1.596,
+      "end": 1.738
+    },
+    {
+      "index": 7,
+      "char": "左",
+      "start": 1.765,
+      "end": 1.907
+    },
+    {
+      "index": 8,
+      "char": "右",
+      "start": 1.934,
+      "end": 2.076
+    },
+    {
+      "index": 9,
+      "char": "结",
+      "start": 2.103,
+      "end": 2.245
+    },
+    {
+      "index": 10,
+      "char": "构",
+      "start": 2.272,
+      "end": 2.414
+    },
+    {
+      "index": 11,
+      "char": "看",
+      "start": 2.738,
+      "end": 2.879
+    },
+    {
+      "index": 12,
+      "char": "图",
+      "start": 2.907,
+      "end": 3.048
+    },
+    {
+      "index": 13,
+      "char": "找",
+      "start": 3.075,
+      "end": 3.217
+    },
+    {
+      "index": 14,
+      "char": "部",
+      "start": 3.244,
+      "end": 3.386
+    },
+    {
+      "index": 15,
+      "char": "件",
+      "start": 3.413,
+      "end": 3.555
+    },
+    {
+      "index": 16,
+      "char": "合",
+      "start": 3.739,
+      "end": 3.881
+    },
+    {
+      "index": 17,
+      "char": "成",
+      "start": 3.908,
+      "end": 4.05
+    },
+    {
+      "index": 18,
+      "char": "字",
+      "start": 4.077,
+      "end": 4.219
+    },
+    {
+      "index": 19,
+      "char": "形",
+      "start": 4.246,
+      "end": 4.388
+    },
+    {
+      "index": 20,
+      "char": "再",
+      "start": 4.712,
+      "end": 4.854
+    },
+    {
+      "index": 21,
+      "char": "读",
+      "start": 4.881,
+      "end": 5.023
+    },
+    {
+      "index": 22,
+      "char": "酿",
+      "start": 5.207,
+      "end": 5.349
+    },
+    {
+      "index": 23,
+      "char": "酒",
+      "start": 5.376,
+      "end": 5.518
+    }
+  ],
+  "transcript": "酿，“酿酒”的“酿”。它是左右结构。看图找部件，合成字形。再读：酿酒。",
+  "voice_reference": "封",
+  "timing_source": "punctuation-weighted-estimate",
+  "script_version": "child-first-v1",
+  "duration": 5.920181
+}

@@ -1,0 +1,153 @@
+{
+  "marks": [
+    {
+      "index": 0,
+      "char": "籍",
+      "start": 0.182,
+      "end": 0.396
+    },
+    {
+      "index": 1,
+      "char": "书",
+      "start": 0.617,
+      "end": 0.832
+    },
+    {
+      "index": 2,
+      "char": "籍",
+      "start": 0.872,
+      "end": 1.087
+    },
+    {
+      "index": 3,
+      "char": "的",
+      "start": 1.128,
+      "end": 1.342
+    },
+    {
+      "index": 4,
+      "char": "籍",
+      "start": 1.383,
+      "end": 1.598
+    },
+    {
+      "index": 5,
+      "char": "它",
+      "start": 1.979,
+      "end": 2.193
+    },
+    {
+      "index": 6,
+      "char": "是",
+      "start": 2.234,
+      "end": 2.448
+    },
+    {
+      "index": 7,
+      "char": "上",
+      "start": 2.489,
+      "end": 2.704
+    },
+    {
+      "index": 8,
+      "char": "下",
+      "start": 2.745,
+      "end": 2.959
+    },
+    {
+      "index": 9,
+      "char": "结",
+      "start": 3,
+      "end": 3.215
+    },
+    {
+      "index": 10,
+      "char": "构",
+      "start": 3.255,
+      "end": 3.47
+    },
+    {
+      "index": 11,
+      "char": "看",
+      "start": 3.851,
+      "end": 4.065
+    },
+    {
+      "index": 12,
+      "char": "图",
+      "start": 4.106,
+      "end": 4.321
+    },
+    {
+      "index": 13,
+      "char": "找",
+      "start": 4.362,
+      "end": 4.576
+    },
+    {
+      "index": 14,
+      "char": "部",
+      "start": 4.617,
+      "end": 4.831
+    },
+    {
+      "index": 15,
+      "char": "件",
+      "start": 4.872,
+      "end": 5.087
+    },
+    {
+      "index": 16,
+      "char": "合",
+      "start": 5.308,
+      "end": 5.522
+    },
+    {
+      "index": 17,
+      "char": "成",
+      "start": 5.563,
+      "end": 5.778
+    },
+    {
+      "index": 18,
+      "char": "字",
+      "start": 5.818,
+      "end": 6.033
+    },
+    {
+      "index": 19,
+      "char": "形",
+      "start": 6.074,
+      "end": 6.288
+    },
+    {
+      "index": 20,
+      "char": "再",
+      "start": 6.669,
+      "end": 6.884
+    },
+    {
+      "index": 21,
+      "char": "读",
+      "start": 6.925,
+      "end": 7.139
+    },
+    {
+      "index": 22,
+      "char": "书",
+      "start": 7.36,
+      "end": 7.574
+    },
+    {
+      "index": 23,
+      "char": "籍",
+      "start": 7.615,
+      "end": 7.83
+    }
+  ],
+  "transcript": "籍，“书籍”的“籍”。它是上下结构。看图找部件，合成字形。再读：书籍。",
+  "voice_reference": "封",
+  "timing_source": "punctuation-weighted-estimate",
+  "script_version": "child-first-v1",
+  "duration": 8.320181
+}

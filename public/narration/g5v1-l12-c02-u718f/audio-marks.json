@@ -1,0 +1,153 @@
+{
+  "marks": [
+    {
+      "index": 0,
+      "char": "熏",
+      "start": 0.171,
+      "end": 0.376
+    },
+    {
+      "index": 1,
+      "char": "熏",
+      "start": 0.595,
+      "end": 0.8
+    },
+    {
+      "index": 2,
+      "char": "陶",
+      "start": 0.839,
+      "end": 1.043
+    },
+    {
+      "index": 3,
+      "char": "的",
+      "start": 1.082,
+      "end": 1.287
+    },
+    {
+      "index": 4,
+      "char": "熏",
+      "start": 1.326,
+      "end": 1.53
+    },
+    {
+      "index": 5,
+      "char": "它",
+      "start": 1.909,
+      "end": 2.114
+    },
+    {
+      "index": 6,
+      "char": "是",
+      "start": 2.153,
+      "end": 2.357
+    },
+    {
+      "index": 7,
+      "char": "上",
+      "start": 2.396,
+      "end": 2.601
+    },
+    {
+      "index": 8,
+      "char": "下",
+      "start": 2.64,
+      "end": 2.845
+    },
+    {
+      "index": 9,
+      "char": "结",
+      "start": 2.884,
+      "end": 3.088
+    },
+    {
+      "index": 10,
+      "char": "构",
+      "start": 3.127,
+      "end": 3.332
+    },
+    {
+      "index": 11,
+      "char": "顺",
+      "start": 3.711,
+      "end": 3.915
+    },
+    {
+      "index": 12,
+      "char": "着",
+      "start": 3.954,
+      "end": 4.159
+    },
+    {
+      "index": 13,
+      "char": "图",
+      "start": 4.198,
+      "end": 4.402
+    },
+    {
+      "index": 14,
+      "char": "记",
+      "start": 4.441,
+      "end": 4.646
+    },
+    {
+      "index": 15,
+      "char": "住",
+      "start": 4.685,
+      "end": 4.89
+    },
+    {
+      "index": 16,
+      "char": "整",
+      "start": 4.929,
+      "end": 5.133
+    },
+    {
+      "index": 17,
+      "char": "体",
+      "start": 5.172,
+      "end": 5.377
+    },
+    {
+      "index": 18,
+      "char": "轮",
+      "start": 5.416,
+      "end": 5.62
+    },
+    {
+      "index": 19,
+      "char": "廓",
+      "start": 5.659,
+      "end": 5.864
+    },
+    {
+      "index": 20,
+      "char": "再",
+      "start": 6.243,
+      "end": 6.447
+    },
+    {
+      "index": 21,
+      "char": "读",
+      "start": 6.486,
+      "end": 6.691
+    },
+    {
+      "index": 22,
+      "char": "熏",
+      "start": 6.91,
+      "end": 7.115
+    },
+    {
+      "index": 23,
+      "char": "陶",
+      "start": 7.154,
+      "end": 7.358
+    }
+  ],
+  "transcript": "熏，“熏陶”的“熏”。它是上下结构。顺着图记住整体轮廓。再读：熏陶。",
+  "voice_reference": "封",
+  "timing_source": "punctuation-weighted-estimate",
+  "script_version": "child-first-v1",
+  "duration": 7.840181
+}

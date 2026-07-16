@@ -1,0 +1,153 @@
+{
+  "marks": [
+    {
+      "index": 0,
+      "char": "蚕",
+      "start": 0.268,
+      "end": 0.612
+    },
+    {
+      "index": 1,
+      "char": "蚕",
+      "start": 0.858,
+      "end": 1.202
+    },
+    {
+      "index": 2,
+      "char": "茧",
+      "start": 1.267,
+      "end": 1.612
+    },
+    {
+      "index": 3,
+      "char": "的",
+      "start": 1.677,
+      "end": 2.021
+    },
+    {
+      "index": 4,
+      "char": "蚕",
+      "start": 2.087,
+      "end": 2.431
+    },
+    {
+      "index": 5,
+      "char": "它",
+      "start": 2.837,
+      "end": 3.181
+    },
+    {
+      "index": 6,
+      "char": "是",
+      "start": 3.246,
+      "end": 3.591
+    },
+    {
+      "index": 7,
+      "char": "上",
+      "start": 3.656,
+      "end": 4
+    },
+    {
+      "index": 8,
+      "char": "下",
+      "start": 4.066,
+      "end": 4.41
+    },
+    {
+      "index": 9,
+      "char": "结",
+      "start": 4.476,
+      "end": 4.82
+    },
+    {
+      "index": 10,
+      "char": "构",
+      "start": 4.886,
+      "end": 5.23
+    },
+    {
+      "index": 11,
+      "char": "看",
+      "start": 5.635,
+      "end": 5.98
+    },
+    {
+      "index": 12,
+      "char": "图",
+      "start": 6.045,
+      "end": 6.389
+    },
+    {
+      "index": 13,
+      "char": "找",
+      "start": 6.455,
+      "end": 6.799
+    },
+    {
+      "index": 14,
+      "char": "部",
+      "start": 6.865,
+      "end": 7.209
+    },
+    {
+      "index": 15,
+      "char": "件",
+      "start": 7.274,
+      "end": 7.619
+    },
+    {
+      "index": 16,
+      "char": "合",
+      "start": 7.864,
+      "end": 8.208
+    },
+    {
+      "index": 17,
+      "char": "成",
+      "start": 8.274,
+      "end": 8.618
+    },
+    {
+      "index": 18,
+      "char": "字",
+      "start": 8.684,
+      "end": 9.028
+    },
+    {
+      "index": 19,
+      "char": "形",
+      "start": 9.093,
+      "end": 9.438
+    },
+    {
+      "index": 20,
+      "char": "再",
+      "start": 9.843,
+      "end": 10.187
+    },
+    {
+      "index": 21,
+      "char": "读",
+      "start": 10.253,
+      "end": 10.597
+    },
+    {
+      "index": 22,
+      "char": "蚕",
+      "start": 10.843,
+      "end": 11.187
+    },
+    {
+      "index": 23,
+      "char": "茧",
+      "start": 11.253,
+      "end": 11.597
+    }
+  ],
+  "transcript": "蚕，“蚕茧”的“蚕”。它是上下结构。看图找部件，合成字形。再读：蚕茧。",
+  "voice_reference": "封",
+  "timing_source": "punctuation-weighted-estimate",
+  "script_version": "child-first-v1",
+  "duration": 12.160181
+}

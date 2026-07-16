@@ -1,4 +1,5 @@
 import type { CharacterItem } from "./catalog";
+import { grade5MnemonicScenes } from "./grade5-volume1-mnemonics.generated.ts";
 
 export type MnemonicScene = {
   scene: string;
@@ -12,7 +13,7 @@ export type MnemonicLayout = "left-right" | "top-bottom" | "surround" | "single"
  * image composition. The objects in the illustration carry the strokes; the
  * UI only helps learners notice them and never pastes a large glyph over art.
  */
-export const mnemonicScenes: Record<string, MnemonicScene> = {
+const legacyMnemonicScenes: Record<string, MnemonicScene> = {
   桂: { scene: "一棵桂树与一枚立在双层土台上的玉圭并排生长，树、花和礼器共同组成字形。", cues: ["桂树的树干、横枝和斜根自然长成“木”。", "玉圭立在上下两层土台上，外轮廓正好组成“圭”。"] },
   花: { scene: "花圃的草叶在上方展开，照料花朵的人影在下方完成“花”的上下结构。", cues: ["成排花梗和叶片伸展成“艹”的两组短枝。", "花下两个人影与转身动作收拢成“化”。"] },
   故: { scene: "旧石碑与轻敲讲述往事的人并列，把“从前”的故事藏进“故”。", cues: ["旧碑的十字骨架和方形碑座组成“古”。", "手持短杖、迈步轻敲的动作轮廓组成“攵”。"] },
@@ -89,6 +90,18 @@ export const mnemonicScenes: Record<string, MnemonicScene> = {
   无: { scene: "舞者放开羽毛，两道长绸与身体、弯曲芦苇合成空灵的“无”。", cues: ["两条横绸、斜伸手臂、中央身姿与末端上钩的芦苇共同组成“无”。"] },
   抗: { scene: "左侧手掌顶住扶柱，右侧亭架迎着强风仍保持站立。", cues: ["左侧高柱和两根短枝形成“扌”。", "右侧屋顶、横梁、中央立柱和张开的支脚组成“亢”。"] },
   日: { scene: "圆角方形太阳升起，一道水平云带穿过中央，太阳本身就是“日”。", cues: ["方正日轮的外框与正中横向云光共同组成完整的“日”。"] },
+};
+
+const generatedMnemonicScenes = grade5MnemonicScenes as unknown as Record<string, MnemonicScene>;
+
+export const mnemonicScenes: Record<string, MnemonicScene> = {
+  ...legacyMnemonicScenes,
+  ...Object.fromEntries(
+    Object.entries(generatedMnemonicScenes).map(([glyph, generated]) => {
+      const legacy = legacyMnemonicScenes[glyph];
+      return [glyph, legacy && legacy.cues.length === generated.cues.length ? legacy : generated];
+    }),
+  ),
 };
 
 export function getMnemonicScene(character: CharacterItem): MnemonicScene {

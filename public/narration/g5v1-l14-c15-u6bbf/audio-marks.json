@@ -1,0 +1,153 @@
+{
+  "marks": [
+    {
+      "index": 0,
+      "char": "殿",
+      "start": 0.153,
+      "end": 0.324
+    },
+    {
+      "index": 1,
+      "char": "宫",
+      "start": 0.537,
+      "end": 0.708
+    },
+    {
+      "index": 2,
+      "char": "殿",
+      "start": 0.741,
+      "end": 0.912
+    },
+    {
+      "index": 3,
+      "char": "的",
+      "start": 0.945,
+      "end": 1.116
+    },
+    {
+      "index": 4,
+      "char": "殿",
+      "start": 1.149,
+      "end": 1.32
+    },
+    {
+      "index": 5,
+      "char": "它",
+      "start": 1.693,
+      "end": 1.864
+    },
+    {
+      "index": 6,
+      "char": "是",
+      "start": 1.896,
+      "end": 2.068
+    },
+    {
+      "index": 7,
+      "char": "左",
+      "start": 2.1,
+      "end": 2.272
+    },
+    {
+      "index": 8,
+      "char": "右",
+      "start": 2.304,
+      "end": 2.476
+    },
+    {
+      "index": 9,
+      "char": "结",
+      "start": 2.508,
+      "end": 2.679
+    },
+    {
+      "index": 10,
+      "char": "构",
+      "start": 2.712,
+      "end": 2.883
+    },
+    {
+      "index": 11,
+      "char": "看",
+      "start": 3.256,
+      "end": 3.427
+    },
+    {
+      "index": 12,
+      "char": "图",
+      "start": 3.46,
+      "end": 3.631
+    },
+    {
+      "index": 13,
+      "char": "找",
+      "start": 3.664,
+      "end": 3.835
+    },
+    {
+      "index": 14,
+      "char": "部",
+      "start": 3.868,
+      "end": 4.039
+    },
+    {
+      "index": 15,
+      "char": "件",
+      "start": 4.072,
+      "end": 4.243
+    },
+    {
+      "index": 16,
+      "char": "合",
+      "start": 4.456,
+      "end": 4.627
+    },
+    {
+      "index": 17,
+      "char": "成",
+      "start": 4.659,
+      "end": 4.831
+    },
+    {
+      "index": 18,
+      "char": "字",
+      "start": 4.863,
+      "end": 5.035
+    },
+    {
+      "index": 19,
+      "char": "形",
+      "start": 5.067,
+      "end": 5.239
+    },
+    {
+      "index": 20,
+      "char": "再",
+      "start": 5.611,
+      "end": 5.782
+    },
+    {
+      "index": 21,
+      "char": "读",
+      "start": 5.815,
+      "end": 5.986
+    },
+    {
+      "index": 22,
+      "char": "宫",
+      "start": 6.199,
+      "end": 6.37
+    },
+    {
+      "index": 23,
+      "char": "殿",
+      "start": 6.403,
+      "end": 6.574
+    }
+  ],
+  "transcript": "殿，“宫殿”的“殿”。它是左右结构。看图找部件，合成字形。再读：宫殿。",
+  "voice_reference": "封",
+  "timing_source": "punctuation-weighted-estimate",
+  "script_version": "child-first-v1",
+  "duration": 7.040181
+}

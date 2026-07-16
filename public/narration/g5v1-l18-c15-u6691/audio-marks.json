@@ -1,0 +1,153 @@
+{
+  "marks": [
+    {
+      "index": 0,
+      "char": "暑",
+      "start": 0.25,
+      "end": 0.567
+    },
+    {
+      "index": 1,
+      "char": "酷",
+      "start": 0.807,
+      "end": 1.125
+    },
+    {
+      "index": 2,
+      "char": "暑",
+      "start": 1.185,
+      "end": 1.502
+    },
+    {
+      "index": 3,
+      "char": "的",
+      "start": 1.563,
+      "end": 1.88
+    },
+    {
+      "index": 4,
+      "char": "暑",
+      "start": 1.94,
+      "end": 2.257
+    },
+    {
+      "index": 5,
+      "char": "它",
+      "start": 2.658,
+      "end": 2.975
+    },
+    {
+      "index": 6,
+      "char": "是",
+      "start": 3.036,
+      "end": 3.353
+    },
+    {
+      "index": 7,
+      "char": "上",
+      "start": 3.413,
+      "end": 3.73
+    },
+    {
+      "index": 8,
+      "char": "下",
+      "start": 3.791,
+      "end": 4.108
+    },
+    {
+      "index": 9,
+      "char": "结",
+      "start": 4.168,
+      "end": 4.486
+    },
+    {
+      "index": 10,
+      "char": "构",
+      "start": 4.546,
+      "end": 4.863
+    },
+    {
+      "index": 11,
+      "char": "看",
+      "start": 5.264,
+      "end": 5.581
+    },
+    {
+      "index": 12,
+      "char": "图",
+      "start": 5.641,
+      "end": 5.958
+    },
+    {
+      "index": 13,
+      "char": "找",
+      "start": 6.019,
+      "end": 6.336
+    },
+    {
+      "index": 14,
+      "char": "部",
+      "start": 6.396,
+      "end": 6.714
+    },
+    {
+      "index": 15,
+      "char": "件",
+      "start": 6.774,
+      "end": 7.091
+    },
+    {
+      "index": 16,
+      "char": "合",
+      "start": 7.332,
+      "end": 7.649
+    },
+    {
+      "index": 17,
+      "char": "成",
+      "start": 7.709,
+      "end": 8.026
+    },
+    {
+      "index": 18,
+      "char": "字",
+      "start": 8.087,
+      "end": 8.404
+    },
+    {
+      "index": 19,
+      "char": "形",
+      "start": 8.464,
+      "end": 8.782
+    },
+    {
+      "index": 20,
+      "char": "再",
+      "start": 9.182,
+      "end": 9.499
+    },
+    {
+      "index": 21,
+      "char": "读",
+      "start": 9.56,
+      "end": 9.877
+    },
+    {
+      "index": 22,
+      "char": "酷",
+      "start": 10.117,
+      "end": 10.434
+    },
+    {
+      "index": 23,
+      "char": "暑",
+      "start": 10.495,
+      "end": 10.812
+    }
+  ],
+  "transcript": "暑，“酷暑”的“暑”。它是上下结构。看图找部件，合成字形。再读：酷暑。",
+  "voice_reference": "封",
+  "timing_source": "punctuation-weighted-estimate",
+  "script_version": "child-first-v1",
+  "duration": 11.360181
+}

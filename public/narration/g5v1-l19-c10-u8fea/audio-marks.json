@@ -1,0 +1,165 @@
+{
+  "marks": [
+    {
+      "index": 0,
+      "char": "迪",
+      "start": 0.181,
+      "end": 0.379
+    },
+    {
+      "index": 1,
+      "char": "启",
+      "start": 0.596,
+      "end": 0.794
+    },
+    {
+      "index": 2,
+      "char": "迪",
+      "start": 0.832,
+      "end": 1.03
+    },
+    {
+      "index": 3,
+      "char": "的",
+      "start": 1.068,
+      "end": 1.266
+    },
+    {
+      "index": 4,
+      "char": "迪",
+      "start": 1.303,
+      "end": 1.501
+    },
+    {
+      "index": 5,
+      "char": "它",
+      "start": 1.879,
+      "end": 2.077
+    },
+    {
+      "index": 6,
+      "char": "是",
+      "start": 2.115,
+      "end": 2.313
+    },
+    {
+      "index": 7,
+      "char": "左",
+      "start": 2.351,
+      "end": 2.549
+    },
+    {
+      "index": 8,
+      "char": "下",
+      "start": 2.586,
+      "end": 2.784
+    },
+    {
+      "index": 9,
+      "char": "包",
+      "start": 2.822,
+      "end": 3.02
+    },
+    {
+      "index": 10,
+      "char": "围",
+      "start": 3.058,
+      "end": 3.256
+    },
+    {
+      "index": 11,
+      "char": "结",
+      "start": 3.294,
+      "end": 3.492
+    },
+    {
+      "index": 12,
+      "char": "构",
+      "start": 3.529,
+      "end": 3.727
+    },
+    {
+      "index": 13,
+      "char": "看",
+      "start": 4.105,
+      "end": 4.303
+    },
+    {
+      "index": 14,
+      "char": "图",
+      "start": 4.341,
+      "end": 4.539
+    },
+    {
+      "index": 15,
+      "char": "找",
+      "start": 4.576,
+      "end": 4.775
+    },
+    {
+      "index": 16,
+      "char": "部",
+      "start": 4.812,
+      "end": 5.01
+    },
+    {
+      "index": 17,
+      "char": "件",
+      "start": 5.048,
+      "end": 5.246
+    },
+    {
+      "index": 18,
+      "char": "合",
+      "start": 5.464,
+      "end": 5.662
+    },
+    {
+      "index": 19,
+      "char": "成",
+      "start": 5.699,
+      "end": 5.897
+    },
+    {
+      "index": 20,
+      "char": "字",
+      "start": 5.935,
+      "end": 6.133
+    },
+    {
+      "index": 21,
+      "char": "形",
+      "start": 6.171,
+      "end": 6.369
+    },
+    {
+      "index": 22,
+      "char": "再",
+      "start": 6.747,
+      "end": 6.945
+    },
+    {
+      "index": 23,
+      "char": "读",
+      "start": 6.982,
+      "end": 7.18
+    },
+    {
+      "index": 24,
+      "char": "启",
+      "start": 7.398,
+      "end": 7.596
+    },
+    {
+      "index": 25,
+      "char": "迪",
+      "start": 7.634,
+      "end": 7.832
+    }
+  ],
+  "transcript": "迪，“启迪”的“迪”。它是左下包围结构。看图找部件，合成字形。再读：启迪。",
+  "voice_reference": "封",
+  "timing_source": "punctuation-weighted-estimate",
+  "script_version": "child-first-v1",
+  "duration": 8.320181
+}

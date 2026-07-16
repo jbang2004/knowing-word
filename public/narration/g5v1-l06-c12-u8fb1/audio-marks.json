@@ -1,0 +1,165 @@
+{
+  "marks": [
+    {
+      "index": 0,
+      "char": "辱",
+      "start": 0.17,
+      "end": 0.353
+    },
+    {
+      "index": 1,
+      "char": "侮",
+      "start": 0.568,
+      "end": 0.751
+    },
+    {
+      "index": 2,
+      "char": "辱",
+      "start": 0.786,
+      "end": 0.969
+    },
+    {
+      "index": 3,
+      "char": "的",
+      "start": 1.004,
+      "end": 1.187
+    },
+    {
+      "index": 4,
+      "char": "辱",
+      "start": 1.222,
+      "end": 1.405
+    },
+    {
+      "index": 5,
+      "char": "它",
+      "start": 1.779,
+      "end": 1.962
+    },
+    {
+      "index": 6,
+      "char": "是",
+      "start": 1.997,
+      "end": 2.18
+    },
+    {
+      "index": 7,
+      "char": "左",
+      "start": 2.215,
+      "end": 2.398
+    },
+    {
+      "index": 8,
+      "char": "上",
+      "start": 2.433,
+      "end": 2.616
+    },
+    {
+      "index": 9,
+      "char": "包",
+      "start": 2.651,
+      "end": 2.834
+    },
+    {
+      "index": 10,
+      "char": "围",
+      "start": 2.869,
+      "end": 3.052
+    },
+    {
+      "index": 11,
+      "char": "结",
+      "start": 3.087,
+      "end": 3.27
+    },
+    {
+      "index": 12,
+      "char": "构",
+      "start": 3.305,
+      "end": 3.488
+    },
+    {
+      "index": 13,
+      "char": "看",
+      "start": 3.863,
+      "end": 4.046
+    },
+    {
+      "index": 14,
+      "char": "图",
+      "start": 4.081,
+      "end": 4.264
+    },
+    {
+      "index": 15,
+      "char": "找",
+      "start": 4.299,
+      "end": 4.482
+    },
+    {
+      "index": 16,
+      "char": "部",
+      "start": 4.517,
+      "end": 4.7
+    },
+    {
+      "index": 17,
+      "char": "件",
+      "start": 4.734,
+      "end": 4.917
+    },
+    {
+      "index": 18,
+      "char": "合",
+      "start": 5.132,
+      "end": 5.315
+    },
+    {
+      "index": 19,
+      "char": "成",
+      "start": 5.35,
+      "end": 5.533
+    },
+    {
+      "index": 20,
+      "char": "字",
+      "start": 5.568,
+      "end": 5.751
+    },
+    {
+      "index": 21,
+      "char": "形",
+      "start": 5.786,
+      "end": 5.969
+    },
+    {
+      "index": 22,
+      "char": "再",
+      "start": 6.344,
+      "end": 6.527
+    },
+    {
+      "index": 23,
+      "char": "读",
+      "start": 6.562,
+      "end": 6.745
+    },
+    {
+      "index": 24,
+      "char": "侮",
+      "start": 6.96,
+      "end": 7.143
+    },
+    {
+      "index": 25,
+      "char": "辱",
+      "start": 7.178,
+      "end": 7.361
+    }
+  ],
+  "transcript": "辱，“侮辱”的“辱”。它是左上包围结构。看图找部件，合成字形。再读：侮辱。",
+  "voice_reference": "封",
+  "timing_source": "punctuation-weighted-estimate",
+  "script_version": "child-first-v1",
+  "duration": 7.840181
+}

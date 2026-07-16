@@ -1,0 +1,165 @@
+{
+  "marks": [
+    {
+      "index": 0,
+      "char": "乃",
+      "start": 0.227,
+      "end": 0.49
+    },
+    {
+      "index": 1,
+      "char": "乃",
+      "start": 0.72,
+      "end": 0.983
+    },
+    {
+      "index": 2,
+      "char": "至",
+      "start": 1.033,
+      "end": 1.296
+    },
+    {
+      "index": 3,
+      "char": "的",
+      "start": 1.346,
+      "end": 1.608
+    },
+    {
+      "index": 4,
+      "char": "乃",
+      "start": 1.658,
+      "end": 1.921
+    },
+    {
+      "index": 5,
+      "char": "它",
+      "start": 2.311,
+      "end": 2.574
+    },
+    {
+      "index": 6,
+      "char": "是",
+      "start": 2.624,
+      "end": 2.887
+    },
+    {
+      "index": 7,
+      "char": "右",
+      "start": 2.937,
+      "end": 3.2
+    },
+    {
+      "index": 8,
+      "char": "上",
+      "start": 3.25,
+      "end": 3.513
+    },
+    {
+      "index": 9,
+      "char": "包",
+      "start": 3.563,
+      "end": 3.826
+    },
+    {
+      "index": 10,
+      "char": "围",
+      "start": 3.876,
+      "end": 4.139
+    },
+    {
+      "index": 11,
+      "char": "结",
+      "start": 4.189,
+      "end": 4.452
+    },
+    {
+      "index": 12,
+      "char": "构",
+      "start": 4.502,
+      "end": 4.765
+    },
+    {
+      "index": 13,
+      "char": "看",
+      "start": 5.155,
+      "end": 5.418
+    },
+    {
+      "index": 14,
+      "char": "图",
+      "start": 5.468,
+      "end": 5.731
+    },
+    {
+      "index": 15,
+      "char": "找",
+      "start": 5.781,
+      "end": 6.044
+    },
+    {
+      "index": 16,
+      "char": "部",
+      "start": 6.094,
+      "end": 6.357
+    },
+    {
+      "index": 17,
+      "char": "件",
+      "start": 6.407,
+      "end": 6.669
+    },
+    {
+      "index": 18,
+      "char": "合",
+      "start": 6.9,
+      "end": 7.162
+    },
+    {
+      "index": 19,
+      "char": "成",
+      "start": 7.212,
+      "end": 7.475
+    },
+    {
+      "index": 20,
+      "char": "字",
+      "start": 7.525,
+      "end": 7.788
+    },
+    {
+      "index": 21,
+      "char": "形",
+      "start": 7.838,
+      "end": 8.101
+    },
+    {
+      "index": 22,
+      "char": "再",
+      "start": 8.491,
+      "end": 8.754
+    },
+    {
+      "index": 23,
+      "char": "读",
+      "start": 8.804,
+      "end": 9.067
+    },
+    {
+      "index": 24,
+      "char": "乃",
+      "start": 9.297,
+      "end": 9.56
+    },
+    {
+      "index": 25,
+      "char": "至",
+      "start": 9.61,
+      "end": 9.873
+    }
+  ],
+  "transcript": "乃，“乃至”的“乃”。它是右上包围结构。看图找部件，合成字形。再读：乃至。",
+  "voice_reference": "封",
+  "timing_source": "punctuation-weighted-estimate",
+  "script_version": "child-first-v1",
+  "duration": 10.400181
+}

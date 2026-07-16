@@ -1,0 +1,153 @@
+{
+  "marks": [
+    {
+      "index": 0,
+      "char": "榕",
+      "start": 0.175,
+      "end": 0.378
+    },
+    {
+      "index": 1,
+      "char": "榕",
+      "start": 0.597,
+      "end": 0.801
+    },
+    {
+      "index": 2,
+      "char": "树",
+      "start": 0.84,
+      "end": 1.043
+    },
+    {
+      "index": 3,
+      "char": "的",
+      "start": 1.082,
+      "end": 1.286
+    },
+    {
+      "index": 4,
+      "char": "榕",
+      "start": 1.325,
+      "end": 1.528
+    },
+    {
+      "index": 5,
+      "char": "它",
+      "start": 1.907,
+      "end": 2.111
+    },
+    {
+      "index": 6,
+      "char": "是",
+      "start": 2.15,
+      "end": 2.353
+    },
+    {
+      "index": 7,
+      "char": "左",
+      "start": 2.392,
+      "end": 2.596
+    },
+    {
+      "index": 8,
+      "char": "右",
+      "start": 2.635,
+      "end": 2.838
+    },
+    {
+      "index": 9,
+      "char": "结",
+      "start": 2.877,
+      "end": 3.081
+    },
+    {
+      "index": 10,
+      "char": "构",
+      "start": 3.12,
+      "end": 3.323
+    },
+    {
+      "index": 11,
+      "char": "看",
+      "start": 3.702,
+      "end": 3.906
+    },
+    {
+      "index": 12,
+      "char": "图",
+      "start": 3.945,
+      "end": 4.148
+    },
+    {
+      "index": 13,
+      "char": "找",
+      "start": 4.187,
+      "end": 4.391
+    },
+    {
+      "index": 14,
+      "char": "部",
+      "start": 4.43,
+      "end": 4.633
+    },
+    {
+      "index": 15,
+      "char": "件",
+      "start": 4.672,
+      "end": 4.876
+    },
+    {
+      "index": 16,
+      "char": "合",
+      "start": 5.095,
+      "end": 5.298
+    },
+    {
+      "index": 17,
+      "char": "成",
+      "start": 5.337,
+      "end": 5.541
+    },
+    {
+      "index": 18,
+      "char": "字",
+      "start": 5.58,
+      "end": 5.783
+    },
+    {
+      "index": 19,
+      "char": "形",
+      "start": 5.822,
+      "end": 6.026
+    },
+    {
+      "index": 20,
+      "char": "再",
+      "start": 6.405,
+      "end": 6.608
+    },
+    {
+      "index": 21,
+      "char": "读",
+      "start": 6.647,
+      "end": 6.851
+    },
+    {
+      "index": 22,
+      "char": "榕",
+      "start": 7.07,
+      "end": 7.273
+    },
+    {
+      "index": 23,
+      "char": "树",
+      "start": 7.312,
+      "end": 7.516
+    }
+  ],
+  "transcript": "榕，“榕树”的“榕”。它是左右结构。看图找部件，合成字形。再读：榕树。",
+  "voice_reference": "封",
+  "timing_source": "punctuation-weighted-estimate",
+  "script_version": "child-first-v1",
+  "duration": 8.000181
+}

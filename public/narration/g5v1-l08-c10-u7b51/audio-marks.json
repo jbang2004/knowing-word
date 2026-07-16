@@ -1,0 +1,153 @@
+{
+  "marks": [
+    {
+      "index": 0,
+      "char": "筑",
+      "start": 0.207,
+      "end": 0.459
+    },
+    {
+      "index": 1,
+      "char": "修",
+      "start": 0.687,
+      "end": 0.94
+    },
+    {
+      "index": 2,
+      "char": "筑",
+      "start": 0.988,
+      "end": 1.24
+    },
+    {
+      "index": 3,
+      "char": "的",
+      "start": 1.288,
+      "end": 1.54
+    },
+    {
+      "index": 4,
+      "char": "筑",
+      "start": 1.588,
+      "end": 1.841
+    },
+    {
+      "index": 5,
+      "char": "它",
+      "start": 2.229,
+      "end": 2.481
+    },
+    {
+      "index": 6,
+      "char": "是",
+      "start": 2.529,
+      "end": 2.782
+    },
+    {
+      "index": 7,
+      "char": "上",
+      "start": 2.83,
+      "end": 3.082
+    },
+    {
+      "index": 8,
+      "char": "下",
+      "start": 3.13,
+      "end": 3.382
+    },
+    {
+      "index": 9,
+      "char": "结",
+      "start": 3.43,
+      "end": 3.683
+    },
+    {
+      "index": 10,
+      "char": "构",
+      "start": 3.731,
+      "end": 3.983
+    },
+    {
+      "index": 11,
+      "char": "看",
+      "start": 4.371,
+      "end": 4.624
+    },
+    {
+      "index": 12,
+      "char": "图",
+      "start": 4.672,
+      "end": 4.924
+    },
+    {
+      "index": 13,
+      "char": "找",
+      "start": 4.972,
+      "end": 5.224
+    },
+    {
+      "index": 14,
+      "char": "部",
+      "start": 5.273,
+      "end": 5.525
+    },
+    {
+      "index": 15,
+      "char": "件",
+      "start": 5.573,
+      "end": 5.825
+    },
+    {
+      "index": 16,
+      "char": "合",
+      "start": 6.053,
+      "end": 6.306
+    },
+    {
+      "index": 17,
+      "char": "成",
+      "start": 6.354,
+      "end": 6.606
+    },
+    {
+      "index": 18,
+      "char": "字",
+      "start": 6.654,
+      "end": 6.907
+    },
+    {
+      "index": 19,
+      "char": "形",
+      "start": 6.955,
+      "end": 7.207
+    },
+    {
+      "index": 20,
+      "char": "再",
+      "start": 7.595,
+      "end": 7.847
+    },
+    {
+      "index": 21,
+      "char": "读",
+      "start": 7.895,
+      "end": 8.148
+    },
+    {
+      "index": 22,
+      "char": "修",
+      "start": 8.376,
+      "end": 8.628
+    },
+    {
+      "index": 23,
+      "char": "筑",
+      "start": 8.676,
+      "end": 8.929
+    }
+  ],
+  "transcript": "筑，“修筑”的“筑”。它是上下结构。看图找部件，合成字形。再读：修筑。",
+  "voice_reference": "封",
+  "timing_source": "punctuation-weighted-estimate",
+  "script_version": "child-first-v1",
+  "duration": 9.440181
+}

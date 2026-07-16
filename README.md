@@ -9,23 +9,29 @@ the same characters through three focused practice routes.
 
 ## What is included
 
-- A course map for three Grade 5 Chinese lessons and their word lists
-- 80 character entries and 416 ordered practice prompts
+- The complete current 26-lesson Grade 5 volume 1 course map, including six
+  skimming lessons and an original three-step comprehension path for every text
+- 365 official lesson-character records (359 unique glyphs), plus 65 optional
+  context extensions, with 3,322 ordered practice prompts in total
+- Explicit curriculum roles for 200 recognition targets, 16 polyphonic targets,
+  and 220 writing targets; all polyphonic targets include in-context reading checks
 - Four aligned learning routes: word-list mini quizzes, character assembly,
   radical-color recognition, and spatial-structure recognition
-- A component studio that ranks 79 components by their course appearance
+- A component studio that ranks 394 components by their course appearance
 - Per-question attempts, last-answer status, character-level completion, and
   resume points for each route
-- Real, shareable URLs for all 210 authenticated source-page routes
+- Real, shareable URLs for all 2,007 active learning and practice routes
 - D1-backed cross-device profiles, daily activity, answer events, and
   route-specific resume state, with local-first offline fallback
 - Pronunciation, browser-only handwriting, R2-backed read-aloud recording, and
   responsive day/night modes
 - 385 localized teaching resources: 274 historical glyph stages, 58 red-blue
   character diagrams, and 53 pronunciation recordings
-- 162 original generated illustrations: 76 object-shaped character mnemonics,
-  76 semantic reference scenes, six supplemental scenes, all three lessons,
-  and the home learning journey
+- 359 responsive picture-embedded official character visuals, 26 original
+  lesson scenes, the original deep-dive illustration set, six supplemental
+  scenes, and a new social sharing card
+- One consistent local VoxCPM2 “封” reference voice across all 423 unique
+  character narrations, with punctuated transcripts and persistent word timing
 
 The application uses its own visual language and a fully authored mnemonic
 system: natural objects carry the component geometry instead of placing large
@@ -41,6 +47,7 @@ visual audit, asset coverage, and art direction.
 ## Run locally
 
     npm install
+    npm run generate:grade5
     npm run dev
 
 Then visit the local URL printed by the development server.
@@ -50,10 +57,10 @@ Then visit the local URL printed by the development server.
     npm run lint
     npm test
 
-The test command builds the app, server-renders all 210 source routes, checks
+The test command builds the app, server-renders all 2,007 active routes, checks
 resume/completion regressions, validates every illustration and historical
-resource, and verifies that the public catalog contains no credentials or
-signed media links.
+resource, verifies all 423 narration timelines, and confirms that the public
+catalog contains no credentials, textbook scans, or signed media links.
 
 ## Privacy and content boundaries
 

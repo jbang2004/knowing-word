@@ -1,0 +1,177 @@
+{
+  "marks": [
+    {
+      "index": 0,
+      "char": "沥",
+      "start": 0.197,
+      "end": 0.404
+    },
+    {
+      "index": 1,
+      "char": "呕",
+      "start": 0.624,
+      "end": 0.831
+    },
+    {
+      "index": 2,
+      "char": "心",
+      "start": 0.87,
+      "end": 1.077
+    },
+    {
+      "index": 3,
+      "char": "沥",
+      "start": 1.117,
+      "end": 1.324
+    },
+    {
+      "index": 4,
+      "char": "血",
+      "start": 1.363,
+      "end": 1.57
+    },
+    {
+      "index": 5,
+      "char": "的",
+      "start": 1.61,
+      "end": 1.817
+    },
+    {
+      "index": 6,
+      "char": "沥",
+      "start": 1.856,
+      "end": 2.063
+    },
+    {
+      "index": 7,
+      "char": "它",
+      "start": 2.442,
+      "end": 2.649
+    },
+    {
+      "index": 8,
+      "char": "是",
+      "start": 2.689,
+      "end": 2.896
+    },
+    {
+      "index": 9,
+      "char": "左",
+      "start": 2.935,
+      "end": 3.142
+    },
+    {
+      "index": 10,
+      "char": "右",
+      "start": 3.182,
+      "end": 3.389
+    },
+    {
+      "index": 11,
+      "char": "结",
+      "start": 3.428,
+      "end": 3.635
+    },
+    {
+      "index": 12,
+      "char": "构",
+      "start": 3.675,
+      "end": 3.882
+    },
+    {
+      "index": 13,
+      "char": "看",
+      "start": 4.261,
+      "end": 4.468
+    },
+    {
+      "index": 14,
+      "char": "图",
+      "start": 4.508,
+      "end": 4.715
+    },
+    {
+      "index": 15,
+      "char": "找",
+      "start": 4.754,
+      "end": 4.961
+    },
+    {
+      "index": 16,
+      "char": "部",
+      "start": 5.001,
+      "end": 5.208
+    },
+    {
+      "index": 17,
+      "char": "件",
+      "start": 5.247,
+      "end": 5.454
+    },
+    {
+      "index": 18,
+      "char": "合",
+      "start": 5.674,
+      "end": 5.881
+    },
+    {
+      "index": 19,
+      "char": "成",
+      "start": 5.92,
+      "end": 6.127
+    },
+    {
+      "index": 20,
+      "char": "字",
+      "start": 6.166,
+      "end": 6.373
+    },
+    {
+      "index": 21,
+      "char": "形",
+      "start": 6.413,
+      "end": 6.62
+    },
+    {
+      "index": 22,
+      "char": "再",
+      "start": 6.999,
+      "end": 7.206
+    },
+    {
+      "index": 23,
+      "char": "读",
+      "start": 7.246,
+      "end": 7.453
+    },
+    {
+      "index": 24,
+      "char": "呕",
+      "start": 7.672,
+      "end": 7.879
+    },
+    {
+      "index": 25,
+      "char": "心",
+      "start": 7.919,
+      "end": 8.126
+    },
+    {
+      "index": 26,
+      "char": "沥",
+      "start": 8.165,
+      "end": 8.372
+    },
+    {
+      "index": 27,
+      "char": "血",
+      "start": 8.412,
+      "end": 8.619
+    }
+  ],
+  "transcript": "沥，“呕心沥血”的“沥”。它是左右结构。看图找部件，合成字形。再读：呕心沥血。",
+  "voice_reference": "封",
+  "timing_source": "punctuation-weighted-estimate",
+  "script_version": "child-first-v1",
+  "duration": 9.120181
+}

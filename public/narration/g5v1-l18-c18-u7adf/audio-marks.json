@@ -1,0 +1,153 @@
+{
+  "marks": [
+    {
+      "index": 0,
+      "char": "竟",
+      "start": 0.16,
+      "end": 0.342
+    },
+    {
+      "index": 1,
+      "char": "竟",
+      "start": 0.557,
+      "end": 0.739
+    },
+    {
+      "index": 2,
+      "char": "然",
+      "start": 0.774,
+      "end": 0.956
+    },
+    {
+      "index": 3,
+      "char": "的",
+      "start": 0.991,
+      "end": 1.173
+    },
+    {
+      "index": 4,
+      "char": "竟",
+      "start": 1.207,
+      "end": 1.389
+    },
+    {
+      "index": 5,
+      "char": "它",
+      "start": 1.764,
+      "end": 1.946
+    },
+    {
+      "index": 6,
+      "char": "是",
+      "start": 1.981,
+      "end": 2.163
+    },
+    {
+      "index": 7,
+      "char": "上",
+      "start": 2.198,
+      "end": 2.38
+    },
+    {
+      "index": 8,
+      "char": "下",
+      "start": 2.414,
+      "end": 2.596
+    },
+    {
+      "index": 9,
+      "char": "结",
+      "start": 2.631,
+      "end": 2.813
+    },
+    {
+      "index": 10,
+      "char": "构",
+      "start": 2.848,
+      "end": 3.03
+    },
+    {
+      "index": 11,
+      "char": "看",
+      "start": 3.405,
+      "end": 3.587
+    },
+    {
+      "index": 12,
+      "char": "图",
+      "start": 3.621,
+      "end": 3.804
+    },
+    {
+      "index": 13,
+      "char": "找",
+      "start": 3.838,
+      "end": 4.02
+    },
+    {
+      "index": 14,
+      "char": "部",
+      "start": 4.055,
+      "end": 4.237
+    },
+    {
+      "index": 15,
+      "char": "件",
+      "start": 4.272,
+      "end": 4.454
+    },
+    {
+      "index": 16,
+      "char": "合",
+      "start": 4.669,
+      "end": 4.851
+    },
+    {
+      "index": 17,
+      "char": "成",
+      "start": 4.885,
+      "end": 5.067
+    },
+    {
+      "index": 18,
+      "char": "字",
+      "start": 5.102,
+      "end": 5.284
+    },
+    {
+      "index": 19,
+      "char": "形",
+      "start": 5.319,
+      "end": 5.501
+    },
+    {
+      "index": 20,
+      "char": "再",
+      "start": 5.876,
+      "end": 6.058
+    },
+    {
+      "index": 21,
+      "char": "读",
+      "start": 6.092,
+      "end": 6.275
+    },
+    {
+      "index": 22,
+      "char": "竟",
+      "start": 6.489,
+      "end": 6.671
+    },
+    {
+      "index": 23,
+      "char": "然",
+      "start": 6.706,
+      "end": 6.888
+    }
+  ],
+  "transcript": "竟，“竟然”的“竟”。它是上下结构。看图找部件，合成字形。再读：竟然。",
+  "voice_reference": "封",
+  "timing_source": "punctuation-weighted-estimate",
+  "script_version": "child-first-v1",
+  "duration": 7.360181
+}

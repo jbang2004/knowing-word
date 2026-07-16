@@ -1,0 +1,153 @@
+{
+  "marks": [
+    {
+      "index": 0,
+      "char": "监",
+      "start": 0.186,
+      "end": 0.412
+    },
+    {
+      "index": 1,
+      "char": "监",
+      "start": 0.635,
+      "end": 0.861
+    },
+    {
+      "index": 2,
+      "char": "狱",
+      "start": 0.904,
+      "end": 1.131
+    },
+    {
+      "index": 3,
+      "char": "的",
+      "start": 1.174,
+      "end": 1.4
+    },
+    {
+      "index": 4,
+      "char": "监",
+      "start": 1.443,
+      "end": 1.669
+    },
+    {
+      "index": 5,
+      "char": "它",
+      "start": 2.052,
+      "end": 2.279
+    },
+    {
+      "index": 6,
+      "char": "是",
+      "start": 2.322,
+      "end": 2.548
+    },
+    {
+      "index": 7,
+      "char": "上",
+      "start": 2.591,
+      "end": 2.817
+    },
+    {
+      "index": 8,
+      "char": "下",
+      "start": 2.86,
+      "end": 3.086
+    },
+    {
+      "index": 9,
+      "char": "结",
+      "start": 3.13,
+      "end": 3.356
+    },
+    {
+      "index": 10,
+      "char": "构",
+      "start": 3.399,
+      "end": 3.625
+    },
+    {
+      "index": 11,
+      "char": "顺",
+      "start": 4.008,
+      "end": 4.234
+    },
+    {
+      "index": 12,
+      "char": "着",
+      "start": 4.277,
+      "end": 4.504
+    },
+    {
+      "index": 13,
+      "char": "图",
+      "start": 4.547,
+      "end": 4.773
+    },
+    {
+      "index": 14,
+      "char": "记",
+      "start": 4.816,
+      "end": 5.042
+    },
+    {
+      "index": 15,
+      "char": "住",
+      "start": 5.085,
+      "end": 5.312
+    },
+    {
+      "index": 16,
+      "char": "整",
+      "start": 5.355,
+      "end": 5.581
+    },
+    {
+      "index": 17,
+      "char": "体",
+      "start": 5.624,
+      "end": 5.85
+    },
+    {
+      "index": 18,
+      "char": "轮",
+      "start": 5.893,
+      "end": 6.12
+    },
+    {
+      "index": 19,
+      "char": "廓",
+      "start": 6.163,
+      "end": 6.389
+    },
+    {
+      "index": 20,
+      "char": "再",
+      "start": 6.772,
+      "end": 6.998
+    },
+    {
+      "index": 21,
+      "char": "读",
+      "start": 7.041,
+      "end": 7.267
+    },
+    {
+      "index": 22,
+      "char": "监",
+      "start": 7.491,
+      "end": 7.717
+    },
+    {
+      "index": 23,
+      "char": "狱",
+      "start": 7.76,
+      "end": 7.986
+    }
+  ],
+  "transcript": "监，“监狱”的“监”。它是上下结构。顺着图记住整体轮廓。再读：监狱。",
+  "voice_reference": "封",
+  "timing_source": "punctuation-weighted-estimate",
+  "script_version": "child-first-v1",
+  "duration": 8.480181
+}

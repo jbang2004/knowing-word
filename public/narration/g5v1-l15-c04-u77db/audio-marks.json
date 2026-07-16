@@ -1,0 +1,153 @@
+{
+  "marks": [
+    {
+      "index": 0,
+      "char": "矛",
+      "start": 0.189,
+      "end": 0.421
+    },
+    {
+      "index": 1,
+      "char": "矛",
+      "start": 0.645,
+      "end": 0.877
+    },
+    {
+      "index": 2,
+      "char": "盾",
+      "start": 0.921,
+      "end": 1.152
+    },
+    {
+      "index": 3,
+      "char": "的",
+      "start": 1.197,
+      "end": 1.428
+    },
+    {
+      "index": 4,
+      "char": "矛",
+      "start": 1.472,
+      "end": 1.704
+    },
+    {
+      "index": 5,
+      "char": "它",
+      "start": 2.088,
+      "end": 2.32
+    },
+    {
+      "index": 6,
+      "char": "是",
+      "start": 2.364,
+      "end": 2.595
+    },
+    {
+      "index": 7,
+      "char": "独",
+      "start": 2.64,
+      "end": 2.871
+    },
+    {
+      "index": 8,
+      "char": "体",
+      "start": 2.915,
+      "end": 3.147
+    },
+    {
+      "index": 9,
+      "char": "结",
+      "start": 3.191,
+      "end": 3.423
+    },
+    {
+      "index": 10,
+      "char": "构",
+      "start": 3.467,
+      "end": 3.698
+    },
+    {
+      "index": 11,
+      "char": "顺",
+      "start": 4.082,
+      "end": 4.314
+    },
+    {
+      "index": 12,
+      "char": "着",
+      "start": 4.358,
+      "end": 4.59
+    },
+    {
+      "index": 13,
+      "char": "图",
+      "start": 4.634,
+      "end": 4.866
+    },
+    {
+      "index": 14,
+      "char": "记",
+      "start": 4.91,
+      "end": 5.141
+    },
+    {
+      "index": 15,
+      "char": "住",
+      "start": 5.185,
+      "end": 5.417
+    },
+    {
+      "index": 16,
+      "char": "整",
+      "start": 5.461,
+      "end": 5.693
+    },
+    {
+      "index": 17,
+      "char": "体",
+      "start": 5.737,
+      "end": 5.969
+    },
+    {
+      "index": 18,
+      "char": "轮",
+      "start": 6.013,
+      "end": 6.244
+    },
+    {
+      "index": 19,
+      "char": "廓",
+      "start": 6.288,
+      "end": 6.52
+    },
+    {
+      "index": 20,
+      "char": "再",
+      "start": 6.904,
+      "end": 7.136
+    },
+    {
+      "index": 21,
+      "char": "读",
+      "start": 7.18,
+      "end": 7.412
+    },
+    {
+      "index": 22,
+      "char": "矛",
+      "start": 7.636,
+      "end": 7.867
+    },
+    {
+      "index": 23,
+      "char": "盾",
+      "start": 7.911,
+      "end": 8.143
+    }
+  ],
+  "transcript": "矛，“矛盾”的“矛”。它是独体结构。顺着图记住整体轮廓。再读：矛盾。",
+  "voice_reference": "封",
+  "timing_source": "punctuation-weighted-estimate",
+  "script_version": "child-first-v1",
+  "duration": 8.640181
+}

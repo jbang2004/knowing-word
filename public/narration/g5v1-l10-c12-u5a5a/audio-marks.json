@@ -1,0 +1,153 @@
+{
+  "marks": [
+    {
+      "index": 0,
+      "char": "婚",
+      "start": 0.149,
+      "end": 0.315
+    },
+    {
+      "index": 1,
+      "char": "结",
+      "start": 0.527,
+      "end": 0.693
+    },
+    {
+      "index": 2,
+      "char": "婚",
+      "start": 0.724,
+      "end": 0.89
+    },
+    {
+      "index": 3,
+      "char": "的",
+      "start": 0.922,
+      "end": 1.088
+    },
+    {
+      "index": 4,
+      "char": "婚",
+      "start": 1.119,
+      "end": 1.285
+    },
+    {
+      "index": 5,
+      "char": "它",
+      "start": 1.657,
+      "end": 1.823
+    },
+    {
+      "index": 6,
+      "char": "是",
+      "start": 1.854,
+      "end": 2.02
+    },
+    {
+      "index": 7,
+      "char": "左",
+      "start": 2.052,
+      "end": 2.218
+    },
+    {
+      "index": 8,
+      "char": "右",
+      "start": 2.249,
+      "end": 2.415
+    },
+    {
+      "index": 9,
+      "char": "结",
+      "start": 2.447,
+      "end": 2.613
+    },
+    {
+      "index": 10,
+      "char": "构",
+      "start": 2.644,
+      "end": 2.81
+    },
+    {
+      "index": 11,
+      "char": "看",
+      "start": 3.182,
+      "end": 3.348
+    },
+    {
+      "index": 12,
+      "char": "图",
+      "start": 3.379,
+      "end": 3.545
+    },
+    {
+      "index": 13,
+      "char": "找",
+      "start": 3.577,
+      "end": 3.742
+    },
+    {
+      "index": 14,
+      "char": "部",
+      "start": 3.774,
+      "end": 3.94
+    },
+    {
+      "index": 15,
+      "char": "件",
+      "start": 3.972,
+      "end": 4.137
+    },
+    {
+      "index": 16,
+      "char": "合",
+      "start": 4.349,
+      "end": 4.515
+    },
+    {
+      "index": 17,
+      "char": "成",
+      "start": 4.547,
+      "end": 4.712
+    },
+    {
+      "index": 18,
+      "char": "字",
+      "start": 4.744,
+      "end": 4.91
+    },
+    {
+      "index": 19,
+      "char": "形",
+      "start": 4.941,
+      "end": 5.107
+    },
+    {
+      "index": 20,
+      "char": "再",
+      "start": 5.479,
+      "end": 5.645
+    },
+    {
+      "index": 21,
+      "char": "读",
+      "start": 5.676,
+      "end": 5.842
+    },
+    {
+      "index": 22,
+      "char": "结",
+      "start": 6.054,
+      "end": 6.22
+    },
+    {
+      "index": 23,
+      "char": "婚",
+      "start": 6.251,
+      "end": 6.417
+    }
+  ],
+  "transcript": "婚，“结婚”的“婚”。它是左右结构。看图找部件，合成字形。再读：结婚。",
+  "voice_reference": "封",
+  "timing_source": "punctuation-weighted-estimate",
+  "script_version": "child-first-v1",
+  "duration": 6.880181
+}

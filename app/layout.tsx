@@ -8,24 +8,24 @@ export async function generateMetadata(): Promise<Metadata> {
   const protocol = incoming.get("x-forwarded-proto") || (host.startsWith("localhost") ? "http" : "https");
   const origin = new URL(`${protocol}://${host}`);
   const imageUrl = new URL("/og.png", origin).toString();
-  const description = "以课文词语表、字义故事、专项练习与学习记录串联的中文识字学习空间。";
+  const description = "统编版五年级上册 26 课识字地图：用图中嵌字、字义讲解、拆字练习与写字巩固，把课内汉字真正记进脑海。";
   return {
     metadataBase: origin,
-    title: "Knowing Word · 课程地图与汉字闯关",
+    title: "Knowing Word · 五年级上册 26 课汉字学习地图",
     description,
     icons: {
       icon: "/favicon.svg",
       shortcut: "/favicon.svg",
     },
     openGraph: {
-      title: "Knowing Word",
+      title: "Knowing Word · 五年级上册 26 课汉字学习地图",
       description,
       type: "website",
       images: [{ url: imageUrl, width: 1672, height: 941, alt: "Knowing Word 汉字学习地图" }],
     },
     twitter: {
       card: "summary_large_image",
-      title: "Knowing Word",
+      title: "Knowing Word · 五年级上册 26 课汉字学习地图",
       description,
       images: [imageUrl],
     },

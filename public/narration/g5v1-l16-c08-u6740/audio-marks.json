@@ -1,0 +1,153 @@
+{
+  "marks": [
+    {
+      "index": 0,
+      "char": "杀",
+      "start": 0.196,
+      "end": 0.432
+    },
+    {
+      "index": 1,
+      "char": "杀",
+      "start": 0.657,
+      "end": 0.893
+    },
+    {
+      "index": 2,
+      "char": "菌",
+      "start": 0.938,
+      "end": 1.175
+    },
+    {
+      "index": 3,
+      "char": "的",
+      "start": 1.22,
+      "end": 1.456
+    },
+    {
+      "index": 4,
+      "char": "杀",
+      "start": 1.501,
+      "end": 1.737
+    },
+    {
+      "index": 5,
+      "char": "它",
+      "start": 2.122,
+      "end": 2.358
+    },
+    {
+      "index": 6,
+      "char": "是",
+      "start": 2.403,
+      "end": 2.639
+    },
+    {
+      "index": 7,
+      "char": "上",
+      "start": 2.684,
+      "end": 2.92
+    },
+    {
+      "index": 8,
+      "char": "下",
+      "start": 2.965,
+      "end": 3.201
+    },
+    {
+      "index": 9,
+      "char": "结",
+      "start": 3.246,
+      "end": 3.483
+    },
+    {
+      "index": 10,
+      "char": "构",
+      "start": 3.528,
+      "end": 3.764
+    },
+    {
+      "index": 11,
+      "char": "看",
+      "start": 4.149,
+      "end": 4.385
+    },
+    {
+      "index": 12,
+      "char": "图",
+      "start": 4.43,
+      "end": 4.666
+    },
+    {
+      "index": 13,
+      "char": "找",
+      "start": 4.711,
+      "end": 4.947
+    },
+    {
+      "index": 14,
+      "char": "部",
+      "start": 4.992,
+      "end": 5.228
+    },
+    {
+      "index": 15,
+      "char": "件",
+      "start": 5.273,
+      "end": 5.509
+    },
+    {
+      "index": 16,
+      "char": "合",
+      "start": 5.734,
+      "end": 5.971
+    },
+    {
+      "index": 17,
+      "char": "成",
+      "start": 6.016,
+      "end": 6.252
+    },
+    {
+      "index": 18,
+      "char": "字",
+      "start": 6.297,
+      "end": 6.533
+    },
+    {
+      "index": 19,
+      "char": "形",
+      "start": 6.578,
+      "end": 6.814
+    },
+    {
+      "index": 20,
+      "char": "再",
+      "start": 7.199,
+      "end": 7.435
+    },
+    {
+      "index": 21,
+      "char": "读",
+      "start": 7.48,
+      "end": 7.716
+    },
+    {
+      "index": 22,
+      "char": "杀",
+      "start": 7.941,
+      "end": 8.177
+    },
+    {
+      "index": 23,
+      "char": "菌",
+      "start": 8.222,
+      "end": 8.459
+    }
+  ],
+  "transcript": "杀，“杀菌”的“杀”。它是上下结构。看图找部件，合成字形。再读：杀菌。",
+  "voice_reference": "封",
+  "timing_source": "punctuation-weighted-estimate",
+  "script_version": "child-first-v1",
+  "duration": 8.961066
+}

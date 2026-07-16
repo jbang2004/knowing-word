@@ -1,3 +1,8 @@
+import {
+  grade5CharacterVisuals,
+  grade5LessonVisuals,
+} from "./grade5-volume1-visuals.generated.ts";
+
 export type LearningVisual = {
   src: string;
   label: string;
@@ -16,7 +21,7 @@ const semanticVisual = (id: string, label: string, alt: string): LearningVisual 
   alt,
 });
 
-export const characterVisuals: Record<string, LearningVisual> = {
+const legacyCharacterVisuals: Record<string, LearningVisual> = {
   劲: visual("m01", "弓强有力", "孩子用力拉开一张绷紧的弓"),
   吩: visual("m02", "用嘴巴发出命令", "小队长向同伴清楚地发出指令"),
   其: visual("m09", "簸箕", "装着谷物的竹编簸箕"),
@@ -95,6 +100,11 @@ export const characterVisuals: Record<string, LearningVisual> = {
   直: visual("m130", "正见、看得正直", "孩子沿笔直竹尺瞄准远处标记"),
 };
 
+export const characterVisuals: Record<string, LearningVisual> = {
+  ...(grade5CharacterVisuals as unknown as Record<string, LearningVisual>),
+  ...legacyCharacterVisuals,
+};
+
 export const supplementalVisuals: LearningVisual[] = [
   semanticVisual("m03", "检查、验证", "孩子用放大镜仔细检查一件物品"),
   semanticVisual("m04", "倚靠、凭借", "行路的人稳稳倚靠一根手杖"),
@@ -104,7 +114,7 @@ export const supplementalVisuals: LearningVisual[] = [
   semanticVisual("m08", "整齐有序", "竹简按照次序整齐排列"),
 ];
 
-export const lessonVisuals: Record<string, LearningVisual> = {
+const legacyLessonVisuals: Record<string, LearningVisual> = {
   "019f0523-819f-7702-89a2-75f13809d57a": {
     src: "/illustrations/lessons/guihua-yu.jpg",
     label: "桂花雨",
@@ -120,6 +130,11 @@ export const lessonVisuals: Record<string, LearningVisual> = {
     label: "冀中的地道战",
     alt: "村庄地面与地下地道网络的剖面图",
   },
+};
+
+export const lessonVisuals: Record<string, LearningVisual> = {
+  ...legacyLessonVisuals,
+  ...(grade5LessonVisuals as unknown as Record<string, LearningVisual>),
 };
 
 function hash(value: string) {

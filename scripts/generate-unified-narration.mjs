@@ -20,6 +20,7 @@ const referenceAudio = join(publicRoot, "heritage", referenceCharacterId, "audio
 const referenceWav = join(tmpdir(), "knowing-word-feng-reference.wav");
 const referenceText = "封，封锁的封。会意字，左右结构，本义是地界，左边的圭。";
 const narrationBitrate = process.env.NARRATION_BITRATE || "48k";
+const diffusionSteps = Number(process.env.NARRATION_DDPM_STEPS || 3);
 const scriptVersion = "child-first-v1";
 const requestedGlyph = process.argv.find((arg) => arg.startsWith("--glyph="))?.slice(8);
 const force = process.argv.includes("--force");
@@ -109,6 +110,21 @@ async function durationOf(path) {
   return Number(stdout.trim());
 }
 
+function spokenCountFor(text) {
+  return Array.from(text).filter((char) => spokenPattern.test(char)).length;
+}
+
+function maximumNarrationDuration(text) {
+  return Math.max(5, spokenCountFor(text) * 0.66 + 1.5);
+}
+
+function durationLooksNatural(text, duration) {
+  const spokenCount = spokenCountFor(text);
+  return Number.isFinite(duration)
+    && duration >= Math.max(2, spokenCount * 0.11)
+    && duration <= maximumNarrationDuration(text) + 0.15;
+}
+
 async function prepareReference() {
   if (!force && await exists(referenceWav)) return;
   await run("ffmpeg", [
@@ -125,23 +141,29 @@ async function outputMatchesScript(mp3Path, marksPath, text) {
   if (!(await exists(mp3Path)) || !(await exists(marksPath))) return false;
   try {
     const payload = JSON.parse(await readFile(marksPath, "utf8"));
-    return payload.transcript === text && payload.script_version === scriptVersion;
+    return payload.transcript === text
+      && payload.script_version === scriptVersion
+      && payload.marks?.length === spokenCountFor(text)
+      && durationLooksNatural(text, Number(payload.duration));
   } catch {
     return false;
   }
 }
 
-async function synthesize(text, wavPath) {
-  const maxTokens = Math.min(7000, Math.max(1200, Array.from(text).length * 12));
+async function synthesize(text, wavPath, qualityAttempt = 1) {
+  const baseMaxTokens = Math.min(1800, Math.max(360, Array.from(text).length * 6));
+  const tokenScale = [1, 0.75, 0.6][qualityAttempt - 1] || 0.6;
+  const maxTokens = Math.max(180, Math.round(baseMaxTokens * tokenScale));
   const body = JSON.stringify({
     text,
     lang_code: "chinese",
     max_tokens: maxTokens,
-    temperature: 0.65,
-    top_p: 0.9,
+    temperature: 0.48,
+    top_p: 0.86,
     top_k: 50,
-    repetition_penalty: 1.1,
-    speed: 1,
+    repetition_penalty: 1.16,
+    ddpm_steps: diffusionSteps,
+    speed: 1.08,
     ref_audio: referenceWav,
     ref_text: referenceText,
     save_path: wavPath,
@@ -167,10 +189,11 @@ async function synthesize(text, wavPath) {
   throw new Error("VoxCPM generation failed");
 }
 
-async function encodeMp3(wavPath, mp3Path) {
+async function encodeMp3(wavPath, mp3Path, maximumDuration) {
   await run("ffmpeg", [
     "-hide_banner", "-loglevel", "error", "-y",
     "-i", wavPath,
+    ...(maximumDuration ? ["-t", String(maximumDuration)] : []),
     "-af", "loudnorm=I=-18:LRA=7:TP=-1.5",
     "-ar", "44100",
     "-ac", "1",
@@ -201,20 +224,45 @@ for (let offset = 0; offset < glyphEntries.length; offset += 1) {
   const canonical = records.find((record) => record.primary && record.ready)
     || records.find((record) => record.primary)
     || records[0];
-  const folder = join(outputRoot, canonical.id);
-  const mp3Path = join(folder, "audio.mp3");
-  const marksPath = join(folder, "audio-marks.json");
-  const wavPath = join(tmpdir(), `knowing-word-${canonical.id}.wav`);
-  await mkdir(folder, { recursive: true });
   const text = narrationScripts[glyph];
   if (!text) throw new Error(`Missing child-first narration script for ${glyph}`);
+  let outputRecord = canonical;
+  if (!force) {
+    for (const record of records) {
+      const candidateFolder = join(outputRoot, record.id);
+      if (await outputMatchesScript(join(candidateFolder, "audio.mp3"), join(candidateFolder, "audio-marks.json"), text)) {
+        outputRecord = record;
+        break;
+      }
+    }
+  }
+  const folder = join(outputRoot, outputRecord.id);
+  const mp3Path = join(folder, "audio.mp3");
+  const marksPath = join(folder, "audio-marks.json");
+  const wavPath = join(tmpdir(), `knowing-word-${outputRecord.id}.wav`);
+  await mkdir(folder, { recursive: true });
   const matchesScript = !force && await outputMatchesScript(mp3Path, marksPath, text);
 
   if (!matchesScript) {
     process.stdout.write(`[${offset + 1}/${glyphEntries.length}] ${glyph} · generating ${Array.from(text).length} chars\n`);
-    const meta = await synthesize(text, wavPath);
-    await encodeMp3(wavPath, mp3Path);
-    const duration = await durationOf(mp3Path);
+    let duration = 0;
+    let meta;
+    for (let qualityAttempt = 1; qualityAttempt <= 3; qualityAttempt += 1) {
+      meta = await synthesize(text, wavPath, qualityAttempt);
+      await encodeMp3(
+        wavPath,
+        mp3Path,
+        qualityAttempt === 3 ? maximumNarrationDuration(text) : undefined,
+      );
+      duration = await durationOf(mp3Path);
+      if (durationLooksNatural(text, duration)) break;
+      if (qualityAttempt < 3) {
+        process.stdout.write(`[${offset + 1}/${glyphEntries.length}] ${glyph} · unnatural ${duration.toFixed(2)}s take; retrying\n`);
+      }
+    }
+    if (!durationLooksNatural(text, duration)) {
+      throw new Error(`Narration duration failed quality gate for ${glyph}: ${duration.toFixed(2)}s`);
+    }
     const marks = createEstimatedMarks(text, duration);
     await writeFile(marksPath, JSON.stringify({
       marks,

@@ -1,0 +1,153 @@
+{
+  "marks": [
+    {
+      "index": 0,
+      "char": "赤",
+      "start": 0.179,
+      "end": 0.394
+    },
+    {
+      "index": 1,
+      "char": "赤",
+      "start": 0.615,
+      "end": 0.83
+    },
+    {
+      "index": 2,
+      "char": "道",
+      "start": 0.871,
+      "end": 1.087
+    },
+    {
+      "index": 3,
+      "char": "的",
+      "start": 1.128,
+      "end": 1.343
+    },
+    {
+      "index": 4,
+      "char": "赤",
+      "start": 1.384,
+      "end": 1.6
+    },
+    {
+      "index": 5,
+      "char": "它",
+      "start": 1.981,
+      "end": 2.196
+    },
+    {
+      "index": 6,
+      "char": "是",
+      "start": 2.237,
+      "end": 2.453
+    },
+    {
+      "index": 7,
+      "char": "上",
+      "start": 2.494,
+      "end": 2.709
+    },
+    {
+      "index": 8,
+      "char": "下",
+      "start": 2.75,
+      "end": 2.966
+    },
+    {
+      "index": 9,
+      "char": "结",
+      "start": 3.007,
+      "end": 3.222
+    },
+    {
+      "index": 10,
+      "char": "构",
+      "start": 3.263,
+      "end": 3.478
+    },
+    {
+      "index": 11,
+      "char": "顺",
+      "start": 3.859,
+      "end": 4.075
+    },
+    {
+      "index": 12,
+      "char": "着",
+      "start": 4.116,
+      "end": 4.331
+    },
+    {
+      "index": 13,
+      "char": "图",
+      "start": 4.372,
+      "end": 4.588
+    },
+    {
+      "index": 14,
+      "char": "记",
+      "start": 4.629,
+      "end": 4.844
+    },
+    {
+      "index": 15,
+      "char": "住",
+      "start": 4.885,
+      "end": 5.101
+    },
+    {
+      "index": 16,
+      "char": "整",
+      "start": 5.142,
+      "end": 5.357
+    },
+    {
+      "index": 17,
+      "char": "体",
+      "start": 5.398,
+      "end": 5.613
+    },
+    {
+      "index": 18,
+      "char": "轮",
+      "start": 5.655,
+      "end": 5.87
+    },
+    {
+      "index": 19,
+      "char": "廓",
+      "start": 5.911,
+      "end": 6.126
+    },
+    {
+      "index": 20,
+      "char": "再",
+      "start": 6.507,
+      "end": 6.723
+    },
+    {
+      "index": 21,
+      "char": "读",
+      "start": 6.764,
+      "end": 6.979
+    },
+    {
+      "index": 22,
+      "char": "赤",
+      "start": 7.2,
+      "end": 7.416
+    },
+    {
+      "index": 23,
+      "char": "道",
+      "start": 7.457,
+      "end": 7.672
+    }
+  ],
+  "transcript": "赤，“赤道”的“赤”。它是上下结构。顺着图记住整体轮廓。再读：赤道。",
+  "voice_reference": "封",
+  "timing_source": "punctuation-weighted-estimate",
+  "script_version": "child-first-v1",
+  "duration": 8.160181
+}

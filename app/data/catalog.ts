@@ -1,3 +1,10 @@
+import {
+  grade5Characters,
+  grade5Components,
+  grade5Course,
+  grade5Lessons,
+} from "./grade5-volume1-generated.ts";
+
 /* This catalog is a sanitized, public learning dataset. It deliberately excludes account, enrollment, progress, media URLs, and all signed asset URLs. */
 
 export type ExerciseKind = "single" | "structure" | "components" | "write";
@@ -13,7 +20,11 @@ export type Exercise = {
 };
 
 export type CharacterItem = {
-  id: string; lessonId: string; lessonTitle: string; lessonPosition: number; word: string; wordPosition: number; hanzi: string; primary: boolean; ready: boolean; pinyin: string; charType: string; decomposition: string; originalMeaning: string; description: string; originalText: string; parts: { char: string; radical: boolean }[]; compositions: { char: string; description: string; charType: string; children: string[] }[]; exercises: Exercise[];
+  id: string; lessonId: string; lessonTitle: string; lessonPosition: number; word: string; wordPosition: number; hanzi: string; primary: boolean; ready: boolean; pinyin: string; charType: string; decomposition: string; originalMeaning: string; description: string; originalText: string; parts: { char: string; radical: boolean }[]; compositions: { char: string; description: string; charType: string; children: string[] }[]; exercises: Exercise[]; curriculumRole?: "write" | "recognize" | "polyphonic" | "extension"; polyphonic?: boolean; official?: boolean; tier?: "curriculum" | "extension";
+};
+
+export type LessonItem = {
+  id: string; title: string; position: number; skimming?: boolean; context?: string; mode?: string; learningPath?: readonly string[]; recognitionCount?: number; polyphonicCount?: number; writingCount?: number; officialCount?: number;
 };
 
 export type ComponentItem = {
@@ -17380,4 +17391,42 @@ export const catalog = {
   ]
 } as const;
 
-export const { course, lessons, characters, components } = catalog;
+const officialLessonByTitle = new Map<string, (typeof grade5Lessons)[number]>(
+  grade5Lessons.map((lesson) => [lesson.title, lesson]),
+);
+const officialGlyphsByTitle = new Map<string, Set<string>>();
+for (const item of grade5Characters) {
+  const set = officialGlyphsByTitle.get(item.lessonTitle) || new Set<string>();
+  set.add(item.hanzi);
+  officialGlyphsByTitle.set(item.lessonTitle, set);
+}
+
+const extensionByLessonAndGlyph = new Map<string, CharacterItem>();
+for (const raw of catalog.characters as unknown as CharacterItem[]) {
+  const lesson = officialLessonByTitle.get(raw.lessonTitle);
+  if (!lesson || officialGlyphsByTitle.get(raw.lessonTitle)?.has(raw.hanzi)) continue;
+  const key = `${lesson.id}:${raw.hanzi}`;
+  if (extensionByLessonAndGlyph.has(key)) continue;
+  extensionByLessonAndGlyph.set(key, {
+    ...raw,
+    lessonId: lesson.id,
+    lessonPosition: lesson.position,
+    wordPosition: raw.wordPosition + 100,
+    primary: true,
+    curriculumRole: "extension",
+    official: false,
+    tier: "extension",
+  });
+}
+
+const mergedComponents = new Map<string, ComponentItem>();
+for (const component of grade5Components as unknown as ComponentItem[]) mergedComponents.set(component.glyph, component);
+for (const component of catalog.components as unknown as ComponentItem[]) mergedComponents.set(component.glyph, component);
+
+export const course = grade5Course;
+export const lessons = grade5Lessons as unknown as LessonItem[];
+export const characters = [
+  ...(grade5Characters as unknown as CharacterItem[]),
+  ...extensionByLessonAndGlyph.values(),
+];
+export const components = [...mergedComponents.values()];

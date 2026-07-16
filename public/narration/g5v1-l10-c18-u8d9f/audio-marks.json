@@ -1,0 +1,165 @@
+{
+  "marks": [
+    {
+      "index": 0,
+      "char": "趟",
+      "start": 0.184,
+      "end": 0.387
+    },
+    {
+      "index": 1,
+      "char": "一",
+      "start": 0.606,
+      "end": 0.809
+    },
+    {
+      "index": 2,
+      "char": "趟",
+      "start": 0.847,
+      "end": 1.05
+    },
+    {
+      "index": 3,
+      "char": "的",
+      "start": 1.089,
+      "end": 1.292
+    },
+    {
+      "index": 4,
+      "char": "趟",
+      "start": 1.331,
+      "end": 1.534
+    },
+    {
+      "index": 5,
+      "char": "它",
+      "start": 1.912,
+      "end": 2.115
+    },
+    {
+      "index": 6,
+      "char": "是",
+      "start": 2.154,
+      "end": 2.357
+    },
+    {
+      "index": 7,
+      "char": "左",
+      "start": 2.396,
+      "end": 2.599
+    },
+    {
+      "index": 8,
+      "char": "下",
+      "start": 2.637,
+      "end": 2.84
+    },
+    {
+      "index": 9,
+      "char": "包",
+      "start": 2.879,
+      "end": 3.082
+    },
+    {
+      "index": 10,
+      "char": "围",
+      "start": 3.121,
+      "end": 3.324
+    },
+    {
+      "index": 11,
+      "char": "结",
+      "start": 3.362,
+      "end": 3.565
+    },
+    {
+      "index": 12,
+      "char": "构",
+      "start": 3.604,
+      "end": 3.807
+    },
+    {
+      "index": 13,
+      "char": "看",
+      "start": 4.186,
+      "end": 4.389
+    },
+    {
+      "index": 14,
+      "char": "图",
+      "start": 4.427,
+      "end": 4.63
+    },
+    {
+      "index": 15,
+      "char": "找",
+      "start": 4.669,
+      "end": 4.872
+    },
+    {
+      "index": 16,
+      "char": "部",
+      "start": 4.911,
+      "end": 5.114
+    },
+    {
+      "index": 17,
+      "char": "件",
+      "start": 5.152,
+      "end": 5.355
+    },
+    {
+      "index": 18,
+      "char": "合",
+      "start": 5.574,
+      "end": 5.777
+    },
+    {
+      "index": 19,
+      "char": "成",
+      "start": 5.816,
+      "end": 6.019
+    },
+    {
+      "index": 20,
+      "char": "字",
+      "start": 6.057,
+      "end": 6.26
+    },
+    {
+      "index": 21,
+      "char": "形",
+      "start": 6.299,
+      "end": 6.502
+    },
+    {
+      "index": 22,
+      "char": "再",
+      "start": 6.881,
+      "end": 7.084
+    },
+    {
+      "index": 23,
+      "char": "读",
+      "start": 7.122,
+      "end": 7.325
+    },
+    {
+      "index": 24,
+      "char": "一",
+      "start": 7.544,
+      "end": 7.747
+    },
+    {
+      "index": 25,
+      "char": "趟",
+      "start": 7.786,
+      "end": 7.989
+    }
+  ],
+  "transcript": "趟，“一趟”的“趟”。它是左下包围结构。看图找部件，合成字形。再读：一趟。",
+  "voice_reference": "封",
+  "timing_source": "punctuation-weighted-estimate",
+  "script_version": "child-first-v1",
+  "duration": 8.480181
+}

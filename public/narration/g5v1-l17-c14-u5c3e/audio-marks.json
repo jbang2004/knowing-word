@@ -1,0 +1,165 @@
+{
+  "marks": [
+    {
+      "index": 0,
+      "char": "尾",
+      "start": 0.223,
+      "end": 0.481
+    },
+    {
+      "index": 1,
+      "char": "尾",
+      "start": 0.71,
+      "end": 0.968
+    },
+    {
+      "index": 2,
+      "char": "巴",
+      "start": 1.017,
+      "end": 1.275
+    },
+    {
+      "index": 3,
+      "char": "的",
+      "start": 1.324,
+      "end": 1.582
+    },
+    {
+      "index": 4,
+      "char": "尾",
+      "start": 1.631,
+      "end": 1.889
+    },
+    {
+      "index": 5,
+      "char": "它",
+      "start": 2.278,
+      "end": 2.536
+    },
+    {
+      "index": 6,
+      "char": "是",
+      "start": 2.585,
+      "end": 2.843
+    },
+    {
+      "index": 7,
+      "char": "左",
+      "start": 2.892,
+      "end": 3.15
+    },
+    {
+      "index": 8,
+      "char": "上",
+      "start": 3.199,
+      "end": 3.457
+    },
+    {
+      "index": 9,
+      "char": "包",
+      "start": 3.506,
+      "end": 3.764
+    },
+    {
+      "index": 10,
+      "char": "围",
+      "start": 3.813,
+      "end": 4.071
+    },
+    {
+      "index": 11,
+      "char": "结",
+      "start": 4.121,
+      "end": 4.378
+    },
+    {
+      "index": 12,
+      "char": "构",
+      "start": 4.428,
+      "end": 4.685
+    },
+    {
+      "index": 13,
+      "char": "看",
+      "start": 5.075,
+      "end": 5.332
+    },
+    {
+      "index": 14,
+      "char": "图",
+      "start": 5.382,
+      "end": 5.639
+    },
+    {
+      "index": 15,
+      "char": "找",
+      "start": 5.689,
+      "end": 5.947
+    },
+    {
+      "index": 16,
+      "char": "部",
+      "start": 5.996,
+      "end": 6.254
+    },
+    {
+      "index": 17,
+      "char": "件",
+      "start": 6.303,
+      "end": 6.561
+    },
+    {
+      "index": 18,
+      "char": "合",
+      "start": 6.79,
+      "end": 7.048
+    },
+    {
+      "index": 19,
+      "char": "成",
+      "start": 7.097,
+      "end": 7.355
+    },
+    {
+      "index": 20,
+      "char": "字",
+      "start": 7.404,
+      "end": 7.662
+    },
+    {
+      "index": 21,
+      "char": "形",
+      "start": 7.711,
+      "end": 7.969
+    },
+    {
+      "index": 22,
+      "char": "再",
+      "start": 8.358,
+      "end": 8.616
+    },
+    {
+      "index": 23,
+      "char": "读",
+      "start": 8.665,
+      "end": 8.923
+    },
+    {
+      "index": 24,
+      "char": "尾",
+      "start": 9.152,
+      "end": 9.41
+    },
+    {
+      "index": 25,
+      "char": "巴",
+      "start": 9.459,
+      "end": 9.717
+    }
+  ],
+  "transcript": "尾，“尾巴”的“尾”。它是左上包围结构。看图找部件，合成字形。再读：尾巴。",
+  "voice_reference": "封",
+  "timing_source": "punctuation-weighted-estimate",
+  "script_version": "child-first-v1",
+  "duration": 10.241066
+}

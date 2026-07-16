@@ -1,0 +1,165 @@
+{
+  "marks": [
+    {
+      "index": 0,
+      "char": "勺",
+      "start": 0.209,
+      "end": 0.447
+    },
+    {
+      "index": 1,
+      "char": "勺",
+      "start": 0.672,
+      "end": 0.91
+    },
+    {
+      "index": 2,
+      "char": "子",
+      "start": 0.955,
+      "end": 1.193
+    },
+    {
+      "index": 3,
+      "char": "的",
+      "start": 1.239,
+      "end": 1.477
+    },
+    {
+      "index": 4,
+      "char": "勺",
+      "start": 1.522,
+      "end": 1.76
+    },
+    {
+      "index": 5,
+      "char": "它",
+      "start": 2.145,
+      "end": 2.383
+    },
+    {
+      "index": 6,
+      "char": "是",
+      "start": 2.428,
+      "end": 2.666
+    },
+    {
+      "index": 7,
+      "char": "右",
+      "start": 2.712,
+      "end": 2.95
+    },
+    {
+      "index": 8,
+      "char": "上",
+      "start": 2.995,
+      "end": 3.233
+    },
+    {
+      "index": 9,
+      "char": "包",
+      "start": 3.278,
+      "end": 3.516
+    },
+    {
+      "index": 10,
+      "char": "围",
+      "start": 3.561,
+      "end": 3.799
+    },
+    {
+      "index": 11,
+      "char": "结",
+      "start": 3.845,
+      "end": 4.083
+    },
+    {
+      "index": 12,
+      "char": "构",
+      "start": 4.128,
+      "end": 4.366
+    },
+    {
+      "index": 13,
+      "char": "看",
+      "start": 4.751,
+      "end": 4.989
+    },
+    {
+      "index": 14,
+      "char": "图",
+      "start": 5.034,
+      "end": 5.272
+    },
+    {
+      "index": 15,
+      "char": "找",
+      "start": 5.318,
+      "end": 5.555
+    },
+    {
+      "index": 16,
+      "char": "部",
+      "start": 5.601,
+      "end": 5.839
+    },
+    {
+      "index": 17,
+      "char": "件",
+      "start": 5.884,
+      "end": 6.122
+    },
+    {
+      "index": 18,
+      "char": "合",
+      "start": 6.347,
+      "end": 6.585
+    },
+    {
+      "index": 19,
+      "char": "成",
+      "start": 6.631,
+      "end": 6.868
+    },
+    {
+      "index": 20,
+      "char": "字",
+      "start": 6.914,
+      "end": 7.152
+    },
+    {
+      "index": 21,
+      "char": "形",
+      "start": 7.197,
+      "end": 7.435
+    },
+    {
+      "index": 22,
+      "char": "再",
+      "start": 7.82,
+      "end": 8.058
+    },
+    {
+      "index": 23,
+      "char": "读",
+      "start": 8.103,
+      "end": 8.341
+    },
+    {
+      "index": 24,
+      "char": "勺",
+      "start": 8.567,
+      "end": 8.805
+    },
+    {
+      "index": 25,
+      "char": "子",
+      "start": 8.85,
+      "end": 9.088
+    }
+  ],
+  "transcript": "勺，“勺子”的“勺”。它是右上包围结构。看图找部件，合成字形。再读：勺子。",
+  "voice_reference": "封",
+  "timing_source": "punctuation-weighted-estimate",
+  "script_version": "child-first-v1",
+  "duration": 9.600181
+}

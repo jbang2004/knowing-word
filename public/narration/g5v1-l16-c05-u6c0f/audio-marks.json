@@ -1,0 +1,153 @@
+{
+  "marks": [
+    {
+      "index": 0,
+      "char": "氏",
+      "start": 0.24,
+      "end": 0.547
+    },
+    {
+      "index": 1,
+      "char": "摄",
+      "start": 0.785,
+      "end": 1.093
+    },
+    {
+      "index": 2,
+      "char": "氏",
+      "start": 1.151,
+      "end": 1.458
+    },
+    {
+      "index": 3,
+      "char": "的",
+      "start": 1.517,
+      "end": 1.824
+    },
+    {
+      "index": 4,
+      "char": "氏",
+      "start": 1.883,
+      "end": 2.19
+    },
+    {
+      "index": 5,
+      "char": "它",
+      "start": 2.589,
+      "end": 2.896
+    },
+    {
+      "index": 6,
+      "char": "是",
+      "start": 2.954,
+      "end": 3.262
+    },
+    {
+      "index": 7,
+      "char": "独",
+      "start": 3.32,
+      "end": 3.627
+    },
+    {
+      "index": 8,
+      "char": "体",
+      "start": 3.686,
+      "end": 3.993
+    },
+    {
+      "index": 9,
+      "char": "结",
+      "start": 4.052,
+      "end": 4.359
+    },
+    {
+      "index": 10,
+      "char": "构",
+      "start": 4.418,
+      "end": 4.725
+    },
+    {
+      "index": 11,
+      "char": "顺",
+      "start": 5.123,
+      "end": 5.431
+    },
+    {
+      "index": 12,
+      "char": "着",
+      "start": 5.489,
+      "end": 5.797
+    },
+    {
+      "index": 13,
+      "char": "图",
+      "start": 5.855,
+      "end": 6.162
+    },
+    {
+      "index": 14,
+      "char": "记",
+      "start": 6.221,
+      "end": 6.528
+    },
+    {
+      "index": 15,
+      "char": "住",
+      "start": 6.587,
+      "end": 6.894
+    },
+    {
+      "index": 16,
+      "char": "整",
+      "start": 6.952,
+      "end": 7.26
+    },
+    {
+      "index": 17,
+      "char": "体",
+      "start": 7.318,
+      "end": 7.626
+    },
+    {
+      "index": 18,
+      "char": "轮",
+      "start": 7.684,
+      "end": 7.991
+    },
+    {
+      "index": 19,
+      "char": "廓",
+      "start": 8.05,
+      "end": 8.357
+    },
+    {
+      "index": 20,
+      "char": "再",
+      "start": 8.756,
+      "end": 9.063
+    },
+    {
+      "index": 21,
+      "char": "读",
+      "start": 9.122,
+      "end": 9.429
+    },
+    {
+      "index": 22,
+      "char": "摄",
+      "start": 9.667,
+      "end": 9.975
+    },
+    {
+      "index": 23,
+      "char": "氏",
+      "start": 10.033,
+      "end": 10.34
+    }
+  ],
+  "transcript": "氏，“摄氏”的“氏”。它是独体结构。顺着图记住整体轮廓。再读：摄氏。",
+  "voice_reference": "封",
+  "timing_source": "punctuation-weighted-estimate",
+  "script_version": "child-first-v1",
+  "duration": 10.880181
+}

@@ -1,0 +1,153 @@
+{
+  "marks": [
+    {
+      "index": 0,
+      "char": "献",
+      "start": 0.271,
+      "end": 0.621
+    },
+    {
+      "index": 1,
+      "char": "献",
+      "start": 0.868,
+      "end": 1.217
+    },
+    {
+      "index": 2,
+      "char": "上",
+      "start": 1.284,
+      "end": 1.633
+    },
+    {
+      "index": 3,
+      "char": "的",
+      "start": 1.7,
+      "end": 2.05
+    },
+    {
+      "index": 4,
+      "char": "献",
+      "start": 2.116,
+      "end": 2.466
+    },
+    {
+      "index": 5,
+      "char": "它",
+      "start": 2.872,
+      "end": 3.222
+    },
+    {
+      "index": 6,
+      "char": "是",
+      "start": 3.289,
+      "end": 3.638
+    },
+    {
+      "index": 7,
+      "char": "左",
+      "start": 3.705,
+      "end": 4.054
+    },
+    {
+      "index": 8,
+      "char": "右",
+      "start": 4.121,
+      "end": 4.471
+    },
+    {
+      "index": 9,
+      "char": "结",
+      "start": 4.537,
+      "end": 4.887
+    },
+    {
+      "index": 10,
+      "char": "构",
+      "start": 4.953,
+      "end": 5.303
+    },
+    {
+      "index": 11,
+      "char": "看",
+      "start": 5.71,
+      "end": 6.059
+    },
+    {
+      "index": 12,
+      "char": "图",
+      "start": 6.126,
+      "end": 6.475
+    },
+    {
+      "index": 13,
+      "char": "找",
+      "start": 6.542,
+      "end": 6.892
+    },
+    {
+      "index": 14,
+      "char": "部",
+      "start": 6.958,
+      "end": 7.308
+    },
+    {
+      "index": 15,
+      "char": "件",
+      "start": 7.374,
+      "end": 7.724
+    },
+    {
+      "index": 16,
+      "char": "合",
+      "start": 7.971,
+      "end": 8.32
+    },
+    {
+      "index": 17,
+      "char": "成",
+      "start": 8.387,
+      "end": 8.737
+    },
+    {
+      "index": 18,
+      "char": "字",
+      "start": 8.803,
+      "end": 9.153
+    },
+    {
+      "index": 19,
+      "char": "形",
+      "start": 9.219,
+      "end": 9.569
+    },
+    {
+      "index": 20,
+      "char": "再",
+      "start": 9.976,
+      "end": 10.325
+    },
+    {
+      "index": 21,
+      "char": "读",
+      "start": 10.392,
+      "end": 10.741
+    },
+    {
+      "index": 22,
+      "char": "献",
+      "start": 10.988,
+      "end": 11.338
+    },
+    {
+      "index": 23,
+      "char": "上",
+      "start": 11.404,
+      "end": 11.754
+    }
+  ],
+  "transcript": "献，“献上”的“献”。它是左右结构。看图找部件，合成字形。再读：献上。",
+  "voice_reference": "封",
+  "timing_source": "punctuation-weighted-estimate",
+  "script_version": "child-first-v1",
+  "duration": 12.320181
+}

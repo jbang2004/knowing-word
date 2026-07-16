@@ -1,0 +1,165 @@
+{
+  "marks": [
+    {
+      "index": 0,
+      "char": "考",
+      "start": 0.156,
+      "end": 0.319
+    },
+    {
+      "index": 1,
+      "char": "考",
+      "start": 0.53,
+      "end": 0.693
+    },
+    {
+      "index": 2,
+      "char": "试",
+      "start": 0.724,
+      "end": 0.887
+    },
+    {
+      "index": 3,
+      "char": "的",
+      "start": 0.918,
+      "end": 1.081
+    },
+    {
+      "index": 4,
+      "char": "考",
+      "start": 1.112,
+      "end": 1.275
+    },
+    {
+      "index": 5,
+      "char": "它",
+      "start": 1.646,
+      "end": 1.81
+    },
+    {
+      "index": 6,
+      "char": "是",
+      "start": 1.841,
+      "end": 2.004
+    },
+    {
+      "index": 7,
+      "char": "左",
+      "start": 2.035,
+      "end": 2.198
+    },
+    {
+      "index": 8,
+      "char": "上",
+      "start": 2.229,
+      "end": 2.392
+    },
+    {
+      "index": 9,
+      "char": "包",
+      "start": 2.423,
+      "end": 2.586
+    },
+    {
+      "index": 10,
+      "char": "围",
+      "start": 2.617,
+      "end": 2.78
+    },
+    {
+      "index": 11,
+      "char": "结",
+      "start": 2.811,
+      "end": 2.975
+    },
+    {
+      "index": 12,
+      "char": "构",
+      "start": 3.006,
+      "end": 3.169
+    },
+    {
+      "index": 13,
+      "char": "看",
+      "start": 3.54,
+      "end": 3.703
+    },
+    {
+      "index": 14,
+      "char": "图",
+      "start": 3.734,
+      "end": 3.897
+    },
+    {
+      "index": 15,
+      "char": "找",
+      "start": 3.928,
+      "end": 4.091
+    },
+    {
+      "index": 16,
+      "char": "部",
+      "start": 4.122,
+      "end": 4.285
+    },
+    {
+      "index": 17,
+      "char": "件",
+      "start": 4.316,
+      "end": 4.479
+    },
+    {
+      "index": 18,
+      "char": "合",
+      "start": 4.691,
+      "end": 4.854
+    },
+    {
+      "index": 19,
+      "char": "成",
+      "start": 4.885,
+      "end": 5.048
+    },
+    {
+      "index": 20,
+      "char": "字",
+      "start": 5.079,
+      "end": 5.242
+    },
+    {
+      "index": 21,
+      "char": "形",
+      "start": 5.273,
+      "end": 5.436
+    },
+    {
+      "index": 22,
+      "char": "再",
+      "start": 5.807,
+      "end": 5.97
+    },
+    {
+      "index": 23,
+      "char": "读",
+      "start": 6.001,
+      "end": 6.164
+    },
+    {
+      "index": 24,
+      "char": "考",
+      "start": 6.376,
+      "end": 6.539
+    },
+    {
+      "index": 25,
+      "char": "试",
+      "start": 6.57,
+      "end": 6.733
+    }
+  ],
+  "transcript": "考，“考试”的“考”。它是左上包围结构。看图找部件，合成字形。再读：考试。",
+  "voice_reference": "封",
+  "timing_source": "punctuation-weighted-estimate",
+  "script_version": "child-first-v1",
+  "duration": 7.200181
+}
