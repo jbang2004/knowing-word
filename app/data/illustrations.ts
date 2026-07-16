@@ -10,13 +10,13 @@ export type LearningVisual = {
 };
 
 const visual = (id: string, label: string, alt: string): LearningVisual => ({
-  src: `/illustrations/mnemonics/${id}.jpg`,
+  src: `/illustrations/mnemonics/${id}.webp`,
   label,
   alt,
 });
 
 const semanticVisual = (id: string, label: string, alt: string): LearningVisual => ({
-  src: `/illustrations/meanings/${id}.jpg`,
+  src: `/illustrations/meanings/${id}.webp`,
   label,
   alt,
 });
@@ -116,17 +116,17 @@ export const supplementalVisuals: LearningVisual[] = [
 
 const legacyLessonVisuals: Record<string, LearningVisual> = {
   "019f0523-819f-7702-89a2-75f13809d57a": {
-    src: "/illustrations/lessons/guihua-yu.jpg",
+    src: "/illustrations/lessons/guihua-yu.webp",
     label: "桂花雨",
     alt: "金桂树下孩子们用竹篮接住纷纷落下的桂花",
   },
   "019f0523-819f-7702-89a2-7b176be276e5": {
-    src: "/illustrations/lessons/luohuasheng.jpg",
+    src: "/illustrations/lessons/luohuasheng.webp",
     label: "落花生",
     alt: "一家人在田里收获花生并围坐分享",
   },
   "019f0523-819f-7702-89a2-7cf5002b615d": {
-    src: "/illustrations/lessons/didaozhan.jpg",
+    src: "/illustrations/lessons/didaozhan.webp",
     label: "冀中的地道战",
     alt: "村庄地面与地下地道网络的剖面图",
   },

@@ -51,6 +51,8 @@ test("character pages render the complete picture-to-character memory flow", asy
   assert.match(html, /找部件/);
   assert.match(html, /合成字/);
   assert.match(html, /听字义讲解/);
+  assert.match(html, /audio\/webm; codecs=&quot;opus&quot;/);
+  assert.match(html, /audio\.webm\?v=child-first-v2/);
 });
 
 test("all catalog routes server-render with real, shareable URLs", async () => {
@@ -153,7 +155,7 @@ test("every image-based literacy question has a generated visual asset", async (
     assert.ok(visual, `missing character-study visual for ${glyph}`);
     assert.match(
       visual.src,
-      /^\/illustrations\/(?:mnemonics\/(?:m\d+\.jpg|g5-u[0-9a-f]+\.svg)|mnemonics-v2\/g5-u[0-9a-f]+\.webp)$/,
+      /^\/illustrations\/(?:mnemonics\/(?:m\d+\.webp|g5-u[0-9a-f]+\.svg)|mnemonics-v2\/g5-u[0-9a-f]+\.webp)$/,
     );
     await access(new URL(`../public${visual.src}`, import.meta.url));
   }

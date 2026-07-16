@@ -1160,7 +1160,7 @@ function HomeHub({
         </div>
         <div className="hero-illustration">
           <Image
-            src="/illustrations/system/home-hero.jpg"
+            src="/illustrations/system/home-hero.webp"
             alt="两名孩子跟随蓝金色喜鹊，在桂花与书卷之间探索汉字"
             fill
             priority
@@ -1551,7 +1551,6 @@ function NarratedDescription({ character }: { character: CharacterItem }) {
       {audioSource && (
         <audio
           ref={audioRef}
-          src={audioSource}
           preload="metadata"
           onLoadedMetadata={(event) => setDuration(event.currentTarget.duration || 0)}
           onTimeUpdate={(event) => setElapsed(event.currentTarget.currentTime)}
@@ -1567,7 +1566,9 @@ function NarratedDescription({ character }: { character: CharacterItem }) {
             setPlaying(false);
             setElapsed(event.currentTarget.duration || marks.at(-1)?.end || 0);
           }}
-        />
+        >
+          <source src={audioSource} type='audio/webm; codecs="opus"' />
+        </audio>
       )}
     </div>
   );
