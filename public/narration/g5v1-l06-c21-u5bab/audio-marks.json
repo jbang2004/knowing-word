@@ -3,151 +3,769 @@
     {
       "index": 0,
       "char": "宫",
-      "start": 0.171,
-      "end": 0.369
+      "start": 0.292,
+      "end": 0.458
     },
     {
       "index": 1,
       "char": "王",
-      "start": 0.587,
-      "end": 0.785
+      "start": 0.669,
+      "end": 0.836
     },
     {
       "index": 2,
       "char": "宫",
-      "start": 0.823,
-      "end": 1.021
+      "start": 0.867,
+      "end": 1.033
     },
     {
       "index": 3,
       "char": "的",
-      "start": 1.059,
-      "end": 1.257
+      "start": 1.065,
+      "end": 1.231
     },
     {
       "index": 4,
       "char": "宫",
-      "start": 1.295,
-      "end": 1.494
+      "start": 1.262,
+      "end": 1.428
     },
     {
       "index": 5,
-      "char": "它",
-      "start": 1.871,
-      "end": 2.07
+      "char": "读",
+      "start": 1.64,
+      "end": 1.806
     },
     {
       "index": 6,
-      "char": "是",
-      "start": 2.107,
-      "end": 2.306
+      "char": "g",
+      "start": 1.838,
+      "end": 2.004
     },
     {
       "index": 7,
-      "char": "上",
-      "start": 2.343,
-      "end": 2.542
+      "char": "ō",
+      "start": 2.035,
+      "end": 2.201
     },
     {
       "index": 8,
-      "char": "下",
-      "start": 2.58,
-      "end": 2.778
+      "char": "n",
+      "start": 2.233,
+      "end": 2.399
     },
     {
       "index": 9,
-      "char": "结",
-      "start": 2.816,
-      "end": 3.014
+      "char": "g",
+      "start": 2.431,
+      "end": 2.597
     },
     {
       "index": 10,
-      "char": "构",
-      "start": 3.052,
-      "end": 3.25
+      "char": "它",
+      "start": 2.968,
+      "end": 3.134
     },
     {
       "index": 11,
-      "char": "看",
-      "start": 3.628,
-      "end": 3.826
+      "char": "是",
+      "start": 3.166,
+      "end": 3.332
     },
     {
       "index": 12,
-      "char": "图",
-      "start": 3.864,
-      "end": 4.062
+      "char": "上",
+      "start": 3.364,
+      "end": 3.53
     },
     {
       "index": 13,
-      "char": "找",
-      "start": 4.1,
-      "end": 4.298
+      "char": "下",
+      "start": 3.561,
+      "end": 3.727
     },
     {
       "index": 14,
-      "char": "部",
-      "start": 4.336,
-      "end": 4.534
+      "char": "结",
+      "start": 3.759,
+      "end": 3.925
     },
     {
       "index": 15,
-      "char": "件",
-      "start": 4.572,
-      "end": 4.77
+      "char": "构",
+      "start": 3.956,
+      "end": 4.122
     },
     {
       "index": 16,
-      "char": "合",
-      "start": 4.988,
-      "end": 5.186
+      "char": "按",
+      "start": 4.334,
+      "end": 4.5
     },
     {
       "index": 17,
-      "char": "成",
-      "start": 5.224,
-      "end": 5.423
+      "char": "顺",
+      "start": 4.532,
+      "end": 4.698
     },
     {
       "index": 18,
-      "char": "字",
-      "start": 5.46,
-      "end": 5.659
+      "char": "序",
+      "start": 4.729,
+      "end": 4.895
     },
     {
       "index": 19,
-      "char": "形",
-      "start": 5.696,
-      "end": 5.895
+      "char": "能",
+      "start": 4.927,
+      "end": 5.093
     },
     {
       "index": 20,
-      "char": "再",
-      "start": 6.272,
-      "end": 6.471
+      "char": "看",
+      "start": 5.125,
+      "end": 5.291
     },
     {
       "index": 21,
-      "char": "读",
-      "start": 6.509,
-      "end": 6.707
+      "char": "到",
+      "start": 5.322,
+      "end": 5.488
     },
     {
       "index": 22,
-      "char": "王",
-      "start": 6.925,
-      "end": 7.123
+      "char": "宀",
+      "start": 5.52,
+      "end": 5.686
     },
     {
       "index": 23,
+      "char": "和",
+      "start": 5.718,
+      "end": 5.884
+    },
+    {
+      "index": 24,
+      "char": "吕",
+      "start": 5.915,
+      "end": 6.081
+    },
+    {
+      "index": 25,
+      "char": "从",
+      "start": 6.453,
+      "end": 6.619
+    },
+    {
+      "index": 26,
+      "char": "构",
+      "start": 6.65,
+      "end": 6.816
+    },
+    {
+      "index": 27,
+      "char": "字",
+      "start": 6.848,
+      "end": 7.014
+    },
+    {
+      "index": 28,
+      "char": "分",
+      "start": 7.046,
+      "end": 7.212
+    },
+    {
+      "index": 29,
+      "char": "工",
+      "start": 7.243,
+      "end": 7.409
+    },
+    {
+      "index": 30,
+      "char": "看",
+      "start": 7.441,
+      "end": 7.607
+    },
+    {
+      "index": 31,
+      "char": "宀",
+      "start": 7.819,
+      "end": 7.985
+    },
+    {
+      "index": 32,
+      "char": "提",
+      "start": 8.016,
+      "end": 8.182
+    },
+    {
+      "index": 33,
+      "char": "示",
+      "start": 8.214,
+      "end": 8.38
+    },
+    {
+      "index": 34,
+      "char": "意",
+      "start": 8.412,
+      "end": 8.578
+    },
+    {
+      "index": 35,
+      "char": "义",
+      "start": 8.609,
+      "end": 8.775
+    },
+    {
+      "index": 36,
+      "char": "类",
+      "start": 8.807,
+      "end": 8.973
+    },
+    {
+      "index": 37,
+      "char": "别",
+      "start": 9.005,
+      "end": 9.171
+    },
+    {
+      "index": 38,
+      "char": "吕",
+      "start": 9.382,
+      "end": 9.548
+    },
+    {
+      "index": 39,
+      "char": "提",
+      "start": 9.58,
+      "end": 9.746
+    },
+    {
+      "index": 40,
+      "char": "供",
+      "start": 9.777,
+      "end": 9.943
+    },
+    {
+      "index": 41,
+      "char": "读",
+      "start": 9.975,
+      "end": 10.141
+    },
+    {
+      "index": 42,
+      "char": "音",
+      "start": 10.173,
+      "end": 10.339
+    },
+    {
+      "index": 43,
+      "char": "线",
+      "start": 10.37,
+      "end": 10.536
+    },
+    {
+      "index": 44,
+      "char": "索",
+      "start": 10.568,
+      "end": 10.734
+    },
+    {
+      "index": 45,
+      "char": "看",
+      "start": 11.106,
+      "end": 11.272
+    },
+    {
+      "index": 46,
+      "char": "图",
+      "start": 11.303,
+      "end": 11.469
+    },
+    {
+      "index": 47,
+      "char": "时",
+      "start": 11.501,
+      "end": 11.667
+    },
+    {
+      "index": 48,
+      "char": "上",
+      "start": 11.879,
+      "end": 12.045
+    },
+    {
+      "index": 49,
+      "char": "方",
+      "start": 12.076,
+      "end": 12.242
+    },
+    {
+      "index": 50,
+      "char": "宽",
+      "start": 12.274,
+      "end": 12.44
+    },
+    {
+      "index": 51,
+      "char": "大",
+      "start": 12.471,
+      "end": 12.637
+    },
+    {
+      "index": 52,
       "char": "宫",
-      "start": 7.161,
-      "end": 7.359
+      "start": 12.669,
+      "end": 12.835
+    },
+    {
+      "index": 53,
+      "char": "顶",
+      "start": 12.867,
+      "end": 13.033
+    },
+    {
+      "index": 54,
+      "char": "形",
+      "start": 13.064,
+      "end": 13.23
+    },
+    {
+      "index": 55,
+      "char": "成",
+      "start": 13.262,
+      "end": 13.428
+    },
+    {
+      "index": 56,
+      "char": "宀",
+      "start": 13.46,
+      "end": 13.626
+    },
+    {
+      "index": 57,
+      "char": "下",
+      "start": 13.837,
+      "end": 14.003
+    },
+    {
+      "index": 58,
+      "char": "方",
+      "start": 14.035,
+      "end": 14.201
+    },
+    {
+      "index": 59,
+      "char": "两",
+      "start": 14.233,
+      "end": 14.399
+    },
+    {
+      "index": 60,
+      "char": "重",
+      "start": 14.43,
+      "end": 14.596
+    },
+    {
+      "index": 61,
+      "char": "宫",
+      "start": 14.628,
+      "end": 14.794
+    },
+    {
+      "index": 62,
+      "char": "门",
+      "start": 14.825,
+      "end": 14.992
+    },
+    {
+      "index": 63,
+      "char": "一",
+      "start": 15.023,
+      "end": 15.189
+    },
+    {
+      "index": 64,
+      "char": "上",
+      "start": 15.221,
+      "end": 15.387
+    },
+    {
+      "index": 65,
+      "char": "一",
+      "start": 15.418,
+      "end": 15.584
+    },
+    {
+      "index": 66,
+      "char": "下",
+      "start": 15.616,
+      "end": 15.782
+    },
+    {
+      "index": 67,
+      "char": "排",
+      "start": 15.814,
+      "end": 15.98
+    },
+    {
+      "index": 68,
+      "char": "成",
+      "start": 16.011,
+      "end": 16.177
+    },
+    {
+      "index": 69,
+      "char": "吕",
+      "start": 16.209,
+      "end": 16.375
+    },
+    {
+      "index": 70,
+      "char": "组",
+      "start": 16.587,
+      "end": 16.753
+    },
+    {
+      "index": 71,
+      "char": "成",
+      "start": 16.784,
+      "end": 16.95
+    },
+    {
+      "index": 72,
+      "char": "层",
+      "start": 16.982,
+      "end": 17.148
+    },
+    {
+      "index": 73,
+      "char": "层",
+      "start": 17.18,
+      "end": 17.346
+    },
+    {
+      "index": 74,
+      "char": "深",
+      "start": 17.377,
+      "end": 17.543
+    },
+    {
+      "index": 75,
+      "char": "进",
+      "start": 17.575,
+      "end": 17.741
+    },
+    {
+      "index": 76,
+      "char": "的",
+      "start": 17.772,
+      "end": 17.938
+    },
+    {
+      "index": 77,
+      "char": "宫",
+      "start": 17.97,
+      "end": 18.136
+    },
+    {
+      "index": 78,
+      "char": "王",
+      "start": 18.508,
+      "end": 18.674
+    },
+    {
+      "index": 79,
+      "char": "宫",
+      "start": 18.705,
+      "end": 18.871
+    },
+    {
+      "index": 80,
+      "char": "是",
+      "start": 18.903,
+      "end": 19.069
+    },
+    {
+      "index": 81,
+      "char": "古",
+      "start": 19.101,
+      "end": 19.267
+    },
+    {
+      "index": 82,
+      "char": "代",
+      "start": 19.298,
+      "end": 19.464
+    },
+    {
+      "index": 83,
+      "char": "国",
+      "start": 19.496,
+      "end": 19.662
+    },
+    {
+      "index": 84,
+      "char": "王",
+      "start": 19.694,
+      "end": 19.86
+    },
+    {
+      "index": 85,
+      "char": "居",
+      "start": 19.891,
+      "end": 20.057
+    },
+    {
+      "index": 86,
+      "char": "住",
+      "start": 20.089,
+      "end": 20.255
+    },
+    {
+      "index": 87,
+      "char": "和",
+      "start": 20.286,
+      "end": 20.452
+    },
+    {
+      "index": 88,
+      "char": "处",
+      "start": 20.484,
+      "end": 20.65
+    },
+    {
+      "index": 89,
+      "char": "理",
+      "start": 20.682,
+      "end": 20.848
+    },
+    {
+      "index": 90,
+      "char": "政",
+      "start": 20.879,
+      "end": 21.045
+    },
+    {
+      "index": 91,
+      "char": "事",
+      "start": 21.077,
+      "end": 21.243
+    },
+    {
+      "index": 92,
+      "char": "的",
+      "start": 21.275,
+      "end": 21.441
+    },
+    {
+      "index": 93,
+      "char": "建",
+      "start": 21.472,
+      "end": 21.638
+    },
+    {
+      "index": 94,
+      "char": "筑",
+      "start": 21.67,
+      "end": 21.836
+    },
+    {
+      "index": 95,
+      "char": "群",
+      "start": 21.868,
+      "end": 22.034
+    },
+    {
+      "index": 96,
+      "char": "这",
+      "start": 22.405,
+      "end": 22.571
+    },
+    {
+      "index": 97,
+      "char": "是",
+      "start": 22.603,
+      "end": 22.769
+    },
+    {
+      "index": 98,
+      "char": "一",
+      "start": 22.801,
+      "end": 22.967
+    },
+    {
+      "index": 99,
+      "char": "幅",
+      "start": 22.998,
+      "end": 23.164
+    },
+    {
+      "index": 100,
+      "char": "帮",
+      "start": 23.196,
+      "end": 23.362
+    },
+    {
+      "index": 101,
+      "char": "助",
+      "start": 23.393,
+      "end": 23.559
+    },
+    {
+      "index": 102,
+      "char": "记",
+      "start": 23.591,
+      "end": 23.757
+    },
+    {
+      "index": 103,
+      "char": "笔",
+      "start": 23.789,
+      "end": 23.955
+    },
+    {
+      "index": 104,
+      "char": "画",
+      "start": 23.986,
+      "end": 24.152
+    },
+    {
+      "index": 105,
+      "char": "和",
+      "start": 24.184,
+      "end": 24.35
+    },
+    {
+      "index": 106,
+      "char": "位",
+      "start": 24.382,
+      "end": 24.548
+    },
+    {
+      "index": 107,
+      "char": "置",
+      "start": 24.579,
+      "end": 24.745
+    },
+    {
+      "index": 108,
+      "char": "的",
+      "start": 24.777,
+      "end": 24.943
+    },
+    {
+      "index": 109,
+      "char": "记",
+      "start": 24.975,
+      "end": 25.141
+    },
+    {
+      "index": 110,
+      "char": "忆",
+      "start": 25.172,
+      "end": 25.338
+    },
+    {
+      "index": 111,
+      "char": "画",
+      "start": 25.37,
+      "end": 25.536
+    },
+    {
+      "index": 112,
+      "char": "面",
+      "start": 25.567,
+      "end": 25.733
+    },
+    {
+      "index": 113,
+      "char": "不",
+      "start": 25.945,
+      "end": 26.111
+    },
+    {
+      "index": 114,
+      "char": "是",
+      "start": 26.143,
+      "end": 26.309
+    },
+    {
+      "index": 115,
+      "char": "完",
+      "start": 26.34,
+      "end": 26.506
+    },
+    {
+      "index": 116,
+      "char": "整",
+      "start": 26.538,
+      "end": 26.704
+    },
+    {
+      "index": 117,
+      "char": "字",
+      "start": 26.736,
+      "end": 26.902
+    },
+    {
+      "index": 118,
+      "char": "源",
+      "start": 26.933,
+      "end": 27.099
+    },
+    {
+      "index": 119,
+      "char": "最",
+      "start": 27.471,
+      "end": 27.637
+    },
+    {
+      "index": 120,
+      "char": "后",
+      "start": 27.669,
+      "end": 27.835
+    },
+    {
+      "index": 121,
+      "char": "再",
+      "start": 27.866,
+      "end": 28.032
+    },
+    {
+      "index": 122,
+      "char": "读",
+      "start": 28.064,
+      "end": 28.23
+    },
+    {
+      "index": 123,
+      "char": "一",
+      "start": 28.261,
+      "end": 28.427
+    },
+    {
+      "index": 124,
+      "char": "遍",
+      "start": 28.459,
+      "end": 28.625
+    },
+    {
+      "index": 125,
+      "char": "王",
+      "start": 28.837,
+      "end": 29.003
+    },
+    {
+      "index": 126,
+      "char": "宫",
+      "start": 29.034,
+      "end": 29.2
     }
   ],
-  "transcript": "宫，“王宫”的“宫”。它是上下结构。看图找部件，合成字形。再读：王宫。",
+  "transcript": "宫，“王宫”的“宫”，读gōng。它是上下结构，按顺序能看到“宀”和“吕”。从构字分工看，“宀”提示意义类别，“吕”提供读音线索。看图时，上方宽大宫顶形成“宀”，下方两重宫门一上一下排成“吕”，组成层层深进的“宫”。王宫是古代国王居住和处理政事的建筑群。这是一幅帮助记笔画和位置的记忆画面，不是完整字源。最后再读一遍：王宫。",
   "voice_reference": "封",
   "timing_source": "punctuation-weighted-estimate",
-  "script_version": "child-first-v1",
-  "duration": 7.840181
+  "script_version": "child-first-v2",
+  "duration": 29.760181
 }

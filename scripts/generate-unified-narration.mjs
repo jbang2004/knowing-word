@@ -21,7 +21,8 @@ const referenceWav = join(tmpdir(), "knowing-word-feng-reference.wav");
 const referenceText = "封，封锁的封。会意字，左右结构，本义是地界，左边的圭。";
 const narrationBitrate = process.env.NARRATION_BITRATE || "48k";
 const diffusionSteps = Number(process.env.NARRATION_DDPM_STEPS || 3);
-const scriptVersion = "child-first-v1";
+const legacyScriptVersion = "child-first-v1";
+const officialScriptVersion = "child-first-v2";
 const requestedGlyph = process.argv.find((arg) => arg.startsWith("--glyph="))?.slice(8);
 const force = process.argv.includes("--force");
 
@@ -137,7 +138,13 @@ async function prepareReference() {
   ]);
 }
 
-async function outputMatchesScript(mp3Path, marksPath, text) {
+function scriptVersionFor(records) {
+  return records.some((record) => record.official !== false)
+    ? officialScriptVersion
+    : legacyScriptVersion;
+}
+
+async function outputMatchesScript(mp3Path, marksPath, text, scriptVersion) {
   if (!(await exists(mp3Path)) || !(await exists(marksPath))) return false;
   try {
     const payload = JSON.parse(await readFile(marksPath, "utf8"));
@@ -225,12 +232,13 @@ for (let offset = 0; offset < glyphEntries.length; offset += 1) {
     || records.find((record) => record.primary)
     || records[0];
   const text = narrationScripts[glyph];
+  const scriptVersion = scriptVersionFor(records);
   if (!text) throw new Error(`Missing child-first narration script for ${glyph}`);
   let outputRecord = canonical;
   if (!force) {
     for (const record of records) {
       const candidateFolder = join(outputRoot, record.id);
-      if (await outputMatchesScript(join(candidateFolder, "audio.mp3"), join(candidateFolder, "audio-marks.json"), text)) {
+      if (await outputMatchesScript(join(candidateFolder, "audio.mp3"), join(candidateFolder, "audio-marks.json"), text, scriptVersion)) {
         outputRecord = record;
         break;
       }
@@ -241,7 +249,7 @@ for (let offset = 0; offset < glyphEntries.length; offset += 1) {
   const marksPath = join(folder, "audio-marks.json");
   const wavPath = join(tmpdir(), `knowing-word-${outputRecord.id}.wav`);
   await mkdir(folder, { recursive: true });
-  const matchesScript = !force && await outputMatchesScript(mp3Path, marksPath, text);
+  const matchesScript = !force && await outputMatchesScript(mp3Path, marksPath, text, scriptVersion);
 
   if (!matchesScript) {
     process.stdout.write(`[${offset + 1}/${glyphEntries.length}] ${glyph} · generating ${Array.from(text).length} chars\n`);

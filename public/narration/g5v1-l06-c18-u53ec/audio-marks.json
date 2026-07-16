@@ -3,151 +3,781 @@
     {
       "index": 0,
       "char": "召",
-      "start": 0.175,
-      "end": 0.378
+      "start": 0.293,
+      "end": 0.477
     },
     {
       "index": 1,
       "char": "召",
-      "start": 0.597,
-      "end": 0.801
+      "start": 0.692,
+      "end": 0.877
     },
     {
       "index": 2,
       "char": "集",
-      "start": 0.84,
-      "end": 1.043
+      "start": 0.912,
+      "end": 1.096
     },
     {
       "index": 3,
       "char": "的",
-      "start": 1.082,
-      "end": 1.286
+      "start": 1.131,
+      "end": 1.315
     },
     {
       "index": 4,
       "char": "召",
-      "start": 1.325,
-      "end": 1.528
+      "start": 1.35,
+      "end": 1.534
     },
     {
       "index": 5,
-      "char": "它",
-      "start": 1.907,
-      "end": 2.111
+      "char": "读",
+      "start": 1.749,
+      "end": 1.933
     },
     {
       "index": 6,
-      "char": "是",
-      "start": 2.15,
-      "end": 2.353
+      "char": "z",
+      "start": 1.969,
+      "end": 2.153
     },
     {
       "index": 7,
-      "char": "上",
-      "start": 2.392,
-      "end": 2.596
+      "char": "h",
+      "start": 2.188,
+      "end": 2.372
     },
     {
       "index": 8,
-      "char": "下",
-      "start": 2.635,
-      "end": 2.838
+      "char": "à",
+      "start": 2.407,
+      "end": 2.591
     },
     {
       "index": 9,
-      "char": "结",
-      "start": 2.877,
-      "end": 3.081
+      "char": "o",
+      "start": 2.626,
+      "end": 2.81
     },
     {
       "index": 10,
-      "char": "构",
-      "start": 3.12,
-      "end": 3.323
+      "char": "它",
+      "start": 3.185,
+      "end": 3.37
     },
     {
       "index": 11,
-      "char": "看",
-      "start": 3.702,
-      "end": 3.906
+      "char": "是",
+      "start": 3.405,
+      "end": 3.589
     },
     {
       "index": 12,
-      "char": "图",
-      "start": 3.945,
-      "end": 4.148
+      "char": "上",
+      "start": 3.624,
+      "end": 3.808
     },
     {
       "index": 13,
-      "char": "找",
-      "start": 4.187,
-      "end": 4.391
+      "char": "下",
+      "start": 3.843,
+      "end": 4.027
     },
     {
       "index": 14,
-      "char": "部",
-      "start": 4.43,
-      "end": 4.633
+      "char": "结",
+      "start": 4.062,
+      "end": 4.246
     },
     {
       "index": 15,
-      "char": "件",
-      "start": 4.672,
-      "end": 4.876
+      "char": "构",
+      "start": 4.282,
+      "end": 4.466
     },
     {
       "index": 16,
-      "char": "合",
-      "start": 5.095,
-      "end": 5.298
+      "char": "按",
+      "start": 4.681,
+      "end": 4.865
     },
     {
       "index": 17,
-      "char": "成",
-      "start": 5.337,
-      "end": 5.541
+      "char": "顺",
+      "start": 4.9,
+      "end": 5.084
     },
     {
       "index": 18,
-      "char": "字",
-      "start": 5.58,
-      "end": 5.783
+      "char": "序",
+      "start": 5.119,
+      "end": 5.303
     },
     {
       "index": 19,
-      "char": "形",
-      "start": 5.822,
-      "end": 6.026
+      "char": "能",
+      "start": 5.338,
+      "end": 5.523
     },
     {
       "index": 20,
-      "char": "再",
-      "start": 6.405,
-      "end": 6.608
+      "char": "看",
+      "start": 5.558,
+      "end": 5.742
     },
     {
       "index": 21,
-      "char": "读",
-      "start": 6.647,
-      "end": 6.851
+      "char": "到",
+      "start": 5.777,
+      "end": 5.961
     },
     {
       "index": 22,
-      "char": "召",
-      "start": 7.07,
-      "end": 7.273
+      "char": "刀",
+      "start": 5.996,
+      "end": 6.18
     },
     {
       "index": 23,
+      "char": "和",
+      "start": 6.215,
+      "end": 6.4
+    },
+    {
+      "index": 24,
+      "char": "口",
+      "start": 6.435,
+      "end": 6.619
+    },
+    {
+      "index": 25,
+      "char": "从",
+      "start": 6.994,
+      "end": 7.178
+    },
+    {
+      "index": 26,
+      "char": "构",
+      "start": 7.213,
+      "end": 7.397
+    },
+    {
+      "index": 27,
+      "char": "字",
+      "start": 7.432,
+      "end": 7.616
+    },
+    {
+      "index": 28,
+      "char": "分",
+      "start": 7.651,
+      "end": 7.836
+    },
+    {
+      "index": 29,
+      "char": "工",
+      "start": 7.871,
+      "end": 8.055
+    },
+    {
+      "index": 30,
+      "char": "看",
+      "start": 8.09,
+      "end": 8.274
+    },
+    {
+      "index": 31,
+      "char": "口",
+      "start": 8.489,
+      "end": 8.673
+    },
+    {
+      "index": 32,
+      "char": "提",
+      "start": 8.708,
+      "end": 8.893
+    },
+    {
+      "index": 33,
+      "char": "示",
+      "start": 8.928,
+      "end": 9.112
+    },
+    {
+      "index": 34,
+      "char": "意",
+      "start": 9.147,
+      "end": 9.331
+    },
+    {
+      "index": 35,
+      "char": "义",
+      "start": 9.366,
+      "end": 9.55
+    },
+    {
+      "index": 36,
+      "char": "类",
+      "start": 9.585,
+      "end": 9.769
+    },
+    {
+      "index": 37,
+      "char": "别",
+      "start": 9.805,
+      "end": 9.989
+    },
+    {
+      "index": 38,
+      "char": "刀",
+      "start": 10.204,
+      "end": 10.388
+    },
+    {
+      "index": 39,
+      "char": "提",
+      "start": 10.423,
+      "end": 10.607
+    },
+    {
+      "index": 40,
+      "char": "供",
+      "start": 10.642,
+      "end": 10.826
+    },
+    {
+      "index": 41,
+      "char": "读",
+      "start": 10.861,
+      "end": 11.046
+    },
+    {
+      "index": 42,
+      "char": "音",
+      "start": 11.081,
+      "end": 11.265
+    },
+    {
+      "index": 43,
+      "char": "线",
+      "start": 11.3,
+      "end": 11.484
+    },
+    {
+      "index": 44,
+      "char": "索",
+      "start": 11.519,
+      "end": 11.703
+    },
+    {
+      "index": 45,
+      "char": "看",
+      "start": 12.078,
+      "end": 12.262
+    },
+    {
+      "index": 46,
+      "char": "图",
+      "start": 12.298,
+      "end": 12.482
+    },
+    {
+      "index": 47,
+      "char": "时",
+      "start": 12.517,
+      "end": 12.701
+    },
+    {
+      "index": 48,
+      "char": "上",
+      "start": 12.916,
+      "end": 13.1
+    },
+    {
+      "index": 49,
+      "char": "方",
+      "start": 13.135,
+      "end": 13.319
+    },
+    {
+      "index": 50,
+      "char": "弯",
+      "start": 13.354,
+      "end": 13.539
+    },
+    {
+      "index": 51,
+      "char": "柄",
+      "start": 13.574,
+      "end": 13.758
+    },
+    {
+      "index": 52,
+      "char": "响",
+      "start": 13.793,
+      "end": 13.977
+    },
+    {
+      "index": 53,
+      "char": "铃",
+      "start": 14.012,
+      "end": 14.196
+    },
+    {
+      "index": 54,
+      "char": "和",
+      "start": 14.231,
+      "end": 14.416
+    },
+    {
+      "index": 55,
+      "char": "召",
+      "start": 14.451,
+      "end": 14.635
+    },
+    {
+      "index": 56,
       "char": "集",
-      "start": 7.312,
-      "end": 7.516
+      "start": 14.67,
+      "end": 14.854
+    },
+    {
+      "index": 57,
+      "char": "刀",
+      "start": 14.889,
+      "end": 15.073
+    },
+    {
+      "index": 58,
+      "char": "牌",
+      "start": 15.108,
+      "end": 15.292
+    },
+    {
+      "index": 59,
+      "char": "形",
+      "start": 15.327,
+      "end": 15.512
+    },
+    {
+      "index": 60,
+      "char": "成",
+      "start": 15.547,
+      "end": 15.731
+    },
+    {
+      "index": 61,
+      "char": "刀",
+      "start": 15.766,
+      "end": 15.95
+    },
+    {
+      "index": 62,
+      "char": "下",
+      "start": 16.165,
+      "end": 16.349
+    },
+    {
+      "index": 63,
+      "char": "方",
+      "start": 16.384,
+      "end": 16.569
+    },
+    {
+      "index": 64,
+      "char": "传",
+      "start": 16.604,
+      "end": 16.788
+    },
+    {
+      "index": 65,
+      "char": "声",
+      "start": 16.823,
+      "end": 17.007
+    },
+    {
+      "index": 66,
+      "char": "台",
+      "start": 17.042,
+      "end": 17.226
+    },
+    {
+      "index": 67,
+      "char": "开",
+      "start": 17.261,
+      "end": 17.445
+    },
+    {
+      "index": 68,
+      "char": "成",
+      "start": 17.481,
+      "end": 17.665
+    },
+    {
+      "index": 69,
+      "char": "口",
+      "start": 17.7,
+      "end": 17.884
+    },
+    {
+      "index": 70,
+      "char": "上",
+      "start": 18.099,
+      "end": 18.283
+    },
+    {
+      "index": 71,
+      "char": "下",
+      "start": 18.318,
+      "end": 18.502
+    },
+    {
+      "index": 72,
+      "char": "发",
+      "start": 18.537,
+      "end": 18.722
+    },
+    {
+      "index": 73,
+      "char": "出",
+      "start": 18.757,
+      "end": 18.941
+    },
+    {
+      "index": 74,
+      "char": "召",
+      "start": 18.976,
+      "end": 19.16
+    },
+    {
+      "index": 75,
+      "char": "集",
+      "start": 19.195,
+      "end": 19.379
+    },
+    {
+      "index": 76,
+      "char": "信",
+      "start": 19.414,
+      "end": 19.598
+    },
+    {
+      "index": 77,
+      "char": "号",
+      "start": 19.634,
+      "end": 19.818
+    },
+    {
+      "index": 78,
+      "char": "组",
+      "start": 20.033,
+      "end": 20.217
+    },
+    {
+      "index": 79,
+      "char": "成",
+      "start": 20.252,
+      "end": 20.436
+    },
+    {
+      "index": 80,
+      "char": "召",
+      "start": 20.471,
+      "end": 20.655
+    },
+    {
+      "index": 81,
+      "char": "召",
+      "start": 21.03,
+      "end": 21.215
+    },
+    {
+      "index": 82,
+      "char": "集",
+      "start": 21.25,
+      "end": 21.434
+    },
+    {
+      "index": 83,
+      "char": "就",
+      "start": 21.469,
+      "end": 21.653
+    },
+    {
+      "index": 84,
+      "char": "是",
+      "start": 21.688,
+      "end": 21.872
+    },
+    {
+      "index": 85,
+      "char": "通",
+      "start": 21.907,
+      "end": 22.092
+    },
+    {
+      "index": 86,
+      "char": "知",
+      "start": 22.127,
+      "end": 22.311
+    },
+    {
+      "index": 87,
+      "char": "许",
+      "start": 22.346,
+      "end": 22.53
+    },
+    {
+      "index": 88,
+      "char": "多",
+      "start": 22.565,
+      "end": 22.749
+    },
+    {
+      "index": 89,
+      "char": "人",
+      "start": 22.784,
+      "end": 22.968
+    },
+    {
+      "index": 90,
+      "char": "到",
+      "start": 23.004,
+      "end": 23.188
+    },
+    {
+      "index": 91,
+      "char": "同",
+      "start": 23.223,
+      "end": 23.407
+    },
+    {
+      "index": 92,
+      "char": "一",
+      "start": 23.442,
+      "end": 23.626
+    },
+    {
+      "index": 93,
+      "char": "个",
+      "start": 23.661,
+      "end": 23.845
+    },
+    {
+      "index": 94,
+      "char": "地",
+      "start": 23.88,
+      "end": 24.065
+    },
+    {
+      "index": 95,
+      "char": "方",
+      "start": 24.1,
+      "end": 24.284
+    },
+    {
+      "index": 96,
+      "char": "集",
+      "start": 24.319,
+      "end": 24.503
+    },
+    {
+      "index": 97,
+      "char": "合",
+      "start": 24.538,
+      "end": 24.722
+    },
+    {
+      "index": 98,
+      "char": "这",
+      "start": 25.097,
+      "end": 25.281
+    },
+    {
+      "index": 99,
+      "char": "是",
+      "start": 25.317,
+      "end": 25.501
+    },
+    {
+      "index": 100,
+      "char": "一",
+      "start": 25.536,
+      "end": 25.72
+    },
+    {
+      "index": 101,
+      "char": "幅",
+      "start": 25.755,
+      "end": 25.939
+    },
+    {
+      "index": 102,
+      "char": "帮",
+      "start": 25.974,
+      "end": 26.158
+    },
+    {
+      "index": 103,
+      "char": "助",
+      "start": 26.193,
+      "end": 26.378
+    },
+    {
+      "index": 104,
+      "char": "记",
+      "start": 26.413,
+      "end": 26.597
+    },
+    {
+      "index": 105,
+      "char": "笔",
+      "start": 26.632,
+      "end": 26.816
+    },
+    {
+      "index": 106,
+      "char": "画",
+      "start": 26.851,
+      "end": 27.035
+    },
+    {
+      "index": 107,
+      "char": "和",
+      "start": 27.07,
+      "end": 27.255
+    },
+    {
+      "index": 108,
+      "char": "位",
+      "start": 27.29,
+      "end": 27.474
+    },
+    {
+      "index": 109,
+      "char": "置",
+      "start": 27.509,
+      "end": 27.693
+    },
+    {
+      "index": 110,
+      "char": "的",
+      "start": 27.728,
+      "end": 27.912
+    },
+    {
+      "index": 111,
+      "char": "记",
+      "start": 27.947,
+      "end": 28.131
+    },
+    {
+      "index": 112,
+      "char": "忆",
+      "start": 28.166,
+      "end": 28.351
+    },
+    {
+      "index": 113,
+      "char": "画",
+      "start": 28.386,
+      "end": 28.57
+    },
+    {
+      "index": 114,
+      "char": "面",
+      "start": 28.605,
+      "end": 28.789
+    },
+    {
+      "index": 115,
+      "char": "不",
+      "start": 29.004,
+      "end": 29.188
+    },
+    {
+      "index": 116,
+      "char": "是",
+      "start": 29.223,
+      "end": 29.408
+    },
+    {
+      "index": 117,
+      "char": "完",
+      "start": 29.443,
+      "end": 29.627
+    },
+    {
+      "index": 118,
+      "char": "整",
+      "start": 29.662,
+      "end": 29.846
+    },
+    {
+      "index": 119,
+      "char": "字",
+      "start": 29.881,
+      "end": 30.065
+    },
+    {
+      "index": 120,
+      "char": "源",
+      "start": 30.1,
+      "end": 30.284
+    },
+    {
+      "index": 121,
+      "char": "最",
+      "start": 30.66,
+      "end": 30.844
+    },
+    {
+      "index": 122,
+      "char": "后",
+      "start": 30.879,
+      "end": 31.063
+    },
+    {
+      "index": 123,
+      "char": "再",
+      "start": 31.098,
+      "end": 31.282
+    },
+    {
+      "index": 124,
+      "char": "读",
+      "start": 31.317,
+      "end": 31.501
+    },
+    {
+      "index": 125,
+      "char": "一",
+      "start": 31.536,
+      "end": 31.721
+    },
+    {
+      "index": 126,
+      "char": "遍",
+      "start": 31.756,
+      "end": 31.94
+    },
+    {
+      "index": 127,
+      "char": "召",
+      "start": 32.155,
+      "end": 32.339
+    },
+    {
+      "index": 128,
+      "char": "集",
+      "start": 32.374,
+      "end": 32.558
     }
   ],
-  "transcript": "召，“召集”的“召”。它是上下结构。看图找部件，合成字形。再读：召集。",
+  "transcript": "召，“召集”的“召”，读zhào。它是上下结构，按顺序能看到“刀”和“口”。从构字分工看，“口”提示意义类别，“刀”提供读音线索。看图时，上方弯柄响铃和召集刀牌形成“刀”，下方传声台开成“口”，上下发出召集信号，组成“召”。召集就是通知许多人到同一个地方集合。这是一幅帮助记笔画和位置的记忆画面，不是完整字源。最后再读一遍：召集。",
   "voice_reference": "封",
   "timing_source": "punctuation-weighted-estimate",
-  "script_version": "child-first-v1",
-  "duration": 8.000181
+  "script_version": "child-first-v2",
+  "duration": 33.120181
 }

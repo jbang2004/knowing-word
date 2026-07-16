@@ -3,151 +3,763 @@
     {
       "index": 0,
       "char": "党",
-      "start": 0.218,
-      "end": 0.486
+      "start": 0.292,
+      "end": 0.456
     },
     {
       "index": 1,
       "char": "党",
-      "start": 0.717,
-      "end": 0.986
+      "start": 0.667,
+      "end": 0.831
     },
     {
       "index": 2,
       "char": "员",
-      "start": 1.037,
-      "end": 1.306
+      "start": 0.862,
+      "end": 1.026
     },
     {
       "index": 3,
       "char": "的",
-      "start": 1.357,
-      "end": 1.625
+      "start": 1.057,
+      "end": 1.221
     },
     {
       "index": 4,
       "char": "党",
-      "start": 1.676,
-      "end": 1.945
+      "start": 1.253,
+      "end": 1.417
     },
     {
       "index": 5,
-      "char": "它",
-      "start": 2.336,
-      "end": 2.605
+      "char": "读",
+      "start": 1.628,
+      "end": 1.792
     },
     {
       "index": 6,
-      "char": "是",
-      "start": 2.656,
-      "end": 2.924
+      "char": "d",
+      "start": 1.823,
+      "end": 1.987
     },
     {
       "index": 7,
-      "char": "穿",
-      "start": 2.976,
-      "end": 3.244
+      "char": "ǎ",
+      "start": 2.018,
+      "end": 2.182
     },
     {
       "index": 8,
-      "char": "插",
-      "start": 3.295,
-      "end": 3.564
+      "char": "n",
+      "start": 2.214,
+      "end": 2.378
     },
     {
       "index": 9,
-      "char": "结",
-      "start": 3.615,
-      "end": 3.884
+      "char": "g",
+      "start": 2.409,
+      "end": 2.573
     },
     {
       "index": 10,
-      "char": "构",
-      "start": 3.935,
-      "end": 4.203
+      "char": "它",
+      "start": 2.944,
+      "end": 3.108
     },
     {
       "index": 11,
-      "char": "看",
-      "start": 4.594,
-      "end": 4.863
+      "char": "是",
+      "start": 3.139,
+      "end": 3.303
     },
     {
       "index": 12,
-      "char": "图",
-      "start": 4.914,
-      "end": 5.183
+      "char": "穿",
+      "start": 3.335,
+      "end": 3.499
     },
     {
       "index": 13,
-      "char": "找",
-      "start": 5.234,
-      "end": 5.502
+      "char": "插",
+      "start": 3.53,
+      "end": 3.694
     },
     {
       "index": 14,
-      "char": "部",
-      "start": 5.553,
-      "end": 5.822
+      "char": "结",
+      "start": 3.725,
+      "end": 3.889
     },
     {
       "index": 15,
-      "char": "件",
-      "start": 5.873,
-      "end": 6.142
+      "char": "构",
+      "start": 3.92,
+      "end": 4.084
     },
     {
       "index": 16,
-      "char": "合",
-      "start": 6.373,
-      "end": 6.641
+      "char": "按",
+      "start": 4.296,
+      "end": 4.46
     },
     {
       "index": 17,
-      "char": "成",
-      "start": 6.693,
-      "end": 6.961
+      "char": "顺",
+      "start": 4.491,
+      "end": 4.655
     },
     {
       "index": 18,
-      "char": "字",
-      "start": 7.012,
-      "end": 7.281
+      "char": "序",
+      "start": 4.686,
+      "end": 4.85
     },
     {
       "index": 19,
-      "char": "形",
-      "start": 7.332,
-      "end": 7.601
+      "char": "能",
+      "start": 4.881,
+      "end": 5.045
     },
     {
       "index": 20,
-      "char": "再",
-      "start": 7.992,
-      "end": 8.26
+      "char": "看",
+      "start": 5.077,
+      "end": 5.241
     },
     {
       "index": 21,
-      "char": "读",
-      "start": 8.311,
-      "end": 8.58
+      "char": "到",
+      "start": 5.272,
+      "end": 5.436
     },
     {
       "index": 22,
-      "char": "党",
-      "start": 8.811,
-      "end": 9.08
+      "char": "龸",
+      "start": 5.467,
+      "end": 5.631
     },
     {
       "index": 23,
+      "char": "和",
+      "start": 5.662,
+      "end": 5.826
+    },
+    {
+      "index": 24,
+      "char": "兄",
+      "start": 5.858,
+      "end": 6.022
+    },
+    {
+      "index": 25,
+      "char": "从",
+      "start": 6.393,
+      "end": 6.557
+    },
+    {
+      "index": 26,
+      "char": "构",
+      "start": 6.588,
+      "end": 6.752
+    },
+    {
+      "index": 27,
+      "char": "字",
+      "start": 6.783,
+      "end": 6.947
+    },
+    {
+      "index": 28,
+      "char": "分",
+      "start": 6.979,
+      "end": 7.143
+    },
+    {
+      "index": 29,
+      "char": "工",
+      "start": 7.174,
+      "end": 7.338
+    },
+    {
+      "index": 30,
+      "char": "看",
+      "start": 7.369,
+      "end": 7.533
+    },
+    {
+      "index": 31,
+      "char": "兄",
+      "start": 7.744,
+      "end": 7.908
+    },
+    {
+      "index": 32,
+      "char": "提",
+      "start": 7.94,
+      "end": 8.104
+    },
+    {
+      "index": 33,
+      "char": "示",
+      "start": 8.135,
+      "end": 8.299
+    },
+    {
+      "index": 34,
+      "char": "意",
+      "start": 8.33,
+      "end": 8.494
+    },
+    {
+      "index": 35,
+      "char": "义",
+      "start": 8.525,
+      "end": 8.689
+    },
+    {
+      "index": 36,
+      "char": "类",
+      "start": 8.721,
+      "end": 8.885
+    },
+    {
+      "index": 37,
+      "char": "别",
+      "start": 8.916,
+      "end": 9.08
+    },
+    {
+      "index": 38,
+      "char": "尚",
+      "start": 9.291,
+      "end": 9.455
+    },
+    {
+      "index": 39,
+      "char": "提",
+      "start": 9.486,
+      "end": 9.65
+    },
+    {
+      "index": 40,
+      "char": "供",
+      "start": 9.682,
+      "end": 9.846
+    },
+    {
+      "index": 41,
+      "char": "读",
+      "start": 9.877,
+      "end": 10.041
+    },
+    {
+      "index": 42,
+      "char": "音",
+      "start": 10.072,
+      "end": 10.236
+    },
+    {
+      "index": 43,
+      "char": "线",
+      "start": 10.267,
+      "end": 10.431
+    },
+    {
+      "index": 44,
+      "char": "索",
+      "start": 10.463,
+      "end": 10.627
+    },
+    {
+      "index": 45,
+      "char": "看",
+      "start": 10.998,
+      "end": 11.162
+    },
+    {
+      "index": 46,
+      "char": "图",
+      "start": 11.193,
+      "end": 11.357
+    },
+    {
+      "index": 47,
+      "char": "时",
+      "start": 11.388,
+      "end": 11.552
+    },
+    {
+      "index": 48,
+      "char": "上",
+      "start": 11.764,
+      "end": 11.928
+    },
+    {
+      "index": 49,
+      "char": "方",
+      "start": 11.959,
+      "end": 12.123
+    },
+    {
+      "index": 50,
+      "char": "灯",
+      "start": 12.154,
+      "end": 12.318
+    },
+    {
+      "index": 51,
+      "char": "棚",
+      "start": 12.349,
+      "end": 12.513
+    },
+    {
+      "index": 52,
+      "char": "形",
+      "start": 12.545,
+      "end": 12.709
+    },
+    {
+      "index": 53,
+      "char": "成",
+      "start": 12.74,
+      "end": 12.904
+    },
+    {
+      "index": 54,
+      "char": "龸",
+      "start": 12.935,
+      "end": 13.099
+    },
+    {
+      "index": 55,
+      "char": "中",
+      "start": 13.31,
+      "end": 13.474
+    },
+    {
+      "index": 56,
+      "char": "间",
+      "start": 13.506,
+      "end": 13.67
+    },
+    {
+      "index": 57,
+      "char": "并",
+      "start": 13.701,
+      "end": 13.865
+    },
+    {
+      "index": 58,
+      "char": "肩",
+      "start": 13.896,
+      "end": 14.06
+    },
+    {
+      "index": 59,
+      "char": "人",
+      "start": 14.091,
+      "end": 14.255
+    },
+    {
+      "index": 60,
+      "char": "物",
+      "start": 14.287,
+      "end": 14.451
+    },
+    {
+      "index": 61,
+      "char": "沿",
+      "start": 14.482,
+      "end": 14.646
+    },
+    {
+      "index": 62,
+      "char": "兄",
+      "start": 14.677,
+      "end": 14.841
+    },
+    {
+      "index": 63,
+      "char": "站",
+      "start": 14.872,
+      "end": 15.036
+    },
+    {
+      "index": 64,
+      "char": "立",
+      "start": 15.067,
+      "end": 15.232
+    },
+    {
+      "index": 65,
+      "char": "下",
+      "start": 15.443,
+      "end": 15.607
+    },
+    {
+      "index": 66,
+      "char": "方",
+      "start": 15.638,
+      "end": 15.802
+    },
+    {
+      "index": 67,
+      "char": "两",
+      "start": 15.833,
+      "end": 15.997
+    },
+    {
+      "index": 68,
+      "char": "腿",
+      "start": 16.028,
+      "end": 16.192
+    },
+    {
+      "index": 69,
+      "char": "形",
+      "start": 16.224,
+      "end": 16.388
+    },
+    {
+      "index": 70,
+      "char": "成",
+      "start": 16.419,
+      "end": 16.583
+    },
+    {
+      "index": 71,
+      "char": "儿",
+      "start": 16.614,
+      "end": 16.778
+    },
+    {
+      "index": 72,
+      "char": "共",
+      "start": 16.989,
+      "end": 17.153
+    },
+    {
+      "index": 73,
+      "char": "同",
+      "start": 17.185,
+      "end": 17.349
+    },
+    {
+      "index": 74,
+      "char": "组",
+      "start": 17.38,
+      "end": 17.544
+    },
+    {
+      "index": 75,
+      "char": "成",
+      "start": 17.575,
+      "end": 17.739
+    },
+    {
+      "index": 76,
+      "char": "党",
+      "start": 17.77,
+      "end": 17.934
+    },
+    {
+      "index": 77,
+      "char": "党",
+      "start": 18.306,
+      "end": 18.47
+    },
+    {
+      "index": 78,
       "char": "员",
-      "start": 9.131,
-      "end": 9.399
+      "start": 18.501,
+      "end": 18.665
+    },
+    {
+      "index": 79,
+      "char": "是",
+      "start": 18.696,
+      "end": 18.86
+    },
+    {
+      "index": 80,
+      "char": "加",
+      "start": 18.891,
+      "end": 19.055
+    },
+    {
+      "index": 81,
+      "char": "入",
+      "start": 19.087,
+      "end": 19.251
+    },
+    {
+      "index": 82,
+      "char": "某",
+      "start": 19.282,
+      "end": 19.446
+    },
+    {
+      "index": 83,
+      "char": "一",
+      "start": 19.477,
+      "end": 19.641
+    },
+    {
+      "index": 84,
+      "char": "政",
+      "start": 19.672,
+      "end": 19.836
+    },
+    {
+      "index": 85,
+      "char": "党",
+      "start": 19.868,
+      "end": 20.032
+    },
+    {
+      "index": 86,
+      "char": "并",
+      "start": 20.063,
+      "end": 20.227
+    },
+    {
+      "index": 87,
+      "char": "遵",
+      "start": 20.258,
+      "end": 20.422
+    },
+    {
+      "index": 88,
+      "char": "守",
+      "start": 20.453,
+      "end": 20.617
+    },
+    {
+      "index": 89,
+      "char": "其",
+      "start": 20.649,
+      "end": 20.813
+    },
+    {
+      "index": 90,
+      "char": "章",
+      "start": 20.844,
+      "end": 21.008
+    },
+    {
+      "index": 91,
+      "char": "程",
+      "start": 21.039,
+      "end": 21.203
+    },
+    {
+      "index": 92,
+      "char": "的",
+      "start": 21.234,
+      "end": 21.398
+    },
+    {
+      "index": 93,
+      "char": "成",
+      "start": 21.43,
+      "end": 21.594
+    },
+    {
+      "index": 94,
+      "char": "员",
+      "start": 21.625,
+      "end": 21.789
+    },
+    {
+      "index": 95,
+      "char": "这",
+      "start": 22.16,
+      "end": 22.324
+    },
+    {
+      "index": 96,
+      "char": "是",
+      "start": 22.355,
+      "end": 22.519
+    },
+    {
+      "index": 97,
+      "char": "一",
+      "start": 22.551,
+      "end": 22.715
+    },
+    {
+      "index": 98,
+      "char": "幅",
+      "start": 22.746,
+      "end": 22.91
+    },
+    {
+      "index": 99,
+      "char": "帮",
+      "start": 22.941,
+      "end": 23.105
+    },
+    {
+      "index": 100,
+      "char": "助",
+      "start": 23.136,
+      "end": 23.3
+    },
+    {
+      "index": 101,
+      "char": "记",
+      "start": 23.332,
+      "end": 23.496
+    },
+    {
+      "index": 102,
+      "char": "笔",
+      "start": 23.527,
+      "end": 23.691
+    },
+    {
+      "index": 103,
+      "char": "画",
+      "start": 23.722,
+      "end": 23.886
+    },
+    {
+      "index": 104,
+      "char": "和",
+      "start": 23.917,
+      "end": 24.081
+    },
+    {
+      "index": 105,
+      "char": "位",
+      "start": 24.113,
+      "end": 24.277
+    },
+    {
+      "index": 106,
+      "char": "置",
+      "start": 24.308,
+      "end": 24.472
+    },
+    {
+      "index": 107,
+      "char": "的",
+      "start": 24.503,
+      "end": 24.667
+    },
+    {
+      "index": 108,
+      "char": "记",
+      "start": 24.698,
+      "end": 24.862
+    },
+    {
+      "index": 109,
+      "char": "忆",
+      "start": 24.894,
+      "end": 25.058
+    },
+    {
+      "index": 110,
+      "char": "画",
+      "start": 25.089,
+      "end": 25.253
+    },
+    {
+      "index": 111,
+      "char": "面",
+      "start": 25.284,
+      "end": 25.448
+    },
+    {
+      "index": 112,
+      "char": "不",
+      "start": 25.659,
+      "end": 25.823
+    },
+    {
+      "index": 113,
+      "char": "是",
+      "start": 25.855,
+      "end": 26.019
+    },
+    {
+      "index": 114,
+      "char": "完",
+      "start": 26.05,
+      "end": 26.214
+    },
+    {
+      "index": 115,
+      "char": "整",
+      "start": 26.245,
+      "end": 26.409
+    },
+    {
+      "index": 116,
+      "char": "字",
+      "start": 26.44,
+      "end": 26.604
+    },
+    {
+      "index": 117,
+      "char": "源",
+      "start": 26.636,
+      "end": 26.8
+    },
+    {
+      "index": 118,
+      "char": "最",
+      "start": 27.171,
+      "end": 27.335
+    },
+    {
+      "index": 119,
+      "char": "后",
+      "start": 27.366,
+      "end": 27.53
+    },
+    {
+      "index": 120,
+      "char": "再",
+      "start": 27.561,
+      "end": 27.725
+    },
+    {
+      "index": 121,
+      "char": "读",
+      "start": 27.757,
+      "end": 27.921
+    },
+    {
+      "index": 122,
+      "char": "一",
+      "start": 27.952,
+      "end": 28.116
+    },
+    {
+      "index": 123,
+      "char": "遍",
+      "start": 28.147,
+      "end": 28.311
+    },
+    {
+      "index": 124,
+      "char": "党",
+      "start": 28.522,
+      "end": 28.686
+    },
+    {
+      "index": 125,
+      "char": "员",
+      "start": 28.718,
+      "end": 28.882
     }
   ],
-  "transcript": "党，“党员”的“党”。它是穿插结构。看图找部件，合成字形。再读：党员。",
+  "transcript": "党，“党员”的“党”，读dǎng。它是穿插结构，按顺序能看到“龸”和“兄”。从构字分工看，“兄”提示意义类别，“尚”提供读音线索。看图时，上方灯棚形成“龸”，中间并肩人物沿“兄”站立，下方两腿形成“儿”，共同组成“党”。党员是加入某一政党并遵守其章程的成员。这是一幅帮助记笔画和位置的记忆画面，不是完整字源。最后再读一遍：党员。",
   "voice_reference": "封",
   "timing_source": "punctuation-weighted-estimate",
-  "script_version": "child-first-v1",
-  "duration": 9.920181
+  "script_version": "child-first-v2",
+  "duration": 29.441066
 }

@@ -3,163 +3,769 @@
     {
       "index": 0,
       "char": "勺",
-      "start": 0.209,
-      "end": 0.447
+      "start": 0.293,
+      "end": 0.474
     },
     {
       "index": 1,
       "char": "勺",
-      "start": 0.672,
-      "end": 0.91
+      "start": 0.688,
+      "end": 0.869
     },
     {
       "index": 2,
       "char": "子",
-      "start": 0.955,
-      "end": 1.193
+      "start": 0.903,
+      "end": 1.084
     },
     {
       "index": 3,
       "char": "的",
-      "start": 1.239,
-      "end": 1.477
+      "start": 1.118,
+      "end": 1.299
     },
     {
       "index": 4,
       "char": "勺",
-      "start": 1.522,
-      "end": 1.76
+      "start": 1.333,
+      "end": 1.514
     },
     {
       "index": 5,
-      "char": "它",
-      "start": 2.145,
-      "end": 2.383
+      "char": "读",
+      "start": 1.729,
+      "end": 1.909
     },
     {
       "index": 6,
-      "char": "是",
-      "start": 2.428,
-      "end": 2.666
+      "char": "s",
+      "start": 1.944,
+      "end": 2.124
     },
     {
       "index": 7,
-      "char": "右",
-      "start": 2.712,
-      "end": 2.95
+      "char": "h",
+      "start": 2.159,
+      "end": 2.339
     },
     {
       "index": 8,
-      "char": "上",
-      "start": 2.995,
-      "end": 3.233
+      "char": "á",
+      "start": 2.374,
+      "end": 2.555
     },
     {
       "index": 9,
-      "char": "包",
-      "start": 3.278,
-      "end": 3.516
+      "char": "o",
+      "start": 2.589,
+      "end": 2.77
     },
     {
       "index": 10,
-      "char": "围",
-      "start": 3.561,
-      "end": 3.799
+      "char": "它",
+      "start": 3.144,
+      "end": 3.325
     },
     {
       "index": 11,
-      "char": "结",
-      "start": 3.845,
-      "end": 4.083
+      "char": "是",
+      "start": 3.359,
+      "end": 3.54
     },
     {
       "index": 12,
-      "char": "构",
-      "start": 4.128,
-      "end": 4.366
+      "char": "右",
+      "start": 3.574,
+      "end": 3.755
     },
     {
       "index": 13,
-      "char": "看",
-      "start": 4.751,
-      "end": 4.989
+      "char": "上",
+      "start": 3.789,
+      "end": 3.97
     },
     {
       "index": 14,
-      "char": "图",
-      "start": 5.034,
-      "end": 5.272
+      "char": "包",
+      "start": 4.005,
+      "end": 4.185
     },
     {
       "index": 15,
-      "char": "找",
-      "start": 5.318,
-      "end": 5.555
+      "char": "围",
+      "start": 4.22,
+      "end": 4.4
     },
     {
       "index": 16,
-      "char": "部",
-      "start": 5.601,
-      "end": 5.839
+      "char": "结",
+      "start": 4.435,
+      "end": 4.616
     },
     {
       "index": 17,
-      "char": "件",
-      "start": 5.884,
-      "end": 6.122
+      "char": "构",
+      "start": 4.65,
+      "end": 4.831
     },
     {
       "index": 18,
-      "char": "合",
-      "start": 6.347,
-      "end": 6.585
+      "char": "按",
+      "start": 5.045,
+      "end": 5.226
     },
     {
       "index": 19,
-      "char": "成",
-      "start": 6.631,
-      "end": 6.868
+      "char": "顺",
+      "start": 5.26,
+      "end": 5.441
     },
     {
       "index": 20,
-      "char": "字",
-      "start": 6.914,
-      "end": 7.152
+      "char": "序",
+      "start": 5.475,
+      "end": 5.656
     },
     {
       "index": 21,
-      "char": "形",
-      "start": 7.197,
-      "end": 7.435
+      "char": "能",
+      "start": 5.69,
+      "end": 5.871
     },
     {
       "index": 22,
-      "char": "再",
-      "start": 7.82,
-      "end": 8.058
+      "char": "看",
+      "start": 5.906,
+      "end": 6.086
     },
     {
       "index": 23,
-      "char": "读",
-      "start": 8.103,
-      "end": 8.341
+      "char": "到",
+      "start": 6.121,
+      "end": 6.301
     },
     {
       "index": 24,
-      "char": "勺",
-      "start": 8.567,
-      "end": 8.805
+      "char": "勹",
+      "start": 6.336,
+      "end": 6.516
     },
     {
       "index": 25,
+      "char": "和",
+      "start": 6.551,
+      "end": 6.732
+    },
+    {
+      "index": 26,
+      "char": "丶",
+      "start": 6.766,
+      "end": 6.947
+    },
+    {
+      "index": 27,
+      "char": "从",
+      "start": 7.321,
+      "end": 7.502
+    },
+    {
+      "index": 28,
+      "char": "构",
+      "start": 7.536,
+      "end": 7.717
+    },
+    {
+      "index": 29,
+      "char": "字",
+      "start": 7.751,
+      "end": 7.932
+    },
+    {
+      "index": 30,
+      "char": "分",
+      "start": 7.966,
+      "end": 8.147
+    },
+    {
+      "index": 31,
+      "char": "工",
+      "start": 8.182,
+      "end": 8.362
+    },
+    {
+      "index": 32,
+      "char": "看",
+      "start": 8.397,
+      "end": 8.577
+    },
+    {
+      "index": 33,
+      "char": "勹",
+      "start": 8.792,
+      "end": 8.973
+    },
+    {
+      "index": 34,
+      "char": "先",
+      "start": 9.007,
+      "end": 9.188
+    },
+    {
+      "index": 35,
+      "char": "提",
+      "start": 9.222,
+      "end": 9.403
+    },
+    {
+      "index": 36,
+      "char": "示",
+      "start": 9.437,
+      "end": 9.618
+    },
+    {
+      "index": 37,
+      "char": "意",
+      "start": 9.652,
+      "end": 9.833
+    },
+    {
+      "index": 38,
+      "char": "义",
+      "start": 9.867,
+      "end": 10.048
+    },
+    {
+      "index": 39,
+      "char": "类",
+      "start": 10.083,
+      "end": 10.263
+    },
+    {
+      "index": 40,
+      "char": "别",
+      "start": 10.298,
+      "end": 10.478
+    },
+    {
+      "index": 41,
+      "char": "其",
+      "start": 10.693,
+      "end": 10.874
+    },
+    {
+      "index": 42,
+      "char": "余",
+      "start": 10.908,
+      "end": 11.089
+    },
+    {
+      "index": 43,
+      "char": "部",
+      "start": 11.123,
+      "end": 11.304
+    },
+    {
+      "index": 44,
+      "char": "件",
+      "start": 11.338,
+      "end": 11.519
+    },
+    {
+      "index": 45,
+      "char": "补",
+      "start": 11.553,
+      "end": 11.734
+    },
+    {
+      "index": 46,
+      "char": "足",
+      "start": 11.768,
+      "end": 11.949
+    },
+    {
+      "index": 47,
+      "char": "字",
+      "start": 11.984,
+      "end": 12.164
+    },
+    {
+      "index": 48,
+      "char": "形",
+      "start": 12.199,
+      "end": 12.379
+    },
+    {
+      "index": 49,
+      "char": "看",
+      "start": 12.754,
+      "end": 12.934
+    },
+    {
+      "index": 50,
+      "char": "图",
+      "start": 12.969,
+      "end": 13.15
+    },
+    {
+      "index": 51,
+      "char": "时",
+      "start": 13.184,
+      "end": 13.365
+    },
+    {
+      "index": 52,
+      "char": "弯",
+      "start": 13.579,
+      "end": 13.76
+    },
+    {
+      "index": 53,
+      "char": "曲",
+      "start": 13.794,
+      "end": 13.975
+    },
+    {
+      "index": 54,
+      "char": "长",
+      "start": 14.009,
+      "end": 14.19
+    },
+    {
+      "index": 55,
+      "char": "柄",
+      "start": 14.224,
+      "end": 14.405
+    },
+    {
+      "index": 56,
+      "char": "围",
+      "start": 14.44,
+      "end": 14.62
+    },
+    {
+      "index": 57,
+      "char": "成",
+      "start": 14.655,
+      "end": 14.835
+    },
+    {
+      "index": 58,
+      "char": "勹",
+      "start": 14.87,
+      "end": 15.051
+    },
+    {
+      "index": 59,
+      "char": "凹",
+      "start": 15.265,
+      "end": 15.446
+    },
+    {
+      "index": 60,
+      "char": "槽",
+      "start": 15.48,
+      "end": 15.661
+    },
+    {
+      "index": 61,
+      "char": "里",
+      "start": 15.695,
+      "end": 15.876
+    },
+    {
+      "index": 62,
+      "char": "一",
+      "start": 15.91,
+      "end": 16.091
+    },
+    {
+      "index": 63,
+      "char": "滴",
+      "start": 16.125,
+      "end": 16.306
+    },
+    {
+      "index": 64,
+      "char": "汤",
+      "start": 16.341,
+      "end": 16.521
+    },
+    {
+      "index": 65,
+      "char": "形",
+      "start": 16.556,
+      "end": 16.736
+    },
+    {
+      "index": 66,
+      "char": "成",
+      "start": 16.771,
+      "end": 16.951
+    },
+    {
+      "index": 67,
+      "char": "丶",
+      "start": 16.986,
+      "end": 17.167
+    },
+    {
+      "index": 68,
+      "char": "整",
+      "start": 17.381,
+      "end": 17.562
+    },
+    {
+      "index": 69,
+      "char": "把",
+      "start": 17.596,
+      "end": 17.777
+    },
+    {
+      "index": 70,
+      "char": "勺",
+      "start": 17.811,
+      "end": 17.992
+    },
+    {
+      "index": 71,
       "char": "子",
-      "start": 8.85,
-      "end": 9.088
+      "start": 18.026,
+      "end": 18.207
+    },
+    {
+      "index": 72,
+      "char": "自",
+      "start": 18.242,
+      "end": 18.422
+    },
+    {
+      "index": 73,
+      "char": "然",
+      "start": 18.457,
+      "end": 18.637
+    },
+    {
+      "index": 74,
+      "char": "长",
+      "start": 18.672,
+      "end": 18.852
+    },
+    {
+      "index": 75,
+      "char": "成",
+      "start": 18.887,
+      "end": 19.068
+    },
+    {
+      "index": 76,
+      "char": "勺",
+      "start": 19.102,
+      "end": 19.283
+    },
+    {
+      "index": 77,
+      "char": "勺",
+      "start": 19.657,
+      "end": 19.838
+    },
+    {
+      "index": 78,
+      "char": "子",
+      "start": 19.872,
+      "end": 20.053
+    },
+    {
+      "index": 79,
+      "char": "是",
+      "start": 20.087,
+      "end": 20.268
+    },
+    {
+      "index": 80,
+      "char": "有",
+      "start": 20.302,
+      "end": 20.483
+    },
+    {
+      "index": 81,
+      "char": "小",
+      "start": 20.518,
+      "end": 20.698
+    },
+    {
+      "index": 82,
+      "char": "凹",
+      "start": 20.733,
+      "end": 20.913
+    },
+    {
+      "index": 83,
+      "char": "槽",
+      "start": 20.948,
+      "end": 21.129
+    },
+    {
+      "index": 84,
+      "char": "和",
+      "start": 21.163,
+      "end": 21.344
+    },
+    {
+      "index": 85,
+      "char": "长",
+      "start": 21.378,
+      "end": 21.559
+    },
+    {
+      "index": 86,
+      "char": "柄",
+      "start": 21.593,
+      "end": 21.774
+    },
+    {
+      "index": 87,
+      "char": "用",
+      "start": 21.988,
+      "end": 22.169
+    },
+    {
+      "index": 88,
+      "char": "来",
+      "start": 22.203,
+      "end": 22.384
+    },
+    {
+      "index": 89,
+      "char": "舀",
+      "start": 22.419,
+      "end": 22.599
+    },
+    {
+      "index": 90,
+      "char": "取",
+      "start": 22.634,
+      "end": 22.814
+    },
+    {
+      "index": 91,
+      "char": "东",
+      "start": 22.849,
+      "end": 23.029
+    },
+    {
+      "index": 92,
+      "char": "西",
+      "start": 23.064,
+      "end": 23.245
+    },
+    {
+      "index": 93,
+      "char": "的",
+      "start": 23.279,
+      "end": 23.46
+    },
+    {
+      "index": 94,
+      "char": "器",
+      "start": 23.494,
+      "end": 23.675
+    },
+    {
+      "index": 95,
+      "char": "具",
+      "start": 23.709,
+      "end": 23.89
+    },
+    {
+      "index": 96,
+      "char": "这",
+      "start": 24.264,
+      "end": 24.445
+    },
+    {
+      "index": 97,
+      "char": "是",
+      "start": 24.48,
+      "end": 24.66
+    },
+    {
+      "index": 98,
+      "char": "一",
+      "start": 24.695,
+      "end": 24.875
+    },
+    {
+      "index": 99,
+      "char": "幅",
+      "start": 24.91,
+      "end": 25.09
+    },
+    {
+      "index": 100,
+      "char": "帮",
+      "start": 25.125,
+      "end": 25.306
+    },
+    {
+      "index": 101,
+      "char": "助",
+      "start": 25.34,
+      "end": 25.521
+    },
+    {
+      "index": 102,
+      "char": "记",
+      "start": 25.555,
+      "end": 25.736
+    },
+    {
+      "index": 103,
+      "char": "笔",
+      "start": 25.77,
+      "end": 25.951
+    },
+    {
+      "index": 104,
+      "char": "画",
+      "start": 25.985,
+      "end": 26.166
+    },
+    {
+      "index": 105,
+      "char": "和",
+      "start": 26.2,
+      "end": 26.381
+    },
+    {
+      "index": 106,
+      "char": "位",
+      "start": 26.416,
+      "end": 26.596
+    },
+    {
+      "index": 107,
+      "char": "置",
+      "start": 26.631,
+      "end": 26.811
+    },
+    {
+      "index": 108,
+      "char": "的",
+      "start": 26.846,
+      "end": 27.027
+    },
+    {
+      "index": 109,
+      "char": "记",
+      "start": 27.061,
+      "end": 27.242
+    },
+    {
+      "index": 110,
+      "char": "忆",
+      "start": 27.276,
+      "end": 27.457
+    },
+    {
+      "index": 111,
+      "char": "画",
+      "start": 27.491,
+      "end": 27.672
+    },
+    {
+      "index": 112,
+      "char": "面",
+      "start": 27.706,
+      "end": 27.887
+    },
+    {
+      "index": 113,
+      "char": "不",
+      "start": 28.101,
+      "end": 28.282
+    },
+    {
+      "index": 114,
+      "char": "是",
+      "start": 28.317,
+      "end": 28.497
+    },
+    {
+      "index": 115,
+      "char": "完",
+      "start": 28.532,
+      "end": 28.712
+    },
+    {
+      "index": 116,
+      "char": "整",
+      "start": 28.747,
+      "end": 28.927
+    },
+    {
+      "index": 117,
+      "char": "字",
+      "start": 28.962,
+      "end": 29.143
+    },
+    {
+      "index": 118,
+      "char": "源",
+      "start": 29.177,
+      "end": 29.358
+    },
+    {
+      "index": 119,
+      "char": "最",
+      "start": 29.732,
+      "end": 29.913
+    },
+    {
+      "index": 120,
+      "char": "后",
+      "start": 29.947,
+      "end": 30.128
+    },
+    {
+      "index": 121,
+      "char": "再",
+      "start": 30.162,
+      "end": 30.343
+    },
+    {
+      "index": 122,
+      "char": "读",
+      "start": 30.377,
+      "end": 30.558
+    },
+    {
+      "index": 123,
+      "char": "一",
+      "start": 30.593,
+      "end": 30.773
+    },
+    {
+      "index": 124,
+      "char": "遍",
+      "start": 30.808,
+      "end": 30.988
+    },
+    {
+      "index": 125,
+      "char": "勺",
+      "start": 31.203,
+      "end": 31.384
+    },
+    {
+      "index": 126,
+      "char": "子",
+      "start": 31.418,
+      "end": 31.599
     }
   ],
-  "transcript": "勺，“勺子”的“勺”。它是右上包围结构。看图找部件，合成字形。再读：勺子。",
+  "transcript": "勺，“勺子”的“勺”，读sháo。它是右上包围结构，按顺序能看到“勹”和“丶”。从构字分工看，“勹”先提示意义类别，其余部件补足字形。看图时，弯曲长柄围成“勹”，凹槽里一滴汤形成“丶”，整把勺子自然长成“勺”。勺子是有小凹槽和长柄、用来舀取东西的器具。这是一幅帮助记笔画和位置的记忆画面，不是完整字源。最后再读一遍：勺子。",
   "voice_reference": "封",
   "timing_source": "punctuation-weighted-estimate",
-  "script_version": "child-first-v1",
-  "duration": 9.600181
+  "script_version": "child-first-v2",
+  "duration": 32.160181
 }

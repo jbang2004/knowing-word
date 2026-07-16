@@ -3,151 +3,769 @@
     {
       "index": 0,
       "char": "恩",
-      "start": 0.221,
-      "end": 0.495
+      "start": 0.295,
+      "end": 0.499
     },
     {
       "index": 1,
       "char": "恩",
-      "start": 0.727,
-      "end": 1.001
+      "start": 0.717,
+      "end": 0.921
     },
     {
       "index": 2,
       "char": "惠",
-      "start": 1.053,
-      "end": 1.327
+      "start": 0.96,
+      "end": 1.164
     },
     {
       "index": 3,
       "char": "的",
-      "start": 1.38,
-      "end": 1.654
+      "start": 1.203,
+      "end": 1.407
     },
     {
       "index": 4,
       "char": "恩",
-      "start": 1.706,
-      "end": 1.98
+      "start": 1.446,
+      "end": 1.65
     },
     {
       "index": 5,
-      "char": "它",
-      "start": 2.372,
-      "end": 2.646
+      "char": "读",
+      "start": 1.869,
+      "end": 2.073
     },
     {
       "index": 6,
-      "char": "是",
-      "start": 2.698,
-      "end": 2.972
+      "char": "ē",
+      "start": 2.112,
+      "end": 2.316
     },
     {
       "index": 7,
-      "char": "上",
-      "start": 3.024,
-      "end": 3.298
+      "char": "n",
+      "start": 2.354,
+      "end": 2.558
     },
     {
       "index": 8,
-      "char": "下",
-      "start": 3.35,
-      "end": 3.624
+      "char": "它",
+      "start": 2.937,
+      "end": 3.141
     },
     {
       "index": 9,
-      "char": "结",
-      "start": 3.676,
-      "end": 3.95
+      "char": "是",
+      "start": 3.18,
+      "end": 3.384
     },
     {
       "index": 10,
-      "char": "构",
-      "start": 4.003,
-      "end": 4.277
+      "char": "上",
+      "start": 3.423,
+      "end": 3.627
     },
     {
       "index": 11,
-      "char": "看",
-      "start": 4.669,
-      "end": 4.943
+      "char": "下",
+      "start": 3.666,
+      "end": 3.87
     },
     {
       "index": 12,
-      "char": "图",
-      "start": 4.995,
-      "end": 5.269
+      "char": "结",
+      "start": 3.909,
+      "end": 4.113
     },
     {
       "index": 13,
-      "char": "找",
-      "start": 5.321,
-      "end": 5.595
+      "char": "构",
+      "start": 4.151,
+      "end": 4.355
     },
     {
       "index": 14,
-      "char": "部",
-      "start": 5.647,
-      "end": 5.921
+      "char": "按",
+      "start": 4.574,
+      "end": 4.778
     },
     {
       "index": 15,
-      "char": "件",
-      "start": 5.973,
-      "end": 6.247
+      "char": "顺",
+      "start": 4.817,
+      "end": 5.021
     },
     {
       "index": 16,
-      "char": "合",
-      "start": 6.479,
-      "end": 6.753
+      "char": "序",
+      "start": 5.06,
+      "end": 5.264
     },
     {
       "index": 17,
-      "char": "成",
-      "start": 6.806,
-      "end": 7.08
+      "char": "能",
+      "start": 5.303,
+      "end": 5.507
     },
     {
       "index": 18,
-      "char": "字",
-      "start": 7.132,
-      "end": 7.406
+      "char": "看",
+      "start": 5.546,
+      "end": 5.75
     },
     {
       "index": 19,
-      "char": "形",
-      "start": 7.458,
-      "end": 7.732
+      "char": "到",
+      "start": 5.788,
+      "end": 5.992
     },
     {
       "index": 20,
-      "char": "再",
-      "start": 8.124,
-      "end": 8.398
+      "char": "因",
+      "start": 6.031,
+      "end": 6.235
     },
     {
       "index": 21,
-      "char": "读",
-      "start": 8.45,
-      "end": 8.724
+      "char": "和",
+      "start": 6.274,
+      "end": 6.478
     },
     {
       "index": 22,
-      "char": "恩",
-      "start": 8.956,
-      "end": 9.23
+      "char": "心",
+      "start": 6.517,
+      "end": 6.721
     },
     {
       "index": 23,
+      "char": "从",
+      "start": 7.1,
+      "end": 7.304
+    },
+    {
+      "index": 24,
+      "char": "构",
+      "start": 7.343,
+      "end": 7.547
+    },
+    {
+      "index": 25,
+      "char": "字",
+      "start": 7.585,
+      "end": 7.789
+    },
+    {
+      "index": 26,
+      "char": "分",
+      "start": 7.828,
+      "end": 8.032
+    },
+    {
+      "index": 27,
+      "char": "工",
+      "start": 8.071,
+      "end": 8.275
+    },
+    {
+      "index": 28,
+      "char": "看",
+      "start": 8.314,
+      "end": 8.518
+    },
+    {
+      "index": 29,
+      "char": "心",
+      "start": 8.737,
+      "end": 8.941
+    },
+    {
+      "index": 30,
+      "char": "提",
+      "start": 8.98,
+      "end": 9.184
+    },
+    {
+      "index": 31,
+      "char": "示",
+      "start": 9.222,
+      "end": 9.426
+    },
+    {
+      "index": 32,
+      "char": "意",
+      "start": 9.465,
+      "end": 9.669
+    },
+    {
+      "index": 33,
+      "char": "义",
+      "start": 9.708,
+      "end": 9.912
+    },
+    {
+      "index": 34,
+      "char": "类",
+      "start": 9.951,
+      "end": 10.155
+    },
+    {
+      "index": 35,
+      "char": "别",
+      "start": 10.194,
+      "end": 10.398
+    },
+    {
+      "index": 36,
+      "char": "因",
+      "start": 10.617,
+      "end": 10.821
+    },
+    {
+      "index": 37,
+      "char": "提",
+      "start": 10.86,
+      "end": 11.063
+    },
+    {
+      "index": 38,
+      "char": "供",
+      "start": 11.102,
+      "end": 11.306
+    },
+    {
+      "index": 39,
+      "char": "读",
+      "start": 11.345,
+      "end": 11.549
+    },
+    {
+      "index": 40,
+      "char": "音",
+      "start": 11.588,
+      "end": 11.792
+    },
+    {
+      "index": 41,
+      "char": "线",
+      "start": 11.831,
+      "end": 12.035
+    },
+    {
+      "index": 42,
+      "char": "索",
+      "start": 12.074,
+      "end": 12.278
+    },
+    {
+      "index": 43,
+      "char": "看",
+      "start": 12.657,
+      "end": 12.861
+    },
+    {
+      "index": 44,
+      "char": "图",
+      "start": 12.899,
+      "end": 13.103
+    },
+    {
+      "index": 45,
+      "char": "时",
+      "start": 13.142,
+      "end": 13.346
+    },
+    {
+      "index": 46,
+      "char": "上",
+      "start": 13.565,
+      "end": 13.769
+    },
+    {
+      "index": 47,
+      "char": "方",
+      "start": 13.808,
+      "end": 14.012
+    },
+    {
+      "index": 48,
+      "char": "一",
+      "start": 14.051,
+      "end": 14.255
+    },
+    {
+      "index": 49,
+      "char": "份",
+      "start": 14.294,
+      "end": 14.498
+    },
+    {
+      "index": 50,
+      "char": "被",
+      "start": 14.536,
+      "end": 14.74
+    },
+    {
+      "index": 51,
+      "char": "方",
+      "start": 14.779,
+      "end": 14.983
+    },
+    {
+      "index": 52,
+      "char": "框",
+      "start": 15.022,
+      "end": 15.226
+    },
+    {
+      "index": 53,
+      "char": "珍",
+      "start": 15.265,
+      "end": 15.469
+    },
+    {
+      "index": 54,
+      "char": "藏",
+      "start": 15.508,
+      "end": 15.712
+    },
+    {
+      "index": 55,
+      "char": "的",
+      "start": 15.751,
+      "end": 15.955
+    },
+    {
+      "index": 56,
+      "char": "帮",
+      "start": 15.993,
+      "end": 16.197
+    },
+    {
+      "index": 57,
+      "char": "助",
+      "start": 16.236,
+      "end": 16.44
+    },
+    {
+      "index": 58,
+      "char": "排",
+      "start": 16.479,
+      "end": 16.683
+    },
+    {
+      "index": 59,
+      "char": "成",
+      "start": 16.722,
+      "end": 16.926
+    },
+    {
+      "index": 60,
+      "char": "因",
+      "start": 16.965,
+      "end": 17.169
+    },
+    {
+      "index": 61,
+      "char": "下",
+      "start": 17.388,
+      "end": 17.592
+    },
+    {
+      "index": 62,
+      "char": "方",
+      "start": 17.63,
+      "end": 17.834
+    },
+    {
+      "index": 63,
+      "char": "一",
+      "start": 17.873,
+      "end": 18.077
+    },
+    {
+      "index": 64,
+      "char": "颗",
+      "start": 18.116,
+      "end": 18.32
+    },
+    {
+      "index": 65,
+      "char": "发",
+      "start": 18.359,
+      "end": 18.563
+    },
+    {
+      "index": 66,
+      "char": "亮",
+      "start": 18.602,
+      "end": 18.806
+    },
+    {
+      "index": 67,
+      "char": "的",
+      "start": 18.845,
+      "end": 19.049
+    },
+    {
+      "index": 68,
+      "char": "心",
+      "start": 19.087,
+      "end": 19.291
+    },
+    {
+      "index": 69,
+      "char": "长",
+      "start": 19.33,
+      "end": 19.534
+    },
+    {
+      "index": 70,
+      "char": "成",
+      "start": 19.573,
+      "end": 19.777
+    },
+    {
+      "index": 71,
+      "char": "心",
+      "start": 19.816,
+      "end": 20.02
+    },
+    {
+      "index": 72,
+      "char": "上",
+      "start": 20.239,
+      "end": 20.443
+    },
+    {
+      "index": 73,
+      "char": "下",
+      "start": 20.482,
+      "end": 20.686
+    },
+    {
+      "index": 74,
+      "char": "组",
+      "start": 20.724,
+      "end": 20.928
+    },
+    {
+      "index": 75,
+      "char": "成",
+      "start": 20.967,
+      "end": 21.171
+    },
+    {
+      "index": 76,
+      "char": "恩",
+      "start": 21.21,
+      "end": 21.414
+    },
+    {
+      "index": 77,
+      "char": "恩",
+      "start": 21.793,
+      "end": 21.997
+    },
+    {
+      "index": 78,
       "char": "惠",
-      "start": 9.282,
-      "end": 9.556
+      "start": 22.036,
+      "end": 22.24
+    },
+    {
+      "index": 79,
+      "char": "是",
+      "start": 22.279,
+      "end": 22.483
+    },
+    {
+      "index": 80,
+      "char": "别",
+      "start": 22.521,
+      "end": 22.725
+    },
+    {
+      "index": 81,
+      "char": "人",
+      "start": 22.764,
+      "end": 22.968
+    },
+    {
+      "index": 82,
+      "char": "给",
+      "start": 23.007,
+      "end": 23.211
+    },
+    {
+      "index": 83,
+      "char": "予",
+      "start": 23.25,
+      "end": 23.454
+    },
+    {
+      "index": 84,
+      "char": "的",
+      "start": 23.493,
+      "end": 23.697
+    },
+    {
+      "index": 85,
+      "char": "帮",
+      "start": 23.736,
+      "end": 23.94
+    },
+    {
+      "index": 86,
+      "char": "助",
+      "start": 23.978,
+      "end": 24.182
+    },
+    {
+      "index": 87,
+      "char": "和",
+      "start": 24.221,
+      "end": 24.425
+    },
+    {
+      "index": 88,
+      "char": "好",
+      "start": 24.464,
+      "end": 24.668
+    },
+    {
+      "index": 89,
+      "char": "处",
+      "start": 24.707,
+      "end": 24.911
+    },
+    {
+      "index": 90,
+      "char": "值",
+      "start": 25.13,
+      "end": 25.334
+    },
+    {
+      "index": 91,
+      "char": "得",
+      "start": 25.373,
+      "end": 25.577
+    },
+    {
+      "index": 92,
+      "char": "记",
+      "start": 25.615,
+      "end": 25.819
+    },
+    {
+      "index": 93,
+      "char": "在",
+      "start": 25.858,
+      "end": 26.062
+    },
+    {
+      "index": 94,
+      "char": "心",
+      "start": 26.101,
+      "end": 26.305
+    },
+    {
+      "index": 95,
+      "char": "里",
+      "start": 26.344,
+      "end": 26.548
+    },
+    {
+      "index": 96,
+      "char": "这",
+      "start": 26.927,
+      "end": 27.131
+    },
+    {
+      "index": 97,
+      "char": "是",
+      "start": 27.17,
+      "end": 27.374
+    },
+    {
+      "index": 98,
+      "char": "一",
+      "start": 27.413,
+      "end": 27.616
+    },
+    {
+      "index": 99,
+      "char": "幅",
+      "start": 27.655,
+      "end": 27.859
+    },
+    {
+      "index": 100,
+      "char": "帮",
+      "start": 27.898,
+      "end": 28.102
+    },
+    {
+      "index": 101,
+      "char": "助",
+      "start": 28.141,
+      "end": 28.345
+    },
+    {
+      "index": 102,
+      "char": "记",
+      "start": 28.384,
+      "end": 28.588
+    },
+    {
+      "index": 103,
+      "char": "笔",
+      "start": 28.627,
+      "end": 28.831
+    },
+    {
+      "index": 104,
+      "char": "画",
+      "start": 28.87,
+      "end": 29.074
+    },
+    {
+      "index": 105,
+      "char": "和",
+      "start": 29.112,
+      "end": 29.316
+    },
+    {
+      "index": 106,
+      "char": "位",
+      "start": 29.355,
+      "end": 29.559
+    },
+    {
+      "index": 107,
+      "char": "置",
+      "start": 29.598,
+      "end": 29.802
+    },
+    {
+      "index": 108,
+      "char": "的",
+      "start": 29.841,
+      "end": 30.045
+    },
+    {
+      "index": 109,
+      "char": "记",
+      "start": 30.084,
+      "end": 30.288
+    },
+    {
+      "index": 110,
+      "char": "忆",
+      "start": 30.327,
+      "end": 30.531
+    },
+    {
+      "index": 111,
+      "char": "画",
+      "start": 30.569,
+      "end": 30.773
+    },
+    {
+      "index": 112,
+      "char": "面",
+      "start": 30.812,
+      "end": 31.016
+    },
+    {
+      "index": 113,
+      "char": "不",
+      "start": 31.235,
+      "end": 31.439
+    },
+    {
+      "index": 114,
+      "char": "是",
+      "start": 31.478,
+      "end": 31.682
+    },
+    {
+      "index": 115,
+      "char": "完",
+      "start": 31.721,
+      "end": 31.925
+    },
+    {
+      "index": 116,
+      "char": "整",
+      "start": 31.964,
+      "end": 32.168
+    },
+    {
+      "index": 117,
+      "char": "字",
+      "start": 32.206,
+      "end": 32.41
+    },
+    {
+      "index": 118,
+      "char": "源",
+      "start": 32.449,
+      "end": 32.653
+    },
+    {
+      "index": 119,
+      "char": "最",
+      "start": 33.032,
+      "end": 33.236
+    },
+    {
+      "index": 120,
+      "char": "后",
+      "start": 33.275,
+      "end": 33.479
+    },
+    {
+      "index": 121,
+      "char": "再",
+      "start": 33.518,
+      "end": 33.722
+    },
+    {
+      "index": 122,
+      "char": "读",
+      "start": 33.761,
+      "end": 33.965
+    },
+    {
+      "index": 123,
+      "char": "一",
+      "start": 34.003,
+      "end": 34.207
+    },
+    {
+      "index": 124,
+      "char": "遍",
+      "start": 34.246,
+      "end": 34.45
+    },
+    {
+      "index": 125,
+      "char": "恩",
+      "start": 34.669,
+      "end": 34.873
+    },
+    {
+      "index": 126,
+      "char": "惠",
+      "start": 34.912,
+      "end": 35.116
     }
   ],
-  "transcript": "恩，“恩惠”的“恩”。它是上下结构。看图找部件，合成字形。再读：恩惠。",
+  "transcript": "恩，“恩惠”的“恩”，读ēn。它是上下结构，按顺序能看到“因”和“心”。从构字分工看，“心”提示意义类别，“因”提供读音线索。看图时，上方一份被方框珍藏的帮助排成“因”，下方一颗发亮的心长成“心”，上下组成“恩”。恩惠是别人给予的帮助和好处，值得记在心里。这是一幅帮助记笔画和位置的记忆画面，不是完整字源。最后再读一遍：恩惠。",
   "voice_reference": "封",
   "timing_source": "punctuation-weighted-estimate",
-  "script_version": "child-first-v1",
-  "duration": 10.080181
+  "script_version": "child-first-v2",
+  "duration": 35.680181
 }

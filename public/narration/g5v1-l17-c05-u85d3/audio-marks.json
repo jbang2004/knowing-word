@@ -3,151 +3,817 @@
     {
       "index": 0,
       "char": "藓",
-      "start": 0.189,
-      "end": 0.414
+      "start": 0.295,
+      "end": 0.499
     },
     {
       "index": 1,
       "char": "苔",
-      "start": 0.637,
-      "end": 0.862
+      "start": 0.717,
+      "end": 0.921
     },
     {
       "index": 2,
       "char": "藓",
-      "start": 0.905,
-      "end": 1.131
+      "start": 0.96,
+      "end": 1.164
     },
     {
       "index": 3,
       "char": "的",
-      "start": 1.174,
-      "end": 1.399
+      "start": 1.203,
+      "end": 1.407
     },
     {
       "index": 4,
       "char": "藓",
-      "start": 1.442,
-      "end": 1.667
+      "start": 1.446,
+      "end": 1.65
     },
     {
       "index": 5,
-      "char": "它",
-      "start": 2.05,
-      "end": 2.275
+      "char": "读",
+      "start": 1.869,
+      "end": 2.073
     },
     {
       "index": 6,
-      "char": "是",
-      "start": 2.318,
-      "end": 2.544
+      "char": "x",
+      "start": 2.111,
+      "end": 2.315
     },
     {
       "index": 7,
-      "char": "上",
-      "start": 2.587,
-      "end": 2.812
+      "char": "i",
+      "start": 2.354,
+      "end": 2.558
     },
     {
       "index": 8,
-      "char": "下",
-      "start": 2.855,
-      "end": 3.08
+      "char": "ǎ",
+      "start": 2.597,
+      "end": 2.801
     },
     {
       "index": 9,
-      "char": "结",
-      "start": 3.123,
-      "end": 3.348
+      "char": "n",
+      "start": 2.84,
+      "end": 3.044
     },
     {
       "index": 10,
-      "char": "构",
-      "start": 3.391,
-      "end": 3.617
+      "char": "它",
+      "start": 3.423,
+      "end": 3.627
     },
     {
       "index": 11,
-      "char": "看",
-      "start": 4,
-      "end": 4.225
+      "char": "是",
+      "start": 3.666,
+      "end": 3.87
     },
     {
       "index": 12,
-      "char": "图",
-      "start": 4.268,
-      "end": 4.493
+      "char": "上",
+      "start": 3.908,
+      "end": 4.112
     },
     {
       "index": 13,
-      "char": "找",
-      "start": 4.536,
-      "end": 4.761
+      "char": "下",
+      "start": 4.151,
+      "end": 4.355
     },
     {
       "index": 14,
-      "char": "部",
-      "start": 4.804,
-      "end": 5.03
+      "char": "结",
+      "start": 4.394,
+      "end": 4.598
     },
     {
       "index": 15,
-      "char": "件",
-      "start": 5.073,
-      "end": 5.298
+      "char": "构",
+      "start": 4.637,
+      "end": 4.841
     },
     {
       "index": 16,
-      "char": "合",
-      "start": 5.521,
-      "end": 5.746
+      "char": "按",
+      "start": 5.06,
+      "end": 5.264
     },
     {
       "index": 17,
-      "char": "成",
-      "start": 5.789,
-      "end": 6.014
+      "char": "顺",
+      "start": 5.302,
+      "end": 5.506
     },
     {
       "index": 18,
-      "char": "字",
-      "start": 6.057,
-      "end": 6.283
+      "char": "序",
+      "start": 5.545,
+      "end": 5.749
     },
     {
       "index": 19,
-      "char": "形",
-      "start": 6.325,
-      "end": 6.551
+      "char": "能",
+      "start": 5.788,
+      "end": 5.992
     },
     {
       "index": 20,
-      "char": "再",
-      "start": 6.934,
-      "end": 7.159
+      "char": "看",
+      "start": 6.031,
+      "end": 6.235
     },
     {
       "index": 21,
-      "char": "读",
-      "start": 7.202,
-      "end": 7.427
+      "char": "到",
+      "start": 6.274,
+      "end": 6.478
     },
     {
       "index": 22,
-      "char": "苔",
-      "start": 7.65,
-      "end": 7.876
+      "char": "艹",
+      "start": 6.517,
+      "end": 6.72
     },
     {
       "index": 23,
+      "char": "和",
+      "start": 6.759,
+      "end": 6.963
+    },
+    {
+      "index": 24,
+      "char": "鲜",
+      "start": 7.002,
+      "end": 7.206
+    },
+    {
+      "index": 25,
+      "char": "从",
+      "start": 7.585,
+      "end": 7.789
+    },
+    {
+      "index": 26,
+      "char": "构",
+      "start": 7.828,
+      "end": 8.032
+    },
+    {
+      "index": 27,
+      "char": "字",
+      "start": 8.071,
+      "end": 8.275
+    },
+    {
+      "index": 28,
+      "char": "分",
+      "start": 8.313,
+      "end": 8.517
+    },
+    {
+      "index": 29,
+      "char": "工",
+      "start": 8.556,
+      "end": 8.76
+    },
+    {
+      "index": 30,
+      "char": "看",
+      "start": 8.799,
+      "end": 9.003
+    },
+    {
+      "index": 31,
+      "char": "艹",
+      "start": 9.222,
+      "end": 9.426
+    },
+    {
+      "index": 32,
+      "char": "提",
+      "start": 9.465,
+      "end": 9.669
+    },
+    {
+      "index": 33,
+      "char": "示",
+      "start": 9.708,
+      "end": 9.911
+    },
+    {
+      "index": 34,
+      "char": "意",
+      "start": 9.95,
+      "end": 10.154
+    },
+    {
+      "index": 35,
+      "char": "义",
+      "start": 10.193,
+      "end": 10.397
+    },
+    {
+      "index": 36,
+      "char": "类",
+      "start": 10.436,
+      "end": 10.64
+    },
+    {
+      "index": 37,
+      "char": "别",
+      "start": 10.679,
+      "end": 10.883
+    },
+    {
+      "index": 38,
+      "char": "鲜",
+      "start": 11.102,
+      "end": 11.306
+    },
+    {
+      "index": 39,
+      "char": "提",
+      "start": 11.344,
+      "end": 11.548
+    },
+    {
+      "index": 40,
+      "char": "供",
+      "start": 11.587,
+      "end": 11.791
+    },
+    {
+      "index": 41,
+      "char": "读",
+      "start": 11.83,
+      "end": 12.034
+    },
+    {
+      "index": 42,
+      "char": "音",
+      "start": 12.073,
+      "end": 12.277
+    },
+    {
+      "index": 43,
+      "char": "线",
+      "start": 12.316,
+      "end": 12.52
+    },
+    {
+      "index": 44,
+      "char": "索",
+      "start": 12.558,
+      "end": 12.762
+    },
+    {
+      "index": 45,
+      "char": "看",
+      "start": 13.141,
+      "end": 13.345
+    },
+    {
+      "index": 46,
+      "char": "图",
+      "start": 13.384,
+      "end": 13.588
+    },
+    {
+      "index": 47,
+      "char": "时",
+      "start": 13.627,
+      "end": 13.831
+    },
+    {
+      "index": 48,
+      "char": "上",
+      "start": 14.05,
+      "end": 14.254
+    },
+    {
+      "index": 49,
+      "char": "方",
+      "start": 14.293,
+      "end": 14.497
+    },
+    {
+      "index": 50,
+      "char": "细",
+      "start": 14.535,
+      "end": 14.739
+    },
+    {
+      "index": 51,
+      "char": "密",
+      "start": 14.778,
+      "end": 14.982
+    },
+    {
+      "index": 52,
+      "char": "嫩",
+      "start": 15.021,
+      "end": 15.225
+    },
+    {
+      "index": 53,
+      "char": "芽",
+      "start": 15.264,
+      "end": 15.468
+    },
+    {
+      "index": 54,
+      "char": "形",
+      "start": 15.507,
+      "end": 15.711
+    },
+    {
+      "index": 55,
+      "char": "成",
+      "start": 15.749,
+      "end": 15.953
+    },
+    {
+      "index": 56,
+      "char": "艹",
+      "start": 15.992,
+      "end": 16.196
+    },
+    {
+      "index": 57,
+      "char": "下",
+      "start": 16.415,
+      "end": 16.619
+    },
+    {
+      "index": 58,
+      "char": "方",
+      "start": 16.658,
+      "end": 16.862
+    },
+    {
+      "index": 59,
+      "char": "小",
+      "start": 16.901,
+      "end": 17.105
+    },
+    {
+      "index": 60,
+      "char": "鱼",
+      "start": 17.144,
+      "end": 17.348
+    },
+    {
+      "index": 61,
+      "char": "形",
+      "start": 17.386,
+      "end": 17.59
+    },
+    {
+      "index": 62,
+      "char": "水",
+      "start": 17.629,
+      "end": 17.833
+    },
+    {
+      "index": 63,
+      "char": "痕",
+      "start": 17.872,
+      "end": 18.076
+    },
+    {
+      "index": 64,
+      "char": "和",
+      "start": 18.115,
+      "end": 18.319
+    },
+    {
+      "index": 65,
+      "char": "羊",
+      "start": 18.358,
+      "end": 18.562
+    },
+    {
+      "index": 66,
+      "char": "角",
+      "start": 18.6,
+      "end": 18.804
+    },
+    {
+      "index": 67,
+      "char": "状",
+      "start": 18.843,
+      "end": 19.047
+    },
+    {
+      "index": 68,
+      "char": "叶",
+      "start": 19.086,
+      "end": 19.29
+    },
+    {
+      "index": 69,
+      "char": "丛",
+      "start": 19.329,
+      "end": 19.533
+    },
+    {
+      "index": 70,
+      "char": "沿",
+      "start": 19.572,
+      "end": 19.776
+    },
+    {
+      "index": 71,
+      "char": "鲜",
+      "start": 19.815,
+      "end": 20.018
+    },
+    {
+      "index": 72,
+      "char": "排",
+      "start": 20.057,
+      "end": 20.261
+    },
+    {
+      "index": 73,
+      "char": "开",
+      "start": 20.3,
+      "end": 20.504
+    },
+    {
+      "index": 74,
+      "char": "组",
+      "start": 20.723,
+      "end": 20.927
+    },
+    {
+      "index": 75,
+      "char": "成",
+      "start": 20.966,
+      "end": 21.17
+    },
+    {
+      "index": 76,
+      "char": "湿",
+      "start": 21.209,
+      "end": 21.413
+    },
+    {
+      "index": 77,
+      "char": "润",
+      "start": 21.451,
+      "end": 21.655
+    },
+    {
+      "index": 78,
+      "char": "青",
+      "start": 21.694,
+      "end": 21.898
+    },
+    {
+      "index": 79,
+      "char": "绿",
+      "start": 21.937,
+      "end": 22.141
+    },
+    {
+      "index": 80,
+      "char": "的",
+      "start": 22.18,
+      "end": 22.384
+    },
+    {
+      "index": 81,
       "char": "藓",
-      "start": 7.918,
-      "end": 8.144
+      "start": 22.423,
+      "end": 22.627
+    },
+    {
+      "index": 82,
+      "char": "苔",
+      "start": 23.005,
+      "end": 23.209
+    },
+    {
+      "index": 83,
+      "char": "藓",
+      "start": 23.248,
+      "end": 23.452
+    },
+    {
+      "index": 84,
+      "char": "是",
+      "start": 23.491,
+      "end": 23.695
+    },
+    {
+      "index": 85,
+      "char": "一",
+      "start": 23.734,
+      "end": 23.938
+    },
+    {
+      "index": 86,
+      "char": "类",
+      "start": 23.977,
+      "end": 24.181
+    },
+    {
+      "index": 87,
+      "char": "贴",
+      "start": 24.22,
+      "end": 24.424
+    },
+    {
+      "index": 88,
+      "char": "着",
+      "start": 24.462,
+      "end": 24.666
+    },
+    {
+      "index": 89,
+      "char": "潮",
+      "start": 24.705,
+      "end": 24.909
+    },
+    {
+      "index": 90,
+      "char": "湿",
+      "start": 24.948,
+      "end": 25.152
+    },
+    {
+      "index": 91,
+      "char": "地",
+      "start": 25.191,
+      "end": 25.395
+    },
+    {
+      "index": 92,
+      "char": "面",
+      "start": 25.434,
+      "end": 25.638
+    },
+    {
+      "index": 93,
+      "char": "或",
+      "start": 25.676,
+      "end": 25.88
+    },
+    {
+      "index": 94,
+      "char": "树",
+      "start": 25.919,
+      "end": 26.123
+    },
+    {
+      "index": 95,
+      "char": "皮",
+      "start": 26.162,
+      "end": 26.366
+    },
+    {
+      "index": 96,
+      "char": "生",
+      "start": 26.405,
+      "end": 26.609
+    },
+    {
+      "index": 97,
+      "char": "长",
+      "start": 26.648,
+      "end": 26.852
+    },
+    {
+      "index": 98,
+      "char": "的",
+      "start": 26.891,
+      "end": 27.095
+    },
+    {
+      "index": 99,
+      "char": "绿",
+      "start": 27.133,
+      "end": 27.337
+    },
+    {
+      "index": 100,
+      "char": "色",
+      "start": 27.376,
+      "end": 27.58
+    },
+    {
+      "index": 101,
+      "char": "小",
+      "start": 27.619,
+      "end": 27.823
+    },
+    {
+      "index": 102,
+      "char": "植",
+      "start": 27.862,
+      "end": 28.066
+    },
+    {
+      "index": 103,
+      "char": "物",
+      "start": 28.105,
+      "end": 28.309
+    },
+    {
+      "index": 104,
+      "char": "这",
+      "start": 28.687,
+      "end": 28.891
+    },
+    {
+      "index": 105,
+      "char": "是",
+      "start": 28.93,
+      "end": 29.134
+    },
+    {
+      "index": 106,
+      "char": "一",
+      "start": 29.173,
+      "end": 29.377
+    },
+    {
+      "index": 107,
+      "char": "幅",
+      "start": 29.416,
+      "end": 29.62
+    },
+    {
+      "index": 108,
+      "char": "帮",
+      "start": 29.659,
+      "end": 29.863
+    },
+    {
+      "index": 109,
+      "char": "助",
+      "start": 29.902,
+      "end": 30.105
+    },
+    {
+      "index": 110,
+      "char": "记",
+      "start": 30.144,
+      "end": 30.348
+    },
+    {
+      "index": 111,
+      "char": "笔",
+      "start": 30.387,
+      "end": 30.591
+    },
+    {
+      "index": 112,
+      "char": "画",
+      "start": 30.63,
+      "end": 30.834
+    },
+    {
+      "index": 113,
+      "char": "和",
+      "start": 30.873,
+      "end": 31.077
+    },
+    {
+      "index": 114,
+      "char": "位",
+      "start": 31.116,
+      "end": 31.32
+    },
+    {
+      "index": 115,
+      "char": "置",
+      "start": 31.358,
+      "end": 31.562
+    },
+    {
+      "index": 116,
+      "char": "的",
+      "start": 31.601,
+      "end": 31.805
+    },
+    {
+      "index": 117,
+      "char": "记",
+      "start": 31.844,
+      "end": 32.048
+    },
+    {
+      "index": 118,
+      "char": "忆",
+      "start": 32.087,
+      "end": 32.291
+    },
+    {
+      "index": 119,
+      "char": "画",
+      "start": 32.33,
+      "end": 32.534
+    },
+    {
+      "index": 120,
+      "char": "面",
+      "start": 32.573,
+      "end": 32.776
+    },
+    {
+      "index": 121,
+      "char": "不",
+      "start": 32.995,
+      "end": 33.199
+    },
+    {
+      "index": 122,
+      "char": "是",
+      "start": 33.238,
+      "end": 33.442
+    },
+    {
+      "index": 123,
+      "char": "完",
+      "start": 33.481,
+      "end": 33.685
+    },
+    {
+      "index": 124,
+      "char": "整",
+      "start": 33.724,
+      "end": 33.928
+    },
+    {
+      "index": 125,
+      "char": "字",
+      "start": 33.967,
+      "end": 34.171
+    },
+    {
+      "index": 126,
+      "char": "源",
+      "start": 34.209,
+      "end": 34.413
+    },
+    {
+      "index": 127,
+      "char": "最",
+      "start": 34.792,
+      "end": 34.996
+    },
+    {
+      "index": 128,
+      "char": "后",
+      "start": 35.035,
+      "end": 35.239
+    },
+    {
+      "index": 129,
+      "char": "再",
+      "start": 35.278,
+      "end": 35.482
+    },
+    {
+      "index": 130,
+      "char": "读",
+      "start": 35.521,
+      "end": 35.725
+    },
+    {
+      "index": 131,
+      "char": "一",
+      "start": 35.763,
+      "end": 35.967
+    },
+    {
+      "index": 132,
+      "char": "遍",
+      "start": 36.006,
+      "end": 36.21
+    },
+    {
+      "index": 133,
+      "char": "苔",
+      "start": 36.429,
+      "end": 36.633
+    },
+    {
+      "index": 134,
+      "char": "藓",
+      "start": 36.672,
+      "end": 36.876
     }
   ],
-  "transcript": "藓，“苔藓”的“藓”。它是上下结构。看图找部件，合成字形。再读：苔藓。",
+  "transcript": "藓，“苔藓”的“藓”，读xiǎn。它是上下结构，按顺序能看到“艹”和“鲜”。从构字分工看，“艹”提示意义类别，“鲜”提供读音线索。看图时，上方细密嫩芽形成“艹”，下方小鱼形水痕和羊角状叶丛沿“鲜”排开，组成湿润青绿的“藓”。苔藓是一类贴着潮湿地面或树皮生长的绿色小植物。这是一幅帮助记笔画和位置的记忆画面，不是完整字源。最后再读一遍：苔藓。",
   "voice_reference": "封",
   "timing_source": "punctuation-weighted-estimate",
-  "script_version": "child-first-v1",
-  "duration": 8.640181
+  "script_version": "child-first-v2",
+  "duration": 37.440181
 }

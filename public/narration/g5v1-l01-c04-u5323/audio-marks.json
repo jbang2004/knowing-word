@@ -3,163 +3,751 @@
     {
       "index": 0,
       "char": "匣",
-      "start": 0.22,
-      "end": 0.473
+      "start": 0.291,
+      "end": 0.443
     },
     {
       "index": 1,
       "char": "匣",
-      "start": 0.701,
-      "end": 0.954
+      "start": 0.652,
+      "end": 0.805
     },
     {
       "index": 2,
       "char": "子",
-      "start": 1.002,
-      "end": 1.255
+      "start": 0.834,
+      "end": 0.986
     },
     {
       "index": 3,
       "char": "的",
-      "start": 1.303,
-      "end": 1.556
+      "start": 1.015,
+      "end": 1.168
     },
     {
       "index": 4,
       "char": "匣",
-      "start": 1.604,
-      "end": 1.857
+      "start": 1.197,
+      "end": 1.349
     },
     {
       "index": 5,
-      "char": "它",
-      "start": 2.245,
-      "end": 2.498
+      "char": "读",
+      "start": 1.558,
+      "end": 1.711
     },
     {
       "index": 6,
-      "char": "是",
-      "start": 2.546,
-      "end": 2.799
+      "char": "x",
+      "start": 1.74,
+      "end": 1.892
     },
     {
       "index": 7,
-      "char": "左",
-      "start": 2.847,
-      "end": 3.1
+      "char": "i",
+      "start": 1.921,
+      "end": 2.073
     },
     {
       "index": 8,
-      "char": "三",
-      "start": 3.148,
-      "end": 3.401
+      "char": "á",
+      "start": 2.103,
+      "end": 2.255
     },
     {
       "index": 9,
-      "char": "包",
-      "start": 3.449,
-      "end": 3.702
+      "char": "它",
+      "start": 2.624,
+      "end": 2.776
     },
     {
       "index": 10,
-      "char": "围",
-      "start": 3.75,
-      "end": 4.003
+      "char": "是",
+      "start": 2.805,
+      "end": 2.958
     },
     {
       "index": 11,
-      "char": "结",
-      "start": 4.051,
-      "end": 4.304
+      "char": "左",
+      "start": 2.987,
+      "end": 3.139
     },
     {
       "index": 12,
-      "char": "构",
-      "start": 4.352,
-      "end": 4.605
+      "char": "三",
+      "start": 3.168,
+      "end": 3.321
     },
     {
       "index": 13,
-      "char": "看",
-      "start": 4.993,
-      "end": 5.246
+      "char": "包",
+      "start": 3.35,
+      "end": 3.502
     },
     {
       "index": 14,
-      "char": "图",
-      "start": 5.294,
-      "end": 5.547
+      "char": "围",
+      "start": 3.531,
+      "end": 3.684
     },
     {
       "index": 15,
-      "char": "找",
-      "start": 5.595,
-      "end": 5.848
+      "char": "结",
+      "start": 3.713,
+      "end": 3.865
     },
     {
       "index": 16,
-      "char": "部",
-      "start": 5.897,
-      "end": 6.149
+      "char": "构",
+      "start": 3.894,
+      "end": 4.047
     },
     {
       "index": 17,
-      "char": "件",
-      "start": 6.198,
-      "end": 6.45
+      "char": "按",
+      "start": 4.256,
+      "end": 4.408
     },
     {
       "index": 18,
-      "char": "合",
-      "start": 6.679,
-      "end": 6.932
+      "char": "顺",
+      "start": 4.437,
+      "end": 4.589
     },
     {
       "index": 19,
-      "char": "成",
-      "start": 6.98,
-      "end": 7.233
+      "char": "序",
+      "start": 4.618,
+      "end": 4.771
     },
     {
       "index": 20,
-      "char": "字",
-      "start": 7.281,
-      "end": 7.534
+      "char": "能",
+      "start": 4.8,
+      "end": 4.952
     },
     {
       "index": 21,
-      "char": "形",
-      "start": 7.582,
-      "end": 7.835
+      "char": "看",
+      "start": 4.981,
+      "end": 5.134
     },
     {
       "index": 22,
-      "char": "再",
-      "start": 8.223,
-      "end": 8.476
+      "char": "到",
+      "start": 5.163,
+      "end": 5.315
     },
     {
       "index": 23,
-      "char": "读",
-      "start": 8.524,
-      "end": 8.777
+      "char": "匚",
+      "start": 5.344,
+      "end": 5.497
     },
     {
       "index": 24,
-      "char": "匣",
-      "start": 9.005,
-      "end": 9.258
+      "char": "和",
+      "start": 5.526,
+      "end": 5.678
     },
     {
       "index": 25,
+      "char": "甲",
+      "start": 5.707,
+      "end": 5.86
+    },
+    {
+      "index": 26,
+      "char": "从",
+      "start": 6.229,
+      "end": 6.381
+    },
+    {
+      "index": 27,
+      "char": "构",
+      "start": 6.41,
+      "end": 6.563
+    },
+    {
+      "index": 28,
+      "char": "字",
+      "start": 6.592,
+      "end": 6.744
+    },
+    {
+      "index": 29,
+      "char": "分",
+      "start": 6.773,
+      "end": 6.925
+    },
+    {
+      "index": 30,
+      "char": "工",
+      "start": 6.954,
+      "end": 7.107
+    },
+    {
+      "index": 31,
+      "char": "看",
+      "start": 7.136,
+      "end": 7.288
+    },
+    {
+      "index": 32,
+      "char": "匚",
+      "start": 7.497,
+      "end": 7.65
+    },
+    {
+      "index": 33,
+      "char": "提",
+      "start": 7.679,
+      "end": 7.831
+    },
+    {
+      "index": 34,
+      "char": "示",
+      "start": 7.86,
+      "end": 8.013
+    },
+    {
+      "index": 35,
+      "char": "意",
+      "start": 8.042,
+      "end": 8.194
+    },
+    {
+      "index": 36,
+      "char": "义",
+      "start": 8.223,
+      "end": 8.376
+    },
+    {
+      "index": 37,
+      "char": "类",
+      "start": 8.405,
+      "end": 8.557
+    },
+    {
+      "index": 38,
+      "char": "别",
+      "start": 8.586,
+      "end": 8.739
+    },
+    {
+      "index": 39,
+      "char": "甲",
+      "start": 8.948,
+      "end": 9.1
+    },
+    {
+      "index": 40,
+      "char": "提",
+      "start": 9.129,
+      "end": 9.281
+    },
+    {
+      "index": 41,
+      "char": "供",
+      "start": 9.31,
+      "end": 9.463
+    },
+    {
+      "index": 42,
+      "char": "读",
+      "start": 9.492,
+      "end": 9.644
+    },
+    {
+      "index": 43,
+      "char": "音",
+      "start": 9.673,
+      "end": 9.826
+    },
+    {
+      "index": 44,
+      "char": "线",
+      "start": 9.855,
+      "end": 10.007
+    },
+    {
+      "index": 45,
+      "char": "索",
+      "start": 10.036,
+      "end": 10.189
+    },
+    {
+      "index": 46,
+      "char": "看",
+      "start": 10.558,
+      "end": 10.71
+    },
+    {
+      "index": 47,
+      "char": "图",
+      "start": 10.739,
+      "end": 10.892
+    },
+    {
+      "index": 48,
+      "char": "时",
+      "start": 10.921,
+      "end": 11.073
+    },
+    {
+      "index": 49,
+      "char": "木",
+      "start": 11.282,
+      "end": 11.435
+    },
+    {
+      "index": 50,
+      "char": "盒",
+      "start": 11.464,
+      "end": 11.616
+    },
+    {
+      "index": 51,
+      "char": "的",
+      "start": 11.645,
+      "end": 11.797
+    },
+    {
+      "index": 52,
+      "char": "左",
+      "start": 11.826,
+      "end": 11.979
+    },
+    {
+      "index": 53,
+      "char": "壁",
+      "start": 12.008,
+      "end": 12.16
+    },
+    {
+      "index": 54,
+      "char": "顶",
+      "start": 12.369,
+      "end": 12.522
+    },
+    {
+      "index": 55,
+      "char": "盖",
+      "start": 12.551,
+      "end": 12.703
+    },
+    {
+      "index": 56,
+      "char": "和",
+      "start": 12.732,
+      "end": 12.885
+    },
+    {
+      "index": 57,
+      "char": "底",
+      "start": 12.914,
+      "end": 13.066
+    },
+    {
+      "index": 58,
+      "char": "板",
+      "start": 13.095,
+      "end": 13.248
+    },
+    {
+      "index": 59,
+      "char": "围",
+      "start": 13.277,
+      "end": 13.429
+    },
+    {
+      "index": 60,
+      "char": "成",
+      "start": 13.458,
+      "end": 13.61
+    },
+    {
+      "index": 61,
+      "char": "匚",
+      "start": 13.64,
+      "end": 13.792
+    },
+    {
+      "index": 62,
+      "char": "盒",
+      "start": 14.001,
+      "end": 14.153
+    },
+    {
+      "index": 63,
+      "char": "内",
+      "start": 14.182,
+      "end": 14.335
+    },
+    {
+      "index": 64,
+      "char": "一",
+      "start": 14.364,
+      "end": 14.516
+    },
+    {
+      "index": 65,
+      "char": "格",
+      "start": 14.545,
+      "end": 14.698
+    },
+    {
+      "index": 66,
+      "char": "格",
+      "start": 14.727,
+      "end": 14.879
+    },
+    {
+      "index": 67,
+      "char": "收",
+      "start": 14.908,
+      "end": 15.061
+    },
+    {
+      "index": 68,
+      "char": "藏",
+      "start": 15.09,
+      "end": 15.242
+    },
+    {
+      "index": 69,
+      "char": "槽",
+      "start": 15.271,
+      "end": 15.424
+    },
+    {
+      "index": 70,
+      "char": "排",
+      "start": 15.453,
+      "end": 15.605
+    },
+    {
+      "index": 71,
+      "char": "成",
+      "start": 15.634,
+      "end": 15.786
+    },
+    {
+      "index": 72,
+      "char": "甲",
+      "start": 15.816,
+      "end": 15.968
+    },
+    {
+      "index": 73,
+      "char": "共",
+      "start": 16.177,
+      "end": 16.329
+    },
+    {
+      "index": 74,
+      "char": "同",
+      "start": 16.358,
+      "end": 16.511
+    },
+    {
+      "index": 75,
+      "char": "长",
+      "start": 16.54,
+      "end": 16.692
+    },
+    {
+      "index": 76,
+      "char": "成",
+      "start": 16.721,
+      "end": 16.874
+    },
+    {
+      "index": 77,
+      "char": "匣",
+      "start": 16.903,
+      "end": 17.055
+    },
+    {
+      "index": 78,
+      "char": "匣",
+      "start": 17.424,
+      "end": 17.577
+    },
+    {
+      "index": 79,
       "char": "子",
-      "start": 9.306,
-      "end": 9.559
+      "start": 17.606,
+      "end": 17.758
+    },
+    {
+      "index": 80,
+      "char": "是",
+      "start": 17.787,
+      "end": 17.94
+    },
+    {
+      "index": 81,
+      "char": "有",
+      "start": 17.969,
+      "end": 18.121
+    },
+    {
+      "index": 82,
+      "char": "盖",
+      "start": 18.15,
+      "end": 18.302
+    },
+    {
+      "index": 83,
+      "char": "用",
+      "start": 18.511,
+      "end": 18.664
+    },
+    {
+      "index": 84,
+      "char": "来",
+      "start": 18.693,
+      "end": 18.845
+    },
+    {
+      "index": 85,
+      "char": "收",
+      "start": 18.874,
+      "end": 19.027
+    },
+    {
+      "index": 86,
+      "char": "藏",
+      "start": 19.056,
+      "end": 19.208
+    },
+    {
+      "index": 87,
+      "char": "小",
+      "start": 19.237,
+      "end": 19.39
+    },
+    {
+      "index": 88,
+      "char": "物",
+      "start": 19.419,
+      "end": 19.571
+    },
+    {
+      "index": 89,
+      "char": "件",
+      "start": 19.6,
+      "end": 19.753
+    },
+    {
+      "index": 90,
+      "char": "的",
+      "start": 19.782,
+      "end": 19.934
+    },
+    {
+      "index": 91,
+      "char": "盒",
+      "start": 19.963,
+      "end": 20.116
+    },
+    {
+      "index": 92,
+      "char": "子",
+      "start": 20.145,
+      "end": 20.297
+    },
+    {
+      "index": 93,
+      "char": "这",
+      "start": 20.666,
+      "end": 20.818
+    },
+    {
+      "index": 94,
+      "char": "是",
+      "start": 20.847,
+      "end": 21
+    },
+    {
+      "index": 95,
+      "char": "一",
+      "start": 21.029,
+      "end": 21.181
+    },
+    {
+      "index": 96,
+      "char": "幅",
+      "start": 21.21,
+      "end": 21.363
+    },
+    {
+      "index": 97,
+      "char": "帮",
+      "start": 21.392,
+      "end": 21.544
+    },
+    {
+      "index": 98,
+      "char": "助",
+      "start": 21.573,
+      "end": 21.726
+    },
+    {
+      "index": 99,
+      "char": "记",
+      "start": 21.755,
+      "end": 21.907
+    },
+    {
+      "index": 100,
+      "char": "笔",
+      "start": 21.936,
+      "end": 22.089
+    },
+    {
+      "index": 101,
+      "char": "画",
+      "start": 22.118,
+      "end": 22.27
+    },
+    {
+      "index": 102,
+      "char": "和",
+      "start": 22.299,
+      "end": 22.452
+    },
+    {
+      "index": 103,
+      "char": "位",
+      "start": 22.481,
+      "end": 22.633
+    },
+    {
+      "index": 104,
+      "char": "置",
+      "start": 22.662,
+      "end": 22.814
+    },
+    {
+      "index": 105,
+      "char": "的",
+      "start": 22.843,
+      "end": 22.996
+    },
+    {
+      "index": 106,
+      "char": "记",
+      "start": 23.025,
+      "end": 23.177
+    },
+    {
+      "index": 107,
+      "char": "忆",
+      "start": 23.206,
+      "end": 23.359
+    },
+    {
+      "index": 108,
+      "char": "画",
+      "start": 23.388,
+      "end": 23.54
+    },
+    {
+      "index": 109,
+      "char": "面",
+      "start": 23.569,
+      "end": 23.722
+    },
+    {
+      "index": 110,
+      "char": "不",
+      "start": 23.931,
+      "end": 24.083
+    },
+    {
+      "index": 111,
+      "char": "是",
+      "start": 24.112,
+      "end": 24.265
+    },
+    {
+      "index": 112,
+      "char": "完",
+      "start": 24.294,
+      "end": 24.446
+    },
+    {
+      "index": 113,
+      "char": "整",
+      "start": 24.475,
+      "end": 24.628
+    },
+    {
+      "index": 114,
+      "char": "字",
+      "start": 24.657,
+      "end": 24.809
+    },
+    {
+      "index": 115,
+      "char": "源",
+      "start": 24.838,
+      "end": 24.99
+    },
+    {
+      "index": 116,
+      "char": "最",
+      "start": 25.359,
+      "end": 25.512
+    },
+    {
+      "index": 117,
+      "char": "后",
+      "start": 25.541,
+      "end": 25.693
+    },
+    {
+      "index": 118,
+      "char": "再",
+      "start": 25.722,
+      "end": 25.875
+    },
+    {
+      "index": 119,
+      "char": "读",
+      "start": 25.904,
+      "end": 26.056
+    },
+    {
+      "index": 120,
+      "char": "一",
+      "start": 26.085,
+      "end": 26.238
+    },
+    {
+      "index": 121,
+      "char": "遍",
+      "start": 26.267,
+      "end": 26.419
+    },
+    {
+      "index": 122,
+      "char": "匣",
+      "start": 26.628,
+      "end": 26.781
+    },
+    {
+      "index": 123,
+      "char": "子",
+      "start": 26.81,
+      "end": 26.962
     }
   ],
-  "transcript": "匣，“匣子”的“匣”。它是左三包围结构。看图找部件，合成字形。再读：匣子。",
+  "transcript": "匣，“匣子”的“匣”，读xiá。它是左三包围结构，按顺序能看到“匚”和“甲”。从构字分工看，“匚”提示意义类别，“甲”提供读音线索。看图时，木盒的左壁、顶盖和底板围成“匚”，盒内一格格收藏槽排成“甲”，共同长成“匣”。匣子是有盖、用来收藏小物件的盒子。这是一幅帮助记笔画和位置的记忆画面，不是完整字源。最后再读一遍：匣子。",
   "voice_reference": "封",
   "timing_source": "punctuation-weighted-estimate",
-  "script_version": "child-first-v1",
-  "duration": 10.080181
+  "script_version": "child-first-v2",
+  "duration": 27.520181
 }

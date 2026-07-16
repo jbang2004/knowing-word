@@ -3,151 +3,781 @@
     {
       "index": 0,
       "char": "脊",
-      "start": 0.171,
-      "end": 0.369
+      "start": 0.292,
+      "end": 0.465
     },
     {
       "index": 1,
       "char": "脊",
-      "start": 0.587,
-      "end": 0.785
+      "start": 0.678,
+      "end": 0.851
     },
     {
       "index": 2,
       "char": "背",
-      "start": 0.823,
-      "end": 1.021
+      "start": 0.884,
+      "end": 1.058
     },
     {
       "index": 3,
       "char": "的",
-      "start": 1.059,
-      "end": 1.257
+      "start": 1.091,
+      "end": 1.264
     },
     {
       "index": 4,
       "char": "脊",
-      "start": 1.295,
-      "end": 1.494
+      "start": 1.297,
+      "end": 1.47
     },
     {
       "index": 5,
-      "char": "它",
-      "start": 1.871,
-      "end": 2.07
+      "char": "读",
+      "start": 1.683,
+      "end": 1.856
     },
     {
       "index": 6,
-      "char": "是",
-      "start": 2.107,
-      "end": 2.306
+      "char": "j",
+      "start": 1.889,
+      "end": 2.062
     },
     {
       "index": 7,
-      "char": "上",
-      "start": 2.343,
-      "end": 2.542
+      "char": "ǐ",
+      "start": 2.095,
+      "end": 2.268
     },
     {
       "index": 8,
-      "char": "下",
-      "start": 2.58,
-      "end": 2.778
+      "char": "它",
+      "start": 2.641,
+      "end": 2.814
     },
     {
       "index": 9,
-      "char": "结",
-      "start": 2.816,
-      "end": 3.014
+      "char": "是",
+      "start": 2.847,
+      "end": 3.02
     },
     {
       "index": 10,
-      "char": "构",
-      "start": 3.052,
-      "end": 3.25
+      "char": "独",
+      "start": 3.053,
+      "end": 3.226
     },
     {
       "index": 11,
-      "char": "看",
-      "start": 3.628,
-      "end": 3.826
+      "char": "体",
+      "start": 3.259,
+      "end": 3.432
     },
     {
       "index": 12,
-      "char": "图",
-      "start": 3.864,
-      "end": 4.062
+      "char": "结",
+      "start": 3.465,
+      "end": 3.638
     },
     {
       "index": 13,
-      "char": "找",
-      "start": 4.1,
-      "end": 4.298
+      "char": "构",
+      "start": 3.671,
+      "end": 3.844
     },
     {
       "index": 14,
-      "char": "部",
-      "start": 4.336,
-      "end": 4.534
+      "char": "按",
+      "start": 4.057,
+      "end": 4.23
     },
     {
       "index": 15,
-      "char": "件",
-      "start": 4.572,
-      "end": 4.77
+      "char": "顺",
+      "start": 4.263,
+      "end": 4.436
     },
     {
       "index": 16,
-      "char": "合",
-      "start": 4.988,
-      "end": 5.186
+      "char": "序",
+      "start": 4.469,
+      "end": 4.642
     },
     {
       "index": 17,
-      "char": "成",
-      "start": 5.224,
-      "end": 5.423
+      "char": "能",
+      "start": 4.675,
+      "end": 4.848
     },
     {
       "index": 18,
-      "char": "字",
-      "start": 5.46,
-      "end": 5.659
+      "char": "看",
+      "start": 4.881,
+      "end": 5.054
     },
     {
       "index": 19,
-      "char": "形",
-      "start": 5.696,
-      "end": 5.895
+      "char": "到",
+      "start": 5.087,
+      "end": 5.26
     },
     {
       "index": 20,
-      "char": "再",
-      "start": 6.272,
-      "end": 6.471
+      "char": "脊",
+      "start": 5.293,
+      "end": 5.466
     },
     {
       "index": 21,
-      "char": "读",
-      "start": 6.509,
-      "end": 6.707
+      "char": "这",
+      "start": 5.839,
+      "end": 6.012
     },
     {
       "index": 22,
-      "char": "脊",
-      "start": 6.925,
-      "end": 7.123
+      "char": "个",
+      "start": 6.045,
+      "end": 6.218
     },
     {
       "index": 23,
+      "char": "字",
+      "start": 6.251,
+      "end": 6.425
+    },
+    {
+      "index": 24,
+      "char": "适",
+      "start": 6.458,
+      "end": 6.631
+    },
+    {
+      "index": 25,
+      "char": "合",
+      "start": 6.664,
+      "end": 6.837
+    },
+    {
+      "index": 26,
+      "char": "顺",
+      "start": 6.87,
+      "end": 7.043
+    },
+    {
+      "index": 27,
+      "char": "着",
+      "start": 7.076,
+      "end": 7.249
+    },
+    {
+      "index": 28,
+      "char": "完",
+      "start": 7.282,
+      "end": 7.455
+    },
+    {
+      "index": 29,
+      "char": "整",
+      "start": 7.488,
+      "end": 7.661
+    },
+    {
+      "index": 30,
+      "char": "轮",
+      "start": 7.694,
+      "end": 7.867
+    },
+    {
+      "index": 31,
+      "char": "廓",
+      "start": 7.9,
+      "end": 8.073
+    },
+    {
+      "index": 32,
+      "char": "来",
+      "start": 8.106,
+      "end": 8.279
+    },
+    {
+      "index": 33,
+      "char": "记",
+      "start": 8.312,
+      "end": 8.485
+    },
+    {
+      "index": 34,
+      "char": "看",
+      "start": 8.858,
+      "end": 9.031
+    },
+    {
+      "index": 35,
+      "char": "图",
+      "start": 9.064,
+      "end": 9.237
+    },
+    {
+      "index": 36,
+      "char": "时",
+      "start": 9.27,
+      "end": 9.443
+    },
+    {
+      "index": 37,
+      "char": "中",
+      "start": 9.656,
+      "end": 9.829
+    },
+    {
+      "index": 38,
+      "char": "央",
+      "start": 9.862,
+      "end": 10.035
+    },
+    {
+      "index": 39,
+      "char": "一",
+      "start": 10.068,
+      "end": 10.241
+    },
+    {
+      "index": 40,
+      "char": "条",
+      "start": 10.274,
+      "end": 10.447
+    },
+    {
+      "index": 41,
+      "char": "竖",
+      "start": 10.48,
+      "end": 10.653
+    },
+    {
+      "index": 42,
+      "char": "直",
+      "start": 10.686,
+      "end": 10.859
+    },
+    {
+      "index": 43,
+      "char": "脊",
+      "start": 10.892,
+      "end": 11.066
+    },
+    {
+      "index": 44,
+      "char": "柱",
+      "start": 11.098,
+      "end": 11.272
+    },
+    {
+      "index": 45,
+      "char": "贯",
+      "start": 11.305,
+      "end": 11.478
+    },
+    {
+      "index": 46,
+      "char": "穿",
+      "start": 11.511,
+      "end": 11.684
+    },
+    {
+      "index": 47,
+      "char": "上",
+      "start": 11.717,
+      "end": 11.89
+    },
+    {
+      "index": 48,
+      "char": "下",
+      "start": 11.923,
+      "end": 12.096
+    },
+    {
+      "index": 49,
+      "char": "两",
+      "start": 12.309,
+      "end": 12.482
+    },
+    {
+      "index": 50,
+      "char": "侧",
+      "start": 12.515,
+      "end": 12.688
+    },
+    {
+      "index": 51,
+      "char": "肌",
+      "start": 12.721,
+      "end": 12.894
+    },
+    {
+      "index": 52,
+      "char": "肉",
+      "start": 12.927,
+      "end": 13.1
+    },
+    {
+      "index": 53,
+      "char": "与",
+      "start": 13.133,
+      "end": 13.306
+    },
+    {
+      "index": 54,
+      "char": "下",
+      "start": 13.339,
+      "end": 13.512
+    },
+    {
+      "index": 55,
+      "char": "方",
+      "start": 13.545,
+      "end": 13.718
+    },
+    {
+      "index": 56,
+      "char": "月",
+      "start": 13.751,
+      "end": 13.924
+    },
+    {
+      "index": 57,
+      "char": "形",
+      "start": 13.957,
+      "end": 14.13
+    },
+    {
+      "index": 58,
+      "char": "躯",
+      "start": 14.163,
+      "end": 14.336
+    },
+    {
+      "index": 59,
+      "char": "干",
+      "start": 14.369,
+      "end": 14.542
+    },
+    {
+      "index": 60,
+      "char": "沿",
+      "start": 14.575,
+      "end": 14.748
+    },
+    {
+      "index": 61,
+      "char": "脊",
+      "start": 14.781,
+      "end": 14.954
+    },
+    {
+      "index": 62,
+      "char": "的",
+      "start": 14.987,
+      "end": 15.16
+    },
+    {
+      "index": 63,
+      "char": "点",
+      "start": 15.193,
+      "end": 15.366
+    },
+    {
+      "index": 64,
+      "char": "撇",
+      "start": 15.399,
+      "end": 15.573
+    },
+    {
+      "index": 65,
+      "char": "横",
+      "start": 15.605,
+      "end": 15.779
+    },
+    {
+      "index": 66,
+      "char": "画",
+      "start": 15.812,
+      "end": 15.985
+    },
+    {
+      "index": 67,
+      "char": "对",
+      "start": 16.018,
+      "end": 16.191
+    },
+    {
+      "index": 68,
+      "char": "称",
+      "start": 16.224,
+      "end": 16.397
+    },
+    {
+      "index": 69,
+      "char": "展",
+      "start": 16.43,
+      "end": 16.603
+    },
+    {
+      "index": 70,
+      "char": "开",
+      "start": 16.636,
+      "end": 16.809
+    },
+    {
+      "index": 71,
+      "char": "整",
+      "start": 17.022,
+      "end": 17.195
+    },
+    {
+      "index": 72,
+      "char": "幅",
+      "start": 17.228,
+      "end": 17.401
+    },
+    {
+      "index": 73,
       "char": "背",
-      "start": 7.161,
-      "end": 7.359
+      "start": 17.434,
+      "end": 17.607
+    },
+    {
+      "index": 74,
+      "char": "部",
+      "start": 17.64,
+      "end": 17.813
+    },
+    {
+      "index": 75,
+      "char": "长",
+      "start": 17.846,
+      "end": 18.019
+    },
+    {
+      "index": 76,
+      "char": "成",
+      "start": 18.052,
+      "end": 18.225
+    },
+    {
+      "index": 77,
+      "char": "脊",
+      "start": 18.258,
+      "end": 18.431
+    },
+    {
+      "index": 78,
+      "char": "脊",
+      "start": 18.804,
+      "end": 18.977
+    },
+    {
+      "index": 79,
+      "char": "背",
+      "start": 19.01,
+      "end": 19.183
+    },
+    {
+      "index": 80,
+      "char": "是",
+      "start": 19.216,
+      "end": 19.389
+    },
+    {
+      "index": 81,
+      "char": "人",
+      "start": 19.422,
+      "end": 19.595
+    },
+    {
+      "index": 82,
+      "char": "或",
+      "start": 19.628,
+      "end": 19.801
+    },
+    {
+      "index": 83,
+      "char": "动",
+      "start": 19.834,
+      "end": 20.007
+    },
+    {
+      "index": 84,
+      "char": "物",
+      "start": 20.04,
+      "end": 20.213
+    },
+    {
+      "index": 85,
+      "char": "躯",
+      "start": 20.246,
+      "end": 20.42
+    },
+    {
+      "index": 86,
+      "char": "干",
+      "start": 20.452,
+      "end": 20.626
+    },
+    {
+      "index": 87,
+      "char": "后",
+      "start": 20.659,
+      "end": 20.832
+    },
+    {
+      "index": 88,
+      "char": "面",
+      "start": 20.865,
+      "end": 21.038
+    },
+    {
+      "index": 89,
+      "char": "中",
+      "start": 21.071,
+      "end": 21.244
+    },
+    {
+      "index": 90,
+      "char": "央",
+      "start": 21.277,
+      "end": 21.45
+    },
+    {
+      "index": 91,
+      "char": "的",
+      "start": 21.483,
+      "end": 21.656
+    },
+    {
+      "index": 92,
+      "char": "一",
+      "start": 21.689,
+      "end": 21.862
+    },
+    {
+      "index": 93,
+      "char": "条",
+      "start": 21.895,
+      "end": 22.068
+    },
+    {
+      "index": 94,
+      "char": "骨",
+      "start": 22.101,
+      "end": 22.274
+    },
+    {
+      "index": 95,
+      "char": "肉",
+      "start": 22.307,
+      "end": 22.48
+    },
+    {
+      "index": 96,
+      "char": "区",
+      "start": 22.513,
+      "end": 22.686
+    },
+    {
+      "index": 97,
+      "char": "域",
+      "start": 22.719,
+      "end": 22.892
+    },
+    {
+      "index": 98,
+      "char": "这",
+      "start": 23.265,
+      "end": 23.438
+    },
+    {
+      "index": 99,
+      "char": "是",
+      "start": 23.471,
+      "end": 23.644
+    },
+    {
+      "index": 100,
+      "char": "一",
+      "start": 23.677,
+      "end": 23.85
+    },
+    {
+      "index": 101,
+      "char": "幅",
+      "start": 23.883,
+      "end": 24.056
+    },
+    {
+      "index": 102,
+      "char": "帮",
+      "start": 24.089,
+      "end": 24.262
+    },
+    {
+      "index": 103,
+      "char": "助",
+      "start": 24.295,
+      "end": 24.468
+    },
+    {
+      "index": 104,
+      "char": "记",
+      "start": 24.501,
+      "end": 24.674
+    },
+    {
+      "index": 105,
+      "char": "笔",
+      "start": 24.707,
+      "end": 24.88
+    },
+    {
+      "index": 106,
+      "char": "画",
+      "start": 24.913,
+      "end": 25.087
+    },
+    {
+      "index": 107,
+      "char": "和",
+      "start": 25.119,
+      "end": 25.293
+    },
+    {
+      "index": 108,
+      "char": "位",
+      "start": 25.326,
+      "end": 25.499
+    },
+    {
+      "index": 109,
+      "char": "置",
+      "start": 25.532,
+      "end": 25.705
+    },
+    {
+      "index": 110,
+      "char": "的",
+      "start": 25.738,
+      "end": 25.911
+    },
+    {
+      "index": 111,
+      "char": "记",
+      "start": 25.944,
+      "end": 26.117
+    },
+    {
+      "index": 112,
+      "char": "忆",
+      "start": 26.15,
+      "end": 26.323
+    },
+    {
+      "index": 113,
+      "char": "画",
+      "start": 26.356,
+      "end": 26.529
+    },
+    {
+      "index": 114,
+      "char": "面",
+      "start": 26.562,
+      "end": 26.735
+    },
+    {
+      "index": 115,
+      "char": "不",
+      "start": 26.948,
+      "end": 27.121
+    },
+    {
+      "index": 116,
+      "char": "是",
+      "start": 27.154,
+      "end": 27.327
+    },
+    {
+      "index": 117,
+      "char": "完",
+      "start": 27.36,
+      "end": 27.533
+    },
+    {
+      "index": 118,
+      "char": "整",
+      "start": 27.566,
+      "end": 27.739
+    },
+    {
+      "index": 119,
+      "char": "字",
+      "start": 27.772,
+      "end": 27.945
+    },
+    {
+      "index": 120,
+      "char": "源",
+      "start": 27.978,
+      "end": 28.151
+    },
+    {
+      "index": 121,
+      "char": "最",
+      "start": 28.524,
+      "end": 28.697
+    },
+    {
+      "index": 122,
+      "char": "后",
+      "start": 28.73,
+      "end": 28.903
+    },
+    {
+      "index": 123,
+      "char": "再",
+      "start": 28.936,
+      "end": 29.109
+    },
+    {
+      "index": 124,
+      "char": "读",
+      "start": 29.142,
+      "end": 29.315
+    },
+    {
+      "index": 125,
+      "char": "一",
+      "start": 29.348,
+      "end": 29.521
+    },
+    {
+      "index": 126,
+      "char": "遍",
+      "start": 29.554,
+      "end": 29.727
+    },
+    {
+      "index": 127,
+      "char": "脊",
+      "start": 29.94,
+      "end": 30.114
+    },
+    {
+      "index": 128,
+      "char": "背",
+      "start": 30.146,
+      "end": 30.32
     }
   ],
-  "transcript": "脊，“脊背”的“脊”。它是上下结构。看图找部件，合成字形。再读：脊背。",
+  "transcript": "脊，“脊背”的“脊”，读jǐ。它是独体结构，按顺序能看到“脊”。这个字适合顺着完整轮廓来记。看图时，中央一条竖直脊柱贯穿上下，两侧肌肉与下方月形躯干沿“脊”的点撇横画对称展开，整幅背部长成“脊”。脊背是人或动物躯干后面中央的一条骨肉区域。这是一幅帮助记笔画和位置的记忆画面，不是完整字源。最后再读一遍：脊背。",
   "voice_reference": "封",
   "timing_source": "punctuation-weighted-estimate",
-  "script_version": "child-first-v1",
-  "duration": 7.840181
+  "script_version": "child-first-v2",
+  "duration": 30.880181
 }

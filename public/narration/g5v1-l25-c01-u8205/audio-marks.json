@@ -3,151 +3,751 @@
     {
       "index": 0,
       "char": "舅",
-      "start": 0.182,
-      "end": 0.396
+      "start": 0.293,
+      "end": 0.468
     },
     {
       "index": 1,
       "char": "舅",
-      "start": 0.617,
-      "end": 0.832
+      "start": 0.681,
+      "end": 0.857
     },
     {
       "index": 2,
       "char": "舅",
-      "start": 0.872,
-      "end": 1.087
+      "start": 0.89,
+      "end": 1.066
     },
     {
       "index": 3,
       "char": "的",
-      "start": 1.128,
-      "end": 1.342
+      "start": 1.099,
+      "end": 1.275
     },
     {
       "index": 4,
       "char": "舅",
-      "start": 1.383,
-      "end": 1.598
+      "start": 1.308,
+      "end": 1.483
     },
     {
       "index": 5,
-      "char": "它",
-      "start": 1.979,
-      "end": 2.193
+      "char": "读",
+      "start": 1.697,
+      "end": 1.872
     },
     {
       "index": 6,
-      "char": "是",
-      "start": 2.234,
-      "end": 2.448
+      "char": "j",
+      "start": 1.906,
+      "end": 2.081
     },
     {
       "index": 7,
-      "char": "上",
-      "start": 2.489,
-      "end": 2.704
+      "char": "i",
+      "start": 2.115,
+      "end": 2.29
     },
     {
       "index": 8,
-      "char": "下",
-      "start": 2.745,
-      "end": 2.959
+      "char": "ù",
+      "start": 2.324,
+      "end": 2.499
     },
     {
       "index": 9,
-      "char": "结",
-      "start": 3,
-      "end": 3.215
+      "char": "它",
+      "start": 2.872,
+      "end": 3.048
     },
     {
       "index": 10,
-      "char": "构",
-      "start": 3.255,
-      "end": 3.47
+      "char": "是",
+      "start": 3.081,
+      "end": 3.257
     },
     {
       "index": 11,
-      "char": "看",
-      "start": 3.851,
-      "end": 4.065
+      "char": "上",
+      "start": 3.29,
+      "end": 3.466
     },
     {
       "index": 12,
-      "char": "图",
-      "start": 4.106,
-      "end": 4.321
+      "char": "下",
+      "start": 3.499,
+      "end": 3.674
     },
     {
       "index": 13,
-      "char": "找",
-      "start": 4.362,
-      "end": 4.576
+      "char": "结",
+      "start": 3.708,
+      "end": 3.883
     },
     {
       "index": 14,
-      "char": "部",
-      "start": 4.617,
-      "end": 4.831
+      "char": "构",
+      "start": 3.917,
+      "end": 4.092
     },
     {
       "index": 15,
-      "char": "件",
-      "start": 4.872,
-      "end": 5.087
+      "char": "按",
+      "start": 4.306,
+      "end": 4.481
     },
     {
       "index": 16,
-      "char": "合",
-      "start": 5.308,
-      "end": 5.522
+      "char": "顺",
+      "start": 4.514,
+      "end": 4.69
     },
     {
       "index": 17,
-      "char": "成",
-      "start": 5.563,
-      "end": 5.778
+      "char": "序",
+      "start": 4.723,
+      "end": 4.899
     },
     {
       "index": 18,
-      "char": "字",
-      "start": 5.818,
-      "end": 6.033
+      "char": "能",
+      "start": 4.932,
+      "end": 5.108
     },
     {
       "index": 19,
-      "char": "形",
-      "start": 6.074,
-      "end": 6.288
+      "char": "看",
+      "start": 5.141,
+      "end": 5.317
     },
     {
       "index": 20,
-      "char": "再",
-      "start": 6.669,
-      "end": 6.884
+      "char": "到",
+      "start": 5.35,
+      "end": 5.525
     },
     {
       "index": 21,
-      "char": "读",
-      "start": 6.925,
-      "end": 7.139
+      "char": "臼",
+      "start": 5.559,
+      "end": 5.734
     },
     {
       "index": 22,
-      "char": "舅",
-      "start": 7.36,
-      "end": 7.574
+      "char": "和",
+      "start": 5.768,
+      "end": 5.943
     },
     {
       "index": 23,
+      "char": "男",
+      "start": 5.977,
+      "end": 6.152
+    },
+    {
+      "index": 24,
+      "char": "从",
+      "start": 6.525,
+      "end": 6.701
+    },
+    {
+      "index": 25,
+      "char": "构",
+      "start": 6.734,
+      "end": 6.91
+    },
+    {
+      "index": 26,
+      "char": "字",
+      "start": 6.943,
+      "end": 7.119
+    },
+    {
+      "index": 27,
+      "char": "分",
+      "start": 7.152,
+      "end": 7.328
+    },
+    {
+      "index": 28,
+      "char": "工",
+      "start": 7.361,
+      "end": 7.536
+    },
+    {
+      "index": 29,
+      "char": "看",
+      "start": 7.57,
+      "end": 7.745
+    },
+    {
+      "index": 30,
+      "char": "男",
+      "start": 7.959,
+      "end": 8.134
+    },
+    {
+      "index": 31,
+      "char": "提",
+      "start": 8.168,
+      "end": 8.343
+    },
+    {
+      "index": 32,
+      "char": "示",
+      "start": 8.376,
+      "end": 8.552
+    },
+    {
+      "index": 33,
+      "char": "意",
+      "start": 8.585,
+      "end": 8.761
+    },
+    {
+      "index": 34,
+      "char": "义",
+      "start": 8.794,
+      "end": 8.97
+    },
+    {
+      "index": 35,
+      "char": "类",
+      "start": 9.003,
+      "end": 9.179
+    },
+    {
+      "index": 36,
+      "char": "别",
+      "start": 9.212,
+      "end": 9.387
+    },
+    {
+      "index": 37,
+      "char": "臼",
+      "start": 9.601,
+      "end": 9.776
+    },
+    {
+      "index": 38,
+      "char": "提",
+      "start": 9.81,
+      "end": 9.985
+    },
+    {
+      "index": 39,
+      "char": "供",
+      "start": 10.019,
+      "end": 10.194
+    },
+    {
+      "index": 40,
+      "char": "读",
+      "start": 10.227,
+      "end": 10.403
+    },
+    {
+      "index": 41,
+      "char": "音",
+      "start": 10.436,
+      "end": 10.612
+    },
+    {
+      "index": 42,
+      "char": "线",
+      "start": 10.645,
+      "end": 10.821
+    },
+    {
+      "index": 43,
+      "char": "索",
+      "start": 10.854,
+      "end": 11.029
+    },
+    {
+      "index": 44,
+      "char": "看",
+      "start": 11.403,
+      "end": 11.578
+    },
+    {
+      "index": 45,
+      "char": "图",
+      "start": 11.612,
+      "end": 11.787
+    },
+    {
+      "index": 46,
+      "char": "时",
+      "start": 11.821,
+      "end": 11.996
+    },
+    {
+      "index": 47,
+      "char": "上",
+      "start": 12.21,
+      "end": 12.385
+    },
+    {
+      "index": 48,
+      "char": "方",
+      "start": 12.418,
+      "end": 12.594
+    },
+    {
+      "index": 49,
+      "char": "家",
+      "start": 12.627,
+      "end": 12.803
+    },
+    {
+      "index": 50,
+      "char": "族",
+      "start": 12.836,
+      "end": 13.012
+    },
+    {
+      "index": 51,
+      "char": "记",
+      "start": 13.045,
+      "end": 13.22
+    },
+    {
+      "index": 52,
+      "char": "录",
+      "start": 13.254,
+      "end": 13.429
+    },
+    {
+      "index": 53,
+      "char": "册",
+      "start": 13.463,
+      "end": 13.638
+    },
+    {
+      "index": 54,
+      "char": "和",
+      "start": 13.672,
+      "end": 13.847
+    },
+    {
+      "index": 55,
+      "char": "旧",
+      "start": 13.881,
+      "end": 14.056
+    },
+    {
+      "index": 56,
+      "char": "印",
+      "start": 14.089,
+      "end": 14.265
+    },
+    {
+      "index": 57,
+      "char": "章",
+      "start": 14.298,
+      "end": 14.474
+    },
+    {
+      "index": 58,
+      "char": "沿",
+      "start": 14.507,
+      "end": 14.683
+    },
+    {
+      "index": 59,
+      "char": "臼",
+      "start": 14.716,
+      "end": 14.891
+    },
+    {
+      "index": 60,
+      "char": "围",
+      "start": 14.925,
+      "end": 15.1
+    },
+    {
+      "index": 61,
+      "char": "成",
+      "start": 15.134,
+      "end": 15.309
+    },
+    {
+      "index": 62,
+      "char": "头",
+      "start": 15.343,
+      "end": 15.518
+    },
+    {
+      "index": 63,
+      "char": "像",
+      "start": 15.551,
+      "end": 15.727
+    },
+    {
+      "index": 64,
+      "char": "下",
+      "start": 15.94,
+      "end": 16.116
+    },
+    {
+      "index": 65,
+      "char": "方",
+      "start": 16.149,
+      "end": 16.325
+    },
+    {
+      "index": 66,
+      "char": "男",
+      "start": 16.358,
+      "end": 16.534
+    },
+    {
+      "index": 67,
+      "char": "子",
+      "start": 16.567,
+      "end": 16.742
+    },
+    {
+      "index": 68,
+      "char": "在",
+      "start": 16.776,
+      "end": 16.951
+    },
+    {
+      "index": 69,
+      "char": "田",
+      "start": 16.985,
+      "end": 17.16
+    },
+    {
+      "index": 70,
+      "char": "地",
+      "start": 17.194,
+      "end": 17.369
+    },
+    {
+      "index": 71,
+      "char": "旁",
+      "start": 17.402,
+      "end": 17.578
+    },
+    {
+      "index": 72,
+      "char": "用",
+      "start": 17.611,
+      "end": 17.787
+    },
+    {
+      "index": 73,
+      "char": "力",
+      "start": 17.82,
+      "end": 17.996
+    },
+    {
+      "index": 74,
+      "char": "劳",
+      "start": 18.029,
+      "end": 18.205
+    },
+    {
+      "index": 75,
+      "char": "作",
+      "start": 18.238,
+      "end": 18.413
+    },
+    {
+      "index": 76,
+      "char": "沿",
+      "start": 18.447,
+      "end": 18.622
+    },
+    {
+      "index": 77,
+      "char": "男",
+      "start": 18.656,
+      "end": 18.831
+    },
+    {
+      "index": 78,
+      "char": "站",
+      "start": 18.865,
+      "end": 19.04
+    },
+    {
+      "index": 79,
+      "char": "好",
+      "start": 19.073,
+      "end": 19.249
+    },
+    {
+      "index": 80,
+      "char": "上",
+      "start": 19.462,
+      "end": 19.638
+    },
+    {
+      "index": 81,
+      "char": "下",
+      "start": 19.671,
+      "end": 19.847
+    },
+    {
+      "index": 82,
+      "char": "组",
+      "start": 19.88,
+      "end": 20.056
+    },
+    {
+      "index": 83,
+      "char": "成",
+      "start": 20.089,
+      "end": 20.264
+    },
+    {
+      "index": 84,
       "char": "舅",
-      "start": 7.615,
-      "end": 7.83
+      "start": 20.298,
+      "end": 20.473
+    },
+    {
+      "index": 85,
+      "char": "舅",
+      "start": 20.847,
+      "end": 21.022
+    },
+    {
+      "index": 86,
+      "char": "舅",
+      "start": 21.056,
+      "end": 21.231
+    },
+    {
+      "index": 87,
+      "char": "是",
+      "start": 21.264,
+      "end": 21.44
+    },
+    {
+      "index": 88,
+      "char": "母",
+      "start": 21.473,
+      "end": 21.649
+    },
+    {
+      "index": 89,
+      "char": "亲",
+      "start": 21.682,
+      "end": 21.858
+    },
+    {
+      "index": 90,
+      "char": "的",
+      "start": 21.891,
+      "end": 22.067
+    },
+    {
+      "index": 91,
+      "char": "兄",
+      "start": 22.1,
+      "end": 22.275
+    },
+    {
+      "index": 92,
+      "char": "弟",
+      "start": 22.309,
+      "end": 22.484
+    },
+    {
+      "index": 93,
+      "char": "这",
+      "start": 22.858,
+      "end": 23.033
+    },
+    {
+      "index": 94,
+      "char": "是",
+      "start": 23.067,
+      "end": 23.242
+    },
+    {
+      "index": 95,
+      "char": "一",
+      "start": 23.275,
+      "end": 23.451
+    },
+    {
+      "index": 96,
+      "char": "幅",
+      "start": 23.484,
+      "end": 23.66
+    },
+    {
+      "index": 97,
+      "char": "帮",
+      "start": 23.693,
+      "end": 23.869
+    },
+    {
+      "index": 98,
+      "char": "助",
+      "start": 23.902,
+      "end": 24.077
+    },
+    {
+      "index": 99,
+      "char": "记",
+      "start": 24.111,
+      "end": 24.286
+    },
+    {
+      "index": 100,
+      "char": "笔",
+      "start": 24.32,
+      "end": 24.495
+    },
+    {
+      "index": 101,
+      "char": "画",
+      "start": 24.529,
+      "end": 24.704
+    },
+    {
+      "index": 102,
+      "char": "和",
+      "start": 24.738,
+      "end": 24.913
+    },
+    {
+      "index": 103,
+      "char": "位",
+      "start": 24.946,
+      "end": 25.122
+    },
+    {
+      "index": 104,
+      "char": "置",
+      "start": 25.155,
+      "end": 25.331
+    },
+    {
+      "index": 105,
+      "char": "的",
+      "start": 25.364,
+      "end": 25.54
+    },
+    {
+      "index": 106,
+      "char": "记",
+      "start": 25.573,
+      "end": 25.748
+    },
+    {
+      "index": 107,
+      "char": "忆",
+      "start": 25.782,
+      "end": 25.957
+    },
+    {
+      "index": 108,
+      "char": "画",
+      "start": 25.991,
+      "end": 26.166
+    },
+    {
+      "index": 109,
+      "char": "面",
+      "start": 26.2,
+      "end": 26.375
+    },
+    {
+      "index": 110,
+      "char": "不",
+      "start": 26.588,
+      "end": 26.764
+    },
+    {
+      "index": 111,
+      "char": "是",
+      "start": 26.797,
+      "end": 26.973
+    },
+    {
+      "index": 112,
+      "char": "完",
+      "start": 27.006,
+      "end": 27.182
+    },
+    {
+      "index": 113,
+      "char": "整",
+      "start": 27.215,
+      "end": 27.391
+    },
+    {
+      "index": 114,
+      "char": "字",
+      "start": 27.424,
+      "end": 27.599
+    },
+    {
+      "index": 115,
+      "char": "源",
+      "start": 27.633,
+      "end": 27.808
+    },
+    {
+      "index": 116,
+      "char": "最",
+      "start": 28.182,
+      "end": 28.357
+    },
+    {
+      "index": 117,
+      "char": "后",
+      "start": 28.391,
+      "end": 28.566
+    },
+    {
+      "index": 118,
+      "char": "再",
+      "start": 28.599,
+      "end": 28.775
+    },
+    {
+      "index": 119,
+      "char": "读",
+      "start": 28.808,
+      "end": 28.984
+    },
+    {
+      "index": 120,
+      "char": "一",
+      "start": 29.017,
+      "end": 29.193
+    },
+    {
+      "index": 121,
+      "char": "遍",
+      "start": 29.226,
+      "end": 29.402
+    },
+    {
+      "index": 122,
+      "char": "舅",
+      "start": 29.615,
+      "end": 29.79
+    },
+    {
+      "index": 123,
+      "char": "舅",
+      "start": 29.824,
+      "end": 29.999
     }
   ],
-  "transcript": "舅，“舅舅”的“舅”。它是上下结构。看图找部件，合成字形。再读：舅舅。",
+  "transcript": "舅，“舅舅”的“舅”，读jiù。它是上下结构，按顺序能看到“臼”和“男”。从构字分工看，“男”提示意义类别，“臼”提供读音线索。看图时，上方家族记录册和旧印章沿“臼”围成头像，下方男子在田地旁用力劳作沿“男”站好，上下组成“舅”。舅舅是母亲的兄弟。这是一幅帮助记笔画和位置的记忆画面，不是完整字源。最后再读一遍：舅舅。",
   "voice_reference": "封",
   "timing_source": "punctuation-weighted-estimate",
-  "script_version": "child-first-v1",
-  "duration": 8.320181
+  "script_version": "child-first-v2",
+  "duration": 30.560181
 }

@@ -151,7 +151,10 @@ test("every image-based literacy question has a generated visual asset", async (
   for (const glyph of allGlyphs) {
     const visual = characterVisuals[glyph];
     assert.ok(visual, `missing character-study visual for ${glyph}`);
-    assert.match(visual.src, /^\/illustrations\/mnemonics\/(?:m\d+\.jpg|g5-u[0-9a-f]+\.svg)$/);
+    assert.match(
+      visual.src,
+      /^\/illustrations\/(?:mnemonics\/(?:m\d+\.jpg|g5-u[0-9a-f]+\.svg)|mnemonics-v2\/g5-u[0-9a-f]+\.jpg)$/,
+    );
     await access(new URL(`../public${visual.src}`, import.meta.url));
   }
 
@@ -215,6 +218,9 @@ test("every source character has a complete, authored object-shaped mnemonic", a
   const { getMnemonicLayout, getMnemonicScene, mnemonicScenes } = await import(
     new URL("../app/data/mnemonic-scenes.ts", import.meta.url).href,
   );
+  const { mnemonicQualityPlans } = await import(
+    new URL("../app/data/mnemonic-quality.ts", import.meta.url).href,
+  );
   const sourceCharacters = [...new Map(
     characters.map((character) => [character.hanzi, character]),
   ).values()];
@@ -222,6 +228,23 @@ test("every source character has a complete, authored object-shaped mnemonic", a
   assert.deepEqual(mnemonicStageLabels, ["看意象", "找部首", "找部件", "合成字"]);
   assert.equal(sourceCharacters.length, 423);
   assert.equal(Object.keys(mnemonicScenes).length, sourceCharacters.length);
+  const officialCharacters = sourceCharacters.filter((character) => character.official !== false);
+  assert.equal(officialCharacters.length, 359);
+  assert.deepEqual(
+    new Set(Object.keys(mnemonicQualityPlans)),
+    new Set(officialCharacters.map((character) => character.hanzi)),
+  );
+  for (const character of officialCharacters) {
+    const plan = mnemonicQualityPlans[character.hanzi];
+    assert.ok(plan.meaning.length >= 8, `mnemonic meaning is too vague for ${character.hanzi}`);
+    assert.ok(plan.scene.length >= 18, `mnemonic scene is too vague for ${character.hanzi}`);
+    for (const [partIndex, part] of character.parts.map((item) => item.char).entries()) {
+      assert.ok(plan.scene.includes(part), `mnemonic scene for ${character.hanzi} misses ${part}`);
+      const description = character.compositions[partIndex]?.description ?? "";
+      assert.ok(description.includes(part), `component copy for ${character.hanzi} misses ${part}`);
+      assert.doesNotMatch(description, /故事道具|轮廓像|专属画面/u);
+    }
+  }
   for (const character of sourceCharacters) {
     const parts = character.parts.length || 1;
     const scene = getMnemonicScene(character);
@@ -419,6 +442,8 @@ test("narration timing becomes a punctuated, persistent reading transcript", asy
   const pageSource = await readFile(new URL("../app/page.tsx", import.meta.url), "utf8");
   assert.match(pageSource, /requestAnimationFrame\(sampleAudioTime\)/);
   assert.match(pageSource, /is-complete/);
+  assert.match(pageSource, /withAssetVersion/);
+  assert.match(pageSource, /character\.official !== false \? "child-first-v2" : "child-first-v1"/);
   assert.doesNotMatch(pageSource, /onEnded=\{\(\) => \{[\s\S]*setElapsed\(0\)/);
 });
 
@@ -464,7 +489,13 @@ test("all narration scripts use the child-first four-beat teaching structure", a
   for (const character of uniqueCharacters) {
     const script = narrationScripts[character.hanzi];
     const length = Array.from(script).length;
-    assert.ok(length >= 33 && length <= 115, `wrong child-first length for ${character.hanzi}: ${length}`);
+    const [minimumLength, maximumLength] = character.official !== false
+      ? [80, 230]
+      : [33, 115];
+    assert.ok(
+      length >= minimumLength && length <= maximumLength,
+      `wrong child-first length for ${character.hanzi}: ${length}`,
+    );
     if (character.polyphonic) {
       assert.ok(script.startsWith(`先读“${character.word}”`), `missing contextual opening for ${character.hanzi}`);
     } else {
@@ -474,6 +505,7 @@ test("all narration scripts use the child-first four-beat teaching structure", a
     assert.notEqual(script, character.description, `catalog prose copied verbatim into ${character.hanzi}`);
     assert.ok(longestSharedSpan(script, character.originalText) <= 18, `lesson text copied into ${character.hanzi}`);
     assert.doesNotMatch(script, /声符[“"]?貧|刺瞎|就是这样造出来|真正的造字过程/u);
+    assert.doesNotMatch(script, /看图找部件|故事道具|轮廓像/u);
 
     const sourceMarksPath = heritageAssets[character.id]?.audioMarks;
     if (sourceMarksPath) {
@@ -529,7 +561,10 @@ test("every character record has a complete Feng-voice narration and authored ti
       await readFile(new URL(`../public${asset.audioMarks}`, import.meta.url), "utf8"),
     );
     assert.equal(payload.voice_reference, "封");
-    assert.equal(payload.script_version, "child-first-v1");
+    assert.equal(
+      payload.script_version,
+      character.official !== false ? "child-first-v2" : "child-first-v1",
+    );
     assert.equal(payload.transcript, narrationScripts[character.hanzi]);
     assert.ok(Array.isArray(payload.marks) && payload.marks.length > 0, `missing marks for ${character.hanzi}`);
     assert.ok(typeof payload.transcript === "string" && payload.transcript.length > 0);

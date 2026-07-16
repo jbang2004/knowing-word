@@ -3,151 +3,727 @@
     {
       "index": 0,
       "char": "艇",
-      "start": 0.164,
-      "end": 0.351
+      "start": 0.293,
+      "end": 0.474
     },
     {
       "index": 1,
       "char": "小",
-      "start": 0.567,
-      "end": 0.754
+      "start": 0.688,
+      "end": 0.869
     },
     {
       "index": 2,
       "char": "艇",
-      "start": 0.79,
-      "end": 0.978
+      "start": 0.904,
+      "end": 1.085
     },
     {
       "index": 3,
       "char": "的",
-      "start": 1.013,
-      "end": 1.201
+      "start": 1.119,
+      "end": 1.3
     },
     {
       "index": 4,
       "char": "艇",
-      "start": 1.237,
-      "end": 1.424
+      "start": 1.335,
+      "end": 1.516
     },
     {
       "index": 5,
-      "char": "它",
-      "start": 1.8,
-      "end": 1.987
+      "char": "读",
+      "start": 1.73,
+      "end": 1.911
     },
     {
       "index": 6,
-      "char": "是",
-      "start": 2.023,
-      "end": 2.211
+      "char": "t",
+      "start": 1.946,
+      "end": 2.127
     },
     {
       "index": 7,
-      "char": "左",
-      "start": 2.246,
-      "end": 2.434
+      "char": "ǐ",
+      "start": 2.161,
+      "end": 2.342
     },
     {
       "index": 8,
-      "char": "右",
-      "start": 2.469,
-      "end": 2.657
+      "char": "n",
+      "start": 2.377,
+      "end": 2.558
     },
     {
       "index": 9,
-      "char": "结",
-      "start": 2.693,
-      "end": 2.88
+      "char": "g",
+      "start": 2.592,
+      "end": 2.773
     },
     {
       "index": 10,
-      "char": "构",
-      "start": 2.916,
-      "end": 3.103
+      "char": "它",
+      "start": 3.148,
+      "end": 3.329
     },
     {
       "index": 11,
-      "char": "看",
-      "start": 3.479,
-      "end": 3.667
+      "char": "是",
+      "start": 3.363,
+      "end": 3.544
     },
     {
       "index": 12,
-      "char": "图",
-      "start": 3.702,
-      "end": 3.89
+      "char": "左",
+      "start": 3.579,
+      "end": 3.76
     },
     {
       "index": 13,
-      "char": "找",
-      "start": 3.925,
-      "end": 4.113
+      "char": "右",
+      "start": 3.794,
+      "end": 3.975
     },
     {
       "index": 14,
-      "char": "部",
-      "start": 4.149,
-      "end": 4.336
+      "char": "结",
+      "start": 4.01,
+      "end": 4.191
     },
     {
       "index": 15,
-      "char": "件",
-      "start": 4.372,
-      "end": 4.559
+      "char": "构",
+      "start": 4.225,
+      "end": 4.406
     },
     {
       "index": 16,
-      "char": "合",
-      "start": 4.775,
-      "end": 4.963
+      "char": "按",
+      "start": 4.621,
+      "end": 4.802
     },
     {
       "index": 17,
-      "char": "成",
-      "start": 4.998,
-      "end": 5.186
+      "char": "顺",
+      "start": 4.836,
+      "end": 5.017
     },
     {
       "index": 18,
-      "char": "字",
-      "start": 5.222,
-      "end": 5.409
+      "char": "序",
+      "start": 5.052,
+      "end": 5.233
     },
     {
       "index": 19,
-      "char": "形",
-      "start": 5.445,
-      "end": 5.632
+      "char": "能",
+      "start": 5.267,
+      "end": 5.448
     },
     {
       "index": 20,
-      "char": "再",
-      "start": 6.008,
-      "end": 6.195
+      "char": "看",
+      "start": 5.483,
+      "end": 5.664
     },
     {
       "index": 21,
-      "char": "读",
-      "start": 6.231,
-      "end": 6.419
+      "char": "到",
+      "start": 5.698,
+      "end": 5.879
     },
     {
       "index": 22,
-      "char": "小",
-      "start": 6.634,
-      "end": 6.822
+      "char": "舟",
+      "start": 5.914,
+      "end": 6.095
     },
     {
       "index": 23,
+      "char": "和",
+      "start": 6.129,
+      "end": 6.31
+    },
+    {
+      "index": 24,
+      "char": "廷",
+      "start": 6.345,
+      "end": 6.526
+    },
+    {
+      "index": 25,
+      "char": "从",
+      "start": 6.9,
+      "end": 7.081
+    },
+    {
+      "index": 26,
+      "char": "构",
+      "start": 7.116,
+      "end": 7.297
+    },
+    {
+      "index": 27,
+      "char": "字",
+      "start": 7.331,
+      "end": 7.512
+    },
+    {
+      "index": 28,
+      "char": "分",
+      "start": 7.547,
+      "end": 7.728
+    },
+    {
+      "index": 29,
+      "char": "工",
+      "start": 7.762,
+      "end": 7.943
+    },
+    {
+      "index": 30,
+      "char": "看",
+      "start": 7.978,
+      "end": 8.159
+    },
+    {
+      "index": 31,
+      "char": "舟",
+      "start": 8.373,
+      "end": 8.554
+    },
+    {
+      "index": 32,
+      "char": "提",
+      "start": 8.589,
+      "end": 8.77
+    },
+    {
+      "index": 33,
+      "char": "示",
+      "start": 8.804,
+      "end": 8.986
+    },
+    {
+      "index": 34,
+      "char": "意",
+      "start": 9.02,
+      "end": 9.201
+    },
+    {
+      "index": 35,
+      "char": "义",
+      "start": 9.235,
+      "end": 9.417
+    },
+    {
+      "index": 36,
+      "char": "类",
+      "start": 9.451,
+      "end": 9.632
+    },
+    {
+      "index": 37,
+      "char": "别",
+      "start": 9.666,
+      "end": 9.848
+    },
+    {
+      "index": 38,
+      "char": "廷",
+      "start": 10.062,
+      "end": 10.243
+    },
+    {
+      "index": 39,
+      "char": "提",
+      "start": 10.277,
+      "end": 10.459
+    },
+    {
+      "index": 40,
+      "char": "供",
+      "start": 10.493,
+      "end": 10.674
+    },
+    {
+      "index": 41,
+      "char": "读",
+      "start": 10.708,
+      "end": 10.89
+    },
+    {
+      "index": 42,
+      "char": "音",
+      "start": 10.924,
+      "end": 11.105
+    },
+    {
+      "index": 43,
+      "char": "线",
+      "start": 11.139,
+      "end": 11.321
+    },
+    {
+      "index": 44,
+      "char": "索",
+      "start": 11.355,
+      "end": 11.536
+    },
+    {
+      "index": 45,
+      "char": "看",
+      "start": 11.91,
+      "end": 12.092
+    },
+    {
+      "index": 46,
+      "char": "图",
+      "start": 12.126,
+      "end": 12.307
+    },
+    {
+      "index": 47,
+      "char": "时",
+      "start": 12.342,
+      "end": 12.523
+    },
+    {
+      "index": 48,
+      "char": "左",
+      "start": 12.737,
+      "end": 12.918
+    },
+    {
+      "index": 49,
+      "char": "边",
+      "start": 12.953,
+      "end": 13.134
+    },
+    {
+      "index": 50,
+      "char": "细",
+      "start": 13.168,
+      "end": 13.349
+    },
+    {
+      "index": 51,
+      "char": "长",
+      "start": 13.384,
+      "end": 13.565
+    },
+    {
+      "index": 52,
+      "char": "船",
+      "start": 13.599,
+      "end": 13.78
+    },
+    {
+      "index": 53,
+      "char": "身",
+      "start": 13.815,
+      "end": 13.996
+    },
+    {
+      "index": 54,
+      "char": "形",
+      "start": 14.03,
+      "end": 14.211
+    },
+    {
+      "index": 55,
+      "char": "成",
+      "start": 14.246,
+      "end": 14.427
+    },
+    {
+      "index": 56,
+      "char": "舟",
+      "start": 14.461,
+      "end": 14.642
+    },
+    {
+      "index": 57,
+      "char": "右",
+      "start": 14.857,
+      "end": 15.038
+    },
+    {
+      "index": 58,
+      "char": "边",
+      "start": 15.072,
+      "end": 15.253
+    },
+    {
+      "index": 59,
+      "char": "船",
+      "start": 15.288,
+      "end": 15.469
+    },
+    {
+      "index": 60,
+      "char": "桅",
+      "start": 15.503,
+      "end": 15.684
+    },
+    {
+      "index": 61,
+      "char": "甲",
+      "start": 15.899,
+      "end": 16.08
+    },
+    {
+      "index": 62,
+      "char": "板",
+      "start": 16.114,
+      "end": 16.295
+    },
+    {
+      "index": 63,
+      "char": "和",
+      "start": 16.33,
+      "end": 16.511
+    },
+    {
+      "index": 64,
+      "char": "延",
+      "start": 16.545,
+      "end": 16.726
+    },
+    {
+      "index": 65,
+      "char": "伸",
+      "start": 16.761,
+      "end": 16.942
+    },
+    {
+      "index": 66,
+      "char": "航",
+      "start": 16.976,
+      "end": 17.157
+    },
+    {
+      "index": 67,
+      "char": "线",
+      "start": 17.192,
+      "end": 17.373
+    },
+    {
+      "index": 68,
+      "char": "沿",
+      "start": 17.407,
+      "end": 17.588
+    },
+    {
+      "index": 69,
+      "char": "廷",
+      "start": 17.623,
+      "end": 17.804
+    },
+    {
+      "index": 70,
+      "char": "排",
+      "start": 17.838,
+      "end": 18.019
+    },
+    {
+      "index": 71,
+      "char": "列",
+      "start": 18.054,
+      "end": 18.235
+    },
+    {
+      "index": 72,
+      "char": "组",
+      "start": 18.449,
+      "end": 18.63
+    },
+    {
+      "index": 73,
+      "char": "成",
+      "start": 18.665,
+      "end": 18.846
+    },
+    {
+      "index": 74,
       "char": "艇",
-      "start": 6.858,
-      "end": 7.045
+      "start": 18.88,
+      "end": 19.061
+    },
+    {
+      "index": 75,
+      "char": "小",
+      "start": 19.436,
+      "end": 19.617
+    },
+    {
+      "index": 76,
+      "char": "艇",
+      "start": 19.651,
+      "end": 19.832
+    },
+    {
+      "index": 77,
+      "char": "是",
+      "start": 19.867,
+      "end": 20.048
+    },
+    {
+      "index": 78,
+      "char": "体",
+      "start": 20.082,
+      "end": 20.263
+    },
+    {
+      "index": 79,
+      "char": "形",
+      "start": 20.298,
+      "end": 20.479
+    },
+    {
+      "index": 80,
+      "char": "较",
+      "start": 20.513,
+      "end": 20.694
+    },
+    {
+      "index": 81,
+      "char": "小",
+      "start": 20.729,
+      "end": 20.91
+    },
+    {
+      "index": 82,
+      "char": "在",
+      "start": 21.124,
+      "end": 21.305
+    },
+    {
+      "index": 83,
+      "char": "水",
+      "start": 21.34,
+      "end": 21.521
+    },
+    {
+      "index": 84,
+      "char": "上",
+      "start": 21.555,
+      "end": 21.736
+    },
+    {
+      "index": 85,
+      "char": "行",
+      "start": 21.771,
+      "end": 21.952
+    },
+    {
+      "index": 86,
+      "char": "驶",
+      "start": 21.986,
+      "end": 22.167
+    },
+    {
+      "index": 87,
+      "char": "的",
+      "start": 22.202,
+      "end": 22.383
+    },
+    {
+      "index": 88,
+      "char": "船",
+      "start": 22.417,
+      "end": 22.598
+    },
+    {
+      "index": 89,
+      "char": "这",
+      "start": 22.973,
+      "end": 23.154
+    },
+    {
+      "index": 90,
+      "char": "是",
+      "start": 23.188,
+      "end": 23.369
+    },
+    {
+      "index": 91,
+      "char": "一",
+      "start": 23.404,
+      "end": 23.585
+    },
+    {
+      "index": 92,
+      "char": "幅",
+      "start": 23.619,
+      "end": 23.8
+    },
+    {
+      "index": 93,
+      "char": "帮",
+      "start": 23.835,
+      "end": 24.016
+    },
+    {
+      "index": 94,
+      "char": "助",
+      "start": 24.05,
+      "end": 24.231
+    },
+    {
+      "index": 95,
+      "char": "记",
+      "start": 24.266,
+      "end": 24.447
+    },
+    {
+      "index": 96,
+      "char": "笔",
+      "start": 24.481,
+      "end": 24.662
+    },
+    {
+      "index": 97,
+      "char": "画",
+      "start": 24.697,
+      "end": 24.878
+    },
+    {
+      "index": 98,
+      "char": "和",
+      "start": 24.912,
+      "end": 25.093
+    },
+    {
+      "index": 99,
+      "char": "位",
+      "start": 25.128,
+      "end": 25.309
+    },
+    {
+      "index": 100,
+      "char": "置",
+      "start": 25.343,
+      "end": 25.524
+    },
+    {
+      "index": 101,
+      "char": "的",
+      "start": 25.559,
+      "end": 25.74
+    },
+    {
+      "index": 102,
+      "char": "记",
+      "start": 25.774,
+      "end": 25.955
+    },
+    {
+      "index": 103,
+      "char": "忆",
+      "start": 25.99,
+      "end": 26.171
+    },
+    {
+      "index": 104,
+      "char": "画",
+      "start": 26.205,
+      "end": 26.386
+    },
+    {
+      "index": 105,
+      "char": "面",
+      "start": 26.421,
+      "end": 26.602
+    },
+    {
+      "index": 106,
+      "char": "不",
+      "start": 26.816,
+      "end": 26.997
+    },
+    {
+      "index": 107,
+      "char": "是",
+      "start": 27.032,
+      "end": 27.213
+    },
+    {
+      "index": 108,
+      "char": "完",
+      "start": 27.247,
+      "end": 27.428
+    },
+    {
+      "index": 109,
+      "char": "整",
+      "start": 27.463,
+      "end": 27.644
+    },
+    {
+      "index": 110,
+      "char": "字",
+      "start": 27.678,
+      "end": 27.859
+    },
+    {
+      "index": 111,
+      "char": "源",
+      "start": 27.894,
+      "end": 28.075
+    },
+    {
+      "index": 112,
+      "char": "最",
+      "start": 28.449,
+      "end": 28.63
+    },
+    {
+      "index": 113,
+      "char": "后",
+      "start": 28.665,
+      "end": 28.846
+    },
+    {
+      "index": 114,
+      "char": "再",
+      "start": 28.88,
+      "end": 29.061
+    },
+    {
+      "index": 115,
+      "char": "读",
+      "start": 29.096,
+      "end": 29.277
+    },
+    {
+      "index": 116,
+      "char": "一",
+      "start": 29.311,
+      "end": 29.492
+    },
+    {
+      "index": 117,
+      "char": "遍",
+      "start": 29.527,
+      "end": 29.708
+    },
+    {
+      "index": 118,
+      "char": "小",
+      "start": 29.922,
+      "end": 30.103
+    },
+    {
+      "index": 119,
+      "char": "艇",
+      "start": 30.138,
+      "end": 30.319
     }
   ],
-  "transcript": "艇，“小艇”的“艇”。它是左右结构。看图找部件，合成字形。再读：小艇。",
+  "transcript": "艇，“小艇”的“艇”，读tǐng。它是左右结构，按顺序能看到“舟”和“廷”。从构字分工看，“舟”提示意义类别，“廷”提供读音线索。看图时，左边细长船身形成“舟”，右边船桅、甲板和延伸航线沿“廷”排列，组成“艇”。小艇是体形较小、在水上行驶的船。这是一幅帮助记笔画和位置的记忆画面，不是完整字源。最后再读一遍：小艇。",
   "voice_reference": "封",
   "timing_source": "punctuation-weighted-estimate",
-  "script_version": "child-first-v1",
-  "duration": 7.520181
+  "script_version": "child-first-v2",
+  "duration": 30.880181
 }

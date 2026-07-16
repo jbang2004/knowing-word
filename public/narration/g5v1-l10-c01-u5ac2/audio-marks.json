@@ -3,151 +3,727 @@
     {
       "index": 0,
       "char": "嫂",
-      "start": 0.214,
-      "end": 0.477
+      "start": 0.294,
+      "end": 0.49
     },
     {
       "index": 1,
       "char": "嫂",
       "start": 0.707,
-      "end": 0.97
+      "end": 0.903
     },
     {
       "index": 2,
       "char": "子",
-      "start": 1.021,
-      "end": 1.284
+      "start": 0.94,
+      "end": 1.136
     },
     {
       "index": 3,
       "char": "的",
-      "start": 1.334,
-      "end": 1.597
+      "start": 1.173,
+      "end": 1.369
     },
     {
       "index": 4,
       "char": "嫂",
-      "start": 1.647,
-      "end": 1.91
+      "start": 1.406,
+      "end": 1.602
     },
     {
       "index": 5,
-      "char": "它",
-      "start": 2.3,
-      "end": 2.564
+      "char": "读",
+      "start": 1.819,
+      "end": 2.015
     },
     {
       "index": 6,
-      "char": "是",
-      "start": 2.614,
-      "end": 2.877
+      "char": "s",
+      "start": 2.052,
+      "end": 2.248
     },
     {
       "index": 7,
-      "char": "左",
-      "start": 2.927,
-      "end": 3.19
+      "char": "ǎ",
+      "start": 2.285,
+      "end": 2.481
     },
     {
       "index": 8,
-      "char": "右",
-      "start": 3.24,
-      "end": 3.503
+      "char": "o",
+      "start": 2.518,
+      "end": 2.714
     },
     {
       "index": 9,
-      "char": "结",
-      "start": 3.553,
-      "end": 3.817
+      "char": "它",
+      "start": 3.091,
+      "end": 3.287
     },
     {
       "index": 10,
-      "char": "构",
-      "start": 3.867,
-      "end": 4.13
+      "char": "是",
+      "start": 3.324,
+      "end": 3.52
     },
     {
       "index": 11,
-      "char": "看",
-      "start": 4.52,
-      "end": 4.783
+      "char": "左",
+      "start": 3.557,
+      "end": 3.753
     },
     {
       "index": 12,
-      "char": "图",
-      "start": 4.833,
-      "end": 5.096
+      "char": "右",
+      "start": 3.79,
+      "end": 3.986
     },
     {
       "index": 13,
-      "char": "找",
-      "start": 5.147,
-      "end": 5.41
+      "char": "结",
+      "start": 4.023,
+      "end": 4.219
     },
     {
       "index": 14,
-      "char": "部",
-      "start": 5.46,
-      "end": 5.723
+      "char": "构",
+      "start": 4.256,
+      "end": 4.452
     },
     {
       "index": 15,
-      "char": "件",
-      "start": 5.773,
-      "end": 6.036
+      "char": "按",
+      "start": 4.669,
+      "end": 4.865
     },
     {
       "index": 16,
-      "char": "合",
-      "start": 6.266,
-      "end": 6.53
+      "char": "顺",
+      "start": 4.902,
+      "end": 5.098
     },
     {
       "index": 17,
-      "char": "成",
-      "start": 6.58,
-      "end": 6.843
+      "char": "序",
+      "start": 5.135,
+      "end": 5.331
     },
     {
       "index": 18,
-      "char": "字",
-      "start": 6.893,
-      "end": 7.156
+      "char": "能",
+      "start": 5.368,
+      "end": 5.564
     },
     {
       "index": 19,
-      "char": "形",
-      "start": 7.206,
-      "end": 7.469
+      "char": "看",
+      "start": 5.601,
+      "end": 5.797
     },
     {
       "index": 20,
-      "char": "再",
-      "start": 7.859,
-      "end": 8.123
+      "char": "到",
+      "start": 5.834,
+      "end": 6.03
     },
     {
       "index": 21,
-      "char": "读",
-      "start": 8.173,
-      "end": 8.436
+      "char": "女",
+      "start": 6.067,
+      "end": 6.263
     },
     {
       "index": 22,
-      "char": "嫂",
-      "start": 8.666,
-      "end": 8.929
+      "char": "和",
+      "start": 6.3,
+      "end": 6.496
     },
     {
       "index": 23,
+      "char": "叟",
+      "start": 6.533,
+      "end": 6.729
+    },
+    {
+      "index": 24,
+      "char": "从",
+      "start": 7.106,
+      "end": 7.302
+    },
+    {
+      "index": 25,
+      "char": "构",
+      "start": 7.339,
+      "end": 7.535
+    },
+    {
+      "index": 26,
+      "char": "字",
+      "start": 7.572,
+      "end": 7.768
+    },
+    {
+      "index": 27,
+      "char": "分",
+      "start": 7.805,
+      "end": 8.001
+    },
+    {
+      "index": 28,
+      "char": "工",
+      "start": 8.038,
+      "end": 8.234
+    },
+    {
+      "index": 29,
+      "char": "看",
+      "start": 8.271,
+      "end": 8.467
+    },
+    {
+      "index": 30,
+      "char": "女",
+      "start": 8.684,
+      "end": 8.88
+    },
+    {
+      "index": 31,
+      "char": "提",
+      "start": 8.917,
+      "end": 9.113
+    },
+    {
+      "index": 32,
+      "char": "示",
+      "start": 9.15,
+      "end": 9.346
+    },
+    {
+      "index": 33,
+      "char": "意",
+      "start": 9.383,
+      "end": 9.579
+    },
+    {
+      "index": 34,
+      "char": "义",
+      "start": 9.616,
+      "end": 9.812
+    },
+    {
+      "index": 35,
+      "char": "类",
+      "start": 9.849,
+      "end": 10.045
+    },
+    {
+      "index": 36,
+      "char": "别",
+      "start": 10.082,
+      "end": 10.278
+    },
+    {
+      "index": 37,
+      "char": "叟",
+      "start": 10.495,
+      "end": 10.691
+    },
+    {
+      "index": 38,
+      "char": "提",
+      "start": 10.728,
+      "end": 10.924
+    },
+    {
+      "index": 39,
+      "char": "供",
+      "start": 10.961,
+      "end": 11.157
+    },
+    {
+      "index": 40,
+      "char": "读",
+      "start": 11.194,
+      "end": 11.39
+    },
+    {
+      "index": 41,
+      "char": "音",
+      "start": 11.427,
+      "end": 11.623
+    },
+    {
+      "index": 42,
+      "char": "线",
+      "start": 11.66,
+      "end": 11.856
+    },
+    {
+      "index": 43,
+      "char": "索",
+      "start": 11.893,
+      "end": 12.089
+    },
+    {
+      "index": 44,
+      "char": "看",
+      "start": 12.466,
+      "end": 12.662
+    },
+    {
+      "index": 45,
+      "char": "图",
+      "start": 12.699,
+      "end": 12.895
+    },
+    {
+      "index": 46,
+      "char": "时",
+      "start": 12.932,
+      "end": 13.128
+    },
+    {
+      "index": 47,
+      "char": "左",
+      "start": 13.345,
+      "end": 13.541
+    },
+    {
+      "index": 48,
+      "char": "边",
+      "start": 13.578,
+      "end": 13.774
+    },
+    {
+      "index": 49,
+      "char": "女",
+      "start": 13.811,
+      "end": 14.007
+    },
+    {
+      "index": 50,
+      "char": "性",
+      "start": 14.044,
+      "end": 14.24
+    },
+    {
+      "index": 51,
+      "char": "人",
+      "start": 14.277,
+      "end": 14.473
+    },
+    {
+      "index": 52,
+      "char": "物",
+      "start": 14.51,
+      "end": 14.706
+    },
+    {
+      "index": 53,
+      "char": "形",
+      "start": 14.743,
+      "end": 14.939
+    },
+    {
+      "index": 54,
+      "char": "成",
+      "start": 14.976,
+      "end": 15.172
+    },
+    {
+      "index": 55,
+      "char": "女",
+      "start": 15.209,
+      "end": 15.405
+    },
+    {
+      "index": 56,
+      "char": "右",
+      "start": 15.622,
+      "end": 15.818
+    },
+    {
+      "index": 57,
+      "char": "边",
+      "start": 15.855,
+      "end": 16.051
+    },
+    {
+      "index": 58,
+      "char": "年",
+      "start": 16.088,
+      "end": 16.284
+    },
+    {
+      "index": 59,
+      "char": "长",
+      "start": 16.321,
+      "end": 16.517
+    },
+    {
+      "index": 60,
+      "char": "者",
+      "start": 16.554,
+      "end": 16.75
+    },
+    {
+      "index": 61,
+      "char": "弯",
+      "start": 16.787,
+      "end": 16.983
+    },
+    {
+      "index": 62,
+      "char": "身",
+      "start": 17.02,
+      "end": 17.216
+    },
+    {
+      "index": 63,
+      "char": "整",
+      "start": 17.253,
+      "end": 17.449
+    },
+    {
+      "index": 64,
+      "char": "理",
+      "start": 17.486,
+      "end": 17.682
+    },
+    {
+      "index": 65,
+      "char": "谷",
+      "start": 17.719,
+      "end": 17.915
+    },
+    {
+      "index": 66,
+      "char": "物",
+      "start": 17.952,
+      "end": 18.148
+    },
+    {
+      "index": 67,
+      "char": "身",
+      "start": 18.365,
+      "end": 18.561
+    },
+    {
+      "index": 68,
+      "char": "体",
+      "start": 18.598,
+      "end": 18.794
+    },
+    {
+      "index": 69,
+      "char": "与",
+      "start": 18.831,
+      "end": 19.027
+    },
+    {
+      "index": 70,
+      "char": "工",
+      "start": 19.064,
+      "end": 19.26
+    },
+    {
+      "index": 71,
+      "char": "具",
+      "start": 19.297,
+      "end": 19.493
+    },
+    {
+      "index": 72,
+      "char": "沿",
+      "start": 19.53,
+      "end": 19.726
+    },
+    {
+      "index": 73,
+      "char": "叟",
+      "start": 19.763,
+      "end": 19.959
+    },
+    {
+      "index": 74,
+      "char": "站",
+      "start": 19.996,
+      "end": 20.192
+    },
+    {
+      "index": 75,
+      "char": "好",
+      "start": 20.229,
+      "end": 20.425
+    },
+    {
+      "index": 76,
+      "char": "组",
+      "start": 20.642,
+      "end": 20.838
+    },
+    {
+      "index": 77,
+      "char": "成",
+      "start": 20.875,
+      "end": 21.071
+    },
+    {
+      "index": 78,
+      "char": "嫂",
+      "start": 21.108,
+      "end": 21.304
+    },
+    {
+      "index": 79,
+      "char": "嫂",
+      "start": 21.681,
+      "end": 21.877
+    },
+    {
+      "index": 80,
       "char": "子",
-      "start": 8.979,
-      "end": 9.242
+      "start": 21.914,
+      "end": 22.11
+    },
+    {
+      "index": 81,
+      "char": "通",
+      "start": 22.147,
+      "end": 22.343
+    },
+    {
+      "index": 82,
+      "char": "常",
+      "start": 22.38,
+      "end": 22.576
+    },
+    {
+      "index": 83,
+      "char": "指",
+      "start": 22.613,
+      "end": 22.809
+    },
+    {
+      "index": 84,
+      "char": "哥",
+      "start": 22.846,
+      "end": 23.042
+    },
+    {
+      "index": 85,
+      "char": "哥",
+      "start": 23.079,
+      "end": 23.275
+    },
+    {
+      "index": 86,
+      "char": "的",
+      "start": 23.312,
+      "end": 23.508
+    },
+    {
+      "index": 87,
+      "char": "妻",
+      "start": 23.545,
+      "end": 23.741
+    },
+    {
+      "index": 88,
+      "char": "子",
+      "start": 23.778,
+      "end": 23.974
+    },
+    {
+      "index": 89,
+      "char": "这",
+      "start": 24.351,
+      "end": 24.547
+    },
+    {
+      "index": 90,
+      "char": "是",
+      "start": 24.584,
+      "end": 24.78
+    },
+    {
+      "index": 91,
+      "char": "一",
+      "start": 24.817,
+      "end": 25.013
+    },
+    {
+      "index": 92,
+      "char": "幅",
+      "start": 25.05,
+      "end": 25.246
+    },
+    {
+      "index": 93,
+      "char": "帮",
+      "start": 25.283,
+      "end": 25.479
+    },
+    {
+      "index": 94,
+      "char": "助",
+      "start": 25.516,
+      "end": 25.712
+    },
+    {
+      "index": 95,
+      "char": "记",
+      "start": 25.749,
+      "end": 25.945
+    },
+    {
+      "index": 96,
+      "char": "笔",
+      "start": 25.982,
+      "end": 26.178
+    },
+    {
+      "index": 97,
+      "char": "画",
+      "start": 26.215,
+      "end": 26.411
+    },
+    {
+      "index": 98,
+      "char": "和",
+      "start": 26.448,
+      "end": 26.644
+    },
+    {
+      "index": 99,
+      "char": "位",
+      "start": 26.681,
+      "end": 26.877
+    },
+    {
+      "index": 100,
+      "char": "置",
+      "start": 26.914,
+      "end": 27.11
+    },
+    {
+      "index": 101,
+      "char": "的",
+      "start": 27.147,
+      "end": 27.343
+    },
+    {
+      "index": 102,
+      "char": "记",
+      "start": 27.38,
+      "end": 27.576
+    },
+    {
+      "index": 103,
+      "char": "忆",
+      "start": 27.613,
+      "end": 27.809
+    },
+    {
+      "index": 104,
+      "char": "画",
+      "start": 27.846,
+      "end": 28.042
+    },
+    {
+      "index": 105,
+      "char": "面",
+      "start": 28.079,
+      "end": 28.275
+    },
+    {
+      "index": 106,
+      "char": "不",
+      "start": 28.492,
+      "end": 28.688
+    },
+    {
+      "index": 107,
+      "char": "是",
+      "start": 28.725,
+      "end": 28.921
+    },
+    {
+      "index": 108,
+      "char": "完",
+      "start": 28.958,
+      "end": 29.154
+    },
+    {
+      "index": 109,
+      "char": "整",
+      "start": 29.191,
+      "end": 29.387
+    },
+    {
+      "index": 110,
+      "char": "字",
+      "start": 29.424,
+      "end": 29.62
+    },
+    {
+      "index": 111,
+      "char": "源",
+      "start": 29.657,
+      "end": 29.853
+    },
+    {
+      "index": 112,
+      "char": "最",
+      "start": 30.23,
+      "end": 30.426
+    },
+    {
+      "index": 113,
+      "char": "后",
+      "start": 30.463,
+      "end": 30.659
+    },
+    {
+      "index": 114,
+      "char": "再",
+      "start": 30.696,
+      "end": 30.892
+    },
+    {
+      "index": 115,
+      "char": "读",
+      "start": 30.929,
+      "end": 31.125
+    },
+    {
+      "index": 116,
+      "char": "一",
+      "start": 31.162,
+      "end": 31.358
+    },
+    {
+      "index": 117,
+      "char": "遍",
+      "start": 31.395,
+      "end": 31.591
+    },
+    {
+      "index": 118,
+      "char": "嫂",
+      "start": 31.808,
+      "end": 32.004
+    },
+    {
+      "index": 119,
+      "char": "子",
+      "start": 32.041,
+      "end": 32.237
     }
   ],
-  "transcript": "嫂，“嫂子”的“嫂”。它是左右结构。看图找部件，合成字形。再读：嫂子。",
+  "transcript": "嫂，“嫂子”的“嫂”，读sǎo。它是左右结构，按顺序能看到“女”和“叟”。从构字分工看，“女”提示意义类别，“叟”提供读音线索。看图时，左边女性人物形成“女”，右边年长者弯身整理谷物，身体与工具沿“叟”站好，组成“嫂”。嫂子通常指哥哥的妻子。这是一幅帮助记笔画和位置的记忆画面，不是完整字源。最后再读一遍：嫂子。",
   "voice_reference": "封",
   "timing_source": "punctuation-weighted-estimate",
-  "script_version": "child-first-v1",
-  "duration": 9.760181
+  "script_version": "child-first-v2",
+  "duration": 32.800181
 }

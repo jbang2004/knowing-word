@@ -3,151 +3,781 @@
     {
       "index": 0,
       "char": "矫",
-      "start": 0.207,
-      "end": 0.459
+      "start": 0.291,
+      "end": 0.446
     },
     {
       "index": 1,
       "char": "矫",
-      "start": 0.687,
-      "end": 0.94
+      "start": 0.655,
+      "end": 0.81
     },
     {
       "index": 2,
       "char": "健",
-      "start": 0.988,
-      "end": 1.24
+      "start": 0.839,
+      "end": 0.994
     },
     {
       "index": 3,
       "char": "的",
-      "start": 1.288,
-      "end": 1.54
+      "start": 1.023,
+      "end": 1.178
     },
     {
       "index": 4,
       "char": "矫",
-      "start": 1.588,
-      "end": 1.841
+      "start": 1.207,
+      "end": 1.362
     },
     {
       "index": 5,
-      "char": "它",
-      "start": 2.229,
-      "end": 2.481
+      "char": "读",
+      "start": 1.571,
+      "end": 1.726
     },
     {
       "index": 6,
-      "char": "是",
-      "start": 2.529,
-      "end": 2.782
+      "char": "j",
+      "start": 1.755,
+      "end": 1.91
     },
     {
       "index": 7,
-      "char": "左",
-      "start": 2.83,
-      "end": 3.082
+      "char": "i",
+      "start": 1.939,
+      "end": 2.094
     },
     {
       "index": 8,
-      "char": "右",
-      "start": 3.13,
-      "end": 3.382
+      "char": "ǎ",
+      "start": 2.123,
+      "end": 2.278
     },
     {
       "index": 9,
-      "char": "结",
-      "start": 3.43,
-      "end": 3.683
+      "char": "o",
+      "start": 2.307,
+      "end": 2.462
     },
     {
       "index": 10,
-      "char": "构",
-      "start": 3.731,
-      "end": 3.983
+      "char": "它",
+      "start": 2.831,
+      "end": 2.986
     },
     {
       "index": 11,
-      "char": "看",
-      "start": 4.371,
-      "end": 4.624
+      "char": "是",
+      "start": 3.015,
+      "end": 3.17
     },
     {
       "index": 12,
-      "char": "图",
-      "start": 4.672,
-      "end": 4.924
+      "char": "左",
+      "start": 3.199,
+      "end": 3.354
     },
     {
       "index": 13,
-      "char": "找",
-      "start": 4.972,
-      "end": 5.224
+      "char": "右",
+      "start": 3.383,
+      "end": 3.538
     },
     {
       "index": 14,
-      "char": "部",
-      "start": 5.273,
-      "end": 5.525
+      "char": "结",
+      "start": 3.567,
+      "end": 3.722
     },
     {
       "index": 15,
-      "char": "件",
-      "start": 5.573,
-      "end": 5.825
+      "char": "构",
+      "start": 3.752,
+      "end": 3.906
     },
     {
       "index": 16,
-      "char": "合",
-      "start": 6.053,
-      "end": 6.306
+      "char": "按",
+      "start": 4.116,
+      "end": 4.27
     },
     {
       "index": 17,
-      "char": "成",
-      "start": 6.354,
-      "end": 6.606
+      "char": "顺",
+      "start": 4.3,
+      "end": 4.454
     },
     {
       "index": 18,
-      "char": "字",
-      "start": 6.654,
-      "end": 6.907
+      "char": "序",
+      "start": 4.484,
+      "end": 4.638
     },
     {
       "index": 19,
-      "char": "形",
-      "start": 6.955,
-      "end": 7.207
+      "char": "能",
+      "start": 4.668,
+      "end": 4.822
     },
     {
       "index": 20,
-      "char": "再",
-      "start": 7.595,
-      "end": 7.847
+      "char": "看",
+      "start": 4.852,
+      "end": 5.006
     },
     {
       "index": 21,
-      "char": "读",
-      "start": 7.895,
-      "end": 8.148
+      "char": "到",
+      "start": 5.036,
+      "end": 5.19
     },
     {
       "index": 22,
-      "char": "矫",
-      "start": 8.376,
-      "end": 8.628
+      "char": "矢",
+      "start": 5.22,
+      "end": 5.374
     },
     {
       "index": 23,
+      "char": "和",
+      "start": 5.404,
+      "end": 5.558
+    },
+    {
+      "index": 24,
+      "char": "乔",
+      "start": 5.588,
+      "end": 5.742
+    },
+    {
+      "index": 25,
+      "char": "从",
+      "start": 6.112,
+      "end": 6.266
+    },
+    {
+      "index": 26,
+      "char": "构",
+      "start": 6.296,
+      "end": 6.45
+    },
+    {
+      "index": 27,
+      "char": "字",
+      "start": 6.48,
+      "end": 6.635
+    },
+    {
+      "index": 28,
+      "char": "分",
+      "start": 6.664,
+      "end": 6.819
+    },
+    {
+      "index": 29,
+      "char": "工",
+      "start": 6.848,
+      "end": 7.003
+    },
+    {
+      "index": 30,
+      "char": "看",
+      "start": 7.032,
+      "end": 7.187
+    },
+    {
+      "index": 31,
+      "char": "矢",
+      "start": 7.396,
+      "end": 7.551
+    },
+    {
+      "index": 32,
+      "char": "提",
+      "start": 7.58,
+      "end": 7.735
+    },
+    {
+      "index": 33,
+      "char": "示",
+      "start": 7.764,
+      "end": 7.919
+    },
+    {
+      "index": 34,
+      "char": "意",
+      "start": 7.948,
+      "end": 8.103
+    },
+    {
+      "index": 35,
+      "char": "义",
+      "start": 8.132,
+      "end": 8.287
+    },
+    {
+      "index": 36,
+      "char": "类",
+      "start": 8.316,
+      "end": 8.471
+    },
+    {
+      "index": 37,
+      "char": "别",
+      "start": 8.5,
+      "end": 8.655
+    },
+    {
+      "index": 38,
+      "char": "乔",
+      "start": 8.864,
+      "end": 9.019
+    },
+    {
+      "index": 39,
+      "char": "提",
+      "start": 9.048,
+      "end": 9.203
+    },
+    {
+      "index": 40,
+      "char": "供",
+      "start": 9.232,
+      "end": 9.387
+    },
+    {
+      "index": 41,
+      "char": "读",
+      "start": 9.416,
+      "end": 9.571
+    },
+    {
+      "index": 42,
+      "char": "音",
+      "start": 9.6,
+      "end": 9.755
+    },
+    {
+      "index": 43,
+      "char": "线",
+      "start": 9.784,
+      "end": 9.939
+    },
+    {
+      "index": 44,
+      "char": "索",
+      "start": 9.968,
+      "end": 10.123
+    },
+    {
+      "index": 45,
+      "char": "看",
+      "start": 10.493,
+      "end": 10.647
+    },
+    {
+      "index": 46,
+      "char": "图",
+      "start": 10.677,
+      "end": 10.831
+    },
+    {
+      "index": 47,
+      "char": "时",
+      "start": 10.861,
+      "end": 11.015
+    },
+    {
+      "index": 48,
+      "char": "左",
+      "start": 11.225,
+      "end": 11.379
+    },
+    {
+      "index": 49,
+      "char": "边",
+      "start": 11.409,
+      "end": 11.563
+    },
+    {
+      "index": 50,
+      "char": "一",
+      "start": 11.593,
+      "end": 11.747
+    },
+    {
+      "index": 51,
+      "char": "支",
+      "start": 11.777,
+      "end": 11.931
+    },
+    {
+      "index": 52,
+      "char": "笔",
+      "start": 11.961,
+      "end": 12.115
+    },
+    {
+      "index": 53,
+      "char": "直",
+      "start": 12.145,
+      "end": 12.299
+    },
+    {
+      "index": 54,
+      "char": "短",
+      "start": 12.329,
+      "end": 12.483
+    },
+    {
+      "index": 55,
+      "char": "箭",
+      "start": 12.513,
+      "end": 12.667
+    },
+    {
+      "index": 56,
+      "char": "形",
+      "start": 12.697,
+      "end": 12.851
+    },
+    {
+      "index": 57,
+      "char": "成",
+      "start": 12.881,
+      "end": 13.035
+    },
+    {
+      "index": 58,
+      "char": "矢",
+      "start": 13.065,
+      "end": 13.22
+    },
+    {
+      "index": 59,
+      "char": "右",
+      "start": 13.429,
+      "end": 13.584
+    },
+    {
+      "index": 60,
+      "char": "边",
+      "start": 13.613,
+      "end": 13.768
+    },
+    {
+      "index": 61,
+      "char": "高",
+      "start": 13.797,
+      "end": 13.952
+    },
+    {
+      "index": 62,
+      "char": "桥",
+      "start": 13.981,
+      "end": 14.136
+    },
+    {
+      "index": 63,
+      "char": "人",
+      "start": 14.345,
+      "end": 14.5
+    },
+    {
+      "index": 64,
+      "char": "物",
+      "start": 14.529,
+      "end": 14.684
+    },
+    {
+      "index": 65,
+      "char": "和",
+      "start": 14.713,
+      "end": 14.868
+    },
+    {
+      "index": 66,
+      "char": "跨",
+      "start": 14.897,
+      "end": 15.052
+    },
+    {
+      "index": 67,
+      "char": "步",
+      "start": 15.081,
+      "end": 15.236
+    },
+    {
+      "index": 68,
+      "char": "桥",
+      "start": 15.265,
+      "end": 15.42
+    },
+    {
+      "index": 69,
+      "char": "脚",
+      "start": 15.449,
+      "end": 15.604
+    },
+    {
+      "index": 70,
+      "char": "沿",
+      "start": 15.633,
+      "end": 15.788
+    },
+    {
+      "index": 71,
+      "char": "乔",
+      "start": 15.817,
+      "end": 15.972
+    },
+    {
+      "index": 72,
+      "char": "展",
+      "start": 16.001,
+      "end": 16.156
+    },
+    {
+      "index": 73,
+      "char": "开",
+      "start": 16.185,
+      "end": 16.34
+    },
+    {
+      "index": 74,
+      "char": "像",
+      "start": 16.549,
+      "end": 16.704
+    },
+    {
+      "index": 75,
+      "char": "松",
+      "start": 16.733,
+      "end": 16.888
+    },
+    {
+      "index": 76,
+      "char": "鼠",
+      "start": 16.918,
+      "end": 17.072
+    },
+    {
+      "index": 77,
+      "char": "轻",
+      "start": 17.102,
+      "end": 17.256
+    },
+    {
+      "index": 78,
+      "char": "巧",
+      "start": 17.286,
+      "end": 17.44
+    },
+    {
+      "index": 79,
+      "char": "跃",
+      "start": 17.47,
+      "end": 17.624
+    },
+    {
+      "index": 80,
+      "char": "过",
+      "start": 17.654,
+      "end": 17.808
+    },
+    {
+      "index": 81,
+      "char": "组",
+      "start": 18.018,
+      "end": 18.172
+    },
+    {
+      "index": 82,
+      "char": "成",
+      "start": 18.202,
+      "end": 18.356
+    },
+    {
+      "index": 83,
+      "char": "矫",
+      "start": 18.386,
+      "end": 18.54
+    },
+    {
+      "index": 84,
+      "char": "矫",
+      "start": 18.91,
+      "end": 19.064
+    },
+    {
+      "index": 85,
       "char": "健",
-      "start": 8.676,
-      "end": 8.929
+      "start": 19.094,
+      "end": 19.248
+    },
+    {
+      "index": 86,
+      "char": "形",
+      "start": 19.278,
+      "end": 19.432
+    },
+    {
+      "index": 87,
+      "char": "容",
+      "start": 19.462,
+      "end": 19.616
+    },
+    {
+      "index": 88,
+      "char": "动",
+      "start": 19.646,
+      "end": 19.8
+    },
+    {
+      "index": 89,
+      "char": "作",
+      "start": 19.83,
+      "end": 19.985
+    },
+    {
+      "index": 90,
+      "char": "有",
+      "start": 20.014,
+      "end": 20.169
+    },
+    {
+      "index": 91,
+      "char": "力",
+      "start": 20.198,
+      "end": 20.353
+    },
+    {
+      "index": 92,
+      "char": "灵",
+      "start": 20.562,
+      "end": 20.717
+    },
+    {
+      "index": 93,
+      "char": "活",
+      "start": 20.746,
+      "end": 20.901
+    },
+    {
+      "index": 94,
+      "char": "姿",
+      "start": 21.11,
+      "end": 21.265
+    },
+    {
+      "index": 95,
+      "char": "态",
+      "start": 21.294,
+      "end": 21.449
+    },
+    {
+      "index": 96,
+      "char": "挺",
+      "start": 21.478,
+      "end": 21.633
+    },
+    {
+      "index": 97,
+      "char": "拔",
+      "start": 21.662,
+      "end": 21.817
+    },
+    {
+      "index": 98,
+      "char": "这",
+      "start": 22.186,
+      "end": 22.341
+    },
+    {
+      "index": 99,
+      "char": "是",
+      "start": 22.37,
+      "end": 22.525
+    },
+    {
+      "index": 100,
+      "char": "一",
+      "start": 22.554,
+      "end": 22.709
+    },
+    {
+      "index": 101,
+      "char": "幅",
+      "start": 22.738,
+      "end": 22.893
+    },
+    {
+      "index": 102,
+      "char": "帮",
+      "start": 22.922,
+      "end": 23.077
+    },
+    {
+      "index": 103,
+      "char": "助",
+      "start": 23.106,
+      "end": 23.261
+    },
+    {
+      "index": 104,
+      "char": "记",
+      "start": 23.29,
+      "end": 23.445
+    },
+    {
+      "index": 105,
+      "char": "笔",
+      "start": 23.474,
+      "end": 23.629
+    },
+    {
+      "index": 106,
+      "char": "画",
+      "start": 23.658,
+      "end": 23.813
+    },
+    {
+      "index": 107,
+      "char": "和",
+      "start": 23.843,
+      "end": 23.997
+    },
+    {
+      "index": 108,
+      "char": "位",
+      "start": 24.027,
+      "end": 24.181
+    },
+    {
+      "index": 109,
+      "char": "置",
+      "start": 24.211,
+      "end": 24.365
+    },
+    {
+      "index": 110,
+      "char": "的",
+      "start": 24.395,
+      "end": 24.549
+    },
+    {
+      "index": 111,
+      "char": "记",
+      "start": 24.579,
+      "end": 24.733
+    },
+    {
+      "index": 112,
+      "char": "忆",
+      "start": 24.763,
+      "end": 24.917
+    },
+    {
+      "index": 113,
+      "char": "画",
+      "start": 24.947,
+      "end": 25.101
+    },
+    {
+      "index": 114,
+      "char": "面",
+      "start": 25.131,
+      "end": 25.285
+    },
+    {
+      "index": 115,
+      "char": "不",
+      "start": 25.495,
+      "end": 25.649
+    },
+    {
+      "index": 116,
+      "char": "是",
+      "start": 25.679,
+      "end": 25.833
+    },
+    {
+      "index": 117,
+      "char": "完",
+      "start": 25.863,
+      "end": 26.017
+    },
+    {
+      "index": 118,
+      "char": "整",
+      "start": 26.047,
+      "end": 26.201
+    },
+    {
+      "index": 119,
+      "char": "字",
+      "start": 26.231,
+      "end": 26.385
+    },
+    {
+      "index": 120,
+      "char": "源",
+      "start": 26.415,
+      "end": 26.57
+    },
+    {
+      "index": 121,
+      "char": "最",
+      "start": 26.939,
+      "end": 27.094
+    },
+    {
+      "index": 122,
+      "char": "后",
+      "start": 27.123,
+      "end": 27.278
+    },
+    {
+      "index": 123,
+      "char": "再",
+      "start": 27.307,
+      "end": 27.462
+    },
+    {
+      "index": 124,
+      "char": "读",
+      "start": 27.491,
+      "end": 27.646
+    },
+    {
+      "index": 125,
+      "char": "一",
+      "start": 27.675,
+      "end": 27.83
+    },
+    {
+      "index": 126,
+      "char": "遍",
+      "start": 27.859,
+      "end": 28.014
+    },
+    {
+      "index": 127,
+      "char": "矫",
+      "start": 28.223,
+      "end": 28.378
+    },
+    {
+      "index": 128,
+      "char": "健",
+      "start": 28.407,
+      "end": 28.562
     }
   ],
-  "transcript": "矫，“矫健”的“矫”。它是左右结构。看图找部件，合成字形。再读：矫健。",
+  "transcript": "矫，“矫健”的“矫”，读jiǎo。它是左右结构，按顺序能看到“矢”和“乔”。从构字分工看，“矢”提示意义类别，“乔”提供读音线索。看图时，左边一支笔直短箭形成“矢”，右边高桥、人物和跨步桥脚沿“乔”展开，像松鼠轻巧跃过，组成“矫”。矫健形容动作有力、灵活，姿态挺拔。这是一幅帮助记笔画和位置的记忆画面，不是完整字源。最后再读一遍：矫健。",
   "voice_reference": "封",
   "timing_source": "punctuation-weighted-estimate",
-  "script_version": "child-first-v1",
-  "duration": 9.440181
+  "script_version": "child-first-v2",
+  "duration": 29.120181
 }

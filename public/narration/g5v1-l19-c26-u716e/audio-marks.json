@@ -3,151 +3,757 @@
     {
       "index": 0,
       "char": "煮",
-      "start": 0.2,
-      "end": 0.441
+      "start": 0.296,
+      "end": 0.523
     },
     {
       "index": 1,
       "char": "煮",
-      "start": 0.667,
-      "end": 0.909
+      "start": 0.746,
+      "end": 0.973
     },
     {
       "index": 2,
       "char": "饭",
-      "start": 0.955,
-      "end": 1.196
+      "start": 1.016,
+      "end": 1.242
     },
     {
       "index": 3,
       "char": "的",
-      "start": 1.242,
-      "end": 1.484
+      "start": 1.285,
+      "end": 1.512
     },
     {
       "index": 4,
       "char": "煮",
-      "start": 1.53,
-      "end": 1.771
+      "start": 1.555,
+      "end": 1.782
     },
     {
       "index": 5,
-      "char": "它",
-      "start": 2.157,
-      "end": 2.399
+      "char": "读",
+      "start": 2.005,
+      "end": 2.232
     },
     {
       "index": 6,
-      "char": "是",
-      "start": 2.445,
-      "end": 2.686
+      "char": "z",
+      "start": 2.275,
+      "end": 2.501
     },
     {
       "index": 7,
-      "char": "上",
-      "start": 2.732,
-      "end": 2.974
+      "char": "h",
+      "start": 2.545,
+      "end": 2.771
     },
     {
       "index": 8,
-      "char": "下",
-      "start": 3.02,
-      "end": 3.262
+      "char": "ǔ",
+      "start": 2.814,
+      "end": 3.041
     },
     {
       "index": 9,
-      "char": "结",
-      "start": 3.308,
-      "end": 3.549
+      "char": "它",
+      "start": 3.424,
+      "end": 3.651
     },
     {
       "index": 10,
-      "char": "构",
-      "start": 3.595,
-      "end": 3.837
+      "char": "是",
+      "start": 3.694,
+      "end": 3.92
     },
     {
       "index": 11,
-      "char": "看",
-      "start": 4.223,
-      "end": 4.464
+      "char": "上",
+      "start": 3.964,
+      "end": 4.19
     },
     {
       "index": 12,
-      "char": "图",
-      "start": 4.51,
-      "end": 4.752
+      "char": "下",
+      "start": 4.233,
+      "end": 4.46
     },
     {
       "index": 13,
-      "char": "找",
-      "start": 4.798,
-      "end": 5.039
+      "char": "结",
+      "start": 4.503,
+      "end": 4.73
     },
     {
       "index": 14,
-      "char": "部",
-      "start": 5.085,
-      "end": 5.327
+      "char": "构",
+      "start": 4.773,
+      "end": 4.999
     },
     {
       "index": 15,
-      "char": "件",
-      "start": 5.373,
-      "end": 5.614
+      "char": "按",
+      "start": 5.223,
+      "end": 5.449
     },
     {
       "index": 16,
-      "char": "合",
-      "start": 5.84,
-      "end": 6.082
+      "char": "顺",
+      "start": 5.492,
+      "end": 5.719
     },
     {
       "index": 17,
-      "char": "成",
-      "start": 6.128,
-      "end": 6.369
+      "char": "序",
+      "start": 5.762,
+      "end": 5.989
     },
     {
       "index": 18,
-      "char": "字",
-      "start": 6.415,
-      "end": 6.657
+      "char": "能",
+      "start": 6.032,
+      "end": 6.258
     },
     {
       "index": 19,
-      "char": "形",
-      "start": 6.703,
-      "end": 6.944
+      "char": "看",
+      "start": 6.302,
+      "end": 6.528
     },
     {
       "index": 20,
-      "char": "再",
-      "start": 7.33,
-      "end": 7.572
+      "char": "到",
+      "start": 6.571,
+      "end": 6.798
     },
     {
       "index": 21,
-      "char": "读",
-      "start": 7.618,
-      "end": 7.86
+      "char": "者",
+      "start": 6.841,
+      "end": 7.068
     },
     {
       "index": 22,
-      "char": "煮",
-      "start": 8.086,
-      "end": 8.327
+      "char": "和",
+      "start": 7.111,
+      "end": 7.338
     },
     {
       "index": 23,
+      "char": "灬",
+      "start": 7.381,
+      "end": 7.607
+    },
+    {
+      "index": 24,
+      "char": "从",
+      "start": 7.99,
+      "end": 8.217
+    },
+    {
+      "index": 25,
+      "char": "构",
+      "start": 8.26,
+      "end": 8.487
+    },
+    {
+      "index": 26,
+      "char": "字",
+      "start": 8.53,
+      "end": 8.757
+    },
+    {
+      "index": 27,
+      "char": "分",
+      "start": 8.8,
+      "end": 9.026
+    },
+    {
+      "index": 28,
+      "char": "工",
+      "start": 9.07,
+      "end": 9.296
+    },
+    {
+      "index": 29,
+      "char": "看",
+      "start": 9.339,
+      "end": 9.566
+    },
+    {
+      "index": 30,
+      "char": "灬",
+      "start": 9.789,
+      "end": 10.016
+    },
+    {
+      "index": 31,
+      "char": "提",
+      "start": 10.059,
+      "end": 10.285
+    },
+    {
+      "index": 32,
+      "char": "示",
+      "start": 10.329,
+      "end": 10.555
+    },
+    {
+      "index": 33,
+      "char": "意",
+      "start": 10.598,
+      "end": 10.825
+    },
+    {
+      "index": 34,
+      "char": "义",
+      "start": 10.868,
+      "end": 11.095
+    },
+    {
+      "index": 35,
+      "char": "类",
+      "start": 11.138,
+      "end": 11.364
+    },
+    {
+      "index": 36,
+      "char": "别",
+      "start": 11.408,
+      "end": 11.634
+    },
+    {
+      "index": 37,
+      "char": "者",
+      "start": 11.857,
+      "end": 12.084
+    },
+    {
+      "index": 38,
+      "char": "提",
+      "start": 12.127,
+      "end": 12.354
+    },
+    {
+      "index": 39,
+      "char": "供",
+      "start": 12.397,
+      "end": 12.623
+    },
+    {
+      "index": 40,
+      "char": "读",
+      "start": 12.667,
+      "end": 12.893
+    },
+    {
+      "index": 41,
+      "char": "音",
+      "start": 12.936,
+      "end": 13.163
+    },
+    {
+      "index": 42,
+      "char": "线",
+      "start": 13.206,
+      "end": 13.433
+    },
+    {
+      "index": 43,
+      "char": "索",
+      "start": 13.476,
+      "end": 13.703
+    },
+    {
+      "index": 44,
+      "char": "看",
+      "start": 14.086,
+      "end": 14.312
+    },
+    {
+      "index": 45,
+      "char": "图",
+      "start": 14.355,
+      "end": 14.582
+    },
+    {
+      "index": 46,
+      "char": "时",
+      "start": 14.625,
+      "end": 14.852
+    },
+    {
+      "index": 47,
+      "char": "上",
+      "start": 15.075,
+      "end": 15.302
+    },
+    {
+      "index": 48,
+      "char": "方",
+      "start": 15.345,
+      "end": 15.571
+    },
+    {
+      "index": 49,
+      "char": "人",
+      "start": 15.614,
+      "end": 15.841
+    },
+    {
+      "index": 50,
+      "char": "物",
+      "start": 15.884,
+      "end": 16.111
+    },
+    {
+      "index": 51,
+      "char": "守",
+      "start": 16.154,
+      "end": 16.381
+    },
+    {
+      "index": 52,
+      "char": "着",
+      "start": 16.424,
+      "end": 16.65
+    },
+    {
+      "index": 53,
+      "char": "锅",
+      "start": 16.694,
+      "end": 16.92
+    },
+    {
+      "index": 54,
+      "char": "台",
+      "start": 16.963,
+      "end": 17.19
+    },
+    {
+      "index": 55,
+      "char": "沿",
+      "start": 17.233,
+      "end": 17.46
+    },
+    {
+      "index": 56,
+      "char": "者",
+      "start": 17.503,
+      "end": 17.729
+    },
+    {
+      "index": 57,
+      "char": "站",
+      "start": 17.773,
+      "end": 17.999
+    },
+    {
+      "index": 58,
+      "char": "立",
+      "start": 18.042,
+      "end": 18.269
+    },
+    {
+      "index": 59,
+      "char": "下",
+      "start": 18.492,
+      "end": 18.719
+    },
+    {
+      "index": 60,
+      "char": "方",
+      "start": 18.762,
+      "end": 18.988
+    },
+    {
+      "index": 61,
+      "char": "四",
+      "start": 19.032,
+      "end": 19.258
+    },
+    {
+      "index": 62,
+      "char": "点",
+      "start": 19.301,
+      "end": 19.528
+    },
+    {
+      "index": 63,
+      "char": "炉",
+      "start": 19.571,
+      "end": 19.798
+    },
+    {
+      "index": 64,
+      "char": "火",
+      "start": 19.841,
+      "end": 20.068
+    },
+    {
+      "index": 65,
+      "char": "形",
+      "start": 20.111,
+      "end": 20.337
+    },
+    {
+      "index": 66,
+      "char": "成",
+      "start": 20.38,
+      "end": 20.607
+    },
+    {
+      "index": 67,
+      "char": "灬",
+      "start": 20.65,
+      "end": 20.877
+    },
+    {
+      "index": 68,
+      "char": "火",
+      "start": 21.1,
+      "end": 21.327
+    },
+    {
+      "index": 69,
+      "char": "从",
+      "start": 21.37,
+      "end": 21.596
+    },
+    {
+      "index": 70,
+      "char": "锅",
+      "start": 21.639,
+      "end": 21.866
+    },
+    {
+      "index": 71,
+      "char": "底",
+      "start": 21.909,
+      "end": 22.136
+    },
+    {
+      "index": 72,
+      "char": "加",
+      "start": 22.179,
+      "end": 22.406
+    },
+    {
+      "index": 73,
+      "char": "热",
+      "start": 22.449,
+      "end": 22.675
+    },
+    {
+      "index": 74,
+      "char": "组",
+      "start": 22.899,
+      "end": 23.125
+    },
+    {
+      "index": 75,
+      "char": "成",
+      "start": 23.168,
+      "end": 23.395
+    },
+    {
+      "index": 76,
+      "char": "煮",
+      "start": 23.438,
+      "end": 23.665
+    },
+    {
+      "index": 77,
+      "char": "煮",
+      "start": 24.048,
+      "end": 24.274
+    },
+    {
+      "index": 78,
       "char": "饭",
-      "start": 8.373,
-      "end": 8.615
+      "start": 24.318,
+      "end": 24.544
+    },
+    {
+      "index": 79,
+      "char": "是",
+      "start": 24.587,
+      "end": 24.814
+    },
+    {
+      "index": 80,
+      "char": "把",
+      "start": 24.857,
+      "end": 25.084
+    },
+    {
+      "index": 81,
+      "char": "食",
+      "start": 25.127,
+      "end": 25.353
+    },
+    {
+      "index": 82,
+      "char": "物",
+      "start": 25.397,
+      "end": 25.623
+    },
+    {
+      "index": 83,
+      "char": "放",
+      "start": 25.666,
+      "end": 25.893
+    },
+    {
+      "index": 84,
+      "char": "在",
+      "start": 25.936,
+      "end": 26.163
+    },
+    {
+      "index": 85,
+      "char": "水",
+      "start": 26.206,
+      "end": 26.433
+    },
+    {
+      "index": 86,
+      "char": "里",
+      "start": 26.476,
+      "end": 26.702
+    },
+    {
+      "index": 87,
+      "char": "或",
+      "start": 26.745,
+      "end": 26.972
+    },
+    {
+      "index": 88,
+      "char": "锅",
+      "start": 27.015,
+      "end": 27.242
+    },
+    {
+      "index": 89,
+      "char": "里",
+      "start": 27.285,
+      "end": 27.512
+    },
+    {
+      "index": 90,
+      "char": "加",
+      "start": 27.555,
+      "end": 27.781
+    },
+    {
+      "index": 91,
+      "char": "热",
+      "start": 27.824,
+      "end": 28.051
+    },
+    {
+      "index": 92,
+      "char": "至",
+      "start": 28.094,
+      "end": 28.321
+    },
+    {
+      "index": 93,
+      "char": "熟",
+      "start": 28.364,
+      "end": 28.591
+    },
+    {
+      "index": 94,
+      "char": "这",
+      "start": 28.974,
+      "end": 29.2
+    },
+    {
+      "index": 95,
+      "char": "是",
+      "start": 29.244,
+      "end": 29.47
+    },
+    {
+      "index": 96,
+      "char": "一",
+      "start": 29.513,
+      "end": 29.74
+    },
+    {
+      "index": 97,
+      "char": "幅",
+      "start": 29.783,
+      "end": 30.01
+    },
+    {
+      "index": 98,
+      "char": "帮",
+      "start": 30.053,
+      "end": 30.279
+    },
+    {
+      "index": 99,
+      "char": "助",
+      "start": 30.323,
+      "end": 30.549
+    },
+    {
+      "index": 100,
+      "char": "记",
+      "start": 30.592,
+      "end": 30.819
+    },
+    {
+      "index": 101,
+      "char": "笔",
+      "start": 30.862,
+      "end": 31.089
+    },
+    {
+      "index": 102,
+      "char": "画",
+      "start": 31.132,
+      "end": 31.358
+    },
+    {
+      "index": 103,
+      "char": "和",
+      "start": 31.402,
+      "end": 31.628
+    },
+    {
+      "index": 104,
+      "char": "位",
+      "start": 31.671,
+      "end": 31.898
+    },
+    {
+      "index": 105,
+      "char": "置",
+      "start": 31.941,
+      "end": 32.168
+    },
+    {
+      "index": 106,
+      "char": "的",
+      "start": 32.211,
+      "end": 32.437
+    },
+    {
+      "index": 107,
+      "char": "记",
+      "start": 32.481,
+      "end": 32.707
+    },
+    {
+      "index": 108,
+      "char": "忆",
+      "start": 32.75,
+      "end": 32.977
+    },
+    {
+      "index": 109,
+      "char": "画",
+      "start": 33.02,
+      "end": 33.247
+    },
+    {
+      "index": 110,
+      "char": "面",
+      "start": 33.29,
+      "end": 33.517
+    },
+    {
+      "index": 111,
+      "char": "不",
+      "start": 33.74,
+      "end": 33.966
+    },
+    {
+      "index": 112,
+      "char": "是",
+      "start": 34.009,
+      "end": 34.236
+    },
+    {
+      "index": 113,
+      "char": "完",
+      "start": 34.279,
+      "end": 34.506
+    },
+    {
+      "index": 114,
+      "char": "整",
+      "start": 34.549,
+      "end": 34.776
+    },
+    {
+      "index": 115,
+      "char": "字",
+      "start": 34.819,
+      "end": 35.045
+    },
+    {
+      "index": 116,
+      "char": "源",
+      "start": 35.089,
+      "end": 35.315
+    },
+    {
+      "index": 117,
+      "char": "最",
+      "start": 35.698,
+      "end": 35.925
+    },
+    {
+      "index": 118,
+      "char": "后",
+      "start": 35.968,
+      "end": 36.195
+    },
+    {
+      "index": 119,
+      "char": "再",
+      "start": 36.238,
+      "end": 36.464
+    },
+    {
+      "index": 120,
+      "char": "读",
+      "start": 36.508,
+      "end": 36.734
+    },
+    {
+      "index": 121,
+      "char": "一",
+      "start": 36.777,
+      "end": 37.004
+    },
+    {
+      "index": 122,
+      "char": "遍",
+      "start": 37.047,
+      "end": 37.274
+    },
+    {
+      "index": 123,
+      "char": "煮",
+      "start": 37.497,
+      "end": 37.723
+    },
+    {
+      "index": 124,
+      "char": "饭",
+      "start": 37.767,
+      "end": 37.993
     }
   ],
-  "transcript": "煮，“煮饭”的“煮”。它是上下结构。看图找部件，合成字形。再读：煮饭。",
+  "transcript": "煮，“煮饭”的“煮”，读zhǔ。它是上下结构，按顺序能看到“者”和“灬”。从构字分工看，“灬”提示意义类别，“者”提供读音线索。看图时，上方人物守着锅台沿“者”站立，下方四点炉火形成“灬”，火从锅底加热，组成“煮”。煮饭是把食物放在水里或锅里加热至熟。这是一幅帮助记笔画和位置的记忆画面，不是完整字源。最后再读一遍：煮饭。",
   "voice_reference": "封",
   "timing_source": "punctuation-weighted-estimate",
-  "script_version": "child-first-v1",
-  "duration": 9.120181
+  "script_version": "child-first-v2",
+  "duration": 38.560181
 }

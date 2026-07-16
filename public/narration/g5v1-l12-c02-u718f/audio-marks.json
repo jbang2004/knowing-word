@@ -3,151 +3,733 @@
     {
       "index": 0,
       "char": "熏",
-      "start": 0.171,
-      "end": 0.376
+      "start": 0.293,
+      "end": 0.473
     },
     {
       "index": 1,
       "char": "熏",
-      "start": 0.595,
-      "end": 0.8
+      "start": 0.687,
+      "end": 0.867
     },
     {
       "index": 2,
       "char": "陶",
-      "start": 0.839,
-      "end": 1.043
+      "start": 0.901,
+      "end": 1.081
     },
     {
       "index": 3,
       "char": "的",
-      "start": 1.082,
-      "end": 1.287
+      "start": 1.115,
+      "end": 1.295
     },
     {
       "index": 4,
       "char": "熏",
-      "start": 1.326,
-      "end": 1.53
+      "start": 1.329,
+      "end": 1.509
     },
     {
       "index": 5,
-      "char": "它",
-      "start": 1.909,
-      "end": 2.114
+      "char": "读",
+      "start": 1.723,
+      "end": 1.903
     },
     {
       "index": 6,
-      "char": "是",
-      "start": 2.153,
-      "end": 2.357
+      "char": "x",
+      "start": 1.937,
+      "end": 2.117
     },
     {
       "index": 7,
-      "char": "上",
-      "start": 2.396,
-      "end": 2.601
+      "char": "ū",
+      "start": 2.151,
+      "end": 2.331
     },
     {
       "index": 8,
-      "char": "下",
-      "start": 2.64,
-      "end": 2.845
+      "char": "n",
+      "start": 2.365,
+      "end": 2.545
     },
     {
       "index": 9,
-      "char": "结",
-      "start": 2.884,
-      "end": 3.088
+      "char": "它",
+      "start": 2.919,
+      "end": 3.099
     },
     {
       "index": 10,
-      "char": "构",
-      "start": 3.127,
-      "end": 3.332
+      "char": "是",
+      "start": 3.133,
+      "end": 3.313
     },
     {
       "index": 11,
-      "char": "顺",
-      "start": 3.711,
-      "end": 3.915
+      "char": "独",
+      "start": 3.347,
+      "end": 3.527
     },
     {
       "index": 12,
-      "char": "着",
-      "start": 3.954,
-      "end": 4.159
+      "char": "体",
+      "start": 3.561,
+      "end": 3.741
     },
     {
       "index": 13,
-      "char": "图",
-      "start": 4.198,
-      "end": 4.402
+      "char": "结",
+      "start": 3.776,
+      "end": 3.955
     },
     {
       "index": 14,
-      "char": "记",
-      "start": 4.441,
-      "end": 4.646
+      "char": "构",
+      "start": 3.99,
+      "end": 4.169
     },
     {
       "index": 15,
-      "char": "住",
-      "start": 4.685,
-      "end": 4.89
+      "char": "按",
+      "start": 4.384,
+      "end": 4.563
     },
     {
       "index": 16,
-      "char": "整",
-      "start": 4.929,
-      "end": 5.133
+      "char": "顺",
+      "start": 4.598,
+      "end": 4.777
     },
     {
       "index": 17,
-      "char": "体",
-      "start": 5.172,
-      "end": 5.377
+      "char": "序",
+      "start": 4.812,
+      "end": 4.992
     },
     {
       "index": 18,
-      "char": "轮",
-      "start": 5.416,
-      "end": 5.62
+      "char": "能",
+      "start": 5.026,
+      "end": 5.206
     },
     {
       "index": 19,
-      "char": "廓",
-      "start": 5.659,
-      "end": 5.864
+      "char": "看",
+      "start": 5.24,
+      "end": 5.42
     },
     {
       "index": 20,
-      "char": "再",
-      "start": 6.243,
-      "end": 6.447
+      "char": "到",
+      "start": 5.454,
+      "end": 5.634
     },
     {
       "index": 21,
-      "char": "读",
-      "start": 6.486,
-      "end": 6.691
+      "char": "熏",
+      "start": 5.668,
+      "end": 5.848
     },
     {
       "index": 22,
-      "char": "熏",
-      "start": 6.91,
-      "end": 7.115
+      "char": "这",
+      "start": 6.222,
+      "end": 6.402
     },
     {
       "index": 23,
+      "char": "个",
+      "start": 6.436,
+      "end": 6.616
+    },
+    {
+      "index": 24,
+      "char": "字",
+      "start": 6.65,
+      "end": 6.83
+    },
+    {
+      "index": 25,
+      "char": "适",
+      "start": 6.864,
+      "end": 7.044
+    },
+    {
+      "index": 26,
+      "char": "合",
+      "start": 7.078,
+      "end": 7.258
+    },
+    {
+      "index": 27,
+      "char": "顺",
+      "start": 7.292,
+      "end": 7.472
+    },
+    {
+      "index": 28,
+      "char": "着",
+      "start": 7.506,
+      "end": 7.686
+    },
+    {
+      "index": 29,
+      "char": "完",
+      "start": 7.72,
+      "end": 7.9
+    },
+    {
+      "index": 30,
+      "char": "整",
+      "start": 7.934,
+      "end": 8.114
+    },
+    {
+      "index": 31,
+      "char": "轮",
+      "start": 8.148,
+      "end": 8.328
+    },
+    {
+      "index": 32,
+      "char": "廓",
+      "start": 8.362,
+      "end": 8.542
+    },
+    {
+      "index": 33,
+      "char": "来",
+      "start": 8.577,
+      "end": 8.756
+    },
+    {
+      "index": 34,
+      "char": "记",
+      "start": 8.791,
+      "end": 8.97
+    },
+    {
+      "index": 35,
+      "char": "看",
+      "start": 9.345,
+      "end": 9.524
+    },
+    {
+      "index": 36,
+      "char": "图",
+      "start": 9.559,
+      "end": 9.738
+    },
+    {
+      "index": 37,
+      "char": "时",
+      "start": 9.773,
+      "end": 9.953
+    },
+    {
+      "index": 38,
+      "char": "上",
+      "start": 10.167,
+      "end": 10.347
+    },
+    {
+      "index": 39,
+      "char": "方",
+      "start": 10.381,
+      "end": 10.561
+    },
+    {
+      "index": 40,
+      "char": "香",
+      "start": 10.595,
+      "end": 10.775
+    },
+    {
+      "index": 41,
+      "char": "炉",
+      "start": 10.809,
+      "end": 10.989
+    },
+    {
+      "index": 42,
+      "char": "层",
+      "start": 11.203,
+      "end": 11.383
+    },
+    {
+      "index": 43,
+      "char": "层",
+      "start": 11.417,
+      "end": 11.597
+    },
+    {
+      "index": 44,
+      "char": "香",
+      "start": 11.631,
+      "end": 11.811
+    },
+    {
+      "index": 45,
+      "char": "料",
+      "start": 11.845,
+      "end": 12.025
+    },
+    {
+      "index": 46,
+      "char": "和",
+      "start": 12.059,
+      "end": 12.239
+    },
+    {
+      "index": 47,
+      "char": "窗",
+      "start": 12.273,
+      "end": 12.453
+    },
+    {
+      "index": 48,
+      "char": "格",
+      "start": 12.487,
+      "end": 12.667
+    },
+    {
+      "index": 49,
+      "char": "沿",
+      "start": 12.701,
+      "end": 12.881
+    },
+    {
+      "index": 50,
+      "char": "熏",
+      "start": 12.915,
+      "end": 13.095
+    },
+    {
+      "index": 51,
+      "char": "的",
+      "start": 13.129,
+      "end": 13.309
+    },
+    {
+      "index": 52,
+      "char": "上",
+      "start": 13.343,
+      "end": 13.523
+    },
+    {
+      "index": 53,
+      "char": "部",
+      "start": 13.558,
+      "end": 13.737
+    },
+    {
+      "index": 54,
+      "char": "叠",
+      "start": 13.772,
+      "end": 13.951
+    },
+    {
+      "index": 55,
+      "char": "放",
+      "start": 13.986,
+      "end": 14.165
+    },
+    {
+      "index": 56,
+      "char": "下",
+      "start": 14.38,
+      "end": 14.56
+    },
+    {
+      "index": 57,
+      "char": "方",
+      "start": 14.594,
+      "end": 14.774
+    },
+    {
+      "index": 58,
+      "char": "四",
+      "start": 14.808,
+      "end": 14.988
+    },
+    {
+      "index": 59,
+      "char": "点",
+      "start": 15.022,
+      "end": 15.202
+    },
+    {
+      "index": 60,
+      "char": "温",
+      "start": 15.236,
+      "end": 15.416
+    },
+    {
+      "index": 61,
+      "char": "热",
+      "start": 15.45,
+      "end": 15.63
+    },
+    {
+      "index": 62,
+      "char": "香",
+      "start": 15.664,
+      "end": 15.844
+    },
+    {
+      "index": 63,
+      "char": "气",
+      "start": 15.878,
+      "end": 16.058
+    },
+    {
+      "index": 64,
+      "char": "形",
+      "start": 16.092,
+      "end": 16.272
+    },
+    {
+      "index": 65,
+      "char": "成",
+      "start": 16.306,
+      "end": 16.486
+    },
+    {
+      "index": 66,
+      "char": "灬",
+      "start": 16.52,
+      "end": 16.7
+    },
+    {
+      "index": 67,
+      "char": "组",
+      "start": 16.914,
+      "end": 17.094
+    },
+    {
+      "index": 68,
+      "char": "成",
+      "start": 17.128,
+      "end": 17.308
+    },
+    {
+      "index": 69,
+      "char": "熏",
+      "start": 17.342,
+      "end": 17.522
+    },
+    {
+      "index": 70,
+      "char": "熏",
+      "start": 17.896,
+      "end": 18.076
+    },
+    {
+      "index": 71,
       "char": "陶",
-      "start": 7.154,
-      "end": 7.358
+      "start": 18.11,
+      "end": 18.29
+    },
+    {
+      "index": 72,
+      "char": "比",
+      "start": 18.325,
+      "end": 18.504
+    },
+    {
+      "index": 73,
+      "char": "喻",
+      "start": 18.539,
+      "end": 18.718
+    },
+    {
+      "index": 74,
+      "char": "长",
+      "start": 18.753,
+      "end": 18.932
+    },
+    {
+      "index": 75,
+      "char": "期",
+      "start": 18.967,
+      "end": 19.146
+    },
+    {
+      "index": 76,
+      "char": "受",
+      "start": 19.181,
+      "end": 19.361
+    },
+    {
+      "index": 77,
+      "char": "到",
+      "start": 19.395,
+      "end": 19.575
+    },
+    {
+      "index": 78,
+      "char": "好",
+      "start": 19.609,
+      "end": 19.789
+    },
+    {
+      "index": 79,
+      "char": "思",
+      "start": 19.823,
+      "end": 20.003
+    },
+    {
+      "index": 80,
+      "char": "想",
+      "start": 20.037,
+      "end": 20.217
+    },
+    {
+      "index": 81,
+      "char": "好",
+      "start": 20.431,
+      "end": 20.611
+    },
+    {
+      "index": 82,
+      "char": "习",
+      "start": 20.645,
+      "end": 20.825
+    },
+    {
+      "index": 83,
+      "char": "惯",
+      "start": 20.859,
+      "end": 21.039
+    },
+    {
+      "index": 84,
+      "char": "或",
+      "start": 21.073,
+      "end": 21.253
+    },
+    {
+      "index": 85,
+      "char": "文",
+      "start": 21.287,
+      "end": 21.467
+    },
+    {
+      "index": 86,
+      "char": "化",
+      "start": 21.501,
+      "end": 21.681
+    },
+    {
+      "index": 87,
+      "char": "的",
+      "start": 21.715,
+      "end": 21.895
+    },
+    {
+      "index": 88,
+      "char": "影",
+      "start": 21.929,
+      "end": 22.109
+    },
+    {
+      "index": 89,
+      "char": "响",
+      "start": 22.143,
+      "end": 22.323
+    },
+    {
+      "index": 90,
+      "char": "这",
+      "start": 22.697,
+      "end": 22.877
+    },
+    {
+      "index": 91,
+      "char": "是",
+      "start": 22.911,
+      "end": 23.091
+    },
+    {
+      "index": 92,
+      "char": "一",
+      "start": 23.126,
+      "end": 23.305
+    },
+    {
+      "index": 93,
+      "char": "幅",
+      "start": 23.34,
+      "end": 23.519
+    },
+    {
+      "index": 94,
+      "char": "帮",
+      "start": 23.554,
+      "end": 23.733
+    },
+    {
+      "index": 95,
+      "char": "助",
+      "start": 23.768,
+      "end": 23.947
+    },
+    {
+      "index": 96,
+      "char": "记",
+      "start": 23.982,
+      "end": 24.162
+    },
+    {
+      "index": 97,
+      "char": "笔",
+      "start": 24.196,
+      "end": 24.376
+    },
+    {
+      "index": 98,
+      "char": "画",
+      "start": 24.41,
+      "end": 24.59
+    },
+    {
+      "index": 99,
+      "char": "和",
+      "start": 24.624,
+      "end": 24.804
+    },
+    {
+      "index": 100,
+      "char": "位",
+      "start": 24.838,
+      "end": 25.018
+    },
+    {
+      "index": 101,
+      "char": "置",
+      "start": 25.052,
+      "end": 25.232
+    },
+    {
+      "index": 102,
+      "char": "的",
+      "start": 25.266,
+      "end": 25.446
+    },
+    {
+      "index": 103,
+      "char": "记",
+      "start": 25.48,
+      "end": 25.66
+    },
+    {
+      "index": 104,
+      "char": "忆",
+      "start": 25.694,
+      "end": 25.874
+    },
+    {
+      "index": 105,
+      "char": "画",
+      "start": 25.908,
+      "end": 26.088
+    },
+    {
+      "index": 106,
+      "char": "面",
+      "start": 26.122,
+      "end": 26.302
+    },
+    {
+      "index": 107,
+      "char": "不",
+      "start": 26.516,
+      "end": 26.696
+    },
+    {
+      "index": 108,
+      "char": "是",
+      "start": 26.73,
+      "end": 26.91
+    },
+    {
+      "index": 109,
+      "char": "完",
+      "start": 26.944,
+      "end": 27.124
+    },
+    {
+      "index": 110,
+      "char": "整",
+      "start": 27.158,
+      "end": 27.338
+    },
+    {
+      "index": 111,
+      "char": "字",
+      "start": 27.373,
+      "end": 27.552
+    },
+    {
+      "index": 112,
+      "char": "源",
+      "start": 27.587,
+      "end": 27.766
+    },
+    {
+      "index": 113,
+      "char": "最",
+      "start": 28.141,
+      "end": 28.32
+    },
+    {
+      "index": 114,
+      "char": "后",
+      "start": 28.355,
+      "end": 28.534
+    },
+    {
+      "index": 115,
+      "char": "再",
+      "start": 28.569,
+      "end": 28.749
+    },
+    {
+      "index": 116,
+      "char": "读",
+      "start": 28.783,
+      "end": 28.963
+    },
+    {
+      "index": 117,
+      "char": "一",
+      "start": 28.997,
+      "end": 29.177
+    },
+    {
+      "index": 118,
+      "char": "遍",
+      "start": 29.211,
+      "end": 29.391
+    },
+    {
+      "index": 119,
+      "char": "熏",
+      "start": 29.605,
+      "end": 29.785
+    },
+    {
+      "index": 120,
+      "char": "陶",
+      "start": 29.819,
+      "end": 29.999
     }
   ],
-  "transcript": "熏，“熏陶”的“熏”。它是上下结构。顺着图记住整体轮廓。再读：熏陶。",
+  "transcript": "熏，“熏陶”的“熏”，读xūn。它是独体结构，按顺序能看到“熏”。这个字适合顺着完整轮廓来记。看图时，上方香炉、层层香料和窗格沿“熏”的上部叠放，下方四点温热香气形成“灬”，组成“熏”。熏陶比喻长期受到好思想、好习惯或文化的影响。这是一幅帮助记笔画和位置的记忆画面，不是完整字源。最后再读一遍：熏陶。",
   "voice_reference": "封",
   "timing_source": "punctuation-weighted-estimate",
-  "script_version": "child-first-v1",
-  "duration": 7.840181
+  "script_version": "child-first-v2",
+  "duration": 30.560181
 }

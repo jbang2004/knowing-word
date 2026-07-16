@@ -3,151 +3,775 @@
     {
       "index": 0,
       "char": "宜",
-      "start": 0.189,
-      "end": 0.414
+      "start": 0.294,
+      "end": 0.488
     },
     {
       "index": 1,
       "char": "适",
-      "start": 0.637,
-      "end": 0.862
+      "start": 0.705,
+      "end": 0.899
     },
     {
       "index": 2,
       "char": "宜",
-      "start": 0.905,
-      "end": 1.131
+      "start": 0.936,
+      "end": 1.13
     },
     {
       "index": 3,
       "char": "的",
-      "start": 1.174,
-      "end": 1.399
+      "start": 1.167,
+      "end": 1.361
     },
     {
       "index": 4,
       "char": "宜",
-      "start": 1.442,
-      "end": 1.667
+      "start": 1.398,
+      "end": 1.592
     },
     {
       "index": 5,
-      "char": "它",
-      "start": 2.05,
-      "end": 2.275
+      "char": "读",
+      "start": 1.809,
+      "end": 2.003
     },
     {
       "index": 6,
-      "char": "是",
-      "start": 2.318,
-      "end": 2.544
+      "char": "y",
+      "start": 2.039,
+      "end": 2.233
     },
     {
       "index": 7,
-      "char": "上",
-      "start": 2.587,
-      "end": 2.812
+      "char": "í",
+      "start": 2.27,
+      "end": 2.464
     },
     {
       "index": 8,
-      "char": "下",
-      "start": 2.855,
-      "end": 3.08
+      "char": "它",
+      "start": 2.841,
+      "end": 3.035
     },
     {
       "index": 9,
-      "char": "结",
-      "start": 3.123,
-      "end": 3.348
+      "char": "是",
+      "start": 3.072,
+      "end": 3.266
     },
     {
       "index": 10,
-      "char": "构",
-      "start": 3.391,
-      "end": 3.617
+      "char": "上",
+      "start": 3.303,
+      "end": 3.497
     },
     {
       "index": 11,
-      "char": "看",
-      "start": 4,
-      "end": 4.225
+      "char": "下",
+      "start": 3.534,
+      "end": 3.728
     },
     {
       "index": 12,
-      "char": "图",
-      "start": 4.268,
-      "end": 4.493
+      "char": "结",
+      "start": 3.765,
+      "end": 3.959
     },
     {
       "index": 13,
-      "char": "找",
-      "start": 4.536,
-      "end": 4.761
+      "char": "构",
+      "start": 3.996,
+      "end": 4.19
     },
     {
       "index": 14,
-      "char": "部",
-      "start": 4.804,
-      "end": 5.03
+      "char": "按",
+      "start": 4.407,
+      "end": 4.601
     },
     {
       "index": 15,
-      "char": "件",
-      "start": 5.073,
-      "end": 5.298
+      "char": "顺",
+      "start": 4.638,
+      "end": 4.832
     },
     {
       "index": 16,
-      "char": "合",
-      "start": 5.521,
-      "end": 5.746
+      "char": "序",
+      "start": 4.869,
+      "end": 5.063
     },
     {
       "index": 17,
-      "char": "成",
-      "start": 5.789,
-      "end": 6.014
+      "char": "能",
+      "start": 5.1,
+      "end": 5.294
     },
     {
       "index": 18,
-      "char": "字",
-      "start": 6.057,
-      "end": 6.283
+      "char": "看",
+      "start": 5.331,
+      "end": 5.525
     },
     {
       "index": 19,
-      "char": "形",
-      "start": 6.325,
-      "end": 6.551
+      "char": "到",
+      "start": 5.562,
+      "end": 5.756
     },
     {
       "index": 20,
-      "char": "再",
-      "start": 6.934,
-      "end": 7.159
+      "char": "宀",
+      "start": 5.793,
+      "end": 5.987
     },
     {
       "index": 21,
-      "char": "读",
-      "start": 7.202,
-      "end": 7.427
+      "char": "和",
+      "start": 6.024,
+      "end": 6.218
     },
     {
       "index": 22,
-      "char": "适",
-      "start": 7.65,
-      "end": 7.876
+      "char": "且",
+      "start": 6.255,
+      "end": 6.449
     },
     {
       "index": 23,
+      "char": "从",
+      "start": 6.825,
+      "end": 7.019
+    },
+    {
+      "index": 24,
+      "char": "构",
+      "start": 7.056,
+      "end": 7.25
+    },
+    {
+      "index": 25,
+      "char": "字",
+      "start": 7.287,
+      "end": 7.481
+    },
+    {
+      "index": 26,
+      "char": "分",
+      "start": 7.518,
+      "end": 7.712
+    },
+    {
+      "index": 27,
+      "char": "工",
+      "start": 7.749,
+      "end": 7.943
+    },
+    {
+      "index": 28,
+      "char": "看",
+      "start": 7.98,
+      "end": 8.174
+    },
+    {
+      "index": 29,
+      "char": "宀",
+      "start": 8.391,
+      "end": 8.585
+    },
+    {
+      "index": 30,
+      "char": "先",
+      "start": 8.622,
+      "end": 8.816
+    },
+    {
+      "index": 31,
+      "char": "提",
+      "start": 8.853,
+      "end": 9.047
+    },
+    {
+      "index": 32,
+      "char": "示",
+      "start": 9.084,
+      "end": 9.278
+    },
+    {
+      "index": 33,
+      "char": "意",
+      "start": 9.315,
+      "end": 9.509
+    },
+    {
+      "index": 34,
+      "char": "义",
+      "start": 9.546,
+      "end": 9.74
+    },
+    {
+      "index": 35,
+      "char": "类",
+      "start": 9.777,
+      "end": 9.971
+    },
+    {
+      "index": 36,
+      "char": "别",
+      "start": 10.008,
+      "end": 10.202
+    },
+    {
+      "index": 37,
+      "char": "其",
+      "start": 10.419,
+      "end": 10.613
+    },
+    {
+      "index": 38,
+      "char": "余",
+      "start": 10.65,
+      "end": 10.844
+    },
+    {
+      "index": 39,
+      "char": "部",
+      "start": 10.88,
+      "end": 11.074
+    },
+    {
+      "index": 40,
+      "char": "件",
+      "start": 11.111,
+      "end": 11.305
+    },
+    {
+      "index": 41,
+      "char": "补",
+      "start": 11.342,
+      "end": 11.536
+    },
+    {
+      "index": 42,
+      "char": "足",
+      "start": 11.573,
+      "end": 11.767
+    },
+    {
+      "index": 43,
+      "char": "字",
+      "start": 11.804,
+      "end": 11.998
+    },
+    {
+      "index": 44,
+      "char": "形",
+      "start": 12.035,
+      "end": 12.229
+    },
+    {
+      "index": 45,
+      "char": "看",
+      "start": 12.606,
+      "end": 12.8
+    },
+    {
+      "index": 46,
+      "char": "图",
+      "start": 12.837,
+      "end": 13.031
+    },
+    {
+      "index": 47,
+      "char": "时",
+      "start": 13.068,
+      "end": 13.262
+    },
+    {
+      "index": 48,
+      "char": "安",
+      "start": 13.479,
+      "end": 13.673
+    },
+    {
+      "index": 49,
+      "char": "稳",
+      "start": 13.71,
+      "end": 13.904
+    },
+    {
+      "index": 50,
+      "char": "屋",
+      "start": 13.941,
+      "end": 14.135
+    },
+    {
+      "index": 51,
+      "char": "顶",
+      "start": 14.172,
+      "end": 14.366
+    },
+    {
+      "index": 52,
+      "char": "覆",
+      "start": 14.403,
+      "end": 14.597
+    },
+    {
+      "index": 53,
+      "char": "盖",
+      "start": 14.634,
+      "end": 14.828
+    },
+    {
+      "index": 54,
+      "char": "成",
+      "start": 14.865,
+      "end": 15.059
+    },
+    {
+      "index": 55,
+      "char": "宀",
+      "start": 15.095,
+      "end": 15.289
+    },
+    {
+      "index": 56,
+      "char": "下",
+      "start": 15.506,
+      "end": 15.7
+    },
+    {
+      "index": 57,
+      "char": "面",
+      "start": 15.737,
+      "end": 15.931
+    },
+    {
+      "index": 58,
+      "char": "两",
+      "start": 15.968,
+      "end": 16.162
+    },
+    {
+      "index": 59,
+      "char": "层",
+      "start": 16.199,
+      "end": 16.393
+    },
+    {
+      "index": 60,
+      "char": "尺",
+      "start": 16.43,
+      "end": 16.624
+    },
+    {
+      "index": 61,
+      "char": "寸",
+      "start": 16.661,
+      "end": 16.855
+    },
+    {
+      "index": 62,
+      "char": "刚",
+      "start": 16.892,
+      "end": 17.086
+    },
+    {
+      "index": 63,
+      "char": "好",
+      "start": 17.123,
+      "end": 17.317
+    },
+    {
+      "index": 64,
+      "char": "的",
+      "start": 17.354,
+      "end": 17.548
+    },
+    {
+      "index": 65,
+      "char": "置",
+      "start": 17.585,
+      "end": 17.779
+    },
+    {
+      "index": 66,
+      "char": "物",
+      "start": 17.816,
+      "end": 18.01
+    },
+    {
+      "index": 67,
+      "char": "台",
+      "start": 18.047,
+      "end": 18.241
+    },
+    {
+      "index": 68,
+      "char": "排",
+      "start": 18.278,
+      "end": 18.472
+    },
+    {
+      "index": 69,
+      "char": "成",
+      "start": 18.509,
+      "end": 18.703
+    },
+    {
+      "index": 70,
+      "char": "且",
+      "start": 18.74,
+      "end": 18.934
+    },
+    {
+      "index": 71,
+      "char": "像",
+      "start": 19.151,
+      "end": 19.345
+    },
+    {
+      "index": 72,
+      "char": "一",
+      "start": 19.381,
+      "end": 19.575
+    },
+    {
+      "index": 73,
+      "char": "间",
+      "start": 19.612,
+      "end": 19.806
+    },
+    {
+      "index": 74,
+      "char": "布",
+      "start": 19.843,
+      "end": 20.037
+    },
+    {
+      "index": 75,
+      "char": "置",
+      "start": 20.074,
+      "end": 20.268
+    },
+    {
+      "index": 76,
+      "char": "适",
+      "start": 20.305,
+      "end": 20.499
+    },
+    {
+      "index": 77,
       "char": "宜",
-      "start": 7.918,
-      "end": 8.144
+      "start": 20.536,
+      "end": 20.73
+    },
+    {
+      "index": 78,
+      "char": "的",
+      "start": 20.767,
+      "end": 20.961
+    },
+    {
+      "index": 79,
+      "char": "小",
+      "start": 20.998,
+      "end": 21.192
+    },
+    {
+      "index": 80,
+      "char": "屋",
+      "start": 21.229,
+      "end": 21.423
+    },
+    {
+      "index": 81,
+      "char": "适",
+      "start": 21.8,
+      "end": 21.994
+    },
+    {
+      "index": 82,
+      "char": "宜",
+      "start": 22.031,
+      "end": 22.225
+    },
+    {
+      "index": 83,
+      "char": "就",
+      "start": 22.262,
+      "end": 22.456
+    },
+    {
+      "index": 84,
+      "char": "是",
+      "start": 22.493,
+      "end": 22.687
+    },
+    {
+      "index": 85,
+      "char": "条",
+      "start": 22.724,
+      "end": 22.918
+    },
+    {
+      "index": 86,
+      "char": "件",
+      "start": 22.955,
+      "end": 23.149
+    },
+    {
+      "index": 87,
+      "char": "正",
+      "start": 23.186,
+      "end": 23.38
+    },
+    {
+      "index": 88,
+      "char": "合",
+      "start": 23.416,
+      "end": 23.61
+    },
+    {
+      "index": 89,
+      "char": "适",
+      "start": 23.647,
+      "end": 23.841
+    },
+    {
+      "index": 90,
+      "char": "做",
+      "start": 24.058,
+      "end": 24.252
+    },
+    {
+      "index": 91,
+      "char": "起",
+      "start": 24.289,
+      "end": 24.483
+    },
+    {
+      "index": 92,
+      "char": "来",
+      "start": 24.52,
+      "end": 24.714
+    },
+    {
+      "index": 93,
+      "char": "恰",
+      "start": 24.751,
+      "end": 24.945
+    },
+    {
+      "index": 94,
+      "char": "到",
+      "start": 24.982,
+      "end": 25.176
+    },
+    {
+      "index": 95,
+      "char": "好",
+      "start": 25.213,
+      "end": 25.407
+    },
+    {
+      "index": 96,
+      "char": "处",
+      "start": 25.444,
+      "end": 25.638
+    },
+    {
+      "index": 97,
+      "char": "这",
+      "start": 26.015,
+      "end": 26.209
+    },
+    {
+      "index": 98,
+      "char": "是",
+      "start": 26.246,
+      "end": 26.44
+    },
+    {
+      "index": 99,
+      "char": "一",
+      "start": 26.477,
+      "end": 26.671
+    },
+    {
+      "index": 100,
+      "char": "幅",
+      "start": 26.708,
+      "end": 26.902
+    },
+    {
+      "index": 101,
+      "char": "帮",
+      "start": 26.939,
+      "end": 27.133
+    },
+    {
+      "index": 102,
+      "char": "助",
+      "start": 27.17,
+      "end": 27.364
+    },
+    {
+      "index": 103,
+      "char": "记",
+      "start": 27.401,
+      "end": 27.595
+    },
+    {
+      "index": 104,
+      "char": "笔",
+      "start": 27.632,
+      "end": 27.825
+    },
+    {
+      "index": 105,
+      "char": "画",
+      "start": 27.862,
+      "end": 28.056
+    },
+    {
+      "index": 106,
+      "char": "和",
+      "start": 28.093,
+      "end": 28.287
+    },
+    {
+      "index": 107,
+      "char": "位",
+      "start": 28.324,
+      "end": 28.518
+    },
+    {
+      "index": 108,
+      "char": "置",
+      "start": 28.555,
+      "end": 28.749
+    },
+    {
+      "index": 109,
+      "char": "的",
+      "start": 28.786,
+      "end": 28.98
+    },
+    {
+      "index": 110,
+      "char": "记",
+      "start": 29.017,
+      "end": 29.211
+    },
+    {
+      "index": 111,
+      "char": "忆",
+      "start": 29.248,
+      "end": 29.442
+    },
+    {
+      "index": 112,
+      "char": "画",
+      "start": 29.479,
+      "end": 29.673
+    },
+    {
+      "index": 113,
+      "char": "面",
+      "start": 29.71,
+      "end": 29.904
+    },
+    {
+      "index": 114,
+      "char": "不",
+      "start": 30.121,
+      "end": 30.315
+    },
+    {
+      "index": 115,
+      "char": "是",
+      "start": 30.352,
+      "end": 30.546
+    },
+    {
+      "index": 116,
+      "char": "完",
+      "start": 30.583,
+      "end": 30.777
+    },
+    {
+      "index": 117,
+      "char": "整",
+      "start": 30.814,
+      "end": 31.008
+    },
+    {
+      "index": 118,
+      "char": "字",
+      "start": 31.045,
+      "end": 31.239
+    },
+    {
+      "index": 119,
+      "char": "源",
+      "start": 31.276,
+      "end": 31.47
+    },
+    {
+      "index": 120,
+      "char": "最",
+      "start": 31.847,
+      "end": 32.041
+    },
+    {
+      "index": 121,
+      "char": "后",
+      "start": 32.077,
+      "end": 32.271
+    },
+    {
+      "index": 122,
+      "char": "再",
+      "start": 32.308,
+      "end": 32.502
+    },
+    {
+      "index": 123,
+      "char": "读",
+      "start": 32.539,
+      "end": 32.733
+    },
+    {
+      "index": 124,
+      "char": "一",
+      "start": 32.77,
+      "end": 32.964
+    },
+    {
+      "index": 125,
+      "char": "遍",
+      "start": 33.001,
+      "end": 33.195
+    },
+    {
+      "index": 126,
+      "char": "适",
+      "start": 33.412,
+      "end": 33.606
+    },
+    {
+      "index": 127,
+      "char": "宜",
+      "start": 33.643,
+      "end": 33.837
     }
   ],
-  "transcript": "宜，“适宜”的“宜”。它是上下结构。看图找部件，合成字形。再读：适宜。",
+  "transcript": "宜，“适宜”的“宜”，读yí。它是上下结构，按顺序能看到“宀”和“且”。从构字分工看，“宀”先提示意义类别，其余部件补足字形。看图时，安稳屋顶覆盖成“宀”，下面两层尺寸刚好的置物台排成“且”，像一间布置适宜的小屋。适宜就是条件正合适，做起来恰到好处。这是一幅帮助记笔画和位置的记忆画面，不是完整字源。最后再读一遍：适宜。",
   "voice_reference": "封",
   "timing_source": "punctuation-weighted-estimate",
-  "script_version": "child-first-v1",
-  "duration": 8.640181
+  "script_version": "child-first-v2",
+  "duration": 34.400181
 }

@@ -3,151 +3,787 @@
     {
       "index": 0,
       "char": "烬",
-      "start": 0.293,
-      "end": 0.675
+      "start": 0.294,
+      "end": 0.494
     },
     {
       "index": 1,
       "char": "灰",
-      "start": 0.928,
-      "end": 1.31
+      "start": 0.712,
+      "end": 0.911
     },
     {
       "index": 2,
       "char": "烬",
-      "start": 1.383,
-      "end": 1.765
+      "start": 0.949,
+      "end": 1.148
     },
     {
       "index": 3,
       "char": "的",
-      "start": 1.837,
-      "end": 2.219
+      "start": 1.186,
+      "end": 1.386
     },
     {
       "index": 4,
       "char": "烬",
-      "start": 2.292,
-      "end": 2.674
+      "start": 1.424,
+      "end": 1.623
     },
     {
       "index": 5,
-      "char": "它",
-      "start": 3.087,
-      "end": 3.469
+      "char": "读",
+      "start": 1.841,
+      "end": 2.041
     },
     {
       "index": 6,
-      "char": "是",
-      "start": 3.542,
-      "end": 3.924
+      "char": "j",
+      "start": 2.079,
+      "end": 2.278
     },
     {
       "index": 7,
-      "char": "左",
-      "start": 3.997,
-      "end": 4.379
+      "char": "ì",
+      "start": 2.316,
+      "end": 2.515
     },
     {
       "index": 8,
-      "char": "右",
-      "start": 4.451,
-      "end": 4.833
+      "char": "n",
+      "start": 2.553,
+      "end": 2.753
     },
     {
       "index": 9,
-      "char": "结",
-      "start": 4.906,
-      "end": 5.288
+      "char": "它",
+      "start": 3.131,
+      "end": 3.33
     },
     {
       "index": 10,
-      "char": "构",
-      "start": 5.361,
-      "end": 5.743
+      "char": "是",
+      "start": 3.368,
+      "end": 3.568
     },
     {
       "index": 11,
-      "char": "看",
-      "start": 6.156,
-      "end": 6.538
+      "char": "左",
+      "start": 3.605,
+      "end": 3.805
     },
     {
       "index": 12,
-      "char": "图",
-      "start": 6.611,
-      "end": 6.993
+      "char": "右",
+      "start": 3.843,
+      "end": 4.042
     },
     {
       "index": 13,
-      "char": "找",
-      "start": 7.065,
-      "end": 7.447
+      "char": "结",
+      "start": 4.08,
+      "end": 4.28
     },
     {
       "index": 14,
-      "char": "部",
-      "start": 7.52,
-      "end": 7.902
+      "char": "构",
+      "start": 4.318,
+      "end": 4.517
     },
     {
       "index": 15,
-      "char": "件",
-      "start": 7.975,
-      "end": 8.357
+      "char": "按",
+      "start": 4.735,
+      "end": 4.934
     },
     {
       "index": 16,
-      "char": "合",
-      "start": 8.61,
-      "end": 8.992
+      "char": "顺",
+      "start": 4.972,
+      "end": 5.172
     },
     {
       "index": 17,
-      "char": "成",
-      "start": 9.065,
-      "end": 9.447
+      "char": "序",
+      "start": 5.21,
+      "end": 5.409
     },
     {
       "index": 18,
-      "char": "字",
-      "start": 9.519,
-      "end": 9.901
+      "char": "能",
+      "start": 5.447,
+      "end": 5.647
     },
     {
       "index": 19,
-      "char": "形",
-      "start": 9.974,
-      "end": 10.356
+      "char": "看",
+      "start": 5.685,
+      "end": 5.884
     },
     {
       "index": 20,
-      "char": "再",
-      "start": 10.769,
-      "end": 11.151
+      "char": "到",
+      "start": 5.922,
+      "end": 6.121
     },
     {
       "index": 21,
-      "char": "读",
-      "start": 11.224,
-      "end": 11.606
+      "char": "火",
+      "start": 6.159,
+      "end": 6.359
     },
     {
       "index": 22,
-      "char": "灰",
-      "start": 11.859,
-      "end": 12.241
+      "char": "和",
+      "start": 6.397,
+      "end": 6.596
     },
     {
       "index": 23,
+      "char": "尽",
+      "start": 6.634,
+      "end": 6.834
+    },
+    {
+      "index": 24,
+      "char": "从",
+      "start": 7.212,
+      "end": 7.411
+    },
+    {
+      "index": 25,
+      "char": "构",
+      "start": 7.449,
+      "end": 7.648
+    },
+    {
+      "index": 26,
+      "char": "字",
+      "start": 7.686,
+      "end": 7.886
+    },
+    {
+      "index": 27,
+      "char": "分",
+      "start": 7.924,
+      "end": 8.123
+    },
+    {
+      "index": 28,
+      "char": "工",
+      "start": 8.161,
+      "end": 8.36
+    },
+    {
+      "index": 29,
+      "char": "看",
+      "start": 8.398,
+      "end": 8.598
+    },
+    {
+      "index": 30,
+      "char": "火",
+      "start": 8.816,
+      "end": 9.015
+    },
+    {
+      "index": 31,
+      "char": "先",
+      "start": 9.053,
+      "end": 9.253
+    },
+    {
+      "index": 32,
+      "char": "提",
+      "start": 9.291,
+      "end": 9.49
+    },
+    {
+      "index": 33,
+      "char": "示",
+      "start": 9.528,
+      "end": 9.727
+    },
+    {
+      "index": 34,
+      "char": "意",
+      "start": 9.765,
+      "end": 9.965
+    },
+    {
+      "index": 35,
+      "char": "义",
+      "start": 10.003,
+      "end": 10.202
+    },
+    {
+      "index": 36,
+      "char": "类",
+      "start": 10.24,
+      "end": 10.44
+    },
+    {
+      "index": 37,
+      "char": "别",
+      "start": 10.478,
+      "end": 10.677
+    },
+    {
+      "index": 38,
+      "char": "其",
+      "start": 10.895,
+      "end": 11.094
+    },
+    {
+      "index": 39,
+      "char": "余",
+      "start": 11.132,
+      "end": 11.332
+    },
+    {
+      "index": 40,
+      "char": "部",
+      "start": 11.37,
+      "end": 11.569
+    },
+    {
+      "index": 41,
+      "char": "件",
+      "start": 11.607,
+      "end": 11.806
+    },
+    {
+      "index": 42,
+      "char": "补",
+      "start": 11.844,
+      "end": 12.044
+    },
+    {
+      "index": 43,
+      "char": "足",
+      "start": 12.082,
+      "end": 12.281
+    },
+    {
+      "index": 44,
+      "char": "字",
+      "start": 12.319,
+      "end": 12.519
+    },
+    {
+      "index": 45,
+      "char": "形",
+      "start": 12.557,
+      "end": 12.756
+    },
+    {
+      "index": 46,
+      "char": "看",
+      "start": 13.134,
+      "end": 13.333
+    },
+    {
+      "index": 47,
+      "char": "图",
+      "start": 13.371,
+      "end": 13.571
+    },
+    {
+      "index": 48,
+      "char": "时",
+      "start": 13.609,
+      "end": 13.808
+    },
+    {
+      "index": 49,
+      "char": "左",
+      "start": 14.026,
+      "end": 14.226
+    },
+    {
+      "index": 50,
+      "char": "边",
+      "start": 14.264,
+      "end": 14.463
+    },
+    {
+      "index": 51,
+      "char": "逐",
+      "start": 14.501,
+      "end": 14.7
+    },
+    {
+      "index": 52,
+      "char": "渐",
+      "start": 14.738,
+      "end": 14.938
+    },
+    {
+      "index": 53,
+      "char": "变",
+      "start": 14.976,
+      "end": 15.175
+    },
+    {
+      "index": 54,
+      "char": "小",
+      "start": 15.213,
+      "end": 15.412
+    },
+    {
+      "index": 55,
+      "char": "的",
+      "start": 15.45,
+      "end": 15.65
+    },
+    {
+      "index": 56,
+      "char": "火",
+      "start": 15.688,
+      "end": 15.887
+    },
+    {
+      "index": 57,
+      "char": "焰",
+      "start": 15.925,
+      "end": 16.125
+    },
+    {
+      "index": 58,
+      "char": "形",
+      "start": 16.163,
+      "end": 16.362
+    },
+    {
+      "index": 59,
+      "char": "成",
+      "start": 16.4,
+      "end": 16.599
+    },
+    {
+      "index": 60,
+      "char": "火",
+      "start": 16.637,
+      "end": 16.837
+    },
+    {
+      "index": 61,
+      "char": "右",
+      "start": 17.055,
+      "end": 17.254
+    },
+    {
+      "index": 62,
+      "char": "边",
+      "start": 17.292,
+      "end": 17.492
+    },
+    {
+      "index": 63,
+      "char": "空",
+      "start": 17.53,
+      "end": 17.729
+    },
+    {
+      "index": 64,
+      "char": "器",
+      "start": 17.767,
+      "end": 17.966
+    },
+    {
+      "index": 65,
+      "char": "皿",
+      "start": 18.004,
+      "end": 18.204
+    },
+    {
+      "index": 66,
+      "char": "和",
+      "start": 18.242,
+      "end": 18.441
+    },
+    {
+      "index": 67,
+      "char": "最",
+      "start": 18.479,
+      "end": 18.679
+    },
+    {
+      "index": 68,
+      "char": "后",
+      "start": 18.716,
+      "end": 18.916
+    },
+    {
+      "index": 69,
+      "char": "两",
+      "start": 18.954,
+      "end": 19.153
+    },
+    {
+      "index": 70,
+      "char": "点",
+      "start": 19.191,
+      "end": 19.391
+    },
+    {
+      "index": 71,
+      "char": "余",
+      "start": 19.429,
+      "end": 19.628
+    },
+    {
+      "index": 72,
+      "char": "灰",
+      "start": 19.666,
+      "end": 19.865
+    },
+    {
+      "index": 73,
+      "char": "沿",
+      "start": 19.903,
+      "end": 20.103
+    },
+    {
+      "index": 74,
+      "char": "尽",
+      "start": 20.141,
+      "end": 20.34
+    },
+    {
+      "index": 75,
+      "char": "落",
+      "start": 20.378,
+      "end": 20.578
+    },
+    {
+      "index": 76,
+      "char": "下",
+      "start": 20.616,
+      "end": 20.815
+    },
+    {
+      "index": 77,
+      "char": "组",
+      "start": 21.033,
+      "end": 21.232
+    },
+    {
+      "index": 78,
+      "char": "成",
+      "start": 21.27,
+      "end": 21.47
+    },
+    {
+      "index": 79,
       "char": "烬",
-      "start": 12.313,
-      "end": 12.695
+      "start": 21.508,
+      "end": 21.707
+    },
+    {
+      "index": 80,
+      "char": "灰",
+      "start": 22.085,
+      "end": 22.285
+    },
+    {
+      "index": 81,
+      "char": "烬",
+      "start": 22.323,
+      "end": 22.522
+    },
+    {
+      "index": 82,
+      "char": "是",
+      "start": 22.56,
+      "end": 22.759
+    },
+    {
+      "index": 83,
+      "char": "物",
+      "start": 22.797,
+      "end": 22.997
+    },
+    {
+      "index": 84,
+      "char": "体",
+      "start": 23.035,
+      "end": 23.234
+    },
+    {
+      "index": 85,
+      "char": "燃",
+      "start": 23.272,
+      "end": 23.471
+    },
+    {
+      "index": 86,
+      "char": "烧",
+      "start": 23.509,
+      "end": 23.709
+    },
+    {
+      "index": 87,
+      "char": "后",
+      "start": 23.747,
+      "end": 23.946
+    },
+    {
+      "index": 88,
+      "char": "留",
+      "start": 23.984,
+      "end": 24.184
+    },
+    {
+      "index": 89,
+      "char": "下",
+      "start": 24.222,
+      "end": 24.421
+    },
+    {
+      "index": 90,
+      "char": "的",
+      "start": 24.459,
+      "end": 24.658
+    },
+    {
+      "index": 91,
+      "char": "灰",
+      "start": 24.696,
+      "end": 24.896
+    },
+    {
+      "index": 92,
+      "char": "和",
+      "start": 24.934,
+      "end": 25.133
+    },
+    {
+      "index": 93,
+      "char": "少",
+      "start": 25.171,
+      "end": 25.371
+    },
+    {
+      "index": 94,
+      "char": "量",
+      "start": 25.409,
+      "end": 25.608
+    },
+    {
+      "index": 95,
+      "char": "未",
+      "start": 25.646,
+      "end": 25.845
+    },
+    {
+      "index": 96,
+      "char": "烧",
+      "start": 25.883,
+      "end": 26.083
+    },
+    {
+      "index": 97,
+      "char": "尽",
+      "start": 26.121,
+      "end": 26.32
+    },
+    {
+      "index": 98,
+      "char": "物",
+      "start": 26.358,
+      "end": 26.557
+    },
+    {
+      "index": 99,
+      "char": "这",
+      "start": 26.935,
+      "end": 27.135
+    },
+    {
+      "index": 100,
+      "char": "是",
+      "start": 27.173,
+      "end": 27.372
+    },
+    {
+      "index": 101,
+      "char": "一",
+      "start": 27.41,
+      "end": 27.61
+    },
+    {
+      "index": 102,
+      "char": "幅",
+      "start": 27.648,
+      "end": 27.847
+    },
+    {
+      "index": 103,
+      "char": "帮",
+      "start": 27.885,
+      "end": 28.084
+    },
+    {
+      "index": 104,
+      "char": "助",
+      "start": 28.122,
+      "end": 28.322
+    },
+    {
+      "index": 105,
+      "char": "记",
+      "start": 28.36,
+      "end": 28.559
+    },
+    {
+      "index": 106,
+      "char": "笔",
+      "start": 28.597,
+      "end": 28.797
+    },
+    {
+      "index": 107,
+      "char": "画",
+      "start": 28.835,
+      "end": 29.034
+    },
+    {
+      "index": 108,
+      "char": "和",
+      "start": 29.072,
+      "end": 29.271
+    },
+    {
+      "index": 109,
+      "char": "位",
+      "start": 29.309,
+      "end": 29.509
+    },
+    {
+      "index": 110,
+      "char": "置",
+      "start": 29.547,
+      "end": 29.746
+    },
+    {
+      "index": 111,
+      "char": "的",
+      "start": 29.784,
+      "end": 29.983
+    },
+    {
+      "index": 112,
+      "char": "记",
+      "start": 30.021,
+      "end": 30.221
+    },
+    {
+      "index": 113,
+      "char": "忆",
+      "start": 30.259,
+      "end": 30.458
+    },
+    {
+      "index": 114,
+      "char": "画",
+      "start": 30.496,
+      "end": 30.696
+    },
+    {
+      "index": 115,
+      "char": "面",
+      "start": 30.734,
+      "end": 30.933
+    },
+    {
+      "index": 116,
+      "char": "不",
+      "start": 31.151,
+      "end": 31.35
+    },
+    {
+      "index": 117,
+      "char": "是",
+      "start": 31.388,
+      "end": 31.588
+    },
+    {
+      "index": 118,
+      "char": "完",
+      "start": 31.626,
+      "end": 31.825
+    },
+    {
+      "index": 119,
+      "char": "整",
+      "start": 31.863,
+      "end": 32.063
+    },
+    {
+      "index": 120,
+      "char": "字",
+      "start": 32.101,
+      "end": 32.3
+    },
+    {
+      "index": 121,
+      "char": "源",
+      "start": 32.338,
+      "end": 32.537
+    },
+    {
+      "index": 122,
+      "char": "最",
+      "start": 32.915,
+      "end": 33.115
+    },
+    {
+      "index": 123,
+      "char": "后",
+      "start": 33.153,
+      "end": 33.352
+    },
+    {
+      "index": 124,
+      "char": "再",
+      "start": 33.39,
+      "end": 33.59
+    },
+    {
+      "index": 125,
+      "char": "读",
+      "start": 33.627,
+      "end": 33.827
+    },
+    {
+      "index": 126,
+      "char": "一",
+      "start": 33.865,
+      "end": 34.064
+    },
+    {
+      "index": 127,
+      "char": "遍",
+      "start": 34.102,
+      "end": 34.302
+    },
+    {
+      "index": 128,
+      "char": "灰",
+      "start": 34.52,
+      "end": 34.719
+    },
+    {
+      "index": 129,
+      "char": "烬",
+      "start": 34.757,
+      "end": 34.956
     }
   ],
-  "transcript": "烬，“灰烬”的“烬”。它是左右结构。看图找部件，合成字形。再读：灰烬。",
+  "transcript": "烬，“灰烬”的“烬”，读jìn。它是左右结构，按顺序能看到“火”和“尽”。从构字分工看，“火”先提示意义类别，其余部件补足字形。看图时，左边逐渐变小的火焰形成“火”，右边空器皿和最后两点余灰沿“尽”落下，组成“烬”。灰烬是物体燃烧后留下的灰和少量未烧尽物。这是一幅帮助记笔画和位置的记忆画面，不是完整字源。最后再读一遍：灰烬。",
   "voice_reference": "封",
   "timing_source": "punctuation-weighted-estimate",
-  "script_version": "child-first-v1",
-  "duration": 13.280181
+  "script_version": "child-first-v2",
+  "duration": 35.520181
 }

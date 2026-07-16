@@ -3,151 +3,769 @@
     {
       "index": 0,
       "char": "岔",
-      "start": 0.203,
-      "end": 0.45
+      "start": 0.291,
+      "end": 0.44
     },
     {
       "index": 1,
       "char": "岔",
-      "start": 0.677,
-      "end": 0.924
+      "start": 0.648,
+      "end": 0.797
     },
     {
       "index": 2,
       "char": "道",
-      "start": 0.971,
-      "end": 1.218
+      "start": 0.826,
+      "end": 0.975
     },
     {
       "index": 3,
       "char": "的",
-      "start": 1.265,
-      "end": 1.512
+      "start": 1.003,
+      "end": 1.152
     },
     {
       "index": 4,
       "char": "岔",
-      "start": 1.559,
-      "end": 1.806
+      "start": 1.181,
+      "end": 1.33
     },
     {
       "index": 5,
-      "char": "它",
-      "start": 2.193,
-      "end": 2.44
+      "char": "读",
+      "start": 1.538,
+      "end": 1.687
     },
     {
       "index": 6,
-      "char": "是",
-      "start": 2.487,
-      "end": 2.734
+      "char": "c",
+      "start": 1.716,
+      "end": 1.865
     },
     {
       "index": 7,
-      "char": "上",
-      "start": 2.781,
-      "end": 3.028
+      "char": "h",
+      "start": 1.893,
+      "end": 2.042
     },
     {
       "index": 8,
-      "char": "下",
-      "start": 3.075,
-      "end": 3.322
+      "char": "à",
+      "start": 2.071,
+      "end": 2.22
     },
     {
       "index": 9,
-      "char": "结",
-      "start": 3.369,
-      "end": 3.616
+      "char": "它",
+      "start": 2.588,
+      "end": 2.737
     },
     {
       "index": 10,
-      "char": "构",
-      "start": 3.663,
-      "end": 3.91
+      "char": "是",
+      "start": 2.765,
+      "end": 2.915
     },
     {
       "index": 11,
-      "char": "看",
-      "start": 4.297,
-      "end": 4.544
+      "char": "上",
+      "start": 2.943,
+      "end": 3.092
     },
     {
       "index": 12,
-      "char": "图",
-      "start": 4.591,
-      "end": 4.838
+      "char": "下",
+      "start": 3.12,
+      "end": 3.27
     },
     {
       "index": 13,
-      "char": "找",
-      "start": 4.885,
-      "end": 5.132
+      "char": "结",
+      "start": 3.298,
+      "end": 3.447
     },
     {
       "index": 14,
-      "char": "部",
-      "start": 5.179,
-      "end": 5.426
+      "char": "构",
+      "start": 3.475,
+      "end": 3.624
     },
     {
       "index": 15,
-      "char": "件",
-      "start": 5.473,
-      "end": 5.72
+      "char": "按",
+      "start": 3.833,
+      "end": 3.982
     },
     {
       "index": 16,
-      "char": "合",
-      "start": 5.947,
-      "end": 6.194
+      "char": "顺",
+      "start": 4.01,
+      "end": 4.159
     },
     {
       "index": 17,
-      "char": "成",
-      "start": 6.241,
-      "end": 6.488
+      "char": "序",
+      "start": 4.188,
+      "end": 4.337
     },
     {
       "index": 18,
-      "char": "字",
-      "start": 6.535,
-      "end": 6.782
+      "char": "能",
+      "start": 4.365,
+      "end": 4.514
     },
     {
       "index": 19,
-      "char": "形",
-      "start": 6.829,
-      "end": 7.076
+      "char": "看",
+      "start": 4.543,
+      "end": 4.692
     },
     {
       "index": 20,
-      "char": "再",
-      "start": 7.463,
-      "end": 7.71
+      "char": "到",
+      "start": 4.72,
+      "end": 4.869
     },
     {
       "index": 21,
-      "char": "读",
-      "start": 7.757,
-      "end": 8.004
+      "char": "分",
+      "start": 4.898,
+      "end": 5.047
     },
     {
       "index": 22,
-      "char": "岔",
-      "start": 8.231,
-      "end": 8.478
+      "char": "和",
+      "start": 5.075,
+      "end": 5.224
     },
     {
       "index": 23,
+      "char": "山",
+      "start": 5.253,
+      "end": 5.402
+    },
+    {
+      "index": 24,
+      "char": "从",
+      "start": 5.77,
+      "end": 5.919
+    },
+    {
+      "index": 25,
+      "char": "构",
+      "start": 5.948,
+      "end": 6.097
+    },
+    {
+      "index": 26,
+      "char": "字",
+      "start": 6.125,
+      "end": 6.274
+    },
+    {
+      "index": 27,
+      "char": "分",
+      "start": 6.303,
+      "end": 6.452
+    },
+    {
+      "index": 28,
+      "char": "工",
+      "start": 6.48,
+      "end": 6.629
+    },
+    {
+      "index": 29,
+      "char": "看",
+      "start": 6.658,
+      "end": 6.807
+    },
+    {
+      "index": 30,
+      "char": "山",
+      "start": 7.015,
+      "end": 7.164
+    },
+    {
+      "index": 31,
+      "char": "先",
+      "start": 7.193,
+      "end": 7.342
+    },
+    {
+      "index": 32,
+      "char": "提",
+      "start": 7.37,
+      "end": 7.519
+    },
+    {
+      "index": 33,
+      "char": "示",
+      "start": 7.548,
+      "end": 7.697
+    },
+    {
+      "index": 34,
+      "char": "意",
+      "start": 7.725,
+      "end": 7.874
+    },
+    {
+      "index": 35,
+      "char": "义",
+      "start": 7.903,
+      "end": 8.052
+    },
+    {
+      "index": 36,
+      "char": "类",
+      "start": 8.08,
+      "end": 8.229
+    },
+    {
+      "index": 37,
+      "char": "别",
+      "start": 8.257,
+      "end": 8.407
+    },
+    {
+      "index": 38,
+      "char": "其",
+      "start": 8.615,
+      "end": 8.764
+    },
+    {
+      "index": 39,
+      "char": "余",
+      "start": 8.792,
+      "end": 8.942
+    },
+    {
+      "index": 40,
+      "char": "部",
+      "start": 8.97,
+      "end": 9.119
+    },
+    {
+      "index": 41,
+      "char": "件",
+      "start": 9.147,
+      "end": 9.296
+    },
+    {
+      "index": 42,
+      "char": "补",
+      "start": 9.325,
+      "end": 9.474
+    },
+    {
+      "index": 43,
+      "char": "足",
+      "start": 9.502,
+      "end": 9.651
+    },
+    {
+      "index": 44,
+      "char": "字",
+      "start": 9.68,
+      "end": 9.829
+    },
+    {
+      "index": 45,
+      "char": "形",
+      "start": 9.857,
+      "end": 10.006
+    },
+    {
+      "index": 46,
+      "char": "看",
+      "start": 10.375,
+      "end": 10.524
+    },
+    {
+      "index": 47,
+      "char": "图",
+      "start": 10.552,
+      "end": 10.701
+    },
+    {
+      "index": 48,
+      "char": "时",
+      "start": 10.73,
+      "end": 10.879
+    },
+    {
+      "index": 49,
+      "char": "上",
+      "start": 11.087,
+      "end": 11.236
+    },
+    {
+      "index": 50,
+      "char": "方",
+      "start": 11.265,
+      "end": 11.414
+    },
+    {
+      "index": 51,
+      "char": "一",
+      "start": 11.442,
+      "end": 11.591
+    },
+    {
+      "index": 52,
+      "char": "条",
+      "start": 11.62,
+      "end": 11.769
+    },
+    {
+      "index": 53,
+      "char": "路",
+      "start": 11.797,
+      "end": 11.946
+    },
+    {
+      "index": 54,
+      "char": "从",
+      "start": 11.975,
+      "end": 12.124
+    },
+    {
+      "index": 55,
+      "char": "中",
+      "start": 12.152,
+      "end": 12.301
+    },
+    {
+      "index": 56,
+      "char": "央",
+      "start": 12.33,
+      "end": 12.479
+    },
+    {
+      "index": 57,
+      "char": "分",
+      "start": 12.507,
+      "end": 12.656
+    },
+    {
+      "index": 58,
+      "char": "成",
+      "start": 12.685,
+      "end": 12.834
+    },
+    {
+      "index": 59,
+      "char": "两",
+      "start": 12.862,
+      "end": 13.011
+    },
+    {
+      "index": 60,
+      "char": "股",
+      "start": 13.04,
+      "end": 13.189
+    },
+    {
+      "index": 61,
+      "char": "形",
+      "start": 13.217,
+      "end": 13.366
+    },
+    {
+      "index": 62,
+      "char": "成",
+      "start": 13.395,
+      "end": 13.544
+    },
+    {
+      "index": 63,
+      "char": "分",
+      "start": 13.572,
+      "end": 13.721
+    },
+    {
+      "index": 64,
+      "char": "下",
+      "start": 13.929,
+      "end": 14.079
+    },
+    {
+      "index": 65,
+      "char": "方",
+      "start": 14.107,
+      "end": 14.256
+    },
+    {
+      "index": 66,
+      "char": "山",
+      "start": 14.284,
+      "end": 14.434
+    },
+    {
+      "index": 67,
+      "char": "谷",
+      "start": 14.462,
+      "end": 14.611
+    },
+    {
+      "index": 68,
+      "char": "三",
+      "start": 14.639,
+      "end": 14.788
+    },
+    {
+      "index": 69,
+      "char": "峰",
+      "start": 14.817,
+      "end": 14.966
+    },
+    {
+      "index": 70,
+      "char": "组",
+      "start": 14.994,
+      "end": 15.143
+    },
+    {
+      "index": 71,
+      "char": "成",
+      "start": 15.172,
+      "end": 15.321
+    },
+    {
+      "index": 72,
+      "char": "山",
+      "start": 15.349,
+      "end": 15.498
+    },
+    {
+      "index": 73,
+      "char": "分",
+      "start": 15.707,
+      "end": 15.856
+    },
+    {
+      "index": 74,
+      "char": "开",
+      "start": 15.884,
+      "end": 16.033
+    },
+    {
+      "index": 75,
+      "char": "的",
+      "start": 16.062,
+      "end": 16.211
+    },
+    {
+      "index": 76,
+      "char": "山",
+      "start": 16.239,
+      "end": 16.388
+    },
+    {
+      "index": 77,
+      "char": "路",
+      "start": 16.417,
+      "end": 16.566
+    },
+    {
+      "index": 78,
+      "char": "合",
+      "start": 16.594,
+      "end": 16.743
+    },
+    {
+      "index": 79,
+      "char": "成",
+      "start": 16.772,
+      "end": 16.921
+    },
+    {
+      "index": 80,
+      "char": "岔",
+      "start": 16.949,
+      "end": 17.098
+    },
+    {
+      "index": 81,
+      "char": "岔",
+      "start": 17.467,
+      "end": 17.616
+    },
+    {
+      "index": 82,
       "char": "道",
-      "start": 8.525,
-      "end": 8.772
+      "start": 17.644,
+      "end": 17.793
+    },
+    {
+      "index": 83,
+      "char": "是",
+      "start": 17.822,
+      "end": 17.971
+    },
+    {
+      "index": 84,
+      "char": "从",
+      "start": 17.999,
+      "end": 18.148
+    },
+    {
+      "index": 85,
+      "char": "一",
+      "start": 18.177,
+      "end": 18.326
+    },
+    {
+      "index": 86,
+      "char": "条",
+      "start": 18.354,
+      "end": 18.503
+    },
+    {
+      "index": 87,
+      "char": "路",
+      "start": 18.532,
+      "end": 18.681
+    },
+    {
+      "index": 88,
+      "char": "分",
+      "start": 18.709,
+      "end": 18.858
+    },
+    {
+      "index": 89,
+      "char": "出",
+      "start": 18.887,
+      "end": 19.036
+    },
+    {
+      "index": 90,
+      "char": "去",
+      "start": 19.064,
+      "end": 19.213
+    },
+    {
+      "index": 91,
+      "char": "的",
+      "start": 19.241,
+      "end": 19.391
+    },
+    {
+      "index": 92,
+      "char": "另",
+      "start": 19.419,
+      "end": 19.568
+    },
+    {
+      "index": 93,
+      "char": "一",
+      "start": 19.596,
+      "end": 19.746
+    },
+    {
+      "index": 94,
+      "char": "条",
+      "start": 19.774,
+      "end": 19.923
+    },
+    {
+      "index": 95,
+      "char": "路",
+      "start": 19.951,
+      "end": 20.1
+    },
+    {
+      "index": 96,
+      "char": "这",
+      "start": 20.469,
+      "end": 20.618
+    },
+    {
+      "index": 97,
+      "char": "是",
+      "start": 20.646,
+      "end": 20.795
+    },
+    {
+      "index": 98,
+      "char": "一",
+      "start": 20.824,
+      "end": 20.973
+    },
+    {
+      "index": 99,
+      "char": "幅",
+      "start": 21.001,
+      "end": 21.15
+    },
+    {
+      "index": 100,
+      "char": "帮",
+      "start": 21.179,
+      "end": 21.328
+    },
+    {
+      "index": 101,
+      "char": "助",
+      "start": 21.356,
+      "end": 21.505
+    },
+    {
+      "index": 102,
+      "char": "记",
+      "start": 21.534,
+      "end": 21.683
+    },
+    {
+      "index": 103,
+      "char": "笔",
+      "start": 21.711,
+      "end": 21.86
+    },
+    {
+      "index": 104,
+      "char": "画",
+      "start": 21.889,
+      "end": 22.038
+    },
+    {
+      "index": 105,
+      "char": "和",
+      "start": 22.066,
+      "end": 22.215
+    },
+    {
+      "index": 106,
+      "char": "位",
+      "start": 22.244,
+      "end": 22.393
+    },
+    {
+      "index": 107,
+      "char": "置",
+      "start": 22.421,
+      "end": 22.57
+    },
+    {
+      "index": 108,
+      "char": "的",
+      "start": 22.599,
+      "end": 22.748
+    },
+    {
+      "index": 109,
+      "char": "记",
+      "start": 22.776,
+      "end": 22.925
+    },
+    {
+      "index": 110,
+      "char": "忆",
+      "start": 22.954,
+      "end": 23.103
+    },
+    {
+      "index": 111,
+      "char": "画",
+      "start": 23.131,
+      "end": 23.28
+    },
+    {
+      "index": 112,
+      "char": "面",
+      "start": 23.309,
+      "end": 23.458
+    },
+    {
+      "index": 113,
+      "char": "不",
+      "start": 23.666,
+      "end": 23.815
+    },
+    {
+      "index": 114,
+      "char": "是",
+      "start": 23.844,
+      "end": 23.993
+    },
+    {
+      "index": 115,
+      "char": "完",
+      "start": 24.021,
+      "end": 24.17
+    },
+    {
+      "index": 116,
+      "char": "整",
+      "start": 24.199,
+      "end": 24.348
+    },
+    {
+      "index": 117,
+      "char": "字",
+      "start": 24.376,
+      "end": 24.525
+    },
+    {
+      "index": 118,
+      "char": "源",
+      "start": 24.553,
+      "end": 24.703
+    },
+    {
+      "index": 119,
+      "char": "最",
+      "start": 25.071,
+      "end": 25.22
+    },
+    {
+      "index": 120,
+      "char": "后",
+      "start": 25.248,
+      "end": 25.398
+    },
+    {
+      "index": 121,
+      "char": "再",
+      "start": 25.426,
+      "end": 25.575
+    },
+    {
+      "index": 122,
+      "char": "读",
+      "start": 25.603,
+      "end": 25.753
+    },
+    {
+      "index": 123,
+      "char": "一",
+      "start": 25.781,
+      "end": 25.93
+    },
+    {
+      "index": 124,
+      "char": "遍",
+      "start": 25.958,
+      "end": 26.107
+    },
+    {
+      "index": 125,
+      "char": "岔",
+      "start": 26.316,
+      "end": 26.465
+    },
+    {
+      "index": 126,
+      "char": "道",
+      "start": 26.493,
+      "end": 26.642
     }
   ],
-  "transcript": "岔，“岔道”的“岔”。它是上下结构。看图找部件，合成字形。再读：岔道。",
+  "transcript": "岔，“岔道”的“岔”，读chà。它是上下结构，按顺序能看到“分”和“山”。从构字分工看，“山”先提示意义类别，其余部件补足字形。看图时，上方一条路从中央分成两股形成“分”，下方山谷三峰组成“山”，分开的山路合成“岔”。岔道是从一条路分出去的另一条路。这是一幅帮助记笔画和位置的记忆画面，不是完整字源。最后再读一遍：岔道。",
   "voice_reference": "封",
   "timing_source": "punctuation-weighted-estimate",
-  "script_version": "child-first-v1",
-  "duration": 9.280181
+  "script_version": "child-first-v2",
+  "duration": 27.200181
 }

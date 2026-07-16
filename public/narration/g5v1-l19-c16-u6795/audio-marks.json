@@ -3,151 +3,739 @@
     {
       "index": 0,
       "char": "枕",
-      "start": 0.228,
-      "end": 0.513
+      "start": 0.292,
+      "end": 0.463
     },
     {
       "index": 1,
       "char": "枕",
-      "start": 0.747,
-      "end": 1.032
+      "start": 0.675,
+      "end": 0.845
     },
     {
       "index": 2,
       "char": "头",
-      "start": 1.086,
-      "end": 1.371
+      "start": 0.878,
+      "end": 1.048
     },
     {
       "index": 3,
       "char": "的",
-      "start": 1.425,
-      "end": 1.71
+      "start": 1.081,
+      "end": 1.251
     },
     {
       "index": 4,
       "char": "枕",
-      "start": 1.764,
-      "end": 2.049
+      "start": 1.283,
+      "end": 1.454
     },
     {
       "index": 5,
-      "char": "它",
-      "start": 2.443,
-      "end": 2.728
+      "char": "读",
+      "start": 1.666,
+      "end": 1.836
     },
     {
       "index": 6,
-      "char": "是",
-      "start": 2.782,
-      "end": 3.067
+      "char": "z",
+      "start": 1.869,
+      "end": 2.039
     },
     {
       "index": 7,
-      "char": "左",
-      "start": 3.121,
-      "end": 3.406
+      "char": "h",
+      "start": 2.072,
+      "end": 2.242
     },
     {
       "index": 8,
-      "char": "右",
-      "start": 3.46,
-      "end": 3.745
+      "char": "ě",
+      "start": 2.274,
+      "end": 2.445
     },
     {
       "index": 9,
-      "char": "结",
-      "start": 3.799,
-      "end": 4.084
+      "char": "n",
+      "start": 2.477,
+      "end": 2.648
     },
     {
       "index": 10,
-      "char": "构",
-      "start": 4.138,
-      "end": 4.423
+      "char": "它",
+      "start": 3.02,
+      "end": 3.19
     },
     {
       "index": 11,
-      "char": "看",
-      "start": 4.817,
-      "end": 5.102
+      "char": "是",
+      "start": 3.223,
+      "end": 3.393
     },
     {
       "index": 12,
-      "char": "图",
-      "start": 5.156,
-      "end": 5.441
+      "char": "左",
+      "start": 3.426,
+      "end": 3.596
     },
     {
       "index": 13,
-      "char": "找",
-      "start": 5.495,
-      "end": 5.78
+      "char": "右",
+      "start": 3.628,
+      "end": 3.799
     },
     {
       "index": 14,
-      "char": "部",
-      "start": 5.834,
-      "end": 6.119
+      "char": "结",
+      "start": 3.831,
+      "end": 4.002
     },
     {
       "index": 15,
-      "char": "件",
-      "start": 6.173,
-      "end": 6.458
+      "char": "构",
+      "start": 4.034,
+      "end": 4.204
     },
     {
       "index": 16,
-      "char": "合",
-      "start": 6.692,
-      "end": 6.977
+      "char": "按",
+      "start": 4.417,
+      "end": 4.587
     },
     {
       "index": 17,
-      "char": "成",
-      "start": 7.031,
-      "end": 7.316
+      "char": "顺",
+      "start": 4.62,
+      "end": 4.79
     },
     {
       "index": 18,
-      "char": "字",
-      "start": 7.37,
-      "end": 7.655
+      "char": "序",
+      "start": 4.822,
+      "end": 4.993
     },
     {
       "index": 19,
-      "char": "形",
-      "start": 7.709,
-      "end": 7.994
+      "char": "能",
+      "start": 5.025,
+      "end": 5.195
     },
     {
       "index": 20,
-      "char": "再",
-      "start": 8.388,
-      "end": 8.673
+      "char": "看",
+      "start": 5.228,
+      "end": 5.398
     },
     {
       "index": 21,
-      "char": "读",
-      "start": 8.727,
-      "end": 9.012
+      "char": "到",
+      "start": 5.431,
+      "end": 5.601
     },
     {
       "index": 22,
-      "char": "枕",
-      "start": 9.247,
-      "end": 9.531
+      "char": "木",
+      "start": 5.634,
+      "end": 5.804
     },
     {
       "index": 23,
+      "char": "和",
+      "start": 5.836,
+      "end": 6.007
+    },
+    {
+      "index": 24,
+      "char": "冘",
+      "start": 6.039,
+      "end": 6.209
+    },
+    {
+      "index": 25,
+      "char": "从",
+      "start": 6.582,
+      "end": 6.752
+    },
+    {
+      "index": 26,
+      "char": "构",
+      "start": 6.785,
+      "end": 6.955
+    },
+    {
+      "index": 27,
+      "char": "字",
+      "start": 6.987,
+      "end": 7.158
+    },
+    {
+      "index": 28,
+      "char": "分",
+      "start": 7.19,
+      "end": 7.361
+    },
+    {
+      "index": 29,
+      "char": "工",
+      "start": 7.393,
+      "end": 7.563
+    },
+    {
+      "index": 30,
+      "char": "看",
+      "start": 7.596,
+      "end": 7.766
+    },
+    {
+      "index": 31,
+      "char": "木",
+      "start": 7.979,
+      "end": 8.149
+    },
+    {
+      "index": 32,
+      "char": "提",
+      "start": 8.181,
+      "end": 8.352
+    },
+    {
+      "index": 33,
+      "char": "示",
+      "start": 8.384,
+      "end": 8.555
+    },
+    {
+      "index": 34,
+      "char": "意",
+      "start": 8.587,
+      "end": 8.757
+    },
+    {
+      "index": 35,
+      "char": "义",
+      "start": 8.79,
+      "end": 8.96
+    },
+    {
+      "index": 36,
+      "char": "类",
+      "start": 8.993,
+      "end": 9.163
+    },
+    {
+      "index": 37,
+      "char": "别",
+      "start": 9.195,
+      "end": 9.366
+    },
+    {
+      "index": 38,
+      "char": "冘",
+      "start": 9.578,
+      "end": 9.748
+    },
+    {
+      "index": 39,
+      "char": "提",
+      "start": 9.781,
+      "end": 9.951
+    },
+    {
+      "index": 40,
+      "char": "供",
+      "start": 9.984,
+      "end": 10.154
+    },
+    {
+      "index": 41,
+      "char": "读",
+      "start": 10.186,
+      "end": 10.357
+    },
+    {
+      "index": 42,
+      "char": "音",
+      "start": 10.389,
+      "end": 10.56
+    },
+    {
+      "index": 43,
+      "char": "线",
+      "start": 10.592,
+      "end": 10.762
+    },
+    {
+      "index": 44,
+      "char": "索",
+      "start": 10.795,
+      "end": 10.965
+    },
+    {
+      "index": 45,
+      "char": "看",
+      "start": 11.338,
+      "end": 11.508
+    },
+    {
+      "index": 46,
+      "char": "图",
+      "start": 11.54,
+      "end": 11.711
+    },
+    {
+      "index": 47,
+      "char": "时",
+      "start": 11.743,
+      "end": 11.914
+    },
+    {
+      "index": 48,
+      "char": "左",
+      "start": 12.126,
+      "end": 12.296
+    },
+    {
+      "index": 49,
+      "char": "边",
+      "start": 12.329,
+      "end": 12.499
+    },
+    {
+      "index": 50,
+      "char": "木",
+      "start": 12.532,
+      "end": 12.702
+    },
+    {
+      "index": 51,
+      "char": "床",
+      "start": 12.734,
+      "end": 12.905
+    },
+    {
+      "index": 52,
+      "char": "架",
+      "start": 12.937,
+      "end": 13.108
+    },
+    {
+      "index": 53,
+      "char": "形",
+      "start": 13.14,
+      "end": 13.31
+    },
+    {
+      "index": 54,
+      "char": "成",
+      "start": 13.343,
+      "end": 13.513
+    },
+    {
+      "index": 55,
+      "char": "木",
+      "start": 13.546,
+      "end": 13.716
+    },
+    {
+      "index": 56,
+      "char": "右",
+      "start": 13.928,
+      "end": 14.099
+    },
+    {
+      "index": 57,
+      "char": "边",
+      "start": 14.131,
+      "end": 14.301
+    },
+    {
+      "index": 58,
+      "char": "软",
+      "start": 14.334,
+      "end": 14.504
+    },
+    {
+      "index": 59,
+      "char": "枕",
+      "start": 14.537,
+      "end": 14.707
+    },
+    {
+      "index": 60,
+      "char": "垂",
+      "start": 14.919,
+      "end": 15.09
+    },
+    {
+      "index": 61,
+      "char": "带",
+      "start": 15.122,
+      "end": 15.293
+    },
+    {
+      "index": 62,
+      "char": "和",
+      "start": 15.325,
+      "end": 15.495
+    },
+    {
+      "index": 63,
+      "char": "弯",
+      "start": 15.528,
+      "end": 15.698
+    },
+    {
+      "index": 64,
+      "char": "脚",
+      "start": 15.731,
+      "end": 15.901
+    },
+    {
+      "index": 65,
+      "char": "沿",
+      "start": 15.933,
+      "end": 16.104
+    },
+    {
+      "index": 66,
+      "char": "冘",
+      "start": 16.136,
+      "end": 16.307
+    },
+    {
+      "index": 67,
+      "char": "放",
+      "start": 16.339,
+      "end": 16.509
+    },
+    {
+      "index": 68,
+      "char": "在",
+      "start": 16.542,
+      "end": 16.712
+    },
+    {
+      "index": 69,
+      "char": "床",
+      "start": 16.745,
+      "end": 16.915
+    },
+    {
+      "index": 70,
       "char": "头",
-      "start": 9.586,
-      "end": 9.87
+      "start": 16.947,
+      "end": 17.118
+    },
+    {
+      "index": 71,
+      "char": "合",
+      "start": 17.33,
+      "end": 17.5
+    },
+    {
+      "index": 72,
+      "char": "成",
+      "start": 17.533,
+      "end": 17.703
+    },
+    {
+      "index": 73,
+      "char": "枕",
+      "start": 17.736,
+      "end": 17.906
+    },
+    {
+      "index": 74,
+      "char": "枕",
+      "start": 18.279,
+      "end": 18.449
+    },
+    {
+      "index": 75,
+      "char": "头",
+      "start": 18.481,
+      "end": 18.652
+    },
+    {
+      "index": 76,
+      "char": "是",
+      "start": 18.684,
+      "end": 18.854
+    },
+    {
+      "index": 77,
+      "char": "睡",
+      "start": 18.887,
+      "end": 19.057
+    },
+    {
+      "index": 78,
+      "char": "觉",
+      "start": 19.09,
+      "end": 19.26
+    },
+    {
+      "index": 79,
+      "char": "时",
+      "start": 19.292,
+      "end": 19.463
+    },
+    {
+      "index": 80,
+      "char": "垫",
+      "start": 19.495,
+      "end": 19.666
+    },
+    {
+      "index": 81,
+      "char": "在",
+      "start": 19.698,
+      "end": 19.868
+    },
+    {
+      "index": 82,
+      "char": "头",
+      "start": 19.901,
+      "end": 20.071
+    },
+    {
+      "index": 83,
+      "char": "下",
+      "start": 20.104,
+      "end": 20.274
+    },
+    {
+      "index": 84,
+      "char": "支",
+      "start": 20.486,
+      "end": 20.657
+    },
+    {
+      "index": 85,
+      "char": "撑",
+      "start": 20.689,
+      "end": 20.86
+    },
+    {
+      "index": 86,
+      "char": "头",
+      "start": 20.892,
+      "end": 21.062
+    },
+    {
+      "index": 87,
+      "char": "颈",
+      "start": 21.095,
+      "end": 21.265
+    },
+    {
+      "index": 88,
+      "char": "的",
+      "start": 21.298,
+      "end": 21.468
+    },
+    {
+      "index": 89,
+      "char": "用",
+      "start": 21.5,
+      "end": 21.671
+    },
+    {
+      "index": 90,
+      "char": "品",
+      "start": 21.703,
+      "end": 21.873
+    },
+    {
+      "index": 91,
+      "char": "这",
+      "start": 22.246,
+      "end": 22.416
+    },
+    {
+      "index": 92,
+      "char": "是",
+      "start": 22.449,
+      "end": 22.619
+    },
+    {
+      "index": 93,
+      "char": "一",
+      "start": 22.651,
+      "end": 22.822
+    },
+    {
+      "index": 94,
+      "char": "幅",
+      "start": 22.854,
+      "end": 23.025
+    },
+    {
+      "index": 95,
+      "char": "帮",
+      "start": 23.057,
+      "end": 23.227
+    },
+    {
+      "index": 96,
+      "char": "助",
+      "start": 23.26,
+      "end": 23.43
+    },
+    {
+      "index": 97,
+      "char": "记",
+      "start": 23.463,
+      "end": 23.633
+    },
+    {
+      "index": 98,
+      "char": "笔",
+      "start": 23.665,
+      "end": 23.836
+    },
+    {
+      "index": 99,
+      "char": "画",
+      "start": 23.868,
+      "end": 24.039
+    },
+    {
+      "index": 100,
+      "char": "和",
+      "start": 24.071,
+      "end": 24.241
+    },
+    {
+      "index": 101,
+      "char": "位",
+      "start": 24.274,
+      "end": 24.444
+    },
+    {
+      "index": 102,
+      "char": "置",
+      "start": 24.477,
+      "end": 24.647
+    },
+    {
+      "index": 103,
+      "char": "的",
+      "start": 24.679,
+      "end": 24.85
+    },
+    {
+      "index": 104,
+      "char": "记",
+      "start": 24.882,
+      "end": 25.052
+    },
+    {
+      "index": 105,
+      "char": "忆",
+      "start": 25.085,
+      "end": 25.255
+    },
+    {
+      "index": 106,
+      "char": "画",
+      "start": 25.288,
+      "end": 25.458
+    },
+    {
+      "index": 107,
+      "char": "面",
+      "start": 25.491,
+      "end": 25.661
+    },
+    {
+      "index": 108,
+      "char": "不",
+      "start": 25.873,
+      "end": 26.044
+    },
+    {
+      "index": 109,
+      "char": "是",
+      "start": 26.076,
+      "end": 26.246
+    },
+    {
+      "index": 110,
+      "char": "完",
+      "start": 26.279,
+      "end": 26.449
+    },
+    {
+      "index": 111,
+      "char": "整",
+      "start": 26.482,
+      "end": 26.652
+    },
+    {
+      "index": 112,
+      "char": "字",
+      "start": 26.684,
+      "end": 26.855
+    },
+    {
+      "index": 113,
+      "char": "源",
+      "start": 26.887,
+      "end": 27.058
+    },
+    {
+      "index": 114,
+      "char": "最",
+      "start": 27.43,
+      "end": 27.6
+    },
+    {
+      "index": 115,
+      "char": "后",
+      "start": 27.633,
+      "end": 27.803
+    },
+    {
+      "index": 116,
+      "char": "再",
+      "start": 27.836,
+      "end": 28.006
+    },
+    {
+      "index": 117,
+      "char": "读",
+      "start": 28.038,
+      "end": 28.209
+    },
+    {
+      "index": 118,
+      "char": "一",
+      "start": 28.241,
+      "end": 28.412
+    },
+    {
+      "index": 119,
+      "char": "遍",
+      "start": 28.444,
+      "end": 28.614
+    },
+    {
+      "index": 120,
+      "char": "枕",
+      "start": 28.827,
+      "end": 28.997
+    },
+    {
+      "index": 121,
+      "char": "头",
+      "start": 29.03,
+      "end": 29.2
     }
   ],
-  "transcript": "枕，“枕头”的“枕”。它是左右结构。看图找部件，合成字形。再读：枕头。",
+  "transcript": "枕，“枕头”的“枕”，读zhěn。它是左右结构，按顺序能看到“木”和“冘”。从构字分工看，“木”提示意义类别，“冘”提供读音线索。看图时，左边木床架形成“木”，右边软枕、垂带和弯脚沿“冘”放在床头，合成“枕”。枕头是睡觉时垫在头下、支撑头颈的用品。这是一幅帮助记笔画和位置的记忆画面，不是完整字源。最后再读一遍：枕头。",
   "voice_reference": "封",
   "timing_source": "punctuation-weighted-estimate",
-  "script_version": "child-first-v1",
-  "duration": 10.400181
+  "script_version": "child-first-v2",
+  "duration": 29.760181
 }

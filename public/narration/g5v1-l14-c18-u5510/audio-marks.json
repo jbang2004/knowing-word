@@ -3,163 +3,709 @@
     {
       "index": 0,
       "char": "唐",
-      "start": 0.188,
-      "end": 0.396
+      "start": 0.293,
+      "end": 0.473
     },
     {
       "index": 1,
       "char": "唐",
-      "start": 0.615,
-      "end": 0.823
+      "start": 0.688,
+      "end": 0.868
     },
     {
       "index": 2,
       "char": "代",
-      "start": 0.863,
-      "end": 1.071
+      "start": 0.903,
+      "end": 1.083
     },
     {
       "index": 3,
       "char": "的",
-      "start": 1.11,
-      "end": 1.318
+      "start": 1.118,
+      "end": 1.298
     },
     {
       "index": 4,
       "char": "唐",
-      "start": 1.358,
-      "end": 1.566
+      "start": 1.332,
+      "end": 1.513
     },
     {
       "index": 5,
-      "char": "它",
-      "start": 1.946,
-      "end": 2.154
+      "char": "读",
+      "start": 1.727,
+      "end": 1.908
     },
     {
       "index": 6,
-      "char": "是",
-      "start": 2.193,
-      "end": 2.401
+      "char": "t",
+      "start": 1.942,
+      "end": 2.123
     },
     {
       "index": 7,
-      "char": "左",
-      "start": 2.441,
-      "end": 2.649
+      "char": "á",
+      "start": 2.157,
+      "end": 2.338
     },
     {
       "index": 8,
-      "char": "上",
-      "start": 2.689,
-      "end": 2.897
+      "char": "n",
+      "start": 2.372,
+      "end": 2.552
     },
     {
       "index": 9,
-      "char": "包",
-      "start": 2.936,
-      "end": 3.144
+      "char": "g",
+      "start": 2.587,
+      "end": 2.767
     },
     {
       "index": 10,
-      "char": "围",
-      "start": 3.184,
-      "end": 3.392
+      "char": "它",
+      "start": 3.142,
+      "end": 3.322
     },
     {
       "index": 11,
-      "char": "结",
-      "start": 3.431,
-      "end": 3.639
+      "char": "是",
+      "start": 3.357,
+      "end": 3.537
     },
     {
       "index": 12,
-      "char": "构",
-      "start": 3.679,
-      "end": 3.887
+      "char": "左",
+      "start": 3.571,
+      "end": 3.752
     },
     {
       "index": 13,
-      "char": "看",
-      "start": 4.267,
-      "end": 4.475
+      "char": "上",
+      "start": 3.786,
+      "end": 3.967
     },
     {
       "index": 14,
-      "char": "图",
-      "start": 4.514,
-      "end": 4.722
+      "char": "包",
+      "start": 4.001,
+      "end": 4.182
     },
     {
       "index": 15,
-      "char": "找",
-      "start": 4.762,
-      "end": 4.97
+      "char": "围",
+      "start": 4.216,
+      "end": 4.397
     },
     {
       "index": 16,
-      "char": "部",
-      "start": 5.009,
-      "end": 5.217
+      "char": "结",
+      "start": 4.431,
+      "end": 4.611
     },
     {
       "index": 17,
-      "char": "件",
-      "start": 5.257,
-      "end": 5.465
+      "char": "构",
+      "start": 4.646,
+      "end": 4.826
     },
     {
       "index": 18,
-      "char": "合",
-      "start": 5.685,
-      "end": 5.893
+      "char": "按",
+      "start": 5.041,
+      "end": 5.221
     },
     {
       "index": 19,
-      "char": "成",
-      "start": 5.932,
-      "end": 6.14
+      "char": "顺",
+      "start": 5.256,
+      "end": 5.436
     },
     {
       "index": 20,
-      "char": "字",
-      "start": 6.18,
-      "end": 6.388
+      "char": "序",
+      "start": 5.471,
+      "end": 5.651
     },
     {
       "index": 21,
-      "char": "形",
-      "start": 6.427,
-      "end": 6.635
+      "char": "能",
+      "start": 5.685,
+      "end": 5.866
     },
     {
       "index": 22,
-      "char": "再",
-      "start": 7.015,
-      "end": 7.223
+      "char": "看",
+      "start": 5.9,
+      "end": 6.081
     },
     {
       "index": 23,
-      "char": "读",
-      "start": 7.263,
-      "end": 7.471
+      "char": "到",
+      "start": 6.115,
+      "end": 6.296
     },
     {
       "index": 24,
-      "char": "唐",
-      "start": 7.69,
-      "end": 7.898
+      "char": "广",
+      "start": 6.33,
+      "end": 6.511
     },
     {
       "index": 25,
+      "char": "这",
+      "start": 6.885,
+      "end": 7.065
+    },
+    {
+      "index": 26,
+      "char": "个",
+      "start": 7.1,
+      "end": 7.28
+    },
+    {
+      "index": 27,
+      "char": "字",
+      "start": 7.315,
+      "end": 7.495
+    },
+    {
+      "index": 28,
+      "char": "适",
+      "start": 7.53,
+      "end": 7.71
+    },
+    {
+      "index": 29,
+      "char": "合",
+      "start": 7.744,
+      "end": 7.925
+    },
+    {
+      "index": 30,
+      "char": "顺",
+      "start": 7.959,
+      "end": 8.14
+    },
+    {
+      "index": 31,
+      "char": "着",
+      "start": 8.174,
+      "end": 8.355
+    },
+    {
+      "index": 32,
+      "char": "完",
+      "start": 8.389,
+      "end": 8.57
+    },
+    {
+      "index": 33,
+      "char": "整",
+      "start": 8.604,
+      "end": 8.784
+    },
+    {
+      "index": 34,
+      "char": "轮",
+      "start": 8.819,
+      "end": 8.999
+    },
+    {
+      "index": 35,
+      "char": "廓",
+      "start": 9.034,
+      "end": 9.214
+    },
+    {
+      "index": 36,
+      "char": "来",
+      "start": 9.249,
+      "end": 9.429
+    },
+    {
+      "index": 37,
+      "char": "记",
+      "start": 9.463,
+      "end": 9.644
+    },
+    {
+      "index": 38,
+      "char": "看",
+      "start": 10.018,
+      "end": 10.199
+    },
+    {
+      "index": 39,
+      "char": "图",
+      "start": 10.233,
+      "end": 10.414
+    },
+    {
+      "index": 40,
+      "char": "时",
+      "start": 10.448,
+      "end": 10.629
+    },
+    {
+      "index": 41,
+      "char": "外",
+      "start": 10.843,
+      "end": 11.024
+    },
+    {
+      "index": 42,
+      "char": "面",
+      "start": 11.058,
+      "end": 11.238
+    },
+    {
+      "index": 43,
+      "char": "宏",
+      "start": 11.273,
+      "end": 11.453
+    },
+    {
+      "index": 44,
+      "char": "大",
+      "start": 11.488,
+      "end": 11.668
+    },
+    {
+      "index": 45,
+      "char": "屋",
+      "start": 11.703,
+      "end": 11.883
+    },
+    {
+      "index": 46,
+      "char": "檐",
+      "start": 11.917,
+      "end": 12.098
+    },
+    {
+      "index": 47,
+      "char": "形",
+      "start": 12.132,
+      "end": 12.313
+    },
+    {
+      "index": 48,
+      "char": "成",
+      "start": 12.347,
+      "end": 12.528
+    },
+    {
+      "index": 49,
+      "char": "广",
+      "start": 12.562,
+      "end": 12.743
+    },
+    {
+      "index": 50,
+      "char": "里",
+      "start": 12.957,
+      "end": 13.137
+    },
+    {
+      "index": 51,
+      "char": "面",
+      "start": 13.172,
+      "end": 13.352
+    },
+    {
+      "index": 52,
+      "char": "层",
+      "start": 13.387,
+      "end": 13.567
+    },
+    {
+      "index": 53,
+      "char": "层",
+      "start": 13.602,
+      "end": 13.782
+    },
+    {
+      "index": 54,
+      "char": "宫",
+      "start": 13.816,
+      "end": 13.997
+    },
+    {
+      "index": 55,
+      "char": "梁",
+      "start": 14.031,
+      "end": 14.212
+    },
+    {
+      "index": 56,
+      "char": "和",
+      "start": 14.246,
+      "end": 14.427
+    },
+    {
+      "index": 57,
+      "char": "方",
+      "start": 14.461,
+      "end": 14.642
+    },
+    {
+      "index": 58,
+      "char": "形",
+      "start": 14.676,
+      "end": 14.856
+    },
+    {
+      "index": 59,
+      "char": "宫",
+      "start": 14.891,
+      "end": 15.071
+    },
+    {
+      "index": 60,
+      "char": "门",
+      "start": 15.106,
+      "end": 15.286
+    },
+    {
+      "index": 61,
+      "char": "沿",
+      "start": 15.321,
+      "end": 15.501
+    },
+    {
+      "index": 62,
+      "char": "唐",
+      "start": 15.536,
+      "end": 15.716
+    },
+    {
+      "index": 63,
+      "char": "的",
+      "start": 15.75,
+      "end": 15.931
+    },
+    {
+      "index": 64,
+      "char": "内",
+      "start": 15.965,
+      "end": 16.146
+    },
+    {
+      "index": 65,
+      "char": "部",
+      "start": 16.18,
+      "end": 16.361
+    },
+    {
+      "index": 66,
+      "char": "笔",
+      "start": 16.395,
+      "end": 16.576
+    },
+    {
+      "index": 67,
+      "char": "画",
+      "start": 16.61,
+      "end": 16.79
+    },
+    {
+      "index": 68,
+      "char": "搭",
+      "start": 16.825,
+      "end": 17.005
+    },
+    {
+      "index": 69,
+      "char": "起",
+      "start": 17.04,
+      "end": 17.22
+    },
+    {
+      "index": 70,
+      "char": "组",
+      "start": 17.435,
+      "end": 17.615
+    },
+    {
+      "index": 71,
+      "char": "成",
+      "start": 17.649,
+      "end": 17.83
+    },
+    {
+      "index": 72,
+      "char": "唐",
+      "start": 17.864,
+      "end": 18.045
+    },
+    {
+      "index": 73,
+      "char": "唐",
+      "start": 18.419,
+      "end": 18.6
+    },
+    {
+      "index": 74,
       "char": "代",
-      "start": 7.938,
-      "end": 8.146
+      "start": 18.634,
+      "end": 18.815
+    },
+    {
+      "index": 75,
+      "char": "是",
+      "start": 18.849,
+      "end": 19.029
+    },
+    {
+      "index": 76,
+      "char": "中",
+      "start": 19.064,
+      "end": 19.244
+    },
+    {
+      "index": 77,
+      "char": "国",
+      "start": 19.279,
+      "end": 19.459
+    },
+    {
+      "index": 78,
+      "char": "历",
+      "start": 19.494,
+      "end": 19.674
+    },
+    {
+      "index": 79,
+      "char": "史",
+      "start": 19.708,
+      "end": 19.889
+    },
+    {
+      "index": 80,
+      "char": "上",
+      "start": 19.923,
+      "end": 20.104
+    },
+    {
+      "index": 81,
+      "char": "的",
+      "start": 20.138,
+      "end": 20.319
+    },
+    {
+      "index": 82,
+      "char": "一",
+      "start": 20.353,
+      "end": 20.534
+    },
+    {
+      "index": 83,
+      "char": "个",
+      "start": 20.568,
+      "end": 20.749
+    },
+    {
+      "index": 84,
+      "char": "朝",
+      "start": 20.783,
+      "end": 20.963
+    },
+    {
+      "index": 85,
+      "char": "代",
+      "start": 20.998,
+      "end": 21.178
+    },
+    {
+      "index": 86,
+      "char": "这",
+      "start": 21.553,
+      "end": 21.733
+    },
+    {
+      "index": 87,
+      "char": "是",
+      "start": 21.768,
+      "end": 21.948
+    },
+    {
+      "index": 88,
+      "char": "一",
+      "start": 21.982,
+      "end": 22.163
+    },
+    {
+      "index": 89,
+      "char": "幅",
+      "start": 22.197,
+      "end": 22.378
+    },
+    {
+      "index": 90,
+      "char": "帮",
+      "start": 22.412,
+      "end": 22.593
+    },
+    {
+      "index": 91,
+      "char": "助",
+      "start": 22.627,
+      "end": 22.808
+    },
+    {
+      "index": 92,
+      "char": "记",
+      "start": 22.842,
+      "end": 23.022
+    },
+    {
+      "index": 93,
+      "char": "笔",
+      "start": 23.057,
+      "end": 23.237
+    },
+    {
+      "index": 94,
+      "char": "画",
+      "start": 23.272,
+      "end": 23.452
+    },
+    {
+      "index": 95,
+      "char": "和",
+      "start": 23.487,
+      "end": 23.667
+    },
+    {
+      "index": 96,
+      "char": "位",
+      "start": 23.701,
+      "end": 23.882
+    },
+    {
+      "index": 97,
+      "char": "置",
+      "start": 23.916,
+      "end": 24.097
+    },
+    {
+      "index": 98,
+      "char": "的",
+      "start": 24.131,
+      "end": 24.312
+    },
+    {
+      "index": 99,
+      "char": "记",
+      "start": 24.346,
+      "end": 24.527
+    },
+    {
+      "index": 100,
+      "char": "忆",
+      "start": 24.561,
+      "end": 24.741
+    },
+    {
+      "index": 101,
+      "char": "画",
+      "start": 24.776,
+      "end": 24.956
+    },
+    {
+      "index": 102,
+      "char": "面",
+      "start": 24.991,
+      "end": 25.171
+    },
+    {
+      "index": 103,
+      "char": "不",
+      "start": 25.386,
+      "end": 25.566
+    },
+    {
+      "index": 104,
+      "char": "是",
+      "start": 25.601,
+      "end": 25.781
+    },
+    {
+      "index": 105,
+      "char": "完",
+      "start": 25.815,
+      "end": 25.996
+    },
+    {
+      "index": 106,
+      "char": "整",
+      "start": 26.03,
+      "end": 26.211
+    },
+    {
+      "index": 107,
+      "char": "字",
+      "start": 26.245,
+      "end": 26.426
+    },
+    {
+      "index": 108,
+      "char": "源",
+      "start": 26.46,
+      "end": 26.641
+    },
+    {
+      "index": 109,
+      "char": "最",
+      "start": 27.015,
+      "end": 27.195
+    },
+    {
+      "index": 110,
+      "char": "后",
+      "start": 27.23,
+      "end": 27.41
+    },
+    {
+      "index": 111,
+      "char": "再",
+      "start": 27.445,
+      "end": 27.625
+    },
+    {
+      "index": 112,
+      "char": "读",
+      "start": 27.66,
+      "end": 27.84
+    },
+    {
+      "index": 113,
+      "char": "一",
+      "start": 27.874,
+      "end": 28.055
+    },
+    {
+      "index": 114,
+      "char": "遍",
+      "start": 28.089,
+      "end": 28.27
+    },
+    {
+      "index": 115,
+      "char": "唐",
+      "start": 28.484,
+      "end": 28.665
+    },
+    {
+      "index": 116,
+      "char": "代",
+      "start": 28.699,
+      "end": 28.88
     }
   ],
-  "transcript": "唐，“唐代”的“唐”。它是左上包围结构。看图找部件，合成字形。再读：唐代。",
+  "transcript": "唐，“唐代”的“唐”，读táng。它是左上包围结构，按顺序能看到“广”。这个字适合顺着完整轮廓来记。看图时，外面宏大屋檐形成“广”，里面层层宫梁和方形宫门沿“唐”的内部笔画搭起，组成“唐”。唐代是中国历史上的一个朝代。这是一幅帮助记笔画和位置的记忆画面，不是完整字源。最后再读一遍：唐代。",
   "voice_reference": "封",
   "timing_source": "punctuation-weighted-estimate",
-  "script_version": "child-first-v1",
-  "duration": 8.640181
+  "script_version": "child-first-v2",
+  "duration": 29.441066
 }

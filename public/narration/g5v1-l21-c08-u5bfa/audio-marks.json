@@ -3,151 +3,805 @@
     {
       "index": 0,
       "char": "寺",
-      "start": 0.192,
-      "end": 0.423
+      "start": 0.293,
+      "end": 0.481
     },
     {
       "index": 1,
       "char": "寺",
-      "start": 0.647,
-      "end": 0.878
+      "start": 0.697,
+      "end": 0.884
     },
     {
       "index": 2,
       "char": "庙",
-      "start": 0.922,
-      "end": 1.153
+      "start": 0.92,
+      "end": 1.108
     },
     {
       "index": 3,
       "char": "的",
-      "start": 1.197,
-      "end": 1.427
+      "start": 1.143,
+      "end": 1.331
     },
     {
       "index": 4,
       "char": "寺",
-      "start": 1.471,
-      "end": 1.702
+      "start": 1.367,
+      "end": 1.554
     },
     {
       "index": 5,
-      "char": "它",
-      "start": 2.086,
-      "end": 2.317
+      "char": "读",
+      "start": 1.77,
+      "end": 1.958
     },
     {
       "index": 6,
-      "char": "是",
-      "start": 2.361,
-      "end": 2.591
+      "char": "s",
+      "start": 1.993,
+      "end": 2.181
     },
     {
       "index": 7,
-      "char": "上",
-      "start": 2.635,
-      "end": 2.866
+      "char": "ì",
+      "start": 2.217,
+      "end": 2.404
     },
     {
       "index": 8,
-      "char": "下",
-      "start": 2.91,
-      "end": 3.141
+      "char": "它",
+      "start": 2.78,
+      "end": 2.967
     },
     {
       "index": 9,
-      "char": "结",
-      "start": 3.185,
-      "end": 3.415
+      "char": "是",
+      "start": 3.003,
+      "end": 3.191
     },
     {
       "index": 10,
-      "char": "构",
-      "start": 3.459,
-      "end": 3.69
+      "char": "上",
+      "start": 3.226,
+      "end": 3.414
     },
     {
       "index": 11,
-      "char": "看",
-      "start": 4.074,
-      "end": 4.305
+      "char": "下",
+      "start": 3.45,
+      "end": 3.637
     },
     {
       "index": 12,
-      "char": "图",
-      "start": 4.349,
-      "end": 4.579
+      "char": "结",
+      "start": 3.673,
+      "end": 3.861
     },
     {
       "index": 13,
-      "char": "找",
-      "start": 4.623,
-      "end": 4.854
+      "char": "构",
+      "start": 3.896,
+      "end": 4.084
     },
     {
       "index": 14,
-      "char": "部",
-      "start": 4.898,
-      "end": 5.129
+      "char": "按",
+      "start": 4.3,
+      "end": 4.487
     },
     {
       "index": 15,
-      "char": "件",
-      "start": 5.173,
-      "end": 5.403
+      "char": "顺",
+      "start": 4.523,
+      "end": 4.711
     },
     {
       "index": 16,
-      "char": "合",
-      "start": 5.627,
-      "end": 5.858
+      "char": "序",
+      "start": 4.746,
+      "end": 4.934
     },
     {
       "index": 17,
-      "char": "成",
-      "start": 5.902,
-      "end": 6.133
+      "char": "能",
+      "start": 4.97,
+      "end": 5.157
     },
     {
       "index": 18,
-      "char": "字",
-      "start": 6.177,
-      "end": 6.407
+      "char": "看",
+      "start": 5.193,
+      "end": 5.381
     },
     {
       "index": 19,
-      "char": "形",
-      "start": 6.451,
-      "end": 6.682
+      "char": "到",
+      "start": 5.416,
+      "end": 5.604
     },
     {
       "index": 20,
-      "char": "再",
-      "start": 7.066,
-      "end": 7.297
+      "char": "土",
+      "start": 5.64,
+      "end": 5.827
     },
     {
       "index": 21,
-      "char": "读",
-      "start": 7.341,
-      "end": 7.571
+      "char": "和",
+      "start": 5.863,
+      "end": 6.05
     },
     {
       "index": 22,
-      "char": "寺",
-      "start": 7.795,
-      "end": 8.026
+      "char": "寸",
+      "start": 6.086,
+      "end": 6.274
     },
     {
       "index": 23,
+      "char": "从",
+      "start": 6.65,
+      "end": 6.837
+    },
+    {
+      "index": 24,
+      "char": "构",
+      "start": 6.873,
+      "end": 7.06
+    },
+    {
+      "index": 25,
+      "char": "字",
+      "start": 7.096,
+      "end": 7.284
+    },
+    {
+      "index": 26,
+      "char": "分",
+      "start": 7.319,
+      "end": 7.507
+    },
+    {
+      "index": 27,
+      "char": "工",
+      "start": 7.543,
+      "end": 7.73
+    },
+    {
+      "index": 28,
+      "char": "看",
+      "start": 7.766,
+      "end": 7.954
+    },
+    {
+      "index": 29,
+      "char": "寸",
+      "start": 8.169,
+      "end": 8.357
+    },
+    {
+      "index": 30,
+      "char": "先",
+      "start": 8.393,
+      "end": 8.58
+    },
+    {
+      "index": 31,
+      "char": "提",
+      "start": 8.616,
+      "end": 8.804
+    },
+    {
+      "index": 32,
+      "char": "示",
+      "start": 8.839,
+      "end": 9.027
+    },
+    {
+      "index": 33,
+      "char": "意",
+      "start": 9.063,
+      "end": 9.25
+    },
+    {
+      "index": 34,
+      "char": "义",
+      "start": 9.286,
+      "end": 9.474
+    },
+    {
+      "index": 35,
+      "char": "类",
+      "start": 9.509,
+      "end": 9.697
+    },
+    {
+      "index": 36,
+      "char": "别",
+      "start": 9.733,
+      "end": 9.92
+    },
+    {
+      "index": 37,
+      "char": "其",
+      "start": 10.136,
+      "end": 10.323
+    },
+    {
+      "index": 38,
+      "char": "余",
+      "start": 10.359,
+      "end": 10.547
+    },
+    {
+      "index": 39,
+      "char": "部",
+      "start": 10.582,
+      "end": 10.77
+    },
+    {
+      "index": 40,
+      "char": "件",
+      "start": 10.806,
+      "end": 10.993
+    },
+    {
+      "index": 41,
+      "char": "补",
+      "start": 11.029,
+      "end": 11.217
+    },
+    {
+      "index": 42,
+      "char": "足",
+      "start": 11.252,
+      "end": 11.44
+    },
+    {
+      "index": 43,
+      "char": "字",
+      "start": 11.476,
+      "end": 11.663
+    },
+    {
+      "index": 44,
+      "char": "形",
+      "start": 11.699,
+      "end": 11.887
+    },
+    {
+      "index": 45,
+      "char": "看",
+      "start": 12.262,
+      "end": 12.45
+    },
+    {
+      "index": 46,
+      "char": "图",
+      "start": 12.486,
+      "end": 12.673
+    },
+    {
+      "index": 47,
+      "char": "时",
+      "start": 12.709,
+      "end": 12.897
+    },
+    {
+      "index": 48,
+      "char": "上",
+      "start": 13.112,
+      "end": 13.3
+    },
+    {
+      "index": 49,
+      "char": "方",
+      "start": 13.336,
+      "end": 13.523
+    },
+    {
+      "index": 50,
+      "char": "分",
+      "start": 13.559,
+      "end": 13.746
+    },
+    {
+      "index": 51,
+      "char": "层",
+      "start": 13.782,
+      "end": 13.97
+    },
+    {
+      "index": 52,
+      "char": "土",
+      "start": 14.005,
+      "end": 14.193
+    },
+    {
+      "index": 53,
+      "char": "台",
+      "start": 14.229,
+      "end": 14.416
+    },
+    {
+      "index": 54,
+      "char": "形",
+      "start": 14.452,
+      "end": 14.64
+    },
+    {
+      "index": 55,
+      "char": "成",
+      "start": 14.675,
+      "end": 14.863
+    },
+    {
+      "index": 56,
+      "char": "土",
+      "start": 14.899,
+      "end": 15.086
+    },
+    {
+      "index": 57,
+      "char": "下",
+      "start": 15.302,
+      "end": 15.49
+    },
+    {
+      "index": 58,
+      "char": "方",
+      "start": 15.525,
+      "end": 15.713
+    },
+    {
+      "index": 59,
+      "char": "带",
+      "start": 15.749,
+      "end": 15.936
+    },
+    {
+      "index": 60,
+      "char": "刻",
+      "start": 15.972,
+      "end": 16.16
+    },
+    {
+      "index": 61,
+      "char": "度",
+      "start": 16.195,
+      "end": 16.383
+    },
+    {
+      "index": 62,
+      "char": "的",
+      "start": 16.419,
+      "end": 16.606
+    },
+    {
+      "index": 63,
+      "char": "守",
+      "start": 16.642,
+      "end": 16.829
+    },
+    {
+      "index": 64,
+      "char": "时",
+      "start": 16.865,
+      "end": 17.053
+    },
+    {
+      "index": 65,
+      "char": "手",
+      "start": 17.089,
+      "end": 17.276
+    },
+    {
+      "index": 66,
+      "char": "腕",
+      "start": 17.312,
+      "end": 17.499
+    },
+    {
+      "index": 67,
+      "char": "形",
+      "start": 17.535,
+      "end": 17.723
+    },
+    {
+      "index": 68,
+      "char": "成",
+      "start": 17.758,
+      "end": 17.946
+    },
+    {
+      "index": 69,
+      "char": "寸",
+      "start": 17.982,
+      "end": 18.169
+    },
+    {
+      "index": 70,
+      "char": "台",
+      "start": 18.385,
+      "end": 18.573
+    },
+    {
+      "index": 71,
+      "char": "阶",
+      "start": 18.608,
+      "end": 18.796
+    },
+    {
+      "index": 72,
+      "char": "与",
+      "start": 18.832,
+      "end": 19.019
+    },
+    {
+      "index": 73,
+      "char": "礼",
+      "start": 19.055,
+      "end": 19.243
+    },
+    {
+      "index": 74,
+      "char": "仪",
+      "start": 19.278,
+      "end": 19.466
+    },
+    {
+      "index": 75,
+      "char": "位",
+      "start": 19.502,
+      "end": 19.689
+    },
+    {
+      "index": 76,
+      "char": "置",
+      "start": 19.725,
+      "end": 19.913
+    },
+    {
+      "index": 77,
+      "char": "上",
+      "start": 19.948,
+      "end": 20.136
+    },
+    {
+      "index": 78,
+      "char": "下",
+      "start": 20.172,
+      "end": 20.359
+    },
+    {
+      "index": 79,
+      "char": "对",
+      "start": 20.395,
+      "end": 20.582
+    },
+    {
+      "index": 80,
+      "char": "齐",
+      "start": 20.618,
+      "end": 20.806
+    },
+    {
+      "index": 81,
+      "char": "组",
+      "start": 21.021,
+      "end": 21.209
+    },
+    {
+      "index": 82,
+      "char": "成",
+      "start": 21.245,
+      "end": 21.432
+    },
+    {
+      "index": 83,
+      "char": "寺",
+      "start": 21.468,
+      "end": 21.656
+    },
+    {
+      "index": 84,
+      "char": "寺",
+      "start": 22.031,
+      "end": 22.219
+    },
+    {
+      "index": 85,
       "char": "庙",
-      "start": 8.07,
-      "end": 8.301
+      "start": 22.255,
+      "end": 22.442
+    },
+    {
+      "index": 86,
+      "char": "是",
+      "start": 22.478,
+      "end": 22.666
+    },
+    {
+      "index": 87,
+      "char": "供",
+      "start": 22.701,
+      "end": 22.889
+    },
+    {
+      "index": 88,
+      "char": "奉",
+      "start": 22.925,
+      "end": 23.112
+    },
+    {
+      "index": 89,
+      "char": "宗",
+      "start": 23.148,
+      "end": 23.336
+    },
+    {
+      "index": 90,
+      "char": "教",
+      "start": 23.371,
+      "end": 23.559
+    },
+    {
+      "index": 91,
+      "char": "神",
+      "start": 23.595,
+      "end": 23.782
+    },
+    {
+      "index": 92,
+      "char": "像",
+      "start": 23.818,
+      "end": 24.005
+    },
+    {
+      "index": 93,
+      "char": "进",
+      "start": 24.221,
+      "end": 24.409
+    },
+    {
+      "index": 94,
+      "char": "行",
+      "start": 24.445,
+      "end": 24.632
+    },
+    {
+      "index": 95,
+      "char": "相",
+      "start": 24.668,
+      "end": 24.855
+    },
+    {
+      "index": 96,
+      "char": "关",
+      "start": 24.891,
+      "end": 25.079
+    },
+    {
+      "index": 97,
+      "char": "活",
+      "start": 25.114,
+      "end": 25.302
+    },
+    {
+      "index": 98,
+      "char": "动",
+      "start": 25.338,
+      "end": 25.525
+    },
+    {
+      "index": 99,
+      "char": "的",
+      "start": 25.561,
+      "end": 25.749
+    },
+    {
+      "index": 100,
+      "char": "建",
+      "start": 25.784,
+      "end": 25.972
+    },
+    {
+      "index": 101,
+      "char": "筑",
+      "start": 26.008,
+      "end": 26.195
+    },
+    {
+      "index": 102,
+      "char": "这",
+      "start": 26.571,
+      "end": 26.759
+    },
+    {
+      "index": 103,
+      "char": "是",
+      "start": 26.794,
+      "end": 26.982
+    },
+    {
+      "index": 104,
+      "char": "一",
+      "start": 27.018,
+      "end": 27.205
+    },
+    {
+      "index": 105,
+      "char": "幅",
+      "start": 27.241,
+      "end": 27.428
+    },
+    {
+      "index": 106,
+      "char": "帮",
+      "start": 27.464,
+      "end": 27.652
+    },
+    {
+      "index": 107,
+      "char": "助",
+      "start": 27.688,
+      "end": 27.875
+    },
+    {
+      "index": 108,
+      "char": "记",
+      "start": 27.911,
+      "end": 28.098
+    },
+    {
+      "index": 109,
+      "char": "笔",
+      "start": 28.134,
+      "end": 28.322
+    },
+    {
+      "index": 110,
+      "char": "画",
+      "start": 28.357,
+      "end": 28.545
+    },
+    {
+      "index": 111,
+      "char": "和",
+      "start": 28.581,
+      "end": 28.768
+    },
+    {
+      "index": 112,
+      "char": "位",
+      "start": 28.804,
+      "end": 28.992
+    },
+    {
+      "index": 113,
+      "char": "置",
+      "start": 29.027,
+      "end": 29.215
+    },
+    {
+      "index": 114,
+      "char": "的",
+      "start": 29.251,
+      "end": 29.438
+    },
+    {
+      "index": 115,
+      "char": "记",
+      "start": 29.474,
+      "end": 29.662
+    },
+    {
+      "index": 116,
+      "char": "忆",
+      "start": 29.697,
+      "end": 29.885
+    },
+    {
+      "index": 117,
+      "char": "画",
+      "start": 29.921,
+      "end": 30.108
+    },
+    {
+      "index": 118,
+      "char": "面",
+      "start": 30.144,
+      "end": 30.332
+    },
+    {
+      "index": 119,
+      "char": "不",
+      "start": 30.547,
+      "end": 30.735
+    },
+    {
+      "index": 120,
+      "char": "是",
+      "start": 30.771,
+      "end": 30.958
+    },
+    {
+      "index": 121,
+      "char": "完",
+      "start": 30.994,
+      "end": 31.181
+    },
+    {
+      "index": 122,
+      "char": "整",
+      "start": 31.217,
+      "end": 31.405
+    },
+    {
+      "index": 123,
+      "char": "字",
+      "start": 31.44,
+      "end": 31.628
+    },
+    {
+      "index": 124,
+      "char": "源",
+      "start": 31.664,
+      "end": 31.851
+    },
+    {
+      "index": 125,
+      "char": "最",
+      "start": 32.227,
+      "end": 32.415
+    },
+    {
+      "index": 126,
+      "char": "后",
+      "start": 32.45,
+      "end": 32.638
+    },
+    {
+      "index": 127,
+      "char": "再",
+      "start": 32.674,
+      "end": 32.861
+    },
+    {
+      "index": 128,
+      "char": "读",
+      "start": 32.897,
+      "end": 33.085
+    },
+    {
+      "index": 129,
+      "char": "一",
+      "start": 33.12,
+      "end": 33.308
+    },
+    {
+      "index": 130,
+      "char": "遍",
+      "start": 33.344,
+      "end": 33.531
+    },
+    {
+      "index": 131,
+      "char": "寺",
+      "start": 33.747,
+      "end": 33.935
+    },
+    {
+      "index": 132,
+      "char": "庙",
+      "start": 33.97,
+      "end": 34.158
     }
   ],
-  "transcript": "寺，“寺庙”的“寺”。它是上下结构。看图找部件，合成字形。再读：寺庙。",
+  "transcript": "寺，“寺庙”的“寺”，读sì。它是上下结构，按顺序能看到“土”和“寸”。从构字分工看，“寸”先提示意义类别，其余部件补足字形。看图时，上方分层土台形成“土”，下方带刻度的守时手腕形成“寸”，台阶与礼仪位置上下对齐，组成“寺”。寺庙是供奉宗教神像、进行相关活动的建筑。这是一幅帮助记笔画和位置的记忆画面，不是完整字源。最后再读一遍：寺庙。",
   "voice_reference": "封",
   "timing_source": "punctuation-weighted-estimate",
-  "script_version": "child-first-v1",
-  "duration": 8.800181
+  "script_version": "child-first-v2",
+  "duration": 34.720181
 }

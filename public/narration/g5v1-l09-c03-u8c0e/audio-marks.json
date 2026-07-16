@@ -3,151 +3,763 @@
     {
       "index": 0,
       "char": "谎",
-      "start": 0.207,
-      "end": 0.459
+      "start": 0.298,
+      "end": 0.549
     },
     {
       "index": 1,
       "char": "谎",
-      "start": 0.687,
-      "end": 0.94
+      "start": 0.777,
+      "end": 1.028
     },
     {
       "index": 2,
       "char": "话",
-      "start": 0.988,
-      "end": 1.24
+      "start": 1.076,
+      "end": 1.327
     },
     {
       "index": 3,
       "char": "的",
-      "start": 1.288,
-      "end": 1.54
+      "start": 1.375,
+      "end": 1.626
     },
     {
       "index": 4,
       "char": "谎",
-      "start": 1.588,
-      "end": 1.841
+      "start": 1.674,
+      "end": 1.925
     },
     {
       "index": 5,
-      "char": "它",
-      "start": 2.229,
-      "end": 2.481
+      "char": "读",
+      "start": 2.153,
+      "end": 2.404
     },
     {
       "index": 6,
-      "char": "是",
-      "start": 2.529,
-      "end": 2.782
+      "char": "h",
+      "start": 2.452,
+      "end": 2.703
     },
     {
       "index": 7,
-      "char": "左",
-      "start": 2.83,
-      "end": 3.082
+      "char": "u",
+      "start": 2.751,
+      "end": 3.002
     },
     {
       "index": 8,
-      "char": "右",
-      "start": 3.13,
-      "end": 3.382
+      "char": "ǎ",
+      "start": 3.05,
+      "end": 3.302
     },
     {
       "index": 9,
-      "char": "结",
-      "start": 3.43,
-      "end": 3.683
+      "char": "n",
+      "start": 3.349,
+      "end": 3.601
     },
     {
       "index": 10,
-      "char": "构",
-      "start": 3.731,
-      "end": 3.983
+      "char": "g",
+      "start": 3.648,
+      "end": 3.9
     },
     {
       "index": 11,
-      "char": "看",
-      "start": 4.371,
-      "end": 4.624
+      "char": "它",
+      "start": 4.287,
+      "end": 4.539
     },
     {
       "index": 12,
-      "char": "图",
-      "start": 4.672,
-      "end": 4.924
+      "char": "是",
+      "start": 4.587,
+      "end": 4.838
     },
     {
       "index": 13,
-      "char": "找",
-      "start": 4.972,
-      "end": 5.224
+      "char": "左",
+      "start": 4.886,
+      "end": 5.137
     },
     {
       "index": 14,
-      "char": "部",
-      "start": 5.273,
-      "end": 5.525
+      "char": "右",
+      "start": 5.185,
+      "end": 5.436
     },
     {
       "index": 15,
-      "char": "件",
-      "start": 5.573,
-      "end": 5.825
+      "char": "结",
+      "start": 5.484,
+      "end": 5.735
     },
     {
       "index": 16,
-      "char": "合",
-      "start": 6.053,
-      "end": 6.306
+      "char": "构",
+      "start": 5.783,
+      "end": 6.034
     },
     {
       "index": 17,
-      "char": "成",
-      "start": 6.354,
-      "end": 6.606
+      "char": "按",
+      "start": 6.262,
+      "end": 6.513
     },
     {
       "index": 18,
-      "char": "字",
-      "start": 6.654,
-      "end": 6.907
+      "char": "顺",
+      "start": 6.561,
+      "end": 6.812
     },
     {
       "index": 19,
-      "char": "形",
-      "start": 6.955,
-      "end": 7.207
+      "char": "序",
+      "start": 6.86,
+      "end": 7.111
     },
     {
       "index": 20,
-      "char": "再",
-      "start": 7.595,
-      "end": 7.847
+      "char": "能",
+      "start": 7.159,
+      "end": 7.41
     },
     {
       "index": 21,
-      "char": "读",
-      "start": 7.895,
-      "end": 8.148
+      "char": "看",
+      "start": 7.458,
+      "end": 7.709
     },
     {
       "index": 22,
-      "char": "谎",
-      "start": 8.376,
-      "end": 8.628
+      "char": "到",
+      "start": 7.757,
+      "end": 8.008
     },
     {
       "index": 23,
+      "char": "讠",
+      "start": 8.056,
+      "end": 8.307
+    },
+    {
+      "index": 24,
+      "char": "和",
+      "start": 8.355,
+      "end": 8.606
+    },
+    {
+      "index": 25,
+      "char": "荒",
+      "start": 8.654,
+      "end": 8.905
+    },
+    {
+      "index": 26,
+      "char": "从",
+      "start": 9.293,
+      "end": 9.544
+    },
+    {
+      "index": 27,
+      "char": "构",
+      "start": 9.592,
+      "end": 9.843
+    },
+    {
+      "index": 28,
+      "char": "字",
+      "start": 9.891,
+      "end": 10.143
+    },
+    {
+      "index": 29,
+      "char": "分",
+      "start": 10.19,
+      "end": 10.442
+    },
+    {
+      "index": 30,
+      "char": "工",
+      "start": 10.489,
+      "end": 10.741
+    },
+    {
+      "index": 31,
+      "char": "看",
+      "start": 10.788,
+      "end": 11.04
+    },
+    {
+      "index": 32,
+      "char": "讠",
+      "start": 11.268,
+      "end": 11.519
+    },
+    {
+      "index": 33,
+      "char": "提",
+      "start": 11.567,
+      "end": 11.818
+    },
+    {
+      "index": 34,
+      "char": "示",
+      "start": 11.866,
+      "end": 12.117
+    },
+    {
+      "index": 35,
+      "char": "意",
+      "start": 12.165,
+      "end": 12.416
+    },
+    {
+      "index": 36,
+      "char": "义",
+      "start": 12.464,
+      "end": 12.715
+    },
+    {
+      "index": 37,
+      "char": "类",
+      "start": 12.763,
+      "end": 13.014
+    },
+    {
+      "index": 38,
+      "char": "别",
+      "start": 13.062,
+      "end": 13.313
+    },
+    {
+      "index": 39,
+      "char": "荒",
+      "start": 13.541,
+      "end": 13.792
+    },
+    {
+      "index": 40,
+      "char": "提",
+      "start": 13.84,
+      "end": 14.091
+    },
+    {
+      "index": 41,
+      "char": "供",
+      "start": 14.139,
+      "end": 14.39
+    },
+    {
+      "index": 42,
+      "char": "读",
+      "start": 14.438,
+      "end": 14.689
+    },
+    {
+      "index": 43,
+      "char": "音",
+      "start": 14.737,
+      "end": 14.988
+    },
+    {
+      "index": 44,
+      "char": "线",
+      "start": 15.036,
+      "end": 15.287
+    },
+    {
+      "index": 45,
+      "char": "索",
+      "start": 15.335,
+      "end": 15.586
+    },
+    {
+      "index": 46,
+      "char": "看",
+      "start": 15.974,
+      "end": 16.225
+    },
+    {
+      "index": 47,
+      "char": "图",
+      "start": 16.273,
+      "end": 16.524
+    },
+    {
+      "index": 48,
+      "char": "时",
+      "start": 16.572,
+      "end": 16.823
+    },
+    {
+      "index": 49,
+      "char": "左",
+      "start": 17.051,
+      "end": 17.303
+    },
+    {
+      "index": 50,
+      "char": "边",
+      "start": 17.35,
+      "end": 17.602
+    },
+    {
+      "index": 51,
+      "char": "说",
+      "start": 17.649,
+      "end": 17.901
+    },
+    {
+      "index": 52,
       "char": "话",
-      "start": 8.676,
-      "end": 8.929
+      "start": 17.948,
+      "end": 18.2
+    },
+    {
+      "index": 53,
+      "char": "框",
+      "start": 18.248,
+      "end": 18.499
+    },
+    {
+      "index": 54,
+      "char": "形",
+      "start": 18.547,
+      "end": 18.798
+    },
+    {
+      "index": 55,
+      "char": "成",
+      "start": 18.846,
+      "end": 19.097
+    },
+    {
+      "index": 56,
+      "char": "讠",
+      "start": 19.145,
+      "end": 19.396
+    },
+    {
+      "index": 57,
+      "char": "右",
+      "start": 19.624,
+      "end": 19.875
+    },
+    {
+      "index": 58,
+      "char": "边",
+      "start": 19.923,
+      "end": 20.174
+    },
+    {
+      "index": 59,
+      "char": "荒",
+      "start": 20.222,
+      "end": 20.473
+    },
+    {
+      "index": 60,
+      "char": "草",
+      "start": 20.521,
+      "end": 20.772
+    },
+    {
+      "index": 61,
+      "char": "弯",
+      "start": 21,
+      "end": 21.251
+    },
+    {
+      "index": 62,
+      "char": "路",
+      "start": 21.299,
+      "end": 21.55
+    },
+    {
+      "index": 63,
+      "char": "和",
+      "start": 21.598,
+      "end": 21.849
+    },
+    {
+      "index": 64,
+      "char": "隐",
+      "start": 21.897,
+      "end": 22.148
+    },
+    {
+      "index": 65,
+      "char": "藏",
+      "start": 22.196,
+      "end": 22.447
+    },
+    {
+      "index": 66,
+      "char": "人",
+      "start": 22.495,
+      "end": 22.746
+    },
+    {
+      "index": 67,
+      "char": "物",
+      "start": 22.794,
+      "end": 23.045
+    },
+    {
+      "index": 68,
+      "char": "沿",
+      "start": 23.093,
+      "end": 23.344
+    },
+    {
+      "index": 69,
+      "char": "荒",
+      "start": 23.392,
+      "end": 23.644
+    },
+    {
+      "index": 70,
+      "char": "铺",
+      "start": 23.691,
+      "end": 23.943
+    },
+    {
+      "index": 71,
+      "char": "开",
+      "start": 23.99,
+      "end": 24.242
+    },
+    {
+      "index": 72,
+      "char": "话",
+      "start": 24.469,
+      "end": 24.721
+    },
+    {
+      "index": 73,
+      "char": "语",
+      "start": 24.769,
+      "end": 25.02
+    },
+    {
+      "index": 74,
+      "char": "走",
+      "start": 25.068,
+      "end": 25.319
+    },
+    {
+      "index": 75,
+      "char": "进",
+      "start": 25.367,
+      "end": 25.618
+    },
+    {
+      "index": 76,
+      "char": "荒",
+      "start": 25.666,
+      "end": 25.917
+    },
+    {
+      "index": 77,
+      "char": "路",
+      "start": 25.965,
+      "end": 26.216
+    },
+    {
+      "index": 78,
+      "char": "组",
+      "start": 26.444,
+      "end": 26.695
+    },
+    {
+      "index": 79,
+      "char": "成",
+      "start": 26.743,
+      "end": 26.994
+    },
+    {
+      "index": 80,
+      "char": "谎",
+      "start": 27.042,
+      "end": 27.293
+    },
+    {
+      "index": 81,
+      "char": "谎",
+      "start": 27.681,
+      "end": 27.932
+    },
+    {
+      "index": 82,
+      "char": "话",
+      "start": 27.98,
+      "end": 28.231
+    },
+    {
+      "index": 83,
+      "char": "是",
+      "start": 28.279,
+      "end": 28.53
+    },
+    {
+      "index": 84,
+      "char": "不",
+      "start": 28.578,
+      "end": 28.829
+    },
+    {
+      "index": 85,
+      "char": "真",
+      "start": 28.877,
+      "end": 29.128
+    },
+    {
+      "index": 86,
+      "char": "实",
+      "start": 29.176,
+      "end": 29.427
+    },
+    {
+      "index": 87,
+      "char": "故",
+      "start": 29.655,
+      "end": 29.906
+    },
+    {
+      "index": 88,
+      "char": "意",
+      "start": 29.954,
+      "end": 30.205
+    },
+    {
+      "index": 89,
+      "char": "欺",
+      "start": 30.253,
+      "end": 30.505
+    },
+    {
+      "index": 90,
+      "char": "骗",
+      "start": 30.552,
+      "end": 30.804
+    },
+    {
+      "index": 91,
+      "char": "别",
+      "start": 30.851,
+      "end": 31.103
+    },
+    {
+      "index": 92,
+      "char": "人",
+      "start": 31.15,
+      "end": 31.402
+    },
+    {
+      "index": 93,
+      "char": "的",
+      "start": 31.45,
+      "end": 31.701
+    },
+    {
+      "index": 94,
+      "char": "话",
+      "start": 31.749,
+      "end": 32
+    },
+    {
+      "index": 95,
+      "char": "这",
+      "start": 32.388,
+      "end": 32.639
+    },
+    {
+      "index": 96,
+      "char": "是",
+      "start": 32.687,
+      "end": 32.938
+    },
+    {
+      "index": 97,
+      "char": "一",
+      "start": 32.986,
+      "end": 33.237
+    },
+    {
+      "index": 98,
+      "char": "幅",
+      "start": 33.285,
+      "end": 33.536
+    },
+    {
+      "index": 99,
+      "char": "帮",
+      "start": 33.584,
+      "end": 33.835
+    },
+    {
+      "index": 100,
+      "char": "助",
+      "start": 33.883,
+      "end": 34.134
+    },
+    {
+      "index": 101,
+      "char": "记",
+      "start": 34.182,
+      "end": 34.433
+    },
+    {
+      "index": 102,
+      "char": "笔",
+      "start": 34.481,
+      "end": 34.732
+    },
+    {
+      "index": 103,
+      "char": "画",
+      "start": 34.78,
+      "end": 35.031
+    },
+    {
+      "index": 104,
+      "char": "和",
+      "start": 35.079,
+      "end": 35.33
+    },
+    {
+      "index": 105,
+      "char": "位",
+      "start": 35.378,
+      "end": 35.629
+    },
+    {
+      "index": 106,
+      "char": "置",
+      "start": 35.677,
+      "end": 35.928
+    },
+    {
+      "index": 107,
+      "char": "的",
+      "start": 35.976,
+      "end": 36.227
+    },
+    {
+      "index": 108,
+      "char": "记",
+      "start": 36.275,
+      "end": 36.526
+    },
+    {
+      "index": 109,
+      "char": "忆",
+      "start": 36.574,
+      "end": 36.825
+    },
+    {
+      "index": 110,
+      "char": "画",
+      "start": 36.873,
+      "end": 37.125
+    },
+    {
+      "index": 111,
+      "char": "面",
+      "start": 37.172,
+      "end": 37.424
+    },
+    {
+      "index": 112,
+      "char": "不",
+      "start": 37.651,
+      "end": 37.903
+    },
+    {
+      "index": 113,
+      "char": "是",
+      "start": 37.95,
+      "end": 38.202
+    },
+    {
+      "index": 114,
+      "char": "完",
+      "start": 38.25,
+      "end": 38.501
+    },
+    {
+      "index": 115,
+      "char": "整",
+      "start": 38.549,
+      "end": 38.8
+    },
+    {
+      "index": 116,
+      "char": "字",
+      "start": 38.848,
+      "end": 39.099
+    },
+    {
+      "index": 117,
+      "char": "源",
+      "start": 39.147,
+      "end": 39.398
+    },
+    {
+      "index": 118,
+      "char": "最",
+      "start": 39.786,
+      "end": 40.037
+    },
+    {
+      "index": 119,
+      "char": "后",
+      "start": 40.085,
+      "end": 40.336
+    },
+    {
+      "index": 120,
+      "char": "再",
+      "start": 40.384,
+      "end": 40.635
+    },
+    {
+      "index": 121,
+      "char": "读",
+      "start": 40.683,
+      "end": 40.934
+    },
+    {
+      "index": 122,
+      "char": "一",
+      "start": 40.982,
+      "end": 41.233
+    },
+    {
+      "index": 123,
+      "char": "遍",
+      "start": 41.281,
+      "end": 41.532
+    },
+    {
+      "index": 124,
+      "char": "谎",
+      "start": 41.76,
+      "end": 42.011
+    },
+    {
+      "index": 125,
+      "char": "话",
+      "start": 42.059,
+      "end": 42.31
     }
   ],
-  "transcript": "谎，“谎话”的“谎”。它是左右结构。看图找部件，合成字形。再读：谎话。",
+  "transcript": "谎，“谎话”的“谎”，读huǎng。它是左右结构，按顺序能看到“讠”和“荒”。从构字分工看，“讠”提示意义类别，“荒”提供读音线索。看图时，左边说话框形成“讠”，右边荒草、弯路和隐藏人物沿“荒”铺开，话语走进荒路，组成“谎”。谎话是不真实、故意欺骗别人的话。这是一幅帮助记笔画和位置的记忆画面，不是完整字源。最后再读一遍：谎话。",
   "voice_reference": "封",
   "timing_source": "punctuation-weighted-estimate",
-  "script_version": "child-first-v1",
-  "duration": 9.440181
+  "script_version": "child-first-v2",
+  "duration": 42.880181
 }

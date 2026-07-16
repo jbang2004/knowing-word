@@ -3,151 +3,739 @@
     {
       "index": 0,
       "char": "筑",
-      "start": 0.207,
-      "end": 0.459
+      "start": 0.292,
+      "end": 0.465
     },
     {
       "index": 1,
       "char": "修",
-      "start": 0.687,
-      "end": 0.94
+      "start": 0.678,
+      "end": 0.85
     },
     {
       "index": 2,
       "char": "筑",
-      "start": 0.988,
-      "end": 1.24
+      "start": 0.883,
+      "end": 1.056
     },
     {
       "index": 3,
       "char": "的",
-      "start": 1.288,
-      "end": 1.54
+      "start": 1.089,
+      "end": 1.261
     },
     {
       "index": 4,
       "char": "筑",
-      "start": 1.588,
-      "end": 1.841
+      "start": 1.294,
+      "end": 1.467
     },
     {
       "index": 5,
-      "char": "它",
-      "start": 2.229,
-      "end": 2.481
+      "char": "读",
+      "start": 1.679,
+      "end": 1.852
     },
     {
       "index": 6,
-      "char": "是",
-      "start": 2.529,
-      "end": 2.782
+      "char": "z",
+      "start": 1.885,
+      "end": 2.057
     },
     {
       "index": 7,
-      "char": "上",
-      "start": 2.83,
-      "end": 3.082
+      "char": "h",
+      "start": 2.09,
+      "end": 2.263
     },
     {
       "index": 8,
-      "char": "下",
-      "start": 3.13,
-      "end": 3.382
+      "char": "ù",
+      "start": 2.296,
+      "end": 2.468
     },
     {
       "index": 9,
-      "char": "结",
-      "start": 3.43,
-      "end": 3.683
+      "char": "它",
+      "start": 2.841,
+      "end": 3.014
     },
     {
       "index": 10,
-      "char": "构",
-      "start": 3.731,
-      "end": 3.983
+      "char": "是",
+      "start": 3.046,
+      "end": 3.219
     },
     {
       "index": 11,
-      "char": "看",
-      "start": 4.371,
-      "end": 4.624
+      "char": "上",
+      "start": 3.252,
+      "end": 3.424
     },
     {
       "index": 12,
-      "char": "图",
-      "start": 4.672,
-      "end": 4.924
+      "char": "下",
+      "start": 3.457,
+      "end": 3.63
     },
     {
       "index": 13,
-      "char": "找",
-      "start": 4.972,
-      "end": 5.224
+      "char": "结",
+      "start": 3.663,
+      "end": 3.835
     },
     {
       "index": 14,
-      "char": "部",
-      "start": 5.273,
-      "end": 5.525
+      "char": "构",
+      "start": 3.868,
+      "end": 4.041
     },
     {
       "index": 15,
-      "char": "件",
-      "start": 5.573,
-      "end": 5.825
+      "char": "按",
+      "start": 4.253,
+      "end": 4.426
     },
     {
       "index": 16,
-      "char": "合",
-      "start": 6.053,
-      "end": 6.306
+      "char": "顺",
+      "start": 4.459,
+      "end": 4.631
     },
     {
       "index": 17,
-      "char": "成",
-      "start": 6.354,
-      "end": 6.606
+      "char": "序",
+      "start": 4.664,
+      "end": 4.837
     },
     {
       "index": 18,
-      "char": "字",
-      "start": 6.654,
-      "end": 6.907
+      "char": "能",
+      "start": 4.87,
+      "end": 5.042
     },
     {
       "index": 19,
-      "char": "形",
-      "start": 6.955,
-      "end": 7.207
+      "char": "看",
+      "start": 5.075,
+      "end": 5.248
     },
     {
       "index": 20,
-      "char": "再",
-      "start": 7.595,
-      "end": 7.847
+      "char": "到",
+      "start": 5.281,
+      "end": 5.453
     },
     {
       "index": 21,
-      "char": "读",
-      "start": 7.895,
-      "end": 8.148
+      "char": "⺮",
+      "start": 5.486,
+      "end": 5.659
     },
     {
       "index": 22,
-      "char": "修",
-      "start": 8.376,
-      "end": 8.628
+      "char": "和",
+      "start": 5.691,
+      "end": 5.864
     },
     {
       "index": 23,
-      "char": "筑",
+      "char": "巩",
+      "start": 5.897,
+      "end": 6.069
+    },
+    {
+      "index": 24,
+      "char": "从",
+      "start": 6.442,
+      "end": 6.615
+    },
+    {
+      "index": 25,
+      "char": "构",
+      "start": 6.648,
+      "end": 6.82
+    },
+    {
+      "index": 26,
+      "char": "字",
+      "start": 6.853,
+      "end": 7.026
+    },
+    {
+      "index": 27,
+      "char": "分",
+      "start": 7.058,
+      "end": 7.231
+    },
+    {
+      "index": 28,
+      "char": "工",
+      "start": 7.264,
+      "end": 7.436
+    },
+    {
+      "index": 29,
+      "char": "看",
+      "start": 7.469,
+      "end": 7.642
+    },
+    {
+      "index": 30,
+      "char": "⺮",
+      "start": 7.855,
+      "end": 8.027
+    },
+    {
+      "index": 31,
+      "char": "先",
+      "start": 8.06,
+      "end": 8.233
+    },
+    {
+      "index": 32,
+      "char": "提",
+      "start": 8.265,
+      "end": 8.438
+    },
+    {
+      "index": 33,
+      "char": "示",
+      "start": 8.471,
+      "end": 8.643
+    },
+    {
+      "index": 34,
+      "char": "意",
       "start": 8.676,
-      "end": 8.929
+      "end": 8.849
+    },
+    {
+      "index": 35,
+      "char": "义",
+      "start": 8.882,
+      "end": 9.054
+    },
+    {
+      "index": 36,
+      "char": "类",
+      "start": 9.087,
+      "end": 9.26
+    },
+    {
+      "index": 37,
+      "char": "别",
+      "start": 9.293,
+      "end": 9.465
+    },
+    {
+      "index": 38,
+      "char": "其",
+      "start": 9.678,
+      "end": 9.851
+    },
+    {
+      "index": 39,
+      "char": "余",
+      "start": 9.883,
+      "end": 10.056
+    },
+    {
+      "index": 40,
+      "char": "部",
+      "start": 10.089,
+      "end": 10.261
+    },
+    {
+      "index": 41,
+      "char": "件",
+      "start": 10.294,
+      "end": 10.467
+    },
+    {
+      "index": 42,
+      "char": "补",
+      "start": 10.5,
+      "end": 10.672
+    },
+    {
+      "index": 43,
+      "char": "足",
+      "start": 10.705,
+      "end": 10.878
+    },
+    {
+      "index": 44,
+      "char": "字",
+      "start": 10.91,
+      "end": 11.083
+    },
+    {
+      "index": 45,
+      "char": "形",
+      "start": 11.116,
+      "end": 11.288
+    },
+    {
+      "index": 46,
+      "char": "看",
+      "start": 11.661,
+      "end": 11.834
+    },
+    {
+      "index": 47,
+      "char": "图",
+      "start": 11.867,
+      "end": 12.039
+    },
+    {
+      "index": 48,
+      "char": "时",
+      "start": 12.072,
+      "end": 12.245
+    },
+    {
+      "index": 49,
+      "char": "上",
+      "start": 12.457,
+      "end": 12.63
+    },
+    {
+      "index": 50,
+      "char": "方",
+      "start": 12.663,
+      "end": 12.835
+    },
+    {
+      "index": 51,
+      "char": "两",
+      "start": 12.868,
+      "end": 13.041
+    },
+    {
+      "index": 52,
+      "char": "排",
+      "start": 13.074,
+      "end": 13.246
+    },
+    {
+      "index": 53,
+      "char": "竹",
+      "start": 13.279,
+      "end": 13.452
+    },
+    {
+      "index": 54,
+      "char": "片",
+      "start": 13.485,
+      "end": 13.657
+    },
+    {
+      "index": 55,
+      "char": "形",
+      "start": 13.69,
+      "end": 13.862
+    },
+    {
+      "index": 56,
+      "char": "成",
+      "start": 13.895,
+      "end": 14.068
+    },
+    {
+      "index": 57,
+      "char": "⺮",
+      "start": 14.101,
+      "end": 14.273
+    },
+    {
+      "index": 58,
+      "char": "下",
+      "start": 14.486,
+      "end": 14.659
+    },
+    {
+      "index": 59,
+      "char": "方",
+      "start": 14.692,
+      "end": 14.864
+    },
+    {
+      "index": 60,
+      "char": "工",
+      "start": 14.897,
+      "end": 15.07
+    },
+    {
+      "index": 61,
+      "char": "匠",
+      "start": 15.102,
+      "end": 15.275
+    },
+    {
+      "index": 62,
+      "char": "双",
+      "start": 15.308,
+      "end": 15.48
+    },
+    {
+      "index": 63,
+      "char": "手",
+      "start": 15.513,
+      "end": 15.686
+    },
+    {
+      "index": 64,
+      "char": "夯",
+      "start": 15.719,
+      "end": 15.891
+    },
+    {
+      "index": 65,
+      "char": "土",
+      "start": 15.924,
+      "end": 16.097
+    },
+    {
+      "index": 66,
+      "char": "工",
+      "start": 16.309,
+      "end": 16.482
+    },
+    {
+      "index": 67,
+      "char": "具",
+      "start": 16.515,
+      "end": 16.687
+    },
+    {
+      "index": 68,
+      "char": "和",
+      "start": 16.72,
+      "end": 16.893
+    },
+    {
+      "index": 69,
+      "char": "地",
+      "start": 16.926,
+      "end": 17.098
+    },
+    {
+      "index": 70,
+      "char": "基",
+      "start": 17.131,
+      "end": 17.304
+    },
+    {
+      "index": 71,
+      "char": "沿",
+      "start": 17.337,
+      "end": 17.509
+    },
+    {
+      "index": 72,
+      "char": "巩",
+      "start": 17.542,
+      "end": 17.714
+    },
+    {
+      "index": 73,
+      "char": "搭",
+      "start": 17.747,
+      "end": 17.92
+    },
+    {
+      "index": 74,
+      "char": "起",
+      "start": 17.953,
+      "end": 18.125
+    },
+    {
+      "index": 75,
+      "char": "组",
+      "start": 18.338,
+      "end": 18.511
+    },
+    {
+      "index": 76,
+      "char": "成",
+      "start": 18.544,
+      "end": 18.716
+    },
+    {
+      "index": 77,
+      "char": "筑",
+      "start": 18.749,
+      "end": 18.922
+    },
+    {
+      "index": 78,
+      "char": "修",
+      "start": 19.294,
+      "end": 19.467
+    },
+    {
+      "index": 79,
+      "char": "筑",
+      "start": 19.5,
+      "end": 19.672
+    },
+    {
+      "index": 80,
+      "char": "就",
+      "start": 19.705,
+      "end": 19.878
+    },
+    {
+      "index": 81,
+      "char": "是",
+      "start": 19.911,
+      "end": 20.083
+    },
+    {
+      "index": 82,
+      "char": "建",
+      "start": 20.116,
+      "end": 20.289
+    },
+    {
+      "index": 83,
+      "char": "造",
+      "start": 20.321,
+      "end": 20.494
+    },
+    {
+      "index": 84,
+      "char": "道",
+      "start": 20.527,
+      "end": 20.699
+    },
+    {
+      "index": 85,
+      "char": "路",
+      "start": 20.732,
+      "end": 20.905
+    },
+    {
+      "index": 86,
+      "char": "工",
+      "start": 21.118,
+      "end": 21.29
+    },
+    {
+      "index": 87,
+      "char": "事",
+      "start": 21.323,
+      "end": 21.496
+    },
+    {
+      "index": 88,
+      "char": "或",
+      "start": 21.529,
+      "end": 21.701
+    },
+    {
+      "index": 89,
+      "char": "建",
+      "start": 21.734,
+      "end": 21.906
+    },
+    {
+      "index": 90,
+      "char": "筑",
+      "start": 21.939,
+      "end": 22.112
+    },
+    {
+      "index": 91,
+      "char": "这",
+      "start": 22.485,
+      "end": 22.657
+    },
+    {
+      "index": 92,
+      "char": "是",
+      "start": 22.69,
+      "end": 22.863
+    },
+    {
+      "index": 93,
+      "char": "一",
+      "start": 22.896,
+      "end": 23.068
+    },
+    {
+      "index": 94,
+      "char": "幅",
+      "start": 23.101,
+      "end": 23.274
+    },
+    {
+      "index": 95,
+      "char": "帮",
+      "start": 23.306,
+      "end": 23.479
+    },
+    {
+      "index": 96,
+      "char": "助",
+      "start": 23.512,
+      "end": 23.684
+    },
+    {
+      "index": 97,
+      "char": "记",
+      "start": 23.717,
+      "end": 23.89
+    },
+    {
+      "index": 98,
+      "char": "笔",
+      "start": 23.923,
+      "end": 24.095
+    },
+    {
+      "index": 99,
+      "char": "画",
+      "start": 24.128,
+      "end": 24.301
+    },
+    {
+      "index": 100,
+      "char": "和",
+      "start": 24.333,
+      "end": 24.506
+    },
+    {
+      "index": 101,
+      "char": "位",
+      "start": 24.539,
+      "end": 24.711
+    },
+    {
+      "index": 102,
+      "char": "置",
+      "start": 24.744,
+      "end": 24.917
+    },
+    {
+      "index": 103,
+      "char": "的",
+      "start": 24.95,
+      "end": 25.122
+    },
+    {
+      "index": 104,
+      "char": "记",
+      "start": 25.155,
+      "end": 25.328
+    },
+    {
+      "index": 105,
+      "char": "忆",
+      "start": 25.361,
+      "end": 25.533
+    },
+    {
+      "index": 106,
+      "char": "画",
+      "start": 25.566,
+      "end": 25.738
+    },
+    {
+      "index": 107,
+      "char": "面",
+      "start": 25.771,
+      "end": 25.944
+    },
+    {
+      "index": 108,
+      "char": "不",
+      "start": 26.157,
+      "end": 26.329
+    },
+    {
+      "index": 109,
+      "char": "是",
+      "start": 26.362,
+      "end": 26.535
+    },
+    {
+      "index": 110,
+      "char": "完",
+      "start": 26.568,
+      "end": 26.74
+    },
+    {
+      "index": 111,
+      "char": "整",
+      "start": 26.773,
+      "end": 26.946
+    },
+    {
+      "index": 112,
+      "char": "字",
+      "start": 26.978,
+      "end": 27.151
+    },
+    {
+      "index": 113,
+      "char": "源",
+      "start": 27.184,
+      "end": 27.356
+    },
+    {
+      "index": 114,
+      "char": "最",
+      "start": 27.729,
+      "end": 27.902
+    },
+    {
+      "index": 115,
+      "char": "后",
+      "start": 27.935,
+      "end": 28.107
+    },
+    {
+      "index": 116,
+      "char": "再",
+      "start": 28.14,
+      "end": 28.313
+    },
+    {
+      "index": 117,
+      "char": "读",
+      "start": 28.345,
+      "end": 28.518
+    },
+    {
+      "index": 118,
+      "char": "一",
+      "start": 28.551,
+      "end": 28.723
+    },
+    {
+      "index": 119,
+      "char": "遍",
+      "start": 28.756,
+      "end": 28.929
+    },
+    {
+      "index": 120,
+      "char": "修",
+      "start": 29.142,
+      "end": 29.314
+    },
+    {
+      "index": 121,
+      "char": "筑",
+      "start": 29.347,
+      "end": 29.52
     }
   ],
-  "transcript": "筑，“修筑”的“筑”。它是上下结构。看图找部件，合成字形。再读：修筑。",
+  "transcript": "筑，“修筑”的“筑”，读zhù。它是上下结构，按顺序能看到“⺮”和“巩”。从构字分工看，“⺮”先提示意义类别，其余部件补足字形。看图时，上方两排竹片形成“⺮”，下方工匠双手夯土、工具和地基沿“巩”搭起，组成“筑”。修筑就是建造道路、工事或建筑。这是一幅帮助记笔画和位置的记忆画面，不是完整字源。最后再读一遍：修筑。",
   "voice_reference": "封",
   "timing_source": "punctuation-weighted-estimate",
-  "script_version": "child-first-v1",
-  "duration": 9.440181
+  "script_version": "child-first-v2",
+  "duration": 30.080181
 }

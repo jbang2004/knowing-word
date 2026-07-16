@@ -3,151 +3,781 @@
     {
       "index": 0,
       "char": "瓷",
-      "start": 0.189,
-      "end": 0.414
+      "start": 0.293,
+      "end": 0.469
     },
     {
       "index": 1,
       "char": "瓷",
-      "start": 0.637,
-      "end": 0.862
+      "start": 0.683,
+      "end": 0.86
     },
     {
       "index": 2,
       "char": "器",
-      "start": 0.905,
-      "end": 1.131
+      "start": 0.894,
+      "end": 1.071
     },
     {
       "index": 3,
       "char": "的",
-      "start": 1.174,
-      "end": 1.399
+      "start": 1.104,
+      "end": 1.281
     },
     {
       "index": 4,
       "char": "瓷",
-      "start": 1.442,
-      "end": 1.667
+      "start": 1.315,
+      "end": 1.492
     },
     {
       "index": 5,
-      "char": "它",
-      "start": 2.05,
-      "end": 2.275
+      "char": "读",
+      "start": 1.705,
+      "end": 1.882
     },
     {
       "index": 6,
-      "char": "是",
-      "start": 2.318,
-      "end": 2.544
+      "char": "c",
+      "start": 1.916,
+      "end": 2.093
     },
     {
       "index": 7,
-      "char": "上",
-      "start": 2.587,
-      "end": 2.812
+      "char": "í",
+      "start": 2.126,
+      "end": 2.303
     },
     {
       "index": 8,
-      "char": "下",
-      "start": 2.855,
-      "end": 3.08
+      "char": "它",
+      "start": 2.677,
+      "end": 2.854
     },
     {
       "index": 9,
-      "char": "结",
-      "start": 3.123,
-      "end": 3.348
+      "char": "是",
+      "start": 2.888,
+      "end": 3.064
     },
     {
       "index": 10,
-      "char": "构",
-      "start": 3.391,
-      "end": 3.617
+      "char": "上",
+      "start": 3.098,
+      "end": 3.275
     },
     {
       "index": 11,
-      "char": "看",
-      "start": 4,
-      "end": 4.225
+      "char": "下",
+      "start": 3.309,
+      "end": 3.486
     },
     {
       "index": 12,
-      "char": "图",
-      "start": 4.268,
-      "end": 4.493
+      "char": "结",
+      "start": 3.519,
+      "end": 3.696
     },
     {
       "index": 13,
-      "char": "找",
-      "start": 4.536,
-      "end": 4.761
+      "char": "构",
+      "start": 3.73,
+      "end": 3.907
     },
     {
       "index": 14,
-      "char": "部",
-      "start": 4.804,
-      "end": 5.03
+      "char": "按",
+      "start": 4.12,
+      "end": 4.297
     },
     {
       "index": 15,
-      "char": "件",
-      "start": 5.073,
-      "end": 5.298
+      "char": "顺",
+      "start": 4.331,
+      "end": 4.508
     },
     {
       "index": 16,
-      "char": "合",
-      "start": 5.521,
-      "end": 5.746
+      "char": "序",
+      "start": 4.541,
+      "end": 4.718
     },
     {
       "index": 17,
-      "char": "成",
-      "start": 5.789,
-      "end": 6.014
+      "char": "能",
+      "start": 4.752,
+      "end": 4.929
     },
     {
       "index": 18,
-      "char": "字",
-      "start": 6.057,
-      "end": 6.283
+      "char": "看",
+      "start": 4.963,
+      "end": 5.139
     },
     {
       "index": 19,
-      "char": "形",
-      "start": 6.325,
-      "end": 6.551
+      "char": "到",
+      "start": 5.173,
+      "end": 5.35
     },
     {
       "index": 20,
-      "char": "再",
-      "start": 6.934,
-      "end": 7.159
+      "char": "次",
+      "start": 5.384,
+      "end": 5.561
     },
     {
       "index": 21,
-      "char": "读",
-      "start": 7.202,
-      "end": 7.427
+      "char": "和",
+      "start": 5.594,
+      "end": 5.771
     },
     {
       "index": 22,
-      "char": "瓷",
-      "start": 7.65,
-      "end": 7.876
+      "char": "瓦",
+      "start": 5.805,
+      "end": 5.982
     },
     {
       "index": 23,
+      "char": "从",
+      "start": 6.355,
+      "end": 6.532
+    },
+    {
+      "index": 24,
+      "char": "构",
+      "start": 6.566,
+      "end": 6.743
+    },
+    {
+      "index": 25,
+      "char": "字",
+      "start": 6.776,
+      "end": 6.953
+    },
+    {
+      "index": 26,
+      "char": "分",
+      "start": 6.987,
+      "end": 7.164
+    },
+    {
+      "index": 27,
+      "char": "工",
+      "start": 7.198,
+      "end": 7.374
+    },
+    {
+      "index": 28,
+      "char": "看",
+      "start": 7.408,
+      "end": 7.585
+    },
+    {
+      "index": 29,
+      "char": "瓦",
+      "start": 7.799,
+      "end": 7.975
+    },
+    {
+      "index": 30,
+      "char": "提",
+      "start": 8.009,
+      "end": 8.186
+    },
+    {
+      "index": 31,
+      "char": "示",
+      "start": 8.22,
+      "end": 8.397
+    },
+    {
+      "index": 32,
+      "char": "意",
+      "start": 8.43,
+      "end": 8.607
+    },
+    {
+      "index": 33,
+      "char": "义",
+      "start": 8.641,
+      "end": 8.818
+    },
+    {
+      "index": 34,
+      "char": "类",
+      "start": 8.851,
+      "end": 9.028
+    },
+    {
+      "index": 35,
+      "char": "别",
+      "start": 9.062,
+      "end": 9.239
+    },
+    {
+      "index": 36,
+      "char": "次",
+      "start": 9.452,
+      "end": 9.629
+    },
+    {
+      "index": 37,
+      "char": "提",
+      "start": 9.663,
+      "end": 9.84
+    },
+    {
+      "index": 38,
+      "char": "供",
+      "start": 9.874,
+      "end": 10.05
+    },
+    {
+      "index": 39,
+      "char": "读",
+      "start": 10.084,
+      "end": 10.261
+    },
+    {
+      "index": 40,
+      "char": "音",
+      "start": 10.295,
+      "end": 10.472
+    },
+    {
+      "index": 41,
+      "char": "线",
+      "start": 10.505,
+      "end": 10.682
+    },
+    {
+      "index": 42,
+      "char": "索",
+      "start": 10.716,
+      "end": 10.893
+    },
+    {
+      "index": 43,
+      "char": "看",
+      "start": 11.266,
+      "end": 11.443
+    },
+    {
+      "index": 44,
+      "char": "图",
+      "start": 11.477,
+      "end": 11.654
+    },
+    {
+      "index": 45,
+      "char": "时",
+      "start": 11.687,
+      "end": 11.864
+    },
+    {
+      "index": 46,
+      "char": "上",
+      "start": 12.078,
+      "end": 12.255
+    },
+    {
+      "index": 47,
+      "char": "方",
+      "start": 12.289,
+      "end": 12.465
+    },
+    {
+      "index": 48,
+      "char": "冰",
+      "start": 12.499,
+      "end": 12.676
+    },
+    {
+      "index": 49,
+      "char": "纹",
+      "start": 12.71,
+      "end": 12.886
+    },
+    {
+      "index": 50,
+      "char": "与",
+      "start": 12.92,
+      "end": 13.097
+    },
+    {
+      "index": 51,
+      "char": "张",
+      "start": 13.131,
+      "end": 13.308
+    },
+    {
+      "index": 52,
+      "char": "口",
+      "start": 13.341,
+      "end": 13.518
+    },
+    {
+      "index": 53,
+      "char": "人",
+      "start": 13.552,
+      "end": 13.729
+    },
+    {
+      "index": 54,
+      "char": "物",
+      "start": 13.762,
+      "end": 13.939
+    },
+    {
+      "index": 55,
+      "char": "沿",
+      "start": 13.973,
+      "end": 14.15
+    },
+    {
+      "index": 56,
+      "char": "次",
+      "start": 14.183,
+      "end": 14.36
+    },
+    {
+      "index": 57,
+      "char": "排",
+      "start": 14.394,
+      "end": 14.571
+    },
+    {
+      "index": 58,
+      "char": "成",
+      "start": 14.605,
+      "end": 14.781
+    },
+    {
+      "index": 59,
+      "char": "烧",
+      "start": 14.815,
+      "end": 14.992
+    },
+    {
+      "index": 60,
+      "char": "制",
+      "start": 15.026,
+      "end": 15.203
+    },
+    {
+      "index": 61,
+      "char": "前",
+      "start": 15.236,
+      "end": 15.413
+    },
+    {
+      "index": 62,
+      "char": "的",
+      "start": 15.447,
+      "end": 15.624
+    },
+    {
+      "index": 63,
+      "char": "釉",
+      "start": 15.657,
+      "end": 15.834
+    },
+    {
+      "index": 64,
+      "char": "纹",
+      "start": 15.868,
+      "end": 16.045
+    },
+    {
+      "index": 65,
+      "char": "下",
+      "start": 16.258,
+      "end": 16.435
+    },
+    {
+      "index": 66,
+      "char": "方",
+      "start": 16.469,
+      "end": 16.646
+    },
+    {
+      "index": 67,
+      "char": "圆",
+      "start": 16.68,
+      "end": 16.856
+    },
+    {
+      "index": 68,
+      "char": "腹",
+      "start": 16.89,
+      "end": 17.067
+    },
+    {
+      "index": 69,
+      "char": "瓦",
+      "start": 17.101,
+      "end": 17.278
+    },
+    {
+      "index": 70,
       "char": "器",
-      "start": 7.918,
-      "end": 8.144
+      "start": 17.311,
+      "end": 17.488
+    },
+    {
+      "index": 71,
+      "char": "形",
+      "start": 17.522,
+      "end": 17.699
+    },
+    {
+      "index": 72,
+      "char": "成",
+      "start": 17.732,
+      "end": 17.909
+    },
+    {
+      "index": 73,
+      "char": "瓦",
+      "start": 17.943,
+      "end": 18.12
+    },
+    {
+      "index": 74,
+      "char": "上",
+      "start": 18.333,
+      "end": 18.51
+    },
+    {
+      "index": 75,
+      "char": "下",
+      "start": 18.544,
+      "end": 18.721
+    },
+    {
+      "index": 76,
+      "char": "烧",
+      "start": 18.755,
+      "end": 18.931
+    },
+    {
+      "index": 77,
+      "char": "成",
+      "start": 18.965,
+      "end": 19.142
+    },
+    {
+      "index": 78,
+      "char": "一",
+      "start": 19.176,
+      "end": 19.352
+    },
+    {
+      "index": 79,
+      "char": "件",
+      "start": 19.386,
+      "end": 19.563
+    },
+    {
+      "index": 80,
+      "char": "瓷",
+      "start": 19.597,
+      "end": 19.774
+    },
+    {
+      "index": 81,
+      "char": "瓷",
+      "start": 20.147,
+      "end": 20.324
+    },
+    {
+      "index": 82,
+      "char": "器",
+      "start": 20.358,
+      "end": 20.535
+    },
+    {
+      "index": 83,
+      "char": "是",
+      "start": 20.568,
+      "end": 20.745
+    },
+    {
+      "index": 84,
+      "char": "用",
+      "start": 20.779,
+      "end": 20.956
+    },
+    {
+      "index": 85,
+      "char": "瓷",
+      "start": 20.989,
+      "end": 21.166
+    },
+    {
+      "index": 86,
+      "char": "土",
+      "start": 21.2,
+      "end": 21.377
+    },
+    {
+      "index": 87,
+      "char": "制",
+      "start": 21.411,
+      "end": 21.587
+    },
+    {
+      "index": 88,
+      "char": "成",
+      "start": 21.621,
+      "end": 21.798
+    },
+    {
+      "index": 89,
+      "char": "经",
+      "start": 22.012,
+      "end": 22.189
+    },
+    {
+      "index": 90,
+      "char": "过",
+      "start": 22.222,
+      "end": 22.399
+    },
+    {
+      "index": 91,
+      "char": "高",
+      "start": 22.433,
+      "end": 22.61
+    },
+    {
+      "index": 92,
+      "char": "温",
+      "start": 22.643,
+      "end": 22.82
+    },
+    {
+      "index": 93,
+      "char": "烧",
+      "start": 22.854,
+      "end": 23.031
+    },
+    {
+      "index": 94,
+      "char": "制",
+      "start": 23.064,
+      "end": 23.241
+    },
+    {
+      "index": 95,
+      "char": "的",
+      "start": 23.275,
+      "end": 23.452
+    },
+    {
+      "index": 96,
+      "char": "器",
+      "start": 23.486,
+      "end": 23.662
+    },
+    {
+      "index": 97,
+      "char": "物",
+      "start": 23.696,
+      "end": 23.873
+    },
+    {
+      "index": 98,
+      "char": "这",
+      "start": 24.247,
+      "end": 24.423
+    },
+    {
+      "index": 99,
+      "char": "是",
+      "start": 24.457,
+      "end": 24.634
+    },
+    {
+      "index": 100,
+      "char": "一",
+      "start": 24.668,
+      "end": 24.845
+    },
+    {
+      "index": 101,
+      "char": "幅",
+      "start": 24.878,
+      "end": 25.055
+    },
+    {
+      "index": 102,
+      "char": "帮",
+      "start": 25.089,
+      "end": 25.266
+    },
+    {
+      "index": 103,
+      "char": "助",
+      "start": 25.299,
+      "end": 25.476
+    },
+    {
+      "index": 104,
+      "char": "记",
+      "start": 25.51,
+      "end": 25.687
+    },
+    {
+      "index": 105,
+      "char": "笔",
+      "start": 25.72,
+      "end": 25.897
+    },
+    {
+      "index": 106,
+      "char": "画",
+      "start": 25.931,
+      "end": 26.108
+    },
+    {
+      "index": 107,
+      "char": "和",
+      "start": 26.142,
+      "end": 26.318
+    },
+    {
+      "index": 108,
+      "char": "位",
+      "start": 26.352,
+      "end": 26.529
+    },
+    {
+      "index": 109,
+      "char": "置",
+      "start": 26.563,
+      "end": 26.74
+    },
+    {
+      "index": 110,
+      "char": "的",
+      "start": 26.773,
+      "end": 26.95
+    },
+    {
+      "index": 111,
+      "char": "记",
+      "start": 26.984,
+      "end": 27.161
+    },
+    {
+      "index": 112,
+      "char": "忆",
+      "start": 27.194,
+      "end": 27.371
+    },
+    {
+      "index": 113,
+      "char": "画",
+      "start": 27.405,
+      "end": 27.582
+    },
+    {
+      "index": 114,
+      "char": "面",
+      "start": 27.615,
+      "end": 27.792
+    },
+    {
+      "index": 115,
+      "char": "不",
+      "start": 28.006,
+      "end": 28.183
+    },
+    {
+      "index": 116,
+      "char": "是",
+      "start": 28.217,
+      "end": 28.393
+    },
+    {
+      "index": 117,
+      "char": "完",
+      "start": 28.427,
+      "end": 28.604
+    },
+    {
+      "index": 118,
+      "char": "整",
+      "start": 28.638,
+      "end": 28.815
+    },
+    {
+      "index": 119,
+      "char": "字",
+      "start": 28.848,
+      "end": 29.025
+    },
+    {
+      "index": 120,
+      "char": "源",
+      "start": 29.059,
+      "end": 29.236
+    },
+    {
+      "index": 121,
+      "char": "最",
+      "start": 29.609,
+      "end": 29.786
+    },
+    {
+      "index": 122,
+      "char": "后",
+      "start": 29.82,
+      "end": 29.997
+    },
+    {
+      "index": 123,
+      "char": "再",
+      "start": 30.03,
+      "end": 30.207
+    },
+    {
+      "index": 124,
+      "char": "读",
+      "start": 30.241,
+      "end": 30.418
+    },
+    {
+      "index": 125,
+      "char": "一",
+      "start": 30.451,
+      "end": 30.628
+    },
+    {
+      "index": 126,
+      "char": "遍",
+      "start": 30.662,
+      "end": 30.839
+    },
+    {
+      "index": 127,
+      "char": "瓷",
+      "start": 31.053,
+      "end": 31.229
+    },
+    {
+      "index": 128,
+      "char": "器",
+      "start": 31.263,
+      "end": 31.44
     }
   ],
-  "transcript": "瓷，“瓷器”的“瓷”。它是上下结构。看图找部件，合成字形。再读：瓷器。",
+  "transcript": "瓷，“瓷器”的“瓷”，读cí。它是上下结构，按顺序能看到“次”和“瓦”。从构字分工看，“瓦”提示意义类别，“次”提供读音线索。看图时，上方冰纹与张口人物沿“次”排成烧制前的釉纹，下方圆腹瓦器形成“瓦”，上下烧成一件“瓷”。瓷器是用瓷土制成、经过高温烧制的器物。这是一幅帮助记笔画和位置的记忆画面，不是完整字源。最后再读一遍：瓷器。",
   "voice_reference": "封",
   "timing_source": "punctuation-weighted-estimate",
-  "script_version": "child-first-v1",
-  "duration": 8.640181
+  "script_version": "child-first-v2",
+  "duration": 32.001066
 }

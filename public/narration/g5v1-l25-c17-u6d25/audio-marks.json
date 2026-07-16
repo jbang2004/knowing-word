@@ -3,151 +3,781 @@
     {
       "index": 0,
       "char": "津",
-      "start": 0.214,
-      "end": 0.477
+      "start": 0.292,
+      "end": 0.458
     },
     {
       "index": 1,
       "char": "天",
-      "start": 0.707,
-      "end": 0.97
+      "start": 0.67,
+      "end": 0.836
     },
     {
       "index": 2,
       "char": "津",
-      "start": 1.021,
-      "end": 1.284
+      "start": 0.868,
+      "end": 1.034
     },
     {
       "index": 3,
       "char": "的",
-      "start": 1.334,
-      "end": 1.597
+      "start": 1.066,
+      "end": 1.232
     },
     {
       "index": 4,
       "char": "津",
-      "start": 1.647,
-      "end": 1.91
+      "start": 1.264,
+      "end": 1.43
     },
     {
       "index": 5,
-      "char": "它",
-      "start": 2.3,
-      "end": 2.564
+      "char": "读",
+      "start": 1.642,
+      "end": 1.808
     },
     {
       "index": 6,
-      "char": "是",
-      "start": 2.614,
-      "end": 2.877
+      "char": "j",
+      "start": 1.84,
+      "end": 2.006
     },
     {
       "index": 7,
-      "char": "左",
-      "start": 2.927,
-      "end": 3.19
+      "char": "ī",
+      "start": 2.038,
+      "end": 2.204
     },
     {
       "index": 8,
-      "char": "右",
-      "start": 3.24,
-      "end": 3.503
+      "char": "n",
+      "start": 2.236,
+      "end": 2.402
     },
     {
       "index": 9,
-      "char": "结",
-      "start": 3.553,
-      "end": 3.817
+      "char": "它",
+      "start": 2.774,
+      "end": 2.94
     },
     {
       "index": 10,
-      "char": "构",
-      "start": 3.867,
-      "end": 4.13
+      "char": "是",
+      "start": 2.972,
+      "end": 3.138
     },
     {
       "index": 11,
-      "char": "看",
-      "start": 4.52,
-      "end": 4.783
+      "char": "左",
+      "start": 3.17,
+      "end": 3.336
     },
     {
       "index": 12,
-      "char": "图",
-      "start": 4.833,
-      "end": 5.096
+      "char": "右",
+      "start": 3.368,
+      "end": 3.534
     },
     {
       "index": 13,
-      "char": "找",
-      "start": 5.147,
-      "end": 5.41
+      "char": "结",
+      "start": 3.566,
+      "end": 3.732
     },
     {
       "index": 14,
-      "char": "部",
-      "start": 5.46,
-      "end": 5.723
+      "char": "构",
+      "start": 3.764,
+      "end": 3.93
     },
     {
       "index": 15,
-      "char": "件",
-      "start": 5.773,
-      "end": 6.036
+      "char": "按",
+      "start": 4.142,
+      "end": 4.308
     },
     {
       "index": 16,
-      "char": "合",
-      "start": 6.266,
-      "end": 6.53
+      "char": "顺",
+      "start": 4.34,
+      "end": 4.506
     },
     {
       "index": 17,
-      "char": "成",
-      "start": 6.58,
-      "end": 6.843
+      "char": "序",
+      "start": 4.538,
+      "end": 4.704
     },
     {
       "index": 18,
-      "char": "字",
-      "start": 6.893,
-      "end": 7.156
+      "char": "能",
+      "start": 4.736,
+      "end": 4.902
     },
     {
       "index": 19,
-      "char": "形",
-      "start": 7.206,
-      "end": 7.469
+      "char": "看",
+      "start": 4.934,
+      "end": 5.1
     },
     {
       "index": 20,
-      "char": "再",
-      "start": 7.859,
-      "end": 8.123
+      "char": "到",
+      "start": 5.132,
+      "end": 5.298
     },
     {
       "index": 21,
-      "char": "读",
-      "start": 8.173,
-      "end": 8.436
+      "char": "氵",
+      "start": 5.33,
+      "end": 5.496
     },
     {
       "index": 22,
-      "char": "天",
-      "start": 8.666,
-      "end": 8.929
+      "char": "和",
+      "start": 5.528,
+      "end": 5.694
     },
     {
       "index": 23,
+      "char": "聿",
+      "start": 5.726,
+      "end": 5.892
+    },
+    {
+      "index": 24,
+      "char": "从",
+      "start": 6.264,
+      "end": 6.43
+    },
+    {
+      "index": 25,
+      "char": "构",
+      "start": 6.462,
+      "end": 6.628
+    },
+    {
+      "index": 26,
+      "char": "字",
+      "start": 6.66,
+      "end": 6.826
+    },
+    {
+      "index": 27,
+      "char": "分",
+      "start": 6.857,
+      "end": 7.024
+    },
+    {
+      "index": 28,
+      "char": "工",
+      "start": 7.055,
+      "end": 7.222
+    },
+    {
+      "index": 29,
+      "char": "看",
+      "start": 7.253,
+      "end": 7.42
+    },
+    {
+      "index": 30,
+      "char": "氵",
+      "start": 7.631,
+      "end": 7.798
+    },
+    {
+      "index": 31,
+      "char": "提",
+      "start": 7.829,
+      "end": 7.996
+    },
+    {
+      "index": 32,
+      "char": "示",
+      "start": 8.027,
+      "end": 8.194
+    },
+    {
+      "index": 33,
+      "char": "意",
+      "start": 8.225,
+      "end": 8.392
+    },
+    {
+      "index": 34,
+      "char": "义",
+      "start": 8.423,
+      "end": 8.59
+    },
+    {
+      "index": 35,
+      "char": "类",
+      "start": 8.621,
+      "end": 8.788
+    },
+    {
+      "index": 36,
+      "char": "别",
+      "start": 8.819,
+      "end": 8.986
+    },
+    {
+      "index": 37,
+      "char": "聿",
+      "start": 9.197,
+      "end": 9.364
+    },
+    {
+      "index": 38,
+      "char": "提",
+      "start": 9.395,
+      "end": 9.562
+    },
+    {
+      "index": 39,
+      "char": "供",
+      "start": 9.593,
+      "end": 9.76
+    },
+    {
+      "index": 40,
+      "char": "读",
+      "start": 9.791,
+      "end": 9.958
+    },
+    {
+      "index": 41,
+      "char": "音",
+      "start": 9.989,
+      "end": 10.156
+    },
+    {
+      "index": 42,
+      "char": "线",
+      "start": 10.187,
+      "end": 10.354
+    },
+    {
+      "index": 43,
+      "char": "索",
+      "start": 10.385,
+      "end": 10.552
+    },
+    {
+      "index": 44,
+      "char": "看",
+      "start": 10.923,
+      "end": 11.09
+    },
+    {
+      "index": 45,
+      "char": "图",
+      "start": 11.121,
+      "end": 11.288
+    },
+    {
+      "index": 46,
+      "char": "时",
+      "start": 11.319,
+      "end": 11.486
+    },
+    {
+      "index": 47,
+      "char": "左",
+      "start": 11.697,
+      "end": 11.864
+    },
+    {
+      "index": 48,
+      "char": "边",
+      "start": 11.895,
+      "end": 12.062
+    },
+    {
+      "index": 49,
+      "char": "三",
+      "start": 12.093,
+      "end": 12.259
+    },
+    {
+      "index": 50,
+      "char": "股",
+      "start": 12.291,
+      "end": 12.457
+    },
+    {
+      "index": 51,
+      "char": "河",
+      "start": 12.489,
+      "end": 12.655
+    },
+    {
+      "index": 52,
+      "char": "水",
+      "start": 12.687,
+      "end": 12.853
+    },
+    {
+      "index": 53,
+      "char": "形",
+      "start": 12.885,
+      "end": 13.051
+    },
+    {
+      "index": 54,
+      "char": "成",
+      "start": 13.083,
+      "end": 13.249
+    },
+    {
+      "index": 55,
+      "char": "氵",
+      "start": 13.281,
+      "end": 13.447
+    },
+    {
+      "index": 56,
+      "char": "右",
+      "start": 13.659,
+      "end": 13.825
+    },
+    {
+      "index": 57,
+      "char": "边",
+      "start": 13.857,
+      "end": 14.023
+    },
+    {
+      "index": 58,
+      "char": "手",
+      "start": 14.055,
+      "end": 14.221
+    },
+    {
+      "index": 59,
+      "char": "持",
+      "start": 14.253,
+      "end": 14.419
+    },
+    {
+      "index": 60,
+      "char": "渡",
+      "start": 14.451,
+      "end": 14.617
+    },
+    {
+      "index": 61,
+      "char": "船",
+      "start": 14.649,
+      "end": 14.815
+    },
+    {
+      "index": 62,
+      "char": "撑",
+      "start": 14.847,
+      "end": 15.013
+    },
+    {
+      "index": 63,
+      "char": "杆",
+      "start": 15.045,
+      "end": 15.211
+    },
+    {
+      "index": 64,
+      "char": "横",
+      "start": 15.423,
+      "end": 15.589
+    },
+    {
+      "index": 65,
+      "char": "梁",
+      "start": 15.621,
+      "end": 15.787
+    },
+    {
+      "index": 66,
+      "char": "和",
+      "start": 15.819,
+      "end": 15.985
+    },
+    {
+      "index": 67,
+      "char": "船",
+      "start": 16.017,
+      "end": 16.183
+    },
+    {
+      "index": 68,
+      "char": "桨",
+      "start": 16.215,
+      "end": 16.381
+    },
+    {
+      "index": 69,
+      "char": "沿",
+      "start": 16.413,
+      "end": 16.579
+    },
+    {
+      "index": 70,
+      "char": "聿",
+      "start": 16.611,
+      "end": 16.777
+    },
+    {
+      "index": 71,
+      "char": "排",
+      "start": 16.809,
+      "end": 16.975
+    },
+    {
+      "index": 72,
+      "char": "列",
+      "start": 17.007,
+      "end": 17.173
+    },
+    {
+      "index": 73,
+      "char": "水",
+      "start": 17.385,
+      "end": 17.551
+    },
+    {
+      "index": 74,
+      "char": "边",
+      "start": 17.583,
+      "end": 17.749
+    },
+    {
+      "index": 75,
+      "char": "渡",
+      "start": 17.781,
+      "end": 17.947
+    },
+    {
+      "index": 76,
+      "char": "口",
+      "start": 17.979,
+      "end": 18.145
+    },
+    {
+      "index": 77,
+      "char": "组",
+      "start": 18.177,
+      "end": 18.343
+    },
+    {
+      "index": 78,
+      "char": "成",
+      "start": 18.375,
+      "end": 18.541
+    },
+    {
+      "index": 79,
       "char": "津",
-      "start": 8.979,
-      "end": 9.242
+      "start": 18.573,
+      "end": 18.739
+    },
+    {
+      "index": 80,
+      "char": "天",
+      "start": 19.111,
+      "end": 19.277
+    },
+    {
+      "index": 81,
+      "char": "津",
+      "start": 19.309,
+      "end": 19.475
+    },
+    {
+      "index": 82,
+      "char": "是",
+      "start": 19.507,
+      "end": 19.673
+    },
+    {
+      "index": 83,
+      "char": "中",
+      "start": 19.705,
+      "end": 19.871
+    },
+    {
+      "index": 84,
+      "char": "国",
+      "start": 19.903,
+      "end": 20.069
+    },
+    {
+      "index": 85,
+      "char": "的",
+      "start": 20.101,
+      "end": 20.267
+    },
+    {
+      "index": 86,
+      "char": "直",
+      "start": 20.299,
+      "end": 20.465
+    },
+    {
+      "index": 87,
+      "char": "辖",
+      "start": 20.497,
+      "end": 20.663
+    },
+    {
+      "index": 88,
+      "char": "市",
+      "start": 20.695,
+      "end": 20.861
+    },
+    {
+      "index": 89,
+      "char": "津",
+      "start": 21.073,
+      "end": 21.239
+    },
+    {
+      "index": 90,
+      "char": "也",
+      "start": 21.271,
+      "end": 21.437
+    },
+    {
+      "index": 91,
+      "char": "可",
+      "start": 21.469,
+      "end": 21.635
+    },
+    {
+      "index": 92,
+      "char": "指",
+      "start": 21.667,
+      "end": 21.833
+    },
+    {
+      "index": 93,
+      "char": "渡",
+      "start": 21.865,
+      "end": 22.031
+    },
+    {
+      "index": 94,
+      "char": "口",
+      "start": 22.063,
+      "end": 22.229
+    },
+    {
+      "index": 95,
+      "char": "或",
+      "start": 22.261,
+      "end": 22.427
+    },
+    {
+      "index": 96,
+      "char": "唾",
+      "start": 22.459,
+      "end": 22.625
+    },
+    {
+      "index": 97,
+      "char": "液",
+      "start": 22.657,
+      "end": 22.823
+    },
+    {
+      "index": 98,
+      "char": "这",
+      "start": 23.194,
+      "end": 23.361
+    },
+    {
+      "index": 99,
+      "char": "是",
+      "start": 23.392,
+      "end": 23.559
+    },
+    {
+      "index": 100,
+      "char": "一",
+      "start": 23.59,
+      "end": 23.757
+    },
+    {
+      "index": 101,
+      "char": "幅",
+      "start": 23.788,
+      "end": 23.955
+    },
+    {
+      "index": 102,
+      "char": "帮",
+      "start": 23.986,
+      "end": 24.153
+    },
+    {
+      "index": 103,
+      "char": "助",
+      "start": 24.184,
+      "end": 24.351
+    },
+    {
+      "index": 104,
+      "char": "记",
+      "start": 24.382,
+      "end": 24.549
+    },
+    {
+      "index": 105,
+      "char": "笔",
+      "start": 24.58,
+      "end": 24.747
+    },
+    {
+      "index": 106,
+      "char": "画",
+      "start": 24.778,
+      "end": 24.945
+    },
+    {
+      "index": 107,
+      "char": "和",
+      "start": 24.976,
+      "end": 25.143
+    },
+    {
+      "index": 108,
+      "char": "位",
+      "start": 25.174,
+      "end": 25.341
+    },
+    {
+      "index": 109,
+      "char": "置",
+      "start": 25.372,
+      "end": 25.539
+    },
+    {
+      "index": 110,
+      "char": "的",
+      "start": 25.57,
+      "end": 25.737
+    },
+    {
+      "index": 111,
+      "char": "记",
+      "start": 25.768,
+      "end": 25.935
+    },
+    {
+      "index": 112,
+      "char": "忆",
+      "start": 25.966,
+      "end": 26.133
+    },
+    {
+      "index": 113,
+      "char": "画",
+      "start": 26.164,
+      "end": 26.331
+    },
+    {
+      "index": 114,
+      "char": "面",
+      "start": 26.362,
+      "end": 26.529
+    },
+    {
+      "index": 115,
+      "char": "不",
+      "start": 26.74,
+      "end": 26.907
+    },
+    {
+      "index": 116,
+      "char": "是",
+      "start": 26.938,
+      "end": 27.105
+    },
+    {
+      "index": 117,
+      "char": "完",
+      "start": 27.136,
+      "end": 27.303
+    },
+    {
+      "index": 118,
+      "char": "整",
+      "start": 27.334,
+      "end": 27.501
+    },
+    {
+      "index": 119,
+      "char": "字",
+      "start": 27.532,
+      "end": 27.699
+    },
+    {
+      "index": 120,
+      "char": "源",
+      "start": 27.73,
+      "end": 27.896
+    },
+    {
+      "index": 121,
+      "char": "最",
+      "start": 28.268,
+      "end": 28.434
+    },
+    {
+      "index": 122,
+      "char": "后",
+      "start": 28.466,
+      "end": 28.632
+    },
+    {
+      "index": 123,
+      "char": "再",
+      "start": 28.664,
+      "end": 28.83
+    },
+    {
+      "index": 124,
+      "char": "读",
+      "start": 28.862,
+      "end": 29.028
+    },
+    {
+      "index": 125,
+      "char": "一",
+      "start": 29.06,
+      "end": 29.226
+    },
+    {
+      "index": 126,
+      "char": "遍",
+      "start": 29.258,
+      "end": 29.424
+    },
+    {
+      "index": 127,
+      "char": "天",
+      "start": 29.636,
+      "end": 29.802
+    },
+    {
+      "index": 128,
+      "char": "津",
+      "start": 29.834,
+      "end": 30
     }
   ],
-  "transcript": "津，“天津”的“津”。它是左右结构。看图找部件，合成字形。再读：天津。",
+  "transcript": "津，“天津”的“津”，读jīn。它是左右结构，按顺序能看到“氵”和“聿”。从构字分工看，“氵”提示意义类别，“聿”提供读音线索。看图时，左边三股河水形成“氵”，右边手持渡船撑杆、横梁和船桨沿“聿”排列，水边渡口组成“津”。天津是中国的直辖市；“津”也可指渡口或唾液。这是一幅帮助记笔画和位置的记忆画面，不是完整字源。最后再读一遍：天津。",
   "voice_reference": "封",
   "timing_source": "punctuation-weighted-estimate",
-  "script_version": "child-first-v1",
-  "duration": 9.760181
+  "script_version": "child-first-v2",
+  "duration": 30.560181
 }

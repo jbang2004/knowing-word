@@ -3,151 +3,769 @@
     {
       "index": 0,
       "char": "恃",
-      "start": 0.182,
-      "end": 0.396
+      "start": 0.292,
+      "end": 0.466
     },
     {
       "index": 1,
       "char": "恃",
-      "start": 0.617,
-      "end": 0.832
+      "start": 0.679,
+      "end": 0.852
     },
     {
       "index": 2,
       "char": "强",
-      "start": 0.872,
-      "end": 1.087
+      "start": 0.885,
+      "end": 1.058
     },
     {
       "index": 3,
       "char": "的",
-      "start": 1.128,
-      "end": 1.342
+      "start": 1.091,
+      "end": 1.264
     },
     {
       "index": 4,
       "char": "恃",
-      "start": 1.383,
-      "end": 1.598
+      "start": 1.297,
+      "end": 1.47
     },
     {
       "index": 5,
-      "char": "它",
-      "start": 1.979,
-      "end": 2.193
+      "char": "读",
+      "start": 1.683,
+      "end": 1.856
     },
     {
       "index": 6,
-      "char": "是",
-      "start": 2.234,
-      "end": 2.448
+      "char": "s",
+      "start": 1.889,
+      "end": 2.062
     },
     {
       "index": 7,
-      "char": "左",
-      "start": 2.489,
-      "end": 2.704
+      "char": "h",
+      "start": 2.095,
+      "end": 2.269
     },
     {
       "index": 8,
-      "char": "右",
-      "start": 2.745,
-      "end": 2.959
+      "char": "ì",
+      "start": 2.302,
+      "end": 2.475
     },
     {
       "index": 9,
-      "char": "结",
-      "start": 3,
-      "end": 3.215
+      "char": "它",
+      "start": 2.848,
+      "end": 3.021
     },
     {
       "index": 10,
-      "char": "构",
-      "start": 3.255,
-      "end": 3.47
+      "char": "是",
+      "start": 3.054,
+      "end": 3.227
     },
     {
       "index": 11,
-      "char": "看",
-      "start": 3.851,
-      "end": 4.065
+      "char": "左",
+      "start": 3.26,
+      "end": 3.433
     },
     {
       "index": 12,
-      "char": "图",
-      "start": 4.106,
-      "end": 4.321
+      "char": "右",
+      "start": 3.466,
+      "end": 3.639
     },
     {
       "index": 13,
-      "char": "找",
-      "start": 4.362,
-      "end": 4.576
+      "char": "结",
+      "start": 3.672,
+      "end": 3.845
     },
     {
       "index": 14,
-      "char": "部",
-      "start": 4.617,
-      "end": 4.831
+      "char": "构",
+      "start": 3.878,
+      "end": 4.052
     },
     {
       "index": 15,
-      "char": "件",
-      "start": 4.872,
-      "end": 5.087
+      "char": "按",
+      "start": 4.265,
+      "end": 4.438
     },
     {
       "index": 16,
-      "char": "合",
-      "start": 5.308,
-      "end": 5.522
+      "char": "顺",
+      "start": 4.471,
+      "end": 4.644
     },
     {
       "index": 17,
-      "char": "成",
-      "start": 5.563,
-      "end": 5.778
+      "char": "序",
+      "start": 4.677,
+      "end": 4.85
     },
     {
       "index": 18,
-      "char": "字",
-      "start": 5.818,
-      "end": 6.033
+      "char": "能",
+      "start": 4.883,
+      "end": 5.056
     },
     {
       "index": 19,
-      "char": "形",
-      "start": 6.074,
-      "end": 6.288
+      "char": "看",
+      "start": 5.089,
+      "end": 5.262
     },
     {
       "index": 20,
-      "char": "再",
-      "start": 6.669,
-      "end": 6.884
+      "char": "到",
+      "start": 5.295,
+      "end": 5.468
     },
     {
       "index": 21,
-      "char": "读",
-      "start": 6.925,
-      "end": 7.139
+      "char": "忄",
+      "start": 5.501,
+      "end": 5.675
     },
     {
       "index": 22,
-      "char": "恃",
-      "start": 7.36,
-      "end": 7.574
+      "char": "和",
+      "start": 5.708,
+      "end": 5.881
     },
     {
       "index": 23,
+      "char": "寺",
+      "start": 5.914,
+      "end": 6.087
+    },
+    {
+      "index": 24,
+      "char": "从",
+      "start": 6.46,
+      "end": 6.633
+    },
+    {
+      "index": 25,
+      "char": "构",
+      "start": 6.666,
+      "end": 6.839
+    },
+    {
+      "index": 26,
+      "char": "字",
+      "start": 6.872,
+      "end": 7.045
+    },
+    {
+      "index": 27,
+      "char": "分",
+      "start": 7.078,
+      "end": 7.251
+    },
+    {
+      "index": 28,
+      "char": "工",
+      "start": 7.284,
+      "end": 7.458
+    },
+    {
+      "index": 29,
+      "char": "看",
+      "start": 7.491,
+      "end": 7.664
+    },
+    {
+      "index": 30,
+      "char": "忄",
+      "start": 7.877,
+      "end": 8.05
+    },
+    {
+      "index": 31,
+      "char": "提",
+      "start": 8.083,
+      "end": 8.256
+    },
+    {
+      "index": 32,
+      "char": "示",
+      "start": 8.289,
+      "end": 8.462
+    },
+    {
+      "index": 33,
+      "char": "意",
+      "start": 8.495,
+      "end": 8.668
+    },
+    {
+      "index": 34,
+      "char": "义",
+      "start": 8.701,
+      "end": 8.874
+    },
+    {
+      "index": 35,
+      "char": "类",
+      "start": 8.907,
+      "end": 9.081
+    },
+    {
+      "index": 36,
+      "char": "别",
+      "start": 9.114,
+      "end": 9.287
+    },
+    {
+      "index": 37,
+      "char": "寺",
+      "start": 9.5,
+      "end": 9.673
+    },
+    {
+      "index": 38,
+      "char": "提",
+      "start": 9.706,
+      "end": 9.879
+    },
+    {
+      "index": 39,
+      "char": "供",
+      "start": 9.912,
+      "end": 10.085
+    },
+    {
+      "index": 40,
+      "char": "读",
+      "start": 10.118,
+      "end": 10.291
+    },
+    {
+      "index": 41,
+      "char": "音",
+      "start": 10.324,
+      "end": 10.497
+    },
+    {
+      "index": 42,
+      "char": "线",
+      "start": 10.53,
+      "end": 10.704
+    },
+    {
+      "index": 43,
+      "char": "索",
+      "start": 10.737,
+      "end": 10.91
+    },
+    {
+      "index": 44,
+      "char": "看",
+      "start": 11.283,
+      "end": 11.456
+    },
+    {
+      "index": 45,
+      "char": "图",
+      "start": 11.489,
+      "end": 11.662
+    },
+    {
+      "index": 46,
+      "char": "时",
+      "start": 11.695,
+      "end": 11.868
+    },
+    {
+      "index": 47,
+      "char": "左",
+      "start": 12.081,
+      "end": 12.254
+    },
+    {
+      "index": 48,
+      "char": "边",
+      "start": 12.287,
+      "end": 12.46
+    },
+    {
+      "index": 49,
+      "char": "偏",
+      "start": 12.493,
+      "end": 12.667
+    },
+    {
+      "index": 50,
+      "char": "斜",
+      "start": 12.7,
+      "end": 12.873
+    },
+    {
+      "index": 51,
+      "char": "心",
+      "start": 12.906,
+      "end": 13.079
+    },
+    {
+      "index": 52,
+      "char": "灯",
+      "start": 13.112,
+      "end": 13.285
+    },
+    {
+      "index": 53,
+      "char": "形",
+      "start": 13.318,
+      "end": 13.491
+    },
+    {
+      "index": 54,
+      "char": "成",
+      "start": 13.524,
+      "end": 13.697
+    },
+    {
+      "index": 55,
+      "char": "忄",
+      "start": 13.73,
+      "end": 13.903
+    },
+    {
+      "index": 56,
+      "char": "右",
+      "start": 14.116,
+      "end": 14.29
+    },
+    {
+      "index": 57,
+      "char": "边",
+      "start": 14.323,
+      "end": 14.496
+    },
+    {
+      "index": 58,
+      "char": "寺",
+      "start": 14.529,
+      "end": 14.702
+    },
+    {
+      "index": 59,
+      "char": "院",
+      "start": 14.735,
+      "end": 14.908
+    },
+    {
+      "index": 60,
+      "char": "土",
+      "start": 14.941,
+      "end": 15.114
+    },
+    {
+      "index": 61,
+      "char": "台",
+      "start": 15.147,
+      "end": 15.32
+    },
+    {
+      "index": 62,
+      "char": "手",
+      "start": 15.533,
+      "end": 15.706
+    },
+    {
+      "index": 63,
+      "char": "腕",
+      "start": 15.739,
+      "end": 15.913
+    },
+    {
+      "index": 64,
+      "char": "和",
+      "start": 15.946,
+      "end": 16.119
+    },
+    {
+      "index": 65,
+      "char": "屋",
+      "start": 16.152,
+      "end": 16.325
+    },
+    {
+      "index": 66,
+      "char": "梁",
+      "start": 16.358,
+      "end": 16.531
+    },
+    {
+      "index": 67,
+      "char": "沿",
+      "start": 16.564,
+      "end": 16.737
+    },
+    {
+      "index": 68,
+      "char": "寺",
+      "start": 16.77,
+      "end": 16.943
+    },
+    {
+      "index": 69,
+      "char": "站",
+      "start": 16.976,
+      "end": 17.149
+    },
+    {
+      "index": 70,
+      "char": "高",
+      "start": 17.182,
+      "end": 17.356
+    },
+    {
+      "index": 71,
+      "char": "像",
+      "start": 17.569,
+      "end": 17.742
+    },
+    {
+      "index": 72,
+      "char": "把",
+      "start": 17.775,
+      "end": 17.948
+    },
+    {
+      "index": 73,
+      "char": "高",
+      "start": 17.981,
+      "end": 18.154
+    },
+    {
+      "index": 74,
+      "char": "台",
+      "start": 18.187,
+      "end": 18.36
+    },
+    {
+      "index": 75,
+      "char": "当",
+      "start": 18.393,
+      "end": 18.566
+    },
+    {
+      "index": 76,
+      "char": "依",
+      "start": 18.599,
+      "end": 18.772
+    },
+    {
+      "index": 77,
+      "char": "靠",
+      "start": 18.805,
+      "end": 18.979
+    },
+    {
+      "index": 78,
+      "char": "组",
+      "start": 19.192,
+      "end": 19.365
+    },
+    {
+      "index": 79,
+      "char": "成",
+      "start": 19.398,
+      "end": 19.571
+    },
+    {
+      "index": 80,
+      "char": "恃",
+      "start": 19.604,
+      "end": 19.777
+    },
+    {
+      "index": 81,
+      "char": "恃",
+      "start": 20.15,
+      "end": 20.323
+    },
+    {
+      "index": 82,
       "char": "强",
-      "start": 7.615,
-      "end": 7.83
+      "start": 20.356,
+      "end": 20.529
+    },
+    {
+      "index": 83,
+      "char": "就",
+      "start": 20.562,
+      "end": 20.735
+    },
+    {
+      "index": 84,
+      "char": "是",
+      "start": 20.768,
+      "end": 20.942
+    },
+    {
+      "index": 85,
+      "char": "依",
+      "start": 20.975,
+      "end": 21.148
+    },
+    {
+      "index": 86,
+      "char": "仗",
+      "start": 21.181,
+      "end": 21.354
+    },
+    {
+      "index": 87,
+      "char": "自",
+      "start": 21.387,
+      "end": 21.56
+    },
+    {
+      "index": 88,
+      "char": "己",
+      "start": 21.593,
+      "end": 21.766
+    },
+    {
+      "index": 89,
+      "char": "强",
+      "start": 21.799,
+      "end": 21.972
+    },
+    {
+      "index": 90,
+      "char": "大",
+      "start": 22.005,
+      "end": 22.178
+    },
+    {
+      "index": 91,
+      "char": "而",
+      "start": 22.211,
+      "end": 22.385
+    },
+    {
+      "index": 92,
+      "char": "欺",
+      "start": 22.418,
+      "end": 22.591
+    },
+    {
+      "index": 93,
+      "char": "压",
+      "start": 22.624,
+      "end": 22.797
+    },
+    {
+      "index": 94,
+      "char": "别",
+      "start": 22.83,
+      "end": 23.003
+    },
+    {
+      "index": 95,
+      "char": "人",
+      "start": 23.036,
+      "end": 23.209
+    },
+    {
+      "index": 96,
+      "char": "这",
+      "start": 23.582,
+      "end": 23.755
+    },
+    {
+      "index": 97,
+      "char": "是",
+      "start": 23.788,
+      "end": 23.961
+    },
+    {
+      "index": 98,
+      "char": "一",
+      "start": 23.994,
+      "end": 24.168
+    },
+    {
+      "index": 99,
+      "char": "幅",
+      "start": 24.201,
+      "end": 24.374
+    },
+    {
+      "index": 100,
+      "char": "帮",
+      "start": 24.407,
+      "end": 24.58
+    },
+    {
+      "index": 101,
+      "char": "助",
+      "start": 24.613,
+      "end": 24.786
+    },
+    {
+      "index": 102,
+      "char": "记",
+      "start": 24.819,
+      "end": 24.992
+    },
+    {
+      "index": 103,
+      "char": "笔",
+      "start": 25.025,
+      "end": 25.198
+    },
+    {
+      "index": 104,
+      "char": "画",
+      "start": 25.231,
+      "end": 25.404
+    },
+    {
+      "index": 105,
+      "char": "和",
+      "start": 25.437,
+      "end": 25.611
+    },
+    {
+      "index": 106,
+      "char": "位",
+      "start": 25.644,
+      "end": 25.817
+    },
+    {
+      "index": 107,
+      "char": "置",
+      "start": 25.85,
+      "end": 26.023
+    },
+    {
+      "index": 108,
+      "char": "的",
+      "start": 26.056,
+      "end": 26.229
+    },
+    {
+      "index": 109,
+      "char": "记",
+      "start": 26.262,
+      "end": 26.435
+    },
+    {
+      "index": 110,
+      "char": "忆",
+      "start": 26.468,
+      "end": 26.641
+    },
+    {
+      "index": 111,
+      "char": "画",
+      "start": 26.674,
+      "end": 26.847
+    },
+    {
+      "index": 112,
+      "char": "面",
+      "start": 26.88,
+      "end": 27.054
+    },
+    {
+      "index": 113,
+      "char": "不",
+      "start": 27.267,
+      "end": 27.44
+    },
+    {
+      "index": 114,
+      "char": "是",
+      "start": 27.473,
+      "end": 27.646
+    },
+    {
+      "index": 115,
+      "char": "完",
+      "start": 27.679,
+      "end": 27.852
+    },
+    {
+      "index": 116,
+      "char": "整",
+      "start": 27.885,
+      "end": 28.058
+    },
+    {
+      "index": 117,
+      "char": "字",
+      "start": 28.091,
+      "end": 28.264
+    },
+    {
+      "index": 118,
+      "char": "源",
+      "start": 28.297,
+      "end": 28.47
+    },
+    {
+      "index": 119,
+      "char": "最",
+      "start": 28.843,
+      "end": 29.017
+    },
+    {
+      "index": 120,
+      "char": "后",
+      "start": 29.05,
+      "end": 29.223
+    },
+    {
+      "index": 121,
+      "char": "再",
+      "start": 29.256,
+      "end": 29.429
+    },
+    {
+      "index": 122,
+      "char": "读",
+      "start": 29.462,
+      "end": 29.635
+    },
+    {
+      "index": 123,
+      "char": "一",
+      "start": 29.668,
+      "end": 29.841
+    },
+    {
+      "index": 124,
+      "char": "遍",
+      "start": 29.874,
+      "end": 30.047
+    },
+    {
+      "index": 125,
+      "char": "恃",
+      "start": 30.26,
+      "end": 30.433
+    },
+    {
+      "index": 126,
+      "char": "强",
+      "start": 30.466,
+      "end": 30.64
     }
   ],
-  "transcript": "恃，“恃强”的“恃”。它是左右结构。看图找部件，合成字形。再读：恃强。",
+  "transcript": "恃，“恃强”的“恃”，读shì。它是左右结构，按顺序能看到“忄”和“寺”。从构字分工看，“忄”提示意义类别，“寺”提供读音线索。看图时，左边偏斜心灯形成“忄”，右边寺院土台、手腕和屋梁沿“寺”站高，像把高台当依靠，组成“恃”。恃强就是依仗自己强大而欺压别人。这是一幅帮助记笔画和位置的记忆画面，不是完整字源。最后再读一遍：恃强。",
   "voice_reference": "封",
   "timing_source": "punctuation-weighted-estimate",
-  "script_version": "child-first-v1",
-  "duration": 8.320181
+  "script_version": "child-first-v2",
+  "duration": 31.200181
 }

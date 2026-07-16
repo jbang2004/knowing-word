@@ -3,151 +3,799 @@
     {
       "index": 0,
       "char": "磁",
-      "start": 0.139,
-      "end": 0.292
+      "start": 0.291,
+      "end": 0.446
     },
     {
       "index": 1,
       "char": "磁",
-      "start": 0.491,
-      "end": 0.645
+      "start": 0.656,
+      "end": 0.811
     },
     {
       "index": 2,
       "char": "铁",
-      "start": 0.674,
-      "end": 0.828
+      "start": 0.841,
+      "end": 0.996
     },
     {
       "index": 3,
       "char": "的",
-      "start": 0.857,
-      "end": 1.01
+      "start": 1.026,
+      "end": 1.181
     },
     {
       "index": 4,
       "char": "磁",
-      "start": 1.04,
-      "end": 1.193
+      "start": 1.21,
+      "end": 1.366
     },
     {
       "index": 5,
-      "char": "它",
-      "start": 1.543,
-      "end": 1.696
+      "char": "读",
+      "start": 1.575,
+      "end": 1.731
     },
     {
       "index": 6,
-      "char": "是",
-      "start": 1.726,
-      "end": 1.879
+      "char": "c",
+      "start": 1.76,
+      "end": 1.915
     },
     {
       "index": 7,
-      "char": "左",
-      "start": 1.908,
-      "end": 2.062
+      "char": "í",
+      "start": 1.945,
+      "end": 2.1
     },
     {
       "index": 8,
-      "char": "右",
-      "start": 2.091,
-      "end": 2.245
+      "char": "它",
+      "start": 2.47,
+      "end": 2.625
     },
     {
       "index": 9,
-      "char": "结",
-      "start": 2.274,
-      "end": 2.427
+      "char": "是",
+      "start": 2.655,
+      "end": 2.81
     },
     {
       "index": 10,
-      "char": "构",
-      "start": 2.456,
-      "end": 2.61
+      "char": "左",
+      "start": 2.84,
+      "end": 2.995
     },
     {
       "index": 11,
-      "char": "看",
-      "start": 2.96,
-      "end": 3.113
+      "char": "右",
+      "start": 3.024,
+      "end": 3.18
     },
     {
       "index": 12,
-      "char": "图",
-      "start": 3.143,
-      "end": 3.296
+      "char": "结",
+      "start": 3.209,
+      "end": 3.365
     },
     {
       "index": 13,
-      "char": "找",
-      "start": 3.325,
-      "end": 3.479
+      "char": "构",
+      "start": 3.394,
+      "end": 3.549
     },
     {
       "index": 14,
-      "char": "部",
-      "start": 3.508,
-      "end": 3.661
+      "char": "按",
+      "start": 3.759,
+      "end": 3.914
     },
     {
       "index": 15,
-      "char": "件",
-      "start": 3.691,
-      "end": 3.844
+      "char": "顺",
+      "start": 3.944,
+      "end": 4.099
     },
     {
       "index": 16,
-      "char": "合",
-      "start": 4.043,
-      "end": 4.197
+      "char": "序",
+      "start": 4.129,
+      "end": 4.284
     },
     {
       "index": 17,
-      "char": "成",
-      "start": 4.226,
-      "end": 4.379
+      "char": "能",
+      "start": 4.314,
+      "end": 4.469
     },
     {
       "index": 18,
-      "char": "字",
-      "start": 4.409,
-      "end": 4.562
+      "char": "看",
+      "start": 4.498,
+      "end": 4.654
     },
     {
       "index": 19,
-      "char": "形",
-      "start": 4.591,
-      "end": 4.745
+      "char": "到",
+      "start": 4.683,
+      "end": 4.839
     },
     {
       "index": 20,
-      "char": "再",
-      "start": 5.095,
-      "end": 5.248
+      "char": "石",
+      "start": 4.868,
+      "end": 5.023
     },
     {
       "index": 21,
-      "char": "读",
-      "start": 5.277,
-      "end": 5.431
+      "char": "和",
+      "start": 5.053,
+      "end": 5.208
     },
     {
       "index": 22,
-      "char": "磁",
-      "start": 5.63,
-      "end": 5.783
+      "char": "兹",
+      "start": 5.238,
+      "end": 5.393
     },
     {
       "index": 23,
+      "char": "从",
+      "start": 5.763,
+      "end": 5.918
+    },
+    {
+      "index": 24,
+      "char": "构",
+      "start": 5.947,
+      "end": 6.103
+    },
+    {
+      "index": 25,
+      "char": "字",
+      "start": 6.132,
+      "end": 6.288
+    },
+    {
+      "index": 26,
+      "char": "分",
+      "start": 6.317,
+      "end": 6.472
+    },
+    {
+      "index": 27,
+      "char": "工",
+      "start": 6.502,
+      "end": 6.657
+    },
+    {
+      "index": 28,
+      "char": "看",
+      "start": 6.687,
+      "end": 6.842
+    },
+    {
+      "index": 29,
+      "char": "石",
+      "start": 7.052,
+      "end": 7.207
+    },
+    {
+      "index": 30,
+      "char": "提",
+      "start": 7.237,
+      "end": 7.392
+    },
+    {
+      "index": 31,
+      "char": "示",
+      "start": 7.421,
+      "end": 7.577
+    },
+    {
+      "index": 32,
+      "char": "意",
+      "start": 7.606,
+      "end": 7.762
+    },
+    {
+      "index": 33,
+      "char": "义",
+      "start": 7.791,
+      "end": 7.946
+    },
+    {
+      "index": 34,
+      "char": "类",
+      "start": 7.976,
+      "end": 8.131
+    },
+    {
+      "index": 35,
+      "char": "别",
+      "start": 8.161,
+      "end": 8.316
+    },
+    {
+      "index": 36,
+      "char": "兹",
+      "start": 8.526,
+      "end": 8.681
+    },
+    {
+      "index": 37,
+      "char": "提",
+      "start": 8.711,
+      "end": 8.866
+    },
+    {
+      "index": 38,
+      "char": "供",
+      "start": 8.895,
+      "end": 9.051
+    },
+    {
+      "index": 39,
+      "char": "读",
+      "start": 9.08,
+      "end": 9.236
+    },
+    {
+      "index": 40,
+      "char": "音",
+      "start": 9.265,
+      "end": 9.42
+    },
+    {
+      "index": 41,
+      "char": "线",
+      "start": 9.45,
+      "end": 9.605
+    },
+    {
+      "index": 42,
+      "char": "索",
+      "start": 9.635,
+      "end": 9.79
+    },
+    {
+      "index": 43,
+      "char": "看",
+      "start": 10.16,
+      "end": 10.315
+    },
+    {
+      "index": 44,
+      "char": "图",
+      "start": 10.344,
+      "end": 10.5
+    },
+    {
+      "index": 45,
+      "char": "时",
+      "start": 10.529,
+      "end": 10.685
+    },
+    {
+      "index": 46,
+      "char": "左",
+      "start": 10.894,
+      "end": 11.049
+    },
+    {
+      "index": 47,
+      "char": "边",
+      "start": 11.079,
+      "end": 11.234
+    },
+    {
+      "index": 48,
+      "char": "带",
+      "start": 11.264,
+      "end": 11.419
+    },
+    {
+      "index": 49,
+      "char": "切",
+      "start": 11.449,
+      "end": 11.604
+    },
+    {
+      "index": 50,
+      "char": "面",
+      "start": 11.634,
+      "end": 11.789
+    },
+    {
+      "index": 51,
+      "char": "的",
+      "start": 11.818,
+      "end": 11.974
+    },
+    {
+      "index": 52,
+      "char": "矿",
+      "start": 12.003,
+      "end": 12.159
+    },
+    {
+      "index": 53,
+      "char": "石",
+      "start": 12.188,
+      "end": 12.343
+    },
+    {
+      "index": 54,
+      "char": "形",
+      "start": 12.373,
+      "end": 12.528
+    },
+    {
+      "index": 55,
+      "char": "成",
+      "start": 12.558,
+      "end": 12.713
+    },
+    {
+      "index": 56,
+      "char": "石",
+      "start": 12.743,
+      "end": 12.898
+    },
+    {
+      "index": 57,
+      "char": "右",
+      "start": 13.108,
+      "end": 13.263
+    },
+    {
+      "index": 58,
+      "char": "边",
+      "start": 13.292,
+      "end": 13.448
+    },
+    {
+      "index": 59,
+      "char": "两",
+      "start": 13.477,
+      "end": 13.633
+    },
+    {
+      "index": 60,
+      "char": "束",
+      "start": 13.662,
+      "end": 13.817
+    },
+    {
+      "index": 61,
+      "char": "丝",
+      "start": 13.847,
+      "end": 14.002
+    },
+    {
+      "index": 62,
+      "char": "线",
+      "start": 14.032,
+      "end": 14.187
+    },
+    {
+      "index": 63,
+      "char": "被",
+      "start": 14.217,
+      "end": 14.372
+    },
+    {
+      "index": 64,
+      "char": "上",
+      "start": 14.401,
+      "end": 14.557
+    },
+    {
+      "index": 65,
+      "char": "方",
+      "start": 14.586,
+      "end": 14.742
+    },
+    {
+      "index": 66,
+      "char": "磁",
+      "start": 14.771,
+      "end": 14.926
+    },
+    {
+      "index": 67,
+      "char": "极",
+      "start": 14.956,
+      "end": 15.111
+    },
+    {
+      "index": 68,
+      "char": "牵",
+      "start": 15.141,
+      "end": 15.296
+    },
+    {
+      "index": 69,
+      "char": "成",
+      "start": 15.326,
+      "end": 15.481
+    },
+    {
+      "index": 70,
+      "char": "兹",
+      "start": 15.511,
+      "end": 15.666
+    },
+    {
+      "index": 71,
+      "char": "的",
+      "start": 15.695,
+      "end": 15.851
+    },
+    {
+      "index": 72,
+      "char": "弧",
+      "start": 15.88,
+      "end": 16.036
+    },
+    {
+      "index": 73,
+      "char": "线",
+      "start": 16.065,
+      "end": 16.22
+    },
+    {
+      "index": 74,
+      "char": "石",
+      "start": 16.43,
+      "end": 16.585
+    },
+    {
+      "index": 75,
+      "char": "头",
+      "start": 16.615,
+      "end": 16.77
+    },
+    {
+      "index": 76,
+      "char": "产",
+      "start": 16.8,
+      "end": 16.955
+    },
+    {
+      "index": 77,
+      "char": "生",
+      "start": 16.985,
+      "end": 17.14
+    },
+    {
+      "index": 78,
+      "char": "吸",
+      "start": 17.169,
+      "end": 17.325
+    },
+    {
+      "index": 79,
+      "char": "力",
+      "start": 17.354,
+      "end": 17.51
+    },
+    {
+      "index": 80,
+      "char": "组",
+      "start": 17.719,
+      "end": 17.874
+    },
+    {
+      "index": 81,
+      "char": "成",
+      "start": 17.904,
+      "end": 18.059
+    },
+    {
+      "index": 82,
+      "char": "磁",
+      "start": 18.089,
+      "end": 18.244
+    },
+    {
+      "index": 83,
+      "char": "磁",
+      "start": 18.614,
+      "end": 18.769
+    },
+    {
+      "index": 84,
       "char": "铁",
-      "start": 5.813,
-      "end": 5.966
+      "start": 18.798,
+      "end": 18.954
+    },
+    {
+      "index": 85,
+      "char": "能",
+      "start": 18.983,
+      "end": 19.139
+    },
+    {
+      "index": 86,
+      "char": "吸",
+      "start": 19.168,
+      "end": 19.323
+    },
+    {
+      "index": 87,
+      "char": "引",
+      "start": 19.353,
+      "end": 19.508
+    },
+    {
+      "index": 88,
+      "char": "铁",
+      "start": 19.538,
+      "end": 19.693
+    },
+    {
+      "index": 89,
+      "char": "镍",
+      "start": 19.903,
+      "end": 20.058
+    },
+    {
+      "index": 90,
+      "char": "等",
+      "start": 20.088,
+      "end": 20.243
+    },
+    {
+      "index": 91,
+      "char": "材",
+      "start": 20.272,
+      "end": 20.428
+    },
+    {
+      "index": 92,
+      "char": "料",
+      "start": 20.457,
+      "end": 20.613
+    },
+    {
+      "index": 93,
+      "char": "也",
+      "start": 20.822,
+      "end": 20.977
+    },
+    {
+      "index": 94,
+      "char": "有",
+      "start": 21.007,
+      "end": 21.162
+    },
+    {
+      "index": 95,
+      "char": "南",
+      "start": 21.192,
+      "end": 21.347
+    },
+    {
+      "index": 96,
+      "char": "北",
+      "start": 21.377,
+      "end": 21.532
+    },
+    {
+      "index": 97,
+      "char": "两",
+      "start": 21.562,
+      "end": 21.717
+    },
+    {
+      "index": 98,
+      "char": "个",
+      "start": 21.746,
+      "end": 21.902
+    },
+    {
+      "index": 99,
+      "char": "磁",
+      "start": 21.931,
+      "end": 22.087
+    },
+    {
+      "index": 100,
+      "char": "极",
+      "start": 22.116,
+      "end": 22.271
+    },
+    {
+      "index": 101,
+      "char": "这",
+      "start": 22.641,
+      "end": 22.796
+    },
+    {
+      "index": 102,
+      "char": "是",
+      "start": 22.826,
+      "end": 22.981
+    },
+    {
+      "index": 103,
+      "char": "一",
+      "start": 23.011,
+      "end": 23.166
+    },
+    {
+      "index": 104,
+      "char": "幅",
+      "start": 23.195,
+      "end": 23.351
+    },
+    {
+      "index": 105,
+      "char": "帮",
+      "start": 23.38,
+      "end": 23.536
+    },
+    {
+      "index": 106,
+      "char": "助",
+      "start": 23.565,
+      "end": 23.72
+    },
+    {
+      "index": 107,
+      "char": "记",
+      "start": 23.75,
+      "end": 23.905
+    },
+    {
+      "index": 108,
+      "char": "笔",
+      "start": 23.935,
+      "end": 24.09
+    },
+    {
+      "index": 109,
+      "char": "画",
+      "start": 24.12,
+      "end": 24.275
+    },
+    {
+      "index": 110,
+      "char": "和",
+      "start": 24.305,
+      "end": 24.46
+    },
+    {
+      "index": 111,
+      "char": "位",
+      "start": 24.489,
+      "end": 24.645
+    },
+    {
+      "index": 112,
+      "char": "置",
+      "start": 24.674,
+      "end": 24.83
+    },
+    {
+      "index": 113,
+      "char": "的",
+      "start": 24.859,
+      "end": 25.014
+    },
+    {
+      "index": 114,
+      "char": "记",
+      "start": 25.044,
+      "end": 25.199
+    },
+    {
+      "index": 115,
+      "char": "忆",
+      "start": 25.229,
+      "end": 25.384
+    },
+    {
+      "index": 116,
+      "char": "画",
+      "start": 25.414,
+      "end": 25.569
+    },
+    {
+      "index": 117,
+      "char": "面",
+      "start": 25.599,
+      "end": 25.754
+    },
+    {
+      "index": 118,
+      "char": "不",
+      "start": 25.963,
+      "end": 26.119
+    },
+    {
+      "index": 119,
+      "char": "是",
+      "start": 26.148,
+      "end": 26.303
+    },
+    {
+      "index": 120,
+      "char": "完",
+      "start": 26.333,
+      "end": 26.488
+    },
+    {
+      "index": 121,
+      "char": "整",
+      "start": 26.518,
+      "end": 26.673
+    },
+    {
+      "index": 122,
+      "char": "字",
+      "start": 26.703,
+      "end": 26.858
+    },
+    {
+      "index": 123,
+      "char": "源",
+      "start": 26.888,
+      "end": 27.043
+    },
+    {
+      "index": 124,
+      "char": "最",
+      "start": 27.412,
+      "end": 27.568
+    },
+    {
+      "index": 125,
+      "char": "后",
+      "start": 27.597,
+      "end": 27.753
+    },
+    {
+      "index": 126,
+      "char": "再",
+      "start": 27.782,
+      "end": 27.937
+    },
+    {
+      "index": 127,
+      "char": "读",
+      "start": 27.967,
+      "end": 28.122
+    },
+    {
+      "index": 128,
+      "char": "一",
+      "start": 28.152,
+      "end": 28.307
+    },
+    {
+      "index": 129,
+      "char": "遍",
+      "start": 28.337,
+      "end": 28.492
+    },
+    {
+      "index": 130,
+      "char": "磁",
+      "start": 28.702,
+      "end": 28.857
+    },
+    {
+      "index": 131,
+      "char": "铁",
+      "start": 28.886,
+      "end": 29.042
     }
   ],
-  "transcript": "磁，“磁铁”的“磁”。它是左右结构。看图找部件，合成字形。再读：磁铁。",
+  "transcript": "磁，“磁铁”的“磁”，读cí。它是左右结构，按顺序能看到“石”和“兹”。从构字分工看，“石”提示意义类别，“兹”提供读音线索。看图时，左边带切面的矿石形成“石”，右边两束丝线被上方磁极牵成“兹”的弧线，石头产生吸力，组成“磁”。磁铁能吸引铁、镍等材料，也有南北两个磁极。这是一幅帮助记笔画和位置的记忆画面，不是完整字源。最后再读一遍：磁铁。",
   "voice_reference": "封",
   "timing_source": "punctuation-weighted-estimate",
-  "script_version": "child-first-v1",
-  "duration": 6.401066
+  "script_version": "child-first-v2",
+  "duration": 29.600181
 }

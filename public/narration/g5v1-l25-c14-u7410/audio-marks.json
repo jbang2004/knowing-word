@@ -3,151 +3,769 @@
     {
       "index": 0,
       "char": "琐",
-      "start": 0.171,
-      "end": 0.376
+      "start": 0.296,
+      "end": 0.522
     },
     {
       "index": 1,
       "char": "琐",
-      "start": 0.595,
-      "end": 0.8
+      "start": 0.745,
+      "end": 0.971
     },
     {
       "index": 2,
       "char": "事",
-      "start": 0.839,
-      "end": 1.043
+      "start": 1.014,
+      "end": 1.24
     },
     {
       "index": 3,
       "char": "的",
-      "start": 1.082,
-      "end": 1.287
+      "start": 1.284,
+      "end": 1.51
     },
     {
       "index": 4,
       "char": "琐",
-      "start": 1.326,
-      "end": 1.53
+      "start": 1.553,
+      "end": 1.779
     },
     {
       "index": 5,
-      "char": "它",
-      "start": 1.909,
-      "end": 2.114
+      "char": "读",
+      "start": 2.002,
+      "end": 2.228
     },
     {
       "index": 6,
-      "char": "是",
-      "start": 2.153,
-      "end": 2.357
+      "char": "s",
+      "start": 2.271,
+      "end": 2.497
     },
     {
       "index": 7,
-      "char": "左",
-      "start": 2.396,
-      "end": 2.601
+      "char": "u",
+      "start": 2.54,
+      "end": 2.766
     },
     {
       "index": 8,
-      "char": "右",
-      "start": 2.64,
-      "end": 2.845
+      "char": "ǒ",
+      "start": 2.809,
+      "end": 3.035
     },
     {
       "index": 9,
-      "char": "结",
-      "start": 2.884,
-      "end": 3.088
+      "char": "它",
+      "start": 3.418,
+      "end": 3.644
     },
     {
       "index": 10,
-      "char": "构",
-      "start": 3.127,
-      "end": 3.332
+      "char": "是",
+      "start": 3.688,
+      "end": 3.914
     },
     {
       "index": 11,
-      "char": "顺",
-      "start": 3.711,
-      "end": 3.915
+      "char": "左",
+      "start": 3.957,
+      "end": 4.183
     },
     {
       "index": 12,
-      "char": "着",
-      "start": 3.954,
-      "end": 4.159
+      "char": "右",
+      "start": 4.226,
+      "end": 4.452
     },
     {
       "index": 13,
-      "char": "图",
-      "start": 4.198,
-      "end": 4.402
+      "char": "结",
+      "start": 4.495,
+      "end": 4.721
     },
     {
       "index": 14,
-      "char": "记",
-      "start": 4.441,
-      "end": 4.646
+      "char": "构",
+      "start": 4.764,
+      "end": 4.99
     },
     {
       "index": 15,
-      "char": "住",
-      "start": 4.685,
-      "end": 4.89
+      "char": "按",
+      "start": 5.213,
+      "end": 5.439
     },
     {
       "index": 16,
-      "char": "整",
-      "start": 4.929,
-      "end": 5.133
+      "char": "顺",
+      "start": 5.482,
+      "end": 5.708
     },
     {
       "index": 17,
-      "char": "体",
-      "start": 5.172,
-      "end": 5.377
+      "char": "序",
+      "start": 5.751,
+      "end": 5.978
     },
     {
       "index": 18,
-      "char": "轮",
-      "start": 5.416,
-      "end": 5.62
+      "char": "能",
+      "start": 6.021,
+      "end": 6.247
     },
     {
       "index": 19,
-      "char": "廓",
-      "start": 5.659,
-      "end": 5.864
+      "char": "看",
+      "start": 6.29,
+      "end": 6.516
     },
     {
       "index": 20,
-      "char": "再",
-      "start": 6.243,
-      "end": 6.447
+      "char": "到",
+      "start": 6.559,
+      "end": 6.785
     },
     {
       "index": 21,
-      "char": "读",
-      "start": 6.486,
-      "end": 6.691
+      "char": "王",
+      "start": 6.828,
+      "end": 7.054
     },
     {
       "index": 22,
-      "char": "琐",
-      "start": 6.91,
-      "end": 7.115
+      "char": "和",
+      "start": 7.097,
+      "end": 7.323
     },
     {
       "index": 23,
+      "char": "⺌",
+      "start": 7.366,
+      "end": 7.592
+    },
+    {
+      "index": 24,
+      "char": "和",
+      "start": 7.635,
+      "end": 7.861
+    },
+    {
+      "index": 25,
+      "char": "贝",
+      "start": 7.905,
+      "end": 8.131
+    },
+    {
+      "index": 26,
+      "char": "从",
+      "start": 8.514,
+      "end": 8.74
+    },
+    {
+      "index": 27,
+      "char": "构",
+      "start": 8.783,
+      "end": 9.009
+    },
+    {
+      "index": 28,
+      "char": "字",
+      "start": 9.052,
+      "end": 9.278
+    },
+    {
+      "index": 29,
+      "char": "分",
+      "start": 9.321,
+      "end": 9.547
+    },
+    {
+      "index": 30,
+      "char": "工",
+      "start": 9.59,
+      "end": 9.816
+    },
+    {
+      "index": 31,
+      "char": "看",
+      "start": 9.859,
+      "end": 10.085
+    },
+    {
+      "index": 32,
+      "char": "王",
+      "start": 10.308,
+      "end": 10.535
+    },
+    {
+      "index": 33,
+      "char": "提",
+      "start": 10.578,
+      "end": 10.804
+    },
+    {
+      "index": 34,
+      "char": "示",
+      "start": 10.847,
+      "end": 11.073
+    },
+    {
+      "index": 35,
+      "char": "意",
+      "start": 11.116,
+      "end": 11.342
+    },
+    {
+      "index": 36,
+      "char": "义",
+      "start": 11.385,
+      "end": 11.611
+    },
+    {
+      "index": 37,
+      "char": "类",
+      "start": 11.654,
+      "end": 11.88
+    },
+    {
+      "index": 38,
+      "char": "别",
+      "start": 11.923,
+      "end": 12.149
+    },
+    {
+      "index": 39,
+      "char": "⺌",
+      "start": 12.372,
+      "end": 12.598
+    },
+    {
+      "index": 40,
+      "char": "提",
+      "start": 12.642,
+      "end": 12.868
+    },
+    {
+      "index": 41,
+      "char": "供",
+      "start": 12.911,
+      "end": 13.137
+    },
+    {
+      "index": 42,
+      "char": "读",
+      "start": 13.18,
+      "end": 13.406
+    },
+    {
+      "index": 43,
+      "char": "音",
+      "start": 13.449,
+      "end": 13.675
+    },
+    {
+      "index": 44,
+      "char": "线",
+      "start": 13.718,
+      "end": 13.944
+    },
+    {
+      "index": 45,
+      "char": "索",
+      "start": 13.987,
+      "end": 14.213
+    },
+    {
+      "index": 46,
+      "char": "看",
+      "start": 14.596,
+      "end": 14.822
+    },
+    {
+      "index": 47,
+      "char": "图",
+      "start": 14.866,
+      "end": 15.092
+    },
+    {
+      "index": 48,
+      "char": "时",
+      "start": 15.135,
+      "end": 15.361
+    },
+    {
+      "index": 49,
+      "char": "左",
+      "start": 15.584,
+      "end": 15.81
+    },
+    {
+      "index": 50,
+      "char": "边",
+      "start": 15.853,
+      "end": 16.079
+    },
+    {
+      "index": 51,
+      "char": "三",
+      "start": 16.122,
+      "end": 16.348
+    },
+    {
+      "index": 52,
+      "char": "层",
+      "start": 16.391,
+      "end": 16.617
+    },
+    {
+      "index": 53,
+      "char": "玉",
+      "start": 16.66,
+      "end": 16.886
+    },
+    {
+      "index": 54,
+      "char": "架",
+      "start": 16.929,
+      "end": 17.156
+    },
+    {
+      "index": 55,
+      "char": "形",
+      "start": 17.199,
+      "end": 17.425
+    },
+    {
+      "index": 56,
+      "char": "成",
+      "start": 17.468,
+      "end": 17.694
+    },
+    {
+      "index": 57,
+      "char": "王",
+      "start": 17.737,
+      "end": 17.963
+    },
+    {
+      "index": 58,
+      "char": "右",
+      "start": 18.186,
+      "end": 18.412
+    },
+    {
+      "index": 59,
+      "char": "上",
+      "start": 18.455,
+      "end": 18.681
+    },
+    {
+      "index": 60,
+      "char": "方",
+      "start": 18.724,
+      "end": 18.95
+    },
+    {
+      "index": 61,
+      "char": "三",
+      "start": 18.993,
+      "end": 19.219
+    },
+    {
+      "index": 62,
+      "char": "粒",
+      "start": 19.263,
+      "end": 19.489
+    },
+    {
+      "index": 63,
+      "char": "小",
+      "start": 19.532,
+      "end": 19.758
+    },
+    {
+      "index": 64,
+      "char": "光",
+      "start": 19.801,
+      "end": 20.027
+    },
+    {
+      "index": 65,
+      "char": "点",
+      "start": 20.07,
+      "end": 20.296
+    },
+    {
+      "index": 66,
+      "char": "形",
+      "start": 20.339,
+      "end": 20.565
+    },
+    {
+      "index": 67,
+      "char": "成",
+      "start": 20.608,
+      "end": 20.834
+    },
+    {
+      "index": 68,
+      "char": "⺌",
+      "start": 20.877,
+      "end": 21.103
+    },
+    {
+      "index": 69,
+      "char": "右",
+      "start": 21.326,
+      "end": 21.553
+    },
+    {
+      "index": 70,
+      "char": "下",
+      "start": 21.596,
+      "end": 21.822
+    },
+    {
+      "index": 71,
+      "char": "方",
+      "start": 21.865,
+      "end": 22.091
+    },
+    {
+      "index": 72,
+      "char": "收",
+      "start": 22.134,
+      "end": 22.36
+    },
+    {
+      "index": 73,
+      "char": "纳",
+      "start": 22.403,
+      "end": 22.629
+    },
+    {
+      "index": 74,
+      "char": "盒",
+      "start": 22.672,
+      "end": 22.898
+    },
+    {
+      "index": 75,
+      "char": "形",
+      "start": 22.941,
+      "end": 23.167
+    },
+    {
+      "index": 76,
+      "char": "成",
+      "start": 23.21,
+      "end": 23.437
+    },
+    {
+      "index": 77,
+      "char": "贝",
+      "start": 23.48,
+      "end": 23.706
+    },
+    {
+      "index": 78,
+      "char": "一",
+      "start": 23.929,
+      "end": 24.155
+    },
+    {
+      "index": 79,
+      "char": "件",
+      "start": 24.198,
+      "end": 24.424
+    },
+    {
+      "index": 80,
+      "char": "件",
+      "start": 24.467,
+      "end": 24.693
+    },
+    {
+      "index": 81,
+      "char": "小",
+      "start": 24.736,
+      "end": 24.962
+    },
+    {
+      "index": 82,
+      "char": "物",
+      "start": 25.005,
+      "end": 25.231
+    },
+    {
+      "index": 83,
+      "char": "合",
+      "start": 25.274,
+      "end": 25.5
+    },
+    {
+      "index": 84,
+      "char": "成",
+      "start": 25.544,
+      "end": 25.77
+    },
+    {
+      "index": 85,
+      "char": "琐",
+      "start": 25.813,
+      "end": 26.039
+    },
+    {
+      "index": 86,
+      "char": "琐",
+      "start": 26.422,
+      "end": 26.648
+    },
+    {
+      "index": 87,
       "char": "事",
-      "start": 7.154,
-      "end": 7.358
+      "start": 26.691,
+      "end": 26.917
+    },
+    {
+      "index": 88,
+      "char": "是",
+      "start": 26.96,
+      "end": 27.186
+    },
+    {
+      "index": 89,
+      "char": "细",
+      "start": 27.229,
+      "end": 27.455
+    },
+    {
+      "index": 90,
+      "char": "小",
+      "start": 27.498,
+      "end": 27.724
+    },
+    {
+      "index": 91,
+      "char": "零",
+      "start": 27.947,
+      "end": 28.174
+    },
+    {
+      "index": 92,
+      "char": "碎",
+      "start": 28.217,
+      "end": 28.443
+    },
+    {
+      "index": 93,
+      "char": "的",
+      "start": 28.486,
+      "end": 28.712
+    },
+    {
+      "index": 94,
+      "char": "事",
+      "start": 28.755,
+      "end": 28.981
+    },
+    {
+      "index": 95,
+      "char": "情",
+      "start": 29.024,
+      "end": 29.25
+    },
+    {
+      "index": 96,
+      "char": "这",
+      "start": 29.633,
+      "end": 29.859
+    },
+    {
+      "index": 97,
+      "char": "是",
+      "start": 29.902,
+      "end": 30.128
+    },
+    {
+      "index": 98,
+      "char": "一",
+      "start": 30.171,
+      "end": 30.397
+    },
+    {
+      "index": 99,
+      "char": "幅",
+      "start": 30.441,
+      "end": 30.667
+    },
+    {
+      "index": 100,
+      "char": "帮",
+      "start": 30.71,
+      "end": 30.936
+    },
+    {
+      "index": 101,
+      "char": "助",
+      "start": 30.979,
+      "end": 31.205
+    },
+    {
+      "index": 102,
+      "char": "记",
+      "start": 31.248,
+      "end": 31.474
+    },
+    {
+      "index": 103,
+      "char": "笔",
+      "start": 31.517,
+      "end": 31.743
+    },
+    {
+      "index": 104,
+      "char": "画",
+      "start": 31.786,
+      "end": 32.012
+    },
+    {
+      "index": 105,
+      "char": "和",
+      "start": 32.055,
+      "end": 32.281
+    },
+    {
+      "index": 106,
+      "char": "位",
+      "start": 32.324,
+      "end": 32.551
+    },
+    {
+      "index": 107,
+      "char": "置",
+      "start": 32.594,
+      "end": 32.82
+    },
+    {
+      "index": 108,
+      "char": "的",
+      "start": 32.863,
+      "end": 33.089
+    },
+    {
+      "index": 109,
+      "char": "记",
+      "start": 33.132,
+      "end": 33.358
+    },
+    {
+      "index": 110,
+      "char": "忆",
+      "start": 33.401,
+      "end": 33.627
+    },
+    {
+      "index": 111,
+      "char": "画",
+      "start": 33.67,
+      "end": 33.896
+    },
+    {
+      "index": 112,
+      "char": "面",
+      "start": 33.939,
+      "end": 34.165
+    },
+    {
+      "index": 113,
+      "char": "不",
+      "start": 34.388,
+      "end": 34.615
+    },
+    {
+      "index": 114,
+      "char": "是",
+      "start": 34.658,
+      "end": 34.884
+    },
+    {
+      "index": 115,
+      "char": "完",
+      "start": 34.927,
+      "end": 35.153
+    },
+    {
+      "index": 116,
+      "char": "整",
+      "start": 35.196,
+      "end": 35.422
+    },
+    {
+      "index": 117,
+      "char": "字",
+      "start": 35.465,
+      "end": 35.691
+    },
+    {
+      "index": 118,
+      "char": "源",
+      "start": 35.734,
+      "end": 35.96
+    },
+    {
+      "index": 119,
+      "char": "最",
+      "start": 36.343,
+      "end": 36.569
+    },
+    {
+      "index": 120,
+      "char": "后",
+      "start": 36.612,
+      "end": 36.838
+    },
+    {
+      "index": 121,
+      "char": "再",
+      "start": 36.882,
+      "end": 37.108
+    },
+    {
+      "index": 122,
+      "char": "读",
+      "start": 37.151,
+      "end": 37.377
+    },
+    {
+      "index": 123,
+      "char": "一",
+      "start": 37.42,
+      "end": 37.646
+    },
+    {
+      "index": 124,
+      "char": "遍",
+      "start": 37.689,
+      "end": 37.915
+    },
+    {
+      "index": 125,
+      "char": "琐",
+      "start": 38.138,
+      "end": 38.364
+    },
+    {
+      "index": 126,
+      "char": "事",
+      "start": 38.407,
+      "end": 38.633
     }
   ],
-  "transcript": "琐，“琐事”的“琐”。它是左右结构。顺着图记住整体轮廓。再读：琐事。",
+  "transcript": "琐，“琐事”的“琐”，读suǒ。它是左右结构，按顺序能看到“王”和“⺌”和“贝”。从构字分工看，“王”提示意义类别，“⺌”提供读音线索。看图时，左边三层玉架形成“王”，右上方三粒小光点形成“⺌”，右下方收纳盒形成“贝”，一件件小物合成“琐”。琐事是细小、零碎的事情。这是一幅帮助记笔画和位置的记忆画面，不是完整字源。最后再读一遍：琐事。",
   "voice_reference": "封",
   "timing_source": "punctuation-weighted-estimate",
-  "script_version": "child-first-v1",
-  "duration": 7.840181
+  "script_version": "child-first-v2",
+  "duration": 39.200181
 }

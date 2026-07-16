@@ -3,151 +3,733 @@
     {
       "index": 0,
       "char": "衰",
-      "start": 0.204,
-      "end": 0.457
+      "start": 0.294,
+      "end": 0.484
     },
     {
       "index": 1,
       "char": "衰",
-      "start": 0.685,
-      "end": 0.938
+      "start": 0.7,
+      "end": 0.89
     },
     {
       "index": 2,
       "char": "老",
-      "start": 0.987,
-      "end": 1.24
+      "start": 0.926,
+      "end": 1.116
     },
     {
       "index": 3,
       "char": "的",
-      "start": 1.288,
-      "end": 1.541
+      "start": 1.152,
+      "end": 1.343
     },
     {
       "index": 4,
       "char": "衰",
-      "start": 1.59,
-      "end": 1.843
+      "start": 1.379,
+      "end": 1.569
     },
     {
       "index": 5,
-      "char": "它",
-      "start": 2.231,
-      "end": 2.484
+      "char": "读",
+      "start": 1.785,
+      "end": 1.975
     },
     {
       "index": 6,
-      "char": "是",
-      "start": 2.533,
-      "end": 2.786
+      "char": "s",
+      "start": 2.011,
+      "end": 2.201
     },
     {
       "index": 7,
-      "char": "穿",
-      "start": 2.834,
-      "end": 3.087
+      "char": "h",
+      "start": 2.238,
+      "end": 2.428
     },
     {
       "index": 8,
-      "char": "插",
-      "start": 3.135,
-      "end": 3.389
+      "char": "u",
+      "start": 2.464,
+      "end": 2.654
     },
     {
       "index": 9,
-      "char": "结",
-      "start": 3.437,
-      "end": 3.69
+      "char": "ā",
+      "start": 2.69,
+      "end": 2.88
     },
     {
       "index": 10,
-      "char": "构",
-      "start": 3.738,
-      "end": 3.992
+      "char": "i",
+      "start": 2.916,
+      "end": 3.106
     },
     {
       "index": 11,
-      "char": "顺",
-      "start": 4.38,
-      "end": 4.633
+      "char": "它",
+      "start": 3.483,
+      "end": 3.673
     },
     {
       "index": 12,
-      "char": "着",
-      "start": 4.681,
-      "end": 4.935
+      "char": "是",
+      "start": 3.709,
+      "end": 3.899
     },
     {
       "index": 13,
-      "char": "图",
-      "start": 4.983,
-      "end": 5.236
+      "char": "独",
+      "start": 3.935,
+      "end": 4.125
     },
     {
       "index": 14,
-      "char": "记",
-      "start": 5.284,
-      "end": 5.538
+      "char": "体",
+      "start": 4.162,
+      "end": 4.352
     },
     {
       "index": 15,
-      "char": "住",
-      "start": 5.586,
-      "end": 5.839
+      "char": "结",
+      "start": 4.388,
+      "end": 4.578
     },
     {
       "index": 16,
-      "char": "整",
-      "start": 5.887,
-      "end": 6.141
+      "char": "构",
+      "start": 4.614,
+      "end": 4.804
     },
     {
       "index": 17,
-      "char": "体",
-      "start": 6.189,
-      "end": 6.442
+      "char": "按",
+      "start": 5.02,
+      "end": 5.21
     },
     {
       "index": 18,
-      "char": "轮",
-      "start": 6.49,
-      "end": 6.743
+      "char": "顺",
+      "start": 5.247,
+      "end": 5.437
     },
     {
       "index": 19,
-      "char": "廓",
-      "start": 6.792,
-      "end": 7.045
+      "char": "序",
+      "start": 5.473,
+      "end": 5.663
     },
     {
       "index": 20,
-      "char": "再",
-      "start": 7.433,
-      "end": 7.686
+      "char": "能",
+      "start": 5.699,
+      "end": 5.889
     },
     {
       "index": 21,
-      "char": "读",
-      "start": 7.735,
-      "end": 7.988
+      "char": "看",
+      "start": 5.926,
+      "end": 6.116
     },
     {
       "index": 22,
-      "char": "衰",
-      "start": 8.216,
-      "end": 8.469
+      "char": "到",
+      "start": 6.152,
+      "end": 6.342
     },
     {
       "index": 23,
+      "char": "衰",
+      "start": 6.378,
+      "end": 6.568
+    },
+    {
+      "index": 24,
+      "char": "这",
+      "start": 6.944,
+      "end": 7.134
+    },
+    {
+      "index": 25,
+      "char": "个",
+      "start": 7.171,
+      "end": 7.361
+    },
+    {
+      "index": 26,
+      "char": "字",
+      "start": 7.397,
+      "end": 7.587
+    },
+    {
+      "index": 27,
+      "char": "适",
+      "start": 7.623,
+      "end": 7.813
+    },
+    {
+      "index": 28,
+      "char": "合",
+      "start": 7.849,
+      "end": 8.04
+    },
+    {
+      "index": 29,
+      "char": "顺",
+      "start": 8.076,
+      "end": 8.266
+    },
+    {
+      "index": 30,
+      "char": "着",
+      "start": 8.302,
+      "end": 8.492
+    },
+    {
+      "index": 31,
+      "char": "完",
+      "start": 8.528,
+      "end": 8.718
+    },
+    {
+      "index": 32,
+      "char": "整",
+      "start": 8.755,
+      "end": 8.945
+    },
+    {
+      "index": 33,
+      "char": "轮",
+      "start": 8.981,
+      "end": 9.171
+    },
+    {
+      "index": 34,
+      "char": "廓",
+      "start": 9.207,
+      "end": 9.397
+    },
+    {
+      "index": 35,
+      "char": "来",
+      "start": 9.433,
+      "end": 9.624
+    },
+    {
+      "index": 36,
+      "char": "记",
+      "start": 9.66,
+      "end": 9.85
+    },
+    {
+      "index": 37,
+      "char": "看",
+      "start": 10.226,
+      "end": 10.416
+    },
+    {
+      "index": 38,
+      "char": "图",
+      "start": 10.452,
+      "end": 10.642
+    },
+    {
+      "index": 39,
+      "char": "时",
+      "start": 10.679,
+      "end": 10.869
+    },
+    {
+      "index": 40,
+      "char": "一",
+      "start": 11.085,
+      "end": 11.275
+    },
+    {
+      "index": 41,
+      "char": "件",
+      "start": 11.311,
+      "end": 11.501
+    },
+    {
+      "index": 42,
+      "char": "长",
+      "start": 11.537,
+      "end": 11.728
+    },
+    {
+      "index": 43,
+      "char": "衣",
+      "start": 11.764,
+      "end": 11.954
+    },
+    {
+      "index": 44,
+      "char": "从",
+      "start": 11.99,
+      "end": 12.18
+    },
+    {
+      "index": 45,
+      "char": "肩",
+      "start": 12.216,
+      "end": 12.406
+    },
+    {
+      "index": 46,
+      "char": "领",
+      "start": 12.443,
+      "end": 12.633
+    },
+    {
+      "index": 47,
+      "char": "到",
+      "start": 12.669,
+      "end": 12.859
+    },
+    {
+      "index": 48,
+      "char": "下",
+      "start": 12.895,
+      "end": 13.085
+    },
+    {
+      "index": 49,
+      "char": "摆",
+      "start": 13.121,
+      "end": 13.311
+    },
+    {
+      "index": 50,
+      "char": "沿",
+      "start": 13.348,
+      "end": 13.538
+    },
+    {
+      "index": 51,
+      "char": "衰",
+      "start": 13.574,
+      "end": 13.764
+    },
+    {
+      "index": 52,
+      "char": "的",
+      "start": 13.8,
+      "end": 13.99
+    },
+    {
+      "index": 53,
+      "char": "笔",
+      "start": 14.027,
+      "end": 14.217
+    },
+    {
+      "index": 54,
+      "char": "画",
+      "start": 14.253,
+      "end": 14.443
+    },
+    {
+      "index": 55,
+      "char": "垂",
+      "start": 14.479,
+      "end": 14.669
+    },
+    {
+      "index": 56,
+      "char": "落",
+      "start": 14.705,
+      "end": 14.895
+    },
+    {
+      "index": 57,
+      "char": "中",
+      "start": 15.112,
+      "end": 15.302
+    },
+    {
+      "index": 58,
+      "char": "央",
+      "start": 15.338,
+      "end": 15.528
+    },
+    {
+      "index": 59,
+      "char": "叶",
+      "start": 15.564,
+      "end": 15.754
+    },
+    {
+      "index": 60,
+      "char": "片",
+      "start": 15.791,
+      "end": 15.981
+    },
+    {
+      "index": 61,
+      "char": "由",
+      "start": 16.017,
+      "end": 16.207
+    },
+    {
+      "index": 62,
+      "char": "鲜",
+      "start": 16.243,
+      "end": 16.433
+    },
+    {
+      "index": 63,
+      "char": "绿",
+      "start": 16.469,
+      "end": 16.659
+    },
+    {
+      "index": 64,
+      "char": "变",
+      "start": 16.696,
+      "end": 16.886
+    },
+    {
+      "index": 65,
+      "char": "淡",
+      "start": 16.922,
+      "end": 17.112
+    },
+    {
+      "index": 66,
+      "char": "表",
+      "start": 17.328,
+      "end": 17.518
+    },
+    {
+      "index": 67,
+      "char": "现",
+      "start": 17.555,
+      "end": 17.745
+    },
+    {
+      "index": 68,
+      "char": "岁",
+      "start": 17.781,
+      "end": 17.971
+    },
+    {
+      "index": 69,
+      "char": "月",
+      "start": 18.007,
+      "end": 18.197
+    },
+    {
+      "index": 70,
+      "char": "变",
+      "start": 18.233,
+      "end": 18.423
+    },
+    {
+      "index": 71,
+      "char": "化",
+      "start": 18.46,
+      "end": 18.65
+    },
+    {
+      "index": 72,
+      "char": "衰",
+      "start": 19.026,
+      "end": 19.216
+    },
+    {
+      "index": 73,
       "char": "老",
-      "start": 8.518,
-      "end": 8.771
+      "start": 19.252,
+      "end": 19.442
+    },
+    {
+      "index": 74,
+      "char": "表",
+      "start": 19.478,
+      "end": 19.669
+    },
+    {
+      "index": 75,
+      "char": "示",
+      "start": 19.705,
+      "end": 19.895
+    },
+    {
+      "index": 76,
+      "char": "身",
+      "start": 19.931,
+      "end": 20.121
+    },
+    {
+      "index": 77,
+      "char": "体",
+      "start": 20.157,
+      "end": 20.347
+    },
+    {
+      "index": 78,
+      "char": "机",
+      "start": 20.384,
+      "end": 20.574
+    },
+    {
+      "index": 79,
+      "char": "能",
+      "start": 20.61,
+      "end": 20.8
+    },
+    {
+      "index": 80,
+      "char": "随",
+      "start": 20.836,
+      "end": 21.026
+    },
+    {
+      "index": 81,
+      "char": "着",
+      "start": 21.062,
+      "end": 21.253
+    },
+    {
+      "index": 82,
+      "char": "年",
+      "start": 21.289,
+      "end": 21.479
+    },
+    {
+      "index": 83,
+      "char": "岁",
+      "start": 21.515,
+      "end": 21.705
+    },
+    {
+      "index": 84,
+      "char": "增",
+      "start": 21.741,
+      "end": 21.931
+    },
+    {
+      "index": 85,
+      "char": "长",
+      "start": 21.968,
+      "end": 22.158
+    },
+    {
+      "index": 86,
+      "char": "逐",
+      "start": 22.194,
+      "end": 22.384
+    },
+    {
+      "index": 87,
+      "char": "渐",
+      "start": 22.42,
+      "end": 22.61
+    },
+    {
+      "index": 88,
+      "char": "减",
+      "start": 22.646,
+      "end": 22.837
+    },
+    {
+      "index": 89,
+      "char": "弱",
+      "start": 22.873,
+      "end": 23.063
+    },
+    {
+      "index": 90,
+      "char": "这",
+      "start": 23.439,
+      "end": 23.629
+    },
+    {
+      "index": 91,
+      "char": "是",
+      "start": 23.665,
+      "end": 23.855
+    },
+    {
+      "index": 92,
+      "char": "一",
+      "start": 23.892,
+      "end": 24.082
+    },
+    {
+      "index": 93,
+      "char": "幅",
+      "start": 24.118,
+      "end": 24.308
+    },
+    {
+      "index": 94,
+      "char": "帮",
+      "start": 24.344,
+      "end": 24.534
+    },
+    {
+      "index": 95,
+      "char": "助",
+      "start": 24.57,
+      "end": 24.76
+    },
+    {
+      "index": 96,
+      "char": "记",
+      "start": 24.797,
+      "end": 24.987
+    },
+    {
+      "index": 97,
+      "char": "笔",
+      "start": 25.023,
+      "end": 25.213
+    },
+    {
+      "index": 98,
+      "char": "画",
+      "start": 25.249,
+      "end": 25.439
+    },
+    {
+      "index": 99,
+      "char": "和",
+      "start": 25.476,
+      "end": 25.666
+    },
+    {
+      "index": 100,
+      "char": "位",
+      "start": 25.702,
+      "end": 25.892
+    },
+    {
+      "index": 101,
+      "char": "置",
+      "start": 25.928,
+      "end": 26.118
+    },
+    {
+      "index": 102,
+      "char": "的",
+      "start": 26.154,
+      "end": 26.344
+    },
+    {
+      "index": 103,
+      "char": "记",
+      "start": 26.381,
+      "end": 26.571
+    },
+    {
+      "index": 104,
+      "char": "忆",
+      "start": 26.607,
+      "end": 26.797
+    },
+    {
+      "index": 105,
+      "char": "画",
+      "start": 26.833,
+      "end": 27.023
+    },
+    {
+      "index": 106,
+      "char": "面",
+      "start": 27.06,
+      "end": 27.25
+    },
+    {
+      "index": 107,
+      "char": "不",
+      "start": 27.466,
+      "end": 27.656
+    },
+    {
+      "index": 108,
+      "char": "是",
+      "start": 27.692,
+      "end": 27.882
+    },
+    {
+      "index": 109,
+      "char": "完",
+      "start": 27.918,
+      "end": 28.108
+    },
+    {
+      "index": 110,
+      "char": "整",
+      "start": 28.145,
+      "end": 28.335
+    },
+    {
+      "index": 111,
+      "char": "字",
+      "start": 28.371,
+      "end": 28.561
+    },
+    {
+      "index": 112,
+      "char": "源",
+      "start": 28.597,
+      "end": 28.787
+    },
+    {
+      "index": 113,
+      "char": "最",
+      "start": 29.163,
+      "end": 29.354
+    },
+    {
+      "index": 114,
+      "char": "后",
+      "start": 29.39,
+      "end": 29.58
+    },
+    {
+      "index": 115,
+      "char": "再",
+      "start": 29.616,
+      "end": 29.806
+    },
+    {
+      "index": 116,
+      "char": "读",
+      "start": 29.842,
+      "end": 30.032
+    },
+    {
+      "index": 117,
+      "char": "一",
+      "start": 30.069,
+      "end": 30.259
+    },
+    {
+      "index": 118,
+      "char": "遍",
+      "start": 30.295,
+      "end": 30.485
+    },
+    {
+      "index": 119,
+      "char": "衰",
+      "start": 30.701,
+      "end": 30.891
+    },
+    {
+      "index": 120,
+      "char": "老",
+      "start": 30.927,
+      "end": 31.118
     }
   ],
-  "transcript": "衰，“衰老”的“衰”。它是穿插结构。顺着图记住整体轮廓。再读：衰老。",
+  "transcript": "衰，“衰老”的“衰”，读shuāi。它是独体结构，按顺序能看到“衰”。这个字适合顺着完整轮廓来记。看图时，一件长衣从肩领到下摆沿“衰”的笔画垂落，中央叶片由鲜绿变淡，表现岁月变化。衰老表示身体机能随着年岁增长逐渐减弱。这是一幅帮助记笔画和位置的记忆画面，不是完整字源。最后再读一遍：衰老。",
   "voice_reference": "封",
   "timing_source": "punctuation-weighted-estimate",
-  "script_version": "child-first-v1",
-  "duration": 9.280181
+  "script_version": "child-first-v2",
+  "duration": 31.680181
 }

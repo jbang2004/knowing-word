@@ -3,151 +3,781 @@
     {
       "index": 0,
       "char": "凯",
-      "start": 0.218,
-      "end": 0.486
+      "start": 0.295,
+      "end": 0.506
     },
     {
       "index": 1,
       "char": "凯",
-      "start": 0.717,
-      "end": 0.986
+      "start": 0.726,
+      "end": 0.938
     },
     {
       "index": 2,
       "char": "旋",
-      "start": 1.037,
-      "end": 1.306
+      "start": 0.978,
+      "end": 1.189
     },
     {
       "index": 3,
       "char": "的",
-      "start": 1.357,
-      "end": 1.625
+      "start": 1.229,
+      "end": 1.44
     },
     {
       "index": 4,
       "char": "凯",
-      "start": 1.676,
-      "end": 1.945
+      "start": 1.48,
+      "end": 1.691
     },
     {
       "index": 5,
-      "char": "它",
-      "start": 2.336,
-      "end": 2.605
+      "char": "读",
+      "start": 1.912,
+      "end": 2.123
     },
     {
       "index": 6,
-      "char": "是",
-      "start": 2.656,
-      "end": 2.924
+      "char": "k",
+      "start": 2.163,
+      "end": 2.374
     },
     {
       "index": 7,
-      "char": "左",
-      "start": 2.976,
-      "end": 3.244
+      "char": "ǎ",
+      "start": 2.414,
+      "end": 2.625
     },
     {
       "index": 8,
-      "char": "右",
-      "start": 3.295,
-      "end": 3.564
+      "char": "i",
+      "start": 2.666,
+      "end": 2.877
     },
     {
       "index": 9,
-      "char": "结",
-      "start": 3.615,
-      "end": 3.884
+      "char": "它",
+      "start": 3.257,
+      "end": 3.468
     },
     {
       "index": 10,
-      "char": "构",
-      "start": 3.935,
-      "end": 4.203
+      "char": "是",
+      "start": 3.508,
+      "end": 3.719
     },
     {
       "index": 11,
-      "char": "看",
-      "start": 4.594,
-      "end": 4.863
+      "char": "左",
+      "start": 3.76,
+      "end": 3.971
     },
     {
       "index": 12,
-      "char": "图",
-      "start": 4.914,
-      "end": 5.183
+      "char": "右",
+      "start": 4.011,
+      "end": 4.222
     },
     {
       "index": 13,
-      "char": "找",
-      "start": 5.234,
-      "end": 5.502
+      "char": "结",
+      "start": 4.262,
+      "end": 4.473
     },
     {
       "index": 14,
-      "char": "部",
-      "start": 5.553,
-      "end": 5.822
+      "char": "构",
+      "start": 4.514,
+      "end": 4.725
     },
     {
       "index": 15,
-      "char": "件",
-      "start": 5.873,
-      "end": 6.142
+      "char": "按",
+      "start": 4.945,
+      "end": 5.156
     },
     {
       "index": 16,
-      "char": "合",
-      "start": 6.373,
-      "end": 6.641
+      "char": "顺",
+      "start": 5.196,
+      "end": 5.407
     },
     {
       "index": 17,
-      "char": "成",
-      "start": 6.693,
-      "end": 6.961
+      "char": "序",
+      "start": 5.448,
+      "end": 5.659
     },
     {
       "index": 18,
-      "char": "字",
-      "start": 7.012,
-      "end": 7.281
+      "char": "能",
+      "start": 5.699,
+      "end": 5.91
     },
     {
       "index": 19,
-      "char": "形",
-      "start": 7.332,
-      "end": 7.601
+      "char": "看",
+      "start": 5.95,
+      "end": 6.161
     },
     {
       "index": 20,
-      "char": "再",
-      "start": 7.992,
-      "end": 8.26
+      "char": "到",
+      "start": 6.201,
+      "end": 6.413
     },
     {
       "index": 21,
-      "char": "读",
-      "start": 8.311,
-      "end": 8.58
+      "char": "岂",
+      "start": 6.453,
+      "end": 6.664
     },
     {
       "index": 22,
-      "char": "凯",
-      "start": 8.811,
-      "end": 9.08
+      "char": "和",
+      "start": 6.704,
+      "end": 6.915
     },
     {
       "index": 23,
+      "char": "几",
+      "start": 6.955,
+      "end": 7.167
+    },
+    {
+      "index": 24,
+      "char": "从",
+      "start": 7.547,
+      "end": 7.758
+    },
+    {
+      "index": 25,
+      "char": "构",
+      "start": 7.798,
+      "end": 8.009
+    },
+    {
+      "index": 26,
+      "char": "字",
+      "start": 8.049,
+      "end": 8.26
+    },
+    {
+      "index": 27,
+      "char": "分",
+      "start": 8.301,
+      "end": 8.512
+    },
+    {
+      "index": 28,
+      "char": "工",
+      "start": 8.552,
+      "end": 8.763
+    },
+    {
+      "index": 29,
+      "char": "看",
+      "start": 8.803,
+      "end": 9.014
+    },
+    {
+      "index": 30,
+      "char": "几",
+      "start": 9.235,
+      "end": 9.446
+    },
+    {
+      "index": 31,
+      "char": "先",
+      "start": 9.486,
+      "end": 9.697
+    },
+    {
+      "index": 32,
+      "char": "提",
+      "start": 9.737,
+      "end": 9.948
+    },
+    {
+      "index": 33,
+      "char": "示",
+      "start": 9.989,
+      "end": 10.2
+    },
+    {
+      "index": 34,
+      "char": "意",
+      "start": 10.24,
+      "end": 10.451
+    },
+    {
+      "index": 35,
+      "char": "义",
+      "start": 10.491,
+      "end": 10.702
+    },
+    {
+      "index": 36,
+      "char": "类",
+      "start": 10.743,
+      "end": 10.954
+    },
+    {
+      "index": 37,
+      "char": "别",
+      "start": 10.994,
+      "end": 11.205
+    },
+    {
+      "index": 38,
+      "char": "其",
+      "start": 11.425,
+      "end": 11.636
+    },
+    {
+      "index": 39,
+      "char": "余",
+      "start": 11.677,
+      "end": 11.888
+    },
+    {
+      "index": 40,
+      "char": "部",
+      "start": 11.928,
+      "end": 12.139
+    },
+    {
+      "index": 41,
+      "char": "件",
+      "start": 12.179,
+      "end": 12.39
+    },
+    {
+      "index": 42,
+      "char": "补",
+      "start": 12.43,
+      "end": 12.642
+    },
+    {
+      "index": 43,
+      "char": "足",
+      "start": 12.682,
+      "end": 12.893
+    },
+    {
+      "index": 44,
+      "char": "字",
+      "start": 12.933,
+      "end": 13.144
+    },
+    {
+      "index": 45,
+      "char": "形",
+      "start": 13.184,
+      "end": 13.396
+    },
+    {
+      "index": 46,
+      "char": "看",
+      "start": 13.776,
+      "end": 13.987
+    },
+    {
+      "index": 47,
+      "char": "图",
+      "start": 14.027,
+      "end": 14.238
+    },
+    {
+      "index": 48,
+      "char": "时",
+      "start": 14.278,
+      "end": 14.49
+    },
+    {
+      "index": 49,
+      "char": "左",
+      "start": 14.71,
+      "end": 14.921
+    },
+    {
+      "index": 50,
+      "char": "边",
+      "start": 14.961,
+      "end": 15.172
+    },
+    {
+      "index": 51,
+      "char": "山",
+      "start": 15.212,
+      "end": 15.423
+    },
+    {
+      "index": 52,
+      "char": "形",
+      "start": 15.464,
+      "end": 15.675
+    },
+    {
+      "index": 53,
+      "char": "胜",
+      "start": 15.715,
+      "end": 15.926
+    },
+    {
+      "index": 54,
+      "char": "利",
+      "start": 15.966,
+      "end": 16.177
+    },
+    {
+      "index": 55,
+      "char": "台",
+      "start": 16.218,
+      "end": 16.429
+    },
+    {
+      "index": 56,
+      "char": "和",
+      "start": 16.469,
+      "end": 16.68
+    },
+    {
+      "index": 57,
+      "char": "鼓",
+      "start": 16.72,
+      "end": 16.931
+    },
+    {
+      "index": 58,
+      "char": "架",
+      "start": 16.972,
+      "end": 17.183
+    },
+    {
+      "index": 59,
+      "char": "沿",
+      "start": 17.223,
+      "end": 17.434
+    },
+    {
+      "index": 60,
+      "char": "岂",
+      "start": 17.474,
+      "end": 17.685
+    },
+    {
+      "index": 61,
+      "char": "搭",
+      "start": 17.726,
+      "end": 17.937
+    },
+    {
+      "index": 62,
+      "char": "起",
+      "start": 17.977,
+      "end": 18.188
+    },
+    {
+      "index": 63,
+      "char": "右",
+      "start": 18.408,
+      "end": 18.619
+    },
+    {
+      "index": 64,
+      "char": "边",
+      "start": 18.66,
+      "end": 18.871
+    },
+    {
+      "index": 65,
+      "char": "风",
+      "start": 18.911,
+      "end": 19.122
+    },
+    {
+      "index": 66,
+      "char": "帆",
+      "start": 19.162,
+      "end": 19.373
+    },
+    {
+      "index": 67,
+      "char": "与",
+      "start": 19.413,
+      "end": 19.625
+    },
+    {
+      "index": 68,
+      "char": "弯",
+      "start": 19.665,
+      "end": 19.876
+    },
+    {
+      "index": 69,
+      "char": "脚",
+      "start": 19.916,
+      "end": 20.127
+    },
+    {
+      "index": 70,
+      "char": "形",
+      "start": 20.167,
+      "end": 20.379
+    },
+    {
+      "index": 71,
+      "char": "成",
+      "start": 20.419,
+      "end": 20.63
+    },
+    {
+      "index": 72,
+      "char": "几",
+      "start": 20.67,
+      "end": 20.881
+    },
+    {
+      "index": 73,
+      "char": "旗",
+      "start": 21.101,
+      "end": 21.312
+    },
+    {
+      "index": 74,
+      "char": "帜",
+      "start": 21.353,
+      "end": 21.564
+    },
+    {
+      "index": 75,
+      "char": "乘",
+      "start": 21.604,
+      "end": 21.815
+    },
+    {
+      "index": 76,
+      "char": "风",
+      "start": 21.855,
+      "end": 22.066
+    },
+    {
+      "index": 77,
+      "char": "归",
+      "start": 22.107,
+      "end": 22.318
+    },
+    {
+      "index": 78,
+      "char": "来",
+      "start": 22.358,
+      "end": 22.569
+    },
+    {
+      "index": 79,
+      "char": "组",
+      "start": 22.789,
+      "end": 23
+    },
+    {
+      "index": 80,
+      "char": "成",
+      "start": 23.041,
+      "end": 23.252
+    },
+    {
+      "index": 81,
+      "char": "凯",
+      "start": 23.292,
+      "end": 23.503
+    },
+    {
+      "index": 82,
+      "char": "凯",
+      "start": 23.883,
+      "end": 24.094
+    },
+    {
+      "index": 83,
       "char": "旋",
-      "start": 9.131,
-      "end": 9.399
+      "start": 24.135,
+      "end": 24.346
+    },
+    {
+      "index": 84,
+      "char": "指",
+      "start": 24.386,
+      "end": 24.597
+    },
+    {
+      "index": 85,
+      "char": "军",
+      "start": 24.637,
+      "end": 24.848
+    },
+    {
+      "index": 86,
+      "char": "队",
+      "start": 24.889,
+      "end": 25.1
+    },
+    {
+      "index": 87,
+      "char": "获",
+      "start": 25.14,
+      "end": 25.351
+    },
+    {
+      "index": 88,
+      "char": "胜",
+      "start": 25.391,
+      "end": 25.602
+    },
+    {
+      "index": 89,
+      "char": "归",
+      "start": 25.642,
+      "end": 25.854
+    },
+    {
+      "index": 90,
+      "char": "来",
+      "start": 25.894,
+      "end": 26.105
+    },
+    {
+      "index": 91,
+      "char": "也",
+      "start": 26.325,
+      "end": 26.536
+    },
+    {
+      "index": 92,
+      "char": "泛",
+      "start": 26.576,
+      "end": 26.788
+    },
+    {
+      "index": 93,
+      "char": "指",
+      "start": 26.828,
+      "end": 27.039
+    },
+    {
+      "index": 94,
+      "char": "胜",
+      "start": 27.079,
+      "end": 27.29
+    },
+    {
+      "index": 95,
+      "char": "利",
+      "start": 27.33,
+      "end": 27.542
+    },
+    {
+      "index": 96,
+      "char": "归",
+      "start": 27.582,
+      "end": 27.793
+    },
+    {
+      "index": 97,
+      "char": "来",
+      "start": 27.833,
+      "end": 28.044
+    },
+    {
+      "index": 98,
+      "char": "这",
+      "start": 28.424,
+      "end": 28.635
+    },
+    {
+      "index": 99,
+      "char": "是",
+      "start": 28.676,
+      "end": 28.887
+    },
+    {
+      "index": 100,
+      "char": "一",
+      "start": 28.927,
+      "end": 29.138
+    },
+    {
+      "index": 101,
+      "char": "幅",
+      "start": 29.178,
+      "end": 29.389
+    },
+    {
+      "index": 102,
+      "char": "帮",
+      "start": 29.43,
+      "end": 29.641
+    },
+    {
+      "index": 103,
+      "char": "助",
+      "start": 29.681,
+      "end": 29.892
+    },
+    {
+      "index": 104,
+      "char": "记",
+      "start": 29.932,
+      "end": 30.143
+    },
+    {
+      "index": 105,
+      "char": "笔",
+      "start": 30.184,
+      "end": 30.395
+    },
+    {
+      "index": 106,
+      "char": "画",
+      "start": 30.435,
+      "end": 30.646
+    },
+    {
+      "index": 107,
+      "char": "和",
+      "start": 30.686,
+      "end": 30.897
+    },
+    {
+      "index": 108,
+      "char": "位",
+      "start": 30.938,
+      "end": 31.149
+    },
+    {
+      "index": 109,
+      "char": "置",
+      "start": 31.189,
+      "end": 31.4
+    },
+    {
+      "index": 110,
+      "char": "的",
+      "start": 31.44,
+      "end": 31.651
+    },
+    {
+      "index": 111,
+      "char": "记",
+      "start": 31.692,
+      "end": 31.903
+    },
+    {
+      "index": 112,
+      "char": "忆",
+      "start": 31.943,
+      "end": 32.154
+    },
+    {
+      "index": 113,
+      "char": "画",
+      "start": 32.194,
+      "end": 32.405
+    },
+    {
+      "index": 114,
+      "char": "面",
+      "start": 32.445,
+      "end": 32.657
+    },
+    {
+      "index": 115,
+      "char": "不",
+      "start": 32.877,
+      "end": 33.088
+    },
+    {
+      "index": 116,
+      "char": "是",
+      "start": 33.128,
+      "end": 33.339
+    },
+    {
+      "index": 117,
+      "char": "完",
+      "start": 33.379,
+      "end": 33.591
+    },
+    {
+      "index": 118,
+      "char": "整",
+      "start": 33.631,
+      "end": 33.842
+    },
+    {
+      "index": 119,
+      "char": "字",
+      "start": 33.882,
+      "end": 34.093
+    },
+    {
+      "index": 120,
+      "char": "源",
+      "start": 34.133,
+      "end": 34.344
+    },
+    {
+      "index": 121,
+      "char": "最",
+      "start": 34.725,
+      "end": 34.936
+    },
+    {
+      "index": 122,
+      "char": "后",
+      "start": 34.976,
+      "end": 35.187
+    },
+    {
+      "index": 123,
+      "char": "再",
+      "start": 35.227,
+      "end": 35.438
+    },
+    {
+      "index": 124,
+      "char": "读",
+      "start": 35.479,
+      "end": 35.69
+    },
+    {
+      "index": 125,
+      "char": "一",
+      "start": 35.73,
+      "end": 35.941
+    },
+    {
+      "index": 126,
+      "char": "遍",
+      "start": 35.981,
+      "end": 36.192
+    },
+    {
+      "index": 127,
+      "char": "凯",
+      "start": 36.413,
+      "end": 36.624
+    },
+    {
+      "index": 128,
+      "char": "旋",
+      "start": 36.664,
+      "end": 36.875
     }
   ],
-  "transcript": "凯，“凯旋”的“凯”。它是左右结构。看图找部件，合成字形。再读：凯旋。",
+  "transcript": "凯，“凯旋”的“凯”，读kǎi。它是左右结构，按顺序能看到“岂”和“几”。从构字分工看，“几”先提示意义类别，其余部件补足字形。看图时，左边山形胜利台和鼓架沿“岂”搭起，右边风帆与弯脚形成“几”，旗帜乘风归来，组成“凯”。凯旋指军队获胜归来，也泛指胜利归来。这是一幅帮助记笔画和位置的记忆画面，不是完整字源。最后再读一遍：凯旋。",
   "voice_reference": "封",
   "timing_source": "punctuation-weighted-estimate",
-  "script_version": "child-first-v1",
-  "duration": 9.920181
+  "script_version": "child-first-v2",
+  "duration": 37.440181
 }

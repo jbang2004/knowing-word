@@ -3,151 +3,763 @@
     {
       "index": 0,
       "char": "惶",
-      "start": 0.196,
-      "end": 0.432
+      "start": 0.293,
+      "end": 0.474
     },
     {
       "index": 1,
       "char": "惶",
-      "start": 0.657,
-      "end": 0.893
+      "start": 0.688,
+      "end": 0.869
     },
     {
       "index": 2,
       "char": "恐",
-      "start": 0.938,
-      "end": 1.175
+      "start": 0.904,
+      "end": 1.085
     },
     {
       "index": 3,
       "char": "的",
-      "start": 1.22,
-      "end": 1.456
+      "start": 1.119,
+      "end": 1.3
     },
     {
       "index": 4,
       "char": "惶",
-      "start": 1.501,
-      "end": 1.737
+      "start": 1.335,
+      "end": 1.515
     },
     {
       "index": 5,
-      "char": "它",
-      "start": 2.122,
-      "end": 2.358
+      "char": "读",
+      "start": 1.73,
+      "end": 1.911
     },
     {
       "index": 6,
-      "char": "是",
-      "start": 2.403,
-      "end": 2.639
+      "char": "h",
+      "start": 1.945,
+      "end": 2.126
     },
     {
       "index": 7,
-      "char": "左",
-      "start": 2.684,
-      "end": 2.92
+      "char": "u",
+      "start": 2.161,
+      "end": 2.342
     },
     {
       "index": 8,
-      "char": "右",
-      "start": 2.965,
-      "end": 3.201
+      "char": "á",
+      "start": 2.376,
+      "end": 2.557
     },
     {
       "index": 9,
-      "char": "结",
-      "start": 3.246,
-      "end": 3.483
+      "char": "n",
+      "start": 2.592,
+      "end": 2.772
     },
     {
       "index": 10,
-      "char": "构",
-      "start": 3.528,
-      "end": 3.764
+      "char": "g",
+      "start": 2.807,
+      "end": 2.988
     },
     {
       "index": 11,
-      "char": "看",
-      "start": 4.149,
-      "end": 4.385
+      "char": "它",
+      "start": 3.362,
+      "end": 3.543
     },
     {
       "index": 12,
-      "char": "图",
-      "start": 4.43,
-      "end": 4.666
+      "char": "是",
+      "start": 3.578,
+      "end": 3.759
     },
     {
       "index": 13,
-      "char": "找",
-      "start": 4.711,
-      "end": 4.947
+      "char": "左",
+      "start": 3.793,
+      "end": 3.974
     },
     {
       "index": 14,
-      "char": "部",
-      "start": 4.992,
-      "end": 5.228
+      "char": "右",
+      "start": 4.008,
+      "end": 4.189
     },
     {
       "index": 15,
-      "char": "件",
-      "start": 5.273,
-      "end": 5.509
+      "char": "结",
+      "start": 4.224,
+      "end": 4.405
     },
     {
       "index": 16,
-      "char": "合",
-      "start": 5.734,
-      "end": 5.971
+      "char": "构",
+      "start": 4.439,
+      "end": 4.62
     },
     {
       "index": 17,
-      "char": "成",
-      "start": 6.016,
-      "end": 6.252
+      "char": "按",
+      "start": 4.835,
+      "end": 5.016
     },
     {
       "index": 18,
-      "char": "字",
-      "start": 6.297,
-      "end": 6.533
+      "char": "顺",
+      "start": 5.05,
+      "end": 5.231
     },
     {
       "index": 19,
-      "char": "形",
-      "start": 6.578,
-      "end": 6.814
+      "char": "序",
+      "start": 5.265,
+      "end": 5.446
     },
     {
       "index": 20,
-      "char": "再",
-      "start": 7.199,
-      "end": 7.435
+      "char": "能",
+      "start": 5.481,
+      "end": 5.662
     },
     {
       "index": 21,
-      "char": "读",
-      "start": 7.48,
-      "end": 7.716
+      "char": "看",
+      "start": 5.696,
+      "end": 5.877
     },
     {
       "index": 22,
-      "char": "惶",
-      "start": 7.941,
-      "end": 8.177
+      "char": "到",
+      "start": 5.912,
+      "end": 6.093
     },
     {
       "index": 23,
+      "char": "忄",
+      "start": 6.127,
+      "end": 6.308
+    },
+    {
+      "index": 24,
+      "char": "和",
+      "start": 6.342,
+      "end": 6.523
+    },
+    {
+      "index": 25,
+      "char": "皇",
+      "start": 6.558,
+      "end": 6.739
+    },
+    {
+      "index": 26,
+      "char": "从",
+      "start": 7.113,
+      "end": 7.294
+    },
+    {
+      "index": 27,
+      "char": "构",
+      "start": 7.329,
+      "end": 7.51
+    },
+    {
+      "index": 28,
+      "char": "字",
+      "start": 7.544,
+      "end": 7.725
+    },
+    {
+      "index": 29,
+      "char": "分",
+      "start": 7.759,
+      "end": 7.94
+    },
+    {
+      "index": 30,
+      "char": "工",
+      "start": 7.975,
+      "end": 8.156
+    },
+    {
+      "index": 31,
+      "char": "看",
+      "start": 8.19,
+      "end": 8.371
+    },
+    {
+      "index": 32,
+      "char": "忄",
+      "start": 8.586,
+      "end": 8.767
+    },
+    {
+      "index": 33,
+      "char": "提",
+      "start": 8.801,
+      "end": 8.982
+    },
+    {
+      "index": 34,
+      "char": "示",
+      "start": 9.016,
+      "end": 9.197
+    },
+    {
+      "index": 35,
+      "char": "意",
+      "start": 9.232,
+      "end": 9.413
+    },
+    {
+      "index": 36,
+      "char": "义",
+      "start": 9.447,
+      "end": 9.628
+    },
+    {
+      "index": 37,
+      "char": "类",
+      "start": 9.663,
+      "end": 9.844
+    },
+    {
+      "index": 38,
+      "char": "别",
+      "start": 9.878,
+      "end": 10.059
+    },
+    {
+      "index": 39,
+      "char": "皇",
+      "start": 10.273,
+      "end": 10.454
+    },
+    {
+      "index": 40,
+      "char": "提",
+      "start": 10.489,
+      "end": 10.67
+    },
+    {
+      "index": 41,
+      "char": "供",
+      "start": 10.704,
+      "end": 10.885
+    },
+    {
+      "index": 42,
+      "char": "读",
+      "start": 10.92,
+      "end": 11.101
+    },
+    {
+      "index": 43,
+      "char": "音",
+      "start": 11.135,
+      "end": 11.316
+    },
+    {
+      "index": 44,
+      "char": "线",
+      "start": 11.35,
+      "end": 11.531
+    },
+    {
+      "index": 45,
+      "char": "索",
+      "start": 11.566,
+      "end": 11.747
+    },
+    {
+      "index": 46,
+      "char": "看",
+      "start": 12.121,
+      "end": 12.302
+    },
+    {
+      "index": 47,
+      "char": "图",
+      "start": 12.337,
+      "end": 12.518
+    },
+    {
+      "index": 48,
+      "char": "时",
+      "start": 12.552,
+      "end": 12.733
+    },
+    {
+      "index": 49,
+      "char": "左",
+      "start": 12.947,
+      "end": 13.128
+    },
+    {
+      "index": 50,
+      "char": "边",
+      "start": 13.163,
+      "end": 13.344
+    },
+    {
+      "index": 51,
+      "char": "快",
+      "start": 13.378,
+      "end": 13.559
+    },
+    {
+      "index": 52,
+      "char": "速",
+      "start": 13.594,
+      "end": 13.775
+    },
+    {
+      "index": 53,
+      "char": "跳",
+      "start": 13.809,
+      "end": 13.99
+    },
+    {
+      "index": 54,
+      "char": "动",
+      "start": 14.024,
+      "end": 14.205
+    },
+    {
+      "index": 55,
+      "char": "的",
+      "start": 14.24,
+      "end": 14.421
+    },
+    {
+      "index": 56,
+      "char": "心",
+      "start": 14.455,
+      "end": 14.636
+    },
+    {
+      "index": 57,
+      "char": "灯",
+      "start": 14.671,
+      "end": 14.852
+    },
+    {
+      "index": 58,
+      "char": "形",
+      "start": 14.886,
+      "end": 15.067
+    },
+    {
+      "index": 59,
+      "char": "成",
+      "start": 15.101,
+      "end": 15.282
+    },
+    {
+      "index": 60,
+      "char": "忄",
+      "start": 15.317,
+      "end": 15.498
+    },
+    {
+      "index": 61,
+      "char": "右",
+      "start": 15.712,
+      "end": 15.893
+    },
+    {
+      "index": 62,
+      "char": "边",
+      "start": 15.928,
+      "end": 16.109
+    },
+    {
+      "index": 63,
+      "char": "高",
+      "start": 16.143,
+      "end": 16.324
+    },
+    {
+      "index": 64,
+      "char": "冠",
+      "start": 16.358,
+      "end": 16.539
+    },
+    {
+      "index": 65,
+      "char": "和",
+      "start": 16.574,
+      "end": 16.755
+    },
+    {
+      "index": 66,
+      "char": "玉",
+      "start": 16.789,
+      "end": 16.97
+    },
+    {
+      "index": 67,
+      "char": "座",
+      "start": 17.005,
+      "end": 17.186
+    },
+    {
+      "index": 68,
+      "char": "沿",
+      "start": 17.22,
+      "end": 17.401
+    },
+    {
+      "index": 69,
+      "char": "皇",
+      "start": 17.435,
+      "end": 17.616
+    },
+    {
+      "index": 70,
+      "char": "压",
+      "start": 17.651,
+      "end": 17.832
+    },
+    {
+      "index": 71,
+      "char": "下",
+      "start": 17.866,
+      "end": 18.047
+    },
+    {
+      "index": 72,
+      "char": "来",
+      "start": 18.082,
+      "end": 18.263
+    },
+    {
+      "index": 73,
+      "char": "心",
+      "start": 18.477,
+      "end": 18.658
+    },
+    {
+      "index": 74,
+      "char": "在",
+      "start": 18.692,
+      "end": 18.873
+    },
+    {
+      "index": 75,
+      "char": "高",
+      "start": 18.908,
+      "end": 19.089
+    },
+    {
+      "index": 76,
+      "char": "台",
+      "start": 19.123,
+      "end": 19.304
+    },
+    {
+      "index": 77,
+      "char": "旁",
+      "start": 19.339,
+      "end": 19.52
+    },
+    {
+      "index": 78,
+      "char": "不",
+      "start": 19.554,
+      "end": 19.735
+    },
+    {
+      "index": 79,
+      "char": "安",
+      "start": 19.769,
+      "end": 19.95
+    },
+    {
+      "index": 80,
+      "char": "组",
+      "start": 20.165,
+      "end": 20.346
+    },
+    {
+      "index": 81,
+      "char": "成",
+      "start": 20.38,
+      "end": 20.561
+    },
+    {
+      "index": 82,
+      "char": "惶",
+      "start": 20.596,
+      "end": 20.777
+    },
+    {
+      "index": 83,
+      "char": "惶",
+      "start": 21.151,
+      "end": 21.332
+    },
+    {
+      "index": 84,
       "char": "恐",
-      "start": 8.222,
-      "end": 8.459
+      "start": 21.366,
+      "end": 21.547
+    },
+    {
+      "index": 85,
+      "char": "就",
+      "start": 21.582,
+      "end": 21.763
+    },
+    {
+      "index": 86,
+      "char": "是",
+      "start": 21.797,
+      "end": 21.978
+    },
+    {
+      "index": 87,
+      "char": "心",
+      "start": 22.013,
+      "end": 22.194
+    },
+    {
+      "index": 88,
+      "char": "里",
+      "start": 22.228,
+      "end": 22.409
+    },
+    {
+      "index": 89,
+      "char": "害",
+      "start": 22.443,
+      "end": 22.624
+    },
+    {
+      "index": 90,
+      "char": "怕",
+      "start": 22.659,
+      "end": 22.84
+    },
+    {
+      "index": 91,
+      "char": "非",
+      "start": 23.054,
+      "end": 23.235
+    },
+    {
+      "index": 92,
+      "char": "常",
+      "start": 23.27,
+      "end": 23.45
+    },
+    {
+      "index": 93,
+      "char": "不",
+      "start": 23.485,
+      "end": 23.666
+    },
+    {
+      "index": 94,
+      "char": "安",
+      "start": 23.7,
+      "end": 23.881
+    },
+    {
+      "index": 95,
+      "char": "这",
+      "start": 24.256,
+      "end": 24.437
+    },
+    {
+      "index": 96,
+      "char": "是",
+      "start": 24.471,
+      "end": 24.652
+    },
+    {
+      "index": 97,
+      "char": "一",
+      "start": 24.687,
+      "end": 24.867
+    },
+    {
+      "index": 98,
+      "char": "幅",
+      "start": 24.902,
+      "end": 25.083
+    },
+    {
+      "index": 99,
+      "char": "帮",
+      "start": 25.117,
+      "end": 25.298
+    },
+    {
+      "index": 100,
+      "char": "助",
+      "start": 25.333,
+      "end": 25.514
+    },
+    {
+      "index": 101,
+      "char": "记",
+      "start": 25.548,
+      "end": 25.729
+    },
+    {
+      "index": 102,
+      "char": "笔",
+      "start": 25.764,
+      "end": 25.944
+    },
+    {
+      "index": 103,
+      "char": "画",
+      "start": 25.979,
+      "end": 26.16
+    },
+    {
+      "index": 104,
+      "char": "和",
+      "start": 26.194,
+      "end": 26.375
+    },
+    {
+      "index": 105,
+      "char": "位",
+      "start": 26.41,
+      "end": 26.591
+    },
+    {
+      "index": 106,
+      "char": "置",
+      "start": 26.625,
+      "end": 26.806
+    },
+    {
+      "index": 107,
+      "char": "的",
+      "start": 26.841,
+      "end": 27.021
+    },
+    {
+      "index": 108,
+      "char": "记",
+      "start": 27.056,
+      "end": 27.237
+    },
+    {
+      "index": 109,
+      "char": "忆",
+      "start": 27.271,
+      "end": 27.452
+    },
+    {
+      "index": 110,
+      "char": "画",
+      "start": 27.487,
+      "end": 27.668
+    },
+    {
+      "index": 111,
+      "char": "面",
+      "start": 27.702,
+      "end": 27.883
+    },
+    {
+      "index": 112,
+      "char": "不",
+      "start": 28.098,
+      "end": 28.278
+    },
+    {
+      "index": 113,
+      "char": "是",
+      "start": 28.313,
+      "end": 28.494
+    },
+    {
+      "index": 114,
+      "char": "完",
+      "start": 28.528,
+      "end": 28.709
+    },
+    {
+      "index": 115,
+      "char": "整",
+      "start": 28.744,
+      "end": 28.925
+    },
+    {
+      "index": 116,
+      "char": "字",
+      "start": 28.959,
+      "end": 29.14
+    },
+    {
+      "index": 117,
+      "char": "源",
+      "start": 29.175,
+      "end": 29.355
+    },
+    {
+      "index": 118,
+      "char": "最",
+      "start": 29.73,
+      "end": 29.911
+    },
+    {
+      "index": 119,
+      "char": "后",
+      "start": 29.945,
+      "end": 30.126
+    },
+    {
+      "index": 120,
+      "char": "再",
+      "start": 30.161,
+      "end": 30.342
+    },
+    {
+      "index": 121,
+      "char": "读",
+      "start": 30.376,
+      "end": 30.557
+    },
+    {
+      "index": 122,
+      "char": "一",
+      "start": 30.592,
+      "end": 30.772
+    },
+    {
+      "index": 123,
+      "char": "遍",
+      "start": 30.807,
+      "end": 30.988
+    },
+    {
+      "index": 124,
+      "char": "惶",
+      "start": 31.202,
+      "end": 31.383
+    },
+    {
+      "index": 125,
+      "char": "恐",
+      "start": 31.418,
+      "end": 31.599
     }
   ],
-  "transcript": "惶，“惶恐”的“惶”。它是左右结构。看图找部件，合成字形。再读：惶恐。",
+  "transcript": "惶，“惶恐”的“惶”，读huáng。它是左右结构，按顺序能看到“忄”和“皇”。从构字分工看，“忄”提示意义类别，“皇”提供读音线索。看图时，左边快速跳动的心灯形成“忄”，右边高冠和玉座沿“皇”压下来，心在高台旁不安，组成“惶”。惶恐就是心里害怕、非常不安。这是一幅帮助记笔画和位置的记忆画面，不是完整字源。最后再读一遍：惶恐。",
   "voice_reference": "封",
   "timing_source": "punctuation-weighted-estimate",
-  "script_version": "child-first-v1",
-  "duration": 8.961066
+  "script_version": "child-first-v2",
+  "duration": 32.160181
 }

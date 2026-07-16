@@ -3,151 +3,769 @@
     {
       "index": 0,
       "char": "汛",
-      "start": 0.228,
-      "end": 0.513
+      "start": 0.294,
+      "end": 0.488
     },
     {
       "index": 1,
       "char": "汛",
-      "start": 0.747,
-      "end": 1.032
+      "start": 0.705,
+      "end": 0.9
     },
     {
       "index": 2,
       "char": "期",
-      "start": 1.086,
-      "end": 1.371
+      "start": 0.937,
+      "end": 1.131
     },
     {
       "index": 3,
       "char": "的",
-      "start": 1.425,
-      "end": 1.71
+      "start": 1.168,
+      "end": 1.362
     },
     {
       "index": 4,
       "char": "汛",
-      "start": 1.764,
-      "end": 2.049
+      "start": 1.399,
+      "end": 1.594
     },
     {
       "index": 5,
-      "char": "它",
-      "start": 2.443,
-      "end": 2.728
+      "char": "读",
+      "start": 1.811,
+      "end": 2.005
     },
     {
       "index": 6,
-      "char": "是",
-      "start": 2.782,
-      "end": 3.067
+      "char": "x",
+      "start": 2.042,
+      "end": 2.236
     },
     {
       "index": 7,
-      "char": "左",
-      "start": 3.121,
-      "end": 3.406
+      "char": "ù",
+      "start": 2.273,
+      "end": 2.468
     },
     {
       "index": 8,
-      "char": "右",
-      "start": 3.46,
-      "end": 3.745
+      "char": "n",
+      "start": 2.505,
+      "end": 2.699
     },
     {
       "index": 9,
-      "char": "结",
-      "start": 3.799,
-      "end": 4.084
+      "char": "它",
+      "start": 3.076,
+      "end": 3.27
     },
     {
       "index": 10,
-      "char": "构",
-      "start": 4.138,
-      "end": 4.423
+      "char": "是",
+      "start": 3.307,
+      "end": 3.502
     },
     {
       "index": 11,
-      "char": "看",
-      "start": 4.817,
-      "end": 5.102
+      "char": "左",
+      "start": 3.539,
+      "end": 3.733
     },
     {
       "index": 12,
-      "char": "图",
-      "start": 5.156,
-      "end": 5.441
+      "char": "右",
+      "start": 3.77,
+      "end": 3.964
     },
     {
       "index": 13,
-      "char": "找",
-      "start": 5.495,
-      "end": 5.78
+      "char": "结",
+      "start": 4.001,
+      "end": 4.196
     },
     {
       "index": 14,
-      "char": "部",
-      "start": 5.834,
-      "end": 6.119
+      "char": "构",
+      "start": 4.233,
+      "end": 4.427
     },
     {
       "index": 15,
-      "char": "件",
-      "start": 6.173,
-      "end": 6.458
+      "char": "按",
+      "start": 4.644,
+      "end": 4.838
     },
     {
       "index": 16,
-      "char": "合",
-      "start": 6.692,
-      "end": 6.977
+      "char": "顺",
+      "start": 4.875,
+      "end": 5.07
     },
     {
       "index": 17,
-      "char": "成",
-      "start": 7.031,
-      "end": 7.316
+      "char": "序",
+      "start": 5.107,
+      "end": 5.301
     },
     {
       "index": 18,
-      "char": "字",
-      "start": 7.37,
-      "end": 7.655
+      "char": "能",
+      "start": 5.338,
+      "end": 5.532
     },
     {
       "index": 19,
-      "char": "形",
-      "start": 7.709,
-      "end": 7.994
+      "char": "看",
+      "start": 5.569,
+      "end": 5.764
     },
     {
       "index": 20,
-      "char": "再",
-      "start": 8.388,
-      "end": 8.673
+      "char": "到",
+      "start": 5.801,
+      "end": 5.995
     },
     {
       "index": 21,
-      "char": "读",
-      "start": 8.727,
-      "end": 9.012
+      "char": "氵",
+      "start": 6.032,
+      "end": 6.226
     },
     {
       "index": 22,
-      "char": "汛",
-      "start": 9.247,
-      "end": 9.531
+      "char": "和",
+      "start": 6.263,
+      "end": 6.458
     },
     {
       "index": 23,
+      "char": "卂",
+      "start": 6.495,
+      "end": 6.689
+    },
+    {
+      "index": 24,
+      "char": "从",
+      "start": 7.066,
+      "end": 7.26
+    },
+    {
+      "index": 25,
+      "char": "构",
+      "start": 7.297,
+      "end": 7.492
+    },
+    {
+      "index": 26,
+      "char": "字",
+      "start": 7.529,
+      "end": 7.723
+    },
+    {
+      "index": 27,
+      "char": "分",
+      "start": 7.76,
+      "end": 7.954
+    },
+    {
+      "index": 28,
+      "char": "工",
+      "start": 7.991,
+      "end": 8.186
+    },
+    {
+      "index": 29,
+      "char": "看",
+      "start": 8.223,
+      "end": 8.417
+    },
+    {
+      "index": 30,
+      "char": "氵",
+      "start": 8.634,
+      "end": 8.828
+    },
+    {
+      "index": 31,
+      "char": "提",
+      "start": 8.865,
+      "end": 9.06
+    },
+    {
+      "index": 32,
+      "char": "示",
+      "start": 9.097,
+      "end": 9.291
+    },
+    {
+      "index": 33,
+      "char": "意",
+      "start": 9.328,
+      "end": 9.522
+    },
+    {
+      "index": 34,
+      "char": "义",
+      "start": 9.559,
+      "end": 9.754
+    },
+    {
+      "index": 35,
+      "char": "类",
+      "start": 9.791,
+      "end": 9.985
+    },
+    {
+      "index": 36,
+      "char": "别",
+      "start": 10.022,
+      "end": 10.216
+    },
+    {
+      "index": 37,
+      "char": "卂",
+      "start": 10.433,
+      "end": 10.628
+    },
+    {
+      "index": 38,
+      "char": "提",
+      "start": 10.665,
+      "end": 10.859
+    },
+    {
+      "index": 39,
+      "char": "供",
+      "start": 10.896,
+      "end": 11.09
+    },
+    {
+      "index": 40,
+      "char": "读",
+      "start": 11.127,
+      "end": 11.322
+    },
+    {
+      "index": 41,
+      "char": "音",
+      "start": 11.359,
+      "end": 11.553
+    },
+    {
+      "index": 42,
+      "char": "线",
+      "start": 11.59,
+      "end": 11.784
+    },
+    {
+      "index": 43,
+      "char": "索",
+      "start": 11.822,
+      "end": 12.016
+    },
+    {
+      "index": 44,
+      "char": "看",
+      "start": 12.393,
+      "end": 12.587
+    },
+    {
+      "index": 45,
+      "char": "图",
+      "start": 12.624,
+      "end": 12.819
+    },
+    {
+      "index": 46,
+      "char": "时",
+      "start": 12.856,
+      "end": 13.05
+    },
+    {
+      "index": 47,
+      "char": "左",
+      "start": 13.267,
+      "end": 13.461
+    },
+    {
+      "index": 48,
+      "char": "边",
+      "start": 13.498,
+      "end": 13.693
+    },
+    {
+      "index": 49,
+      "char": "三",
+      "start": 13.73,
+      "end": 13.924
+    },
+    {
+      "index": 50,
+      "char": "股",
+      "start": 13.961,
+      "end": 14.155
+    },
+    {
+      "index": 51,
+      "char": "上",
+      "start": 14.192,
+      "end": 14.387
+    },
+    {
+      "index": 52,
+      "char": "涨",
+      "start": 14.424,
+      "end": 14.618
+    },
+    {
+      "index": 53,
+      "char": "水",
+      "start": 14.655,
+      "end": 14.849
+    },
+    {
+      "index": 54,
+      "char": "流",
+      "start": 14.886,
+      "end": 15.081
+    },
+    {
+      "index": 55,
+      "char": "排",
+      "start": 15.118,
+      "end": 15.312
+    },
+    {
+      "index": 56,
+      "char": "成",
+      "start": 15.349,
+      "end": 15.543
+    },
+    {
+      "index": 57,
+      "char": "氵",
+      "start": 15.58,
+      "end": 15.775
+    },
+    {
+      "index": 58,
+      "char": "右",
+      "start": 15.992,
+      "end": 16.186
+    },
+    {
+      "index": 59,
+      "char": "边",
+      "start": 16.223,
+      "end": 16.417
+    },
+    {
+      "index": 60,
+      "char": "水",
+      "start": 16.454,
+      "end": 16.649
+    },
+    {
+      "index": 61,
+      "char": "位",
+      "start": 16.686,
+      "end": 16.88
+    },
+    {
+      "index": 62,
+      "char": "警",
+      "start": 16.917,
+      "end": 17.111
+    },
+    {
+      "index": 63,
+      "char": "示",
+      "start": 17.148,
+      "end": 17.343
+    },
+    {
+      "index": 64,
+      "char": "杆",
+      "start": 17.38,
+      "end": 17.574
+    },
+    {
+      "index": 65,
+      "char": "横",
+      "start": 17.791,
+      "end": 17.985
+    },
+    {
+      "index": 66,
+      "char": "梁",
+      "start": 18.022,
+      "end": 18.217
+    },
+    {
+      "index": 67,
+      "char": "和",
+      "start": 18.254,
+      "end": 18.448
+    },
+    {
+      "index": 68,
+      "char": "弯",
+      "start": 18.485,
+      "end": 18.679
+    },
+    {
+      "index": 69,
+      "char": "钩",
+      "start": 18.716,
+      "end": 18.911
+    },
+    {
+      "index": 70,
+      "char": "搭",
+      "start": 18.948,
+      "end": 19.142
+    },
+    {
+      "index": 71,
+      "char": "成",
+      "start": 19.179,
+      "end": 19.373
+    },
+    {
+      "index": 72,
+      "char": "卂",
+      "start": 19.41,
+      "end": 19.605
+    },
+    {
+      "index": 73,
+      "char": "合",
+      "start": 19.822,
+      "end": 20.016
+    },
+    {
+      "index": 74,
+      "char": "成",
+      "start": 20.053,
+      "end": 20.247
+    },
+    {
+      "index": 75,
+      "char": "汛",
+      "start": 20.284,
+      "end": 20.479
+    },
+    {
+      "index": 76,
+      "char": "汛",
+      "start": 20.856,
+      "end": 21.05
+    },
+    {
+      "index": 77,
       "char": "期",
-      "start": 9.586,
-      "end": 9.87
+      "start": 21.087,
+      "end": 21.281
+    },
+    {
+      "index": 78,
+      "char": "是",
+      "start": 21.318,
+      "end": 21.513
+    },
+    {
+      "index": 79,
+      "char": "江",
+      "start": 21.55,
+      "end": 21.744
+    },
+    {
+      "index": 80,
+      "char": "河",
+      "start": 21.781,
+      "end": 21.975
+    },
+    {
+      "index": 81,
+      "char": "水",
+      "start": 22.012,
+      "end": 22.207
+    },
+    {
+      "index": 82,
+      "char": "位",
+      "start": 22.244,
+      "end": 22.438
+    },
+    {
+      "index": 83,
+      "char": "集",
+      "start": 22.475,
+      "end": 22.669
+    },
+    {
+      "index": 84,
+      "char": "中",
+      "start": 22.706,
+      "end": 22.901
+    },
+    {
+      "index": 85,
+      "char": "上",
+      "start": 22.938,
+      "end": 23.132
+    },
+    {
+      "index": 86,
+      "char": "涨",
+      "start": 23.169,
+      "end": 23.363
+    },
+    {
+      "index": 87,
+      "char": "需",
+      "start": 23.58,
+      "end": 23.775
+    },
+    {
+      "index": 88,
+      "char": "要",
+      "start": 23.812,
+      "end": 24.006
+    },
+    {
+      "index": 89,
+      "char": "留",
+      "start": 24.043,
+      "end": 24.237
+    },
+    {
+      "index": 90,
+      "char": "意",
+      "start": 24.274,
+      "end": 24.469
+    },
+    {
+      "index": 91,
+      "char": "洪",
+      "start": 24.506,
+      "end": 24.7
+    },
+    {
+      "index": 92,
+      "char": "水",
+      "start": 24.737,
+      "end": 24.931
+    },
+    {
+      "index": 93,
+      "char": "的",
+      "start": 24.969,
+      "end": 25.163
+    },
+    {
+      "index": 94,
+      "char": "时",
+      "start": 25.2,
+      "end": 25.394
+    },
+    {
+      "index": 95,
+      "char": "段",
+      "start": 25.431,
+      "end": 25.626
+    },
+    {
+      "index": 96,
+      "char": "这",
+      "start": 26.003,
+      "end": 26.197
+    },
+    {
+      "index": 97,
+      "char": "是",
+      "start": 26.234,
+      "end": 26.428
+    },
+    {
+      "index": 98,
+      "char": "一",
+      "start": 26.465,
+      "end": 26.66
+    },
+    {
+      "index": 99,
+      "char": "幅",
+      "start": 26.697,
+      "end": 26.891
+    },
+    {
+      "index": 100,
+      "char": "帮",
+      "start": 26.928,
+      "end": 27.122
+    },
+    {
+      "index": 101,
+      "char": "助",
+      "start": 27.159,
+      "end": 27.354
+    },
+    {
+      "index": 102,
+      "char": "记",
+      "start": 27.391,
+      "end": 27.585
+    },
+    {
+      "index": 103,
+      "char": "笔",
+      "start": 27.622,
+      "end": 27.816
+    },
+    {
+      "index": 104,
+      "char": "画",
+      "start": 27.853,
+      "end": 28.048
+    },
+    {
+      "index": 105,
+      "char": "和",
+      "start": 28.085,
+      "end": 28.279
+    },
+    {
+      "index": 106,
+      "char": "位",
+      "start": 28.316,
+      "end": 28.51
+    },
+    {
+      "index": 107,
+      "char": "置",
+      "start": 28.547,
+      "end": 28.742
+    },
+    {
+      "index": 108,
+      "char": "的",
+      "start": 28.779,
+      "end": 28.973
+    },
+    {
+      "index": 109,
+      "char": "记",
+      "start": 29.01,
+      "end": 29.204
+    },
+    {
+      "index": 110,
+      "char": "忆",
+      "start": 29.241,
+      "end": 29.436
+    },
+    {
+      "index": 111,
+      "char": "画",
+      "start": 29.473,
+      "end": 29.667
+    },
+    {
+      "index": 112,
+      "char": "面",
+      "start": 29.704,
+      "end": 29.898
+    },
+    {
+      "index": 113,
+      "char": "不",
+      "start": 30.115,
+      "end": 30.31
+    },
+    {
+      "index": 114,
+      "char": "是",
+      "start": 30.347,
+      "end": 30.541
+    },
+    {
+      "index": 115,
+      "char": "完",
+      "start": 30.578,
+      "end": 30.772
+    },
+    {
+      "index": 116,
+      "char": "整",
+      "start": 30.809,
+      "end": 31.004
+    },
+    {
+      "index": 117,
+      "char": "字",
+      "start": 31.041,
+      "end": 31.235
+    },
+    {
+      "index": 118,
+      "char": "源",
+      "start": 31.272,
+      "end": 31.466
+    },
+    {
+      "index": 119,
+      "char": "最",
+      "start": 31.843,
+      "end": 32.038
+    },
+    {
+      "index": 120,
+      "char": "后",
+      "start": 32.075,
+      "end": 32.269
+    },
+    {
+      "index": 121,
+      "char": "再",
+      "start": 32.306,
+      "end": 32.5
+    },
+    {
+      "index": 122,
+      "char": "读",
+      "start": 32.537,
+      "end": 32.732
+    },
+    {
+      "index": 123,
+      "char": "一",
+      "start": 32.769,
+      "end": 32.963
+    },
+    {
+      "index": 124,
+      "char": "遍",
+      "start": 33,
+      "end": 33.194
+    },
+    {
+      "index": 125,
+      "char": "汛",
+      "start": 33.411,
+      "end": 33.606
+    },
+    {
+      "index": 126,
+      "char": "期",
+      "start": 33.643,
+      "end": 33.837
     }
   ],
-  "transcript": "汛，“汛期”的“汛”。它是左右结构。看图找部件，合成字形。再读：汛期。",
+  "transcript": "汛，“汛期”的“汛”，读xùn。它是左右结构，按顺序能看到“氵”和“卂”。从构字分工看，“氵”提示意义类别，“卂”提供读音线索。看图时，左边三股上涨水流排成“氵”，右边水位警示杆、横梁和弯钩搭成“卂”，合成“汛”。汛期是江河水位集中上涨、需要留意洪水的时段。这是一幅帮助记笔画和位置的记忆画面，不是完整字源。最后再读一遍：汛期。",
   "voice_reference": "封",
   "timing_source": "punctuation-weighted-estimate",
-  "script_version": "child-first-v1",
-  "duration": 10.400181
+  "script_version": "child-first-v2",
+  "duration": 34.400181
 }

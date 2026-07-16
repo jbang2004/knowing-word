@@ -3,151 +3,763 @@
     {
       "index": 0,
       "char": "蔓",
-      "start": 0.182,
-      "end": 0.396
+      "start": 0.291,
+      "end": 0.447
     },
     {
       "index": 1,
       "char": "蔓",
-      "start": 0.617,
-      "end": 0.832
+      "start": 0.656,
+      "end": 0.812
     },
     {
       "index": 2,
       "char": "延",
-      "start": 0.872,
-      "end": 1.087
+      "start": 0.842,
+      "end": 0.997
     },
     {
       "index": 3,
       "char": "的",
-      "start": 1.128,
-      "end": 1.342
+      "start": 1.027,
+      "end": 1.182
     },
     {
       "index": 4,
       "char": "蔓",
-      "start": 1.383,
-      "end": 1.598
+      "start": 1.212,
+      "end": 1.368
     },
     {
       "index": 5,
-      "char": "它",
-      "start": 1.979,
-      "end": 2.193
+      "char": "读",
+      "start": 1.577,
+      "end": 1.733
     },
     {
       "index": 6,
-      "char": "是",
-      "start": 2.234,
-      "end": 2.448
+      "char": "m",
+      "start": 1.763,
+      "end": 1.918
     },
     {
       "index": 7,
-      "char": "上",
-      "start": 2.489,
-      "end": 2.704
+      "char": "à",
+      "start": 1.948,
+      "end": 2.103
     },
     {
       "index": 8,
-      "char": "下",
-      "start": 2.745,
-      "end": 2.959
+      "char": "n",
+      "start": 2.133,
+      "end": 2.289
     },
     {
       "index": 9,
-      "char": "结",
-      "start": 3,
-      "end": 3.215
+      "char": "它",
+      "start": 2.658,
+      "end": 2.814
     },
     {
       "index": 10,
-      "char": "构",
-      "start": 3.255,
-      "end": 3.47
+      "char": "是",
+      "start": 2.844,
+      "end": 2.999
     },
     {
       "index": 11,
-      "char": "看",
-      "start": 3.851,
-      "end": 4.065
+      "char": "上",
+      "start": 3.029,
+      "end": 3.184
     },
     {
       "index": 12,
-      "char": "图",
-      "start": 4.106,
-      "end": 4.321
+      "char": "下",
+      "start": 3.214,
+      "end": 3.37
     },
     {
       "index": 13,
-      "char": "找",
-      "start": 4.362,
-      "end": 4.576
+      "char": "结",
+      "start": 3.399,
+      "end": 3.555
     },
     {
       "index": 14,
-      "char": "部",
-      "start": 4.617,
-      "end": 4.831
+      "char": "构",
+      "start": 3.584,
+      "end": 3.74
     },
     {
       "index": 15,
-      "char": "件",
-      "start": 4.872,
-      "end": 5.087
+      "char": "按",
+      "start": 3.95,
+      "end": 4.105
     },
     {
       "index": 16,
-      "char": "合",
-      "start": 5.308,
-      "end": 5.522
+      "char": "顺",
+      "start": 4.135,
+      "end": 4.291
     },
     {
       "index": 17,
-      "char": "成",
-      "start": 5.563,
-      "end": 5.778
+      "char": "序",
+      "start": 4.32,
+      "end": 4.476
     },
     {
       "index": 18,
-      "char": "字",
-      "start": 5.818,
-      "end": 6.033
+      "char": "能",
+      "start": 4.505,
+      "end": 4.661
     },
     {
       "index": 19,
-      "char": "形",
-      "start": 6.074,
-      "end": 6.288
+      "char": "看",
+      "start": 4.691,
+      "end": 4.846
     },
     {
       "index": 20,
-      "char": "再",
-      "start": 6.669,
-      "end": 6.884
+      "char": "到",
+      "start": 4.876,
+      "end": 5.032
     },
     {
       "index": 21,
-      "char": "读",
-      "start": 6.925,
-      "end": 7.139
+      "char": "艹",
+      "start": 5.061,
+      "end": 5.217
     },
     {
       "index": 22,
-      "char": "蔓",
-      "start": 7.36,
-      "end": 7.574
+      "char": "和",
+      "start": 5.246,
+      "end": 5.402
     },
     {
       "index": 23,
+      "char": "曼",
+      "start": 5.432,
+      "end": 5.587
+    },
+    {
+      "index": 24,
+      "char": "从",
+      "start": 5.957,
+      "end": 6.112
+    },
+    {
+      "index": 25,
+      "char": "构",
+      "start": 6.142,
+      "end": 6.298
+    },
+    {
+      "index": 26,
+      "char": "字",
+      "start": 6.327,
+      "end": 6.483
+    },
+    {
+      "index": 27,
+      "char": "分",
+      "start": 6.513,
+      "end": 6.668
+    },
+    {
+      "index": 28,
+      "char": "工",
+      "start": 6.698,
+      "end": 6.853
+    },
+    {
+      "index": 29,
+      "char": "看",
+      "start": 6.883,
+      "end": 7.039
+    },
+    {
+      "index": 30,
+      "char": "艹",
+      "start": 7.248,
+      "end": 7.404
+    },
+    {
+      "index": 31,
+      "char": "先",
+      "start": 7.434,
+      "end": 7.589
+    },
+    {
+      "index": 32,
+      "char": "提",
+      "start": 7.619,
+      "end": 7.774
+    },
+    {
+      "index": 33,
+      "char": "示",
+      "start": 7.804,
+      "end": 7.96
+    },
+    {
+      "index": 34,
+      "char": "意",
+      "start": 7.989,
+      "end": 8.145
+    },
+    {
+      "index": 35,
+      "char": "义",
+      "start": 8.174,
+      "end": 8.33
+    },
+    {
+      "index": 36,
+      "char": "类",
+      "start": 8.36,
+      "end": 8.515
+    },
+    {
+      "index": 37,
+      "char": "别",
+      "start": 8.545,
+      "end": 8.701
+    },
+    {
+      "index": 38,
+      "char": "其",
+      "start": 8.91,
+      "end": 9.066
+    },
+    {
+      "index": 39,
+      "char": "余",
+      "start": 9.095,
+      "end": 9.251
+    },
+    {
+      "index": 40,
+      "char": "部",
+      "start": 9.281,
+      "end": 9.436
+    },
+    {
+      "index": 41,
+      "char": "件",
+      "start": 9.466,
+      "end": 9.622
+    },
+    {
+      "index": 42,
+      "char": "补",
+      "start": 9.651,
+      "end": 9.807
+    },
+    {
+      "index": 43,
+      "char": "足",
+      "start": 9.836,
+      "end": 9.992
+    },
+    {
+      "index": 44,
+      "char": "字",
+      "start": 10.022,
+      "end": 10.177
+    },
+    {
+      "index": 45,
+      "char": "形",
+      "start": 10.207,
+      "end": 10.362
+    },
+    {
+      "index": 46,
+      "char": "看",
+      "start": 10.732,
+      "end": 10.888
+    },
+    {
+      "index": 47,
+      "char": "图",
+      "start": 10.917,
+      "end": 11.073
+    },
+    {
+      "index": 48,
+      "char": "时",
+      "start": 11.103,
+      "end": 11.258
+    },
+    {
+      "index": 49,
+      "char": "上",
+      "start": 11.468,
+      "end": 11.623
+    },
+    {
+      "index": 50,
+      "char": "方",
+      "start": 11.653,
+      "end": 11.809
+    },
+    {
+      "index": 51,
+      "char": "新",
+      "start": 11.838,
+      "end": 11.994
+    },
+    {
+      "index": 52,
+      "char": "叶",
+      "start": 12.024,
+      "end": 12.179
+    },
+    {
+      "index": 53,
+      "char": "组",
+      "start": 12.209,
+      "end": 12.364
+    },
+    {
+      "index": 54,
+      "char": "成",
+      "start": 12.394,
+      "end": 12.55
+    },
+    {
+      "index": 55,
+      "char": "艹",
+      "start": 12.579,
+      "end": 12.735
+    },
+    {
+      "index": 56,
+      "char": "下",
+      "start": 12.945,
+      "end": 13.1
+    },
+    {
+      "index": 57,
+      "char": "方",
+      "start": 13.13,
+      "end": 13.285
+    },
+    {
+      "index": 58,
+      "char": "藤",
+      "start": 13.315,
+      "end": 13.471
+    },
+    {
+      "index": 59,
+      "char": "条",
+      "start": 13.5,
+      "end": 13.656
+    },
+    {
+      "index": 60,
+      "char": "绕",
+      "start": 13.685,
+      "end": 13.841
+    },
+    {
+      "index": 61,
+      "char": "过",
+      "start": 13.871,
+      "end": 14.026
+    },
+    {
+      "index": 62,
+      "char": "日",
+      "start": 14.056,
+      "end": 14.212
+    },
+    {
+      "index": 63,
+      "char": "轮",
+      "start": 14.241,
+      "end": 14.397
+    },
+    {
+      "index": 64,
+      "char": "和",
+      "start": 14.426,
+      "end": 14.582
+    },
+    {
+      "index": 65,
+      "char": "舒",
+      "start": 14.612,
+      "end": 14.767
+    },
+    {
+      "index": 66,
+      "char": "展",
+      "start": 14.797,
+      "end": 14.953
+    },
+    {
+      "index": 67,
+      "char": "双",
+      "start": 14.982,
+      "end": 15.138
+    },
+    {
+      "index": 68,
+      "char": "手",
+      "start": 15.167,
+      "end": 15.323
+    },
+    {
+      "index": 69,
+      "char": "沿",
+      "start": 15.353,
+      "end": 15.508
+    },
+    {
+      "index": 70,
+      "char": "曼",
+      "start": 15.538,
+      "end": 15.693
+    },
+    {
+      "index": 71,
+      "char": "的",
+      "start": 15.723,
+      "end": 15.879
+    },
+    {
+      "index": 72,
+      "char": "笔",
+      "start": 15.908,
+      "end": 16.064
+    },
+    {
+      "index": 73,
+      "char": "画",
+      "start": 16.094,
+      "end": 16.249
+    },
+    {
+      "index": 74,
       "char": "延",
-      "start": 7.615,
-      "end": 7.83
+      "start": 16.279,
+      "end": 16.434
+    },
+    {
+      "index": 75,
+      "char": "伸",
+      "start": 16.464,
+      "end": 16.62
+    },
+    {
+      "index": 76,
+      "char": "长",
+      "start": 16.829,
+      "end": 16.985
+    },
+    {
+      "index": 77,
+      "char": "成",
+      "start": 17.015,
+      "end": 17.17
+    },
+    {
+      "index": 78,
+      "char": "蔓",
+      "start": 17.2,
+      "end": 17.355
+    },
+    {
+      "index": 79,
+      "char": "蔓",
+      "start": 17.725,
+      "end": 17.881
+    },
+    {
+      "index": 80,
+      "char": "延",
+      "start": 17.91,
+      "end": 18.066
+    },
+    {
+      "index": 81,
+      "char": "表",
+      "start": 18.096,
+      "end": 18.251
+    },
+    {
+      "index": 82,
+      "char": "示",
+      "start": 18.281,
+      "end": 18.436
+    },
+    {
+      "index": 83,
+      "char": "像",
+      "start": 18.466,
+      "end": 18.622
+    },
+    {
+      "index": 84,
+      "char": "藤",
+      "start": 18.651,
+      "end": 18.807
+    },
+    {
+      "index": 85,
+      "char": "蔓",
+      "start": 18.836,
+      "end": 18.992
+    },
+    {
+      "index": 86,
+      "char": "一",
+      "start": 19.022,
+      "end": 19.177
+    },
+    {
+      "index": 87,
+      "char": "样",
+      "start": 19.207,
+      "end": 19.363
+    },
+    {
+      "index": 88,
+      "char": "不",
+      "start": 19.392,
+      "end": 19.548
+    },
+    {
+      "index": 89,
+      "char": "断",
+      "start": 19.577,
+      "end": 19.733
+    },
+    {
+      "index": 90,
+      "char": "向",
+      "start": 19.763,
+      "end": 19.918
+    },
+    {
+      "index": 91,
+      "char": "四",
+      "start": 19.948,
+      "end": 20.104
+    },
+    {
+      "index": 92,
+      "char": "周",
+      "start": 20.133,
+      "end": 20.289
+    },
+    {
+      "index": 93,
+      "char": "伸",
+      "start": 20.318,
+      "end": 20.474
+    },
+    {
+      "index": 94,
+      "char": "展",
+      "start": 20.504,
+      "end": 20.659
+    },
+    {
+      "index": 95,
+      "char": "这",
+      "start": 21.029,
+      "end": 21.184
+    },
+    {
+      "index": 96,
+      "char": "是",
+      "start": 21.214,
+      "end": 21.37
+    },
+    {
+      "index": 97,
+      "char": "一",
+      "start": 21.399,
+      "end": 21.555
+    },
+    {
+      "index": 98,
+      "char": "幅",
+      "start": 21.585,
+      "end": 21.74
+    },
+    {
+      "index": 99,
+      "char": "帮",
+      "start": 21.77,
+      "end": 21.925
+    },
+    {
+      "index": 100,
+      "char": "助",
+      "start": 21.955,
+      "end": 22.111
+    },
+    {
+      "index": 101,
+      "char": "记",
+      "start": 22.14,
+      "end": 22.296
+    },
+    {
+      "index": 102,
+      "char": "笔",
+      "start": 22.326,
+      "end": 22.481
+    },
+    {
+      "index": 103,
+      "char": "画",
+      "start": 22.511,
+      "end": 22.666
+    },
+    {
+      "index": 104,
+      "char": "和",
+      "start": 22.696,
+      "end": 22.852
+    },
+    {
+      "index": 105,
+      "char": "位",
+      "start": 22.881,
+      "end": 23.037
+    },
+    {
+      "index": 106,
+      "char": "置",
+      "start": 23.067,
+      "end": 23.222
+    },
+    {
+      "index": 107,
+      "char": "的",
+      "start": 23.252,
+      "end": 23.407
+    },
+    {
+      "index": 108,
+      "char": "记",
+      "start": 23.437,
+      "end": 23.593
+    },
+    {
+      "index": 109,
+      "char": "忆",
+      "start": 23.622,
+      "end": 23.778
+    },
+    {
+      "index": 110,
+      "char": "画",
+      "start": 23.807,
+      "end": 23.963
+    },
+    {
+      "index": 111,
+      "char": "面",
+      "start": 23.993,
+      "end": 24.148
+    },
+    {
+      "index": 112,
+      "char": "不",
+      "start": 24.358,
+      "end": 24.514
+    },
+    {
+      "index": 113,
+      "char": "是",
+      "start": 24.543,
+      "end": 24.699
+    },
+    {
+      "index": 114,
+      "char": "完",
+      "start": 24.728,
+      "end": 24.884
+    },
+    {
+      "index": 115,
+      "char": "整",
+      "start": 24.914,
+      "end": 25.069
+    },
+    {
+      "index": 116,
+      "char": "字",
+      "start": 25.099,
+      "end": 25.255
+    },
+    {
+      "index": 117,
+      "char": "源",
+      "start": 25.284,
+      "end": 25.44
+    },
+    {
+      "index": 118,
+      "char": "最",
+      "start": 25.809,
+      "end": 25.965
+    },
+    {
+      "index": 119,
+      "char": "后",
+      "start": 25.995,
+      "end": 26.15
+    },
+    {
+      "index": 120,
+      "char": "再",
+      "start": 26.18,
+      "end": 26.335
+    },
+    {
+      "index": 121,
+      "char": "读",
+      "start": 26.365,
+      "end": 26.521
+    },
+    {
+      "index": 122,
+      "char": "一",
+      "start": 26.55,
+      "end": 26.706
+    },
+    {
+      "index": 123,
+      "char": "遍",
+      "start": 26.736,
+      "end": 26.891
+    },
+    {
+      "index": 124,
+      "char": "蔓",
+      "start": 27.101,
+      "end": 27.256
+    },
+    {
+      "index": 125,
+      "char": "延",
+      "start": 27.286,
+      "end": 27.442
     }
   ],
-  "transcript": "蔓，“蔓延”的“蔓”。它是上下结构。看图找部件，合成字形。再读：蔓延。",
+  "transcript": "蔓，“蔓延”的“蔓”，读màn。它是上下结构，按顺序能看到“艹”和“曼”。从构字分工看，“艹”先提示意义类别，其余部件补足字形。看图时，上方新叶组成“艹”，下方藤条绕过日轮和舒展双手沿“曼”的笔画延伸，长成“蔓”。蔓延表示像藤蔓一样不断向四周伸展。这是一幅帮助记笔画和位置的记忆画面，不是完整字源。最后再读一遍：蔓延。",
   "voice_reference": "封",
   "timing_source": "punctuation-weighted-estimate",
-  "script_version": "child-first-v1",
-  "duration": 8.320181
+  "script_version": "child-first-v2",
+  "duration": 28.000181
 }

@@ -3,151 +3,757 @@
     {
       "index": 0,
       "char": "畔",
-      "start": 0.192,
-      "end": 0.423
+      "start": 0.293,
+      "end": 0.47
     },
     {
       "index": 1,
       "char": "河",
-      "start": 0.647,
-      "end": 0.878
+      "start": 0.683,
+      "end": 0.86
     },
     {
       "index": 2,
       "char": "畔",
-      "start": 0.922,
-      "end": 1.153
+      "start": 0.894,
+      "end": 1.071
     },
     {
       "index": 3,
       "char": "的",
-      "start": 1.197,
-      "end": 1.427
+      "start": 1.105,
+      "end": 1.282
     },
     {
       "index": 4,
       "char": "畔",
-      "start": 1.471,
-      "end": 1.702
+      "start": 1.316,
+      "end": 1.493
     },
     {
       "index": 5,
-      "char": "它",
-      "start": 2.086,
-      "end": 2.317
+      "char": "读",
+      "start": 1.706,
+      "end": 1.883
     },
     {
       "index": 6,
-      "char": "是",
-      "start": 2.361,
-      "end": 2.591
+      "char": "p",
+      "start": 1.917,
+      "end": 2.094
     },
     {
       "index": 7,
-      "char": "左",
-      "start": 2.635,
-      "end": 2.866
+      "char": "à",
+      "start": 2.128,
+      "end": 2.305
     },
     {
       "index": 8,
-      "char": "右",
-      "start": 2.91,
-      "end": 3.141
+      "char": "n",
+      "start": 2.338,
+      "end": 2.515
     },
     {
       "index": 9,
-      "char": "结",
-      "start": 3.185,
-      "end": 3.415
+      "char": "它",
+      "start": 2.889,
+      "end": 3.066
     },
     {
       "index": 10,
-      "char": "构",
-      "start": 3.459,
-      "end": 3.69
+      "char": "是",
+      "start": 3.1,
+      "end": 3.277
     },
     {
       "index": 11,
-      "char": "看",
-      "start": 4.074,
-      "end": 4.305
+      "char": "左",
+      "start": 3.311,
+      "end": 3.488
     },
     {
       "index": 12,
-      "char": "图",
-      "start": 4.349,
-      "end": 4.579
+      "char": "右",
+      "start": 3.521,
+      "end": 3.698
     },
     {
       "index": 13,
-      "char": "找",
-      "start": 4.623,
-      "end": 4.854
+      "char": "结",
+      "start": 3.732,
+      "end": 3.909
     },
     {
       "index": 14,
-      "char": "部",
-      "start": 4.898,
-      "end": 5.129
+      "char": "构",
+      "start": 3.943,
+      "end": 4.12
     },
     {
       "index": 15,
-      "char": "件",
-      "start": 5.173,
-      "end": 5.403
+      "char": "按",
+      "start": 4.333,
+      "end": 4.51
     },
     {
       "index": 16,
-      "char": "合",
-      "start": 5.627,
-      "end": 5.858
+      "char": "顺",
+      "start": 4.544,
+      "end": 4.721
     },
     {
       "index": 17,
-      "char": "成",
-      "start": 5.902,
-      "end": 6.133
+      "char": "序",
+      "start": 4.755,
+      "end": 4.932
     },
     {
       "index": 18,
-      "char": "字",
-      "start": 6.177,
-      "end": 6.407
+      "char": "能",
+      "start": 4.966,
+      "end": 5.143
     },
     {
       "index": 19,
-      "char": "形",
-      "start": 6.451,
-      "end": 6.682
+      "char": "看",
+      "start": 5.176,
+      "end": 5.353
     },
     {
       "index": 20,
-      "char": "再",
-      "start": 7.066,
-      "end": 7.297
+      "char": "到",
+      "start": 5.387,
+      "end": 5.564
     },
     {
       "index": 21,
-      "char": "读",
-      "start": 7.341,
-      "end": 7.571
+      "char": "田",
+      "start": 5.598,
+      "end": 5.775
     },
     {
       "index": 22,
-      "char": "河",
-      "start": 7.795,
-      "end": 8.026
+      "char": "和",
+      "start": 5.809,
+      "end": 5.986
     },
     {
       "index": 23,
+      "char": "半",
+      "start": 6.019,
+      "end": 6.196
+    },
+    {
+      "index": 24,
+      "char": "从",
+      "start": 6.57,
+      "end": 6.747
+    },
+    {
+      "index": 25,
+      "char": "构",
+      "start": 6.781,
+      "end": 6.958
+    },
+    {
+      "index": 26,
+      "char": "字",
+      "start": 6.991,
+      "end": 7.168
+    },
+    {
+      "index": 27,
+      "char": "分",
+      "start": 7.202,
+      "end": 7.379
+    },
+    {
+      "index": 28,
+      "char": "工",
+      "start": 7.413,
+      "end": 7.59
+    },
+    {
+      "index": 29,
+      "char": "看",
+      "start": 7.624,
+      "end": 7.801
+    },
+    {
+      "index": 30,
+      "char": "田",
+      "start": 8.014,
+      "end": 8.191
+    },
+    {
+      "index": 31,
+      "char": "先",
+      "start": 8.225,
+      "end": 8.402
+    },
+    {
+      "index": 32,
+      "char": "提",
+      "start": 8.436,
+      "end": 8.613
+    },
+    {
+      "index": 33,
+      "char": "示",
+      "start": 8.646,
+      "end": 8.823
+    },
+    {
+      "index": 34,
+      "char": "意",
+      "start": 8.857,
+      "end": 9.034
+    },
+    {
+      "index": 35,
+      "char": "义",
+      "start": 9.068,
+      "end": 9.245
+    },
+    {
+      "index": 36,
+      "char": "类",
+      "start": 9.279,
+      "end": 9.456
+    },
+    {
+      "index": 37,
+      "char": "别",
+      "start": 9.489,
+      "end": 9.666
+    },
+    {
+      "index": 38,
+      "char": "其",
+      "start": 9.88,
+      "end": 10.057
+    },
+    {
+      "index": 39,
+      "char": "余",
+      "start": 10.091,
+      "end": 10.268
+    },
+    {
+      "index": 40,
+      "char": "部",
+      "start": 10.302,
+      "end": 10.479
+    },
+    {
+      "index": 41,
+      "char": "件",
+      "start": 10.512,
+      "end": 10.689
+    },
+    {
+      "index": 42,
+      "char": "补",
+      "start": 10.723,
+      "end": 10.9
+    },
+    {
+      "index": 43,
+      "char": "足",
+      "start": 10.934,
+      "end": 11.111
+    },
+    {
+      "index": 44,
+      "char": "字",
+      "start": 11.144,
+      "end": 11.321
+    },
+    {
+      "index": 45,
+      "char": "形",
+      "start": 11.355,
+      "end": 11.532
+    },
+    {
+      "index": 46,
+      "char": "看",
+      "start": 11.906,
+      "end": 12.083
+    },
+    {
+      "index": 47,
+      "char": "图",
+      "start": 12.117,
+      "end": 12.294
+    },
+    {
+      "index": 48,
+      "char": "时",
+      "start": 12.327,
+      "end": 12.504
+    },
+    {
+      "index": 49,
+      "char": "左",
+      "start": 12.718,
+      "end": 12.895
+    },
+    {
+      "index": 50,
+      "char": "边",
+      "start": 12.929,
+      "end": 13.106
+    },
+    {
+      "index": 51,
+      "char": "四",
+      "start": 13.139,
+      "end": 13.316
+    },
+    {
+      "index": 52,
+      "char": "格",
+      "start": 13.35,
+      "end": 13.527
+    },
+    {
+      "index": 53,
+      "char": "田",
+      "start": 13.561,
+      "end": 13.738
+    },
+    {
+      "index": 54,
+      "char": "地",
+      "start": 13.772,
+      "end": 13.949
+    },
+    {
+      "index": 55,
+      "char": "形",
+      "start": 13.982,
+      "end": 14.159
+    },
+    {
+      "index": 56,
+      "char": "成",
+      "start": 14.193,
+      "end": 14.37
+    },
+    {
+      "index": 57,
+      "char": "田",
+      "start": 14.404,
+      "end": 14.581
+    },
+    {
+      "index": 58,
+      "char": "右",
+      "start": 14.794,
+      "end": 14.971
+    },
+    {
+      "index": 59,
+      "char": "边",
+      "start": 15.005,
+      "end": 15.182
+    },
+    {
+      "index": 60,
+      "char": "半",
+      "start": 15.216,
+      "end": 15.393
+    },
+    {
+      "index": 61,
+      "char": "边",
+      "start": 15.427,
+      "end": 15.604
+    },
+    {
+      "index": 62,
+      "char": "护",
+      "start": 15.637,
+      "end": 15.814
+    },
+    {
+      "index": 63,
+      "char": "栏",
+      "start": 15.848,
+      "end": 16.025
+    },
+    {
+      "index": 64,
+      "char": "竖",
+      "start": 16.239,
+      "end": 16.416
+    },
+    {
+      "index": 65,
+      "char": "杆",
+      "start": 16.45,
+      "end": 16.627
+    },
+    {
+      "index": 66,
+      "char": "和",
+      "start": 16.66,
+      "end": 16.837
+    },
+    {
+      "index": 67,
+      "char": "横",
+      "start": 16.871,
+      "end": 17.048
+    },
+    {
+      "index": 68,
+      "char": "岸",
+      "start": 17.082,
+      "end": 17.259
+    },
+    {
+      "index": 69,
+      "char": "沿",
+      "start": 17.292,
+      "end": 17.469
+    },
+    {
+      "index": 70,
+      "char": "半",
+      "start": 17.503,
+      "end": 17.68
+    },
+    {
+      "index": 71,
+      "char": "搭",
+      "start": 17.714,
+      "end": 17.891
+    },
+    {
+      "index": 72,
+      "char": "起",
+      "start": 17.925,
+      "end": 18.102
+    },
+    {
+      "index": 73,
+      "char": "田",
+      "start": 18.315,
+      "end": 18.492
+    },
+    {
+      "index": 74,
+      "char": "与",
+      "start": 18.526,
+      "end": 18.703
+    },
+    {
+      "index": 75,
+      "char": "河",
+      "start": 18.737,
+      "end": 18.914
+    },
+    {
+      "index": 76,
+      "char": "岸",
+      "start": 18.947,
+      "end": 19.124
+    },
+    {
+      "index": 77,
+      "char": "相",
+      "start": 19.158,
+      "end": 19.335
+    },
+    {
+      "index": 78,
+      "char": "接",
+      "start": 19.369,
+      "end": 19.546
+    },
+    {
+      "index": 79,
+      "char": "组",
+      "start": 19.76,
+      "end": 19.937
+    },
+    {
+      "index": 80,
+      "char": "成",
+      "start": 19.97,
+      "end": 20.147
+    },
+    {
+      "index": 81,
       "char": "畔",
-      "start": 8.07,
-      "end": 8.301
+      "start": 20.181,
+      "end": 20.358
+    },
+    {
+      "index": 82,
+      "char": "河",
+      "start": 20.732,
+      "end": 20.909
+    },
+    {
+      "index": 83,
+      "char": "畔",
+      "start": 20.943,
+      "end": 21.12
+    },
+    {
+      "index": 84,
+      "char": "就",
+      "start": 21.153,
+      "end": 21.33
+    },
+    {
+      "index": 85,
+      "char": "是",
+      "start": 21.364,
+      "end": 21.541
+    },
+    {
+      "index": 86,
+      "char": "河",
+      "start": 21.575,
+      "end": 21.752
+    },
+    {
+      "index": 87,
+      "char": "边",
+      "start": 21.785,
+      "end": 21.962
+    },
+    {
+      "index": 88,
+      "char": "靠",
+      "start": 21.996,
+      "end": 22.173
+    },
+    {
+      "index": 89,
+      "char": "近",
+      "start": 22.207,
+      "end": 22.384
+    },
+    {
+      "index": 90,
+      "char": "水",
+      "start": 22.418,
+      "end": 22.595
+    },
+    {
+      "index": 91,
+      "char": "的",
+      "start": 22.628,
+      "end": 22.805
+    },
+    {
+      "index": 92,
+      "char": "地",
+      "start": 22.839,
+      "end": 23.016
+    },
+    {
+      "index": 93,
+      "char": "方",
+      "start": 23.05,
+      "end": 23.227
+    },
+    {
+      "index": 94,
+      "char": "这",
+      "start": 23.6,
+      "end": 23.777
+    },
+    {
+      "index": 95,
+      "char": "是",
+      "start": 23.811,
+      "end": 23.988
+    },
+    {
+      "index": 96,
+      "char": "一",
+      "start": 24.022,
+      "end": 24.199
+    },
+    {
+      "index": 97,
+      "char": "幅",
+      "start": 24.233,
+      "end": 24.41
+    },
+    {
+      "index": 98,
+      "char": "帮",
+      "start": 24.443,
+      "end": 24.62
+    },
+    {
+      "index": 99,
+      "char": "助",
+      "start": 24.654,
+      "end": 24.831
+    },
+    {
+      "index": 100,
+      "char": "记",
+      "start": 24.865,
+      "end": 25.042
+    },
+    {
+      "index": 101,
+      "char": "笔",
+      "start": 25.076,
+      "end": 25.253
+    },
+    {
+      "index": 102,
+      "char": "画",
+      "start": 25.286,
+      "end": 25.463
+    },
+    {
+      "index": 103,
+      "char": "和",
+      "start": 25.497,
+      "end": 25.674
+    },
+    {
+      "index": 104,
+      "char": "位",
+      "start": 25.708,
+      "end": 25.885
+    },
+    {
+      "index": 105,
+      "char": "置",
+      "start": 25.918,
+      "end": 26.095
+    },
+    {
+      "index": 106,
+      "char": "的",
+      "start": 26.129,
+      "end": 26.306
+    },
+    {
+      "index": 107,
+      "char": "记",
+      "start": 26.34,
+      "end": 26.517
+    },
+    {
+      "index": 108,
+      "char": "忆",
+      "start": 26.551,
+      "end": 26.728
+    },
+    {
+      "index": 109,
+      "char": "画",
+      "start": 26.761,
+      "end": 26.938
+    },
+    {
+      "index": 110,
+      "char": "面",
+      "start": 26.972,
+      "end": 27.149
+    },
+    {
+      "index": 111,
+      "char": "不",
+      "start": 27.363,
+      "end": 27.54
+    },
+    {
+      "index": 112,
+      "char": "是",
+      "start": 27.573,
+      "end": 27.75
+    },
+    {
+      "index": 113,
+      "char": "完",
+      "start": 27.784,
+      "end": 27.961
+    },
+    {
+      "index": 114,
+      "char": "整",
+      "start": 27.995,
+      "end": 28.172
+    },
+    {
+      "index": 115,
+      "char": "字",
+      "start": 28.206,
+      "end": 28.383
+    },
+    {
+      "index": 116,
+      "char": "源",
+      "start": 28.416,
+      "end": 28.593
+    },
+    {
+      "index": 117,
+      "char": "最",
+      "start": 28.967,
+      "end": 29.144
+    },
+    {
+      "index": 118,
+      "char": "后",
+      "start": 29.178,
+      "end": 29.355
+    },
+    {
+      "index": 119,
+      "char": "再",
+      "start": 29.388,
+      "end": 29.566
+    },
+    {
+      "index": 120,
+      "char": "读",
+      "start": 29.599,
+      "end": 29.776
+    },
+    {
+      "index": 121,
+      "char": "一",
+      "start": 29.81,
+      "end": 29.987
+    },
+    {
+      "index": 122,
+      "char": "遍",
+      "start": 30.021,
+      "end": 30.198
+    },
+    {
+      "index": 123,
+      "char": "河",
+      "start": 30.411,
+      "end": 30.588
+    },
+    {
+      "index": 124,
+      "char": "畔",
+      "start": 30.622,
+      "end": 30.799
     }
   ],
-  "transcript": "畔，“河畔”的“畔”。它是左右结构。看图找部件，合成字形。再读：河畔。",
+  "transcript": "畔，“河畔”的“畔”，读pàn。它是左右结构，按顺序能看到“田”和“半”。从构字分工看，“田”先提示意义类别，其余部件补足字形。看图时，左边四格田地形成“田”，右边半边护栏、竖杆和横岸沿“半”搭起，田与河岸相接，组成“畔”。河畔就是河边靠近水的地方。这是一幅帮助记笔画和位置的记忆画面，不是完整字源。最后再读一遍：河畔。",
   "voice_reference": "封",
   "timing_source": "punctuation-weighted-estimate",
-  "script_version": "child-first-v1",
-  "duration": 8.800181
+  "script_version": "child-first-v2",
+  "duration": 31.360181
 }

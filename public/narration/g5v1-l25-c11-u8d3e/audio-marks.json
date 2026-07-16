@@ -3,151 +3,847 @@
     {
       "index": 0,
       "char": "贾",
-      "start": 0.196,
-      "end": 0.432
+      "start": 0.295,
+      "end": 0.509
     },
     {
       "index": 1,
       "char": "商",
-      "start": 0.657,
-      "end": 0.893
+      "start": 0.73,
+      "end": 0.943
     },
     {
       "index": 2,
       "char": "贾",
-      "start": 0.938,
-      "end": 1.175
+      "start": 0.984,
+      "end": 1.197
     },
     {
       "index": 3,
       "char": "的",
-      "start": 1.22,
-      "end": 1.456
+      "start": 1.238,
+      "end": 1.452
     },
     {
       "index": 4,
       "char": "贾",
-      "start": 1.501,
-      "end": 1.737
+      "start": 1.492,
+      "end": 1.706
     },
     {
       "index": 5,
-      "char": "它",
-      "start": 2.122,
-      "end": 2.358
+      "char": "读",
+      "start": 1.927,
+      "end": 2.14
     },
     {
       "index": 6,
-      "char": "是",
-      "start": 2.403,
-      "end": 2.639
+      "char": "j",
+      "start": 2.181,
+      "end": 2.395
     },
     {
       "index": 7,
-      "char": "上",
-      "start": 2.684,
-      "end": 2.92
+      "char": "i",
+      "start": 2.435,
+      "end": 2.649
     },
     {
       "index": 8,
-      "char": "下",
-      "start": 2.965,
-      "end": 3.201
+      "char": "ǎ",
+      "start": 2.69,
+      "end": 2.903
     },
     {
       "index": 9,
-      "char": "结",
-      "start": 3.246,
-      "end": 3.483
+      "char": "它",
+      "start": 3.284,
+      "end": 3.497
     },
     {
       "index": 10,
-      "char": "构",
-      "start": 3.528,
-      "end": 3.764
+      "char": "是",
+      "start": 3.538,
+      "end": 3.752
     },
     {
       "index": 11,
-      "char": "看",
-      "start": 4.149,
-      "end": 4.385
+      "char": "上",
+      "start": 3.792,
+      "end": 4.006
     },
     {
       "index": 12,
-      "char": "图",
-      "start": 4.43,
-      "end": 4.666
+      "char": "下",
+      "start": 4.047,
+      "end": 4.26
     },
     {
       "index": 13,
-      "char": "找",
-      "start": 4.711,
-      "end": 4.947
+      "char": "结",
+      "start": 4.301,
+      "end": 4.515
     },
     {
       "index": 14,
-      "char": "部",
-      "start": 4.992,
-      "end": 5.228
+      "char": "构",
+      "start": 4.555,
+      "end": 4.769
     },
     {
       "index": 15,
-      "char": "件",
-      "start": 5.273,
-      "end": 5.509
+      "char": "按",
+      "start": 4.99,
+      "end": 5.203
     },
     {
       "index": 16,
-      "char": "合",
-      "start": 5.734,
-      "end": 5.971
+      "char": "顺",
+      "start": 5.244,
+      "end": 5.457
     },
     {
       "index": 17,
-      "char": "成",
-      "start": 6.016,
-      "end": 6.252
+      "char": "序",
+      "start": 5.498,
+      "end": 5.712
     },
     {
       "index": 18,
-      "char": "字",
-      "start": 6.297,
-      "end": 6.533
+      "char": "能",
+      "start": 5.752,
+      "end": 5.966
     },
     {
       "index": 19,
-      "char": "形",
-      "start": 6.578,
-      "end": 6.814
+      "char": "看",
+      "start": 6.007,
+      "end": 6.22
     },
     {
       "index": 20,
-      "char": "再",
-      "start": 7.199,
-      "end": 7.435
+      "char": "到",
+      "start": 6.261,
+      "end": 6.475
     },
     {
       "index": 21,
-      "char": "读",
-      "start": 7.48,
-      "end": 7.716
+      "char": "覀",
+      "start": 6.515,
+      "end": 6.729
     },
     {
       "index": 22,
-      "char": "商",
-      "start": 7.941,
-      "end": 8.177
+      "char": "和",
+      "start": 6.77,
+      "end": 6.983
     },
     {
       "index": 23,
+      "char": "贝",
+      "start": 7.024,
+      "end": 7.237
+    },
+    {
+      "index": 24,
+      "char": "从",
+      "start": 7.618,
+      "end": 7.832
+    },
+    {
+      "index": 25,
+      "char": "构",
+      "start": 7.872,
+      "end": 8.086
+    },
+    {
+      "index": 26,
+      "char": "字",
+      "start": 8.127,
+      "end": 8.34
+    },
+    {
+      "index": 27,
+      "char": "分",
+      "start": 8.381,
+      "end": 8.595
+    },
+    {
+      "index": 28,
+      "char": "工",
+      "start": 8.635,
+      "end": 8.849
+    },
+    {
+      "index": 29,
+      "char": "看",
+      "start": 8.89,
+      "end": 9.103
+    },
+    {
+      "index": 30,
+      "char": "贝",
+      "start": 9.324,
+      "end": 9.537
+    },
+    {
+      "index": 31,
+      "char": "提",
+      "start": 9.578,
+      "end": 9.792
+    },
+    {
+      "index": 32,
+      "char": "示",
+      "start": 9.832,
+      "end": 10.046
+    },
+    {
+      "index": 33,
+      "char": "意",
+      "start": 10.087,
+      "end": 10.3
+    },
+    {
+      "index": 34,
+      "char": "义",
+      "start": 10.341,
+      "end": 10.555
+    },
+    {
+      "index": 35,
+      "char": "类",
+      "start": 10.595,
+      "end": 10.809
+    },
+    {
+      "index": 36,
+      "char": "别",
+      "start": 10.85,
+      "end": 11.063
+    },
+    {
+      "index": 37,
+      "char": "覀",
+      "start": 11.284,
+      "end": 11.497
+    },
+    {
+      "index": 38,
+      "char": "提",
+      "start": 11.538,
+      "end": 11.752
+    },
+    {
+      "index": 39,
+      "char": "供",
+      "start": 11.792,
+      "end": 12.006
+    },
+    {
+      "index": 40,
+      "char": "读",
+      "start": 12.047,
+      "end": 12.26
+    },
+    {
+      "index": 41,
+      "char": "音",
+      "start": 12.301,
+      "end": 12.515
+    },
+    {
+      "index": 42,
+      "char": "线",
+      "start": 12.555,
+      "end": 12.769
+    },
+    {
+      "index": 43,
+      "char": "索",
+      "start": 12.81,
+      "end": 13.023
+    },
+    {
+      "index": 44,
+      "char": "看",
+      "start": 13.404,
+      "end": 13.617
+    },
+    {
+      "index": 45,
+      "char": "图",
+      "start": 13.658,
+      "end": 13.872
+    },
+    {
+      "index": 46,
+      "char": "时",
+      "start": 13.912,
+      "end": 14.126
+    },
+    {
+      "index": 47,
+      "char": "上",
+      "start": 14.347,
+      "end": 14.56
+    },
+    {
+      "index": 48,
+      "char": "方",
+      "start": 14.601,
+      "end": 14.815
+    },
+    {
+      "index": 49,
+      "char": "封",
+      "start": 14.855,
+      "end": 15.069
+    },
+    {
+      "index": 50,
+      "char": "好",
+      "start": 15.11,
+      "end": 15.323
+    },
+    {
+      "index": 51,
+      "char": "的",
+      "start": 15.364,
+      "end": 15.577
+    },
+    {
+      "index": 52,
+      "char": "货",
+      "start": 15.618,
+      "end": 15.832
+    },
+    {
+      "index": 53,
+      "char": "箱",
+      "start": 15.872,
+      "end": 16.086
+    },
+    {
+      "index": 54,
+      "char": "盖",
+      "start": 16.127,
+      "end": 16.34
+    },
+    {
+      "index": 55,
+      "char": "沿",
+      "start": 16.381,
+      "end": 16.595
+    },
+    {
+      "index": 56,
+      "char": "覀",
+      "start": 16.635,
+      "end": 16.849
+    },
+    {
+      "index": 57,
+      "char": "覆",
+      "start": 16.89,
+      "end": 17.103
+    },
+    {
+      "index": 58,
+      "char": "盖",
+      "start": 17.144,
+      "end": 17.358
+    },
+    {
+      "index": 59,
+      "char": "下",
+      "start": 17.578,
+      "end": 17.792
+    },
+    {
+      "index": 60,
+      "char": "方",
+      "start": 17.832,
+      "end": 18.046
+    },
+    {
+      "index": 61,
+      "char": "一",
+      "start": 18.087,
+      "end": 18.3
+    },
+    {
+      "index": 62,
+      "char": "枚",
+      "start": 18.341,
+      "end": 18.555
+    },
+    {
+      "index": 63,
+      "char": "贝",
+      "start": 18.595,
+      "end": 18.809
+    },
+    {
+      "index": 64,
+      "char": "壳",
+      "start": 18.85,
+      "end": 19.063
+    },
+    {
+      "index": 65,
+      "char": "货",
+      "start": 19.104,
+      "end": 19.318
+    },
+    {
+      "index": 66,
+      "char": "币",
+      "start": 19.358,
+      "end": 19.572
+    },
+    {
+      "index": 67,
+      "char": "形",
+      "start": 19.612,
+      "end": 19.826
+    },
+    {
+      "index": 68,
+      "char": "成",
+      "start": 19.867,
+      "end": 20.08
+    },
+    {
+      "index": 69,
+      "char": "贝",
+      "start": 20.121,
+      "end": 20.335
+    },
+    {
+      "index": 70,
+      "char": "货",
+      "start": 20.555,
+      "end": 20.769
+    },
+    {
+      "index": 71,
+      "char": "物",
+      "start": 20.81,
+      "end": 21.023
+    },
+    {
+      "index": 72,
+      "char": "与",
+      "start": 21.064,
+      "end": 21.278
+    },
+    {
+      "index": 73,
+      "char": "钱",
+      "start": 21.318,
+      "end": 21.532
+    },
+    {
+      "index": 74,
+      "char": "币",
+      "start": 21.572,
+      "end": 21.786
+    },
+    {
+      "index": 75,
+      "char": "上",
+      "start": 21.827,
+      "end": 22.04
+    },
+    {
+      "index": 76,
+      "char": "下",
+      "start": 22.081,
+      "end": 22.295
+    },
+    {
+      "index": 77,
+      "char": "相",
+      "start": 22.335,
+      "end": 22.549
+    },
+    {
+      "index": 78,
+      "char": "合",
+      "start": 22.59,
+      "end": 22.803
+    },
+    {
+      "index": 79,
+      "char": "组",
+      "start": 23.024,
+      "end": 23.238
+    },
+    {
+      "index": 80,
+      "char": "成",
+      "start": 23.278,
+      "end": 23.492
+    },
+    {
+      "index": 81,
       "char": "贾",
-      "start": 8.222,
-      "end": 8.459
+      "start": 23.533,
+      "end": 23.746
+    },
+    {
+      "index": 82,
+      "char": "商",
+      "start": 24.127,
+      "end": 24.34
+    },
+    {
+      "index": 83,
+      "char": "贾",
+      "start": 24.381,
+      "end": 24.595
+    },
+    {
+      "index": 84,
+      "char": "是",
+      "start": 24.635,
+      "end": 24.849
+    },
+    {
+      "index": 85,
+      "char": "旧",
+      "start": 24.89,
+      "end": 25.103
+    },
+    {
+      "index": 86,
+      "char": "时",
+      "start": 25.144,
+      "end": 25.358
+    },
+    {
+      "index": 87,
+      "char": "对",
+      "start": 25.398,
+      "end": 25.612
+    },
+    {
+      "index": 88,
+      "char": "商",
+      "start": 25.653,
+      "end": 25.866
+    },
+    {
+      "index": 89,
+      "char": "人",
+      "start": 25.907,
+      "end": 26.12
+    },
+    {
+      "index": 90,
+      "char": "的",
+      "start": 26.161,
+      "end": 26.375
+    },
+    {
+      "index": 91,
+      "char": "称",
+      "start": 26.415,
+      "end": 26.629
+    },
+    {
+      "index": 92,
+      "char": "呼",
+      "start": 26.67,
+      "end": 26.883
+    },
+    {
+      "index": 93,
+      "char": "这",
+      "start": 27.104,
+      "end": 27.318
+    },
+    {
+      "index": 94,
+      "char": "里",
+      "start": 27.358,
+      "end": 27.572
+    },
+    {
+      "index": 95,
+      "char": "的",
+      "start": 27.613,
+      "end": 27.826
+    },
+    {
+      "index": 96,
+      "char": "贾",
+      "start": 27.867,
+      "end": 28.08
+    },
+    {
+      "index": 97,
+      "char": "读",
+      "start": 28.121,
+      "end": 28.335
+    },
+    {
+      "index": 98,
+      "char": "g",
+      "start": 28.375,
+      "end": 28.589
+    },
+    {
+      "index": 99,
+      "char": "ǔ",
+      "start": 28.63,
+      "end": 28.843
+    },
+    {
+      "index": 100,
+      "char": "作",
+      "start": 29.064,
+      "end": 29.278
+    },
+    {
+      "index": 101,
+      "char": "为",
+      "start": 29.318,
+      "end": 29.532
+    },
+    {
+      "index": 102,
+      "char": "姓",
+      "start": 29.573,
+      "end": 29.786
+    },
+    {
+      "index": 103,
+      "char": "氏",
+      "start": 29.827,
+      "end": 30.04
+    },
+    {
+      "index": 104,
+      "char": "时",
+      "start": 30.081,
+      "end": 30.295
+    },
+    {
+      "index": 105,
+      "char": "读",
+      "start": 30.335,
+      "end": 30.549
+    },
+    {
+      "index": 106,
+      "char": "j",
+      "start": 30.59,
+      "end": 30.803
+    },
+    {
+      "index": 107,
+      "char": "i",
+      "start": 30.844,
+      "end": 31.058
+    },
+    {
+      "index": 108,
+      "char": "ǎ",
+      "start": 31.098,
+      "end": 31.312
+    },
+    {
+      "index": 109,
+      "char": "这",
+      "start": 31.693,
+      "end": 31.906
+    },
+    {
+      "index": 110,
+      "char": "是",
+      "start": 31.947,
+      "end": 32.16
+    },
+    {
+      "index": 111,
+      "char": "一",
+      "start": 32.201,
+      "end": 32.415
+    },
+    {
+      "index": 112,
+      "char": "幅",
+      "start": 32.455,
+      "end": 32.669
+    },
+    {
+      "index": 113,
+      "char": "帮",
+      "start": 32.71,
+      "end": 32.923
+    },
+    {
+      "index": 114,
+      "char": "助",
+      "start": 32.964,
+      "end": 33.178
+    },
+    {
+      "index": 115,
+      "char": "记",
+      "start": 33.218,
+      "end": 33.432
+    },
+    {
+      "index": 116,
+      "char": "笔",
+      "start": 33.473,
+      "end": 33.686
+    },
+    {
+      "index": 117,
+      "char": "画",
+      "start": 33.727,
+      "end": 33.94
+    },
+    {
+      "index": 118,
+      "char": "和",
+      "start": 33.981,
+      "end": 34.195
+    },
+    {
+      "index": 119,
+      "char": "位",
+      "start": 34.235,
+      "end": 34.449
+    },
+    {
+      "index": 120,
+      "char": "置",
+      "start": 34.49,
+      "end": 34.703
+    },
+    {
+      "index": 121,
+      "char": "的",
+      "start": 34.744,
+      "end": 34.958
+    },
+    {
+      "index": 122,
+      "char": "记",
+      "start": 34.998,
+      "end": 35.212
+    },
+    {
+      "index": 123,
+      "char": "忆",
+      "start": 35.253,
+      "end": 35.466
+    },
+    {
+      "index": 124,
+      "char": "画",
+      "start": 35.507,
+      "end": 35.72
+    },
+    {
+      "index": 125,
+      "char": "面",
+      "start": 35.761,
+      "end": 35.975
+    },
+    {
+      "index": 126,
+      "char": "不",
+      "start": 36.195,
+      "end": 36.409
+    },
+    {
+      "index": 127,
+      "char": "是",
+      "start": 36.45,
+      "end": 36.663
+    },
+    {
+      "index": 128,
+      "char": "完",
+      "start": 36.704,
+      "end": 36.918
+    },
+    {
+      "index": 129,
+      "char": "整",
+      "start": 36.958,
+      "end": 37.172
+    },
+    {
+      "index": 130,
+      "char": "字",
+      "start": 37.213,
+      "end": 37.426
+    },
+    {
+      "index": 131,
+      "char": "源",
+      "start": 37.467,
+      "end": 37.68
+    },
+    {
+      "index": 132,
+      "char": "最",
+      "start": 38.061,
+      "end": 38.275
+    },
+    {
+      "index": 133,
+      "char": "后",
+      "start": 38.315,
+      "end": 38.529
+    },
+    {
+      "index": 134,
+      "char": "再",
+      "start": 38.57,
+      "end": 38.783
+    },
+    {
+      "index": 135,
+      "char": "读",
+      "start": 38.824,
+      "end": 39.038
+    },
+    {
+      "index": 136,
+      "char": "一",
+      "start": 39.078,
+      "end": 39.292
+    },
+    {
+      "index": 137,
+      "char": "遍",
+      "start": 39.333,
+      "end": 39.546
+    },
+    {
+      "index": 138,
+      "char": "商",
+      "start": 39.767,
+      "end": 39.98
+    },
+    {
+      "index": 139,
+      "char": "贾",
+      "start": 40.021,
+      "end": 40.235
     }
   ],
-  "transcript": "贾，“商贾”的“贾”。它是上下结构。看图找部件，合成字形。再读：商贾。",
+  "transcript": "贾，“商贾”的“贾”，读jiǎ。它是上下结构，按顺序能看到“覀”和“贝”。从构字分工看，“贝”提示意义类别，“覀”提供读音线索。看图时，上方封好的货箱盖沿“覀”覆盖，下方一枚贝壳货币形成“贝”，货物与钱币上下相合，组成“贾”。商贾是旧时对商人的称呼，这里的“贾”读gǔ；作为姓氏时读jiǎ。这是一幅帮助记笔画和位置的记忆画面，不是完整字源。最后再读一遍：商贾。",
   "voice_reference": "封",
   "timing_source": "punctuation-weighted-estimate",
-  "script_version": "child-first-v1",
-  "duration": 8.961066
+  "script_version": "child-first-v2",
+  "duration": 40.800181
 }

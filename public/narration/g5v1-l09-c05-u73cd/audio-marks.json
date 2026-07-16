@@ -3,151 +3,751 @@
     {
       "index": 0,
       "char": "珍",
-      "start": 0.2,
-      "end": 0.441
+      "start": 0.297,
+      "end": 0.542
     },
     {
       "index": 1,
       "char": "珍",
-      "start": 0.667,
-      "end": 0.909
+      "start": 0.769,
+      "end": 1.013
     },
     {
       "index": 2,
       "char": "宝",
-      "start": 0.955,
-      "end": 1.196
+      "start": 1.06,
+      "end": 1.304
     },
     {
       "index": 3,
       "char": "的",
-      "start": 1.242,
-      "end": 1.484
+      "start": 1.351,
+      "end": 1.595
     },
     {
       "index": 4,
       "char": "珍",
-      "start": 1.53,
-      "end": 1.771
+      "start": 1.642,
+      "end": 1.887
     },
     {
       "index": 5,
-      "char": "它",
-      "start": 2.157,
-      "end": 2.399
+      "char": "读",
+      "start": 2.113,
+      "end": 2.358
     },
     {
       "index": 6,
-      "char": "是",
-      "start": 2.445,
-      "end": 2.686
+      "char": "z",
+      "start": 2.404,
+      "end": 2.649
     },
     {
       "index": 7,
-      "char": "左",
-      "start": 2.732,
-      "end": 2.974
+      "char": "h",
+      "start": 2.695,
+      "end": 2.94
     },
     {
       "index": 8,
-      "char": "右",
-      "start": 3.02,
-      "end": 3.262
+      "char": "ē",
+      "start": 2.987,
+      "end": 3.231
     },
     {
       "index": 9,
-      "char": "结",
-      "start": 3.308,
-      "end": 3.549
+      "char": "n",
+      "start": 3.278,
+      "end": 3.522
     },
     {
       "index": 10,
-      "char": "构",
-      "start": 3.595,
-      "end": 3.837
+      "char": "它",
+      "start": 3.909,
+      "end": 4.153
     },
     {
       "index": 11,
-      "char": "看",
-      "start": 4.223,
-      "end": 4.464
+      "char": "是",
+      "start": 4.2,
+      "end": 4.444
     },
     {
       "index": 12,
-      "char": "图",
-      "start": 4.51,
-      "end": 4.752
+      "char": "左",
+      "start": 4.491,
+      "end": 4.736
     },
     {
       "index": 13,
-      "char": "找",
-      "start": 4.798,
-      "end": 5.039
+      "char": "右",
+      "start": 4.782,
+      "end": 5.027
     },
     {
       "index": 14,
-      "char": "部",
-      "start": 5.085,
-      "end": 5.327
+      "char": "结",
+      "start": 5.073,
+      "end": 5.318
     },
     {
       "index": 15,
-      "char": "件",
-      "start": 5.373,
-      "end": 5.614
+      "char": "构",
+      "start": 5.364,
+      "end": 5.609
     },
     {
       "index": 16,
-      "char": "合",
-      "start": 5.84,
-      "end": 6.082
+      "char": "按",
+      "start": 5.836,
+      "end": 6.08
     },
     {
       "index": 17,
-      "char": "成",
-      "start": 6.128,
-      "end": 6.369
+      "char": "顺",
+      "start": 6.127,
+      "end": 6.371
     },
     {
       "index": 18,
-      "char": "字",
-      "start": 6.415,
-      "end": 6.657
+      "char": "序",
+      "start": 6.418,
+      "end": 6.662
     },
     {
       "index": 19,
-      "char": "形",
-      "start": 6.703,
-      "end": 6.944
+      "char": "能",
+      "start": 6.709,
+      "end": 6.953
     },
     {
       "index": 20,
-      "char": "再",
-      "start": 7.33,
-      "end": 7.572
+      "char": "看",
+      "start": 7,
+      "end": 7.245
     },
     {
       "index": 21,
-      "char": "读",
-      "start": 7.618,
-      "end": 7.86
+      "char": "到",
+      "start": 7.291,
+      "end": 7.536
     },
     {
       "index": 22,
-      "char": "珍",
-      "start": 8.086,
-      "end": 8.327
+      "char": "王",
+      "start": 7.582,
+      "end": 7.827
     },
     {
       "index": 23,
+      "char": "和",
+      "start": 7.873,
+      "end": 8.118
+    },
+    {
+      "index": 24,
+      "char": "㐱",
+      "start": 8.165,
+      "end": 8.409
+    },
+    {
+      "index": 25,
+      "char": "从",
+      "start": 8.796,
+      "end": 9.04
+    },
+    {
+      "index": 26,
+      "char": "构",
+      "start": 9.087,
+      "end": 9.331
+    },
+    {
+      "index": 27,
+      "char": "字",
+      "start": 9.378,
+      "end": 9.623
+    },
+    {
+      "index": 28,
+      "char": "分",
+      "start": 9.669,
+      "end": 9.914
+    },
+    {
+      "index": 29,
+      "char": "工",
+      "start": 9.96,
+      "end": 10.205
+    },
+    {
+      "index": 30,
+      "char": "看",
+      "start": 10.251,
+      "end": 10.496
+    },
+    {
+      "index": 31,
+      "char": "王",
+      "start": 10.723,
+      "end": 10.967
+    },
+    {
+      "index": 32,
+      "char": "提",
+      "start": 11.014,
+      "end": 11.258
+    },
+    {
+      "index": 33,
+      "char": "示",
+      "start": 11.305,
+      "end": 11.549
+    },
+    {
+      "index": 34,
+      "char": "意",
+      "start": 11.596,
+      "end": 11.84
+    },
+    {
+      "index": 35,
+      "char": "义",
+      "start": 11.887,
+      "end": 12.132
+    },
+    {
+      "index": 36,
+      "char": "类",
+      "start": 12.178,
+      "end": 12.423
+    },
+    {
+      "index": 37,
+      "char": "别",
+      "start": 12.469,
+      "end": 12.714
+    },
+    {
+      "index": 38,
+      "char": "彡",
+      "start": 12.94,
+      "end": 13.185
+    },
+    {
+      "index": 39,
+      "char": "提",
+      "start": 13.232,
+      "end": 13.476
+    },
+    {
+      "index": 40,
+      "char": "供",
+      "start": 13.523,
+      "end": 13.767
+    },
+    {
+      "index": 41,
+      "char": "读",
+      "start": 13.814,
+      "end": 14.058
+    },
+    {
+      "index": 42,
+      "char": "音",
+      "start": 14.105,
+      "end": 14.349
+    },
+    {
+      "index": 43,
+      "char": "线",
+      "start": 14.396,
+      "end": 14.641
+    },
+    {
+      "index": 44,
+      "char": "索",
+      "start": 14.687,
+      "end": 14.932
+    },
+    {
+      "index": 45,
+      "char": "看",
+      "start": 15.318,
+      "end": 15.563
+    },
+    {
+      "index": 46,
+      "char": "图",
+      "start": 15.609,
+      "end": 15.854
+    },
+    {
+      "index": 47,
+      "char": "时",
+      "start": 15.901,
+      "end": 16.145
+    },
+    {
+      "index": 48,
+      "char": "左",
+      "start": 16.372,
+      "end": 16.616
+    },
+    {
+      "index": 49,
+      "char": "边",
+      "start": 16.663,
+      "end": 16.907
+    },
+    {
+      "index": 50,
+      "char": "三",
+      "start": 16.954,
+      "end": 17.199
+    },
+    {
+      "index": 51,
+      "char": "层",
+      "start": 17.245,
+      "end": 17.49
+    },
+    {
+      "index": 52,
+      "char": "玉",
+      "start": 17.536,
+      "end": 17.781
+    },
+    {
+      "index": 53,
+      "char": "架",
+      "start": 17.827,
+      "end": 18.072
+    },
+    {
+      "index": 54,
+      "char": "形",
+      "start": 18.119,
+      "end": 18.363
+    },
+    {
+      "index": 55,
+      "char": "成",
+      "start": 18.41,
+      "end": 18.654
+    },
+    {
+      "index": 56,
+      "char": "王",
+      "start": 18.701,
+      "end": 18.945
+    },
+    {
+      "index": 57,
+      "char": "右",
+      "start": 19.172,
+      "end": 19.416
+    },
+    {
+      "index": 58,
+      "char": "边",
+      "start": 19.463,
+      "end": 19.708
+    },
+    {
+      "index": 59,
+      "char": "双",
+      "start": 19.754,
+      "end": 19.999
+    },
+    {
+      "index": 60,
+      "char": "手",
+      "start": 20.045,
+      "end": 20.29
+    },
+    {
+      "index": 61,
+      "char": "捧",
+      "start": 20.336,
+      "end": 20.581
+    },
+    {
+      "index": 62,
+      "char": "起",
+      "start": 20.628,
+      "end": 20.872
+    },
+    {
+      "index": 63,
+      "char": "细",
+      "start": 20.919,
+      "end": 21.163
+    },
+    {
+      "index": 64,
+      "char": "密",
+      "start": 21.21,
+      "end": 21.454
+    },
+    {
+      "index": 65,
       "char": "宝",
-      "start": 8.373,
-      "end": 8.615
+      "start": 21.501,
+      "end": 21.745
+    },
+    {
+      "index": 66,
+      "char": "珠",
+      "start": 21.792,
+      "end": 22.037
+    },
+    {
+      "index": 67,
+      "char": "手",
+      "start": 22.263,
+      "end": 22.508
+    },
+    {
+      "index": 68,
+      "char": "指",
+      "start": 22.554,
+      "end": 22.799
+    },
+    {
+      "index": 69,
+      "char": "和",
+      "start": 22.845,
+      "end": 23.09
+    },
+    {
+      "index": 70,
+      "char": "珠",
+      "start": 23.137,
+      "end": 23.381
+    },
+    {
+      "index": 71,
+      "char": "光",
+      "start": 23.428,
+      "end": 23.672
+    },
+    {
+      "index": 72,
+      "char": "沿",
+      "start": 23.719,
+      "end": 23.963
+    },
+    {
+      "index": 73,
+      "char": "㐱",
+      "start": 24.01,
+      "end": 24.255
+    },
+    {
+      "index": 74,
+      "char": "排",
+      "start": 24.301,
+      "end": 24.546
+    },
+    {
+      "index": 75,
+      "char": "列",
+      "start": 24.592,
+      "end": 24.837
+    },
+    {
+      "index": 76,
+      "char": "组",
+      "start": 25.063,
+      "end": 25.308
+    },
+    {
+      "index": 77,
+      "char": "成",
+      "start": 25.355,
+      "end": 25.599
+    },
+    {
+      "index": 78,
+      "char": "珍",
+      "start": 25.646,
+      "end": 25.89
+    },
+    {
+      "index": 79,
+      "char": "珍",
+      "start": 26.277,
+      "end": 26.521
+    },
+    {
+      "index": 80,
+      "char": "宝",
+      "start": 26.568,
+      "end": 26.812
+    },
+    {
+      "index": 81,
+      "char": "是",
+      "start": 26.859,
+      "end": 27.104
+    },
+    {
+      "index": 82,
+      "char": "珍",
+      "start": 27.15,
+      "end": 27.395
+    },
+    {
+      "index": 83,
+      "char": "贵",
+      "start": 27.441,
+      "end": 27.686
+    },
+    {
+      "index": 84,
+      "char": "值",
+      "start": 27.912,
+      "end": 28.157
+    },
+    {
+      "index": 85,
+      "char": "得",
+      "start": 28.204,
+      "end": 28.448
+    },
+    {
+      "index": 86,
+      "char": "好",
+      "start": 28.495,
+      "end": 28.739
+    },
+    {
+      "index": 87,
+      "char": "好",
+      "start": 28.786,
+      "end": 29.03
+    },
+    {
+      "index": 88,
+      "char": "保",
+      "start": 29.077,
+      "end": 29.322
+    },
+    {
+      "index": 89,
+      "char": "存",
+      "start": 29.368,
+      "end": 29.613
+    },
+    {
+      "index": 90,
+      "char": "的",
+      "start": 29.659,
+      "end": 29.904
+    },
+    {
+      "index": 91,
+      "char": "物",
+      "start": 29.95,
+      "end": 30.195
+    },
+    {
+      "index": 92,
+      "char": "品",
+      "start": 30.241,
+      "end": 30.486
+    },
+    {
+      "index": 93,
+      "char": "这",
+      "start": 30.873,
+      "end": 31.117
+    },
+    {
+      "index": 94,
+      "char": "是",
+      "start": 31.164,
+      "end": 31.408
+    },
+    {
+      "index": 95,
+      "char": "一",
+      "start": 31.455,
+      "end": 31.699
+    },
+    {
+      "index": 96,
+      "char": "幅",
+      "start": 31.746,
+      "end": 31.991
+    },
+    {
+      "index": 97,
+      "char": "帮",
+      "start": 32.037,
+      "end": 32.282
+    },
+    {
+      "index": 98,
+      "char": "助",
+      "start": 32.328,
+      "end": 32.573
+    },
+    {
+      "index": 99,
+      "char": "记",
+      "start": 32.619,
+      "end": 32.864
+    },
+    {
+      "index": 100,
+      "char": "笔",
+      "start": 32.911,
+      "end": 33.155
+    },
+    {
+      "index": 101,
+      "char": "画",
+      "start": 33.202,
+      "end": 33.446
+    },
+    {
+      "index": 102,
+      "char": "和",
+      "start": 33.493,
+      "end": 33.737
+    },
+    {
+      "index": 103,
+      "char": "位",
+      "start": 33.784,
+      "end": 34.028
+    },
+    {
+      "index": 104,
+      "char": "置",
+      "start": 34.075,
+      "end": 34.32
+    },
+    {
+      "index": 105,
+      "char": "的",
+      "start": 34.366,
+      "end": 34.611
+    },
+    {
+      "index": 106,
+      "char": "记",
+      "start": 34.657,
+      "end": 34.902
+    },
+    {
+      "index": 107,
+      "char": "忆",
+      "start": 34.948,
+      "end": 35.193
+    },
+    {
+      "index": 108,
+      "char": "画",
+      "start": 35.24,
+      "end": 35.484
+    },
+    {
+      "index": 109,
+      "char": "面",
+      "start": 35.531,
+      "end": 35.775
+    },
+    {
+      "index": 110,
+      "char": "不",
+      "start": 36.002,
+      "end": 36.246
+    },
+    {
+      "index": 111,
+      "char": "是",
+      "start": 36.293,
+      "end": 36.538
+    },
+    {
+      "index": 112,
+      "char": "完",
+      "start": 36.584,
+      "end": 36.829
+    },
+    {
+      "index": 113,
+      "char": "整",
+      "start": 36.875,
+      "end": 37.12
+    },
+    {
+      "index": 114,
+      "char": "字",
+      "start": 37.166,
+      "end": 37.411
+    },
+    {
+      "index": 115,
+      "char": "源",
+      "start": 37.457,
+      "end": 37.702
+    },
+    {
+      "index": 116,
+      "char": "最",
+      "start": 38.089,
+      "end": 38.333
+    },
+    {
+      "index": 117,
+      "char": "后",
+      "start": 38.38,
+      "end": 38.624
+    },
+    {
+      "index": 118,
+      "char": "再",
+      "start": 38.671,
+      "end": 38.915
+    },
+    {
+      "index": 119,
+      "char": "读",
+      "start": 38.962,
+      "end": 39.207
+    },
+    {
+      "index": 120,
+      "char": "一",
+      "start": 39.253,
+      "end": 39.498
+    },
+    {
+      "index": 121,
+      "char": "遍",
+      "start": 39.544,
+      "end": 39.789
+    },
+    {
+      "index": 122,
+      "char": "珍",
+      "start": 40.015,
+      "end": 40.26
+    },
+    {
+      "index": 123,
+      "char": "宝",
+      "start": 40.307,
+      "end": 40.551
     }
   ],
-  "transcript": "珍，“珍宝”的“珍”。它是左右结构。看图找部件，合成字形。再读：珍宝。",
+  "transcript": "珍，“珍宝”的“珍”，读zhēn。它是左右结构，按顺序能看到“王”和“㐱”。从构字分工看，“王”提示意义类别，“彡”提供读音线索。看图时，左边三层玉架形成“王”，右边双手捧起细密宝珠，手指和珠光沿“㐱”排列，组成“珍”。珍宝是珍贵、值得好好保存的物品。这是一幅帮助记笔画和位置的记忆画面，不是完整字源。最后再读一遍：珍宝。",
   "voice_reference": "封",
   "timing_source": "punctuation-weighted-estimate",
-  "script_version": "child-first-v1",
-  "duration": 9.120181
+  "script_version": "child-first-v2",
+  "duration": 41.120181
 }

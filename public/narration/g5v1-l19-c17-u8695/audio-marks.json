@@ -3,151 +3,769 @@
     {
       "index": 0,
       "char": "蚕",
-      "start": 0.268,
-      "end": 0.612
+      "start": 0.294,
+      "end": 0.491
     },
     {
       "index": 1,
       "char": "蚕",
-      "start": 0.858,
-      "end": 1.202
+      "start": 0.708,
+      "end": 0.905
     },
     {
       "index": 2,
       "char": "茧",
-      "start": 1.267,
-      "end": 1.612
+      "start": 0.942,
+      "end": 1.139
     },
     {
       "index": 3,
       "char": "的",
-      "start": 1.677,
-      "end": 2.021
+      "start": 1.176,
+      "end": 1.373
     },
     {
       "index": 4,
       "char": "蚕",
-      "start": 2.087,
-      "end": 2.431
+      "start": 1.41,
+      "end": 1.607
     },
     {
       "index": 5,
-      "char": "它",
-      "start": 2.837,
-      "end": 3.181
+      "char": "读",
+      "start": 1.824,
+      "end": 2.021
     },
     {
       "index": 6,
-      "char": "是",
-      "start": 3.246,
-      "end": 3.591
+      "char": "c",
+      "start": 2.058,
+      "end": 2.255
     },
     {
       "index": 7,
-      "char": "上",
-      "start": 3.656,
-      "end": 4
+      "char": "á",
+      "start": 2.292,
+      "end": 2.489
     },
     {
       "index": 8,
-      "char": "下",
-      "start": 4.066,
-      "end": 4.41
+      "char": "n",
+      "start": 2.526,
+      "end": 2.723
     },
     {
       "index": 9,
-      "char": "结",
-      "start": 4.476,
-      "end": 4.82
+      "char": "它",
+      "start": 3.1,
+      "end": 3.297
     },
     {
       "index": 10,
-      "char": "构",
-      "start": 4.886,
-      "end": 5.23
+      "char": "是",
+      "start": 3.334,
+      "end": 3.531
     },
     {
       "index": 11,
-      "char": "看",
-      "start": 5.635,
-      "end": 5.98
+      "char": "上",
+      "start": 3.568,
+      "end": 3.765
     },
     {
       "index": 12,
-      "char": "图",
-      "start": 6.045,
-      "end": 6.389
+      "char": "下",
+      "start": 3.802,
+      "end": 3.999
     },
     {
       "index": 13,
-      "char": "找",
-      "start": 6.455,
-      "end": 6.799
+      "char": "结",
+      "start": 4.036,
+      "end": 4.233
     },
     {
       "index": 14,
-      "char": "部",
-      "start": 6.865,
-      "end": 7.209
+      "char": "构",
+      "start": 4.27,
+      "end": 4.467
     },
     {
       "index": 15,
-      "char": "件",
-      "start": 7.274,
-      "end": 7.619
+      "char": "按",
+      "start": 4.684,
+      "end": 4.881
     },
     {
       "index": 16,
-      "char": "合",
-      "start": 7.864,
-      "end": 8.208
+      "char": "顺",
+      "start": 4.918,
+      "end": 5.115
     },
     {
       "index": 17,
-      "char": "成",
-      "start": 8.274,
-      "end": 8.618
+      "char": "序",
+      "start": 5.152,
+      "end": 5.349
     },
     {
       "index": 18,
-      "char": "字",
-      "start": 8.684,
-      "end": 9.028
+      "char": "能",
+      "start": 5.386,
+      "end": 5.583
     },
     {
       "index": 19,
-      "char": "形",
-      "start": 9.093,
-      "end": 9.438
+      "char": "看",
+      "start": 5.621,
+      "end": 5.817
     },
     {
       "index": 20,
-      "char": "再",
-      "start": 9.843,
-      "end": 10.187
+      "char": "到",
+      "start": 5.855,
+      "end": 6.051
     },
     {
       "index": 21,
-      "char": "读",
-      "start": 10.253,
-      "end": 10.597
+      "char": "天",
+      "start": 6.089,
+      "end": 6.285
     },
     {
       "index": 22,
-      "char": "蚕",
-      "start": 10.843,
-      "end": 11.187
+      "char": "和",
+      "start": 6.323,
+      "end": 6.519
     },
     {
       "index": 23,
+      "char": "虫",
+      "start": 6.557,
+      "end": 6.753
+    },
+    {
+      "index": 24,
+      "char": "从",
+      "start": 7.131,
+      "end": 7.327
+    },
+    {
+      "index": 25,
+      "char": "构",
+      "start": 7.365,
+      "end": 7.561
+    },
+    {
+      "index": 26,
+      "char": "字",
+      "start": 7.599,
+      "end": 7.795
+    },
+    {
+      "index": 27,
+      "char": "分",
+      "start": 7.833,
+      "end": 8.029
+    },
+    {
+      "index": 28,
+      "char": "工",
+      "start": 8.067,
+      "end": 8.263
+    },
+    {
+      "index": 29,
+      "char": "看",
+      "start": 8.301,
+      "end": 8.497
+    },
+    {
+      "index": 30,
+      "char": "虫",
+      "start": 8.715,
+      "end": 8.911
+    },
+    {
+      "index": 31,
+      "char": "提",
+      "start": 8.949,
+      "end": 9.145
+    },
+    {
+      "index": 32,
+      "char": "示",
+      "start": 9.183,
+      "end": 9.379
+    },
+    {
+      "index": 33,
+      "char": "意",
+      "start": 9.417,
+      "end": 9.613
+    },
+    {
+      "index": 34,
+      "char": "义",
+      "start": 9.651,
+      "end": 9.847
+    },
+    {
+      "index": 35,
+      "char": "类",
+      "start": 9.885,
+      "end": 10.081
+    },
+    {
+      "index": 36,
+      "char": "别",
+      "start": 10.119,
+      "end": 10.315
+    },
+    {
+      "index": 37,
+      "char": "天",
+      "start": 10.533,
+      "end": 10.73
+    },
+    {
+      "index": 38,
+      "char": "提",
+      "start": 10.767,
+      "end": 10.964
+    },
+    {
+      "index": 39,
+      "char": "供",
+      "start": 11.001,
+      "end": 11.198
+    },
+    {
+      "index": 40,
+      "char": "读",
+      "start": 11.235,
+      "end": 11.432
+    },
+    {
+      "index": 41,
+      "char": "音",
+      "start": 11.469,
+      "end": 11.666
+    },
+    {
+      "index": 42,
+      "char": "线",
+      "start": 11.703,
+      "end": 11.9
+    },
+    {
+      "index": 43,
+      "char": "索",
+      "start": 11.937,
+      "end": 12.134
+    },
+    {
+      "index": 44,
+      "char": "看",
+      "start": 12.511,
+      "end": 12.708
+    },
+    {
+      "index": 45,
+      "char": "图",
+      "start": 12.745,
+      "end": 12.942
+    },
+    {
+      "index": 46,
+      "char": "时",
+      "start": 12.979,
+      "end": 13.176
+    },
+    {
+      "index": 47,
+      "char": "上",
+      "start": 13.393,
+      "end": 13.59
+    },
+    {
+      "index": 48,
+      "char": "方",
+      "start": 13.627,
+      "end": 13.824
+    },
+    {
+      "index": 49,
+      "char": "天",
+      "start": 13.861,
+      "end": 14.058
+    },
+    {
+      "index": 50,
+      "char": "空",
+      "start": 14.095,
+      "end": 14.292
+    },
+    {
+      "index": 51,
+      "char": "横",
+      "start": 14.329,
+      "end": 14.526
+    },
+    {
+      "index": 52,
+      "char": "梁",
+      "start": 14.563,
+      "end": 14.76
+    },
+    {
+      "index": 53,
+      "char": "和",
+      "start": 14.797,
+      "end": 14.994
+    },
+    {
+      "index": 54,
+      "char": "伸",
+      "start": 15.031,
+      "end": 15.228
+    },
+    {
+      "index": 55,
+      "char": "展",
+      "start": 15.265,
+      "end": 15.462
+    },
+    {
+      "index": 56,
+      "char": "人",
+      "start": 15.499,
+      "end": 15.696
+    },
+    {
+      "index": 57,
+      "char": "物",
+      "start": 15.733,
+      "end": 15.93
+    },
+    {
+      "index": 58,
+      "char": "沿",
+      "start": 15.967,
+      "end": 16.164
+    },
+    {
+      "index": 59,
+      "char": "天",
+      "start": 16.201,
+      "end": 16.398
+    },
+    {
+      "index": 60,
+      "char": "展",
+      "start": 16.435,
+      "end": 16.632
+    },
+    {
+      "index": 61,
+      "char": "开",
+      "start": 16.67,
+      "end": 16.866
+    },
+    {
+      "index": 62,
+      "char": "下",
+      "start": 17.084,
+      "end": 17.28
+    },
+    {
+      "index": 63,
+      "char": "方",
+      "start": 17.318,
+      "end": 17.514
+    },
+    {
+      "index": 64,
+      "char": "一",
+      "start": 17.552,
+      "end": 17.748
+    },
+    {
+      "index": 65,
+      "char": "条",
+      "start": 17.786,
+      "end": 17.982
+    },
+    {
+      "index": 66,
+      "char": "吐",
+      "start": 18.02,
+      "end": 18.216
+    },
+    {
+      "index": 67,
+      "char": "丝",
+      "start": 18.254,
+      "end": 18.45
+    },
+    {
+      "index": 68,
+      "char": "小",
+      "start": 18.488,
+      "end": 18.684
+    },
+    {
+      "index": 69,
+      "char": "虫",
+      "start": 18.722,
+      "end": 18.918
+    },
+    {
+      "index": 70,
+      "char": "盘",
+      "start": 18.956,
+      "end": 19.152
+    },
+    {
+      "index": 71,
+      "char": "成",
+      "start": 19.19,
+      "end": 19.386
+    },
+    {
+      "index": 72,
+      "char": "虫",
+      "start": 19.424,
+      "end": 19.62
+    },
+    {
+      "index": 73,
+      "char": "上",
+      "start": 19.838,
+      "end": 20.034
+    },
+    {
+      "index": 74,
+      "char": "下",
+      "start": 20.072,
+      "end": 20.268
+    },
+    {
+      "index": 75,
+      "char": "组",
+      "start": 20.306,
+      "end": 20.502
+    },
+    {
+      "index": 76,
+      "char": "成",
+      "start": 20.54,
+      "end": 20.736
+    },
+    {
+      "index": 77,
+      "char": "蚕",
+      "start": 20.774,
+      "end": 20.97
+    },
+    {
+      "index": 78,
+      "char": "蚕",
+      "start": 21.348,
+      "end": 21.545
+    },
+    {
+      "index": 79,
+      "char": "是",
+      "start": 21.582,
+      "end": 21.779
+    },
+    {
+      "index": 80,
+      "char": "一",
+      "start": 21.816,
+      "end": 22.013
+    },
+    {
+      "index": 81,
+      "char": "种",
+      "start": 22.05,
+      "end": 22.247
+    },
+    {
+      "index": 82,
+      "char": "会",
+      "start": 22.284,
+      "end": 22.481
+    },
+    {
+      "index": 83,
+      "char": "吐",
+      "start": 22.518,
+      "end": 22.715
+    },
+    {
+      "index": 84,
+      "char": "丝",
+      "start": 22.752,
+      "end": 22.949
+    },
+    {
+      "index": 85,
+      "char": "结",
+      "start": 22.986,
+      "end": 23.183
+    },
+    {
+      "index": 86,
       "char": "茧",
-      "start": 11.253,
-      "end": 11.597
+      "start": 23.22,
+      "end": 23.417
+    },
+    {
+      "index": 87,
+      "char": "的",
+      "start": 23.454,
+      "end": 23.651
+    },
+    {
+      "index": 88,
+      "char": "昆",
+      "start": 23.688,
+      "end": 23.885
+    },
+    {
+      "index": 89,
+      "char": "虫",
+      "start": 23.922,
+      "end": 24.119
+    },
+    {
+      "index": 90,
+      "char": "常",
+      "start": 24.336,
+      "end": 24.533
+    },
+    {
+      "index": 91,
+      "char": "以",
+      "start": 24.57,
+      "end": 24.767
+    },
+    {
+      "index": 92,
+      "char": "桑",
+      "start": 24.804,
+      "end": 25.001
+    },
+    {
+      "index": 93,
+      "char": "叶",
+      "start": 25.038,
+      "end": 25.235
+    },
+    {
+      "index": 94,
+      "char": "为",
+      "start": 25.272,
+      "end": 25.469
+    },
+    {
+      "index": 95,
+      "char": "食",
+      "start": 25.506,
+      "end": 25.703
+    },
+    {
+      "index": 96,
+      "char": "这",
+      "start": 26.08,
+      "end": 26.277
+    },
+    {
+      "index": 97,
+      "char": "是",
+      "start": 26.314,
+      "end": 26.511
+    },
+    {
+      "index": 98,
+      "char": "一",
+      "start": 26.548,
+      "end": 26.745
+    },
+    {
+      "index": 99,
+      "char": "幅",
+      "start": 26.782,
+      "end": 26.979
+    },
+    {
+      "index": 100,
+      "char": "帮",
+      "start": 27.016,
+      "end": 27.213
+    },
+    {
+      "index": 101,
+      "char": "助",
+      "start": 27.25,
+      "end": 27.447
+    },
+    {
+      "index": 102,
+      "char": "记",
+      "start": 27.485,
+      "end": 27.681
+    },
+    {
+      "index": 103,
+      "char": "笔",
+      "start": 27.719,
+      "end": 27.915
+    },
+    {
+      "index": 104,
+      "char": "画",
+      "start": 27.953,
+      "end": 28.149
+    },
+    {
+      "index": 105,
+      "char": "和",
+      "start": 28.187,
+      "end": 28.383
+    },
+    {
+      "index": 106,
+      "char": "位",
+      "start": 28.421,
+      "end": 28.617
+    },
+    {
+      "index": 107,
+      "char": "置",
+      "start": 28.655,
+      "end": 28.851
+    },
+    {
+      "index": 108,
+      "char": "的",
+      "start": 28.889,
+      "end": 29.085
+    },
+    {
+      "index": 109,
+      "char": "记",
+      "start": 29.123,
+      "end": 29.319
+    },
+    {
+      "index": 110,
+      "char": "忆",
+      "start": 29.357,
+      "end": 29.553
+    },
+    {
+      "index": 111,
+      "char": "画",
+      "start": 29.591,
+      "end": 29.787
+    },
+    {
+      "index": 112,
+      "char": "面",
+      "start": 29.825,
+      "end": 30.021
+    },
+    {
+      "index": 113,
+      "char": "不",
+      "start": 30.239,
+      "end": 30.435
+    },
+    {
+      "index": 114,
+      "char": "是",
+      "start": 30.473,
+      "end": 30.669
+    },
+    {
+      "index": 115,
+      "char": "完",
+      "start": 30.707,
+      "end": 30.903
+    },
+    {
+      "index": 116,
+      "char": "整",
+      "start": 30.941,
+      "end": 31.137
+    },
+    {
+      "index": 117,
+      "char": "字",
+      "start": 31.175,
+      "end": 31.371
+    },
+    {
+      "index": 118,
+      "char": "源",
+      "start": 31.409,
+      "end": 31.605
+    },
+    {
+      "index": 119,
+      "char": "最",
+      "start": 31.983,
+      "end": 32.179
+    },
+    {
+      "index": 120,
+      "char": "后",
+      "start": 32.217,
+      "end": 32.414
+    },
+    {
+      "index": 121,
+      "char": "再",
+      "start": 32.451,
+      "end": 32.648
+    },
+    {
+      "index": 122,
+      "char": "读",
+      "start": 32.685,
+      "end": 32.882
+    },
+    {
+      "index": 123,
+      "char": "一",
+      "start": 32.919,
+      "end": 33.116
+    },
+    {
+      "index": 124,
+      "char": "遍",
+      "start": 33.153,
+      "end": 33.35
+    },
+    {
+      "index": 125,
+      "char": "蚕",
+      "start": 33.567,
+      "end": 33.764
+    },
+    {
+      "index": 126,
+      "char": "茧",
+      "start": 33.801,
+      "end": 33.998
     }
   ],
-  "transcript": "蚕，“蚕茧”的“蚕”。它是上下结构。看图找部件，合成字形。再读：蚕茧。",
+  "transcript": "蚕，“蚕茧”的“蚕”，读cán。它是上下结构，按顺序能看到“天”和“虫”。从构字分工看，“虫”提示意义类别，“天”提供读音线索。看图时，上方天空横梁和伸展人物沿“天”展开，下方一条吐丝小虫盘成“虫”，上下组成“蚕”。蚕是一种会吐丝结茧的昆虫，常以桑叶为食。这是一幅帮助记笔画和位置的记忆画面，不是完整字源。最后再读一遍：蚕茧。",
   "voice_reference": "封",
   "timing_source": "punctuation-weighted-estimate",
-  "script_version": "child-first-v1",
-  "duration": 12.160181
+  "script_version": "child-first-v2",
+  "duration": 34.561066
 }

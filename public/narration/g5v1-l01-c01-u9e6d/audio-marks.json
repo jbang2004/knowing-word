@@ -3,151 +3,763 @@
     {
       "index": 0,
       "char": "鹭",
-      "start": 0.192,
-      "end": 0.423
+      "start": 0.292,
+      "end": 0.465
     },
     {
       "index": 1,
       "char": "白",
-      "start": 0.647,
-      "end": 0.878
+      "start": 0.678,
+      "end": 0.85
     },
     {
       "index": 2,
       "char": "鹭",
-      "start": 0.922,
-      "end": 1.153
+      "start": 0.883,
+      "end": 1.056
     },
     {
       "index": 3,
       "char": "的",
-      "start": 1.197,
-      "end": 1.427
+      "start": 1.089,
+      "end": 1.261
     },
     {
       "index": 4,
       "char": "鹭",
-      "start": 1.471,
-      "end": 1.702
+      "start": 1.294,
+      "end": 1.466
     },
     {
       "index": 5,
-      "char": "它",
-      "start": 2.086,
-      "end": 2.317
+      "char": "读",
+      "start": 1.679,
+      "end": 1.852
     },
     {
       "index": 6,
-      "char": "是",
-      "start": 2.361,
-      "end": 2.591
+      "char": "l",
+      "start": 1.885,
+      "end": 2.057
     },
     {
       "index": 7,
-      "char": "上",
-      "start": 2.635,
-      "end": 2.866
+      "char": "ù",
+      "start": 2.09,
+      "end": 2.263
     },
     {
       "index": 8,
-      "char": "下",
-      "start": 2.91,
-      "end": 3.141
+      "char": "它",
+      "start": 2.636,
+      "end": 2.808
     },
     {
       "index": 9,
-      "char": "结",
-      "start": 3.185,
-      "end": 3.415
+      "char": "是",
+      "start": 2.841,
+      "end": 3.014
     },
     {
       "index": 10,
-      "char": "构",
-      "start": 3.459,
-      "end": 3.69
+      "char": "上",
+      "start": 3.046,
+      "end": 3.219
     },
     {
       "index": 11,
-      "char": "看",
-      "start": 4.074,
-      "end": 4.305
+      "char": "下",
+      "start": 3.252,
+      "end": 3.424
     },
     {
       "index": 12,
-      "char": "图",
-      "start": 4.349,
-      "end": 4.579
+      "char": "结",
+      "start": 3.457,
+      "end": 3.63
     },
     {
       "index": 13,
-      "char": "找",
-      "start": 4.623,
-      "end": 4.854
+      "char": "构",
+      "start": 3.663,
+      "end": 3.835
     },
     {
       "index": 14,
-      "char": "部",
-      "start": 4.898,
-      "end": 5.129
+      "char": "按",
+      "start": 4.048,
+      "end": 4.221
     },
     {
       "index": 15,
-      "char": "件",
-      "start": 5.173,
-      "end": 5.403
+      "char": "顺",
+      "start": 4.253,
+      "end": 4.426
     },
     {
       "index": 16,
-      "char": "合",
-      "start": 5.627,
-      "end": 5.858
+      "char": "序",
+      "start": 4.459,
+      "end": 4.631
     },
     {
       "index": 17,
-      "char": "成",
-      "start": 5.902,
-      "end": 6.133
+      "char": "能",
+      "start": 4.664,
+      "end": 4.837
     },
     {
       "index": 18,
-      "char": "字",
-      "start": 6.177,
-      "end": 6.407
+      "char": "看",
+      "start": 4.87,
+      "end": 5.042
     },
     {
       "index": 19,
-      "char": "形",
-      "start": 6.451,
-      "end": 6.682
+      "char": "到",
+      "start": 5.075,
+      "end": 5.248
     },
     {
       "index": 20,
-      "char": "再",
-      "start": 7.066,
-      "end": 7.297
+      "char": "路",
+      "start": 5.28,
+      "end": 5.453
     },
     {
       "index": 21,
-      "char": "读",
-      "start": 7.341,
-      "end": 7.571
+      "char": "和",
+      "start": 5.486,
+      "end": 5.658
     },
     {
       "index": 22,
-      "char": "白",
-      "start": 7.795,
-      "end": 8.026
+      "char": "鸟",
+      "start": 5.691,
+      "end": 5.864
     },
     {
       "index": 23,
+      "char": "从",
+      "start": 6.237,
+      "end": 6.409
+    },
+    {
+      "index": 24,
+      "char": "构",
+      "start": 6.442,
+      "end": 6.615
+    },
+    {
+      "index": 25,
+      "char": "字",
+      "start": 6.647,
+      "end": 6.82
+    },
+    {
+      "index": 26,
+      "char": "分",
+      "start": 6.853,
+      "end": 7.025
+    },
+    {
+      "index": 27,
+      "char": "工",
+      "start": 7.058,
+      "end": 7.231
+    },
+    {
+      "index": 28,
+      "char": "看",
+      "start": 7.264,
+      "end": 7.436
+    },
+    {
+      "index": 29,
+      "char": "鸟",
+      "start": 7.649,
+      "end": 7.822
+    },
+    {
+      "index": 30,
+      "char": "提",
+      "start": 7.854,
+      "end": 8.027
+    },
+    {
+      "index": 31,
+      "char": "示",
+      "start": 8.06,
+      "end": 8.232
+    },
+    {
+      "index": 32,
+      "char": "意",
+      "start": 8.265,
+      "end": 8.438
+    },
+    {
+      "index": 33,
+      "char": "义",
+      "start": 8.471,
+      "end": 8.643
+    },
+    {
+      "index": 34,
+      "char": "类",
+      "start": 8.676,
+      "end": 8.849
+    },
+    {
+      "index": 35,
+      "char": "别",
+      "start": 8.882,
+      "end": 9.054
+    },
+    {
+      "index": 36,
+      "char": "路",
+      "start": 9.267,
+      "end": 9.439
+    },
+    {
+      "index": 37,
+      "char": "提",
+      "start": 9.472,
+      "end": 9.645
+    },
+    {
+      "index": 38,
+      "char": "供",
+      "start": 9.678,
+      "end": 9.85
+    },
+    {
+      "index": 39,
+      "char": "读",
+      "start": 9.883,
+      "end": 10.056
+    },
+    {
+      "index": 40,
+      "char": "音",
+      "start": 10.089,
+      "end": 10.261
+    },
+    {
+      "index": 41,
+      "char": "线",
+      "start": 10.294,
+      "end": 10.466
+    },
+    {
+      "index": 42,
+      "char": "索",
+      "start": 10.499,
+      "end": 10.672
+    },
+    {
+      "index": 43,
+      "char": "看",
+      "start": 11.045,
+      "end": 11.217
+    },
+    {
+      "index": 44,
+      "char": "图",
+      "start": 11.25,
+      "end": 11.423
+    },
+    {
+      "index": 45,
+      "char": "时",
+      "start": 11.456,
+      "end": 11.628
+    },
+    {
+      "index": 46,
+      "char": "上",
+      "start": 11.841,
+      "end": 12.014
+    },
+    {
+      "index": 47,
+      "char": "方",
+      "start": 12.046,
+      "end": 12.219
+    },
+    {
+      "index": 48,
+      "char": "一",
+      "start": 12.252,
+      "end": 12.424
+    },
+    {
+      "index": 49,
+      "char": "条",
+      "start": 12.457,
+      "end": 12.63
+    },
+    {
+      "index": 50,
+      "char": "弯",
+      "start": 12.663,
+      "end": 12.835
+    },
+    {
+      "index": 51,
+      "char": "曲",
+      "start": 12.868,
+      "end": 13.041
+    },
+    {
+      "index": 52,
+      "char": "石",
+      "start": 13.073,
+      "end": 13.246
+    },
+    {
+      "index": 53,
+      "char": "路",
+      "start": 13.279,
+      "end": 13.451
+    },
+    {
+      "index": 54,
+      "char": "沿",
+      "start": 13.484,
+      "end": 13.657
+    },
+    {
+      "index": 55,
+      "char": "路",
+      "start": 13.69,
+      "end": 13.862
+    },
+    {
+      "index": 56,
+      "char": "的",
+      "start": 13.895,
+      "end": 14.068
+    },
+    {
+      "index": 57,
+      "char": "笔",
+      "start": 14.1,
+      "end": 14.273
+    },
+    {
+      "index": 58,
+      "char": "画",
+      "start": 14.306,
+      "end": 14.478
+    },
+    {
+      "index": 59,
+      "char": "铺",
+      "start": 14.511,
+      "end": 14.684
+    },
+    {
+      "index": 60,
+      "char": "开",
+      "start": 14.717,
+      "end": 14.889
+    },
+    {
+      "index": 61,
+      "char": "下",
+      "start": 15.102,
+      "end": 15.275
+    },
+    {
+      "index": 62,
+      "char": "方",
+      "start": 15.307,
+      "end": 15.48
+    },
+    {
+      "index": 63,
+      "char": "白",
+      "start": 15.513,
+      "end": 15.685
+    },
+    {
+      "index": 64,
       "char": "鹭",
-      "start": 8.07,
-      "end": 8.301
+      "start": 15.718,
+      "end": 15.891
+    },
+    {
+      "index": 65,
+      "char": "收",
+      "start": 15.924,
+      "end": 16.096
+    },
+    {
+      "index": 66,
+      "char": "拢",
+      "start": 16.129,
+      "end": 16.302
+    },
+    {
+      "index": 67,
+      "char": "翅",
+      "start": 16.334,
+      "end": 16.507
+    },
+    {
+      "index": 68,
+      "char": "尾",
+      "start": 16.54,
+      "end": 16.712
+    },
+    {
+      "index": 69,
+      "char": "站",
+      "start": 16.745,
+      "end": 16.918
+    },
+    {
+      "index": 70,
+      "char": "成",
+      "start": 16.951,
+      "end": 17.123
+    },
+    {
+      "index": 71,
+      "char": "鸟",
+      "start": 17.156,
+      "end": 17.329
+    },
+    {
+      "index": 72,
+      "char": "上",
+      "start": 17.542,
+      "end": 17.714
+    },
+    {
+      "index": 73,
+      "char": "下",
+      "start": 17.747,
+      "end": 17.919
+    },
+    {
+      "index": 74,
+      "char": "合",
+      "start": 17.952,
+      "end": 18.125
+    },
+    {
+      "index": 75,
+      "char": "成",
+      "start": 18.158,
+      "end": 18.33
+    },
+    {
+      "index": 76,
+      "char": "鹭",
+      "start": 18.363,
+      "end": 18.536
+    },
+    {
+      "index": 77,
+      "char": "白",
+      "start": 18.909,
+      "end": 19.081
+    },
+    {
+      "index": 78,
+      "char": "鹭",
+      "start": 19.114,
+      "end": 19.286
+    },
+    {
+      "index": 79,
+      "char": "是",
+      "start": 19.319,
+      "end": 19.492
+    },
+    {
+      "index": 80,
+      "char": "羽",
+      "start": 19.525,
+      "end": 19.697
+    },
+    {
+      "index": 81,
+      "char": "毛",
+      "start": 19.73,
+      "end": 19.903
+    },
+    {
+      "index": 82,
+      "char": "洁",
+      "start": 19.936,
+      "end": 20.108
+    },
+    {
+      "index": 83,
+      "char": "白",
+      "start": 20.141,
+      "end": 20.314
+    },
+    {
+      "index": 84,
+      "char": "常",
+      "start": 20.526,
+      "end": 20.699
+    },
+    {
+      "index": 85,
+      "char": "在",
+      "start": 20.732,
+      "end": 20.904
+    },
+    {
+      "index": 86,
+      "char": "水",
+      "start": 20.937,
+      "end": 21.11
+    },
+    {
+      "index": 87,
+      "char": "田",
+      "start": 21.143,
+      "end": 21.315
+    },
+    {
+      "index": 88,
+      "char": "和",
+      "start": 21.348,
+      "end": 21.521
+    },
+    {
+      "index": 89,
+      "char": "河",
+      "start": 21.553,
+      "end": 21.726
+    },
+    {
+      "index": 90,
+      "char": "滩",
+      "start": 21.759,
+      "end": 21.931
+    },
+    {
+      "index": 91,
+      "char": "活",
+      "start": 21.964,
+      "end": 22.137
+    },
+    {
+      "index": 92,
+      "char": "动",
+      "start": 22.17,
+      "end": 22.342
+    },
+    {
+      "index": 93,
+      "char": "的",
+      "start": 22.375,
+      "end": 22.548
+    },
+    {
+      "index": 94,
+      "char": "鸟",
+      "start": 22.58,
+      "end": 22.753
+    },
+    {
+      "index": 95,
+      "char": "这",
+      "start": 23.126,
+      "end": 23.298
+    },
+    {
+      "index": 96,
+      "char": "是",
+      "start": 23.331,
+      "end": 23.504
+    },
+    {
+      "index": 97,
+      "char": "一",
+      "start": 23.537,
+      "end": 23.709
+    },
+    {
+      "index": 98,
+      "char": "幅",
+      "start": 23.742,
+      "end": 23.915
+    },
+    {
+      "index": 99,
+      "char": "帮",
+      "start": 23.947,
+      "end": 24.12
+    },
+    {
+      "index": 100,
+      "char": "助",
+      "start": 24.153,
+      "end": 24.325
+    },
+    {
+      "index": 101,
+      "char": "记",
+      "start": 24.358,
+      "end": 24.531
+    },
+    {
+      "index": 102,
+      "char": "笔",
+      "start": 24.564,
+      "end": 24.736
+    },
+    {
+      "index": 103,
+      "char": "画",
+      "start": 24.769,
+      "end": 24.942
+    },
+    {
+      "index": 104,
+      "char": "和",
+      "start": 24.974,
+      "end": 25.147
+    },
+    {
+      "index": 105,
+      "char": "位",
+      "start": 25.18,
+      "end": 25.352
+    },
+    {
+      "index": 106,
+      "char": "置",
+      "start": 25.385,
+      "end": 25.558
+    },
+    {
+      "index": 107,
+      "char": "的",
+      "start": 25.591,
+      "end": 25.763
+    },
+    {
+      "index": 108,
+      "char": "记",
+      "start": 25.796,
+      "end": 25.969
+    },
+    {
+      "index": 109,
+      "char": "忆",
+      "start": 26.002,
+      "end": 26.174
+    },
+    {
+      "index": 110,
+      "char": "画",
+      "start": 26.207,
+      "end": 26.379
+    },
+    {
+      "index": 111,
+      "char": "面",
+      "start": 26.412,
+      "end": 26.585
+    },
+    {
+      "index": 112,
+      "char": "不",
+      "start": 26.798,
+      "end": 26.97
+    },
+    {
+      "index": 113,
+      "char": "是",
+      "start": 27.003,
+      "end": 27.176
+    },
+    {
+      "index": 114,
+      "char": "完",
+      "start": 27.209,
+      "end": 27.381
+    },
+    {
+      "index": 115,
+      "char": "整",
+      "start": 27.414,
+      "end": 27.586
+    },
+    {
+      "index": 116,
+      "char": "字",
+      "start": 27.619,
+      "end": 27.792
+    },
+    {
+      "index": 117,
+      "char": "源",
+      "start": 27.825,
+      "end": 27.997
+    },
+    {
+      "index": 118,
+      "char": "最",
+      "start": 28.37,
+      "end": 28.543
+    },
+    {
+      "index": 119,
+      "char": "后",
+      "start": 28.576,
+      "end": 28.748
+    },
+    {
+      "index": 120,
+      "char": "再",
+      "start": 28.781,
+      "end": 28.953
+    },
+    {
+      "index": 121,
+      "char": "读",
+      "start": 28.986,
+      "end": 29.159
+    },
+    {
+      "index": 122,
+      "char": "一",
+      "start": 29.192,
+      "end": 29.364
+    },
+    {
+      "index": 123,
+      "char": "遍",
+      "start": 29.397,
+      "end": 29.57
+    },
+    {
+      "index": 124,
+      "char": "白",
+      "start": 29.783,
+      "end": 29.955
+    },
+    {
+      "index": 125,
+      "char": "鹭",
+      "start": 29.988,
+      "end": 30.161
     }
   ],
-  "transcript": "鹭，“白鹭”的“鹭”。它是上下结构。看图找部件，合成字形。再读：白鹭。",
+  "transcript": "鹭，“白鹭”的“鹭”，读lù。它是上下结构，按顺序能看到“路”和“鸟”。从构字分工看，“鸟”提示意义类别，“路”提供读音线索。看图时，上方一条弯曲石路沿“路”的笔画铺开，下方白鹭收拢翅尾站成“鸟”，上下合成“鹭”。白鹭是羽毛洁白、常在水田和河滩活动的鸟。这是一幅帮助记笔画和位置的记忆画面，不是完整字源。最后再读一遍：白鹭。",
   "voice_reference": "封",
   "timing_source": "punctuation-weighted-estimate",
-  "script_version": "child-first-v1",
-  "duration": 8.800181
+  "script_version": "child-first-v2",
+  "duration": 30.721066
 }

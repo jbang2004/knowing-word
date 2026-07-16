@@ -11,6 +11,7 @@ import {
   officialRecognitionCount,
   officialWritingCount,
 } from "../app/data/grade5-volume1-source.ts";
+import { mnemonicQualityPlans } from "../app/data/mnemonic-quality.ts";
 
 const root = resolve(import.meta.dirname, "..");
 const dictionaryCache = "/tmp/knowing-word-makemeahanzi-dictionary.txt";
@@ -19,7 +20,8 @@ const outputModule = join(root, "app/data/grade5-volume1-generated.ts");
 const visualModule = join(root, "app/data/grade5-volume1-visuals.generated.ts");
 const mnemonicModule = join(root, "app/data/grade5-volume1-mnemonics.generated.ts");
 const narrationModule = join(root, "app/data/grade5-volume1-narration.generated.ts");
-const mnemonicRoot = join(root, "public/illustrations/mnemonics");
+const promptModule = join(root, "app/data/grade5-volume1-image-prompts.generated.ts");
+const mnemonicRoot = join(root, "public/illustrations/mnemonics-v2");
 
 const structureNames = {
   "⿰": "左右结构", "⿱": "上下结构", "⿲": "左中右结构", "⿳": "上中下结构",
@@ -50,6 +52,25 @@ const cueMap = {
   大: "正面伸展的人", 子: "被轻轻托住的孩子", 田: "分成四格的田地", 雨: "云框和落下的雨点", 白: "明亮的小窗",
 };
 
+// MakeMeAHanzi deliberately leaves a few modern simplified composites unnamed.
+// These overrides keep the parts teachable instead of silently dropping every
+// component after the radical.
+const componentOverrides = {
+  浸: ["氵", "彐", "冖", "又"], 茶: ["艹", "人", "木"], 惰: ["忄", "左", "月"],
+  衡: ["彳", "田", "大", "亍"], 臣: ["臣"], 赤: ["赤"], 侵: ["亻", "彐", "冖", "又"],
+  延: ["廴", "丿", "止"], 监: ["〢", "丿", "一", "丶", "皿"], 狱: ["犭", "讠", "犬"], 乃: ["乃"],
+  郎: ["良", "阝"], 妻: ["十", "彐", "女"], 衰: ["衰"], 熏: ["熏"],
+  祭: ["月", "又", "示"], 瑶: ["王", "爫", "缶"], 毁: ["臼", "工", "殳"],
+  览: ["〢", "丿", "一", "丶", "见"], 瞒: ["目", "艹", "两"], 矛: ["矛"],
+  氏: ["氏"], 鼠: ["鼠"], 兜: ["兜"], 席: ["广", "廿", "巾"],
+  桨: ["丬", "夕", "木"], 寝: ["宀", "丬", "彐", "冖", "又"], 抛: ["扌", "九", "力"],
+  煞: ["刍", "攵", "灬"], 寇: ["宀", "元", "攴"], 琐: ["王", "⺌", "贝"],
+  鉴: ["〢", "丿", "一", "丶", "金"], 幽: ["幺", "幺", "山"], 盾: ["⺁", "十", "目"],
+  区: ["匸", "乂"], 惫: ["备", "心"], 脊: ["脊"], 兼: ["兼"], 更: ["更"], 差: ["⺶", "工"],
+};
+
+const componentAliases = { "㣺": "⺗", "足": "⻊", "⺼": "月" };
+
 function glyphs(value = "") { return Array.from(value); }
 function unique(values) { return [...new Set(values)]; }
 function lessonId(position) { return `g5v1-l${String(position).padStart(2, "0")}`; }
@@ -77,12 +98,14 @@ function cueFor(component) {
 }
 
 function decompositionFor(record, parts) {
+  if (parts.length === 1 && record?.character === parts[0]) return "独体结构";
   const operator = record?.decomposition?.[0];
   if (structureNames[operator]) return structureNames[operator];
   return parts.length <= 1 ? "独体结构" : "组合结构";
 }
 
 function topParts(character) {
+  if (componentOverrides[character]) return componentOverrides[character];
   const decomposed = Hanzi.decompose(character, 1)?.components || [];
   const clean = decomposed.filter((part) =>
     part
@@ -91,7 +114,7 @@ function topParts(character) {
     && !part.startsWith("["),
   ).slice(0, 3);
   if (!clean.length || clean.join("") === character) return [character];
-  return clean;
+  return clean.map((part) => componentAliases[part] || part);
 }
 
 function makeOptions(id, values, correctValues, radicalValues = [], idc = {}) {
@@ -104,7 +127,7 @@ function makeOptions(id, values, correctValues, radicalValues = [], idc = {}) {
   }));
 }
 
-function exerciseSet(character, index, lesson, parts, structure, writing, polyphonic, word, pinyinText) {
+function exerciseSet(character, index, lesson, parts, radical, structure, writing, polyphonic, word, pinyinText) {
   const base = charId(lesson.position, index, character);
   const lessonWords = unique(lesson.words.filter((item) => item !== word));
   const distractorWords = [lessonWords[(index * 3 + 1) % lessonWords.length], lessonWords[(index * 5 + 2) % lessonWords.length]].filter(Boolean);
@@ -127,9 +150,9 @@ function exerciseSet(character, index, lesson, parts, structure, writing, polyph
     { id: wordQuestion, origin: "识字小测", kind: "single", questionType: "single_select", prompt: `“${character}”在本课哪个词语中出现？`, options: makeOptions(wordQuestion, unique([word, ...distractorWords]), [word]), explanation: `“${character}”就在“${word}”中。先把字放回词语，字义会更清楚。` },
     { id: structureQuestion, origin: "识字小测", kind: "structure", questionType: "character_structure_select", prompt: `“${character}”是什么结构？`, options: makeOptions(structureQuestion, structures, [structure], [], structureCodes), explanation: `“${character}”是${structure}。先看部件站位，再看笔画细节。` },
     { id: imageQuestion, origin: "识字小测", kind: "single", questionType: "image_single_select", prompt: `哪幅图把“${character}”的部件藏得最完整？`, options: [0, 1, 2].map((slot) => ({ id: `${imageQuestion}-${slot}`, text: "", correct: slot === 1, radical: false, idcCode: "" })), explanation: `正确画面把${parts.map((part) => `“${part}”`).join("和")}按${structure}嵌进了“${character}”。` },
-    { id: componentQuestion, origin: "识字小测", kind: "components", questionType: "composition_select_to_text", prompt: `选择“${character}”的主要部件。`, options: makeOptions(componentQuestion, componentPool, parts, [parts[0]]), explanation: `${parts.join(" + ")}，按${structure}组合成“${character}”。` },
-    { id: splitQuestion, origin: "拆一拆", kind: "components", questionType: "composition_select_to_text", prompt: `按顺序搭出“${character}”。`, options: makeOptions(splitQuestion, componentPool, parts, [parts[0]]), explanation: `先找到表意部件，再按顺序补齐其余部件。` },
-    { id: redBlueQuestion, origin: "红蓝字", kind: "components", questionType: "radical_component_select", prompt: `给“${character}”的表意部件和其他部件分色。`, options: makeOptions(redBlueQuestion, parts, parts, [parts[0]]), explanation: `暖红追踪表意部件“${parts[0]}”，靛蓝追踪其余字形线索。` },
+    { id: componentQuestion, origin: "识字小测", kind: "components", questionType: "composition_select_to_text", prompt: `选择“${character}”的主要部件。`, options: makeOptions(componentQuestion, componentPool, parts, [radical]), explanation: `${parts.join(" + ")}，按${structure}组合成“${character}”。` },
+    { id: splitQuestion, origin: "拆一拆", kind: "components", questionType: "composition_select_to_text", prompt: `按顺序搭出“${character}”。`, options: makeOptions(splitQuestion, componentPool, parts, [radical]), explanation: `先按${structure}排好部件，再找到表意线索“${radical}”。` },
+    { id: redBlueQuestion, origin: "红蓝字", kind: "components", questionType: "radical_component_select", prompt: `给“${character}”的表意部件和其他部件分色。`, options: makeOptions(redBlueQuestion, parts, parts, [radical]), explanation: `暖红追踪表意线索“${radical}”，靛蓝追踪其余字形或读音线索。` },
     { id: structureTrackQuestion, origin: "空间结构", kind: "structure", questionType: "character_structure_select", prompt: `把“${character}”放进正确的结构格。`, options: makeOptions(structureTrackQuestion, structures, [structure], [], structureCodes), explanation: `“${character}”的部件按${structure}站位。` },
   ];
   if (polyphonic) {
@@ -152,23 +175,52 @@ function exerciseSet(character, index, lesson, parts, structure, writing, polyph
   return list;
 }
 
-function componentDescription(part) {
-  return `把“${part}”看成${cueFor(part)}。观察转折、长短和它在整字里的位置，再把轮廓合回去。`;
+function componentDescription(part, plan, parts, index) {
+  const sceneCue = sceneCues(plan, parts)[index];
+  return `${sceneCue}先认清“${part}”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。`;
 }
 
-function makeDescription(character, pinyinText, word, structure, parts, role, scene) {
+function trimStop(value) {
+  return value.replace(/[。！？；]+$/u, "");
+}
+
+function etymologyCopy(record, parts, radical) {
+  const semantic = record?.etymology?.semantic;
+  const phonetic = record?.etymology?.phonetic;
+  if (record?.etymology?.type?.includes("pictophonetic") && semantic && phonetic) {
+    return `从构字分工看，“${semantic}”提示意义类别，“${phonetic}”提供读音线索`;
+  }
+  if (parts.length > 1) return `从构字分工看，“${radical}”先提示意义类别，其余部件补足字形`;
+  return "这个字适合顺着完整轮廓来记";
+}
+
+function makeDescription(character, pinyinText, word, structure, parts, radical, role, plan, record) {
   const roleCopy = role === "write" ? "这是本课要求会写的字" : role === "polyphonic" ? "这是本课要留意读音变化的多音字" : "这是本课要求会认的字";
-  return `${character}，读${pinyinText}，是“${word}”里的字。${roleCopy}。先看整体：它是${structure}，可以抓住${parts.map((part) => `“${part}”`).join("和")}。${scene}暖红部分先提示意义，靛蓝部分补足字形或读音线索。最后回到“${word}”里读一遍，再闭眼把字形在脑中描出来。`;
+  return `${character}，读${pinyinText}，是“${word}”里的字。${roleCopy}。先看整体：它是${structure}，按顺序能看到${parts.map((part) => `“${part}”`).join("和")}。${etymologyCopy(record, parts, radical)}。看图时，${trimStop(plan.scene)}。${trimStop(plan.meaning)}。这幅物象图用于记笔画和位置，不代替完整字源。最后回到“${word}”里读一遍。`;
 }
 
-function makeNarration(character, word, structure, parts, polyphonic) {
-  const memoryCopy = parts.length > 1 ? "看图找部件，合成字形" : "顺着图记住整体轮廓";
+function makeNarration(character, word, pinyinText, structure, parts, radical, polyphonic, plan, record) {
+  const visibleParts = parts.map((part) => `“${part}”`).join("和");
+  const body = `它是${structure}，按顺序能看到${visibleParts}。${etymologyCopy(record, parts, radical)}。看图时，${trimStop(plan.scene)}。${trimStop(plan.meaning)}。这是一幅帮助记笔画和位置的记忆画面，不是完整字源。`;
   if (polyphonic) {
     const wordIndex = Math.max(0, Array.from(word).indexOf(character));
     const ordinal = ["一", "二", "三", "四", "五"][wordIndex] || String(wordIndex + 1);
-    return `先读“${word}”。这里的第${ordinal}个字是多音字，要跟着课文语境读。它是${structure}。${memoryCopy}。再读：${word}。`;
+    return `先读“${word}”。这里的第${ordinal}个字是“${character}”，在这个词里读${pinyinText}，多音字要跟着语境选读音。${body}最后再读一遍：${word}。`;
   }
-  return `${character}，“${word}”的“${character}”。它是${structure}。${memoryCopy}。再读：${word}。`;
+  return `${character}，“${word}”的“${character}”，读${pinyinText}。${body}最后再读一遍：${word}。`;
+}
+
+function sceneCues(plan, parts) {
+  const clauses = plan.scene.split(/[，；。]/u).map((item) => item.trim()).filter(Boolean);
+  return parts.map((part, index) => {
+    const exact = clauses.find((clause) => clause.includes(`“${part}”`));
+    if (exact) return `${exact}。`;
+    return `${index === 0 ? "先" : "再"}在专属画面中找到“${part}”的完整位置；${trimStop(plan.scene)}。`;
+  });
+}
+
+function imagePrompt({ character, word, lesson, structure, parts, radical, plan }) {
+  return `Use case: scientific-educational\nAsset type: square web mnemonic illustration for a Grade 5 Chinese literacy lesson\nPrimary request: create one polished child-friendly object-shaped mnemonic for the Chinese character “${character}” in the word “${word}”\nScene/backdrop: a single coherent ${lesson.title} learning scene on warm rice-paper texture, quiet and uncluttered\nSubject: ${trimStop(plan.scene)}\nStructure accuracy: preserve the real ${structure}; place ${parts.map((part) => `“${part}”`).join("、")} in that exact order and relative position; “${radical}” remains clearly findable as the semantic clue\nStyle/medium: premium Chinese children’s-book watercolor with crisp object silhouettes, natural depth, refined details, warm light, visually comparable to an award-winning educational picture book\nComposition/framing: 1:1 square, the full mnemonic object centered inside the middle 78% of the canvas, generous safe padding on all four sides, no object or stroke-like edge cropped; readable on mobile\nLearning goal: every component is made from meaningful real objects, and those object contours naturally grow into the component strokes before combining into the whole character\nConstraints: one scene only; component contours must stay complete and separable; meaning must be understandable without labels; age-appropriate and beautiful\nAvoid: printed or handwritten Chinese text, font masks, a giant opaque character pasted over a photo, captions, pinyin, labels, borders, split panels, UI, watermark, logos, violence, clutter, cropped subjects`;
 }
 
 function makeSvg({ character, word, lesson, parts, radical }) {
@@ -207,6 +259,7 @@ const characters = [];
 const visuals = {};
 const scenes = {};
 const narrations = {};
+const imagePrompts = {};
 const componentMap = new Map();
 
 for (const lesson of grade5Volume1Lessons) {
@@ -223,30 +276,32 @@ for (const lesson of grade5Volume1Lessons) {
     const record = dictionary.get(character);
     const rawParts = topParts(character);
     const radical = record?.radical && record.radical !== character ? record.radical : rawParts[0];
-    const parts = [radical, ...rawParts.filter((part) => part !== radical)];
+    const parts = rawParts;
+    const teachingRadical = parts.includes(radical) ? radical : parts[0];
     const structure = decompositionFor(record, parts);
     const word = wordFor(lesson, character);
     const pinyinText = pinyinFor(lesson, word, character);
     const role = writing.has(character) ? "write" : polyphonic.has(character) ? "polyphonic" : "recognize";
-    const scene = `在“${word}”的画面里，${parts.map((part) => cueFor(part)).join("和")}按${structure}站好，物体边缘顺着真实笔画长成“${character}”。`;
+    const plan = mnemonicQualityPlans[character];
+    if (!plan) throw new Error(`missing mnemonic quality plan for ${character}`);
+    const scene = plan.scene;
     const idForCharacter = charId(lesson.position, index, character);
-    const compositions = parts.map((part) => ({ char: part, description: componentDescription(part), charType: part === character ? typeNames[record?.etymology?.type] || "字形部件" : "字形部件", children: [] }));
+    const compositions = parts.map((part, partIndex) => ({ char: part, description: componentDescription(part, plan, parts, partIndex), charType: part === character ? typeNames[record?.etymology?.type] || "字形部件" : "字形部件", children: [] }));
     const item = {
       id: idForCharacter, lessonId: id, lessonTitle: lesson.title, lessonPosition: lesson.position,
       word, wordPosition: lesson.words.indexOf(word) + 1 || index + 1, hanzi: character, primary: true, ready: true,
       pinyin: pinyinText, charType: typeNames[record?.etymology?.type] || "字形字", decomposition: structure,
-      originalMeaning: word, description: makeDescription(character, pinyinText, word, structure, parts, role, scene), originalText: lesson.context,
-      parts: parts.map((part) => ({ char: part, radical: part === radical })), compositions,
-      exercises: exerciseSet(character, index, lesson, parts, structure, writing.has(character), polyphonic.has(character), word, pinyinText),
+      originalMeaning: plan.meaning, description: makeDescription(character, pinyinText, word, structure, parts, teachingRadical, role, plan, record), originalText: lesson.context,
+      parts: parts.map((part) => ({ char: part, radical: part === teachingRadical })), compositions,
+      exercises: exerciseSet(character, index, lesson, parts, teachingRadical, structure, writing.has(character), polyphonic.has(character), word, pinyinText),
       curriculumRole: role, polyphonic: polyphonic.has(character), official: true, tier: "curriculum",
     };
     characters.push(item);
-    scenes[character] ||= { scene, cues: parts.map((part, partIndex) => `${cueFor(part)}沿着“${part}”的主要笔画转折，${partIndex === 0 ? "先提示意义类别" : "再补足字形或读音线索"}。`) };
-    narrations[character] ||= makeNarration(character, word, structure, parts, polyphonic.has(character));
-    visuals[character] ||= { src: `/illustrations/mnemonics/g5-${codeId(character)}.svg`, label: word, alt: `${character}字嵌在${cueFor(radical)}与${parts.slice(1).map(cueFor).join("、") || "完整物象"}组成的学习插图中` };
-    for (const part of parts) if (!componentMap.has(part)) componentMap.set(part, { id: `g5-component-${codeId(part)}`, title: part, glyph: part, examples: [character], description: componentDescription(part), characterSet: [character], group: componentMap.size + 600, sequence: componentMap.size + 600 }); else { const component = componentMap.get(part); if (!component.examples.includes(character)) component.examples.push(character); if (!component.characterSet.includes(character)) component.characterSet.push(character); }
-    const svg = makeSvg({ character, word, lesson, parts, radical });
-    await writeFile(join(mnemonicRoot, svg.filename), svg.content);
+    scenes[character] ||= { scene, cues: sceneCues(plan, parts) };
+    narrations[character] ||= makeNarration(character, word, pinyinText, structure, parts, teachingRadical, polyphonic.has(character), plan, record);
+    visuals[character] ||= { src: `/illustrations/mnemonics-v2/g5-${codeId(character)}.jpg`, label: word, alt: `${trimStop(plan.meaning)} 图中${parts.map((part) => `“${part}”`).join("与")}按${structure}自然长成“${character}”。` };
+    imagePrompts[character] ||= { character, word, lesson: lesson.title, structure, parts, radical: teachingRadical, filename: `g5-${codeId(character)}.jpg`, prompt: imagePrompt({ character, word, lesson, structure, parts, radical: teachingRadical, plan }) };
+    for (const [partIndex, part] of parts.entries()) if (!componentMap.has(part)) componentMap.set(part, { id: `g5-component-${codeId(part)}`, title: part, glyph: part, examples: [character], description: componentDescription(part, plan, parts, partIndex), characterSet: [character], group: componentMap.size + 600, sequence: componentMap.size + 600 }); else { const component = componentMap.get(part); if (!component.examples.includes(character)) component.examples.push(character); if (!component.characterSet.includes(character)) component.characterSet.push(character); }
   }
 }
 
@@ -261,4 +316,5 @@ await writeFile(outputModule, [serialize("grade5Course", course), serialize("gra
 await writeFile(visualModule, `${serialize("grade5CharacterVisuals", visuals)}\n${serialize("grade5LessonVisuals", Object.fromEntries(grade5Volume1Lessons.map((lesson) => [lessonId(lesson.position), { src: `/illustrations/lessons/g5-${String(lesson.position).padStart(2, "0")}.jpg`, label: lesson.title, alt: lesson.visual }])))}`);
 await writeFile(mnemonicModule, serialize("grade5MnemonicScenes", scenes));
 await writeFile(narrationModule, serialize("grade5NarrationScripts", narrations));
+await writeFile(promptModule, serialize("grade5ImagePrompts", imagePrompts));
 process.stdout.write(`Generated ${lessons.length} lessons, ${characters.length} lesson-character records, ${Object.keys(visuals).length} unique glyph visuals and ${componentMap.size} components.\n`);

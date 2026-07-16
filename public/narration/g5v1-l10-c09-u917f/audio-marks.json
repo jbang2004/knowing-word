@@ -3,151 +3,763 @@
     {
       "index": 0,
       "char": "酿",
-      "start": 0.129,
-      "end": 0.27
+      "start": 0.294,
+      "end": 0.484
     },
     {
       "index": 1,
       "char": "酿",
-      "start": 0.455,
-      "end": 0.596
+      "start": 0.701,
+      "end": 0.891
     },
     {
       "index": 2,
       "char": "酒",
-      "start": 0.624,
-      "end": 0.765
+      "start": 0.928,
+      "end": 1.118
     },
     {
       "index": 3,
       "char": "的",
-      "start": 0.792,
-      "end": 0.934
+      "start": 1.155,
+      "end": 1.345
     },
     {
       "index": 4,
       "char": "酿",
-      "start": 0.961,
-      "end": 1.103
+      "start": 1.382,
+      "end": 1.572
     },
     {
       "index": 5,
-      "char": "它",
-      "start": 1.427,
-      "end": 1.569
+      "char": "读",
+      "start": 1.789,
+      "end": 1.979
     },
     {
       "index": 6,
-      "char": "是",
-      "start": 1.596,
-      "end": 1.738
+      "char": "n",
+      "start": 2.016,
+      "end": 2.206
     },
     {
       "index": 7,
-      "char": "左",
-      "start": 1.765,
-      "end": 1.907
+      "char": "i",
+      "start": 2.243,
+      "end": 2.433
     },
     {
       "index": 8,
-      "char": "右",
-      "start": 1.934,
-      "end": 2.076
+      "char": "à",
+      "start": 2.47,
+      "end": 2.66
     },
     {
       "index": 9,
-      "char": "结",
-      "start": 2.103,
-      "end": 2.245
+      "char": "n",
+      "start": 2.696,
+      "end": 2.887
     },
     {
       "index": 10,
-      "char": "构",
-      "start": 2.272,
-      "end": 2.414
+      "char": "g",
+      "start": 2.923,
+      "end": 3.114
     },
     {
       "index": 11,
-      "char": "看",
-      "start": 2.738,
-      "end": 2.879
+      "char": "它",
+      "start": 3.49,
+      "end": 3.681
     },
     {
       "index": 12,
-      "char": "图",
-      "start": 2.907,
-      "end": 3.048
+      "char": "是",
+      "start": 3.717,
+      "end": 3.908
     },
     {
       "index": 13,
-      "char": "找",
-      "start": 3.075,
-      "end": 3.217
+      "char": "左",
+      "start": 3.944,
+      "end": 4.135
     },
     {
       "index": 14,
-      "char": "部",
-      "start": 3.244,
-      "end": 3.386
+      "char": "右",
+      "start": 4.171,
+      "end": 4.362
     },
     {
       "index": 15,
-      "char": "件",
-      "start": 3.413,
-      "end": 3.555
+      "char": "结",
+      "start": 4.398,
+      "end": 4.589
     },
     {
       "index": 16,
-      "char": "合",
-      "start": 3.739,
-      "end": 3.881
+      "char": "构",
+      "start": 4.625,
+      "end": 4.816
     },
     {
       "index": 17,
-      "char": "成",
-      "start": 3.908,
-      "end": 4.05
+      "char": "按",
+      "start": 5.032,
+      "end": 5.223
     },
     {
       "index": 18,
-      "char": "字",
-      "start": 4.077,
-      "end": 4.219
+      "char": "顺",
+      "start": 5.259,
+      "end": 5.45
     },
     {
       "index": 19,
-      "char": "形",
-      "start": 4.246,
-      "end": 4.388
+      "char": "序",
+      "start": 5.486,
+      "end": 5.677
     },
     {
       "index": 20,
-      "char": "再",
-      "start": 4.712,
-      "end": 4.854
+      "char": "能",
+      "start": 5.713,
+      "end": 5.904
     },
     {
       "index": 21,
-      "char": "读",
-      "start": 4.881,
-      "end": 5.023
+      "char": "看",
+      "start": 5.94,
+      "end": 6.131
     },
     {
       "index": 22,
-      "char": "酿",
-      "start": 5.207,
-      "end": 5.349
+      "char": "到",
+      "start": 6.167,
+      "end": 6.358
     },
     {
       "index": 23,
+      "char": "酉",
+      "start": 6.394,
+      "end": 6.585
+    },
+    {
+      "index": 24,
+      "char": "和",
+      "start": 6.621,
+      "end": 6.812
+    },
+    {
+      "index": 25,
+      "char": "良",
+      "start": 6.848,
+      "end": 7.039
+    },
+    {
+      "index": 26,
+      "char": "从",
+      "start": 7.415,
+      "end": 7.606
+    },
+    {
+      "index": 27,
+      "char": "构",
+      "start": 7.642,
+      "end": 7.833
+    },
+    {
+      "index": 28,
+      "char": "字",
+      "start": 7.869,
+      "end": 8.06
+    },
+    {
+      "index": 29,
+      "char": "分",
+      "start": 8.096,
+      "end": 8.287
+    },
+    {
+      "index": 30,
+      "char": "工",
+      "start": 8.323,
+      "end": 8.514
+    },
+    {
+      "index": 31,
+      "char": "看",
+      "start": 8.55,
+      "end": 8.741
+    },
+    {
+      "index": 32,
+      "char": "酉",
+      "start": 8.957,
+      "end": 9.148
+    },
+    {
+      "index": 33,
+      "char": "提",
+      "start": 9.184,
+      "end": 9.375
+    },
+    {
+      "index": 34,
+      "char": "示",
+      "start": 9.411,
+      "end": 9.602
+    },
+    {
+      "index": 35,
+      "char": "意",
+      "start": 9.638,
+      "end": 9.829
+    },
+    {
+      "index": 36,
+      "char": "义",
+      "start": 9.865,
+      "end": 10.056
+    },
+    {
+      "index": 37,
+      "char": "类",
+      "start": 10.092,
+      "end": 10.283
+    },
+    {
+      "index": 38,
+      "char": "别",
+      "start": 10.319,
+      "end": 10.51
+    },
+    {
+      "index": 39,
+      "char": "良",
+      "start": 10.726,
+      "end": 10.917
+    },
+    {
+      "index": 40,
+      "char": "提",
+      "start": 10.953,
+      "end": 11.144
+    },
+    {
+      "index": 41,
+      "char": "供",
+      "start": 11.18,
+      "end": 11.371
+    },
+    {
+      "index": 42,
+      "char": "读",
+      "start": 11.407,
+      "end": 11.598
+    },
+    {
+      "index": 43,
+      "char": "音",
+      "start": 11.634,
+      "end": 11.825
+    },
+    {
+      "index": 44,
+      "char": "线",
+      "start": 11.861,
+      "end": 12.052
+    },
+    {
+      "index": 45,
+      "char": "索",
+      "start": 12.088,
+      "end": 12.279
+    },
+    {
+      "index": 46,
+      "char": "看",
+      "start": 12.655,
+      "end": 12.846
+    },
+    {
+      "index": 47,
+      "char": "图",
+      "start": 12.882,
+      "end": 13.073
+    },
+    {
+      "index": 48,
+      "char": "时",
+      "start": 13.109,
+      "end": 13.3
+    },
+    {
+      "index": 49,
+      "char": "左",
+      "start": 13.516,
+      "end": 13.707
+    },
+    {
+      "index": 50,
+      "char": "边",
+      "start": 13.743,
+      "end": 13.934
+    },
+    {
+      "index": 51,
+      "char": "封",
+      "start": 13.97,
+      "end": 14.161
+    },
+    {
+      "index": 52,
+      "char": "口",
+      "start": 14.197,
+      "end": 14.388
+    },
+    {
+      "index": 53,
       "char": "酒",
-      "start": 5.376,
-      "end": 5.518
+      "start": 14.424,
+      "end": 14.615
+    },
+    {
+      "index": 54,
+      "char": "坛",
+      "start": 14.651,
+      "end": 14.842
+    },
+    {
+      "index": 55,
+      "char": "形",
+      "start": 14.878,
+      "end": 15.068
+    },
+    {
+      "index": 56,
+      "char": "成",
+      "start": 15.105,
+      "end": 15.295
+    },
+    {
+      "index": 57,
+      "char": "酉",
+      "start": 15.332,
+      "end": 15.522
+    },
+    {
+      "index": 58,
+      "char": "右",
+      "start": 15.739,
+      "end": 15.929
+    },
+    {
+      "index": 59,
+      "char": "边",
+      "start": 15.966,
+      "end": 16.156
+    },
+    {
+      "index": 60,
+      "char": "优",
+      "start": 16.193,
+      "end": 16.383
+    },
+    {
+      "index": 61,
+      "char": "质",
+      "start": 16.42,
+      "end": 16.61
+    },
+    {
+      "index": 62,
+      "char": "谷",
+      "start": 16.647,
+      "end": 16.837
+    },
+    {
+      "index": 63,
+      "char": "物",
+      "start": 16.874,
+      "end": 17.064
+    },
+    {
+      "index": 64,
+      "char": "发",
+      "start": 17.281,
+      "end": 17.471
+    },
+    {
+      "index": 65,
+      "char": "酵",
+      "start": 17.508,
+      "end": 17.698
+    },
+    {
+      "index": 66,
+      "char": "布",
+      "start": 17.735,
+      "end": 17.925
+    },
+    {
+      "index": 67,
+      "char": "和",
+      "start": 17.962,
+      "end": 18.152
+    },
+    {
+      "index": 68,
+      "char": "流",
+      "start": 18.189,
+      "end": 18.379
+    },
+    {
+      "index": 69,
+      "char": "下",
+      "start": 18.416,
+      "end": 18.606
+    },
+    {
+      "index": 70,
+      "char": "酒",
+      "start": 18.643,
+      "end": 18.833
+    },
+    {
+      "index": 71,
+      "char": "液",
+      "start": 18.87,
+      "end": 19.06
+    },
+    {
+      "index": 72,
+      "char": "沿",
+      "start": 19.097,
+      "end": 19.287
+    },
+    {
+      "index": 73,
+      "char": "良",
+      "start": 19.324,
+      "end": 19.514
+    },
+    {
+      "index": 74,
+      "char": "排",
+      "start": 19.551,
+      "end": 19.741
+    },
+    {
+      "index": 75,
+      "char": "列",
+      "start": 19.778,
+      "end": 19.968
+    },
+    {
+      "index": 76,
+      "char": "组",
+      "start": 20.185,
+      "end": 20.375
+    },
+    {
+      "index": 77,
+      "char": "成",
+      "start": 20.412,
+      "end": 20.602
+    },
+    {
+      "index": 78,
+      "char": "酿",
+      "start": 20.638,
+      "end": 20.829
+    },
+    {
+      "index": 79,
+      "char": "酿",
+      "start": 21.205,
+      "end": 21.396
+    },
+    {
+      "index": 80,
+      "char": "酒",
+      "start": 21.432,
+      "end": 21.623
+    },
+    {
+      "index": 81,
+      "char": "是",
+      "start": 21.659,
+      "end": 21.85
+    },
+    {
+      "index": 82,
+      "char": "让",
+      "start": 21.886,
+      "end": 22.077
+    },
+    {
+      "index": 83,
+      "char": "粮",
+      "start": 22.113,
+      "end": 22.304
+    },
+    {
+      "index": 84,
+      "char": "食",
+      "start": 22.34,
+      "end": 22.531
+    },
+    {
+      "index": 85,
+      "char": "或",
+      "start": 22.567,
+      "end": 22.758
+    },
+    {
+      "index": 86,
+      "char": "水",
+      "start": 22.794,
+      "end": 22.985
+    },
+    {
+      "index": 87,
+      "char": "果",
+      "start": 23.021,
+      "end": 23.212
+    },
+    {
+      "index": 88,
+      "char": "经",
+      "start": 23.248,
+      "end": 23.439
+    },
+    {
+      "index": 89,
+      "char": "过",
+      "start": 23.475,
+      "end": 23.666
+    },
+    {
+      "index": 90,
+      "char": "发",
+      "start": 23.702,
+      "end": 23.893
+    },
+    {
+      "index": 91,
+      "char": "酵",
+      "start": 23.929,
+      "end": 24.12
+    },
+    {
+      "index": 92,
+      "char": "变",
+      "start": 24.156,
+      "end": 24.347
+    },
+    {
+      "index": 93,
+      "char": "成",
+      "start": 24.383,
+      "end": 24.574
+    },
+    {
+      "index": 94,
+      "char": "酒",
+      "start": 24.61,
+      "end": 24.801
+    },
+    {
+      "index": 95,
+      "char": "这",
+      "start": 25.177,
+      "end": 25.368
+    },
+    {
+      "index": 96,
+      "char": "是",
+      "start": 25.404,
+      "end": 25.595
+    },
+    {
+      "index": 97,
+      "char": "一",
+      "start": 25.631,
+      "end": 25.822
+    },
+    {
+      "index": 98,
+      "char": "幅",
+      "start": 25.858,
+      "end": 26.049
+    },
+    {
+      "index": 99,
+      "char": "帮",
+      "start": 26.085,
+      "end": 26.276
+    },
+    {
+      "index": 100,
+      "char": "助",
+      "start": 26.312,
+      "end": 26.503
+    },
+    {
+      "index": 101,
+      "char": "记",
+      "start": 26.539,
+      "end": 26.73
+    },
+    {
+      "index": 102,
+      "char": "笔",
+      "start": 26.766,
+      "end": 26.957
+    },
+    {
+      "index": 103,
+      "char": "画",
+      "start": 26.993,
+      "end": 27.184
+    },
+    {
+      "index": 104,
+      "char": "和",
+      "start": 27.22,
+      "end": 27.411
+    },
+    {
+      "index": 105,
+      "char": "位",
+      "start": 27.447,
+      "end": 27.638
+    },
+    {
+      "index": 106,
+      "char": "置",
+      "start": 27.674,
+      "end": 27.865
+    },
+    {
+      "index": 107,
+      "char": "的",
+      "start": 27.901,
+      "end": 28.092
+    },
+    {
+      "index": 108,
+      "char": "记",
+      "start": 28.128,
+      "end": 28.319
+    },
+    {
+      "index": 109,
+      "char": "忆",
+      "start": 28.355,
+      "end": 28.546
+    },
+    {
+      "index": 110,
+      "char": "画",
+      "start": 28.582,
+      "end": 28.773
+    },
+    {
+      "index": 111,
+      "char": "面",
+      "start": 28.809,
+      "end": 29
+    },
+    {
+      "index": 112,
+      "char": "不",
+      "start": 29.216,
+      "end": 29.407
+    },
+    {
+      "index": 113,
+      "char": "是",
+      "start": 29.443,
+      "end": 29.634
+    },
+    {
+      "index": 114,
+      "char": "完",
+      "start": 29.67,
+      "end": 29.861
+    },
+    {
+      "index": 115,
+      "char": "整",
+      "start": 29.897,
+      "end": 30.088
+    },
+    {
+      "index": 116,
+      "char": "字",
+      "start": 30.124,
+      "end": 30.315
+    },
+    {
+      "index": 117,
+      "char": "源",
+      "start": 30.351,
+      "end": 30.542
+    },
+    {
+      "index": 118,
+      "char": "最",
+      "start": 30.918,
+      "end": 31.109
+    },
+    {
+      "index": 119,
+      "char": "后",
+      "start": 31.145,
+      "end": 31.336
+    },
+    {
+      "index": 120,
+      "char": "再",
+      "start": 31.372,
+      "end": 31.563
+    },
+    {
+      "index": 121,
+      "char": "读",
+      "start": 31.599,
+      "end": 31.79
+    },
+    {
+      "index": 122,
+      "char": "一",
+      "start": 31.826,
+      "end": 32.017
+    },
+    {
+      "index": 123,
+      "char": "遍",
+      "start": 32.053,
+      "end": 32.244
+    },
+    {
+      "index": 124,
+      "char": "酿",
+      "start": 32.46,
+      "end": 32.65
+    },
+    {
+      "index": 125,
+      "char": "酒",
+      "start": 32.687,
+      "end": 32.877
     }
   ],
-  "transcript": "酿，“酿酒”的“酿”。它是左右结构。看图找部件，合成字形。再读：酿酒。",
+  "transcript": "酿，“酿酒”的“酿”，读niàng。它是左右结构，按顺序能看到“酉”和“良”。从构字分工看，“酉”提示意义类别，“良”提供读音线索。看图时，左边封口酒坛形成“酉”，右边优质谷物、发酵布和流下酒液沿“良”排列，组成“酿”。酿酒是让粮食或水果经过发酵变成酒。这是一幅帮助记笔画和位置的记忆画面，不是完整字源。最后再读一遍：酿酒。",
   "voice_reference": "封",
   "timing_source": "punctuation-weighted-estimate",
-  "script_version": "child-first-v1",
-  "duration": 5.920181
+  "script_version": "child-first-v2",
+  "duration": 33.440181
 }

@@ -3,151 +3,775 @@
     {
       "index": 0,
       "char": "焦",
-      "start": 0.207,
-      "end": 0.459
+      "start": 0.294,
+      "end": 0.491
     },
     {
       "index": 1,
       "char": "焦",
-      "start": 0.687,
-      "end": 0.94
+      "start": 0.709,
+      "end": 0.906
     },
     {
       "index": 2,
       "char": "急",
-      "start": 0.988,
-      "end": 1.24
+      "start": 0.943,
+      "end": 1.14
     },
     {
       "index": 3,
       "char": "的",
-      "start": 1.288,
-      "end": 1.54
+      "start": 1.178,
+      "end": 1.375
     },
     {
       "index": 4,
       "char": "焦",
-      "start": 1.588,
-      "end": 1.841
+      "start": 1.412,
+      "end": 1.609
     },
     {
       "index": 5,
-      "char": "它",
-      "start": 2.229,
-      "end": 2.481
+      "char": "读",
+      "start": 1.827,
+      "end": 2.024
     },
     {
       "index": 6,
-      "char": "是",
-      "start": 2.529,
-      "end": 2.782
+      "char": "j",
+      "start": 2.061,
+      "end": 2.258
     },
     {
       "index": 7,
-      "char": "上",
-      "start": 2.83,
-      "end": 3.082
+      "char": "i",
+      "start": 2.296,
+      "end": 2.493
     },
     {
       "index": 8,
-      "char": "下",
-      "start": 3.13,
-      "end": 3.382
+      "char": "ā",
+      "start": 2.53,
+      "end": 2.727
     },
     {
       "index": 9,
-      "char": "结",
-      "start": 3.43,
-      "end": 3.683
+      "char": "o",
+      "start": 2.765,
+      "end": 2.962
     },
     {
       "index": 10,
-      "char": "构",
-      "start": 3.731,
-      "end": 3.983
+      "char": "它",
+      "start": 3.339,
+      "end": 3.536
     },
     {
       "index": 11,
-      "char": "看",
-      "start": 4.371,
-      "end": 4.624
+      "char": "是",
+      "start": 3.574,
+      "end": 3.771
     },
     {
       "index": 12,
-      "char": "图",
-      "start": 4.672,
-      "end": 4.924
+      "char": "上",
+      "start": 3.808,
+      "end": 4.005
     },
     {
       "index": 13,
-      "char": "找",
-      "start": 4.972,
-      "end": 5.224
+      "char": "下",
+      "start": 4.043,
+      "end": 4.24
     },
     {
       "index": 14,
-      "char": "部",
-      "start": 5.273,
-      "end": 5.525
+      "char": "结",
+      "start": 4.278,
+      "end": 4.475
     },
     {
       "index": 15,
-      "char": "件",
-      "start": 5.573,
-      "end": 5.825
+      "char": "构",
+      "start": 4.512,
+      "end": 4.709
     },
     {
       "index": 16,
-      "char": "合",
-      "start": 6.053,
-      "end": 6.306
+      "char": "按",
+      "start": 4.927,
+      "end": 5.124
     },
     {
       "index": 17,
-      "char": "成",
-      "start": 6.354,
-      "end": 6.606
+      "char": "顺",
+      "start": 5.161,
+      "end": 5.358
     },
     {
       "index": 18,
-      "char": "字",
-      "start": 6.654,
-      "end": 6.907
+      "char": "序",
+      "start": 5.396,
+      "end": 5.593
     },
     {
       "index": 19,
-      "char": "形",
-      "start": 6.955,
-      "end": 7.207
+      "char": "能",
+      "start": 5.63,
+      "end": 5.827
     },
     {
       "index": 20,
-      "char": "再",
-      "start": 7.595,
-      "end": 7.847
+      "char": "看",
+      "start": 5.865,
+      "end": 6.062
     },
     {
       "index": 21,
-      "char": "读",
-      "start": 7.895,
-      "end": 8.148
+      "char": "到",
+      "start": 6.099,
+      "end": 6.296
     },
     {
       "index": 22,
-      "char": "焦",
-      "start": 8.376,
-      "end": 8.628
+      "char": "隹",
+      "start": 6.334,
+      "end": 6.531
     },
     {
       "index": 23,
+      "char": "和",
+      "start": 6.568,
+      "end": 6.765
+    },
+    {
+      "index": 24,
+      "char": "灬",
+      "start": 6.803,
+      "end": 7
+    },
+    {
+      "index": 25,
+      "char": "从",
+      "start": 7.377,
+      "end": 7.574
+    },
+    {
+      "index": 26,
+      "char": "构",
+      "start": 7.612,
+      "end": 7.809
+    },
+    {
+      "index": 27,
+      "char": "字",
+      "start": 7.846,
+      "end": 8.043
+    },
+    {
+      "index": 28,
+      "char": "分",
+      "start": 8.081,
+      "end": 8.278
+    },
+    {
+      "index": 29,
+      "char": "工",
+      "start": 8.316,
+      "end": 8.513
+    },
+    {
+      "index": 30,
+      "char": "看",
+      "start": 8.55,
+      "end": 8.747
+    },
+    {
+      "index": 31,
+      "char": "灬",
+      "start": 8.965,
+      "end": 9.162
+    },
+    {
+      "index": 32,
+      "char": "先",
+      "start": 9.199,
+      "end": 9.396
+    },
+    {
+      "index": 33,
+      "char": "提",
+      "start": 9.434,
+      "end": 9.631
+    },
+    {
+      "index": 34,
+      "char": "示",
+      "start": 9.668,
+      "end": 9.865
+    },
+    {
+      "index": 35,
+      "char": "意",
+      "start": 9.903,
+      "end": 10.1
+    },
+    {
+      "index": 36,
+      "char": "义",
+      "start": 10.137,
+      "end": 10.334
+    },
+    {
+      "index": 37,
+      "char": "类",
+      "start": 10.372,
+      "end": 10.569
+    },
+    {
+      "index": 38,
+      "char": "别",
+      "start": 10.606,
+      "end": 10.803
+    },
+    {
+      "index": 39,
+      "char": "其",
+      "start": 11.021,
+      "end": 11.218
+    },
+    {
+      "index": 40,
+      "char": "余",
+      "start": 11.255,
+      "end": 11.452
+    },
+    {
+      "index": 41,
+      "char": "部",
+      "start": 11.49,
+      "end": 11.687
+    },
+    {
+      "index": 42,
+      "char": "件",
+      "start": 11.724,
+      "end": 11.921
+    },
+    {
+      "index": 43,
+      "char": "补",
+      "start": 11.959,
+      "end": 12.156
+    },
+    {
+      "index": 44,
+      "char": "足",
+      "start": 12.194,
+      "end": 12.391
+    },
+    {
+      "index": 45,
+      "char": "字",
+      "start": 12.428,
+      "end": 12.625
+    },
+    {
+      "index": 46,
+      "char": "形",
+      "start": 12.663,
+      "end": 12.86
+    },
+    {
+      "index": 47,
+      "char": "看",
+      "start": 13.237,
+      "end": 13.434
+    },
+    {
+      "index": 48,
+      "char": "图",
+      "start": 13.472,
+      "end": 13.669
+    },
+    {
+      "index": 49,
+      "char": "时",
+      "start": 13.706,
+      "end": 13.903
+    },
+    {
+      "index": 50,
+      "char": "上",
+      "start": 14.121,
+      "end": 14.318
+    },
+    {
+      "index": 51,
+      "char": "方",
+      "start": 14.355,
+      "end": 14.552
+    },
+    {
+      "index": 52,
+      "char": "一",
+      "start": 14.59,
+      "end": 14.787
+    },
+    {
+      "index": 53,
+      "char": "只",
+      "start": 14.824,
+      "end": 15.021
+    },
+    {
+      "index": 54,
+      "char": "来",
+      "start": 15.059,
+      "end": 15.256
+    },
+    {
+      "index": 55,
+      "char": "回",
+      "start": 15.293,
+      "end": 15.49
+    },
+    {
+      "index": 56,
+      "char": "张",
+      "start": 15.528,
+      "end": 15.725
+    },
+    {
+      "index": 57,
+      "char": "望",
+      "start": 15.762,
+      "end": 15.959
+    },
+    {
+      "index": 58,
+      "char": "的",
+      "start": 15.997,
+      "end": 16.194
+    },
+    {
+      "index": 59,
+      "char": "鸟",
+      "start": 16.231,
+      "end": 16.429
+    },
+    {
+      "index": 60,
+      "char": "形",
+      "start": 16.466,
+      "end": 16.663
+    },
+    {
+      "index": 61,
+      "char": "隹",
+      "start": 16.701,
+      "end": 16.898
+    },
+    {
+      "index": 62,
+      "char": "站",
+      "start": 16.935,
+      "end": 17.132
+    },
+    {
+      "index": 63,
+      "char": "在",
+      "start": 17.17,
+      "end": 17.367
+    },
+    {
+      "index": 64,
+      "char": "架",
+      "start": 17.404,
+      "end": 17.601
+    },
+    {
+      "index": 65,
+      "char": "上",
+      "start": 17.639,
+      "end": 17.836
+    },
+    {
+      "index": 66,
+      "char": "下",
+      "start": 18.053,
+      "end": 18.25
+    },
+    {
+      "index": 67,
+      "char": "方",
+      "start": 18.288,
+      "end": 18.485
+    },
+    {
+      "index": 68,
+      "char": "四",
+      "start": 18.522,
+      "end": 18.719
+    },
+    {
+      "index": 69,
+      "char": "点",
+      "start": 18.757,
+      "end": 18.954
+    },
+    {
+      "index": 70,
+      "char": "热",
+      "start": 18.991,
+      "end": 19.188
+    },
+    {
+      "index": 71,
+      "char": "火",
+      "start": 19.226,
+      "end": 19.423
+    },
+    {
+      "index": 72,
+      "char": "形",
+      "start": 19.46,
+      "end": 19.657
+    },
+    {
+      "index": 73,
+      "char": "成",
+      "start": 19.695,
+      "end": 19.892
+    },
+    {
+      "index": 74,
+      "char": "灬",
+      "start": 19.929,
+      "end": 20.126
+    },
+    {
+      "index": 75,
+      "char": "像",
+      "start": 20.344,
+      "end": 20.541
+    },
+    {
+      "index": 76,
       "char": "急",
-      "start": 8.676,
-      "end": 8.929
+      "start": 20.579,
+      "end": 20.776
+    },
+    {
+      "index": 77,
+      "char": "得",
+      "start": 20.813,
+      "end": 21.01
+    },
+    {
+      "index": 78,
+      "char": "发",
+      "start": 21.048,
+      "end": 21.245
+    },
+    {
+      "index": 79,
+      "char": "热",
+      "start": 21.282,
+      "end": 21.479
+    },
+    {
+      "index": 80,
+      "char": "组",
+      "start": 21.697,
+      "end": 21.894
+    },
+    {
+      "index": 81,
+      "char": "成",
+      "start": 21.931,
+      "end": 22.128
+    },
+    {
+      "index": 82,
+      "char": "焦",
+      "start": 22.166,
+      "end": 22.363
+    },
+    {
+      "index": 83,
+      "char": "焦",
+      "start": 22.74,
+      "end": 22.937
+    },
+    {
+      "index": 84,
+      "char": "急",
+      "start": 22.975,
+      "end": 23.172
+    },
+    {
+      "index": 85,
+      "char": "就",
+      "start": 23.209,
+      "end": 23.406
+    },
+    {
+      "index": 86,
+      "char": "是",
+      "start": 23.444,
+      "end": 23.641
+    },
+    {
+      "index": 87,
+      "char": "心",
+      "start": 23.678,
+      "end": 23.875
+    },
+    {
+      "index": 88,
+      "char": "里",
+      "start": 23.913,
+      "end": 24.11
+    },
+    {
+      "index": 89,
+      "char": "非",
+      "start": 24.147,
+      "end": 24.344
+    },
+    {
+      "index": 90,
+      "char": "常",
+      "start": 24.382,
+      "end": 24.579
+    },
+    {
+      "index": 91,
+      "char": "着",
+      "start": 24.617,
+      "end": 24.814
+    },
+    {
+      "index": 92,
+      "char": "急",
+      "start": 24.851,
+      "end": 25.048
+    },
+    {
+      "index": 93,
+      "char": "难",
+      "start": 25.266,
+      "end": 25.463
+    },
+    {
+      "index": 94,
+      "char": "以",
+      "start": 25.5,
+      "end": 25.697
+    },
+    {
+      "index": 95,
+      "char": "平",
+      "start": 25.735,
+      "end": 25.932
+    },
+    {
+      "index": 96,
+      "char": "静",
+      "start": 25.969,
+      "end": 26.166
+    },
+    {
+      "index": 97,
+      "char": "这",
+      "start": 26.544,
+      "end": 26.741
+    },
+    {
+      "index": 98,
+      "char": "是",
+      "start": 26.778,
+      "end": 26.975
+    },
+    {
+      "index": 99,
+      "char": "一",
+      "start": 27.013,
+      "end": 27.21
+    },
+    {
+      "index": 100,
+      "char": "幅",
+      "start": 27.247,
+      "end": 27.444
+    },
+    {
+      "index": 101,
+      "char": "帮",
+      "start": 27.482,
+      "end": 27.679
+    },
+    {
+      "index": 102,
+      "char": "助",
+      "start": 27.716,
+      "end": 27.913
+    },
+    {
+      "index": 103,
+      "char": "记",
+      "start": 27.951,
+      "end": 28.148
+    },
+    {
+      "index": 104,
+      "char": "笔",
+      "start": 28.185,
+      "end": 28.382
+    },
+    {
+      "index": 105,
+      "char": "画",
+      "start": 28.42,
+      "end": 28.617
+    },
+    {
+      "index": 106,
+      "char": "和",
+      "start": 28.655,
+      "end": 28.852
+    },
+    {
+      "index": 107,
+      "char": "位",
+      "start": 28.889,
+      "end": 29.086
+    },
+    {
+      "index": 108,
+      "char": "置",
+      "start": 29.124,
+      "end": 29.321
+    },
+    {
+      "index": 109,
+      "char": "的",
+      "start": 29.358,
+      "end": 29.555
+    },
+    {
+      "index": 110,
+      "char": "记",
+      "start": 29.593,
+      "end": 29.79
+    },
+    {
+      "index": 111,
+      "char": "忆",
+      "start": 29.827,
+      "end": 30.024
+    },
+    {
+      "index": 112,
+      "char": "画",
+      "start": 30.062,
+      "end": 30.259
+    },
+    {
+      "index": 113,
+      "char": "面",
+      "start": 30.296,
+      "end": 30.493
+    },
+    {
+      "index": 114,
+      "char": "不",
+      "start": 30.711,
+      "end": 30.908
+    },
+    {
+      "index": 115,
+      "char": "是",
+      "start": 30.945,
+      "end": 31.142
+    },
+    {
+      "index": 116,
+      "char": "完",
+      "start": 31.18,
+      "end": 31.377
+    },
+    {
+      "index": 117,
+      "char": "整",
+      "start": 31.414,
+      "end": 31.611
+    },
+    {
+      "index": 118,
+      "char": "字",
+      "start": 31.649,
+      "end": 31.846
+    },
+    {
+      "index": 119,
+      "char": "源",
+      "start": 31.883,
+      "end": 32.08
+    },
+    {
+      "index": 120,
+      "char": "最",
+      "start": 32.458,
+      "end": 32.655
+    },
+    {
+      "index": 121,
+      "char": "后",
+      "start": 32.693,
+      "end": 32.89
+    },
+    {
+      "index": 122,
+      "char": "再",
+      "start": 32.927,
+      "end": 33.124
+    },
+    {
+      "index": 123,
+      "char": "读",
+      "start": 33.162,
+      "end": 33.359
+    },
+    {
+      "index": 124,
+      "char": "一",
+      "start": 33.396,
+      "end": 33.593
+    },
+    {
+      "index": 125,
+      "char": "遍",
+      "start": 33.631,
+      "end": 33.828
+    },
+    {
+      "index": 126,
+      "char": "焦",
+      "start": 34.045,
+      "end": 34.242
+    },
+    {
+      "index": 127,
+      "char": "急",
+      "start": 34.28,
+      "end": 34.477
     }
   ],
-  "transcript": "焦，“焦急”的“焦”。它是上下结构。看图找部件，合成字形。再读：焦急。",
+  "transcript": "焦，“焦急”的“焦”，读jiāo。它是上下结构，按顺序能看到“隹”和“灬”。从构字分工看，“灬”先提示意义类别，其余部件补足字形。看图时，上方一只来回张望的鸟形“隹”站在架上，下方四点热火形成“灬”，像急得发热，组成“焦”。焦急就是心里非常着急，难以平静。这是一幅帮助记笔画和位置的记忆画面，不是完整字源。最后再读一遍：焦急。",
   "voice_reference": "封",
   "timing_source": "punctuation-weighted-estimate",
-  "script_version": "child-first-v1",
-  "duration": 9.440181
+  "script_version": "child-first-v2",
+  "duration": 35.040181
 }

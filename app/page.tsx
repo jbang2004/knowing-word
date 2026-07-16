@@ -1422,11 +1422,17 @@ function LessonWordMap({
   );
 }
 
+function withAssetVersion(source: string | undefined, version: string) {
+  if (!source) return undefined;
+  return `${source}${source.includes("?") ? "&" : "?"}v=${encodeURIComponent(version)}`;
+}
+
 function NarratedDescription({ character }: { character: CharacterItem }) {
   const asset = heritageAssets[character.id];
   const narrationAsset = narrationAssets[character.id];
-  const audioSource = narrationAsset?.audio || asset?.audio;
-  const audioMarksSource = narrationAsset?.audioMarks || asset?.audioMarks;
+  const narrationVersion = character.official !== false ? "child-first-v2" : "child-first-v1";
+  const audioSource = withAssetVersion(narrationAsset?.audio || asset?.audio, narrationVersion);
+  const audioMarksSource = withAssetVersion(narrationAsset?.audioMarks || asset?.audioMarks, narrationVersion);
   const audioRef = useRef<HTMLAudioElement>(null);
   const [marks, setMarks] = useState<AudioMark[]>([]);
   const [transcriptText, setTranscriptText] = useState("");

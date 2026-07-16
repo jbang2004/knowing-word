@@ -3,151 +3,781 @@
     {
       "index": 0,
       "char": "鼠",
-      "start": 0.168,
-      "end": 0.367
+      "start": 0.294,
+      "end": 0.492
     },
     {
       "index": 1,
       "char": "松",
-      "start": 0.585,
-      "end": 0.784
+      "start": 0.709,
+      "end": 0.907
     },
     {
       "index": 2,
       "char": "鼠",
-      "start": 0.822,
-      "end": 1.021
+      "start": 0.945,
+      "end": 1.143
     },
     {
       "index": 3,
       "char": "的",
-      "start": 1.059,
-      "end": 1.259
+      "start": 1.18,
+      "end": 1.378
     },
     {
       "index": 4,
       "char": "鼠",
-      "start": 1.297,
-      "end": 1.496
+      "start": 1.416,
+      "end": 1.613
     },
     {
       "index": 5,
-      "char": "它",
-      "start": 1.874,
-      "end": 2.073
+      "char": "读",
+      "start": 1.831,
+      "end": 2.029
     },
     {
       "index": 6,
-      "char": "是",
-      "start": 2.111,
-      "end": 2.31
+      "char": "s",
+      "start": 2.066,
+      "end": 2.264
     },
     {
       "index": 7,
-      "char": "上",
-      "start": 2.348,
-      "end": 2.547
+      "char": "h",
+      "start": 2.302,
+      "end": 2.499
     },
     {
       "index": 8,
-      "char": "下",
-      "start": 2.585,
-      "end": 2.784
+      "char": "ǔ",
+      "start": 2.537,
+      "end": 2.735
     },
     {
       "index": 9,
-      "char": "结",
-      "start": 2.822,
-      "end": 3.022
+      "char": "它",
+      "start": 3.112,
+      "end": 3.31
     },
     {
       "index": 10,
-      "char": "构",
-      "start": 3.06,
-      "end": 3.259
+      "char": "是",
+      "start": 3.348,
+      "end": 3.545
     },
     {
       "index": 11,
-      "char": "顺",
-      "start": 3.637,
-      "end": 3.836
+      "char": "独",
+      "start": 3.583,
+      "end": 3.781
     },
     {
       "index": 12,
-      "char": "着",
-      "start": 3.874,
-      "end": 4.073
+      "char": "体",
+      "start": 3.818,
+      "end": 4.016
     },
     {
       "index": 13,
-      "char": "图",
-      "start": 4.111,
-      "end": 4.31
+      "char": "结",
+      "start": 4.054,
+      "end": 4.251
     },
     {
       "index": 14,
-      "char": "记",
-      "start": 4.348,
-      "end": 4.548
+      "char": "构",
+      "start": 4.289,
+      "end": 4.487
     },
     {
       "index": 15,
-      "char": "住",
-      "start": 4.585,
-      "end": 4.785
+      "char": "按",
+      "start": 4.704,
+      "end": 4.902
     },
     {
       "index": 16,
-      "char": "整",
-      "start": 4.823,
-      "end": 5.022
+      "char": "顺",
+      "start": 4.94,
+      "end": 5.137
     },
     {
       "index": 17,
-      "char": "体",
-      "start": 5.06,
-      "end": 5.259
+      "char": "序",
+      "start": 5.175,
+      "end": 5.373
     },
     {
       "index": 18,
-      "char": "轮",
-      "start": 5.297,
-      "end": 5.496
+      "char": "能",
+      "start": 5.41,
+      "end": 5.608
     },
     {
       "index": 19,
-      "char": "廓",
-      "start": 5.534,
-      "end": 5.733
+      "char": "看",
+      "start": 5.646,
+      "end": 5.843
     },
     {
       "index": 20,
-      "char": "再",
-      "start": 6.111,
-      "end": 6.311
+      "char": "到",
+      "start": 5.881,
+      "end": 6.079
     },
     {
       "index": 21,
-      "char": "读",
-      "start": 6.349,
-      "end": 6.548
+      "char": "鼠",
+      "start": 6.116,
+      "end": 6.314
     },
     {
       "index": 22,
-      "char": "松",
-      "start": 6.766,
-      "end": 6.965
+      "char": "这",
+      "start": 6.692,
+      "end": 6.89
     },
     {
       "index": 23,
+      "char": "个",
+      "start": 6.927,
+      "end": 7.125
+    },
+    {
+      "index": 24,
+      "char": "字",
+      "start": 7.163,
+      "end": 7.36
+    },
+    {
+      "index": 25,
+      "char": "适",
+      "start": 7.398,
+      "end": 7.596
+    },
+    {
+      "index": 26,
+      "char": "合",
+      "start": 7.633,
+      "end": 7.831
+    },
+    {
+      "index": 27,
+      "char": "顺",
+      "start": 7.869,
+      "end": 8.066
+    },
+    {
+      "index": 28,
+      "char": "着",
+      "start": 8.104,
+      "end": 8.302
+    },
+    {
+      "index": 29,
+      "char": "完",
+      "start": 8.339,
+      "end": 8.537
+    },
+    {
+      "index": 30,
+      "char": "整",
+      "start": 8.575,
+      "end": 8.772
+    },
+    {
+      "index": 31,
+      "char": "轮",
+      "start": 8.81,
+      "end": 9.008
+    },
+    {
+      "index": 32,
+      "char": "廓",
+      "start": 9.045,
+      "end": 9.243
+    },
+    {
+      "index": 33,
+      "char": "来",
+      "start": 9.281,
+      "end": 9.478
+    },
+    {
+      "index": 34,
+      "char": "记",
+      "start": 9.516,
+      "end": 9.714
+    },
+    {
+      "index": 35,
+      "char": "看",
+      "start": 10.091,
+      "end": 10.289
+    },
+    {
+      "index": 36,
+      "char": "图",
+      "start": 10.327,
+      "end": 10.524
+    },
+    {
+      "index": 37,
+      "char": "时",
+      "start": 10.562,
+      "end": 10.76
+    },
+    {
+      "index": 38,
+      "char": "上",
+      "start": 10.977,
+      "end": 11.175
+    },
+    {
+      "index": 39,
+      "char": "方",
+      "start": 11.213,
+      "end": 11.41
+    },
+    {
+      "index": 40,
       "char": "鼠",
-      "start": 7.003,
-      "end": 7.202
+      "start": 11.448,
+      "end": 11.646
+    },
+    {
+      "index": 41,
+      "char": "头",
+      "start": 11.683,
+      "end": 11.881
+    },
+    {
+      "index": 42,
+      "char": "耳",
+      "start": 12.099,
+      "end": 12.297
+    },
+    {
+      "index": 43,
+      "char": "朵",
+      "start": 12.334,
+      "end": 12.532
+    },
+    {
+      "index": 44,
+      "char": "和",
+      "start": 12.57,
+      "end": 12.767
+    },
+    {
+      "index": 45,
+      "char": "门",
+      "start": 12.805,
+      "end": 13.003
+    },
+    {
+      "index": 46,
+      "char": "牙",
+      "start": 13.04,
+      "end": 13.238
+    },
+    {
+      "index": 47,
+      "char": "嵌",
+      "start": 13.276,
+      "end": 13.473
+    },
+    {
+      "index": 48,
+      "char": "进",
+      "start": 13.511,
+      "end": 13.709
+    },
+    {
+      "index": 49,
+      "char": "臼",
+      "start": 13.746,
+      "end": 13.944
+    },
+    {
+      "index": 50,
+      "char": "形",
+      "start": 13.982,
+      "end": 14.179
+    },
+    {
+      "index": 51,
+      "char": "洞",
+      "start": 14.217,
+      "end": 14.415
+    },
+    {
+      "index": 52,
+      "char": "口",
+      "start": 14.452,
+      "end": 14.65
+    },
+    {
+      "index": 53,
+      "char": "下",
+      "start": 14.868,
+      "end": 15.065
+    },
+    {
+      "index": 54,
+      "char": "方",
+      "start": 15.103,
+      "end": 15.301
+    },
+    {
+      "index": 55,
+      "char": "身",
+      "start": 15.338,
+      "end": 15.536
+    },
+    {
+      "index": 56,
+      "char": "体",
+      "start": 15.574,
+      "end": 15.771
+    },
+    {
+      "index": 57,
+      "char": "四",
+      "start": 15.989,
+      "end": 16.187
+    },
+    {
+      "index": 58,
+      "char": "足",
+      "start": 16.224,
+      "end": 16.422
+    },
+    {
+      "index": 59,
+      "char": "和",
+      "start": 16.46,
+      "end": 16.657
+    },
+    {
+      "index": 60,
+      "char": "长",
+      "start": 16.695,
+      "end": 16.893
+    },
+    {
+      "index": 61,
+      "char": "尾",
+      "start": 16.93,
+      "end": 17.128
+    },
+    {
+      "index": 62,
+      "char": "严",
+      "start": 17.166,
+      "end": 17.364
+    },
+    {
+      "index": 63,
+      "char": "格",
+      "start": 17.401,
+      "end": 17.599
+    },
+    {
+      "index": 64,
+      "char": "沿",
+      "start": 17.637,
+      "end": 17.834
+    },
+    {
+      "index": 65,
+      "char": "弯",
+      "start": 17.872,
+      "end": 18.07
+    },
+    {
+      "index": 66,
+      "char": "钩",
+      "start": 18.107,
+      "end": 18.305
+    },
+    {
+      "index": 67,
+      "char": "点",
+      "start": 18.343,
+      "end": 18.54
+    },
+    {
+      "index": 68,
+      "char": "画",
+      "start": 18.578,
+      "end": 18.776
+    },
+    {
+      "index": 69,
+      "char": "舒",
+      "start": 18.813,
+      "end": 19.011
+    },
+    {
+      "index": 70,
+      "char": "展",
+      "start": 19.049,
+      "end": 19.246
+    },
+    {
+      "index": 71,
+      "char": "整",
+      "start": 19.464,
+      "end": 19.662
+    },
+    {
+      "index": 72,
+      "char": "只",
+      "start": 19.699,
+      "end": 19.897
+    },
+    {
+      "index": 73,
+      "char": "松",
+      "start": 19.935,
+      "end": 20.132
+    },
+    {
+      "index": 74,
+      "char": "鼠",
+      "start": 20.17,
+      "end": 20.368
+    },
+    {
+      "index": 75,
+      "char": "长",
+      "start": 20.405,
+      "end": 20.603
+    },
+    {
+      "index": 76,
+      "char": "成",
+      "start": 20.641,
+      "end": 20.838
+    },
+    {
+      "index": 77,
+      "char": "鼠",
+      "start": 20.876,
+      "end": 21.074
+    },
+    {
+      "index": 78,
+      "char": "松",
+      "start": 21.451,
+      "end": 21.649
+    },
+    {
+      "index": 79,
+      "char": "鼠",
+      "start": 21.687,
+      "end": 21.884
+    },
+    {
+      "index": 80,
+      "char": "是",
+      "start": 21.922,
+      "end": 22.12
+    },
+    {
+      "index": 81,
+      "char": "一",
+      "start": 22.157,
+      "end": 22.355
+    },
+    {
+      "index": 82,
+      "char": "种",
+      "start": 22.393,
+      "end": 22.591
+    },
+    {
+      "index": 83,
+      "char": "尾",
+      "start": 22.628,
+      "end": 22.826
+    },
+    {
+      "index": 84,
+      "char": "巴",
+      "start": 22.864,
+      "end": 23.061
+    },
+    {
+      "index": 85,
+      "char": "蓬",
+      "start": 23.099,
+      "end": 23.297
+    },
+    {
+      "index": 86,
+      "char": "松",
+      "start": 23.334,
+      "end": 23.532
+    },
+    {
+      "index": 87,
+      "char": "善",
+      "start": 23.75,
+      "end": 23.947
+    },
+    {
+      "index": 88,
+      "char": "于",
+      "start": 23.985,
+      "end": 24.183
+    },
+    {
+      "index": 89,
+      "char": "攀",
+      "start": 24.22,
+      "end": 24.418
+    },
+    {
+      "index": 90,
+      "char": "爬",
+      "start": 24.456,
+      "end": 24.653
+    },
+    {
+      "index": 91,
+      "char": "和",
+      "start": 24.691,
+      "end": 24.889
+    },
+    {
+      "index": 92,
+      "char": "跳",
+      "start": 24.926,
+      "end": 25.124
+    },
+    {
+      "index": 93,
+      "char": "跃",
+      "start": 25.162,
+      "end": 25.359
+    },
+    {
+      "index": 94,
+      "char": "的",
+      "start": 25.397,
+      "end": 25.595
+    },
+    {
+      "index": 95,
+      "char": "小",
+      "start": 25.632,
+      "end": 25.83
+    },
+    {
+      "index": 96,
+      "char": "动",
+      "start": 25.868,
+      "end": 26.065
+    },
+    {
+      "index": 97,
+      "char": "物",
+      "start": 26.103,
+      "end": 26.301
+    },
+    {
+      "index": 98,
+      "char": "这",
+      "start": 26.678,
+      "end": 26.876
+    },
+    {
+      "index": 99,
+      "char": "是",
+      "start": 26.914,
+      "end": 27.111
+    },
+    {
+      "index": 100,
+      "char": "一",
+      "start": 27.149,
+      "end": 27.347
+    },
+    {
+      "index": 101,
+      "char": "幅",
+      "start": 27.384,
+      "end": 27.582
+    },
+    {
+      "index": 102,
+      "char": "帮",
+      "start": 27.62,
+      "end": 27.818
+    },
+    {
+      "index": 103,
+      "char": "助",
+      "start": 27.855,
+      "end": 28.053
+    },
+    {
+      "index": 104,
+      "char": "记",
+      "start": 28.091,
+      "end": 28.288
+    },
+    {
+      "index": 105,
+      "char": "笔",
+      "start": 28.326,
+      "end": 28.524
+    },
+    {
+      "index": 106,
+      "char": "画",
+      "start": 28.561,
+      "end": 28.759
+    },
+    {
+      "index": 107,
+      "char": "和",
+      "start": 28.797,
+      "end": 28.994
+    },
+    {
+      "index": 108,
+      "char": "位",
+      "start": 29.032,
+      "end": 29.23
+    },
+    {
+      "index": 109,
+      "char": "置",
+      "start": 29.267,
+      "end": 29.465
+    },
+    {
+      "index": 110,
+      "char": "的",
+      "start": 29.503,
+      "end": 29.7
+    },
+    {
+      "index": 111,
+      "char": "记",
+      "start": 29.738,
+      "end": 29.936
+    },
+    {
+      "index": 112,
+      "char": "忆",
+      "start": 29.973,
+      "end": 30.171
+    },
+    {
+      "index": 113,
+      "char": "画",
+      "start": 30.209,
+      "end": 30.406
+    },
+    {
+      "index": 114,
+      "char": "面",
+      "start": 30.444,
+      "end": 30.642
+    },
+    {
+      "index": 115,
+      "char": "不",
+      "start": 30.859,
+      "end": 31.057
+    },
+    {
+      "index": 116,
+      "char": "是",
+      "start": 31.095,
+      "end": 31.292
+    },
+    {
+      "index": 117,
+      "char": "完",
+      "start": 31.33,
+      "end": 31.528
+    },
+    {
+      "index": 118,
+      "char": "整",
+      "start": 31.565,
+      "end": 31.763
+    },
+    {
+      "index": 119,
+      "char": "字",
+      "start": 31.801,
+      "end": 31.998
+    },
+    {
+      "index": 120,
+      "char": "源",
+      "start": 32.036,
+      "end": 32.234
+    },
+    {
+      "index": 121,
+      "char": "最",
+      "start": 32.612,
+      "end": 32.809
+    },
+    {
+      "index": 122,
+      "char": "后",
+      "start": 32.847,
+      "end": 33.045
+    },
+    {
+      "index": 123,
+      "char": "再",
+      "start": 33.082,
+      "end": 33.28
+    },
+    {
+      "index": 124,
+      "char": "读",
+      "start": 33.318,
+      "end": 33.515
+    },
+    {
+      "index": 125,
+      "char": "一",
+      "start": 33.553,
+      "end": 33.751
+    },
+    {
+      "index": 126,
+      "char": "遍",
+      "start": 33.788,
+      "end": 33.986
+    },
+    {
+      "index": 127,
+      "char": "松",
+      "start": 34.204,
+      "end": 34.401
+    },
+    {
+      "index": 128,
+      "char": "鼠",
+      "start": 34.439,
+      "end": 34.637
     }
   ],
-  "transcript": "鼠，“松鼠”的“鼠”。它是上下结构。顺着图记住整体轮廓。再读：松鼠。",
+  "transcript": "鼠，“松鼠”的“鼠”，读shǔ。它是独体结构，按顺序能看到“鼠”。这个字适合顺着完整轮廓来记。看图时，上方鼠头、耳朵和门牙嵌进“臼”形洞口，下方身体、四足和长尾严格沿弯钩点画舒展，整只松鼠长成“鼠”。松鼠是一种尾巴蓬松、善于攀爬和跳跃的小动物。这是一幅帮助记笔画和位置的记忆画面，不是完整字源。最后再读一遍：松鼠。",
   "voice_reference": "封",
   "timing_source": "punctuation-weighted-estimate",
-  "script_version": "child-first-v1",
-  "duration": 7.681066
+  "script_version": "child-first-v2",
+  "duration": 35.200181
 }

@@ -3,151 +3,793 @@
     {
       "index": 0,
       "char": "魄",
-      "start": 0.164,
-      "end": 0.351
+      "start": 0.292,
+      "end": 0.454
     },
     {
       "index": 1,
       "char": "魂",
-      "start": 0.567,
-      "end": 0.754
+      "start": 0.665,
+      "end": 0.828
     },
     {
       "index": 2,
       "char": "魄",
-      "start": 0.79,
-      "end": 0.978
+      "start": 0.859,
+      "end": 1.022
     },
     {
       "index": 3,
       "char": "的",
-      "start": 1.013,
-      "end": 1.201
+      "start": 1.053,
+      "end": 1.216
     },
     {
       "index": 4,
       "char": "魄",
-      "start": 1.237,
-      "end": 1.424
+      "start": 1.247,
+      "end": 1.409
     },
     {
       "index": 5,
-      "char": "它",
-      "start": 1.8,
-      "end": 1.987
+      "char": "读",
+      "start": 1.62,
+      "end": 1.783
     },
     {
       "index": 6,
-      "char": "是",
-      "start": 2.023,
-      "end": 2.211
+      "char": "p",
+      "start": 1.814,
+      "end": 1.977
     },
     {
       "index": 7,
-      "char": "左",
-      "start": 2.246,
-      "end": 2.434
+      "char": "ò",
+      "start": 2.008,
+      "end": 2.171
     },
     {
       "index": 8,
-      "char": "右",
-      "start": 2.469,
-      "end": 2.657
+      "char": "它",
+      "start": 2.542,
+      "end": 2.704
     },
     {
       "index": 9,
-      "char": "结",
-      "start": 2.693,
-      "end": 2.88
+      "char": "是",
+      "start": 2.735,
+      "end": 2.898
     },
     {
       "index": 10,
-      "char": "构",
-      "start": 2.916,
-      "end": 3.103
+      "char": "左",
+      "start": 2.929,
+      "end": 3.092
     },
     {
       "index": 11,
-      "char": "看",
-      "start": 3.479,
-      "end": 3.667
+      "char": "右",
+      "start": 3.123,
+      "end": 3.286
     },
     {
       "index": 12,
-      "char": "图",
-      "start": 3.702,
-      "end": 3.89
+      "char": "结",
+      "start": 3.317,
+      "end": 3.479
     },
     {
       "index": 13,
-      "char": "找",
-      "start": 3.925,
-      "end": 4.113
+      "char": "构",
+      "start": 3.51,
+      "end": 3.673
     },
     {
       "index": 14,
-      "char": "部",
-      "start": 4.149,
-      "end": 4.336
+      "char": "按",
+      "start": 3.884,
+      "end": 4.047
     },
     {
       "index": 15,
-      "char": "件",
-      "start": 4.372,
-      "end": 4.559
+      "char": "顺",
+      "start": 4.078,
+      "end": 4.24
     },
     {
       "index": 16,
-      "char": "合",
-      "start": 4.775,
-      "end": 4.963
+      "char": "序",
+      "start": 4.271,
+      "end": 4.434
     },
     {
       "index": 17,
-      "char": "成",
-      "start": 4.998,
-      "end": 5.186
+      "char": "能",
+      "start": 4.465,
+      "end": 4.628
     },
     {
       "index": 18,
-      "char": "字",
-      "start": 5.222,
-      "end": 5.409
+      "char": "看",
+      "start": 4.659,
+      "end": 4.822
     },
     {
       "index": 19,
-      "char": "形",
-      "start": 5.445,
-      "end": 5.632
+      "char": "到",
+      "start": 4.853,
+      "end": 5.015
     },
     {
       "index": 20,
-      "char": "再",
-      "start": 6.008,
-      "end": 6.195
+      "char": "白",
+      "start": 5.046,
+      "end": 5.209
     },
     {
       "index": 21,
-      "char": "读",
-      "start": 6.231,
-      "end": 6.419
+      "char": "和",
+      "start": 5.24,
+      "end": 5.403
     },
     {
       "index": 22,
-      "char": "魂",
-      "start": 6.634,
-      "end": 6.822
+      "char": "鬼",
+      "start": 5.434,
+      "end": 5.597
     },
     {
       "index": 23,
+      "char": "从",
+      "start": 5.968,
+      "end": 6.13
+    },
+    {
+      "index": 24,
+      "char": "构",
+      "start": 6.161,
+      "end": 6.324
+    },
+    {
+      "index": 25,
+      "char": "字",
+      "start": 6.355,
+      "end": 6.518
+    },
+    {
+      "index": 26,
+      "char": "分",
+      "start": 6.549,
+      "end": 6.712
+    },
+    {
+      "index": 27,
+      "char": "工",
+      "start": 6.743,
+      "end": 6.905
+    },
+    {
+      "index": 28,
+      "char": "看",
+      "start": 6.936,
+      "end": 7.099
+    },
+    {
+      "index": 29,
+      "char": "鬼",
+      "start": 7.31,
+      "end": 7.473
+    },
+    {
+      "index": 30,
+      "char": "提",
+      "start": 7.504,
+      "end": 7.667
+    },
+    {
+      "index": 31,
+      "char": "示",
+      "start": 7.698,
+      "end": 7.86
+    },
+    {
+      "index": 32,
+      "char": "意",
+      "start": 7.891,
+      "end": 8.054
+    },
+    {
+      "index": 33,
+      "char": "义",
+      "start": 8.085,
+      "end": 8.248
+    },
+    {
+      "index": 34,
+      "char": "类",
+      "start": 8.279,
+      "end": 8.442
+    },
+    {
+      "index": 35,
+      "char": "别",
+      "start": 8.473,
+      "end": 8.635
+    },
+    {
+      "index": 36,
+      "char": "白",
+      "start": 8.846,
+      "end": 9.009
+    },
+    {
+      "index": 37,
+      "char": "提",
+      "start": 9.04,
+      "end": 9.203
+    },
+    {
+      "index": 38,
+      "char": "供",
+      "start": 9.234,
+      "end": 9.397
+    },
+    {
+      "index": 39,
+      "char": "读",
+      "start": 9.428,
+      "end": 9.59
+    },
+    {
+      "index": 40,
+      "char": "音",
+      "start": 9.621,
+      "end": 9.784
+    },
+    {
+      "index": 41,
+      "char": "线",
+      "start": 9.815,
+      "end": 9.978
+    },
+    {
+      "index": 42,
+      "char": "索",
+      "start": 10.009,
+      "end": 10.172
+    },
+    {
+      "index": 43,
+      "char": "看",
+      "start": 10.543,
+      "end": 10.705
+    },
+    {
+      "index": 44,
+      "char": "图",
+      "start": 10.736,
+      "end": 10.899
+    },
+    {
+      "index": 45,
+      "char": "时",
+      "start": 10.93,
+      "end": 11.093
+    },
+    {
+      "index": 46,
+      "char": "左",
+      "start": 11.304,
+      "end": 11.466
+    },
+    {
+      "index": 47,
+      "char": "边",
+      "start": 11.497,
+      "end": 11.66
+    },
+    {
+      "index": 48,
+      "char": "一",
+      "start": 11.691,
+      "end": 11.854
+    },
+    {
+      "index": 49,
+      "char": "扇",
+      "start": 11.885,
+      "end": 12.048
+    },
+    {
+      "index": 50,
+      "char": "明",
+      "start": 12.079,
+      "end": 12.241
+    },
+    {
+      "index": 51,
+      "char": "亮",
+      "start": 12.272,
+      "end": 12.435
+    },
+    {
+      "index": 52,
+      "char": "白",
+      "start": 12.466,
+      "end": 12.629
+    },
+    {
+      "index": 53,
+      "char": "窗",
+      "start": 12.66,
+      "end": 12.823
+    },
+    {
+      "index": 54,
+      "char": "形",
+      "start": 12.854,
+      "end": 13.016
+    },
+    {
+      "index": 55,
+      "char": "成",
+      "start": 13.047,
+      "end": 13.21
+    },
+    {
+      "index": 56,
+      "char": "白",
+      "start": 13.241,
+      "end": 13.404
+    },
+    {
+      "index": 57,
+      "char": "右",
+      "start": 13.615,
+      "end": 13.778
+    },
+    {
+      "index": 58,
+      "char": "边",
+      "start": 13.809,
+      "end": 13.971
+    },
+    {
+      "index": 59,
+      "char": "戴",
+      "start": 14.002,
+      "end": 14.165
+    },
+    {
+      "index": 60,
+      "char": "角",
+      "start": 14.196,
+      "end": 14.359
+    },
+    {
+      "index": 61,
+      "char": "面",
+      "start": 14.39,
+      "end": 14.553
+    },
+    {
+      "index": 62,
+      "char": "具",
+      "start": 14.584,
+      "end": 14.746
+    },
+    {
+      "index": 63,
+      "char": "弯",
+      "start": 14.957,
+      "end": 15.12
+    },
+    {
+      "index": 64,
+      "char": "身",
+      "start": 15.151,
+      "end": 15.314
+    },
+    {
+      "index": 65,
+      "char": "和",
+      "start": 15.345,
+      "end": 15.508
+    },
+    {
+      "index": 66,
+      "char": "长",
+      "start": 15.539,
+      "end": 15.701
+    },
+    {
+      "index": 67,
+      "char": "尾",
+      "start": 15.732,
+      "end": 15.895
+    },
+    {
+      "index": 68,
+      "char": "沿",
+      "start": 15.926,
+      "end": 16.089
+    },
+    {
+      "index": 69,
+      "char": "鬼",
+      "start": 16.12,
+      "end": 16.283
+    },
+    {
+      "index": 70,
+      "char": "展",
+      "start": 16.314,
+      "end": 16.476
+    },
+    {
+      "index": 71,
+      "char": "开",
+      "start": 16.507,
+      "end": 16.67
+    },
+    {
+      "index": 72,
+      "char": "像",
+      "start": 16.881,
+      "end": 17.044
+    },
+    {
+      "index": 73,
+      "char": "精",
+      "start": 17.075,
+      "end": 17.238
+    },
+    {
+      "index": 74,
+      "char": "神",
+      "start": 17.269,
+      "end": 17.431
+    },
+    {
+      "index": 75,
+      "char": "影",
+      "start": 17.462,
+      "end": 17.625
+    },
+    {
+      "index": 76,
+      "char": "子",
+      "start": 17.656,
+      "end": 17.819
+    },
+    {
+      "index": 77,
+      "char": "依",
+      "start": 17.85,
+      "end": 18.012
+    },
+    {
+      "index": 78,
+      "char": "着",
+      "start": 18.043,
+      "end": 18.206
+    },
+    {
+      "index": 79,
+      "char": "人",
+      "start": 18.237,
+      "end": 18.4
+    },
+    {
+      "index": 80,
+      "char": "组",
+      "start": 18.611,
+      "end": 18.774
+    },
+    {
+      "index": 81,
+      "char": "成",
+      "start": 18.805,
+      "end": 18.967
+    },
+    {
+      "index": 82,
       "char": "魄",
-      "start": 6.858,
-      "end": 7.045
+      "start": 18.998,
+      "end": 19.161
+    },
+    {
+      "index": 83,
+      "char": "魂",
+      "start": 19.532,
+      "end": 19.695
+    },
+    {
+      "index": 84,
+      "char": "魄",
+      "start": 19.726,
+      "end": 19.889
+    },
+    {
+      "index": 85,
+      "char": "在",
+      "start": 19.92,
+      "end": 20.082
+    },
+    {
+      "index": 86,
+      "char": "课",
+      "start": 20.113,
+      "end": 20.276
+    },
+    {
+      "index": 87,
+      "char": "文",
+      "start": 20.307,
+      "end": 20.47
+    },
+    {
+      "index": 88,
+      "char": "语",
+      "start": 20.501,
+      "end": 20.664
+    },
+    {
+      "index": 89,
+      "char": "境",
+      "start": 20.695,
+      "end": 20.857
+    },
+    {
+      "index": 90,
+      "char": "中",
+      "start": 20.888,
+      "end": 21.051
+    },
+    {
+      "index": 91,
+      "char": "表",
+      "start": 21.082,
+      "end": 21.245
+    },
+    {
+      "index": 92,
+      "char": "示",
+      "start": 21.276,
+      "end": 21.439
+    },
+    {
+      "index": 93,
+      "char": "人",
+      "start": 21.47,
+      "end": 21.632
+    },
+    {
+      "index": 94,
+      "char": "的",
+      "start": 21.663,
+      "end": 21.826
+    },
+    {
+      "index": 95,
+      "char": "精",
+      "start": 21.857,
+      "end": 22.02
+    },
+    {
+      "index": 96,
+      "char": "神",
+      "start": 22.051,
+      "end": 22.214
+    },
+    {
+      "index": 97,
+      "char": "和",
+      "start": 22.245,
+      "end": 22.407
+    },
+    {
+      "index": 98,
+      "char": "心",
+      "start": 22.438,
+      "end": 22.601
+    },
+    {
+      "index": 99,
+      "char": "神",
+      "start": 22.632,
+      "end": 22.795
+    },
+    {
+      "index": 100,
+      "char": "这",
+      "start": 23.166,
+      "end": 23.329
+    },
+    {
+      "index": 101,
+      "char": "是",
+      "start": 23.36,
+      "end": 23.522
+    },
+    {
+      "index": 102,
+      "char": "一",
+      "start": 23.553,
+      "end": 23.716
+    },
+    {
+      "index": 103,
+      "char": "幅",
+      "start": 23.747,
+      "end": 23.91
+    },
+    {
+      "index": 104,
+      "char": "帮",
+      "start": 23.941,
+      "end": 24.104
+    },
+    {
+      "index": 105,
+      "char": "助",
+      "start": 24.135,
+      "end": 24.297
+    },
+    {
+      "index": 106,
+      "char": "记",
+      "start": 24.328,
+      "end": 24.491
+    },
+    {
+      "index": 107,
+      "char": "笔",
+      "start": 24.522,
+      "end": 24.685
+    },
+    {
+      "index": 108,
+      "char": "画",
+      "start": 24.716,
+      "end": 24.878
+    },
+    {
+      "index": 109,
+      "char": "和",
+      "start": 24.909,
+      "end": 25.072
+    },
+    {
+      "index": 110,
+      "char": "位",
+      "start": 25.103,
+      "end": 25.266
+    },
+    {
+      "index": 111,
+      "char": "置",
+      "start": 25.297,
+      "end": 25.46
+    },
+    {
+      "index": 112,
+      "char": "的",
+      "start": 25.491,
+      "end": 25.653
+    },
+    {
+      "index": 113,
+      "char": "记",
+      "start": 25.684,
+      "end": 25.847
+    },
+    {
+      "index": 114,
+      "char": "忆",
+      "start": 25.878,
+      "end": 26.041
+    },
+    {
+      "index": 115,
+      "char": "画",
+      "start": 26.072,
+      "end": 26.235
+    },
+    {
+      "index": 116,
+      "char": "面",
+      "start": 26.266,
+      "end": 26.428
+    },
+    {
+      "index": 117,
+      "char": "不",
+      "start": 26.639,
+      "end": 26.802
+    },
+    {
+      "index": 118,
+      "char": "是",
+      "start": 26.833,
+      "end": 26.996
+    },
+    {
+      "index": 119,
+      "char": "完",
+      "start": 27.027,
+      "end": 27.19
+    },
+    {
+      "index": 120,
+      "char": "整",
+      "start": 27.221,
+      "end": 27.383
+    },
+    {
+      "index": 121,
+      "char": "字",
+      "start": 27.414,
+      "end": 27.577
+    },
+    {
+      "index": 122,
+      "char": "源",
+      "start": 27.608,
+      "end": 27.771
+    },
+    {
+      "index": 123,
+      "char": "最",
+      "start": 28.142,
+      "end": 28.305
+    },
+    {
+      "index": 124,
+      "char": "后",
+      "start": 28.336,
+      "end": 28.498
+    },
+    {
+      "index": 125,
+      "char": "再",
+      "start": 28.529,
+      "end": 28.692
+    },
+    {
+      "index": 126,
+      "char": "读",
+      "start": 28.723,
+      "end": 28.886
+    },
+    {
+      "index": 127,
+      "char": "一",
+      "start": 28.917,
+      "end": 29.08
+    },
+    {
+      "index": 128,
+      "char": "遍",
+      "start": 29.111,
+      "end": 29.273
+    },
+    {
+      "index": 129,
+      "char": "魂",
+      "start": 29.484,
+      "end": 29.647
+    },
+    {
+      "index": 130,
+      "char": "魄",
+      "start": 29.678,
+      "end": 29.841
     }
   ],
-  "transcript": "魄，“魂魄”的“魄”。它是左右结构。看图找部件，合成字形。再读：魂魄。",
+  "transcript": "魄，“魂魄”的“魄”，读pò。它是左右结构，按顺序能看到“白”和“鬼”。从构字分工看，“鬼”提示意义类别，“白”提供读音线索。看图时，左边一扇明亮白窗形成“白”，右边戴角面具、弯身和长尾沿“鬼”展开，像精神影子依着人，组成“魄”。魂魄在课文语境中表示人的精神和心神。这是一幅帮助记笔画和位置的记忆画面，不是完整字源。最后再读一遍：魂魄。",
   "voice_reference": "封",
   "timing_source": "punctuation-weighted-estimate",
-  "script_version": "child-first-v1",
-  "duration": 7.520181
+  "script_version": "child-first-v2",
+  "duration": 30.400181
 }
