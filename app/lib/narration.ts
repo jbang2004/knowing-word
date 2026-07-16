@@ -13,7 +13,7 @@ export type NarrationToken =
     }
   | {
       kind: "punctuation";
-      text: "，" | "。";
+      text: string;
       markIndex: number;
       completionTime: number;
     };
@@ -29,7 +29,33 @@ function punctuationAfter(mark: TimedCharacter, next?: TimedCharacter): "，" | 
   return null;
 }
 
-export function buildNarrationTokens(marks: TimedCharacter[]): NarrationToken[] {
+const spokenCharacterPattern = /[\p{L}\p{N}\p{Script=Han}]/u;
+
+function punctuationByMark(marks: TimedCharacter[], transcript: string) {
+  const source = Array.from(transcript);
+  const byMark = new Map<number, string>();
+  let cursor = 0;
+
+  for (let markIndex = 0; markIndex < marks.length; markIndex += 1) {
+    const mark = marks[markIndex];
+    let matchIndex = source.indexOf(mark.char, cursor);
+    if (matchIndex < 0) {
+      matchIndex = source.findIndex((char, index) => index >= cursor && spokenCharacterPattern.test(char));
+    }
+    if (matchIndex < 0) break;
+    cursor = matchIndex + 1;
+    let punctuation = "";
+    while (cursor < source.length && !spokenCharacterPattern.test(source[cursor])) {
+      if (!/\s/u.test(source[cursor])) punctuation += source[cursor];
+      cursor += 1;
+    }
+    if (punctuation) byMark.set(markIndex, punctuation);
+  }
+  return byMark;
+}
+
+export function buildNarrationTokens(marks: TimedCharacter[], transcript?: string): NarrationToken[] {
+  const authoredPunctuation = transcript ? punctuationByMark(marks, transcript) : null;
   return marks.flatMap((mark, markIndex) => {
     const character: NarrationToken = {
       kind: "character",
@@ -37,7 +63,7 @@ export function buildNarrationTokens(marks: TimedCharacter[]): NarrationToken[] 
       markIndex,
       completionTime: mark.end,
     };
-    const punctuation = punctuationAfter(mark, marks[markIndex + 1]);
+    const punctuation = authoredPunctuation?.get(markIndex) || punctuationAfter(mark, marks[markIndex + 1]);
     return punctuation
       ? [
           character,

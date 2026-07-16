@@ -25,6 +25,7 @@ import {
   lessonVisuals,
 } from "./data/illustrations";
 import { heritageAssets, type AudioMark } from "./data/heritage-assets";
+import { narrationAssets } from "./data/narration-assets";
 import {
   getMnemonicLayout,
   getMnemonicScene,
@@ -1374,14 +1375,18 @@ function LessonWordMap({
 
 function NarratedDescription({ character }: { character: CharacterItem }) {
   const asset = heritageAssets[character.id];
+  const narrationAsset = narrationAssets[character.id];
+  const audioSource = narrationAsset?.audio || asset?.audio;
+  const audioMarksSource = narrationAsset?.audioMarks || asset?.audioMarks;
   const audioRef = useRef<HTMLAudioElement>(null);
   const [marks, setMarks] = useState<AudioMark[]>([]);
+  const [transcriptText, setTranscriptText] = useState("");
   const [elapsed, setElapsed] = useState(0);
   const [duration, setDuration] = useState(0);
   const [playing, setPlaying] = useState(false);
 
   useEffect(() => {
-    if (!playing || !asset?.audio) return;
+    if (!playing || !audioSource) return;
     let frame = 0;
     let lastSample = 0;
     const sampleAudioTime = (timestamp: number) => {
@@ -1394,27 +1399,28 @@ function NarratedDescription({ character }: { character: CharacterItem }) {
     };
     frame = window.requestAnimationFrame(sampleAudioTime);
     return () => window.cancelAnimationFrame(frame);
-  }, [asset?.audio, playing]);
+  }, [audioSource, playing]);
 
   useEffect(() => {
-    if (!asset?.audioMarks) return;
+    if (!audioMarksSource) return;
     const controller = new AbortController();
     const audio = audioRef.current;
-    void fetch(asset.audioMarks, { signal: controller.signal })
+    void fetch(audioMarksSource, { signal: controller.signal })
       .then((response) => response.ok ? response.json() : Promise.reject(new Error("marks unavailable")))
-      .then((payload: { marks?: AudioMark[] }) => {
+      .then((payload: { marks?: AudioMark[]; transcript?: string }) => {
         setMarks((payload.marks || []).filter((mark) => Number.isFinite(mark.start) && Number.isFinite(mark.end)));
+        setTranscriptText(payload.transcript || "");
       })
       .catch(() => undefined);
     return () => {
       controller.abort();
       audio?.pause();
     };
-  }, [asset?.audioMarks]);
+  }, [audioMarksSource]);
 
   function toggleNarration() {
     const audio = audioRef.current;
-    if (!asset?.audio || !audio) {
+    if (!audioSource || !audio) {
       setPlaying(true);
       speak(character.description, () => setPlaying(false));
       return;
@@ -1436,7 +1442,7 @@ function NarratedDescription({ character }: { character: CharacterItem }) {
   }
 
   const activeIndex = marks.findIndex((mark) => elapsed >= mark.start && elapsed < mark.end);
-  const transcript = useMemo(() => buildNarrationTokens(marks), [marks]);
+  const transcript = useMemo(() => buildNarrationTokens(marks, transcriptText), [marks, transcriptText]);
   const timelineDuration = duration || marks.at(-1)?.end || 0;
   const completedCount = marks.reduce((count, mark) => count + (mark.end <= elapsed ? 1 : 0), 0);
   const finished = marks.length > 0 && completedCount === marks.length && !playing;
@@ -1488,10 +1494,10 @@ function NarratedDescription({ character }: { character: CharacterItem }) {
         <p>{character.description}</p>
       )}
       <div className="narration-progress" aria-hidden="true"><i style={{ width: `${progress}%` }} /></div>
-      {asset?.audio && (
+      {audioSource && (
         <audio
           ref={audioRef}
-          src={asset.audio}
+          src={audioSource}
           preload="metadata"
           onLoadedMetadata={(event) => setDuration(event.currentTarget.duration || 0)}
           onTimeUpdate={(event) => setElapsed(event.currentTarget.currentTime)}

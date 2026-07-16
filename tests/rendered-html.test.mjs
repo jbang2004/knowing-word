@@ -356,8 +356,70 @@ test("narration timing becomes a punctuated, persistent reading transcript", asy
   assert.equal(tokens.filter((token) => token.kind === "character").length, marks.length);
   assert.ok(tokens.every((token) => token.completionTime >= 0));
 
+  const authoredTokens = buildNarrationTokens(marks, "封，封锁的封。会意字。");
+  assert.equal(authoredTokens.map((token) => token.text).join(""), "封，封锁的封。会意字。");
+
   const pageSource = await readFile(new URL("../app/page.tsx", import.meta.url), "utf8");
   assert.match(pageSource, /requestAnimationFrame\(sampleAudioTime\)/);
   assert.match(pageSource, /is-complete/);
   assert.doesNotMatch(pageSource, /onEnded=\{\(\) => \{[\s\S]*setElapsed\(0\)/);
+});
+
+test("every character record has a complete Feng-voice narration and authored timeline", async () => {
+  const { characters } = await import(
+    new URL("../app/data/catalog.ts", import.meta.url).href,
+  );
+  const { narrationAssets } = await import(
+    new URL("../app/data/narration-assets.ts", import.meta.url).href,
+  );
+  const { buildNarrationTokens } = await import(
+    new URL("../app/lib/narration.ts", import.meta.url).href,
+  );
+
+  assert.equal(characters.length, 80);
+  assert.equal(Object.keys(narrationAssets).length, characters.length);
+  assert.equal(new Set(Object.values(narrationAssets).map((asset) => asset.audio)).size, 76);
+
+  const audioByGlyph = new Map();
+  for (const character of characters) {
+    const asset = narrationAssets[character.id];
+    assert.ok(asset, `missing narration mapping for ${character.hanzi} (${character.id})`);
+    assert.equal(asset.voice, "封");
+    await access(new URL(`../public${asset.audio}`, import.meta.url));
+    await access(new URL(`../public${asset.audioMarks}`, import.meta.url));
+
+    const priorAudio = audioByGlyph.get(character.hanzi);
+    if (priorAudio) assert.equal(asset.audio, priorAudio, `duplicate glyph audio differs for ${character.hanzi}`);
+    else audioByGlyph.set(character.hanzi, asset.audio);
+
+    const payload = JSON.parse(
+      await readFile(new URL(`../public${asset.audioMarks}`, import.meta.url), "utf8"),
+    );
+    assert.equal(payload.voice_reference, "封");
+    assert.ok(Array.isArray(payload.marks) && payload.marks.length > 0, `missing marks for ${character.hanzi}`);
+    assert.ok(typeof payload.transcript === "string" && payload.transcript.length > 0);
+    assert.match(payload.transcript, /[，。！？；：、]/u, `missing punctuation for ${character.hanzi}`);
+
+    let priorStart = -1;
+    for (const [index, mark] of payload.marks.entries()) {
+      assert.equal(mark.index, index, `wrong mark index for ${character.hanzi}`);
+      assert.equal(typeof mark.char, "string");
+      assert.ok(Number.isFinite(mark.start) && Number.isFinite(mark.end));
+      assert.ok(mark.start >= priorStart, `non-monotonic marks for ${character.hanzi}`);
+      assert.ok(mark.end >= mark.start, `invalid mark duration for ${character.hanzi}`);
+      priorStart = mark.start;
+    }
+
+    const renderedTranscript = buildNarrationTokens(payload.marks, payload.transcript)
+      .map((token) => token.text)
+      .join("");
+    assert.equal(renderedTranscript, payload.transcript.replace(/\s/gu, ""));
+  }
+
+  assert.equal(audioByGlyph.size, 76);
+  const feng = characters.find((character) => character.hanzi === "封");
+  assert.equal(
+    narrationAssets[feng.id].audio,
+    "/heritage/019f0554-ea22-762e-966c-32d678fd6bf6/audio.mp3",
+  );
 });
