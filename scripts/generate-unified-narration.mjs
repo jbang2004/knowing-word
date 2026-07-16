@@ -21,6 +21,7 @@ const referenceAudio = join(publicRoot, "heritage", referenceCharacterId, "audio
 const referenceMarks = join(publicRoot, "heritage", referenceCharacterId, "audio-marks.json");
 const referenceWav = join(tmpdir(), "knowing-word-feng-reference.wav");
 const referenceText = "封，封锁的封。会意字，左右结构，本义是地界，左边的圭。";
+const narrationBitrate = process.env.NARRATION_BITRATE || "48k";
 const requestedGlyph = process.argv.find((arg) => arg.startsWith("--glyph="))?.slice(8);
 const force = process.argv.includes("--force");
 
@@ -197,7 +198,7 @@ async function encodeMp3(wavPath, mp3Path) {
     "-af", "loudnorm=I=-18:LRA=7:TP=-1.5",
     "-ar", "44100",
     "-ac", "1",
-    "-b:a", "128k",
+    "-b:a", narrationBitrate,
     mp3Path,
   ]);
 }
