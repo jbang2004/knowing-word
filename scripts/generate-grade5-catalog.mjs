@@ -299,7 +299,7 @@ for (const lesson of grade5Volume1Lessons) {
     characters.push(item);
     scenes[character] ||= { scene, cues: sceneCues(plan, parts) };
     narrations[character] ||= makeNarration(character, word, pinyinText, structure, parts, teachingRadical, polyphonic.has(character), plan, record);
-    visuals[character] ||= { src: `/illustrations/mnemonics-v2/g5-${codeId(character)}.jpg`, label: word, alt: `${trimStop(plan.meaning)} 图中${parts.map((part) => `“${part}”`).join("与")}按${structure}自然长成“${character}”。` };
+    visuals[character] ||= { src: `/illustrations/mnemonics-v2/g5-${codeId(character)}.webp`, label: word, alt: `${trimStop(plan.meaning)} 图中${parts.map((part) => `“${part}”`).join("与")}按${structure}自然长成“${character}”。` };
     imagePrompts[character] ||= { character, word, lesson: lesson.title, structure, parts, radical: teachingRadical, filename: `g5-${codeId(character)}.jpg`, prompt: imagePrompt({ character, word, lesson, structure, parts, radical: teachingRadical, plan }) };
     for (const [partIndex, part] of parts.entries()) if (!componentMap.has(part)) componentMap.set(part, { id: `g5-component-${codeId(part)}`, title: part, glyph: part, examples: [character], description: componentDescription(part, plan, parts, partIndex), characterSet: [character], group: componentMap.size + 600, sequence: componentMap.size + 600 }); else { const component = componentMap.get(part); if (!component.examples.includes(character)) component.examples.push(character); if (!component.characterSet.includes(character)) component.characterSet.push(character); }
   }

@@ -153,7 +153,7 @@ test("every image-based literacy question has a generated visual asset", async (
     assert.ok(visual, `missing character-study visual for ${glyph}`);
     assert.match(
       visual.src,
-      /^\/illustrations\/(?:mnemonics\/(?:m\d+\.jpg|g5-u[0-9a-f]+\.svg)|mnemonics-v2\/g5-u[0-9a-f]+\.jpg)$/,
+      /^\/illustrations\/(?:mnemonics\/(?:m\d+\.jpg|g5-u[0-9a-f]+\.svg)|mnemonics-v2\/g5-u[0-9a-f]+\.webp)$/,
     );
     await access(new URL(`../public${visual.src}`, import.meta.url));
   }
