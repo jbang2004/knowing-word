@@ -550,6 +550,7 @@ test("every character record has a complete Feng-voice narration and authored ti
     const asset = narrationAssets[character.id];
     assert.ok(asset, `missing narration mapping for ${character.hanzi} (${character.id})`);
     assert.equal(asset.voice, "封");
+    assert.match(asset.audio, /\/audio\.webm$/u);
     await access(new URL(`../public${asset.audio}`, import.meta.url));
     await access(new URL(`../public${asset.audioMarks}`, import.meta.url));
 
@@ -598,7 +599,7 @@ test("every character record has a complete Feng-voice narration and authored ti
   const feng = characters.find((character) => character.hanzi === "封");
   assert.equal(
     narrationAssets[feng.id].audio,
-    "/narration/019f0554-ea22-762e-966c-32d678fd6bf6/audio.mp3",
+    "/narration/019f0554-ea22-762e-966c-32d678fd6bf6/audio.webm",
   );
 });
 

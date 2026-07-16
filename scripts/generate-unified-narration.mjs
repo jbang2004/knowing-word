@@ -19,7 +19,7 @@ const referenceCharacterId = "019f0554-ea22-762e-966c-32d678fd6bf6";
 const referenceAudio = join(publicRoot, "heritage", referenceCharacterId, "audio.mp3");
 const referenceWav = join(tmpdir(), "knowing-word-feng-reference.wav");
 const referenceText = "封，封锁的封。会意字，左右结构，本义是地界，左边的圭。";
-const narrationBitrate = process.env.NARRATION_BITRATE || "48k";
+const narrationBitrate = process.env.NARRATION_BITRATE || "20k";
 const diffusionSteps = Number(process.env.NARRATION_DDPM_STEPS || 3);
 const legacyScriptVersion = "child-first-v1";
 const officialScriptVersion = "child-first-v2";
@@ -144,8 +144,8 @@ function scriptVersionFor(records) {
     : legacyScriptVersion;
 }
 
-async function outputMatchesScript(mp3Path, marksPath, text, scriptVersion) {
-  if (!(await exists(mp3Path)) || !(await exists(marksPath))) return false;
+async function outputMatchesScript(audioPath, marksPath, text, scriptVersion) {
+  if (!(await exists(audioPath)) || !(await exists(marksPath))) return false;
   try {
     const payload = JSON.parse(await readFile(marksPath, "utf8"));
     return payload.transcript === text
@@ -196,16 +196,20 @@ async function synthesize(text, wavPath, qualityAttempt = 1) {
   throw new Error("VoxCPM generation failed");
 }
 
-async function encodeMp3(wavPath, mp3Path, maximumDuration) {
+async function encodeNarration(wavPath, audioPath, maximumDuration) {
   await run("ffmpeg", [
     "-hide_banner", "-loglevel", "error", "-y",
     "-i", wavPath,
     ...(maximumDuration ? ["-t", String(maximumDuration)] : []),
     "-af", "loudnorm=I=-18:LRA=7:TP=-1.5",
-    "-ar", "44100",
+    "-c:a", "libopus",
+    "-application", "voip",
+    "-vbr", "on",
+    "-compression_level", "10",
+    "-ar", "48000",
     "-ac", "1",
     "-b:a", narrationBitrate,
-    mp3Path,
+    audioPath,
   ]);
 }
 
@@ -238,18 +242,18 @@ for (let offset = 0; offset < glyphEntries.length; offset += 1) {
   if (!force) {
     for (const record of records) {
       const candidateFolder = join(outputRoot, record.id);
-      if (await outputMatchesScript(join(candidateFolder, "audio.mp3"), join(candidateFolder, "audio-marks.json"), text, scriptVersion)) {
+      if (await outputMatchesScript(join(candidateFolder, "audio.webm"), join(candidateFolder, "audio-marks.json"), text, scriptVersion)) {
         outputRecord = record;
         break;
       }
     }
   }
   const folder = join(outputRoot, outputRecord.id);
-  const mp3Path = join(folder, "audio.mp3");
+  const audioPath = join(folder, "audio.webm");
   const marksPath = join(folder, "audio-marks.json");
   const wavPath = join(tmpdir(), `knowing-word-${outputRecord.id}.wav`);
   await mkdir(folder, { recursive: true });
-  const matchesScript = !force && await outputMatchesScript(mp3Path, marksPath, text, scriptVersion);
+  const matchesScript = !force && await outputMatchesScript(audioPath, marksPath, text, scriptVersion);
 
   if (!matchesScript) {
     process.stdout.write(`[${offset + 1}/${glyphEntries.length}] ${glyph} · generating ${Array.from(text).length} chars\n`);
@@ -257,12 +261,12 @@ for (let offset = 0; offset < glyphEntries.length; offset += 1) {
     let meta;
     for (let qualityAttempt = 1; qualityAttempt <= 3; qualityAttempt += 1) {
       meta = await synthesize(text, wavPath, qualityAttempt);
-      await encodeMp3(
+      await encodeNarration(
         wavPath,
-        mp3Path,
+        audioPath,
         qualityAttempt === 3 ? maximumNarrationDuration(text) : undefined,
       );
-      duration = await durationOf(mp3Path);
+      duration = await durationOf(audioPath);
       if (durationLooksNatural(text, duration)) break;
       if (qualityAttempt < 3) {
         process.stdout.write(`[${offset + 1}/${glyphEntries.length}] ${glyph} · unnatural ${duration.toFixed(2)}s take; retrying\n`);
@@ -286,7 +290,7 @@ for (let offset = 0; offset < glyphEntries.length; offset += 1) {
   }
 
   generatedByGlyph.set(glyph, {
-    audio: `/${mp3Path.slice(publicRoot.length + 1)}`,
+    audio: `/${audioPath.slice(publicRoot.length + 1)}`,
     audioMarks: `/${marksPath.slice(publicRoot.length + 1)}`,
     voice: "封",
   });
