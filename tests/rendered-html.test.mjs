@@ -603,6 +603,19 @@ test("the public home shell is split from the full learning engine", async () =>
   assert.ok(experienceStat.size > homeStat.size * 10, "learning engine was folded back into the home entry");
 });
 
+test("versioned assets run through the cache-header worker path", async () => {
+  const config = JSON.parse(
+    await readFile(new URL("../dist/server/wrangler.json", import.meta.url), "utf8"),
+  );
+  assert.equal(config.assets.binding, "ASSETS");
+  assert.deepEqual(config.assets.run_worker_first, [
+    "/assets/*",
+    "/illustrations/*",
+    "/heritage/*",
+    "/og-cover.jpg",
+  ]);
+});
+
 test("R2 narration delivery supports immutable byte ranges", async () => {
   const workerUrl = new URL("../dist/server/index.js", import.meta.url);
   workerUrl.searchParams.set("test", "media-suite");

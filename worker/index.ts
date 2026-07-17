@@ -193,6 +193,13 @@ function withDeliveryCache(response: Response, pathname: string) {
   });
 }
 
+function isDeliveryAsset(pathname: string) {
+  return pathname.startsWith("/assets/") ||
+    pathname.startsWith("/illustrations/") ||
+    pathname.startsWith("/heritage/") ||
+    pathname === "/og-cover.jpg";
+}
+
 interface ExecutionContext {
   waitUntil(promise: Promise<unknown>): void;
   passThroughOnException(): void;
@@ -211,6 +218,11 @@ const worker = {
 
     const narrationPath = narrationRelativePath(url.pathname);
     if (narrationPath) return serveNarration(request, env, ctx, narrationPath);
+
+    if (isDeliveryAsset(url.pathname) && env.ASSETS) {
+      const asset = await env.ASSETS.fetch(request);
+      if (asset.status !== 404) return withDeliveryCache(asset, url.pathname);
+    }
 
     if (url.pathname === "/_vinext/image") {
       // The local Vite preview does not expose the production ASSETS/IMAGES

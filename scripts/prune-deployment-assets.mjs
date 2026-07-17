@@ -1,4 +1,4 @@
-import { access, readFile, readdir, rm } from "node:fs/promises";
+import { access, readFile, readdir, rm, writeFile } from "node:fs/promises";
 import { join, relative, resolve, sep } from "node:path";
 
 const projectRoot = resolve(import.meta.dirname, "..");
@@ -6,6 +6,7 @@ const clientRoot = join(projectRoot, "dist/client");
 const narrationRoot = join(clientRoot, "narration");
 const narrationManifest = join(projectRoot, "app/data/narration-assets.ts");
 const narrationReadyMarker = join(projectRoot, "config/narration-r2-ready-v2.json");
+const wranglerConfigPath = join(projectRoot, "dist/server/wrangler.json");
 const legacyNarrationFiles = new Set(["audio.mp3", "audio-marks.json"]);
 
 async function exists(path) {
@@ -81,11 +82,24 @@ for (const name of ["file.svg", "globe.svg", "window.svg"]) {
   }
 }
 
+const wranglerConfig = JSON.parse(await readFile(wranglerConfigPath, "utf8"));
+wranglerConfig.assets = {
+  ...wranglerConfig.assets,
+  binding: "ASSETS",
+  run_worker_first: [
+    "/assets/*",
+    "/illustrations/*",
+    "/heritage/*",
+    "/og-cover.jpg",
+  ],
+};
+await writeFile(wranglerConfigPath, `${JSON.stringify(wranglerConfig)}\n`);
+
 const narrationSummary = counts.narration === -1
   ? "removed the R2-backed narration directory"
   : `removed ${counts.narration} unreferenced narration files`;
 process.stdout.write(
   `Deployment assets pruned: ${counts.heritage} legacy heritage files, ` +
   `${counts.mnemonicSvg} unused mnemonic SVGs, ${narrationSummary}, ` +
-  `${counts.starter} starter icons.\n`,
+  `${counts.starter} starter icons; enabled cache-header routing.\n`,
 );
