@@ -1097,10 +1097,10 @@ function TopNavigation({
 }) {
   const nav: { label: string; english: string; screen: Screen; active: Screen[]; icon: LucideIcon }[] = [
     { label: "今日", english: "Today", screen: "home", active: ["home"], icon: HomeIcon },
-    { label: "课本", english: "Reader", screen: "course", active: ["course", "lesson", "character"], icon: BookOpenText },
-    { label: "专项", english: "Practice", screen: "trackMap", active: ["trackMap", "trackLesson", "challenge"], icon: Route },
+    { label: "课程", english: "Learn", screen: "course", active: ["course", "lesson", "character"], icon: BookOpenText },
+    { label: "练习", english: "Practice", screen: "trackMap", active: ["trackMap", "trackLesson", "challenge"], icon: Route },
     { label: "部件", english: "Radicals", screen: "components", active: ["components"], icon: Layers3 },
-    { label: "手账", english: "Journal", screen: "records", active: ["records", "recordDetail"], icon: ChartNoAxesColumnIncreasing },
+    { label: "成长", english: "Progress", screen: "records", active: ["records", "recordDetail"], icon: ChartNoAxesColumnIncreasing },
   ];
 
   return (
@@ -1110,12 +1110,12 @@ function TopNavigation({
         <span className="wordmark-copy">
           <strong>知字</strong>
           <em>KNOWING WORD</em>
-          <span className="wordmark-flag">数字汉字博物志</span>
+          <span className="wordmark-flag">让汉字更好懂</span>
         </span>
       </button>
       <div className="nav-edition" aria-label="当前课程版本">
         <span>语文 · 五年级上册</span>
-        <small>VOLUME 01　/　26 LESSONS</small>
+        <small>正在学习 · 26 课</small>
       </div>
       <nav aria-label="主菜单">
         {nav.map((item, index) => {
@@ -1136,10 +1136,10 @@ function TopNavigation({
       <div className="nav-account">
         <button className="profile-pill" onClick={onProfile} aria-label={`打开${name || "我的"}学习空间`}>
           <span>{name ? name.slice(0, 1) : "学"}</span>
-          <small><b>{name || "小探险家"}</b><em>个人识字手账</em></small>
+          <small><b>{name || "小探险家"}</b><em>我的学习空间</em></small>
           <UserRound aria-hidden="true" />
         </button>
-        <p>字有来处，学有归途。</p>
+        <p>今天也在进步</p>
       </div>
     </header>
   );
@@ -1174,8 +1174,8 @@ function HomeHub({
       <section className="home-hero">
         <div className="hero-copy">
           <div className="hero-chapter">
-            <span>卷一 · 今日识字</span>
-            <small>DAILY CHARACTER STUDY</small>
+            <span>今天的汉字</span>
+            <small>每天认识一个新字</small>
           </div>
           <label className="course-selector">
             <span>当前课程</span>
@@ -1183,16 +1183,16 @@ function HomeHub({
               <option value="chinese-grade-5-volume-1">语文 · 五年级上册</option>
             </select>
           </label>
-          <div className="hero-eyebrow"><Sparkles aria-hidden="true" /> {name}的今日一字</div>
-          <h1><span>从一个字，</span><br />看见一方世界。</h1>
+          <div className="hero-eyebrow"><Sparkles aria-hidden="true" /> 为{name}准备好了</div>
+          <h1><span>看见一个字，</span><br />记住一个世界。</h1>
           <p>
-            今天从「{nextWord?.hanzi || "字"}」出发：看见它的物象，读懂它的来处，再亲手把部件搭回来。
+            从「{nextWord?.hanzi || "字"}」开始，看图理解、动手拆解，再把它轻松记下来。
           </p>
           <div className="hero-buttons">
             <button className="game-button primary" onClick={() => onContinue("words")}>
               {nextWord ? "继续学习「" + nextWord.hanzi + "」" : "开始识字"} <ArrowRight aria-hidden="true" />
             </button>
-            <button className="game-button ghost" onClick={onCourse}><BookOpenText aria-hidden="true" />查看课本</button>
+            <button className="game-button ghost" onClick={onCourse}><BookOpenText aria-hidden="true" />浏览课程</button>
           </div>
           <div className="hero-status">
             {syncState === "local" ? <CloudOff aria-hidden="true" /> : <Cloud aria-hidden="true" />}
@@ -1230,9 +1230,9 @@ function HomeHub({
 
       <section className="mission-heading">
         <div>
-          <p className="kicker">学习索引 · Study index</p>
-          <h2>循着五条线索，把一个字读透</h2>
-          <p className="section-intro">字义、部件、部首、结构与声音，在同一条学习路径上彼此印证。</p>
+          <p className="kicker">按你的节奏学习</p>
+          <h2>今天想学什么？</h2>
+          <p className="section-intro">认识字义、拆解部件、练习结构，或者把课文大声读出来。</p>
         </div>
         <button className="text-button" onClick={onRecords}>查看学习记录 <ArrowRight aria-hidden="true" /></button>
       </section>
@@ -1280,12 +1280,12 @@ function HomeHub({
       <section className="home-bottom-grid">
         <article className="course-glance">
           <div>
-            <p className="kicker">课本目录 · Reader</p>
-            <h2>二十六课，构成这一册的识字长卷</h2>
-            <button className="text-button" onClick={onCourse}>打开完整目录 <ArrowRight aria-hidden="true" /></button>
+            <p className="kicker">继续课程</p>
+            <h2>跟着课文，认识每一个新字</h2>
+            <button className="text-button" onClick={onCourse}>查看全部课程 <ArrowRight aria-hidden="true" /></button>
           </div>
           <div className="lesson-dots">
-            {lessonList.map((lesson) => {
+            {lessonList.slice(0, 8).map((lesson) => {
               const progress = trackProgress(profile, "words", lesson.id);
               return (
                 <button key={lesson.id} onClick={onCourse}>
@@ -1300,9 +1300,9 @@ function HomeHub({
         <article className="learning-promise">
           <span><Sparkles aria-hidden="true" /></span>
           <div>
-            <p className="kicker">本馆方法 · Method</p>
-            <h2>识其形，明其义，知其所从来。</h2>
-            <p>观察、拆解、复原、书写，让每一次记忆都有依据。</p>
+            <p className="kicker">每天十分钟</p>
+            <h2>看懂、拆开、记住。</h2>
+            <p>把复杂的汉字变成看得见、玩得懂的小发现。</p>
           </div>
         </article>
       </section>
@@ -1814,7 +1814,7 @@ function CharacterStudy({
       <div className="character-topbar">
         <button className="back-button" onClick={onBack}><ArrowLeft aria-hidden="true" />返回词语表</button>
         <div>
-          <p>CHARACTER STUDY　/　{character.lessonTitle} · {character.word}</p>
+          <p>第 {character.lessonPosition} 课 · {character.lessonTitle} · {character.word}</p>
           <h1>{character.hanzi}<small>{character.pinyin}</small></h1>
         </div>
         <button className={"favorite-star " + (favorite ? "is-active" : "")} onClick={onFavorite} aria-label={favorite ? "取消收藏" : "收藏这个字"}>
@@ -1823,7 +1823,7 @@ function CharacterStudy({
       </div>
 
       <section className="character-story-card">
-        <span className="story-folio" aria-hidden="true">字　{character.lessonPosition}.{String(character.wordPosition || 1).padStart(2, "0")}</span>
+        <span className="story-folio" aria-hidden="true">第 {character.lessonPosition} 课 · 第 {character.wordPosition || 1} 个字</span>
         <div className="story-character-column">
           <div className="story-glyph">{character.hanzi}</div>
           <span className="character-pinyin">{character.pinyin}</span>
@@ -3029,7 +3029,7 @@ function PageHeading({
       </div>
       <p className="page-heading-copy">{copy}</p>
       <MapIcon className="page-heading-mark" aria-hidden="true" />
-      <span className="page-heading-folio" aria-hidden="true">KNOWING WORD　/　ARCHIVE</span>
+      <span className="page-heading-folio" aria-hidden="true">KNOWING WORD</span>
     </header>
   );
 }
