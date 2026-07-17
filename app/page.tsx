@@ -1095,30 +1095,25 @@ function TopNavigation({
   onNavigate: (screen: Screen) => void;
   onProfile: () => void;
 }) {
-  const nav: { label: string; english: string; screen: Screen; active: Screen[]; icon: LucideIcon }[] = [
-    { label: "今日", english: "Today", screen: "home", active: ["home"], icon: HomeIcon },
-    { label: "课程", english: "Learn", screen: "course", active: ["course", "lesson", "character"], icon: BookOpenText },
-    { label: "练习", english: "Practice", screen: "trackMap", active: ["trackMap", "trackLesson", "challenge"], icon: Route },
-    { label: "部件", english: "Radicals", screen: "components", active: ["components"], icon: Layers3 },
-    { label: "成长", english: "Progress", screen: "records", active: ["records", "recordDetail"], icon: ChartNoAxesColumnIncreasing },
+  const nav: { label: string; screen: Screen; active: Screen[]; icon: LucideIcon }[] = [
+    { label: "首页", screen: "home", active: ["home"], icon: HomeIcon },
+    { label: "课本", screen: "course", active: ["course", "lesson", "character"], icon: BookOpenText },
+    { label: "专项", screen: "trackMap", active: ["trackMap", "trackLesson", "challenge"], icon: Route },
+    { label: "部件", screen: "components", active: ["components"], icon: Layers3 },
+    { label: "记录", screen: "records", active: ["records", "recordDetail"], icon: ChartNoAxesColumnIncreasing },
   ];
 
   return (
-    <header className={`top-navigation${active === "challenge" ? " is-focus" : ""}`}>
+    <header className="top-navigation">
       <button className="wordmark" onClick={() => onNavigate("home")} aria-label="回到 Knowing Word 首页">
         <span className="brand-seal" aria-hidden="true">知</span>
         <span className="wordmark-copy">
-          <strong>知字</strong>
-          <em>KNOWING WORD</em>
-          <span className="wordmark-flag">让汉字更好懂</span>
+          <strong>KNOWING WORD</strong>
+          <span className="wordmark-flag">从一个字，看见一方世界</span>
         </span>
       </button>
-      <div className="nav-edition" aria-label="当前课程版本">
-        <span>语文 · 五年级上册</span>
-        <small>正在学习 · 26 课</small>
-      </div>
       <nav aria-label="主菜单">
-        {nav.map((item, index) => {
+        {nav.map((item) => {
           const Icon = item.icon;
           return (
             <button
@@ -1126,21 +1121,17 @@ function TopNavigation({
               key={item.label}
               onClick={() => onNavigate(item.screen)}
             >
-              <span className="nav-index">{String(index + 1).padStart(2, "0")}</span>
               <Icon aria-hidden="true" />
-              <span className="nav-label"><b>{item.label}</b><small>{item.english}</small></span>
+              <span>{item.label}</span>
             </button>
           );
         })}
       </nav>
-      <div className="nav-account">
-        <button className="profile-pill" onClick={onProfile} aria-label={`打开${name || "我的"}学习空间`}>
-          <span>{name ? name.slice(0, 1) : "学"}</span>
-          <small><b>{name || "小探险家"}</b><em>我的学习空间</em></small>
-          <UserRound aria-hidden="true" />
-        </button>
-        <p>今天也在进步</p>
-      </div>
+      <button className="profile-pill" onClick={onProfile} aria-label={`打开${name || "我的"}学习空间`}>
+        <span>{name ? name.slice(0, 1) : "学"}</span>
+        <small>{name || "学习空间"}</small>
+        <UserRound aria-hidden="true" />
+      </button>
     </header>
   );
 }
@@ -1173,26 +1164,22 @@ function HomeHub({
     <div className="page home-page">
       <section className="home-hero">
         <div className="hero-copy">
-          <div className="hero-chapter">
-            <span>今天的汉字</span>
-            <small>每天认识一个新字</small>
-          </div>
           <label className="course-selector">
             <span>当前课程</span>
             <select aria-label="选择课程" value={profile.courseId} onChange={() => undefined}>
               <option value="chinese-grade-5-volume-1">语文 · 五年级上册</option>
             </select>
           </label>
-          <div className="hero-eyebrow"><Sparkles aria-hidden="true" /> 为{name}准备好了</div>
-          <h1><span>看见一个字，</span><br />记住一个世界。</h1>
+          <div className="hero-eyebrow"><Sparkles aria-hidden="true" /> 每日汉字探索</div>
+          <h1>你好，{name}！<br />今天从一个字出发。</h1>
           <p>
-            从「{nextWord?.hanzi || "字"}」开始，看图理解、动手拆解，再把它轻松记下来。
+            每个学习区都在训练不同能力：先懂字义，再会拆字、分部首、认结构。
           </p>
           <div className="hero-buttons">
             <button className="game-button primary" onClick={() => onContinue("words")}>
               {nextWord ? "继续学习「" + nextWord.hanzi + "」" : "开始识字"} <ArrowRight aria-hidden="true" />
             </button>
-            <button className="game-button ghost" onClick={onCourse}><BookOpenText aria-hidden="true" />浏览课程</button>
+            <button className="game-button ghost" onClick={onCourse}><BookOpenText aria-hidden="true" />查看课本</button>
           </div>
           <div className="hero-status">
             {syncState === "local" ? <CloudOff aria-hidden="true" /> : <Cloud aria-hidden="true" />}
@@ -1216,11 +1203,6 @@ function HomeHub({
             priority
             sizes="(max-width: 760px) 100vw, 46vw"
           />
-          <div className="hero-character-plate" aria-hidden="true">
-            <span>{nextWord?.pinyin || "zì"}</span>
-            <strong>{nextWord?.hanzi || "字"}</strong>
-            <small>{nextWord?.word || "汉字"}</small>
-          </div>
           <div className="hero-badge">
             <span>当前识字进度</span>
             <strong>{wordProgress.completed}<small> / {wordProgress.total}</small></strong>
@@ -1230,21 +1212,19 @@ function HomeHub({
 
       <section className="mission-heading">
         <div>
-          <p className="kicker">按你的节奏学习</p>
-          <h2>今天想学什么？</h2>
-          <p className="section-intro">认识字义、拆解部件、练习结构，或者把课文大声读出来。</p>
+          <p className="kicker">今天可以做什么</p>
+          <h2>四条学习路线，一起把字学扎实</h2>
         </div>
         <button className="text-button" onClick={onRecords}>查看学习记录 <ArrowRight aria-hidden="true" /></button>
       </section>
 
       <section className="mission-grid">
-        {trackIds.map((track, index) => {
+        {trackIds.map((track) => {
           const meta = trackMeta[track];
           const progress = trackProgress(profile, track);
           const next = getNextCharacter(track, profile);
           return (
             <article className={"mission-card " + meta.tone} key={track}>
-              <span className="mission-sequence">{String(index + 1).padStart(2, "0")}</span>
               <div className="mission-card-top">
                 <span className="mission-glyph">{meta.glyph}</span>
                 <span className="mission-count">{progress.completed} / {progress.total}</span>
@@ -1262,7 +1242,6 @@ function HomeHub({
         })}
 
         <article className="mission-card reading-card">
-          <span className="mission-sequence">05</span>
           <div className="mission-card-top">
             <span className="mission-glyph">读</span>
             <span className="mission-count">{profile.readSessions} 次</span>
@@ -1280,12 +1259,11 @@ function HomeHub({
       <section className="home-bottom-grid">
         <article className="course-glance">
           <div>
-            <p className="kicker">继续课程</p>
-            <h2>跟着课文，认识每一个新字</h2>
-            <button className="text-button" onClick={onCourse}>查看全部课程 <ArrowRight aria-hidden="true" /></button>
+            <p className="kicker">关卡地图</p>
+            <h2>跟着课文，一课一课往前走</h2>
           </div>
           <div className="lesson-dots">
-            {lessonList.slice(0, 8).map((lesson) => {
+            {lessonList.map((lesson) => {
               const progress = trackProgress(profile, "words", lesson.id);
               return (
                 <button key={lesson.id} onClick={onCourse}>
@@ -1300,9 +1278,8 @@ function HomeHub({
         <article className="learning-promise">
           <span><Sparkles aria-hidden="true" /></span>
           <div>
-            <p className="kicker">每天十分钟</p>
-            <h2>看懂、拆开、记住。</h2>
-            <p>把复杂的汉字变成看得见、玩得懂的小发现。</p>
+            <p className="kicker">学习方法</p>
+            <h2>看得懂字义，也能说清它是怎么搭起来的。</h2>
           </div>
         </article>
       </section>
@@ -1812,9 +1789,9 @@ function CharacterStudy({
   return (
     <div className="page character-page">
       <div className="character-topbar">
-        <button className="back-button" onClick={onBack}><ArrowLeft aria-hidden="true" />返回词语表</button>
+        <button className="back-button" onClick={onBack}>← 返回词语表</button>
         <div>
-          <p>第 {character.lessonPosition} 课 · {character.lessonTitle} · {character.word}</p>
+          <p>{character.lessonTitle} · {character.word}</p>
           <h1>{character.hanzi}<small>{character.pinyin}</small></h1>
         </div>
         <button className={"favorite-star " + (favorite ? "is-active" : "")} onClick={onFavorite} aria-label={favorite ? "取消收藏" : "收藏这个字"}>
@@ -1823,7 +1800,6 @@ function CharacterStudy({
       </div>
 
       <section className="character-story-card">
-        <span className="story-folio" aria-hidden="true">第 {character.lessonPosition} 课 · 第 {character.wordPosition || 1} 个字</span>
         <div className="story-character-column">
           <div className="story-glyph">{character.hanzi}</div>
           <span className="character-pinyin">{character.pinyin}</span>
@@ -3026,10 +3002,9 @@ function PageHeading({
       <div>
         <p className="kicker">{kicker}</p>
         <h1>{title}</h1>
+        <p>{copy}</p>
       </div>
-      <p className="page-heading-copy">{copy}</p>
       <MapIcon className="page-heading-mark" aria-hidden="true" />
-      <span className="page-heading-folio" aria-hidden="true">KNOWING WORD</span>
     </header>
   );
 }
