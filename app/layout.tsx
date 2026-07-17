@@ -7,7 +7,7 @@ export async function generateMetadata(): Promise<Metadata> {
   const host = incoming.get("x-forwarded-host") || incoming.get("host") || "knowing-word.jbang2004.chatgpt.site";
   const protocol = incoming.get("x-forwarded-proto") || (host.startsWith("localhost") ? "http" : "https");
   const origin = new URL(`${protocol}://${host}`);
-  const imageUrl = new URL("/og-v2.jpg", origin).toString();
+  const imageUrl = new URL("/og.png", origin).toString();
   const description = "统编版五年级上册 26 课识字地图：用图中嵌字、字义讲解、拆字练习与写字巩固，把课内汉字真正记进脑海。";
   return {
     metadataBase: origin,
