@@ -1,4 +1,4 @@
-import KnowingWord from "../page";
+import KnowingWord from "../experience";
 
 export const dynamic = "force-dynamic";
 

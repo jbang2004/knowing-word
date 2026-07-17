@@ -34,24 +34,6 @@ const typeNames = {
   "pictophonetic/ideographic": "形声兼会意字", simplified: "简化字", unknown: "字形字",
 };
 
-const cueMap = {
-  "氵": "三股清亮水流", 水: "分开的河流与水花", 木: "有横枝、直干和斜根的大树", "艹": "成排草叶与花梗",
-  "扌": "伸出并发力的手臂", 手: "张开的手掌", 口: "方形传声窗", 日: "有中央光带的日轮", 月: "弯月形灯盘",
-  "忄": "跳动的心形灯带", 心: "心形灯带与三点微光", 亻: "侧身站立的人", 人: "展开双臂的人", 女: "照料幼苗的人影",
-  土: "分层的土台", 山: "高低相连的山峰", 石: "带切面的岩石", 鸟: "舒展翅尾的小鸟", 鱼: "有鳍和尾巴的鱼",
-  虫: "弯身的小虫", 犭: "奔跑动物的侧影", 牛: "带角的牛头", 羊: "对称羊角", 马: "奔跑的马与鬃尾",
-  米: "米架和四散米粒", 禾: "低垂的谷穗", 竹: "两簇竹叶", "⺮": "两簇竹叶", 贝: "被托起的贝壳",
-  金: "金属工具架", "钅": "金属工具架", 火: "向上跳动的火焰", "灬": "四点温暖火光", 纟: "盘绕的细丝线", 糸: "盘绕的细丝线",
-  讠: "从说话框飞出的短句", 言: "从口中升起的言语", 足: "脚印和落脚台", "⻊": "脚印和落脚台", 走: "向前迈出的脚步",
-  门: "打开的双扇门", 广: "伸出长檐的屋舍", 宀: "安稳覆盖的屋顶", 穴: "带采光孔的洞顶", 厂: "山崖与长檐",
-  辶: "回转向前的小路", 阝: "高低相接的土坡", 车: "有轮轴的车架", 舟: "细长的小船", 巾: "垂下的布幅",
-  衤: "展开衣襟的上衣", 衣: "展开衣襟的上衣", 页: "突出头部的人影", 目: "方框中的眼睛", 耳: "竖起的耳朵",
-  王: "三层玉架", 玉: "温润的玉石", 皿: "浅口器皿", 酉: "封口酒坛", 食: "带盖的食器", "饣": "带盖的食器",
-  刂: "竖直刀刃", 刀: "弯柄刀具", 力: "弯曲而发力的手臂", 弓: "绷紧的弓弦", 攵: "迈步轻敲的短杖",
-  攴: "迈步轻敲的短杖", 寸: "有刻度的手腕", 又: "回转的右手", 欠: "张口舒气的人影", 小: "中央光点与两侧小点",
-  大: "正面伸展的人", 子: "被轻轻托住的孩子", 田: "分成四格的田地", 雨: "云框和落下的雨点", 白: "明亮的小窗",
-};
-
 // MakeMeAHanzi deliberately leaves a few modern simplified composites unnamed.
 // These overrides keep the parts teachable instead of silently dropping every
 // component after the radical.
@@ -76,8 +58,6 @@ function unique(values) { return [...new Set(values)]; }
 function lessonId(position) { return `g5v1-l${String(position).padStart(2, "0")}`; }
 function codeId(character) { return `u${character.codePointAt(0).toString(16)}`; }
 function charId(position, index, character) { return `${lessonId(position)}-c${String(index + 1).padStart(2, "0")}-${codeId(character)}`; }
-function xml(value) { return String(value).replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;"); }
-
 function pinyinFor(lesson, word, character) {
   const override = officialPolyphonicContexts[`${lesson.position}:${character}`];
   if (override) return override.pinyin;
@@ -91,10 +71,6 @@ function wordFor(lesson, character) {
   const override = officialPolyphonicContexts[`${lesson.position}:${character}`];
   if (override) return override.word;
   return lesson.words.find((word) => word.includes(character)) || character;
-}
-
-function cueFor(component) {
-  return cueMap[component] || `轮廓像“${component}”的故事道具`;
 }
 
 function decompositionFor(record, parts) {
@@ -221,18 +197,6 @@ function sceneCues(plan, parts) {
 
 function imagePrompt({ character, word, lesson, structure, parts, radical, plan }) {
   return `Use case: scientific-educational\nAsset type: square web mnemonic illustration for a Grade 5 Chinese literacy lesson\nPrimary request: create one polished child-friendly object-shaped mnemonic for the Chinese character “${character}” in the word “${word}”\nScene/backdrop: a single coherent ${lesson.title} learning scene on warm rice-paper texture, quiet and uncluttered\nSubject: ${trimStop(plan.scene)}\nStructure accuracy: preserve the real ${structure}; place ${parts.map((part) => `“${part}”`).join("、")} in that exact order and relative position; “${radical}” remains clearly findable as the semantic clue\nStyle/medium: premium Chinese children’s-book watercolor with crisp object silhouettes, natural depth, refined details, warm light, visually comparable to an award-winning educational picture book\nComposition/framing: 1:1 square, the full mnemonic object centered inside the middle 78% of the canvas, generous safe padding on all four sides, no object or stroke-like edge cropped; readable on mobile\nLearning goal: every component is made from meaningful real objects, and those object contours naturally grow into the component strokes before combining into the whole character\nConstraints: one scene only; component contours must stay complete and separable; meaning must be understandable without labels; age-appropriate and beautiful\nAvoid: printed or handwritten Chinese text, font masks, a giant opaque character pasted over a photo, captions, pinyin, labels, borders, split panels, UI, watermark, logos, violence, clutter, cropped subjects`;
-}
-
-function makeSvg({ character, word, lesson, parts, radical }) {
-  const palettes = [
-    ["#243B67", "#6A5BE7", "#F4B84A", "#FFF7E8"], ["#184F57", "#2D9A78", "#F08958", "#F0FBF4"],
-    ["#4A315E", "#B05CC8", "#F2A84B", "#FFF3F4"], ["#203E66", "#3F7CD8", "#ED6B61", "#EEF7FF"],
-  ];
-  const [ink, blue, coral, paper] = palettes[(lesson.position - 1) % palettes.length];
-  const filename = `g5-${codeId(character)}.svg`;
-  const partLabels = parts.map((part, index) => `<g transform="translate(${330 + index * 190} 760)"><rect width="160" height="58" rx="29" fill="${index === 0 ? coral : blue}" opacity=".96"/><text x="80" y="39" text-anchor="middle" fill="white" font-family="PingFang SC, sans-serif" font-size="28" font-weight="800">${xml(part)} · ${index === 0 ? "表意" : "补形"}</text></g>`).join("");
-  const shapes = parts.map((part, index) => `<g transform="translate(${220 + index * 270} ${215 + (index % 2) * 45})" opacity="${index === 0 ? ".92" : ".82"}"><circle cx="0" cy="0" r="92" fill="${index === 0 ? coral : blue}" opacity=".2"/><path d="M-105 35 Q0 -120 105 35 Q58 128 0 108 Q-58 128 -105 35Z" fill="${index === 0 ? coral : blue}" opacity=".25"/><text x="0" y="30" text-anchor="middle" fill="${index === 0 ? coral : blue}" font-family="Songti SC, STSong, serif" font-size="116" font-weight="900">${xml(part)}</text></g>`).join("");
-  return { filename, content: `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc"><title id="title">${xml(character)}字的图中嵌字意象</title><desc id="desc">${xml(parts.join("与"))}按${xml(decompositionFor(null, parts))}形成${xml(character)}</desc><defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="${paper}"/><stop offset="1" stop-color="#EAF1FF"/></linearGradient><filter id="shadow"><feDropShadow dx="0" dy="20" stdDeviation="18" flood-color="${ink}" flood-opacity=".18"/></filter><mask id="glyph"><rect width="1200" height="900" fill="black"/><text x="600" y="650" text-anchor="middle" fill="white" stroke="white" stroke-width="8" font-family="Songti SC, STSong, serif" font-size="570" font-weight="900">${xml(character)}</text></mask><linearGradient id="glyphPaint" x1="0" y1="0" x2="1" y2="1"><stop stop-color="${coral}"/><stop offset=".48" stop-color="${blue}"/><stop offset="1" stop-color="${ink}"/></linearGradient></defs><rect width="1200" height="900" rx="60" fill="url(#bg)"/><circle cx="1050" cy="115" r="210" fill="${coral}" opacity=".09"/><circle cx="120" cy="790" r="270" fill="${blue}" opacity=".08"/><g opacity=".32">${shapes}</g><g mask="url(#glyph)" filter="url(#shadow)"><rect x="125" y="105" width="950" height="610" rx="120" fill="url(#glyphPaint)"/><image href="../lessons/g5-${String(lesson.position).padStart(2, "0")}.webp" x="0" y="0" width="1200" height="900" preserveAspectRatio="xMidYMid slice" opacity=".38"/></g><text x="70" y="82" fill="${ink}" font-family="PingFang SC, sans-serif" font-size="27" font-weight="800">第 ${lesson.position} 课 · ${xml(lesson.title)}</text><text x="1130" y="82" text-anchor="end" fill="${ink}" opacity=".66" font-family="PingFang SC, sans-serif" font-size="24">${xml(word)}</text>${partLabels}<text x="70" y="852" fill="${ink}" opacity=".68" font-family="PingFang SC, sans-serif" font-size="22">物象长成笔画 · ${xml(cueFor(radical))}</text></svg>\n` };
 }
 
 async function loadDictionary() {

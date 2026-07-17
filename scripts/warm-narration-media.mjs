@@ -18,22 +18,20 @@ const queue = [...mediaPaths];
 
 async function warm(path) {
   const url = `${siteUrl}${path}`;
-  const before = await fetch(url, { method: "HEAD" });
-  if (before.ok && before.headers.get("x-knowing-word-media") === "r2") {
-    reused += 1;
-    return;
+  const response = await fetch(url, {
+    cache: "no-store",
+    headers: {
+      "accept-encoding": "identity",
+      range: "bytes=0-0",
+    },
+  });
+  if (response.status !== 206 || response.headers.get("x-knowing-word-media") !== "r2") {
+    throw new Error(`${response.status} ${response.statusText}: media did not resolve from R2`);
   }
-
-  const response = await fetch(url, { headers: { "accept-encoding": "identity" } });
-  if (!response.ok) throw new Error(`${response.status} ${response.statusText}`);
+  if (Number(response.headers.get("content-length")) !== 1) {
+    throw new Error("R2 byte-range verification returned an unexpected payload");
+  }
   await response.arrayBuffer();
-
-  for (let attempt = 0; attempt < 8; attempt += 1) {
-    const check = await fetch(url, { method: "HEAD", cache: "no-store" });
-    if (check.ok && check.headers.get("x-knowing-word-media") === "r2") return;
-    await new Promise((resolve) => setTimeout(resolve, 250 * (attempt + 1)));
-  }
-  throw new Error("R2 verification timed out");
 }
 
 async function worker() {

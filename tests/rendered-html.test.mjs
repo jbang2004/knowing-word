@@ -266,7 +266,7 @@ test("every source character has a complete, authored object-shaped mnemonic", a
 
 test("mnemonic artwork is never cropped or hidden by its caption", async () => {
   const pageSource = await readFile(
-    new URL("../app/page.tsx", import.meta.url),
+    new URL("../app/experience.tsx", import.meta.url),
     "utf8",
   );
   const stylesheet = await readFile(
@@ -427,7 +427,7 @@ test("narration timing becomes a punctuated, persistent reading transcript", asy
   const authoredTokens = buildNarrationTokens(marks, "封，封锁的封。会意字。");
   assert.equal(authoredTokens.map((token) => token.text).join(""), "封，封锁的封。会意字。");
 
-  const pageSource = await readFile(new URL("../app/page.tsx", import.meta.url), "utf8");
+  const pageSource = await readFile(new URL("../app/experience.tsx", import.meta.url), "utf8");
   assert.match(pageSource, /requestAnimationFrame\(sampleAudioTime\)/);
   assert.match(pageSource, /is-complete/);
   assert.match(pageSource, /withAssetVersion/);
@@ -442,10 +442,6 @@ test("all narration scripts use the child-first four-beat teaching structure", a
   const { narrationScripts } = await import(
     new URL("../app/data/narration-scripts.ts", import.meta.url).href,
   );
-  const { buildNarrationTokens } = await import(
-    new URL("../app/lib/narration.ts", import.meta.url).href,
-  );
-
   const uniqueCharacters = [...new Map(
     characters.map((character) => [character.hanzi, character]),
   ).values()];
@@ -589,4 +585,53 @@ test("production output excludes superseded heritage narration copies", async ()
     access(new URL("../dist/client/narration/", import.meta.url)),
     (error) => error?.code === "ENOENT",
   );
+});
+
+test("the public home shell is split from the full learning engine", async () => {
+  const { readdir, stat } = await import("node:fs/promises");
+  const assetsRoot = new URL("../dist/client/assets/", import.meta.url);
+  const entries = await readdir(assetsRoot);
+  const homeEntry = entries.find((entry) => /^home-client-.*\.js$/u.test(entry));
+  const experienceEntry = entries.find((entry) => /^experience-.*\.js$/u.test(entry));
+  assert.ok(homeEntry, "compact home client entry is missing");
+  assert.ok(experienceEntry, "full learning engine entry is missing");
+  const [homeStat, experienceStat] = await Promise.all([
+    stat(new URL(homeEntry, assetsRoot)),
+    stat(new URL(experienceEntry, assetsRoot)),
+  ]);
+  assert.ok(homeStat.size < 150_000, `home entry is too large: ${homeStat.size}`);
+  assert.ok(experienceStat.size > homeStat.size * 10, "learning engine was folded back into the home entry");
+});
+
+test("R2 narration delivery supports immutable byte ranges", async () => {
+  const workerUrl = new URL("../dist/server/index.js", import.meta.url);
+  workerUrl.searchParams.set("test", "media-suite");
+  workerPromise ||= import(workerUrl.href).then((module) => module.default);
+  const worker = await workerPromise;
+  const bytes = new TextEncoder().encode("knowing-word-narration");
+  const media = {
+    async head() {
+      return { size: bytes.byteLength, httpEtag: '"narration-etag"' };
+    },
+    async get(_key, options) {
+      const offset = options?.range?.offset || 0;
+      const length = options?.range?.length || bytes.byteLength;
+      return {
+        body: new Response(bytes.slice(offset, offset + length)).body,
+      };
+    },
+  };
+  const response = await worker.fetch(
+    new Request(
+      "http://localhost/media/narration/v2/g5v1-l01-c01-u9e6d/audio.webm?v=test",
+      { headers: { range: "bytes=0-6" } },
+    ),
+    { MEDIA: media },
+    { waitUntil() {}, passThroughOnException() {} },
+  );
+  assert.equal(response.status, 206);
+  assert.equal(response.headers.get("content-range"), `bytes 0-6/${bytes.byteLength}`);
+  assert.equal(response.headers.get("cache-control"), "public, max-age=31536000, immutable");
+  assert.equal(response.headers.get("x-knowing-word-media"), "r2");
+  assert.equal((await response.arrayBuffer()).byteLength, 7);
 });

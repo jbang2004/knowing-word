@@ -1,0 +1,42 @@
+import { writeFile } from "node:fs/promises";
+import { resolve } from "node:path";
+import { characters, course, lessons } from "../app/data/catalog.ts";
+
+const origins = {
+  words: "识字小测",
+  split: "拆一拆",
+  honglan: "红蓝字",
+  structure: "空间结构",
+};
+
+const candidates = Object.fromEntries(
+  Object.entries(origins).map(([track, origin]) => [
+    track,
+    characters
+      .filter(
+        (character) =>
+          character.primary &&
+          character.official !== false &&
+          character.exercises.some((exercise) => exercise.origin === origin),
+      )
+      .map(({ id, lessonId, hanzi }) => ({ id, lessonId, hanzi })),
+  ]),
+);
+
+const source = `export type HomeTrackId = "words" | "split" | "honglan" | "structure";
+export type HomeCandidate = { id: string; lessonId: string; hanzi: string };
+
+export const homeCourse = ${JSON.stringify({
+  title: course.title,
+  grade: course.grade,
+  lessons: lessons.map(({ id, title, position }) => ({ id, title, position })),
+}, null, 2)} as const;
+
+export const homeCandidates: Record<HomeTrackId, HomeCandidate[]> = ${JSON.stringify(candidates, null, 2)};
+`;
+
+await writeFile(
+  resolve(import.meta.dirname, "../app/data/home-index.generated.ts"),
+  source,
+);
+process.stdout.write("Wrote compact home learning index.\n");
