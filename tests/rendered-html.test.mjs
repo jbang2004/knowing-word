@@ -30,7 +30,7 @@ test("server-renders the course-first Knowing Word learning experience", async (
   assert.match(html, /Knowing Word/i);
   assert.match(html, /五年级上册 26 课汉字学习地图/);
   assert.match(html, /KNOWING/);
-  assert.match(html, /四条学习路线/);
+  assert.match(html, /五条学习路线/);
   assert.match(html, /词语表与写字表/);
   assert.match(html, /课后练习/);
   assert.match(html, /红蓝练习/);

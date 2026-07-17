@@ -1104,7 +1104,7 @@ function TopNavigation({
   ];
 
   return (
-    <header className="top-navigation">
+    <header className={`top-navigation${active === "challenge" ? " is-focus" : ""}`}>
       <button className="wordmark" onClick={() => onNavigate("home")} aria-label="回到 Knowing Word 首页">
         <span className="brand-seal" aria-hidden="true">知</span>
         <span className="wordmark-copy">
@@ -1171,7 +1171,7 @@ function HomeHub({
             </select>
           </label>
           <div className="hero-eyebrow"><Sparkles aria-hidden="true" /> 每日汉字探索</div>
-          <h1>你好，{name}！<br />今天从一个字出发。</h1>
+          <h1><span>你好，{name}！</span><span>今天从一个字出发。</span></h1>
           <p>
             每个学习区都在训练不同能力：先懂字义，再会拆字、分部首、认结构。
           </p>
@@ -1213,7 +1213,7 @@ function HomeHub({
       <section className="mission-heading">
         <div>
           <p className="kicker">今天可以做什么</p>
-          <h2>四条学习路线，一起把字学扎实</h2>
+          <h2>五条学习路线，一起把字学扎实</h2>
         </div>
         <button className="text-button" onClick={onRecords}>查看学习记录 <ArrowRight aria-hidden="true" /></button>
       </section>
@@ -1477,6 +1477,7 @@ function NarratedDescription({ character }: { character: CharacterItem }) {
   const [elapsed, setElapsed] = useState(0);
   const [duration, setDuration] = useState(0);
   const [playing, setPlaying] = useState(false);
+  const [transcriptExpanded, setTranscriptExpanded] = useState(false);
 
   useEffect(() => {
     if (!playing || !audioSource) return;
@@ -1514,11 +1515,13 @@ function NarratedDescription({ character }: { character: CharacterItem }) {
   function toggleNarration() {
     const audio = audioRef.current;
     if (!audioSource || !audio) {
+      setTranscriptExpanded(true);
       setPlaying(true);
       speak(character.description, () => setPlaying(false));
       return;
     }
     if (audio.paused) {
+      setTranscriptExpanded(true);
       const audioDuration = Number.isFinite(audio.duration) ? audio.duration : duration;
       if (audio.ended || (audioDuration > 0 && audio.currentTime >= audioDuration - 0.08)) {
         audio.currentTime = 0;
@@ -1564,28 +1567,38 @@ function NarratedDescription({ character }: { character: CharacterItem }) {
           {narrationStatus}
         </span>
       </div>
-      {marks.length ? (
-        <p className="narration-transcript" aria-label={transcript.map((token) => token.text).join("")}>
-          {transcript.map((token, index) => {
-            if (token.kind === "punctuation") return null;
-            const completed = token.completionTime <= elapsed;
-            const punctuation = transcript[index + 1]?.kind === "punctuation" ? transcript[index + 1] : null;
-            const className = `narration-token${token.markIndex === activeIndex ? " is-active" : completed ? " is-complete" : " is-upcoming"}`;
-            return (
-              <span className="narration-unit" key={`${token.kind}-${token.markIndex}-${index}`} aria-hidden="true">
-                <span className={className}>{token.text}</span>
-                {punctuation && (
-                  <span className={`narration-token is-punctuation${completed ? " is-complete" : ""}`}>
-                    {punctuation.text}
-                  </span>
-                )}
-              </span>
-            );
-          })}
-        </p>
-      ) : (
-        <p>{character.description}</p>
-      )}
+      <div className={`narration-copy${transcriptExpanded ? " is-expanded" : ""}`}>
+        {marks.length ? (
+          <p className="narration-transcript" aria-label={transcript.map((token) => token.text).join("")}>
+            {transcript.map((token, index) => {
+              if (token.kind === "punctuation") return null;
+              const completed = token.completionTime <= elapsed;
+              const punctuation = transcript[index + 1]?.kind === "punctuation" ? transcript[index + 1] : null;
+              const className = `narration-token${token.markIndex === activeIndex ? " is-active" : completed ? " is-complete" : " is-upcoming"}`;
+              return (
+                <span className="narration-unit" key={`${token.kind}-${token.markIndex}-${index}`} aria-hidden="true">
+                  <span className={className}>{token.text}</span>
+                  {punctuation && (
+                    <span className={`narration-token is-punctuation${completed ? " is-complete" : ""}`}>
+                      {punctuation.text}
+                    </span>
+                  )}
+                </span>
+              );
+            })}
+          </p>
+        ) : (
+          <p>{character.description}</p>
+        )}
+      </div>
+      <button
+        className="narration-toggle"
+        type="button"
+        onClick={() => setTranscriptExpanded((value) => !value)}
+        aria-expanded={transcriptExpanded}
+      >
+        {transcriptExpanded ? "收起逐字讲解" : "展开完整讲解"}<span aria-hidden="true">⌄</span>
+      </button>
       <div className="narration-progress" aria-hidden="true"><i style={{ width: `${progress}%` }} /></div>
       {audioSource && (
         <audio
