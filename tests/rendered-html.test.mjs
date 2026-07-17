@@ -616,6 +616,19 @@ test("versioned assets run through the cache-header worker path", async () => {
   ]);
 });
 
+test("repeat visits cache hashed assets and revalidate visual assets locally", async () => {
+  const registration = await readFile(
+    new URL("../app/service-worker-registration.tsx", import.meta.url),
+    "utf8",
+  );
+  const worker = await readFile(new URL("../public/sw.js", import.meta.url), "utf8");
+  assert.match(registration, /serviceWorker\.register\("\/sw\.js"/u);
+  assert.match(registration, /updateViaCache: "none"/u);
+  assert.match(worker, /IMMUTABLE_PREFIX = "\/assets\/"/u);
+  assert.match(worker, /staleWhileRevalidate/u);
+  assert.doesNotMatch(worker, /\/api\//u);
+});
+
 test("R2 narration delivery supports immutable byte ranges", async () => {
   const workerUrl = new URL("../dist/server/index.js", import.meta.url);
   workerUrl.searchParams.set("test", "media-suite");
