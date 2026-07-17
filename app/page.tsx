@@ -3,6 +3,29 @@
 import Image from "next/image";
 import Link from "next/link";
 import {
+  ArrowLeft,
+  ArrowRight,
+  BookOpenText,
+  ChartNoAxesColumnIncreasing,
+  Cloud,
+  CloudOff,
+  CircleStop,
+  CheckCircle2,
+  Home as HomeIcon,
+  Layers3,
+  LogOut,
+  Map as MapIcon,
+  Mic2,
+  MoonStar,
+  RotateCcw,
+  Route,
+  Sparkles,
+  SunMedium,
+  UserRound,
+  Volume2,
+  type LucideIcon,
+} from "lucide-react";
+import {
   type PointerEvent as ReactPointerEvent,
   useCallback,
   useEffect,
@@ -1072,34 +1095,42 @@ function TopNavigation({
   onNavigate: (screen: Screen) => void;
   onProfile: () => void;
 }) {
-  const nav: { label: string; screen: Screen; active: Screen[] }[] = [
-    { label: "首页", screen: "home", active: ["home"] },
-    { label: "课本", screen: "course", active: ["course", "lesson", "character"] },
-    { label: "专项", screen: "trackMap", active: ["trackMap", "trackLesson", "challenge"] },
-    { label: "部件", screen: "components", active: ["components"] },
-    { label: "记录", screen: "records", active: ["records", "recordDetail"] },
+  const nav: { label: string; screen: Screen; active: Screen[]; icon: LucideIcon }[] = [
+    { label: "首页", screen: "home", active: ["home"], icon: HomeIcon },
+    { label: "课本", screen: "course", active: ["course", "lesson", "character"], icon: BookOpenText },
+    { label: "专项", screen: "trackMap", active: ["trackMap", "trackLesson", "challenge"], icon: Route },
+    { label: "部件", screen: "components", active: ["components"], icon: Layers3 },
+    { label: "记录", screen: "records", active: ["records", "recordDetail"], icon: ChartNoAxesColumnIncreasing },
   ];
 
   return (
     <header className="top-navigation">
       <button className="wordmark" onClick={() => onNavigate("home")} aria-label="回到 Knowing Word 首页">
-        <span className="wordmark-flag">汉字学习旅程</span>
-        <strong>KNOWING<br />WORD</strong>
+        <span className="brand-seal" aria-hidden="true">知</span>
+        <span className="wordmark-copy">
+          <strong>KNOWING WORD</strong>
+          <span className="wordmark-flag">从一个字，看见一方世界</span>
+        </span>
       </button>
       <nav aria-label="主菜单">
-        {nav.map((item) => (
-          <button
-            className={item.active.includes(active) ? "is-active" : ""}
-            key={item.label}
-            onClick={() => onNavigate(item.screen)}
-          >
-            {item.label}
-          </button>
-        ))}
+        {nav.map((item) => {
+          const Icon = item.icon;
+          return (
+            <button
+              className={item.active.includes(active) ? "is-active" : ""}
+              key={item.label}
+              onClick={() => onNavigate(item.screen)}
+            >
+              <Icon aria-hidden="true" />
+              <span>{item.label}</span>
+            </button>
+          );
+        })}
       </nav>
-      <button className="profile-pill" onClick={onProfile}>
+      <button className="profile-pill" onClick={onProfile} aria-label={`打开${name || "我的"}学习空间`}>
         <span>{name ? name.slice(0, 1) : "学"}</span>
-        <small>{name || "我的书包"}</small>
+        <small>{name || "学习空间"}</small>
+        <UserRound aria-hidden="true" />
       </button>
     </header>
   );
@@ -1139,24 +1170,30 @@ function HomeHub({
               <option value="chinese-grade-5-volume-1">语文 · 五年级上册</option>
             </select>
           </label>
+          <div className="hero-eyebrow"><Sparkles aria-hidden="true" /> 每日汉字探索</div>
           <h1>你好，{name}！<br />今天从一个字出发。</h1>
           <p>
             每个学习区都在训练不同能力：先懂字义，再会拆字、分部首、认结构。
           </p>
           <div className="hero-buttons">
             <button className="game-button primary" onClick={() => onContinue("words")}>
-              {nextWord ? "继续学习「" + nextWord.hanzi + "」" : "开始识字"} <span>→</span>
+              {nextWord ? "继续学习「" + nextWord.hanzi + "」" : "开始识字"} <ArrowRight aria-hidden="true" />
             </button>
-            <button className="game-button ghost" onClick={onCourse}>查看课本</button>
+            <button className="game-button ghost" onClick={onCourse}><BookOpenText aria-hidden="true" />查看课本</button>
           </div>
           <div className="hero-status">
-            <span className="pulse-dot" />
+            {syncState === "local" ? <CloudOff aria-hidden="true" /> : <Cloud aria-hidden="true" />}
             {!hydrated
               ? "正在准备学习空间"
               : syncState === "synced"
                 ? `今天已作答 ${today.attempts} 次 · 云端已同步`
                 : `今天已作答 ${today.attempts} 次 · 当前离线，稍后自动同步`}
           </div>
+          <dl className="hero-metrics" aria-label="今日学习概览">
+            <div><dt>今日作答</dt><dd>{today.attempts}<small> 次</small></dd></div>
+            <div><dt>识字进度</dt><dd>{wordProgress.completed}<small> / {wordProgress.total}</small></dd></div>
+            <div><dt>朗读练习</dt><dd>{profile.readSessions}<small> 次</small></dd></div>
+          </dl>
         </div>
         <div className="hero-illustration">
           <Image
@@ -1178,7 +1215,7 @@ function HomeHub({
           <p className="kicker">今天可以做什么</p>
           <h2>四条学习路线，一起把字学扎实</h2>
         </div>
-        <button className="text-button" onClick={onRecords}>查看学习记录 →</button>
+        <button className="text-button" onClick={onRecords}>查看学习记录 <ArrowRight aria-hidden="true" /></button>
       </section>
 
       <section className="mission-grid">
@@ -1196,8 +1233,9 @@ function HomeHub({
               <h3>{meta.label}</h3>
               <div className="mission-next">
                 <span>{next ? "上次到「" + next.hanzi + "」" : "准备开始"}</span>
-                <button onClick={() => onContinue(track)}>{meta.action} →</button>
+                <button onClick={() => onContinue(track)}>{meta.action} <ArrowRight aria-hidden="true" /></button>
               </div>
+              <div className="mission-progress" aria-hidden="true"><i style={{ width: `${progress.total ? (progress.completed / progress.total) * 100 : 0}%` }} /></div>
               <button className="card-link" onClick={() => onTrackMap(track)} aria-label={"查看" + meta.label + "关卡地图"} />
             </article>
           );
@@ -1212,8 +1250,9 @@ function HomeHub({
           <h3>日日朗读</h3>
           <div className="mission-next">
             <span>把课文里的句子读出声</span>
-            <button onClick={onRead}>去朗读 →</button>
+            <button onClick={onRead}>去朗读 <ArrowRight aria-hidden="true" /></button>
           </div>
+          <div className="mission-progress" aria-hidden="true"><i style={{ width: `${Math.min(profile.readSessions * 12.5, 100)}%` }} /></div>
         </article>
       </section>
 
@@ -1237,7 +1276,7 @@ function HomeHub({
           </div>
         </article>
         <article className="learning-promise">
-          <span>✦</span>
+          <span><Sparkles aria-hidden="true" /></span>
           <div>
             <p className="kicker">学习方法</p>
             <h2>看得懂字义，也能说清它是怎么搭起来的。</h2>
@@ -1889,7 +1928,7 @@ function TrackMap({
           <h2>{next ? next.hanzi + " 字" : "准备开始"}</h2>
           <span>{next ? "来自第 " + next.lessonPosition + " 课 · " + next.lessonTitle : "从第一课开始闯关"}</span>
         </div>
-        <button className="game-button white" onClick={onContinue}>{meta.action} →</button>
+        <button className="game-button white" onClick={onContinue}>{meta.action} <ArrowRight aria-hidden="true" /></button>
       </section>
 
       <section className="level-map">
@@ -1905,7 +1944,7 @@ function TrackMap({
                 <span className="level-number">第 {lesson.position} 课</span>
                 <strong>{lesson.title}</strong>
                 <i>{itemProgress.completed}/{itemProgress.total}</i>
-                <b>→</b>
+                <b><ArrowRight aria-hidden="true" /></b>
               </button>
             );
           })}
@@ -2812,20 +2851,20 @@ function ReadAloud({
           <p>选择一句，先听范读，再按下录音键读一遍。</p>
         </div>
         <button className={"game-button " + (recording ? "recording" : "primary")} onClick={toggleRecording}>
-          {recording ? "■ 结束录音" : "● 开始录音"}
+          {recording ? <><CircleStop aria-hidden="true" />结束录音</> : <><Mic2 aria-hidden="true" />开始录音</>}
         </button>
       </section>
       <div className="sentence-list">
         {sentences.map((text) => (
           <article className={activeText === text ? "is-speaking" : ""} key={text}>
             <p>“{text}”</p>
-            <button onClick={() => play(text)}>{speaking && activeText === text ? "正在范读…" : "▷ 范读"}</button>
+            <button onClick={() => play(text)}><Volume2 aria-hidden="true" />{speaking && activeText === text ? "正在范读…" : "范读"}</button>
           </article>
         ))}
       </div>
       {recordingUrl && (
         <section className="recording-result">
-          <span>✓</span>
+          <span><CheckCircle2 aria-hidden="true" /></span>
           <div><strong>{recordingStatus === "saving" ? "正在保存录音…" : "这次朗读已经录好"}</strong><p>{recordingStatus === "saved" ? "录音已安全同步，可以稍后回来继续听。" : recordingStatus === "local" ? "当前网络不可用，录音暂存在本页。" : "你可以在这里回听。"}</p></div>
           <audio controls src={recordingUrl} />
         </section>
@@ -2879,9 +2918,9 @@ function ProfilePanel({
         </div>
       </section>
       <div className="profile-actions">
-        <button onClick={onTheme}><span>{profile.theme === "light" ? "◐" : "◑"}</span>{profile.theme === "light" ? "切换夜读模式" : "切换日间模式"}</button>
-        <button className="is-danger" onClick={onReset}><span>↺</span>清除学习记录</button>
-        {identity?.mode === "workspace" && <Link className="account-signout" href="/signout-with-chatgpt?return_to=%2F"><span>↗</span>退出登录</Link>}
+        <button onClick={onTheme}>{profile.theme === "light" ? <MoonStar aria-hidden="true" /> : <SunMedium aria-hidden="true" />}{profile.theme === "light" ? "切换夜读模式" : "切换日间模式"}</button>
+        <button className="is-danger" onClick={onReset}><RotateCcw aria-hidden="true" />清除学习记录</button>
+        {identity?.mode === "workspace" && <Link className="account-signout" href="/signout-with-chatgpt?return_to=%2F"><LogOut aria-hidden="true" />退出登录</Link>}
       </div>
     </div>
   );
@@ -2959,12 +2998,13 @@ function PageHeading({
 }) {
   return (
     <header className="page-heading">
-      <button className="back-button" onClick={onBack}>← 返回</button>
+      <button className="back-button" onClick={onBack}><ArrowLeft aria-hidden="true" />返回</button>
       <div>
         <p className="kicker">{kicker}</p>
         <h1>{title}</h1>
         <p>{copy}</p>
       </div>
+      <MapIcon className="page-heading-mark" aria-hidden="true" />
     </header>
   );
 }
