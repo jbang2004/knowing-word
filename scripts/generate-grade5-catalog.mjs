@@ -20,7 +20,7 @@ const outputModule = join(root, "app/data/grade5-volume1-generated.ts");
 const visualModule = join(root, "app/data/grade5-volume1-visuals.generated.ts");
 const mnemonicModule = join(root, "app/data/grade5-volume1-mnemonics.generated.ts");
 const narrationModule = join(root, "app/data/grade5-volume1-narration.generated.ts");
-const promptModule = join(root, "app/data/grade5-volume1-image-prompts.generated.ts");
+const promptModule = join(root, "scripts/generated/grade5-volume1-image-prompts.generated.ts");
 const mnemonicRoot = join(root, "public/illustrations/mnemonics-v2");
 
 const structureNames = {
@@ -253,6 +253,7 @@ function serialize(name, value) {
 await Hanzi.start();
 const dictionary = await loadDictionary();
 await mkdir(mnemonicRoot, { recursive: true });
+await mkdir(join(root, "scripts/generated"), { recursive: true });
 
 const lessons = [];
 const characters = [];

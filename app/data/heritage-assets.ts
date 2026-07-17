@@ -8,8 +8,6 @@ export type AudioMark = {
 export type HeritageAsset = {
   stages: { label: string; src: string }[];
   redBlue?: string;
-  audio?: string;
-  audioMarks?: string;
 };
 
 export const heritageAssets: Record<string, HeritageAsset> = {
@@ -37,8 +35,6 @@ export const heritageAssets: Record<string, HeritageAsset> = {
       }
     ],
     "redBlue": "/heritage/019f0554-ea21-740f-af56-8f5393f25abc/red-blue.svg",
-    "audio": "/heritage/019f0554-ea21-740f-af56-8f5393f25abc/audio.mp3",
-    "audioMarks": "/heritage/019f0554-ea21-740f-af56-8f5393f25abc/audio-marks.json"
   },
   "019f0554-ea21-740f-af56-91a530f5a84a": {
     "stages": [
@@ -48,8 +44,6 @@ export const heritageAssets: Record<string, HeritageAsset> = {
       }
     ],
     "redBlue": "/heritage/019f0554-ea21-740f-af56-91a530f5a84a/red-blue.svg",
-    "audio": "/heritage/019f0554-ea21-740f-af56-91a530f5a84a/audio.mp3",
-    "audioMarks": "/heritage/019f0554-ea21-740f-af56-91a530f5a84a/audio-marks.json"
   },
   "019f0554-ea21-740f-af56-98e4990b31e9": {
     "stages": [
@@ -79,8 +73,6 @@ export const heritageAssets: Record<string, HeritageAsset> = {
       }
     ],
     "redBlue": "/heritage/019f0554-ea21-740f-af56-98e4990b31e9/red-blue.svg",
-    "audio": "/heritage/019f0554-ea21-740f-af56-98e4990b31e9/audio.mp3",
-    "audioMarks": "/heritage/019f0554-ea21-740f-af56-98e4990b31e9/audio-marks.json"
   },
   "019f0554-ea21-740f-af56-9f077aee3190": {
     "stages": [
@@ -106,8 +98,6 @@ export const heritageAssets: Record<string, HeritageAsset> = {
       }
     ],
     "redBlue": "/heritage/019f0554-ea21-740f-af56-9f077aee3190/red-blue.svg",
-    "audio": "/heritage/019f0554-ea21-740f-af56-9f077aee3190/audio.mp3",
-    "audioMarks": "/heritage/019f0554-ea21-740f-af56-9f077aee3190/audio-marks.json"
   },
   "019f0554-ea21-740f-af56-a597cc432bfa": {
     "stages": [
@@ -125,8 +115,6 @@ export const heritageAssets: Record<string, HeritageAsset> = {
       }
     ],
     "redBlue": "/heritage/019f0554-ea21-740f-af56-a597cc432bfa/red-blue.svg",
-    "audio": "/heritage/019f0554-ea21-740f-af56-a597cc432bfa/audio.mp3",
-    "audioMarks": "/heritage/019f0554-ea21-740f-af56-a597cc432bfa/audio-marks.json"
   },
   "019f0554-ea21-740f-af56-a849ce35f999": {
     "stages": [
@@ -185,8 +173,6 @@ export const heritageAssets: Record<string, HeritageAsset> = {
       }
     ],
     "redBlue": "/heritage/019f0554-ea21-740f-af56-b2be37c57c6f/red-blue.svg",
-    "audio": "/heritage/019f0554-ea21-740f-af56-b2be37c57c6f/audio.mp3",
-    "audioMarks": "/heritage/019f0554-ea21-740f-af56-b2be37c57c6f/audio-marks.json"
   },
   "019f0554-ea21-740f-af56-b5a49431c08a": {
     "stages": [
@@ -200,8 +186,6 @@ export const heritageAssets: Record<string, HeritageAsset> = {
       }
     ],
     "redBlue": "/heritage/019f0554-ea21-740f-af56-b5a49431c08a/red-blue.svg",
-    "audio": "/heritage/019f0554-ea21-740f-af56-b5a49431c08a/audio.mp3",
-    "audioMarks": "/heritage/019f0554-ea21-740f-af56-b5a49431c08a/audio-marks.json"
   },
   "019f0554-ea21-740f-af56-bbfbd3faf147": {
     "stages": [
@@ -244,8 +228,6 @@ export const heritageAssets: Record<string, HeritageAsset> = {
       }
     ],
     "redBlue": "/heritage/019f0554-ea21-740f-af56-c30d06561eab/red-blue.svg",
-    "audio": "/heritage/019f0554-ea21-740f-af56-c30d06561eab/audio.mp3",
-    "audioMarks": "/heritage/019f0554-ea21-740f-af56-c30d06561eab/audio-marks.json"
   },
   "019f0554-ea21-740f-af56-c69fa0ab0a63": {
     "stages": [
@@ -271,8 +253,6 @@ export const heritageAssets: Record<string, HeritageAsset> = {
       }
     ],
     "redBlue": "/heritage/019f0554-ea21-740f-af56-c69fa0ab0a63/red-blue.svg",
-    "audio": "/heritage/019f0554-ea21-740f-af56-c69fa0ab0a63/audio.mp3",
-    "audioMarks": "/heritage/019f0554-ea21-740f-af56-c69fa0ab0a63/audio-marks.json"
   },
   "019f0554-ea21-740f-af56-cee56e724f90": {
     "stages": [
@@ -306,8 +286,6 @@ export const heritageAssets: Record<string, HeritageAsset> = {
       }
     ],
     "redBlue": "/heritage/019f0554-ea21-740f-af56-cee56e724f90/red-blue.svg",
-    "audio": "/heritage/019f0554-ea21-740f-af56-cee56e724f90/audio.mp3",
-    "audioMarks": "/heritage/019f0554-ea21-740f-af56-cee56e724f90/audio-marks.json"
   },
   "019f0554-ea21-740f-af56-d0a1e8088ef3": {
     "stages": [
@@ -317,8 +295,6 @@ export const heritageAssets: Record<string, HeritageAsset> = {
       }
     ],
     "redBlue": "/heritage/019f0554-ea21-740f-af56-d0a1e8088ef3/red-blue.svg",
-    "audio": "/heritage/019f0554-ea21-740f-af56-d0a1e8088ef3/audio.mp3",
-    "audioMarks": "/heritage/019f0554-ea21-740f-af56-d0a1e8088ef3/audio-marks.json"
   },
   "019f0554-ea21-740f-af56-d596ba1ac69d": {
     "stages": [
@@ -337,8 +313,6 @@ export const heritageAssets: Record<string, HeritageAsset> = {
       }
     ],
     "redBlue": "/heritage/019f0554-ea21-740f-af56-df19f47aff27/red-blue.svg",
-    "audio": "/heritage/019f0554-ea21-740f-af56-df19f47aff27/audio.mp3",
-    "audioMarks": "/heritage/019f0554-ea21-740f-af56-df19f47aff27/audio-marks.json"
   },
   "019f0554-ea21-740f-af56-e20f48f7369d": {
     "stages": [
@@ -352,8 +326,6 @@ export const heritageAssets: Record<string, HeritageAsset> = {
       }
     ],
     "redBlue": "/heritage/019f0554-ea21-740f-af56-e20f48f7369d/red-blue.svg",
-    "audio": "/heritage/019f0554-ea21-740f-af56-e20f48f7369d/audio.mp3",
-    "audioMarks": "/heritage/019f0554-ea21-740f-af56-e20f48f7369d/audio-marks.json"
   },
   "019f0554-ea21-740f-af56-eb8a1342988b": {
     "stages": [
@@ -379,8 +351,6 @@ export const heritageAssets: Record<string, HeritageAsset> = {
       }
     ],
     "redBlue": "/heritage/019f0554-ea21-740f-af56-eb8a1342988b/red-blue.svg",
-    "audio": "/heritage/019f0554-ea21-740f-af56-eb8a1342988b/audio.mp3",
-    "audioMarks": "/heritage/019f0554-ea21-740f-af56-eb8a1342988b/audio-marks.json"
   },
   "019f0554-ea21-740f-af56-ec702611da9c": {
     "stages": [
@@ -414,8 +384,6 @@ export const heritageAssets: Record<string, HeritageAsset> = {
       }
     ],
     "redBlue": "/heritage/019f0554-ea21-740f-af56-ec702611da9c/red-blue.svg",
-    "audio": "/heritage/019f0554-ea21-740f-af56-ec702611da9c/audio.mp3",
-    "audioMarks": "/heritage/019f0554-ea21-740f-af56-ec702611da9c/audio-marks.json"
   },
   "019f0554-ea21-740f-af56-f733d22bc224": {
     "stages": [
@@ -449,8 +417,6 @@ export const heritageAssets: Record<string, HeritageAsset> = {
       }
     ],
     "redBlue": "/heritage/019f0554-ea21-740f-af56-f733d22bc224/red-blue.svg",
-    "audio": "/heritage/019f0554-ea21-740f-af56-f733d22bc224/audio.mp3",
-    "audioMarks": "/heritage/019f0554-ea21-740f-af56-f733d22bc224/audio-marks.json"
   },
   "019f0554-ea21-740f-af56-fbb5f4ff5346": {
     "stages": [
@@ -468,8 +434,6 @@ export const heritageAssets: Record<string, HeritageAsset> = {
       }
     ],
     "redBlue": "/heritage/019f0554-ea21-740f-af56-fbb5f4ff5346/red-blue.svg",
-    "audio": "/heritage/019f0554-ea21-740f-af56-fbb5f4ff5346/audio.mp3",
-    "audioMarks": "/heritage/019f0554-ea21-740f-af56-fbb5f4ff5346/audio-marks.json"
   },
   "019f0554-ea21-740f-af57-0073c73d6737": {
     "stages": [
@@ -483,8 +447,6 @@ export const heritageAssets: Record<string, HeritageAsset> = {
       }
     ],
     "redBlue": "/heritage/019f0554-ea21-740f-af57-0073c73d6737/red-blue.svg",
-    "audio": "/heritage/019f0554-ea21-740f-af57-0073c73d6737/audio.mp3",
-    "audioMarks": "/heritage/019f0554-ea21-740f-af57-0073c73d6737/audio-marks.json"
   },
   "019f0554-ea21-740f-af57-040b5e6e761b": {
     "stages": [
@@ -506,8 +468,6 @@ export const heritageAssets: Record<string, HeritageAsset> = {
       }
     ],
     "redBlue": "/heritage/019f0554-ea21-740f-af57-040b5e6e761b/red-blue.svg",
-    "audio": "/heritage/019f0554-ea21-740f-af57-040b5e6e761b/audio.mp3",
-    "audioMarks": "/heritage/019f0554-ea21-740f-af57-040b5e6e761b/audio-marks.json"
   },
   "019f0554-ea22-762e-966b-d3fa2de611be": {
     "stages": [
@@ -521,8 +481,6 @@ export const heritageAssets: Record<string, HeritageAsset> = {
       }
     ],
     "redBlue": "/heritage/019f0554-ea22-762e-966b-d3fa2de611be/red-blue.svg",
-    "audio": "/heritage/019f0554-ea22-762e-966b-d3fa2de611be/audio.mp3",
-    "audioMarks": "/heritage/019f0554-ea22-762e-966b-d3fa2de611be/audio-marks.json"
   },
   "019f0554-ea22-762e-966b-d4bb77fae57f": {
     "stages": [
@@ -556,8 +514,6 @@ export const heritageAssets: Record<string, HeritageAsset> = {
       }
     ],
     "redBlue": "/heritage/019f0554-ea22-762e-966b-d4bb77fae57f/red-blue.svg",
-    "audio": "/heritage/019f0554-ea22-762e-966b-d4bb77fae57f/audio.mp3",
-    "audioMarks": "/heritage/019f0554-ea22-762e-966b-d4bb77fae57f/audio-marks.json"
   },
   "019f0554-ea22-762e-966b-dd82ee494384": {
     "stages": [
@@ -591,8 +547,6 @@ export const heritageAssets: Record<string, HeritageAsset> = {
       }
     ],
     "redBlue": "/heritage/019f0554-ea22-762e-966b-dd82ee494384/red-blue.svg",
-    "audio": "/heritage/019f0554-ea22-762e-966b-dd82ee494384/audio.mp3",
-    "audioMarks": "/heritage/019f0554-ea22-762e-966b-dd82ee494384/audio-marks.json"
   },
   "019f0554-ea22-762e-966b-e1631ffd2c46": {
     "stages": [
@@ -618,8 +572,6 @@ export const heritageAssets: Record<string, HeritageAsset> = {
       }
     ],
     "redBlue": "/heritage/019f0554-ea22-762e-966b-e1631ffd2c46/red-blue.svg",
-    "audio": "/heritage/019f0554-ea22-762e-966b-e1631ffd2c46/audio.mp3",
-    "audioMarks": "/heritage/019f0554-ea22-762e-966b-e1631ffd2c46/audio-marks.json"
   },
   "019f0554-ea22-762e-966b-ebda64f057b8": {
     "stages": [
@@ -629,8 +581,6 @@ export const heritageAssets: Record<string, HeritageAsset> = {
       }
     ],
     "redBlue": "/heritage/019f0554-ea22-762e-966b-ebda64f057b8/red-blue.svg",
-    "audio": "/heritage/019f0554-ea22-762e-966b-ebda64f057b8/audio.mp3",
-    "audioMarks": "/heritage/019f0554-ea22-762e-966b-ebda64f057b8/audio-marks.json"
   },
   "019f0554-ea22-762e-966b-ef1ad97fda3a": {
     "stages": [
@@ -656,8 +606,6 @@ export const heritageAssets: Record<string, HeritageAsset> = {
       }
     ],
     "redBlue": "/heritage/019f0554-ea22-762e-966b-ef1ad97fda3a/red-blue.svg",
-    "audio": "/heritage/019f0554-ea22-762e-966b-ef1ad97fda3a/audio.mp3",
-    "audioMarks": "/heritage/019f0554-ea22-762e-966b-ef1ad97fda3a/audio-marks.json"
   },
   "019f0554-ea22-762e-966b-f64404abe271": {
     "stages": [
@@ -687,8 +635,6 @@ export const heritageAssets: Record<string, HeritageAsset> = {
       }
     ],
     "redBlue": "/heritage/019f0554-ea22-762e-966b-f64404abe271/red-blue.svg",
-    "audio": "/heritage/019f0554-ea22-762e-966b-f64404abe271/audio.mp3",
-    "audioMarks": "/heritage/019f0554-ea22-762e-966b-f64404abe271/audio-marks.json"
   },
   "019f0554-ea22-762e-966b-fb7629001a7c": {
     "stages": [
@@ -714,8 +660,6 @@ export const heritageAssets: Record<string, HeritageAsset> = {
       }
     ],
     "redBlue": "/heritage/019f0554-ea22-762e-966b-fb7629001a7c/red-blue.svg",
-    "audio": "/heritage/019f0554-ea22-762e-966b-fb7629001a7c/audio.mp3",
-    "audioMarks": "/heritage/019f0554-ea22-762e-966b-fb7629001a7c/audio-marks.json"
   },
   "019f0554-ea22-762e-966c-00c686953731": {
     "stages": [
@@ -749,8 +693,6 @@ export const heritageAssets: Record<string, HeritageAsset> = {
       }
     ],
     "redBlue": "/heritage/019f0554-ea22-762e-966c-00c686953731/red-blue.svg",
-    "audio": "/heritage/019f0554-ea22-762e-966c-00c686953731/audio.mp3",
-    "audioMarks": "/heritage/019f0554-ea22-762e-966c-00c686953731/audio-marks.json"
   },
   "019f0554-ea22-762e-966c-045f1238cfda": {
     "stages": [
@@ -776,8 +718,6 @@ export const heritageAssets: Record<string, HeritageAsset> = {
       }
     ],
     "redBlue": "/heritage/019f0554-ea22-762e-966c-045f1238cfda/red-blue.svg",
-    "audio": "/heritage/019f0554-ea22-762e-966c-045f1238cfda/audio.mp3",
-    "audioMarks": "/heritage/019f0554-ea22-762e-966c-045f1238cfda/audio-marks.json"
   },
   "019f0554-ea22-762e-966c-0e550b46e532": {
     "stages": [
@@ -787,8 +727,6 @@ export const heritageAssets: Record<string, HeritageAsset> = {
       }
     ],
     "redBlue": "/heritage/019f0554-ea22-762e-966c-0e550b46e532/red-blue.svg",
-    "audio": "/heritage/019f0554-ea22-762e-966c-0e550b46e532/audio.mp3",
-    "audioMarks": "/heritage/019f0554-ea22-762e-966c-0e550b46e532/audio-marks.json"
   },
   "019f0554-ea22-762e-966c-107a74abbe03": {
     "stages": [
@@ -810,8 +748,6 @@ export const heritageAssets: Record<string, HeritageAsset> = {
       }
     ],
     "redBlue": "/heritage/019f0554-ea22-762e-966c-107a74abbe03/red-blue.svg",
-    "audio": "/heritage/019f0554-ea22-762e-966c-107a74abbe03/audio.mp3",
-    "audioMarks": "/heritage/019f0554-ea22-762e-966c-107a74abbe03/audio-marks.json"
   },
   "019f0554-ea22-762e-966c-1a01682b33c7": {
     "stages": [
@@ -837,8 +773,6 @@ export const heritageAssets: Record<string, HeritageAsset> = {
       }
     ],
     "redBlue": "/heritage/019f0554-ea22-762e-966c-1a01682b33c7/red-blue.svg",
-    "audio": "/heritage/019f0554-ea22-762e-966c-1a01682b33c7/audio.mp3",
-    "audioMarks": "/heritage/019f0554-ea22-762e-966c-1a01682b33c7/audio-marks.json"
   },
   "019f0554-ea22-762e-966c-1c2b90eef3c3": {
     "stages": [
@@ -868,8 +802,6 @@ export const heritageAssets: Record<string, HeritageAsset> = {
       }
     ],
     "redBlue": "/heritage/019f0554-ea22-762e-966c-1c2b90eef3c3/red-blue.svg",
-    "audio": "/heritage/019f0554-ea22-762e-966c-1c2b90eef3c3/audio.mp3",
-    "audioMarks": "/heritage/019f0554-ea22-762e-966c-1c2b90eef3c3/audio-marks.json"
   },
   "019f0554-ea22-762e-966c-26177aed95a6": {
     "stages": [
@@ -899,8 +831,6 @@ export const heritageAssets: Record<string, HeritageAsset> = {
       }
     ],
     "redBlue": "/heritage/019f0554-ea22-762e-966c-26177aed95a6/red-blue.svg",
-    "audio": "/heritage/019f0554-ea22-762e-966c-26177aed95a6/audio.mp3",
-    "audioMarks": "/heritage/019f0554-ea22-762e-966c-26177aed95a6/audio-marks.json"
   },
   "019f0554-ea22-762e-966c-32d678fd6bf6": {
     "stages": [
@@ -930,8 +860,6 @@ export const heritageAssets: Record<string, HeritageAsset> = {
       }
     ],
     "redBlue": "/heritage/019f0554-ea22-762e-966c-32d678fd6bf6/red-blue.svg",
-    "audio": "/heritage/019f0554-ea22-762e-966c-32d678fd6bf6/audio.mp3",
-    "audioMarks": "/heritage/019f0554-ea22-762e-966c-32d678fd6bf6/audio-marks.json"
   },
   "019f0554-ea22-762e-966c-58aee8dc172b": {
     "stages": [
@@ -949,8 +877,6 @@ export const heritageAssets: Record<string, HeritageAsset> = {
       }
     ],
     "redBlue": "/heritage/019f0554-ea22-762e-966c-58aee8dc172b/red-blue.svg",
-    "audio": "/heritage/019f0554-ea22-762e-966c-58aee8dc172b/audio.mp3",
-    "audioMarks": "/heritage/019f0554-ea22-762e-966c-58aee8dc172b/audio-marks.json"
   },
   "019f0554-ea22-762e-966c-648c839e834d": {
     "stages": [
@@ -1013,8 +939,6 @@ export const heritageAssets: Record<string, HeritageAsset> = {
       }
     ],
     "redBlue": "/heritage/019f0554-ea22-762e-966c-6f1312a8ab57/red-blue.svg",
-    "audio": "/heritage/019f0554-ea22-762e-966c-6f1312a8ab57/audio.mp3",
-    "audioMarks": "/heritage/019f0554-ea22-762e-966c-6f1312a8ab57/audio-marks.json"
   },
   "019f0554-ea22-762e-966c-7ac68ada26e9": {
     "stages": [
@@ -1040,8 +964,6 @@ export const heritageAssets: Record<string, HeritageAsset> = {
       }
     ],
     "redBlue": "/heritage/019f0554-ea22-762e-966c-7ac68ada26e9/red-blue.svg",
-    "audio": "/heritage/019f0554-ea22-762e-966c-7ac68ada26e9/audio.mp3",
-    "audioMarks": "/heritage/019f0554-ea22-762e-966c-7ac68ada26e9/audio-marks.json"
   },
   "019f0554-ea22-762e-966c-7ed2f3d7f1f4": {
     "stages": [
@@ -1067,8 +989,6 @@ export const heritageAssets: Record<string, HeritageAsset> = {
       }
     ],
     "redBlue": "/heritage/019f0554-ea22-762e-966c-7ed2f3d7f1f4/red-blue.svg",
-    "audio": "/heritage/019f0554-ea22-762e-966c-7ed2f3d7f1f4/audio.mp3",
-    "audioMarks": "/heritage/019f0554-ea22-762e-966c-7ed2f3d7f1f4/audio-marks.json"
   },
   "019f0554-ea22-762e-966c-91164a91987a": {
     "stages": [
@@ -1090,8 +1010,6 @@ export const heritageAssets: Record<string, HeritageAsset> = {
       }
     ],
     "redBlue": "/heritage/019f0554-ea22-762e-966c-91164a91987a/red-blue.svg",
-    "audio": "/heritage/019f0554-ea22-762e-966c-91164a91987a/audio.mp3",
-    "audioMarks": "/heritage/019f0554-ea22-762e-966c-91164a91987a/audio-marks.json"
   },
   "019f0554-ea22-762e-966c-9641b1078ac1": {
     "stages": [
@@ -1117,8 +1035,6 @@ export const heritageAssets: Record<string, HeritageAsset> = {
       }
     ],
     "redBlue": "/heritage/019f0554-ea22-762e-966c-9641b1078ac1/red-blue.svg",
-    "audio": "/heritage/019f0554-ea22-762e-966c-9641b1078ac1/audio.mp3",
-    "audioMarks": "/heritage/019f0554-ea22-762e-966c-9641b1078ac1/audio-marks.json"
   },
   "019f0554-ea22-762e-966c-a994523efc60": {
     "stages": [
@@ -1152,8 +1068,6 @@ export const heritageAssets: Record<string, HeritageAsset> = {
       }
     ],
     "redBlue": "/heritage/019f0554-ea22-762e-966c-a994523efc60/red-blue.svg",
-    "audio": "/heritage/019f0554-ea22-762e-966c-a994523efc60/audio.mp3",
-    "audioMarks": "/heritage/019f0554-ea22-762e-966c-a994523efc60/audio-marks.json"
   },
   "019f0554-ea22-762e-966c-b68b75784d2e": {
     "stages": [
@@ -1179,8 +1093,6 @@ export const heritageAssets: Record<string, HeritageAsset> = {
       }
     ],
     "redBlue": "/heritage/019f0554-ea22-762e-966c-b68b75784d2e/red-blue.svg",
-    "audio": "/heritage/019f0554-ea22-762e-966c-b68b75784d2e/audio.mp3",
-    "audioMarks": "/heritage/019f0554-ea22-762e-966c-b68b75784d2e/audio-marks.json"
   },
   "019f0554-ea22-762e-966c-c23c4186d00d": {
     "stages": [
@@ -1214,8 +1126,6 @@ export const heritageAssets: Record<string, HeritageAsset> = {
       }
     ],
     "redBlue": "/heritage/019f0554-ea22-762e-966c-c23c4186d00d/red-blue.svg",
-    "audio": "/heritage/019f0554-ea22-762e-966c-c23c4186d00d/audio.mp3",
-    "audioMarks": "/heritage/019f0554-ea22-762e-966c-c23c4186d00d/audio-marks.json"
   },
   "019f0554-ea22-762e-966c-c55f0d86d613": {
     "stages": [
@@ -1249,8 +1159,6 @@ export const heritageAssets: Record<string, HeritageAsset> = {
       }
     ],
     "redBlue": "/heritage/019f0554-ea22-762e-966c-c55f0d86d613/red-blue.svg",
-    "audio": "/heritage/019f0554-ea22-762e-966c-c55f0d86d613/audio.mp3",
-    "audioMarks": "/heritage/019f0554-ea22-762e-966c-c55f0d86d613/audio-marks.json"
   },
   "019f0554-ea22-762e-966c-daf4204fc6b4": {
     "stages": [
@@ -1284,8 +1192,6 @@ export const heritageAssets: Record<string, HeritageAsset> = {
       }
     ],
     "redBlue": "/heritage/019f0554-ea22-762e-966c-daf4204fc6b4/red-blue.svg",
-    "audio": "/heritage/019f0554-ea22-762e-966c-daf4204fc6b4/audio.mp3",
-    "audioMarks": "/heritage/019f0554-ea22-762e-966c-daf4204fc6b4/audio-marks.json"
   },
   "019f0554-ea22-762e-966c-e9594325cd7d": {
     "stages": [
@@ -1307,8 +1213,6 @@ export const heritageAssets: Record<string, HeritageAsset> = {
       }
     ],
     "redBlue": "/heritage/019f0554-ea22-762e-966c-e9594325cd7d/red-blue.svg",
-    "audio": "/heritage/019f0554-ea22-762e-966c-e9594325cd7d/audio.mp3",
-    "audioMarks": "/heritage/019f0554-ea22-762e-966c-e9594325cd7d/audio-marks.json"
   },
   "019f0554-ea22-762e-966c-f16720ed784f": {
     "stages": [
@@ -1330,8 +1234,6 @@ export const heritageAssets: Record<string, HeritageAsset> = {
       }
     ],
     "redBlue": "/heritage/019f0554-ea22-762e-966c-f16720ed784f/red-blue.svg",
-    "audio": "/heritage/019f0554-ea22-762e-966c-f16720ed784f/audio.mp3",
-    "audioMarks": "/heritage/019f0554-ea22-762e-966c-f16720ed784f/audio-marks.json"
   },
   "019f0554-ea22-762e-966c-f75a091eff54": {
     "stages": [
@@ -1361,8 +1263,6 @@ export const heritageAssets: Record<string, HeritageAsset> = {
       }
     ],
     "redBlue": "/heritage/019f0554-ea22-762e-966c-f75a091eff54/red-blue.svg",
-    "audio": "/heritage/019f0554-ea22-762e-966c-f75a091eff54/audio.mp3",
-    "audioMarks": "/heritage/019f0554-ea22-762e-966c-f75a091eff54/audio-marks.json"
   },
   "019f0554-ea22-762e-966d-0882757b1f54": {
     "stages": [
@@ -1392,8 +1292,6 @@ export const heritageAssets: Record<string, HeritageAsset> = {
       }
     ],
     "redBlue": "/heritage/019f0554-ea22-762e-966d-0882757b1f54/red-blue.svg",
-    "audio": "/heritage/019f0554-ea22-762e-966d-0882757b1f54/audio.mp3",
-    "audioMarks": "/heritage/019f0554-ea22-762e-966d-0882757b1f54/audio-marks.json"
   },
   "019f0554-ea22-762e-966d-100abc0d94fb": {
     "stages": [
@@ -1448,8 +1346,6 @@ export const heritageAssets: Record<string, HeritageAsset> = {
       }
     ],
     "redBlue": "/heritage/019f0554-ea22-762e-966d-15d9bb6f7bbb/red-blue.svg",
-    "audio": "/heritage/019f0554-ea22-762e-966d-15d9bb6f7bbb/audio.mp3",
-    "audioMarks": "/heritage/019f0554-ea22-762e-966d-15d9bb6f7bbb/audio-marks.json"
   },
   "019f0554-ea22-762e-966d-1cbd3a593fc0": {
     "stages": [
@@ -1467,8 +1363,6 @@ export const heritageAssets: Record<string, HeritageAsset> = {
       }
     ],
     "redBlue": "/heritage/019f0554-ea22-762e-966d-1cbd3a593fc0/red-blue.svg",
-    "audio": "/heritage/019f0554-ea22-762e-966d-1cbd3a593fc0/audio.mp3",
-    "audioMarks": "/heritage/019f0554-ea22-762e-966d-1cbd3a593fc0/audio-marks.json"
   },
   "019f0554-ea22-762e-966d-21e44861f3a8": {
     "stages": [
@@ -1502,7 +1396,5 @@ export const heritageAssets: Record<string, HeritageAsset> = {
       }
     ],
     "redBlue": "/heritage/019f0554-ea22-762e-966d-21e44861f3a8/red-blue.svg",
-    "audio": "/heritage/019f0554-ea22-762e-966d-21e44861f3a8/audio.mp3",
-    "audioMarks": "/heritage/019f0554-ea22-762e-966d-21e44861f3a8/audio-marks.json"
   }
 };

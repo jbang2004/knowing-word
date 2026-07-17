@@ -52,6 +52,7 @@ test("character pages render the complete picture-to-character memory flow", asy
   assert.match(html, /合成字/);
   assert.match(html, /听字义讲解/);
   assert.match(html, /audio\/webm; codecs=&quot;opus&quot;/);
+  assert.match(html, /\/media\/narration\/v2\//);
   assert.match(html, /audio\.webm\?v=child-first-v2/);
 });
 
@@ -392,27 +393,12 @@ test("localized historical glyph, red-blue, pronunciation, and timing resources 
   const paths = records.flatMap((record) => [
     ...record.stages.map((stage) => stage.src),
     ...(record.redBlue ? [record.redBlue] : []),
-    ...(record.audio ? [record.audio] : []),
-    ...(record.audioMarks ? [record.audioMarks] : []),
   ]);
 
   assert.equal(records.length, 58);
-  assert.equal(paths.length, 438);
+  assert.equal(paths.length, 332);
   assert.equal(new Set(paths).size, paths.length);
   for (const path of paths) await access(new URL(`../public${path}`, import.meta.url));
-
-  const markedRecords = records.filter((record) => record.audioMarks);
-  assert.equal(markedRecords.length, 53);
-  for (const record of markedRecords) {
-    const payload = JSON.parse(
-      await readFile(new URL(`../public${record.audioMarks}`, import.meta.url), "utf8"),
-    );
-    assert.ok(Array.isArray(payload.marks) && payload.marks.length > 0);
-    payload.marks.forEach((mark, index) => {
-      assert.equal(typeof mark.char, "string");
-      assert.ok(mark.end >= mark.start, `invalid timing mark ${index}`);
-    });
-  }
 
   const source = await readFile(new URL("../app/data/heritage-assets.ts", import.meta.url), "utf8");
   assert.doesNotMatch(source, /auth_key|access_token|authorization|password|account_number/i);
@@ -452,9 +438,6 @@ test("narration timing becomes a punctuated, persistent reading transcript", asy
 test("all narration scripts use the child-first four-beat teaching structure", async () => {
   const { characters } = await import(
     new URL("../app/data/catalog.ts", import.meta.url).href,
-  );
-  const { heritageAssets } = await import(
-    new URL("../app/data/heritage-assets.ts", import.meta.url).href,
   );
   const { narrationScripts } = await import(
     new URL("../app/data/narration-scripts.ts", import.meta.url).href,
@@ -508,15 +491,6 @@ test("all narration scripts use the child-first four-beat teaching structure", a
     assert.ok(longestSharedSpan(script, character.originalText) <= 18, `lesson text copied into ${character.hanzi}`);
     assert.doesNotMatch(script, /声符[“"]?貧|刺瞎|就是这样造出来|真正的造字过程/u);
     assert.doesNotMatch(script, /看图找部件|故事道具|轮廓像/u);
-
-    const sourceMarksPath = heritageAssets[character.id]?.audioMarks;
-    if (sourceMarksPath) {
-      const payload = JSON.parse(
-        await readFile(new URL(`../public${sourceMarksPath}`, import.meta.url), "utf8"),
-      );
-      const sourceTranscript = buildNarrationTokens(payload.marks).map((token) => token.text).join("");
-      assert.ok(longestSharedSpan(script, sourceTranscript) <= 12, `source narration copied into ${character.hanzi}`);
-    }
   }
 
   for (const character of uniqueCharacters) {

@@ -1466,11 +1466,16 @@ function withAssetVersion(source: string | undefined, version: string) {
   return `${source}${source.includes("?") ? "&" : "?"}v=${encodeURIComponent(version)}`;
 }
 
+function narrationMediaSource(source: string | undefined) {
+  if (!source?.startsWith("/narration/")) return source;
+  return `/media/narration/v2/${source.slice("/narration/".length)}`;
+}
+
 function NarratedDescription({ character }: { character: CharacterItem }) {
   const narrationAsset = narrationAssets[character.id];
   const narrationVersion = character.official !== false ? "child-first-v2" : "child-first-v1";
-  const audioSource = withAssetVersion(narrationAsset?.audio, narrationVersion);
-  const audioMarksSource = withAssetVersion(narrationAsset?.audioMarks, narrationVersion);
+  const audioSource = withAssetVersion(narrationMediaSource(narrationAsset?.audio), narrationVersion);
+  const audioMarksSource = withAssetVersion(narrationMediaSource(narrationAsset?.audioMarks), narrationVersion);
   const audioRef = useRef<HTMLAudioElement>(null);
   const [marks, setMarks] = useState<AudioMark[]>([]);
   const [transcriptText, setTranscriptText] = useState("");
