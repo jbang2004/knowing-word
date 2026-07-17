@@ -69,6 +69,34 @@ function narrationHeaders(relative: string, size?: number, etag?: string) {
   return headers;
 }
 
+async function migrateSeededNarration(env: Env, relative: string, objectKey: string) {
+  if (!env.DB || !env.MEDIA) return null;
+  const seedTag = `builtin:narration:v2:${relative}`;
+  const row = await env.DB
+    .prepare(
+      "SELECT id, object_key FROM recordings WHERE lesson_id = ?1 ORDER BY created_at DESC LIMIT 1",
+    )
+    .bind(seedTag)
+    .first<{ id: string; object_key: string }>();
+  if (!row) return null;
+
+  const seed = await env.MEDIA.get(row.object_key);
+  if (!seed?.body) return null;
+  const bytes = await seed.arrayBuffer();
+  await env.MEDIA.put(objectKey, bytes, {
+    httpMetadata: {
+      cacheControl: IMMUTABLE_CACHE,
+      contentType: narrationContentType(relative),
+    },
+    customMetadata: { assetVersion: "v2", source: "knowing-word" },
+  });
+  await Promise.all([
+    env.MEDIA.delete(row.object_key),
+    env.DB.prepare("DELETE FROM recordings WHERE id = ?1").bind(row.id).run(),
+  ]);
+  return env.MEDIA.head(objectKey);
+}
+
 async function serveNarration(
   request: Request,
   env: Env,
@@ -80,7 +108,14 @@ async function serveNarration(
   }
 
   const objectKey = `${NARRATION_OBJECT_PREFIX}${relative}`;
-  const stored = env.MEDIA ? await env.MEDIA.head(objectKey) : null;
+  let stored = env.MEDIA ? await env.MEDIA.head(objectKey) : null;
+  if (!stored) {
+    try {
+      stored = await migrateSeededNarration(env, relative, objectKey);
+    } catch {
+      stored = null;
+    }
+  }
   if (stored) {
     const headers = narrationHeaders(relative, stored.size, stored.httpEtag);
     headers.set("x-knowing-word-media", "r2");

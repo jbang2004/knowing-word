@@ -12,6 +12,7 @@
     "start": "WRANGLER_LOG_PATH=.wrangler/wrangler.log vinext start",
     "generate:grade5": "node scripts/generate-grade5-catalog.mjs",
     "clean:assets": "node scripts/clean-source-assets.mjs",
+    "preseed:narration": "node scripts/preseed-narration-media.mjs",
     "warm:narration": "node scripts/warm-narration-media.mjs",
     "test": "npm run build && node --test tests/*.test.mjs",
     "lint": "eslint . --ignore-pattern dist --ignore-pattern .next"

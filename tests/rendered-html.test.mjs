@@ -585,4 +585,8 @@ test("production output excludes superseded heritage narration copies", async ()
   const entries = await readdir(heritageRoot, { recursive: true });
   assert.ok(entries.length > 0, "heritage glyph assets are missing");
   assert.ok(!entries.some((entry) => /(^|\/)audio(?:-marks\.json|\.mp3)$/u.test(entry)));
+  await assert.rejects(
+    access(new URL("../dist/client/narration/", import.meta.url)),
+    (error) => error?.code === "ENOENT",
+  );
 });
