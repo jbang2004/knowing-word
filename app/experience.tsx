@@ -50,6 +50,13 @@ import {
 } from "./data/illustrations";
 import { heritageAssets, type AudioMark } from "./data/heritage-assets";
 import { narrationAssets } from "./data/narration-assets";
+import { releasedNarrationTranscripts } from "./data/released-narration-transcripts.generated";
+import {
+  LESSON_THREE_ID,
+  getLessonThreeKnowledge,
+  qianPhoneticFamily,
+  type LessonThreeKnowledge,
+} from "./data/lesson3-literacy";
 import {
   getMnemonicLayout,
   getMnemonicScene,
@@ -64,9 +71,15 @@ import {
   isQuestionSetComplete,
   nextCandidateId,
   nextResumeIndex,
+  advanceResumeIndex,
   updateCompletion,
 } from "./lib/progress-model";
-import { buildNarrationTokens } from "./lib/narration";
+import {
+  activeNarrationMarkIndices,
+  activeNarrationPhraseIndex,
+  buildNarrationTokens,
+  narrationPhraseIndexByMark,
+} from "./lib/narration";
 
 type Screen =
   | "home"
@@ -380,7 +393,74 @@ function getExtensionLessonCharacters(lessonId: string) {
 }
 
 function getTrackExercises(character: CharacterItem, track: TrackId) {
-  return character.exercises.filter((exercise) => exercise.origin === trackMeta[track].origin);
+  const exercises = character.exercises.filter((exercise) => exercise.origin === trackMeta[track].origin);
+  if (character.lessonId !== LESSON_THREE_ID || track !== "words") return exercises;
+
+  const knowledge = getLessonThreeKnowledge(character.hanzi);
+  if (!knowledge) return exercises;
+
+  const noImageExercises = exercises.filter((exercise) => exercise.questionType !== "image_single_select");
+  const methodExercise = createLessonThreeMethodExercise(character, knowledge);
+  // The generated question set always begins with the course-word context check.
+  // Keep that curriculum anchor first, then add the human-authored method check.
+  const insertAt = Math.min(1, noImageExercises.length);
+  return [
+    ...noImageExercises.slice(0, insertAt),
+    methodExercise,
+    ...noImageExercises.slice(insertAt),
+  ];
+}
+
+function exerciseOption(id: string, text: string, correct = false): Exercise["options"][number] {
+  return { id, text, correct, radical: false, idcCode: "" };
+}
+
+function createLessonThreeMethodExercise(
+  character: CharacterItem,
+  knowledge: LessonThreeKnowledge,
+): Exercise {
+  const id = `${character.id}-words-method`;
+  if (knowledge.method === "phonosemantic") {
+    const phonetic = knowledge.components.find((component) => component.role === "phonetic")!;
+    const semantic = knowledge.components.find((component) => component.role === "semantic")!;
+    return {
+      id,
+      origin: "words",
+      kind: "single",
+      questionType: "lesson3_method_select",
+      prompt: `“${character.hanzi}”中，哪个部件主要提示读音？`,
+      options: [
+        exerciseOption(`${id}-phonetic`, `${phonetic.glyph}：${phonetic.note}`, true),
+        exerciseOption(`${id}-semantic`, `${semantic.glyph}：${semantic.note}`),
+        exerciseOption(`${id}-picture`, "整张插图：看见画面就能确定读音"),
+        exerciseOption(`${id}-story`, "记忆故事：故事里的每件物品都表音"),
+      ],
+      explanation: `${knowledge.explanation} 形旁和声旁都只是线索，还要放回“${character.word}”核对。`,
+    };
+  }
+
+  return {
+    id,
+    origin: "words",
+    kind: "single",
+    questionType: "lesson3_method_select",
+    prompt: `学习“${character.hanzi}”时，哪一种记法最可靠？`,
+    options: [
+      exerciseOption(`${id}-route`, knowledge.recallCue, true),
+      exerciseOption(`${id}-origin`, "把助记图片当作这个字的真实历史来源"),
+      exerciseOption(`${id}-guess`, "只记一张漂亮图片，不观察部件位置"),
+      exerciseOption(`${id}-sound`, "把每个部件都当成准确的读音提示"),
+    ],
+    explanation: `${knowledge.explanation} ${knowledge.evidence}`,
+  };
+}
+
+function stableOptionOrder(options: Exercise["options"], seed: string) {
+  const hash = [...seed].reduce((value, char) => ((value * 31) + char.charCodeAt(0)) >>> 0, 2166136261);
+  return [...options]
+    .map((option, index) => ({ option, rank: ((hash ^ ((index + 1) * 2654435761)) >>> 0) }))
+    .sort((a, b) => a.rank - b.rank)
+    .map(({ option }) => option);
 }
 
 function getTrackCharacters(track: TrackId, lessonId?: string) {
@@ -525,6 +605,8 @@ export default function Home({ initialPath = "/" }: { initialPath?: string }) {
   const [hydrated, setHydrated] = useState(false);
   const [identity, setIdentity] = useState<AccountIdentity | null>(null);
   const [syncState, setSyncState] = useState<"loading" | "synced" | "local">("loading");
+  const [sessionResults, setSessionResults] = useState<boolean[]>([]);
+  const [celebration, setCelebration] = useState(false);
 
   const applyRoute = useCallback((route: AppRoute) => {
     setScreen(route.screen);
@@ -540,6 +622,8 @@ export default function Home({ initialPath = "/" }: { initialPath?: string }) {
       setSelectedOptions([]);
       setWrote(false);
       setResult(null);
+      setSessionResults([]);
+      setCelebration(false);
     }
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
@@ -572,15 +656,24 @@ export default function Home({ initialPath = "/" }: { initialPath?: string }) {
         const serverUpdatedAt = Date.parse(payload.updatedAt || "") || 0;
         if (payload.profile && (!localProfile || serverUpdatedAt >= localUpdatedAt)) {
           setProfile(normalizeProfile(payload.profile));
+          setSyncState("synced");
         } else if (localProfile) {
           setProfile(localProfile);
-          void fetch("/api/profile", {
-            method: "PUT",
-            headers: { "content-type": "application/json" },
-            body: JSON.stringify(localProfile),
-          });
+          try {
+            // Only report "synced" once the cloud actually accepted the local
+            // profile; a failed upload must surface as "local", not as success.
+            const putResponse = await fetch("/api/profile", {
+              method: "PUT",
+              headers: { "content-type": "application/json" },
+              body: JSON.stringify(localProfile),
+            });
+            if (active) setSyncState(putResponse.ok ? "synced" : "local");
+          } catch {
+            if (active) setSyncState("local");
+          }
+        } else {
+          setSyncState("synced");
         }
-        setSyncState("synced");
       } catch {
         if (active && localProfile) setProfile(localProfile);
         if (active) setSyncState("local");
@@ -629,6 +722,39 @@ export default function Home({ initialPath = "/" }: { initialPath?: string }) {
   const challengeExercises = getTrackExercises(selectedCharacter, selectedTrack);
   const currentQuestion = challengeExercises[questionIndex];
   const favoriteSet = useMemo(() => new Set(profile.favorites), [profile.favorites]);
+  // One deterministic display order shared by the exercise renderer and the
+  // keyboard shortcuts, so pressing a key always hits the option on screen.
+  const orderedOptions = useMemo(
+    () =>
+      currentQuestion && currentQuestion.kind !== "write"
+        ? stableOptionOrder(currentQuestion.options, currentQuestion.id)
+        : [],
+    [currentQuestion],
+  );
+
+  useEffect(() => {
+    if (screen !== "challenge" || celebration || !currentQuestion) return;
+    function onKeyboardEvent(event: KeyboardEvent) {
+      if (event.target instanceof HTMLInputElement || event.target instanceof HTMLTextAreaElement) return;
+      if (event.key === "Enter") {
+        event.preventDefault();
+        if (result === null) {
+          const ready = currentQuestion.kind === "write" ? wrote : orderedOptions.length > 0 && selectedOptions.length > 0;
+          if (ready) checkAnswer();
+        } else {
+          nextChallengeStep();
+        }
+        return;
+      }
+      if (result !== null) return;
+      const keys = "123456789abcdefghijklmnopqrstuvwxyz";
+      const index = keys.indexOf(event.key.toLowerCase());
+      if (index >= 0 && index < orderedOptions.length) chooseOption(orderedOptions[index].id);
+    }
+    window.addEventListener("keydown", onKeyboardEvent);
+    return () => window.removeEventListener("keydown", onKeyboardEvent);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [screen, celebration, currentQuestion, result, selectedOptions, wrote, orderedOptions]);
 
   function navigatePath(path: string, replace = false) {
     const route = resolveAppRoute(path);
@@ -741,6 +867,7 @@ export default function Home({ initialPath = "/" }: { initialPath?: string }) {
     const questionIds = challengeExercises.map((item) => item.id);
     const now = new Date().toISOString();
     setResult(correct);
+    setSessionResults((previous) => [...previous, correct]);
     logLearningEvent({
       action: "answer",
       track: selectedTrack,
@@ -823,11 +950,38 @@ export default function Home({ initialPath = "/" }: { initialPath?: string }) {
       return;
     }
 
-    if (selectedTrack === "words") {
-      openLesson(selectedCharacter.lessonId);
-    } else {
-      openTrackLesson(selectedTrack, selectedCharacter.lessonId);
-    }
+    // Finishing the last question lands on a celebration summary instead of an
+    // abrupt jump back to the map.
+    setCelebration(true);
+  }
+
+  function restartChallenge() {
+    setQuestionIndex(0);
+    setSelectedOptions([]);
+    setWrote(false);
+    setResult(null);
+    setSessionResults([]);
+    setCelebration(false);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
+  function finishChallengeCelebration() {
+    setCelebration(false);
+    if (selectedTrack === "words") openLesson(selectedCharacter.lessonId);
+    else openTrackLesson(selectedTrack, selectedCharacter.lessonId);
+  }
+
+  function nextCharacterFromCelebration() {
+    setCelebration(false);
+    const candidates = getTrackCharacters(selectedTrack, selectedCharacter.lessonId);
+    const nextId = nextCandidateId(
+      candidates.map((item) => item.id),
+      profile.completed[selectedTrack],
+      selectedCharacter.id,
+    );
+    const next = candidates.find((item) => item.id === nextId);
+    if (next && next.id !== selectedCharacter.id) openChallenge(selectedTrack, next, 0);
+    else finishChallengeCelebration();
   }
 
   function previousChallengeStep() {
@@ -854,7 +1008,7 @@ export default function Home({ initialPath = "/" }: { initialPath?: string }) {
           [selectedTrack]: {
             lessonId: selectedCharacter.lessonId,
             characterId: selectedCharacter.id,
-            questionIndex: Math.min(questionIndex + 1, Math.max(0, challengeExercises.length - 1)),
+            questionIndex: advanceResumeIndex(questionIndex, challengeExercises.length),
           },
         },
       };
@@ -996,6 +1150,7 @@ export default function Home({ initialPath = "/" }: { initialPath?: string }) {
           wrote={wrote}
           result={result}
           profile={profile}
+          orderedOptions={orderedOptions}
           onBack={() =>
             selectedTrack === "words"
               ? openCharacter(selectedCharacter)
@@ -1009,6 +1164,18 @@ export default function Home({ initialPath = "/" }: { initialPath?: string }) {
           onNext={nextChallengeStep}
           onPrevious={previousChallengeStep}
           onSkip={skipChallengeStep}
+        />
+      )}
+
+      {screen === "challenge" && celebration && (
+        <CelebrationOverlay
+          track={selectedTrack}
+          character={selectedCharacter}
+          results={sessionResults}
+          total={challengeExercises.length}
+          onReplay={restartChallenge}
+          onNextCharacter={nextCharacterFromCelebration}
+          onFinish={finishChallengeCelebration}
         />
       )}
 
@@ -1335,6 +1502,95 @@ function CourseMap({
   );
 }
 
+function lessonThreeReviewState(character: CharacterItem, profile: StudyProfile) {
+  const records = getTrackExercises(character, "words")
+    .map((exercise) => profile.answers[exercise.id])
+    .filter((record): record is AnswerStat => Boolean(record));
+  if (!records.length) return { label: "未开始", due: false, tone: "new" };
+  if (records.some((record) => !record.lastCorrect)) return { label: "现在复习", due: true, tone: "due" };
+
+  const latest = records.reduce((current, record) => record.lastAt > current.lastAt ? record : current);
+  const intervalDays = records.every((record) => record.attempts >= 3) ? 7 : records.every((record) => record.attempts >= 2) ? 3 : 1;
+  const dueAt = new Date(latest.lastAt).getTime() + intervalDays * 86_400_000;
+  if (!Number.isFinite(dueAt) || dueAt <= Date.now()) return { label: "今天复习", due: true, tone: "due" };
+  const remainingDays = Math.max(1, Math.ceil((dueAt - Date.now()) / 86_400_000));
+  return { label: `${remainingDays} 天后`, due: false, tone: "later" };
+}
+
+function LessonThreeMethodOverview({
+  characters,
+  profile,
+  onCharacter,
+}: {
+  characters: CharacterItem[];
+  profile: StudyProfile;
+  onCharacter: (character: CharacterItem) => void;
+}) {
+  const phonosemantic = characters.filter((character) => getLessonThreeKnowledge(character.hanzi)?.method === "phonosemantic");
+  const structural = characters.filter((character) => getLessonThreeKnowledge(character.hanzi)?.method === "structure");
+  const reviewStates = characters.map((character) => ({ character, ...lessonThreeReviewState(character, profile) }));
+  const dueCount = reviewStates.filter((item) => item.due).length;
+  const startedCount = reviewStates.filter((item) => item.tone !== "new").length;
+  const visibleReviewStates = [...reviewStates]
+    .sort((left, right) => Number(right.due) - Number(left.due))
+    .slice(0, 6);
+
+  return (
+    <section className="pilot-method-overview" aria-labelledby="pilot-method-title">
+      <div className="pilot-overview-heading">
+        <div>
+          <p className="kicker">第三课 · 识字方法试点</p>
+          <h2 id="pilot-method-title">先分方法，再使用图片</h2>
+          <p>本课 11 个课内字按构形关系分组：图片只在开始时搭桥，最后必须离图认读和回忆。</p>
+        </div>
+        <span className="pilot-source-badge">规范字形教学拆分<br /><small>不等同历史字源</small></span>
+      </div>
+
+      <div className="pilot-method-grid">
+        <article className="pilot-method-lane is-phonetic">
+          <div><span>01</span><p><strong>形旁 + 声旁</strong><small>{phonosemantic.length} 个字 · 用字族迁移</small></p></div>
+          <div className="pilot-character-list">
+            {phonosemantic.map((character) => {
+              const knowledge = getLessonThreeKnowledge(character.hanzi)!;
+              return <button key={character.id} onClick={() => onCharacter(character)}><strong>{character.hanzi}</strong><small>{knowledge.equation}</small></button>;
+            })}
+          </div>
+        </article>
+        <article className="pilot-method-lane is-structure">
+          <div><span>02</span><p><strong>部件 + 位置</strong><small>{structural.length} 个字 · 不强编字源</small></p></div>
+          <div className="pilot-character-list">
+            {structural.map((character) => {
+              const knowledge = getLessonThreeKnowledge(character.hanzi)!;
+              return <button key={character.id} onClick={() => onCharacter(character)}><strong>{character.hanzi}</strong><small>{knowledge.equation}</small></button>;
+            })}
+          </div>
+        </article>
+      </div>
+
+      <div className="pilot-overview-bottom">
+        <article className="pilot-family-card">
+          <div><span>声旁家族</span><strong>佥</strong><small>读音只提供线索，不保证完全相同</small></div>
+          <div className="pilot-family-flow">
+            {qianPhoneticFamily.map((member) => (
+              <span className={member.active ? "is-active" : ""} key={member.hanzi}>
+                <b>{member.semantic}</b><i>+</i><b>佥</b><i>→</i><strong>{member.hanzi}</strong><small>{member.word} · {member.lesson}</small>
+              </span>
+            ))}
+          </div>
+        </article>
+        <article className="pilot-review-card">
+          <div><span>间隔复习</span><strong>{dueCount ? `${dueCount} 个待复习` : startedCount ? "今日已安排" : `${characters.length} 个待学习`}</strong><small>答错立即再练；答对后按 1、3、7 天拉开间隔</small></div>
+          <div className="pilot-review-list">
+            {visibleReviewStates.map(({ character, label, tone }) => (
+              <button className={`is-${tone}`} key={character.id} onClick={() => onCharacter(character)}><b>{character.hanzi}</b><small>{label}</small></button>
+            ))}
+          </div>
+        </article>
+      </div>
+    </section>
+  );
+}
+
 function LessonWordMap({
   lesson,
   profile,
@@ -1353,6 +1609,7 @@ function LessonWordMap({
   const completed = new Set(profile.completed.words);
   const progress = trackProgress(profile, "words", lesson.id);
   const illustration = lessonVisuals[lesson.id];
+  const isLessonThreePilot = lesson.id === LESSON_THREE_ID;
 
   return (
     <div className="page lesson-page">
@@ -1390,6 +1647,10 @@ function LessonWordMap({
         </ol>
       </section>
 
+      {isLessonThreePilot && (
+        <LessonThreeMethodOverview characters={getOfficialLessonCharacters(lesson.id)} profile={profile} onCharacter={onCharacter} />
+      )}
+
       <section className="word-map-board">
         <div className="board-title"><span>{lesson.skimming ? "课内会认字" : "课内识字写字表"}</span><i>把官方字表放回词语，区分会认、会写与多音字</i></div>
         <div className="word-groups">
@@ -1410,6 +1671,7 @@ function LessonWordMap({
                     <strong>{character.hanzi}</strong>
                     {completed.has(character.id) && <small>✓</small>}
                     {!completed.has(character.id) && <em>{character.polyphonic ? "多" : character.curriculumRole === "write" ? "写" : "认"}</em>}
+                    {isLessonThreePilot && <span className="pilot-chip-method">{getLessonThreeKnowledge(character.hanzi)?.method === "phonosemantic" ? "形声" : "部件"}</span>}
                   </button>
                 ))}
               </div>
@@ -1468,17 +1730,18 @@ function withAssetVersion(source: string | undefined, version: string) {
 
 function narrationMediaSource(source: string | undefined) {
   if (!source?.startsWith("/narration/")) return source;
-  return `/media/narration/v2/${source.slice("/narration/".length)}`;
+  return `/media/narration/v3/${source.slice("/narration/".length)}`;
 }
 
 function NarratedDescription({ character }: { character: CharacterItem }) {
   const narrationAsset = narrationAssets[character.id];
-  const narrationVersion = character.official !== false ? "child-first-v2" : "child-first-v1";
+  const releasedTranscript = releasedNarrationTranscripts[character.id]?.transcript || character.description;
+  const narrationVersion = "narration-v3-qwen3-4bit-r37e955a";
   const audioSource = withAssetVersion(narrationMediaSource(narrationAsset?.audio), narrationVersion);
   const audioMarksSource = withAssetVersion(narrationMediaSource(narrationAsset?.audioMarks), narrationVersion);
   const audioRef = useRef<HTMLAudioElement>(null);
   const [marks, setMarks] = useState<AudioMark[]>([]);
-  const [transcriptText, setTranscriptText] = useState("");
+  const [transcriptText, setTranscriptText] = useState(releasedTranscript);
   const [elapsed, setElapsed] = useState(0);
   const [duration, setDuration] = useState(0);
   const [playing, setPlaying] = useState(false);
@@ -1505,7 +1768,9 @@ function NarratedDescription({ character }: { character: CharacterItem }) {
     const controller = new AbortController();
     const audio = audioRef.current;
     void fetch(audioMarksSource, { signal: controller.signal })
-      .then((response) => response.ok ? response.json() : Promise.reject(new Error("marks unavailable")))
+      .then((response) => response.ok
+        ? response.json() as Promise<{ marks?: AudioMark[]; transcript?: string }>
+        : Promise.reject(new Error("marks unavailable")))
       .then((payload: { marks?: AudioMark[]; transcript?: string }) => {
         setMarks((payload.marks || []).filter((mark) => Number.isFinite(mark.start) && Number.isFinite(mark.end)));
         setTranscriptText(payload.transcript || "");
@@ -1522,7 +1787,7 @@ function NarratedDescription({ character }: { character: CharacterItem }) {
     if (!audioSource || !audio) {
       setTranscriptExpanded(true);
       setPlaying(true);
-      speak(character.description, () => setPlaying(false));
+      speak(releasedTranscript, () => setPlaying(false));
       return;
     }
     if (audio.paused) {
@@ -1534,7 +1799,7 @@ function NarratedDescription({ character }: { character: CharacterItem }) {
       }
       void audio.play().then(() => setPlaying(true)).catch(() => {
         setPlaying(true);
-        speak(character.description, () => setPlaying(false));
+        speak(releasedTranscript, () => setPlaying(false));
       });
     } else {
       audio.pause();
@@ -1542,8 +1807,16 @@ function NarratedDescription({ character }: { character: CharacterItem }) {
     }
   }
 
-  const activeIndex = marks.findIndex((mark) => elapsed >= mark.start && elapsed < mark.end);
+  const activeMarkIndices = useMemo(
+    () => new Set(activeNarrationMarkIndices(marks, elapsed)),
+    [marks, elapsed],
+  );
   const transcript = useMemo(() => buildNarrationTokens(marks, transcriptText), [marks, transcriptText]);
+  const phraseByMark = useMemo(() => narrationPhraseIndexByMark(transcript), [transcript]);
+  const activePhraseIndex = useMemo(
+    () => activeNarrationPhraseIndex(marks, elapsed, phraseByMark),
+    [marks, elapsed, phraseByMark],
+  );
   const timelineDuration = duration || marks.at(-1)?.end || 0;
   const completedCount = marks.reduce((count, mark) => count + (mark.end <= elapsed ? 1 : 0), 0);
   const finished = marks.length > 0 && completedCount === marks.length && !playing;
@@ -1578,13 +1851,15 @@ function NarratedDescription({ character }: { character: CharacterItem }) {
             {transcript.map((token, index) => {
               if (token.kind === "punctuation") return null;
               const completed = token.completionTime <= elapsed;
+              const currentPhrase = phraseByMark[token.markIndex] === activePhraseIndex;
               const punctuation = transcript[index + 1]?.kind === "punctuation" ? transcript[index + 1] : null;
-              const className = `narration-token${token.markIndex === activeIndex ? " is-active" : completed ? " is-complete" : " is-upcoming"}`;
+              const phraseClass = currentPhrase ? " is-current-phrase" : "";
+              const className = `narration-token${activeMarkIndices.has(token.markIndex) ? " is-active" : completed ? " is-complete" : " is-upcoming"}${phraseClass}`;
               return (
                 <span className="narration-unit" key={`${token.kind}-${token.markIndex}-${index}`} aria-hidden="true">
                   <span className={className}>{token.text}</span>
                   {punctuation && (
-                    <span className={`narration-token is-punctuation${completed ? " is-complete" : ""}`}>
+                    <span className={`narration-token is-punctuation${completed ? " is-complete" : ""}${phraseClass}`}>
                       {punctuation.text}
                     </span>
                   )}
@@ -1593,7 +1868,7 @@ function NarratedDescription({ character }: { character: CharacterItem }) {
             })}
           </p>
         ) : (
-          <p>{character.description}</p>
+          <p>{releasedTranscript}</p>
         )}
       </div>
       <button
@@ -1774,6 +2049,96 @@ function MnemonicMemory({
   );
 }
 
+function LessonThreeMemory({
+  character,
+  onComponent,
+}: {
+  character: CharacterItem;
+  onComponent: (glyph: string) => void;
+}) {
+  const knowledge = getLessonThreeKnowledge(character.hanzi)!;
+  const visual = characterVisuals[character.hanzi];
+  const [stage, setStage] = useState(0);
+  const [revealed, setRevealed] = useState(false);
+  const labels = ["图字同现", "图片淡出", "只看汉字", "词语回忆"];
+  const maskedWord = character.word.split(character.hanzi).join("□");
+
+  function selectStage(next: number) {
+    setStage(next);
+    if (next === 3) setRevealed(false);
+  }
+
+  return (
+    <section className="pilot-memory-card" aria-labelledby={`pilot-memory-${character.id}`}>
+      <div className="pilot-memory-heading">
+        <div>
+          <p className="kicker">图片是桥梁 · 不是答案</p>
+          <h2 id={`pilot-memory-${character.id}`}>从画面走到无图回忆</h2>
+          <p>每次向后一步，图片提示都会减少；最后只凭词义、结构和读音把字找回来。</p>
+        </div>
+        <span>{knowledge.methodLabel}</span>
+      </div>
+
+      <div className={`pilot-memory-stage stage-${stage}`}>
+        <div className="pilot-memory-visual">
+          {stage <= 1 && (
+            <div className="pilot-memory-image">
+              <Image src={visual.src} alt={stage === 0 ? visual.alt : "逐渐淡出的助记画面"} fill priority sizes="(max-width: 760px) 100vw, 620px" style={{ objectFit: "contain" }} />
+              <span>构形助记图 · 非字源图</span>
+            </div>
+          )}
+          {stage === 0 && <strong className="pilot-memory-glyph is-over-image">{character.hanzi}</strong>}
+          {stage === 1 && (
+            <div className="pilot-memory-equation-on-image">
+              {knowledge.components.map((component) => <span key={component.glyph}>{component.glyph}<small>{component.label}</small></span>)}
+            </div>
+          )}
+          {stage === 2 && (
+            <div className="pilot-memory-glyph-only">
+              <span>图片已经拿走</span><strong>{character.hanzi}</strong><small>{character.pinyin} · {character.word}</small>
+            </div>
+          )}
+          {stage === 3 && (
+            <div className="pilot-memory-recall">
+              <span>不看图片，补出方框里的字</span>
+              <strong>{revealed ? character.word : maskedWord}</strong>
+              <small>{character.pinyin} · {character.originalMeaning}</small>
+              <button onClick={() => setRevealed((value) => !value)}>{revealed ? "再次遮住" : "显示答案"}</button>
+            </div>
+          )}
+        </div>
+
+        <aside className="pilot-memory-copy" aria-live="polite">
+          <span className="pilot-step-index">0{stage + 1} / 04</span>
+          {stage === 0 && <><h3>先把字放进词义画面</h3><p>观察“{character.word}”的意思，同时保持规范汉字清楚可见。图片只负责建立第一次联系。</p></>}
+          {stage === 1 && <><h3>图片退后，部件站出来</h3><p>{knowledge.explanation}</p></>}
+          {stage === 2 && <><h3>只留下规范汉字</h3><p>{knowledge.recallCue} 现在用手指沿字形空写一遍。</p></>}
+          {stage === 3 && <><h3>从词语主动提取</h3><p>{revealed ? `答案是“${character.hanzi}”。核对结构后，再遮住重来一次。` : "先读词义和拼音，在心里写出答案，再点击核对。"}</p></>}
+
+          {stage < 3 && (
+            <div className="pilot-component-roles">
+              {knowledge.components.map((component) => (
+                <button key={component.glyph} onClick={() => onComponent(component.glyph)}>
+                  <strong>{component.glyph}</strong><span><b>{component.label}</b><small>{component.note}</small></span>
+                </button>
+              ))}
+            </div>
+          )}
+          <div className="pilot-evidence-note"><b>依据说明</b><span>{knowledge.evidence}</span></div>
+        </aside>
+      </div>
+
+      <nav className="pilot-memory-nav" aria-label="图片提示逐步撤除">
+        {labels.map((label, index) => (
+          <button className={stage === index ? "is-active" : stage > index ? "is-past" : ""} key={label} onClick={() => selectStage(index)} aria-current={stage === index ? "step" : undefined}>
+            <span>{index + 1}</span><strong>{label}</strong><small>{index === 0 ? "图 + 字" : index === 1 ? "图淡化" : index === 2 ? "仅字形" : "无图提取"}</small>
+          </button>
+        ))}
+      </nav>
+    </section>
+  );
+}
+
 function CharacterStudy({
   character,
   profile,
@@ -1796,6 +2161,7 @@ function CharacterStudy({
   const completedQuestions = exercises.filter((question) => profile.answers[question.id]?.lastCorrect).length;
   const heritage = heritageAssets[character.id];
   const hasExercises = exercises.length > 0;
+  const pilotKnowledge = character.lessonId === LESSON_THREE_ID ? getLessonThreeKnowledge(character.hanzi) : undefined;
   const roleLabel = character.official === false
     ? "语境拓展"
     : character.polyphonic
@@ -1828,11 +2194,17 @@ function CharacterStudy({
         <div className="story-copy">
           <div className="story-meta">
             <span className={`curriculum-role role-${character.curriculumRole || "extension"}`}>{roleLabel}</span>
-            <span>{character.charType}</span>
+            <span>{pilotKnowledge?.methodLabel || character.charType}</span>
             <span>{character.decomposition}</span>
             <span>{character.official === false ? "本义" : "本课词语"}：{character.originalMeaning}</span>
           </div>
-          <NarratedDescription character={character} key={character.id} />
+          {pilotKnowledge ? (
+            <div className="pilot-story-explanation">
+              <span>本课构形说明</span><p>{pilotKnowledge.explanation}</p><small>{pilotKnowledge.evidence}</small>
+            </div>
+          ) : (
+            <NarratedDescription character={character} key={character.id} />
+          )}
           {heritage?.stages.length ? (
             <div className="script-line" aria-label="真实字形演变资料">
               {heritage.stages.map((stage) => (
@@ -1857,9 +2229,13 @@ function CharacterStudy({
         </div>
       </section>
 
-      <MnemonicMemory character={character} key={character.id} onComponent={onComponent} />
+      {pilotKnowledge ? (
+        <LessonThreeMemory character={character} key={character.id} onComponent={onComponent} />
+      ) : (
+        <MnemonicMemory character={character} key={character.id} onComponent={onComponent} />
+      )}
 
-      <section className="character-map-card">
+      {!pilotKnowledge && <section className="character-map-card">
         <div className="map-card-heading">
           <div>
             <p className="kicker">字形推理图</p>
@@ -1890,14 +2266,16 @@ function CharacterStudy({
             })}
           </div>
         </div>
-      </section>
+      </section>}
 
       <section className="word-quest-card">
         <div>
           <p className="kicker">识字闯关</p>
           <h2>理解过后，马上练一练</h2>
           <p>{hasExercises
-            ? `按照“本义 → 结构 → 图意 → 组字 → 书写”的顺序完成 ${exercises.length} 题。`
+            ? pilotKnowledge
+              ? `按照“词语判断 → 构形线索 → 无图组字${character.curriculumRole === "write" ? " → 自主书写" : ""}”完成 ${exercises.length} 题。`
+              : `按照“本义 → 结构 → 图意 → 组字 → 书写”的顺序完成 ${exercises.length} 题。`
             : "这个拓展字已开放字义故事、红蓝和结构练习，完整识字小测稍后开放。"}</p>
           <div className="quest-dots">
             {exercises.map((exercise) => (
@@ -2021,6 +2399,74 @@ function TrackLessonMap({
   );
 }
 
+function CelebrationOverlay({
+  track,
+  character,
+  results,
+  total,
+  onReplay,
+  onNextCharacter,
+  onFinish,
+}: {
+  track: TrackId;
+  character: CharacterItem;
+  results: boolean[];
+  total: number;
+  onReplay: () => void;
+  onNextCharacter: () => void;
+  onFinish: () => void;
+}) {
+  // Reaching this overlay means every question ended up correct; results holds
+  // one entry per ATTEMPT, so extra tries are the mistakes.
+  const attempts = results.length;
+  const mistakes = Math.max(0, attempts - total);
+  const stars = mistakes === 0 ? 3 : mistakes <= 2 ? 2 : 1;
+  const firstTryRate = Math.min(100, Math.round((total * 100) / Math.max(attempts, total)));
+  return (
+    <div className="celebration-overlay" role="dialog" aria-label="本关完成">
+      <div className={"celebration-card track-" + trackMeta[track].tone}>
+        <div className="celebration-confetti" aria-hidden="true">
+          {Array.from({ length: 26 }).map((_, index) => (
+            <i
+              key={index}
+              className={"confetti-piece piece-" + (index % 4)}
+              style={{
+                left: ((index * 37 + 13) % 100) + "%",
+                animationDelay: ((index % 8) * 0.14).toFixed(2) + "s",
+              }}
+            />
+          ))}
+        </div>
+        <p className="celebration-kicker">{trackMeta[track].menu} · {character.lessonTitle}</p>
+        <div className="celebration-stars" aria-label={stars + " 颗星"}>
+          {[0, 1, 2].map((index) => (
+            <span key={index} className={index < stars ? "star is-lit" : "star"} style={{ animationDelay: index * 0.18 + "s" }}>★</span>
+          ))}
+        </div>
+        <h2>{mistakes === 0 ? "完美通关！" : "本关完成！"}</h2>
+        <div className="celebration-glyph" aria-hidden="true">{character.hanzi}</div>
+        <dl className="celebration-stats">
+          <div><dt>题目</dt><dd>{total} 题</dd></div>
+          <div><dt>尝试</dt><dd>{attempts} 次</dd></div>
+          <div><dt>首次答对</dt><dd>{firstTryRate}%</dd></div>
+        </dl>
+        <p className="celebration-note">
+          {stars === 3
+            ? "一次全对，这个字已经稳稳住进记忆里了。"
+            : stars === 2
+              ? "只错了一点点，再练一轮就能拿满三颗星。"
+              : "慢慢来，把答错的题再看一遍线索。"}
+        </p>
+        <div className="celebration-actions">
+          <button className="game-button ghost" onClick={onReplay}><RotateCcw aria-hidden="true" /> 再练一轮</button>
+          <button className="game-button primary" onClick={onNextCharacter}>下一个字 →</button>
+          <button className="text-button" onClick={onFinish}>返回课文地图</button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function ChallengeRoom({
   track,
   character,
@@ -2031,6 +2477,7 @@ function ChallengeRoom({
   wrote,
   result,
   profile,
+  orderedOptions,
   onBack,
   onChoose,
   onRemove,
@@ -2050,6 +2497,7 @@ function ChallengeRoom({
   wrote: boolean;
   result: boolean | null;
   profile: StudyProfile;
+  orderedOptions: Exercise["options"];
   onBack: () => void;
   onChoose: (id: string) => void;
   onRemove: (id: string) => void;
@@ -2075,7 +2523,7 @@ function ChallengeRoom({
   const record = profile.answers[question.id];
 
   return (
-    <div className={"challenge-page track-" + meta.tone}>
+    <div className={"challenge-page challenge-centered track-" + meta.tone}>
       <header className="challenge-header">
         <button className="back-button" onClick={onBack}>← 返回</button>
         <div>
@@ -2084,21 +2532,40 @@ function ChallengeRoom({
         </div>
         <span className="challenge-count">第 {questionIndex + 1} / {total} 题</span>
       </header>
-      <div className="challenge-progress"><i style={{ width: ((questionIndex + 1) / total) * 100 + "%" }} /></div>
+      <div
+        className="challenge-progress"
+        role="progressbar"
+        aria-valuemin={0}
+        aria-valuemax={total}
+        aria-valuenow={questionIndex + (result === null ? 0 : 1)}
+      >
+        <i style={{ width: ((result === null ? questionIndex : questionIndex + 1) / total) * 100 + "%" }} />
+      </div>
 
       <section className="challenge-board">
         <div className="challenge-question">
           <span className="question-tag">{questionTypeLabel(question, track)}</span>
           <h2>{question.prompt}</h2>
-          {needsMultiple && <p>这题需要选择多个部件。</p>}
+          {needsMultiple && (
+            <p className="multi-hint">
+              这题需要选择多个部件 · 已选 <b>{selected.length}</b> / 需要 <b>{expected.length}</b> 个
+            </p>
+          )}
         </div>
 
         {question.kind === "write" ? (
-          <WritingPad character={character.hanzi} onWrite={onWrite} onClear={onClearWrite} />
+          <WritingPad
+            character={character.hanzi}
+            guided={character.lessonId !== LESSON_THREE_ID}
+            revealAnswer={result !== null}
+            onWrite={onWrite}
+            onClear={onClearWrite}
+          />
         ) : question.kind === "components" && track === "split" ? (
           <AssemblyExercise
             character={character}
             question={question}
+            orderedOptions={orderedOptions}
             selected={selected}
             result={result}
             onChoose={onChoose}
@@ -2108,6 +2575,7 @@ function ChallengeRoom({
           <RedBlueExercise
             character={character}
             question={question}
+            orderedOptions={orderedOptions}
             selected={selected}
             result={result}
             onChoose={onChoose}
@@ -2116,6 +2584,7 @@ function ChallengeRoom({
           <ChoiceExercise
             character={character}
             question={question}
+            orderedOptions={orderedOptions}
             selected={selected}
             result={result}
             onChoose={onChoose}
@@ -2125,15 +2594,18 @@ function ChallengeRoom({
         <div className="challenge-footer">
           {result === null ? (
             <div className="question-navigation">
-              <button className="game-button ghost" disabled={questionIndex === 0} onClick={onPrevious}>← 上一题</button>
+              <div className="question-nav-left">
+                <button className="game-button ghost" disabled={questionIndex === 0} onClick={onPrevious}>← 上一题</button>
+                <span className="key-hint">按 <kbd>A</kbd>–<kbd>D</kbd> 选择 · <kbd>Enter</kbd> 确认</span>
+              </div>
               <button className="text-button" onClick={onSkip}>跳过这一题 →</button>
-              <button className="game-button primary" disabled={!ready} onClick={onCheck}>核对答案 →</button>
+              <button className="game-button primary" disabled={!ready} onClick={onCheck}>核对答案 ⏎</button>
             </div>
           ) : (
             <div className={"answer-feedback " + (result ? "is-correct" : "is-wrong")}>
               <span>{result ? "✓" : "!"}</span>
               <div>
-                <strong>{result ? "答得真棒！" : "再试一次，慢慢来。"}</strong>
+                <strong>{result ? (question.kind === "write" && character.lessonId === LESSON_THREE_ID ? "已记录书写，请对照自查" : "答得真棒！") : "再试一次，慢慢来。"}</strong>
                 <p>
                   {result
                     ? question.explanation || (finalStep ? "这一关完成了，回到地图看看下一站。" : "记住这个线索，再去下一题。")
@@ -2142,7 +2614,7 @@ function ChallengeRoom({
                 {record && <small>本题已尝试 {record.attempts} 次</small>}
               </div>
               <button className="game-button ghost" onClick={onNext}>
-                {result ? (finalStep ? "完成本关" : "下一题 →") : "重新作答"}
+                {result ? (finalStep ? "查看成绩 🎉" : "下一题 →") : "重新作答"}
               </button>
             </div>
           )}
@@ -2155,23 +2627,29 @@ function ChallengeRoom({
 function ChoiceExercise({
   character,
   question,
+  orderedOptions,
   selected,
   result,
   onChoose,
 }: {
   character: CharacterItem;
   question: Exercise;
+  orderedOptions: Exercise["options"];
   selected: string[];
   result: boolean | null;
   onChoose: (id: string) => void;
 }) {
   const visual = question.questionType === "image_single_select";
-  const showVisualCaption = question.options.some((item) => Boolean(item.text));
+  // Captions on picture options can name the answer; reveal them only after
+  // the question has been graded.
+  const showVisualCaption = result !== null && question.options.some((item) => Boolean(item.text));
+  const displayedOptions = orderedOptions.length ? orderedOptions : stableOptionOrder(question.options, question.id);
+  const keyLabels = "ABCDEFGH";
   return (
     <div className={"choice-grid " + (visual ? "is-visual " : "") + (visual && !showVisualCaption ? "no-visual-captions" : "")}>
-      {question.options.map((option, index) => {
+      {displayedOptions.map((option, index) => {
         const isSelected = selected.includes(option.id);
-        const wrongSlot = question.options
+        const wrongSlot = displayedOptions
           .slice(0, index)
           .filter((item) => !item.correct).length;
         const illustration = visual
@@ -2194,11 +2672,12 @@ function ChoiceExercise({
             onClick={() => onChoose(option.id)}
             aria-pressed={isSelected}
           >
+            <span className="choice-key" aria-hidden="true">{keyLabels[index] || index + 1}</span>
             {visual ? (
               <span className="meaning-illustration">
                 <Image
                   src={illustration!.src}
-                  alt={illustration!.alt}
+                  alt={showVisualCaption ? illustration!.alt : "选项图片"}
                   fill
                   sizes="(max-width: 760px) 82vw, 220px"
                   style={{ objectFit: "contain", objectPosition: "center" }}
@@ -2217,7 +2696,7 @@ function ChoiceExercise({
             ) : (
               <strong>{optionText(option, character, index)}</strong>
             )}
-            {question.kind === "structure" && <small>{option.idcCode}</small>}
+            {question.kind === "structure" && <small aria-hidden="true">{option.idcCode}</small>}
           </button>
         );
       })}
@@ -2228,6 +2707,7 @@ function ChoiceExercise({
 function AssemblyExercise({
   character,
   question,
+  orderedOptions,
   selected,
   result,
   onChoose,
@@ -2235,6 +2715,7 @@ function AssemblyExercise({
 }: {
   character: CharacterItem;
   question: Exercise;
+  orderedOptions: Exercise["options"];
   selected: string[];
   result: boolean | null;
   onChoose: (id: string) => void;
@@ -2242,6 +2723,7 @@ function AssemblyExercise({
 }) {
   const expected = getExpectedIds(question, character, "split");
   const slots = Math.max(expected.length, character.parts.length, 1);
+  const choices = orderedOptions.length ? orderedOptions : stableOptionOrder(question.options, question.id);
   return (
     <div className="assembly-exercise">
       <div className="assembly-target">
@@ -2269,9 +2751,10 @@ function AssemblyExercise({
             );
           })}
         </div>
+        {result === null && <small className="assembly-hint">按顺序点选部件；点错了就点上面的格子撤销。</small>}
       </div>
       <div className="assembly-choices">
-        {question.options.map((option) => (
+        {choices.map((option) => (
           <button
             className={selected.includes(option.id) ? "is-picked" : ""}
             disabled={result !== null}
@@ -2289,17 +2772,20 @@ function AssemblyExercise({
 function RedBlueExercise({
   character,
   question,
+  orderedOptions,
   selected,
   result,
   onChoose,
 }: {
   character: CharacterItem;
   question: Exercise;
+  orderedOptions: Exercise["options"];
   selected: string[];
   result: boolean | null;
   onChoose: (id: string) => void;
 }) {
   const redBlueAsset = heritageAssets[character.id]?.redBlue;
+  const choices = orderedOptions.length ? orderedOptions : stableOptionOrder(question.options, question.id);
   return (
     <div className="redblue-exercise">
       {redBlueAsset ? (
@@ -2321,8 +2807,12 @@ function RedBlueExercise({
       )}
       <p><i className="red-key" /> 表意部首　<i className="blue-key" /> 其他部件</p>
       <div className="redblue-options">
-        {question.options.map((option, index) => {
+        {choices.map((option, index) => {
           const isSelected = selected.includes(option.id);
+          // Chips stay color-neutral before grading; coloring radicals red up
+          // front would give the answer away before checking.
+          const revealColors = result !== null;
+          const chipColor = revealColors ? (option.radical ? " is-red" : " is-blue") : "";
           const state =
             result === null
               ? isSelected
@@ -2334,8 +2824,8 @@ function RedBlueExercise({
                   ? "is-wrong"
                   : "";
           return (
-            <button className={state} key={option.id} disabled={result !== null} onClick={() => onChoose(option.id)}>
-              <span className={option.radical ? "is-red" : "is-blue"}>{optionText(option, character, index)}</span>
+            <button className={chipColor.trim() + " " + state} key={option.id} disabled={result !== null} onClick={() => onChoose(option.id)}>
+              <span className={revealColors ? (option.radical ? "is-red" : "is-blue") : ""}>{optionText(option, character, index)}</span>
             </button>
           );
         })}
@@ -2345,18 +2835,22 @@ function RedBlueExercise({
 }
 
 function StructureShape({ code }: { code: string }) {
-  const type =
-    code === "⿰" || code === "⿲"
-      ? "side"
-      : code === "⿱" || code === "⿳"
-        ? "stack"
-        : code.includes("⿴")
-          ? "surround"
-          : code
-            ? "half"
-            : "single";
+  const shape =
+    code === "⿰" ? "side"
+    : code === "⿲" ? "triside"
+    : code === "⿱" ? "stack"
+    : code === "⿳" ? "tristack"
+    : code === "⿴" ? "enclose"
+    : code === "⿵" ? "open-top"
+    : code === "⿶" ? "open-bottom"
+    : code === "⿷" ? "open-right"
+    : code === "⿸" ? "corner-tl"
+    : code === "⿹" ? "corner-tr"
+    : code === "⿺" ? "corner-bl"
+    : code === "⿻" ? "cross"
+    : "single";
   return (
-    <span className={"structure-shape " + type} aria-hidden="true">
+    <span className={"structure-shape ss-" + shape} aria-hidden="true">
       <i /><i /><i />
     </span>
   );
@@ -2364,10 +2858,14 @@ function StructureShape({ code }: { code: string }) {
 
 function WritingPad({
   character,
+  guided,
+  revealAnswer,
   onWrite,
   onClear,
 }: {
   character: string;
+  guided: boolean;
+  revealAnswer: boolean;
   onWrite: () => void;
   onClear: () => void;
 }) {
@@ -2428,7 +2926,7 @@ function WritingPad({
       const distance = Math.hypot(point.x - previous.x, point.y - previous.y);
       strokeLengthRef.current += distance;
       totalLengthRef.current += distance;
-      if (!acceptedRef.current && totalLengthRef.current >= 34) {
+      if (guided && !acceptedRef.current && totalLengthRef.current >= 34) {
         acceptedRef.current = true;
         onWrite();
       }
@@ -2440,7 +2938,12 @@ function WritingPad({
 
   function stop() {
     if (drawingRef.current && strokeLengthRef.current >= 7) {
-      setStrokeCount((count) => count + 1);
+      const nextStrokeCount = strokeCount + 1;
+      setStrokeCount(nextStrokeCount);
+      if (!guided && !acceptedRef.current && nextStrokeCount >= 2 && totalLengthRef.current >= 80) {
+        acceptedRef.current = true;
+        onWrite();
+      }
     }
     drawingRef.current = false;
     lastPointRef.current = null;
@@ -2462,8 +2965,8 @@ function WritingPad({
   }
 
   return (
-    <div className="writing-board">
-      <div className="writing-guide" aria-hidden="true">{character}</div>
+    <div className={`writing-board${guided ? "" : " is-unguided"}${revealAnswer ? " is-answer-revealed" : ""}`}>
+      {(guided || revealAnswer) && <div className="writing-guide" aria-hidden="true">{character}</div>}
       <canvas
         ref={canvasRef}
         aria-label={"书写“" + character + "”"}
@@ -2475,7 +2978,13 @@ function WritingPad({
       />
       <div className="writing-footer">
         <span className={strokeCount ? "writing-status has-ink" : "writing-status"}>
-          {strokeCount ? `已记录 ${strokeCount} 笔，继续把字写完整` : "沿着浅色字形认真描写，轻点一下不会算作完成"}
+          {revealAnswer
+            ? "规范字已显示：请逐部件对照是否漏笔、错位"
+            : strokeCount
+              ? `已记录 ${strokeCount} 笔，继续把字写完整`
+              : guided
+                ? "沿着浅色字形认真描写，轻点一下不会算作完成"
+                : "空白书写：至少完成两笔后才能核对答案"}
         </span>
         <button onClick={clear}>重新写</button>
       </div>
@@ -2774,7 +3283,9 @@ function ReadAloud({
   useEffect(() => {
     let active = true;
     void fetch(`/api/recordings?lessonId=${encodeURIComponent(lessonId)}`, { cache: "no-store" })
-      .then((response) => response.ok ? response.json() : Promise.reject())
+      .then((response) => response.ok
+        ? response.json() as Promise<{ recordings?: { url: string }[] }>
+        : Promise.reject())
       .then((payload: { recordings?: { url: string }[] }) => {
         if (active && payload.recordings?.[0]) {
           setRecordingUrl(payload.recordings[0].url);

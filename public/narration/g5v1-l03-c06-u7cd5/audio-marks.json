@@ -2,506 +2,720 @@
   "marks": [
     {
       "index": 0,
-      "char": "糕",
-      "start": 0.291,
-      "end": 0.449
+      "char": "母",
+      "start": 0.16,
+      "end": 0.32
     },
     {
       "index": 1,
-      "char": "糕",
-      "start": 0.659,
-      "end": 0.817
+      "char": "亲",
+      "start": 0.32,
+      "end": 0.56
     },
     {
       "index": 2,
-      "char": "饼",
-      "start": 0.847,
-      "end": 1.005
+      "char": "盘",
+      "start": 0.56,
+      "end": 0.8
     },
     {
       "index": 3,
-      "char": "的",
-      "start": 1.035,
-      "end": 1.193
+      "char": "算",
+      "start": 0.8,
+      "end": 1.04
     },
     {
       "index": 4,
-      "char": "糕",
-      "start": 1.223,
-      "end": 1.381
+      "char": "收",
+      "start": 1.04,
+      "end": 1.28
     },
     {
       "index": 5,
-      "char": "它",
-      "start": 1.751,
-      "end": 1.909
+      "char": "下",
+      "start": 1.28,
+      "end": 1.44
     },
     {
       "index": 6,
-      "char": "是",
-      "start": 1.939,
-      "end": 2.097
+      "char": "桂",
+      "start": 1.44,
+      "end": 1.6
     },
     {
       "index": 7,
-      "char": "左",
-      "start": 2.127,
-      "end": 2.285
+      "char": "花",
+      "start": 1.6,
+      "end": 1.84
     },
     {
       "index": 8,
-      "char": "右",
-      "start": 2.315,
-      "end": 2.473
+      "char": "后",
+      "start": 1.84,
+      "end": 2.24
     },
     {
       "index": 9,
-      "char": "结",
-      "start": 2.503,
-      "end": 2.661
+      "char": "送",
+      "start": 2.56,
+      "end": 2.8
     },
     {
       "index": 10,
-      "char": "构",
-      "start": 2.691,
-      "end": 2.849
+      "char": "一",
+      "start": 2.8,
+      "end": 2.88
     },
     {
       "index": 11,
-      "char": "左",
-      "start": 3.059,
-      "end": 3.217
+      "char": "箩",
+      "start": 2.88,
+      "end": 3.2
     },
     {
       "index": 12,
-      "char": "边",
-      "start": 3.247,
-      "end": 3.405
+      "char": "给",
+      "start": 3.2,
+      "end": 3.36
     },
     {
       "index": 13,
-      "char": "的",
-      "start": 3.435,
-      "end": 3.593
+      "char": "胡",
+      "start": 3.36,
+      "end": 3.6
     },
     {
       "index": 14,
-      "char": "米",
-      "start": 3.623,
-      "end": 3.781
+      "char": "家",
+      "start": 3.6,
+      "end": 3.84
     },
     {
       "index": 15,
-      "char": "告",
-      "start": 3.811,
-      "end": 3.968
+      "char": "老",
+      "start": 3.84,
+      "end": 4.0
     },
     {
       "index": 16,
-      "char": "诉",
-      "start": 3.999,
-      "end": 4.156
+      "char": "爷",
+      "start": 4.0,
+      "end": 4.32
     },
     {
       "index": 17,
-      "char": "我",
-      "start": 4.186,
-      "end": 4.344
+      "char": "爷",
+      "start": 4.32,
+      "end": 4.48
     },
     {
       "index": 18,
-      "char": "们",
-      "start": 4.374,
-      "end": 4.532
+      "char": "再",
+      "start": 4.8,
+      "end": 4.96
     },
     {
       "index": 19,
-      "char": "糕",
-      "start": 4.742,
-      "end": 4.9
+      "char": "送",
+      "start": 4.96,
+      "end": 5.12
     },
     {
       "index": 20,
-      "char": "常",
-      "start": 4.93,
-      "end": 5.088
+      "char": "一",
+      "start": 5.12,
+      "end": 5.28
     },
     {
       "index": 21,
-      "char": "用",
-      "start": 5.118,
-      "end": 5.276
+      "char": "箩",
+      "start": 5.28,
+      "end": 5.6
     },
     {
       "index": 22,
-      "char": "米",
-      "start": 5.306,
-      "end": 5.464
+      "char": "给",
+      "start": 5.6,
+      "end": 5.76
     },
     {
       "index": 23,
-      "char": "粉",
-      "start": 5.494,
-      "end": 5.652
+      "char": "毛",
+      "start": 5.76,
+      "end": 6.0
     },
     {
       "index": 24,
-      "char": "或",
-      "start": 5.682,
-      "end": 5.84
+      "char": "家",
+      "start": 6.0,
+      "end": 6.16
     },
     {
       "index": 25,
-      "char": "粮",
-      "start": 5.87,
-      "end": 6.028
+      "char": "老",
+      "start": 6.16,
+      "end": 6.32
     },
     {
       "index": 26,
-      "char": "食",
-      "start": 6.058,
-      "end": 6.216
+      "char": "婆",
+      "start": 6.32,
+      "end": 6.56
     },
     {
       "index": 27,
-      "char": "做",
-      "start": 6.246,
-      "end": 6.404
+      "char": "婆",
+      "start": 6.56,
+      "end": 6.88
     },
     {
       "index": 28,
-      "char": "成",
-      "start": 6.434,
-      "end": 6.592
+      "char": "因",
+      "start": 7.28,
+      "end": 7.36
     },
     {
       "index": 29,
-      "char": "右",
-      "start": 6.802,
-      "end": 6.96
+      "char": "为",
+      "start": 7.36,
+      "end": 7.52
     },
     {
       "index": 30,
-      "char": "边",
-      "start": 6.99,
-      "end": 7.148
+      "char": "两",
+      "start": 7.52,
+      "end": 7.76
     },
     {
       "index": 31,
-      "char": "的",
-      "start": 7.178,
-      "end": 7.336
+      "char": "家",
+      "start": 7.76,
+      "end": 7.92
     },
     {
       "index": 32,
-      "char": "羔",
-      "start": 7.366,
-      "end": 7.524
+      "char": "做",
+      "start": 7.92,
+      "end": 8.08
     },
     {
       "index": 33,
-      "char": "帮",
-      "start": 7.554,
-      "end": 7.712
+      "char": "的",
+      "start": 8.08,
+      "end": 8.24
     },
     {
       "index": 34,
-      "char": "助",
-      "start": 7.742,
-      "end": 7.9
+      "char": "糕",
+      "start": 8.24,
+      "end": 8.4
     },
     {
       "index": 35,
-      "char": "记",
-      "start": 7.93,
-      "end": 8.088
+      "char": "饼",
+      "start": 8.4,
+      "end": 8.56
     },
     {
       "index": 36,
-      "char": "住",
-      "start": 8.118,
-      "end": 8.276
+      "char": "多",
+      "start": 8.64,
+      "end": 8.96
     },
     {
       "index": 37,
-      "char": "读",
-      "start": 8.306,
-      "end": 8.463
+      "char": "糕",
+      "start": 9.28,
+      "end": 9.44
     },
     {
       "index": 38,
-      "char": "音",
-      "start": 8.494,
-      "end": 8.651
+      "char": "饼",
+      "start": 9.44,
+      "end": 9.52
     },
     {
       "index": 39,
-      "char": "想",
-      "start": 9.021,
-      "end": 9.179
+      "char": "是",
+      "start": 9.68,
+      "end": 9.92
     },
     {
       "index": 40,
-      "char": "象",
-      "start": 9.209,
-      "end": 9.367
+      "char": "用",
+      "start": 9.92,
+      "end": 10.08
     },
     {
       "index": 41,
       "char": "米",
-      "start": 9.397,
-      "end": 9.555
+      "start": 10.08,
+      "end": 10.4
     },
     {
       "index": 42,
-      "char": "粒",
-      "start": 9.585,
-      "end": 9.743
+      "char": "面",
+      "start": 10.56,
+      "end": 10.88
     },
     {
       "index": 43,
-      "char": "送",
-      "start": 9.773,
-      "end": 9.931
+      "char": "等",
+      "start": 10.88,
+      "end": 11.04
     },
     {
       "index": 44,
-      "char": "进",
-      "start": 9.961,
-      "end": 10.119
+      "char": "原",
+      "start": 11.04,
+      "end": 11.2
     },
     {
       "index": 45,
-      "char": "蒸",
-      "start": 10.149,
-      "end": 10.307
+      "char": "料",
+      "start": 11.2,
+      "end": 11.44
     },
     {
       "index": 46,
-      "char": "笼",
-      "start": 10.337,
-      "end": 10.495
+      "char": "做",
+      "start": 11.44,
+      "end": 11.6
     },
     {
       "index": 47,
-      "char": "热",
-      "start": 10.705,
-      "end": 10.863
+      "char": "成",
+      "start": 11.6,
+      "end": 11.84
     },
     {
       "index": 48,
-      "char": "气",
-      "start": 10.893,
-      "end": 11.051
+      "char": "的",
+      "start": 11.84,
+      "end": 11.92
     },
     {
       "index": 49,
-      "char": "和",
-      "start": 11.081,
-      "end": 11.239
+      "char": "点",
+      "start": 11.92,
+      "end": 12.08
     },
     {
       "index": 50,
-      "char": "火",
-      "start": 11.269,
-      "end": 11.427
+      "char": "心",
+      "start": 12.08,
+      "end": 12.48
     },
     {
       "index": 51,
-      "char": "光",
-      "start": 11.457,
-      "end": 11.615
+      "char": "糕",
+      "start": 12.8,
+      "end": 13.04
     },
     {
       "index": 52,
-      "char": "托",
-      "start": 11.645,
-      "end": 11.803
+      "char": "是",
+      "start": 13.04,
+      "end": 13.2
     },
     {
       "index": 53,
-      "char": "起",
-      "start": 11.833,
-      "end": 11.991
+      "char": "左",
+      "start": 13.2,
+      "end": 13.36
     },
     {
       "index": 54,
-      "char": "香",
-      "start": 12.021,
-      "end": 12.179
+      "char": "右",
+      "start": 13.36,
+      "end": 13.6
     },
     {
       "index": 55,
-      "char": "软",
-      "start": 12.209,
-      "end": 12.367
+      "char": "结",
+      "start": 13.6,
+      "end": 13.84
     },
     {
       "index": 56,
-      "char": "的",
-      "start": 12.397,
-      "end": 12.555
+      "char": "构",
+      "start": 13.84,
+      "end": 14.08
     },
     {
       "index": 57,
-      "char": "糕",
-      "start": 12.585,
-      "end": 12.743
+      "char": "左",
+      "start": 14.32,
+      "end": 14.4
     },
     {
       "index": 58,
-      "char": "点",
-      "start": 12.773,
-      "end": 12.93
+      "char": "边",
+      "start": 14.48,
+      "end": 14.64
     },
     {
       "index": 59,
       "char": "米",
-      "start": 13.141,
-      "end": 13.298
+      "start": 14.64,
+      "end": 14.88
     },
     {
       "index": 60,
-      "char": "和",
-      "start": 13.329,
-      "end": 13.486
+      "char": "字",
+      "start": 14.88,
+      "end": 15.04
     },
     {
       "index": 61,
-      "char": "蒸",
-      "start": 13.516,
-      "end": 13.674
+      "char": "旁",
+      "start": 15.04,
+      "end": 15.36
     },
     {
       "index": 62,
-      "char": "糕",
-      "start": 13.704,
-      "end": 13.862
+      "char": "像",
+      "start": 15.36,
+      "end": 15.6
     },
     {
       "index": 63,
-      "char": "并",
-      "start": 13.892,
-      "end": 14.05
+      "char": "一",
+      "start": 15.6,
+      "end": 15.76
     },
     {
       "index": 64,
-      "char": "排",
-      "start": 14.08,
-      "end": 14.238
+      "char": "粒",
+      "start": 15.76,
+      "end": 15.92
     },
     {
       "index": 65,
-      "char": "组",
-      "start": 14.268,
-      "end": 14.426
+      "char": "粒",
+      "start": 15.92,
+      "end": 16.08
     },
     {
       "index": 66,
-      "char": "成",
-      "start": 14.456,
-      "end": 14.614
+      "char": "米",
+      "start": 16.08,
+      "end": 16.4
     },
     {
       "index": 67,
-      "char": "糕",
-      "start": 14.644,
-      "end": 14.802
+      "char": "右",
+      "start": 16.64,
+      "end": 16.8
     },
     {
       "index": 68,
-      "char": "糕",
-      "start": 15.172,
-      "end": 15.33
+      "char": "边",
+      "start": 16.8,
+      "end": 17.04
     },
     {
       "index": 69,
-      "char": "饼",
-      "start": 15.36,
-      "end": 15.518
+      "char": "可",
+      "start": 17.04,
+      "end": 17.2
     },
     {
       "index": 70,
-      "char": "就",
-      "start": 15.728,
-      "end": 15.886
+      "char": "以",
+      "start": 17.2,
+      "end": 17.36
     },
     {
       "index": 71,
-      "char": "是",
-      "start": 15.916,
-      "end": 16.074
+      "char": "想",
+      "start": 17.36,
+      "end": 17.52
     },
     {
       "index": 72,
-      "char": "用",
-      "start": 16.104,
-      "end": 16.262
+      "char": "成",
+      "start": 17.6,
+      "end": 17.84
     },
     {
       "index": 73,
-      "char": "米",
-      "start": 16.292,
-      "end": 16.45
+      "char": "蒸",
+      "start": 17.84,
+      "end": 18.08
     },
     {
       "index": 74,
-      "char": "面",
-      "start": 16.66,
-      "end": 16.818
+      "char": "笼",
+      "start": 18.08,
+      "end": 18.32
     },
     {
       "index": 75,
-      "char": "等",
-      "start": 16.848,
-      "end": 17.006
+      "char": "和",
+      "start": 18.32,
+      "end": 18.56
     },
     {
       "index": 76,
-      "char": "材",
-      "start": 17.036,
-      "end": 17.194
+      "char": "下",
+      "start": 18.56,
+      "end": 18.72
     },
     {
       "index": 77,
-      "char": "料",
-      "start": 17.224,
-      "end": 17.382
+      "char": "方",
+      "start": 18.72,
+      "end": 18.96
     },
     {
       "index": 78,
-      "char": "做",
-      "start": 17.412,
-      "end": 17.57
+      "char": "的",
+      "start": 18.96,
+      "end": 19.04
     },
     {
       "index": 79,
-      "char": "成",
-      "start": 17.6,
-      "end": 17.758
+      "char": "火",
+      "start": 19.04,
+      "end": 19.28
     },
     {
       "index": 80,
-      "char": "的",
-      "start": 17.788,
-      "end": 17.945
+      "char": "米",
+      "start": 19.68,
+      "end": 19.84
     },
     {
       "index": 81,
-      "char": "点",
-      "start": 17.976,
-      "end": 18.133
+      "char": "粉",
+      "start": 19.84,
+      "end": 20.08
     },
     {
       "index": 82,
-      "char": "心",
-      "start": 18.164,
-      "end": 18.321
+      "char": "在",
+      "start": 20.08,
+      "end": 20.32
+    },
+    {
+      "index": 83,
+      "char": "蒸",
+      "start": 20.32,
+      "end": 20.48
+    },
+    {
+      "index": 84,
+      "char": "笼",
+      "start": 20.48,
+      "end": 20.72
+    },
+    {
+      "index": 85,
+      "char": "里",
+      "start": 20.72,
+      "end": 20.88
+    },
+    {
+      "index": 86,
+      "char": "慢",
+      "start": 20.88,
+      "end": 21.12
+    },
+    {
+      "index": 87,
+      "char": "慢",
+      "start": 21.12,
+      "end": 21.36
+    },
+    {
+      "index": 88,
+      "char": "变",
+      "start": 21.36,
+      "end": 21.52
+    },
+    {
+      "index": 89,
+      "char": "成",
+      "start": 21.52,
+      "end": 21.76
+    },
+    {
+      "index": 90,
+      "char": "香",
+      "start": 21.76,
+      "end": 22.0
+    },
+    {
+      "index": 91,
+      "char": "软",
+      "start": 22.0,
+      "end": 22.16
+    },
+    {
+      "index": 92,
+      "char": "糕",
+      "start": 22.16,
+      "end": 22.32
+    },
+    {
+      "index": 93,
+      "char": "点",
+      "start": 22.32,
+      "end": 22.64
+    },
+    {
+      "index": 94,
+      "char": "行",
+      "start": 22.96,
+      "end": 23.2
+    },
+    {
+      "index": 95,
+      "char": "动",
+      "start": 23.2,
+      "end": 23.36
+    },
+    {
+      "index": 96,
+      "char": "者",
+      "start": 23.36,
+      "end": 23.6
+    },
+    {
+      "index": 97,
+      "char": "和",
+      "start": 23.6,
+      "end": 23.76
+    },
+    {
+      "index": 98,
+      "char": "送",
+      "start": 23.76,
+      "end": 24.0
+    },
+    {
+      "index": 99,
+      "char": "花",
+      "start": 24.0,
+      "end": 24.24
+    },
+    {
+      "index": 100,
+      "char": "原",
+      "start": 24.24,
+      "end": 24.4
+    },
+    {
+      "index": 101,
+      "char": "因",
+      "start": 24.4,
+      "end": 24.64
+    },
+    {
+      "index": 102,
+      "char": "一",
+      "start": 24.64,
+      "end": 24.72
+    },
+    {
+      "index": 103,
+      "char": "对",
+      "start": 24.72,
+      "end": 24.96
+    },
+    {
+      "index": 104,
+      "char": "上",
+      "start": 24.96,
+      "end": 25.12
+    },
+    {
+      "index": 105,
+      "char": "花",
+      "start": 25.52,
+      "end": 25.76
+    },
+    {
+      "index": 106,
+      "char": "香",
+      "start": 25.76,
+      "end": 26.08
+    },
+    {
+      "index": 107,
+      "char": "怎",
+      "start": 26.08,
+      "end": 26.24
+    },
+    {
+      "index": 108,
+      "char": "样",
+      "start": 26.24,
+      "end": 26.4
+    },
+    {
+      "index": 109,
+      "char": "走",
+      "start": 26.4,
+      "end": 26.56
+    },
+    {
+      "index": 110,
+      "char": "进",
+      "start": 26.56,
+      "end": 26.8
+    },
+    {
+      "index": 111,
+      "char": "糕",
+      "start": 26.8,
+      "end": 26.96
+    },
+    {
+      "index": 112,
+      "char": "饼",
+      "start": 26.96,
+      "end": 27.04
+    },
+    {
+      "index": 113,
+      "char": "也",
+      "start": 27.2,
+      "end": 27.36
+    },
+    {
+      "index": 114,
+      "char": "清",
+      "start": 27.36,
+      "end": 27.6
+    },
+    {
+      "index": 115,
+      "char": "楚",
+      "start": 27.6,
+      "end": 27.76
+    },
+    {
+      "index": 116,
+      "char": "了",
+      "start": 27.76,
+      "end": 28.0
     }
   ],
-  "transcript": "糕，糕饼的糕。它是左右结构，左边的米告诉我们，糕常用米粉或粮食做成；右边的羔帮助记住读音。想象米粒送进蒸笼，热气和火光托起香软的糕点，米和蒸糕并排组成糕。糕饼，就是用米、面等材料做成的点心。",
+  "transcript": "母亲盘算收下桂花后，送一箩给胡家老爷爷，再送一箩给毛家老婆婆，因为两家做的糕饼多。糕饼是用米、面等原料做成的点心。糕是左右结构，左边米字旁像一粒粒米，右边可以想成蒸笼和下方的火。米粉在蒸笼里慢慢变成香软糕点。行动者和送花原因一对上，花香怎样走进糕饼也清楚了。",
   "voice_reference": "封",
-  "timing_source": "punctuation-weighted-estimate",
-  "script_version": "child-first-v2",
-  "duration": 18.880181
+  "reference_id": "019f0554-ea22-762e-966c-32d678fd6bf6",
+  "reference_sha256": "eb07e06ee13a20ee4577b1b481df6d33d42127c1b3876bfa5d5e5362ae349f19",
+  "timing_source": "qwen3-forced-aligner",
+  "script_version": "narration-v3",
+  "model": "mlx-community/Qwen3-TTS-12Hz-1.7B-Base-4bit",
+  "model_revision": "37e955a1deb861c088ae5f3a67043185f3d1a60c",
+  "generation_policy": "qwen3-clone-2026-08-22-v3",
+  "seed": 20260822,
+  "content_hash": "bfb238dc24303fd1587a",
+  "duration": 27.983,
+  "alignment_model": "mlx-community/Qwen3-ForcedAligner-0.6B-8bit",
+  "aligned_audio_sha256": "5d8d7eb41d0405c645ae287667175f78f52145c066e373fed381968a4df7421f",
+  "alignment_groups": []
 }

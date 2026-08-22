@@ -3,523 +3,695 @@
     {
       "index": 0,
       "char": "风",
-      "start": 0.294,
-      "end": 0.491
+      "start": 0.24,
+      "end": 0.64
     },
     {
       "index": 1,
       "char": "台",
-      "start": 0.709,
-      "end": 0.906
+      "start": 1.12,
+      "end": 1.28
     },
     {
       "index": 2,
       "char": "风",
-      "start": 0.944,
-      "end": 1.141
+      "start": 1.28,
+      "end": 1.52
     },
     {
       "index": 3,
       "char": "的",
-      "start": 1.179,
-      "end": 1.376
+      "start": 1.52,
+      "end": 1.6
     },
     {
       "index": 4,
       "char": "风",
-      "start": 1.414,
-      "end": 1.611
+      "start": 1.6,
+      "end": 1.92
     },
     {
       "index": 5,
-      "char": "它",
-      "start": 1.989,
-      "end": 2.186
+      "char": "风",
+      "start": 2.4,
+      "end": 2.64
     },
     {
       "index": 6,
       "char": "是",
-      "start": 2.223,
-      "end": 2.421
+      "start": 2.64,
+      "end": 2.8
     },
     {
       "index": 7,
-      "char": "半",
-      "start": 2.458,
-      "end": 2.656
+      "char": "空",
+      "start": 2.8,
+      "end": 3.04
     },
     {
       "index": 8,
-      "char": "包",
-      "start": 2.693,
-      "end": 2.89
+      "char": "气",
+      "start": 3.04,
+      "end": 3.2
     },
     {
       "index": 9,
-      "char": "围",
-      "start": 2.928,
-      "end": 3.125
-    },
-    {
-      "index": 10,
-      "char": "结",
-      "start": 3.163,
+      "char": "流",
+      "start": 3.2,
       "end": 3.36
     },
     {
+      "index": 10,
+      "char": "动",
+      "start": 3.36,
+      "end": 3.52
+    },
+    {
       "index": 11,
-      "char": "构",
-      "start": 3.398,
-      "end": 3.595
+      "char": "形",
+      "start": 3.52,
+      "end": 3.68
     },
     {
       "index": 12,
-      "char": "外",
-      "start": 3.813,
-      "end": 4.01
+      "char": "成",
+      "start": 3.68,
+      "end": 3.92
     },
     {
       "index": 13,
-      "char": "面",
-      "start": 4.048,
-      "end": 4.245
+      "char": "的",
+      "start": 3.92,
+      "end": 4.16
     },
     {
       "index": 14,
-      "char": "像",
-      "start": 4.282,
-      "end": 4.48
+      "char": "台",
+      "start": 4.64,
+      "end": 4.88
     },
     {
       "index": 15,
-      "char": "弯",
-      "start": 4.517,
-      "end": 4.715
+      "char": "风",
+      "start": 4.88,
+      "end": 5.12
     },
     {
       "index": 16,
-      "char": "曲",
-      "start": 4.752,
-      "end": 4.95
+      "char": "则",
+      "start": 5.12,
+      "end": 5.28
     },
     {
       "index": 17,
-      "char": "的",
-      "start": 4.987,
-      "end": 5.184
+      "char": "是",
+      "start": 5.28,
+      "end": 5.44
     },
     {
       "index": 18,
-      "char": "风",
-      "start": 5.222,
-      "end": 5.419
+      "char": "海",
+      "start": 5.44,
+      "end": 5.6
     },
     {
       "index": 19,
-      "char": "道",
-      "start": 5.457,
-      "end": 5.654
+      "char": "上",
+      "start": 5.6,
+      "end": 5.84
     },
     {
       "index": 20,
-      "char": "里",
-      "start": 5.872,
-      "end": 6.069
+      "char": "形",
+      "start": 5.84,
+      "end": 6.08
     },
     {
       "index": 21,
-      "char": "面",
-      "start": 6.107,
-      "end": 6.304
+      "char": "成",
+      "start": 6.08,
+      "end": 6.4
     },
     {
       "index": 22,
-      "char": "的",
-      "start": 6.342,
-      "end": 6.539
+      "char": "力",
+      "start": 6.72,
+      "end": 6.88
     },
     {
       "index": 23,
-      "char": "交",
-      "start": 6.576,
-      "end": 6.774
+      "char": "量",
+      "start": 6.88,
+      "end": 7.04
     },
     {
       "index": 24,
-      "char": "叉",
-      "start": 6.811,
-      "end": 7.009
+      "char": "很",
+      "start": 7.04,
+      "end": 7.2
     },
     {
       "index": 25,
-      "char": "笔",
-      "start": 7.046,
-      "end": 7.244
+      "char": "强",
+      "start": 7.2,
+      "end": 7.44
     },
     {
       "index": 26,
-      "char": "画",
-      "start": 7.281,
-      "end": 7.478
+      "char": "的",
+      "start": 7.44,
+      "end": 7.52
     },
     {
       "index": 27,
-      "char": "像",
-      "start": 7.516,
-      "end": 7.713
+      "char": "风",
+      "start": 7.52,
+      "end": 7.76
     },
     {
       "index": 28,
-      "char": "被",
-      "start": 7.751,
-      "end": 7.948
+      "char": "暴",
+      "start": 7.76,
+      "end": 8.08
     },
     {
       "index": 29,
-      "char": "吹",
-      "start": 7.986,
-      "end": 8.183
+      "char": "风",
+      "start": 8.56,
+      "end": 8.8
     },
     {
       "index": 30,
-      "char": "动",
-      "start": 8.221,
-      "end": 8.418
+      "char": "是",
+      "start": 8.8,
+      "end": 8.96
     },
     {
       "index": 31,
-      "char": "的",
-      "start": 8.456,
-      "end": 8.653
+      "char": "半",
+      "start": 8.96,
+      "end": 9.12
     },
     {
       "index": 32,
-      "char": "丝",
-      "start": 8.69,
-      "end": 8.888
+      "char": "包",
+      "start": 9.12,
+      "end": 9.28
     },
     {
       "index": 33,
-      "char": "带",
-      "start": 8.925,
-      "end": 9.123
+      "char": "围",
+      "start": 9.36,
+      "end": 9.44
     },
     {
       "index": 34,
-      "char": "风",
-      "start": 9.5,
-      "end": 9.698
+      "char": "结",
+      "start": 9.44,
+      "end": 9.68
     },
     {
       "index": 35,
-      "char": "看",
-      "start": 9.735,
-      "end": 9.932
+      "char": "构",
+      "start": 9.68,
+      "end": 10.0
     },
     {
       "index": 36,
-      "char": "不",
-      "start": 9.97,
-      "end": 10.167
+      "char": "外",
+      "start": 10.4,
+      "end": 10.56
     },
     {
       "index": 37,
-      "char": "见",
-      "start": 10.205,
-      "end": 10.402
+      "char": "面",
+      "start": 10.56,
+      "end": 10.72
     },
     {
       "index": 38,
-      "char": "却",
-      "start": 10.62,
-      "end": 10.817
+      "char": "像",
+      "start": 10.72,
+      "end": 10.96
     },
     {
       "index": 39,
-      "char": "能",
-      "start": 10.855,
-      "end": 11.052
+      "char": "弯",
+      "start": 10.96,
+      "end": 11.12
     },
     {
       "index": 40,
-      "char": "让",
-      "start": 11.09,
-      "end": 11.287
+      "char": "曲",
+      "start": 11.12,
+      "end": 11.28
     },
     {
       "index": 41,
-      "char": "云",
-      "start": 11.324,
-      "end": 11.522
+      "char": "风",
+      "start": 11.28,
+      "end": 11.52
     },
     {
       "index": 42,
-      "char": "树",
-      "start": 11.739,
-      "end": 11.937
+      "char": "道",
+      "start": 11.52,
+      "end": 11.84
     },
     {
       "index": 43,
-      "char": "叶",
-      "start": 11.974,
-      "end": 12.171
+      "char": "里",
+      "start": 12.08,
+      "end": 12.24
     },
     {
       "index": 44,
-      "char": "和",
-      "start": 12.209,
-      "end": 12.406
+      "char": "面",
+      "start": 12.24,
+      "end": 12.48
     },
     {
       "index": 45,
-      "char": "衣",
-      "start": 12.444,
-      "end": 12.641
+      "char": "交",
+      "start": 12.48,
+      "end": 12.64
     },
     {
       "index": 46,
-      "char": "带",
-      "start": 12.679,
-      "end": 12.876
+      "char": "叉",
+      "start": 12.64,
+      "end": 12.8
     },
     {
       "index": 47,
-      "char": "动",
-      "start": 12.914,
-      "end": 13.111
+      "char": "笔",
+      "start": 12.8,
+      "end": 13.04
     },
     {
       "index": 48,
-      "char": "起",
-      "start": 13.149,
-      "end": 13.346
+      "char": "画",
+      "start": 13.04,
+      "end": 13.28
     },
     {
       "index": 49,
-      "char": "来",
-      "start": 13.383,
-      "end": 13.581
+      "char": "像",
+      "start": 13.28,
+      "end": 13.52
     },
     {
       "index": 50,
-      "char": "记",
-      "start": 13.958,
-      "end": 14.156
+      "char": "被",
+      "start": 13.52,
+      "end": 13.68
     },
     {
       "index": 51,
-      "char": "忆",
-      "start": 14.193,
-      "end": 14.391
+      "char": "吹",
+      "start": 13.68,
+      "end": 13.84
     },
     {
       "index": 52,
-      "char": "画",
-      "start": 14.428,
-      "end": 14.625
+      "char": "起",
+      "start": 13.84,
+      "end": 14.0
     },
     {
       "index": 53,
-      "char": "面",
-      "start": 14.663,
-      "end": 14.86
+      "char": "的",
+      "start": 14.0,
+      "end": 14.16
     },
     {
       "index": 54,
-      "char": "里",
-      "start": 14.898,
-      "end": 15.095
+      "char": "两",
+      "start": 14.16,
+      "end": 14.32
     },
     {
       "index": 55,
-      "char": "气",
-      "start": 15.313,
-      "end": 15.51
+      "char": "条",
+      "start": 14.32,
+      "end": 14.48
     },
     {
       "index": 56,
-      "char": "流",
-      "start": 15.548,
-      "end": 15.745
+      "char": "丝",
+      "start": 14.48,
+      "end": 14.72
     },
     {
       "index": 57,
-      "char": "卷",
-      "start": 15.783,
-      "end": 15.98
+      "char": "带",
+      "start": 14.72,
+      "end": 14.96
     },
     {
       "index": 58,
-      "char": "着",
-      "start": 16.017,
-      "end": 16.215
+      "char": "丝",
+      "start": 15.44,
+      "end": 15.68
     },
     {
       "index": 59,
-      "char": "两",
-      "start": 16.252,
-      "end": 16.45
+      "char": "带",
+      "start": 15.68,
+      "end": 15.84
     },
     {
       "index": 60,
-      "char": "条",
-      "start": 16.487,
-      "end": 16.685
+      "char": "在",
+      "start": 15.84,
+      "end": 16.0
     },
     {
       "index": 61,
-      "char": "丝",
-      "start": 16.722,
-      "end": 16.919
+      "char": "风",
+      "start": 16.0,
+      "end": 16.16
     },
     {
       "index": 62,
-      "char": "带",
-      "start": 16.957,
-      "end": 17.154
+      "char": "道",
+      "start": 16.16,
+      "end": 16.32
     },
     {
       "index": 63,
-      "char": "飞",
-      "start": 17.192,
-      "end": 17.389
+      "char": "里",
+      "start": 16.32,
+      "end": 16.48
     },
     {
       "index": 64,
-      "char": "舞",
-      "start": 17.427,
-      "end": 17.624
+      "char": "翻",
+      "start": 16.48,
+      "end": 16.72
     },
     {
       "index": 65,
-      "char": "正",
-      "start": 17.842,
-      "end": 18.039
+      "char": "飞",
+      "start": 16.72,
+      "end": 17.04
     },
     {
       "index": 66,
-      "char": "好",
-      "start": 18.077,
-      "end": 18.274
+      "char": "弯",
+      "start": 17.36,
+      "end": 17.52
     },
     {
       "index": 67,
-      "char": "显",
-      "start": 18.311,
-      "end": 18.509
+      "char": "框",
+      "start": 17.52,
+      "end": 17.84
     },
     {
       "index": 68,
-      "char": "出",
-      "start": 18.546,
-      "end": 18.744
+      "char": "和",
+      "start": 17.84,
+      "end": 17.92
     },
     {
       "index": 69,
-      "char": "风",
-      "start": 18.781,
-      "end": 18.979
+      "char": "交",
+      "start": 17.92,
+      "end": 18.16
     },
     {
       "index": 70,
-      "char": "的",
-      "start": 19.016,
-      "end": 19.213
+      "char": "叉",
+      "start": 18.16,
+      "end": 18.32
     },
     {
       "index": 71,
-      "char": "轮",
-      "start": 19.251,
-      "end": 19.448
+      "char": "笔",
+      "start": 18.32,
+      "end": 18.56
     },
     {
       "index": 72,
-      "char": "廓",
-      "start": 19.486,
-      "end": 19.683
+      "char": "画",
+      "start": 18.56,
+      "end": 18.8
     },
     {
       "index": 73,
-      "char": "台",
-      "start": 20.061,
-      "end": 20.258
+      "char": "便",
+      "start": 18.8,
+      "end": 18.96
     },
     {
       "index": 74,
-      "char": "风",
-      "start": 20.296,
-      "end": 20.493
+      "char": "容",
+      "start": 18.96,
+      "end": 19.12
     },
     {
       "index": 75,
-      "char": "是",
-      "start": 20.711,
-      "end": 20.908
+      "char": "易",
+      "start": 19.12,
+      "end": 19.2
     },
     {
       "index": 76,
-      "char": "力",
-      "start": 20.945,
-      "end": 21.143
+      "char": "分",
+      "start": 19.2,
+      "end": 19.44
     },
     {
       "index": 77,
-      "char": "量",
-      "start": 21.18,
-      "end": 21.378
+      "char": "清",
+      "start": 19.44,
+      "end": 19.76
     },
     {
       "index": 78,
-      "char": "很",
-      "start": 21.415,
-      "end": 21.612
+      "char": "课",
+      "start": 20.24,
+      "end": 20.4
     },
     {
       "index": 79,
-      "char": "强",
-      "start": 21.65,
-      "end": 21.847
+      "char": "文",
+      "start": 20.4,
+      "end": 20.56
     },
     {
       "index": 80,
-      "char": "范",
-      "start": 22.065,
-      "end": 22.262
+      "char": "说",
+      "start": 20.56,
+      "end": 20.8
     },
     {
       "index": 81,
-      "char": "围",
-      "start": 22.3,
-      "end": 22.497
+      "char": "故",
+      "start": 20.8,
+      "end": 20.96
     },
     {
       "index": 82,
-      "char": "很",
-      "start": 22.535,
-      "end": 22.732
+      "char": "乡",
+      "start": 20.96,
+      "end": 21.12
     },
     {
       "index": 83,
-      "char": "大",
-      "start": 22.77,
-      "end": 22.967
+      "char": "靠",
+      "start": 21.12,
+      "end": 21.36
     },
     {
       "index": 84,
-      "char": "的",
-      "start": 23.005,
-      "end": 23.202
+      "char": "海",
+      "start": 21.36,
+      "end": 21.76
     },
     {
       "index": 85,
+      "char": "八",
+      "start": 22.08,
+      "end": 22.32
+    },
+    {
+      "index": 86,
+      "char": "月",
+      "start": 22.32,
+      "end": 22.56
+    },
+    {
+      "index": 87,
+      "char": "正",
+      "start": 22.56,
+      "end": 22.72
+    },
+    {
+      "index": 88,
+      "char": "是",
+      "start": 22.72,
+      "end": 22.8
+    },
+    {
+      "index": 89,
+      "char": "台",
+      "start": 22.8,
+      "end": 23.04
+    },
+    {
+      "index": 90,
       "char": "风",
-      "start": 23.239,
-      "end": 23.437
+      "start": 23.04,
+      "end": 23.2
+    },
+    {
+      "index": 91,
+      "char": "季",
+      "start": 23.2,
+      "end": 23.44
+    },
+    {
+      "index": 92,
+      "char": "节",
+      "start": 23.44,
+      "end": 23.76
+    },
+    {
+      "index": 93,
+      "char": "母",
+      "start": 24.08,
+      "end": 24.24
+    },
+    {
+      "index": 94,
+      "char": "亲",
+      "start": 24.24,
+      "end": 24.4
+    },
+    {
+      "index": 95,
+      "char": "担",
+      "start": 24.4,
+      "end": 24.56
+    },
+    {
+      "index": 96,
+      "char": "心",
+      "start": 24.56,
+      "end": 24.8
+    },
+    {
+      "index": 97,
+      "char": "桂",
+      "start": 24.8,
+      "end": 24.96
+    },
+    {
+      "index": 98,
+      "char": "花",
+      "start": 24.96,
+      "end": 25.12
+    },
+    {
+      "index": 99,
+      "char": "被",
+      "start": 25.12,
+      "end": 25.28
+    },
+    {
+      "index": 100,
+      "char": "风",
+      "start": 25.28,
+      "end": 25.44
+    },
+    {
+      "index": 101,
+      "char": "吹",
+      "start": 25.44,
+      "end": 25.68
+    },
+    {
+      "index": 102,
+      "char": "落",
+      "start": 25.68,
+      "end": 26.0
+    },
+    {
+      "index": 103,
+      "char": "才",
+      "start": 26.24,
+      "end": 26.4
+    },
+    {
+      "index": 104,
+      "char": "催",
+      "start": 26.4,
+      "end": 26.56
+    },
+    {
+      "index": 105,
+      "char": "着",
+      "start": 26.56,
+      "end": 26.64
+    },
+    {
+      "index": 106,
+      "char": "大",
+      "start": 26.64,
+      "end": 26.8
+    },
+    {
+      "index": 107,
+      "char": "家",
+      "start": 26.8,
+      "end": 26.96
+    },
+    {
+      "index": 108,
+      "char": "及",
+      "start": 26.96,
+      "end": 27.2
+    },
+    {
+      "index": 109,
+      "char": "时",
+      "start": 27.2,
+      "end": 27.36
+    },
+    {
+      "index": 110,
+      "char": "摇",
+      "start": 27.36,
+      "end": 27.52
+    },
+    {
+      "index": 111,
+      "char": "桂",
+      "start": 27.52,
+      "end": 27.68
+    },
+    {
+      "index": 112,
+      "char": "花",
+      "start": 27.68,
+      "end": 28.08
     }
   ],
-  "transcript": "风，台风的风。它是半包围结构，外面像弯曲的风道，里面的交叉笔画像被吹动的丝带。风看不见，却能让云、树叶和衣带动起来。记忆画面里，气流卷着两条丝带飞舞，正好显出风的轮廓。台风，是力量很强、范围很大的风。",
+  "transcript": "风，台风的风。风是空气流动形成的，台风则是海上形成、力量很强的风暴。风是半包围结构，外面像弯曲风道，里面交叉笔画像被吹起的两条丝带。丝带在风道里翻飞，弯框和交叉笔画便容易分清。课文说故乡靠海，八月正是台风季节，母亲担心桂花被风吹落，才催着大家及时摇桂花。",
   "voice_reference": "封",
-  "timing_source": "punctuation-weighted-estimate",
-  "script_version": "child-first-v1",
-  "duration": 24.000181
+  "reference_id": "019f0554-ea22-762e-966c-32d678fd6bf6",
+  "reference_sha256": "eb07e06ee13a20ee4577b1b481df6d33d42127c1b3876bfa5d5e5362ae349f19",
+  "timing_source": "qwen3-forced-aligner",
+  "script_version": "narration-v3",
+  "model": "mlx-community/Qwen3-TTS-12Hz-1.7B-Base-4bit",
+  "model_revision": "37e955a1deb861c088ae5f3a67043185f3d1a60c",
+  "generation_policy": "qwen3-clone-2026-08-22-v3",
+  "seed": 20260822,
+  "content_hash": "c61749e63b7a45276e80",
+  "duration": 28.097,
+  "alignment_model": "mlx-community/Qwen3-ForcedAligner-0.6B-8bit",
+  "aligned_audio_sha256": "467a86a1f1825870e4c1d6158bfff5103345a95c06286b000f0770b46ca808c3",
+  "alignment_groups": []
 }

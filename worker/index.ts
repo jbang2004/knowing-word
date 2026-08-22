@@ -2,29 +2,15 @@
 import { handleImageOptimization, DEFAULT_DEVICE_SIZES, DEFAULT_IMAGE_SIZES } from "vinext/server/image-optimization";
 import handler from "vinext/server/app-router-entry";
 
-interface Env {
-  ASSETS?: Fetcher;
-  DB?: D1Database;
-  MEDIA?: R2Bucket;
-  IMAGES?: {
-    input(stream: ReadableStream): {
-      transform(options: Record<string, unknown>): {
-        output(options: { format: string; quality: number }): Promise<{ response(): Response }>;
-      };
-    };
-  };
-}
+type RuntimeEnv = Partial<Env> & { IMAGES?: ImagesBinding };
 
-const NARRATION_ROUTE_PREFIX = "/media/narration/v2/";
-const NARRATION_OBJECT_PREFIX = "built-in/narration/v2/";
+const NARRATION_VERSIONS = new Set(["v2", "v3"]);
 const IMMUTABLE_CACHE = "public, max-age=31536000, immutable";
 
-function narrationRelativePath(pathname: string) {
-  if (!pathname.startsWith(NARRATION_ROUTE_PREFIX)) return null;
-  const relative = pathname.slice(NARRATION_ROUTE_PREFIX.length);
-  return /^[a-z0-9-]+\/(?:audio\.webm|audio-marks\.json)$/.test(relative)
-    ? relative
-    : null;
+function narrationRequestPath(pathname: string) {
+  const match = /^\/media\/narration\/(v\d+)\/([a-z0-9-]+\/(?:audio\.webm|audio-marks\.json))$/.exec(pathname);
+  if (!match || !NARRATION_VERSIONS.has(match[1])) return null;
+  return { version: match[1], relative: match[2] };
 }
 
 function narrationContentType(relative: string) {
@@ -69,9 +55,14 @@ function narrationHeaders(relative: string, size?: number, etag?: string) {
   return headers;
 }
 
-async function migrateSeededNarration(env: Env, relative: string, objectKey: string) {
+async function migrateSeededNarration(
+  env: RuntimeEnv,
+  version: string,
+  relative: string,
+  objectKey: string,
+) {
   if (!env.DB || !env.MEDIA) return null;
-  const seedTag = `builtin:narration:v2:${relative}`;
+  const seedTag = `builtin:narration:${version}:${relative}`;
   const row = await env.DB
     .prepare(
       "SELECT id, object_key FROM recordings WHERE lesson_id = ?1 ORDER BY created_at DESC LIMIT 1",
@@ -88,7 +79,7 @@ async function migrateSeededNarration(env: Env, relative: string, objectKey: str
       cacheControl: IMMUTABLE_CACHE,
       contentType: narrationContentType(relative),
     },
-    customMetadata: { assetVersion: "v2", source: "knowing-word" },
+    customMetadata: { assetVersion: version, source: "knowing-word" },
   });
   await Promise.all([
     env.MEDIA.delete(row.object_key),
@@ -99,19 +90,20 @@ async function migrateSeededNarration(env: Env, relative: string, objectKey: str
 
 async function serveNarration(
   request: Request,
-  env: Env,
+  env: RuntimeEnv,
   ctx: ExecutionContext,
+  version: string,
   relative: string,
 ) {
   if (request.method !== "GET" && request.method !== "HEAD") {
     return new Response("Method not allowed", { status: 405, headers: { allow: "GET, HEAD" } });
   }
 
-  const objectKey = `${NARRATION_OBJECT_PREFIX}${relative}`;
+  const objectKey = `built-in/narration/${version}/${relative}`;
   let stored = env.MEDIA ? await env.MEDIA.head(objectKey) : null;
   if (!stored) {
     try {
-      stored = await migrateSeededNarration(env, relative, objectKey);
+      stored = await migrateSeededNarration(env, version, relative, objectKey);
     } catch {
       stored = null;
     }
@@ -144,7 +136,9 @@ async function serveNarration(
     return new Response(object.body, { status: range ? 206 : 200, headers });
   }
 
-  if (!env.ASSETS) return new Response("Media not found", { status: 404 });
+  // v3 is R2-only. Falling back to the v2 static path would silently pair the
+  // new transcript/timing data with old audio, so a missing v3 object must fail closed.
+  if (version !== "v2" || !env.ASSETS) return new Response("Media not found", { status: 404 });
   const sourceUrl = new URL(`/narration/${relative}`, request.url);
   const sourceRequest = new Request(sourceUrl, {
     method: request.method,
@@ -165,7 +159,7 @@ async function serveNarration(
           cacheControl: IMMUTABLE_CACHE,
           contentType: narrationContentType(relative),
         },
-        customMetadata: { assetVersion: "v2", source: "knowing-word" },
+        customMetadata: { assetVersion: version, source: "knowing-word" },
       })).then(() => undefined),
     );
   }
@@ -200,11 +194,6 @@ function isDeliveryAsset(pathname: string) {
     pathname === "/og-cover.jpg";
 }
 
-interface ExecutionContext {
-  waitUntil(promise: Promise<unknown>): void;
-  passThroughOnException(): void;
-}
-
 // Image security config. SVG sources with .svg extension auto-skip the
 // optimization endpoint on the client side (served directly, no proxy).
 // To route SVGs through the optimizer (with security headers), set
@@ -212,12 +201,14 @@ interface ExecutionContext {
 // const imageConfig: ImageConfig = { dangerouslyAllowSVG: true };
 
 const worker = {
-  async fetch(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
-    (globalThis as typeof globalThis & { __KNOWING_WORD_ENV__?: Env }).__KNOWING_WORD_ENV__ = env;
+  async fetch(request: Request, env: RuntimeEnv, ctx: ExecutionContext): Promise<Response> {
+    (globalThis as typeof globalThis & { __KNOWING_WORD_ENV__?: RuntimeEnv }).__KNOWING_WORD_ENV__ = env;
     const url = new URL(request.url);
 
-    const narrationPath = narrationRelativePath(url.pathname);
-    if (narrationPath) return serveNarration(request, env, ctx, narrationPath);
+    const narrationPath = narrationRequestPath(url.pathname);
+    if (narrationPath) {
+      return serveNarration(request, env, ctx, narrationPath.version, narrationPath.relative);
+    }
 
     if (isDeliveryAsset(url.pathname) && env.ASSETS) {
       const asset = await env.ASSETS.fetch(request);
@@ -233,11 +224,25 @@ const worker = {
         if (!source || !source.startsWith("/")) return new Response("Invalid image source", { status: 400 });
         return Response.redirect(new URL(source, request.url), 307);
       }
+      const assets = env.ASSETS;
+      const images = env.IMAGES;
       const allowedWidths = [...DEFAULT_DEVICE_SIZES, ...DEFAULT_IMAGE_SIZES];
       return handleImageOptimization(request, {
-        fetchAsset: (path) => env.ASSETS.fetch(new Request(new URL(path, request.url))),
+        fetchAsset: (path) => assets.fetch(new Request(new URL(path, request.url))),
         transformImage: async (body, { width, format, quality }) => {
-          const result = await env.IMAGES.input(body).transform(width > 0 ? { width } : {}).output({ format, quality });
+          const outputFormat = format === "image/avif"
+            || format === "image/jpeg"
+            || format === "image/webp"
+            || format === "image/png"
+            || format === "image/gif"
+            || format === "rgb"
+            || format === "rgba"
+            ? format
+            : "image/webp";
+          const result = await images.input(body).transform(width > 0 ? { width } : {}).output({
+            format: outputFormat,
+            quality,
+          });
           return result.response();
         },
       }, allowedWidths);
@@ -248,4 +253,4 @@ const worker = {
   },
 };
 
-export default worker;
+export default worker satisfies ExportedHandler<RuntimeEnv>;

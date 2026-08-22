@@ -1,0 +1,655 @@
+{
+  "marks": [
+    {
+      "index": 0,
+      "char": "辞",
+      "start": 0.24,
+      "end": 0.56
+    },
+    {
+      "index": 1,
+      "char": "别",
+      "start": 0.56,
+      "end": 0.72
+    },
+    {
+      "index": 2,
+      "char": "的",
+      "start": 0.72,
+      "end": 0.88
+    },
+    {
+      "index": 3,
+      "char": "辞",
+      "start": 0.88,
+      "end": 1.28
+    },
+    {
+      "index": 4,
+      "char": "读",
+      "start": 1.6,
+      "end": 1.76
+    },
+    {
+      "index": 5,
+      "char": "第",
+      "start": 1.76,
+      "end": 1.84
+    },
+    {
+      "index": 6,
+      "char": "二",
+      "start": 1.84,
+      "end": 2.08
+    },
+    {
+      "index": 7,
+      "char": "声",
+      "start": 2.08,
+      "end": 2.48
+    },
+    {
+      "index": 8,
+      "char": "辞",
+      "start": 2.72,
+      "end": 3.04
+    },
+    {
+      "index": 9,
+      "char": "别",
+      "start": 3.04,
+      "end": 3.36
+    },
+    {
+      "index": 10,
+      "char": "就",
+      "start": 3.36,
+      "end": 3.44
+    },
+    {
+      "index": 11,
+      "char": "是",
+      "start": 3.44,
+      "end": 3.6
+    },
+    {
+      "index": 12,
+      "char": "告",
+      "start": 3.6,
+      "end": 3.76
+    },
+    {
+      "index": 13,
+      "char": "别",
+      "start": 3.76,
+      "end": 4.16
+    },
+    {
+      "index": 14,
+      "char": "辞",
+      "start": 4.48,
+      "end": 4.8
+    },
+    {
+      "index": 15,
+      "char": "退",
+      "start": 4.8,
+      "end": 5.2
+    },
+    {
+      "index": 16,
+      "char": "则",
+      "start": 5.2,
+      "end": 5.36
+    },
+    {
+      "index": 17,
+      "char": "是",
+      "start": 5.36,
+      "end": 5.52
+    },
+    {
+      "index": 18,
+      "char": "解",
+      "start": 5.52,
+      "end": 5.68
+    },
+    {
+      "index": 19,
+      "char": "除",
+      "start": 5.68,
+      "end": 5.92
+    },
+    {
+      "index": 20,
+      "char": "一",
+      "start": 5.92,
+      "end": 6.0
+    },
+    {
+      "index": 21,
+      "char": "个",
+      "start": 6.0,
+      "end": 6.16
+    },
+    {
+      "index": 22,
+      "char": "人",
+      "start": 6.16,
+      "end": 6.24
+    },
+    {
+      "index": 23,
+      "char": "的",
+      "start": 6.24,
+      "end": 6.4
+    },
+    {
+      "index": 24,
+      "char": "工",
+      "start": 6.4,
+      "end": 6.56
+    },
+    {
+      "index": 25,
+      "char": "作",
+      "start": 6.56,
+      "end": 6.88
+    },
+    {
+      "index": 26,
+      "char": "两",
+      "start": 7.28,
+      "end": 7.52
+    },
+    {
+      "index": 27,
+      "char": "词",
+      "start": 7.52,
+      "end": 7.76
+    },
+    {
+      "index": 28,
+      "char": "都",
+      "start": 7.76,
+      "end": 8.0
+    },
+    {
+      "index": 29,
+      "char": "带",
+      "start": 8.0,
+      "end": 8.16
+    },
+    {
+      "index": 30,
+      "char": "辞",
+      "start": 8.16,
+      "end": 8.64
+    },
+    {
+      "index": 31,
+      "char": "意",
+      "start": 8.8,
+      "end": 8.88
+    },
+    {
+      "index": 32,
+      "char": "思",
+      "start": 8.88,
+      "end": 9.04
+    },
+    {
+      "index": 33,
+      "char": "并",
+      "start": 9.04,
+      "end": 9.36
+    },
+    {
+      "index": 34,
+      "char": "不",
+      "start": 9.36,
+      "end": 9.44
+    },
+    {
+      "index": 35,
+      "char": "相",
+      "start": 9.44,
+      "end": 9.68
+    },
+    {
+      "index": 36,
+      "char": "同",
+      "start": 9.68,
+      "end": 10.0
+    },
+    {
+      "index": 37,
+      "char": "辞",
+      "start": 10.56,
+      "end": 10.8
+    },
+    {
+      "index": 38,
+      "char": "按",
+      "start": 10.8,
+      "end": 11.04
+    },
+    {
+      "index": 39,
+      "char": "左",
+      "start": 11.04,
+      "end": 11.2
+    },
+    {
+      "index": 40,
+      "char": "右",
+      "start": 11.2,
+      "end": 11.44
+    },
+    {
+      "index": 41,
+      "char": "排",
+      "start": 11.44,
+      "end": 11.68
+    },
+    {
+      "index": 42,
+      "char": "列",
+      "start": 11.68,
+      "end": 11.92
+    },
+    {
+      "index": 43,
+      "char": "左",
+      "start": 12.32,
+      "end": 12.4
+    },
+    {
+      "index": 44,
+      "char": "边",
+      "start": 12.48,
+      "end": 12.64
+    },
+    {
+      "index": 45,
+      "char": "是",
+      "start": 12.64,
+      "end": 12.88
+    },
+    {
+      "index": 46,
+      "char": "舌",
+      "start": 12.88,
+      "end": 13.28
+    },
+    {
+      "index": 47,
+      "char": "右",
+      "start": 13.6,
+      "end": 13.76
+    },
+    {
+      "index": 48,
+      "char": "边",
+      "start": 13.76,
+      "end": 13.92
+    },
+    {
+      "index": 49,
+      "char": "是",
+      "start": 13.92,
+      "end": 14.08
+    },
+    {
+      "index": 50,
+      "char": "辛",
+      "start": 14.08,
+      "end": 14.48
+    },
+    {
+      "index": 51,
+      "char": "写",
+      "start": 14.72,
+      "end": 15.04
+    },
+    {
+      "index": 52,
+      "char": "时",
+      "start": 15.04,
+      "end": 15.2
+    },
+    {
+      "index": 53,
+      "char": "两",
+      "start": 15.2,
+      "end": 15.44
+    },
+    {
+      "index": 54,
+      "char": "边",
+      "start": 15.44,
+      "end": 15.6
+    },
+    {
+      "index": 55,
+      "char": "相",
+      "start": 15.6,
+      "end": 15.84
+    },
+    {
+      "index": 56,
+      "char": "让",
+      "start": 15.84,
+      "end": 16.16
+    },
+    {
+      "index": 57,
+      "char": "母",
+      "start": 16.64,
+      "end": 16.8
+    },
+    {
+      "index": 58,
+      "char": "亲",
+      "start": 16.8,
+      "end": 17.04
+    },
+    {
+      "index": 59,
+      "char": "被",
+      "start": 17.04,
+      "end": 17.2
+    },
+    {
+      "index": 60,
+      "char": "铁",
+      "start": 17.2,
+      "end": 17.36
+    },
+    {
+      "index": 61,
+      "char": "路",
+      "start": 17.36,
+      "end": 17.52
+    },
+    {
+      "index": 62,
+      "char": "工",
+      "start": 17.52,
+      "end": 17.68
+    },
+    {
+      "index": 63,
+      "char": "厂",
+      "start": 17.68,
+      "end": 17.92
+    },
+    {
+      "index": 64,
+      "char": "辞",
+      "start": 17.92,
+      "end": 18.08
+    },
+    {
+      "index": 65,
+      "char": "退",
+      "start": 18.08,
+      "end": 18.24
+    },
+    {
+      "index": 66,
+      "char": "后",
+      "start": 18.24,
+      "end": 18.56
+    },
+    {
+      "index": 67,
+      "char": "来",
+      "start": 18.8,
+      "end": 18.96
+    },
+    {
+      "index": 68,
+      "char": "到",
+      "start": 18.96,
+      "end": 19.04
+    },
+    {
+      "index": 69,
+      "char": "街",
+      "start": 19.04,
+      "end": 19.28
+    },
+    {
+      "index": 70,
+      "char": "道",
+      "start": 19.28,
+      "end": 19.44
+    },
+    {
+      "index": 71,
+      "char": "小",
+      "start": 19.44,
+      "end": 19.68
+    },
+    {
+      "index": 72,
+      "char": "厂",
+      "start": 19.68,
+      "end": 19.84
+    },
+    {
+      "index": 73,
+      "char": "谋",
+      "start": 19.84,
+      "end": 20.0
+    },
+    {
+      "index": 74,
+      "char": "生",
+      "start": 20.0,
+      "end": 20.32
+    },
+    {
+      "index": 75,
+      "char": "收",
+      "start": 20.56,
+      "end": 20.8
+    },
+    {
+      "index": 76,
+      "char": "入",
+      "start": 20.8,
+      "end": 20.96
+    },
+    {
+      "index": 77,
+      "char": "很",
+      "start": 20.96,
+      "end": 21.2
+    },
+    {
+      "index": 78,
+      "char": "低",
+      "start": 21.2,
+      "end": 21.52
+    },
+    {
+      "index": 79,
+      "char": "劳",
+      "start": 21.84,
+      "end": 22.0
+    },
+    {
+      "index": 80,
+      "char": "动",
+      "start": 22.0,
+      "end": 22.16
+    },
+    {
+      "index": 81,
+      "char": "环",
+      "start": 22.16,
+      "end": 22.4
+    },
+    {
+      "index": 82,
+      "char": "境",
+      "start": 22.4,
+      "end": 22.56
+    },
+    {
+      "index": 83,
+      "char": "也",
+      "start": 22.56,
+      "end": 22.72
+    },
+    {
+      "index": 84,
+      "char": "很",
+      "start": 22.72,
+      "end": 22.88
+    },
+    {
+      "index": 85,
+      "char": "差",
+      "start": 22.88,
+      "end": 23.28
+    },
+    {
+      "index": 86,
+      "char": "分",
+      "start": 23.68,
+      "end": 23.92
+    },
+    {
+      "index": 87,
+      "char": "清",
+      "start": 23.92,
+      "end": 24.16
+    },
+    {
+      "index": 88,
+      "char": "辞",
+      "start": 24.16,
+      "end": 24.32
+    },
+    {
+      "index": 89,
+      "char": "别",
+      "start": 24.32,
+      "end": 24.48
+    },
+    {
+      "index": 90,
+      "char": "和",
+      "start": 24.48,
+      "end": 24.64
+    },
+    {
+      "index": 91,
+      "char": "辞",
+      "start": 24.64,
+      "end": 24.88
+    },
+    {
+      "index": 92,
+      "char": "退",
+      "start": 24.88,
+      "end": 25.2
+    },
+    {
+      "index": 93,
+      "char": "才",
+      "start": 25.36,
+      "end": 25.52
+    },
+    {
+      "index": 94,
+      "char": "能",
+      "start": 25.52,
+      "end": 25.68
+    },
+    {
+      "index": 95,
+      "char": "读",
+      "start": 25.68,
+      "end": 25.92
+    },
+    {
+      "index": 96,
+      "char": "准",
+      "start": 25.92,
+      "end": 26.16
+    },
+    {
+      "index": 97,
+      "char": "这",
+      "start": 26.16,
+      "end": 26.24
+    },
+    {
+      "index": 98,
+      "char": "段",
+      "start": 26.24,
+      "end": 26.4
+    },
+    {
+      "index": 99,
+      "char": "生",
+      "start": 26.4,
+      "end": 26.64
+    },
+    {
+      "index": 100,
+      "char": "活",
+      "start": 26.64,
+      "end": 26.72
+    },
+    {
+      "index": 101,
+      "char": "经",
+      "start": 26.72,
+      "end": 26.96
+    },
+    {
+      "index": 102,
+      "char": "历",
+      "start": 26.96,
+      "end": 27.04
+    },
+    {
+      "index": 103,
+      "char": "的",
+      "start": 27.04,
+      "end": 27.12
+    },
+    {
+      "index": 104,
+      "char": "分",
+      "start": 27.12,
+      "end": 27.36
+    },
+    {
+      "index": 105,
+      "char": "量",
+      "start": 27.36,
+      "end": 27.68
+    }
+  ],
+  "transcript": "辞别的辞，读第二声，辞别就是告别。辞退则是解除一个人的工作，两词都带辞，意思并不相同。辞按左右排列，左边是舌，右边是辛，写时两边相让。母亲被铁路工厂辞退后，来到街道小厂谋生，收入很低，劳动环境也很差。分清辞别和辞退，才能读准这段生活经历的分量。",
+  "voice_reference": "封",
+  "reference_id": "019f0554-ea22-762e-966c-32d678fd6bf6",
+  "reference_sha256": "eb07e06ee13a20ee4577b1b481df6d33d42127c1b3876bfa5d5e5362ae349f19",
+  "timing_source": "qwen3-forced-aligner",
+  "script_version": "narration-v3",
+  "model": "mlx-community/Qwen3-TTS-12Hz-1.7B-Base-4bit",
+  "model_revision": "37e955a1deb861c088ae5f3a67043185f3d1a60c",
+  "generation_policy": "qwen3-clone-2026-08-22-v3",
+  "seed": 20260822,
+  "content_hash": "4767e42ae5d43316fce2",
+  "duration": 27.652,
+  "alignment_model": "mlx-community/Qwen3-ForcedAligner-0.6B-8bit",
+  "aligned_audio_sha256": "0557d5f0f8583624ff8cfdfa30ea7a03dd889e143f2b0928d1a324cab8bd3bed",
+  "alignment_groups": []
+}

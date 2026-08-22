@@ -103,7 +103,7 @@ export const grade5CharacterVisuals = {
   "亭": {
     "src": "/illustrations/mnemonics-v2/g5-u4ead.webp",
     "label": "茅亭",
-    "alt": "茅亭是用茅草盖顶、供人停留休息的小建筑 图中“丁”按上下结构自然长成“亭”。"
+    "alt": "茅亭是用茅草盖顶、供人停留休息的小建筑 图中“亠”与“口”与“冖”与“丁”按上下结构自然长成“亭”。"
   },
   "慕": {
     "src": "/illustrations/mnemonics-v2/g5-u6155.webp",
@@ -137,7 +137,7 @@ export const grade5CharacterVisuals = {
   },
   "婆": {
     "src": "/illustrations/mnemonics-v2/g5-u5a46.webp",
-    "label": "外婆",
+    "label": "老婆婆",
     "alt": "外婆是母亲的母亲，是家庭中的长辈 图中“波”与“女”按上下结构自然长成“婆”。"
   },
   "糕": {
@@ -178,7 +178,7 @@ export const grade5CharacterVisuals = {
   "幽": {
     "src": "/illustrations/mnemonics-v2/g5-u5e7d.webp",
     "label": "幽深",
-    "alt": "幽深形容地方安静、深远，光线也比较暗 图中“幺”与“幺”与“山”按穿插结构自然长成“幽”。"
+    "alt": "幽深形容地方安静、深远，光线也比较暗 图中“幺”与“幺”与“山”按半包围结构自然长成“幽”。"
   },
   "悉": {
     "src": "/illustrations/mnemonics-v2/g5-u6089.webp",
@@ -203,7 +203,7 @@ export const grade5CharacterVisuals = {
   "享": {
     "src": "/illustrations/mnemonics-v2/g5-u4eab.webp",
     "label": "享受",
-    "alt": "享受就是从生活或活动中得到满足和愉快 图中“子”按上中下结构自然长成“享”。"
+    "alt": "享受就是从生活或活动中得到满足和愉快 图中“亠”与“口”与“子”按上中下结构自然长成“享”。"
   },
   "陪": {
     "src": "/illustrations/mnemonics-v2/g5-u966a.webp",
@@ -237,7 +237,7 @@ export const grade5CharacterVisuals = {
   },
   "挽": {
     "src": "/illustrations/mnemonics-v2/g5-u633d.webp",
-    "label": "挽留",
+    "label": "挽裤",
     "alt": "挽留就是拉住或劝说将要离开的人留下来 图中“扌”与“免”按左右结构自然长成“挽”。"
   },
   "间": {
@@ -262,7 +262,7 @@ export const grade5CharacterVisuals = {
   },
   "绰": {
     "src": "/illustrations/mnemonics-v2/g5-u7ef0.webp",
-    "label": "绰绰有余",
+    "label": "人影绰绰",
     "alt": "绰绰有余表示数量或能力充足，用起来还有剩余 图中“纟”与“卓”按左右结构自然长成“绰”。"
   },
   "洪": {
@@ -298,7 +298,7 @@ export const grade5CharacterVisuals = {
   "免": {
     "src": "/illustrations/mnemonics-v2/g5-u514d.webp",
     "label": "免得",
-    "alt": "免得表示为了避免出现某种不希望的情况 图中“⺈”按上下结构自然长成“免”。"
+    "alt": "免得表示为了避免出现某种不希望的情况 图中“⺈”与“口”与“儿”按上下结构自然长成“免”。"
   },
   "璧": {
     "src": "/illustrations/mnemonics-v2/g5-u74a7.webp",
@@ -373,7 +373,7 @@ export const grade5CharacterVisuals = {
   "卿": {
     "src": "/illustrations/mnemonics-v2/g5-u537f.webp",
     "label": "上卿",
-    "alt": "上卿是古代地位很高的官职 图中“卯”按全包围结构自然长成“卿”。"
+    "alt": "上卿是古代地位很高的官职 图中“卯”按独体结构自然长成“卿”。"
   },
   "削": {
     "src": "/illustrations/mnemonics-v2/g5-u524a.webp",
@@ -467,17 +467,17 @@ export const grade5CharacterVisuals = {
   },
   "箭": {
     "src": "/illustrations/mnemonics-v2/g5-u7bad.webp",
-    "label": "弓箭",
+    "label": "火箭",
     "alt": "弓箭由弓和箭组成，箭射出后速度很快 图中“⺮”与“前”按上下结构自然长成“箭”。"
   },
   "浩": {
     "src": "/illustrations/mnemonics-v2/g5-u6d69.webp",
-    "label": "浩大",
+    "label": "浩瀚",
     "alt": "浩大形容水势、声势或规模非常大 图中“氵”与“告”按左右结构自然长成“浩”。"
   },
   "筒": {
     "src": "/illustrations/mnemonics-v2/g5-u7b52.webp",
-    "label": "圆筒",
+    "label": "手电筒",
     "alt": "圆筒是上下粗细相近、内部中空的圆柱形物体 图中“⺮”与“同”按上下结构自然长成“筒”。"
   },
   "束": {
@@ -497,7 +497,7 @@ export const grade5CharacterVisuals = {
   },
   "置": {
     "src": "/illustrations/mnemonics-v2/g5-u7f6e.webp",
-    "label": "位置",
+    "label": "难以置信",
     "alt": "位置表示人或物所在的地方 图中“罒”与“直”按上下结构自然长成“置”。"
   },
   "侵": {
@@ -527,7 +527,7 @@ export const grade5CharacterVisuals = {
   },
   "搁": {
     "src": "/illustrations/mnemonics-v2/g5-u6401.webp",
-    "label": "搁置",
+    "label": "搁东西",
     "alt": "搁置就是把东西放下，暂时不处理 图中“扌”与“阁”按左右结构自然长成“搁”。"
   },
   "陷": {
@@ -632,7 +632,7 @@ export const grade5CharacterVisuals = {
   },
   "扶": {
     "src": "/illustrations/mnemonics-v2/g5-u6276.webp",
-    "label": "扶持",
+    "label": "扶着老人",
     "alt": "扶持就是用手帮助别人站稳或继续前进 图中“扌”与“夫”按左右结构自然长成“扶”。"
   },
   "嫂": {
@@ -642,17 +642,17 @@ export const grade5CharacterVisuals = {
   },
   "恳": {
     "src": "/illustrations/mnemonics-v2/g5-u6073.webp",
-    "label": "恳求",
+    "label": "勤勤恳恳",
     "alt": "恳求就是态度真诚、急切地请求别人 图中“艮”与“心”按上下结构自然长成“恳”。"
   },
   "筛": {
     "src": "/illustrations/mnemonics-v2/g5-u7b5b.webp",
-    "label": "筛子",
+    "label": "筛干草",
     "alt": "筛子是有许多小孔、用来分开粗细颗粒的工具 图中“⺮”与“师”按上下结构自然长成“筛”。"
   },
   "歹": {
     "src": "/illustrations/mnemonics-v2/g5-u6b79.webp",
-    "label": "歹人",
+    "label": "好歹",
     "alt": "歹人是做坏事、会伤害别人的人 图中“一”与“夕”按上下结构自然长成“歹”。"
   },
   "罕": {
@@ -677,7 +677,7 @@ export const grade5CharacterVisuals = {
   },
   "酿": {
     "src": "/illustrations/mnemonics-v2/g5-u917f.webp",
-    "label": "酿酒",
+    "label": "酿的葡萄酒",
     "alt": "酿酒是让粮食或水果经过发酵变成酒 图中“酉”与“良”按左右结构自然长成“酿”。"
   },
   "瞌": {
@@ -727,22 +727,22 @@ export const grade5CharacterVisuals = {
   },
   "托": {
     "src": "/illustrations/mnemonics-v2/g5-u6258.webp",
-    "label": "托付",
+    "label": "托着纱衣",
     "alt": "托付就是把重要的人或事情交给可信任的人照管 图中“扌”与“乇”按左右结构自然长成“托”。"
   },
   "溜": {
     "src": "/illustrations/mnemonics-v2/g5-u6e9c.webp",
-    "label": "溜走",
+    "label": "溜出来",
     "alt": "溜走就是趁人不注意，悄悄而快速地离开 图中“氵”与“留”按左右结构自然长成“溜”。"
   },
   "辈": {
     "src": "/illustrations/mnemonics-v2/g5-u8f88.webp",
-    "label": "长辈",
+    "label": "一辈子",
     "alt": "长辈是年龄和辈分比自己高的人 图中“非”与“车”按上下结构自然长成“辈”。"
   },
   "挨": {
     "src": "/illustrations/mnemonics-v2/g5-u6328.webp",
-    "label": "挨打",
+    "label": "挨挨耳朵",
     "alt": "挨打表示身体受到击打；故事中要理解人物遭遇，不模仿伤害行为 图中“扌”与“矣”按左右结构自然长成“挨”。"
   },
   "俭": {
@@ -752,7 +752,7 @@ export const grade5CharacterVisuals = {
   },
   "皇": {
     "src": "/illustrations/mnemonics-v2/g5-u7687.webp",
-    "label": "皇帝",
+    "label": "富丽堂皇",
     "alt": "皇帝是中国古代国家的最高统治者 图中“白”与“王”按上下结构自然长成“皇”。"
   },
   "偎": {
@@ -777,17 +777,17 @@ export const grade5CharacterVisuals = {
   },
   "礁": {
     "src": "/illustrations/mnemonics-v2/g5-u7901.webp",
-    "label": "暗礁",
+    "label": "珊瑚礁",
     "alt": "暗礁是水面下不容易看见、可能影响航行的岩石 图中“石”与“焦”按左右结构自然长成“礁”。"
   },
   "筐": {
     "src": "/illustrations/mnemonics-v2/g5-u7b50.webp",
-    "label": "竹筐",
+    "label": "两个筐",
     "alt": "竹筐是用竹条编成、可以盛放物品的器具 图中“⺮”与“匡”按上下结构自然长成“筐”。"
   },
   "拗": {
     "src": "/illustrations/mnemonics-v2/g5-u62d7.webp",
-    "label": "执拗",
+    "label": "拗不过",
     "alt": "执拗形容坚持自己的想法，不容易听进劝说 图中“扌”与“幼”按左右结构自然长成“拗”。"
   },
   "乃": {
@@ -802,8 +802,8 @@ export const grade5CharacterVisuals = {
   },
   "亥": {
     "src": "/illustrations/mnemonics-v2/g5-u4ea5.webp",
-    "label": "亥时",
-    "alt": "亥时是古代计时名称，大约相当于晚上九点到十一点 图中“人”按上下结构自然长成“亥”。"
+    "label": "己亥",
+    "alt": "亥时是古代计时名称，大约相当于晚上九点到十一点 图中“人”按独体结构自然长成“亥”。"
   },
   "恃": {
     "src": "/illustrations/mnemonics-v2/g5-u6043.webp",
@@ -822,7 +822,7 @@ export const grade5CharacterVisuals = {
   },
   "哀": {
     "src": "/illustrations/mnemonics-v2/g5-u54c0.webp",
-    "label": "哀伤",
+    "label": "可哀",
     "alt": "哀伤就是因为失去、忧虑等感到深深悲伤 图中“衣”与“口”按穿插结构自然长成“哀”。"
   },
   "拘": {
@@ -878,7 +878,7 @@ export const grade5CharacterVisuals = {
   "疆": {
     "src": "/illustrations/mnemonics-v2/g5-u7586.webp",
     "label": "边疆",
-    "alt": "边疆是靠近国界的地区 图中“畺”按左右结构自然长成“疆”。"
+    "alt": "边疆是靠近国界的地区 图中“弓”与“土”与“畺”按左右结构自然长成“疆”。"
   },
   "估": {
     "src": "/illustrations/mnemonics-v2/g5-u4f30.webp",
@@ -902,7 +902,7 @@ export const grade5CharacterVisuals = {
   },
   "澜": {
     "src": "/illustrations/mnemonics-v2/g5-u6f9c.webp",
-    "label": "波澜",
+    "label": "安澜园",
     "alt": "波澜是较大的水波，也可以比喻事情的起伏变化 图中“氵”与“阑”按左右结构自然长成“澜”。"
   },
   "瑶": {
@@ -912,7 +912,7 @@ export const grade5CharacterVisuals = {
   },
   "陵": {
     "src": "/illustrations/mnemonics-v2/g5-u9675.webp",
-    "label": "陵园",
+    "label": "武陵春色",
     "alt": "陵园是安葬并纪念逝者的园地，应当保持庄重 图中“阝”与“夌”按左右结构自然长成“陵”。"
   },
   "宏": {
@@ -923,7 +923,7 @@ export const grade5CharacterVisuals = {
   "奉": {
     "src": "/illustrations/mnemonics-v2/g5-u5949.webp",
     "label": "奉命",
-    "alt": "奉命就是接受命令并认真执行 图中“𡗗”按上下结构自然长成“奉”。"
+    "alt": "奉命就是接受命令并认真执行 图中“𡗗”按独体结构自然长成“奉”。"
   },
   "烬": {
     "src": "/illustrations/mnemonics-v2/g5-u70ec.webp",
@@ -942,7 +942,7 @@ export const grade5CharacterVisuals = {
   },
   "拱": {
     "src": "/illustrations/mnemonics-v2/g5-u62f1.webp",
-    "label": "拱桥",
+    "label": "众星拱月",
     "alt": "拱桥是桥身向上弯成弧形的桥 图中“扌”与“共”按左右结构自然长成“拱”。"
   },
   "辉": {
@@ -962,13 +962,13 @@ export const grade5CharacterVisuals = {
   },
   "境": {
     "src": "/illustrations/mnemonics-v2/g5-u5883.webp",
-    "label": "环境",
+    "label": "幻想的境界",
     "alt": "环境是人或事物周围的自然条件和社会条件 图中“土”与“竟”按左右结构自然长成“境”。"
   },
   "唐": {
     "src": "/illustrations/mnemonics-v2/g5-u5510.webp",
     "label": "唐代",
-    "alt": "唐代是中国历史上的一个朝代 图中“广”按左上包围结构自然长成“唐”。"
+    "alt": "唐代是中国历史上的一个朝代 图中“广”与“肀”与“口”按左上包围结构自然长成“唐”。"
   },
   "闯": {
     "src": "/illustrations/mnemonics-v2/g5-u95ef.webp",
@@ -1012,7 +1012,7 @@ export const grade5CharacterVisuals = {
   },
   "炊": {
     "src": "/illustrations/mnemonics-v2/g5-u708a.webp",
-    "label": "炊烟",
+    "label": "炊事员",
     "alt": "炊烟是做饭烧火时升起的烟 图中“火”与“欠”按左右结构自然长成“炊”。"
   },
   "哼": {
@@ -1042,12 +1042,12 @@ export const grade5CharacterVisuals = {
   },
   "搅": {
     "src": "/illustrations/mnemonics-v2/g5-u6405.webp",
-    "label": "搅拌",
+    "label": "搅了几下",
     "alt": "搅拌就是用工具来回转动，使材料混合均匀 图中“扌”与“觉”按左右结构自然长成“搅”。"
   },
   "舀": {
     "src": "/illustrations/mnemonics-v2/g5-u8200.webp",
-    "label": "舀水",
+    "label": "舀起一勺汤",
     "alt": "舀水就是用勺、瓢等器具把水取出来 图中“爫”与“臼”按上下结构自然长成“舀”。"
   },
   "摄": {
@@ -1437,7 +1437,7 @@ export const grade5CharacterVisuals = {
   },
   "祥": {
     "src": "/illustrations/mnemonics-v2/g5-u7965.webp",
-    "label": "吉祥",
+    "label": "慈祥",
     "alt": "吉祥表示幸运、顺利，是人们对美好生活的祝愿 图中“礻”与“羊”按左右结构自然长成“祥”。"
   },
   "歧": {
@@ -1812,7 +1812,7 @@ export const grade5LessonVisuals = {
   "g5v1-l03": {
     "src": "/illustrations/lessons/g5-03.webp",
     "label": "桂花雨",
-    "alt": "桂树下金色花雨纷飞，孩子举着竹箩，江南庭院温柔明亮"
+    "alt": "桂树下金色花雨纷飞，孩子抱树摇花，竹箩放在一旁，江南庭院温柔明亮"
   },
   "g5v1-l04": {
     "src": "/illustrations/lessons/g5-04.webp",

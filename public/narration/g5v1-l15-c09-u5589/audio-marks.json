@@ -2,740 +2,504 @@
   "marks": [
     {
       "index": 0,
-      "char": "喉",
-      "start": 0.293,
-      "end": 0.481
+      "char": "饭",
+      "start": 0.32,
+      "end": 0.56
     },
     {
       "index": 1,
-      "char": "喉",
-      "start": 0.697,
-      "end": 0.885
+      "char": "桌",
+      "start": 0.56,
+      "end": 0.72
     },
     {
       "index": 2,
-      "char": "咙",
-      "start": 0.921,
-      "end": 1.109
+      "char": "上",
+      "start": 0.72,
+      "end": 0.88
     },
     {
       "index": 3,
       "char": "的",
-      "start": 1.145,
-      "end": 1.333
+      "start": 0.88,
+      "end": 0.96
     },
     {
       "index": 4,
-      "char": "喉",
-      "start": 1.369,
-      "end": 1.556
+      "char": "感",
+      "start": 0.96,
+      "end": 1.2
     },
     {
       "index": 5,
-      "char": "读",
-      "start": 1.772,
-      "end": 1.96
+      "char": "动",
+      "start": 1.2,
+      "end": 1.36
     },
     {
       "index": 6,
-      "char": "h",
-      "start": 1.996,
-      "end": 2.184
+      "char": "涌",
+      "start": 1.36,
+      "end": 1.6
     },
     {
       "index": 7,
-      "char": "ó",
-      "start": 2.22,
-      "end": 2.408
+      "char": "上",
+      "start": 1.6,
+      "end": 1.76
     },
     {
       "index": 8,
-      "char": "u",
-      "start": 2.444,
-      "end": 2.632
+      "char": "来",
+      "start": 1.76,
+      "end": 2.0
     },
     {
       "index": 9,
-      "char": "它",
-      "start": 3.007,
-      "end": 3.195
+      "char": "时",
+      "start": 2.0,
+      "end": 2.4
     },
     {
       "index": 10,
-      "char": "是",
-      "start": 3.231,
-      "end": 3.419
+      "char": "人",
+      "start": 2.88,
+      "end": 3.04
     },
     {
       "index": 11,
-      "char": "左",
-      "start": 3.455,
-      "end": 3.643
+      "char": "的",
+      "start": 3.04,
+      "end": 3.12
     },
     {
       "index": 12,
-      "char": "右",
-      "start": 3.679,
-      "end": 3.867
+      "char": "喉",
+      "start": 3.12,
+      "end": 3.36
     },
     {
       "index": 13,
-      "char": "结",
-      "start": 3.902,
-      "end": 4.09
+      "char": "咙",
+      "start": 3.36,
+      "end": 3.52
     },
     {
       "index": 14,
-      "char": "构",
-      "start": 4.126,
-      "end": 4.314
+      "char": "会",
+      "start": 3.52,
+      "end": 3.68
     },
     {
       "index": 15,
-      "char": "按",
-      "start": 4.53,
-      "end": 4.718
+      "char": "发",
+      "start": 3.68,
+      "end": 3.92
     },
     {
       "index": 16,
-      "char": "顺",
-      "start": 4.754,
-      "end": 4.942
+      "char": "紧",
+      "start": 3.92,
+      "end": 4.24
     },
     {
       "index": 17,
-      "char": "序",
-      "start": 4.978,
-      "end": 5.166
+      "char": "话",
+      "start": 4.64,
+      "end": 4.88
     },
     {
       "index": 18,
-      "char": "能",
-      "start": 5.201,
-      "end": 5.389
+      "char": "也",
+      "start": 4.88,
+      "end": 5.04
     },
     {
       "index": 19,
-      "char": "看",
-      "start": 5.425,
-      "end": 5.613
+      "char": "可",
+      "start": 5.04,
+      "end": 5.2
     },
     {
       "index": 20,
-      "char": "到",
-      "start": 5.649,
-      "end": 5.837
+      "char": "能",
+      "start": 5.2,
+      "end": 5.28
     },
     {
       "index": 21,
-      "char": "口",
-      "start": 5.873,
-      "end": 6.061
+      "char": "慢",
+      "start": 5.28,
+      "end": 5.52
     },
     {
       "index": 22,
-      "char": "和",
-      "start": 6.096,
-      "end": 6.284
+      "char": "下",
+      "start": 5.52,
+      "end": 5.68
     },
     {
       "index": 23,
-      "char": "侯",
-      "start": 6.32,
-      "end": 6.508
+      "char": "来",
+      "start": 5.68,
+      "end": 6.0
     },
     {
       "index": 24,
-      "char": "从",
-      "start": 6.884,
-      "end": 7.072
+      "char": "喉",
+      "start": 6.48,
+      "end": 6.72
     },
     {
       "index": 25,
-      "char": "构",
-      "start": 7.108,
-      "end": 7.296
+      "char": "是",
+      "start": 6.72,
+      "end": 6.88
     },
     {
       "index": 26,
-      "char": "字",
-      "start": 7.331,
-      "end": 7.519
+      "char": "左",
+      "start": 6.88,
+      "end": 6.96
     },
     {
       "index": 27,
-      "char": "分",
-      "start": 7.555,
-      "end": 7.743
+      "char": "右",
+      "start": 7.04,
+      "end": 7.2
     },
     {
       "index": 28,
-      "char": "工",
-      "start": 7.779,
-      "end": 7.967
+      "char": "结",
+      "start": 7.2,
+      "end": 7.36
     },
     {
       "index": 29,
-      "char": "看",
-      "start": 8.003,
-      "end": 8.191
+      "char": "构",
+      "start": 7.36,
+      "end": 7.68
     },
     {
       "index": 30,
-      "char": "口",
-      "start": 8.407,
-      "end": 8.595
+      "char": "左",
+      "start": 8.08,
+      "end": 8.24
     },
     {
       "index": 31,
-      "char": "提",
-      "start": 8.63,
-      "end": 8.818
+      "char": "边",
+      "start": 8.24,
+      "end": 8.4
     },
     {
       "index": 32,
-      "char": "示",
-      "start": 8.854,
-      "end": 9.042
+      "char": "是",
+      "start": 8.4,
+      "end": 8.56
     },
     {
       "index": 33,
-      "char": "意",
-      "start": 9.078,
-      "end": 9.266
+      "char": "口",
+      "start": 8.56,
+      "end": 8.72
     },
     {
       "index": 34,
-      "char": "义",
-      "start": 9.302,
-      "end": 9.49
+      "char": "字",
+      "start": 8.72,
+      "end": 8.88
     },
     {
       "index": 35,
-      "char": "类",
-      "start": 9.525,
-      "end": 9.713
+      "char": "旁",
+      "start": 8.88,
+      "end": 9.28
     },
     {
       "index": 36,
-      "char": "别",
-      "start": 9.749,
-      "end": 9.937
+      "char": "右",
+      "start": 9.68,
+      "end": 9.84
     },
     {
       "index": 37,
-      "char": "侯",
-      "start": 10.153,
-      "end": 10.341
+      "char": "边",
+      "start": 9.84,
+      "end": 10.0
     },
     {
       "index": 38,
-      "char": "提",
-      "start": 10.377,
-      "end": 10.565
+      "char": "可",
+      "start": 10.0,
+      "end": 10.16
     },
     {
       "index": 39,
-      "char": "供",
-      "start": 10.601,
-      "end": 10.789
+      "char": "以",
+      "start": 10.16,
+      "end": 10.24
     },
     {
       "index": 40,
-      "char": "读",
-      "start": 10.824,
-      "end": 11.012
+      "char": "想",
+      "start": 10.24,
+      "end": 10.4
     },
     {
       "index": 41,
-      "char": "音",
-      "start": 11.048,
-      "end": 11.236
+      "char": "成",
+      "start": 10.48,
+      "end": 10.64
     },
     {
       "index": 42,
-      "char": "线",
-      "start": 11.272,
-      "end": 11.46
+      "char": "人",
+      "start": 10.64,
+      "end": 10.88
     },
     {
       "index": 43,
-      "char": "索",
-      "start": 11.496,
-      "end": 11.684
+      "char": "物",
+      "start": 10.88,
+      "end": 11.2
     },
     {
       "index": 44,
-      "char": "看",
-      "start": 12.059,
-      "end": 12.247
+      "char": "喉",
+      "start": 11.36,
+      "end": 11.68
     },
     {
       "index": 45,
-      "char": "图",
-      "start": 12.283,
-      "end": 12.471
+      "char": "管",
+      "start": 11.68,
+      "end": 11.92
     },
     {
       "index": 46,
-      "char": "时",
-      "start": 12.507,
-      "end": 12.695
+      "char": "和",
+      "start": 12.0,
+      "end": 12.08
     },
     {
       "index": 47,
-      "char": "左",
-      "start": 12.911,
-      "end": 13.099
+      "char": "吞",
+      "start": 12.08,
+      "end": 12.32
     },
     {
       "index": 48,
-      "char": "边",
-      "start": 13.134,
-      "end": 13.322
+      "char": "咽",
+      "start": 12.32,
+      "end": 12.48
     },
     {
       "index": 49,
-      "char": "张",
-      "start": 13.358,
-      "end": 13.546
+      "char": "路",
+      "start": 12.48,
+      "end": 12.64
     },
     {
       "index": 50,
-      "char": "口",
-      "start": 13.582,
-      "end": 13.77
+      "char": "线",
+      "start": 12.64,
+      "end": 12.96
     },
     {
       "index": 51,
-      "char": "形",
-      "start": 13.806,
-      "end": 13.994
+      "char": "沿",
+      "start": 13.52,
+      "end": 13.6
     },
     {
       "index": 52,
-      "char": "成",
-      "start": 14.03,
-      "end": 14.218
+      "char": "着",
+      "start": 13.6,
+      "end": 13.76
     },
     {
       "index": 53,
       "char": "口",
-      "start": 14.253,
-      "end": 14.441
+      "start": 13.76,
+      "end": 14.0
     },
     {
       "index": 54,
-      "char": "右",
-      "start": 14.657,
-      "end": 14.845
+      "char": "腔",
+      "start": 14.0,
+      "end": 14.32
     },
     {
       "index": 55,
-      "char": "边",
-      "start": 14.881,
-      "end": 15.069
+      "char": "向",
+      "start": 14.32,
+      "end": 14.56
     },
     {
       "index": 56,
-      "char": "人",
-      "start": 15.105,
-      "end": 15.293
+      "char": "颈",
+      "start": 14.56,
+      "end": 14.8
     },
     {
       "index": 57,
-      "char": "物",
-      "start": 15.328,
-      "end": 15.516
+      "char": "部",
+      "start": 14.8,
+      "end": 14.96
     },
     {
       "index": 58,
-      "char": "喉",
-      "start": 15.732,
-      "end": 15.92
+      "char": "寻",
+      "start": 14.96,
+      "end": 15.2
     },
     {
       "index": 59,
-      "char": "管",
-      "start": 15.956,
-      "end": 16.144
+      "char": "找",
+      "start": 15.2,
+      "end": 15.36
     },
     {
       "index": 60,
-      "char": "和",
-      "start": 16.18,
-      "end": 16.368
+      "char": "通",
+      "start": 15.36,
+      "end": 15.6
     },
     {
       "index": 61,
-      "char": "吞",
-      "start": 16.404,
-      "end": 16.591
+      "char": "道",
+      "start": 15.6,
+      "end": 15.84
     },
     {
       "index": 62,
-      "char": "咽",
-      "start": 16.627,
-      "end": 16.815
+      "char": "喉",
+      "start": 16.24,
+      "end": 16.48
     },
     {
       "index": 63,
-      "char": "路",
-      "start": 16.851,
-      "end": 17.039
+      "char": "咙",
+      "start": 16.48,
+      "end": 16.64
     },
     {
       "index": 64,
-      "char": "线",
-      "start": 17.075,
-      "end": 17.263
+      "char": "是",
+      "start": 16.64,
+      "end": 16.8
     },
     {
       "index": 65,
-      "char": "沿",
-      "start": 17.299,
-      "end": 17.487
+      "char": "颈",
+      "start": 16.8,
+      "end": 16.96
     },
     {
       "index": 66,
-      "char": "侯",
-      "start": 17.522,
-      "end": 17.71
+      "char": "部",
+      "start": 16.96,
+      "end": 17.12
     },
     {
       "index": 67,
-      "char": "排",
-      "start": 17.746,
-      "end": 17.934
+      "char": "里",
+      "start": 17.12,
+      "end": 17.28
     },
     {
       "index": 68,
-      "char": "列",
-      "start": 17.97,
-      "end": 18.158
+      "char": "面",
+      "start": 17.28,
+      "end": 17.44
     },
     {
       "index": 69,
-      "char": "组",
-      "start": 18.374,
-      "end": 18.562
+      "char": "连",
+      "start": 17.44,
+      "end": 17.6
     },
     {
       "index": 70,
-      "char": "成",
-      "start": 18.597,
-      "end": 18.785
+      "char": "接",
+      "start": 17.6,
+      "end": 17.76
     },
     {
       "index": 71,
-      "char": "喉",
-      "start": 18.821,
-      "end": 19.009
+      "char": "口",
+      "start": 17.76,
+      "end": 18.0
     },
     {
       "index": 72,
-      "char": "喉",
-      "start": 19.385,
-      "end": 19.573
+      "char": "腔",
+      "start": 18.0,
+      "end": 18.4
     },
     {
       "index": 73,
-      "char": "咙",
-      "start": 19.609,
-      "end": 19.797
+      "char": "气",
+      "start": 18.64,
+      "end": 18.88
     },
     {
       "index": 74,
-      "char": "是",
-      "start": 19.833,
-      "end": 20.021
+      "char": "管",
+      "start": 18.88,
+      "end": 19.12
     },
     {
       "index": 75,
-      "char": "颈",
-      "start": 20.056,
-      "end": 20.244
+      "char": "和",
+      "start": 19.12,
+      "end": 19.28
     },
     {
       "index": 76,
-      "char": "部",
-      "start": 20.28,
-      "end": 20.468
+      "char": "食",
+      "start": 19.28,
+      "end": 19.52
     },
     {
       "index": 77,
-      "char": "里",
-      "start": 20.504,
-      "end": 20.692
+      "char": "管",
+      "start": 19.52,
+      "end": 19.68
     },
     {
       "index": 78,
-      "char": "面",
-      "start": 20.728,
-      "end": 20.916
+      "char": "的",
+      "start": 19.68,
+      "end": 19.76
     },
     {
       "index": 79,
-      "char": "连",
-      "start": 20.951,
-      "end": 21.139
+      "char": "部",
+      "start": 19.76,
+      "end": 20.0
     },
     {
       "index": 80,
-      "char": "接",
-      "start": 21.175,
-      "end": 21.363
-    },
-    {
-      "index": 81,
-      "char": "口",
-      "start": 21.399,
-      "end": 21.587
-    },
-    {
-      "index": 82,
-      "char": "腔",
-      "start": 21.623,
-      "end": 21.811
-    },
-    {
-      "index": 83,
-      "char": "气",
-      "start": 22.027,
-      "end": 22.214
-    },
-    {
-      "index": 84,
-      "char": "管",
-      "start": 22.25,
-      "end": 22.438
-    },
-    {
-      "index": 85,
-      "char": "和",
-      "start": 22.474,
-      "end": 22.662
-    },
-    {
-      "index": 86,
-      "char": "食",
-      "start": 22.698,
-      "end": 22.886
-    },
-    {
-      "index": 87,
-      "char": "管",
-      "start": 22.922,
-      "end": 23.11
-    },
-    {
-      "index": 88,
-      "char": "的",
-      "start": 23.145,
-      "end": 23.333
-    },
-    {
-      "index": 89,
-      "char": "部",
-      "start": 23.369,
-      "end": 23.557
-    },
-    {
-      "index": 90,
       "char": "位",
-      "start": 23.593,
-      "end": 23.781
-    },
-    {
-      "index": 91,
-      "char": "这",
-      "start": 24.157,
-      "end": 24.345
-    },
-    {
-      "index": 92,
-      "char": "是",
-      "start": 24.38,
-      "end": 24.568
-    },
-    {
-      "index": 93,
-      "char": "一",
-      "start": 24.604,
-      "end": 24.792
-    },
-    {
-      "index": 94,
-      "char": "幅",
-      "start": 24.828,
-      "end": 25.016
-    },
-    {
-      "index": 95,
-      "char": "帮",
-      "start": 25.052,
-      "end": 25.24
-    },
-    {
-      "index": 96,
-      "char": "助",
-      "start": 25.276,
-      "end": 25.464
-    },
-    {
-      "index": 97,
-      "char": "记",
-      "start": 25.499,
-      "end": 25.687
-    },
-    {
-      "index": 98,
-      "char": "笔",
-      "start": 25.723,
-      "end": 25.911
-    },
-    {
-      "index": 99,
-      "char": "画",
-      "start": 25.947,
-      "end": 26.135
-    },
-    {
-      "index": 100,
-      "char": "和",
-      "start": 26.171,
-      "end": 26.359
-    },
-    {
-      "index": 101,
-      "char": "位",
-      "start": 26.394,
-      "end": 26.582
-    },
-    {
-      "index": 102,
-      "char": "置",
-      "start": 26.618,
-      "end": 26.806
-    },
-    {
-      "index": 103,
-      "char": "的",
-      "start": 26.842,
-      "end": 27.03
-    },
-    {
-      "index": 104,
-      "char": "记",
-      "start": 27.066,
-      "end": 27.254
-    },
-    {
-      "index": 105,
-      "char": "忆",
-      "start": 27.289,
-      "end": 27.477
-    },
-    {
-      "index": 106,
-      "char": "画",
-      "start": 27.513,
-      "end": 27.701
-    },
-    {
-      "index": 107,
-      "char": "面",
-      "start": 27.737,
-      "end": 27.925
-    },
-    {
-      "index": 108,
-      "char": "不",
-      "start": 28.141,
-      "end": 28.329
-    },
-    {
-      "index": 109,
-      "char": "是",
-      "start": 28.365,
-      "end": 28.553
-    },
-    {
-      "index": 110,
-      "char": "完",
-      "start": 28.588,
-      "end": 28.776
-    },
-    {
-      "index": 111,
-      "char": "整",
-      "start": 28.812,
-      "end": 29
-    },
-    {
-      "index": 112,
-      "char": "字",
-      "start": 29.036,
-      "end": 29.224
-    },
-    {
-      "index": 113,
-      "char": "源",
-      "start": 29.26,
-      "end": 29.448
-    },
-    {
-      "index": 114,
-      "char": "最",
-      "start": 29.823,
-      "end": 30.011
-    },
-    {
-      "index": 115,
-      "char": "后",
-      "start": 30.047,
-      "end": 30.235
-    },
-    {
-      "index": 116,
-      "char": "再",
-      "start": 30.271,
-      "end": 30.459
-    },
-    {
-      "index": 117,
-      "char": "读",
-      "start": 30.495,
-      "end": 30.683
-    },
-    {
-      "index": 118,
-      "char": "一",
-      "start": 30.719,
-      "end": 30.906
-    },
-    {
-      "index": 119,
-      "char": "遍",
-      "start": 30.942,
-      "end": 31.13
-    },
-    {
-      "index": 120,
-      "char": "喉",
-      "start": 31.346,
-      "end": 31.534
-    },
-    {
-      "index": 121,
-      "char": "咙",
-      "start": 31.57,
-      "end": 31.758
+      "start": 20.0,
+      "end": 20.16
     }
   ],
-  "transcript": "喉，“喉咙”的“喉”，读hóu。它是左右结构，按顺序能看到“口”和“侯”。从构字分工看，“口”提示意义类别，“侯”提供读音线索。看图时，左边张口形成“口”，右边人物、喉管和吞咽路线沿“侯”排列，组成“喉”。喉咙是颈部里面连接口腔、气管和食管的部位。这是一幅帮助记笔画和位置的记忆画面，不是完整字源。最后再读一遍：喉咙。",
+  "transcript": "饭桌上的感动涌上来时，人的喉咙会发紧，话也可能慢下来。喉是左右结构，左边是口字旁，右边可以想成人物、喉管和吞咽路线。沿着口腔向颈部寻找通道。喉咙是颈部里面连接口腔、气管和食管的部位。",
   "voice_reference": "封",
-  "timing_source": "punctuation-weighted-estimate",
-  "script_version": "child-first-v2",
-  "duration": 32.320181
+  "reference_id": "019f0554-ea22-762e-966c-32d678fd6bf6",
+  "reference_sha256": "eb07e06ee13a20ee4577b1b481df6d33d42127c1b3876bfa5d5e5362ae349f19",
+  "timing_source": "qwen3-forced-aligner",
+  "script_version": "narration-v3",
+  "model": "mlx-community/Qwen3-TTS-12Hz-1.7B-Base-4bit",
+  "model_revision": "37e955a1deb861c088ae5f3a67043185f3d1a60c",
+  "generation_policy": "qwen3-clone-2026-08-22-v3",
+  "seed": 20260822,
+  "content_hash": "e6802f3549ae0f310364",
+  "duration": 20.184,
+  "alignment_model": "mlx-community/Qwen3-ForcedAligner-0.6B-8bit",
+  "aligned_audio_sha256": "f83c4c67e0a5b6b6f1768871d5607ec32657462c4bf1363083649ed52d4ce12d",
+  "alignment_groups": []
 }

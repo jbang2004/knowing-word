@@ -2,764 +2,636 @@
   "marks": [
     {
       "index": 0,
-      "char": "炭",
-      "start": 0.292,
-      "end": 0.458
+      "char": "煤",
+      "start": 0.08,
+      "end": 0.24
     },
     {
       "index": 1,
-      "char": "煤",
-      "start": 0.67,
-      "end": 0.836
+      "char": "炭",
+      "start": 0.24,
+      "end": 0.48
     },
     {
       "index": 2,
-      "char": "炭",
-      "start": 0.867,
-      "end": 1.034
+      "char": "的",
+      "start": 0.48,
+      "end": 0.56
     },
     {
       "index": 3,
-      "char": "的",
-      "start": 1.065,
-      "end": 1.231
+      "char": "形",
+      "start": 0.56,
+      "end": 0.8
     },
     {
       "index": 4,
-      "char": "炭",
-      "start": 1.263,
-      "end": 1.429
+      "char": "成",
+      "start": 0.8,
+      "end": 1.04
     },
     {
       "index": 5,
-      "char": "读",
-      "start": 1.641,
-      "end": 1.807
+      "char": "和",
+      "start": 1.04,
+      "end": 1.28
     },
     {
       "index": 6,
-      "char": "t",
-      "start": 1.839,
-      "end": 2.005
+      "char": "古",
+      "start": 1.28,
+      "end": 1.44
     },
     {
       "index": 7,
-      "char": "à",
-      "start": 2.036,
-      "end": 2.202
+      "char": "代",
+      "start": 1.44,
+      "end": 1.6
     },
     {
       "index": 8,
-      "char": "n",
-      "start": 2.234,
-      "end": 2.4
+      "char": "植",
+      "start": 1.6,
+      "end": 1.84
     },
     {
       "index": 9,
-      "char": "它",
-      "start": 2.772,
-      "end": 2.938
+      "char": "物",
+      "start": 1.84,
+      "end": 1.92
     },
     {
       "index": 10,
-      "char": "是",
-      "start": 2.97,
-      "end": 3.136
+      "char": "有",
+      "start": 1.92,
+      "end": 2.16
     },
     {
       "index": 11,
-      "char": "上",
-      "start": 3.167,
-      "end": 3.334
+      "char": "关",
+      "start": 2.16,
+      "end": 2.48
     },
     {
       "index": 12,
-      "char": "下",
-      "start": 3.365,
-      "end": 3.531
+      "char": "植",
+      "start": 2.96,
+      "end": 3.12
     },
     {
       "index": 13,
-      "char": "结",
-      "start": 3.563,
-      "end": 3.729
+      "char": "物",
+      "start": 3.12,
+      "end": 3.28
     },
     {
       "index": 14,
-      "char": "构",
-      "start": 3.761,
-      "end": 3.927
+      "char": "生",
+      "start": 3.28,
+      "end": 3.52
     },
     {
       "index": 15,
-      "char": "按",
-      "start": 4.139,
-      "end": 4.305
+      "char": "长",
+      "start": 3.52,
+      "end": 3.76
     },
     {
       "index": 16,
-      "char": "顺",
-      "start": 4.336,
-      "end": 4.502
+      "char": "也",
+      "start": 3.76,
+      "end": 4.0
     },
     {
       "index": 17,
-      "char": "序",
-      "start": 4.534,
-      "end": 4.7
+      "char": "离",
+      "start": 4.0,
+      "end": 4.08
     },
     {
       "index": 18,
-      "char": "能",
-      "start": 4.732,
-      "end": 4.898
+      "char": "不",
+      "start": 4.08,
+      "end": 4.16
     },
     {
       "index": 19,
-      "char": "看",
-      "start": 4.93,
-      "end": 5.096
+      "char": "开",
+      "start": 4.16,
+      "end": 4.4
     },
     {
       "index": 20,
-      "char": "到",
-      "start": 5.127,
-      "end": 5.294
+      "char": "太",
+      "start": 4.4,
+      "end": 4.64
     },
     {
       "index": 21,
-      "char": "山",
-      "start": 5.325,
-      "end": 5.491
+      "char": "阳",
+      "start": 4.64,
+      "end": 4.72
     },
     {
       "index": 22,
-      "char": "和",
-      "start": 5.523,
-      "end": 5.689
+      "char": "能",
+      "start": 4.72,
+      "end": 4.96
     },
     {
       "index": 23,
-      "char": "灰",
-      "start": 5.721,
-      "end": 5.887
+      "char": "量",
+      "start": 4.96,
+      "end": 5.28
     },
     {
       "index": 24,
-      "char": "从",
-      "start": 6.259,
-      "end": 6.425
+      "char": "炭",
+      "start": 5.68,
+      "end": 6.0
     },
     {
       "index": 25,
-      "char": "构",
-      "start": 6.456,
-      "end": 6.622
+      "char": "是",
+      "start": 6.0,
+      "end": 6.24
     },
     {
       "index": 26,
-      "char": "字",
-      "start": 6.654,
-      "end": 6.82
+      "char": "上",
+      "start": 6.24,
+      "end": 6.4
     },
     {
       "index": 27,
-      "char": "分",
-      "start": 6.852,
-      "end": 7.018
+      "char": "下",
+      "start": 6.4,
+      "end": 6.64
     },
     {
       "index": 28,
-      "char": "工",
-      "start": 7.05,
-      "end": 7.216
+      "char": "结",
+      "start": 6.64,
+      "end": 6.8
     },
     {
       "index": 29,
-      "char": "看",
-      "start": 7.247,
-      "end": 7.414
+      "char": "构",
+      "start": 6.8,
+      "end": 7.12
     },
     {
       "index": 30,
-      "char": "灰",
-      "start": 7.625,
-      "end": 7.791
+      "char": "上",
+      "start": 7.36,
+      "end": 7.6
     },
     {
       "index": 31,
-      "char": "提",
-      "start": 7.823,
-      "end": 7.989
+      "char": "面",
+      "start": 7.6,
+      "end": 7.76
     },
     {
       "index": 32,
-      "char": "示",
-      "start": 8.021,
-      "end": 8.187
+      "char": "是",
+      "start": 7.76,
+      "end": 8.0
     },
     {
       "index": 33,
-      "char": "意",
-      "start": 8.219,
-      "end": 8.385
+      "char": "山",
+      "start": 8.0,
+      "end": 8.4
     },
     {
       "index": 34,
-      "char": "义",
-      "start": 8.416,
-      "end": 8.582
+      "char": "下",
+      "start": 8.48,
+      "end": 8.72
     },
     {
       "index": 35,
-      "char": "类",
-      "start": 8.614,
-      "end": 8.78
+      "char": "面",
+      "start": 8.72,
+      "end": 8.88
     },
     {
       "index": 36,
-      "char": "别",
-      "start": 8.812,
-      "end": 8.978
+      "char": "是",
+      "start": 8.88,
+      "end": 9.12
     },
     {
       "index": 37,
-      "char": "山",
-      "start": 9.19,
-      "end": 9.356
+      "char": "灰",
+      "start": 9.12,
+      "end": 9.52
     },
     {
       "index": 38,
-      "char": "提",
-      "start": 9.387,
-      "end": 9.554
+      "char": "想",
+      "start": 9.92,
+      "end": 10.08
     },
     {
       "index": 39,
-      "char": "供",
-      "start": 9.585,
-      "end": 9.751
+      "char": "象",
+      "start": 10.08,
+      "end": 10.32
     },
     {
       "index": 40,
-      "char": "读",
-      "start": 9.783,
-      "end": 9.949
+      "char": "矿",
+      "start": 10.32,
+      "end": 10.48
     },
     {
       "index": 41,
-      "char": "音",
-      "start": 9.981,
-      "end": 10.147
+      "char": "山",
+      "start": 10.48,
+      "end": 10.72
     },
     {
       "index": 42,
-      "char": "线",
-      "start": 10.179,
-      "end": 10.345
+      "char": "下",
+      "start": 10.72,
+      "end": 10.96
     },
     {
       "index": 43,
-      "char": "索",
-      "start": 10.376,
-      "end": 10.543
+      "char": "面",
+      "start": 10.96,
+      "end": 11.12
     },
     {
       "index": 44,
-      "char": "看",
-      "start": 10.914,
-      "end": 11.08
+      "char": "有",
+      "start": 11.12,
+      "end": 11.2
     },
     {
       "index": 45,
-      "char": "图",
-      "start": 11.112,
-      "end": 11.278
+      "char": "黑",
+      "start": 11.2,
+      "end": 11.44
     },
     {
       "index": 46,
-      "char": "时",
-      "start": 11.31,
-      "end": 11.476
+      "char": "色",
+      "start": 11.44,
+      "end": 11.6
     },
     {
       "index": 47,
-      "char": "上",
-      "start": 11.687,
-      "end": 11.854
+      "char": "煤",
+      "start": 11.6,
+      "end": 11.84
     },
     {
       "index": 48,
-      "char": "方",
-      "start": 11.885,
-      "end": 12.051
+      "char": "块",
+      "start": 11.84,
+      "end": 12.08
     },
     {
       "index": 49,
-      "char": "矿",
-      "start": 12.083,
-      "end": 12.249
+      "char": "和",
+      "start": 12.16,
+      "end": 12.24
     },
     {
       "index": 50,
-      "char": "山",
-      "start": 12.281,
-      "end": 12.447
+      "char": "少",
+      "start": 12.24,
+      "end": 12.48
     },
     {
       "index": 51,
-      "char": "形",
-      "start": 12.479,
-      "end": 12.645
+      "char": "量",
+      "start": 12.48,
+      "end": 12.64
     },
     {
       "index": 52,
-      "char": "成",
-      "start": 12.676,
-      "end": 12.843
+      "char": "灰",
+      "start": 12.64,
+      "end": 12.88
     },
     {
       "index": 53,
-      "char": "山",
-      "start": 12.874,
-      "end": 13.04
+      "char": "迹",
+      "start": 12.88,
+      "end": 13.28
     },
     {
       "index": 54,
-      "char": "下",
-      "start": 13.252,
-      "end": 13.418
+      "char": "煤",
+      "start": 13.52,
+      "end": 13.76
     },
     {
       "index": 55,
-      "char": "方",
-      "start": 13.45,
-      "end": 13.616
+      "char": "炭",
+      "start": 13.76,
+      "end": 14.0
     },
     {
       "index": 56,
-      "char": "黑",
-      "start": 13.648,
-      "end": 13.814
+      "char": "是",
+      "start": 14.0,
+      "end": 14.16
     },
     {
       "index": 57,
-      "char": "色",
-      "start": 13.845,
-      "end": 14.011
+      "char": "古",
+      "start": 14.16,
+      "end": 14.32
     },
     {
       "index": 58,
-      "char": "煤",
-      "start": 14.043,
-      "end": 14.209
+      "char": "代",
+      "start": 14.32,
+      "end": 14.56
     },
     {
       "index": 59,
-      "char": "块",
-      "start": 14.241,
-      "end": 14.407
+      "char": "植",
+      "start": 14.56,
+      "end": 14.72
     },
     {
       "index": 60,
-      "char": "火",
-      "start": 14.619,
-      "end": 14.785
+      "char": "物",
+      "start": 14.72,
+      "end": 14.88
     },
     {
       "index": 61,
-      "char": "焰",
-      "start": 14.816,
-      "end": 14.983
+      "char": "遗",
+      "start": 14.88,
+      "end": 15.04
     },
     {
       "index": 62,
-      "char": "和",
-      "start": 15.014,
-      "end": 15.18
+      "char": "体",
+      "start": 15.04,
+      "end": 15.36
     },
     {
       "index": 63,
-      "char": "灰",
-      "start": 15.212,
-      "end": 15.378
+      "char": "经",
+      "start": 15.36,
+      "end": 15.6
     },
     {
       "index": 64,
-      "char": "沿",
-      "start": 15.41,
-      "end": 15.576
+      "char": "过",
+      "start": 15.6,
+      "end": 15.68
     },
     {
       "index": 65,
-      "char": "灰",
-      "start": 15.608,
-      "end": 15.774
+      "char": "漫",
+      "start": 15.68,
+      "end": 15.92
     },
     {
       "index": 66,
-      "char": "排",
-      "start": 15.805,
-      "end": 15.971
+      "char": "长",
+      "start": 15.92,
+      "end": 16.16
     },
     {
       "index": 67,
-      "char": "列",
-      "start": 16.003,
-      "end": 16.169
+      "char": "地",
+      "start": 16.16,
+      "end": 16.32
     },
     {
       "index": 68,
-      "char": "整",
-      "start": 16.381,
-      "end": 16.547
+      "char": "质",
+      "start": 16.32,
+      "end": 16.48
     },
     {
       "index": 69,
-      "char": "体",
-      "start": 16.579,
-      "end": 16.745
+      "char": "变",
+      "start": 16.48,
+      "end": 16.64
     },
     {
       "index": 70,
-      "char": "组",
-      "start": 16.776,
-      "end": 16.943
+      "char": "化",
+      "start": 16.64,
+      "end": 16.88
     },
     {
       "index": 71,
-      "char": "成",
-      "start": 16.974,
-      "end": 17.14
+      "char": "形",
+      "start": 16.88,
+      "end": 17.12
     },
     {
       "index": 72,
-      "char": "炭",
-      "start": 17.172,
-      "end": 17.338
+      "char": "成",
+      "start": 17.12,
+      "end": 17.28
     },
     {
       "index": 73,
-      "char": "煤",
-      "start": 17.71,
-      "end": 17.876
+      "char": "的",
+      "start": 17.28,
+      "end": 17.36
     },
     {
       "index": 74,
-      "char": "炭",
-      "start": 17.908,
-      "end": 18.074
+      "char": "燃",
+      "start": 17.36,
+      "end": 17.52
     },
     {
       "index": 75,
-      "char": "是",
-      "start": 18.105,
-      "end": 18.271
+      "char": "料",
+      "start": 17.6,
+      "end": 17.92
     },
     {
       "index": 76,
-      "char": "古",
-      "start": 18.303,
-      "end": 18.469
+      "char": "煤",
+      "start": 18.08,
+      "end": 18.4
     },
     {
       "index": 77,
-      "char": "代",
-      "start": 18.501,
-      "end": 18.667
+      "char": "炭",
+      "start": 18.4,
+      "end": 18.72
     },
     {
       "index": 78,
-      "char": "植",
-      "start": 18.699,
-      "end": 18.865
+      "char": "保",
+      "start": 18.72,
+      "end": 18.88
     },
     {
       "index": 79,
-      "char": "物",
-      "start": 18.896,
-      "end": 19.063
+      "char": "存",
+      "start": 18.88,
+      "end": 19.12
     },
     {
       "index": 80,
-      "char": "遗",
-      "start": 19.094,
-      "end": 19.26
+      "char": "着",
+      "start": 19.12,
+      "end": 19.2
     },
     {
       "index": 81,
-      "char": "体",
-      "start": 19.292,
-      "end": 19.458
+      "char": "远",
+      "start": 19.2,
+      "end": 19.44
     },
     {
       "index": 82,
-      "char": "经",
-      "start": 19.49,
-      "end": 19.656
+      "char": "古",
+      "start": 19.44,
+      "end": 19.68
     },
     {
       "index": 83,
-      "char": "过",
-      "start": 19.688,
-      "end": 19.854
+      "char": "植",
+      "start": 19.68,
+      "end": 20.0
     },
     {
       "index": 84,
-      "char": "漫",
-      "start": 19.885,
-      "end": 20.051
+      "char": "物",
+      "start": 20.0,
+      "end": 20.16
     },
     {
       "index": 85,
-      "char": "长",
-      "start": 20.083,
-      "end": 20.249
+      "char": "获",
+      "start": 20.16,
+      "end": 20.4
     },
     {
       "index": 86,
-      "char": "地",
-      "start": 20.281,
-      "end": 20.447
+      "char": "得",
+      "start": 20.4,
+      "end": 20.48
     },
     {
       "index": 87,
-      "char": "质",
-      "start": 20.479,
-      "end": 20.645
+      "char": "的",
+      "start": 20.48,
+      "end": 20.64
     },
     {
       "index": 88,
-      "char": "变",
-      "start": 20.676,
-      "end": 20.843
+      "char": "太",
+      "start": 20.64,
+      "end": 20.8
     },
     {
       "index": 89,
-      "char": "化",
-      "start": 20.874,
-      "end": 21.04
+      "char": "阳",
+      "start": 20.8,
+      "end": 20.96
     },
     {
       "index": 90,
-      "char": "形",
-      "start": 21.072,
-      "end": 21.238
+      "char": "能",
+      "start": 20.96,
+      "end": 21.2
     },
     {
       "index": 91,
-      "char": "成",
-      "start": 21.27,
-      "end": 21.436
+      "char": "量",
+      "start": 21.2,
+      "end": 21.52
     },
     {
       "index": 92,
-      "char": "的",
-      "start": 21.468,
-      "end": 21.634
+      "char": "课",
+      "start": 21.84,
+      "end": 22.16
     },
     {
       "index": 93,
-      "char": "燃",
-      "start": 21.665,
-      "end": 21.831
+      "char": "文",
+      "start": 22.16,
+      "end": 22.4
     },
     {
       "index": 94,
-      "char": "料",
-      "start": 21.863,
-      "end": 22.029
+      "char": "借",
+      "start": 22.4,
+      "end": 22.56
     },
     {
       "index": 95,
-      "char": "这",
-      "start": 22.401,
-      "end": 22.567
+      "char": "此",
+      "start": 22.56,
+      "end": 22.72
     },
     {
       "index": 96,
-      "char": "是",
-      "start": 22.599,
-      "end": 22.765
+      "char": "说",
+      "start": 22.72,
+      "end": 22.96
     },
     {
       "index": 97,
-      "char": "一",
-      "start": 22.796,
-      "end": 22.963
+      "char": "明",
+      "start": 22.96,
+      "end": 23.12
     },
     {
       "index": 98,
-      "char": "幅",
-      "start": 22.994,
-      "end": 23.16
+      "char": "太",
+      "start": 23.12,
+      "end": 23.36
     },
     {
       "index": 99,
-      "char": "帮",
-      "start": 23.192,
-      "end": 23.358
+      "char": "阳",
+      "start": 23.36,
+      "end": 23.44
     },
     {
       "index": 100,
-      "char": "助",
-      "start": 23.39,
-      "end": 23.556
+      "char": "的",
+      "start": 23.44,
+      "end": 23.6
     },
     {
       "index": 101,
-      "char": "记",
-      "start": 23.588,
-      "end": 23.754
+      "char": "重",
+      "start": 23.6,
+      "end": 23.84
     },
     {
       "index": 102,
-      "char": "笔",
-      "start": 23.785,
-      "end": 23.951
-    },
-    {
-      "index": 103,
-      "char": "画",
-      "start": 23.983,
-      "end": 24.149
-    },
-    {
-      "index": 104,
-      "char": "和",
-      "start": 24.181,
-      "end": 24.347
-    },
-    {
-      "index": 105,
-      "char": "位",
-      "start": 24.379,
-      "end": 24.545
-    },
-    {
-      "index": 106,
-      "char": "置",
-      "start": 24.576,
-      "end": 24.743
-    },
-    {
-      "index": 107,
-      "char": "的",
-      "start": 24.774,
-      "end": 24.94
-    },
-    {
-      "index": 108,
-      "char": "记",
-      "start": 24.972,
-      "end": 25.138
-    },
-    {
-      "index": 109,
-      "char": "忆",
-      "start": 25.17,
-      "end": 25.336
-    },
-    {
-      "index": 110,
-      "char": "画",
-      "start": 25.368,
-      "end": 25.534
-    },
-    {
-      "index": 111,
-      "char": "面",
-      "start": 25.565,
-      "end": 25.731
-    },
-    {
-      "index": 112,
-      "char": "不",
-      "start": 25.943,
-      "end": 26.109
-    },
-    {
-      "index": 113,
-      "char": "是",
-      "start": 26.141,
-      "end": 26.307
-    },
-    {
-      "index": 114,
-      "char": "完",
-      "start": 26.339,
-      "end": 26.505
-    },
-    {
-      "index": 115,
-      "char": "整",
-      "start": 26.536,
-      "end": 26.703
-    },
-    {
-      "index": 116,
-      "char": "字",
-      "start": 26.734,
-      "end": 26.9
-    },
-    {
-      "index": 117,
-      "char": "源",
-      "start": 26.932,
-      "end": 27.098
-    },
-    {
-      "index": 118,
-      "char": "最",
-      "start": 27.47,
-      "end": 27.636
-    },
-    {
-      "index": 119,
-      "char": "后",
-      "start": 27.668,
-      "end": 27.834
-    },
-    {
-      "index": 120,
-      "char": "再",
-      "start": 27.865,
-      "end": 28.032
-    },
-    {
-      "index": 121,
-      "char": "读",
-      "start": 28.063,
-      "end": 28.229
-    },
-    {
-      "index": 122,
-      "char": "一",
-      "start": 28.261,
-      "end": 28.427
-    },
-    {
-      "index": 123,
-      "char": "遍",
-      "start": 28.459,
-      "end": 28.625
-    },
-    {
-      "index": 124,
-      "char": "煤",
-      "start": 28.836,
-      "end": 29.003
-    },
-    {
-      "index": 125,
-      "char": "炭",
-      "start": 29.034,
-      "end": 29.2
+      "char": "要",
+      "start": 23.84,
+      "end": 24.0
     }
   ],
-  "transcript": "炭，“煤炭”的“炭”，读tàn。它是上下结构，按顺序能看到“山”和“灰”。从构字分工看，“灰”提示意义类别，“山”提供读音线索。看图时，上方矿山形成“山”，下方黑色煤块、火焰和灰沿“灰”排列，整体组成“炭”。煤炭是古代植物遗体经过漫长地质变化形成的燃料。这是一幅帮助记笔画和位置的记忆画面，不是完整字源。最后再读一遍：煤炭。",
+  "transcript": "煤炭的形成和古代植物有关，植物生长也离不开太阳能量。炭是上下结构，上面是山，下面是灰。想象矿山下面有黑色煤块和少量灰迹。煤炭是古代植物遗体经过漫长地质变化形成的燃料。煤炭保存着远古植物获得的太阳能量，课文借此说明太阳的重要。",
   "voice_reference": "封",
-  "timing_source": "punctuation-weighted-estimate",
-  "script_version": "child-first-v2",
-  "duration": 29.760181
+  "reference_id": "019f0554-ea22-762e-966c-32d678fd6bf6",
+  "reference_sha256": "eb07e06ee13a20ee4577b1b481df6d33d42127c1b3876bfa5d5e5362ae349f19",
+  "timing_source": "qwen3-forced-aligner",
+  "script_version": "narration-v3",
+  "model": "mlx-community/Qwen3-TTS-12Hz-1.7B-Base-4bit",
+  "model_revision": "37e955a1deb861c088ae5f3a67043185f3d1a60c",
+  "generation_policy": "qwen3-clone-2026-08-22-v3",
+  "seed": 20260822,
+  "content_hash": "88194ce584083ff15af9",
+  "duration": 24.074,
+  "alignment_model": "mlx-community/Qwen3-ForcedAligner-0.6B-8bit",
+  "aligned_audio_sha256": "dcd4f069f3fa2c1187da45c5a4fd4fbf45200f97549b7ea53c09bcf57629fc5d",
+  "alignment_groups": []
 }

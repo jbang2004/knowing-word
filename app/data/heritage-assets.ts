@@ -3,6 +3,8 @@ export type AudioMark = {
   char: string;
   start: number;
   end: number;
+  alignment_group?: string | number;
+  alignment_group_text?: string;
 };
 
 export type HeritageAsset = {

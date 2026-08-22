@@ -32,6 +32,12 @@ export function nextResumeIndex(currentIndex: number, total: number, correct: bo
   return Math.min(currentIndex + 1, Math.max(0, total - 1));
 }
 
+// Advancing past a question without grading it (skip) still moves the resume
+// point forward; keep the single source of this rule next to nextResumeIndex.
+export function advanceResumeIndex(currentIndex: number, total: number) {
+  return Math.min(currentIndex + 1, Math.max(0, total - 1));
+}
+
 export function isQuestionSetComplete(
   questionIds: string[],
   currentQuestionId: string,

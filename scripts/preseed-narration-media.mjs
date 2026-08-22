@@ -3,6 +3,10 @@ import { dirname, join, resolve } from "node:path";
 import { narrationAssets } from "../app/data/narration-assets.ts";
 
 const projectRoot = resolve(import.meta.dirname, "..");
+const narrationVersion = "v3";
+const narrationSourceRoot = resolve(
+  process.env.NARRATION_SOURCE_ROOT || join(projectRoot, "public/narration"),
+);
 const siteUrl = (process.env.SITE_URL || process.argv[2] || "").replace(/\/+$/, "");
 if (!/^https?:\/\//.test(siteUrl)) {
   throw new Error("Pass the current deployed site URL through SITE_URL or as the first argument.");
@@ -38,7 +42,7 @@ async function request(path, init) {
 }
 
 function seedTag(relative) {
-  return `builtin:narration:v2:${relative}`;
+  return `builtin:narration:${narrationVersion}:${relative}`;
 }
 
 async function isSeeded(relative) {
@@ -53,7 +57,7 @@ async function isSeeded(relative) {
 
 async function upload(relative) {
   if (await isSeeded(relative)) return "reused";
-  const bytes = await readFile(join(projectRoot, "public/narration", relative));
+  const bytes = await readFile(join(narrationSourceRoot, relative));
   const response = await request(
     `/api/recordings?lessonId=${encodeURIComponent(seedTag(relative))}`,
     {

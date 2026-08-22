@@ -2,512 +2,672 @@
   "marks": [
     {
       "index": 0,
-      "char": "无",
-      "start": 0.295,
-      "end": 0.503
+      "char": "为",
+      "start": 0.08,
+      "end": 0.16
     },
     {
       "index": 1,
-      "char": "无",
-      "start": 0.723,
-      "end": 0.931
+      "char": "了",
+      "start": 0.16,
+      "end": 0.32
     },
     {
       "index": 2,
-      "char": "穷",
-      "start": 0.971,
-      "end": 1.179
+      "char": "对",
+      "start": 0.32,
+      "end": 0.48
     },
     {
       "index": 3,
-      "char": "无",
-      "start": 1.219,
-      "end": 1.428
+      "char": "付",
+      "start": 0.48,
+      "end": 0.64
     },
     {
       "index": 4,
-      "char": "尽",
-      "start": 1.467,
-      "end": 1.676
+      "char": "敌",
+      "start": 0.64,
+      "end": 0.88
     },
     {
       "index": 5,
-      "char": "的",
-      "start": 1.715,
-      "end": 1.924
+      "char": "人",
+      "start": 0.88,
+      "end": 1.12
     },
     {
       "index": 6,
-      "char": "无",
-      "start": 1.963,
-      "end": 2.172
+      "char": "冀",
+      "start": 1.52,
+      "end": 1.68
     },
     {
       "index": 7,
-      "char": "无",
-      "start": 2.552,
-      "end": 2.76
+      "char": "中",
+      "start": 1.68,
+      "end": 1.84
     },
     {
       "index": 8,
-      "char": "是",
-      "start": 2.8,
-      "end": 3.008
+      "char": "人",
+      "start": 1.84,
+      "end": 2.0
     },
     {
       "index": 9,
-      "char": "独",
-      "start": 3.048,
-      "end": 3.256
+      "char": "民",
+      "start": 2.0,
+      "end": 2.16
     },
     {
       "index": 10,
-      "char": "体",
-      "start": 3.296,
-      "end": 3.504
+      "char": "想",
+      "start": 2.16,
+      "end": 2.32
     },
     {
       "index": 11,
-      "char": "字",
-      "start": 3.544,
-      "end": 3.752
+      "char": "出",
+      "start": 2.4,
+      "end": 2.56
     },
     {
       "index": 12,
-      "char": "适",
-      "start": 3.972,
-      "end": 4.18
+      "char": "的",
+      "start": 2.56,
+      "end": 2.64
     },
     {
       "index": 13,
-      "char": "合",
-      "start": 4.22,
-      "end": 4.429
+      "char": "办",
+      "start": 2.64,
+      "end": 2.88
     },
     {
       "index": 14,
-      "char": "把",
-      "start": 4.468,
-      "end": 4.677
+      "char": "法",
+      "start": 2.88,
+      "end": 3.2
     },
     {
       "index": 15,
-      "char": "整",
-      "start": 4.716,
-      "end": 4.925
+      "char": "无",
+      "start": 3.2,
+      "end": 3.36
     },
     {
       "index": 16,
-      "char": "体",
-      "start": 4.964,
-      "end": 5.173
+      "char": "穷",
+      "start": 3.36,
+      "end": 3.6
     },
     {
       "index": 17,
-      "char": "轮",
-      "start": 5.213,
-      "end": 5.421
+      "char": "无",
+      "start": 3.6,
+      "end": 3.84
     },
     {
       "index": 18,
-      "char": "廓",
-      "start": 5.461,
-      "end": 5.669
+      "char": "尽",
+      "start": 3.84,
+      "end": 4.16
     },
     {
       "index": 19,
-      "char": "一",
-      "start": 5.709,
-      "end": 5.917
+      "char": "无",
+      "start": 4.8,
+      "end": 4.96
     },
     {
       "index": 20,
-      "char": "起",
-      "start": 5.957,
-      "end": 6.165
+      "char": "适",
+      "start": 4.96,
+      "end": 5.2
     },
     {
       "index": 21,
-      "char": "记",
-      "start": 6.205,
-      "end": 6.413
+      "char": "合",
+      "start": 5.2,
+      "end": 5.36
     },
     {
       "index": 22,
-      "char": "住",
-      "start": 6.453,
-      "end": 6.661
+      "char": "整",
+      "start": 5.36,
+      "end": 5.6
     },
     {
       "index": 23,
-      "char": "看",
-      "start": 7.041,
-      "end": 7.25
+      "char": "体",
+      "start": 5.6,
+      "end": 5.76
     },
     {
       "index": 24,
-      "char": "图",
-      "start": 7.289,
-      "end": 7.498
+      "char": "观",
+      "start": 5.76,
+      "end": 5.92
     },
     {
       "index": 25,
-      "char": "时",
-      "start": 7.537,
-      "end": 7.746
+      "char": "察",
+      "start": 5.92,
+      "end": 6.32
     },
     {
       "index": 26,
-      "char": "舞",
-      "start": 7.965,
-      "end": 8.174
+      "char": "可",
+      "start": 6.72,
+      "end": 6.88
     },
     {
       "index": 27,
-      "char": "者",
-      "start": 8.214,
-      "end": 8.422
+      "char": "以",
+      "start": 6.88,
+      "end": 7.04
     },
     {
       "index": 28,
-      "char": "松",
-      "start": 8.462,
-      "end": 8.67
+      "char": "想",
+      "start": 7.04,
+      "end": 7.2
     },
     {
       "index": 29,
-      "char": "开",
-      "start": 8.71,
-      "end": 8.918
+      "char": "象",
+      "start": 7.2,
+      "end": 7.44
     },
     {
       "index": 30,
-      "char": "手",
-      "start": 8.958,
-      "end": 9.166
+      "char": "舞",
+      "start": 7.44,
+      "end": 7.6
     },
     {
       "index": 31,
-      "char": "中",
-      "start": 9.206,
-      "end": 9.414
+      "char": "者",
+      "start": 7.6,
+      "end": 7.84
     },
     {
       "index": 32,
-      "char": "的",
-      "start": 9.454,
-      "end": 9.662
+      "char": "松",
+      "start": 7.84,
+      "end": 8.0
     },
     {
       "index": 33,
-      "char": "羽",
-      "start": 9.702,
-      "end": 9.911
+      "char": "开",
+      "start": 8.0,
+      "end": 8.16
     },
     {
       "index": 34,
-      "char": "毛",
-      "start": 9.95,
-      "end": 10.159
+      "char": "手",
+      "start": 8.16,
+      "end": 8.4
     },
     {
       "index": 35,
-      "char": "长",
-      "start": 10.378,
-      "end": 10.587
+      "char": "里",
+      "start": 8.4,
+      "end": 8.56
     },
     {
       "index": 36,
-      "char": "绸",
-      "start": 10.626,
-      "end": 10.835
+      "char": "的",
+      "start": 8.56,
+      "end": 8.64
     },
     {
       "index": 37,
-      "char": "在",
-      "start": 10.874,
-      "end": 11.083
+      "char": "羽",
+      "start": 8.64,
+      "end": 8.8
     },
     {
       "index": 38,
-      "char": "空",
-      "start": 11.123,
-      "end": 11.331
+      "char": "毛",
+      "start": 8.8,
+      "end": 9.12
     },
     {
       "index": 39,
-      "char": "中",
-      "start": 11.371,
-      "end": 11.579
+      "char": "长",
+      "start": 9.44,
+      "end": 9.6
     },
     {
       "index": 40,
-      "char": "飘",
-      "start": 11.619,
-      "end": 11.827
+      "char": "绸",
+      "start": 9.6,
+      "end": 9.84
     },
     {
       "index": 41,
-      "char": "走",
-      "start": 11.867,
-      "end": 12.075
+      "char": "飘",
+      "start": 9.84,
+      "end": 10.08
     },
     {
       "index": 42,
-      "char": "手",
-      "start": 12.295,
-      "end": 12.503
+      "char": "走",
+      "start": 10.08,
+      "end": 10.4
     },
     {
       "index": 43,
-      "char": "里",
-      "start": 12.543,
-      "end": 12.751
+      "char": "手",
+      "start": 10.64,
+      "end": 10.88
     },
     {
       "index": 44,
-      "char": "变",
-      "start": 12.791,
-      "end": 13
+      "char": "中",
+      "start": 10.88,
+      "end": 11.04
     },
     {
       "index": 45,
-      "char": "得",
-      "start": 13.039,
-      "end": 13.248
+      "char": "空",
+      "start": 11.04,
+      "end": 11.28
     },
     {
       "index": 46,
-      "char": "什",
-      "start": 13.287,
-      "end": 13.496
+      "char": "了",
+      "start": 11.28,
+      "end": 11.52
     },
     {
       "index": 47,
-      "char": "么",
-      "start": 13.535,
-      "end": 13.744
+      "char": "羽",
+      "start": 12.0,
+      "end": 12.16
     },
     {
       "index": 48,
-      "char": "也",
-      "start": 13.784,
-      "end": 13.992
+      "char": "毛",
+      "start": 12.16,
+      "end": 12.32
     },
     {
       "index": 49,
-      "char": "没",
-      "start": 14.032,
-      "end": 14.24
+      "char": "和",
+      "start": 12.32,
+      "end": 12.56
     },
     {
       "index": 50,
-      "char": "有",
-      "start": 14.28,
-      "end": 14.488
+      "char": "长",
+      "start": 12.56,
+      "end": 12.8
     },
     {
       "index": 51,
-      "char": "这",
-      "start": 14.868,
-      "end": 15.076
+      "char": "绸",
+      "start": 12.8,
+      "end": 13.04
     },
     {
       "index": 52,
-      "char": "个",
-      "start": 15.116,
-      "end": 15.324
+      "char": "都",
+      "start": 13.04,
+      "end": 13.12
     },
     {
       "index": 53,
-      "char": "画",
-      "start": 15.364,
-      "end": 15.572
+      "char": "飘",
+      "start": 13.12,
+      "end": 13.44
     },
     {
       "index": 54,
-      "char": "面",
-      "start": 15.612,
-      "end": 15.821
+      "char": "走",
+      "start": 13.44,
+      "end": 13.6
     },
     {
       "index": 55,
-      "char": "帮",
-      "start": 15.86,
-      "end": 16.069
+      "char": "了",
+      "start": 13.6,
+      "end": 13.92
     },
     {
       "index": 56,
-      "char": "助",
-      "start": 16.108,
-      "end": 16.317
+      "char": "手",
+      "start": 14.16,
+      "end": 14.4
     },
     {
       "index": 57,
-      "char": "记",
-      "start": 16.356,
-      "end": 16.565
+      "char": "中",
+      "start": 14.4,
+      "end": 14.56
     },
     {
       "index": 58,
-      "char": "形",
-      "start": 16.605,
-      "end": 16.813
+      "char": "空",
+      "start": 14.56,
+      "end": 14.8
     },
     {
       "index": 59,
-      "char": "无",
-      "start": 17.193,
-      "end": 17.401
+      "char": "下",
+      "start": 14.8,
+      "end": 15.04
     },
     {
       "index": 60,
-      "char": "表",
-      "start": 17.441,
-      "end": 17.649
+      "char": "来",
+      "start": 15.04,
+      "end": 15.28
     },
     {
       "index": 61,
-      "char": "示",
-      "start": 17.689,
-      "end": 17.897
+      "char": "无",
+      "start": 15.68,
+      "end": 15.76
     },
     {
       "index": 62,
-      "char": "没",
-      "start": 17.937,
-      "end": 18.145
+      "char": "的",
+      "start": 15.76,
+      "end": 15.84
     },
     {
       "index": 63,
-      "char": "有",
-      "start": 18.185,
-      "end": 18.393
+      "char": "意",
+      "start": 15.84,
+      "end": 16.08
     },
     {
       "index": 64,
-      "char": "和",
-      "start": 18.613,
-      "end": 18.822
+      "char": "思",
+      "start": 16.08,
+      "end": 16.4
     },
     {
       "index": 65,
-      "char": "有",
-      "start": 18.861,
-      "end": 19.07
+      "char": "也",
+      "start": 16.48,
+      "end": 16.56
     },
     {
       "index": 66,
-      "char": "相",
-      "start": 19.109,
-      "end": 19.318
+      "char": "跟",
+      "start": 16.56,
+      "end": 16.8
     },
     {
       "index": 67,
-      "char": "对",
-      "start": 19.357,
-      "end": 19.566
+      "char": "着",
+      "start": 16.8,
+      "end": 16.88
     },
     {
       "index": 68,
-      "char": "无",
-      "start": 19.946,
-      "end": 20.154
+      "char": "出",
+      "start": 16.88,
+      "end": 17.12
     },
     {
       "index": 69,
-      "char": "穷",
-      "start": 20.194,
-      "end": 20.402
+      "char": "现",
+      "start": 17.12,
+      "end": 17.44
     },
     {
       "index": 70,
       "char": "无",
-      "start": 20.442,
-      "end": 20.65
+      "start": 17.84,
+      "end": 18.0
     },
     {
       "index": 71,
-      "char": "尽",
-      "start": 20.69,
-      "end": 20.898
+      "char": "表",
+      "start": 18.0,
+      "end": 18.24
     },
     {
       "index": 72,
-      "char": "就",
-      "start": 21.118,
-      "end": 21.326
+      "char": "示",
+      "start": 18.24,
+      "end": 18.4
     },
     {
       "index": 73,
-      "char": "是",
-      "start": 21.366,
-      "end": 21.574
+      "char": "没",
+      "start": 18.4,
+      "end": 18.64
     },
     {
       "index": 74,
-      "char": "既",
-      "start": 21.614,
-      "end": 21.822
+      "char": "有",
+      "start": 18.64,
+      "end": 18.88
     },
     {
       "index": 75,
-      "char": "没",
-      "start": 21.862,
-      "end": 22.071
+      "char": "无",
+      "start": 19.52,
+      "end": 19.6
     },
     {
       "index": 76,
-      "char": "有",
-      "start": 22.11,
-      "end": 22.319
+      "char": "穷",
+      "start": 19.6,
+      "end": 19.84
     },
     {
       "index": 77,
-      "char": "边",
-      "start": 22.358,
-      "end": 22.567
+      "char": "无",
+      "start": 19.84,
+      "end": 20.0
     },
     {
       "index": 78,
-      "char": "界",
-      "start": 22.606,
-      "end": 22.815
+      "char": "尽",
+      "start": 20.0,
+      "end": 20.32
     },
     {
       "index": 79,
-      "char": "也",
-      "start": 23.035,
-      "end": 23.243
+      "char": "就",
+      "start": 20.4,
+      "end": 20.56
     },
     {
       "index": 80,
-      "char": "没",
-      "start": 23.283,
-      "end": 23.491
+      "char": "是",
+      "start": 20.56,
+      "end": 20.64
     },
     {
       "index": 81,
-      "char": "有",
-      "start": 23.531,
-      "end": 23.739
+      "char": "没",
+      "start": 20.64,
+      "end": 20.8
     },
     {
       "index": 82,
-      "char": "尽",
-      "start": 23.779,
-      "end": 23.987
+      "char": "有",
+      "start": 20.8,
+      "end": 20.96
     },
     {
       "index": 83,
+      "char": "边",
+      "start": 20.96,
+      "end": 21.12
+    },
+    {
+      "index": 84,
+      "char": "界",
+      "start": 21.12,
+      "end": 21.36
+    },
+    {
+      "index": 85,
+      "char": "和",
+      "start": 21.36,
+      "end": 21.6
+    },
+    {
+      "index": 86,
+      "char": "尽",
+      "start": 21.6,
+      "end": 21.84
+    },
+    {
+      "index": 87,
       "char": "头",
-      "start": 24.027,
-      "end": 24.235
+      "start": 21.84,
+      "end": 22.24
+    },
+    {
+      "index": 88,
+      "char": "无",
+      "start": 22.32,
+      "end": 22.4
+    },
+    {
+      "index": 89,
+      "char": "穷",
+      "start": 22.4,
+      "end": 22.64
+    },
+    {
+      "index": 90,
+      "char": "无",
+      "start": 22.64,
+      "end": 22.8
+    },
+    {
+      "index": 91,
+      "char": "尽",
+      "start": 22.8,
+      "end": 23.12
+    },
+    {
+      "index": 92,
+      "char": "连",
+      "start": 23.12,
+      "end": 23.36
+    },
+    {
+      "index": 93,
+      "char": "着",
+      "start": 23.36,
+      "end": 23.52
+    },
+    {
+      "index": 94,
+      "char": "人",
+      "start": 23.52,
+      "end": 23.68
+    },
+    {
+      "index": 95,
+      "char": "民",
+      "start": 23.68,
+      "end": 23.84
+    },
+    {
+      "index": 96,
+      "char": "想",
+      "start": 23.84,
+      "end": 24.0
+    },
+    {
+      "index": 97,
+      "char": "出",
+      "start": 24.16,
+      "end": 24.32
+    },
+    {
+      "index": 98,
+      "char": "的",
+      "start": 24.32,
+      "end": 24.4
+    },
+    {
+      "index": 99,
+      "char": "许",
+      "start": 24.4,
+      "end": 24.56
+    },
+    {
+      "index": 100,
+      "char": "多",
+      "start": 24.56,
+      "end": 24.72
+    },
+    {
+      "index": 101,
+      "char": "办",
+      "start": 24.72,
+      "end": 24.96
+    },
+    {
+      "index": 102,
+      "char": "法",
+      "start": 24.96,
+      "end": 25.28
+    },
+    {
+      "index": 103,
+      "char": "赞",
+      "start": 25.52,
+      "end": 25.84
+    },
+    {
+      "index": 104,
+      "char": "叹",
+      "start": 25.84,
+      "end": 26.16
+    },
+    {
+      "index": 105,
+      "char": "意",
+      "start": 26.24,
+      "end": 26.32
+    },
+    {
+      "index": 106,
+      "char": "味",
+      "start": 26.32,
+      "end": 26.48
+    },
+    {
+      "index": 107,
+      "char": "很",
+      "start": 26.48,
+      "end": 26.72
+    },
+    {
+      "index": 108,
+      "char": "强",
+      "start": 26.72,
+      "end": 27.04
     }
   ],
-  "transcript": "无，无穷无尽的无。无是独体字，适合把整体轮廓一起记住。看图时，舞者松开手中的羽毛，长绸在空中飘走，手里变得什么也没有。这个画面帮助记形。无表示没有，和有相对。无穷无尽，就是既没有边界，也没有尽头。",
+  "transcript": "为了对付敌人，冀中人民想出的办法无穷无尽。无适合整体观察，可以想象舞者松开手里的羽毛，长绸飘走，手中空了。羽毛和长绸都飘走了，手中空下来，无的意思也跟着出现。无表示没有，无穷无尽就是没有边界和尽头。“无穷无尽”连着人民想出的许多办法，赞叹意味很强。",
   "voice_reference": "封",
-  "timing_source": "punctuation-weighted-estimate",
-  "script_version": "child-first-v1",
-  "duration": 24.800181
+  "reference_id": "019f0554-ea22-762e-966c-32d678fd6bf6",
+  "reference_sha256": "eb07e06ee13a20ee4577b1b481df6d33d42127c1b3876bfa5d5e5362ae349f19",
+  "timing_source": "qwen3-forced-aligner",
+  "script_version": "narration-v3",
+  "model": "mlx-community/Qwen3-TTS-12Hz-1.7B-Base-4bit",
+  "model_revision": "37e955a1deb861c088ae5f3a67043185f3d1a60c",
+  "generation_policy": "qwen3-clone-2026-08-22-v3",
+  "seed": 20260822,
+  "content_hash": "98ac4eeb43ea2836da4d",
+  "duration": 27.146,
+  "alignment_model": "mlx-community/Qwen3-ForcedAligner-0.6B-8bit",
+  "aligned_audio_sha256": "8c82fc13d569678727d76b7032effa977d3c09df40950288ed75818721d47b88",
+  "alignment_groups": []
 }

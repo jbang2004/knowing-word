@@ -1,0 +1,63 @@
+/**
+ * Visual component glyphs are useful on screen but are not always speakable.
+ * Keep their classroom names explicit so TTS never guesses how to read them.
+ */
+export const componentSpeech: Readonly<Record<string, string>> = {
+  "㇒": "一撇",
+  "亠": "点横头",
+  "亻": "单人旁",
+  "冫": "两点水",
+  "冖": "秃宝盖",
+  "刂": "立刀旁",
+  "匚": "三框儿",
+  "厂": "厂字旁",
+  "囗": "国字框",
+  "宀": "宝盖头",
+  "廴": "建字底",
+  "彳": "双人旁",
+  "忄": "竖心旁",
+  "扌": "提手旁",
+  "攵": "反文旁",
+  "氵": "三点水",
+  "灬": "四点底",
+  "犭": "反犬旁",
+  "疒": "病字旁",
+  "礻": "示字旁",
+  "纟": "绞丝旁",
+  "罒": "四字头",
+  "艹": "草字头",
+  "衤": "衣字旁",
+  "讠": "言字旁",
+  "辶": "走之底",
+  "钅": "金字旁",
+  "阝-left": "左耳旁",
+  "阝-right": "右耳旁",
+  "饣": "食字旁",
+  "⺈": "刀字头",
+  "⺀": "两点",
+  "⺁": "短撇",
+  "⺌": "小字头",
+  "⺌贝": "小字头和贝",
+  "⺗": "心字底",
+  "⺙": "反文旁",
+  "⺮": "竹字头",
+  "⺳": "网字头的变形",
+  "⺶": "羊字头",
+  "⻊": "足字旁",
+  "〢": "两竖",
+  "丶": "一点",
+  "丿": "一撇",
+  "肀": "唐字里面的上半部分",
+  "𣢟": "嵌字下面的部分",
+  "𣎆": "赢字中间的部分",
+  "𦐇": "塌字右下方的部分",
+  "𢦏": "哉字里面的部分",
+  "𡗗": "奉字上面的部分",
+  "𡱒": "殿字左边的部分",
+  "𠃜": "眉字外面的部分",
+};
+
+export function spokenComponent(component: string, side?: "left" | "right") {
+  if (component === "阝" && side) return componentSpeech[`阝-${side}`];
+  return componentSpeech[component] || component;
+}

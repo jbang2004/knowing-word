@@ -40,3 +40,8 @@ next-env.d.ts
 /.wrangler/
 /outputs/
 /work/
+
+# local narration generation and review artifacts
+/artifacts/
+/tsconfig.tsbuildinfo
+/public/heritage/**/audio.mp3

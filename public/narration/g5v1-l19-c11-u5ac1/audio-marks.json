@@ -2,776 +2,654 @@
   "marks": [
     {
       "index": 0,
-      "char": "嫁",
-      "start": 0.292,
-      "end": 0.466
+      "char": "出",
+      "start": 0.24,
+      "end": 0.4
     },
     {
       "index": 1,
-      "char": "出",
-      "start": 0.68,
-      "end": 0.854
+      "char": "嫁",
+      "start": 0.4,
+      "end": 0.64
     },
     {
       "index": 2,
-      "char": "嫁",
-      "start": 0.887,
-      "end": 1.061
+      "char": "的",
+      "start": 0.64,
+      "end": 0.72
     },
     {
       "index": 3,
-      "char": "的",
-      "start": 1.094,
-      "end": 1.268
+      "char": "嫁",
+      "start": 0.72,
+      "end": 1.12
     },
     {
       "index": 4,
-      "char": "嫁",
-      "start": 1.301,
-      "end": 1.475
+      "char": "读",
+      "start": 1.36,
+      "end": 1.52
     },
     {
       "index": 5,
-      "char": "读",
-      "start": 1.688,
-      "end": 1.862
+      "char": "第",
+      "start": 1.52,
+      "end": 1.68
     },
     {
       "index": 6,
-      "char": "j",
-      "start": 1.896,
-      "end": 2.07
+      "char": "四",
+      "start": 1.68,
+      "end": 1.92
     },
     {
       "index": 7,
-      "char": "i",
-      "start": 2.103,
-      "end": 2.277
+      "char": "声",
+      "start": 1.92,
+      "end": 2.32
     },
     {
       "index": 8,
-      "char": "à",
-      "start": 2.31,
-      "end": 2.484
+      "char": "旧",
+      "start": 2.72,
+      "end": 3.04
     },
     {
       "index": 9,
-      "char": "它",
-      "start": 2.857,
-      "end": 3.031
+      "char": "时",
+      "start": 3.04,
+      "end": 3.28
     },
     {
       "index": 10,
-      "char": "是",
-      "start": 3.064,
-      "end": 3.238
+      "char": "多",
+      "start": 3.28,
+      "end": 3.44
     },
     {
       "index": 11,
-      "char": "左",
-      "start": 3.272,
-      "end": 3.446
+      "char": "指",
+      "start": 3.44,
+      "end": 3.6
     },
     {
       "index": 12,
-      "char": "右",
-      "start": 3.479,
-      "end": 3.653
+      "char": "女",
+      "start": 3.6,
+      "end": 3.84
     },
     {
       "index": 13,
-      "char": "结",
-      "start": 3.686,
-      "end": 3.86
+      "char": "子",
+      "start": 3.84,
+      "end": 4.0
     },
     {
       "index": 14,
-      "char": "构",
-      "start": 3.893,
-      "end": 4.067
+      "char": "结",
+      "start": 4.0,
+      "end": 4.24
     },
     {
       "index": 15,
-      "char": "按",
-      "start": 4.28,
-      "end": 4.454
+      "char": "婚",
+      "start": 4.24,
+      "end": 4.48
     },
     {
       "index": 16,
-      "char": "顺",
-      "start": 4.487,
-      "end": 4.661
+      "char": "后",
+      "start": 4.48,
+      "end": 4.8
     },
     {
       "index": 17,
-      "char": "序",
-      "start": 4.695,
-      "end": 4.869
+      "char": "到",
+      "start": 4.8,
+      "end": 4.96
     },
     {
       "index": 18,
-      "char": "能",
-      "start": 4.902,
-      "end": 5.076
+      "char": "配",
+      "start": 4.96,
+      "end": 5.2
     },
     {
       "index": 19,
-      "char": "看",
-      "start": 5.109,
-      "end": 5.283
+      "char": "偶",
+      "start": 5.28,
+      "end": 5.36
     },
     {
       "index": 20,
-      "char": "到",
-      "start": 5.316,
-      "end": 5.49
+      "char": "家",
+      "start": 5.36,
+      "end": 5.6
     },
     {
       "index": 21,
-      "char": "女",
-      "start": 5.523,
-      "end": 5.697
+      "char": "庭",
+      "start": 5.6,
+      "end": 5.76
     },
     {
       "index": 22,
-      "char": "和",
-      "start": 5.731,
-      "end": 5.905
+      "char": "生",
+      "start": 5.76,
+      "end": 6.0
     },
     {
       "index": 23,
-      "char": "家",
-      "start": 5.938,
-      "end": 6.112
+      "char": "活",
+      "start": 6.0,
+      "end": 6.32
     },
     {
       "index": 24,
-      "char": "从",
-      "start": 6.485,
-      "end": 6.659
+      "char": "陪",
+      "start": 6.72,
+      "end": 6.96
     },
     {
       "index": 25,
-      "char": "构",
-      "start": 6.692,
-      "end": 6.866
+      "char": "嫁",
+      "start": 6.96,
+      "end": 7.28
     },
     {
       "index": 26,
-      "char": "字",
-      "start": 6.899,
-      "end": 7.073
+      "char": "则",
+      "start": 7.28,
+      "end": 7.52
     },
     {
       "index": 27,
-      "char": "分",
-      "start": 7.107,
-      "end": 7.281
+      "char": "是",
+      "start": 7.52,
+      "end": 7.68
     },
     {
       "index": 28,
-      "char": "工",
-      "start": 7.314,
-      "end": 7.488
+      "char": "女",
+      "start": 7.68,
+      "end": 7.84
     },
     {
       "index": 29,
-      "char": "看",
-      "start": 7.521,
-      "end": 7.695
+      "char": "子",
+      "start": 7.84,
+      "end": 8.0
     },
     {
       "index": 30,
-      "char": "女",
-      "start": 7.908,
-      "end": 8.082
+      "char": "出",
+      "start": 8.0,
+      "end": 8.16
     },
     {
       "index": 31,
-      "char": "提",
-      "start": 8.115,
-      "end": 8.289
+      "char": "嫁",
+      "start": 8.16,
+      "end": 8.4
     },
     {
       "index": 32,
-      "char": "示",
-      "start": 8.322,
-      "end": 8.497
+      "char": "时",
+      "start": 8.4,
+      "end": 8.72
     },
     {
       "index": 33,
-      "char": "意",
-      "start": 8.53,
-      "end": 8.704
+      "char": "随",
+      "start": 8.8,
+      "end": 8.96
     },
     {
       "index": 34,
-      "char": "义",
-      "start": 8.737,
-      "end": 8.911
+      "char": "身",
+      "start": 8.96,
+      "end": 9.2
     },
     {
       "index": 35,
-      "char": "类",
-      "start": 8.944,
-      "end": 9.118
+      "char": "带",
+      "start": 9.2,
+      "end": 9.36
     },
     {
       "index": 36,
-      "char": "别",
-      "start": 9.151,
-      "end": 9.325
+      "char": "去",
+      "start": 9.44,
+      "end": 9.52
     },
     {
       "index": 37,
-      "char": "家",
-      "start": 9.538,
-      "end": 9.712
+      "char": "的",
+      "start": 9.52,
+      "end": 9.68
     },
     {
       "index": 38,
-      "char": "提",
-      "start": 9.746,
-      "end": 9.92
+      "char": "物",
+      "start": 9.68,
+      "end": 9.84
     },
     {
       "index": 39,
-      "char": "供",
-      "start": 9.953,
-      "end": 10.127
+      "char": "品",
+      "start": 9.84,
+      "end": 10.24
     },
     {
       "index": 40,
-      "char": "读",
-      "start": 10.16,
-      "end": 10.334
+      "char": "嫁",
+      "start": 10.72,
+      "end": 11.12
     },
     {
       "index": 41,
-      "char": "音",
-      "start": 10.367,
-      "end": 10.541
+      "char": "按",
+      "start": 11.2,
+      "end": 11.28
     },
     {
       "index": 42,
-      "char": "线",
-      "start": 10.574,
-      "end": 10.748
+      "char": "左",
+      "start": 11.28,
+      "end": 11.44
     },
     {
       "index": 43,
-      "char": "索",
-      "start": 10.782,
-      "end": 10.956
+      "char": "右",
+      "start": 11.44,
+      "end": 11.68
     },
     {
       "index": 44,
-      "char": "看",
-      "start": 11.329,
-      "end": 11.503
+      "char": "写",
+      "start": 11.68,
+      "end": 12.08
     },
     {
       "index": 45,
-      "char": "图",
-      "start": 11.536,
-      "end": 11.71
+      "char": "女",
+      "start": 12.64,
+      "end": 12.72
     },
     {
       "index": 46,
-      "char": "时",
-      "start": 11.743,
-      "end": 11.917
+      "char": "字",
+      "start": 12.72,
+      "end": 12.96
     },
     {
       "index": 47,
-      "char": "左",
-      "start": 12.13,
-      "end": 12.304
+      "char": "旁",
+      "start": 12.96,
+      "end": 13.2
     },
     {
       "index": 48,
-      "char": "边",
-      "start": 12.337,
-      "end": 12.512
+      "char": "在",
+      "start": 13.2,
+      "end": 13.36
     },
     {
       "index": 49,
-      "char": "人",
-      "start": 12.545,
-      "end": 12.719
+      "char": "左",
+      "start": 13.36,
+      "end": 13.6
     },
     {
       "index": 50,
-      "char": "物",
-      "start": 12.752,
-      "end": 12.926
+      "char": "右",
+      "start": 14.16,
+      "end": 14.24
     },
     {
       "index": 51,
-      "char": "形",
-      "start": 12.959,
-      "end": 13.133
+      "char": "边",
+      "start": 14.24,
+      "end": 14.48
     },
     {
       "index": 52,
-      "char": "成",
-      "start": 13.166,
-      "end": 13.34
+      "char": "是",
+      "start": 14.48,
+      "end": 14.64
     },
     {
       "index": 53,
-      "char": "女",
-      "start": 13.373,
-      "end": 13.547
+      "char": "家",
+      "start": 14.64,
+      "end": 14.96
     },
     {
       "index": 54,
-      "char": "右",
-      "start": 13.761,
-      "end": 13.935
+      "char": "两",
+      "start": 15.12,
+      "end": 15.36
     },
     {
       "index": 55,
       "char": "边",
-      "start": 13.968,
-      "end": 14.142
+      "start": 15.36,
+      "end": 15.52
     },
     {
       "index": 56,
-      "char": "屋",
-      "start": 14.175,
-      "end": 14.349
+      "char": "要",
+      "start": 15.52,
+      "end": 15.68
     },
     {
       "index": 57,
-      "char": "顶",
-      "start": 14.382,
-      "end": 14.556
+      "char": "靠",
+      "start": 15.68,
+      "end": 15.92
     },
     {
       "index": 58,
-      "char": "下",
-      "start": 14.589,
-      "end": 14.763
+      "char": "紧",
+      "start": 15.92,
+      "end": 16.24
     },
     {
       "index": 59,
-      "char": "的",
-      "start": 14.797,
-      "end": 14.971
+      "char": "雨",
+      "start": 16.72,
+      "end": 16.8
     },
     {
       "index": 60,
-      "char": "家",
-      "start": 15.004,
-      "end": 15.178
+      "char": "雪",
+      "start": 16.8,
+      "end": 17.04
     },
     {
       "index": 61,
-      "char": "人",
-      "start": 15.211,
-      "end": 15.385
+      "char": "天",
+      "start": 17.04,
+      "end": 17.52
     },
     {
       "index": 62,
-      "char": "和",
-      "start": 15.418,
-      "end": 15.592
+      "char": "父",
+      "start": 17.6,
+      "end": 17.76
     },
     {
       "index": 63,
-      "char": "小",
-      "start": 15.625,
-      "end": 15.799
+      "char": "亲",
+      "start": 17.76,
+      "end": 18.08
     },
     {
       "index": 64,
-      "char": "猪",
-      "start": 15.833,
-      "end": 16.007
+      "char": "用",
+      "start": 18.08,
+      "end": 18.16
     },
     {
       "index": 65,
-      "char": "沿",
-      "start": 16.04,
-      "end": 16.214
+      "char": "母",
+      "start": 18.16,
+      "end": 18.4
     },
     {
       "index": 66,
-      "char": "家",
-      "start": 16.247,
-      "end": 16.421
+      "char": "亲",
+      "start": 18.4,
+      "end": 18.56
     },
     {
       "index": 67,
-      "char": "相",
-      "start": 16.454,
-      "end": 16.628
+      "char": "出",
+      "start": 18.56,
+      "end": 18.72
     },
     {
       "index": 68,
-      "char": "聚",
-      "start": 16.661,
-      "end": 16.835
+      "char": "嫁",
+      "start": 18.72,
+      "end": 18.96
     },
     {
       "index": 69,
-      "char": "人",
-      "start": 17.048,
-      "end": 17.223
+      "char": "时",
+      "start": 18.96,
+      "end": 19.12
     },
     {
       "index": 70,
-      "char": "物",
-      "start": 17.256,
-      "end": 17.43
+      "char": "的",
+      "start": 19.12,
+      "end": 19.2
     },
     {
       "index": 71,
-      "char": "走",
-      "start": 17.463,
-      "end": 17.637
+      "char": "陪",
+      "start": 19.2,
+      "end": 19.44
     },
     {
       "index": 72,
-      "char": "向",
-      "start": 17.67,
-      "end": 17.844
+      "char": "嫁",
+      "start": 19.44,
+      "end": 19.68
     },
     {
       "index": 73,
-      "char": "新",
-      "start": 17.877,
-      "end": 18.051
+      "char": "汗",
+      "start": 19.68,
+      "end": 19.92
     },
     {
       "index": 74,
-      "char": "家",
-      "start": 18.084,
-      "end": 18.258
+      "char": "巾",
+      "start": 19.92,
+      "end": 20.32
     },
     {
       "index": 75,
-      "char": "庭",
-      "start": 18.292,
-      "end": 18.466
+      "char": "蒙",
+      "start": 20.32,
+      "end": 20.48
     },
     {
       "index": 76,
-      "char": "组",
-      "start": 18.679,
-      "end": 18.853
+      "char": "住",
+      "start": 20.48,
+      "end": 20.64
     },
     {
       "index": 77,
-      "char": "成",
-      "start": 18.886,
-      "end": 19.06
+      "char": "孩",
+      "start": 20.64,
+      "end": 20.96
     },
     {
       "index": 78,
-      "char": "嫁",
-      "start": 19.093,
-      "end": 19.267
+      "char": "子",
+      "start": 20.96,
+      "end": 21.12
     },
     {
       "index": 79,
-      "char": "出",
-      "start": 19.64,
-      "end": 19.814
+      "char": "露",
+      "start": 21.12,
+      "end": 21.28
     },
     {
       "index": 80,
-      "char": "嫁",
-      "start": 19.848,
-      "end": 20.022
+      "char": "在",
+      "start": 21.28,
+      "end": 21.44
     },
     {
       "index": 81,
-      "char": "旧",
-      "start": 20.055,
-      "end": 20.229
+      "char": "外",
+      "start": 21.44,
+      "end": 21.6
     },
     {
       "index": 82,
-      "char": "时",
-      "start": 20.262,
-      "end": 20.436
+      "char": "面",
+      "start": 21.6,
+      "end": 21.76
     },
     {
       "index": 83,
-      "char": "多",
-      "start": 20.469,
-      "end": 20.643
+      "char": "的",
+      "start": 21.76,
+      "end": 21.92
     },
     {
       "index": 84,
-      "char": "指",
-      "start": 20.676,
-      "end": 20.85
+      "char": "耳",
+      "start": 21.92,
+      "end": 22.08
     },
     {
       "index": 85,
-      "char": "女",
-      "start": 20.883,
-      "end": 21.058
+      "char": "朵",
+      "start": 22.08,
+      "end": 22.48
     },
     {
       "index": 86,
-      "char": "子",
-      "start": 21.091,
-      "end": 21.265
+      "char": "那",
+      "start": 22.8,
+      "end": 22.96
     },
     {
       "index": 87,
-      "char": "结",
-      "start": 21.298,
-      "end": 21.472
+      "char": "条",
+      "start": 22.96,
+      "end": 23.2
     },
     {
       "index": 88,
-      "char": "婚",
-      "start": 21.505,
-      "end": 21.679
+      "char": "旧",
+      "start": 23.2,
+      "end": 23.36
     },
     {
       "index": 89,
-      "char": "后",
-      "start": 21.712,
-      "end": 21.886
+      "char": "汗",
+      "start": 23.36,
+      "end": 23.6
     },
     {
       "index": 90,
-      "char": "到",
-      "start": 21.919,
-      "end": 22.093
+      "char": "巾",
+      "start": 23.6,
+      "end": 23.84
     },
     {
       "index": 91,
-      "char": "配",
-      "start": 22.127,
-      "end": 22.301
+      "char": "挡",
+      "start": 23.84,
+      "end": 24.08
     },
     {
       "index": 92,
-      "char": "偶",
-      "start": 22.334,
-      "end": 22.508
+      "char": "住",
+      "start": 24.08,
+      "end": 24.16
     },
     {
       "index": 93,
-      "char": "家",
-      "start": 22.541,
-      "end": 22.715
+      "char": "风",
+      "start": 24.16,
+      "end": 24.4
     },
     {
       "index": 94,
-      "char": "庭",
-      "start": 22.748,
-      "end": 22.922
+      "char": "雪",
+      "start": 24.4,
+      "end": 24.8
     },
     {
       "index": 95,
-      "char": "生",
-      "start": 22.955,
-      "end": 23.129
+      "char": "也",
+      "start": 25.04,
+      "end": 25.2
     },
     {
       "index": 96,
-      "char": "活",
-      "start": 23.163,
-      "end": 23.337
+      "char": "围",
+      "start": 25.2,
+      "end": 25.36
     },
     {
       "index": 97,
-      "char": "这",
-      "start": 23.71,
-      "end": 23.884
+      "char": "住",
+      "start": 25.36,
+      "end": 25.44
     },
     {
       "index": 98,
-      "char": "是",
-      "start": 23.917,
-      "end": 24.091
+      "char": "了",
+      "start": 25.44,
+      "end": 25.6
     },
     {
       "index": 99,
-      "char": "一",
-      "start": 24.124,
-      "end": 24.298
+      "char": "父",
+      "start": 25.6,
+      "end": 25.76
     },
     {
       "index": 100,
-      "char": "幅",
-      "start": 24.331,
-      "end": 24.505
+      "char": "母",
+      "start": 25.76,
+      "end": 25.92
     },
     {
       "index": 101,
-      "char": "帮",
-      "start": 24.539,
-      "end": 24.713
+      "char": "细",
+      "start": 25.92,
+      "end": 26.24
     },
     {
       "index": 102,
-      "char": "助",
-      "start": 24.746,
-      "end": 24.92
+      "char": "密",
+      "start": 26.24,
+      "end": 26.4
     },
     {
       "index": 103,
-      "char": "记",
-      "start": 24.953,
-      "end": 25.127
+      "char": "的",
+      "start": 26.4,
+      "end": 26.48
     },
     {
       "index": 104,
-      "char": "笔",
-      "start": 25.16,
-      "end": 25.334
+      "char": "疼",
+      "start": 26.48,
+      "end": 26.8
     },
     {
       "index": 105,
-      "char": "画",
-      "start": 25.367,
-      "end": 25.541
-    },
-    {
-      "index": 106,
-      "char": "和",
-      "start": 25.574,
-      "end": 25.748
-    },
-    {
-      "index": 107,
-      "char": "位",
-      "start": 25.782,
-      "end": 25.956
-    },
-    {
-      "index": 108,
-      "char": "置",
-      "start": 25.989,
-      "end": 26.163
-    },
-    {
-      "index": 109,
-      "char": "的",
-      "start": 26.196,
-      "end": 26.37
-    },
-    {
-      "index": 110,
-      "char": "记",
-      "start": 26.403,
-      "end": 26.577
-    },
-    {
-      "index": 111,
-      "char": "忆",
-      "start": 26.61,
-      "end": 26.784
-    },
-    {
-      "index": 112,
-      "char": "画",
-      "start": 26.818,
-      "end": 26.992
-    },
-    {
-      "index": 113,
-      "char": "面",
-      "start": 27.025,
-      "end": 27.199
-    },
-    {
-      "index": 114,
-      "char": "不",
-      "start": 27.412,
-      "end": 27.586
-    },
-    {
-      "index": 115,
-      "char": "是",
-      "start": 27.619,
-      "end": 27.793
-    },
-    {
-      "index": 116,
-      "char": "完",
-      "start": 27.826,
-      "end": 28
-    },
-    {
-      "index": 117,
-      "char": "整",
-      "start": 28.034,
-      "end": 28.208
-    },
-    {
-      "index": 118,
-      "char": "字",
-      "start": 28.241,
-      "end": 28.415
-    },
-    {
-      "index": 119,
-      "char": "源",
-      "start": 28.448,
-      "end": 28.622
-    },
-    {
-      "index": 120,
-      "char": "最",
-      "start": 28.995,
-      "end": 29.169
-    },
-    {
-      "index": 121,
-      "char": "后",
-      "start": 29.202,
-      "end": 29.376
-    },
-    {
-      "index": 122,
-      "char": "再",
-      "start": 29.409,
-      "end": 29.584
-    },
-    {
-      "index": 123,
-      "char": "读",
-      "start": 29.617,
-      "end": 29.791
-    },
-    {
-      "index": 124,
-      "char": "一",
-      "start": 29.824,
-      "end": 29.998
-    },
-    {
-      "index": 125,
-      "char": "遍",
-      "start": 30.031,
-      "end": 30.205
-    },
-    {
-      "index": 126,
-      "char": "出",
-      "start": 30.418,
-      "end": 30.592
-    },
-    {
-      "index": 127,
-      "char": "嫁",
-      "start": 30.625,
-      "end": 30.799
+      "char": "爱",
+      "start": 26.8,
+      "end": 27.04
     }
   ],
-  "transcript": "嫁，“出嫁”的“嫁”，读jià。它是左右结构，按顺序能看到“女”和“家”。从构字分工看，“女”提示意义类别，“家”提供读音线索。看图时，左边人物形成“女”，右边屋顶下的家人和小猪沿“家”相聚，人物走向新家庭，组成“嫁”。出嫁旧时多指女子结婚后到配偶家庭生活。这是一幅帮助记笔画和位置的记忆画面，不是完整字源。最后再读一遍：出嫁。",
+  "transcript": "出嫁的嫁，读第四声，旧时多指女子结婚后到配偶家庭生活。陪嫁则是女子出嫁时随身带去的物品。嫁按左右写，女字旁在左，右边是家，两边要靠紧。雨雪天，父亲用母亲出嫁时的陪嫁汗巾蒙住孩子露在外面的耳朵。那条旧汗巾挡住风雪，也围住了父母细密的疼爱。",
   "voice_reference": "封",
-  "timing_source": "punctuation-weighted-estimate",
-  "script_version": "child-first-v2",
-  "duration": 31.360181
+  "reference_id": "019f0554-ea22-762e-966c-32d678fd6bf6",
+  "reference_sha256": "eb07e06ee13a20ee4577b1b481df6d33d42127c1b3876bfa5d5e5362ae349f19",
+  "timing_source": "qwen3-forced-aligner",
+  "script_version": "narration-v3",
+  "model": "mlx-community/Qwen3-TTS-12Hz-1.7B-Base-4bit",
+  "model_revision": "37e955a1deb861c088ae5f3a67043185f3d1a60c",
+  "generation_policy": "qwen3-clone-2026-08-22-v3",
+  "seed": 20260822,
+  "content_hash": "160587d1c3c5089c87c8",
+  "duration": 27.041,
+  "alignment_model": "mlx-community/Qwen3-ForcedAligner-0.6B-8bit",
+  "aligned_audio_sha256": "2d89e707e79a07aebf2611084320077e574d2302d1d0b2d8e0dd62f413b87dc6",
+  "alignment_groups": []
 }

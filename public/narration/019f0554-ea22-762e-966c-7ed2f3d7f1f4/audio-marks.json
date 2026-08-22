@@ -2,506 +2,504 @@
   "marks": [
     {
       "index": 0,
-      "char": "争",
-      "start": 0.295,
-      "end": 0.504
+      "char": "战",
+      "start": 0.24,
+      "end": 0.48
     },
     {
       "index": 1,
-      "char": "战",
-      "start": 0.724,
-      "end": 0.934
+      "char": "争",
+      "start": 0.48,
+      "end": 0.64
     },
     {
       "index": 2,
-      "char": "争",
-      "start": 0.974,
-      "end": 1.183
+      "char": "的",
+      "start": 0.64,
+      "end": 0.8
     },
     {
       "index": 3,
-      "char": "的",
-      "start": 1.223,
-      "end": 1.433
+      "char": "争",
+      "start": 0.8,
+      "end": 1.04
     },
     {
       "index": 4,
-      "char": "争",
-      "start": 1.473,
-      "end": 1.682
+      "char": "适",
+      "start": 1.12,
+      "end": 1.36
     },
     {
       "index": 5,
-      "char": "争",
-      "start": 2.062,
-      "end": 2.271
+      "char": "合",
+      "start": 1.36,
+      "end": 1.52
     },
     {
       "index": 6,
-      "char": "字",
-      "start": 2.311,
-      "end": 2.521
+      "char": "整",
+      "start": 1.52,
+      "end": 1.68
     },
     {
       "index": 7,
-      "char": "要",
-      "start": 2.561,
-      "end": 2.77
+      "char": "体",
+      "start": 1.68,
+      "end": 1.84
     },
     {
       "index": 8,
-      "char": "整",
-      "start": 2.81,
-      "end": 3.02
+      "char": "观",
+      "start": 1.84,
+      "end": 2.08
     },
     {
       "index": 9,
-      "char": "体",
-      "start": 3.06,
-      "end": 3.269
+      "char": "察",
+      "start": 2.08,
+      "end": 2.48
     },
     {
       "index": 10,
-      "char": "看",
-      "start": 3.309,
-      "end": 3.518
+      "char": "弯",
+      "start": 2.96,
+      "end": 3.12
     },
     {
       "index": 11,
-      "char": "古",
-      "start": 3.898,
-      "end": 4.108
+      "char": "折",
+      "start": 3.12,
+      "end": 3.28
     },
     {
       "index": 12,
-      "char": "字",
-      "start": 4.148,
-      "end": 4.357
+      "char": "笔",
+      "start": 3.28,
+      "end": 3.44
     },
     {
       "index": 13,
-      "char": "形",
-      "start": 4.397,
-      "end": 4.607
+      "char": "画",
+      "start": 3.44,
+      "end": 3.68
     },
     {
       "index": 14,
-      "char": "可",
-      "start": 4.647,
-      "end": 4.856
+      "char": "像",
+      "start": 3.68,
+      "end": 4.0
     },
     {
       "index": 15,
-      "char": "以",
-      "start": 4.896,
-      "end": 5.105
+      "char": "两",
+      "start": 4.08,
+      "end": 4.32
     },
     {
       "index": 16,
-      "char": "让",
-      "start": 5.145,
-      "end": 5.355
+      "char": "边",
+      "start": 4.32,
+      "end": 4.48
     },
     {
       "index": 17,
-      "char": "人",
-      "start": 5.395,
-      "end": 5.604
+      "char": "同",
+      "start": 4.48,
+      "end": 4.72
     },
     {
       "index": 18,
-      "char": "想",
-      "start": 5.644,
-      "end": 5.854
+      "char": "时",
+      "start": 4.72,
+      "end": 4.88
     },
     {
       "index": 19,
-      "char": "到",
-      "start": 5.894,
-      "end": 6.103
+      "char": "拉",
+      "start": 4.88,
+      "end": 5.12
     },
     {
       "index": 20,
-      "char": "上",
-      "start": 6.143,
-      "end": 6.352
+      "char": "住",
+      "start": 5.12,
+      "end": 5.28
     },
     {
       "index": 21,
-      "char": "下",
-      "start": 6.392,
-      "end": 6.602
+      "char": "一",
+      "start": 5.28,
+      "end": 5.36
     },
     {
       "index": 22,
-      "char": "两",
-      "start": 6.642,
-      "end": 6.851
+      "char": "件",
+      "start": 5.36,
+      "end": 5.6
     },
     {
       "index": 23,
-      "char": "只",
-      "start": 6.891,
-      "end": 7.101
+      "char": "东",
+      "start": 5.6,
+      "end": 5.76
     },
     {
       "index": 24,
-      "char": "手",
-      "start": 7.141,
-      "end": 7.35
+      "char": "西",
+      "start": 5.76,
+      "end": 6.08
     },
     {
       "index": 25,
-      "char": "同",
-      "start": 7.57,
-      "end": 7.779
+      "char": "双",
+      "start": 6.48,
+      "end": 6.72
     },
     {
       "index": 26,
-      "char": "时",
-      "start": 7.819,
-      "end": 8.029
+      "char": "方",
+      "start": 6.72,
+      "end": 6.88
     },
     {
       "index": 27,
-      "char": "拉",
-      "start": 8.069,
-      "end": 8.278
+      "char": "都",
+      "start": 6.88,
+      "end": 7.04
     },
     {
       "index": 28,
-      "char": "住",
-      "start": 8.318,
-      "end": 8.528
+      "char": "不",
+      "start": 7.04,
+      "end": 7.2
     },
     {
       "index": 29,
-      "char": "中",
-      "start": 8.568,
-      "end": 8.777
+      "char": "肯",
+      "start": 7.2,
+      "end": 7.36
     },
     {
       "index": 30,
-      "char": "间",
-      "start": 8.817,
-      "end": 9.026
+      "char": "松",
+      "start": 7.36,
+      "end": 7.52
     },
     {
       "index": 31,
-      "char": "同",
-      "start": 9.066,
-      "end": 9.276
+      "char": "手",
+      "start": 7.52,
+      "end": 7.84
     },
     {
       "index": 32,
-      "char": "一",
-      "start": 9.316,
-      "end": 9.525
+      "char": "争",
+      "start": 8.24,
+      "end": 8.48
     },
     {
       "index": 33,
-      "char": "件",
-      "start": 9.565,
-      "end": 9.775
+      "char": "夺",
+      "start": 8.48,
+      "end": 8.72
     },
     {
       "index": 34,
-      "char": "东",
-      "start": 9.815,
-      "end": 10.024
+      "char": "和",
+      "start": 8.8,
+      "end": 8.96
     },
     {
       "index": 35,
-      "char": "西",
-      "start": 10.064,
-      "end": 10.273
+      "char": "对",
+      "start": 8.96,
+      "end": 9.12
     },
     {
       "index": 36,
-      "char": "谁",
-      "start": 10.493,
-      "end": 10.703
+      "char": "抗",
+      "start": 9.12,
+      "end": 9.52
     },
     {
       "index": 37,
-      "char": "都",
-      "start": 10.743,
-      "end": 10.952
+      "char": "便",
+      "start": 9.52,
+      "end": 9.76
     },
     {
       "index": 38,
-      "char": "不",
-      "start": 10.992,
-      "end": 11.202
+      "char": "有",
+      "start": 9.76,
+      "end": 9.84
     },
     {
       "index": 39,
-      "char": "愿",
-      "start": 11.242,
-      "end": 11.451
+      "char": "了",
+      "start": 9.84,
+      "end": 9.92
     },
     {
       "index": 40,
-      "char": "放",
-      "start": 11.491,
-      "end": 11.7
+      "char": "动",
+      "start": 9.92,
+      "end": 10.16
     },
     {
       "index": 41,
-      "char": "开",
-      "start": 11.74,
-      "end": 11.95
+      "char": "作",
+      "start": 10.16,
+      "end": 10.48
     },
     {
       "index": 42,
-      "char": "两",
-      "start": 12.33,
-      "end": 12.539
+      "char": "争",
+      "start": 11.04,
+      "end": 11.52
     },
     {
       "index": 43,
-      "char": "边",
-      "start": 12.579,
-      "end": 12.789
+      "char": "有",
+      "start": 11.84,
+      "end": 12.0
     },
     {
       "index": 44,
-      "char": "都",
-      "start": 12.829,
-      "end": 13.038
+      "char": "争",
+      "start": 12.0,
+      "end": 12.32
     },
     {
       "index": 45,
-      "char": "想",
-      "start": 13.078,
-      "end": 13.287
+      "char": "夺",
+      "start": 12.32,
+      "end": 12.48
     },
     {
       "index": 46,
-      "char": "得",
-      "start": 13.327,
-      "end": 13.537
+      "char": "对",
+      "start": 12.8,
+      "end": 12.96
     },
     {
       "index": 47,
-      "char": "到",
-      "start": 13.577,
-      "end": 13.786
+      "char": "抗",
+      "start": 12.96,
+      "end": 13.28
     },
     {
       "index": 48,
-      "char": "它",
-      "start": 13.826,
-      "end": 14.036
+      "char": "的",
+      "start": 13.28,
+      "end": 13.36
     },
     {
       "index": 49,
-      "char": "就",
-      "start": 14.256,
-      "end": 14.465
+      "char": "意",
+      "start": 13.36,
+      "end": 13.6
     },
     {
       "index": 50,
-      "char": "是",
-      "start": 14.505,
-      "end": 14.714
+      "char": "思",
+      "start": 13.6,
+      "end": 13.92
     },
     {
       "index": 51,
-      "char": "争",
-      "start": 14.754,
-      "end": 14.964
+      "char": "和",
+      "start": 14.24,
+      "end": 14.4
     },
     {
       "index": 52,
-      "char": "争",
-      "start": 15.344,
-      "end": 15.553
+      "char": "战",
+      "start": 14.4,
+      "end": 14.88
     },
     {
       "index": 53,
-      "char": "有",
-      "start": 15.593,
-      "end": 15.803
+      "char": "合",
+      "start": 15.04,
+      "end": 15.28
     },
     {
       "index": 54,
-      "char": "争",
-      "start": 15.843,
-      "end": 16.052
+      "char": "成",
+      "start": 15.28,
+      "end": 15.52
     },
     {
       "index": 55,
-      "char": "夺",
-      "start": 16.092,
-      "end": 16.301
+      "char": "战",
+      "start": 15.52,
+      "end": 15.68
     },
     {
       "index": 56,
-      "char": "竞",
-      "start": 16.521,
-      "end": 16.731
+      "char": "争",
+      "start": 15.68,
+      "end": 16.0
     },
     {
       "index": 57,
-      "char": "争",
-      "start": 16.771,
-      "end": 16.98
+      "char": "冀",
+      "start": 16.32,
+      "end": 16.56
     },
     {
       "index": 58,
-      "char": "的",
-      "start": 17.02,
-      "end": 17.23
+      "char": "中",
+      "start": 16.56,
+      "end": 16.72
     },
     {
       "index": 59,
-      "char": "意",
-      "start": 17.27,
-      "end": 17.479
+      "char": "人",
+      "start": 16.72,
+      "end": 16.88
     },
     {
       "index": 60,
-      "char": "思",
-      "start": 17.519,
-      "end": 17.728
+      "char": "民",
+      "start": 16.88,
+      "end": 17.2
     },
     {
       "index": 61,
       "char": "在",
-      "start": 18.108,
-      "end": 18.318
+      "start": 17.2,
+      "end": 17.36
     },
     {
       "index": 62,
       "char": "战",
-      "start": 18.358,
-      "end": 18.567
+      "start": 17.36,
+      "end": 17.6
     },
     {
       "index": 63,
       "char": "争",
-      "start": 18.607,
-      "end": 18.817
+      "start": 17.6,
+      "end": 17.76
     },
     {
       "index": 64,
-      "char": "这",
-      "start": 18.857,
-      "end": 19.066
+      "char": "中",
+      "start": 17.76,
+      "end": 18.0
     },
     {
       "index": 65,
-      "char": "个",
-      "start": 19.106,
-      "end": 19.315
+      "char": "修",
+      "start": 18.08,
+      "end": 18.32
     },
     {
       "index": 66,
-      "char": "词",
-      "start": 19.355,
-      "end": 19.565
+      "char": "筑",
+      "start": 18.32,
+      "end": 18.48
     },
     {
       "index": 67,
-      "char": "里",
-      "start": 19.605,
-      "end": 19.814
+      "char": "纵",
+      "start": 18.48,
+      "end": 18.72
     },
     {
       "index": 68,
-      "char": "争",
-      "start": 20.034,
-      "end": 20.244
+      "char": "横",
+      "start": 18.72,
+      "end": 18.88
     },
     {
       "index": 69,
-      "char": "和",
-      "start": 20.284,
-      "end": 20.493
+      "char": "相",
+      "start": 18.96,
+      "end": 19.12
     },
     {
       "index": 70,
-      "char": "战",
-      "start": 20.533,
-      "end": 20.742
+      "char": "连",
+      "start": 19.12,
+      "end": 19.28
     },
     {
       "index": 71,
-      "char": "合",
-      "start": 20.782,
-      "end": 20.992
+      "char": "的",
+      "start": 19.28,
+      "end": 19.36
     },
     {
       "index": 72,
-      "char": "在",
-      "start": 21.032,
-      "end": 21.241
+      "char": "地",
+      "start": 19.36,
+      "end": 19.52
     },
     {
       "index": 73,
-      "char": "一",
-      "start": 21.281,
-      "end": 21.491
+      "char": "道",
+      "start": 19.52,
+      "end": 19.84
     },
     {
       "index": 74,
-      "char": "起",
-      "start": 21.531,
-      "end": 21.74
+      "char": "用",
+      "start": 20.24,
+      "end": 20.4
     },
     {
       "index": 75,
-      "char": "表",
-      "start": 21.96,
-      "end": 22.169
+      "char": "智",
+      "start": 20.4,
+      "end": 20.64
     },
     {
       "index": 76,
-      "char": "示",
-      "start": 22.209,
-      "end": 22.419
+      "char": "慧",
+      "start": 20.64,
+      "end": 20.96
     },
     {
       "index": 77,
-      "char": "双",
-      "start": 22.459,
-      "end": 22.668
+      "char": "保",
+      "start": 20.96,
+      "end": 21.12
     },
     {
       "index": 78,
-      "char": "方",
-      "start": 22.708,
-      "end": 22.918
+      "char": "卫",
+      "start": 21.12,
+      "end": 21.28
     },
     {
       "index": 79,
-      "char": "激",
-      "start": 22.958,
-      "end": 23.167
+      "char": "家",
+      "start": 21.28,
+      "end": 21.44
     },
     {
       "index": 80,
-      "char": "烈",
-      "start": 23.207,
-      "end": 23.416
-    },
-    {
-      "index": 81,
-      "char": "对",
-      "start": 23.456,
-      "end": 23.666
-    },
-    {
-      "index": 82,
-      "char": "抗",
-      "start": 23.706,
-      "end": 23.915
+      "char": "乡",
+      "start": 21.44,
+      "end": 21.84
     }
   ],
-  "transcript": "争，战争的争。争字要整体看。古字形可以让人想到上下两只手，同时拉住中间同一件东西，谁都不愿放开。两边都想得到它，就是争。争有争夺、竞争的意思。在战争这个词里，争和战合在一起，表示双方激烈对抗。",
+  "transcript": "战争的争适合整体观察，弯折笔画像两边同时拉住一件东西。双方都不肯松手，争夺和对抗便有了动作。争有争夺、对抗的意思，和战合成战争。冀中人民在战争中修筑纵横相连的地道，用智慧保卫家乡。",
   "voice_reference": "封",
-  "timing_source": "punctuation-weighted-estimate",
-  "script_version": "child-first-v1",
-  "duration": 24.480181
+  "reference_id": "019f0554-ea22-762e-966c-32d678fd6bf6",
+  "reference_sha256": "eb07e06ee13a20ee4577b1b481df6d33d42127c1b3876bfa5d5e5362ae349f19",
+  "timing_source": "qwen3-forced-aligner",
+  "script_version": "narration-v3",
+  "model": "mlx-community/Qwen3-TTS-12Hz-1.7B-Base-4bit",
+  "model_revision": "37e955a1deb861c088ae5f3a67043185f3d1a60c",
+  "generation_policy": "qwen3-clone-2026-08-22-v3",
+  "seed": 20260822,
+  "content_hash": "66761082203e563971b6",
+  "duration": 21.963,
+  "alignment_model": "mlx-community/Qwen3-ForcedAligner-0.6B-8bit",
+  "aligned_audio_sha256": "0bfb0791bde4e909bc2534c0eea5945719245d86fff79a71ecde4221864fb94f",
+  "alignment_groups": []
 }

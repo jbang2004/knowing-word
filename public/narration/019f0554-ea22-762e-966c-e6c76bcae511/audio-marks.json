@@ -2,506 +2,504 @@
   "marks": [
     {
       "index": 0,
-      "char": "破",
-      "start": 0.293,
-      "end": 0.48
+      "char": "敌",
+      "start": 0.0,
+      "end": 0.24
     },
     {
       "index": 1,
-      "char": "破",
-      "start": 0.696,
-      "end": 0.883
+      "char": "人",
+      "start": 0.24,
+      "end": 0.4
     },
     {
       "index": 2,
-      "char": "坏",
-      "start": 0.919,
-      "end": 1.106
+      "char": "破",
+      "start": 0.4,
+      "end": 0.56
     },
     {
       "index": 3,
-      "char": "的",
-      "start": 1.141,
-      "end": 1.328
+      "char": "坏",
+      "start": 0.56,
+      "end": 0.72
     },
     {
       "index": 4,
-      "char": "破",
-      "start": 1.364,
-      "end": 1.551
+      "char": "地",
+      "start": 0.72,
+      "end": 0.88
     },
     {
       "index": 5,
-      "char": "它",
-      "start": 1.927,
-      "end": 2.114
+      "char": "道",
+      "start": 0.88,
+      "end": 1.28
     },
     {
       "index": 6,
-      "char": "是",
-      "start": 2.149,
-      "end": 2.336
+      "char": "人",
+      "start": 1.52,
+      "end": 1.76
     },
     {
       "index": 7,
-      "char": "左",
-      "start": 2.372,
-      "end": 2.559
+      "char": "民",
+      "start": 1.76,
+      "end": 2.0
     },
     {
       "index": 8,
-      "char": "右",
-      "start": 2.595,
-      "end": 2.782
+      "char": "便",
+      "start": 2.0,
+      "end": 2.16
     },
     {
       "index": 9,
-      "char": "结",
-      "start": 2.817,
-      "end": 3.004
+      "char": "想",
+      "start": 2.16,
+      "end": 2.24
     },
     {
       "index": 10,
-      "char": "构",
-      "start": 3.04,
-      "end": 3.227
+      "char": "办",
+      "start": 2.24,
+      "end": 2.56
     },
     {
       "index": 11,
-      "char": "石",
-      "start": 3.443,
-      "end": 3.63
+      "char": "法",
+      "start": 2.56,
+      "end": 2.8
     },
     {
       "index": 12,
-      "char": "字",
-      "start": 3.665,
-      "end": 3.852
+      "char": "一",
+      "start": 2.88,
+      "end": 3.12,
+      "alignment_group": "align-group-12-13",
+      "alignment_group_text": "一一"
     },
     {
       "index": 13,
-      "char": "旁",
-      "start": 3.888,
-      "end": 4.075
+      "char": "一",
+      "start": 2.88,
+      "end": 3.12,
+      "alignment_group": "align-group-12-13",
+      "alignment_group_text": "一一"
     },
     {
       "index": 14,
-      "char": "让",
-      "start": 4.11,
-      "end": 4.298
+      "char": "化",
+      "start": 3.12,
+      "end": 3.36
     },
     {
       "index": 15,
-      "char": "人",
-      "start": 4.333,
-      "end": 4.52
+      "char": "解",
+      "start": 3.36,
+      "end": 3.68
     },
     {
       "index": 16,
-      "char": "想",
-      "start": 4.556,
-      "end": 4.743
+      "char": "破",
+      "start": 4.24,
+      "end": 4.56
     },
     {
       "index": 17,
-      "char": "到",
-      "start": 4.778,
-      "end": 4.965
+      "char": "是",
+      "start": 4.64,
+      "end": 4.8
     },
     {
       "index": 18,
-      "char": "坚",
-      "start": 5.001,
-      "end": 5.188
+      "char": "左",
+      "start": 4.8,
+      "end": 4.88
     },
     {
       "index": 19,
-      "char": "硬",
-      "start": 5.224,
-      "end": 5.411
+      "char": "右",
+      "start": 4.96,
+      "end": 5.2
     },
     {
       "index": 20,
-      "char": "的",
-      "start": 5.446,
-      "end": 5.633
+      "char": "结",
+      "start": 5.2,
+      "end": 5.36
     },
     {
       "index": 21,
-      "char": "石",
-      "start": 5.669,
-      "end": 5.856
+      "char": "构",
+      "start": 5.36,
+      "end": 5.68
     },
     {
       "index": 22,
-      "char": "头",
-      "start": 5.892,
-      "end": 6.079
+      "char": "左",
+      "start": 6.0,
+      "end": 6.08
     },
     {
       "index": 23,
-      "char": "右",
-      "start": 6.294,
-      "end": 6.481
+      "char": "边",
+      "start": 6.16,
+      "end": 6.4
     },
     {
       "index": 24,
-      "char": "边",
-      "start": 6.517,
-      "end": 6.704
+      "char": "是",
+      "start": 6.4,
+      "end": 6.48
     },
     {
       "index": 25,
-      "char": "的",
-      "start": 6.74,
-      "end": 6.927
+      "char": "石",
+      "start": 6.48,
+      "end": 6.72
     },
     {
       "index": 26,
-      "char": "皮",
-      "start": 6.962,
-      "end": 7.149
+      "char": "字",
+      "start": 6.72,
+      "end": 6.88
     },
     {
       "index": 27,
-      "char": "帮",
-      "start": 7.185,
-      "end": 7.372
+      "char": "旁",
+      "start": 6.88,
+      "end": 7.28
     },
     {
       "index": 28,
-      "char": "助",
-      "start": 7.408,
-      "end": 7.595
+      "char": "右",
+      "start": 7.68,
+      "end": 7.84
     },
     {
       "index": 29,
-      "char": "记",
-      "start": 7.63,
-      "end": 7.817
+      "char": "边",
+      "start": 7.84,
+      "end": 8.24
     },
     {
       "index": 30,
-      "char": "住",
-      "start": 7.853,
-      "end": 8.04
+      "char": "可",
+      "start": 8.24,
+      "end": 8.4
     },
     {
       "index": 31,
-      "char": "读",
-      "start": 8.076,
-      "end": 8.263
+      "char": "以",
+      "start": 8.4,
+      "end": 8.48
     },
     {
       "index": 32,
-      "char": "音",
-      "start": 8.298,
-      "end": 8.485
+      "char": "想",
+      "start": 8.48,
+      "end": 8.72
     },
     {
       "index": 33,
-      "char": "看",
-      "start": 8.861,
-      "end": 9.048
+      "char": "成",
+      "start": 8.72,
+      "end": 8.88
     },
     {
       "index": 34,
-      "char": "图",
-      "start": 9.084,
-      "end": 9.271
+      "char": "裂",
+      "start": 8.88,
+      "end": 9.04
     },
     {
       "index": 35,
-      "char": "时",
-      "start": 9.306,
-      "end": 9.493
+      "char": "开",
+      "start": 9.04,
+      "end": 9.28
     },
     {
       "index": 36,
-      "char": "石",
-      "start": 9.709,
-      "end": 9.896
+      "char": "的",
+      "start": 9.28,
+      "end": 9.36
     },
     {
       "index": 37,
-      "char": "块",
-      "start": 9.932,
-      "end": 10.119
+      "char": "外",
+      "start": 9.36,
+      "end": 9.52
     },
     {
       "index": 38,
-      "char": "像",
-      "start": 10.154,
-      "end": 10.341
+      "char": "皮",
+      "start": 9.52,
+      "end": 9.92
     },
     {
       "index": 39,
-      "char": "被",
-      "start": 10.377,
-      "end": 10.564
+      "char": "石",
+      "start": 10.32,
+      "end": 10.48
     },
     {
       "index": 40,
-      "char": "剥",
-      "start": 10.599,
-      "end": 10.786
+      "char": "块",
+      "start": 10.48,
+      "end": 10.72
     },
     {
       "index": 41,
-      "char": "开",
-      "start": 10.822,
-      "end": 11.009
+      "char": "表",
+      "start": 10.72,
+      "end": 10.88
     },
     {
       "index": 42,
-      "char": "的",
-      "start": 11.045,
-      "end": 11.232
+      "char": "面",
+      "start": 10.88,
+      "end": 11.04
     },
     {
       "index": 43,
-      "char": "皮",
-      "start": 11.267,
-      "end": 11.454
+      "char": "出",
+      "start": 11.04,
+      "end": 11.2
     },
     {
       "index": 44,
-      "char": "一",
-      "start": 11.49,
-      "end": 11.677
+      "char": "现",
+      "start": 11.2,
+      "end": 11.36
     },
     {
       "index": 45,
-      "char": "样",
-      "start": 11.713,
-      "end": 11.9
+      "char": "破",
+      "start": 11.36,
+      "end": 11.6
     },
     {
       "index": 46,
-      "char": "裂",
-      "start": 11.935,
-      "end": 12.122
+      "char": "口",
+      "start": 11.6,
+      "end": 11.92
     },
     {
       "index": 47,
-      "char": "开",
-      "start": 12.158,
-      "end": 12.345
+      "char": "碎",
+      "start": 12.16,
+      "end": 12.4
     },
     {
       "index": 48,
-      "char": "原",
-      "start": 12.561,
-      "end": 12.748
+      "char": "片",
+      "start": 12.4,
+      "end": 12.56
     },
     {
       "index": 49,
-      "char": "来",
-      "start": 12.783,
-      "end": 12.97
+      "char": "向",
+      "start": 12.56,
+      "end": 12.8
     },
     {
       "index": 50,
-      "char": "完",
-      "start": 13.006,
-      "end": 13.193
+      "char": "外",
+      "start": 12.8,
+      "end": 12.88
     },
     {
       "index": 51,
-      "char": "整",
-      "start": 13.229,
-      "end": 13.416
+      "char": "散",
+      "start": 12.88,
+      "end": 13.12
     },
     {
       "index": 52,
-      "char": "的",
-      "start": 13.451,
-      "end": 13.638
+      "char": "开",
+      "start": 13.12,
+      "end": 13.44
     },
     {
       "index": 53,
-      "char": "表",
-      "start": 13.674,
-      "end": 13.861
+      "char": "破",
+      "start": 13.92,
+      "end": 14.08
     },
     {
       "index": 54,
-      "char": "面",
-      "start": 13.897,
-      "end": 14.084
+      "char": "坏",
+      "start": 14.08,
+      "end": 14.48
     },
     {
       "index": 55,
-      "char": "出",
-      "start": 14.119,
-      "end": 14.306
+      "char": "就",
+      "start": 14.56,
+      "end": 14.72
     },
     {
       "index": 56,
-      "char": "现",
-      "start": 14.342,
-      "end": 14.529
+      "char": "是",
+      "start": 14.72,
+      "end": 14.8
     },
     {
       "index": 57,
-      "char": "破",
-      "start": 14.565,
-      "end": 14.752
+      "char": "把",
+      "start": 14.8,
+      "end": 14.96
     },
     {
       "index": 58,
-      "char": "口",
-      "start": 14.787,
-      "end": 14.974
+      "char": "事",
+      "start": 14.96,
+      "end": 15.2
     },
     {
       "index": 59,
-      "char": "破",
-      "start": 15.35,
-      "end": 15.537
+      "char": "物",
+      "start": 15.2,
+      "end": 15.36
     },
     {
       "index": 60,
-      "char": "表",
-      "start": 15.573,
-      "end": 15.76
+      "char": "弄",
+      "start": 15.36,
+      "end": 15.52
     },
     {
       "index": 61,
-      "char": "示",
-      "start": 15.795,
-      "end": 15.982
+      "char": "坏",
+      "start": 15.52,
+      "end": 15.84
     },
     {
       "index": 62,
-      "char": "裂",
-      "start": 16.018,
-      "end": 16.205
+      "char": "课",
+      "start": 16.16,
+      "end": 16.4
     },
     {
       "index": 63,
-      "char": "开",
-      "start": 16.24,
-      "end": 16.428
+      "char": "文",
+      "start": 16.4,
+      "end": 16.56
     },
     {
       "index": 64,
-      "char": "损",
-      "start": 16.643,
-      "end": 16.83
+      "char": "也",
+      "start": 16.56,
+      "end": 16.72
     },
     {
       "index": 65,
-      "char": "坏",
-      "start": 16.866,
-      "end": 17.053
+      "char": "写",
+      "start": 16.72,
+      "end": 16.88
     },
     {
       "index": 66,
-      "char": "破",
-      "start": 17.428,
-      "end": 17.615
+      "char": "出",
+      "start": 16.88,
+      "end": 17.04
     },
     {
       "index": 67,
-      "char": "坏",
-      "start": 17.651,
-      "end": 17.838
+      "char": "人",
+      "start": 17.04,
+      "end": 17.2
     },
     {
       "index": 68,
-      "char": "就",
-      "start": 18.054,
-      "end": 18.241
+      "char": "民",
+      "start": 17.2,
+      "end": 17.44
     },
     {
       "index": 69,
-      "char": "是",
-      "start": 18.276,
-      "end": 18.463
+      "char": "保",
+      "start": 17.44,
+      "end": 17.68
     },
     {
       "index": 70,
-      "char": "使",
-      "start": 18.499,
-      "end": 18.686
+      "char": "护",
+      "start": 17.68,
+      "end": 17.84
     },
     {
       "index": 71,
-      "char": "事",
-      "start": 18.722,
-      "end": 18.909
+      "char": "地",
+      "start": 17.84,
+      "end": 18.0
     },
     {
       "index": 72,
-      "char": "物",
-      "start": 18.944,
-      "end": 19.131
+      "char": "道",
+      "start": 18.0,
+      "end": 18.24
     },
     {
       "index": 73,
-      "char": "失",
-      "start": 19.167,
-      "end": 19.354
+      "char": "的",
+      "start": 18.24,
+      "end": 18.4
     },
     {
       "index": 74,
-      "char": "去",
-      "start": 19.39,
-      "end": 19.577
+      "char": "智",
+      "start": 18.4,
+      "end": 18.56
     },
     {
       "index": 75,
-      "char": "原",
-      "start": 19.612,
-      "end": 19.799
-    },
-    {
-      "index": 76,
-      "char": "来",
-      "start": 19.835,
-      "end": 20.022
-    },
-    {
-      "index": 77,
-      "char": "的",
-      "start": 20.058,
-      "end": 20.245
-    },
-    {
-      "index": 78,
-      "char": "完",
-      "start": 20.28,
-      "end": 20.467
-    },
-    {
-      "index": 79,
-      "char": "整",
-      "start": 20.503,
-      "end": 20.69
-    },
-    {
-      "index": 80,
-      "char": "和",
-      "start": 20.726,
-      "end": 20.913
-    },
-    {
-      "index": 81,
-      "char": "作",
-      "start": 20.948,
-      "end": 21.135
-    },
-    {
-      "index": 82,
-      "char": "用",
-      "start": 21.171,
-      "end": 21.358
+      "char": "慧",
+      "start": 18.56,
+      "end": 18.88
     }
   ],
-  "transcript": "破，破坏的破。它是左右结构，石字旁让人想到坚硬的石头，右边的皮帮助记住读音。看图时，石块像被剥开的皮一样裂开，原来完整的表面出现破口。破表示裂开、损坏。破坏，就是使事物失去原来的完整和作用。",
+  "transcript": "敌人破坏地道，人民便想办法一一化解。破是左右结构，左边是石字旁，右边可以想成裂开的外皮。石块表面出现破口，碎片向外散开。破坏就是把事物弄坏，课文也写出人民保护地道的智慧。",
   "voice_reference": "封",
-  "timing_source": "punctuation-weighted-estimate",
-  "script_version": "child-first-v1",
-  "duration": 21.920181
+  "reference_id": "019f0554-ea22-762e-966c-32d678fd6bf6",
+  "reference_sha256": "eb07e06ee13a20ee4577b1b481df6d33d42127c1b3876bfa5d5e5362ae349f19",
+  "timing_source": "qwen3-forced-aligner",
+  "script_version": "narration-v3",
+  "model": "mlx-community/Qwen3-TTS-12Hz-1.7B-Base-4bit",
+  "model_revision": "37e955a1deb861c088ae5f3a67043185f3d1a60c",
+  "generation_policy": "qwen3-clone-2026-08-22-v3",
+  "seed": 20260822,
+  "content_hash": "f9c1211ee6fd1d2e0cf1",
+  "duration": 18.937,
+  "alignment_model": "mlx-community/Qwen3-ForcedAligner-0.6B-8bit",
+  "aligned_audio_sha256": "ee68bb2d9bdad30143f67b20459c899c5c6d1b00b05feebaebfe1a0205ef6a3e",
+  "alignment_groups": [
+    {
+      "id": "align-group-12-13",
+      "text": "一一",
+      "indices": [
+        12,
+        13
+      ],
+      "start": 2.88,
+      "end": 3.12,
+      "method": "shared-right-model-interval",
+      "rawIntervals": [
+        {
+          "index": 12,
+          "char": "一",
+          "start": 2.88,
+          "end": 2.88
+        },
+        {
+          "index": 13,
+          "char": "一",
+          "start": 2.88,
+          "end": 3.12
+        }
+      ]
+    }
+  ]
 }

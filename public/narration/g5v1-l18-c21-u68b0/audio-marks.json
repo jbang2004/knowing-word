@@ -2,806 +2,708 @@
   "marks": [
     {
       "index": 0,
-      "char": "械",
-      "start": 0.294,
-      "end": 0.495
+      "char": "机",
+      "start": 0.08,
+      "end": 0.24
     },
     {
       "index": 1,
-      "char": "机",
-      "start": 0.713,
-      "end": 0.914
+      "char": "械",
+      "start": 0.24,
+      "end": 0.4
     },
     {
       "index": 2,
-      "char": "械",
-      "start": 0.952,
-      "end": 1.153
+      "char": "的",
+      "start": 0.4,
+      "end": 0.56
     },
     {
       "index": 3,
-      "char": "的",
-      "start": 1.191,
-      "end": 1.392
+      "char": "械",
+      "start": 0.56,
+      "end": 0.96
     },
     {
       "index": 4,
-      "char": "械",
-      "start": 1.43,
-      "end": 1.631
+      "char": "读",
+      "start": 1.2,
+      "end": 1.36
     },
     {
       "index": 5,
-      "char": "读",
-      "start": 1.849,
-      "end": 2.05
+      "char": "第",
+      "start": 1.36,
+      "end": 1.52
     },
     {
       "index": 6,
-      "char": "x",
-      "start": 2.088,
-      "end": 2.289
+      "char": "四",
+      "start": 1.52,
+      "end": 1.76
     },
     {
       "index": 7,
-      "char": "i",
-      "start": 2.327,
-      "end": 2.528
+      "char": "声",
+      "start": 1.76,
+      "end": 2.16
     },
     {
       "index": 8,
-      "char": "è",
-      "start": 2.566,
-      "end": 2.767
+      "char": "从",
+      "start": 2.64,
+      "end": 2.88
     },
     {
       "index": 9,
-      "char": "它",
-      "start": 3.145,
-      "end": 3.346
+      "char": "左",
+      "start": 2.88,
+      "end": 2.96
     },
     {
       "index": 10,
-      "char": "是",
-      "start": 3.384,
-      "end": 3.585
+      "char": "往",
+      "start": 2.96,
+      "end": 3.2
     },
     {
       "index": 11,
-      "char": "左",
-      "start": 3.623,
-      "end": 3.823
+      "char": "右",
+      "start": 3.2,
+      "end": 3.44
     },
     {
       "index": 12,
-      "char": "右",
-      "start": 3.862,
-      "end": 4.062
+      "char": "看",
+      "start": 3.44,
+      "end": 3.84
     },
     {
       "index": 13,
-      "char": "结",
-      "start": 4.101,
-      "end": 4.301
+      "char": "械",
+      "start": 4.24,
+      "end": 4.64
     },
     {
       "index": 14,
-      "char": "构",
-      "start": 4.34,
-      "end": 4.54
+      "char": "先",
+      "start": 4.64,
+      "end": 4.88
     },
     {
       "index": 15,
-      "char": "按",
-      "start": 4.759,
-      "end": 4.959
+      "char": "写",
+      "start": 4.88,
+      "end": 5.04
     },
     {
       "index": 16,
-      "char": "顺",
-      "start": 4.998,
-      "end": 5.198
+      "char": "木",
+      "start": 5.04,
+      "end": 5.2
     },
     {
       "index": 17,
-      "char": "序",
-      "start": 5.236,
-      "end": 5.437
+      "char": "字",
+      "start": 5.2,
+      "end": 5.36
     },
     {
       "index": 18,
-      "char": "能",
-      "start": 5.475,
-      "end": 5.676
+      "char": "旁",
+      "start": 5.36,
+      "end": 5.76
     },
     {
       "index": 19,
-      "char": "看",
-      "start": 5.714,
-      "end": 5.915
+      "char": "右",
+      "start": 6.16,
+      "end": 6.32
     },
     {
       "index": 20,
-      "char": "到",
-      "start": 5.953,
-      "end": 6.154
+      "char": "边",
+      "start": 6.32,
+      "end": 6.48
     },
     {
       "index": 21,
-      "char": "木",
-      "start": 6.192,
-      "end": 6.393
+      "char": "笔",
+      "start": 6.48,
+      "end": 6.72
     },
     {
       "index": 22,
-      "char": "和",
-      "start": 6.431,
-      "end": 6.632
+      "char": "画",
+      "start": 6.72,
+      "end": 6.88
     },
     {
       "index": 23,
-      "char": "戒",
-      "start": 6.67,
-      "end": 6.871
+      "char": "交",
+      "start": 6.88,
+      "end": 7.12
     },
     {
       "index": 24,
-      "char": "从",
-      "start": 7.249,
-      "end": 7.45
+      "char": "错",
+      "start": 7.12,
+      "end": 7.52
     },
     {
       "index": 25,
-      "char": "构",
-      "start": 7.488,
-      "end": 7.689
+      "char": "写",
+      "start": 8.0,
+      "end": 8.24
     },
     {
       "index": 26,
-      "char": "字",
-      "start": 7.727,
-      "end": 7.928
+      "char": "时",
+      "start": 8.24,
+      "end": 8.4
     },
     {
       "index": 27,
-      "char": "分",
-      "start": 7.966,
-      "end": 8.167
+      "char": "要",
+      "start": 8.4,
+      "end": 8.56
     },
     {
       "index": 28,
-      "char": "工",
-      "start": 8.205,
-      "end": 8.406
+      "char": "注",
+      "start": 8.56,
+      "end": 8.8
     },
     {
       "index": 29,
-      "char": "看",
-      "start": 8.444,
-      "end": 8.645
+      "char": "意",
+      "start": 8.8,
+      "end": 8.96
     },
     {
       "index": 30,
-      "char": "木",
-      "start": 8.863,
-      "end": 9.064
+      "char": "横",
+      "start": 8.96,
+      "end": 9.2
     },
     {
       "index": 31,
-      "char": "提",
-      "start": 9.102,
-      "end": 9.302
+      "char": "斜",
+      "start": 9.2,
+      "end": 9.36
     },
     {
       "index": 32,
-      "char": "示",
-      "start": 9.341,
-      "end": 9.541
+      "char": "相",
+      "start": 9.36,
+      "end": 9.6
     },
     {
       "index": 33,
-      "char": "意",
-      "start": 9.58,
-      "end": 9.78
+      "char": "让",
+      "start": 9.6,
+      "end": 10.0
     },
     {
       "index": 34,
-      "char": "义",
-      "start": 9.819,
-      "end": 10.019
+      "char": "把",
+      "start": 10.32,
+      "end": 10.4
     },
     {
       "index": 35,
-      "char": "类",
-      "start": 10.058,
-      "end": 10.258
+      "char": "两",
+      "start": 10.4,
+      "end": 10.64
     },
     {
       "index": 36,
-      "char": "别",
-      "start": 10.296,
-      "end": 10.497
+      "char": "边",
+      "start": 10.64,
+      "end": 10.72
     },
     {
       "index": 37,
-      "char": "戒",
-      "start": 10.715,
-      "end": 10.916
+      "char": "连",
+      "start": 10.72,
+      "end": 11.04
     },
     {
       "index": 38,
-      "char": "提",
-      "start": 10.954,
-      "end": 11.155
+      "char": "起",
+      "start": 11.04,
+      "end": 11.2
     },
     {
       "index": 39,
-      "char": "供",
-      "start": 11.193,
-      "end": 11.394
+      "char": "来",
+      "start": 11.2,
+      "end": 11.44
     },
     {
       "index": 40,
-      "char": "读",
-      "start": 11.432,
-      "end": 11.633
+      "char": "可",
+      "start": 11.84,
+      "end": 12.0
     },
     {
       "index": 41,
-      "char": "音",
-      "start": 11.671,
-      "end": 11.872
+      "char": "以",
+      "start": 12.0,
+      "end": 12.08
     },
     {
       "index": 42,
-      "char": "线",
-      "start": 11.91,
-      "end": 12.111
+      "char": "想",
+      "start": 12.08,
+      "end": 12.32
     },
     {
       "index": 43,
-      "char": "索",
-      "start": 12.149,
-      "end": 12.35
+      "char": "象",
+      "start": 12.32,
+      "end": 12.72
     },
     {
       "index": 44,
-      "char": "看",
-      "start": 12.728,
-      "end": 12.929
+      "char": "木",
+      "start": 12.72,
+      "end": 12.88
     },
     {
       "index": 45,
-      "char": "图",
-      "start": 12.967,
-      "end": 13.168
+      "char": "架",
+      "start": 12.88,
+      "end": 13.12
     },
     {
       "index": 46,
-      "char": "时",
-      "start": 13.206,
-      "end": 13.407
+      "char": "上",
+      "start": 13.12,
+      "end": 13.36
     },
     {
       "index": 47,
-      "char": "左",
-      "start": 13.625,
-      "end": 13.826
+      "char": "装",
+      "start": 13.36,
+      "end": 13.52
     },
     {
       "index": 48,
-      "char": "边",
-      "start": 13.864,
-      "end": 14.065
+      "char": "着",
+      "start": 13.52,
+      "end": 13.68
     },
     {
       "index": 49,
-      "char": "木",
-      "start": 14.103,
-      "end": 14.304
+      "char": "许",
+      "start": 13.68,
+      "end": 13.84
     },
     {
       "index": 50,
-      "char": "制",
-      "start": 14.342,
-      "end": 14.542
+      "char": "多",
+      "start": 13.84,
+      "end": 14.0
     },
     {
       "index": 51,
-      "char": "机",
-      "start": 14.581,
-      "end": 14.781
+      "char": "互",
+      "start": 14.0,
+      "end": 14.16
     },
     {
       "index": 52,
-      "char": "架",
-      "start": 14.82,
-      "end": 15.02
+      "char": "相",
+      "start": 14.16,
+      "end": 14.4
     },
     {
       "index": 53,
-      "char": "形",
-      "start": 15.059,
-      "end": 15.259
+      "char": "带",
+      "start": 14.4,
+      "end": 14.56
     },
     {
       "index": 54,
-      "char": "成",
-      "start": 15.298,
-      "end": 15.498
+      "char": "动",
+      "start": 14.56,
+      "end": 14.72
     },
     {
       "index": 55,
-      "char": "木",
-      "start": 15.537,
-      "end": 15.737
+      "char": "的",
+      "start": 14.72,
+      "end": 14.8
     },
     {
       "index": 56,
-      "char": "右",
-      "start": 15.955,
-      "end": 16.156
+      "char": "小",
+      "start": 14.8,
+      "end": 14.96
     },
     {
       "index": 57,
-      "char": "边",
-      "start": 16.194,
-      "end": 16.395
+      "char": "零",
+      "start": 14.96,
+      "end": 15.12
     },
     {
       "index": 58,
-      "char": "齿",
-      "start": 16.433,
-      "end": 16.634
+      "char": "件",
+      "start": 15.12,
+      "end": 15.44
     },
     {
       "index": 59,
-      "char": "轮",
-      "start": 16.672,
-      "end": 16.873
+      "char": "转",
+      "start": 15.92,
+      "end": 16.16
     },
     {
       "index": 60,
-      "char": "护",
-      "start": 17.091,
-      "end": 17.292
+      "char": "起",
+      "start": 16.16,
+      "end": 16.32
     },
     {
       "index": 61,
-      "char": "栏",
-      "start": 17.33,
-      "end": 17.531
+      "char": "来",
+      "start": 16.32,
+      "end": 16.48
     },
     {
       "index": 62,
-      "char": "和",
-      "start": 17.569,
-      "end": 17.77
+      "char": "就",
+      "start": 16.48,
+      "end": 16.56
     },
     {
       "index": 63,
-      "char": "工",
-      "start": 17.808,
-      "end": 18.009
+      "char": "能",
+      "start": 16.56,
+      "end": 16.72
     },
     {
       "index": 64,
-      "char": "具",
-      "start": 18.047,
-      "end": 18.248
+      "char": "帮",
+      "start": 16.72,
+      "end": 16.88
     },
     {
       "index": 65,
-      "char": "沿",
-      "start": 18.286,
-      "end": 18.487
+      "char": "人",
+      "start": 16.88,
+      "end": 17.04
     },
     {
       "index": 66,
-      "char": "戒",
-      "start": 18.525,
-      "end": 18.726
+      "char": "工",
+      "start": 17.04,
+      "end": 17.2
     },
     {
       "index": 67,
-      "char": "互",
-      "start": 18.764,
-      "end": 18.965
+      "char": "作",
+      "start": 17.2,
+      "end": 17.52
     },
     {
       "index": 68,
-      "char": "相",
-      "start": 19.003,
-      "end": 19.204
+      "char": "机",
+      "start": 18.08,
+      "end": 18.32
     },
     {
       "index": 69,
-      "char": "咬",
-      "start": 19.242,
-      "end": 19.443
+      "char": "械",
+      "start": 18.32,
+      "end": 18.56
     },
     {
       "index": 70,
-      "char": "合",
-      "start": 19.481,
-      "end": 19.681
+      "char": "是",
+      "start": 18.56,
+      "end": 18.72
     },
     {
       "index": 71,
-      "char": "像",
-      "start": 19.9,
-      "end": 20.1
+      "char": "利",
+      "start": 18.72,
+      "end": 18.88
     },
     {
       "index": 72,
-      "char": "一",
-      "start": 20.139,
-      "end": 20.339
+      "char": "用",
+      "start": 18.88,
+      "end": 18.96
     },
     {
       "index": 73,
-      "char": "台",
-      "start": 20.378,
-      "end": 20.578
+      "char": "零",
+      "start": 18.96,
+      "end": 19.2
     },
     {
       "index": 74,
-      "char": "有",
-      "start": 20.617,
-      "end": 20.817
+      "char": "件",
+      "start": 19.2,
+      "end": 19.44
     },
     {
       "index": 75,
-      "char": "秩",
-      "start": 20.855,
-      "end": 21.056
+      "char": "和",
+      "start": 19.44,
+      "end": 19.6
     },
     {
       "index": 76,
-      "char": "序",
-      "start": 21.094,
-      "end": 21.295
+      "char": "动",
+      "start": 19.6,
+      "end": 19.84
     },
     {
       "index": 77,
-      "char": "运",
-      "start": 21.333,
-      "end": 21.534
+      "char": "力",
+      "start": 19.84,
+      "end": 20.08
     },
     {
       "index": 78,
-      "char": "转",
-      "start": 21.572,
-      "end": 21.773
+      "char": "完",
+      "start": 20.08,
+      "end": 20.24
     },
     {
       "index": 79,
-      "char": "的",
-      "start": 21.811,
-      "end": 22.012
+      "char": "成",
+      "start": 20.24,
+      "end": 20.4
     },
     {
       "index": 80,
-      "char": "机",
-      "start": 22.05,
-      "end": 22.251
+      "char": "工",
+      "start": 20.4,
+      "end": 20.56
     },
     {
       "index": 81,
-      "char": "器",
-      "start": 22.289,
-      "end": 22.49
+      "char": "作",
+      "start": 20.56,
+      "end": 20.72
     },
     {
       "index": 82,
-      "char": "组",
-      "start": 22.708,
-      "end": 22.909
+      "char": "的",
+      "start": 20.72,
+      "end": 20.8
     },
     {
       "index": 83,
-      "char": "成",
-      "start": 22.947,
-      "end": 23.148
+      "char": "装",
+      "start": 20.8,
+      "end": 21.04
     },
     {
       "index": 84,
-      "char": "械",
-      "start": 23.186,
-      "end": 23.387
+      "char": "置",
+      "start": 21.04,
+      "end": 21.36
     },
     {
       "index": 85,
-      "char": "机",
-      "start": 23.765,
-      "end": 23.966
+      "char": "文",
+      "start": 21.76,
+      "end": 21.92
     },
     {
       "index": 86,
-      "char": "械",
-      "start": 24.004,
-      "end": 24.205
+      "char": "中",
+      "start": 21.92,
+      "end": 22.08
     },
     {
       "index": 87,
-      "char": "是",
-      "start": 24.243,
-      "end": 24.444
+      "char": "的",
+      "start": 22.08,
+      "end": 22.16
     },
     {
       "index": 88,
-      "char": "利",
-      "start": 24.482,
-      "end": 24.683
+      "char": "缝",
+      "start": 22.16,
+      "end": 22.4
     },
     {
       "index": 89,
-      "char": "用",
-      "start": 24.721,
-      "end": 24.921
+      "char": "纫",
+      "start": 22.4,
+      "end": 22.56
     },
     {
       "index": 90,
-      "char": "零",
-      "start": 24.96,
-      "end": 25.16
+      "char": "机",
+      "start": 22.56,
+      "end": 22.72
     },
     {
       "index": 91,
-      "char": "件",
-      "start": 25.199,
-      "end": 25.399
+      "char": "械",
+      "start": 22.72,
+      "end": 23.04
     },
     {
       "index": 92,
-      "char": "和",
-      "start": 25.438,
-      "end": 25.638
+      "char": "不",
+      "start": 23.04,
+      "end": 23.2
     },
     {
       "index": 93,
-      "char": "动",
-      "start": 25.677,
-      "end": 25.877
+      "char": "断",
+      "start": 23.2,
+      "end": 23.36
     },
     {
       "index": 94,
-      "char": "力",
-      "start": 25.916,
-      "end": 26.116
+      "char": "转",
+      "start": 23.36,
+      "end": 23.68
     },
     {
       "index": 95,
-      "char": "完",
-      "start": 26.154,
-      "end": 26.355
+      "char": "动",
+      "start": 23.68,
+      "end": 23.92
     },
     {
       "index": 96,
-      "char": "成",
-      "start": 26.393,
-      "end": 26.594
+      "char": "巨",
+      "start": 24.24,
+      "end": 24.4
     },
     {
       "index": 97,
-      "char": "工",
-      "start": 26.632,
-      "end": 26.833
+      "char": "大",
+      "start": 24.4,
+      "end": 24.56
     },
     {
       "index": 98,
-      "char": "作",
-      "start": 26.871,
-      "end": 27.072
+      "char": "的",
+      "start": 24.56,
+      "end": 24.64
     },
     {
       "index": 99,
-      "char": "的",
-      "start": 27.11,
-      "end": 27.311
+      "char": "声",
+      "start": 24.64,
+      "end": 24.8
     },
     {
       "index": 100,
-      "char": "装",
-      "start": 27.349,
-      "end": 27.55
+      "char": "响",
+      "start": 24.88,
+      "end": 25.2
     },
     {
       "index": 101,
-      "char": "置",
-      "start": 27.588,
-      "end": 27.789
+      "char": "和",
+      "start": 25.36,
+      "end": 25.44
     },
     {
       "index": 102,
-      "char": "这",
-      "start": 28.167,
-      "end": 28.368
+      "char": "重",
+      "start": 25.44,
+      "end": 25.76
     },
     {
       "index": 103,
-      "char": "是",
-      "start": 28.406,
-      "end": 28.607
+      "char": "复",
+      "start": 25.76,
+      "end": 25.92
     },
     {
       "index": 104,
-      "char": "一",
-      "start": 28.645,
-      "end": 28.846
+      "char": "动",
+      "start": 25.92,
+      "end": 26.08
     },
     {
       "index": 105,
-      "char": "幅",
-      "start": 28.884,
-      "end": 29.085
+      "char": "作",
+      "start": 26.08,
+      "end": 26.32
     },
     {
       "index": 106,
-      "char": "帮",
-      "start": 29.123,
-      "end": 29.324
+      "char": "衬",
+      "start": 26.32,
+      "end": 26.56
     },
     {
       "index": 107,
-      "char": "助",
-      "start": 29.362,
-      "end": 29.563
+      "char": "出",
+      "start": 26.56,
+      "end": 26.64
     },
     {
       "index": 108,
-      "char": "记",
-      "start": 29.601,
-      "end": 29.802
+      "char": "母",
+      "start": 26.64,
+      "end": 26.8
     },
     {
       "index": 109,
-      "char": "笔",
-      "start": 29.84,
-      "end": 30.04
+      "char": "亲",
+      "start": 26.8,
+      "end": 27.04
     },
     {
       "index": 110,
-      "char": "画",
-      "start": 30.079,
-      "end": 30.279
+      "char": "劳",
+      "start": 27.04,
+      "end": 27.2
     },
     {
       "index": 111,
-      "char": "和",
-      "start": 30.318,
-      "end": 30.518
+      "char": "动",
+      "start": 27.2,
+      "end": 27.36
     },
     {
       "index": 112,
-      "char": "位",
-      "start": 30.557,
-      "end": 30.757
+      "char": "的",
+      "start": 27.36,
+      "end": 27.44
     },
     {
       "index": 113,
-      "char": "置",
-      "start": 30.796,
-      "end": 30.996
+      "char": "辛",
+      "start": 27.44,
+      "end": 27.68
     },
     {
       "index": 114,
-      "char": "的",
-      "start": 31.034,
-      "end": 31.235
-    },
-    {
-      "index": 115,
-      "char": "记",
-      "start": 31.273,
-      "end": 31.474
-    },
-    {
-      "index": 116,
-      "char": "忆",
-      "start": 31.512,
-      "end": 31.713
-    },
-    {
-      "index": 117,
-      "char": "画",
-      "start": 31.751,
-      "end": 31.952
-    },
-    {
-      "index": 118,
-      "char": "面",
-      "start": 31.99,
-      "end": 32.191
-    },
-    {
-      "index": 119,
-      "char": "不",
-      "start": 32.409,
-      "end": 32.61
-    },
-    {
-      "index": 120,
-      "char": "是",
-      "start": 32.648,
-      "end": 32.849
-    },
-    {
-      "index": 121,
-      "char": "完",
-      "start": 32.887,
-      "end": 33.088
-    },
-    {
-      "index": 122,
-      "char": "整",
-      "start": 33.126,
-      "end": 33.327
-    },
-    {
-      "index": 123,
-      "char": "字",
-      "start": 33.365,
-      "end": 33.566
-    },
-    {
-      "index": 124,
-      "char": "源",
-      "start": 33.604,
-      "end": 33.805
-    },
-    {
-      "index": 125,
-      "char": "最",
-      "start": 34.183,
-      "end": 34.384
-    },
-    {
-      "index": 126,
-      "char": "后",
-      "start": 34.422,
-      "end": 34.623
-    },
-    {
-      "index": 127,
-      "char": "再",
-      "start": 34.661,
-      "end": 34.862
-    },
-    {
-      "index": 128,
-      "char": "读",
-      "start": 34.9,
-      "end": 35.1
-    },
-    {
-      "index": 129,
-      "char": "一",
-      "start": 35.139,
-      "end": 35.339
-    },
-    {
-      "index": 130,
-      "char": "遍",
-      "start": 35.378,
-      "end": 35.578
-    },
-    {
-      "index": 131,
-      "char": "机",
-      "start": 35.797,
-      "end": 35.997
-    },
-    {
-      "index": 132,
-      "char": "械",
-      "start": 36.036,
-      "end": 36.236
+      "char": "苦",
+      "start": 27.68,
+      "end": 28.0
     }
   ],
-  "transcript": "械，“机械”的“械”，读xiè。它是左右结构，按顺序能看到“木”和“戒”。从构字分工看，“木”提示意义类别，“戒”提供读音线索。看图时，左边木制机架形成“木”，右边齿轮、护栏和工具沿“戒”互相咬合，像一台有秩序运转的机器，组成“械”。机械是利用零件和动力完成工作的装置。这是一幅帮助记笔画和位置的记忆画面，不是完整字源。最后再读一遍：机械。",
+  "transcript": "机械的械，读第四声。从左往右看，械先写木字旁，右边笔画交错，写时要注意横斜相让。把两边连起来，可以想象木架上装着许多互相带动的小零件，转起来就能帮人工作。机械是利用零件和动力完成工作的装置。文中的缝纫机械不断转动，巨大的声响和重复动作衬出母亲劳动的辛苦。",
   "voice_reference": "封",
-  "timing_source": "punctuation-weighted-estimate",
-  "script_version": "child-first-v2",
-  "duration": 36.800181
+  "reference_id": "019f0554-ea22-762e-966c-32d678fd6bf6",
+  "reference_sha256": "eb07e06ee13a20ee4577b1b481df6d33d42127c1b3876bfa5d5e5362ae349f19",
+  "timing_source": "qwen3-forced-aligner",
+  "script_version": "narration-v3",
+  "model": "mlx-community/Qwen3-TTS-12Hz-1.7B-Base-4bit",
+  "model_revision": "37e955a1deb861c088ae5f3a67043185f3d1a60c",
+  "generation_policy": "qwen3-clone-2026-08-22-v3",
+  "seed": 20260822,
+  "content_hash": "163750bf25c728b6b44b",
+  "duration": 28.039,
+  "alignment_model": "mlx-community/Qwen3-ForcedAligner-0.6B-8bit",
+  "aligned_audio_sha256": "2c8309ca60d22776a89e92b8f3fb58be34046cb0f2494830618f91072d4ddf18",
+  "alignment_groups": []
 }

@@ -1,5 +1,7 @@
 import { narrationAssets } from "../app/data/narration-assets.ts";
 
+const narrationVersion = "v3";
+
 const siteUrl = (process.env.SITE_URL || process.argv[2] || "").replace(/\/+$/, "");
 if (!/^https?:\/\//.test(siteUrl)) {
   throw new Error("Pass the deployed site URL through SITE_URL or as the first argument.");
@@ -8,7 +10,7 @@ if (!/^https?:\/\//.test(siteUrl)) {
 const mediaPaths = [...new Set(
   Object.values(narrationAssets)
     .flatMap((asset) => [asset.audio, asset.audioMarks])
-    .map((source) => source.replace(/^\/narration\//, "/media/narration/v2/")),
+    .map((source) => source.replace(/^\/narration\//, `/media/narration/${narrationVersion}/`)),
 )];
 
 let completed = 0;

@@ -2,512 +2,528 @@
   "marks": [
     {
       "index": 0,
-      "char": "穷",
-      "start": 0.295,
-      "end": 0.507
+      "char": "无",
+      "start": 0.24,
+      "end": 0.4
     },
     {
       "index": 1,
-      "char": "无",
-      "start": 0.727,
-      "end": 0.939
+      "char": "穷",
+      "start": 0.4,
+      "end": 0.56
     },
     {
       "index": 2,
-      "char": "穷",
-      "start": 0.979,
-      "end": 1.191
+      "char": "无",
+      "start": 0.56,
+      "end": 0.8
     },
     {
       "index": 3,
-      "char": "无",
-      "start": 1.231,
-      "end": 1.442
+      "char": "尽",
+      "start": 0.8,
+      "end": 0.96
     },
     {
       "index": 4,
-      "char": "尽",
-      "start": 1.483,
-      "end": 1.694
+      "char": "的",
+      "start": 0.96,
+      "end": 1.04
     },
     {
       "index": 5,
-      "char": "的",
-      "start": 1.735,
-      "end": 1.946
+      "char": "穷",
+      "start": 1.04,
+      "end": 1.44
     },
     {
       "index": 6,
-      "char": "穷",
-      "start": 1.987,
-      "end": 2.198
+      "char": "是",
+      "start": 1.52,
+      "end": 1.68
     },
     {
       "index": 7,
-      "char": "它",
-      "start": 2.578,
-      "end": 2.79
+      "char": "上",
+      "start": 1.68,
+      "end": 1.92
     },
     {
       "index": 8,
-      "char": "是",
-      "start": 2.83,
-      "end": 3.042
+      "char": "下",
+      "start": 1.92,
+      "end": 2.08
     },
     {
       "index": 9,
-      "char": "上",
-      "start": 3.082,
-      "end": 3.294
+      "char": "结",
+      "start": 2.08,
+      "end": 2.24
     },
     {
       "index": 10,
-      "char": "下",
-      "start": 3.334,
-      "end": 3.546
+      "char": "构",
+      "start": 2.24,
+      "end": 2.56
     },
     {
       "index": 11,
-      "char": "结",
-      "start": 3.586,
-      "end": 3.798
+      "char": "上",
+      "start": 2.88,
+      "end": 3.2
     },
     {
       "index": 12,
-      "char": "构",
-      "start": 3.838,
-      "end": 4.05
+      "char": "面",
+      "start": 3.2,
+      "end": 3.44
     },
     {
       "index": 13,
-      "char": "上",
-      "start": 4.27,
-      "end": 4.482
+      "char": "是",
+      "start": 3.44,
+      "end": 3.6
     },
     {
       "index": 14,
-      "char": "面",
-      "start": 4.522,
-      "end": 4.733
+      "char": "穴",
+      "start": 3.6,
+      "end": 3.84
     },
     {
       "index": 15,
-      "char": "是",
-      "start": 4.774,
-      "end": 4.985
+      "char": "宝",
+      "start": 3.84,
+      "end": 4.0
     },
     {
       "index": 16,
-      "char": "穴",
-      "start": 5.026,
-      "end": 5.237
+      "char": "盖",
+      "start": 4.0,
+      "end": 4.32
     },
     {
       "index": 17,
       "char": "下",
-      "start": 5.458,
-      "end": 5.669
+      "start": 4.64,
+      "end": 4.96
     },
     {
       "index": 18,
       "char": "面",
-      "start": 5.709,
-      "end": 5.921
+      "start": 4.96,
+      "end": 5.12
     },
     {
       "index": 19,
       "char": "是",
-      "start": 5.961,
-      "end": 6.173
+      "start": 5.12,
+      "end": 5.28
     },
     {
       "index": 20,
       "char": "力",
-      "start": 6.213,
-      "end": 6.425
+      "start": 5.28,
+      "end": 5.44
     },
     {
       "index": 21,
-      "char": "想",
-      "start": 6.805,
-      "end": 7.017
+      "char": "量",
+      "start": 5.44,
+      "end": 5.6
     },
     {
       "index": 22,
-      "char": "象",
-      "start": 7.057,
-      "end": 7.269
+      "char": "的",
+      "start": 5.6,
+      "end": 5.76
     },
     {
       "index": 23,
-      "char": "一",
-      "start": 7.309,
-      "end": 7.521
+      "char": "力",
+      "start": 5.76,
+      "end": 6.08
     },
     {
       "index": 24,
-      "char": "个",
-      "start": 7.561,
-      "end": 7.772
+      "char": "想",
+      "start": 6.48,
+      "end": 6.72
     },
     {
       "index": 25,
-      "char": "人",
-      "start": 7.813,
-      "end": 8.024
+      "char": "象",
+      "start": 6.72,
+      "end": 7.04
     },
     {
       "index": 26,
-      "char": "钻",
-      "start": 8.065,
-      "end": 8.276
+      "char": "有",
+      "start": 7.04,
+      "end": 7.2
     },
     {
       "index": 27,
-      "char": "进",
-      "start": 8.317,
-      "end": 8.528
+      "char": "人",
+      "start": 7.2,
+      "end": 7.36
     },
     {
       "index": 28,
-      "char": "洞",
-      "start": 8.569,
-      "end": 8.78
+      "char": "在",
+      "start": 7.36,
+      "end": 7.52
     },
     {
       "index": 29,
-      "char": "穴",
-      "start": 8.82,
-      "end": 9.032
+      "char": "洞",
+      "start": 7.52,
+      "end": 7.68
     },
     {
       "index": 30,
-      "char": "一",
-      "start": 9.252,
-      "end": 9.464
+      "char": "穴",
+      "start": 7.68,
+      "end": 7.84
     },
     {
       "index": 31,
-      "char": "直",
-      "start": 9.504,
-      "end": 9.716
+      "char": "里",
+      "start": 7.84,
+      "end": 8.08
     },
     {
       "index": 32,
       "char": "用",
-      "start": 9.756,
-      "end": 9.968
+      "start": 8.08,
+      "end": 8.24
     },
     {
       "index": 33,
       "char": "力",
-      "start": 10.008,
-      "end": 10.22
+      "start": 8.24,
+      "end": 8.32
     },
     {
       "index": 34,
       "char": "向",
-      "start": 10.26,
-      "end": 10.472
+      "start": 8.32,
+      "end": 8.56
     },
     {
       "index": 35,
       "char": "前",
-      "start": 10.512,
-      "end": 10.723
+      "start": 8.56,
+      "end": 8.8
     },
     {
       "index": 36,
       "char": "走",
-      "start": 10.944,
-      "end": 11.155
+      "start": 8.8,
+      "end": 9.12
     },
     {
       "index": 37,
-      "char": "到",
-      "start": 11.196,
-      "end": 11.407
+      "char": "一",
+      "start": 9.44,
+      "end": 9.52
     },
     {
       "index": 38,
-      "char": "最",
-      "start": 11.448,
-      "end": 11.659
+      "char": "直",
+      "start": 9.52,
+      "end": 9.76
     },
     {
       "index": 39,
-      "char": "深",
-      "start": 11.699,
-      "end": 11.911
+      "char": "走",
+      "start": 9.76,
+      "end": 9.92
     },
     {
       "index": 40,
-      "char": "处",
-      "start": 11.951,
-      "end": 12.163
+      "char": "到",
+      "start": 9.92,
+      "end": 10.08
     },
     {
       "index": 41,
-      "char": "再",
-      "start": 12.383,
-      "end": 12.595
+      "char": "最",
+      "start": 10.08,
+      "end": 10.24
     },
     {
       "index": 42,
-      "char": "也",
-      "start": 12.635,
-      "end": 12.847
+      "char": "深",
+      "start": 10.24,
+      "end": 10.48
     },
     {
       "index": 43,
-      "char": "没",
-      "start": 12.887,
-      "end": 13.099
+      "char": "处",
+      "start": 10.48,
+      "end": 10.8
     },
     {
       "index": 44,
-      "char": "有",
-      "start": 13.139,
-      "end": 13.351
+      "char": "一",
+      "start": 11.12,
+      "end": 11.28
     },
     {
       "index": 45,
       "char": "路",
-      "start": 13.391,
-      "end": 13.603
+      "start": 11.28,
+      "end": 11.52
     },
     {
       "index": 46,
-      "char": "了",
-      "start": 13.643,
-      "end": 13.854
+      "char": "走",
+      "start": 11.52,
+      "end": 11.68
     },
     {
       "index": 47,
-      "char": "这",
-      "start": 14.235,
-      "end": 14.446
+      "char": "到",
+      "start": 11.68,
+      "end": 11.76
     },
     {
       "index": 48,
-      "char": "个",
-      "start": 14.487,
-      "end": 14.698
+      "char": "尽",
+      "start": 11.76,
+      "end": 12.0
     },
     {
       "index": 49,
-      "char": "画",
-      "start": 14.739,
-      "end": 14.95
+      "char": "头",
+      "start": 12.0,
+      "end": 12.32
     },
     {
       "index": 50,
-      "char": "面",
-      "start": 14.99,
-      "end": 15.202
+      "char": "正",
+      "start": 12.64,
+      "end": 12.8
     },
     {
       "index": 51,
-      "char": "帮",
-      "start": 15.242,
-      "end": 15.454
+      "char": "好",
+      "start": 12.8,
+      "end": 12.96
     },
     {
       "index": 52,
-      "char": "助",
-      "start": 15.494,
-      "end": 15.706
+      "char": "接",
+      "start": 12.96,
+      "end": 13.2
     },
     {
       "index": 53,
-      "char": "记",
-      "start": 15.746,
-      "end": 15.958
+      "char": "住",
+      "start": 13.2,
+      "end": 13.36
     },
     {
       "index": 54,
-      "char": "住",
-      "start": 15.998,
-      "end": 16.21
+      "char": "穷",
+      "start": 13.36,
+      "end": 13.6
     },
     {
       "index": 55,
-      "char": "达",
-      "start": 16.25,
-      "end": 16.462
+      "char": "的",
+      "start": 13.6,
+      "end": 13.76
     },
     {
       "index": 56,
-      "char": "到",
-      "start": 16.502,
-      "end": 16.714
+      "char": "这",
+      "start": 13.76,
+      "end": 13.84
     },
     {
       "index": 57,
-      "char": "尽",
-      "start": 16.754,
-      "end": 16.965
+      "char": "层",
+      "start": 13.84,
+      "end": 14.0
     },
     {
       "index": 58,
-      "char": "头",
-      "start": 17.006,
-      "end": 17.217
+      "char": "意",
+      "start": 14.0,
+      "end": 14.24
     },
     {
       "index": 59,
-      "char": "的",
-      "start": 17.258,
-      "end": 17.469
+      "char": "思",
+      "start": 14.24,
+      "end": 14.56
     },
     {
       "index": 60,
-      "char": "意",
-      "start": 17.51,
-      "end": 17.721
+      "char": "穷",
+      "start": 14.88,
+      "end": 15.2
     },
     {
       "index": 61,
-      "char": "思",
-      "start": 17.761,
-      "end": 17.973
+      "char": "可",
+      "start": 15.2,
+      "end": 15.36
     },
     {
       "index": 62,
-      "char": "穷",
-      "start": 18.353,
-      "end": 18.565
+      "char": "以",
+      "start": 15.36,
+      "end": 15.52
     },
     {
       "index": 63,
-      "char": "可",
-      "start": 18.605,
-      "end": 18.817
+      "char": "表",
+      "start": 15.52,
+      "end": 15.68
     },
     {
       "index": 64,
-      "char": "以",
-      "start": 18.857,
-      "end": 19.069
+      "char": "示",
+      "start": 15.68,
+      "end": 15.84
     },
     {
       "index": 65,
-      "char": "表",
-      "start": 19.109,
-      "end": 19.321
+      "char": "尽",
+      "start": 15.84,
+      "end": 16.08
     },
     {
       "index": 66,
-      "char": "示",
-      "start": 19.361,
-      "end": 19.573
+      "char": "头",
+      "start": 16.08,
+      "end": 16.4
     },
     {
       "index": 67,
-      "char": "尽",
-      "start": 19.613,
-      "end": 19.824
+      "char": "无",
+      "start": 16.64,
+      "end": 16.8
     },
     {
       "index": 68,
-      "char": "头",
-      "start": 19.865,
-      "end": 20.076
+      "char": "穷",
+      "start": 16.8,
+      "end": 17.2
     },
     {
       "index": 69,
-      "char": "也",
-      "start": 20.297,
-      "end": 20.508
+      "char": "就",
+      "start": 17.28,
+      "end": 17.44
     },
     {
       "index": 70,
-      "char": "可",
-      "start": 20.549,
-      "end": 20.76
+      "char": "是",
+      "start": 17.44,
+      "end": 17.52
     },
     {
       "index": 71,
-      "char": "以",
-      "start": 20.801,
-      "end": 21.012
+      "char": "没",
+      "start": 17.52,
+      "end": 17.76
     },
     {
       "index": 72,
-      "char": "表",
-      "start": 21.052,
-      "end": 21.264
+      "char": "有",
+      "start": 17.76,
+      "end": 17.84
     },
     {
       "index": 73,
-      "char": "示",
-      "start": 21.304,
-      "end": 21.516
+      "char": "尽",
+      "start": 17.84,
+      "end": 18.08
     },
     {
       "index": 74,
-      "char": "贫",
-      "start": 21.556,
-      "end": 21.768
+      "char": "头",
+      "start": 18.08,
+      "end": 18.4
     },
     {
       "index": 75,
-      "char": "困",
-      "start": 21.808,
-      "end": 22.02
+      "char": "课",
+      "start": 18.72,
+      "end": 18.96
     },
     {
       "index": 76,
-      "char": "无",
-      "start": 22.4,
-      "end": 22.612
+      "char": "文",
+      "start": 18.96,
+      "end": 19.28
     },
     {
       "index": 77,
-      "char": "穷",
-      "start": 22.652,
-      "end": 22.864
+      "char": "用",
+      "start": 19.28,
+      "end": 19.44
     },
     {
       "index": 78,
-      "char": "就",
-      "start": 23.084,
-      "end": 23.295
+      "char": "它",
+      "start": 19.44,
+      "end": 19.52
     },
     {
       "index": 79,
-      "char": "是",
-      "start": 23.336,
-      "end": 23.547
+      "char": "赞",
+      "start": 19.52,
+      "end": 19.76
     },
     {
       "index": 80,
-      "char": "没",
-      "start": 23.588,
-      "end": 23.799
+      "char": "美",
+      "start": 19.76,
+      "end": 19.92
     },
     {
       "index": 81,
-      "char": "有",
-      "start": 23.84,
-      "end": 24.051
+      "char": "人",
+      "start": 19.92,
+      "end": 20.08
     },
     {
       "index": 82,
-      "char": "尽",
-      "start": 24.091,
-      "end": 24.303
+      "char": "民",
+      "start": 20.08,
+      "end": 20.32
     },
     {
       "index": 83,
-      "char": "头",
-      "start": 24.343,
-      "end": 24.555
+      "char": "智",
+      "start": 20.32,
+      "end": 20.48
+    },
+    {
+      "index": 84,
+      "char": "慧",
+      "start": 20.48,
+      "end": 20.72
     }
   ],
-  "transcript": "穷，无穷无尽的穷。它是上下结构，上面是穴，下面是力。想象一个人钻进洞穴，一直用力向前，走到最深处，再也没有路了。这个画面帮助记住达到尽头的意思。穷可以表示尽头，也可以表示贫困。无穷，就是没有尽头。",
+  "transcript": "无穷无尽的穷是上下结构，上面是穴宝盖，下面是力量的力。想象有人在洞穴里用力向前走，一直走到最深处。一路走到尽头，正好接住“穷”的这层意思。穷可以表示尽头，无穷就是没有尽头，课文用它赞美人民智慧。",
   "voice_reference": "封",
-  "timing_source": "punctuation-weighted-estimate",
-  "script_version": "child-first-v1",
-  "duration": 25.120181
+  "reference_id": "019f0554-ea22-762e-966c-32d678fd6bf6",
+  "reference_sha256": "eb07e06ee13a20ee4577b1b481df6d33d42127c1b3876bfa5d5e5362ae349f19",
+  "timing_source": "qwen3-forced-aligner",
+  "script_version": "narration-v3",
+  "model": "mlx-community/Qwen3-TTS-12Hz-1.7B-Base-4bit",
+  "model_revision": "37e955a1deb861c088ae5f3a67043185f3d1a60c",
+  "generation_policy": "qwen3-clone-2026-08-22-v3",
+  "seed": 20260822,
+  "content_hash": "70a816a90a9df9ce9202",
+  "duration": 20.749,
+  "alignment_model": "mlx-community/Qwen3-ForcedAligner-0.6B-8bit",
+  "aligned_audio_sha256": "955c31d42ea94b7a4d55e3be1f853fd35bb00f6f1d64d72cc558aefa79432795",
+  "alignment_groups": []
 }

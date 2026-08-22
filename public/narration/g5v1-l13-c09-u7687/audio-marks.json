@@ -1,0 +1,636 @@
+{
+  "marks": [
+    {
+      "index": 0,
+      "char": "奇",
+      "start": 0.24,
+      "end": 0.48
+    },
+    {
+      "index": 1,
+      "char": "花",
+      "start": 0.48,
+      "end": 0.8
+    },
+    {
+      "index": 2,
+      "char": "初",
+      "start": 0.8,
+      "end": 0.96
+    },
+    {
+      "index": 3,
+      "char": "胎",
+      "start": 0.96,
+      "end": 1.36
+    },
+    {
+      "index": 4,
+      "char": "矞",
+      "start": 1.76,
+      "end": 2.0
+    },
+    {
+      "index": 5,
+      "char": "矞",
+      "start": 2.0,
+      "end": 2.32,
+      "alignment_group": "align-group-5-6",
+      "alignment_group_text": "矞皇"
+    },
+    {
+      "index": 6,
+      "char": "皇",
+      "start": 2.0,
+      "end": 2.32,
+      "alignment_group": "align-group-5-6",
+      "alignment_group_text": "矞皇"
+    },
+    {
+      "index": 7,
+      "char": "皇",
+      "start": 2.32,
+      "end": 2.72
+    },
+    {
+      "index": 8,
+      "char": "写",
+      "start": 3.12,
+      "end": 3.36
+    },
+    {
+      "index": 9,
+      "char": "新",
+      "start": 3.36,
+      "end": 3.6
+    },
+    {
+      "index": 10,
+      "char": "生",
+      "start": 3.6,
+      "end": 3.76
+    },
+    {
+      "index": 11,
+      "char": "的",
+      "start": 3.76,
+      "end": 3.84
+    },
+    {
+      "index": 12,
+      "char": "花",
+      "start": 3.84,
+      "end": 4.16
+    },
+    {
+      "index": 13,
+      "char": "朵",
+      "start": 4.16,
+      "end": 4.24
+    },
+    {
+      "index": 14,
+      "char": "明",
+      "start": 4.48,
+      "end": 4.8
+    },
+    {
+      "index": 15,
+      "char": "亮",
+      "start": 4.8,
+      "end": 4.96
+    },
+    {
+      "index": 16,
+      "char": "又",
+      "start": 4.96,
+      "end": 5.12
+    },
+    {
+      "index": 17,
+      "char": "盛",
+      "start": 5.12,
+      "end": 5.44
+    },
+    {
+      "index": 18,
+      "char": "大",
+      "start": 5.44,
+      "end": 5.6
+    },
+    {
+      "index": 19,
+      "char": "的",
+      "start": 5.6,
+      "end": 5.76
+    },
+    {
+      "index": 20,
+      "char": "样",
+      "start": 5.76,
+      "end": 5.92
+    },
+    {
+      "index": 21,
+      "char": "子",
+      "start": 5.92,
+      "end": 6.24
+    },
+    {
+      "index": 22,
+      "char": "皇",
+      "start": 6.88,
+      "end": 7.12
+    },
+    {
+      "index": 23,
+      "char": "的",
+      "start": 7.12,
+      "end": 7.2
+    },
+    {
+      "index": 24,
+      "char": "上",
+      "start": 7.2,
+      "end": 7.44
+    },
+    {
+      "index": 25,
+      "char": "面",
+      "start": 7.44,
+      "end": 7.6
+    },
+    {
+      "index": 26,
+      "char": "是",
+      "start": 7.6,
+      "end": 7.76
+    },
+    {
+      "index": 27,
+      "char": "白",
+      "start": 7.76,
+      "end": 8.16
+    },
+    {
+      "index": 28,
+      "char": "下",
+      "start": 8.4,
+      "end": 8.64
+    },
+    {
+      "index": 29,
+      "char": "面",
+      "start": 8.64,
+      "end": 8.8
+    },
+    {
+      "index": 30,
+      "char": "是",
+      "start": 8.8,
+      "end": 8.96
+    },
+    {
+      "index": 31,
+      "char": "王",
+      "start": 8.96,
+      "end": 9.28
+    },
+    {
+      "index": 32,
+      "char": "可",
+      "start": 9.76,
+      "end": 9.92
+    },
+    {
+      "index": 33,
+      "char": "以",
+      "start": 9.92,
+      "end": 10.0
+    },
+    {
+      "index": 34,
+      "char": "想",
+      "start": 10.0,
+      "end": 10.24
+    },
+    {
+      "index": 35,
+      "char": "象",
+      "start": 10.24,
+      "end": 10.56
+    },
+    {
+      "index": 36,
+      "char": "一",
+      "start": 10.72,
+      "end": 10.8
+    },
+    {
+      "index": 37,
+      "char": "束",
+      "start": 10.8,
+      "end": 10.96
+    },
+    {
+      "index": 38,
+      "char": "亮",
+      "start": 10.96,
+      "end": 11.2
+    },
+    {
+      "index": 39,
+      "char": "光",
+      "start": 11.2,
+      "end": 11.52
+    },
+    {
+      "index": 40,
+      "char": "铺",
+      "start": 11.52,
+      "end": 11.68
+    },
+    {
+      "index": 41,
+      "char": "到",
+      "start": 11.68,
+      "end": 11.84
+    },
+    {
+      "index": 42,
+      "char": "宽",
+      "start": 11.84,
+      "end": 12.16
+    },
+    {
+      "index": 43,
+      "char": "大",
+      "start": 12.16,
+      "end": 12.32
+    },
+    {
+      "index": 44,
+      "char": "的",
+      "start": 12.32,
+      "end": 12.4
+    },
+    {
+      "index": 45,
+      "char": "台",
+      "start": 12.4,
+      "end": 12.64
+    },
+    {
+      "index": 46,
+      "char": "座",
+      "start": 12.64,
+      "end": 12.8
+    },
+    {
+      "index": 47,
+      "char": "上",
+      "start": 12.8,
+      "end": 13.2
+    },
+    {
+      "index": 48,
+      "char": "光",
+      "start": 13.6,
+      "end": 13.84
+    },
+    {
+      "index": 49,
+      "char": "越",
+      "start": 13.84,
+      "end": 14.0
+    },
+    {
+      "index": 50,
+      "char": "来",
+      "start": 14.0,
+      "end": 14.24
+    },
+    {
+      "index": 51,
+      "char": "越",
+      "start": 14.24,
+      "end": 14.4
+    },
+    {
+      "index": 52,
+      "char": "盛",
+      "start": 14.4,
+      "end": 14.72
+    },
+    {
+      "index": 53,
+      "char": "奇",
+      "start": 14.88,
+      "end": 15.2
+    },
+    {
+      "index": 54,
+      "char": "花",
+      "start": 15.2,
+      "end": 15.44
+    },
+    {
+      "index": 55,
+      "char": "也",
+      "start": 15.44,
+      "end": 15.52
+    },
+    {
+      "index": 56,
+      "char": "仿",
+      "start": 15.52,
+      "end": 15.68
+    },
+    {
+      "index": 57,
+      "char": "佛",
+      "start": 15.68,
+      "end": 15.84
+    },
+    {
+      "index": 58,
+      "char": "在",
+      "start": 15.84,
+      "end": 16.0
+    },
+    {
+      "index": 59,
+      "char": "眼",
+      "start": 16.0,
+      "end": 16.24
+    },
+    {
+      "index": 60,
+      "char": "前",
+      "start": 16.24,
+      "end": 16.48
+    },
+    {
+      "index": 61,
+      "char": "舒",
+      "start": 16.48,
+      "end": 16.72
+    },
+    {
+      "index": 62,
+      "char": "展",
+      "start": 16.72,
+      "end": 16.96
+    },
+    {
+      "index": 63,
+      "char": "开",
+      "start": 16.96,
+      "end": 17.12
+    },
+    {
+      "index": 64,
+      "char": "来",
+      "start": 17.12,
+      "end": 17.44
+    },
+    {
+      "index": 65,
+      "char": "把",
+      "start": 17.84,
+      "end": 18.0
+    },
+    {
+      "index": 66,
+      "char": "皇",
+      "start": 18.0,
+      "end": 18.24
+    },
+    {
+      "index": 67,
+      "char": "放",
+      "start": 18.24,
+      "end": 18.48
+    },
+    {
+      "index": 68,
+      "char": "回",
+      "start": 18.48,
+      "end": 18.72
+    },
+    {
+      "index": 69,
+      "char": "矞",
+      "start": 18.72,
+      "end": 18.96
+    },
+    {
+      "index": 70,
+      "char": "矞",
+      "start": 18.96,
+      "end": 19.28,
+      "alignment_group": "align-group-70-71",
+      "alignment_group_text": "矞皇"
+    },
+    {
+      "index": 71,
+      "char": "皇",
+      "start": 18.96,
+      "end": 19.28,
+      "alignment_group": "align-group-70-71",
+      "alignment_group_text": "矞皇"
+    },
+    {
+      "index": 72,
+      "char": "皇",
+      "start": 19.28,
+      "end": 19.52
+    },
+    {
+      "index": 73,
+      "char": "这",
+      "start": 19.52,
+      "end": 19.6
+    },
+    {
+      "index": 74,
+      "char": "个",
+      "start": 19.6,
+      "end": 19.76
+    },
+    {
+      "index": 75,
+      "char": "叠",
+      "start": 19.76,
+      "end": 19.92
+    },
+    {
+      "index": 76,
+      "char": "词",
+      "start": 19.92,
+      "end": 20.16
+    },
+    {
+      "index": 77,
+      "char": "里",
+      "start": 20.16,
+      "end": 20.4
+    },
+    {
+      "index": 78,
+      "char": "眼",
+      "start": 20.8,
+      "end": 20.96
+    },
+    {
+      "index": 79,
+      "char": "前",
+      "start": 20.96,
+      "end": 21.12
+    },
+    {
+      "index": 80,
+      "char": "应",
+      "start": 21.12,
+      "end": 21.28
+    },
+    {
+      "index": 81,
+      "char": "是",
+      "start": 21.28,
+      "end": 21.52
+    },
+    {
+      "index": 82,
+      "char": "少",
+      "start": 21.52,
+      "end": 21.76
+    },
+    {
+      "index": 83,
+      "char": "年",
+      "start": 21.76,
+      "end": 21.92
+    },
+    {
+      "index": 84,
+      "char": "中",
+      "start": 21.92,
+      "end": 22.16
+    },
+    {
+      "index": 85,
+      "char": "国",
+      "start": 22.16,
+      "end": 22.24
+    },
+    {
+      "index": 86,
+      "char": "蓬",
+      "start": 22.24,
+      "end": 22.56
+    },
+    {
+      "index": 87,
+      "char": "勃",
+      "start": 22.56,
+      "end": 22.88
+    },
+    {
+      "index": 88,
+      "char": "灿",
+      "start": 23.12,
+      "end": 23.36
+    },
+    {
+      "index": 89,
+      "char": "烂",
+      "start": 23.36,
+      "end": 23.52
+    },
+    {
+      "index": 90,
+      "char": "的",
+      "start": 23.52,
+      "end": 23.6
+    },
+    {
+      "index": 91,
+      "char": "气",
+      "start": 23.6,
+      "end": 23.84
+    },
+    {
+      "index": 92,
+      "char": "象",
+      "start": 23.84,
+      "end": 24.08
+    }
+  ],
+  "transcript": "奇花初胎，矞矞皇皇，写新生的花朵明亮又盛大的样子。皇的上面是白，下面是王，可以想象一束亮光铺到宽大的台座上。光越来越盛，奇花也仿佛在眼前舒展开来。把皇放回矞矞皇皇这个叠词里，眼前应是少年中国蓬勃、灿烂的气象。",
+  "voice_reference": "封",
+  "reference_id": "019f0554-ea22-762e-966c-32d678fd6bf6",
+  "reference_sha256": "eb07e06ee13a20ee4577b1b481df6d33d42127c1b3876bfa5d5e5362ae349f19",
+  "timing_source": "qwen3-forced-aligner",
+  "script_version": "narration-v3",
+  "model": "mlx-community/Qwen3-TTS-12Hz-1.7B-Base-4bit",
+  "model_revision": "37e955a1deb861c088ae5f3a67043185f3d1a60c",
+  "generation_policy": "qwen3-clone-2026-08-22-v3",
+  "seed": 20260822,
+  "content_hash": "9434b5ad44d2e4c9fc0b",
+  "duration": 24.237,
+  "alignment_model": "mlx-community/Qwen3-ForcedAligner-0.6B-8bit",
+  "aligned_audio_sha256": "c46ac0fd56879361017e561b43d086b7e8c04e50ac1c79dd0b0c68b19e104477",
+  "alignment_groups": [
+    {
+      "id": "align-group-5-6",
+      "text": "矞皇",
+      "indices": [
+        5,
+        6
+      ],
+      "start": 2.0,
+      "end": 2.32,
+      "method": "shared-right-model-interval",
+      "rawIntervals": [
+        {
+          "index": 5,
+          "char": "矞",
+          "start": 2.0,
+          "end": 2.0
+        },
+        {
+          "index": 6,
+          "char": "皇",
+          "start": 2.0,
+          "end": 2.32
+        }
+      ]
+    },
+    {
+      "id": "align-group-70-71",
+      "text": "矞皇",
+      "indices": [
+        70,
+        71
+      ],
+      "start": 18.96,
+      "end": 19.28,
+      "method": "shared-right-model-interval",
+      "rawIntervals": [
+        {
+          "index": 70,
+          "char": "矞",
+          "start": 18.96,
+          "end": 18.96
+        },
+        {
+          "index": 71,
+          "char": "皇",
+          "start": 18.96,
+          "end": 19.28
+        }
+      ]
+    }
+  ]
+}

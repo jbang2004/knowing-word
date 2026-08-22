@@ -2,458 +2,480 @@
   "marks": [
     {
       "index": 0,
-      "char": "光",
-      "start": 0.294,
-      "end": 0.496
+      "char": "地",
+      "start": 0.08,
+      "end": 0.24
     },
     {
       "index": 1,
-      "char": "光",
-      "start": 0.715,
-      "end": 0.917
+      "char": "道",
+      "start": 0.24,
+      "end": 0.48
     },
     {
       "index": 2,
-      "char": "线",
-      "start": 0.956,
-      "end": 1.158
+      "char": "的",
+      "start": 0.48,
+      "end": 0.64
     },
     {
       "index": 3,
-      "char": "的",
-      "start": 1.196,
-      "end": 1.398
+      "char": "气",
+      "start": 0.64,
+      "end": 0.8
     },
     {
       "index": 4,
-      "char": "光",
-      "start": 1.437,
-      "end": 1.639
+      "char": "孔",
+      "start": 0.8,
+      "end": 1.12
     },
     {
       "index": 5,
-      "char": "光",
-      "start": 2.017,
-      "end": 2.219
+      "char": "能",
+      "start": 1.12,
+      "end": 1.28
     },
     {
       "index": 6,
-      "char": "字",
-      "start": 2.258,
-      "end": 2.46
+      "char": "通",
+      "start": 1.28,
+      "end": 1.44
     },
     {
       "index": 7,
-      "char": "上",
-      "start": 2.498,
-      "end": 2.7
+      "char": "到",
+      "start": 1.44,
+      "end": 1.6
     },
     {
       "index": 8,
-      "char": "方",
-      "start": 2.739,
-      "end": 2.941
+      "char": "地",
+      "start": 1.6,
+      "end": 1.76
     },
     {
       "index": 9,
-      "char": "像",
-      "start": 2.979,
-      "end": 3.181
+      "char": "面",
+      "start": 1.76,
+      "end": 2.16
     },
     {
       "index": 10,
-      "char": "几",
-      "start": 3.22,
-      "end": 3.422
+      "char": "光",
+      "start": 2.48,
+      "end": 2.72
     },
     {
       "index": 11,
-      "char": "束",
-      "start": 3.46,
-      "end": 3.662
+      "char": "线",
+      "start": 2.72,
+      "end": 3.04
     },
     {
       "index": 12,
-      "char": "向",
-      "start": 3.701,
-      "end": 3.903
+      "char": "也",
+      "start": 3.04,
+      "end": 3.2
     },
     {
       "index": 13,
-      "char": "外",
-      "start": 3.941,
-      "end": 4.143
+      "char": "从",
+      "start": 3.2,
+      "end": 3.36
     },
     {
       "index": 14,
-      "char": "射",
-      "start": 4.182,
-      "end": 4.384
+      "char": "那",
+      "start": 3.36,
+      "end": 3.52
     },
     {
       "index": 15,
-      "char": "出",
-      "start": 4.422,
-      "end": 4.625
+      "char": "里",
+      "start": 3.52,
+      "end": 3.6
     },
     {
       "index": 16,
-      "char": "的",
-      "start": 4.663,
-      "end": 4.865
+      "char": "漏",
+      "start": 3.6,
+      "end": 3.84
     },
     {
       "index": 17,
-      "char": "亮",
-      "start": 4.904,
-      "end": 5.106
+      "char": "下",
+      "start": 3.84,
+      "end": 4.0
     },
     {
       "index": 18,
-      "char": "光",
-      "start": 5.144,
-      "end": 5.346
+      "char": "来",
+      "start": 4.0,
+      "end": 4.32
     },
     {
       "index": 19,
-      "char": "下",
-      "start": 5.565,
-      "end": 5.767
+      "char": "光",
+      "start": 4.88,
+      "end": 5.12
     },
     {
       "index": 20,
-      "char": "方",
-      "start": 5.805,
-      "end": 6.007
+      "char": "适",
+      "start": 5.12,
+      "end": 5.28
     },
     {
       "index": 21,
-      "char": "像",
-      "start": 6.046,
-      "end": 6.248
+      "char": "合",
+      "start": 5.28,
+      "end": 5.44
     },
     {
       "index": 22,
-      "char": "站",
-      "start": 6.286,
-      "end": 6.488
+      "char": "整",
+      "start": 5.44,
+      "end": 5.6
     },
     {
       "index": 23,
-      "char": "在",
-      "start": 6.527,
-      "end": 6.729
+      "char": "体",
+      "start": 5.6,
+      "end": 5.76
     },
     {
       "index": 24,
-      "char": "灯",
-      "start": 6.767,
-      "end": 6.969
+      "char": "观",
+      "start": 5.76,
+      "end": 5.92
     },
     {
       "index": 25,
-      "char": "下",
-      "start": 7.008,
-      "end": 7.21
+      "char": "察",
+      "start": 5.92,
+      "end": 6.32
     },
     {
       "index": 26,
-      "char": "的",
-      "start": 7.248,
-      "end": 7.45
+      "char": "上",
+      "start": 6.56,
+      "end": 6.8
     },
     {
       "index": 27,
-      "char": "人",
-      "start": 7.489,
-      "end": 7.691
+      "char": "面",
+      "start": 6.8,
+      "end": 6.96
     },
     {
       "index": 28,
-      "char": "看",
-      "start": 8.069,
-      "end": 8.271
+      "char": "几",
+      "start": 6.96,
+      "end": 7.2
     },
     {
       "index": 29,
-      "char": "图",
-      "start": 8.31,
-      "end": 8.512
+      "char": "笔",
+      "start": 7.2,
+      "end": 7.44
     },
     {
       "index": 30,
-      "char": "时",
-      "start": 8.551,
-      "end": 8.753
+      "char": "像",
+      "start": 7.44,
+      "end": 7.6
     },
     {
       "index": 31,
-      "char": "三",
-      "start": 8.971,
-      "end": 9.173
+      "char": "向",
+      "start": 7.6,
+      "end": 7.84
     },
     {
       "index": 32,
-      "char": "束",
-      "start": 9.212,
-      "end": 9.414
+      "char": "外",
+      "start": 7.84,
+      "end": 8.0
     },
     {
       "index": 33,
-      "char": "光",
-      "start": 9.452,
-      "end": 9.654
+      "char": "散",
+      "start": 8.0,
+      "end": 8.24
     },
     {
       "index": 34,
-      "char": "从",
-      "start": 9.693,
-      "end": 9.895
+      "char": "开",
+      "start": 8.24,
+      "end": 8.4
     },
     {
       "index": 35,
-      "char": "头",
-      "start": 9.933,
-      "end": 10.135
+      "char": "的",
+      "start": 8.4,
+      "end": 8.48
     },
     {
       "index": 36,
-      "char": "顶",
-      "start": 10.174,
-      "end": 10.376
+      "char": "亮",
+      "start": 8.48,
+      "end": 8.72
     },
     {
       "index": 37,
-      "char": "展",
-      "start": 10.414,
-      "end": 10.616
+      "char": "光",
+      "start": 8.72,
+      "end": 9.12
     },
     {
       "index": 38,
-      "char": "开",
-      "start": 10.655,
-      "end": 10.857
+      "char": "下",
+      "start": 9.36,
+      "end": 9.6
     },
     {
       "index": 39,
-      "char": "周",
-      "start": 11.075,
-      "end": 11.277
+      "char": "面",
+      "start": 9.6,
+      "end": 9.76
     },
     {
       "index": 40,
-      "char": "围",
-      "start": 11.316,
-      "end": 11.518
+      "char": "像",
+      "start": 9.76,
+      "end": 10.0
     },
     {
       "index": 41,
-      "char": "一",
-      "start": 11.556,
-      "end": 11.758
+      "char": "站",
+      "start": 10.0,
+      "end": 10.16
     },
     {
       "index": 42,
-      "char": "下",
-      "start": 11.797,
-      "end": 11.999
+      "char": "在",
+      "start": 10.16,
+      "end": 10.32
     },
     {
       "index": 43,
-      "char": "子",
-      "start": 12.037,
-      "end": 12.24
+      "char": "灯",
+      "start": 10.32,
+      "end": 10.56
     },
     {
       "index": 44,
-      "char": "变",
-      "start": 12.278,
-      "end": 12.48
+      "char": "下",
+      "start": 10.56,
+      "end": 10.72
     },
     {
       "index": 45,
-      "char": "得",
-      "start": 12.519,
-      "end": 12.721
+      "char": "的",
+      "start": 10.72,
+      "end": 10.88
     },
     {
       "index": 46,
-      "char": "明",
-      "start": 12.759,
-      "end": 12.961
+      "char": "人",
+      "start": 10.88,
+      "end": 11.2
     },
     {
       "index": 47,
-      "char": "亮",
-      "start": 13,
-      "end": 13.202
+      "char": "三",
+      "start": 11.68,
+      "end": 12.0
     },
     {
       "index": 48,
-      "char": "光",
-      "start": 13.58,
-      "end": 13.782
+      "char": "束",
+      "start": 12.0,
+      "end": 12.16
     },
     {
       "index": 49,
-      "char": "能",
-      "start": 13.821,
-      "end": 14.023
+      "char": "光",
+      "start": 12.16,
+      "end": 12.48
     },
     {
       "index": 50,
-      "char": "让",
-      "start": 14.061,
-      "end": 14.263
+      "char": "照",
+      "start": 12.48,
+      "end": 12.64
     },
     {
       "index": 51,
-      "char": "我",
-      "start": 14.302,
-      "end": 14.504
+      "char": "亮",
+      "start": 12.64,
+      "end": 12.8
     },
     {
       "index": 52,
-      "char": "们",
-      "start": 14.542,
-      "end": 14.744
+      "char": "四",
+      "start": 12.8,
+      "end": 12.96
     },
     {
       "index": 53,
-      "char": "看",
-      "start": 14.783,
-      "end": 14.985
+      "char": "周",
+      "start": 12.96,
+      "end": 13.36
     },
     {
       "index": 54,
-      "char": "清",
-      "start": 15.023,
-      "end": 15.225
+      "char": "光",
+      "start": 13.68,
+      "end": 13.92
     },
     {
       "index": 55,
-      "char": "物",
-      "start": 15.264,
-      "end": 15.466
+      "char": "能",
+      "start": 13.92,
+      "end": 14.0
     },
     {
       "index": 56,
-      "char": "体",
-      "start": 15.504,
-      "end": 15.706
+      "char": "让",
+      "start": 14.0,
+      "end": 14.16
     },
     {
       "index": 57,
-      "char": "光",
-      "start": 16.085,
-      "end": 16.287
+      "char": "人",
+      "start": 14.16,
+      "end": 14.32
     },
     {
       "index": 58,
-      "char": "线",
-      "start": 16.326,
-      "end": 16.528
+      "char": "看",
+      "start": 14.32,
+      "end": 14.56
     },
     {
       "index": 59,
-      "char": "就",
-      "start": 16.746,
-      "end": 16.948
+      "char": "清",
+      "start": 14.56,
+      "end": 14.72
     },
     {
       "index": 60,
-      "char": "是",
-      "start": 16.987,
-      "end": 17.189
+      "char": "物",
+      "start": 14.72,
+      "end": 14.96
     },
     {
       "index": 61,
-      "char": "光",
-      "start": 17.227,
-      "end": 17.429
+      "char": "体",
+      "start": 14.96,
+      "end": 15.2
     },
     {
       "index": 62,
-      "char": "传",
-      "start": 17.468,
-      "end": 17.67
+      "char": "光",
+      "start": 15.68,
+      "end": 15.84
     },
     {
       "index": 63,
-      "char": "播",
-      "start": 17.708,
-      "end": 17.91
+      "char": "线",
+      "start": 15.84,
+      "end": 16.16
     },
     {
       "index": 64,
-      "char": "时",
-      "start": 17.949,
-      "end": 18.151
+      "char": "就",
+      "start": 16.16,
+      "end": 16.32
     },
     {
       "index": 65,
-      "char": "形",
-      "start": 18.189,
-      "end": 18.391
+      "char": "是",
+      "start": 16.32,
+      "end": 16.48
     },
     {
       "index": 66,
-      "char": "成",
-      "start": 18.43,
-      "end": 18.632
+      "char": "光",
+      "start": 16.48,
+      "end": 16.64
     },
     {
       "index": 67,
-      "char": "的",
-      "start": 18.67,
-      "end": 18.872
+      "char": "传",
+      "start": 16.64,
+      "end": 16.8
     },
     {
       "index": 68,
-      "char": "一",
-      "start": 18.911,
-      "end": 19.113
+      "char": "播",
+      "start": 16.8,
+      "end": 16.96
     },
     {
       "index": 69,
-      "char": "道",
-      "start": 19.151,
-      "end": 19.353
+      "char": "时",
+      "start": 16.96,
+      "end": 17.2
     },
     {
       "index": 70,
-      "char": "道",
-      "start": 19.392,
-      "end": 19.594
+      "char": "形",
+      "start": 17.2,
+      "end": 17.44
     },
     {
       "index": 71,
-      "char": "明",
-      "start": 19.632,
-      "end": 19.835
+      "char": "成",
+      "start": 17.44,
+      "end": 17.6
     },
     {
       "index": 72,
-      "char": "亮",
-      "start": 19.873,
-      "end": 20.075
+      "char": "的",
+      "start": 17.6,
+      "end": 17.68
     },
     {
       "index": 73,
-      "char": "路",
-      "start": 20.114,
-      "end": 20.316
+      "char": "明",
+      "start": 17.68,
+      "end": 17.92
     },
     {
       "index": 74,
+      "char": "亮",
+      "start": 17.92,
+      "end": 18.08
+    },
+    {
+      "index": 75,
+      "char": "路",
+      "start": 18.08,
+      "end": 18.24
+    },
+    {
+      "index": 76,
       "char": "径",
-      "start": 20.354,
-      "end": 20.556
+      "start": 18.24,
+      "end": 18.56
     }
   ],
-  "transcript": "光，光线的光。光字上方像几束向外射出的亮光，下方像站在灯下的人。看图时，三束光从头顶展开，周围一下子变得明亮。光能让我们看清物体。光线，就是光传播时形成的一道道明亮路径。",
+  "transcript": "地道的气孔能通到地面，光线也从那里漏下来。光适合整体观察，上面几笔像向外散开的亮光，下面像站在灯下的人。三束光照亮四周。光能让人看清物体，光线就是光传播时形成的明亮路径。",
   "voice_reference": "封",
-  "timing_source": "punctuation-weighted-estimate",
-  "script_version": "child-first-v1",
-  "duration": 21.120181
+  "reference_id": "019f0554-ea22-762e-966c-32d678fd6bf6",
+  "reference_sha256": "eb07e06ee13a20ee4577b1b481df6d33d42127c1b3876bfa5d5e5362ae349f19",
+  "timing_source": "qwen3-forced-aligner",
+  "script_version": "narration-v3",
+  "model": "mlx-community/Qwen3-TTS-12Hz-1.7B-Base-4bit",
+  "model_revision": "37e955a1deb861c088ae5f3a67043185f3d1a60c",
+  "generation_policy": "qwen3-clone-2026-08-22-v3",
+  "seed": 20260822,
+  "content_hash": "5e2a4e49c3d4e99c7dd4",
+  "duration": 18.605,
+  "alignment_model": "mlx-community/Qwen3-ForcedAligner-0.6B-8bit",
+  "aligned_audio_sha256": "3e33b258c39434004938c330b6cfa048551d605ab3390cbd38a878aedfee5747",
+  "alignment_groups": []
 }

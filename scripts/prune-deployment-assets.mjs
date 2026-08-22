@@ -5,7 +5,7 @@ const projectRoot = resolve(import.meta.dirname, "..");
 const clientRoot = join(projectRoot, "dist/client");
 const narrationRoot = join(clientRoot, "narration");
 const narrationManifest = join(projectRoot, "app/data/narration-assets.ts");
-const narrationReadyMarker = join(projectRoot, "config/narration-r2-ready-v2.json");
+const narrationReadyMarker = join(projectRoot, "config/narration-r2-ready-v3.json");
 const wranglerConfigPath = join(projectRoot, "dist/server/wrangler.json");
 const legacyNarrationFiles = new Set(["audio.mp3", "audio-marks.json"]);
 

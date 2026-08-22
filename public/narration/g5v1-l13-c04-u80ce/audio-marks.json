@@ -2,758 +2,600 @@
   "marks": [
     {
       "index": 0,
-      "char": "胎",
-      "start": 0.294,
-      "end": 0.483
+      "char": "奇",
+      "start": 0.24,
+      "end": 0.48
     },
     {
       "index": 1,
-      "char": "胎",
-      "start": 0.699,
-      "end": 0.888
+      "char": "花",
+      "start": 0.48,
+      "end": 0.72
     },
     {
       "index": 2,
-      "char": "儿",
-      "start": 0.924,
-      "end": 1.113
+      "char": "初",
+      "start": 0.72,
+      "end": 0.96
     },
     {
       "index": 3,
-      "char": "的",
-      "start": 1.149,
-      "end": 1.338
+      "char": "胎",
+      "start": 0.96,
+      "end": 1.28
     },
     {
       "index": 4,
-      "char": "胎",
-      "start": 1.374,
-      "end": 1.563
+      "char": "矞",
+      "start": 1.6,
+      "end": 1.68
     },
     {
       "index": 5,
-      "char": "读",
-      "start": 1.779,
-      "end": 1.968
+      "char": "矞",
+      "start": 1.68,
+      "end": 1.92
     },
     {
       "index": 6,
-      "char": "t",
-      "start": 2.004,
-      "end": 2.193
+      "char": "皇",
+      "start": 1.92,
+      "end": 2.24
     },
     {
       "index": 7,
-      "char": "ā",
-      "start": 2.229,
-      "end": 2.418
+      "char": "皇",
+      "start": 2.24,
+      "end": 2.56
     },
     {
       "index": 8,
-      "char": "i",
-      "start": 2.454,
-      "end": 2.644
+      "char": "花",
+      "start": 3.04,
+      "end": 3.28
     },
     {
       "index": 9,
-      "char": "它",
-      "start": 3.02,
-      "end": 3.209
+      "char": "苞",
+      "start": 3.28,
+      "end": 3.52
     },
     {
       "index": 10,
-      "char": "是",
-      "start": 3.245,
-      "end": 3.434
+      "char": "刚",
+      "start": 3.52,
+      "end": 3.76
     },
     {
       "index": 11,
-      "char": "左",
-      "start": 3.47,
-      "end": 3.659
+      "char": "刚",
+      "start": 3.76,
+      "end": 3.92
     },
     {
       "index": 12,
-      "char": "右",
-      "start": 3.695,
-      "end": 3.884
+      "char": "孕",
+      "start": 3.92,
+      "end": 4.32
     },
     {
       "index": 13,
-      "char": "结",
-      "start": 3.92,
-      "end": 4.109
+      "char": "育",
+      "start": 4.32,
+      "end": 4.48
     },
     {
       "index": 14,
-      "char": "构",
-      "start": 4.145,
-      "end": 4.334
+      "char": "便",
+      "start": 4.48,
+      "end": 4.64
     },
     {
       "index": 15,
-      "char": "按",
-      "start": 4.55,
-      "end": 4.739
+      "char": "显",
+      "start": 4.64,
+      "end": 4.88
     },
     {
       "index": 16,
-      "char": "顺",
-      "start": 4.775,
-      "end": 4.965
+      "char": "出",
+      "start": 4.88,
+      "end": 5.04
     },
     {
       "index": 17,
-      "char": "序",
-      "start": 5.001,
-      "end": 5.19
+      "char": "明",
+      "start": 5.04,
+      "end": 5.2
     },
     {
       "index": 18,
-      "char": "能",
-      "start": 5.226,
-      "end": 5.415
+      "char": "亮",
+      "start": 5.2,
+      "end": 5.44
     },
     {
       "index": 19,
-      "char": "看",
-      "start": 5.451,
-      "end": 5.64
+      "char": "气",
+      "start": 5.44,
+      "end": 5.68
     },
     {
       "index": 20,
-      "char": "到",
-      "start": 5.676,
-      "end": 5.865
+      "char": "象",
+      "start": 5.68,
+      "end": 6.0
     },
     {
       "index": 21,
-      "char": "月",
-      "start": 5.901,
-      "end": 6.09
+      "char": "胎",
+      "start": 6.48,
+      "end": 6.72
     },
     {
       "index": 22,
-      "char": "和",
-      "start": 6.126,
-      "end": 6.315
+      "char": "是",
+      "start": 6.72,
+      "end": 6.88
     },
     {
       "index": 23,
-      "char": "台",
-      "start": 6.351,
-      "end": 6.54
+      "char": "左",
+      "start": 6.88,
+      "end": 6.96
     },
     {
       "index": 24,
-      "char": "从",
-      "start": 6.916,
-      "end": 7.106
+      "char": "右",
+      "start": 6.96,
+      "end": 7.2
     },
     {
       "index": 25,
-      "char": "构",
-      "start": 7.142,
-      "end": 7.331
+      "char": "结",
+      "start": 7.2,
+      "end": 7.44
     },
     {
       "index": 26,
-      "char": "字",
-      "start": 7.367,
-      "end": 7.556
+      "char": "构",
+      "start": 7.44,
+      "end": 7.76
     },
     {
       "index": 27,
-      "char": "分",
-      "start": 7.592,
-      "end": 7.781
+      "char": "左",
+      "start": 8.08,
+      "end": 8.16
     },
     {
       "index": 28,
-      "char": "工",
-      "start": 7.817,
-      "end": 8.006
+      "char": "边",
+      "start": 8.24,
+      "end": 8.4
     },
     {
       "index": 29,
-      "char": "看",
-      "start": 8.042,
-      "end": 8.231
+      "char": "是",
+      "start": 8.4,
+      "end": 8.64
     },
     {
       "index": 30,
-      "char": "⺼",
-      "start": 8.447,
-      "end": 8.636
+      "char": "月",
+      "start": 8.64,
+      "end": 8.8
     },
     {
       "index": 31,
-      "char": "提",
-      "start": 8.672,
-      "end": 8.861
+      "char": "字",
+      "start": 8.8,
+      "end": 8.96
     },
     {
       "index": 32,
-      "char": "示",
-      "start": 8.897,
-      "end": 9.086
+      "char": "旁",
+      "start": 8.96,
+      "end": 9.36
     },
     {
       "index": 33,
-      "char": "意",
-      "start": 9.123,
-      "end": 9.312
+      "char": "右",
+      "start": 9.68,
+      "end": 9.84
     },
     {
       "index": 34,
-      "char": "义",
-      "start": 9.348,
-      "end": 9.537
+      "char": "边",
+      "start": 9.84,
+      "end": 10.08
     },
     {
       "index": 35,
-      "char": "类",
-      "start": 9.573,
-      "end": 9.762
+      "char": "可",
+      "start": 10.08,
+      "end": 10.24
     },
     {
       "index": 36,
-      "char": "别",
-      "start": 9.798,
-      "end": 9.987
+      "char": "以",
+      "start": 10.24,
+      "end": 10.32
     },
     {
       "index": 37,
-      "char": "台",
-      "start": 10.203,
-      "end": 10.392
+      "char": "想",
+      "start": 10.32,
+      "end": 10.56
     },
     {
       "index": 38,
-      "char": "提",
-      "start": 10.428,
-      "end": 10.617
+      "char": "成",
+      "start": 10.56,
+      "end": 10.72
     },
     {
       "index": 39,
-      "char": "供",
-      "start": 10.653,
-      "end": 10.842
+      "char": "小",
+      "start": 10.72,
+      "end": 10.96
     },
     {
       "index": 40,
-      "char": "读",
-      "start": 10.878,
-      "end": 11.067
+      "char": "生",
+      "start": 10.96,
+      "end": 11.12
     },
     {
       "index": 41,
-      "char": "音",
-      "start": 11.103,
-      "end": 11.293
+      "char": "命",
+      "start": 11.12,
+      "end": 11.36
     },
     {
       "index": 42,
-      "char": "线",
-      "start": 11.329,
-      "end": 11.518
+      "char": "安",
+      "start": 11.36,
+      "end": 11.6
     },
     {
       "index": 43,
-      "char": "索",
-      "start": 11.554,
-      "end": 11.743
+      "char": "稳",
+      "start": 11.6,
+      "end": 11.84
     },
     {
       "index": 44,
-      "char": "看",
-      "start": 12.119,
-      "end": 12.308
+      "char": "躺",
+      "start": 12.16,
+      "end": 12.32
     },
     {
       "index": 45,
-      "char": "图",
-      "start": 12.344,
-      "end": 12.533
+      "char": "在",
+      "start": 12.32,
+      "end": 12.48
     },
     {
       "index": 46,
-      "char": "时",
-      "start": 12.569,
-      "end": 12.758
+      "char": "保",
+      "start": 12.48,
+      "end": 12.64
     },
     {
       "index": 47,
-      "char": "左",
-      "start": 12.974,
-      "end": 13.163
+      "char": "护",
+      "start": 12.64,
+      "end": 12.8
     },
     {
       "index": 48,
-      "char": "边",
-      "start": 13.199,
-      "end": 13.388
+      "char": "空",
+      "start": 12.8,
+      "end": 13.04
     },
     {
       "index": 49,
-      "char": "柔",
-      "start": 13.424,
-      "end": 13.614
+      "char": "间",
+      "start": 13.04,
+      "end": 13.2
     },
     {
       "index": 50,
-      "char": "软",
-      "start": 13.65,
-      "end": 13.839
+      "char": "里",
+      "start": 13.2,
+      "end": 13.52
     },
     {
       "index": 51,
-      "char": "月",
-      "start": 13.875,
-      "end": 14.064
+      "char": "柔",
+      "start": 13.92,
+      "end": 14.08
     },
     {
       "index": 52,
-      "char": "形",
-      "start": 14.1,
-      "end": 14.289
+      "char": "软",
+      "start": 14.08,
+      "end": 14.24
     },
     {
       "index": 53,
       "char": "身",
-      "start": 14.325,
-      "end": 14.514
+      "start": 14.24,
+      "end": 14.48
     },
     {
       "index": 54,
       "char": "体",
-      "start": 14.55,
-      "end": 14.739
+      "start": 14.48,
+      "end": 14.72
     },
     {
       "index": 55,
-      "char": "形",
-      "start": 14.775,
-      "end": 14.964
+      "char": "靠",
+      "start": 14.72,
+      "end": 14.96
     },
     {
       "index": 56,
-      "char": "成",
-      "start": 15,
-      "end": 15.189
+      "char": "着",
+      "start": 14.96,
+      "end": 15.04
     },
     {
       "index": 57,
-      "char": "月",
-      "start": 15.225,
-      "end": 15.415
+      "char": "小",
+      "start": 15.04,
+      "end": 15.2
     },
     {
       "index": 58,
-      "char": "右",
-      "start": 15.631,
-      "end": 15.82
+      "char": "平",
+      "start": 15.2,
+      "end": 15.44
     },
     {
       "index": 59,
-      "char": "边",
-      "start": 15.856,
-      "end": 16.045
+      "char": "台",
+      "start": 15.44,
+      "end": 15.84
     },
     {
       "index": 60,
-      "char": "小",
-      "start": 16.081,
-      "end": 16.27
+      "char": "像",
+      "start": 16.16,
+      "end": 16.32
     },
     {
       "index": 61,
-      "char": "生",
-      "start": 16.306,
-      "end": 16.495
+      "char": "被",
+      "start": 16.32,
+      "end": 16.48
     },
     {
       "index": 62,
-      "char": "命",
-      "start": 16.531,
+      "char": "保",
+      "start": 16.48,
       "end": 16.72
     },
     {
       "index": 63,
-      "char": "蜷",
-      "start": 16.756,
-      "end": 16.945
+      "char": "护",
+      "start": 16.72,
+      "end": 16.8
     },
     {
       "index": 64,
-      "char": "在",
-      "start": 16.981,
-      "end": 17.17
+      "char": "着",
+      "start": 16.8,
+      "end": 16.96
     },
     {
       "index": 65,
-      "char": "台",
-      "start": 17.206,
-      "end": 17.396
+      "char": "的",
+      "start": 16.96,
+      "end": 17.04
     },
     {
       "index": 66,
-      "char": "形",
-      "start": 17.432,
-      "end": 17.621
+      "char": "新",
+      "start": 17.04,
+      "end": 17.2
     },
     {
       "index": 67,
-      "char": "保",
-      "start": 17.657,
-      "end": 17.846
+      "char": "生",
+      "start": 17.2,
+      "end": 17.44
     },
     {
       "index": 68,
-      "char": "护",
-      "start": 17.882,
-      "end": 18.071
+      "char": "命",
+      "start": 17.44,
+      "end": 17.76
     },
     {
       "index": 69,
-      "char": "空",
-      "start": 18.107,
-      "end": 18.296
+      "char": "胎",
+      "start": 18.72,
+      "end": 18.96
     },
     {
       "index": 70,
-      "char": "间",
-      "start": 18.332,
-      "end": 18.521
+      "char": "儿",
+      "start": 18.96,
+      "end": 19.36
     },
     {
       "index": 71,
-      "char": "沿",
-      "start": 18.557,
-      "end": 18.746
+      "char": "是",
+      "start": 19.36,
+      "end": 19.52
     },
     {
       "index": 72,
-      "char": "台",
-      "start": 18.782,
-      "end": 18.971
+      "char": "母",
+      "start": 19.52,
+      "end": 19.76
     },
     {
       "index": 73,
-      "char": "安",
-      "start": 19.007,
-      "end": 19.196
+      "char": "体",
+      "start": 19.76,
+      "end": 19.92
     },
     {
       "index": 74,
-      "char": "稳",
-      "start": 19.232,
-      "end": 19.422
+      "char": "内",
+      "start": 19.92,
+      "end": 20.08
     },
     {
       "index": 75,
-      "char": "躺",
-      "start": 19.458,
-      "end": 19.647
+      "char": "尚",
+      "start": 20.08,
+      "end": 20.32
     },
     {
       "index": 76,
-      "char": "下",
-      "start": 19.683,
-      "end": 19.872
+      "char": "未",
+      "start": 20.32,
+      "end": 20.4
     },
     {
       "index": 77,
-      "char": "组",
-      "start": 20.088,
-      "end": 20.277
+      "char": "出",
+      "start": 20.4,
+      "end": 20.56
     },
     {
       "index": 78,
-      "char": "成",
-      "start": 20.313,
-      "end": 20.502
+      "char": "生",
+      "start": 20.56,
+      "end": 20.72
     },
     {
       "index": 79,
-      "char": "胎",
-      "start": 20.538,
-      "end": 20.727
+      "char": "的",
+      "start": 20.72,
+      "end": 20.8
     },
     {
       "index": 80,
-      "char": "胎",
-      "start": 21.103,
-      "end": 21.292
+      "char": "孩",
+      "start": 20.8,
+      "end": 21.12
     },
     {
       "index": 81,
-      "char": "儿",
-      "start": 21.328,
-      "end": 21.517
+      "char": "子",
+      "start": 21.12,
+      "end": 21.44
     },
     {
       "index": 82,
-      "char": "是",
-      "start": 21.553,
-      "end": 21.743
+      "char": "初",
+      "start": 21.84,
+      "end": 22.0
     },
     {
       "index": 83,
-      "char": "在",
-      "start": 21.779,
-      "end": 21.968
+      "char": "胎",
+      "start": 22.0,
+      "end": 22.32
     },
     {
       "index": 84,
-      "char": "母",
-      "start": 22.004,
-      "end": 22.193
+      "char": "在",
+      "start": 22.32,
+      "end": 22.56
     },
     {
       "index": 85,
-      "char": "体",
-      "start": 22.229,
-      "end": 22.418
+      "char": "文",
+      "start": 22.56,
+      "end": 22.72
     },
     {
       "index": 86,
-      "char": "内",
-      "start": 22.454,
-      "end": 22.643
+      "char": "中",
+      "start": 22.72,
+      "end": 23.04
     },
     {
       "index": 87,
-      "char": "尚",
-      "start": 22.679,
-      "end": 22.868
+      "char": "表",
+      "start": 23.04,
+      "end": 23.2
     },
     {
       "index": 88,
-      "char": "未",
-      "start": 22.904,
-      "end": 23.093
+      "char": "示",
+      "start": 23.2,
+      "end": 23.36
     },
     {
       "index": 89,
-      "char": "出",
-      "start": 23.129,
-      "end": 23.318
+      "char": "新",
+      "start": 23.36,
+      "end": 23.6
     },
     {
       "index": 90,
       "char": "生",
-      "start": 23.354,
-      "end": 23.544
+      "start": 23.6,
+      "end": 23.76
     },
     {
       "index": 91,
-      "char": "的",
-      "start": 23.58,
-      "end": 23.769
+      "char": "事",
+      "start": 23.76,
+      "end": 24.0
     },
     {
       "index": 92,
-      "char": "孩",
-      "start": 23.805,
-      "end": 23.994
+      "char": "物",
+      "start": 24.0,
+      "end": 24.16
     },
     {
       "index": 93,
-      "char": "子",
-      "start": 24.03,
-      "end": 24.219
+      "char": "刚",
+      "start": 24.16,
+      "end": 24.32
     },
     {
       "index": 94,
-      "char": "这",
-      "start": 24.595,
-      "end": 24.784
+      "char": "刚",
+      "start": 24.32,
+      "end": 24.56
     },
     {
       "index": 95,
-      "char": "是",
-      "start": 24.82,
-      "end": 25.009
+      "char": "孕",
+      "start": 24.56,
+      "end": 24.96
     },
     {
       "index": 96,
-      "char": "一",
-      "start": 25.045,
-      "end": 25.234
-    },
-    {
-      "index": 97,
-      "char": "幅",
-      "start": 25.27,
-      "end": 25.459
-    },
-    {
-      "index": 98,
-      "char": "帮",
-      "start": 25.495,
-      "end": 25.685
-    },
-    {
-      "index": 99,
-      "char": "助",
-      "start": 25.721,
-      "end": 25.91
-    },
-    {
-      "index": 100,
-      "char": "记",
-      "start": 25.946,
-      "end": 26.135
-    },
-    {
-      "index": 101,
-      "char": "笔",
-      "start": 26.171,
-      "end": 26.36
-    },
-    {
-      "index": 102,
-      "char": "画",
-      "start": 26.396,
-      "end": 26.585
-    },
-    {
-      "index": 103,
-      "char": "和",
-      "start": 26.621,
-      "end": 26.81
-    },
-    {
-      "index": 104,
-      "char": "位",
-      "start": 26.846,
-      "end": 27.035
-    },
-    {
-      "index": 105,
-      "char": "置",
-      "start": 27.071,
-      "end": 27.26
-    },
-    {
-      "index": 106,
-      "char": "的",
-      "start": 27.296,
-      "end": 27.485
-    },
-    {
-      "index": 107,
-      "char": "记",
-      "start": 27.522,
-      "end": 27.711
-    },
-    {
-      "index": 108,
-      "char": "忆",
-      "start": 27.747,
-      "end": 27.936
-    },
-    {
-      "index": 109,
-      "char": "画",
-      "start": 27.972,
-      "end": 28.161
-    },
-    {
-      "index": 110,
-      "char": "面",
-      "start": 28.197,
-      "end": 28.386
-    },
-    {
-      "index": 111,
-      "char": "不",
-      "start": 28.602,
-      "end": 28.791
-    },
-    {
-      "index": 112,
-      "char": "是",
-      "start": 28.827,
-      "end": 29.016
-    },
-    {
-      "index": 113,
-      "char": "完",
-      "start": 29.052,
-      "end": 29.241
-    },
-    {
-      "index": 114,
-      "char": "整",
-      "start": 29.277,
-      "end": 29.466
-    },
-    {
-      "index": 115,
-      "char": "字",
-      "start": 29.502,
-      "end": 29.692
-    },
-    {
-      "index": 116,
-      "char": "源",
-      "start": 29.728,
-      "end": 29.917
-    },
-    {
-      "index": 117,
-      "char": "最",
-      "start": 30.293,
-      "end": 30.482
-    },
-    {
-      "index": 118,
-      "char": "后",
-      "start": 30.518,
-      "end": 30.707
-    },
-    {
-      "index": 119,
-      "char": "再",
-      "start": 30.743,
-      "end": 30.932
-    },
-    {
-      "index": 120,
-      "char": "读",
-      "start": 30.968,
-      "end": 31.157
-    },
-    {
-      "index": 121,
-      "char": "一",
-      "start": 31.193,
-      "end": 31.382
-    },
-    {
-      "index": 122,
-      "char": "遍",
-      "start": 31.418,
-      "end": 31.607
-    },
-    {
-      "index": 123,
-      "char": "胎",
-      "start": 31.823,
-      "end": 32.013
-    },
-    {
-      "index": 124,
-      "char": "儿",
-      "start": 32.049,
-      "end": 32.238
+      "char": "育",
+      "start": 24.96,
+      "end": 25.04
     }
   ],
-  "transcript": "胎，“胎儿”的“胎”，读tāi。它是左右结构，按顺序能看到“月”和“台”。从构字分工看，“⺼”提示意义类别，“台”提供读音线索。看图时，左边柔软月形身体形成“月”，右边小生命蜷在台形保护空间沿“台”安稳躺下，组成“胎”。胎儿是在母体内尚未出生的孩子。这是一幅帮助记笔画和位置的记忆画面，不是完整字源。最后再读一遍：胎儿。",
+  "transcript": "奇花初胎，矞矞皇皇，花苞刚刚孕育便显出明亮气象。胎是左右结构，左边是月字旁，右边可以想成小生命安稳躺在保护空间里。柔软身体靠着小平台，像被保护着的新生命。胎儿是母体内尚未出生的孩子，初胎在文中表示新生事物刚刚孕育。",
   "voice_reference": "封",
-  "timing_source": "punctuation-weighted-estimate",
-  "script_version": "child-first-v2",
-  "duration": 32.800181
+  "reference_id": "019f0554-ea22-762e-966c-32d678fd6bf6",
+  "reference_sha256": "eb07e06ee13a20ee4577b1b481df6d33d42127c1b3876bfa5d5e5362ae349f19",
+  "timing_source": "qwen3-forced-aligner",
+  "script_version": "narration-v3",
+  "model": "mlx-community/Qwen3-TTS-12Hz-1.7B-Base-4bit",
+  "model_revision": "37e955a1deb861c088ae5f3a67043185f3d1a60c",
+  "generation_policy": "qwen3-clone-2026-08-22-v3",
+  "seed": 20260822,
+  "content_hash": "90a9722e6998490233df",
+  "duration": 25.093,
+  "alignment_model": "mlx-community/Qwen3-ForcedAligner-0.6B-8bit",
+  "aligned_audio_sha256": "31e9adc308fb96f87f81f34dd8e9fe2bfc841e1aa1e20a9a3f9d1db5d3deef3e",
+  "alignment_groups": []
 }

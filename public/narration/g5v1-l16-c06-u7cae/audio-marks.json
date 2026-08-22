@@ -2,788 +2,492 @@
   "marks": [
     {
       "index": 0,
-      "char": "粮",
-      "start": 0.292,
-      "end": 0.462
+      "char": "阳",
+      "start": 0.32,
+      "end": 0.48
     },
     {
       "index": 1,
-      "char": "粮",
-      "start": 0.675,
-      "end": 0.845
+      "char": "光",
+      "start": 0.48,
+      "end": 0.8
     },
     {
       "index": 2,
-      "char": "食",
-      "start": 0.877,
-      "end": 1.048
+      "char": "让",
+      "start": 0.8,
+      "end": 1.04
     },
     {
       "index": 3,
-      "char": "的",
-      "start": 1.08,
-      "end": 1.25
+      "char": "庄",
+      "start": 1.04,
+      "end": 1.2
     },
     {
       "index": 4,
-      "char": "粮",
-      "start": 1.283,
-      "end": 1.453
+      "char": "稼",
+      "start": 1.2,
+      "end": 1.44
     },
     {
       "index": 5,
-      "char": "读",
-      "start": 1.665,
-      "end": 1.835
+      "char": "生",
+      "start": 1.44,
+      "end": 1.6
     },
     {
       "index": 6,
-      "char": "l",
-      "start": 1.868,
-      "end": 2.038
+      "char": "长",
+      "start": 1.6,
+      "end": 1.92
     },
     {
       "index": 7,
-      "char": "i",
-      "start": 2.07,
-      "end": 2.241
+      "char": "成",
+      "start": 2.4,
+      "end": 2.56
     },
     {
       "index": 8,
-      "char": "á",
-      "start": 2.273,
-      "end": 2.443
+      "char": "熟",
+      "start": 2.56,
+      "end": 2.72
     },
     {
       "index": 9,
-      "char": "n",
-      "start": 2.476,
-      "end": 2.646
+      "char": "的",
+      "start": 2.72,
+      "end": 2.88
     },
     {
       "index": 10,
-      "char": "g",
-      "start": 2.678,
-      "end": 2.849
+      "char": "谷",
+      "start": 2.88,
+      "end": 3.04
     },
     {
       "index": 11,
-      "char": "它",
-      "start": 3.221,
-      "end": 3.391
+      "char": "物",
+      "start": 3.04,
+      "end": 3.36
     },
     {
       "index": 12,
-      "char": "是",
-      "start": 3.424,
-      "end": 3.594
+      "char": "会",
+      "start": 3.52,
+      "end": 3.68
     },
     {
       "index": 13,
-      "char": "左",
-      "start": 3.626,
-      "end": 3.796
+      "char": "成",
+      "start": 3.68,
+      "end": 3.92
     },
     {
       "index": 14,
-      "char": "右",
-      "start": 3.829,
-      "end": 3.999
+      "char": "为",
+      "start": 3.92,
+      "end": 4.0
     },
     {
       "index": 15,
-      "char": "结",
-      "start": 4.031,
-      "end": 4.202
+      "char": "人",
+      "start": 4.0,
+      "end": 4.16
     },
     {
       "index": 16,
-      "char": "构",
-      "start": 4.234,
-      "end": 4.404
+      "char": "们",
+      "start": 4.16,
+      "end": 4.32
     },
     {
       "index": 17,
-      "char": "按",
-      "start": 4.617,
-      "end": 4.787
+      "char": "需",
+      "start": 4.32,
+      "end": 4.48
     },
     {
       "index": 18,
-      "char": "顺",
-      "start": 4.819,
-      "end": 4.989
+      "char": "要",
+      "start": 4.48,
+      "end": 4.64
     },
     {
       "index": 19,
-      "char": "序",
-      "start": 5.022,
-      "end": 5.192
+      "char": "的",
+      "start": 4.64,
+      "end": 4.8
     },
     {
       "index": 20,
-      "char": "能",
-      "start": 5.224,
-      "end": 5.395
+      "char": "粮",
+      "start": 4.8,
+      "end": 5.04
     },
     {
       "index": 21,
-      "char": "看",
-      "start": 5.427,
-      "end": 5.597
+      "char": "食",
+      "start": 5.04,
+      "end": 5.36
     },
     {
       "index": 22,
-      "char": "到",
-      "start": 5.63,
-      "end": 5.8
+      "char": "粮",
+      "start": 5.84,
+      "end": 6.24
     },
     {
       "index": 23,
-      "char": "米",
-      "start": 5.832,
-      "end": 6.003
+      "char": "是",
+      "start": 6.24,
+      "end": 6.48
     },
     {
       "index": 24,
-      "char": "和",
-      "start": 6.035,
-      "end": 6.205
+      "char": "左",
+      "start": 6.48,
+      "end": 6.56
     },
     {
       "index": 25,
-      "char": "良",
-      "start": 6.238,
-      "end": 6.408
+      "char": "右",
+      "start": 6.56,
+      "end": 6.88
     },
     {
       "index": 26,
-      "char": "从",
-      "start": 6.78,
-      "end": 6.95
+      "char": "结",
+      "start": 6.88,
+      "end": 7.04
     },
     {
       "index": 27,
       "char": "构",
-      "start": 6.983,
-      "end": 7.153
+      "start": 7.04,
+      "end": 7.36
     },
     {
       "index": 28,
-      "char": "字",
-      "start": 7.185,
-      "end": 7.356
+      "char": "左",
+      "start": 7.68,
+      "end": 7.84
     },
     {
       "index": 29,
-      "char": "分",
-      "start": 7.388,
-      "end": 7.558
+      "char": "边",
+      "start": 7.92,
+      "end": 8.08
     },
     {
       "index": 30,
-      "char": "工",
-      "start": 7.591,
-      "end": 7.761
+      "char": "是",
+      "start": 8.08,
+      "end": 8.24
     },
     {
       "index": 31,
-      "char": "看",
-      "start": 7.793,
-      "end": 7.963
+      "char": "米",
+      "start": 8.24,
+      "end": 8.4
     },
     {
       "index": 32,
-      "char": "米",
-      "start": 8.176,
-      "end": 8.346
+      "char": "字",
+      "start": 8.4,
+      "end": 8.64
     },
     {
       "index": 33,
-      "char": "提",
-      "start": 8.379,
-      "end": 8.549
+      "char": "旁",
+      "start": 8.64,
+      "end": 9.04
     },
     {
       "index": 34,
-      "char": "示",
-      "start": 8.581,
-      "end": 8.751
+      "char": "右",
+      "start": 9.44,
+      "end": 9.6
     },
     {
       "index": 35,
-      "char": "意",
-      "start": 8.784,
-      "end": 8.954
+      "char": "边",
+      "start": 9.6,
+      "end": 9.92
     },
     {
       "index": 36,
-      "char": "义",
-      "start": 8.986,
-      "end": 9.157
+      "char": "可",
+      "start": 9.92,
+      "end": 10.08
     },
     {
       "index": 37,
-      "char": "类",
-      "start": 9.189,
-      "end": 9.359
+      "char": "以",
+      "start": 10.08,
+      "end": 10.24
     },
     {
       "index": 38,
-      "char": "别",
-      "start": 9.392,
-      "end": 9.562
+      "char": "想",
+      "start": 10.24,
+      "end": 10.48
     },
     {
       "index": 39,
-      "char": "良",
-      "start": 9.774,
-      "end": 9.944
+      "char": "成",
+      "start": 10.48,
+      "end": 10.8
     },
     {
       "index": 40,
-      "char": "提",
-      "start": 9.977,
-      "end": 10.147
+      "char": "装",
+      "start": 10.8,
+      "end": 11.04
     },
     {
       "index": 41,
-      "char": "供",
-      "start": 10.179,
-      "end": 10.35
+      "char": "着",
+      "start": 11.04,
+      "end": 11.2
     },
     {
       "index": 42,
-      "char": "读",
-      "start": 10.382,
-      "end": 10.552
+      "char": "好",
+      "start": 11.2,
+      "end": 11.44
     },
     {
       "index": 43,
-      "char": "音",
-      "start": 10.585,
-      "end": 10.755
+      "char": "谷",
+      "start": 11.44,
+      "end": 11.6
     },
     {
       "index": 44,
-      "char": "线",
-      "start": 10.787,
-      "end": 10.957
+      "char": "物",
+      "start": 11.6,
+      "end": 11.76
     },
     {
       "index": 45,
-      "char": "索",
-      "start": 10.99,
-      "end": 11.16
+      "char": "的",
+      "start": 11.76,
+      "end": 11.84
     },
     {
       "index": 46,
-      "char": "看",
-      "start": 11.533,
-      "end": 11.703
+      "char": "粮",
+      "start": 11.84,
+      "end": 12.16
     },
     {
       "index": 47,
-      "char": "图",
-      "start": 11.735,
-      "end": 11.905
+      "char": "袋",
+      "start": 12.16,
+      "end": 12.4
     },
     {
       "index": 48,
-      "char": "时",
-      "start": 11.938,
-      "end": 12.108
+      "char": "米",
+      "start": 12.88,
+      "end": 13.04
     },
     {
       "index": 49,
-      "char": "左",
-      "start": 12.32,
-      "end": 12.491
+      "char": "粒",
+      "start": 13.04,
+      "end": 13.44
     },
     {
       "index": 50,
-      "char": "边",
-      "start": 12.523,
-      "end": 12.693
+      "char": "从",
+      "start": 13.44,
+      "end": 13.68
     },
     {
       "index": 51,
-      "char": "谷",
-      "start": 12.726,
-      "end": 12.896
+      "char": "袋",
+      "start": 13.68,
+      "end": 13.84
     },
     {
       "index": 52,
-      "char": "粒",
-      "start": 12.928,
-      "end": 13.098
+      "char": "口",
+      "start": 13.84,
+      "end": 14.16
     },
     {
       "index": 53,
-      "char": "和",
-      "start": 13.131,
-      "end": 13.301
+      "char": "流",
+      "start": 14.16,
+      "end": 14.32
     },
     {
       "index": 54,
-      "char": "米",
-      "start": 13.333,
-      "end": 13.504
+      "char": "到",
+      "start": 14.32,
+      "end": 14.48
     },
     {
       "index": 55,
-      "char": "架",
-      "start": 13.536,
-      "end": 13.706
+      "char": "米",
+      "start": 14.48,
+      "end": 14.72
     },
     {
       "index": 56,
-      "char": "形",
-      "start": 13.739,
-      "end": 13.909
+      "char": "架",
+      "start": 14.72,
+      "end": 14.96
     },
     {
       "index": 57,
-      "char": "成",
-      "start": 13.941,
-      "end": 14.112
+      "char": "上",
+      "start": 14.96,
+      "end": 15.28
     },
     {
       "index": 58,
-      "char": "米",
-      "start": 14.144,
-      "end": 14.314
+      "char": "粮",
+      "start": 15.68,
+      "end": 15.92
     },
     {
       "index": 59,
-      "char": "右",
-      "start": 14.527,
-      "end": 14.697
+      "char": "食",
+      "start": 15.92,
+      "end": 16.08
     },
     {
       "index": 60,
-      "char": "边",
-      "start": 14.729,
-      "end": 14.899
+      "char": "包",
+      "start": 16.08,
+      "end": 16.32
     },
     {
       "index": 61,
-      "char": "优",
-      "start": 14.932,
-      "end": 15.102
+      "char": "括",
+      "start": 16.32,
+      "end": 16.64
     },
     {
       "index": 62,
-      "char": "质",
-      "start": 15.134,
-      "end": 15.305
+      "char": "供",
+      "start": 16.64,
+      "end": 16.8
     },
     {
       "index": 63,
-      "char": "粮",
-      "start": 15.337,
-      "end": 15.507
+      "char": "人",
+      "start": 16.8,
+      "end": 16.96
     },
     {
       "index": 64,
-      "char": "袋",
-      "start": 15.54,
-      "end": 15.71
+      "char": "食",
+      "start": 16.96,
+      "end": 17.2
     },
     {
       "index": 65,
-      "char": "弯",
-      "start": 15.922,
-      "end": 16.092
+      "char": "用",
+      "start": 17.2,
+      "end": 17.36
     },
     {
       "index": 66,
-      "char": "口",
-      "start": 16.125,
-      "end": 16.295
+      "char": "的",
+      "start": 17.36,
+      "end": 17.44
     },
     {
       "index": 67,
-      "char": "和",
-      "start": 16.327,
-      "end": 16.498
+      "char": "谷",
+      "start": 17.44,
+      "end": 17.6
     },
     {
       "index": 68,
-      "char": "流",
-      "start": 16.53,
-      "end": 16.7
+      "char": "物",
+      "start": 17.6,
+      "end": 18.0
     },
     {
       "index": 69,
-      "char": "下",
-      "start": 16.733,
-      "end": 16.903
+      "char": "豆",
+      "start": 18.24,
+      "end": 18.48
     },
     {
       "index": 70,
-      "char": "谷",
-      "start": 16.935,
-      "end": 17.106
+      "char": "类",
+      "start": 18.48,
+      "end": 18.72
     },
     {
       "index": 71,
-      "char": "物",
-      "start": 17.138,
-      "end": 17.308
+      "char": "和",
+      "start": 18.72,
+      "end": 18.96
     },
     {
       "index": 72,
-      "char": "沿",
-      "start": 17.341,
-      "end": 17.511
+      "char": "薯",
+      "start": 18.96,
+      "end": 19.2
     },
     {
       "index": 73,
-      "char": "良",
-      "start": 17.543,
-      "end": 17.713
+      "char": "类",
+      "start": 19.2,
+      "end": 19.36
     },
     {
       "index": 74,
-      "char": "排",
-      "start": 17.746,
-      "end": 17.916
+      "char": "等",
+      "start": 19.36,
+      "end": 19.52
     },
     {
       "index": 75,
-      "char": "列",
-      "start": 17.948,
-      "end": 18.119
+      "char": "食",
+      "start": 19.52,
+      "end": 19.76
     },
     {
       "index": 76,
-      "char": "组",
-      "start": 18.331,
-      "end": 18.501
+      "char": "物",
+      "start": 19.76,
+      "end": 19.92
     },
     {
       "index": 77,
-      "char": "成",
-      "start": 18.534,
-      "end": 18.704
+      "char": "原",
+      "start": 19.92,
+      "end": 20.08
     },
     {
       "index": 78,
-      "char": "粮",
-      "start": 18.736,
-      "end": 18.906
-    },
-    {
-      "index": 79,
-      "char": "粮",
-      "start": 19.279,
-      "end": 19.449
-    },
-    {
-      "index": 80,
-      "char": "食",
-      "start": 19.481,
-      "end": 19.652
-    },
-    {
-      "index": 81,
-      "char": "是",
-      "start": 19.684,
-      "end": 19.854
-    },
-    {
-      "index": 82,
-      "char": "供",
-      "start": 19.887,
-      "end": 20.057
-    },
-    {
-      "index": 83,
-      "char": "人",
-      "start": 20.089,
-      "end": 20.26
-    },
-    {
-      "index": 84,
-      "char": "食",
-      "start": 20.292,
-      "end": 20.462
-    },
-    {
-      "index": 85,
-      "char": "用",
-      "start": 20.495,
-      "end": 20.665
-    },
-    {
-      "index": 86,
-      "char": "的",
-      "start": 20.697,
-      "end": 20.867
-    },
-    {
-      "index": 87,
-      "char": "谷",
-      "start": 20.9,
-      "end": 21.07
-    },
-    {
-      "index": 88,
-      "char": "物",
-      "start": 21.102,
-      "end": 21.273
-    },
-    {
-      "index": 89,
-      "char": "豆",
-      "start": 21.485,
-      "end": 21.655
-    },
-    {
-      "index": 90,
-      "char": "类",
-      "start": 21.688,
-      "end": 21.858
-    },
-    {
-      "index": 91,
-      "char": "和",
-      "start": 21.89,
-      "end": 22.06
-    },
-    {
-      "index": 92,
-      "char": "薯",
-      "start": 22.093,
-      "end": 22.263
-    },
-    {
-      "index": 93,
-      "char": "类",
-      "start": 22.296,
-      "end": 22.466
-    },
-    {
-      "index": 94,
-      "char": "等",
-      "start": 22.498,
-      "end": 22.668
-    },
-    {
-      "index": 95,
-      "char": "食",
-      "start": 22.701,
-      "end": 22.871
-    },
-    {
-      "index": 96,
-      "char": "物",
-      "start": 22.903,
-      "end": 23.074
-    },
-    {
-      "index": 97,
-      "char": "原",
-      "start": 23.106,
-      "end": 23.276
-    },
-    {
-      "index": 98,
       "char": "料",
-      "start": 23.309,
-      "end": 23.479
-    },
-    {
-      "index": 99,
-      "char": "这",
-      "start": 23.851,
-      "end": 24.021
-    },
-    {
-      "index": 100,
-      "char": "是",
-      "start": 24.054,
-      "end": 24.224
-    },
-    {
-      "index": 101,
-      "char": "一",
-      "start": 24.256,
-      "end": 24.427
-    },
-    {
-      "index": 102,
-      "char": "幅",
-      "start": 24.459,
-      "end": 24.629
-    },
-    {
-      "index": 103,
-      "char": "帮",
-      "start": 24.662,
-      "end": 24.832
-    },
-    {
-      "index": 104,
-      "char": "助",
-      "start": 24.864,
-      "end": 25.034
-    },
-    {
-      "index": 105,
-      "char": "记",
-      "start": 25.067,
-      "end": 25.237
-    },
-    {
-      "index": 106,
-      "char": "笔",
-      "start": 25.27,
-      "end": 25.44
-    },
-    {
-      "index": 107,
-      "char": "画",
-      "start": 25.472,
-      "end": 25.642
-    },
-    {
-      "index": 108,
-      "char": "和",
-      "start": 25.675,
-      "end": 25.845
-    },
-    {
-      "index": 109,
-      "char": "位",
-      "start": 25.877,
-      "end": 26.048
-    },
-    {
-      "index": 110,
-      "char": "置",
-      "start": 26.08,
-      "end": 26.25
-    },
-    {
-      "index": 111,
-      "char": "的",
-      "start": 26.283,
-      "end": 26.453
-    },
-    {
-      "index": 112,
-      "char": "记",
-      "start": 26.485,
-      "end": 26.655
-    },
-    {
-      "index": 113,
-      "char": "忆",
-      "start": 26.688,
-      "end": 26.858
-    },
-    {
-      "index": 114,
-      "char": "画",
-      "start": 26.89,
-      "end": 27.061
-    },
-    {
-      "index": 115,
-      "char": "面",
-      "start": 27.093,
-      "end": 27.263
-    },
-    {
-      "index": 116,
-      "char": "不",
-      "start": 27.476,
-      "end": 27.646
-    },
-    {
-      "index": 117,
-      "char": "是",
-      "start": 27.678,
-      "end": 27.849
-    },
-    {
-      "index": 118,
-      "char": "完",
-      "start": 27.881,
-      "end": 28.051
-    },
-    {
-      "index": 119,
-      "char": "整",
-      "start": 28.084,
-      "end": 28.254
-    },
-    {
-      "index": 120,
-      "char": "字",
-      "start": 28.286,
-      "end": 28.456
-    },
-    {
-      "index": 121,
-      "char": "源",
-      "start": 28.489,
-      "end": 28.659
-    },
-    {
-      "index": 122,
-      "char": "最",
-      "start": 29.031,
-      "end": 29.202
-    },
-    {
-      "index": 123,
-      "char": "后",
-      "start": 29.234,
-      "end": 29.404
-    },
-    {
-      "index": 124,
-      "char": "再",
-      "start": 29.437,
-      "end": 29.607
-    },
-    {
-      "index": 125,
-      "char": "读",
-      "start": 29.639,
-      "end": 29.809
-    },
-    {
-      "index": 126,
-      "char": "一",
-      "start": 29.842,
-      "end": 30.012
-    },
-    {
-      "index": 127,
-      "char": "遍",
-      "start": 30.044,
-      "end": 30.215
-    },
-    {
-      "index": 128,
-      "char": "粮",
-      "start": 30.427,
-      "end": 30.597
-    },
-    {
-      "index": 129,
-      "char": "食",
-      "start": 30.63,
-      "end": 30.8
+      "start": 20.08,
+      "end": 20.32
     }
   ],
-  "transcript": "粮，“粮食”的“粮”，读liáng。它是左右结构，按顺序能看到“米”和“良”。从构字分工看，“米”提示意义类别，“良”提供读音线索。看图时，左边谷粒和米架形成“米”，右边优质粮袋、弯口和流下谷物沿“良”排列，组成“粮”。粮食是供人食用的谷物、豆类和薯类等食物原料。这是一幅帮助记笔画和位置的记忆画面，不是完整字源。最后再读一遍：粮食。",
+  "transcript": "阳光让庄稼生长，成熟的谷物会成为人们需要的粮食。粮是左右结构，左边是米字旁，右边可以想成装着好谷物的粮袋。米粒从袋口流到米架上。粮食包括供人食用的谷物、豆类和薯类等食物原料。",
   "voice_reference": "封",
-  "timing_source": "punctuation-weighted-estimate",
-  "script_version": "child-first-v2",
-  "duration": 31.360181
+  "reference_id": "019f0554-ea22-762e-966c-32d678fd6bf6",
+  "reference_sha256": "eb07e06ee13a20ee4577b1b481df6d33d42127c1b3876bfa5d5e5362ae349f19",
+  "timing_source": "qwen3-forced-aligner",
+  "script_version": "narration-v3",
+  "model": "mlx-community/Qwen3-TTS-12Hz-1.7B-Base-4bit",
+  "model_revision": "37e955a1deb861c088ae5f3a67043185f3d1a60c",
+  "generation_policy": "qwen3-clone-2026-08-22-v3",
+  "seed": 20260822,
+  "content_hash": "ff4bb13a9d74db1aea96",
+  "duration": 20.376,
+  "alignment_model": "mlx-community/Qwen3-ForcedAligner-0.6B-8bit",
+  "aligned_audio_sha256": "5db0865643f1b91f1d32bdd5a58150dd4426af4fd97cd42cb20fc254cc9c0c27",
+  "alignment_groups": []
 }

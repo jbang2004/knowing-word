@@ -1,4 +1,5 @@
 import { grade5NarrationScripts } from "./grade5-volume1-narration.generated.ts";
+import { releasedNarrationOverrides } from "./released-narration-overrides.generated.ts";
 
 /*
  * Child-first narration scripts.
@@ -87,7 +88,12 @@ const legacyNarrationScripts = {
   日: "日，抗日的日。日是独体字，古字形像太阳：外框是日轮，中间一横像太阳中央的光。看图时，一轮方正的太阳从云带后升起，就能记住日。日通常表示太阳或一天；在抗日这个历史词语里，日是日本的简称。",
 } satisfies Record<string, string>;
 
-export const narrationScripts: Record<string, string> = {
+export const authoredNarrationScripts: Record<string, string> = {
   ...(grade5NarrationScripts as unknown as Record<string, string>),
   ...legacyNarrationScripts,
+};
+
+export const narrationScripts: Record<string, string> = {
+  ...authoredNarrationScripts,
+  ...releasedNarrationOverrides,
 };

@@ -1,7 +1,4 @@
-type RuntimeEnv = {
-  DB?: D1Database;
-  MEDIA?: R2Bucket;
-};
+type RuntimeEnv = Partial<Pick<Env, "DB" | "MEDIA">>;
 
 export type RequestIdentity = {
   userId: string;

@@ -2,512 +2,480 @@
   "marks": [
     {
       "index": 0,
-      "char": "陷",
-      "start": 0.297,
-      "end": 0.536
+      "char": "地",
+      "start": 0.08,
+      "end": 0.16
     },
     {
       "index": 1,
-      "char": "陷",
-      "start": 0.762,
-      "end": 1.001
+      "char": "道",
+      "start": 0.16,
+      "end": 0.4
     },
     {
       "index": 2,
-      "char": "坑",
-      "start": 1.047,
-      "end": 1.286
+      "char": "旁",
+      "start": 0.4,
+      "end": 0.64
     },
     {
       "index": 3,
-      "char": "的",
-      "start": 1.331,
-      "end": 1.571
+      "char": "边",
+      "start": 0.64,
+      "end": 1.04
     },
     {
       "index": 4,
-      "char": "陷",
-      "start": 1.616,
-      "end": 1.855
+      "char": "有",
+      "start": 1.04,
+      "end": 1.12
     },
     {
       "index": 5,
-      "char": "它",
-      "start": 2.241,
-      "end": 2.48
+      "char": "时",
+      "start": 1.12,
+      "end": 1.28
     },
     {
       "index": 6,
-      "char": "是",
-      "start": 2.526,
-      "end": 2.765
+      "char": "会",
+      "start": 1.28,
+      "end": 1.52
     },
     {
       "index": 7,
-      "char": "左",
-      "start": 2.81,
-      "end": 3.05
+      "char": "挖",
+      "start": 1.52,
+      "end": 1.68
     },
     {
       "index": 8,
-      "char": "右",
-      "start": 3.095,
-      "end": 3.334
+      "char": "陷",
+      "start": 1.68,
+      "end": 1.92
     },
     {
       "index": 9,
-      "char": "结",
-      "start": 3.38,
-      "end": 3.619
+      "char": "坑",
+      "start": 1.92,
+      "end": 2.24
     },
     {
       "index": 10,
-      "char": "构",
-      "start": 3.665,
-      "end": 3.904
+      "char": "用",
+      "start": 2.8,
+      "end": 2.88
     },
     {
       "index": 11,
-      "char": "左",
-      "start": 4.129,
-      "end": 4.369
+      "char": "来",
+      "start": 2.88,
+      "end": 3.04
     },
     {
       "index": 12,
-      "char": "边",
-      "start": 4.414,
-      "end": 4.653
+      "char": "阻",
+      "start": 3.04,
+      "end": 3.28
     },
     {
       "index": 13,
-      "char": "像",
-      "start": 4.699,
-      "end": 4.938
+      "char": "挡",
+      "start": 3.28,
+      "end": 3.52
     },
     {
       "index": 14,
-      "char": "高",
-      "start": 4.984,
-      "end": 5.223
+      "char": "闯",
+      "start": 3.52,
+      "end": 3.68
     },
     {
       "index": 15,
-      "char": "低",
-      "start": 5.269,
-      "end": 5.508
+      "char": "入",
+      "start": 3.76,
+      "end": 3.84
     },
     {
       "index": 16,
-      "char": "起",
-      "start": 5.553,
-      "end": 5.793
+      "char": "的",
+      "start": 3.84,
+      "end": 4.0
     },
     {
       "index": 17,
-      "char": "伏",
-      "start": 5.838,
-      "end": 6.077
+      "char": "敌",
+      "start": 4.0,
+      "end": 4.24
     },
     {
       "index": 18,
-      "char": "的",
-      "start": 6.123,
-      "end": 6.362
+      "char": "人",
+      "start": 4.24,
+      "end": 4.48
     },
     {
       "index": 19,
-      "char": "土",
-      "start": 6.408,
-      "end": 6.647
+      "char": "陷",
+      "start": 5.04,
+      "end": 5.36
     },
     {
       "index": 20,
-      "char": "坡",
-      "start": 6.692,
-      "end": 6.932
+      "char": "是",
+      "start": 5.36,
+      "end": 5.6
     },
     {
       "index": 21,
-      "char": "右",
-      "start": 7.157,
-      "end": 7.396
+      "char": "左",
+      "start": 5.6,
+      "end": 5.76
     },
     {
       "index": 22,
-      "char": "边",
-      "start": 7.442,
-      "end": 7.681
+      "char": "右",
+      "start": 5.76,
+      "end": 5.92
     },
     {
       "index": 23,
-      "char": "的",
-      "start": 7.727,
-      "end": 7.966
+      "char": "结",
+      "start": 5.92,
+      "end": 6.16
     },
     {
       "index": 24,
-      "char": "部",
-      "start": 8.011,
-      "end": 8.251
+      "char": "构",
+      "start": 6.16,
+      "end": 6.48
     },
     {
       "index": 25,
-      "char": "分",
-      "start": 8.296,
-      "end": 8.535
+      "char": "左",
+      "start": 6.88,
+      "end": 6.96
     },
     {
       "index": 26,
-      "char": "可",
-      "start": 8.581,
-      "end": 8.82
+      "char": "边",
+      "start": 7.04,
+      "end": 7.2
     },
     {
       "index": 27,
-      "char": "以",
-      "start": 8.866,
-      "end": 9.105
+      "char": "像",
+      "start": 7.2,
+      "end": 7.52
     },
     {
       "index": 28,
-      "char": "看",
-      "start": 9.15,
-      "end": 9.39
+      "char": "高",
+      "start": 7.52,
+      "end": 7.68
     },
     {
       "index": 29,
-      "char": "成",
-      "start": 9.435,
-      "end": 9.674
+      "char": "低",
+      "start": 7.68,
+      "end": 7.84
     },
     {
       "index": 30,
-      "char": "一",
-      "start": 9.72,
-      "end": 9.959
+      "char": "土",
+      "start": 7.84,
+      "end": 8.08
     },
     {
       "index": 31,
-      "char": "个",
-      "start": 10.005,
-      "end": 10.244
+      "char": "坡",
+      "start": 8.08,
+      "end": 8.48
     },
     {
       "index": 32,
-      "char": "人",
-      "start": 10.29,
-      "end": 10.529
+      "char": "右",
+      "start": 8.96,
+      "end": 9.12
     },
     {
       "index": 33,
-      "char": "落",
-      "start": 10.574,
-      "end": 10.814
+      "char": "边",
+      "start": 9.12,
+      "end": 9.44
     },
     {
       "index": 34,
-      "char": "进",
-      "start": 10.859,
-      "end": 11.098
+      "char": "可",
+      "start": 9.44,
+      "end": 9.6
     },
     {
       "index": 35,
-      "char": "凹",
-      "start": 11.144,
-      "end": 11.383
+      "char": "以",
+      "start": 9.6,
+      "end": 9.68
     },
     {
       "index": 36,
-      "char": "坑",
-      "start": 11.429,
-      "end": 11.668
+      "char": "想",
+      "start": 9.68,
+      "end": 9.92
     },
     {
       "index": 37,
-      "char": "看",
-      "start": 12.053,
-      "end": 12.293
+      "char": "成",
+      "start": 9.92,
+      "end": 10.08
     },
     {
       "index": 38,
-      "char": "图",
-      "start": 12.338,
-      "end": 12.577
+      "char": "一",
+      "start": 10.08,
+      "end": 10.24
     },
     {
       "index": 39,
-      "char": "时",
-      "start": 12.623,
-      "end": 12.862
+      "char": "个",
+      "start": 10.24,
+      "end": 10.4
     },
     {
       "index": 40,
       "char": "人",
-      "start": 13.088,
-      "end": 13.327
+      "start": 10.4,
+      "end": 10.56
     },
     {
       "index": 41,
-      "char": "物",
-      "start": 13.372,
-      "end": 13.612
+      "char": "落",
+      "start": 10.56,
+      "end": 10.8
     },
     {
       "index": 42,
-      "char": "安",
-      "start": 13.657,
-      "end": 13.896
+      "char": "进",
+      "start": 10.8,
+      "end": 11.04
     },
     {
       "index": 43,
-      "char": "全",
-      "start": 13.942,
-      "end": 14.181
+      "char": "低",
+      "start": 11.04,
+      "end": 11.2
     },
     {
       "index": 44,
-      "char": "地",
-      "start": 14.227,
-      "end": 14.466
+      "char": "处",
+      "start": 11.2,
+      "end": 11.6
     },
     {
       "index": 45,
-      "char": "陷",
-      "start": 14.511,
-      "end": 14.751
+      "char": "人",
+      "start": 11.92,
+      "end": 12.16
     },
     {
       "index": 46,
-      "char": "入",
-      "start": 14.796,
-      "end": 15.035
+      "char": "物",
+      "start": 12.16,
+      "end": 12.24
     },
     {
       "index": 47,
-      "char": "柔",
-      "start": 15.081,
-      "end": 15.32
+      "char": "举",
+      "start": 12.24,
+      "end": 12.48
     },
     {
       "index": 48,
-      "char": "软",
-      "start": 15.366,
-      "end": 15.605
+      "char": "手",
+      "start": 12.48,
+      "end": 12.8
     },
     {
       "index": 49,
-      "char": "浅",
-      "start": 15.651,
-      "end": 15.89
+      "char": "提",
+      "start": 12.8,
+      "end": 12.96
     },
     {
       "index": 50,
-      "char": "坑",
-      "start": 15.935,
-      "end": 16.174
+      "char": "醒",
+      "start": 12.96,
+      "end": 13.2
     },
     {
       "index": 51,
-      "char": "并",
-      "start": 16.22,
-      "end": 16.459
+      "char": "大",
+      "start": 13.2,
+      "end": 13.36
     },
     {
       "index": 52,
-      "char": "举",
-      "start": 16.505,
-      "end": 16.744
+      "char": "家",
+      "start": 13.36,
+      "end": 13.52
     },
     {
       "index": 53,
-      "char": "手",
-      "start": 16.79,
-      "end": 17.029
+      "char": "避",
+      "start": 13.52,
+      "end": 13.76
     },
     {
       "index": 54,
-      "char": "示",
-      "start": 17.074,
-      "end": 17.314
+      "char": "开",
+      "start": 13.76,
+      "end": 13.92
     },
     {
       "index": 55,
-      "char": "意",
-      "start": 17.359,
-      "end": 17.598
+      "char": "坑",
+      "start": 13.92,
+      "end": 14.16
     },
     {
       "index": 56,
-      "char": "陷",
-      "start": 17.984,
-      "end": 18.223
+      "char": "口",
+      "start": 14.16,
+      "end": 14.48
     },
     {
       "index": 57,
-      "char": "表",
-      "start": 18.269,
-      "end": 18.508
+      "char": "陷",
+      "start": 14.8,
+      "end": 15.04
     },
     {
       "index": 58,
-      "char": "示",
-      "start": 18.553,
-      "end": 18.793
+      "char": "坑",
+      "start": 15.04,
+      "end": 15.36
     },
     {
       "index": 59,
-      "char": "掉",
-      "start": 18.838,
-      "end": 19.077
+      "char": "就",
+      "start": 15.36,
+      "end": 15.44
     },
     {
       "index": 60,
-      "char": "进",
-      "start": 19.123,
-      "end": 19.362
+      "char": "是",
+      "start": 15.44,
+      "end": 15.6
     },
     {
       "index": 61,
-      "char": "落",
-      "start": 19.588,
-      "end": 19.827
+      "char": "地",
+      "start": 15.6,
+      "end": 15.84
     },
     {
       "index": 62,
-      "char": "入",
-      "start": 19.872,
-      "end": 20.112
+      "char": "面",
+      "start": 15.84,
+      "end": 16.0
     },
     {
       "index": 63,
-      "char": "也",
-      "start": 20.337,
-      "end": 20.576
+      "char": "向",
+      "start": 16.0,
+      "end": 16.24
     },
     {
       "index": 64,
-      "char": "可",
-      "start": 20.622,
-      "end": 20.861
+      "char": "下",
+      "start": 16.24,
+      "end": 16.48
     },
     {
       "index": 65,
-      "char": "以",
-      "start": 20.907,
-      "end": 21.146
+      "char": "凹",
+      "start": 16.48,
+      "end": 16.8
     },
     {
       "index": 66,
-      "char": "表",
-      "start": 21.192,
-      "end": 21.431
+      "char": "容",
+      "start": 17.04,
+      "end": 17.28
     },
     {
       "index": 67,
-      "char": "示",
-      "start": 21.476,
-      "end": 21.715
+      "char": "易",
+      "start": 17.28,
+      "end": 17.36
     },
     {
       "index": 68,
-      "char": "被",
-      "start": 21.761,
-      "end": 22
+      "char": "让",
+      "start": 17.36,
+      "end": 17.6
     },
     {
       "index": 69,
-      "char": "困",
-      "start": 22.046,
-      "end": 22.285
+      "char": "人",
+      "start": 17.6,
+      "end": 17.84
     },
     {
       "index": 70,
-      "char": "住",
-      "start": 22.331,
-      "end": 22.57
+      "char": "或",
+      "start": 17.84,
+      "end": 18.0
     },
     {
       "index": 71,
-      "char": "陷",
-      "start": 22.955,
-      "end": 23.195
+      "char": "物",
+      "start": 18.0,
+      "end": 18.24
     },
     {
       "index": 72,
-      "char": "坑",
-      "start": 23.24,
-      "end": 23.479
+      "char": "掉",
+      "start": 18.24,
+      "end": 18.48
     },
     {
       "index": 73,
-      "char": "就",
-      "start": 23.705,
-      "end": 23.944
+      "char": "进",
+      "start": 18.48,
+      "end": 18.64
     },
     {
       "index": 74,
-      "char": "是",
-      "start": 23.99,
-      "end": 24.229
+      "char": "去",
+      "start": 18.64,
+      "end": 18.8
     },
     {
       "index": 75,
-      "char": "容",
-      "start": 24.274,
-      "end": 24.514
+      "char": "的",
+      "start": 18.8,
+      "end": 18.88
     },
     {
       "index": 76,
-      "char": "易",
-      "start": 24.559,
-      "end": 24.798
-    },
-    {
-      "index": 77,
-      "char": "让",
-      "start": 24.844,
-      "end": 25.083
-    },
-    {
-      "index": 78,
-      "char": "人",
-      "start": 25.129,
-      "end": 25.368
-    },
-    {
-      "index": 79,
-      "char": "掉",
-      "start": 25.413,
-      "end": 25.653
-    },
-    {
-      "index": 80,
-      "char": "进",
-      "start": 25.698,
-      "end": 25.937
-    },
-    {
-      "index": 81,
-      "char": "去",
-      "start": 25.983,
-      "end": 26.222
-    },
-    {
-      "index": 82,
-      "char": "的",
-      "start": 26.268,
-      "end": 26.507
-    },
-    {
-      "index": 83,
       "char": "坑",
-      "start": 26.553,
-      "end": 26.792
+      "start": 18.88,
+      "end": 19.28
     }
   ],
-  "transcript": "陷，陷坑的陷。它是左右结构，左边像高低起伏的土坡，右边的部分可以看成一个人落进凹坑。看图时，人物安全地陷入柔软浅坑并举手示意。陷表示掉进、落入，也可以表示被困住。陷坑，就是容易让人掉进去的坑。",
+  "transcript": "地道旁边有时会挖陷坑，用来阻挡闯入的敌人。陷是左右结构，左边像高低土坡，右边可以想成一个人落进低处。人物举手提醒大家避开坑口。陷坑就是地面向下凹、容易让人或物掉进去的坑。",
   "voice_reference": "封",
-  "timing_source": "punctuation-weighted-estimate",
-  "script_version": "child-first-v2",
-  "duration": 27.360181
+  "reference_id": "019f0554-ea22-762e-966c-32d678fd6bf6",
+  "reference_sha256": "eb07e06ee13a20ee4577b1b481df6d33d42127c1b3876bfa5d5e5362ae349f19",
+  "timing_source": "qwen3-forced-aligner",
+  "script_version": "narration-v3",
+  "model": "mlx-community/Qwen3-TTS-12Hz-1.7B-Base-4bit",
+  "model_revision": "37e955a1deb861c088ae5f3a67043185f3d1a60c",
+  "generation_policy": "qwen3-clone-2026-08-22-v3",
+  "seed": 20260822,
+  "content_hash": "6912a018dc8ef1f38438",
+  "duration": 19.365,
+  "alignment_model": "mlx-community/Qwen3-ForcedAligner-0.6B-8bit",
+  "aligned_audio_sha256": "ccb2f6318d7b0fce080850ff7b10d5b120c6ef4072748a1228f54d62156a7323",
+  "alignment_groups": []
 }

@@ -2,578 +2,492 @@
   "marks": [
     {
       "index": 0,
-      "char": "粉",
-      "start": 0.295,
-      "end": 0.506
+      "char": "冀",
+      "start": 0.08,
+      "end": 0.24
     },
     {
       "index": 1,
-      "char": "粉",
-      "start": 0.726,
-      "end": 0.938
+      "char": "中",
+      "start": 0.24,
+      "end": 0.48
     },
     {
       "index": 2,
-      "char": "碎",
-      "start": 0.978,
-      "end": 1.189
+      "char": "人",
+      "start": 0.48,
+      "end": 0.56
     },
     {
       "index": 3,
-      "char": "的",
-      "start": 1.229,
-      "end": 1.44
+      "char": "民",
+      "start": 0.56,
+      "end": 0.8
     },
     {
       "index": 4,
-      "char": "粉",
-      "start": 1.481,
-      "end": 1.692
+      "char": "修",
+      "start": 0.8,
+      "end": 1.04
     },
     {
       "index": 5,
-      "char": "它",
-      "start": 2.072,
-      "end": 2.283
+      "char": "地",
+      "start": 1.04,
+      "end": 1.2
     },
     {
       "index": 6,
-      "char": "是",
-      "start": 2.323,
-      "end": 2.534
+      "char": "道",
+      "start": 1.2,
+      "end": 1.52
     },
     {
       "index": 7,
-      "char": "左",
-      "start": 2.575,
-      "end": 2.786
+      "char": "是",
+      "start": 1.84,
+      "end": 2.0
     },
     {
       "index": 8,
-      "char": "右",
-      "start": 2.826,
-      "end": 3.037
+      "char": "为",
+      "start": 2.0,
+      "end": 2.16
     },
     {
       "index": 9,
-      "char": "结",
-      "start": 3.077,
-      "end": 3.289
+      "char": "了",
+      "start": 2.16,
+      "end": 2.24
     },
     {
       "index": 10,
-      "char": "构",
-      "start": 3.329,
-      "end": 3.54
+      "char": "粉",
+      "start": 2.24,
+      "end": 2.48
     },
     {
       "index": 11,
-      "char": "左",
-      "start": 3.76,
-      "end": 3.971
+      "char": "碎",
+      "start": 2.48,
+      "end": 2.72
     },
     {
       "index": 12,
-      "char": "边",
-      "start": 4.012,
-      "end": 4.223
+      "char": "敌",
+      "start": 2.72,
+      "end": 2.88
     },
     {
       "index": 13,
-      "char": "的",
-      "start": 4.263,
-      "end": 4.474
+      "char": "人",
+      "start": 2.88,
+      "end": 3.04
     },
     {
       "index": 14,
-      "char": "米",
-      "start": 4.514,
-      "end": 4.725
+      "char": "的",
+      "start": 3.04,
+      "end": 3.12
     },
     {
       "index": 15,
-      "char": "说",
-      "start": 4.766,
-      "end": 4.977
+      "char": "扫",
+      "start": 3.12,
+      "end": 3.36
     },
     {
       "index": 16,
-      "char": "明",
-      "start": 5.017,
-      "end": 5.228
+      "char": "荡",
+      "start": 3.36,
+      "end": 3.68
     },
     {
       "index": 17,
       "char": "粉",
-      "start": 5.268,
-      "end": 5.48
+      "start": 4.32,
+      "end": 4.64
     },
     {
       "index": 18,
-      "char": "末",
-      "start": 5.52,
-      "end": 5.731
+      "char": "是",
+      "start": 4.64,
+      "end": 4.8
     },
     {
       "index": 19,
-      "char": "常",
-      "start": 5.771,
-      "end": 5.982
+      "char": "左",
+      "start": 4.8,
+      "end": 4.96
     },
     {
       "index": 20,
-      "char": "由",
-      "start": 6.022,
-      "end": 6.234
+      "char": "右",
+      "start": 5.04,
+      "end": 5.2
     },
     {
       "index": 21,
-      "char": "粮",
-      "start": 6.274,
-      "end": 6.485
+      "char": "结",
+      "start": 5.2,
+      "end": 5.44
     },
     {
       "index": 22,
-      "char": "食",
-      "start": 6.525,
-      "end": 6.736
+      "char": "构",
+      "start": 5.44,
+      "end": 5.76
     },
     {
       "index": 23,
-      "char": "磨",
-      "start": 6.777,
-      "end": 6.988
+      "char": "左",
+      "start": 5.92,
+      "end": 6.08
     },
     {
       "index": 24,
-      "char": "成",
-      "start": 7.028,
-      "end": 7.239
+      "char": "边",
+      "start": 6.16,
+      "end": 6.32
     },
     {
       "index": 25,
-      "char": "右",
-      "start": 7.459,
-      "end": 7.67
+      "char": "是",
+      "start": 6.32,
+      "end": 6.48
     },
     {
       "index": 26,
-      "char": "边",
-      "start": 7.711,
-      "end": 7.922
+      "char": "米",
+      "start": 6.48,
+      "end": 6.88
     },
     {
       "index": 27,
-      "char": "的",
-      "start": 7.962,
-      "end": 8.173
+      "char": "右",
+      "start": 7.12,
+      "end": 7.28
     },
     {
       "index": 28,
-      "char": "分",
-      "start": 8.213,
-      "end": 8.425
+      "char": "边",
+      "start": 7.28,
+      "end": 7.44
     },
     {
       "index": 29,
-      "char": "帮",
-      "start": 8.465,
-      "end": 8.676
+      "char": "是",
+      "start": 7.44,
+      "end": 7.6
     },
     {
       "index": 30,
-      "char": "助",
-      "start": 8.716,
-      "end": 8.927
+      "char": "分",
+      "start": 7.6,
+      "end": 7.76
     },
     {
       "index": 31,
-      "char": "记",
-      "start": 8.968,
-      "end": 9.179
+      "char": "开",
+      "start": 7.76,
+      "end": 8.0
     },
     {
       "index": 32,
-      "char": "住",
-      "start": 9.219,
-      "end": 9.43
+      "char": "的",
+      "start": 8.0,
+      "end": 8.08
     },
     {
       "index": 33,
-      "char": "读",
-      "start": 9.47,
-      "end": 9.681
+      "char": "分",
+      "start": 8.08,
+      "end": 8.4
     },
     {
       "index": 34,
-      "char": "音",
-      "start": 9.722,
-      "end": 9.933
+      "char": "想",
+      "start": 8.96,
+      "end": 9.2
     },
     {
       "index": 35,
-      "char": "看",
-      "start": 10.313,
-      "end": 10.524
+      "char": "象",
+      "start": 9.2,
+      "end": 9.36
     },
     {
       "index": 36,
-      "char": "图",
-      "start": 10.564,
-      "end": 10.776
+      "char": "米",
+      "start": 9.36,
+      "end": 9.6
     },
     {
       "index": 37,
-      "char": "时",
-      "start": 10.816,
-      "end": 11.027
+      "char": "粒",
+      "start": 9.6,
+      "end": 9.76
     },
     {
       "index": 38,
-      "char": "米",
-      "start": 11.247,
-      "end": 11.458
+      "char": "进",
+      "start": 9.76,
+      "end": 9.92
     },
     {
       "index": 39,
-      "char": "粒",
-      "start": 11.499,
-      "end": 11.71
+      "char": "入",
+      "start": 9.92,
+      "end": 10.08
     },
     {
       "index": 40,
-      "char": "进",
-      "start": 11.75,
-      "end": 11.961
+      "char": "磨",
+      "start": 10.08,
+      "end": 10.32
     },
     {
       "index": 41,
-      "char": "入",
-      "start": 12.001,
-      "end": 12.212
+      "char": "具",
+      "start": 10.32,
+      "end": 10.64
     },
     {
       "index": 42,
-      "char": "磨",
-      "start": 12.253,
-      "end": 12.464
+      "char": "被",
+      "start": 10.8,
+      "end": 10.96
     },
     {
       "index": 43,
-      "char": "具",
-      "start": 12.504,
-      "end": 12.715
+      "char": "一",
+      "start": 10.96,
+      "end": 11.04
     },
     {
       "index": 44,
-      "char": "被",
-      "start": 12.935,
-      "end": 13.147
+      "char": "点",
+      "start": 11.04,
+      "end": 11.28
     },
     {
       "index": 45,
-      "char": "一",
-      "start": 13.187,
-      "end": 13.398
+      "char": "点",
+      "start": 11.28,
+      "end": 11.44
     },
     {
       "index": 46,
-      "char": "点",
-      "start": 13.438,
-      "end": 13.649
+      "char": "分",
+      "start": 11.44,
+      "end": 11.68
     },
     {
       "index": 47,
-      "char": "点",
-      "start": 13.689,
-      "end": 13.901
+      "char": "开",
+      "start": 11.68,
+      "end": 11.92
     },
     {
       "index": 48,
-      "char": "分",
-      "start": 13.941,
-      "end": 14.152
+      "char": "磨",
+      "start": 11.92,
+      "end": 12.16
     },
     {
       "index": 49,
-      "char": "开",
-      "start": 14.192,
-      "end": 14.403
+      "char": "成",
+      "start": 12.16,
+      "end": 12.32
     },
     {
       "index": 50,
-      "char": "碾",
-      "start": 14.624,
-      "end": 14.835
+      "char": "细",
+      "start": 12.32,
+      "end": 12.56
     },
     {
       "index": 51,
-      "char": "细",
-      "start": 14.875,
-      "end": 15.086
+      "char": "末",
+      "start": 12.56,
+      "end": 12.88
     },
     {
       "index": 52,
-      "char": "最",
-      "start": 15.306,
-      "end": 15.517
+      "char": "粉",
+      "start": 13.28,
+      "end": 13.52
     },
     {
       "index": 53,
-      "char": "后",
-      "start": 15.558,
-      "end": 15.769
+      "char": "碎",
+      "start": 13.52,
+      "end": 13.76
     },
     {
       "index": 54,
-      "char": "变",
-      "start": 15.809,
-      "end": 16.02
+      "char": "原",
+      "start": 13.76,
+      "end": 14.0
     },
     {
       "index": 55,
-      "char": "成",
-      "start": 16.06,
-      "end": 16.272
+      "char": "指",
+      "start": 14.0,
+      "end": 14.24
     },
     {
       "index": 56,
-      "char": "粉",
-      "start": 16.312,
-      "end": 16.523
+      "char": "把",
+      "start": 14.24,
+      "end": 14.4
     },
     {
       "index": 57,
-      "char": "末",
-      "start": 16.563,
-      "end": 16.774
+      "char": "东",
+      "start": 14.4,
+      "end": 14.64
     },
     {
       "index": 58,
-      "char": "这",
-      "start": 17.155,
-      "end": 17.366
+      "char": "西",
+      "start": 14.64,
+      "end": 14.72
     },
     {
       "index": 59,
-      "char": "是",
-      "start": 17.406,
-      "end": 17.617
+      "char": "弄",
+      "start": 14.8,
+      "end": 14.96
     },
     {
       "index": 60,
-      "char": "方",
-      "start": 17.657,
-      "end": 17.868
+      "char": "得",
+      "start": 14.96,
+      "end": 15.04
     },
     {
       "index": 61,
-      "char": "便",
-      "start": 17.909,
-      "end": 18.12
+      "char": "很",
+      "start": 15.04,
+      "end": 15.28
     },
     {
       "index": 62,
-      "char": "记",
-      "start": 18.16,
-      "end": 18.371
+      "char": "细",
+      "start": 15.28,
+      "end": 15.68
     },
     {
       "index": 63,
-      "char": "忆",
-      "start": 18.411,
-      "end": 18.623
+      "char": "很",
+      "start": 15.92,
+      "end": 16.08
     },
     {
       "index": 64,
-      "char": "的",
-      "start": 18.663,
-      "end": 18.874
+      "char": "碎",
+      "start": 16.08,
+      "end": 16.56
     },
     {
       "index": 65,
-      "char": "画",
-      "start": 18.914,
-      "end": 19.125
+      "char": "课",
+      "start": 16.96,
+      "end": 17.12
     },
     {
       "index": 66,
-      "char": "面",
-      "start": 19.166,
-      "end": 19.377
+      "char": "文",
+      "start": 17.12,
+      "end": 17.28
     },
     {
       "index": 67,
-      "char": "粉",
-      "start": 19.757,
-      "end": 19.968
+      "char": "里",
+      "start": 17.28,
+      "end": 17.44
     },
     {
       "index": 68,
-      "char": "碎",
-      "start": 20.008,
-      "end": 20.219
+      "char": "表",
+      "start": 17.44,
+      "end": 17.6
     },
     {
       "index": 69,
-      "char": "就",
-      "start": 20.44,
-      "end": 20.651
+      "char": "示",
+      "start": 17.6,
+      "end": 17.84
     },
     {
       "index": 70,
-      "char": "是",
-      "start": 20.691,
-      "end": 20.902
+      "char": "彻",
+      "start": 17.84,
+      "end": 18.08
     },
     {
       "index": 71,
-      "char": "把",
-      "start": 20.942,
-      "end": 21.154
+      "char": "底",
+      "start": 18.08,
+      "end": 18.24
     },
     {
       "index": 72,
-      "char": "完",
-      "start": 21.194,
-      "end": 21.405
+      "char": "挫",
+      "start": 18.24,
+      "end": 18.4
     },
     {
       "index": 73,
-      "char": "整",
-      "start": 21.445,
-      "end": 21.656
+      "char": "败",
+      "start": 18.4,
+      "end": 18.56
     },
     {
       "index": 74,
-      "char": "的",
-      "start": 21.696,
-      "end": 21.908
+      "char": "敌",
+      "start": 18.56,
+      "end": 18.72
     },
     {
       "index": 75,
-      "char": "东",
-      "start": 21.948,
-      "end": 22.159
+      "char": "人",
+      "start": 18.72,
+      "end": 18.88
     },
     {
       "index": 76,
-      "char": "西",
-      "start": 22.199,
-      "end": 22.41
+      "char": "的",
+      "start": 18.88,
+      "end": 18.96
     },
     {
       "index": 77,
-      "char": "弄",
-      "start": 22.451,
-      "end": 22.662
+      "char": "行",
+      "start": 18.96,
+      "end": 19.2
     },
     {
       "index": 78,
-      "char": "得",
-      "start": 22.702,
-      "end": 22.913
-    },
-    {
-      "index": 79,
-      "char": "又",
-      "start": 22.953,
-      "end": 23.164
-    },
-    {
-      "index": 80,
-      "char": "细",
-      "start": 23.205,
-      "end": 23.416
-    },
-    {
-      "index": 81,
-      "char": "又",
-      "start": 23.456,
-      "end": 23.667
-    },
-    {
-      "index": 82,
-      "char": "碎",
-      "start": 23.707,
-      "end": 23.919
-    },
-    {
-      "index": 83,
-      "char": "课",
-      "start": 24.139,
-      "end": 24.35
-    },
-    {
-      "index": 84,
-      "char": "文",
-      "start": 24.39,
-      "end": 24.601
-    },
-    {
-      "index": 85,
-      "char": "里",
-      "start": 24.642,
-      "end": 24.853
-    },
-    {
-      "index": 86,
-      "char": "还",
-      "start": 24.893,
-      "end": 25.104
-    },
-    {
-      "index": 87,
-      "char": "用",
-      "start": 25.144,
-      "end": 25.355
-    },
-    {
-      "index": 88,
-      "char": "它",
-      "start": 25.396,
-      "end": 25.607
-    },
-    {
-      "index": 89,
-      "char": "表",
-      "start": 25.647,
-      "end": 25.858
-    },
-    {
-      "index": 90,
-      "char": "示",
-      "start": 25.898,
-      "end": 26.11
-    },
-    {
-      "index": 91,
-      "char": "彻",
-      "start": 26.15,
-      "end": 26.361
-    },
-    {
-      "index": 92,
-      "char": "底",
-      "start": 26.401,
-      "end": 26.612
-    },
-    {
-      "index": 93,
-      "char": "打",
-      "start": 26.653,
-      "end": 26.864
-    },
-    {
-      "index": 94,
-      "char": "垮",
-      "start": 26.904,
-      "end": 27.115
+      "char": "动",
+      "start": 19.2,
+      "end": 19.44
     }
   ],
-  "transcript": "粉，粉碎的粉。它是左右结构，左边的米说明粉末常由粮食磨成，右边的分帮助记住读音。看图时，米粒进入磨具，被一点点分开、碾细，最后变成粉末。这是方便记忆的画面。粉碎，就是把完整的东西弄得又细又碎；课文里还用它表示彻底打垮。",
+  "transcript": "冀中人民修地道，是为了粉碎敌人的扫荡。粉是左右结构，左边是米，右边是分开的分。想象米粒进入磨具，被一点点分开磨成细末。粉碎原指把东西弄得很细很碎，课文里表示彻底挫败敌人的行动。",
   "voice_reference": "封",
-  "timing_source": "punctuation-weighted-estimate",
-  "script_version": "child-first-v1",
-  "duration": 27.680181
+  "reference_id": "019f0554-ea22-762e-966c-32d678fd6bf6",
+  "reference_sha256": "eb07e06ee13a20ee4577b1b481df6d33d42127c1b3876bfa5d5e5362ae349f19",
+  "timing_source": "qwen3-forced-aligner",
+  "script_version": "narration-v3",
+  "model": "mlx-community/Qwen3-TTS-12Hz-1.7B-Base-4bit",
+  "model_revision": "37e955a1deb861c088ae5f3a67043185f3d1a60c",
+  "generation_policy": "qwen3-clone-2026-08-22-v3",
+  "seed": 20260822,
+  "content_hash": "6cfad182685cfcdab93a",
+  "duration": 19.493,
+  "alignment_model": "mlx-community/Qwen3-ForcedAligner-0.6B-8bit",
+  "aligned_audio_sha256": "1ad133e449c533d5e9433ec8a4f3ea19e939dd0726fbc09f5367bbb50e23bb50",
+  "alignment_groups": []
 }

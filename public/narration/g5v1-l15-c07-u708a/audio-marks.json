@@ -2,752 +2,630 @@
   "marks": [
     {
       "index": 0,
-      "char": "炊",
-      "start": 0.294,
-      "end": 0.49
+      "char": "开",
+      "start": 0.24,
+      "end": 0.4
     },
     {
       "index": 1,
-      "char": "炊",
-      "start": 0.707,
-      "end": 0.903
+      "char": "饭",
+      "start": 0.4,
+      "end": 0.64
     },
     {
       "index": 2,
-      "char": "烟",
-      "start": 0.94,
-      "end": 1.136
+      "char": "时",
+      "start": 0.64,
+      "end": 1.04
     },
     {
       "index": 3,
-      "char": "的",
-      "start": 1.173,
-      "end": 1.369
+      "char": "炊",
+      "start": 1.36,
+      "end": 1.6
     },
     {
       "index": 4,
-      "char": "炊",
-      "start": 1.406,
-      "end": 1.602
+      "char": "事",
+      "start": 1.6,
+      "end": 1.76
     },
     {
       "index": 5,
-      "char": "读",
-      "start": 1.819,
-      "end": 2.015
+      "char": "员",
+      "start": 1.76,
+      "end": 2.0
     },
     {
       "index": 6,
-      "char": "c",
-      "start": 2.052,
-      "end": 2.248
+      "char": "端",
+      "start": 2.0,
+      "end": 2.16
     },
     {
       "index": 7,
-      "char": "h",
-      "start": 2.285,
-      "end": 2.481
+      "char": "来",
+      "start": 2.16,
+      "end": 2.32
     },
     {
       "index": 8,
-      "char": "u",
-      "start": 2.519,
-      "end": 2.714
+      "char": "一",
+      "start": 2.32,
+      "end": 2.48
     },
     {
       "index": 9,
-      "char": "ī",
-      "start": 2.752,
-      "end": 2.947
+      "char": "盘",
+      "start": 2.48,
+      "end": 2.64
     },
     {
       "index": 10,
-      "char": "它",
-      "start": 3.325,
-      "end": 3.52
+      "char": "小",
+      "start": 2.64,
+      "end": 2.88
     },
     {
       "index": 11,
-      "char": "是",
-      "start": 3.558,
-      "end": 3.753
+      "char": "白",
+      "start": 2.88,
+      "end": 3.04
     },
     {
       "index": 12,
-      "char": "左",
-      "start": 3.791,
-      "end": 3.987
+      "char": "菜",
+      "start": 3.04,
+      "end": 3.44
     },
     {
       "index": 13,
-      "char": "右",
-      "start": 4.024,
-      "end": 4.22
+      "char": "将",
+      "start": 4.0,
+      "end": 4.24
     },
     {
       "index": 14,
-      "char": "结",
-      "start": 4.257,
-      "end": 4.453
+      "char": "军",
+      "start": 4.24,
+      "end": 4.48
     },
     {
       "index": 15,
-      "char": "构",
-      "start": 4.49,
-      "end": 4.686
+      "char": "没",
+      "start": 4.48,
+      "end": 4.64
     },
     {
       "index": 16,
-      "char": "按",
-      "start": 4.903,
-      "end": 5.099
+      "char": "有",
+      "start": 4.64,
+      "end": 4.72
     },
     {
       "index": 17,
-      "char": "顺",
-      "start": 5.136,
-      "end": 5.332
+      "char": "独",
+      "start": 4.72,
+      "end": 4.96
     },
     {
       "index": 18,
-      "char": "序",
-      "start": 5.369,
-      "end": 5.565
+      "char": "自",
+      "start": 4.96,
+      "end": 5.12
     },
     {
       "index": 19,
-      "char": "能",
-      "start": 5.602,
-      "end": 5.798
+      "char": "吃",
+      "start": 5.12,
+      "end": 5.28
     },
     {
       "index": 20,
-      "char": "看",
-      "start": 5.835,
-      "end": 6.031
+      "char": "下",
+      "start": 5.28,
+      "end": 5.44
     },
     {
       "index": 21,
-      "char": "到",
-      "start": 6.068,
-      "end": 6.264
+      "char": "去",
+      "start": 5.44,
+      "end": 5.76
     },
     {
       "index": 22,
-      "char": "火",
-      "start": 6.301,
-      "end": 6.497
+      "char": "炊",
+      "start": 6.32,
+      "end": 6.56
     },
     {
       "index": 23,
-      "char": "和",
-      "start": 6.535,
-      "end": 6.73
+      "char": "事",
+      "start": 6.56,
+      "end": 6.72
     },
     {
       "index": 24,
-      "char": "欠",
-      "start": 6.768,
-      "end": 6.963
+      "char": "员",
+      "start": 6.72,
+      "end": 6.96
     },
     {
       "index": 25,
-      "char": "从",
-      "start": 7.341,
-      "end": 7.536
+      "char": "是",
+      "start": 6.96,
+      "end": 7.12
     },
     {
       "index": 26,
-      "char": "构",
-      "start": 7.574,
-      "end": 7.769
+      "char": "在",
+      "start": 7.12,
+      "end": 7.28
     },
     {
       "index": 27,
-      "char": "字",
-      "start": 7.807,
-      "end": 8.003
+      "char": "集",
+      "start": 7.28,
+      "end": 7.44
     },
     {
       "index": 28,
-      "char": "分",
-      "start": 8.04,
-      "end": 8.236
+      "char": "体",
+      "start": 7.44,
+      "end": 7.68
     },
     {
       "index": 29,
-      "char": "工",
-      "start": 8.273,
-      "end": 8.469
+      "char": "中",
+      "start": 7.68,
+      "end": 7.92
     },
     {
       "index": 30,
-      "char": "看",
-      "start": 8.506,
-      "end": 8.702
+      "char": "负",
+      "start": 7.92,
+      "end": 8.08
     },
     {
       "index": 31,
-      "char": "火",
-      "start": 8.919,
-      "end": 9.115
+      "char": "责",
+      "start": 8.08,
+      "end": 8.24
     },
     {
       "index": 32,
-      "char": "提",
-      "start": 9.152,
-      "end": 9.348
+      "char": "做",
+      "start": 8.24,
+      "end": 8.48
     },
     {
       "index": 33,
-      "char": "示",
-      "start": 9.385,
-      "end": 9.581
+      "char": "饭",
+      "start": 8.48,
+      "end": 8.8
     },
     {
       "index": 34,
-      "char": "意",
-      "start": 9.618,
-      "end": 9.814
+      "char": "保",
+      "start": 9.12,
+      "end": 9.28
     },
     {
       "index": 35,
-      "char": "义",
-      "start": 9.851,
-      "end": 10.047
+      "char": "障",
+      "start": 9.28,
+      "end": 9.44
     },
     {
       "index": 36,
-      "char": "类",
-      "start": 10.084,
-      "end": 10.28
+      "char": "饮",
+      "start": 9.44,
+      "end": 9.6
     },
     {
       "index": 37,
-      "char": "别",
-      "start": 10.317,
-      "end": 10.513
+      "char": "食",
+      "start": 9.6,
+      "end": 9.76
     },
     {
       "index": 38,
-      "char": "欠",
-      "start": 10.73,
-      "end": 10.926
+      "char": "的",
+      "start": 9.76,
+      "end": 9.92
     },
     {
       "index": 39,
-      "char": "提",
-      "start": 10.964,
-      "end": 11.159
+      "char": "人",
+      "start": 9.92,
+      "end": 10.24
     },
     {
       "index": 40,
-      "char": "供",
-      "start": 11.197,
-      "end": 11.392
+      "char": "课",
+      "start": 10.72,
+      "end": 10.96
     },
     {
       "index": 41,
-      "char": "读",
-      "start": 11.43,
-      "end": 11.625
+      "char": "文",
+      "start": 10.96,
+      "end": 11.12
     },
     {
       "index": 42,
-      "char": "音",
-      "start": 11.663,
-      "end": 11.859
+      "char": "里",
+      "start": 11.12,
+      "end": 11.28
     },
     {
       "index": 43,
-      "char": "线",
-      "start": 11.896,
-      "end": 12.092
+      "char": "的",
+      "start": 11.28,
+      "end": 11.36
     },
     {
       "index": 44,
-      "char": "索",
-      "start": 12.129,
-      "end": 12.325
+      "char": "这",
+      "start": 11.36,
+      "end": 11.52
     },
     {
       "index": 45,
-      "char": "看",
-      "start": 12.702,
-      "end": 12.898
+      "char": "盘",
+      "start": 11.52,
+      "end": 11.68
     },
     {
       "index": 46,
-      "char": "图",
-      "start": 12.935,
-      "end": 13.131
+      "char": "菜",
+      "start": 11.68,
+      "end": 12.0
     },
     {
       "index": 47,
-      "char": "时",
-      "start": 13.168,
-      "end": 13.364
+      "char": "就",
+      "start": 12.0,
+      "end": 12.16
     },
     {
       "index": 48,
-      "char": "左",
-      "start": 13.581,
-      "end": 13.777
+      "char": "由",
+      "start": 12.16,
+      "end": 12.32
     },
     {
       "index": 49,
-      "char": "边",
-      "start": 13.814,
-      "end": 14.01
+      "char": "他",
+      "start": 12.32,
+      "end": 12.48
     },
     {
       "index": 50,
-      "char": "炉",
-      "start": 14.047,
-      "end": 14.243
+      "char": "端",
+      "start": 12.48,
+      "end": 12.72
     },
     {
       "index": 51,
-      "char": "火",
-      "start": 14.28,
-      "end": 14.476
+      "char": "上",
+      "start": 12.72,
+      "end": 12.96
     },
     {
       "index": 52,
-      "char": "形",
-      "start": 14.513,
-      "end": 14.709
+      "char": "来",
+      "start": 12.96,
+      "end": 13.2
     },
     {
       "index": 53,
-      "char": "成",
-      "start": 14.746,
-      "end": 14.942
+      "char": "炊",
+      "start": 13.6,
+      "end": 13.84
     },
     {
       "index": 54,
-      "char": "火",
-      "start": 14.98,
-      "end": 15.175
+      "char": "的",
+      "start": 13.84,
+      "end": 14.0
     },
     {
       "index": 55,
-      "char": "右",
-      "start": 15.393,
-      "end": 15.588
+      "char": "左",
+      "start": 14.0,
+      "end": 14.24
     },
     {
       "index": 56,
       "char": "边",
-      "start": 15.626,
-      "end": 15.821
+      "start": 14.24,
+      "end": 14.56
     },
     {
       "index": 57,
-      "char": "人",
-      "start": 15.859,
-      "end": 16.055
+      "char": "是",
+      "start": 14.56,
+      "end": 14.8
     },
     {
       "index": 58,
-      "char": "物",
-      "start": 16.092,
-      "end": 16.288
+      "char": "火",
+      "start": 14.8,
+      "end": 15.04
     },
     {
       "index": 59,
-      "char": "张",
-      "start": 16.325,
-      "end": 16.521
+      "char": "字",
+      "start": 15.04,
+      "end": 15.2
     },
     {
       "index": 60,
-      "char": "口",
-      "start": 16.558,
-      "end": 16.754
+      "char": "旁",
+      "start": 15.2,
+      "end": 15.52
     },
     {
       "index": 61,
-      "char": "轻",
-      "start": 16.791,
-      "end": 16.987
+      "char": "右",
+      "start": 16.0,
+      "end": 16.16
     },
     {
       "index": 62,
-      "char": "吹",
-      "start": 17.024,
-      "end": 17.22
+      "char": "边",
+      "start": 16.16,
+      "end": 16.4
     },
     {
       "index": 63,
-      "char": "身",
-      "start": 17.437,
-      "end": 17.633
+      "char": "可",
+      "start": 16.4,
+      "end": 16.56
     },
     {
       "index": 64,
-      "char": "体",
-      "start": 17.67,
-      "end": 17.866
+      "char": "以",
+      "start": 16.56,
+      "end": 16.72
     },
     {
       "index": 65,
-      "char": "后",
-      "start": 17.903,
-      "end": 18.099
+      "char": "想",
+      "start": 16.72,
+      "end": 16.96
     },
     {
       "index": 66,
-      "char": "仰",
-      "start": 18.136,
-      "end": 18.332
+      "char": "成",
+      "start": 16.96,
+      "end": 17.12
     },
     {
       "index": 67,
-      "char": "沿",
-      "start": 18.369,
-      "end": 18.565
+      "char": "人",
+      "start": 17.12,
+      "end": 17.36
     },
     {
       "index": 68,
-      "char": "欠",
-      "start": 18.602,
-      "end": 18.798
+      "char": "微",
+      "start": 17.36,
+      "end": 17.52
     },
     {
       "index": 69,
-      "char": "站",
-      "start": 18.836,
-      "end": 19.031
+      "char": "微",
+      "start": 17.52,
+      "end": 17.68
     },
     {
       "index": 70,
-      "char": "好",
-      "start": 19.069,
-      "end": 19.264
+      "char": "俯",
+      "start": 17.68,
+      "end": 17.84
     },
     {
       "index": 71,
-      "char": "火",
-      "start": 19.482,
-      "end": 19.677
+      "char": "身",
+      "start": 17.84,
+      "end": 18.16
     },
     {
       "index": 72,
-      "char": "受",
-      "start": 19.715,
-      "end": 19.911
+      "char": "照",
+      "start": 18.16,
+      "end": 18.4
     },
     {
       "index": 73,
-      "char": "风",
-      "start": 19.948,
-      "end": 20.144
+      "char": "看",
+      "start": 18.4,
+      "end": 18.56
     },
     {
       "index": 74,
-      "char": "升",
-      "start": 20.181,
-      "end": 20.377
+      "char": "炉",
+      "start": 18.56,
+      "end": 18.8
     },
     {
       "index": 75,
-      "char": "起",
-      "start": 20.414,
-      "end": 20.61
+      "char": "火",
+      "start": 18.8,
+      "end": 19.12
     },
     {
       "index": 76,
-      "char": "炊",
-      "start": 20.647,
-      "end": 20.843
+      "char": "火",
+      "start": 19.6,
+      "end": 19.76
     },
     {
       "index": 77,
-      "char": "烟",
-      "start": 20.88,
-      "end": 21.076
+      "char": "旁",
+      "start": 19.76,
+      "end": 20.0
     },
     {
       "index": 78,
-      "char": "组",
-      "start": 21.293,
-      "end": 21.489
+      "char": "有",
+      "start": 20.0,
+      "end": 20.16
     },
     {
       "index": 79,
-      "char": "成",
-      "start": 21.526,
-      "end": 21.722
+      "char": "人",
+      "start": 20.16,
+      "end": 20.24
     },
     {
       "index": 80,
-      "char": "炊",
-      "start": 21.759,
-      "end": 21.955
+      "char": "忙",
+      "start": 20.24,
+      "end": 20.48
     },
     {
       "index": 81,
-      "char": "炊",
-      "start": 22.332,
-      "end": 22.528
+      "char": "着",
+      "start": 20.48,
+      "end": 20.56
     },
     {
       "index": 82,
-      "char": "烟",
-      "start": 22.565,
-      "end": 22.761
+      "char": "做",
+      "start": 20.56,
+      "end": 20.8
     },
     {
       "index": 83,
-      "char": "是",
-      "start": 22.798,
-      "end": 22.994
+      "char": "饭",
+      "start": 20.8,
+      "end": 21.12
     },
     {
       "index": 84,
-      "char": "做",
-      "start": 23.032,
-      "end": 23.227
+      "char": "这",
+      "start": 21.52,
+      "end": 21.68
     },
     {
       "index": 85,
-      "char": "饭",
-      "start": 23.265,
-      "end": 23.46
+      "char": "个",
+      "start": 21.68,
+      "end": 21.84
     },
     {
       "index": 86,
-      "char": "烧",
-      "start": 23.498,
-      "end": 23.693
+      "char": "字",
+      "start": 21.84,
+      "end": 22.08
     },
     {
       "index": 87,
-      "char": "火",
-      "start": 23.731,
-      "end": 23.926
+      "char": "便",
+      "start": 22.08,
+      "end": 22.32
     },
     {
       "index": 88,
-      "char": "时",
-      "start": 23.964,
-      "end": 24.16
+      "char": "和",
+      "start": 22.32,
+      "end": 22.48
     },
     {
       "index": 89,
-      "char": "升",
-      "start": 24.197,
-      "end": 24.393
+      "char": "小",
+      "start": 22.48,
+      "end": 22.72
     },
     {
       "index": 90,
-      "char": "起",
-      "start": 24.43,
-      "end": 24.626
+      "char": "岛",
+      "start": 22.72,
+      "end": 22.88
     },
     {
       "index": 91,
-      "char": "的",
-      "start": 24.663,
-      "end": 24.859
+      "char": "上",
+      "start": 22.88,
+      "end": 22.96
     },
     {
       "index": 92,
-      "char": "烟",
-      "start": 24.896,
-      "end": 25.092
+      "char": "的",
+      "start": 22.96,
+      "end": 23.12
     },
     {
       "index": 93,
-      "char": "这",
-      "start": 25.469,
-      "end": 25.665
+      "char": "炊",
+      "start": 23.12,
+      "end": 23.36
     },
     {
       "index": 94,
-      "char": "是",
-      "start": 25.702,
-      "end": 25.898
+      "char": "事",
+      "start": 23.36,
+      "end": 23.52
     },
     {
       "index": 95,
-      "char": "一",
-      "start": 25.935,
-      "end": 26.131
+      "char": "工",
+      "start": 23.52,
+      "end": 23.76
     },
     {
       "index": 96,
-      "char": "幅",
-      "start": 26.168,
-      "end": 26.364
+      "char": "作",
+      "start": 23.76,
+      "end": 24.08
     },
     {
       "index": 97,
-      "char": "帮",
-      "start": 26.401,
-      "end": 26.597
+      "char": "连",
+      "start": 24.08,
+      "end": 24.32
     },
     {
       "index": 98,
-      "char": "助",
-      "start": 26.634,
-      "end": 26.83
+      "char": "在",
+      "start": 24.32,
+      "end": 24.48
     },
     {
       "index": 99,
-      "char": "记",
-      "start": 26.868,
-      "end": 27.063
+      "char": "了",
+      "start": 24.48,
+      "end": 24.56
     },
     {
       "index": 100,
-      "char": "笔",
-      "start": 27.101,
-      "end": 27.296
+      "char": "一",
+      "start": 24.56,
+      "end": 24.72
     },
     {
       "index": 101,
-      "char": "画",
-      "start": 27.334,
-      "end": 27.529
-    },
-    {
-      "index": 102,
-      "char": "和",
-      "start": 27.567,
-      "end": 27.762
-    },
-    {
-      "index": 103,
-      "char": "位",
-      "start": 27.8,
-      "end": 27.996
-    },
-    {
-      "index": 104,
-      "char": "置",
-      "start": 28.033,
-      "end": 28.229
-    },
-    {
-      "index": 105,
-      "char": "的",
-      "start": 28.266,
-      "end": 28.462
-    },
-    {
-      "index": 106,
-      "char": "记",
-      "start": 28.499,
-      "end": 28.695
-    },
-    {
-      "index": 107,
-      "char": "忆",
-      "start": 28.732,
-      "end": 28.928
-    },
-    {
-      "index": 108,
-      "char": "画",
-      "start": 28.965,
-      "end": 29.161
-    },
-    {
-      "index": 109,
-      "char": "面",
-      "start": 29.198,
-      "end": 29.394
-    },
-    {
-      "index": 110,
-      "char": "不",
-      "start": 29.611,
-      "end": 29.807
-    },
-    {
-      "index": 111,
-      "char": "是",
-      "start": 29.844,
-      "end": 30.04
-    },
-    {
-      "index": 112,
-      "char": "完",
-      "start": 30.077,
-      "end": 30.273
-    },
-    {
-      "index": 113,
-      "char": "整",
-      "start": 30.31,
-      "end": 30.506
-    },
-    {
-      "index": 114,
-      "char": "字",
-      "start": 30.544,
-      "end": 30.739
-    },
-    {
-      "index": 115,
-      "char": "源",
-      "start": 30.777,
-      "end": 30.972
-    },
-    {
-      "index": 116,
-      "char": "最",
-      "start": 31.35,
-      "end": 31.545
-    },
-    {
-      "index": 117,
-      "char": "后",
-      "start": 31.583,
-      "end": 31.778
-    },
-    {
-      "index": 118,
-      "char": "再",
-      "start": 31.816,
-      "end": 32.012
-    },
-    {
-      "index": 119,
-      "char": "读",
-      "start": 32.049,
-      "end": 32.245
-    },
-    {
-      "index": 120,
-      "char": "一",
-      "start": 32.282,
-      "end": 32.478
-    },
-    {
-      "index": 121,
-      "char": "遍",
-      "start": 32.515,
-      "end": 32.711
-    },
-    {
-      "index": 122,
-      "char": "炊",
-      "start": 32.928,
-      "end": 33.124
-    },
-    {
-      "index": 123,
-      "char": "烟",
-      "start": 33.161,
-      "end": 33.357
+      "char": "起",
+      "start": 24.72,
+      "end": 25.04
     }
   ],
-  "transcript": "炊，“炊烟”的“炊”，读chuī。它是左右结构，按顺序能看到“火”和“欠”。从构字分工看，“火”提示意义类别，“欠”提供读音线索。看图时，左边炉火形成“火”，右边人物张口轻吹、身体后仰沿“欠”站好，火受风升起炊烟，组成“炊”。炊烟是做饭烧火时升起的烟。这是一幅帮助记笔画和位置的记忆画面，不是完整字源。最后再读一遍：炊烟。",
+  "transcript": "开饭时，炊事员端来一盘小白菜，将军没有独自吃下去。炊事员是在集体中负责做饭、保障饮食的人，课文里的这盘菜就由他端上来。炊的左边是火字旁，右边可以想成人微微俯身照看炉火。火旁有人忙着做饭，这个字便和小岛上的炊事工作连在了一起。",
   "voice_reference": "封",
-  "timing_source": "punctuation-weighted-estimate",
-  "script_version": "child-first-v2",
-  "duration": 33.920181
+  "reference_id": "019f0554-ea22-762e-966c-32d678fd6bf6",
+  "reference_sha256": "eb07e06ee13a20ee4577b1b481df6d33d42127c1b3876bfa5d5e5362ae349f19",
+  "timing_source": "qwen3-forced-aligner",
+  "script_version": "narration-v3",
+  "model": "mlx-community/Qwen3-TTS-12Hz-1.7B-Base-4bit",
+  "model_revision": "37e955a1deb861c088ae5f3a67043185f3d1a60c",
+  "generation_policy": "qwen3-clone-2026-08-22-v3",
+  "seed": 20260822,
+  "content_hash": "e81276eed80af6689627",
+  "duration": 25.106,
+  "alignment_model": "mlx-community/Qwen3-ForcedAligner-0.6B-8bit",
+  "aligned_audio_sha256": "06b7c99f99e2672c42e135ad1e6bed49ea0eff000b6399b0f6499673d7994954",
+  "alignment_groups": []
 }

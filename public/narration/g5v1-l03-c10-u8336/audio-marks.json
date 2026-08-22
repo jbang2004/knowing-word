@@ -3,553 +3,617 @@
     {
       "index": 0,
       "char": "茶",
-      "start": 0.293,
-      "end": 0.472
+      "start": 0.24,
+      "end": 0.72
     },
     {
       "index": 1,
       "char": "茶",
-      "start": 0.686,
-      "end": 0.866
+      "start": 1.12,
+      "end": 1.28
     },
     {
       "index": 2,
       "char": "叶",
-      "start": 0.9,
-      "end": 1.08
+      "start": 1.28,
+      "end": 1.44
     },
     {
       "index": 3,
       "char": "的",
-      "start": 1.114,
-      "end": 1.293
+      "start": 1.44,
+      "end": 1.52
     },
     {
       "index": 4,
       "char": "茶",
-      "start": 1.327,
-      "end": 1.507
+      "start": 1.52,
+      "end": 2.0
     },
     {
       "index": 5,
-      "char": "它",
-      "start": 1.881,
-      "end": 2.06
+      "char": "茶",
+      "start": 2.56,
+      "end": 2.72
     },
     {
       "index": 6,
-      "char": "是",
-      "start": 2.095,
-      "end": 2.274
+      "char": "叶",
+      "start": 2.72,
+      "end": 2.88
     },
     {
       "index": 7,
-      "char": "上",
-      "start": 2.308,
-      "end": 2.488
+      "char": "是",
+      "start": 2.88,
+      "end": 3.04
     },
     {
       "index": 8,
-      "char": "下",
-      "start": 2.522,
-      "end": 2.701
+      "char": "从",
+      "start": 3.04,
+      "end": 3.2
     },
     {
       "index": 9,
-      "char": "结",
-      "start": 2.735,
-      "end": 2.915
+      "char": "茶",
+      "start": 3.2,
+      "end": 3.36
     },
     {
       "index": 10,
-      "char": "构",
-      "start": 2.949,
-      "end": 3.129
+      "char": "树",
+      "start": 3.36,
+      "end": 3.6
     },
     {
       "index": 11,
-      "char": "草",
-      "start": 3.343,
-      "end": 3.522
+      "char": "上",
+      "start": 3.6,
+      "end": 3.76
     },
     {
       "index": 12,
-      "char": "字",
-      "start": 3.556,
-      "end": 3.736
+      "char": "采",
+      "start": 3.76,
+      "end": 4.0
     },
     {
       "index": 13,
-      "char": "头",
-      "start": 3.77,
-      "end": 3.949
+      "char": "下",
+      "start": 4.0,
+      "end": 4.24
     },
     {
       "index": 14,
-      "char": "说",
-      "start": 3.984,
-      "end": 4.163
+      "char": "并",
+      "start": 4.24,
+      "end": 4.48
     },
     {
       "index": 15,
-      "char": "明",
-      "start": 4.197,
-      "end": 4.377
+      "char": "加",
+      "start": 4.48,
+      "end": 4.64
     },
     {
       "index": 16,
-      "char": "茶",
-      "start": 4.411,
-      "end": 4.59
+      "char": "工",
+      "start": 4.64,
+      "end": 4.8
     },
     {
       "index": 17,
-      "char": "是",
-      "start": 4.624,
-      "end": 4.804
+      "char": "好",
+      "start": 4.8,
+      "end": 4.96
     },
     {
       "index": 18,
-      "char": "一",
-      "start": 4.838,
-      "end": 5.018
+      "char": "的",
+      "start": 4.96,
+      "end": 5.12
     },
     {
       "index": 19,
-      "char": "种",
-      "start": 5.052,
-      "end": 5.231
+      "char": "叶",
+      "start": 5.12,
+      "end": 5.36
     },
     {
       "index": 20,
-      "char": "植",
-      "start": 5.265,
-      "end": 5.445
+      "char": "子",
+      "start": 5.36,
+      "end": 5.6
     },
     {
       "index": 21,
-      "char": "物",
-      "start": 5.479,
-      "end": 5.658
+      "char": "茶",
+      "start": 6.16,
+      "end": 6.4
     },
     {
       "index": 22,
-      "char": "看",
-      "start": 6.033,
-      "end": 6.212
+      "char": "是",
+      "start": 6.4,
+      "end": 6.56
     },
     {
       "index": 23,
-      "char": "图",
-      "start": 6.246,
-      "end": 6.426
+      "char": "上",
+      "start": 6.56,
+      "end": 6.72
     },
     {
       "index": 24,
-      "char": "时",
-      "start": 6.46,
-      "end": 6.639
+      "char": "下",
+      "start": 6.8,
+      "end": 6.96
     },
     {
       "index": 25,
-      "char": "上",
-      "start": 6.854,
-      "end": 7.033
+      "char": "结",
+      "start": 6.96,
+      "end": 7.2
     },
     {
       "index": 26,
-      "char": "方",
-      "start": 7.067,
-      "end": 7.247
+      "char": "构",
+      "start": 7.2,
+      "end": 7.52
     },
     {
       "index": 27,
-      "char": "是",
-      "start": 7.281,
-      "end": 7.46
+      "char": "上",
+      "start": 7.84,
+      "end": 8.08
     },
     {
       "index": 28,
-      "char": "新",
-      "start": 7.494,
-      "end": 7.674
+      "char": "面",
+      "start": 8.08,
+      "end": 8.16
     },
     {
       "index": 29,
-      "char": "鲜",
-      "start": 7.708,
-      "end": 7.887
+      "char": "像",
+      "start": 8.16,
+      "end": 8.4
     },
     {
       "index": 30,
-      "char": "茶",
-      "start": 7.922,
-      "end": 8.101
+      "char": "嫩",
+      "start": 8.4,
+      "end": 8.64
     },
     {
       "index": 31,
       "char": "芽",
-      "start": 8.135,
-      "end": 8.315
+      "start": 8.64,
+      "end": 8.96
     },
     {
       "index": 32,
-      "char": "下",
-      "start": 8.529,
-      "end": 8.708
+      "char": "中",
+      "start": 9.12,
+      "end": 9.36
     },
     {
       "index": 33,
-      "char": "方",
-      "start": 8.743,
-      "end": 8.922
+      "char": "间",
+      "start": 9.36,
+      "end": 9.52
     },
     {
       "index": 34,
-      "char": "是",
-      "start": 8.956,
-      "end": 9.136
+      "char": "像",
+      "start": 9.52,
+      "end": 9.84
     },
     {
       "index": 35,
       "char": "采",
-      "start": 9.17,
-      "end": 9.349
+      "start": 9.84,
+      "end": 10.0
     },
     {
       "index": 36,
       "char": "茶",
-      "start": 9.383,
-      "end": 9.563
+      "start": 10.0,
+      "end": 10.24
     },
     {
       "index": 37,
       "char": "人",
-      "start": 9.597,
-      "end": 9.777
+      "start": 10.24,
+      "end": 10.64
     },
     {
       "index": 38,
-      "char": "和",
-      "start": 9.811,
-      "end": 9.99
+      "char": "下",
+      "start": 10.88,
+      "end": 11.12
     },
     {
       "index": 39,
-      "char": "盛",
-      "start": 10.024,
-      "end": 10.204
+      "char": "方",
+      "start": 11.12,
+      "end": 11.36
     },
     {
       "index": 40,
-      "char": "叶",
-      "start": 10.238,
-      "end": 10.417
+      "char": "像",
+      "start": 11.36,
+      "end": 11.68
     },
     {
       "index": 41,
-      "char": "的",
-      "start": 10.452,
-      "end": 10.631
+      "char": "茶",
+      "start": 11.68,
+      "end": 11.84
     },
     {
       "index": 42,
-      "char": "木",
-      "start": 10.665,
-      "end": 10.845
+      "char": "树",
+      "start": 11.84,
+      "end": 12.08
     },
     {
       "index": 43,
-      "char": "架",
-      "start": 10.879,
-      "end": 11.058
+      "char": "的",
+      "start": 12.08,
+      "end": 12.16
     },
     {
       "index": 44,
-      "char": "合",
-      "start": 11.272,
-      "end": 11.452
+      "char": "枝",
+      "start": 12.16,
+      "end": 12.32
     },
     {
       "index": 45,
-      "char": "起",
-      "start": 11.486,
-      "end": 11.666
+      "char": "干",
+      "start": 12.32,
+      "end": 12.72
     },
     {
       "index": 46,
-      "char": "来",
-      "start": 11.7,
-      "end": 11.879
+      "char": "三",
+      "start": 13.12,
+      "end": 13.36
     },
     {
       "index": 47,
-      "char": "就",
-      "start": 11.913,
-      "end": 12.093
+      "char": "层",
+      "start": 13.36,
+      "end": 13.6
     },
     {
       "index": 48,
-      "char": "是",
-      "start": 12.127,
-      "end": 12.306
+      "char": "从",
+      "start": 13.6,
+      "end": 13.84
     },
     {
       "index": 49,
-      "char": "一",
-      "start": 12.341,
-      "end": 12.52
+      "char": "叶",
+      "start": 13.84,
+      "end": 14.08
     },
     {
       "index": 50,
-      "char": "株",
-      "start": 12.554,
-      "end": 12.734
+      "char": "芽",
+      "start": 14.08,
+      "end": 14.32
     },
     {
       "index": 51,
-      "char": "正",
-      "start": 12.768,
-      "end": 12.947
+      "char": "落",
+      "start": 14.32,
+      "end": 14.48
     },
     {
       "index": 52,
-      "char": "在",
-      "start": 12.981,
-      "end": 13.161
+      "char": "到",
+      "start": 14.48,
+      "end": 14.64
     },
     {
       "index": 53,
-      "char": "采",
-      "start": 13.195,
-      "end": 13.375
+      "char": "树",
+      "start": 14.64,
+      "end": 14.8
     },
     {
       "index": 54,
-      "char": "摘",
-      "start": 13.409,
-      "end": 13.588
+      "char": "干",
+      "start": 14.8,
+      "end": 15.04
     },
     {
       "index": 55,
-      "char": "的",
-      "start": 13.622,
-      "end": 13.802
+      "char": "排",
+      "start": 15.28,
+      "end": 15.44
     },
     {
       "index": 56,
-      "char": "茶",
-      "start": 13.836,
-      "end": 14.015
+      "char": "成",
+      "start": 15.44,
+      "end": 15.6
     },
     {
       "index": 57,
-      "char": "树",
-      "start": 14.05,
-      "end": 14.229
+      "char": "一",
+      "start": 15.6,
+      "end": 15.76
     },
     {
       "index": 58,
-      "char": "茶",
-      "start": 14.603,
-      "end": 14.783
+      "char": "株",
+      "start": 15.76,
+      "end": 15.84
     },
     {
       "index": 59,
-      "char": "可",
-      "start": 14.817,
-      "end": 14.996
+      "char": "茶",
+      "start": 15.84,
+      "end": 16.16
     },
     {
       "index": 60,
-      "char": "以",
-      "start": 15.031,
-      "end": 15.21
+      "char": "树",
+      "start": 16.16,
+      "end": 16.48
     },
     {
       "index": 61,
-      "char": "指",
-      "start": 15.244,
-      "end": 15.424
+      "char": "晒",
+      "start": 16.8,
+      "end": 16.96
     },
     {
       "index": 62,
-      "char": "茶",
-      "start": 15.458,
-      "end": 15.637
+      "char": "好",
+      "start": 16.96,
+      "end": 17.12
     },
     {
       "index": 63,
-      "char": "树",
-      "start": 15.671,
-      "end": 15.851
+      "char": "的",
+      "start": 17.12,
+      "end": 17.28
     },
     {
       "index": 64,
-      "char": "也",
-      "start": 16.065,
-      "end": 16.244
+      "char": "桂",
+      "start": 17.28,
+      "end": 17.44
     },
     {
       "index": 65,
-      "char": "可",
-      "start": 16.279,
-      "end": 16.458
+      "char": "花",
+      "start": 17.44,
+      "end": 17.68
     },
     {
       "index": 66,
-      "char": "以",
-      "start": 16.492,
-      "end": 16.672
+      "char": "可",
+      "start": 17.68,
+      "end": 17.84
     },
     {
       "index": 67,
-      "char": "指",
-      "start": 16.706,
-      "end": 16.885
+      "char": "以",
+      "start": 17.84,
+      "end": 18.0
     },
     {
       "index": 68,
-      "char": "茶",
-      "start": 16.92,
-      "end": 17.099
+      "char": "加",
+      "start": 18.0,
+      "end": 18.16
     },
     {
       "index": 69,
-      "char": "叶",
-      "start": 17.133,
-      "end": 17.313
+      "char": "在",
+      "start": 18.16,
+      "end": 18.32
     },
     {
       "index": 70,
-      "char": "泡",
-      "start": 17.347,
-      "end": 17.526
+      "char": "茶",
+      "start": 18.32,
+      "end": 18.56
     },
     {
       "index": 71,
-      "char": "成",
-      "start": 17.56,
-      "end": 17.74
+      "char": "叶",
+      "start": 18.56,
+      "end": 18.72
     },
     {
       "index": 72,
-      "char": "的",
-      "start": 17.774,
-      "end": 17.954
+      "char": "里",
+      "start": 18.72,
+      "end": 18.8
     },
     {
       "index": 73,
-      "char": "饮",
-      "start": 17.988,
-      "end": 18.167
+      "char": "泡",
+      "start": 18.8,
+      "end": 19.04
     },
     {
       "index": 74,
-      "char": "品",
-      "start": 18.201,
-      "end": 18.381
+      "char": "茶",
+      "start": 19.04,
+      "end": 19.52
     },
     {
       "index": 75,
-      "char": "茶",
-      "start": 18.755,
-      "end": 18.934
+      "char": "桂",
+      "start": 19.92,
+      "end": 20.08
     },
     {
       "index": 76,
-      "char": "叶",
-      "start": 18.969,
-      "end": 19.148
+      "char": "花",
+      "start": 20.08,
+      "end": 20.24
     },
     {
       "index": 77,
-      "char": "就",
-      "start": 19.362,
-      "end": 19.542
+      "char": "香",
+      "start": 20.24,
+      "end": 20.48
     },
     {
       "index": 78,
-      "char": "是",
-      "start": 19.576,
-      "end": 19.755
+      "char": "和",
+      "start": 20.48,
+      "end": 20.64
     },
     {
       "index": 79,
       "char": "茶",
-      "start": 19.789,
-      "end": 19.969
+      "start": 20.64,
+      "end": 20.8
     },
     {
       "index": 80,
-      "char": "树",
-      "start": 20.003,
-      "end": 20.183
+      "char": "香",
+      "start": 20.8,
+      "end": 20.96
     },
     {
       "index": 81,
-      "char": "上",
-      "start": 20.217,
-      "end": 20.396
+      "char": "相",
+      "start": 20.96,
+      "end": 21.28
     },
     {
       "index": 82,
-      "char": "采",
-      "start": 20.43,
-      "end": 20.61
+      "char": "遇",
+      "start": 21.28,
+      "end": 21.52
     },
     {
       "index": 83,
-      "char": "下",
-      "start": 20.644,
-      "end": 20.823
+      "char": "故",
+      "start": 21.84,
+      "end": 21.92
     },
     {
       "index": 84,
-      "char": "并",
-      "start": 20.858,
-      "end": 21.037
+      "char": "乡",
+      "start": 21.92,
+      "end": 22.16
     },
     {
       "index": 85,
-      "char": "加",
-      "start": 21.071,
-      "end": 21.251
+      "char": "的",
+      "start": 22.16,
+      "end": 22.24
     },
     {
       "index": 86,
-      "char": "工",
-      "start": 21.285,
-      "end": 21.464
+      "char": "味",
+      "start": 22.24,
+      "end": 22.4
     },
     {
       "index": 87,
-      "char": "好",
-      "start": 21.498,
-      "end": 21.678
+      "char": "道",
+      "start": 22.4,
+      "end": 22.64
     },
     {
       "index": 88,
-      "char": "的",
-      "start": 21.712,
-      "end": 21.892
+      "char": "便",
+      "start": 22.64,
+      "end": 22.88
     },
     {
       "index": 89,
-      "char": "叶",
-      "start": 21.926,
-      "end": 22.105
+      "char": "有",
+      "start": 22.88,
+      "end": 23.04
     },
     {
       "index": 90,
-      "char": "子",
-      "start": 22.139,
-      "end": 22.319
+      "char": "了",
+      "start": 23.04,
+      "end": 23.12
+    },
+    {
+      "index": 91,
+      "char": "可",
+      "start": 23.12,
+      "end": 23.28
+    },
+    {
+      "index": 92,
+      "char": "以",
+      "start": 23.28,
+      "end": 23.44
+    },
+    {
+      "index": 93,
+      "char": "品",
+      "start": 23.44,
+      "end": 23.6
+    },
+    {
+      "index": 94,
+      "char": "尝",
+      "start": 23.6,
+      "end": 23.84
+    },
+    {
+      "index": 95,
+      "char": "的",
+      "start": 23.84,
+      "end": 23.92
+    },
+    {
+      "index": 96,
+      "char": "一",
+      "start": 23.92,
+      "end": 24.0
+    },
+    {
+      "index": 97,
+      "char": "种",
+      "start": 24.0,
+      "end": 24.16
+    },
+    {
+      "index": 98,
+      "char": "方",
+      "start": 24.16,
+      "end": 24.4
+    },
+    {
+      "index": 99,
+      "char": "式",
+      "start": 24.4,
+      "end": 24.72
     }
   ],
-  "transcript": "茶，茶叶的茶。它是上下结构，草字头说明茶是一种植物。看图时，上方是新鲜茶芽，下方是采茶人和盛叶的木架，合起来就是一株正在采摘的茶树。茶可以指茶树，也可以指茶叶泡成的饮品。茶叶，就是茶树上采下并加工好的叶子。",
+  "transcript": "茶，茶叶的茶。茶叶是从茶树上采下并加工好的叶子。茶是上下结构，上面像嫩芽，中间像采茶人，下方像茶树的枝干。三层从叶芽落到树干，排成一株茶树。晒好的桂花可以加在茶叶里泡茶，桂花香和茶香相遇，故乡的味道便有了可以品尝的一种方式。",
   "voice_reference": "封",
-  "timing_source": "punctuation-weighted-estimate",
-  "script_version": "child-first-v2",
-  "duration": 22.880181
+  "reference_id": "019f0554-ea22-762e-966c-32d678fd6bf6",
+  "reference_sha256": "eb07e06ee13a20ee4577b1b481df6d33d42127c1b3876bfa5d5e5362ae349f19",
+  "timing_source": "qwen3-forced-aligner",
+  "script_version": "narration-v3",
+  "model": "mlx-community/Qwen3-TTS-12Hz-1.7B-Base-4bit",
+  "model_revision": "37e955a1deb861c088ae5f3a67043185f3d1a60c",
+  "generation_policy": "qwen3-clone-2026-08-22-v3",
+  "seed": 20260822,
+  "content_hash": "0d76606a3b3618ae02a3",
+  "duration": 25.034,
+  "alignment_model": "mlx-community/Qwen3-ForcedAligner-0.6B-8bit",
+  "aligned_audio_sha256": "ba2c51647d7dd22c5114590d37ba3e02719b368bf2d7a41117ed549cfc6ae688",
+  "alignment_groups": []
 }

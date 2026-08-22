@@ -2,470 +2,594 @@
   "marks": [
     {
       "index": 0,
-      "char": "平",
-      "start": 0.295,
-      "end": 0.498
+      "char": "冀",
+      "start": 0.08,
+      "end": 0.24
     },
     {
       "index": 1,
-      "char": "平",
-      "start": 0.716,
-      "end": 0.919
+      "char": "中",
+      "start": 0.24,
+      "end": 0.48
     },
     {
       "index": 2,
-      "char": "原",
-      "start": 0.958,
-      "end": 1.161
+      "char": "平",
+      "start": 0.48,
+      "end": 0.72
     },
     {
       "index": 3,
-      "char": "的",
-      "start": 1.2,
-      "end": 1.403
+      "char": "原",
+      "start": 0.72,
+      "end": 0.96
     },
     {
       "index": 4,
-      "char": "平",
-      "start": 1.442,
-      "end": 1.645
+      "char": "地",
+      "start": 0.96,
+      "end": 1.2
     },
     {
       "index": 5,
-      "char": "平",
-      "start": 2.024,
-      "end": 2.227
+      "char": "势",
+      "start": 1.2,
+      "end": 1.36
     },
     {
       "index": 6,
-      "char": "是",
-      "start": 2.265,
-      "end": 2.469
+      "char": "开",
+      "start": 1.36,
+      "end": 1.6
     },
     {
       "index": 7,
-      "char": "独",
-      "start": 2.507,
-      "end": 2.71
+      "char": "阔",
+      "start": 1.6,
+      "end": 2.0
     },
     {
       "index": 8,
-      "char": "体",
-      "start": 2.749,
-      "end": 2.952
+      "char": "村",
+      "start": 2.56,
+      "end": 2.8
     },
     {
       "index": 9,
-      "char": "字",
-      "start": 2.991,
-      "end": 3.194
+      "char": "庄",
+      "start": 2.8,
+      "end": 2.96
     },
     {
       "index": 10,
-      "char": "可",
-      "start": 3.413,
-      "end": 3.616
+      "char": "下",
+      "start": 2.96,
+      "end": 3.2
     },
     {
       "index": 11,
-      "char": "以",
-      "start": 3.655,
-      "end": 3.858
+      "char": "面",
+      "start": 3.2,
+      "end": 3.52
     },
     {
       "index": 12,
-      "char": "把",
-      "start": 3.896,
-      "end": 4.099
+      "char": "挖",
+      "start": 3.68,
+      "end": 3.76
     },
     {
       "index": 13,
-      "char": "它",
-      "start": 4.138,
-      "end": 4.341
+      "char": "着",
+      "start": 3.76,
+      "end": 3.92
     },
     {
       "index": 14,
-      "char": "看",
-      "start": 4.38,
-      "end": 4.583
+      "char": "横",
+      "start": 3.92,
+      "end": 4.16
     },
     {
       "index": 15,
-      "char": "成",
-      "start": 4.622,
-      "end": 4.825
+      "char": "竖",
+      "start": 4.16,
+      "end": 4.32
     },
     {
       "index": 16,
-      "char": "一",
-      "start": 4.864,
-      "end": 5.067
+      "char": "相",
+      "start": 4.32,
+      "end": 4.56
     },
     {
       "index": 17,
-      "char": "架",
-      "start": 5.105,
-      "end": 5.309
+      "char": "连",
+      "start": 4.56,
+      "end": 4.72
     },
     {
       "index": 18,
-      "char": "左",
-      "start": 5.347,
-      "end": 5.55
+      "char": "的",
+      "start": 4.72,
+      "end": 4.88
     },
     {
       "index": 19,
-      "char": "右",
-      "start": 5.589,
-      "end": 5.792
+      "char": "地",
+      "start": 4.88,
+      "end": 5.04
     },
     {
       "index": 20,
-      "char": "平",
-      "start": 5.831,
-      "end": 6.034
+      "char": "道",
+      "start": 5.04,
+      "end": 5.36
     },
     {
       "index": 21,
-      "char": "衡",
-      "start": 6.073,
-      "end": 6.276
+      "char": "平",
+      "start": 5.76,
+      "end": 6.08
     },
     {
       "index": 22,
-      "char": "的",
-      "start": 6.315,
-      "end": 6.518
+      "char": "是",
+      "start": 6.16,
+      "end": 6.32
     },
     {
       "index": 23,
-      "char": "秤",
-      "start": 6.556,
-      "end": 6.76
+      "char": "独",
+      "start": 6.32,
+      "end": 6.56
     },
     {
       "index": 24,
-      "char": "横",
-      "start": 6.978,
-      "end": 7.181
+      "char": "体",
+      "start": 6.56,
+      "end": 6.72
     },
     {
       "index": 25,
-      "char": "梁",
-      "start": 7.22,
-      "end": 7.423
+      "char": "字",
+      "start": 6.72,
+      "end": 7.04
     },
     {
       "index": 26,
-      "char": "端",
-      "start": 7.462,
-      "end": 7.665
+      "char": "可",
+      "start": 7.36,
+      "end": 7.44
     },
     {
       "index": 27,
-      "char": "端",
-      "start": 7.704,
-      "end": 7.907
+      "char": "以",
+      "start": 7.44,
+      "end": 7.52
     },
     {
       "index": 28,
-      "char": "正",
-      "start": 7.945,
-      "end": 8.149
+      "char": "把",
+      "start": 7.52,
+      "end": 7.76
     },
     {
       "index": 29,
-      "char": "正",
-      "start": 8.187,
-      "end": 8.39
+      "char": "横",
+      "start": 7.76,
+      "end": 8.0
     },
     {
       "index": 30,
-      "char": "中",
-      "start": 8.609,
-      "end": 8.812
+      "char": "画",
+      "start": 8.0,
+      "end": 8.16
     },
     {
       "index": 31,
-      "char": "轴",
-      "start": 8.851,
-      "end": 9.054
+      "char": "看",
+      "start": 8.16,
+      "end": 8.4
     },
     {
       "index": 32,
-      "char": "站",
-      "start": 9.093,
-      "end": 9.296
+      "char": "成",
+      "start": 8.4,
+      "end": 8.64
     },
     {
       "index": 33,
-      "char": "在",
-      "start": 9.335,
-      "end": 9.538
+      "char": "平",
+      "start": 8.64,
+      "end": 8.88
     },
     {
       "index": 34,
-      "char": "正",
-      "start": 9.576,
-      "end": 9.78
+      "char": "直",
+      "start": 8.88,
+      "end": 9.04
     },
     {
       "index": 35,
-      "char": "中",
-      "start": 9.818,
-      "end": 10.021
+      "char": "的",
+      "start": 9.04,
+      "end": 9.12
     },
     {
       "index": 36,
-      "char": "两",
-      "start": 10.24,
-      "end": 10.443
+      "char": "秤",
+      "start": 9.12,
+      "end": 9.44
     },
     {
       "index": 37,
-      "char": "边",
-      "start": 10.482,
-      "end": 10.685
+      "char": "梁",
+      "start": 9.44,
+      "end": 9.76
     },
     {
       "index": 38,
-      "char": "支",
-      "start": 10.724,
-      "end": 10.927
+      "char": "中",
+      "start": 10.24,
+      "end": 10.4
     },
     {
       "index": 39,
-      "char": "撑",
-      "start": 10.966,
-      "end": 11.169
+      "char": "间",
+      "start": 10.4,
+      "end": 10.64
     },
     {
       "index": 40,
-      "char": "得",
-      "start": 11.207,
-      "end": 11.41
+      "char": "的",
+      "start": 10.64,
+      "end": 10.72
     },
     {
       "index": 41,
-      "char": "一",
-      "start": 11.449,
-      "end": 11.652
+      "char": "竖",
+      "start": 10.72,
+      "end": 10.96
     },
     {
       "index": 42,
-      "char": "样",
-      "start": 11.691,
-      "end": 11.894
+      "char": "画",
+      "start": 10.96,
+      "end": 11.12
     },
     {
       "index": 43,
-      "char": "稳",
-      "start": 11.933,
-      "end": 12.136
+      "char": "像",
+      "start": 11.12,
+      "end": 11.44
     },
     {
       "index": 44,
-      "char": "没",
-      "start": 12.515,
-      "end": 12.718
+      "char": "稳",
+      "start": 11.44,
+      "end": 11.76
     },
     {
       "index": 45,
-      "char": "有",
-      "start": 12.756,
-      "end": 12.96
+      "char": "稳",
+      "start": 11.76,
+      "end": 11.84
     },
     {
       "index": 46,
-      "char": "高",
-      "start": 12.998,
-      "end": 13.201
+      "char": "立",
+      "start": 11.84,
+      "end": 12.0
     },
     {
       "index": 47,
-      "char": "低",
-      "start": 13.24,
-      "end": 13.443
+      "char": "住",
+      "start": 12.0,
+      "end": 12.16
     },
     {
       "index": 48,
-      "char": "倾",
-      "start": 13.482,
-      "end": 13.685
+      "char": "的",
+      "start": 12.16,
+      "end": 12.24
     },
     {
       "index": 49,
-      "char": "斜",
-      "start": 13.724,
-      "end": 13.927
+      "char": "支",
+      "start": 12.24,
+      "end": 12.48
     },
     {
       "index": 50,
-      "char": "就",
-      "start": 14.146,
-      "end": 14.349
+      "char": "点",
+      "start": 12.48,
+      "end": 12.8
     },
     {
       "index": 51,
-      "char": "是",
-      "start": 14.387,
-      "end": 14.59
+      "char": "两",
+      "start": 13.04,
+      "end": 13.2
     },
     {
       "index": 52,
-      "char": "平",
-      "start": 14.629,
-      "end": 14.832
+      "char": "边",
+      "start": 13.2,
+      "end": 13.52
     },
     {
       "index": 53,
-      "char": "平",
-      "start": 15.211,
-      "end": 15.414
+      "char": "保",
+      "start": 13.52,
+      "end": 13.68
     },
     {
       "index": 54,
-      "char": "可",
-      "start": 15.453,
-      "end": 15.656
+      "char": "持",
+      "start": 13.68,
+      "end": 13.92
     },
     {
       "index": 55,
-      "char": "以",
-      "start": 15.695,
-      "end": 15.898
+      "char": "一",
+      "start": 13.92,
+      "end": 14.08
     },
     {
       "index": 56,
-      "char": "表",
-      "start": 15.936,
-      "end": 16.14
+      "char": "样",
+      "start": 14.08,
+      "end": 14.24
     },
     {
       "index": 57,
-      "char": "示",
-      "start": 16.178,
-      "end": 16.381
+      "char": "高",
+      "start": 14.24,
+      "end": 14.56
     },
     {
       "index": 58,
       "char": "平",
-      "start": 16.42,
-      "end": 16.623
+      "start": 14.88,
+      "end": 15.12
     },
     {
       "index": 59,
-      "char": "坦",
-      "start": 16.662,
-      "end": 16.865
+      "char": "原",
+      "start": 15.12,
+      "end": 15.36
     },
     {
       "index": 60,
-      "char": "平",
-      "start": 17.244,
-      "end": 17.447
+      "char": "就",
+      "start": 15.36,
+      "end": 15.52
     },
     {
       "index": 61,
-      "char": "原",
-      "start": 17.486,
-      "end": 17.689
+      "char": "是",
+      "start": 15.52,
+      "end": 15.68
     },
     {
       "index": 62,
-      "char": "就",
-      "start": 17.907,
-      "end": 18.111
+      "char": "地",
+      "start": 15.68,
+      "end": 15.84
     },
     {
       "index": 63,
-      "char": "是",
-      "start": 18.149,
-      "end": 18.352
+      "char": "势",
+      "start": 15.84,
+      "end": 16.08
     },
     {
       "index": 64,
-      "char": "地",
-      "start": 18.391,
-      "end": 18.594
+      "char": "宽",
+      "start": 16.08,
+      "end": 16.32
     },
     {
       "index": 65,
-      "char": "势",
-      "start": 18.633,
-      "end": 18.836
+      "char": "广",
+      "start": 16.32,
+      "end": 16.64
     },
     {
       "index": 66,
-      "char": "宽",
-      "start": 18.875,
-      "end": 19.078
+      "char": "起",
+      "start": 16.8,
+      "end": 17.04
     },
     {
       "index": 67,
-      "char": "广",
-      "start": 19.116,
-      "end": 19.32
+      "char": "伏",
+      "start": 17.04,
+      "end": 17.2
     },
     {
       "index": 68,
-      "char": "起",
-      "start": 19.538,
-      "end": 19.741
+      "char": "很",
+      "start": 17.2,
+      "end": 17.44
     },
     {
       "index": 69,
-      "char": "伏",
-      "start": 19.78,
-      "end": 19.983
+      "char": "小",
+      "start": 17.44,
+      "end": 17.6
     },
     {
       "index": 70,
-      "char": "很",
-      "start": 20.022,
-      "end": 20.225
+      "char": "的",
+      "start": 17.6,
+      "end": 17.76
     },
     {
       "index": 71,
-      "char": "小",
-      "start": 20.264,
-      "end": 20.467
+      "char": "大",
+      "start": 17.76,
+      "end": 17.92
     },
     {
       "index": 72,
-      "char": "的",
-      "start": 20.506,
-      "end": 20.709
+      "char": "片",
+      "start": 17.92,
+      "end": 18.16
     },
     {
       "index": 73,
-      "char": "大",
-      "start": 20.747,
-      "end": 20.951
+      "char": "土",
+      "start": 18.16,
+      "end": 18.4
     },
     {
       "index": 74,
-      "char": "片",
-      "start": 20.989,
-      "end": 21.192
+      "char": "地",
+      "start": 18.4,
+      "end": 18.72
     },
     {
       "index": 75,
-      "char": "土",
-      "start": 21.231,
-      "end": 21.434
+      "char": "地",
+      "start": 19.04,
+      "end": 19.2
     },
     {
       "index": 76,
+      "char": "道",
+      "start": 19.2,
+      "end": 19.52
+    },
+    {
+      "index": 77,
+      "char": "能",
+      "start": 19.52,
+      "end": 19.68
+    },
+    {
+      "index": 78,
+      "char": "在",
+      "start": 19.68,
+      "end": 19.76
+    },
+    {
+      "index": 79,
+      "char": "平",
+      "start": 19.76,
+      "end": 20.0
+    },
+    {
+      "index": 80,
+      "char": "原",
+      "start": 20.0,
+      "end": 20.24
+    },
+    {
+      "index": 81,
       "char": "地",
-      "start": 21.473,
-      "end": 21.676
+      "start": 20.24,
+      "end": 20.4
+    },
+    {
+      "index": 82,
+      "char": "下",
+      "start": 20.4,
+      "end": 20.72
+    },
+    {
+      "index": 83,
+      "char": "纵",
+      "start": 20.8,
+      "end": 20.96
+    },
+    {
+      "index": 84,
+      "char": "横",
+      "start": 20.96,
+      "end": 21.12
+    },
+    {
+      "index": 85,
+      "char": "相",
+      "start": 21.2,
+      "end": 21.44
+    },
+    {
+      "index": 86,
+      "char": "连",
+      "start": 21.44,
+      "end": 21.76
+    },
+    {
+      "index": 87,
+      "char": "也",
+      "start": 22.0,
+      "end": 22.16
+    },
+    {
+      "index": 88,
+      "char": "和",
+      "start": 22.16,
+      "end": 22.32
+    },
+    {
+      "index": 89,
+      "char": "这",
+      "start": 22.32,
+      "end": 22.48
+    },
+    {
+      "index": 90,
+      "char": "里",
+      "start": 22.48,
+      "end": 22.64
+    },
+    {
+      "index": 91,
+      "char": "的",
+      "start": 22.64,
+      "end": 22.72
+    },
+    {
+      "index": 92,
+      "char": "地",
+      "start": 22.72,
+      "end": 22.96
+    },
+    {
+      "index": 93,
+      "char": "势",
+      "start": 22.96,
+      "end": 23.2
+    },
+    {
+      "index": 94,
+      "char": "有",
+      "start": 23.2,
+      "end": 23.36
+    },
+    {
+      "index": 95,
+      "char": "关",
+      "start": 23.36,
+      "end": 23.68
     }
   ],
-  "transcript": "平，平原的平。平是独体字，可以把它看成一架左右平衡的秤：横梁端端正正，中轴站在正中，两边支撑得一样稳。没有高低倾斜，就是平。平可以表示平坦。平原，就是地势宽广、起伏很小的大片土地。",
+  "transcript": "冀中平原地势开阔，村庄下面挖着横竖相连的地道。平是独体字，可以把横画看成平直的秤梁，中间的竖画像稳稳立住的支点。两边保持一样高。平原就是地势宽广、起伏很小的大片土地。地道能在平原地下纵横相连，也和这里的地势有关。",
   "voice_reference": "封",
-  "timing_source": "punctuation-weighted-estimate",
-  "script_version": "child-first-v1",
-  "duration": 22.240181
+  "reference_id": "019f0554-ea22-762e-966c-32d678fd6bf6",
+  "reference_sha256": "eb07e06ee13a20ee4577b1b481df6d33d42127c1b3876bfa5d5e5362ae349f19",
+  "timing_source": "qwen3-forced-aligner",
+  "script_version": "narration-v3",
+  "model": "mlx-community/Qwen3-TTS-12Hz-1.7B-Base-4bit",
+  "model_revision": "37e955a1deb861c088ae5f3a67043185f3d1a60c",
+  "generation_policy": "qwen3-clone-2026-08-22-v3",
+  "seed": 20260822,
+  "content_hash": "ed7b43e55685e9349b42",
+  "duration": 23.79,
+  "alignment_model": "mlx-community/Qwen3-ForcedAligner-0.6B-8bit",
+  "aligned_audio_sha256": "15200326678dde63db4d32e322de1f433b344d81daee3333f728d7428337ca5c",
+  "alignment_groups": []
 }

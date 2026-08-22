@@ -2,488 +2,570 @@
   "marks": [
     {
       "index": 0,
-      "char": "日",
-      "start": 0.294,
-      "end": 0.49
+      "char": "抗",
+      "start": 0.4,
+      "end": 0.64
     },
     {
       "index": 1,
-      "char": "抗",
-      "start": 0.707,
-      "end": 0.903
+      "char": "日",
+      "start": 0.64,
+      "end": 0.8
     },
     {
       "index": 2,
-      "char": "日",
-      "start": 0.94,
-      "end": 1.136
+      "char": "的",
+      "start": 0.8,
+      "end": 0.88
     },
     {
       "index": 3,
-      "char": "的",
-      "start": 1.173,
-      "end": 1.369
+      "char": "日",
+      "start": 0.88,
+      "end": 1.2
     },
     {
       "index": 4,
-      "char": "日",
-      "start": 1.406,
-      "end": 1.602
+      "char": "要",
+      "start": 1.2,
+      "end": 1.28
     },
     {
       "index": 5,
-      "char": "日",
-      "start": 1.979,
-      "end": 2.175
+      "char": "放",
+      "start": 1.28,
+      "end": 1.44
     },
     {
       "index": 6,
-      "char": "是",
-      "start": 2.212,
-      "end": 2.408
+      "char": "进",
+      "start": 1.52,
+      "end": 1.76
     },
     {
       "index": 7,
-      "char": "独",
-      "start": 2.445,
-      "end": 2.641
+      "char": "历",
+      "start": 1.76,
+      "end": 1.84
     },
     {
       "index": 8,
-      "char": "体",
-      "start": 2.678,
-      "end": 2.874
+      "char": "史",
+      "start": 1.84,
+      "end": 2.0
     },
     {
       "index": 9,
-      "char": "字",
-      "start": 2.911,
-      "end": 3.107
+      "char": "词",
+      "start": 2.0,
+      "end": 2.24
     },
     {
       "index": 10,
-      "char": "古",
-      "start": 3.324,
-      "end": 3.52
+      "char": "语",
+      "start": 2.24,
+      "end": 2.4
     },
     {
       "index": 11,
-      "char": "字",
-      "start": 3.557,
-      "end": 3.753
+      "char": "里",
+      "start": 2.4,
+      "end": 2.56
     },
     {
       "index": 12,
-      "char": "形",
-      "start": 3.79,
-      "end": 3.986
+      "char": "理",
+      "start": 2.56,
+      "end": 2.72
     },
     {
       "index": 13,
-      "char": "像",
-      "start": 4.023,
-      "end": 4.219
+      "char": "解",
+      "start": 2.72,
+      "end": 3.04
     },
     {
       "index": 14,
-      "char": "太",
-      "start": 4.256,
-      "end": 4.452
+      "char": "日",
+      "start": 3.52,
+      "end": 3.76
     },
     {
       "index": 15,
-      "char": "阳",
-      "start": 4.489,
-      "end": 4.685
+      "char": "是",
+      "start": 3.76,
+      "end": 4.0
     },
     {
       "index": 16,
-      "char": "外",
-      "start": 4.902,
-      "end": 5.098
+      "char": "独",
+      "start": 4.0,
+      "end": 4.16
     },
     {
       "index": 17,
-      "char": "框",
-      "start": 5.135,
-      "end": 5.331
+      "char": "体",
+      "start": 4.16,
+      "end": 4.32
     },
     {
       "index": 18,
-      "char": "是",
-      "start": 5.368,
-      "end": 5.564
+      "char": "字",
+      "start": 4.32,
+      "end": 4.64
     },
     {
       "index": 19,
-      "char": "日",
-      "start": 5.601,
-      "end": 5.797
+      "char": "外",
+      "start": 5.04,
+      "end": 5.2
     },
     {
       "index": 20,
-      "char": "轮",
-      "start": 5.834,
-      "end": 6.03
+      "char": "框",
+      "start": 5.2,
+      "end": 5.52
     },
     {
       "index": 21,
-      "char": "中",
-      "start": 6.247,
-      "end": 6.443
+      "char": "像",
+      "start": 5.52,
+      "end": 5.68
     },
     {
       "index": 22,
-      "char": "间",
-      "start": 6.48,
-      "end": 6.676
+      "char": "一",
+      "start": 5.68,
+      "end": 5.84
     },
     {
       "index": 23,
-      "char": "一",
-      "start": 6.713,
-      "end": 6.909
+      "char": "轮",
+      "start": 5.84,
+      "end": 6.0
     },
     {
       "index": 24,
-      "char": "横",
-      "start": 6.946,
-      "end": 7.142
+      "char": "方",
+      "start": 6.0,
+      "end": 6.24
     },
     {
       "index": 25,
-      "char": "像",
-      "start": 7.179,
-      "end": 7.375
+      "char": "正",
+      "start": 6.24,
+      "end": 6.4
     },
     {
       "index": 26,
-      "char": "太",
-      "start": 7.412,
-      "end": 7.608
+      "char": "的",
+      "start": 6.4,
+      "end": 6.48
     },
     {
       "index": 27,
-      "char": "阳",
-      "start": 7.645,
-      "end": 7.841
+      "char": "太",
+      "start": 6.48,
+      "end": 6.8
     },
     {
       "index": 28,
-      "char": "中",
-      "start": 7.878,
-      "end": 8.074
+      "char": "阳",
+      "start": 6.8,
+      "end": 7.04
     },
     {
       "index": 29,
-      "char": "央",
-      "start": 8.111,
-      "end": 8.307
+      "char": "中",
+      "start": 7.44,
+      "end": 7.6
     },
     {
       "index": 30,
-      "char": "的",
-      "start": 8.344,
-      "end": 8.54
+      "char": "间",
+      "start": 7.6,
+      "end": 7.84
     },
     {
       "index": 31,
-      "char": "光",
-      "start": 8.577,
-      "end": 8.773
+      "char": "一",
+      "start": 7.84,
+      "end": 8.0
     },
     {
       "index": 32,
-      "char": "看",
-      "start": 9.15,
-      "end": 9.346
+      "char": "横",
+      "start": 8.0,
+      "end": 8.32
     },
     {
       "index": 33,
-      "char": "图",
-      "start": 9.383,
-      "end": 9.579
+      "char": "像",
+      "start": 8.32,
+      "end": 8.56
     },
     {
       "index": 34,
-      "char": "时",
-      "start": 9.616,
-      "end": 9.812
+      "char": "日",
+      "start": 8.56,
+      "end": 8.72
     },
     {
       "index": 35,
-      "char": "一",
-      "start": 10.029,
-      "end": 10.225
+      "char": "轮",
+      "start": 8.72,
+      "end": 8.96
     },
     {
       "index": 36,
-      "char": "轮",
-      "start": 10.262,
-      "end": 10.458
+      "char": "里",
+      "start": 8.96,
+      "end": 9.04
     },
     {
       "index": 37,
-      "char": "方",
-      "start": 10.495,
-      "end": 10.691
+      "char": "的",
+      "start": 9.04,
+      "end": 9.2
     },
     {
       "index": 38,
-      "char": "正",
-      "start": 10.728,
-      "end": 10.924
+      "char": "亮",
+      "start": 9.2,
+      "end": 9.44
     },
     {
       "index": 39,
-      "char": "的",
-      "start": 10.961,
-      "end": 11.157
+      "char": "光",
+      "start": 9.44,
+      "end": 9.76
     },
     {
       "index": 40,
-      "char": "太",
-      "start": 11.194,
-      "end": 11.39
+      "char": "圆",
+      "start": 10.24,
+      "end": 10.48
     },
     {
       "index": 41,
-      "char": "阳",
-      "start": 11.427,
-      "end": 11.623
+      "char": "亮",
+      "start": 10.48,
+      "end": 10.72
     },
     {
       "index": 42,
-      "char": "从",
-      "start": 11.66,
-      "end": 11.856
+      "char": "的",
+      "start": 10.72,
+      "end": 10.8
     },
     {
       "index": 43,
-      "char": "云",
-      "start": 11.893,
-      "end": 12.089
+      "char": "日",
+      "start": 10.8,
+      "end": 10.96
     },
     {
       "index": 44,
-      "char": "带",
-      "start": 12.126,
-      "end": 12.322
+      "char": "轮",
+      "start": 10.96,
+      "end": 11.28
     },
     {
       "index": 45,
-      "char": "后",
-      "start": 12.359,
-      "end": 12.555
+      "char": "落",
+      "start": 11.28,
+      "end": 11.44
     },
     {
       "index": 46,
-      "char": "升",
-      "start": 12.592,
-      "end": 12.788
+      "char": "进",
+      "start": 11.44,
+      "end": 11.68
     },
     {
       "index": 47,
-      "char": "起",
-      "start": 12.825,
-      "end": 13.021
+      "char": "方",
+      "start": 11.68,
+      "end": 11.92
     },
     {
       "index": 48,
-      "char": "就",
-      "start": 13.238,
-      "end": 13.434
+      "char": "框",
+      "start": 11.92,
+      "end": 12.32
     },
     {
       "index": 49,
-      "char": "能",
-      "start": 13.471,
-      "end": 13.667
+      "char": "中",
+      "start": 12.64,
+      "end": 12.8
     },
     {
       "index": 50,
-      "char": "记",
-      "start": 13.704,
-      "end": 13.9
+      "char": "间",
+      "start": 12.8,
+      "end": 13.04
     },
     {
       "index": 51,
-      "char": "住",
-      "start": 13.937,
-      "end": 14.133
+      "char": "一",
+      "start": 13.04,
+      "end": 13.12
     },
     {
       "index": 52,
-      "char": "日",
-      "start": 14.17,
-      "end": 14.366
+      "char": "横",
+      "start": 13.12,
+      "end": 13.52
     },
     {
       "index": 53,
-      "char": "日",
-      "start": 14.743,
-      "end": 14.939
+      "char": "留",
+      "start": 13.52,
+      "end": 13.76
     },
     {
       "index": 54,
-      "char": "通",
-      "start": 14.976,
-      "end": 15.172
+      "char": "住",
+      "start": 13.76,
+      "end": 13.92
     },
     {
       "index": 55,
-      "char": "常",
-      "start": 15.209,
-      "end": 15.405
+      "char": "亮",
+      "start": 13.92,
+      "end": 14.08
     },
     {
       "index": 56,
-      "char": "表",
-      "start": 15.442,
-      "end": 15.638
+      "char": "光",
+      "start": 14.08,
+      "end": 14.48
     },
     {
       "index": 57,
-      "char": "示",
-      "start": 15.675,
-      "end": 15.871
+      "char": "日",
+      "start": 14.88,
+      "end": 15.12
     },
     {
       "index": 58,
-      "char": "太",
-      "start": 15.908,
-      "end": 16.104
+      "char": "通",
+      "start": 15.12,
+      "end": 15.36
     },
     {
       "index": 59,
-      "char": "阳",
-      "start": 16.141,
-      "end": 16.337
+      "char": "常",
+      "start": 15.36,
+      "end": 15.52
     },
     {
       "index": 60,
-      "char": "或",
-      "start": 16.374,
-      "end": 16.57
+      "char": "表",
+      "start": 15.52,
+      "end": 15.76
     },
     {
       "index": 61,
-      "char": "一",
-      "start": 16.607,
-      "end": 16.803
+      "char": "示",
+      "start": 15.76,
+      "end": 16.0
     },
     {
       "index": 62,
-      "char": "天",
-      "start": 16.84,
-      "end": 17.036
+      "char": "太",
+      "start": 16.0,
+      "end": 16.4
     },
     {
       "index": 63,
-      "char": "在",
-      "start": 17.253,
-      "end": 17.449
+      "char": "阳",
+      "start": 16.4,
+      "end": 16.56
     },
     {
       "index": 64,
-      "char": "抗",
-      "start": 17.486,
-      "end": 17.682
+      "char": "或",
+      "start": 16.56,
+      "end": 16.72
     },
     {
       "index": 65,
-      "char": "日",
-      "start": 17.719,
-      "end": 17.915
+      "char": "一",
+      "start": 16.72,
+      "end": 16.88
     },
     {
       "index": 66,
-      "char": "这",
-      "start": 17.952,
-      "end": 18.148
+      "char": "天",
+      "start": 16.88,
+      "end": 17.28
     },
     {
       "index": 67,
-      "char": "个",
-      "start": 18.185,
-      "end": 18.381
+      "char": "在",
+      "start": 17.76,
+      "end": 17.92
     },
     {
       "index": 68,
-      "char": "历",
-      "start": 18.418,
-      "end": 18.614
+      "char": "抗",
+      "start": 17.92,
+      "end": 18.24
     },
     {
       "index": 69,
-      "char": "史",
-      "start": 18.651,
-      "end": 18.847
+      "char": "日",
+      "start": 18.24,
+      "end": 18.4
     },
     {
       "index": 70,
-      "char": "词",
-      "start": 18.884,
-      "end": 19.08
+      "char": "这",
+      "start": 18.4,
+      "end": 18.56
     },
     {
       "index": 71,
-      "char": "语",
-      "start": 19.117,
-      "end": 19.313
+      "char": "个",
+      "start": 18.56,
+      "end": 18.64
     },
     {
       "index": 72,
-      "char": "里",
-      "start": 19.35,
-      "end": 19.546
+      "char": "词",
+      "start": 18.64,
+      "end": 18.88
     },
     {
       "index": 73,
-      "char": "日",
-      "start": 19.763,
-      "end": 19.959
+      "char": "里",
+      "start": 18.88,
+      "end": 19.12
     },
     {
       "index": 74,
-      "char": "是",
-      "start": 19.996,
-      "end": 20.192
+      "char": "它",
+      "start": 19.2,
+      "end": 19.36
     },
     {
       "index": 75,
-      "char": "日",
-      "start": 20.229,
-      "end": 20.425
+      "char": "是",
+      "start": 19.36,
+      "end": 19.44
     },
     {
       "index": 76,
-      "char": "本",
-      "start": 20.462,
-      "end": 20.658
+      "char": "日",
+      "start": 19.44,
+      "end": 19.68
     },
     {
       "index": 77,
-      "char": "的",
-      "start": 20.695,
-      "end": 20.891
+      "char": "本",
+      "start": 19.68,
+      "end": 19.84
     },
     {
       "index": 78,
-      "char": "简",
-      "start": 20.928,
-      "end": 21.124
+      "char": "的",
+      "start": 19.84,
+      "end": 19.92
     },
     {
       "index": 79,
+      "char": "简",
+      "start": 19.92,
+      "end": 20.08
+    },
+    {
+      "index": 80,
       "char": "称",
-      "start": 21.161,
-      "end": 21.357
+      "start": 20.08,
+      "end": 20.4
+    },
+    {
+      "index": 81,
+      "char": "课",
+      "start": 20.8,
+      "end": 21.04
+    },
+    {
+      "index": 82,
+      "char": "文",
+      "start": 21.04,
+      "end": 21.28
+    },
+    {
+      "index": 83,
+      "char": "写",
+      "start": 21.28,
+      "end": 21.52
+    },
+    {
+      "index": 84,
+      "char": "人",
+      "start": 21.52,
+      "end": 21.6
+    },
+    {
+      "index": 85,
+      "char": "民",
+      "start": 21.6,
+      "end": 21.92
+    },
+    {
+      "index": 86,
+      "char": "坚",
+      "start": 21.92,
+      "end": 22.16
+    },
+    {
+      "index": 87,
+      "char": "持",
+      "start": 22.16,
+      "end": 22.4
+    },
+    {
+      "index": 88,
+      "char": "抗",
+      "start": 22.4,
+      "end": 22.64
+    },
+    {
+      "index": 89,
+      "char": "日",
+      "start": 22.64,
+      "end": 22.8
+    },
+    {
+      "index": 90,
+      "char": "斗",
+      "start": 22.8,
+      "end": 22.96
+    },
+    {
+      "index": 91,
+      "char": "争",
+      "start": 22.96,
+      "end": 23.36
     }
   ],
-  "transcript": "日，抗日的日。日是独体字，古字形像太阳：外框是日轮，中间一横像太阳中央的光。看图时，一轮方正的太阳从云带后升起，就能记住日。日通常表示太阳或一天；在抗日这个历史词语里，日是日本的简称。",
+  "transcript": "抗日的日要放进历史词语里理解。日是独体字，外框像一轮方正的太阳，中间一横像日轮里的亮光。圆亮的日轮落进方框，中间一横留住亮光。日通常表示太阳或一天，在抗日这个词里，它是日本的简称，课文写人民坚持抗日斗争。",
   "voice_reference": "封",
-  "timing_source": "punctuation-weighted-estimate",
-  "script_version": "child-first-v1",
-  "duration": 21.920181
+  "reference_id": "019f0554-ea22-762e-966c-32d678fd6bf6",
+  "reference_sha256": "eb07e06ee13a20ee4577b1b481df6d33d42127c1b3876bfa5d5e5362ae349f19",
+  "timing_source": "qwen3-forced-aligner",
+  "script_version": "narration-v3",
+  "model": "mlx-community/Qwen3-TTS-12Hz-1.7B-Base-4bit",
+  "model_revision": "37e955a1deb861c088ae5f3a67043185f3d1a60c",
+  "generation_policy": "qwen3-clone-2026-08-22-v3",
+  "seed": 20260822,
+  "content_hash": "ffd7e67af5bc82302f49",
+  "duration": 23.382,
+  "alignment_model": "mlx-community/Qwen3-ForcedAligner-0.6B-8bit",
+  "aligned_audio_sha256": "2a0a3c2162a71015a0421a134c673d5221b0c0dc189101f76366ccb0bd543c6c",
+  "alignment_groups": []
 }

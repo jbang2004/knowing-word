@@ -826,8 +826,8 @@ export const narrationAssets: Record<string, NarrationAsset> = {
     "voice": "封"
   },
   "g5v1-l12-c07-u676d": {
-    "audio": "/narration/g5v1-l03-c02-u676d/audio.webm",
-    "audioMarks": "/narration/g5v1-l03-c02-u676d/audio-marks.json",
+    "audio": "/narration/g5v1-l12-c07-u676d/audio.webm",
+    "audioMarks": "/narration/g5v1-l12-c07-u676d/audio-marks.json",
     "voice": "封"
   },
   "g5v1-l12-c08-u54c0": {
@@ -881,8 +881,8 @@ export const narrationAssets: Record<string, NarrationAsset> = {
     "voice": "封"
   },
   "g5v1-l13-c09-u7687": {
-    "audio": "/narration/g5v1-l11-c02-u7687/audio.webm",
-    "audioMarks": "/narration/g5v1-l11-c02-u7687/audio-marks.json",
+    "audio": "/narration/g5v1-l13-c09-u7687/audio.webm",
+    "audioMarks": "/narration/g5v1-l13-c09-u7687/audio-marks.json",
     "voice": "封"
   },
   "g5v1-l13-c10-u7eb5": {
@@ -1166,8 +1166,8 @@ export const narrationAssets: Record<string, NarrationAsset> = {
     "voice": "封"
   },
   "g5v1-l17-c12-u73d1": {
-    "audio": "/narration/g5v1-l14-c03-u73d1/audio.webm",
-    "audioMarks": "/narration/g5v1-l14-c03-u73d1/audio-marks.json",
+    "audio": "/narration/g5v1-l17-c12-u73d1/audio.webm",
+    "audioMarks": "/narration/g5v1-l17-c12-u73d1/audio-marks.json",
     "voice": "封"
   },
   "g5v1-l17-c13-u5e3d": {
@@ -1251,8 +1251,8 @@ export const narrationAssets: Record<string, NarrationAsset> = {
     "voice": "封"
   },
   "g5v1-l18-c11-u8f9e": {
-    "audio": "/narration/g5v1-l06-c11-u8f9e/audio.webm",
-    "audioMarks": "/narration/g5v1-l06-c11-u8f9e/audio-marks.json",
+    "audio": "/narration/g5v1-l18-c11-u8f9e/audio.webm",
+    "audioMarks": "/narration/g5v1-l18-c11-u8f9e/audio-marks.json",
     "voice": "封"
   },
   "g5v1-l18-c12-u788c": {
@@ -1426,8 +1426,8 @@ export const narrationAssets: Record<string, NarrationAsset> = {
     "voice": "封"
   },
   "g5v1-l19-c24-u966a": {
-    "audio": "/narration/g5v1-l04-c08-u966a/audio.webm",
-    "audioMarks": "/narration/g5v1-l04-c08-u966a/audio-marks.json",
+    "audio": "/narration/g5v1-l19-c24-u966a/audio.webm",
+    "audioMarks": "/narration/g5v1-l19-c24-u966a/audio-marks.json",
     "voice": "封"
   },
   "g5v1-l19-c25-u6bd5": {
@@ -1741,8 +1741,8 @@ export const narrationAssets: Record<string, NarrationAsset> = {
     "voice": "封"
   },
   "g5v1-l25-c19-u8870": {
-    "audio": "/narration/g5v1-l11-c04-u8870/audio.webm",
-    "audioMarks": "/narration/g5v1-l11-c04-u8870/audio-marks.json",
+    "audio": "/narration/g5v1-l25-c19-u8870/audio.webm",
+    "audioMarks": "/narration/g5v1-l25-c19-u8870/audio-marks.json",
     "voice": "封"
   },
   "g5v1-l25-c20-u7edf": {
@@ -2096,8 +2096,8 @@ export const narrationAssets: Record<string, NarrationAsset> = {
     "voice": "封"
   },
   "019f0554-ea22-762e-966c-daf4204fc6b4": {
-    "audio": "/narration/019f0554-ea21-740f-af56-b2be37c57c6f/audio.webm",
-    "audioMarks": "/narration/019f0554-ea21-740f-af56-b2be37c57c6f/audio-marks.json",
+    "audio": "/narration/019f0554-ea22-762e-966c-daf4204fc6b4/audio.webm",
+    "audioMarks": "/narration/019f0554-ea22-762e-966c-daf4204fc6b4/audio-marks.json",
     "voice": "封"
   },
   "019f0554-ea22-762e-966c-e9594325cd7d": {

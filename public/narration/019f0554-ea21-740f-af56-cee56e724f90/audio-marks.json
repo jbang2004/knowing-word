@@ -3,487 +3,719 @@
     {
       "index": 0,
       "char": "老",
-      "start": 0.298,
-      "end": 0.544
+      "start": 0.24,
+      "end": 1.44
     },
     {
       "index": 1,
       "char": "老",
-      "start": 0.771,
-      "end": 1.017
+      "start": 1.44,
+      "end": 1.68,
+      "alignment_group": "align-group-1-2",
+      "alignment_group_text": "老婆"
     },
     {
       "index": 2,
       "char": "婆",
-      "start": 1.064,
-      "end": 1.31
+      "start": 1.44,
+      "end": 1.68,
+      "alignment_group": "align-group-1-2",
+      "alignment_group_text": "老婆"
     },
     {
       "index": 3,
       "char": "婆",
-      "start": 1.357,
-      "end": 1.603
+      "start": 1.68,
+      "end": 1.76
     },
     {
       "index": 4,
       "char": "的",
-      "start": 1.65,
-      "end": 1.896
+      "start": 1.76,
+      "end": 1.92
     },
     {
       "index": 5,
       "char": "老",
-      "start": 1.943,
-      "end": 2.189
+      "start": 1.92,
+      "end": 2.24
     },
     {
       "index": 6,
-      "char": "这",
-      "start": 2.576,
-      "end": 2.822
+      "char": "老",
+      "start": 2.96,
+      "end": 3.28
     },
     {
       "index": 7,
-      "char": "个",
-      "start": 2.869,
-      "end": 3.115
+      "char": "表",
+      "start": 3.28,
+      "end": 3.44
     },
     {
       "index": 8,
-      "char": "字",
-      "start": 3.162,
-      "end": 3.408
+      "char": "示",
+      "start": 3.44,
+      "end": 3.6
     },
     {
       "index": 9,
-      "char": "可",
-      "start": 3.455,
-      "end": 3.701
+      "char": "年",
+      "start": 3.6,
+      "end": 3.76
     },
     {
       "index": 10,
-      "char": "以",
-      "start": 3.748,
-      "end": 3.994
+      "char": "纪",
+      "start": 3.76,
+      "end": 3.92
     },
     {
       "index": 11,
-      "char": "看",
-      "start": 4.041,
-      "end": 4.287
+      "char": "大",
+      "start": 3.92,
+      "end": 4.24
     },
     {
       "index": 12,
-      "char": "成",
-      "start": 4.334,
-      "end": 4.58
+      "char": "老",
+      "start": 4.64,
+      "end": 4.88
     },
     {
       "index": 13,
-      "char": "一",
-      "start": 4.627,
-      "end": 4.873
+      "char": "婆",
+      "start": 4.88,
+      "end": 5.12
     },
     {
       "index": 14,
-      "char": "位",
-      "start": 4.92,
-      "end": 5.166
+      "char": "婆",
+      "start": 5.12,
+      "end": 5.36
     },
     {
       "index": 15,
-      "char": "弯",
-      "start": 5.213,
-      "end": 5.459
+      "char": "是",
+      "start": 5.36,
+      "end": 5.52
     },
     {
       "index": 16,
-      "char": "着",
-      "start": 5.506,
-      "end": 5.752
+      "char": "对",
+      "start": 5.52,
+      "end": 5.68
     },
     {
       "index": 17,
-      "char": "腰",
-      "start": 5.799,
-      "end": 6.045
+      "char": "年",
+      "start": 5.68,
+      "end": 5.84
     },
     {
       "index": 18,
-      "char": "拄",
-      "start": 6.272,
-      "end": 6.518
+      "char": "长",
+      "start": 5.84,
+      "end": 6.08
     },
     {
       "index": 19,
-      "char": "着",
-      "start": 6.565,
-      "end": 6.811
+      "char": "女",
+      "start": 6.08,
+      "end": 6.24
     },
     {
       "index": 20,
-      "char": "拐",
-      "start": 6.858,
-      "end": 7.104
+      "char": "性",
+      "start": 6.24,
+      "end": 6.48
     },
     {
       "index": 21,
-      "char": "杖",
-      "start": 7.151,
-      "end": 7.397
+      "char": "的",
+      "start": 6.48,
+      "end": 6.56
     },
     {
       "index": 22,
-      "char": "的",
-      "start": 7.444,
-      "end": 7.69
+      "char": "称",
+      "start": 6.56,
+      "end": 6.88
     },
     {
       "index": 23,
-      "char": "老",
-      "start": 7.737,
-      "end": 7.983
+      "char": "呼",
+      "start": 6.88,
+      "end": 7.2
     },
     {
       "index": 24,
-      "char": "人",
-      "start": 8.03,
-      "end": 8.276
+      "char": "老",
+      "start": 7.92,
+      "end": 8.16
     },
     {
       "index": 25,
-      "char": "上",
-      "start": 8.503,
-      "end": 8.749
+      "char": "字",
+      "start": 8.16,
+      "end": 8.4
     },
     {
       "index": 26,
-      "char": "方",
-      "start": 8.796,
-      "end": 9.042
+      "char": "可",
+      "start": 8.4,
+      "end": 8.56
     },
     {
       "index": 27,
-      "char": "像",
-      "start": 9.089,
-      "end": 9.335
+      "char": "以",
+      "start": 8.56,
+      "end": 8.64
     },
     {
       "index": 28,
-      "char": "白",
-      "start": 9.382,
-      "end": 9.628
+      "char": "整",
+      "start": 8.64,
+      "end": 8.88
     },
     {
       "index": 29,
-      "char": "发",
-      "start": 9.675,
-      "end": 9.921
+      "char": "体",
+      "start": 8.88,
+      "end": 9.04
     },
     {
       "index": 30,
-      "char": "和",
-      "start": 9.968,
-      "end": 10.214
+      "char": "想",
+      "start": 9.04,
+      "end": 9.28
     },
     {
       "index": 31,
-      "char": "肩",
-      "start": 10.261,
-      "end": 10.507
+      "char": "成",
+      "start": 9.28,
+      "end": 9.44
     },
     {
       "index": 32,
-      "char": "背",
-      "start": 10.554,
-      "end": 10.8
+      "char": "一",
+      "start": 9.44,
+      "end": 9.6
     },
     {
       "index": 33,
-      "char": "下",
-      "start": 11.027,
-      "end": 11.273
+      "char": "位",
+      "start": 9.6,
+      "end": 9.84
     },
     {
       "index": 34,
-      "char": "方",
-      "start": 11.32,
-      "end": 11.566
+      "char": "弯",
+      "start": 9.92,
+      "end": 10.08
     },
     {
       "index": 35,
-      "char": "像",
-      "start": 11.613,
-      "end": 11.859
+      "char": "着",
+      "start": 10.08,
+      "end": 10.24
     },
     {
       "index": 36,
-      "char": "身",
-      "start": 11.906,
-      "end": 12.152
+      "char": "腰",
+      "start": 10.24,
+      "end": 10.56
     },
     {
       "index": 37,
-      "char": "体",
-      "start": 12.199,
-      "end": 12.445
+      "char": "拄",
+      "start": 10.88,
+      "end": 10.96
     },
     {
       "index": 38,
-      "char": "与",
-      "start": 12.492,
-      "end": 12.738
+      "char": "着",
+      "start": 10.96,
+      "end": 11.12
     },
     {
       "index": 39,
-      "char": "拐",
-      "start": 12.785,
-      "end": 13.031
+      "char": "手",
+      "start": 11.12,
+      "end": 11.28
     },
     {
       "index": 40,
       "char": "杖",
-      "start": 13.078,
-      "end": 13.324
+      "start": 11.28,
+      "end": 11.52
     },
     {
       "index": 41,
-      "char": "顺",
-      "start": 13.711,
-      "end": 13.957
+      "char": "的",
+      "start": 11.52,
+      "end": 11.6
     },
     {
       "index": 42,
-      "char": "着",
-      "start": 14.004,
-      "end": 14.25
+      "char": "长",
+      "start": 11.6,
+      "end": 11.84
     },
     {
       "index": 43,
-      "char": "人",
-      "start": 14.297,
-      "end": 14.543
+      "char": "者",
+      "start": 11.84,
+      "end": 12.16
     },
     {
       "index": 44,
-      "char": "物",
-      "start": 14.59,
-      "end": 14.836
+      "char": "顺",
+      "start": 12.64,
+      "end": 12.88
     },
     {
       "index": 45,
-      "char": "轮",
-      "start": 14.883,
-      "end": 15.129
+      "char": "着",
+      "start": 12.88,
+      "end": 12.96
     },
     {
       "index": 46,
-      "char": "廓",
-      "start": 15.176,
-      "end": 15.422
+      "char": "头",
+      "start": 12.96,
+      "end": 13.28
     },
     {
       "index": 47,
-      "char": "就",
-      "start": 15.649,
-      "end": 15.895
+      "char": "发",
+      "start": 13.28,
+      "end": 13.52
     },
     {
       "index": 48,
-      "char": "能",
-      "start": 15.942,
-      "end": 16.188
+      "char": "肩",
+      "start": 13.6,
+      "end": 13.84
     },
     {
       "index": 49,
-      "char": "把",
-      "start": 16.235,
-      "end": 16.481
+      "char": "背",
+      "start": 13.84,
+      "end": 14.08
     },
     {
       "index": 50,
-      "char": "老",
-      "start": 16.528,
-      "end": 16.774
+      "char": "和",
+      "start": 14.08,
+      "end": 14.24
     },
     {
       "index": 51,
-      "char": "的",
-      "start": 16.821,
-      "end": 17.067
+      "char": "手",
+      "start": 14.24,
+      "end": 14.48
     },
     {
       "index": 52,
-      "char": "笔",
-      "start": 17.114,
-      "end": 17.36
+      "char": "杖",
+      "start": 14.48,
+      "end": 14.8
     },
     {
       "index": 53,
-      "char": "画",
-      "start": 17.407,
-      "end": 17.653
+      "char": "看",
+      "start": 14.8,
+      "end": 15.04
     },
     {
       "index": 54,
-      "char": "连",
-      "start": 17.7,
-      "end": 17.946
+      "char": "清",
+      "start": 15.04,
+      "end": 15.28
     },
     {
       "index": 55,
-      "char": "起",
-      "start": 17.993,
-      "end": 18.239
+      "char": "笔",
+      "start": 15.28,
+      "end": 15.44
     },
     {
       "index": 56,
-      "char": "来",
-      "start": 18.286,
-      "end": 18.532
+      "char": "画",
+      "start": 15.44,
+      "end": 15.84
     },
     {
       "index": 57,
-      "char": "老",
-      "start": 18.919,
-      "end": 19.165
+      "char": "母",
+      "start": 16.4,
+      "end": 16.56
     },
     {
       "index": 58,
-      "char": "表",
-      "start": 19.212,
-      "end": 19.458
+      "char": "亲",
+      "start": 16.56,
+      "end": 16.8
     },
     {
       "index": 59,
-      "char": "示",
-      "start": 19.505,
-      "end": 19.751
+      "char": "把",
+      "start": 16.8,
+      "end": 16.96
     },
     {
       "index": 60,
-      "char": "年",
-      "start": 19.798,
-      "end": 20.045
+      "char": "桂",
+      "start": 16.96,
+      "end": 17.12
     },
     {
       "index": 61,
-      "char": "纪",
-      "start": 20.091,
-      "end": 20.338
+      "char": "花",
+      "start": 17.12,
+      "end": 17.36
     },
     {
       "index": 62,
-      "char": "大",
-      "start": 20.384,
-      "end": 20.631
+      "char": "分",
+      "start": 17.36,
+      "end": 17.6
     },
     {
       "index": 63,
-      "char": "老",
-      "start": 21.017,
-      "end": 21.264
+      "char": "送",
+      "start": 17.6,
+      "end": 17.76
     },
     {
       "index": 64,
-      "char": "婆",
-      "start": 21.31,
-      "end": 21.557
+      "char": "给",
+      "start": 17.76,
+      "end": 17.92
     },
     {
       "index": 65,
-      "char": "婆",
-      "start": 21.603,
-      "end": 21.85
+      "char": "胡",
+      "start": 17.92,
+      "end": 18.08
     },
     {
       "index": 66,
-      "char": "就",
-      "start": 22.076,
-      "end": 22.323
+      "char": "家",
+      "start": 18.08,
+      "end": 18.24
     },
     {
       "index": 67,
-      "char": "是",
-      "start": 22.369,
-      "end": 22.616
+      "char": "老",
+      "start": 18.24,
+      "end": 18.48
     },
     {
       "index": 68,
-      "char": "对",
-      "start": 22.662,
-      "end": 22.909
+      "char": "爷",
+      "start": 18.48,
+      "end": 18.72
     },
     {
       "index": 69,
-      "char": "年",
-      "start": 22.956,
-      "end": 23.202
+      "char": "爷",
+      "start": 18.72,
+      "end": 18.96
     },
     {
       "index": 70,
-      "char": "长",
-      "start": 23.249,
-      "end": 23.495
+      "char": "和",
+      "start": 18.96,
+      "end": 19.12
     },
     {
       "index": 71,
-      "char": "女",
-      "start": 23.542,
-      "end": 23.788
+      "char": "毛",
+      "start": 19.12,
+      "end": 19.36
     },
     {
       "index": 72,
-      "char": "性",
-      "start": 23.835,
-      "end": 24.081
+      "char": "家",
+      "start": 19.36,
+      "end": 19.52
     },
     {
       "index": 73,
-      "char": "亲",
-      "start": 24.128,
-      "end": 24.374
+      "char": "老",
+      "start": 19.52,
+      "end": 19.68
     },
     {
       "index": 74,
-      "char": "切",
-      "start": 24.421,
-      "end": 24.667
+      "char": "婆",
+      "start": 19.68,
+      "end": 19.92
     },
     {
       "index": 75,
-      "char": "尊",
-      "start": 24.894,
-      "end": 25.14
+      "char": "婆",
+      "start": 19.92,
+      "end": 20.24
     },
     {
       "index": 76,
-      "char": "敬",
-      "start": 25.187,
-      "end": 25.433
+      "char": "让",
+      "start": 20.64,
+      "end": 20.8
     },
     {
       "index": 77,
-      "char": "的",
-      "start": 25.48,
-      "end": 25.726
+      "char": "会",
+      "start": 20.8,
+      "end": 20.96
     },
     {
       "index": 78,
-      "char": "称",
-      "start": 25.773,
-      "end": 26.019
+      "char": "做",
+      "start": 20.96,
+      "end": 21.12
     },
     {
       "index": 79,
+      "char": "糕",
+      "start": 21.12,
+      "end": 21.28
+    },
+    {
+      "index": 80,
+      "char": "饼",
+      "start": 21.28,
+      "end": 21.36
+    },
+    {
+      "index": 81,
+      "char": "的",
+      "start": 21.36,
+      "end": 21.52
+    },
+    {
+      "index": 82,
+      "char": "邻",
+      "start": 21.52,
+      "end": 21.76
+    },
+    {
+      "index": 83,
+      "char": "居",
+      "start": 21.76,
+      "end": 22.08
+    },
+    {
+      "index": 84,
+      "char": "也",
+      "start": 22.08,
+      "end": 22.24
+    },
+    {
+      "index": 85,
+      "char": "分",
+      "start": 22.24,
+      "end": 22.48
+    },
+    {
+      "index": 86,
+      "char": "享",
+      "start": 22.48,
+      "end": 22.64
+    },
+    {
+      "index": 87,
+      "char": "花",
+      "start": 22.64,
+      "end": 22.88
+    },
+    {
+      "index": 88,
+      "char": "香",
+      "start": 22.88,
+      "end": 23.2
+    },
+    {
+      "index": 89,
+      "char": "这",
+      "start": 23.84,
+      "end": 24.0
+    },
+    {
+      "index": 90,
+      "char": "个",
+      "start": 24.0,
+      "end": 24.08
+    },
+    {
+      "index": 91,
+      "char": "老",
+      "start": 24.08,
+      "end": 24.32
+    },
+    {
+      "index": 92,
+      "char": "字",
+      "start": 24.32,
+      "end": 24.48
+    },
+    {
+      "index": 93,
+      "char": "既",
+      "start": 24.48,
+      "end": 24.64
+    },
+    {
+      "index": 94,
+      "char": "说",
+      "start": 24.64,
+      "end": 24.8
+    },
+    {
+      "index": 95,
+      "char": "明",
+      "start": 24.8,
+      "end": 25.04
+    },
+    {
+      "index": 96,
+      "char": "年",
+      "start": 25.04,
+      "end": 25.28
+    },
+    {
+      "index": 97,
+      "char": "纪",
+      "start": 25.28,
+      "end": 25.6
+    },
+    {
+      "index": 98,
+      "char": "也",
+      "start": 25.84,
+      "end": 26.0
+    },
+    {
+      "index": 99,
+      "char": "带",
+      "start": 26.0,
+      "end": 26.16
+    },
+    {
+      "index": 100,
+      "char": "着",
+      "start": 26.16,
+      "end": 26.32
+    },
+    {
+      "index": 101,
+      "char": "乡",
+      "start": 26.32,
+      "end": 26.56
+    },
+    {
+      "index": 102,
+      "char": "里",
+      "start": 26.56,
+      "end": 26.64
+    },
+    {
+      "index": 103,
+      "char": "之",
+      "start": 26.64,
+      "end": 26.88
+    },
+    {
+      "index": 104,
+      "char": "间",
+      "start": 26.88,
+      "end": 27.2
+    },
+    {
+      "index": 105,
+      "char": "亲",
+      "start": 27.28,
+      "end": 27.52
+    },
+    {
+      "index": 106,
+      "char": "切",
+      "start": 27.52,
+      "end": 27.68
+    },
+    {
+      "index": 107,
+      "char": "尊",
+      "start": 27.68,
+      "end": 27.92
+    },
+    {
+      "index": 108,
+      "char": "重",
+      "start": 27.92,
+      "end": 28.08
+    },
+    {
+      "index": 109,
+      "char": "的",
+      "start": 28.08,
+      "end": 28.16
+    },
+    {
+      "index": 110,
+      "char": "称",
+      "start": 28.16,
+      "end": 28.4
+    },
+    {
+      "index": 111,
       "char": "呼",
-      "start": 26.066,
-      "end": 26.312
+      "start": 28.4,
+      "end": 28.64
     }
   ],
-  "transcript": "老，老婆婆的老。这个字可以看成一位弯着腰、拄着拐杖的老人：上方像白发和肩背，下方像身体与拐杖。顺着人物轮廓，就能把老的笔画连起来。老表示年纪大。老婆婆，就是对年长女性亲切、尊敬的称呼。",
+  "transcript": "老，老婆婆的老。老表示年纪大，老婆婆是对年长女性的称呼。老字可以整体想成一位弯着腰、拄着手杖的长者，顺着头发、肩背和手杖看清笔画。母亲把桂花分送给胡家老爷爷和毛家老婆婆，让会做糕饼的邻居也分享花香。这个老字既说明年纪，也带着乡里之间亲切尊重的称呼。",
   "voice_reference": "封",
-  "timing_source": "punctuation-weighted-estimate",
-  "script_version": "child-first-v1",
-  "duration": 26.881066
+  "reference_id": "019f0554-ea22-762e-966c-32d678fd6bf6",
+  "reference_sha256": "eb07e06ee13a20ee4577b1b481df6d33d42127c1b3876bfa5d5e5362ae349f19",
+  "timing_source": "qwen3-forced-aligner",
+  "script_version": "narration-v3",
+  "model": "mlx-community/Qwen3-TTS-12Hz-1.7B-Base-4bit",
+  "model_revision": "37e955a1deb861c088ae5f3a67043185f3d1a60c",
+  "generation_policy": "qwen3-clone-2026-08-22-v3",
+  "seed": 20260822,
+  "content_hash": "873310234bd5b7e3e675",
+  "duration": 28.657,
+  "alignment_model": "mlx-community/Qwen3-ForcedAligner-0.6B-8bit",
+  "aligned_audio_sha256": "a0add64294eb250ddf189954dcb0c1a38a9b376628e03dd5d9ba944ad17c384f",
+  "alignment_groups": [
+    {
+      "id": "align-group-1-2",
+      "text": "老婆",
+      "indices": [
+        1,
+        2
+      ],
+      "start": 1.44,
+      "end": 1.68,
+      "method": "shared-right-model-interval",
+      "rawIntervals": [
+        {
+          "index": 1,
+          "char": "老",
+          "start": 1.44,
+          "end": 1.44
+        },
+        {
+          "index": 2,
+          "char": "婆",
+          "start": 1.44,
+          "end": 1.68
+        }
+      ]
+    }
+  ]
 }

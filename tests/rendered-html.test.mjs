@@ -52,8 +52,37 @@ test("character pages render the complete picture-to-character memory flow", asy
   assert.match(html, /合成字/);
   assert.match(html, /听字义讲解/);
   assert.match(html, /audio\/webm; codecs=&quot;opus&quot;/);
-  assert.match(html, /\/media\/narration\/v2\//);
-  assert.match(html, /audio\.webm\?v=child-first-v2/);
+  assert.match(html, /\/media\/narration\/v3\//);
+  assert.match(html, /audio\.webm\?v=narration-v3-qwen3-4bit-r37e955a/);
+});
+
+test("lesson 3 renders the method pilot and picture-withdrawal flow", async () => {
+  const lessonResponse = await render("/lessons/g5v1-l03");
+  assert.equal(lessonResponse.status, 200);
+  const lessonHtml = await lessonResponse.text();
+  assert.match(lessonHtml, /第三课 · 识字方法试点/);
+  assert.match(lessonHtml, /先分方法，再使用图片/);
+  assert.match(lessonHtml, /形旁 \+ 声旁/);
+  assert.match(lessonHtml, /部件 \+ 位置/);
+  assert.match(lessonHtml, /声旁家族/);
+  assert.match(lessonHtml, /间隔复习/);
+
+  const { characters } = await import(
+    new URL("../app/data/catalog.ts", import.meta.url).href,
+  );
+  const pickup = characters.find(
+    (character) => character.lessonId === "g5v1-l03" && character.hanzi === "捡" && character.primary,
+  );
+  assert.ok(pickup);
+
+  const characterResponse = await render(`/lessons/g5v1-l03/words/${pickup.id}`);
+  assert.equal(characterResponse.status, 200);
+  const characterHtml = await characterResponse.text();
+  assert.match(characterHtml, /图片是桥梁 · 不是答案/);
+  assert.match(characterHtml, /从画面走到无图回忆/);
+  assert.match(characterHtml, /构形助记图 · 非字源图/);
+  assert.match(characterHtml, /词语回忆/);
+  assert.match(characterHtml, /规范字形教学拆分|现代规范字形/);
 });
 
 test("all catalog routes server-render with real, shareable URLs", async () => {
@@ -404,8 +433,13 @@ test("localized historical glyph, red-blue, pronunciation, and timing resources 
   assert.doesNotMatch(source, /auth_key|access_token|authorization|password|account_number/i);
 });
 
-test("narration timing becomes a punctuated, persistent reading transcript", async () => {
-  const { buildNarrationTokens } = await import(
+test("narration timing becomes a punctuated, phrase-paced reading transcript", async () => {
+  const {
+    activeNarrationMarkIndices,
+    activeNarrationPhraseIndex,
+    buildNarrationTokens,
+    narrationPhraseIndexByMark,
+  } = await import(
     new URL("../app/lib/narration.ts", import.meta.url).href,
   );
   const marks = [
@@ -426,12 +460,28 @@ test("narration timing becomes a punctuated, persistent reading transcript", asy
 
   const authoredTokens = buildNarrationTokens(marks, "封，封锁的封。会意字。");
   assert.equal(authoredTokens.map((token) => token.text).join(""), "封，封锁的封。会意字。");
+  const phraseByMark = narrationPhraseIndexByMark(authoredTokens);
+  assert.deepEqual(phraseByMark, [0, 1, 1, 1, 1, 2, 2, 2]);
+  assert.equal(activeNarrationPhraseIndex(marks, 1.55, phraseByMark), 1);
+  assert.equal(activeNarrationPhraseIndex(marks, 2.5, phraseByMark), 2);
+  assert.equal(activeNarrationPhraseIndex(marks, 4, phraseByMark), 2);
+
+  const groupedMarks = [
+    { char: "默", start: 0, end: 1, alignment_group: 7, alignment_group_text: "默而" },
+    { char: "而", start: 0.8, end: 1.8, alignment_group: 7, alignment_group_text: "默而" },
+    { char: "识", start: 2, end: 3 },
+  ];
+  assert.deepEqual(activeNarrationMarkIndices(groupedMarks, 0.5), [0, 1]);
+  assert.deepEqual(activeNarrationMarkIndices(groupedMarks, 2.5), [2]);
+  assert.deepEqual(activeNarrationMarkIndices(groupedMarks, 3), []);
 
   const pageSource = await readFile(new URL("../app/experience.tsx", import.meta.url), "utf8");
   assert.match(pageSource, /requestAnimationFrame\(sampleAudioTime\)/);
   assert.match(pageSource, /is-complete/);
   assert.match(pageSource, /withAssetVersion/);
-  assert.match(pageSource, /character\.official !== false \? "child-first-v2" : "child-first-v1"/);
+  assert.match(pageSource, /activeMarkIndices\.has\(token\.markIndex\)/);
+  assert.match(pageSource, /narration-v3-qwen3-4bit-r37e955a/);
+  assert.match(pageSource, /is-current-phrase/);
   assert.doesNotMatch(pageSource, /onEnded=\{\(\) => \{[\s\S]*setElapsed\(0\)/);
 });
 
@@ -506,18 +556,18 @@ test("every character record has a complete Feng-voice narration and authored ti
   const { narrationAssets } = await import(
     new URL("../app/data/narration-assets.ts", import.meta.url).href,
   );
-  const { narrationScripts } = await import(
-    new URL("../app/data/narration-scripts.ts", import.meta.url).href,
-  );
   const { buildNarrationTokens } = await import(
     new URL("../app/lib/narration.ts", import.meta.url).href,
+  );
+  const { releasedNarrationTranscripts } = await import(
+    new URL("../app/data/released-narration-transcripts.generated.ts", import.meta.url).href,
   );
 
   assert.equal(characters.length, 430);
   assert.equal(Object.keys(narrationAssets).length, characters.length);
-  assert.equal(new Set(Object.values(narrationAssets).map((asset) => asset.audio)).size, 423);
+  assert.equal(Object.keys(releasedNarrationTranscripts).length, characters.length);
+  assert.equal(new Set(Object.values(narrationAssets).map((asset) => asset.audio)).size, 430);
 
-  const audioByGlyph = new Map();
   for (const character of characters) {
     const asset = narrationAssets[character.id];
     assert.ok(asset, `missing narration mapping for ${character.hanzi} (${character.id})`);
@@ -526,19 +576,14 @@ test("every character record has a complete Feng-voice narration and authored ti
     await access(new URL(`../public${asset.audio}`, import.meta.url));
     await access(new URL(`../public${asset.audioMarks}`, import.meta.url));
 
-    const priorAudio = audioByGlyph.get(character.hanzi);
-    if (priorAudio) assert.equal(asset.audio, priorAudio, `duplicate glyph audio differs for ${character.hanzi}`);
-    else audioByGlyph.set(character.hanzi, asset.audio);
-
     const payload = JSON.parse(
       await readFile(new URL(`../public${asset.audioMarks}`, import.meta.url), "utf8"),
     );
     assert.equal(payload.voice_reference, "封");
-    assert.equal(
-      payload.script_version,
-      character.official !== false ? "child-first-v2" : "child-first-v1",
-    );
-    assert.equal(payload.transcript, narrationScripts[character.hanzi]);
+    assert.equal(payload.script_version, "narration-v3");
+    assert.equal(payload.model, "mlx-community/Qwen3-TTS-12Hz-1.7B-Base-4bit");
+    assert.equal(payload.model_revision, "37e955a1deb861c088ae5f3a67043185f3d1a60c");
+    assert.equal(payload.transcript, releasedNarrationTranscripts[character.id].transcript);
     assert.ok(Array.isArray(payload.marks) && payload.marks.length > 0, `missing marks for ${character.hanzi}`);
     assert.ok(typeof payload.transcript === "string" && payload.transcript.length > 0);
     assert.match(payload.transcript, /[，。！？；：、]/u, `missing punctuation for ${character.hanzi}`);
@@ -567,7 +612,6 @@ test("every character record has a complete Feng-voice narration and authored ti
     assert.equal(renderedTranscript, payload.transcript.replace(/\s/gu, ""));
   }
 
-  assert.equal(audioByGlyph.size, 423);
   const feng = characters.find((character) => character.hanzi === "封");
   assert.equal(
     narrationAssets[feng.id].audio,
@@ -649,7 +693,7 @@ test("R2 narration delivery supports immutable byte ranges", async () => {
   };
   const response = await worker.fetch(
     new Request(
-      "http://localhost/media/narration/v2/g5v1-l01-c01-u9e6d/audio.webm?v=test",
+      "http://localhost/media/narration/v3/g5v1-l01-c01-u9e6d/audio.webm?v=test",
       { headers: { range: "bytes=0-6" } },
     ),
     { MEDIA: media },

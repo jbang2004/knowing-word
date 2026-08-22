@@ -15504,7 +15504,7 @@ export const catalog = {
       "hanzi": "尽",
       "primary": true,
       "ready": false,
-      "pinyin": "jǐn",
+      "pinyin": "jìn",
       "charType": "会意字",
       "decomposition": "上下结构",
       "originalMeaning": "器皿中空",

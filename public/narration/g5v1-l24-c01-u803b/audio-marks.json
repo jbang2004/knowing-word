@@ -2,818 +2,696 @@
   "marks": [
     {
       "index": 0,
-      "char": "耻",
-      "start": 0.296,
-      "end": 0.52
+      "char": "羞",
+      "start": 0.08,
+      "end": 0.32
     },
     {
       "index": 1,
-      "char": "羞",
-      "start": 0.742,
-      "end": 0.966
+      "char": "耻",
+      "start": 0.32,
+      "end": 0.56
     },
     {
       "index": 2,
-      "char": "耻",
-      "start": 1.009,
-      "end": 1.232
+      "char": "的",
+      "start": 0.56,
+      "end": 0.64
     },
     {
       "index": 3,
-      "char": "的",
-      "start": 1.275,
-      "end": 1.499
+      "char": "耻",
+      "start": 0.64,
+      "end": 1.04
     },
     {
       "index": 4,
-      "char": "耻",
-      "start": 1.541,
-      "end": 1.765
+      "char": "读",
+      "start": 1.52,
+      "end": 1.68
     },
     {
       "index": 5,
-      "char": "读",
-      "start": 1.988,
-      "end": 2.212
+      "char": "第",
+      "start": 1.68,
+      "end": 1.84
     },
     {
       "index": 6,
-      "char": "c",
-      "start": 2.254,
-      "end": 2.478
+      "char": "三",
+      "start": 1.84,
+      "end": 2.08
     },
     {
       "index": 7,
-      "char": "h",
-      "start": 2.521,
-      "end": 2.744
+      "char": "声",
+      "start": 2.08,
+      "end": 2.4
     },
     {
       "index": 8,
-      "char": "ǐ",
-      "start": 2.787,
-      "end": 3.011
+      "char": "耻",
+      "start": 2.88,
+      "end": 3.2
     },
     {
       "index": 9,
-      "char": "它",
-      "start": 3.393,
-      "end": 3.617
+      "char": "是",
+      "start": 3.2,
+      "end": 3.36
     },
     {
       "index": 10,
-      "char": "是",
-      "start": 3.66,
-      "end": 3.883
+      "char": "左",
+      "start": 3.36,
+      "end": 3.44
     },
     {
       "index": 11,
-      "char": "左",
-      "start": 3.926,
-      "end": 4.15
+      "char": "右",
+      "start": 3.52,
+      "end": 3.76
     },
     {
       "index": 12,
-      "char": "右",
-      "start": 4.192,
-      "end": 4.416
+      "char": "结",
+      "start": 3.76,
+      "end": 3.92
     },
     {
       "index": 13,
-      "char": "结",
-      "start": 4.459,
-      "end": 4.683
+      "char": "构",
+      "start": 3.92,
+      "end": 4.24
     },
     {
       "index": 14,
-      "char": "构",
-      "start": 4.725,
-      "end": 4.949
+      "char": "左",
+      "start": 4.56,
+      "end": 4.72
     },
     {
       "index": 15,
-      "char": "按",
-      "start": 5.172,
-      "end": 5.395
+      "char": "边",
+      "start": 4.8,
+      "end": 4.96
     },
     {
       "index": 16,
-      "char": "顺",
-      "start": 5.438,
-      "end": 5.662
+      "char": "是",
+      "start": 4.96,
+      "end": 5.12
     },
     {
       "index": 17,
-      "char": "序",
-      "start": 5.704,
-      "end": 5.928
+      "char": "耳",
+      "start": 5.12,
+      "end": 5.44
     },
     {
       "index": 18,
-      "char": "能",
-      "start": 5.971,
-      "end": 6.194
+      "char": "右",
+      "start": 5.76,
+      "end": 5.92
     },
     {
       "index": 19,
-      "char": "看",
-      "start": 6.237,
-      "end": 6.461
+      "char": "边",
+      "start": 5.92,
+      "end": 6.08
     },
     {
       "index": 20,
-      "char": "到",
-      "start": 6.503,
-      "end": 6.727
+      "char": "是",
+      "start": 6.08,
+      "end": 6.24
     },
     {
       "index": 21,
-      "char": "耳",
-      "start": 6.77,
-      "end": 6.994
+      "char": "止",
+      "start": 6.24,
+      "end": 6.56
     },
     {
       "index": 22,
-      "char": "和",
-      "start": 7.036,
-      "end": 7.26
+      "char": "写",
+      "start": 6.88,
+      "end": 7.2
     },
     {
       "index": 23,
-      "char": "止",
-      "start": 7.303,
-      "end": 7.526
+      "char": "时",
+      "start": 7.2,
+      "end": 7.44
     },
     {
       "index": 24,
-      "char": "从",
-      "start": 7.909,
-      "end": 8.133
+      "char": "两",
+      "start": 7.44,
+      "end": 7.68
     },
     {
       "index": 25,
-      "char": "构",
-      "start": 8.175,
-      "end": 8.399
+      "char": "边",
+      "start": 7.68,
+      "end": 7.92
     },
     {
       "index": 26,
-      "char": "字",
-      "start": 8.442,
-      "end": 8.665
+      "char": "高",
+      "start": 7.92,
+      "end": 8.08
     },
     {
       "index": 27,
-      "char": "分",
-      "start": 8.708,
-      "end": 8.932
+      "char": "低",
+      "start": 8.08,
+      "end": 8.24
     },
     {
       "index": 28,
-      "char": "工",
-      "start": 8.974,
-      "end": 9.198
+      "char": "相",
+      "start": 8.24,
+      "end": 8.48
     },
     {
       "index": 29,
-      "char": "看",
-      "start": 9.241,
-      "end": 9.465
+      "char": "近",
+      "start": 8.48,
+      "end": 8.8
     },
     {
       "index": 30,
-      "char": "耳",
-      "start": 9.687,
-      "end": 9.911
+      "char": "顺",
+      "start": 9.2,
+      "end": 9.44
     },
     {
       "index": 31,
-      "char": "提",
-      "start": 9.954,
-      "end": 10.177
+      "char": "着",
+      "start": 9.44,
+      "end": 9.6
     },
     {
       "index": 32,
-      "char": "示",
-      "start": 10.22,
-      "end": 10.444
+      "char": "字",
+      "start": 9.6,
+      "end": 9.76
     },
     {
       "index": 33,
-      "char": "意",
-      "start": 10.486,
-      "end": 10.71
+      "char": "形",
+      "start": 9.76,
+      "end": 9.92
     },
     {
       "index": 34,
-      "char": "义",
-      "start": 10.753,
-      "end": 10.976
+      "char": "想",
+      "start": 9.92,
+      "end": 10.08
     },
     {
       "index": 35,
-      "char": "类",
-      "start": 11.019,
-      "end": 11.243
+      "char": "一",
+      "start": 10.24,
+      "end": 10.32
     },
     {
       "index": 36,
-      "char": "别",
-      "start": 11.285,
-      "end": 11.509
+      "char": "想",
+      "start": 10.32,
+      "end": 10.72
     },
     {
       "index": 37,
-      "char": "止",
-      "start": 11.732,
-      "end": 11.955
+      "char": "耳",
+      "start": 11.04,
+      "end": 11.12
     },
     {
       "index": 38,
-      "char": "提",
-      "start": 11.998,
-      "end": 12.222
+      "char": "朵",
+      "start": 11.12,
+      "end": 11.28
     },
     {
       "index": 39,
-      "char": "供",
-      "start": 12.264,
-      "end": 12.488
+      "char": "听",
+      "start": 11.28,
+      "end": 11.44
     },
     {
       "index": 40,
-      "char": "读",
-      "start": 12.531,
-      "end": 12.755
+      "char": "见",
+      "start": 11.44,
+      "end": 11.6
     },
     {
       "index": 41,
-      "char": "音",
-      "start": 12.797,
-      "end": 13.021
+      "char": "别",
+      "start": 11.6,
+      "end": 11.84
     },
     {
       "index": 42,
-      "char": "线",
-      "start": 13.064,
-      "end": 13.287
+      "char": "人",
+      "start": 11.84,
+      "end": 12.08
     },
     {
       "index": 43,
-      "char": "索",
-      "start": 13.33,
-      "end": 13.554
+      "char": "指",
+      "start": 12.08,
+      "end": 12.24
     },
     {
       "index": 44,
-      "char": "看",
-      "start": 13.936,
-      "end": 14.16
+      "char": "出",
+      "start": 12.24,
+      "end": 12.4
     },
     {
       "index": 45,
-      "char": "图",
-      "start": 14.203,
-      "end": 14.426
+      "char": "错",
+      "start": 12.4,
+      "end": 12.64
     },
     {
       "index": 46,
-      "char": "时",
-      "start": 14.469,
-      "end": 14.693
+      "char": "误",
+      "start": 12.64,
+      "end": 12.88
     },
     {
       "index": 47,
-      "char": "左",
-      "start": 14.915,
-      "end": 15.139
+      "char": "脚",
+      "start": 13.2,
+      "end": 13.36
     },
     {
       "index": 48,
-      "char": "边",
-      "start": 15.182,
-      "end": 15.406
+      "char": "步",
+      "start": 13.36,
+      "end": 13.52
     },
     {
       "index": 49,
-      "char": "竖",
-      "start": 15.448,
-      "end": 15.672
+      "char": "便",
+      "start": 13.52,
+      "end": 13.68
     },
     {
       "index": 50,
-      "char": "起",
-      "start": 15.715,
-      "end": 15.938
+      "char": "停",
+      "start": 13.68,
+      "end": 13.92
     },
     {
       "index": 51,
-      "char": "的",
-      "start": 15.981,
-      "end": 16.205
+      "char": "下",
+      "start": 13.92,
+      "end": 14.16
     },
     {
       "index": 52,
-      "char": "耳",
-      "start": 16.247,
-      "end": 16.471
+      "char": "来",
+      "start": 14.16,
+      "end": 14.32
     },
     {
       "index": 53,
-      "char": "朵",
-      "start": 16.514,
-      "end": 16.737
+      "char": "认",
+      "start": 14.32,
+      "end": 14.56
     },
     {
       "index": 54,
-      "char": "形",
-      "start": 16.78,
-      "end": 17.004
+      "char": "真",
+      "start": 14.56,
+      "end": 14.72
     },
     {
       "index": 55,
-      "char": "成",
-      "start": 17.046,
-      "end": 17.27
+      "char": "反",
+      "start": 14.72,
+      "end": 14.96
     },
     {
       "index": 56,
-      "char": "耳",
-      "start": 17.313,
-      "end": 17.537
+      "char": "省",
+      "start": 14.96,
+      "end": 15.12
     },
     {
       "index": 57,
-      "char": "右",
-      "start": 17.759,
-      "end": 17.983
+      "char": "羞",
+      "start": 15.68,
+      "end": 15.92
     },
     {
       "index": 58,
-      "char": "边",
-      "start": 18.026,
-      "end": 18.249
+      "char": "耻",
+      "start": 15.92,
+      "end": 16.16
     },
     {
       "index": 59,
-      "char": "一",
-      "start": 18.292,
-      "end": 18.516
+      "char": "是",
+      "start": 16.16,
+      "end": 16.32
     },
     {
       "index": 60,
-      "char": "只",
-      "start": 18.558,
-      "end": 18.782
+      "char": "发",
+      "start": 16.32,
+      "end": 16.56
     },
     {
       "index": 61,
-      "char": "脚",
-      "start": 18.825,
-      "end": 19.048
+      "char": "现",
+      "start": 16.56,
+      "end": 16.72
     },
     {
       "index": 62,
-      "char": "停",
-      "start": 19.091,
-      "end": 19.315
+      "char": "自",
+      "start": 16.72,
+      "end": 16.88
     },
     {
       "index": 63,
-      "char": "在",
-      "start": 19.357,
-      "end": 19.581
+      "char": "己",
+      "start": 16.88,
+      "end": 17.04
     },
     {
       "index": 64,
-      "char": "界",
-      "start": 19.624,
-      "end": 19.848
+      "char": "的",
+      "start": 17.04,
+      "end": 17.12
     },
     {
       "index": 65,
-      "char": "线",
-      "start": 19.89,
-      "end": 20.114
+      "char": "错",
+      "start": 17.12,
+      "end": 17.44
     },
     {
       "index": 66,
-      "char": "前",
-      "start": 20.157,
-      "end": 20.38
+      "char": "误",
+      "start": 17.44,
+      "end": 17.52
     },
     {
       "index": 67,
-      "char": "形",
-      "start": 20.423,
-      "end": 20.647
+      "char": "或",
+      "start": 17.52,
+      "end": 17.68
     },
     {
       "index": 68,
-      "char": "成",
-      "start": 20.689,
-      "end": 20.913
+      "char": "不",
+      "start": 17.68,
+      "end": 17.84
     },
     {
       "index": 69,
-      "char": "止",
-      "start": 20.956,
-      "end": 21.179
+      "char": "当",
+      "start": 17.84,
+      "end": 18.0
     },
     {
       "index": 70,
-      "char": "听",
-      "start": 21.402,
-      "end": 21.626
+      "char": "行",
+      "start": 18.0,
+      "end": 18.24
     },
     {
       "index": 71,
-      "char": "见",
-      "start": 21.668,
-      "end": 21.892
+      "char": "为",
+      "start": 18.24,
+      "end": 18.4
     },
     {
       "index": 72,
-      "char": "提",
-      "start": 21.935,
-      "end": 22.158
+      "char": "后",
+      "start": 18.4,
+      "end": 18.64
     },
     {
       "index": 73,
-      "char": "醒",
-      "start": 22.201,
-      "end": 22.425
+      "char": "感",
+      "start": 18.64,
+      "end": 18.8
     },
     {
       "index": 74,
-      "char": "就",
-      "start": 22.467,
-      "end": 22.691
+      "char": "到",
+      "start": 18.8,
+      "end": 18.96
     },
     {
       "index": 75,
-      "char": "止",
-      "start": 22.734,
-      "end": 22.958
+      "char": "惭",
+      "start": 18.96,
+      "end": 19.2
     },
     {
       "index": 76,
-      "char": "步",
-      "start": 23,
-      "end": 23.224
+      "char": "愧",
+      "start": 19.2,
+      "end": 19.6
     },
     {
       "index": 77,
-      "char": "改",
-      "start": 23.267,
-      "end": 23.49
+      "char": "文",
+      "start": 20.0,
+      "end": 20.16
     },
     {
       "index": 78,
-      "char": "正",
-      "start": 23.533,
-      "end": 23.757
+      "char": "中",
+      "start": 20.16,
+      "end": 20.32
     },
     {
       "index": 79,
-      "char": "组",
-      "start": 23.979,
-      "end": 24.203
+      "char": "不",
+      "start": 20.32,
+      "end": 20.48
     },
     {
       "index": 80,
-      "char": "成",
-      "start": 24.246,
-      "end": 24.469
+      "char": "耻",
+      "start": 20.48,
+      "end": 20.64
     },
     {
       "index": 81,
-      "char": "耻",
-      "start": 24.512,
-      "end": 24.736
+      "char": "下",
+      "start": 20.64,
+      "end": 20.96
     },
     {
       "index": 82,
-      "char": "羞",
-      "start": 25.118,
-      "end": 25.342
+      "char": "问",
+      "start": 20.96,
+      "end": 21.2
     },
     {
       "index": 83,
-      "char": "耻",
-      "start": 25.385,
-      "end": 25.609
+      "char": "提",
+      "start": 21.28,
+      "end": 21.44
     },
     {
       "index": 84,
-      "char": "是",
-      "start": 25.651,
-      "end": 25.875
+      "char": "醒",
+      "start": 21.44,
+      "end": 21.52
     },
     {
       "index": 85,
-      "char": "意",
-      "start": 25.918,
-      "end": 26.141
+      "char": "我",
+      "start": 21.76,
+      "end": 22.08,
+      "alignment_group": "align-group-85-86",
+      "alignment_group_text": "我们"
     },
     {
       "index": 86,
-      "char": "识",
-      "start": 26.184,
-      "end": 26.408
+      "char": "们",
+      "start": 21.76,
+      "end": 22.08,
+      "alignment_group": "align-group-85-86",
+      "alignment_group_text": "我们"
     },
     {
       "index": 87,
-      "char": "到",
-      "start": 26.45,
-      "end": 26.674
+      "char": "向",
+      "start": 22.32,
+      "end": 22.56
     },
     {
       "index": 88,
-      "char": "自",
-      "start": 26.717,
-      "end": 26.94
+      "char": "不",
+      "start": 22.56,
+      "end": 22.72
     },
     {
       "index": 89,
-      "char": "己",
-      "start": 26.983,
-      "end": 27.207
+      "char": "如",
+      "start": 22.72,
+      "end": 22.8
     },
     {
       "index": 90,
-      "char": "的",
-      "start": 27.249,
-      "end": 27.473
+      "char": "自",
+      "start": 22.8,
+      "end": 22.96
     },
     {
       "index": 91,
-      "char": "错",
-      "start": 27.516,
-      "end": 27.74
+      "char": "己",
+      "start": 22.96,
+      "end": 23.12
     },
     {
       "index": 92,
-      "char": "误",
-      "start": 27.782,
-      "end": 28.006
+      "char": "的",
+      "start": 23.12,
+      "end": 23.28
     },
     {
       "index": 93,
-      "char": "或",
-      "start": 28.049,
-      "end": 28.272
+      "char": "人",
+      "start": 23.28,
+      "end": 23.52
     },
     {
       "index": 94,
-      "char": "不",
-      "start": 28.315,
-      "end": 28.539
+      "char": "请",
+      "start": 23.52,
+      "end": 23.68
     },
     {
       "index": 95,
-      "char": "恰",
-      "start": 28.581,
-      "end": 28.805
+      "char": "教",
+      "start": 23.68,
+      "end": 24.0
     },
     {
       "index": 96,
-      "char": "当",
-      "start": 28.848,
-      "end": 29.071
+      "char": "不",
+      "start": 24.0,
+      "end": 24.16
     },
     {
       "index": 97,
-      "char": "行",
-      "start": 29.114,
-      "end": 29.338
+      "char": "该",
+      "start": 24.16,
+      "end": 24.32
     },
     {
       "index": 98,
-      "char": "为",
-      "start": 29.38,
-      "end": 29.604
+      "char": "觉",
+      "start": 24.32,
+      "end": 24.48
     },
     {
       "index": 99,
-      "char": "时",
-      "start": 29.647,
-      "end": 29.871
+      "char": "得",
+      "start": 24.48,
+      "end": 24.56
     },
     {
       "index": 100,
-      "char": "感",
-      "start": 29.913,
-      "end": 30.137
+      "char": "丢",
+      "start": 24.56,
+      "end": 24.8
     },
     {
       "index": 101,
-      "char": "到",
-      "start": 30.18,
-      "end": 30.403
+      "char": "脸",
+      "start": 24.8,
+      "end": 25.12
     },
     {
       "index": 102,
-      "char": "惭",
-      "start": 30.446,
-      "end": 30.67
+      "char": "肯",
+      "start": 25.28,
+      "end": 25.44
     },
     {
       "index": 103,
-      "char": "愧",
-      "start": 30.712,
-      "end": 30.936
+      "char": "学",
+      "start": 25.44,
+      "end": 25.76
     },
     {
       "index": 104,
-      "char": "这",
-      "start": 31.319,
-      "end": 31.542
+      "char": "才",
+      "start": 25.76,
+      "end": 25.92
     },
     {
       "index": 105,
-      "char": "是",
-      "start": 31.585,
-      "end": 31.809
+      "char": "会",
+      "start": 25.92,
+      "end": 26.08
     },
     {
       "index": 106,
-      "char": "一",
-      "start": 31.851,
-      "end": 32.075
+      "char": "进",
+      "start": 26.08,
+      "end": 26.32
     },
     {
       "index": 107,
-      "char": "幅",
-      "start": 32.118,
-      "end": 32.342
-    },
-    {
-      "index": 108,
-      "char": "帮",
-      "start": 32.384,
-      "end": 32.608
-    },
-    {
-      "index": 109,
-      "char": "助",
-      "start": 32.65,
-      "end": 32.874
-    },
-    {
-      "index": 110,
-      "char": "记",
-      "start": 32.917,
-      "end": 33.141
-    },
-    {
-      "index": 111,
-      "char": "笔",
-      "start": 33.183,
-      "end": 33.407
-    },
-    {
-      "index": 112,
-      "char": "画",
-      "start": 33.45,
-      "end": 33.673
-    },
-    {
-      "index": 113,
-      "char": "和",
-      "start": 33.716,
-      "end": 33.94
-    },
-    {
-      "index": 114,
-      "char": "位",
-      "start": 33.982,
-      "end": 34.206
-    },
-    {
-      "index": 115,
-      "char": "置",
-      "start": 34.249,
-      "end": 34.472
-    },
-    {
-      "index": 116,
-      "char": "的",
-      "start": 34.515,
-      "end": 34.739
-    },
-    {
-      "index": 117,
-      "char": "记",
-      "start": 34.781,
-      "end": 35.005
-    },
-    {
-      "index": 118,
-      "char": "忆",
-      "start": 35.048,
-      "end": 35.272
-    },
-    {
-      "index": 119,
-      "char": "画",
-      "start": 35.314,
-      "end": 35.538
-    },
-    {
-      "index": 120,
-      "char": "面",
-      "start": 35.581,
-      "end": 35.804
-    },
-    {
-      "index": 121,
-      "char": "不",
-      "start": 36.027,
-      "end": 36.251
-    },
-    {
-      "index": 122,
-      "char": "是",
-      "start": 36.293,
-      "end": 36.517
-    },
-    {
-      "index": 123,
-      "char": "完",
-      "start": 36.56,
-      "end": 36.783
-    },
-    {
-      "index": 124,
-      "char": "整",
-      "start": 36.826,
-      "end": 37.05
-    },
-    {
-      "index": 125,
-      "char": "字",
-      "start": 37.092,
-      "end": 37.316
-    },
-    {
-      "index": 126,
-      "char": "源",
-      "start": 37.359,
-      "end": 37.583
-    },
-    {
-      "index": 127,
-      "char": "最",
-      "start": 37.965,
-      "end": 38.189
-    },
-    {
-      "index": 128,
-      "char": "后",
-      "start": 38.232,
-      "end": 38.455
-    },
-    {
-      "index": 129,
-      "char": "再",
-      "start": 38.498,
-      "end": 38.722
-    },
-    {
-      "index": 130,
-      "char": "读",
-      "start": 38.764,
-      "end": 38.988
-    },
-    {
-      "index": 131,
-      "char": "一",
-      "start": 39.031,
-      "end": 39.254
-    },
-    {
-      "index": 132,
-      "char": "遍",
-      "start": 39.297,
-      "end": 39.521
-    },
-    {
-      "index": 133,
-      "char": "羞",
-      "start": 39.743,
-      "end": 39.967
-    },
-    {
-      "index": 134,
-      "char": "耻",
-      "start": 40.01,
-      "end": 40.234
+      "char": "步",
+      "start": 26.32,
+      "end": 26.64
     }
   ],
-  "transcript": "耻，“羞耻”的“耻”，读chǐ。它是左右结构，按顺序能看到“耳”和“止”。从构字分工看，“耳”提示意义类别，“止”提供读音线索。看图时，左边竖起的耳朵形成“耳”，右边一只脚停在界线前形成“止”，听见提醒就止步改正，组成“耻”。羞耻是意识到自己的错误或不恰当行为时感到惭愧。这是一幅帮助记笔画和位置的记忆画面，不是完整字源。最后再读一遍：羞耻。",
+  "transcript": "羞耻的耻，读第三声。耻是左右结构，左边是耳，右边是止，写时两边高低相近。顺着字形想一想，耳朵听见别人指出错误，脚步便停下来认真反省。羞耻是发现自己的错误或不当行为后感到惭愧。文中“不耻下问”提醒我们，向不如自己的人请教不该觉得丢脸，肯学才会进步。",
   "voice_reference": "封",
-  "timing_source": "punctuation-weighted-estimate",
-  "script_version": "child-first-v2",
-  "duration": 40.800181
+  "reference_id": "019f0554-ea22-762e-966c-32d678fd6bf6",
+  "reference_sha256": "eb07e06ee13a20ee4577b1b481df6d33d42127c1b3876bfa5d5e5362ae349f19",
+  "timing_source": "qwen3-forced-aligner",
+  "script_version": "narration-v3",
+  "model": "mlx-community/Qwen3-TTS-12Hz-1.7B-Base-4bit",
+  "model_revision": "37e955a1deb861c088ae5f3a67043185f3d1a60c",
+  "generation_policy": "qwen3-clone-2026-08-22-v3",
+  "seed": 20260822,
+  "content_hash": "e253eb4e0b927d95926e",
+  "duration": 26.658,
+  "alignment_model": "mlx-community/Qwen3-ForcedAligner-0.6B-8bit",
+  "aligned_audio_sha256": "577f324b96caceabeb8109b7198083e7e3b841949f12f406781ec6463c9b35a1",
+  "alignment_groups": [
+    {
+      "id": "align-group-85-86",
+      "text": "我们",
+      "indices": [
+        85,
+        86
+      ],
+      "start": 21.76,
+      "end": 22.08,
+      "method": "shared-right-model-interval",
+      "rawIntervals": [
+        {
+          "index": 85,
+          "char": "我",
+          "start": 21.76,
+          "end": 21.76
+        },
+        {
+          "index": 86,
+          "char": "们",
+          "start": 21.76,
+          "end": 22.08
+        }
+      ]
+    }
+  ]
 }

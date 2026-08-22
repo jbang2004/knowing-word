@@ -2,512 +2,624 @@
   "marks": [
     {
       "index": 0,
-      "char": "兵",
-      "start": 0.293,
-      "end": 0.475
+      "char": "民",
+      "start": 0.24,
+      "end": 0.48
     },
     {
       "index": 1,
-      "char": "民",
-      "start": 0.69,
-      "end": 0.872
+      "char": "兵",
+      "start": 0.48,
+      "end": 0.72
     },
     {
       "index": 2,
-      "char": "兵",
-      "start": 0.906,
-      "end": 1.088
+      "char": "在",
+      "start": 0.72,
+      "end": 0.88
     },
     {
       "index": 3,
-      "char": "的",
-      "start": 1.123,
-      "end": 1.305
+      "char": "地",
+      "start": 0.88,
+      "end": 1.04
     },
     {
       "index": 4,
-      "char": "兵",
-      "start": 1.34,
-      "end": 1.522
+      "char": "道",
+      "start": 1.04,
+      "end": 1.28
     },
     {
       "index": 5,
-      "char": "兵",
-      "start": 1.896,
-      "end": 2.078
+      "char": "出",
+      "start": 1.28,
+      "end": 1.44
     },
     {
       "index": 6,
-      "char": "字",
-      "start": 2.113,
-      "end": 2.295
+      "char": "口",
+      "start": 1.44,
+      "end": 1.68
     },
     {
       "index": 7,
-      "char": "可",
-      "start": 2.33,
-      "end": 2.512
+      "char": "附",
+      "start": 1.68,
+      "end": 1.84
     },
     {
       "index": 8,
-      "char": "以",
-      "start": 2.546,
-      "end": 2.728
+      "char": "近",
+      "start": 1.84,
+      "end": 2.08
     },
     {
       "index": 9,
-      "char": "整",
-      "start": 2.763,
-      "end": 2.945
+      "char": "的",
+      "start": 2.08,
+      "end": 2.24
     },
     {
       "index": 10,
-      "char": "体",
-      "start": 2.98,
-      "end": 3.162
+      "char": "坚",
+      "start": 2.24,
+      "end": 2.48
     },
     {
       "index": 11,
-      "char": "来",
-      "start": 3.196,
-      "end": 3.378
+      "char": "固",
+      "start": 2.48,
+      "end": 2.64
     },
     {
       "index": 12,
-      "char": "记",
-      "start": 3.413,
-      "end": 3.595
+      "char": "洞",
+      "start": 2.64,
+      "end": 2.88
     },
     {
       "index": 13,
-      "char": "看",
-      "start": 3.97,
-      "end": 4.152
+      "char": "里",
+      "start": 2.88,
+      "end": 3.12
     },
     {
       "index": 14,
-      "char": "图",
-      "start": 4.186,
-      "end": 4.368
+      "char": "拿",
+      "start": 3.28,
+      "end": 3.36
     },
     {
       "index": 15,
-      "char": "时",
-      "start": 4.403,
-      "end": 4.585
+      "char": "着",
+      "start": 3.36,
+      "end": 3.52
     },
     {
       "index": 16,
-      "char": "上",
-      "start": 4.8,
-      "end": 4.982
+      "char": "武",
+      "start": 3.52,
+      "end": 3.68
     },
     {
       "index": 17,
-      "char": "方",
-      "start": 5.016,
-      "end": 5.198
+      "char": "器",
+      "start": 3.68,
+      "end": 3.92
     },
     {
       "index": 18,
-      "char": "是",
-      "start": 5.233,
-      "end": 5.415
+      "char": "警",
+      "start": 3.92,
+      "end": 4.0
     },
     {
       "index": 19,
-      "char": "一",
-      "start": 5.45,
-      "end": 5.632
+      "char": "戒",
+      "start": 4.0,
+      "end": 4.48
     },
     {
       "index": 20,
-      "char": "件",
-      "start": 5.666,
-      "end": 5.848
+      "char": "兵",
+      "start": 4.96,
+      "end": 5.2
     },
     {
       "index": 21,
-      "char": "陈",
-      "start": 5.883,
-      "end": 6.065
+      "char": "适",
+      "start": 5.2,
+      "end": 5.44
     },
     {
       "index": 22,
-      "char": "列",
-      "start": 6.1,
-      "end": 6.282
+      "char": "合",
+      "start": 5.44,
+      "end": 5.6
     },
     {
       "index": 23,
-      "char": "在",
-      "start": 6.316,
-      "end": 6.498
+      "char": "整",
+      "start": 5.6,
+      "end": 5.76
     },
     {
       "index": 24,
-      "char": "博",
-      "start": 6.533,
-      "end": 6.715
+      "char": "体",
+      "start": 5.76,
+      "end": 5.92
     },
     {
       "index": 25,
-      "char": "物",
-      "start": 6.75,
-      "end": 6.932
+      "char": "记",
+      "start": 5.92,
+      "end": 6.32
     },
     {
       "index": 26,
-      "char": "馆",
-      "start": 6.966,
-      "end": 7.148
+      "char": "上",
+      "start": 6.56,
+      "end": 6.8
     },
     {
       "index": 27,
-      "char": "里",
-      "start": 7.183,
-      "end": 7.365
+      "char": "面",
+      "start": 6.8,
+      "end": 6.96
     },
     {
       "index": 28,
-      "char": "的",
-      "start": 7.4,
-      "end": 7.582
+      "char": "像",
+      "start": 6.96,
+      "end": 7.2
     },
     {
       "index": 29,
-      "char": "古",
-      "start": 7.616,
-      "end": 7.798
+      "char": "一",
+      "start": 7.2,
+      "end": 7.28
     },
     {
       "index": 30,
-      "char": "代",
-      "start": 7.833,
-      "end": 8.015
+      "char": "件",
+      "start": 7.36,
+      "end": 7.52
     },
     {
       "index": 31,
-      "char": "兵",
-      "start": 8.05,
-      "end": 8.232
+      "char": "安",
+      "start": 7.6,
+      "end": 7.68
     },
     {
       "index": 32,
-      "char": "器",
-      "start": 8.266,
-      "end": 8.448
+      "char": "全",
+      "start": 7.68,
+      "end": 7.92
     },
     {
       "index": 33,
-      "char": "下",
-      "start": 8.663,
-      "end": 8.845
+      "char": "陈",
+      "start": 7.92,
+      "end": 8.16
     },
     {
       "index": 34,
-      "char": "方",
-      "start": 8.88,
-      "end": 9.062
+      "char": "列",
+      "start": 8.16,
+      "end": 8.24
     },
     {
       "index": 35,
-      "char": "像",
-      "start": 9.096,
-      "end": 9.278
+      "char": "的",
+      "start": 8.24,
+      "end": 8.4
     },
     {
       "index": 36,
-      "char": "两",
-      "start": 9.313,
-      "end": 9.495
+      "char": "古",
+      "start": 8.4,
+      "end": 8.56
     },
     {
       "index": 37,
-      "char": "只",
-      "start": 9.53,
-      "end": 9.712
+      "char": "代",
+      "start": 8.56,
+      "end": 8.72
     },
     {
       "index": 38,
-      "char": "手",
-      "start": 9.746,
-      "end": 9.928
+      "char": "兵",
+      "start": 8.72,
+      "end": 8.96
     },
     {
       "index": 39,
-      "char": "稳",
-      "start": 9.963,
-      "end": 10.145
+      "char": "器",
+      "start": 8.96,
+      "end": 9.28
     },
     {
       "index": 40,
-      "char": "稳",
-      "start": 10.18,
-      "end": 10.362
+      "char": "下",
+      "start": 9.52,
+      "end": 9.76
     },
     {
       "index": 41,
-      "char": "托",
-      "start": 10.396,
-      "end": 10.578
+      "char": "面",
+      "start": 9.76,
+      "end": 9.92
     },
     {
       "index": 42,
-      "char": "住",
-      "start": 10.613,
-      "end": 10.795
+      "char": "像",
+      "start": 9.92,
+      "end": 10.08
     },
     {
       "index": 43,
-      "char": "它",
-      "start": 10.83,
-      "end": 11.012
+      "char": "两",
+      "start": 10.08,
+      "end": 10.24
     },
     {
       "index": 44,
-      "char": "兵",
-      "start": 11.386,
-      "end": 11.568
+      "char": "只",
+      "start": 10.24,
+      "end": 10.4
     },
     {
       "index": 45,
-      "char": "早",
-      "start": 11.603,
-      "end": 11.785
+      "char": "手",
+      "start": 10.4,
+      "end": 10.72
     },
     {
       "index": 46,
-      "char": "期",
-      "start": 11.82,
-      "end": 12.002
+      "char": "稳",
+      "start": 10.8,
+      "end": 10.88
     },
     {
       "index": 47,
-      "char": "和",
-      "start": 12.036,
-      "end": 12.218
+      "char": "稳",
+      "start": 10.88,
+      "end": 11.12
     },
     {
       "index": 48,
-      "char": "武",
-      "start": 12.253,
-      "end": 12.435
+      "char": "托",
+      "start": 11.12,
+      "end": 11.36
     },
     {
       "index": 49,
-      "char": "器",
-      "start": 12.47,
-      "end": 12.652
+      "char": "住",
+      "start": 11.36,
+      "end": 11.52
     },
     {
       "index": 50,
-      "char": "有",
-      "start": 12.686,
-      "end": 12.868
+      "char": "它",
+      "start": 11.52,
+      "end": 11.92
     },
     {
       "index": 51,
-      "char": "关",
-      "start": 12.903,
-      "end": 13.085
+      "char": "博",
+      "start": 12.48,
+      "end": 12.56
     },
     {
       "index": 52,
-      "char": "后",
-      "start": 13.3,
-      "end": 13.482
+      "char": "物",
+      "start": 12.56,
+      "end": 12.72
     },
     {
       "index": 53,
-      "char": "来",
-      "start": 13.516,
-      "end": 13.698
+      "char": "馆",
+      "start": 12.72,
+      "end": 12.96
     },
     {
       "index": 54,
-      "char": "也",
-      "start": 13.733,
-      "end": 13.915
+      "char": "里",
+      "start": 12.96,
+      "end": 13.04
     },
     {
       "index": 55,
-      "char": "表",
-      "start": 13.95,
-      "end": 14.132
+      "char": "的",
+      "start": 13.04,
+      "end": 13.12
     },
     {
       "index": 56,
-      "char": "示",
-      "start": 14.166,
-      "end": 14.348
+      "char": "陈",
+      "start": 13.12,
+      "end": 13.44
     },
     {
       "index": 57,
-      "char": "拿",
-      "start": 14.383,
-      "end": 14.565
+      "char": "列",
+      "start": 13.44,
+      "end": 13.68
     },
     {
       "index": 58,
-      "char": "着",
-      "start": 14.6,
-      "end": 14.782
+      "char": "让",
+      "start": 13.76,
+      "end": 13.92
     },
     {
       "index": 59,
-      "char": "武",
-      "start": 14.816,
-      "end": 14.998
+      "char": "兵",
+      "start": 13.92,
+      "end": 14.16
     },
     {
       "index": 60,
       "char": "器",
-      "start": 15.033,
-      "end": 15.215
+      "start": 14.16,
+      "end": 14.32
     },
     {
       "index": 61,
-      "char": "守",
-      "start": 15.25,
-      "end": 15.432
+      "char": "轮",
+      "start": 14.32,
+      "end": 14.56
     },
     {
       "index": 62,
-      "char": "卫",
-      "start": 15.466,
-      "end": 15.648
+      "char": "廓",
+      "start": 14.56,
+      "end": 14.72
     },
     {
       "index": 63,
-      "char": "的",
-      "start": 15.683,
-      "end": 15.865
+      "char": "清",
+      "start": 14.72,
+      "end": 14.96
     },
     {
       "index": 64,
-      "char": "人",
-      "start": 15.9,
-      "end": 16.082
+      "char": "楚",
+      "start": 14.96,
+      "end": 15.28
     },
     {
       "index": 65,
-      "char": "民",
-      "start": 16.456,
-      "end": 16.638
+      "char": "也",
+      "start": 15.52,
+      "end": 15.68
     },
     {
       "index": 66,
-      "char": "兵",
-      "start": 16.673,
-      "end": 16.855
+      "char": "保",
+      "start": 15.68,
+      "end": 15.84
     },
     {
       "index": 67,
-      "char": "是",
-      "start": 17.07,
-      "end": 17.252
+      "char": "持",
+      "start": 15.84,
+      "end": 16.0
     },
     {
       "index": 68,
-      "char": "由",
-      "start": 17.286,
-      "end": 17.468
+      "char": "了",
+      "start": 16.0,
+      "end": 16.16
     },
     {
       "index": 69,
-      "char": "普",
-      "start": 17.503,
-      "end": 17.685
+      "char": "安",
+      "start": 16.16,
+      "end": 16.32
     },
     {
       "index": 70,
-      "char": "通",
-      "start": 17.72,
-      "end": 17.902
+      "char": "全",
+      "start": 16.32,
+      "end": 16.48
     },
     {
       "index": 71,
-      "char": "人",
-      "start": 17.936,
-      "end": 18.118
+      "char": "距",
+      "start": 16.48,
+      "end": 16.72
     },
     {
       "index": 72,
-      "char": "民",
-      "start": 18.153,
-      "end": 18.335
+      "char": "离",
+      "start": 16.72,
+      "end": 17.04
     },
     {
       "index": 73,
-      "char": "组",
-      "start": 18.37,
-      "end": 18.552
+      "char": "民",
+      "start": 17.44,
+      "end": 17.76
     },
     {
       "index": 74,
-      "char": "织",
-      "start": 18.586,
-      "end": 18.768
+      "char": "兵",
+      "start": 17.76,
+      "end": 18.0
     },
     {
       "index": 75,
-      "char": "起",
-      "start": 18.803,
-      "end": 18.985
+      "char": "是",
+      "start": 18.0,
+      "end": 18.16
     },
     {
       "index": 76,
-      "char": "来",
-      "start": 19.02,
-      "end": 19.202
+      "char": "人",
+      "start": 18.16,
+      "end": 18.24
     },
     {
       "index": 77,
-      "char": "保",
-      "start": 19.236,
-      "end": 19.419
+      "char": "民",
+      "start": 18.24,
+      "end": 18.48
     },
     {
       "index": 78,
-      "char": "卫",
-      "start": 19.453,
-      "end": 19.635
+      "char": "组",
+      "start": 18.48,
+      "end": 18.64
     },
     {
       "index": 79,
-      "char": "家",
-      "start": 19.67,
-      "end": 19.852
+      "char": "织",
+      "start": 18.64,
+      "end": 18.8
     },
     {
       "index": 80,
-      "char": "乡",
-      "start": 19.887,
-      "end": 20.069
+      "char": "起",
+      "start": 18.8,
+      "end": 18.96
     },
     {
       "index": 81,
-      "char": "的",
-      "start": 20.103,
-      "end": 20.285
+      "char": "来",
+      "start": 18.96,
+      "end": 19.12
     },
     {
       "index": 82,
-      "char": "队",
-      "start": 20.32,
-      "end": 20.502
+      "char": "的",
+      "start": 19.12,
+      "end": 19.28
     },
     {
       "index": 83,
-      "char": "伍",
-      "start": 20.537,
-      "end": 20.719
+      "char": "保",
+      "start": 19.28,
+      "end": 19.44
+    },
+    {
+      "index": 84,
+      "char": "卫",
+      "start": 19.44,
+      "end": 19.6
+    },
+    {
+      "index": 85,
+      "char": "力",
+      "start": 19.6,
+      "end": 19.76
+    },
+    {
+      "index": 86,
+      "char": "量",
+      "start": 19.76,
+      "end": 20.08
+    },
+    {
+      "index": 87,
+      "char": "兵",
+      "start": 20.32,
+      "end": 20.56
+    },
+    {
+      "index": 88,
+      "char": "在",
+      "start": 20.56,
+      "end": 20.72
+    },
+    {
+      "index": 89,
+      "char": "这",
+      "start": 20.72,
+      "end": 20.96
+    },
+    {
+      "index": 90,
+      "char": "里",
+      "start": 20.96,
+      "end": 21.12
+    },
+    {
+      "index": 91,
+      "char": "指",
+      "start": 21.12,
+      "end": 21.36
+    },
+    {
+      "index": 92,
+      "char": "参",
+      "start": 21.36,
+      "end": 21.52
+    },
+    {
+      "index": 93,
+      "char": "加",
+      "start": 21.52,
+      "end": 21.68
+    },
+    {
+      "index": 94,
+      "char": "守",
+      "start": 21.68,
+      "end": 22.0
+    },
+    {
+      "index": 95,
+      "char": "卫",
+      "start": 22.0,
+      "end": 22.16
+    },
+    {
+      "index": 96,
+      "char": "和",
+      "start": 22.16,
+      "end": 22.4
+    },
+    {
+      "index": 97,
+      "char": "战",
+      "start": 22.4,
+      "end": 22.56
+    },
+    {
+      "index": 98,
+      "char": "斗",
+      "start": 22.56,
+      "end": 22.72
+    },
+    {
+      "index": 99,
+      "char": "的",
+      "start": 22.72,
+      "end": 22.8
+    },
+    {
+      "index": 100,
+      "char": "人",
+      "start": 22.8,
+      "end": 23.12
     }
   ],
-  "transcript": "兵，民兵的兵。兵字可以整体来记。看图时，上方是一件陈列在博物馆里的古代兵器，下方像两只手稳稳托住它。兵早期和武器有关，后来也表示拿着武器守卫的人。民兵，是由普通人民组织起来保卫家乡的队伍。",
+  "transcript": "民兵在地道出口附近的坚固洞里拿着武器警戒。兵适合整体记，上面像一件安全陈列的古代兵器，下面像两只手稳稳托住它。博物馆里的陈列让兵器轮廓清楚，也保持了安全距离。民兵是人民组织起来的保卫力量，兵在这里指参加守卫和战斗的人。",
   "voice_reference": "封",
-  "timing_source": "punctuation-weighted-estimate",
-  "script_version": "child-first-v1",
-  "duration": 21.280181
+  "reference_id": "019f0554-ea22-762e-966c-32d678fd6bf6",
+  "reference_sha256": "eb07e06ee13a20ee4577b1b481df6d33d42127c1b3876bfa5d5e5362ae349f19",
+  "timing_source": "qwen3-forced-aligner",
+  "script_version": "narration-v3",
+  "model": "mlx-community/Qwen3-TTS-12Hz-1.7B-Base-4bit",
+  "model_revision": "37e955a1deb861c088ae5f3a67043185f3d1a60c",
+  "generation_policy": "qwen3-clone-2026-08-22-v3",
+  "seed": 20260822,
+  "content_hash": "e6a298057253dd086e76",
+  "duration": 23.212,
+  "alignment_model": "mlx-community/Qwen3-ForcedAligner-0.6B-8bit",
+  "aligned_audio_sha256": "2d0769ed9868df2509e82e803447b6af975d93643b5f2e19c9d05b80293f7b16",
+  "alignment_groups": []
 }

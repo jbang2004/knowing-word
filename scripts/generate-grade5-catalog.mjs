@@ -37,8 +37,19 @@ const typeNames = {
 // MakeMeAHanzi deliberately leaves a few modern simplified composites unnamed.
 // These overrides keep the parts teachable instead of silently dropping every
 // component after the radical.
+// Authoritative structure decisions where the makemeahanzi operator is contested
+// or pedagogically misleading for Grade 5 (卿/亥/奉 are taught as whole shapes,
+// 幽 follows the mainstream 半包围 treatment instead of 穿插).
+const structureOverrides = {
+  卿: "独体结构",
+  亥: "独体结构",
+  奉: "独体结构",
+  幽: "半包围结构",
+};
+
 const componentOverrides = {
-  浸: ["氵", "彐", "冖", "又"], 茶: ["艹", "人", "木"], 惰: ["忄", "左", "月"],
+  亭: ["亠", "口", "冖", "丁"], 享: ["亠", "口", "子"], 免: ["⺈", "口", "儿"],
+  唐: ["广", "肀", "口"], 疆: ["弓", "土", "畺"], 浸: ["氵", "彐", "冖", "又"], 茶: ["艹", "人", "木"], 惰: ["忄", "左", "月"],
   衡: ["彳", "田", "大", "亍"], 臣: ["臣"], 赤: ["赤"], 侵: ["亻", "彐", "冖", "又"],
   延: ["廴", "丿", "止"], 监: ["〢", "丿", "一", "丶", "皿"], 狱: ["犭", "讠", "犬"], 乃: ["乃"],
   郎: ["良", "阝"], 妻: ["十", "彐", "女"], 衰: ["衰"], 熏: ["熏"],
@@ -74,6 +85,7 @@ function wordFor(lesson, character) {
 }
 
 function decompositionFor(record, parts) {
+  if (structureOverrides[record?.character]) return structureOverrides[record.character];
   if (parts.length === 1 && record?.character === parts[0]) return "独体结构";
   const operator = record?.decomposition?.[0];
   if (structureNames[operator]) return structureNames[operator];
@@ -103,16 +115,43 @@ function makeOptions(id, values, correctValues, radicalValues = [], idc = {}) {
   }));
 }
 
+// Course-wide fallback pool so context questions always get enough plausible
+// distractors even in small lessons.
+let courseWordPool = [];
+function pickDistractorWords(lesson, character, word, index, count) {
+  const lessonWords = lesson.words.filter((item) => item !== word && !item.includes(character));
+  const used = new Set([word]);
+  const picks = [];
+  const takeFrom = (pool, stride, offset) => {
+    if (!pool.length || picks.length >= count) return;
+    for (let step = 0; step < pool.length && picks.length < count; step += 1) {
+      const candidate = pool[(index * stride + offset + step) % pool.length];
+      if (!candidate || used.has(candidate) || candidate.includes(character)) continue;
+      used.add(candidate);
+      picks.push(candidate);
+    }
+  };
+  takeFrom(lessonWords, 3, 1);
+  takeFrom(courseWordPool, 7, 3);
+  return picks;
+}
+
 function exerciseSet(character, index, lesson, parts, radical, structure, writing, polyphonic, word, pinyinText) {
   const base = charId(lesson.position, index, character);
-  const lessonWords = unique(lesson.words.filter((item) => item !== word));
-  const distractorWords = [lessonWords[(index * 3 + 1) % lessonWords.length], lessonWords[(index * 5 + 2) % lessonWords.length]].filter(Boolean);
+  const distractorWords = pickDistractorWords(lesson, character, word, index, 3);
   const componentPool = unique([...parts, "木", "口", "土", "日", "人"]).slice(0, Math.max(4, parts.length + 2));
-  const structures = unique([structure, "左右结构", "上下结构", "半包围结构", "独体结构"]).slice(0, 4);
+  const redBlueDecoys = ["木", "口", "土", "日", "人", "又", "丶"].filter((part) => !parts.includes(part)).slice(0, 3);
+  // Keep structure distractors unambiguous: never mix a specific 包围 type with
+  // the generic 半包围结构 in the same question.
+  const surroundFamily = ["全包围结构", "上三包围结构", "下三包围结构", "左三包围结构", "左上包围结构", "右上包围结构", "左下包围结构", "半包围结构"];
+  const structureDistractors = surroundFamily.includes(structure)
+    ? ["左右结构", "上下结构", "独体结构"]
+    : ["左右结构", "上下结构", "半包围结构", "独体结构"];
+  const structures = unique([structure, ...structureDistractors]).slice(0, 4);
   const structureCodes = Object.fromEntries(
     structures.map((item) => [
       item,
-      Object.entries(structureNames).find(([, name]) => name === item)?.[0] || "",
+      Object.entries(structureNames).find(([, name]) => name === item)?.[0] || (item === "半包围结构" ? "⿵" : ""),
     ]),
   );
   const wordQuestion = `${base}-words-context`;
@@ -128,20 +167,26 @@ function exerciseSet(character, index, lesson, parts, radical, structure, writin
     { id: imageQuestion, origin: "识字小测", kind: "single", questionType: "image_single_select", prompt: `哪幅图把“${character}”的部件藏得最完整？`, options: [0, 1, 2].map((slot) => ({ id: `${imageQuestion}-${slot}`, text: "", correct: slot === 1, radical: false, idcCode: "" })), explanation: `正确画面把${parts.map((part) => `“${part}”`).join("和")}按${structure}嵌进了“${character}”。` },
     { id: componentQuestion, origin: "识字小测", kind: "components", questionType: "composition_select_to_text", prompt: `选择“${character}”的主要部件。`, options: makeOptions(componentQuestion, componentPool, parts, [radical]), explanation: `${parts.join(" + ")}，按${structure}组合成“${character}”。` },
     { id: splitQuestion, origin: "拆一拆", kind: "components", questionType: "composition_select_to_text", prompt: `按顺序搭出“${character}”。`, options: makeOptions(splitQuestion, componentPool, parts, [radical]), explanation: `先按${structure}排好部件，再找到表意线索“${radical}”。` },
-    { id: redBlueQuestion, origin: "红蓝字", kind: "components", questionType: "radical_component_select", prompt: `给“${character}”的表意部件和其他部件分色。`, options: makeOptions(redBlueQuestion, parts, parts, [radical]), explanation: `暖红追踪表意线索“${radical}”，靛蓝追踪其余字形或读音线索。` },
+    { id: redBlueQuestion, origin: "红蓝字", kind: "components", questionType: "radical_component_select", prompt: `选出组成“${character}”的真正部件。`, options: makeOptions(redBlueQuestion, unique([...parts, ...redBlueDecoys]), parts, [radical]), explanation: `“${character}”由${parts.map((part) => `“${part}”`).join("和")}组成。暖红追踪表意线索“${radical}”，靛蓝追踪其余字形或读音线索。` },
     { id: structureTrackQuestion, origin: "空间结构", kind: "structure", questionType: "character_structure_select", prompt: `把“${character}”放进正确的结构格。`, options: makeOptions(structureTrackQuestion, structures, [structure], [], structureCodes), explanation: `“${character}”的部件按${structure}站位。` },
   ];
+  // Prefer a course word for polyphonic readings. A standalone interjection
+  // such as “哼” is still a real sentence-level context, so keep its reading
+  // question but explain the role it plays instead of asking circularly.
   if (polyphonic) {
     const readings = unique(pinyin(character, { toneType: "symbol", type: "array", multiple: true }));
     const readingQuestion = `${base}-words-pronunciation`;
+    const hasWordContext = Array.from(word).length >= 2;
     list.splice(1, 0, {
       id: readingQuestion,
       origin: "识字小测",
       kind: "single",
       questionType: "single_select",
-      prompt: `“${character}”在“${word}”中读什么？`,
+      prompt: hasWordContext ? `“${character}”在“${word}”中读什么？` : `课文里的“${word}”读什么？`,
       options: makeOptions(readingQuestion, readings, [pinyinText]),
-      explanation: `放回本课词语“${word}”里读，“${character}”读${pinyinText}。多音字要跟着语境选读音。`,
+      explanation: hasWordContext
+        ? `放回本课词语“${word}”里读，“${character}”读${pinyinText}。多音字要跟着语境选读音。`
+        : `课文里的“${word}”是一声短促的语气声，这里读${pinyinText}。`,
     });
   }
   if (writing) {
@@ -216,6 +261,7 @@ function serialize(name, value) {
 
 await Hanzi.start();
 const dictionary = await loadDictionary();
+courseWordPool = unique(grade5Volume1Lessons.flatMap((lesson) => lesson.words));
 await mkdir(mnemonicRoot, { recursive: true });
 await mkdir(join(root, "scripts/generated"), { recursive: true });
 

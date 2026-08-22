@@ -2,542 +2,474 @@
   "marks": [
     {
       "index": 0,
-      "char": "锁",
-      "start": 0.294,
-      "end": 0.485
+      "char": "敌",
+      "start": 0.16,
+      "end": 0.32
     },
     {
       "index": 1,
-      "char": "封",
-      "start": 0.701,
-      "end": 0.893
+      "char": "人",
+      "start": 0.32,
+      "end": 0.56
     },
     {
       "index": 2,
-      "char": "锁",
-      "start": 0.929,
-      "end": 1.12
+      "char": "修",
+      "start": 0.56,
+      "end": 0.8
     },
     {
       "index": 3,
-      "char": "的",
-      "start": 1.157,
-      "end": 1.348
+      "char": "封",
+      "start": 0.8,
+      "end": 1.04
     },
     {
       "index": 4,
       "char": "锁",
-      "start": 1.384,
-      "end": 1.575
+      "start": 1.04,
+      "end": 1.12
     },
     {
       "index": 5,
-      "char": "它",
-      "start": 1.952,
-      "end": 2.143
+      "char": "沟",
+      "start": 1.28,
+      "end": 1.52
     },
     {
       "index": 6,
-      "char": "是",
-      "start": 2.18,
-      "end": 2.371
+      "char": "和",
+      "start": 1.52,
+      "end": 1.68
     },
     {
       "index": 7,
-      "char": "左",
-      "start": 2.407,
-      "end": 2.598
+      "char": "封",
+      "start": 1.68,
+      "end": 1.92
     },
     {
       "index": 8,
-      "char": "右",
-      "start": 2.635,
-      "end": 2.826
+      "char": "锁",
+      "start": 1.92,
+      "end": 2.0
     },
     {
       "index": 9,
-      "char": "结",
-      "start": 2.862,
-      "end": 3.054
+      "char": "墙",
+      "start": 2.08,
+      "end": 2.56
     },
     {
       "index": 10,
-      "char": "构",
-      "start": 3.09,
-      "end": 3.281
+      "char": "想",
+      "start": 2.96,
+      "end": 3.2
     },
     {
       "index": 11,
-      "char": "金",
-      "start": 3.498,
-      "end": 3.689
+      "char": "切",
+      "start": 3.2,
+      "end": 3.44
     },
     {
       "index": 12,
-      "char": "字",
-      "start": 3.725,
-      "end": 3.917
+      "char": "断",
+      "start": 3.44,
+      "end": 3.6
     },
     {
       "index": 13,
-      "char": "旁",
-      "start": 3.953,
-      "end": 4.144
+      "char": "人",
+      "start": 3.6,
+      "end": 3.84
     },
     {
       "index": 14,
-      "char": "说",
-      "start": 4.181,
-      "end": 4.372
+      "char": "们",
+      "start": 3.84,
+      "end": 3.92
     },
     {
       "index": 15,
-      "char": "明",
-      "start": 4.408,
-      "end": 4.6
+      "char": "的",
+      "start": 3.92,
+      "end": 4.0
     },
     {
       "index": 16,
-      "char": "锁",
-      "start": 4.636,
-      "end": 4.827
+      "char": "来",
+      "start": 4.0,
+      "end": 4.32
     },
     {
       "index": 17,
-      "char": "通",
-      "start": 4.864,
-      "end": 5.055
+      "char": "往",
+      "start": 4.32,
+      "end": 4.56
     },
     {
       "index": 18,
-      "char": "常",
-      "start": 5.091,
-      "end": 5.282
+      "char": "锁",
+      "start": 4.96,
+      "end": 5.12
     },
     {
       "index": 19,
       "char": "是",
-      "start": 5.319,
-      "end": 5.51
+      "start": 5.28,
+      "end": 5.44
     },
     {
       "index": 20,
-      "char": "金",
-      "start": 5.547,
-      "end": 5.738
+      "char": "左",
+      "start": 5.44,
+      "end": 5.6
     },
     {
       "index": 21,
-      "char": "属",
-      "start": 5.774,
-      "end": 5.965
+      "char": "右",
+      "start": 5.6,
+      "end": 5.84
     },
     {
       "index": 22,
-      "char": "做",
-      "start": 6.002,
-      "end": 6.193
+      "char": "结",
+      "start": 5.84,
+      "end": 6.0
     },
     {
       "index": 23,
-      "char": "的",
-      "start": 6.229,
-      "end": 6.421
+      "char": "构",
+      "start": 6.0,
+      "end": 6.32
     },
     {
       "index": 24,
-      "char": "右",
-      "start": 6.637,
-      "end": 6.828
+      "char": "左",
+      "start": 6.64,
+      "end": 6.72
     },
     {
       "index": 25,
       "char": "边",
-      "start": 6.865,
-      "end": 7.056
+      "start": 6.8,
+      "end": 6.96
     },
     {
       "index": 26,
-      "char": "可",
-      "start": 7.092,
-      "end": 7.284
+      "char": "是",
+      "start": 6.96,
+      "end": 7.12
     },
     {
       "index": 27,
-      "char": "以",
-      "start": 7.32,
-      "end": 7.511
+      "char": "金",
+      "start": 7.12,
+      "end": 7.36
     },
     {
       "index": 28,
-      "char": "看",
-      "start": 7.548,
-      "end": 7.739
+      "char": "字",
+      "start": 7.36,
+      "end": 7.52
     },
     {
       "index": 29,
-      "char": "成",
-      "start": 7.775,
-      "end": 7.967
+      "char": "旁",
+      "start": 7.52,
+      "end": 7.92
     },
     {
       "index": 30,
-      "char": "一",
-      "start": 8.003,
-      "end": 8.194
+      "char": "右",
+      "start": 8.32,
+      "end": 8.48
     },
     {
       "index": 31,
-      "char": "个",
-      "start": 8.231,
-      "end": 8.422
+      "char": "边",
+      "start": 8.48,
+      "end": 8.8
     },
     {
       "index": 32,
-      "char": "被",
-      "start": 8.458,
-      "end": 8.649
+      "char": "可",
+      "start": 8.8,
+      "end": 8.96
     },
     {
       "index": 33,
-      "char": "锁",
-      "start": 8.686,
-      "end": 8.877
+      "char": "以",
+      "start": 8.96,
+      "end": 9.04
     },
     {
       "index": 34,
-      "char": "住",
-      "start": 8.914,
-      "end": 9.105
+      "char": "想",
+      "start": 9.04,
+      "end": 9.28
     },
     {
       "index": 35,
-      "char": "的",
-      "start": 9.141,
-      "end": 9.332
+      "char": "成",
+      "start": 9.28,
+      "end": 9.52
     },
     {
       "index": 36,
-      "char": "小",
-      "start": 9.369,
-      "end": 9.56
+      "char": "带",
+      "start": 9.52,
+      "end": 9.68
     },
     {
       "index": 37,
-      "char": "匣",
-      "start": 9.596,
-      "end": 9.788
+      "char": "扣",
+      "start": 9.68,
+      "end": 9.92
     },
     {
       "index": 38,
-      "char": "子",
-      "start": 9.824,
-      "end": 10.015
+      "char": "的",
+      "start": 9.92,
+      "end": 10.0
     },
     {
       "index": 39,
-      "char": "金",
-      "start": 10.392,
-      "end": 10.583
+      "char": "小",
+      "start": 10.0,
+      "end": 10.16
     },
     {
       "index": 40,
-      "char": "属",
-      "start": 10.619,
-      "end": 10.811
+      "char": "匣",
+      "start": 10.16,
+      "end": 10.48
     },
     {
       "index": 41,
-      "char": "锁",
-      "start": 10.847,
-      "end": 11.038
+      "char": "子",
+      "start": 10.48,
+      "end": 10.72
     },
     {
       "index": 42,
-      "char": "扣",
-      "start": 11.075,
-      "end": 11.266
+      "char": "金",
+      "start": 11.36,
+      "end": 11.52
     },
     {
       "index": 43,
-      "char": "一",
-      "start": 11.302,
-      "end": 11.494
+      "char": "属",
+      "start": 11.52,
+      "end": 11.76
     },
     {
       "index": 44,
-      "char": "合",
-      "start": 11.53,
-      "end": 11.721
+      "char": "锁",
+      "start": 11.76,
+      "end": 11.92
     },
     {
       "index": 45,
-      "char": "上",
-      "start": 11.758,
-      "end": 11.949
+      "char": "扣",
+      "start": 12.0,
+      "end": 12.24
     },
     {
       "index": 46,
-      "char": "门",
-      "start": 12.165,
-      "end": 12.356
+      "char": "合",
+      "start": 12.24,
+      "end": 12.4
     },
     {
       "index": 47,
-      "char": "和",
-      "start": 12.393,
-      "end": 12.584
+      "char": "上",
+      "start": 12.4,
+      "end": 12.56
     },
     {
       "index": 48,
-      "char": "箱",
-      "start": 12.62,
-      "end": 12.812
+      "char": "门",
+      "start": 13.04,
+      "end": 13.28
     },
     {
       "index": 49,
-      "char": "子",
-      "start": 12.848,
-      "end": 13.039
+      "char": "和",
+      "start": 13.28,
+      "end": 13.44
     },
     {
       "index": 50,
-      "char": "就",
-      "start": 13.076,
-      "end": 13.267
+      "char": "箱",
+      "start": 13.44,
+      "end": 13.68
     },
     {
       "index": 51,
-      "char": "不",
-      "start": 13.303,
-      "end": 13.495
+      "char": "子",
+      "start": 13.68,
+      "end": 14.0
     },
     {
       "index": 52,
-      "char": "能",
-      "start": 13.531,
-      "end": 13.722
+      "char": "便",
+      "start": 14.0,
+      "end": 14.24
     },
     {
       "index": 53,
-      "char": "随",
-      "start": 13.759,
-      "end": 13.95
+      "char": "难",
+      "start": 14.24,
+      "end": 14.4
     },
     {
       "index": 54,
-      "char": "便",
-      "start": 13.986,
-      "end": 14.178
+      "char": "以",
+      "start": 14.4,
+      "end": 14.48
     },
     {
       "index": 55,
       "char": "打",
-      "start": 14.214,
-      "end": 14.405
+      "start": 14.48,
+      "end": 14.72
     },
     {
       "index": 56,
       "char": "开",
-      "start": 14.442,
-      "end": 14.633
+      "start": 14.72,
+      "end": 15.12
     },
     {
       "index": 57,
-      "char": "锁",
-      "start": 15.009,
-      "end": 15.2
+      "char": "封",
+      "start": 15.52,
+      "end": 15.76
     },
     {
       "index": 58,
-      "char": "既",
-      "start": 15.237,
-      "end": 15.428
+      "char": "锁",
+      "start": 15.76,
+      "end": 15.92
     },
     {
       "index": 59,
-      "char": "是",
-      "start": 15.465,
-      "end": 15.656
+      "char": "就",
+      "start": 16.16,
+      "end": 16.24
     },
     {
       "index": 60,
-      "char": "要",
-      "start": 15.692,
-      "end": 15.883
+      "char": "是",
+      "start": 16.24,
+      "end": 16.4
     },
     {
       "index": 61,
-      "char": "用",
-      "start": 15.92,
-      "end": 16.111
+      "char": "严",
+      "start": 16.4,
+      "end": 16.64
     },
     {
       "index": 62,
-      "char": "钥",
-      "start": 16.147,
-      "end": 16.339
+      "char": "密",
+      "start": 16.64,
+      "end": 16.8
     },
     {
       "index": 63,
-      "char": "匙",
-      "start": 16.375,
-      "end": 16.566
+      "char": "控",
+      "start": 16.8,
+      "end": 16.96
     },
     {
       "index": 64,
-      "char": "开",
-      "start": 16.603,
-      "end": 16.794
+      "char": "制",
+      "start": 16.96,
+      "end": 17.12
     },
     {
       "index": 65,
-      "char": "启",
-      "start": 16.83,
-      "end": 17.022
+      "char": "通",
+      "start": 17.12,
+      "end": 17.36
     },
     {
       "index": 66,
-      "char": "的",
-      "start": 17.058,
-      "end": 17.249
+      "char": "道",
+      "start": 17.36,
+      "end": 17.6
     },
     {
       "index": 67,
-      "char": "器",
-      "start": 17.286,
-      "end": 17.477
+      "char": "不",
+      "start": 17.84,
+      "end": 18.0
     },
     {
       "index": 68,
-      "char": "具",
-      "start": 17.513,
-      "end": 17.705
+      "char": "让",
+      "start": 18.0,
+      "end": 18.16
     },
     {
       "index": 69,
-      "char": "也",
-      "start": 17.921,
-      "end": 18.112
+      "char": "人",
+      "start": 18.16,
+      "end": 18.32
     },
     {
       "index": 70,
-      "char": "有",
-      "start": 18.149,
-      "end": 18.34
+      "char": "和",
+      "start": 18.32,
+      "end": 18.56
     },
     {
       "index": 71,
-      "char": "封",
-      "start": 18.376,
-      "end": 18.567
+      "char": "物",
+      "start": 18.56,
+      "end": 18.72
     },
     {
       "index": 72,
-      "char": "住",
-      "start": 18.604,
-      "end": 18.795
+      "char": "自",
+      "start": 18.72,
+      "end": 18.96
     },
     {
       "index": 73,
-      "char": "的",
-      "start": 18.832,
-      "end": 19.023
+      "char": "由",
+      "start": 18.96,
+      "end": 19.12
     },
     {
       "index": 74,
-      "char": "意",
-      "start": 19.059,
-      "end": 19.25
+      "char": "通",
+      "start": 19.12,
+      "end": 19.36
     },
     {
       "index": 75,
-      "char": "思",
-      "start": 19.287,
-      "end": 19.478
-    },
-    {
-      "index": 76,
-      "char": "封",
-      "start": 19.854,
-      "end": 20.046
-    },
-    {
-      "index": 77,
-      "char": "锁",
-      "start": 20.082,
-      "end": 20.273
-    },
-    {
-      "index": 78,
-      "char": "就",
-      "start": 20.49,
-      "end": 20.681
-    },
-    {
-      "index": 79,
-      "char": "是",
-      "start": 20.717,
-      "end": 20.909
-    },
-    {
-      "index": 80,
-      "char": "把",
-      "start": 20.945,
-      "end": 21.136
-    },
-    {
-      "index": 81,
-      "char": "道",
-      "start": 21.173,
-      "end": 21.364
-    },
-    {
-      "index": 82,
-      "char": "路",
-      "start": 21.4,
-      "end": 21.592
-    },
-    {
-      "index": 83,
-      "char": "严",
-      "start": 21.628,
-      "end": 21.819
-    },
-    {
-      "index": 84,
-      "char": "密",
-      "start": 21.856,
-      "end": 22.047
-    },
-    {
-      "index": 85,
-      "char": "控",
-      "start": 22.083,
-      "end": 22.274
-    },
-    {
-      "index": 86,
-      "char": "制",
-      "start": 22.311,
-      "end": 22.502
-    },
-    {
-      "index": 87,
-      "char": "起",
-      "start": 22.539,
-      "end": 22.73
-    },
-    {
-      "index": 88,
-      "char": "来",
-      "start": 22.766,
-      "end": 22.957
+      "char": "过",
+      "start": 19.36,
+      "end": 19.6
     }
   ],
-  "transcript": "锁，封锁的锁。它是左右结构，金字旁说明锁通常是金属做的，右边可以看成一个被锁住的小匣子。金属锁扣一合上，门和箱子就不能随便打开。锁既是要用钥匙开启的器具，也有封住的意思。封锁，就是把道路严密控制起来。",
+  "transcript": "敌人修封锁沟和封锁墙，想切断人们的来往。锁是左右结构，左边是金字旁，右边可以想成带扣的小匣子。金属锁扣合上，门和箱子便难以打开。封锁就是严密控制通道，不让人和物自由通过。",
   "voice_reference": "封",
-  "timing_source": "punctuation-weighted-estimate",
-  "script_version": "child-first-v1",
-  "duration": 23.520181
+  "reference_id": "019f0554-ea22-762e-966c-32d678fd6bf6",
+  "reference_sha256": "eb07e06ee13a20ee4577b1b481df6d33d42127c1b3876bfa5d5e5362ae349f19",
+  "timing_source": "qwen3-forced-aligner",
+  "script_version": "narration-v3",
+  "model": "mlx-community/Qwen3-TTS-12Hz-1.7B-Base-4bit",
+  "model_revision": "37e955a1deb861c088ae5f3a67043185f3d1a60c",
+  "generation_policy": "qwen3-clone-2026-08-22-v3",
+  "seed": 20260822,
+  "content_hash": "601f0a78a7e1fcb402f8",
+  "duration": 19.608,
+  "alignment_model": "mlx-community/Qwen3-ForcedAligner-0.6B-8bit",
+  "aligned_audio_sha256": "be4971cc53f0da08e4bc1b2d1de535776c7885f6984c60bd1fc7a754d642b67b",
+  "alignment_groups": []
 }

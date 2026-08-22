@@ -2,740 +2,726 @@
   "marks": [
     {
       "index": 0,
-      "char": "箭",
-      "start": 0.294,
-      "end": 0.497
+      "char": "课",
+      "start": 0.08,
+      "end": 0.24
     },
     {
       "index": 1,
-      "char": "弓",
-      "start": 0.715,
-      "end": 0.918
+      "char": "文",
+      "start": 0.24,
+      "end": 0.4
     },
     {
       "index": 2,
-      "char": "箭",
-      "start": 0.956,
-      "end": 1.158
+      "char": "说",
+      "start": 0.4,
+      "end": 0.8
     },
     {
       "index": 3,
-      "char": "的",
-      "start": 1.197,
-      "end": 1.399
+      "char": "想",
+      "start": 1.04,
+      "end": 1.28
     },
     {
       "index": 4,
-      "char": "箭",
-      "start": 1.438,
-      "end": 1.64
+      "char": "到",
+      "start": 1.28,
+      "end": 1.44
     },
     {
       "index": 5,
-      "char": "读",
-      "start": 1.859,
-      "end": 2.061
+      "char": "月",
+      "start": 1.44,
+      "end": 1.6
     },
     {
       "index": 6,
-      "char": "j",
-      "start": 2.099,
-      "end": 2.302
+      "char": "球",
+      "start": 1.6,
+      "end": 1.84
     },
     {
       "index": 7,
-      "char": "i",
-      "start": 2.34,
-      "end": 2.542
+      "char": "去",
+      "start": 1.84,
+      "end": 2.24
     },
     {
       "index": 8,
-      "char": "à",
-      "start": 2.581,
-      "end": 2.783
+      "char": "需",
+      "start": 2.24,
+      "end": 2.4
     },
     {
       "index": 9,
-      "char": "n",
-      "start": 2.822,
-      "end": 3.024
+      "char": "要",
+      "start": 2.4,
+      "end": 2.56
     },
     {
       "index": 10,
-      "char": "它",
-      "start": 3.403,
-      "end": 3.605
+      "char": "一",
+      "start": 2.56,
+      "end": 2.72
     },
     {
       "index": 11,
-      "char": "是",
-      "start": 3.643,
-      "end": 3.846
+      "char": "枚",
+      "start": 2.72,
+      "end": 2.88
     },
     {
       "index": 12,
-      "char": "上",
-      "start": 3.884,
-      "end": 4.087
+      "char": "火",
+      "start": 2.88,
+      "end": 3.04
     },
     {
       "index": 13,
-      "char": "下",
-      "start": 4.125,
-      "end": 4.327
+      "char": "箭",
+      "start": 3.04,
+      "end": 3.44
     },
     {
       "index": 14,
-      "char": "结",
-      "start": 4.366,
-      "end": 4.568
+      "char": "它",
+      "start": 3.84,
+      "end": 4.0
     },
     {
       "index": 15,
-      "char": "构",
-      "start": 4.607,
-      "end": 4.809
+      "char": "的",
+      "start": 4.0,
+      "end": 4.16
     },
     {
       "index": 16,
-      "char": "按",
-      "start": 5.028,
-      "end": 5.23
+      "char": "最",
+      "start": 4.16,
+      "end": 4.32
     },
     {
       "index": 17,
-      "char": "顺",
-      "start": 5.268,
-      "end": 5.471
+      "char": "大",
+      "start": 4.32,
+      "end": 4.48
     },
     {
       "index": 18,
-      "char": "序",
-      "start": 5.509,
-      "end": 5.712
+      "char": "速",
+      "start": 4.48,
+      "end": 4.72
     },
     {
       "index": 19,
-      "char": "能",
-      "start": 5.75,
-      "end": 5.952
+      "char": "度",
+      "start": 4.72,
+      "end": 4.96
     },
     {
       "index": 20,
-      "char": "看",
-      "start": 5.991,
-      "end": 6.193
+      "char": "能",
+      "start": 4.96,
+      "end": 5.2
     },
     {
       "index": 21,
-      "char": "到",
-      "start": 6.232,
-      "end": 6.434
+      "char": "达",
+      "start": 5.2,
+      "end": 5.36
     },
     {
       "index": 22,
-      "char": "⺮",
-      "start": 6.473,
-      "end": 6.675
+      "char": "到",
+      "start": 5.36,
+      "end": 5.6
     },
     {
       "index": 23,
-      "char": "和",
-      "start": 6.713,
-      "end": 6.916
+      "char": "每",
+      "start": 5.6,
+      "end": 5.84
     },
     {
       "index": 24,
-      "char": "前",
-      "start": 6.954,
-      "end": 7.156
+      "char": "小",
+      "start": 5.84,
+      "end": 6.0
     },
     {
       "index": 25,
-      "char": "从",
-      "start": 7.535,
-      "end": 7.737
+      "char": "时",
+      "start": 6.0,
+      "end": 6.24
     },
     {
       "index": 26,
-      "char": "构",
-      "start": 7.776,
-      "end": 7.978
+      "char": "四",
+      "start": 6.24,
+      "end": 6.48
     },
     {
       "index": 27,
-      "char": "字",
-      "start": 8.017,
-      "end": 8.219
+      "char": "万",
+      "start": 6.48,
+      "end": 6.64
     },
     {
       "index": 28,
-      "char": "分",
-      "start": 8.257,
-      "end": 8.46
+      "char": "千",
+      "start": 6.72,
+      "end": 6.88
     },
     {
       "index": 29,
-      "char": "工",
-      "start": 8.498,
-      "end": 8.701
+      "char": "米",
+      "start": 6.88,
+      "end": 7.2
     },
     {
       "index": 30,
-      "char": "看",
-      "start": 8.739,
-      "end": 8.941
+      "char": "火",
+      "start": 7.6,
+      "end": 7.76
     },
     {
       "index": 31,
-      "char": "⺮",
-      "start": 9.16,
-      "end": 9.362
+      "char": "箭",
+      "start": 7.76,
+      "end": 8.0
     },
     {
       "index": 32,
-      "char": "提",
-      "start": 9.401,
-      "end": 9.603
+      "char": "是",
+      "start": 8.0,
+      "end": 8.16
     },
     {
       "index": 33,
-      "char": "示",
-      "start": 9.642,
-      "end": 9.844
+      "char": "靠",
+      "start": 8.16,
+      "end": 8.4
     },
     {
       "index": 34,
-      "char": "意",
-      "start": 9.882,
-      "end": 10.085
+      "char": "发",
+      "start": 8.4,
+      "end": 8.56
     },
     {
       "index": 35,
-      "char": "义",
-      "start": 10.123,
-      "end": 10.325
+      "char": "动",
+      "start": 8.56,
+      "end": 8.72
     },
     {
       "index": 36,
-      "char": "类",
-      "start": 10.364,
-      "end": 10.566
+      "char": "机",
+      "start": 8.72,
+      "end": 8.96
     },
     {
       "index": 37,
-      "char": "别",
-      "start": 10.605,
-      "end": 10.807
+      "char": "产",
+      "start": 8.96,
+      "end": 9.2
     },
     {
       "index": 38,
-      "char": "前",
-      "start": 11.026,
-      "end": 11.228
+      "char": "生",
+      "start": 9.2,
+      "end": 9.36
     },
     {
       "index": 39,
-      "char": "提",
-      "start": 11.266,
-      "end": 11.469
+      "char": "推",
+      "start": 9.36,
+      "end": 9.6
     },
     {
       "index": 40,
-      "char": "供",
-      "start": 11.507,
-      "end": 11.71
+      "char": "力",
+      "start": 9.6,
+      "end": 9.84
     },
     {
       "index": 41,
-      "char": "读",
-      "start": 11.748,
-      "end": 11.95
+      "char": "能",
+      "start": 10.16,
+      "end": 10.32
     },
     {
       "index": 42,
-      "char": "音",
-      "start": 11.989,
-      "end": 12.191
+      "char": "够",
+      "start": 10.32,
+      "end": 10.4
     },
     {
       "index": 43,
-      "char": "线",
-      "start": 12.23,
-      "end": 12.432
+      "char": "高",
+      "start": 10.4,
+      "end": 10.64
     },
     {
       "index": 44,
-      "char": "索",
-      "start": 12.471,
-      "end": 12.673
+      "char": "速",
+      "start": 10.64,
+      "end": 10.8
     },
     {
       "index": 45,
-      "char": "看",
-      "start": 13.051,
-      "end": 13.254
+      "char": "飞",
+      "start": 10.8,
+      "end": 11.04
     },
     {
       "index": 46,
-      "char": "图",
-      "start": 13.292,
-      "end": 13.495
+      "char": "行",
+      "start": 11.04,
+      "end": 11.2
     },
     {
       "index": 47,
-      "char": "时",
-      "start": 13.533,
-      "end": 13.735
+      "char": "的",
+      "start": 11.2,
+      "end": 11.28
     },
     {
       "index": 48,
-      "char": "上",
-      "start": 13.954,
-      "end": 14.156
+      "char": "飞",
+      "start": 11.28,
+      "end": 11.44
     },
     {
       "index": 49,
-      "char": "方",
-      "start": 14.195,
-      "end": 14.397
+      "char": "行",
+      "start": 11.52,
+      "end": 11.68
     },
     {
       "index": 50,
-      "char": "两",
-      "start": 14.436,
-      "end": 14.638
+      "char": "器",
+      "start": 11.68,
+      "end": 12.0
     },
     {
       "index": 51,
-      "char": "簇",
-      "start": 14.676,
-      "end": 14.879
+      "char": "箭",
+      "start": 12.4,
+      "end": 12.64
     },
     {
       "index": 52,
-      "char": "箭",
-      "start": 14.917,
-      "end": 15.119
+      "char": "是",
+      "start": 12.64,
+      "end": 12.8
     },
     {
       "index": 53,
-      "char": "羽",
-      "start": 15.158,
-      "end": 15.36
+      "char": "上",
+      "start": 12.8,
+      "end": 12.96
     },
     {
       "index": 54,
-      "char": "形",
-      "start": 15.399,
-      "end": 15.601
+      "char": "下",
+      "start": 12.96,
+      "end": 13.2
     },
     {
       "index": 55,
-      "char": "成",
-      "start": 15.64,
-      "end": 15.842
+      "char": "结",
+      "start": 13.2,
+      "end": 13.44
     },
     {
       "index": 56,
-      "char": "⺮",
-      "start": 15.88,
-      "end": 16.083
+      "char": "构",
+      "start": 13.44,
+      "end": 13.68
     },
     {
       "index": 57,
-      "char": "下",
-      "start": 16.301,
-      "end": 16.504
+      "char": "上",
+      "start": 13.92,
+      "end": 14.08
     },
     {
       "index": 58,
-      "char": "方",
-      "start": 16.542,
-      "end": 16.744
+      "char": "面",
+      "start": 14.08,
+      "end": 14.32
     },
     {
       "index": 59,
-      "char": "箭",
-      "start": 16.783,
-      "end": 16.985
+      "char": "竹",
+      "start": 14.32,
+      "end": 14.48
     },
     {
       "index": 60,
-      "char": "头",
-      "start": 17.024,
-      "end": 17.226
+      "char": "字",
+      "start": 14.48,
+      "end": 14.64
     },
     {
       "index": 61,
-      "char": "弓",
-      "start": 17.445,
-      "end": 17.647
+      "char": "头",
+      "start": 14.64,
+      "end": 15.04
     },
     {
       "index": 62,
-      "char": "台",
-      "start": 17.685,
-      "end": 17.888
+      "char": "像",
+      "start": 15.04,
+      "end": 15.2
     },
     {
       "index": 63,
-      "char": "和",
-      "start": 17.926,
-      "end": 18.128
+      "char": "两",
+      "start": 15.2,
+      "end": 15.44
     },
     {
       "index": 64,
-      "char": "月",
-      "start": 18.167,
-      "end": 18.369
+      "char": "簇",
+      "start": 15.44,
+      "end": 15.68
     },
     {
       "index": 65,
-      "char": "形",
-      "start": 18.408,
-      "end": 18.61
+      "char": "箭",
+      "start": 15.68,
+      "end": 16.0
     },
     {
       "index": 66,
-      "char": "箭",
-      "start": 18.649,
-      "end": 18.851
+      "char": "羽",
+      "start": 16.0,
+      "end": 16.16
     },
     {
       "index": 67,
-      "char": "槽",
-      "start": 18.889,
-      "end": 19.092
+      "char": "下",
+      "start": 16.48,
+      "end": 16.72
     },
     {
       "index": 68,
-      "char": "沿",
-      "start": 19.13,
-      "end": 19.333
+      "char": "面",
+      "start": 16.72,
+      "end": 16.88
     },
     {
       "index": 69,
       "char": "前",
-      "start": 19.371,
-      "end": 19.573
+      "start": 16.88,
+      "end": 17.2
     },
     {
       "index": 70,
-      "char": "排",
-      "start": 19.612,
-      "end": 19.814
+      "char": "字",
+      "start": 17.2,
+      "end": 17.44
     },
     {
       "index": 71,
-      "char": "列",
-      "start": 19.853,
-      "end": 20.055
+      "char": "指",
+      "start": 17.44,
+      "end": 17.6
     },
     {
       "index": 72,
-      "char": "组",
-      "start": 20.274,
-      "end": 20.476
+      "char": "向",
+      "start": 17.6,
+      "end": 17.84
     },
     {
       "index": 73,
-      "char": "成",
-      "start": 20.514,
-      "end": 20.717
+      "char": "前",
+      "start": 17.84,
+      "end": 18.08
     },
     {
       "index": 74,
-      "char": "箭",
-      "start": 20.755,
-      "end": 20.958
+      "char": "方",
+      "start": 18.08,
+      "end": 18.4
     },
     {
       "index": 75,
-      "char": "弓",
-      "start": 21.336,
-      "end": 21.538
+      "char": "把",
+      "start": 18.88,
+      "end": 19.04
     },
     {
       "index": 76,
       "char": "箭",
-      "start": 21.577,
-      "end": 21.779
+      "start": 19.04,
+      "end": 19.44
     },
     {
       "index": 77,
-      "char": "由",
-      "start": 21.818,
-      "end": 22.02
+      "char": "羽",
+      "start": 19.44,
+      "end": 19.68
     },
     {
       "index": 78,
-      "char": "弓",
-      "start": 22.058,
-      "end": 22.261
+      "char": "和",
+      "start": 19.68,
+      "end": 19.84
     },
     {
       "index": 79,
-      "char": "和",
-      "start": 22.299,
-      "end": 22.502
+      "char": "前",
+      "start": 19.84,
+      "end": 20.08
     },
     {
       "index": 80,
-      "char": "箭",
-      "start": 22.54,
-      "end": 22.742
+      "char": "进",
+      "start": 20.08,
+      "end": 20.24
     },
     {
       "index": 81,
-      "char": "组",
-      "start": 22.781,
-      "end": 22.983
+      "char": "方",
+      "start": 20.24,
+      "end": 20.4
     },
     {
       "index": 82,
-      "char": "成",
-      "start": 23.022,
-      "end": 23.224
+      "char": "向",
+      "start": 20.4,
+      "end": 20.64
     },
     {
       "index": 83,
-      "char": "箭",
-      "start": 23.443,
-      "end": 23.645
+      "char": "放",
+      "start": 20.64,
+      "end": 20.8
     },
     {
       "index": 84,
-      "char": "射",
-      "start": 23.683,
-      "end": 23.886
+      "char": "在",
+      "start": 20.88,
+      "end": 21.04
     },
     {
       "index": 85,
-      "char": "出",
-      "start": 23.924,
-      "end": 24.127
+      "char": "一",
+      "start": 21.04,
+      "end": 21.12
     },
     {
       "index": 86,
-      "char": "后",
-      "start": 24.165,
-      "end": 24.367
+      "char": "起",
+      "start": 21.12,
+      "end": 21.52
     },
     {
       "index": 87,
-      "char": "速",
-      "start": 24.406,
-      "end": 24.608
+      "char": "只",
+      "start": 21.76,
+      "end": 21.92
     },
     {
       "index": 88,
-      "char": "度",
-      "start": 24.647,
-      "end": 24.849
+      "char": "是",
+      "start": 21.92,
+      "end": 22.08
     },
     {
       "index": 89,
-      "char": "很",
-      "start": 24.888,
-      "end": 25.09
+      "char": "帮",
+      "start": 22.08,
+      "end": 22.24
     },
     {
       "index": 90,
-      "char": "快",
-      "start": 25.128,
-      "end": 25.331
+      "char": "助",
+      "start": 22.24,
+      "end": 22.4
     },
     {
       "index": 91,
-      "char": "这",
-      "start": 25.709,
-      "end": 25.911
+      "char": "记",
+      "start": 22.4,
+      "end": 22.56
     },
     {
       "index": 92,
-      "char": "是",
-      "start": 25.95,
-      "end": 26.152
+      "char": "住",
+      "start": 22.56,
+      "end": 22.72
     },
     {
       "index": 93,
-      "char": "一",
-      "start": 26.191,
-      "end": 26.393
+      "char": "字",
+      "start": 22.72,
+      "end": 22.88
     },
     {
       "index": 94,
-      "char": "幅",
-      "start": 26.432,
-      "end": 26.634
+      "char": "形",
+      "start": 22.88,
+      "end": 23.36
     },
     {
       "index": 95,
-      "char": "帮",
-      "start": 26.672,
-      "end": 26.875
+      "char": "火",
+      "start": 23.92,
+      "end": 24.08
     },
     {
       "index": 96,
-      "char": "助",
-      "start": 26.913,
-      "end": 27.116
+      "char": "箭",
+      "start": 24.08,
+      "end": 24.32
     },
     {
       "index": 97,
-      "char": "记",
-      "start": 27.154,
-      "end": 27.356
+      "char": "进",
+      "start": 24.32,
+      "end": 24.48
     },
     {
       "index": 98,
-      "char": "笔",
-      "start": 27.395,
-      "end": 27.597
+      "char": "入",
+      "start": 24.48,
+      "end": 24.64
     },
     {
       "index": 99,
-      "char": "画",
-      "start": 27.636,
-      "end": 27.838
+      "char": "比",
+      "start": 24.64,
+      "end": 24.8
     },
     {
       "index": 100,
-      "char": "和",
-      "start": 27.877,
-      "end": 28.079
+      "char": "较",
+      "start": 24.8,
+      "end": 25.04
     },
     {
       "index": 101,
-      "char": "位",
-      "start": 28.117,
-      "end": 28.32
+      "char": "以",
+      "start": 25.04,
+      "end": 25.2
     },
     {
       "index": 102,
-      "char": "置",
-      "start": 28.358,
-      "end": 28.56
+      "char": "后",
+      "start": 25.2,
+      "end": 25.6
     },
     {
       "index": 103,
-      "char": "的",
-      "start": 28.599,
-      "end": 28.801
+      "char": "喷",
+      "start": 25.6,
+      "end": 25.84
     },
     {
       "index": 104,
-      "char": "记",
-      "start": 28.84,
-      "end": 29.042
+      "char": "气",
+      "start": 25.84,
+      "end": 26.0
     },
     {
       "index": 105,
-      "char": "忆",
-      "start": 29.081,
-      "end": 29.283
+      "char": "式",
+      "start": 26.0,
+      "end": 26.16
     },
     {
       "index": 106,
-      "char": "画",
-      "start": 29.321,
-      "end": 29.524
+      "char": "飞",
+      "start": 26.16,
+      "end": 26.32
     },
     {
       "index": 107,
-      "char": "面",
-      "start": 29.562,
-      "end": 29.765
+      "char": "机",
+      "start": 26.32,
+      "end": 26.48
     },
     {
       "index": 108,
-      "char": "不",
-      "start": 29.983,
-      "end": 30.185
+      "char": "的",
+      "start": 26.48,
+      "end": 26.56
     },
     {
       "index": 109,
-      "char": "是",
-      "start": 30.224,
-      "end": 30.426
+      "char": "速",
+      "start": 26.56,
+      "end": 26.8
     },
     {
       "index": 110,
-      "char": "完",
-      "start": 30.465,
-      "end": 30.667
+      "char": "度",
+      "start": 26.8,
+      "end": 27.04
     },
     {
       "index": 111,
-      "char": "整",
-      "start": 30.706,
-      "end": 30.908
+      "char": "也",
+      "start": 27.04,
+      "end": 27.2
     },
     {
       "index": 112,
-      "char": "字",
-      "start": 30.946,
-      "end": 31.149
+      "char": "显",
+      "start": 27.2,
+      "end": 27.44
     },
     {
       "index": 113,
-      "char": "源",
-      "start": 31.187,
-      "end": 31.39
+      "char": "得",
+      "start": 27.44,
+      "end": 27.6
     },
     {
       "index": 114,
-      "char": "最",
-      "start": 31.768,
-      "end": 31.97
+      "char": "慢",
+      "start": 27.6,
+      "end": 27.76
     },
     {
       "index": 115,
-      "char": "后",
-      "start": 32.009,
-      "end": 32.211
+      "char": "了",
+      "start": 27.76,
+      "end": 27.84
     },
     {
       "index": 116,
-      "char": "再",
-      "start": 32.25,
-      "end": 32.452
+      "char": "许",
+      "start": 27.84,
+      "end": 28.08
     },
     {
       "index": 117,
-      "char": "读",
-      "start": 32.491,
-      "end": 32.693
-    },
-    {
-      "index": 118,
-      "char": "一",
-      "start": 32.731,
-      "end": 32.934
-    },
-    {
-      "index": 119,
-      "char": "遍",
-      "start": 32.972,
-      "end": 33.174
-    },
-    {
-      "index": 120,
-      "char": "弓",
-      "start": 33.393,
-      "end": 33.595
-    },
-    {
-      "index": 121,
-      "char": "箭",
-      "start": 33.634,
-      "end": 33.836
+      "char": "多",
+      "start": 28.08,
+      "end": 28.32
     }
   ],
-  "transcript": "箭，“弓箭”的“箭”，读jiàn。它是上下结构，按顺序能看到“⺮”和“前”。从构字分工看，“⺮”提示意义类别，“前”提供读音线索。看图时，上方两簇箭羽形成“⺮”，下方箭头、弓台和月形箭槽沿“前”排列，组成“箭”。弓箭由弓和箭组成，箭射出后速度很快。这是一幅帮助记笔画和位置的记忆画面，不是完整字源。最后再读一遍：弓箭。",
+  "transcript": "课文说，想到月球去需要一枚火箭，它的最大速度能达到每小时四万千米。火箭是靠发动机产生推力、能够高速飞行的飞行器。箭是上下结构，上面竹字头像两簇箭羽，下面前字指向前方。把箭羽和前进方向放在一起，只是帮助记住字形。火箭进入比较以后，喷气式飞机的速度也显得慢了许多。",
   "voice_reference": "封",
-  "timing_source": "punctuation-weighted-estimate",
-  "script_version": "child-first-v2",
-  "duration": 34.400181
+  "reference_id": "019f0554-ea22-762e-966c-32d678fd6bf6",
+  "reference_sha256": "eb07e06ee13a20ee4577b1b481df6d33d42127c1b3876bfa5d5e5362ae349f19",
+  "timing_source": "qwen3-forced-aligner",
+  "script_version": "narration-v3",
+  "model": "mlx-community/Qwen3-TTS-12Hz-1.7B-Base-4bit",
+  "model_revision": "37e955a1deb861c088ae5f3a67043185f3d1a60c",
+  "generation_policy": "qwen3-clone-2026-08-22-v3",
+  "seed": 20260822,
+  "content_hash": "9d728a54e2a16145c028",
+  "duration": 28.389,
+  "alignment_model": "mlx-community/Qwen3-ForcedAligner-0.6B-8bit",
+  "aligned_audio_sha256": "25d6a52f4cde1826cfeb0f6998bf178dc2fa4728c890a75d6a27836039284f4e",
+  "alignment_groups": []
 }

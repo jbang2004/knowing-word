@@ -2,506 +2,600 @@
   "marks": [
     {
       "index": 0,
-      "char": "付",
-      "start": 0.293,
-      "end": 0.482
+      "char": "对",
+      "start": 0.08,
+      "end": 0.16
     },
     {
       "index": 1,
-      "char": "对",
-      "start": 0.698,
-      "end": 0.886
+      "char": "付",
+      "start": 0.16,
+      "end": 0.32
     },
     {
       "index": 2,
-      "char": "付",
-      "start": 0.922,
-      "end": 1.11
+      "char": "水",
+      "start": 0.32,
+      "end": 0.56
     },
     {
       "index": 3,
-      "char": "的",
-      "start": 1.146,
-      "end": 1.334
+      "char": "攻",
+      "start": 0.56,
+      "end": 0.8
     },
     {
       "index": 4,
-      "char": "付",
-      "start": 1.37,
-      "end": 1.558
+      "char": "的",
+      "start": 0.8,
+      "end": 0.88
     },
     {
       "index": 5,
-      "char": "它",
-      "start": 1.934,
-      "end": 2.122
+      "char": "付",
+      "start": 0.88,
+      "end": 1.2
     },
     {
       "index": 6,
-      "char": "是",
-      "start": 2.158,
-      "end": 2.346
+      "char": "左",
+      "start": 1.6,
+      "end": 1.68
     },
     {
       "index": 7,
-      "char": "左",
-      "start": 2.382,
-      "end": 2.57
+      "char": "边",
+      "start": 1.76,
+      "end": 1.92
     },
     {
       "index": 8,
-      "char": "右",
-      "start": 2.606,
-      "end": 2.794
+      "char": "是",
+      "start": 1.92,
+      "end": 2.08
     },
     {
       "index": 9,
-      "char": "结",
-      "start": 2.83,
-      "end": 3.019
+      "char": "单",
+      "start": 2.08,
+      "end": 2.24
     },
     {
       "index": 10,
-      "char": "构",
-      "start": 3.054,
-      "end": 3.243
+      "char": "人",
+      "start": 2.24,
+      "end": 2.4
     },
     {
       "index": 11,
-      "char": "左",
-      "start": 3.459,
-      "end": 3.647
+      "char": "旁",
+      "start": 2.4,
+      "end": 2.8
     },
     {
       "index": 12,
-      "char": "边",
-      "start": 3.683,
-      "end": 3.871
+      "char": "右",
+      "start": 3.28,
+      "end": 3.44
     },
     {
       "index": 13,
-      "char": "的",
-      "start": 3.907,
-      "end": 4.095
+      "char": "边",
+      "start": 3.44,
+      "end": 3.6
     },
     {
       "index": 14,
-      "char": "单",
-      "start": 4.131,
-      "end": 4.319
+      "char": "的",
+      "start": 3.6,
+      "end": 3.68
     },
     {
       "index": 15,
-      "char": "人",
-      "start": 4.355,
-      "end": 4.543
+      "char": "寸",
+      "start": 3.68,
+      "end": 4.08
     },
     {
       "index": 16,
-      "char": "旁",
-      "start": 4.579,
-      "end": 4.767
+      "char": "可",
+      "start": 4.08,
+      "end": 4.32
     },
     {
       "index": 17,
-      "char": "表",
-      "start": 4.803,
-      "end": 4.991
+      "char": "以",
+      "start": 4.32,
+      "end": 4.4
     },
     {
       "index": 18,
-      "char": "示",
-      "start": 5.027,
-      "end": 5.215
+      "char": "想",
+      "start": 4.4,
+      "end": 4.64
     },
     {
       "index": 19,
-      "char": "人",
-      "start": 5.251,
-      "end": 5.44
+      "char": "成",
+      "start": 4.64,
+      "end": 4.8
     },
     {
       "index": 20,
-      "char": "右",
-      "start": 5.655,
-      "end": 5.844
+      "char": "递",
+      "start": 4.8,
+      "end": 4.96
     },
     {
       "index": 21,
-      "char": "边",
-      "start": 5.88,
-      "end": 6.068
+      "char": "东",
+      "start": 4.96,
+      "end": 5.12
     },
     {
       "index": 22,
-      "char": "的",
-      "start": 6.104,
-      "end": 6.292
+      "char": "西",
+      "start": 5.12,
+      "end": 5.28
     },
     {
       "index": 23,
-      "char": "寸",
-      "start": 6.328,
-      "end": 6.516
+      "char": "的",
+      "start": 5.28,
+      "end": 5.44
     },
     {
       "index": 24,
-      "char": "和",
-      "start": 6.552,
-      "end": 6.74
+      "char": "手",
+      "start": 5.44,
+      "end": 5.76
     },
     {
       "index": 25,
-      "char": "手",
-      "start": 6.776,
-      "end": 6.964
+      "char": "它",
+      "start": 6.24,
+      "end": 6.4
     },
     {
       "index": 26,
-      "char": "有",
-      "start": 7,
-      "end": 7.188
+      "char": "是",
+      "start": 6.4,
+      "end": 6.56
     },
     {
       "index": 27,
-      "char": "关",
-      "start": 7.224,
-      "end": 7.412
+      "char": "左",
+      "start": 6.56,
+      "end": 6.64
     },
     {
       "index": 28,
-      "char": "看",
-      "start": 7.788,
-      "end": 7.976
+      "char": "右",
+      "start": 6.72,
+      "end": 6.96
     },
     {
       "index": 29,
-      "char": "图",
-      "start": 8.012,
-      "end": 8.201
+      "char": "结",
+      "start": 6.96,
+      "end": 7.2
     },
     {
       "index": 30,
-      "char": "时",
-      "start": 8.236,
-      "end": 8.425
+      "char": "构",
+      "start": 7.2,
+      "end": 7.44
     },
     {
       "index": 31,
       "char": "一",
-      "start": 8.641,
-      "end": 8.829
+      "start": 7.76,
+      "end": 7.92
     },
     {
       "index": 32,
       "char": "个",
-      "start": 8.865,
-      "end": 9.053
+      "start": 7.92,
+      "end": 8.0
     },
     {
       "index": 33,
       "char": "人",
-      "start": 9.089,
-      "end": 9.277
+      "start": 8.0,
+      "end": 8.16
     },
     {
       "index": 34,
       "char": "把",
-      "start": 9.313,
-      "end": 9.501
+      "start": 8.16,
+      "end": 8.32
     },
     {
       "index": 35,
-      "char": "东",
-      "start": 9.537,
-      "end": 9.725
+      "char": "任",
+      "start": 8.32,
+      "end": 8.64
     },
     {
       "index": 36,
-      "char": "西",
-      "start": 9.761,
-      "end": 9.949
+      "char": "务",
+      "start": 8.64,
+      "end": 8.72
     },
     {
       "index": 37,
-      "char": "稳",
-      "start": 9.985,
-      "end": 10.173
+      "char": "或",
+      "start": 8.72,
+      "end": 8.88
     },
     {
       "index": 38,
-      "char": "稳",
-      "start": 10.209,
-      "end": 10.397
+      "char": "物",
+      "start": 8.96,
+      "end": 9.04
     },
     {
       "index": 39,
-      "char": "交",
-      "start": 10.433,
-      "end": 10.622
+      "char": "品",
+      "start": 9.04,
+      "end": 9.36
     },
     {
       "index": 40,
-      "char": "到",
-      "start": 10.657,
-      "end": 10.846
+      "char": "稳",
+      "start": 9.44,
+      "end": 9.6
     },
     {
       "index": 41,
-      "char": "另",
-      "start": 10.881,
-      "end": 11.07
+      "char": "稳",
+      "start": 9.6,
+      "end": 9.84
     },
     {
       "index": 42,
-      "char": "一",
-      "start": 11.106,
-      "end": 11.294
+      "char": "交",
+      "start": 9.84,
+      "end": 10.0
     },
     {
       "index": 43,
-      "char": "只",
-      "start": 11.33,
-      "end": 11.518
+      "char": "到",
+      "start": 10.0,
+      "end": 10.16
     },
     {
       "index": 44,
-      "char": "手",
-      "start": 11.554,
-      "end": 11.742
+      "char": "另",
+      "start": 10.16,
+      "end": 10.4
     },
     {
       "index": 45,
-      "char": "中",
-      "start": 11.778,
-      "end": 11.966
+      "char": "一",
+      "start": 10.4,
+      "end": 10.56,
+      "alignment_group": "align-group-45-46",
+      "alignment_group_text": "一只"
     },
     {
       "index": 46,
-      "char": "这",
-      "start": 12.182,
-      "end": 12.37
+      "char": "只",
+      "start": 10.4,
+      "end": 10.56,
+      "alignment_group": "align-group-45-46",
+      "alignment_group_text": "一只"
     },
     {
       "index": 47,
-      "char": "个",
-      "start": 12.406,
-      "end": 12.594
+      "char": "手",
+      "start": 10.56,
+      "end": 10.8
     },
     {
       "index": 48,
-      "char": "动",
-      "start": 12.63,
-      "end": 12.818
+      "char": "中",
+      "start": 10.8,
+      "end": 11.12
     },
     {
       "index": 49,
-      "char": "作",
-      "start": 12.854,
-      "end": 13.043
+      "char": "任",
+      "start": 11.52,
+      "end": 11.76
     },
     {
       "index": 50,
-      "char": "就",
-      "start": 13.078,
-      "end": 13.267
+      "char": "务",
+      "start": 11.76,
+      "end": 11.92
     },
     {
       "index": 51,
-      "char": "是",
-      "start": 13.302,
-      "end": 13.491
+      "char": "从",
+      "start": 11.92,
+      "end": 12.16
     },
     {
       "index": 52,
-      "char": "交",
-      "start": 13.527,
-      "end": 13.715
+      "char": "一",
+      "start": 12.16,
+      "end": 12.32
     },
     {
       "index": 53,
-      "char": "付",
-      "start": 13.751,
-      "end": 13.939
+      "char": "个",
+      "start": 12.32,
+      "end": 12.4
     },
     {
       "index": 54,
-      "char": "付",
-      "start": 14.315,
-      "end": 14.503
+      "char": "人",
+      "start": 12.4,
+      "end": 12.64
     },
     {
       "index": 55,
-      "char": "有",
-      "start": 14.539,
-      "end": 14.727
+      "char": "交",
+      "start": 12.64,
+      "end": 12.8
     },
     {
       "index": 56,
-      "char": "交",
-      "start": 14.763,
-      "end": 14.951
+      "char": "到",
+      "start": 12.8,
+      "end": 12.96
     },
     {
       "index": 57,
-      "char": "给",
-      "start": 14.987,
-      "end": 15.175
+      "char": "另",
+      "start": 12.96,
+      "end": 13.2
     },
     {
       "index": 58,
-      "char": "拿",
-      "start": 15.391,
-      "end": 15.579
+      "char": "一",
+      "start": 13.2,
+      "end": 13.28
     },
     {
       "index": 59,
-      "char": "出",
-      "start": 15.615,
-      "end": 15.804
+      "char": "人",
+      "start": 13.28,
+      "end": 13.44
     },
     {
       "index": 60,
-      "char": "的",
-      "start": 15.839,
-      "end": 16.028
+      "char": "手",
+      "start": 13.44,
+      "end": 13.68
     },
     {
       "index": 61,
-      "char": "意",
-      "start": 16.063,
-      "end": 16.252
+      "char": "里",
+      "start": 13.68,
+      "end": 13.92
     },
     {
       "index": 62,
-      "char": "思",
-      "start": 16.288,
-      "end": 16.476
+      "char": "付",
+      "start": 14.4,
+      "end": 14.72
     },
     {
       "index": 63,
-      "char": "在",
-      "start": 16.852,
-      "end": 17.04
+      "char": "的",
+      "start": 14.72,
+      "end": 14.8
     },
     {
       "index": 64,
-      "char": "对",
-      "start": 17.076,
-      "end": 17.264
+      "char": "动",
+      "start": 14.8,
+      "end": 15.04
     },
     {
       "index": 65,
-      "char": "付",
-      "start": 17.3,
-      "end": 17.488
+      "char": "作",
+      "start": 15.04,
+      "end": 15.2
     },
     {
       "index": 66,
-      "char": "里",
-      "start": 17.524,
-      "end": 17.712
+      "char": "便",
+      "start": 15.2,
+      "end": 15.36
     },
     {
       "index": 67,
-      "char": "它",
-      "start": 17.928,
-      "end": 18.116
+      "char": "清",
+      "start": 15.36,
+      "end": 15.6
     },
     {
       "index": 68,
-      "char": "和",
-      "start": 18.152,
-      "end": 18.34
+      "char": "楚",
+      "start": 15.6,
+      "end": 15.84
     },
     {
       "index": 69,
-      "char": "对",
-      "start": 18.376,
-      "end": 18.564
+      "char": "了",
+      "start": 15.84,
+      "end": 16.08
     },
     {
       "index": 70,
-      "char": "合",
-      "start": 18.6,
-      "end": 18.789
+      "char": "对",
+      "start": 16.4,
+      "end": 16.64
     },
     {
       "index": 71,
-      "char": "成",
-      "start": 18.824,
-      "end": 19.013
+      "char": "付",
+      "start": 16.64,
+      "end": 16.96
     },
     {
       "index": 72,
-      "char": "一",
-      "start": 19.049,
-      "end": 19.237
+      "char": "要",
+      "start": 16.96,
+      "end": 17.12
     },
     {
       "index": 73,
-      "char": "个",
-      "start": 19.273,
-      "end": 19.461
+      "char": "和",
+      "start": 17.12,
+      "end": 17.2
     },
     {
       "index": 74,
-      "char": "词",
-      "start": 19.497,
-      "end": 19.685
+      "char": "对",
+      "start": 17.2,
+      "end": 17.44
     },
     {
       "index": 75,
-      "char": "表",
-      "start": 19.901,
-      "end": 20.089
+      "char": "连",
+      "start": 17.44,
+      "end": 17.68
     },
     {
       "index": 76,
-      "char": "示",
-      "start": 20.125,
-      "end": 20.313
+      "char": "在",
+      "start": 17.68,
+      "end": 17.84
     },
     {
       "index": 77,
-      "char": "设",
-      "start": 20.349,
-      "end": 20.537
+      "char": "一",
+      "start": 17.84,
+      "end": 17.92
     },
     {
       "index": 78,
-      "char": "法",
-      "start": 20.573,
-      "end": 20.761
+      "char": "起",
+      "start": 17.92,
+      "end": 18.16
     },
     {
       "index": 79,
-      "char": "应",
-      "start": 20.797,
-      "end": 20.985
+      "char": "理",
+      "start": 18.16,
+      "end": 18.32
     },
     {
       "index": 80,
-      "char": "对",
-      "start": 21.021,
-      "end": 21.21
+      "char": "解",
+      "start": 18.32,
+      "end": 18.64
     },
     {
       "index": 81,
-      "char": "处",
-      "start": 21.425,
-      "end": 21.614
+      "char": "表",
+      "start": 18.88,
+      "end": 19.04
     },
     {
       "index": 82,
-      "char": "理",
-      "start": 21.65,
-      "end": 21.838
+      "char": "示",
+      "start": 19.04,
+      "end": 19.2
+    },
+    {
+      "index": 83,
+      "char": "设",
+      "start": 19.2,
+      "end": 19.44
+    },
+    {
+      "index": 84,
+      "char": "法",
+      "start": 19.44,
+      "end": 19.68
+    },
+    {
+      "index": 85,
+      "char": "应",
+      "start": 19.68,
+      "end": 19.84
+    },
+    {
+      "index": 86,
+      "char": "对",
+      "start": 19.84,
+      "end": 20.0
+    },
+    {
+      "index": 87,
+      "char": "眼",
+      "start": 20.0,
+      "end": 20.24
+    },
+    {
+      "index": 88,
+      "char": "前",
+      "start": 20.24,
+      "end": 20.4
+    },
+    {
+      "index": 89,
+      "char": "的",
+      "start": 20.4,
+      "end": 20.56
+    },
+    {
+      "index": 90,
+      "char": "问",
+      "start": 20.56,
+      "end": 20.72
+    },
+    {
+      "index": 91,
+      "char": "题",
+      "start": 20.72,
+      "end": 21.04
     }
   ],
-  "transcript": "付，对付的付。它是左右结构，左边的单人旁表示人，右边的寸和手有关。看图时，一个人把东西稳稳交到另一只手中，这个动作就是交付。付有交给、拿出的意思。在对付里，它和对合成一个词，表示设法应对、处理。",
+  "transcript": "对付水攻的付，左边是单人旁，右边的寸可以想成递东西的手。它是左右结构，一个人把任务或物品稳稳交到另一只手中。任务从一个人交到另一人手里，“付”的动作便清楚了。对付要和对连在一起理解，表示设法应对眼前的问题。",
   "voice_reference": "封",
-  "timing_source": "punctuation-weighted-estimate",
-  "script_version": "child-first-v1",
-  "duration": 22.400181
+  "reference_id": "019f0554-ea22-762e-966c-32d678fd6bf6",
+  "reference_sha256": "eb07e06ee13a20ee4577b1b481df6d33d42127c1b3876bfa5d5e5362ae349f19",
+  "timing_source": "qwen3-forced-aligner",
+  "script_version": "narration-v3",
+  "model": "mlx-community/Qwen3-TTS-12Hz-1.7B-Base-4bit",
+  "model_revision": "37e955a1deb861c088ae5f3a67043185f3d1a60c",
+  "generation_policy": "qwen3-clone-2026-08-22-v3",
+  "seed": 20260822,
+  "content_hash": "3a0989fb2f7d3af36bd1",
+  "duration": 21.047,
+  "alignment_model": "mlx-community/Qwen3-ForcedAligner-0.6B-8bit",
+  "aligned_audio_sha256": "a0cef7762ec67e3d75cdb2a3f4a1697ece606ca159201c6cfc1ca55cc35f3033",
+  "alignment_groups": [
+    {
+      "id": "align-group-45-46",
+      "text": "一只",
+      "indices": [
+        45,
+        46
+      ],
+      "start": 10.4,
+      "end": 10.56,
+      "method": "shared-right-model-interval",
+      "rawIntervals": [
+        {
+          "index": 45,
+          "char": "一",
+          "start": 10.4,
+          "end": 10.4
+        },
+        {
+          "index": 46,
+          "char": "只",
+          "start": 10.4,
+          "end": 10.56
+        }
+      ]
+    }
+  ]
 }

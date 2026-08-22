@@ -2,800 +2,564 @@
   "marks": [
     {
       "index": 0,
-      "char": "杀",
-      "start": 0.295,
-      "end": 0.51
+      "char": "阳",
+      "start": 0.24,
+      "end": 0.48
     },
     {
       "index": 1,
-      "char": "杀",
-      "start": 0.731,
-      "end": 0.945
+      "char": "光",
+      "start": 0.48,
+      "end": 0.64
     },
     {
       "index": 2,
-      "char": "菌",
-      "start": 0.986,
-      "end": 1.201
+      "char": "中",
+      "start": 0.64,
+      "end": 0.8
     },
     {
       "index": 3,
       "char": "的",
-      "start": 1.242,
-      "end": 1.456
+      "start": 0.8,
+      "end": 0.88
     },
     {
       "index": 4,
-      "char": "杀",
-      "start": 1.497,
-      "end": 1.712
+      "char": "紫",
+      "start": 0.88,
+      "end": 1.12
     },
     {
       "index": 5,
-      "char": "读",
-      "start": 1.933,
-      "end": 2.147
+      "char": "外",
+      "start": 1.12,
+      "end": 1.28
     },
     {
       "index": 6,
-      "char": "s",
-      "start": 2.188,
-      "end": 2.403
+      "char": "线",
+      "start": 1.28,
+      "end": 1.68
     },
     {
       "index": 7,
-      "char": "h",
-      "start": 2.444,
-      "end": 2.658
+      "char": "有",
+      "start": 1.68,
+      "end": 1.76
     },
     {
       "index": 8,
-      "char": "ā",
-      "start": 2.699,
-      "end": 2.914
+      "char": "杀",
+      "start": 1.76,
+      "end": 2.08
     },
     {
       "index": 9,
-      "char": "它",
-      "start": 3.294,
-      "end": 3.509
+      "char": "菌",
+      "start": 2.08,
+      "end": 2.24
     },
     {
       "index": 10,
-      "char": "是",
-      "start": 3.55,
-      "end": 3.764
+      "char": "作",
+      "start": 2.24,
+      "end": 2.48
     },
     {
       "index": 11,
-      "char": "上",
-      "start": 3.805,
-      "end": 4.02
+      "char": "用",
+      "start": 2.48,
+      "end": 2.72
     },
     {
       "index": 12,
-      "char": "下",
-      "start": 4.061,
-      "end": 4.275
+      "char": "能",
+      "start": 3.12,
+      "end": 3.2
     },
     {
       "index": 13,
-      "char": "结",
-      "start": 4.316,
-      "end": 4.531
+      "char": "消",
+      "start": 3.2,
+      "end": 3.52
     },
     {
       "index": 14,
-      "char": "构",
-      "start": 4.572,
-      "end": 4.786
+      "char": "灭",
+      "start": 3.52,
+      "end": 3.76
     },
     {
       "index": 15,
-      "char": "按",
-      "start": 5.007,
-      "end": 5.222
+      "char": "或",
+      "start": 3.76,
+      "end": 3.92
     },
     {
       "index": 16,
-      "char": "顺",
-      "start": 5.263,
-      "end": 5.477
+      "char": "减",
+      "start": 3.92,
+      "end": 4.16
     },
     {
       "index": 17,
-      "char": "序",
-      "start": 5.518,
-      "end": 5.733
+      "char": "少",
+      "start": 4.16,
+      "end": 4.4
     },
     {
       "index": 18,
-      "char": "能",
-      "start": 5.774,
-      "end": 5.988
+      "char": "一",
+      "start": 4.4,
+      "end": 4.48
     },
     {
       "index": 19,
-      "char": "看",
-      "start": 6.029,
-      "end": 6.244
+      "char": "部",
+      "start": 4.48,
+      "end": 4.64
     },
     {
       "index": 20,
-      "char": "到",
-      "start": 6.284,
-      "end": 6.499
+      "char": "分",
+      "start": 4.64,
+      "end": 4.8
     },
     {
       "index": 21,
-      "char": "乂",
-      "start": 6.54,
-      "end": 6.754
+      "char": "有",
+      "start": 4.8,
+      "end": 4.96
     },
     {
       "index": 22,
-      "char": "和",
-      "start": 6.795,
-      "end": 7.01
+      "char": "害",
+      "start": 4.96,
+      "end": 5.2
     },
     {
       "index": 23,
-      "char": "朩",
-      "start": 7.051,
-      "end": 7.265
+      "char": "细",
+      "start": 5.2,
+      "end": 5.44
     },
     {
       "index": 24,
-      "char": "从",
-      "start": 7.646,
-      "end": 7.861
+      "char": "菌",
+      "start": 5.44,
+      "end": 5.68
     },
     {
       "index": 25,
-      "char": "构",
-      "start": 7.902,
-      "end": 8.116
+      "char": "杀",
+      "start": 6.0,
+      "end": 6.24
     },
     {
       "index": 26,
-      "char": "字",
-      "start": 8.157,
-      "end": 8.372
+      "char": "适",
+      "start": 6.24,
+      "end": 6.4
     },
     {
       "index": 27,
-      "char": "分",
-      "start": 8.413,
-      "end": 8.627
+      "char": "合",
+      "start": 6.4,
+      "end": 6.64
     },
     {
       "index": 28,
-      "char": "工",
-      "start": 8.668,
-      "end": 8.883
+      "char": "整",
+      "start": 6.64,
+      "end": 6.8
     },
     {
       "index": 29,
-      "char": "看",
-      "start": 8.924,
-      "end": 9.138
+      "char": "体",
+      "start": 6.8,
+      "end": 6.96
     },
     {
       "index": 30,
-      "char": "乂",
-      "start": 9.359,
-      "end": 9.574
+      "char": "观",
+      "start": 6.96,
+      "end": 7.2
     },
     {
       "index": 31,
-      "char": "先",
-      "start": 9.614,
-      "end": 9.829
+      "char": "察",
+      "start": 7.2,
+      "end": 7.6
     },
     {
       "index": 32,
-      "char": "提",
-      "start": 9.87,
-      "end": 10.084
+      "char": "上",
+      "start": 7.76,
+      "end": 8.0
     },
     {
       "index": 33,
-      "char": "示",
-      "start": 10.125,
-      "end": 10.34
+      "char": "面",
+      "start": 8.0,
+      "end": 8.16
     },
     {
       "index": 34,
-      "char": "意",
-      "start": 10.381,
-      "end": 10.595
+      "char": "的",
+      "start": 8.16,
+      "end": 8.24
     },
     {
       "index": 35,
-      "char": "义",
-      "start": 10.636,
-      "end": 10.851
+      "char": "交",
+      "start": 8.24,
+      "end": 8.48
     },
     {
       "index": 36,
-      "char": "类",
-      "start": 10.892,
-      "end": 11.106
+      "char": "叉",
+      "start": 8.48,
+      "end": 8.64
     },
     {
       "index": 37,
-      "char": "别",
-      "start": 11.147,
-      "end": 11.362
+      "char": "笔",
+      "start": 8.64,
+      "end": 8.88
     },
     {
       "index": 38,
-      "char": "其",
-      "start": 11.583,
-      "end": 11.797
+      "char": "画",
+      "start": 8.88,
+      "end": 9.12
     },
     {
       "index": 39,
-      "char": "余",
-      "start": 11.838,
-      "end": 12.053
+      "char": "像",
+      "start": 9.12,
+      "end": 9.36
     },
     {
       "index": 40,
-      "char": "部",
-      "start": 12.094,
-      "end": 12.308
+      "char": "消",
+      "start": 9.36,
+      "end": 9.6
     },
     {
       "index": 41,
-      "char": "件",
-      "start": 12.349,
-      "end": 12.564
+      "char": "毒",
+      "start": 9.6,
+      "end": 9.76
     },
     {
       "index": 42,
-      "char": "补",
-      "start": 12.604,
-      "end": 12.819
+      "char": "光",
+      "start": 9.76,
+      "end": 10.16
     },
     {
       "index": 43,
-      "char": "足",
-      "start": 12.86,
-      "end": 13.075
+      "char": "下",
+      "start": 10.32,
+      "end": 10.64
     },
     {
       "index": 44,
-      "char": "字",
-      "start": 13.115,
-      "end": 13.33
+      "char": "面",
+      "start": 10.64,
+      "end": 10.8
     },
     {
       "index": 45,
-      "char": "形",
-      "start": 13.371,
-      "end": 13.585
+      "char": "像",
+      "start": 10.8,
+      "end": 11.04
     },
     {
       "index": 46,
-      "char": "看",
-      "start": 13.966,
-      "end": 14.181
+      "char": "承",
+      "start": 11.04,
+      "end": 11.2
     },
     {
       "index": 47,
-      "char": "图",
-      "start": 14.222,
-      "end": 14.436
+      "char": "托",
+      "start": 11.2,
+      "end": 11.36
     },
     {
       "index": 48,
-      "char": "时",
-      "start": 14.477,
-      "end": 14.692
+      "char": "设",
+      "start": 11.36,
+      "end": 11.6
     },
     {
       "index": 49,
-      "char": "中",
-      "start": 14.913,
-      "end": 15.127
+      "char": "备",
+      "start": 11.6,
+      "end": 11.68
     },
     {
       "index": 50,
-      "char": "央",
-      "start": 15.168,
-      "end": 15.383
+      "char": "的",
+      "start": 11.68,
+      "end": 11.84
     },
     {
       "index": 51,
-      "char": "交",
-      "start": 15.424,
-      "end": 15.638
+      "char": "小",
+      "start": 11.84,
+      "end": 12.0
     },
     {
       "index": 52,
-      "char": "叉",
-      "start": 15.679,
-      "end": 15.894
+      "char": "架",
+      "start": 12.0,
+      "end": 12.32
     },
     {
       "index": 53,
-      "char": "消",
-      "start": 15.934,
-      "end": 16.149
+      "char": "子",
+      "start": 12.32,
+      "end": 12.56
     },
     {
       "index": 54,
-      "char": "毒",
-      "start": 16.19,
-      "end": 16.405
+      "char": "消",
+      "start": 12.64,
+      "end": 12.8
     },
     {
       "index": 55,
-      "char": "光",
-      "start": 16.445,
-      "end": 16.66
+      "char": "毒",
+      "start": 12.8,
+      "end": 12.96
     },
     {
       "index": 56,
-      "char": "形",
-      "start": 16.701,
-      "end": 16.915
+      "char": "光",
+      "start": 12.96,
+      "end": 13.28
     },
     {
       "index": 57,
-      "char": "成",
-      "start": 16.956,
-      "end": 17.171
+      "char": "照",
+      "start": 13.28,
+      "end": 13.52
     },
     {
       "index": 58,
-      "char": "乂",
-      "start": 17.212,
-      "end": 17.426
+      "char": "过",
+      "start": 13.52,
+      "end": 13.68
     },
     {
       "index": 59,
-      "char": "下",
-      "start": 17.647,
-      "end": 17.862
+      "char": "设",
+      "start": 13.68,
+      "end": 13.92
     },
     {
       "index": 60,
-      "char": "方",
-      "start": 17.903,
-      "end": 18.117
+      "char": "备",
+      "start": 13.92,
+      "end": 14.16
     },
     {
       "index": 61,
-      "char": "木",
-      "start": 18.158,
-      "end": 18.373
+      "char": "只",
+      "start": 14.16,
+      "end": 14.32
     },
     {
       "index": 62,
-      "char": "架",
-      "start": 18.414,
-      "end": 18.628
+      "char": "是",
+      "start": 14.32,
+      "end": 14.48
     },
     {
       "index": 63,
-      "char": "和",
-      "start": 18.669,
-      "end": 18.884
+      "char": "一",
+      "start": 14.48,
+      "end": 14.64
     },
     {
       "index": 64,
-      "char": "四",
-      "start": 18.925,
-      "end": 19.139
+      "char": "幅",
+      "start": 14.64,
+      "end": 14.8
     },
     {
       "index": 65,
-      "char": "点",
-      "start": 19.18,
-      "end": 19.395
+      "char": "记",
+      "start": 14.8,
+      "end": 15.04
     },
     {
       "index": 66,
-      "char": "设",
-      "start": 19.435,
-      "end": 19.65
+      "char": "字",
+      "start": 15.04,
+      "end": 15.2
     },
     {
       "index": 67,
-      "char": "备",
-      "start": 19.691,
-      "end": 19.905
+      "char": "画",
+      "start": 15.2,
+      "end": 15.36
     },
     {
       "index": 68,
-      "char": "沿",
-      "start": 19.946,
-      "end": 20.161
+      "char": "面",
+      "start": 15.36,
+      "end": 15.68
     },
     {
       "index": 69,
-      "char": "朩",
-      "start": 20.202,
-      "end": 20.416
+      "char": "杀",
+      "start": 16.0,
+      "end": 16.16
     },
     {
       "index": 70,
-      "char": "承",
-      "start": 20.457,
-      "end": 20.672
+      "char": "菌",
+      "start": 16.16,
+      "end": 16.4
     },
     {
       "index": 71,
-      "char": "托",
-      "start": 20.713,
-      "end": 20.927
+      "char": "要",
+      "start": 16.4,
+      "end": 16.56
     },
     {
       "index": 72,
-      "char": "整",
-      "start": 21.148,
-      "end": 21.363
+      "char": "采",
+      "start": 16.56,
+      "end": 16.72
     },
     {
       "index": 73,
-      "char": "体",
-      "start": 21.404,
-      "end": 21.618
+      "char": "用",
+      "start": 16.72,
+      "end": 16.88
     },
     {
       "index": 74,
-      "char": "排",
-      "start": 21.659,
-      "end": 21.874
+      "char": "安",
+      "start": 16.88,
+      "end": 17.04
     },
     {
       "index": 75,
-      "char": "成",
-      "start": 21.915,
-      "end": 22.129
+      "char": "全",
+      "start": 17.04,
+      "end": 17.2
     },
     {
       "index": 76,
-      "char": "杀",
-      "start": 22.17,
-      "end": 22.385
+      "char": "合",
+      "start": 17.2,
+      "end": 17.44
     },
     {
       "index": 77,
-      "char": "杀",
-      "start": 22.765,
-      "end": 22.98
+      "char": "适",
+      "start": 17.44,
+      "end": 17.6
     },
     {
       "index": 78,
-      "char": "菌",
-      "start": 23.021,
-      "end": 23.235
+      "char": "的",
+      "start": 17.6,
+      "end": 17.68
     },
     {
       "index": 79,
-      "char": "就",
-      "start": 23.276,
-      "end": 23.491
+      "char": "方",
+      "start": 17.68,
+      "end": 17.92
     },
     {
       "index": 80,
-      "char": "是",
-      "start": 23.532,
-      "end": 23.746
+      "char": "法",
+      "start": 17.92,
+      "end": 18.24
     },
     {
       "index": 81,
-      "char": "消",
-      "start": 23.787,
-      "end": 24.002
+      "char": "不",
+      "start": 18.4,
+      "end": 18.56
     },
     {
       "index": 82,
-      "char": "灭",
-      "start": 24.043,
-      "end": 24.257
+      "char": "能",
+      "start": 18.56,
+      "end": 18.72
     },
     {
       "index": 83,
-      "char": "或",
-      "start": 24.298,
-      "end": 24.513
+      "char": "随",
+      "start": 18.72,
+      "end": 18.88
     },
     {
       "index": 84,
-      "char": "减",
-      "start": 24.554,
-      "end": 24.768
+      "char": "意",
+      "start": 18.88,
+      "end": 19.04
     },
     {
       "index": 85,
-      "char": "少",
-      "start": 24.809,
-      "end": 25.024
+      "char": "接",
+      "start": 19.04,
+      "end": 19.28
     },
     {
       "index": 86,
-      "char": "有",
-      "start": 25.065,
-      "end": 25.279
+      "char": "触",
+      "start": 19.28,
+      "end": 19.52
     },
     {
       "index": 87,
-      "char": "害",
-      "start": 25.32,
-      "end": 25.535
+      "char": "危",
+      "start": 19.52,
+      "end": 19.6
     },
     {
       "index": 88,
-      "char": "细",
-      "start": 25.575,
-      "end": 25.79
+      "char": "险",
+      "start": 19.6,
+      "end": 19.76
     },
     {
       "index": 89,
-      "char": "菌",
-      "start": 25.831,
-      "end": 26.045
+      "char": "物",
+      "start": 19.84,
+      "end": 20.0
     },
     {
       "index": 90,
-      "char": "生",
-      "start": 26.266,
-      "end": 26.481
-    },
-    {
-      "index": 91,
-      "char": "活",
-      "start": 26.522,
-      "end": 26.736
-    },
-    {
-      "index": 92,
-      "char": "中",
-      "start": 26.777,
-      "end": 26.992
-    },
-    {
-      "index": 93,
-      "char": "要",
-      "start": 27.033,
-      "end": 27.247
-    },
-    {
-      "index": 94,
-      "char": "按",
-      "start": 27.288,
-      "end": 27.503
-    },
-    {
-      "index": 95,
-      "char": "安",
-      "start": 27.544,
-      "end": 27.758
-    },
-    {
-      "index": 96,
-      "char": "全",
-      "start": 27.799,
-      "end": 28.014
-    },
-    {
-      "index": 97,
-      "char": "方",
-      "start": 28.055,
-      "end": 28.269
-    },
-    {
-      "index": 98,
-      "char": "法",
-      "start": 28.31,
-      "end": 28.525
-    },
-    {
-      "index": 99,
-      "char": "操",
-      "start": 28.565,
-      "end": 28.78
-    },
-    {
-      "index": 100,
-      "char": "作",
-      "start": 28.821,
-      "end": 29.036
-    },
-    {
-      "index": 101,
-      "char": "这",
-      "start": 29.416,
-      "end": 29.631
-    },
-    {
-      "index": 102,
-      "char": "是",
-      "start": 29.672,
-      "end": 29.886
-    },
-    {
-      "index": 103,
-      "char": "一",
-      "start": 29.927,
-      "end": 30.142
-    },
-    {
-      "index": 104,
-      "char": "幅",
-      "start": 30.183,
-      "end": 30.397
-    },
-    {
-      "index": 105,
-      "char": "帮",
-      "start": 30.438,
-      "end": 30.653
-    },
-    {
-      "index": 106,
-      "char": "助",
-      "start": 30.694,
-      "end": 30.908
-    },
-    {
-      "index": 107,
-      "char": "记",
-      "start": 30.949,
-      "end": 31.164
-    },
-    {
-      "index": 108,
-      "char": "笔",
-      "start": 31.205,
-      "end": 31.419
-    },
-    {
-      "index": 109,
-      "char": "画",
-      "start": 31.46,
-      "end": 31.675
-    },
-    {
-      "index": 110,
-      "char": "和",
-      "start": 31.715,
-      "end": 31.93
-    },
-    {
-      "index": 111,
-      "char": "位",
-      "start": 31.971,
-      "end": 32.186
-    },
-    {
-      "index": 112,
-      "char": "置",
-      "start": 32.226,
-      "end": 32.441
-    },
-    {
-      "index": 113,
-      "char": "的",
-      "start": 32.482,
-      "end": 32.696
-    },
-    {
-      "index": 114,
-      "char": "记",
-      "start": 32.737,
-      "end": 32.952
-    },
-    {
-      "index": 115,
-      "char": "忆",
-      "start": 32.993,
-      "end": 33.207
-    },
-    {
-      "index": 116,
-      "char": "画",
-      "start": 33.248,
-      "end": 33.463
-    },
-    {
-      "index": 117,
-      "char": "面",
-      "start": 33.504,
-      "end": 33.718
-    },
-    {
-      "index": 118,
-      "char": "不",
-      "start": 33.939,
-      "end": 34.154
-    },
-    {
-      "index": 119,
-      "char": "是",
-      "start": 34.195,
-      "end": 34.409
-    },
-    {
-      "index": 120,
-      "char": "完",
-      "start": 34.45,
-      "end": 34.665
-    },
-    {
-      "index": 121,
-      "char": "整",
-      "start": 34.705,
-      "end": 34.92
-    },
-    {
-      "index": 122,
-      "char": "字",
-      "start": 34.961,
-      "end": 35.176
-    },
-    {
-      "index": 123,
-      "char": "源",
-      "start": 35.216,
-      "end": 35.431
-    },
-    {
-      "index": 124,
-      "char": "最",
-      "start": 35.812,
-      "end": 36.026
-    },
-    {
-      "index": 125,
-      "char": "后",
-      "start": 36.067,
-      "end": 36.282
-    },
-    {
-      "index": 126,
-      "char": "再",
-      "start": 36.323,
-      "end": 36.537
-    },
-    {
-      "index": 127,
-      "char": "读",
-      "start": 36.578,
-      "end": 36.793
-    },
-    {
-      "index": 128,
-      "char": "一",
-      "start": 36.834,
-      "end": 37.048
-    },
-    {
-      "index": 129,
-      "char": "遍",
-      "start": 37.089,
-      "end": 37.304
-    },
-    {
-      "index": 130,
-      "char": "杀",
-      "start": 37.525,
-      "end": 37.739
-    },
-    {
-      "index": 131,
-      "char": "菌",
-      "start": 37.78,
-      "end": 37.995
+      "char": "品",
+      "start": 20.0,
+      "end": 20.16
     }
   ],
-  "transcript": "杀，“杀菌”的“杀”，读shā。它是上下结构，按顺序能看到“乂”和“朩”。从构字分工看，“乂”先提示意义类别，其余部件补足字形。看图时，中央交叉消毒光形成“乂”，下方木架和四点设备沿“朩”承托，整体排成“杀”。杀菌就是消灭或减少有害细菌；生活中要按安全方法操作。这是一幅帮助记笔画和位置的记忆画面，不是完整字源。最后再读一遍：杀菌。",
+  "transcript": "阳光中的紫外线有杀菌作用，能消灭或减少一部分有害细菌。杀适合整体观察，上面的交叉笔画像消毒光，下面像承托设备的小架子。消毒光照过设备只是一幅记字画面。杀菌要采用安全合适的方法，不能随意接触危险物品。",
   "voice_reference": "封",
-  "timing_source": "punctuation-weighted-estimate",
-  "script_version": "child-first-v2",
-  "duration": 38.560181
+  "reference_id": "019f0554-ea22-762e-966c-32d678fd6bf6",
+  "reference_sha256": "eb07e06ee13a20ee4577b1b481df6d33d42127c1b3876bfa5d5e5362ae349f19",
+  "timing_source": "qwen3-forced-aligner",
+  "script_version": "narration-v3",
+  "model": "mlx-community/Qwen3-TTS-12Hz-1.7B-Base-4bit",
+  "model_revision": "37e955a1deb861c088ae5f3a67043185f3d1a60c",
+  "generation_policy": "qwen3-clone-2026-08-22-v3",
+  "seed": 20260822,
+  "content_hash": "cc12c688264e83ec7758",
+  "duration": 20.182,
+  "alignment_model": "mlx-community/Qwen3-ForcedAligner-0.6B-8bit",
+  "aligned_audio_sha256": "b24ba9fd8dceb6ea13900dc3c67770f0ae1814453d86e8cef79ef09ee401edda",
+  "alignment_groups": []
 }

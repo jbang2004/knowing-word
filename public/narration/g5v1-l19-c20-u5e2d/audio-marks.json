@@ -2,806 +2,744 @@
   "marks": [
     {
       "index": 0,
-      "char": "席",
-      "start": 0.293,
-      "end": 0.478
+      "char": "草",
+      "start": 0.08,
+      "end": 0.32
     },
     {
       "index": 1,
-      "char": "草",
-      "start": 0.693,
-      "end": 0.877
+      "char": "席",
+      "start": 0.32,
+      "end": 0.48
     },
     {
       "index": 2,
-      "char": "席",
-      "start": 0.913,
-      "end": 1.097
+      "char": "的",
+      "start": 0.48,
+      "end": 0.64
     },
     {
       "index": 3,
-      "char": "的",
-      "start": 1.132,
-      "end": 1.317
+      "char": "席",
+      "start": 0.64,
+      "end": 1.04
     },
     {
       "index": 4,
-      "char": "席",
-      "start": 1.352,
-      "end": 1.537
+      "char": "读",
+      "start": 1.52,
+      "end": 1.68
     },
     {
       "index": 5,
-      "char": "读",
-      "start": 1.752,
-      "end": 1.936
+      "char": "第",
+      "start": 1.68,
+      "end": 1.76
     },
     {
       "index": 6,
-      "char": "x",
-      "start": 1.971,
-      "end": 2.156
+      "char": "二",
+      "start": 1.76,
+      "end": 2.0
     },
     {
       "index": 7,
-      "char": "í",
-      "start": 2.191,
-      "end": 2.376
+      "char": "声",
+      "start": 2.0,
+      "end": 2.4
     },
     {
       "index": 8,
-      "char": "它",
-      "start": 2.751,
-      "end": 2.935
+      "char": "草",
+      "start": 2.8,
+      "end": 3.04
     },
     {
       "index": 9,
-      "char": "是",
-      "start": 2.97,
-      "end": 3.155
+      "char": "席",
+      "start": 3.04,
+      "end": 3.36
     },
     {
       "index": 10,
-      "char": "左",
-      "start": 3.19,
-      "end": 3.375
+      "char": "是",
+      "start": 3.36,
+      "end": 3.52
     },
     {
       "index": 11,
-      "char": "上",
-      "start": 3.41,
-      "end": 3.594
+      "char": "用",
+      "start": 3.52,
+      "end": 3.68
     },
     {
       "index": 12,
-      "char": "包",
-      "start": 3.63,
-      "end": 3.814
+      "char": "草",
+      "start": 3.68,
+      "end": 3.92
     },
     {
       "index": 13,
-      "char": "围",
-      "start": 3.849,
-      "end": 4.034
+      "char": "茎",
+      "start": 3.92,
+      "end": 4.16
     },
     {
       "index": 14,
-      "char": "结",
-      "start": 4.069,
-      "end": 4.254
+      "char": "等",
+      "start": 4.16,
+      "end": 4.24
     },
     {
       "index": 15,
-      "char": "构",
-      "start": 4.289,
-      "end": 4.473
+      "char": "材",
+      "start": 4.32,
+      "end": 4.48
     },
     {
       "index": 16,
-      "char": "按",
-      "start": 4.688,
-      "end": 4.873
+      "char": "料",
+      "start": 4.48,
+      "end": 4.64
     },
     {
       "index": 17,
-      "char": "顺",
-      "start": 4.908,
-      "end": 5.093
+      "char": "编",
+      "start": 4.64,
+      "end": 4.88
     },
     {
       "index": 18,
-      "char": "序",
-      "start": 5.128,
-      "end": 5.312
+      "char": "成",
+      "start": 4.88,
+      "end": 5.04
     },
     {
       "index": 19,
-      "char": "能",
-      "start": 5.347,
-      "end": 5.532
+      "char": "的",
+      "start": 5.04,
+      "end": 5.12
     },
     {
       "index": 20,
-      "char": "看",
-      "start": 5.567,
-      "end": 5.752
+      "char": "铺",
+      "start": 5.12,
+      "end": 5.36
     },
     {
       "index": 21,
-      "char": "到",
-      "start": 5.787,
-      "end": 5.971
+      "char": "垫",
+      "start": 5.36,
+      "end": 5.52
     },
     {
       "index": 22,
-      "char": "广",
-      "start": 6.007,
-      "end": 6.191
+      "char": "用",
+      "start": 5.52,
+      "end": 5.76
     },
     {
       "index": 23,
-      "char": "和",
-      "start": 6.226,
-      "end": 6.411
+      "char": "品",
+      "start": 5.76,
+      "end": 6.0
     },
     {
       "index": 24,
-      "char": "廿",
-      "start": 6.446,
-      "end": 6.631
+      "char": "席",
+      "start": 6.56,
+      "end": 6.88
     },
     {
       "index": 25,
-      "char": "和",
-      "start": 6.666,
-      "end": 6.85
+      "char": "是",
+      "start": 6.88,
+      "end": 7.04
     },
     {
       "index": 26,
-      "char": "巾",
-      "start": 6.885,
-      "end": 7.07
+      "char": "左",
+      "start": 7.04,
+      "end": 7.12
     },
     {
       "index": 27,
-      "char": "从",
-      "start": 7.445,
-      "end": 7.63
+      "char": "上",
+      "start": 7.2,
+      "end": 7.44
     },
     {
       "index": 28,
-      "char": "构",
-      "start": 7.665,
-      "end": 7.849
+      "char": "包",
+      "start": 7.44,
+      "end": 7.68
     },
     {
       "index": 29,
-      "char": "字",
-      "start": 7.884,
-      "end": 8.069
+      "char": "围",
+      "start": 7.68,
+      "end": 7.76
     },
     {
       "index": 30,
-      "char": "分",
-      "start": 8.104,
-      "end": 8.289
+      "char": "结",
+      "start": 7.76,
+      "end": 8.0
     },
     {
       "index": 31,
-      "char": "工",
-      "start": 8.324,
-      "end": 8.508
+      "char": "构",
+      "start": 8.0,
+      "end": 8.24
     },
     {
       "index": 32,
-      "char": "看",
-      "start": 8.544,
-      "end": 8.728
+      "char": "外",
+      "start": 8.64,
+      "end": 8.8
     },
     {
       "index": 33,
-      "char": "巾",
-      "start": 8.943,
-      "end": 9.128
+      "char": "部",
+      "start": 8.8,
+      "end": 9.04
     },
     {
       "index": 34,
-      "char": "先",
-      "start": 9.163,
-      "end": 9.348
+      "char": "像",
+      "start": 9.04,
+      "end": 9.28
     },
     {
       "index": 35,
-      "char": "提",
-      "start": 9.383,
-      "end": 9.567
+      "char": "屋",
+      "start": 9.28,
+      "end": 9.36
     },
     {
       "index": 36,
-      "char": "示",
-      "start": 9.602,
-      "end": 9.787
+      "char": "檐",
+      "start": 9.36,
+      "end": 9.76
     },
     {
       "index": 37,
-      "char": "意",
-      "start": 9.822,
-      "end": 10.007
+      "char": "里",
+      "start": 10.0,
+      "end": 10.24
     },
     {
       "index": 38,
-      "char": "义",
-      "start": 10.042,
-      "end": 10.226
+      "char": "面",
+      "start": 10.24,
+      "end": 10.48
     },
     {
       "index": 39,
-      "char": "类",
-      "start": 10.262,
-      "end": 10.446
+      "char": "笔",
+      "start": 10.48,
+      "end": 10.64
     },
     {
       "index": 40,
-      "char": "别",
-      "start": 10.481,
-      "end": 10.666
+      "char": "画",
+      "start": 10.64,
+      "end": 10.88
     },
     {
       "index": 41,
-      "char": "其",
-      "start": 10.881,
-      "end": 11.065
+      "char": "分",
+      "start": 10.88,
+      "end": 11.04
     },
     {
       "index": 42,
-      "char": "余",
-      "start": 11.101,
-      "end": 11.285
+      "char": "层",
+      "start": 11.04,
+      "end": 11.44
     },
     {
       "index": 43,
-      "char": "部",
-      "start": 11.32,
-      "end": 11.505
+      "char": "下",
+      "start": 11.68,
+      "end": 11.92
     },
     {
       "index": 44,
-      "char": "件",
-      "start": 11.54,
-      "end": 11.725
+      "char": "面",
+      "start": 11.92,
+      "end": 12.08
     },
     {
       "index": 45,
-      "char": "补",
-      "start": 11.76,
-      "end": 11.944
+      "char": "一",
+      "start": 12.08,
+      "end": 12.16
     },
     {
       "index": 46,
-      "char": "足",
-      "start": 11.979,
-      "end": 12.164
+      "char": "部",
+      "start": 12.16,
+      "end": 12.4
     },
     {
       "index": 47,
-      "char": "字",
-      "start": 12.199,
-      "end": 12.384
+      "char": "分",
+      "start": 12.4,
+      "end": 12.56
     },
     {
       "index": 48,
-      "char": "形",
-      "start": 12.419,
-      "end": 12.603
+      "char": "要",
+      "start": 12.56,
+      "end": 12.72
     },
     {
       "index": 49,
-      "char": "看",
-      "start": 12.979,
-      "end": 13.163
+      "char": "托",
+      "start": 12.72,
+      "end": 12.96
     },
     {
       "index": 50,
-      "char": "图",
-      "start": 13.198,
-      "end": 13.383
+      "char": "稳",
+      "start": 12.96,
+      "end": 13.28
     },
     {
       "index": 51,
-      "char": "时",
-      "start": 13.418,
-      "end": 13.602
+      "char": "课",
+      "start": 13.6,
+      "end": 13.84
     },
     {
       "index": 52,
-      "char": "上",
-      "start": 13.818,
-      "end": 14.002
+      "char": "文",
+      "start": 13.84,
+      "end": 13.92
     },
     {
       "index": 53,
-      "char": "方",
-      "start": 14.037,
-      "end": 14.222
+      "char": "中",
+      "start": 13.92,
+      "end": 14.08
     },
     {
       "index": 54,
-      "char": "宽",
-      "start": 14.257,
-      "end": 14.442
+      "char": "的",
+      "start": 14.08,
+      "end": 14.24
     },
     {
       "index": 55,
-      "char": "屋",
-      "start": 14.477,
-      "end": 14.661
+      "char": "席",
+      "start": 14.24,
+      "end": 14.48
     },
     {
       "index": 56,
-      "char": "檐",
-      "start": 14.696,
-      "end": 14.881
+      "char": "子",
+      "start": 14.48,
+      "end": 14.72
     },
     {
       "index": 57,
-      "char": "形",
-      "start": 14.916,
-      "end": 15.101
+      "char": "铺",
+      "start": 14.72,
+      "end": 14.96
     },
     {
       "index": 58,
-      "char": "成",
-      "start": 15.136,
-      "end": 15.32
+      "char": "在",
+      "start": 14.96,
+      "end": 15.12
     },
     {
       "index": 59,
-      "char": "广",
-      "start": 15.356,
-      "end": 15.54
+      "char": "一",
+      "start": 15.12,
+      "end": 15.2
     },
     {
       "index": 60,
-      "char": "里",
-      "start": 15.755,
-      "end": 15.94
+      "char": "家",
+      "start": 15.2,
+      "end": 15.44
     },
     {
       "index": 61,
-      "char": "面",
-      "start": 15.975,
-      "end": 16.159
+      "char": "便",
+      "start": 15.44,
+      "end": 15.68
     },
     {
       "index": 62,
-      "char": "交",
-      "start": 16.195,
-      "end": 16.379
+      "char": "宜",
+      "start": 15.68,
+      "end": 15.76
     },
     {
       "index": 63,
-      "char": "叉",
-      "start": 16.414,
-      "end": 16.599
+      "char": "客",
+      "start": 15.76,
+      "end": 15.92
     },
     {
       "index": 64,
-      "char": "草",
-      "start": 16.634,
-      "end": 16.819
+      "char": "栈",
+      "start": 15.92,
+      "end": 16.08
     },
     {
       "index": 65,
-      "char": "篾",
-      "start": 16.854,
-      "end": 17.038
+      "char": "的",
+      "start": 16.08,
+      "end": 16.16
     },
     {
       "index": 66,
-      "char": "和",
-      "start": 17.073,
-      "end": 17.258
+      "char": "床",
+      "start": 16.16,
+      "end": 16.48
     },
     {
       "index": 67,
-      "char": "下",
-      "start": 17.293,
-      "end": 17.478
+      "char": "上",
+      "start": 16.48,
+      "end": 16.8
     },
     {
       "index": 68,
-      "char": "垂",
-      "start": 17.513,
-      "end": 17.697
+      "char": "孩",
+      "start": 17.28,
+      "end": 17.6
     },
     {
       "index": 69,
-      "char": "布",
-      "start": 17.733,
-      "end": 17.917
+      "char": "子",
+      "start": 17.6,
+      "end": 17.76
     },
     {
       "index": 70,
-      "char": "幅",
-      "start": 17.952,
-      "end": 18.137
+      "char": "被",
+      "start": 17.76,
+      "end": 17.92
     },
     {
       "index": 71,
-      "char": "沿",
-      "start": 18.172,
-      "end": 18.356
+      "char": "臭",
+      "start": 17.92,
+      "end": 18.08
     },
     {
       "index": 72,
-      "char": "廿",
-      "start": 18.392,
-      "end": 18.576
+      "char": "虫",
+      "start": 18.08,
+      "end": 18.32
     },
     {
       "index": 73,
-      "char": "巾",
-      "start": 18.611,
-      "end": 18.796
+      "char": "咬",
+      "start": 18.32,
+      "end": 18.56
     },
     {
       "index": 74,
-      "char": "编",
-      "start": 18.831,
-      "end": 19.016
+      "char": "出",
+      "start": 18.56,
+      "end": 18.64
     },
     {
       "index": 75,
-      "char": "好",
-      "start": 19.051,
-      "end": 19.235
+      "char": "许",
+      "start": 18.64,
+      "end": 18.8
     },
     {
       "index": 76,
-      "char": "铺",
-      "start": 19.45,
-      "end": 19.635
+      "char": "多",
+      "start": 18.8,
+      "end": 18.96
     },
     {
       "index": 77,
-      "char": "成",
-      "start": 19.67,
-      "end": 19.855
+      "char": "疙",
+      "start": 18.96,
+      "end": 19.2
     },
     {
       "index": 78,
-      "char": "一",
-      "start": 19.89,
-      "end": 20.074
+      "char": "瘩",
+      "start": 19.2,
+      "end": 19.52
     },
     {
       "index": 79,
-      "char": "张",
-      "start": 20.11,
-      "end": 20.294
+      "char": "父",
+      "start": 19.76,
+      "end": 19.92
     },
     {
       "index": 80,
-      "char": "席",
-      "start": 20.329,
-      "end": 20.514
+      "char": "亲",
+      "start": 19.92,
+      "end": 20.16
     },
     {
       "index": 81,
-      "char": "草",
-      "start": 20.889,
-      "end": 21.073
+      "char": "叫",
+      "start": 20.16,
+      "end": 20.32
     },
     {
       "index": 82,
-      "char": "席",
-      "start": 21.109,
-      "end": 21.293
+      "char": "来",
+      "start": 20.32,
+      "end": 20.4
     },
     {
       "index": 83,
-      "char": "是",
-      "start": 21.328,
-      "end": 21.513
+      "char": "茶",
+      "start": 20.4,
+      "end": 20.72
     },
     {
       "index": 84,
-      "char": "用",
-      "start": 21.548,
-      "end": 21.733
+      "char": "房",
+      "start": 20.72,
+      "end": 21.04
     },
     {
       "index": 85,
-      "char": "草",
-      "start": 21.768,
-      "end": 21.952
+      "char": "掀",
+      "start": 21.28,
+      "end": 21.44
     },
     {
       "index": 86,
-      "char": "茎",
-      "start": 21.987,
-      "end": 22.172
+      "char": "开",
+      "start": 21.44,
+      "end": 21.68
     },
     {
       "index": 87,
-      "char": "竹",
-      "start": 22.387,
-      "end": 22.572
+      "char": "席",
+      "start": 21.68,
+      "end": 21.92
     },
     {
       "index": 88,
-      "char": "篾",
-      "start": 22.607,
-      "end": 22.791
+      "char": "子",
+      "start": 21.92,
+      "end": 22.16
     },
     {
       "index": 89,
-      "char": "等",
-      "start": 22.827,
-      "end": 23.011
+      "char": "让",
+      "start": 22.16,
+      "end": 22.32
     },
     {
       "index": 90,
-      "char": "编",
-      "start": 23.046,
-      "end": 23.231
+      "char": "他",
+      "start": 22.32,
+      "end": 22.48
     },
     {
       "index": 91,
-      "char": "成",
-      "start": 23.266,
-      "end": 23.45
+      "char": "看",
+      "start": 22.48,
+      "end": 22.64
     },
     {
       "index": 92,
-      "char": "可",
-      "start": 23.666,
-      "end": 23.85
+      "char": "满",
+      "start": 22.64,
+      "end": 22.8
     },
     {
       "index": 93,
-      "char": "以",
-      "start": 23.885,
-      "end": 24.07
+      "char": "床",
+      "start": 22.8,
+      "end": 22.96
     },
     {
       "index": 94,
-      "char": "铺",
-      "start": 24.105,
-      "end": 24.29
+      "char": "臭",
+      "start": 22.96,
+      "end": 23.2
     },
     {
       "index": 95,
-      "char": "坐",
-      "start": 24.325,
-      "end": 24.509
+      "char": "虫",
+      "start": 23.2,
+      "end": 23.52
     },
     {
       "index": 96,
-      "char": "或",
-      "start": 24.544,
-      "end": 24.729
+      "char": "这",
+      "start": 23.92,
+      "end": 24.0
     },
     {
       "index": 97,
-      "char": "铺",
-      "start": 24.764,
-      "end": 24.949
+      "char": "个",
+      "start": 24.0,
+      "end": 24.16
     },
     {
       "index": 98,
-      "char": "睡",
-      "start": 24.984,
-      "end": 25.168
+      "char": "掀",
+      "start": 24.16,
+      "end": 24.32
     },
     {
       "index": 99,
-      "char": "的",
-      "start": 25.204,
-      "end": 25.388
+      "char": "席",
+      "start": 24.32,
+      "end": 24.56
     },
     {
       "index": 100,
-      "char": "用",
-      "start": 25.423,
-      "end": 25.608
+      "char": "子",
+      "start": 24.56,
+      "end": 24.64
     },
     {
       "index": 101,
-      "char": "品",
-      "start": 25.643,
-      "end": 25.827
+      "char": "的",
+      "start": 24.64,
+      "end": 24.8
     },
     {
       "index": 102,
-      "char": "这",
-      "start": 26.203,
-      "end": 26.387
+      "char": "动",
+      "start": 24.8,
+      "end": 24.96
     },
     {
       "index": 103,
-      "char": "是",
-      "start": 26.422,
-      "end": 26.607
+      "char": "作",
+      "start": 24.96,
+      "end": 25.2
     },
     {
       "index": 104,
-      "char": "一",
-      "start": 26.642,
-      "end": 26.827
+      "char": "里",
+      "start": 25.2,
+      "end": 25.44
     },
     {
       "index": 105,
-      "char": "幅",
-      "start": 26.862,
-      "end": 27.046
+      "char": "有",
+      "start": 25.68,
+      "end": 25.76
     },
     {
       "index": 106,
-      "char": "帮",
-      "start": 27.081,
-      "end": 27.266
+      "char": "父",
+      "start": 25.76,
+      "end": 26.0
     },
     {
       "index": 107,
-      "char": "助",
-      "start": 27.301,
-      "end": 27.486
+      "char": "亲",
+      "start": 26.0,
+      "end": 26.16
     },
     {
       "index": 108,
-      "char": "记",
-      "start": 27.521,
-      "end": 27.705
+      "char": "的",
+      "start": 26.16,
+      "end": 26.24
     },
     {
       "index": 109,
-      "char": "笔",
-      "start": 27.741,
-      "end": 27.925
+      "char": "气",
+      "start": 26.24,
+      "end": 26.48
     },
     {
       "index": 110,
-      "char": "画",
-      "start": 27.96,
-      "end": 28.145
+      "char": "愤",
+      "start": 26.48,
+      "end": 26.8
     },
     {
       "index": 111,
-      "char": "和",
-      "start": 28.18,
-      "end": 28.364
+      "char": "更",
+      "start": 27.12,
+      "end": 27.28
     },
     {
       "index": 112,
-      "char": "位",
-      "start": 28.4,
-      "end": 28.584
+      "char": "有",
+      "start": 27.28,
+      "end": 27.44
     },
     {
       "index": 113,
-      "char": "置",
-      "start": 28.619,
-      "end": 28.804
+      "char": "对",
+      "start": 27.44,
+      "end": 27.6
     },
     {
       "index": 114,
-      "char": "的",
-      "start": 28.839,
-      "end": 29.024
+      "char": "孩",
+      "start": 27.6,
+      "end": 27.84
     },
     {
       "index": 115,
-      "char": "记",
-      "start": 29.059,
-      "end": 29.243
+      "char": "子",
+      "start": 27.84,
+      "end": 28.0
     },
     {
       "index": 116,
-      "char": "忆",
-      "start": 29.278,
-      "end": 29.463
+      "char": "受",
+      "start": 28.0,
+      "end": 28.16
     },
     {
       "index": 117,
-      "char": "画",
-      "start": 29.498,
-      "end": 29.683
+      "char": "苦",
+      "start": 28.16,
+      "end": 28.32
     },
     {
       "index": 118,
-      "char": "面",
-      "start": 29.718,
-      "end": 29.902
+      "char": "的",
+      "start": 28.32,
+      "end": 28.4
     },
     {
       "index": 119,
-      "char": "不",
-      "start": 30.118,
-      "end": 30.302
+      "char": "心",
+      "start": 28.4,
+      "end": 28.64
     },
     {
       "index": 120,
-      "char": "是",
-      "start": 30.337,
-      "end": 30.522
-    },
-    {
-      "index": 121,
-      "char": "完",
-      "start": 30.557,
-      "end": 30.742
-    },
-    {
-      "index": 122,
-      "char": "整",
-      "start": 30.777,
-      "end": 30.961
-    },
-    {
-      "index": 123,
-      "char": "字",
-      "start": 30.996,
-      "end": 31.181
-    },
-    {
-      "index": 124,
-      "char": "源",
-      "start": 31.216,
-      "end": 31.401
-    },
-    {
-      "index": 125,
-      "char": "最",
-      "start": 31.776,
-      "end": 31.96
-    },
-    {
-      "index": 126,
-      "char": "后",
-      "start": 31.995,
-      "end": 32.18
-    },
-    {
-      "index": 127,
-      "char": "再",
-      "start": 32.215,
-      "end": 32.4
-    },
-    {
-      "index": 128,
-      "char": "读",
-      "start": 32.435,
-      "end": 32.619
-    },
-    {
-      "index": 129,
-      "char": "一",
-      "start": 32.655,
-      "end": 32.839
-    },
-    {
-      "index": 130,
-      "char": "遍",
-      "start": 32.874,
-      "end": 33.059
-    },
-    {
-      "index": 131,
-      "char": "草",
-      "start": 33.274,
-      "end": 33.459
-    },
-    {
-      "index": 132,
-      "char": "席",
-      "start": 33.494,
-      "end": 33.678
+      "char": "疼",
+      "start": 28.64,
+      "end": 28.96
     }
   ],
-  "transcript": "席，“草席”的“席”，读xí。它是左上包围结构，按顺序能看到“广”和“廿”和“巾”。从构字分工看，“巾”先提示意义类别，其余部件补足字形。看图时，上方宽屋檐形成“广”，里面交叉草篾和下垂布幅沿“廿”“巾”编好，铺成一张“席”。草席是用草茎、竹篾等编成、可以铺坐或铺睡的用品。这是一幅帮助记笔画和位置的记忆画面，不是完整字源。最后再读一遍：草席。",
+  "transcript": "草席的席，读第二声，草席是用草茎等材料编成的铺垫用品。席是左上包围结构，外部像屋檐，里面笔画分层，下面一部分要托稳。课文中的席子铺在一家便宜客栈的床上。孩子被臭虫咬出许多疙瘩，父亲叫来茶房，掀开席子让他看满床臭虫。这个掀席子的动作里，有父亲的气愤，更有对孩子受苦的心疼。",
   "voice_reference": "封",
-  "timing_source": "punctuation-weighted-estimate",
-  "script_version": "child-first-v2",
-  "duration": 34.240181
+  "reference_id": "019f0554-ea22-762e-966c-32d678fd6bf6",
+  "reference_sha256": "eb07e06ee13a20ee4577b1b481df6d33d42127c1b3876bfa5d5e5362ae349f19",
+  "timing_source": "qwen3-forced-aligner",
+  "script_version": "narration-v3",
+  "model": "mlx-community/Qwen3-TTS-12Hz-1.7B-Base-4bit",
+  "model_revision": "37e955a1deb861c088ae5f3a67043185f3d1a60c",
+  "generation_policy": "qwen3-clone-2026-08-22-v3",
+  "seed": 20260822,
+  "content_hash": "b700b66b67d784228fa4",
+  "duration": 28.972,
+  "alignment_model": "mlx-community/Qwen3-ForcedAligner-0.6B-8bit",
+  "aligned_audio_sha256": "ec451cca144d98573feeb48c702c1b21617e8b425be33446850444a0c2bdd7bc",
+  "alignment_groups": []
 }

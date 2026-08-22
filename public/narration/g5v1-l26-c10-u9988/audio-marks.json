@@ -2,800 +2,678 @@
   "marks": [
     {
       "index": 0,
-      "char": "馈",
-      "start": 0.292,
-      "end": 0.467
+      "char": "反",
+      "start": 0.08,
+      "end": 0.32
     },
     {
       "index": 1,
-      "char": "反",
-      "start": 0.681,
-      "end": 0.855
+      "char": "馈",
+      "start": 0.32,
+      "end": 0.56
     },
     {
       "index": 2,
-      "char": "馈",
-      "start": 0.889,
-      "end": 1.063
+      "char": "的",
+      "start": 0.56,
+      "end": 0.64
     },
     {
       "index": 3,
-      "char": "的",
-      "start": 1.097,
-      "end": 1.271
+      "char": "馈",
+      "start": 0.64,
+      "end": 0.96
     },
     {
       "index": 4,
-      "char": "馈",
-      "start": 1.305,
-      "end": 1.479
+      "char": "读",
+      "start": 1.44,
+      "end": 1.6
     },
     {
       "index": 5,
-      "char": "读",
-      "start": 1.693,
-      "end": 1.867
+      "char": "第",
+      "start": 1.6,
+      "end": 1.76
     },
     {
       "index": 6,
-      "char": "k",
-      "start": 1.901,
-      "end": 2.075
+      "char": "四",
+      "start": 1.76,
+      "end": 2.0
     },
     {
       "index": 7,
-      "char": "u",
-      "start": 2.109,
-      "end": 2.283
+      "char": "声",
+      "start": 2.0,
+      "end": 2.4
     },
     {
       "index": 8,
-      "char": "ì",
-      "start": 2.317,
-      "end": 2.491
+      "char": "反",
+      "start": 2.72,
+      "end": 3.04
     },
     {
       "index": 9,
-      "char": "它",
-      "start": 2.865,
-      "end": 3.04
+      "char": "馈",
+      "start": 3.04,
+      "end": 3.28
     },
     {
       "index": 10,
       "char": "是",
-      "start": 3.073,
-      "end": 3.248
+      "start": 3.28,
+      "end": 3.44
     },
     {
       "index": 11,
-      "char": "左",
-      "start": 3.281,
-      "end": 3.456
+      "char": "把",
+      "start": 3.44,
+      "end": 3.68
     },
     {
       "index": 12,
-      "char": "右",
-      "start": 3.489,
-      "end": 3.664
+      "char": "结",
+      "start": 3.68,
+      "end": 3.84
     },
     {
       "index": 13,
-      "char": "结",
-      "start": 3.697,
-      "end": 3.872
+      "char": "果",
+      "start": 3.84,
+      "end": 4.24
     },
     {
       "index": 14,
-      "char": "构",
-      "start": 3.905,
-      "end": 4.08
+      "char": "意",
+      "start": 4.4,
+      "end": 4.56
     },
     {
       "index": 15,
-      "char": "按",
-      "start": 4.293,
-      "end": 4.468
+      "char": "见",
+      "start": 4.56,
+      "end": 4.88
     },
     {
       "index": 16,
-      "char": "顺",
-      "start": 4.501,
-      "end": 4.676
+      "char": "或",
+      "start": 4.96,
+      "end": 5.12
     },
     {
       "index": 17,
-      "char": "序",
-      "start": 4.709,
-      "end": 4.884
+      "char": "信",
+      "start": 5.12,
+      "end": 5.36
     },
     {
       "index": 18,
-      "char": "能",
-      "start": 4.917,
-      "end": 5.092
+      "char": "息",
+      "start": 5.36,
+      "end": 5.6
     },
     {
       "index": 19,
-      "char": "看",
-      "start": 5.125,
-      "end": 5.3
+      "char": "送",
+      "start": 5.68,
+      "end": 5.92
     },
     {
       "index": 20,
-      "char": "到",
-      "start": 5.333,
-      "end": 5.508
+      "char": "回",
+      "start": 5.92,
+      "end": 6.08
     },
     {
       "index": 21,
-      "char": "饣",
-      "start": 5.541,
-      "end": 5.716
+      "char": "给",
+      "start": 6.08,
+      "end": 6.16
     },
     {
       "index": 22,
-      "char": "和",
-      "start": 5.749,
-      "end": 5.924
+      "char": "对",
+      "start": 6.16,
+      "end": 6.4
     },
     {
       "index": 23,
-      "char": "贵",
-      "start": 5.957,
-      "end": 6.132
+      "char": "方",
+      "start": 6.4,
+      "end": 6.72
     },
     {
       "index": 24,
-      "char": "从",
-      "start": 6.505,
-      "end": 6.68
+      "char": "馈",
+      "start": 7.28,
+      "end": 7.68
     },
     {
       "index": 25,
-      "char": "构",
-      "start": 6.713,
-      "end": 6.888
+      "char": "还",
+      "start": 7.76,
+      "end": 7.92
     },
     {
       "index": 26,
-      "char": "字",
-      "start": 6.921,
-      "end": 7.096
+      "char": "在",
+      "start": 7.92,
+      "end": 8.08
     },
     {
       "index": 27,
-      "char": "分",
-      "start": 7.129,
-      "end": 7.304
+      "char": "馈",
+      "start": 8.08,
+      "end": 8.32
     },
     {
       "index": 28,
-      "char": "工",
-      "start": 7.337,
-      "end": 7.512
+      "char": "赠",
+      "start": 8.32,
+      "end": 8.48
     },
     {
       "index": 29,
-      "char": "看",
-      "start": 7.545,
-      "end": 7.72
+      "char": "这",
+      "start": 8.48,
+      "end": 8.64
     },
     {
       "index": 30,
-      "char": "饣",
-      "start": 7.933,
-      "end": 8.108
+      "char": "个",
+      "start": 8.64,
+      "end": 8.72
     },
     {
       "index": 31,
-      "char": "先",
-      "start": 8.141,
-      "end": 8.316
+      "char": "词",
+      "start": 8.72,
+      "end": 8.96
     },
     {
       "index": 32,
-      "char": "提",
-      "start": 8.349,
-      "end": 8.524
+      "char": "里",
+      "start": 8.96,
+      "end": 9.2
     },
     {
       "index": 33,
-      "char": "示",
-      "start": 8.558,
-      "end": 8.732
+      "char": "馈",
+      "start": 9.68,
+      "end": 9.92
     },
     {
       "index": 34,
-      "char": "意",
-      "start": 8.766,
-      "end": 8.94
-    },
-    {
-      "index": 35,
-      "char": "义",
-      "start": 8.974,
-      "end": 9.148
-    },
-    {
-      "index": 36,
-      "char": "类",
-      "start": 9.182,
-      "end": 9.356
-    },
-    {
-      "index": 37,
-      "char": "别",
-      "start": 9.39,
-      "end": 9.564
-    },
-    {
-      "index": 38,
-      "char": "其",
-      "start": 9.778,
-      "end": 9.952
-    },
-    {
-      "index": 39,
-      "char": "余",
-      "start": 9.986,
+      "char": "赠",
+      "start": 9.92,
       "end": 10.16
     },
     {
+      "index": 35,
+      "char": "就",
+      "start": 10.16,
+      "end": 10.32
+    },
+    {
+      "index": 36,
+      "char": "是",
+      "start": 10.32,
+      "end": 10.48
+    },
+    {
+      "index": 37,
+      "char": "赠",
+      "start": 10.48,
+      "end": 10.64
+    },
+    {
+      "index": 38,
+      "char": "送",
+      "start": 10.64,
+      "end": 10.88
+    },
+    {
+      "index": 39,
+      "char": "礼",
+      "start": 10.88,
+      "end": 11.04
+    },
+    {
       "index": 40,
-      "char": "部",
-      "start": 10.194,
-      "end": 10.368
+      "char": "物",
+      "start": 11.04,
+      "end": 11.36
     },
     {
       "index": 41,
-      "char": "件",
-      "start": 10.402,
-      "end": 10.577
+      "char": "馈",
+      "start": 11.76,
+      "end": 12.08
     },
     {
       "index": 42,
-      "char": "补",
-      "start": 10.61,
-      "end": 10.785
+      "char": "按",
+      "start": 12.16,
+      "end": 12.32
     },
     {
       "index": 43,
-      "char": "足",
-      "start": 10.818,
-      "end": 10.993
+      "char": "左",
+      "start": 12.32,
+      "end": 12.4
     },
     {
       "index": 44,
-      "char": "字",
-      "start": 11.026,
-      "end": 11.201
+      "char": "右",
+      "start": 12.48,
+      "end": 12.72
     },
     {
       "index": 45,
-      "char": "形",
-      "start": 11.234,
-      "end": 11.409
+      "char": "写",
+      "start": 12.72,
+      "end": 13.12
     },
     {
       "index": 46,
-      "char": "看",
-      "start": 11.782,
-      "end": 11.957
+      "char": "食",
+      "start": 13.36,
+      "end": 13.6
     },
     {
       "index": 47,
-      "char": "图",
-      "start": 11.99,
-      "end": 12.165
+      "char": "字",
+      "start": 13.6,
+      "end": 13.76
     },
     {
       "index": 48,
-      "char": "时",
-      "start": 12.198,
-      "end": 12.373
+      "char": "旁",
+      "start": 13.76,
+      "end": 14.0
     },
     {
       "index": 49,
-      "char": "左",
-      "start": 12.586,
-      "end": 12.761
+      "char": "在",
+      "start": 14.0,
+      "end": 14.24
     },
     {
       "index": 50,
-      "char": "边",
-      "start": 12.794,
-      "end": 12.969
+      "char": "左",
+      "start": 14.24,
+      "end": 14.32
     },
     {
       "index": 51,
-      "char": "带",
-      "start": 13.002,
-      "end": 13.177
+      "char": "贵",
+      "start": 14.88,
+      "end": 15.04
     },
     {
       "index": 52,
-      "char": "盖",
-      "start": 13.21,
-      "end": 13.385
+      "char": "在",
+      "start": 15.04,
+      "end": 15.2
     },
     {
       "index": 53,
-      "char": "信",
-      "start": 13.418,
-      "end": 13.593
+      "char": "右",
+      "start": 15.2,
+      "end": 15.52
     },
     {
       "index": 54,
-      "char": "息",
-      "start": 13.626,
-      "end": 13.801
+      "char": "写",
+      "start": 15.76,
+      "end": 16.0
     },
     {
       "index": 55,
-      "char": "盒",
-      "start": 13.834,
-      "end": 14.009
+      "char": "时",
+      "start": 16.0,
+      "end": 16.32
     },
     {
       "index": 56,
-      "char": "形",
-      "start": 14.042,
-      "end": 14.217
+      "char": "左",
+      "start": 16.32,
+      "end": 16.4
     },
     {
       "index": 57,
-      "char": "成",
-      "start": 14.25,
-      "end": 14.425
+      "char": "窄",
+      "start": 16.48,
+      "end": 16.64
     },
     {
       "index": 58,
-      "char": "饣",
-      "start": 14.458,
-      "end": 14.633
+      "char": "右",
+      "start": 16.64,
+      "end": 16.8
     },
     {
       "index": 59,
-      "char": "右",
-      "start": 14.846,
-      "end": 15.021
+      "char": "宽",
+      "start": 16.8,
+      "end": 17.2
     },
     {
       "index": 60,
-      "char": "边",
-      "start": 15.054,
-      "end": 15.229
+      "char": "作",
+      "start": 17.68,
+      "end": 17.84
     },
     {
       "index": 61,
-      "char": "中",
-      "start": 15.262,
-      "end": 15.437
+      "char": "者",
+      "start": 17.84,
+      "end": 18.0
     },
     {
       "index": 62,
-      "char": "形",
-      "start": 15.47,
-      "end": 15.645
+      "char": "说",
+      "start": 18.0,
+      "end": 18.24
     },
     {
       "index": 63,
-      "char": "通",
-      "start": 15.678,
-      "end": 15.853
+      "char": "写",
+      "start": 18.24,
+      "end": 18.4
     },
     {
       "index": 64,
-      "char": "道",
-      "start": 15.887,
-      "end": 16.061
+      "char": "作",
+      "start": 18.4,
+      "end": 18.56
     },
     {
       "index": 65,
-      "char": "和",
-      "start": 16.095,
-      "end": 16.269
+      "char": "中",
+      "start": 18.56,
+      "end": 18.8
     },
     {
       "index": 66,
-      "char": "贝",
-      "start": 16.303,
-      "end": 16.477
+      "char": "的",
+      "start": 18.8,
+      "end": 18.88
     },
     {
       "index": 67,
-      "char": "形",
-      "start": 16.511,
-      "end": 16.685
+      "char": "这",
+      "start": 18.88,
+      "end": 18.96
     },
     {
       "index": 68,
-      "char": "回",
-      "start": 16.719,
-      "end": 16.893
+      "char": "些",
+      "start": 18.96,
+      "end": 19.12
     },
     {
       "index": 69,
-      "char": "执",
-      "start": 16.927,
-      "end": 17.101
+      "char": "领",
+      "start": 19.12,
+      "end": 19.28
     },
     {
       "index": 70,
-      "char": "沿",
-      "start": 17.135,
-      "end": 17.309
+      "char": "悟",
+      "start": 19.28,
+      "end": 19.6
     },
     {
       "index": 71,
-      "char": "贵",
-      "start": 17.343,
-      "end": 17.517
+      "char": "自",
+      "start": 19.84,
+      "end": 20.0
     },
     {
       "index": 72,
-      "char": "送",
-      "start": 17.551,
-      "end": 17.726
+      "char": "然",
+      "start": 20.0,
+      "end": 20.16
     },
     {
       "index": 73,
-      "char": "回",
-      "start": 17.759,
-      "end": 17.934
+      "char": "是",
+      "start": 20.16,
+      "end": 20.32
     },
     {
       "index": 74,
-      "char": "原",
-      "start": 17.967,
-      "end": 18.142
+      "char": "课",
+      "start": 20.32,
+      "end": 20.48
     },
     {
       "index": 75,
-      "char": "处",
-      "start": 18.175,
-      "end": 18.35
+      "char": "外",
+      "start": 20.48,
+      "end": 20.72
     },
     {
       "index": 76,
-      "char": "消",
-      "start": 18.563,
-      "end": 18.738
+      "char": "读",
+      "start": 20.72,
+      "end": 20.88
     },
     {
       "index": 77,
-      "char": "息",
-      "start": 18.771,
-      "end": 18.946
+      "char": "物",
+      "start": 20.88,
+      "end": 20.96
     },
     {
       "index": 78,
-      "char": "来",
-      "start": 18.979,
-      "end": 19.154
+      "char": "的",
+      "start": 20.96,
+      "end": 21.12
     },
     {
       "index": 79,
-      "char": "回",
-      "start": 19.187,
-      "end": 19.362
+      "char": "馈",
+      "start": 21.12,
+      "end": 21.28
     },
     {
       "index": 80,
-      "char": "传",
-      "start": 19.395,
-      "end": 19.57
+      "char": "赠",
+      "start": 21.28,
+      "end": 21.6
     },
     {
       "index": 81,
-      "char": "递",
-      "start": 19.603,
-      "end": 19.778
+      "char": "一",
+      "start": 22.08,
+      "end": 22.24
     },
     {
       "index": 82,
-      "char": "组",
-      "start": 19.991,
-      "end": 20.166
+      "char": "本",
+      "start": 22.24,
+      "end": 22.48
     },
     {
       "index": 83,
-      "char": "成",
-      "start": 20.199,
-      "end": 20.374
+      "char": "本",
+      "start": 22.48,
+      "end": 22.64
     },
     {
       "index": 84,
-      "char": "馈",
-      "start": 20.407,
-      "end": 20.582
+      "char": "书",
+      "start": 22.64,
+      "end": 22.88
     },
     {
       "index": 85,
-      "char": "反",
-      "start": 20.955,
-      "end": 21.13
+      "char": "送",
+      "start": 22.88,
+      "end": 23.12
     },
     {
       "index": 86,
-      "char": "馈",
-      "start": 21.163,
-      "end": 21.338
+      "char": "给",
+      "start": 23.12,
+      "end": 23.28
     },
     {
       "index": 87,
-      "char": "是",
-      "start": 21.371,
-      "end": 21.546
+      "char": "她",
+      "start": 23.28,
+      "end": 23.44
     },
     {
       "index": 88,
-      "char": "把",
-      "start": 21.579,
-      "end": 21.754
+      "char": "构",
+      "start": 23.44,
+      "end": 23.68
     },
     {
       "index": 89,
-      "char": "结",
-      "start": 21.787,
-      "end": 21.962
+      "char": "思",
+      "start": 23.68,
+      "end": 24.0
     },
     {
       "index": 90,
-      "char": "果",
-      "start": 21.995,
-      "end": 22.17
+      "char": "和",
+      "start": 24.0,
+      "end": 24.16
     },
     {
       "index": 91,
-      "char": "意",
-      "start": 22.383,
-      "end": 22.558
+      "char": "表",
+      "start": 24.16,
+      "end": 24.32
     },
     {
       "index": 92,
-      "char": "见",
-      "start": 22.591,
-      "end": 22.766
+      "char": "达",
+      "start": 24.32,
+      "end": 24.48
     },
     {
       "index": 93,
-      "char": "或",
-      "start": 22.799,
-      "end": 22.974
+      "char": "的",
+      "start": 24.48,
+      "end": 24.56
     },
     {
       "index": 94,
-      "char": "信",
-      "start": 23.007,
-      "end": 23.182
+      "char": "方",
+      "start": 24.56,
+      "end": 24.8
     },
     {
       "index": 95,
-      "char": "息",
-      "start": 23.215,
-      "end": 23.39
+      "char": "法",
+      "start": 24.8,
+      "end": 25.12
     },
     {
       "index": 96,
-      "char": "返",
-      "start": 23.424,
-      "end": 23.598
+      "char": "这",
+      "start": 25.52,
+      "end": 25.6
     },
     {
       "index": 97,
-      "char": "回",
-      "start": 23.632,
-      "end": 23.806
+      "char": "份",
+      "start": 25.6,
+      "end": 25.76
     },
     {
       "index": 98,
-      "char": "给",
-      "start": 23.84,
-      "end": 24.014
+      "char": "礼",
+      "start": 25.76,
+      "end": 25.92
     },
     {
       "index": 99,
-      "char": "对",
-      "start": 24.048,
-      "end": 24.222
+      "char": "物",
+      "start": 25.92,
+      "end": 26.08
     },
     {
       "index": 100,
-      "char": "方",
-      "start": 24.256,
-      "end": 24.43
+      "char": "后",
+      "start": 26.08,
+      "end": 26.32
     },
     {
       "index": 101,
-      "char": "这",
-      "start": 24.804,
-      "end": 24.978
+      "char": "来",
+      "start": 26.32,
+      "end": 26.4
     },
     {
       "index": 102,
-      "char": "是",
-      "start": 25.012,
-      "end": 25.186
+      "char": "变",
+      "start": 26.4,
+      "end": 26.64
     },
     {
       "index": 103,
-      "char": "一",
-      "start": 25.22,
-      "end": 25.394
+      "char": "成",
+      "start": 26.64,
+      "end": 26.88
     },
     {
       "index": 104,
-      "char": "幅",
-      "start": 25.428,
-      "end": 25.603
+      "char": "作",
+      "start": 26.88,
+      "end": 27.04
     },
     {
       "index": 105,
-      "char": "帮",
-      "start": 25.636,
-      "end": 25.811
+      "char": "文",
+      "start": 27.04,
+      "end": 27.2
     },
     {
       "index": 106,
-      "char": "助",
-      "start": 25.844,
-      "end": 26.019
+      "char": "里",
+      "start": 27.2,
+      "end": 27.28
     },
     {
       "index": 107,
-      "char": "记",
-      "start": 26.052,
-      "end": 26.227
+      "char": "的",
+      "start": 27.28,
+      "end": 27.44
     },
     {
       "index": 108,
-      "char": "笔",
-      "start": 26.26,
-      "end": 26.435
+      "char": "进",
+      "start": 27.44,
+      "end": 27.6
     },
     {
       "index": 109,
-      "char": "画",
-      "start": 26.468,
-      "end": 26.643
-    },
-    {
-      "index": 110,
-      "char": "和",
-      "start": 26.676,
-      "end": 26.851
-    },
-    {
-      "index": 111,
-      "char": "位",
-      "start": 26.884,
-      "end": 27.059
-    },
-    {
-      "index": 112,
-      "char": "置",
-      "start": 27.092,
-      "end": 27.267
-    },
-    {
-      "index": 113,
-      "char": "的",
-      "start": 27.3,
-      "end": 27.475
-    },
-    {
-      "index": 114,
-      "char": "记",
-      "start": 27.508,
-      "end": 27.683
-    },
-    {
-      "index": 115,
-      "char": "忆",
-      "start": 27.716,
-      "end": 27.891
-    },
-    {
-      "index": 116,
-      "char": "画",
-      "start": 27.924,
-      "end": 28.099
-    },
-    {
-      "index": 117,
-      "char": "面",
-      "start": 28.132,
-      "end": 28.307
-    },
-    {
-      "index": 118,
-      "char": "不",
-      "start": 28.52,
-      "end": 28.695
-    },
-    {
-      "index": 119,
-      "char": "是",
-      "start": 28.728,
-      "end": 28.903
-    },
-    {
-      "index": 120,
-      "char": "完",
-      "start": 28.936,
-      "end": 29.111
-    },
-    {
-      "index": 121,
-      "char": "整",
-      "start": 29.144,
-      "end": 29.319
-    },
-    {
-      "index": 122,
-      "char": "字",
-      "start": 29.352,
-      "end": 29.527
-    },
-    {
-      "index": 123,
-      "char": "源",
-      "start": 29.56,
-      "end": 29.735
-    },
-    {
-      "index": 124,
-      "char": "最",
-      "start": 30.108,
-      "end": 30.283
-    },
-    {
-      "index": 125,
-      "char": "后",
-      "start": 30.316,
-      "end": 30.491
-    },
-    {
-      "index": 126,
-      "char": "再",
-      "start": 30.524,
-      "end": 30.699
-    },
-    {
-      "index": 127,
-      "char": "读",
-      "start": 30.733,
-      "end": 30.907
-    },
-    {
-      "index": 128,
-      "char": "一",
-      "start": 30.941,
-      "end": 31.115
-    },
-    {
-      "index": 129,
-      "char": "遍",
-      "start": 31.149,
-      "end": 31.323
-    },
-    {
-      "index": 130,
-      "char": "反",
-      "start": 31.537,
-      "end": 31.711
-    },
-    {
-      "index": 131,
-      "char": "馈",
-      "start": 31.745,
-      "end": 31.919
+      "char": "步",
+      "start": 27.6,
+      "end": 27.92
     }
   ],
-  "transcript": "馈，“反馈”的“馈”，读kuì。它是左右结构，按顺序能看到“饣”和“贵”。从构字分工看，“饣”先提示意义类别，其余部件补足字形。看图时，左边带盖信息盒形成“饣”，右边中形通道和贝形回执沿“贵”送回原处，消息来回传递，组成“馈”。反馈是把结果、意见或信息返回给对方。这是一幅帮助记笔画和位置的记忆画面，不是完整字源。最后再读一遍：反馈。",
+  "transcript": "反馈的馈，读第四声，反馈是把结果、意见或信息送回给对方。馈还在馈赠这个词里，馈赠就是赠送礼物。馈按左右写，食字旁在左，贵在右，写时左窄右宽。作者说写作中的这些领悟，自然是课外读物的馈赠。一本本书送给她构思和表达的方法，这份礼物后来变成作文里的进步。",
   "voice_reference": "封",
-  "timing_source": "punctuation-weighted-estimate",
-  "script_version": "child-first-v2",
-  "duration": 32.480181
+  "reference_id": "019f0554-ea22-762e-966c-32d678fd6bf6",
+  "reference_sha256": "eb07e06ee13a20ee4577b1b481df6d33d42127c1b3876bfa5d5e5362ae349f19",
+  "timing_source": "qwen3-forced-aligner",
+  "script_version": "narration-v3",
+  "model": "mlx-community/Qwen3-TTS-12Hz-1.7B-Base-4bit",
+  "model_revision": "37e955a1deb861c088ae5f3a67043185f3d1a60c",
+  "generation_policy": "qwen3-clone-2026-08-22-v3",
+  "seed": 20260822,
+  "content_hash": "8296aa56dae3901e38f2",
+  "duration": 27.94,
+  "alignment_model": "mlx-community/Qwen3-ForcedAligner-0.6B-8bit",
+  "aligned_audio_sha256": "4b2842d3b21a5771fe63fa76ca54b39918645f8ca047e9fd922af8034ee21ced",
+  "alignment_groups": []
 }
