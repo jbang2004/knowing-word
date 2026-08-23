@@ -267,10 +267,10 @@
   gap: 14px;
   padding: 0 18px;
   border-radius: 20px;
-  color: #fff;
+  color: var(--night);
   text-align: left;
-  background: var(--action);
-  box-shadow: 0 10px 28px color-mix(in srgb, var(--action) 34%, transparent);
+  background: var(--n-action);
+  box-shadow: 0 10px 28px rgba(53, 194, 149, 0.34);
   transition: transform 160ms var(--ease-out);
 }
 
@@ -291,7 +291,7 @@
 }
 
 .study-listen-button small {
-  color: rgba(255, 255, 255, 0.74);
+  color: rgba(15, 22, 20, 0.66);
   font-size: 0.75rem;
   font-weight: 400;
 }
@@ -306,7 +306,7 @@
 .study-equalizer b {
   width: 3px;
   border-radius: 2px;
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(15, 22, 20, 0.78);
 }
 
 .study-equalizer b:nth-child(1) { height: 9px; }
@@ -1206,9 +1206,9 @@
 
 .memory-stage-next.is-finish {
   min-height: 60px;
-  color: #fff;
-  background: var(--action);
-  box-shadow: 0 10px 28px color-mix(in srgb, var(--action) 34%, transparent);
+  color: var(--night);
+  background: var(--n-action);
+  box-shadow: 0 10px 28px rgba(53, 194, 149, 0.34);
 }
 
 .memory-stage-secondary {

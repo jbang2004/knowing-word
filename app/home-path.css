@@ -35,7 +35,7 @@
   align-items: center;
   justify-content: center;
   border-radius: 14px;
-  color: #fff;
+  color: var(--action-ink);
   font-family: var(--kai);
   font-size: 1.06rem;
   font-weight: 600;
@@ -92,7 +92,7 @@
   margin: 0 auto;
   padding: 14px 16px;
   border-radius: 22px;
-  color: #fff;
+  color: var(--action-ink);
   background: var(--action);
   box-shadow: 0 10px 26px color-mix(in srgb, var(--action) 26%, transparent);
 }
@@ -106,7 +106,7 @@
 }
 
 .path-lesson small {
-  color: rgba(255, 255, 255, 0.74);
+  color: color-mix(in srgb, var(--action-ink) 68%, transparent);
   font-size: 0.72rem;
   font-weight: 650;
   letter-spacing: 0.08em;
@@ -130,19 +130,19 @@
   height: 5px;
   overflow: hidden;
   border-radius: 3px;
-  background: rgba(255, 255, 255, 0.28);
+  background: color-mix(in srgb, var(--action-ink) 26%, transparent);
 }
 
 .path-lesson-progress b {
   display: block;
   height: 100%;
   border-radius: 3px;
-  background: #fff;
+  background: var(--action-ink);
   transition: width 300ms var(--ease-out);
 }
 
 .path-lesson-progress small {
-  color: rgba(255, 255, 255, 0.84);
+  color: color-mix(in srgb, var(--action-ink) 80%, transparent);
   letter-spacing: 0;
 }
 
@@ -157,12 +157,12 @@
   gap: 3px;
   padding: 0;
   border-radius: 18px;
-  color: #fff;
-  background: rgba(255, 255, 255, 0.16);
+  color: var(--action-ink);
+  background: color-mix(in srgb, var(--action-ink) 14%, transparent);
 }
 
 .path-lesson > button small {
-  color: #fff;
+  color: var(--action-ink);
   font-size: 0.66rem;
   font-weight: 650;
   letter-spacing: 0;
@@ -222,7 +222,7 @@
 }
 
 .path-node.is-done > button {
-  color: #fff;
+  color: var(--action-ink);
   background: var(--action);
   box-shadow: 0 6px 16px color-mix(in srgb, var(--action) 28%, transparent);
 }

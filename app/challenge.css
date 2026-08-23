@@ -172,11 +172,17 @@
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  color: #fff;
 }
 
-.answer-sheet.is-correct .answer-sheet-mark { background: var(--action); }
-.answer-sheet.is-wrong .answer-sheet-mark { background: var(--wrong); }
+.answer-sheet.is-correct .answer-sheet-mark {
+  color: var(--action-ink);
+  background: var(--action);
+}
+
+.answer-sheet.is-wrong .answer-sheet-mark {
+  color: var(--wrong-ink);
+  background: var(--wrong);
+}
 
 .answer-sheet-head strong {
   font-size: 1.25rem;
@@ -212,6 +218,7 @@
 }
 
 .answer-sheet.is-wrong > .game-button.primary {
+  color: var(--wrong-ink);
   background: var(--wrong);
   box-shadow: 0 8px 22px color-mix(in srgb, var(--wrong) 28%, transparent);
 }

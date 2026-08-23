@@ -3742,6 +3742,14 @@ function ProfilePanel({
   );
 }
 
+const semanticRoles = [
+  { token: "--action", label: "行动", use: "主按钮 · 进度 · 答对" },
+  { token: "--radical", label: "表意部首", use: "四步第 2 步 · 红蓝的红" },
+  { token: "--part", label: "形音部件", use: "四步第 3 步 · 红蓝的蓝" },
+  { token: "--wrong", label: "再试", use: "答错 · 待复习" },
+  { token: "--violet", label: "题型标签", use: "中性分类，不表对错" },
+];
+
 function Playground({
   kind,
   onBack,
@@ -3764,11 +3772,23 @@ function Playground({
       </nav>
       {kind === "kit" && (
         <section className="playground-board">
+          <h2>语义色 · 一个颜色一个意思</h2>
+          <div className="kit-swatches">
+            {semanticRoles.map((role) => (
+              <div key={role.token}>
+                <i style={{ background: `var(${role.token})` }} />
+                <strong>{role.label}</strong>
+                <small>{role.use}</small>
+              </div>
+            ))}
+          </div>
+
           <h2>GameButton · 变体</h2>
           <div className="kit-buttons">
-            <button className="game-button primary" onClick={() => setPresses((value) => value + 1)}>🚀 开始啦</button>
-            <button className="game-button success">✓ 正确</button>
-            <button className="game-button ghost">☁ 天空</button>
+            <button className="game-button primary" onClick={() => setPresses((value) => value + 1)}>
+              继续 <ArrowRight aria-hidden="true" />
+            </button>
+            <button className="game-button ghost">次要操作</button>
             <button className="game-button ghost" disabled>禁用</button>
           </div>
           <p>主按钮被按了 {presses} 次</p>
@@ -3787,14 +3807,14 @@ function Playground({
           <h2>把“桂”字搭出来</h2>
           <div className="puzzle-slots"><span>{puzzle[0] || "?"}</span><b>＋</b><span>{puzzle[1] || "?"}</span></div>
           <div className="kit-buttons">{["木", "圭", "女", "寸"].map((part) => <button className={puzzle.includes(part) ? "is-selected" : ""} key={part} disabled={puzzle.length >= 2 && !puzzle.includes(part)} onClick={() => setPuzzle((value) => value.includes(part) ? value.filter((item) => item !== part) : [...value, part])}>{part}</button>)}</div>
-          <p>{puzzle.join("") === "木圭" ? "✓ 搭对了！木表意，圭提示读音。" : "选择两个部件，顺序也很重要。"}</p>
+          <p>{puzzle.join("") === "木圭" ? "搭对了：木表意，圭提示读音。" : "选择两个部件，顺序也很重要。"}</p>
         </section>
       )}
       {kind === "quiz" && (
         <section className="playground-board quiz-demo">
           <h2>“桂”是什么结构？</h2>
           <div className="kit-buttons">{["左右结构", "上下结构", "独体字", "半包围结构"].map((option) => <button className={quiz === option ? (option === "左右结构" ? "is-correct" : "is-wrong") : ""} key={option} onClick={() => setQuiz(option)}>{option}</button>)}</div>
-          {quiz && <p>{quiz === "左右结构" ? "✓ 正确，木和圭左右站立。" : "再看看两个部件的位置。"}</p>}
+          {quiz && <p>{quiz === "左右结构" ? "正确，木和圭左右站立。" : "再看看两个部件的位置。"}</p>}
         </section>
       )}
     </div>
