@@ -49,6 +49,14 @@
   min-height: 44px;
 }
 
+.component-browser-toolbar .component-search {
+  padding-block: 0;
+}
+
+.component-search input {
+  min-height: 44px;
+}
+
 .component-browser-summary {
   display: flex;
   align-items: baseline;
@@ -321,7 +329,7 @@
 
 .read-lesson-picker select {
   width: 100%;
-  min-height: 34px;
+  min-height: 44px;
   padding: 0 28px 0 0;
   overflow: hidden;
   border: 0;
@@ -344,6 +352,11 @@
 .sentence-list button {
   min-height: 44px;
   padding: 9px 13px;
+}
+
+.playground-tabs :is(a, button),
+.playground-board select {
+  min-height: 44px;
 }
 
 @media (max-width: 760px) {

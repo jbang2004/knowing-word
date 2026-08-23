@@ -37,6 +37,7 @@ export function AccountRoute() {
     <LearningPageShell active="profile" name={profile.name}>
       <div className="page profile-page">
         <PageHeading
+          density="utility"
           kicker="我的账户"
           title="这是属于你的学习空间"
           copy={syncState === "synced" ? "学习进度已经安全同步，换设备后也能从上次的位置继续。" : "当前处于离线模式，恢复网络后会自动同步。"}
@@ -241,7 +242,7 @@ export function PlaygroundRoute({ kind }: { kind: PlaygroundKind }) {
   return (
     <LearningPageShell active="home" name={profile.name}>
       <div className="page playground-page">
-        <PageHeading kicker="设计实验室" title={labels[kind]} copy="用于验证游戏化组件、动效、触控和学习反馈的内部体验页面。" backHref="/" />
+        <PageHeading density="utility" kicker="设计实验室" title={labels[kind]} copy="用于验证游戏化组件、动效、触控和学习反馈的内部体验页面。" backHref="/" />
         <nav className="playground-tabs" aria-label="实验页面">
           {(Object.keys(labels) as PlaygroundKind[]).map((id) => <Link className={id === kind ? "is-active" : ""} href={`/playground/${id}`} key={id}>{labels[id]}</Link>)}
         </nav>

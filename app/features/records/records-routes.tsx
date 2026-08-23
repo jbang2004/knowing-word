@@ -127,7 +127,7 @@ export function RecordDetailRoute({ character, track }: { character: CharacterIt
   return (
     <LearningPageShell active="profile" name={profile.name}>
       <div className="page record-detail-page">
-        <PageHeading kicker={`${meta.label} · 学习记录`} title={`“${character.hanzi}”的闯关足迹`} copy={`来自第 ${character.lessonPosition} 课《${character.lessonTitle}》；每一题都保留最后一次作答状态。`} backHref={`/records/${track}`} />
+        <PageHeading density="utility" kicker={`${meta.label} · 学习记录`} title={`“${character.hanzi}”的闯关足迹`} copy={`来自第 ${character.lessonPosition} 课《${character.lessonTitle}》；每一题都保留最后一次作答状态。`} backHref={`/records/${track}`} />
         <section className={`record-detail-summary ${meta.tone}`}>
           <div className="record-detail-glyph">{character.hanzi}</div>
           <div><p>{completed ? "这一关已完成" : "还差几步，就能完成这一关"}</p><h2>{correctCount} / {exercises.length} 题最后一次答对</h2><span>{meta.copy}</span></div>
