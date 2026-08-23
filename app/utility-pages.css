@@ -276,6 +276,76 @@
   line-height: 1.65;
 }
 
+.read-lesson-picker {
+  display: grid;
+  grid-template-columns: 44px minmax(0, 1fr) auto 44px;
+  align-items: center;
+  gap: 10px;
+  max-width: 840px;
+  margin-bottom: 16px;
+  padding: 10px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: var(--paper);
+  box-shadow: var(--shadow-xs);
+}
+
+.read-lesson-picker > button {
+  display: grid;
+  width: 44px;
+  height: 44px;
+  place-items: center;
+  border: 1px solid var(--line);
+  border-radius: 13px;
+  color: var(--action);
+  background: var(--action-soft);
+}
+
+.read-lesson-picker > button svg {
+  width: 19px;
+  height: 19px;
+}
+
+.read-lesson-picker label {
+  display: grid;
+  min-width: 0;
+  gap: 3px;
+}
+
+.read-lesson-picker label span,
+.read-lesson-position {
+  color: var(--ink-soft);
+  font-size: .68rem;
+  font-weight: 750;
+}
+
+.read-lesson-picker select {
+  width: 100%;
+  min-height: 34px;
+  padding: 0 28px 0 0;
+  overflow: hidden;
+  border: 0;
+  outline: 0;
+  color: var(--navy);
+  font-family: var(--serif);
+  font-size: 1rem;
+  font-weight: 800;
+  text-overflow: ellipsis;
+  background: transparent;
+}
+
+.read-lesson-position {
+  padding: 7px 10px;
+  border-radius: 999px;
+  white-space: nowrap;
+  background: var(--paper-soft);
+}
+
+.sentence-list button {
+  min-height: 44px;
+  padding: 9px 13px;
+}
+
 @media (max-width: 760px) {
   .page-heading.is-utility {
     grid-template-columns: minmax(0, 1fr) 32px;
@@ -383,6 +453,15 @@
 
   .record-scope-bar button {
     flex: 0 0 auto;
+  }
+
+  .read-lesson-picker {
+    grid-template-columns: 44px minmax(0, 1fr) 44px;
+    gap: 8px;
+  }
+
+  .read-lesson-position {
+    display: none;
   }
 }
 

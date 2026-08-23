@@ -8,9 +8,6 @@ import {
   CloudOff,
   CircleCheckBig,
   Flame,
-  Home as HomeIcon,
-  LayoutGrid,
-  UserRound,
 } from "lucide-react";
 import { useEffect, useMemo } from "react";
 import {
@@ -18,7 +15,6 @@ import {
   homeCourse,
   type HomeCandidate,
 } from "./data/home-index.generated";
-import { primaryNavigation, type PrimaryNavigationId } from "./lib/navigation";
 import {
   todayKey,
   type StudyProfile,
@@ -26,6 +22,7 @@ import {
 } from "./lib/profile-model";
 import { candidatePathStates, nextCandidateId } from "./lib/progress-model";
 import { useStudyProfile } from "./features/profile/use-study-profile";
+import { LearningPageShell } from "./features/shell/learning-page-shell";
 
 type TrackMeta = {
   label: string;
@@ -146,117 +143,99 @@ export default function HomeLanding() {
   const navigate = (path: string) => router.push(path);
 
   return (
-    <main className="path-home">
-      <header className="path-header">
-        <button className="path-avatar" onClick={() => navigate("/account")} aria-label="打开学习空间">
-          {name.slice(0, 1)}
-        </button>
-        <span className="path-greeting">
-          <strong>你好，{name}</strong>
-          <small>{homeCourse.title}</small>
-        </span>
-        <span className="path-metric is-streak" title="连续学习天数">
-          <Flame aria-hidden="true" size={15} />
-          {streak}
-        </span>
-        <span className="path-metric is-today" title="今日作答次数">
-          <CircleCheckBig aria-hidden="true" size={14} />
-          {today.attempts}
-        </span>
-      </header>
-
-      <section className="path-lesson" aria-label={`第 ${currentLesson.position} 课 ${currentLesson.title}`}>
-        <div>
-          <small>第 {currentLesson.position} 课</small>
-          <strong>{currentLesson.title}</strong>
-          <span className="path-lesson-progress">
-            <i>
-              <b style={{ width: `${lessonProgress.total ? (lessonProgress.completed / lessonProgress.total) * 100 : 0}%` }} />
-            </i>
-            <small>{lessonProgress.completed} / {lessonProgress.total} 字</small>
-          </span>
-        </div>
-        <button onClick={() => navigate(`/lessons/${currentLesson.id}`)}>
-          <BookOpenText aria-hidden="true" size={20} />
-          <small>课文</small>
-        </button>
-      </section>
-
-      {(!hydrated || syncState === "local") && (
-        <p className="path-sync" role="status">
-          <CloudOff aria-hidden="true" size={14} />
-          {hydrated ? "当前离线，学习记录会在联网后自动同步" : "正在准备学习空间"}
-        </p>
-      )}
-
-      <ol className="path-track">
-        {nodes.map((node, index) => {
-          const offset = PATH_OFFSETS[index % PATH_OFFSETS.length];
-          if (node.kind === "reinforce") {
-            const meta = trackMeta[node.track];
-            return (
-              <li className="path-gate" key={node.key}>
-                <button onClick={() => navigate(trackLessonPath(node.track, currentLesson.id))}>
-                  <span className={`path-gate-glyph tone-${meta.tone}`} aria-hidden="true">{meta.glyph}</span>
-                  <span>
-                    <strong>巩固练习 · {meta.label}</strong>
-                    <small>{meta.eyebrow} · 已完成 {node.completed}/{node.total}</small>
-                  </span>
-                  <ArrowRight aria-hidden="true" size={18} />
-                </button>
-              </li>
-            );
-          }
-
-          return (
-            <li className={`path-node is-${node.state}`} key={node.key} style={{ marginLeft: offset }}>
-              {node.state === "current" && <span className="path-node-bubble">开始</span>}
-              <button
-                onClick={() => navigate(node.href)}
-                disabled={node.state === "locked"}
-                aria-label={`${node.hanzi}${node.state === "done" ? "，已学会" : node.state === "current" ? "，从这里继续" : "，尚未解锁"}`}
-              >
-                {node.hanzi}
+    <LearningPageShell active="home" name={profile.name}>
+      <div className="path-home">
+        <div className="path-workspace">
+          <aside className="path-summary">
+            <header className="path-header">
+              <button className="path-avatar" onClick={() => navigate("/account")} aria-label="打开学习空间">
+                {name.slice(0, 1)}
               </button>
-              {node.state === "done" && (
-                <span className="path-node-check" aria-hidden="true">
-                  <Check size={12} strokeWidth={3.4} />
-                </span>
-              )}
-            </li>
-          );
-        })}
-      </ol>
+              <span className="path-greeting">
+                <strong>你好，{name}</strong>
+                <small>{homeCourse.title}</small>
+              </span>
+              <span className="path-metric is-streak" title="连续学习天数">
+                <Flame aria-hidden="true" size={15} />
+                {streak}
+              </span>
+              <span className="path-metric is-today" title="今日作答次数">
+                <CircleCheckBig aria-hidden="true" size={14} />
+                {today.attempts}
+              </span>
+            </header>
 
-      <nav className="path-tabs" aria-label="主菜单">
-        {primaryNavigation.map((item) => {
-          const Icon = homeNavigationIcons[item.id];
-          return (
-            <button
-              className={item.id === "home" ? "is-active" : ""}
-              key={item.id}
-              onClick={() => navigate(item.href)}
-            >
-              <Icon aria-hidden="true" size={22} />
-              <small>{item.label}</small>
-            </button>
-          );
-        })}
-      </nav>
-    </main>
+            <section className="path-lesson" aria-label={`第 ${currentLesson.position} 课 ${currentLesson.title}`}>
+              <div>
+                <small>第 {currentLesson.position} 课</small>
+                <strong>{currentLesson.title}</strong>
+                <span className="path-lesson-progress">
+                  <i>
+                    <b style={{ width: `${lessonProgress.total ? (lessonProgress.completed / lessonProgress.total) * 100 : 0}%` }} />
+                  </i>
+                  <small>{lessonProgress.completed} / {lessonProgress.total} 字</small>
+                </span>
+              </div>
+              <button onClick={() => navigate(`/lessons/${currentLesson.id}`)}>
+                <BookOpenText aria-hidden="true" size={20} />
+                <small>课文</small>
+              </button>
+            </section>
+
+            {(!hydrated || syncState === "local") && (
+              <p className="path-sync" role="status">
+                <CloudOff aria-hidden="true" size={14} />
+                {hydrated ? "当前离线，学习记录会在联网后自动同步" : "正在准备学习空间"}
+              </p>
+            )}
+          </aside>
+
+          <ol className="path-track">
+            {nodes.map((node, index) => {
+              const offset = PATH_OFFSETS[index % PATH_OFFSETS.length];
+              if (node.kind === "reinforce") {
+                const meta = trackMeta[node.track];
+                return (
+                  <li className="path-gate" key={node.key}>
+                    <button onClick={() => navigate(trackLessonPath(node.track, currentLesson.id))}>
+                      <span className={`path-gate-glyph tone-${meta.tone}`} aria-hidden="true">{meta.glyph}</span>
+                      <span>
+                        <strong>巩固练习 · {meta.label}</strong>
+                        <small>{meta.eyebrow} · 已完成 {node.completed}/{node.total}</small>
+                      </span>
+                      <ArrowRight aria-hidden="true" size={18} />
+                    </button>
+                  </li>
+                );
+              }
+
+              return (
+                <li className={`path-node is-${node.state}`} key={node.key} style={{ marginLeft: offset }}>
+                  {node.state === "current" && <span className="path-node-bubble">开始</span>}
+                  <button
+                    onClick={() => navigate(node.href)}
+                    disabled={node.state === "locked"}
+                    aria-label={`${node.hanzi}${node.state === "done" ? "，已学会" : node.state === "current" ? "，从这里继续" : "，尚未解锁"}`}
+                  >
+                    {node.hanzi}
+                  </button>
+                  {node.state === "done" && (
+                    <span className="path-node-check" aria-hidden="true">
+                      <Check size={12} strokeWidth={3.4} />
+                    </span>
+                  )}
+                </li>
+              );
+            })}
+          </ol>
+        </div>
+      </div>
+    </LearningPageShell>
   );
 }
 
 // A gentle S so consecutive nodes never line up in a column.
 const PATH_OFFSETS = [0, 56, 78, 34, -34, -78, -56, 0];
-
-// Consecutive days ending today or yesterday that have at least one answer.
-const homeNavigationIcons: Record<PrimaryNavigationId, typeof HomeIcon> = {
-  home: HomeIcon,
-  course: BookOpenText,
-  practice: LayoutGrid,
-  profile: UserRound,
-};
 
 function currentStreak(daily: StudyProfile["daily"]) {
   const active = new Set(

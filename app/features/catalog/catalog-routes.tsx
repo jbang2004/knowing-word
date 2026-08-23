@@ -139,15 +139,18 @@ export function CourseMapRoute() {
           title={grade5Course.title}
           copy="新版五年级上册共 26 课：按官方会认、会写和多音字清单学习，再用专项关卡反复巩固。"
         />
+        <nav className="course-unit-nav" aria-label="快速跳转到单元">
+          {courseUnits.map((unit, index) => <a href={`#course-unit-${index + 1}`} key={unit.label}>{unit.label}</a>)}
+        </nav>
         <div className="course-units">
-          {courseUnits.map((unit) => {
+          {courseUnits.map((unit, unitIndex) => {
             const lessons = grade5Lessons.filter((lesson) => lesson.position >= unit.start && lesson.position <= unit.end);
             const progress = lessons.reduce((total, lesson) => {
               const item = trackProgress(profile, "words", lesson.id);
               return { completed: total.completed + item.completed, total: total.total + item.total };
             }, { completed: 0, total: 0 });
             return (
-              <section className="course-unit" key={unit.label}>
+              <section className="course-unit" id={`course-unit-${unitIndex + 1}`} key={unit.label}>
                 <header>
                   <div><span>{unit.label}</span><h2>第 {unit.start}—{unit.end} 课</h2></div>
                   <p>已认识 {progress.completed}/{progress.total} 个字</p>

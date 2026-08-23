@@ -38,7 +38,9 @@ test("server-renders the task-first Knowing Word learning experience", async () 
   assert.match(html, /红蓝练习/);
   assert.match(html, /空间结构/);
   assert.match(html, /path-node is-current/);
-  assert.match(html, /path-tabs/);
+  assert.match(html, /path-workspace/);
+  assert.match(html, /top-navigation/);
+  assert.doesNotMatch(html, /path-tabs/);
 
   const practiceResponse = await render("/practice");
   assert.equal(practiceResponse.status, 200);

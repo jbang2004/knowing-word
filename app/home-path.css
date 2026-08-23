@@ -8,29 +8,45 @@
  */
 
 .path-home {
-  display: flex;
-  min-height: 100vh;
-  min-height: 100dvh;
-  flex-direction: column;
+  min-height: calc(100vh - 78px);
+  min-height: calc(100dvh - 78px);
+  padding: 24px 0 48px;
   background: var(--sky);
   font-family: var(--sans);
+}
+
+.path-workspace {
+  display: grid;
+  grid-template-columns: minmax(280px, 340px) minmax(0, 560px);
+  align-items: start;
+  justify-content: center;
+  gap: clamp(34px, 6vw, 72px);
+  width: min(1040px, calc(100% - 48px));
+  margin: 0 auto;
+}
+
+.path-summary {
+  position: sticky;
+  top: 102px;
+  display: grid;
+  gap: 14px;
 }
 
 /* Header -------------------------------------------------------------- */
 
 .path-header {
   display: flex;
-  width: min(560px, calc(100% - 40px));
+  width: 100%;
   align-items: center;
   gap: 12px;
-  margin: 0 auto;
-  padding: max(16px, env(safe-area-inset-top)) 0 12px;
+  margin: 0;
+  padding: 4px 0 8px;
 }
 
 .path-avatar {
   display: flex;
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   flex: 0 0 auto;
   align-items: center;
   justify-content: center;
@@ -86,10 +102,10 @@
 
 .path-lesson {
   display: flex;
-  width: min(560px, calc(100% - 40px));
+  width: 100%;
   align-items: center;
   gap: 13px;
-  margin: 0 auto;
+  margin: 0;
   padding: 14px 16px;
   border-radius: 22px;
   color: var(--action-ink);
@@ -172,12 +188,11 @@
 
 .path-track {
   display: flex;
-  width: min(560px, calc(100% - 40px));
+  width: 100%;
   flex-direction: column;
   align-items: center;
-  flex-grow: 1;
-  margin: 0 auto;
-  padding: 26px 0 24px;
+  margin: 0;
+  padding: 8px 0 24px;
   list-style: none;
 }
 
@@ -356,62 +371,31 @@
   color: var(--ink-faint);
 }
 
-/* Tab bar ------------------------------------------------------------- */
+/* Narrow screens return to one deliberate reading column. */
 
-/* Opaque and part of the layout, so it never covers the end of the path the
-   way the old floating bar did. */
-.path-tabs {
-  position: sticky;
-  bottom: 0;
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 2px;
-  padding: 8px 12px calc(14px + env(safe-area-inset-bottom));
-  border-top: 1px solid color-mix(in srgb, var(--line) 72%, transparent);
-  background: color-mix(in srgb, var(--sky) 92%, transparent);
-  backdrop-filter: blur(16px);
-}
-
-.path-tabs button {
-  display: flex;
-  min-height: 54px;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 5px;
-  padding: 0;
-  border-radius: 16px;
-  color: var(--ink-faint);
-  background: transparent;
-}
-
-.path-tabs button small {
-  font-size: 0.69rem;
-  font-weight: 500;
-}
-
-.path-tabs button.is-active {
-  color: var(--action);
-}
-
-.path-tabs button.is-active small {
-  font-weight: 700;
-}
-
-/* Wider screens ------------------------------------------------------- */
-
-@media (min-width: 900px) {
-  .path-header,
-  .path-lesson,
-  .path-track {
-    width: min(620px, calc(100% - 64px));
+@media (max-width: 899px) {
+  .path-home {
+    min-height: 100dvh;
+    padding: 0 0 30px;
   }
 
-  .path-tabs {
+  .path-workspace {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 10px;
+    width: min(560px, calc(100% - 40px));
+  }
+
+  .path-summary {
     position: static;
-    width: min(620px, calc(100% - 64px));
-    margin: 0 auto;
-    border-top: 0;
+    gap: 12px;
+  }
+
+  .path-header {
+    padding: max(16px, env(safe-area-inset-top)) 0 8px;
+  }
+
+  .path-track {
+    padding-top: 16px;
   }
 }
 
@@ -426,10 +410,10 @@
    "已同步" badge is noise on a page whose job is "what do I do next". */
 .path-sync {
   display: flex;
-  width: min(560px, calc(100% - 40px));
+  width: 100%;
   align-items: center;
   gap: 7px;
-  margin: 12px auto 0;
+  margin: 0;
   padding: 9px 13px;
   border-radius: 14px;
   color: var(--ink-soft);

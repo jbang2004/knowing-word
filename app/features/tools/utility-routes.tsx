@@ -1,9 +1,12 @@
 "use client";
 
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import {
   ArrowRight,
   CheckCircle2,
+  ChevronLeft,
+  ChevronRight,
   CircleStop,
   LogOut,
   Mic2,
@@ -67,9 +70,16 @@ export function AccountRoute() {
   );
 }
 
-export function ReadAloudRoute({ returnTo = "/account" }: { returnTo?: string }) {
+export function ReadAloudRoute({
+  returnTo = "/account",
+  initialLessonId,
+}: {
+  returnTo?: string;
+  initialLessonId?: string;
+}) {
+  const router = useRouter();
   const { profile, setProfile } = useStudyProfile();
-  const [lessonId, setLessonId] = useState<string>(grade5Lessons[0].id);
+  const [lessonId, setLessonId] = useState<string>(() => grade5Lessons.some((item) => item.id === initialLessonId) ? initialLessonId! : grade5Lessons[0].id);
   const [activeText, setActiveText] = useState("");
   const [speaking, setSpeaking] = useState(false);
   const [recording, setRecording] = useState(false);
@@ -79,6 +89,7 @@ export function ReadAloudRoute({ returnTo = "/account" }: { returnTo?: string })
   const streamRef = useRef<MediaStream | null>(null);
   const chunksRef = useRef<Blob[]>([]);
   const lesson = grade5Lessons.find((item) => item.id === lessonId) ?? grade5Lessons[0];
+  const lessonIndex = grade5Lessons.findIndex((item) => item.id === lesson.id);
 
   useEffect(() => () => {
     streamRef.current?.getTracks().forEach((track) => track.stop());
@@ -101,6 +112,18 @@ export function ReadAloudRoute({ returnTo = "/account" }: { returnTo?: string })
     setActiveText(text);
     setSpeaking(true);
     speak(text, () => setSpeaking(false));
+  }
+
+  function selectLesson(nextLessonId: string) {
+    if (!grade5Lessons.some((item) => item.id === nextLessonId)) return;
+    setLessonId(nextLessonId);
+    setActiveText("");
+    setSpeaking(false);
+    setRecordingUrl(null);
+    setRecordingStatus("idle");
+    const query = new URLSearchParams({ lessonId: nextLessonId });
+    if (returnTo) query.set("returnTo", returnTo);
+    router.replace(`/read-aloud?${query}`, { scroll: false });
   }
 
   function countReadSession() {
@@ -161,15 +184,19 @@ export function ReadAloudRoute({ returnTo = "/account" }: { returnTo?: string })
   }
 
   return (
-    <LearningPageShell active="profile" name={profile.name}>
+    <LearningPageShell active="course" name={profile.name}>
       <div className="page read-page">
-        <PageHeading kicker="日日朗读" title="先听一遍，再把句子读出来" copy={`已完成 ${profile.readSessions} 次朗读练习。登录状态下，录音可跨设备回听。`} backHref={returnTo} />
-        <div className="read-lesson-tabs">
-          {grade5Lessons.map((item) => (
-            <button className={item.id === lesson.id ? "is-active" : ""} key={item.id} onClick={() => { setLessonId(item.id); setRecordingUrl(null); setRecordingStatus("idle"); }}>
-              第 {item.position} 课 · {item.title}
-            </button>
-          ))}
+        <PageHeading density="utility" kicker="日日朗读" title="先听一遍，再把句子读出来" copy={`已完成 ${profile.readSessions} 次朗读练习。登录状态下，录音可跨设备回听。`} backHref={returnTo} />
+        <div className="read-lesson-picker">
+          <button disabled={lessonIndex <= 0} aria-label="上一课" onClick={() => selectLesson(grade5Lessons[lessonIndex - 1]?.id)}><ChevronLeft aria-hidden="true" /></button>
+          <label>
+            <span>选择朗读课次</span>
+            <select value={lesson.id} onChange={(event) => selectLesson(event.target.value)}>
+              {grade5Lessons.map((item) => <option value={item.id} key={item.id}>第 {item.position} 课 · {item.title}</option>)}
+            </select>
+          </label>
+          <span className="read-lesson-position">{lessonIndex + 1} / {grade5Lessons.length}</span>
+          <button disabled={lessonIndex >= grade5Lessons.length - 1} aria-label="下一课" onClick={() => selectLesson(grade5Lessons[lessonIndex + 1]?.id)}><ChevronRight aria-hidden="true" /></button>
         </div>
         <section className="read-studio">
           <div className="read-mascot">读</div>
