@@ -1,0 +1,438 @@
+/* Home as a single learning path.
+ *
+ * The previous landing stacked five sections — resume card, today card, the
+ * four-step flow, three practice tiles, a lesson strip — each restating the
+ * same "what next". A path answers it once: the next node is the next thing,
+ * and the reinforcement gates fold the 拆字 / 红蓝 / 结构 routes into the same
+ * line instead of three separate maps to go find.
+ */
+
+.path-home {
+  display: flex;
+  min-height: 100vh;
+  min-height: 100dvh;
+  flex-direction: column;
+  background: var(--sky);
+  font-family: var(--sans);
+}
+
+/* Header -------------------------------------------------------------- */
+
+.path-header {
+  display: flex;
+  width: min(560px, calc(100% - 40px));
+  align-items: center;
+  gap: 12px;
+  margin: 0 auto;
+  padding: max(16px, env(safe-area-inset-top)) 0 12px;
+}
+
+.path-avatar {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  color: #fff;
+  font-family: var(--kai);
+  font-size: 1.06rem;
+  font-weight: 600;
+  background: var(--action);
+}
+
+.path-greeting {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 2px;
+  flex-grow: 1;
+}
+
+.path-greeting strong {
+  color: var(--navy);
+  font-size: 0.94rem;
+  font-weight: 700;
+}
+
+.path-greeting small {
+  color: var(--ink-faint);
+  font-size: 0.72rem;
+}
+
+.path-metric {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 7px 11px;
+  border-radius: 999px;
+  font-size: 0.81rem;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+}
+
+.path-metric.is-streak {
+  color: var(--wrong);
+  background: var(--wrong-soft);
+}
+
+.path-metric.is-today {
+  color: var(--action);
+  background: var(--action-soft);
+}
+
+/* Lesson banner ------------------------------------------------------- */
+
+.path-lesson {
+  display: flex;
+  width: min(560px, calc(100% - 40px));
+  align-items: center;
+  gap: 13px;
+  margin: 0 auto;
+  padding: 14px 16px;
+  border-radius: 22px;
+  color: #fff;
+  background: var(--action);
+  box-shadow: 0 10px 26px color-mix(in srgb, var(--action) 26%, transparent);
+}
+
+.path-lesson > div {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 4px;
+  flex-grow: 1;
+}
+
+.path-lesson small {
+  color: rgba(255, 255, 255, 0.74);
+  font-size: 0.72rem;
+  font-weight: 650;
+  letter-spacing: 0.08em;
+}
+
+.path-lesson strong {
+  font-size: 1.12rem;
+  font-weight: 700;
+}
+
+.path-lesson-progress {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 3px;
+}
+
+.path-lesson-progress i {
+  display: block;
+  width: 96px;
+  height: 5px;
+  overflow: hidden;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.28);
+}
+
+.path-lesson-progress b {
+  display: block;
+  height: 100%;
+  border-radius: 3px;
+  background: #fff;
+  transition: width 300ms var(--ease-out);
+}
+
+.path-lesson-progress small {
+  color: rgba(255, 255, 255, 0.84);
+  letter-spacing: 0;
+}
+
+.path-lesson > button {
+  display: flex;
+  width: 60px;
+  height: 60px;
+  flex: 0 0 auto;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  padding: 0;
+  border-radius: 18px;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.path-lesson > button small {
+  color: #fff;
+  font-size: 0.66rem;
+  font-weight: 650;
+  letter-spacing: 0;
+}
+
+/* The path ------------------------------------------------------------ */
+
+.path-track {
+  display: flex;
+  width: min(560px, calc(100% - 40px));
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+  margin: 0 auto;
+  padding: 26px 0 24px;
+  list-style: none;
+}
+
+.path-node {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Dotted connector between consecutive nodes, drawn on the follower so the
+   last node has no trailing tail. */
+.path-node + .path-node::before,
+.path-node + .path-gate::before,
+.path-gate + .path-node::before {
+  display: block;
+  width: 5px;
+  height: 5px;
+  margin: 11px auto;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--line) 88%, transparent);
+  box-shadow: 0 -13px color-mix(in srgb, var(--line) 88%, transparent), 0 13px color-mix(in srgb, var(--line) 88%, transparent);
+  content: "";
+}
+
+.path-node > button {
+  display: flex;
+  width: 62px;
+  height: 62px;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border-radius: 50%;
+  font-family: var(--kai);
+  font-size: 1.75rem;
+  line-height: 1;
+  transition: transform 180ms var(--ease-out);
+}
+
+.path-node > button:hover:not(:disabled) {
+  transform: translateY(-2px);
+}
+
+.path-node.is-done > button {
+  color: #fff;
+  background: var(--action);
+  box-shadow: 0 6px 16px color-mix(in srgb, var(--action) 28%, transparent);
+}
+
+.path-node.is-locked > button {
+  color: color-mix(in srgb, var(--ink-faint) 72%, var(--line));
+  background: color-mix(in srgb, var(--line) 45%, var(--paper-soft));
+  opacity: 1;
+  cursor: default;
+}
+
+.path-node.is-current > button {
+  width: 74px;
+  height: 74px;
+  border: 4px solid var(--action);
+  color: var(--navy);
+  font-size: 2.25rem;
+  background: var(--paper);
+  box-shadow: 0 10px 24px color-mix(in srgb, var(--action) 20%, transparent);
+}
+
+.path-node.is-current::after {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 92px;
+  height: 92px;
+  border: 2px solid color-mix(in srgb, var(--action) 28%, transparent);
+  border-radius: 50%;
+  transform: translateX(-50%);
+  content: "";
+  pointer-events: none;
+}
+
+.path-node-bubble {
+  position: relative;
+  margin-bottom: 12px;
+  padding: 7px 13px;
+  border-radius: 999px;
+  color: var(--paper);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  background: var(--navy);
+}
+
+.path-node-bubble::after {
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  border-top: 6px solid var(--navy);
+  border-right: 6px solid transparent;
+  border-left: 6px solid transparent;
+  transform: translateX(-50%);
+  content: "";
+}
+
+.path-node-check {
+  position: absolute;
+  right: -2px;
+  bottom: -2px;
+  display: flex;
+  width: 22px;
+  height: 22px;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid var(--sky);
+  border-radius: 50%;
+  color: var(--action);
+  background: var(--paper);
+}
+
+/* Reinforcement gate -------------------------------------------------- */
+
+.path-gate {
+  width: 100%;
+  margin: 6px 0;
+}
+
+.path-gate > button {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 12px;
+  padding: 13px 15px;
+  border: 1.5px dashed color-mix(in srgb, var(--wrong) 38%, var(--line));
+  border-radius: 20px;
+  color: var(--ink);
+  text-align: left;
+  background: color-mix(in srgb, var(--wrong) 8%, var(--paper));
+}
+
+.path-gate-glyph {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  font-family: var(--kai);
+  font-size: 1.12rem;
+  background: var(--paper);
+}
+
+.path-gate-glyph.tone-saffron { color: var(--saffron); }
+.path-gate-glyph.tone-lapis { color: var(--lapis); }
+.path-gate-glyph.tone-jade { color: var(--jade); }
+
+.path-gate > button > span:nth-child(2) {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 2px;
+  flex-grow: 1;
+}
+
+.path-gate strong {
+  color: var(--navy);
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+.path-gate small {
+  color: var(--ink-faint);
+  font-size: 0.72rem;
+}
+
+.path-gate svg {
+  flex: 0 0 auto;
+  color: var(--ink-faint);
+}
+
+/* Tab bar ------------------------------------------------------------- */
+
+/* Opaque and part of the layout, so it never covers the end of the path the
+   way the old floating bar did. */
+.path-tabs {
+  position: sticky;
+  bottom: 0;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 2px;
+  padding: 8px 12px calc(14px + env(safe-area-inset-bottom));
+  border-top: 1px solid color-mix(in srgb, var(--line) 72%, transparent);
+  background: color-mix(in srgb, var(--sky) 92%, transparent);
+  backdrop-filter: blur(16px);
+}
+
+.path-tabs button {
+  display: flex;
+  min-height: 54px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 0;
+  border-radius: 16px;
+  color: var(--ink-faint);
+  background: transparent;
+}
+
+.path-tabs button small {
+  font-size: 0.69rem;
+  font-weight: 500;
+}
+
+.path-tabs button.is-active {
+  color: var(--action);
+}
+
+.path-tabs button.is-active small {
+  font-weight: 700;
+}
+
+/* Wider screens ------------------------------------------------------- */
+
+@media (min-width: 900px) {
+  .path-header,
+  .path-lesson,
+  .path-track {
+    width: min(620px, calc(100% - 64px));
+  }
+
+  .path-tabs {
+    position: static;
+    width: min(620px, calc(100% - 64px));
+    margin: 0 auto;
+    border-top: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .path-node > button,
+  .path-lesson-progress b {
+    transition: none;
+  }
+}
+
+/* Only surfaced when something is wrong or still loading — a permanent
+   "已同步" badge is noise on a page whose job is "what do I do next". */
+.path-sync {
+  display: flex;
+  width: min(560px, calc(100% - 40px));
+  align-items: center;
+  gap: 7px;
+  margin: 12px auto 0;
+  padding: 9px 13px;
+  border-radius: 14px;
+  color: var(--ink-soft);
+  font-size: 0.78rem;
+  background: color-mix(in srgb, var(--line) 34%, var(--paper));
+}

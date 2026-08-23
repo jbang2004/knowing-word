@@ -45,3 +45,6 @@ next-env.d.ts
 /artifacts/
 /tsconfig.tsbuildinfo
 /public/heritage/**/audio.mp3
+
+# generated font sources
+/.cache/

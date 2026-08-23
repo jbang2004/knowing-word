@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import { headers } from "next/headers";
 import "./globals.css";
 import "./home-redesign.css";
+import "./study.css";
+import "./challenge.css";
+import "./home-path.css";
 import ServiceWorkerRegistration from "./service-worker-registration";
 
 export async function generateMetadata(): Promise<Metadata> {

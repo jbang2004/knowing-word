@@ -1,0 +1,256 @@
+/* Answering a question.
+ *
+ * The core loop runs many times a day, so this screen is stripped to the
+ * question, the options and one action. Three changes carry most of it:
+ * the middle "board" container is gone (page → board → option was three nested
+ * surfaces eating the phone's width), the primary button is pinned to the
+ * bottom instead of sitting in the flow below a growing option list, and the
+ * graded state rises as a sheet rather than swapping a row in place.
+ */
+
+.challenge-page {
+  display: flex;
+  min-height: 100vh;
+  min-height: 100dvh;
+  flex-direction: column;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.challenge-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: max(16px, env(safe-area-inset-top)) 0 0;
+}
+
+.challenge-close {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  margin-left: -8px;
+  padding: 0;
+  border-radius: 999px;
+  color: var(--ink-faint);
+  background: transparent;
+}
+
+.challenge-close:hover {
+  color: var(--ink);
+  background: color-mix(in srgb, var(--ink) 6%, transparent);
+}
+
+.challenge-bar .challenge-progress {
+  height: 12px;
+  flex-grow: 1;
+  margin: 0;
+}
+
+.challenge-bar .challenge-count {
+  flex: 0 0 auto;
+  padding: 0;
+  color: var(--ink-soft);
+  font-size: 0.83rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  background: transparent;
+}
+
+/* The board loses its own surface; the question sits on the page. */
+.challenge-board {
+  min-height: 0;
+  flex-grow: 1;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  box-shadow: none;
+}
+
+.challenge-question {
+  margin-bottom: 24px;
+  padding-top: 30px;
+}
+
+.challenge-question h2 {
+  font-family: var(--sans);
+  font-size: clamp(1.4rem, 5.6vw, 1.72rem);
+  font-weight: 700;
+  line-height: 1.46;
+  letter-spacing: 0;
+}
+
+.choice-card {
+  min-height: 62px;
+  border-width: 1.5px;
+  border-radius: 18px;
+  background: var(--paper);
+}
+
+.choice-card strong {
+  font-size: 1.14rem;
+}
+
+.choice-card.is-selected,
+.choice-card.is-correct,
+.choice-card.is-wrong {
+  border-width: 2px;
+  box-shadow: none;
+}
+
+/* Bottom action bar --------------------------------------------------- */
+
+.challenge-actions,
+.answer-sheet {
+  position: sticky;
+  bottom: 0;
+  margin-top: auto;
+  padding: 16px 0 calc(18px + env(safe-area-inset-bottom));
+}
+
+.challenge-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border-top: 1px solid color-mix(in srgb, var(--line) 70%, transparent);
+  background: var(--sky);
+}
+
+.challenge-actions > .game-button.primary {
+  width: 100%;
+  min-height: 58px;
+  border-radius: 20px;
+  font-size: 1.06rem;
+}
+
+.challenge-actions-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 40px;
+}
+
+.challenge-actions-row .text-button:disabled {
+  opacity: 0.35;
+}
+
+/* Feedback sheet ------------------------------------------------------ */
+
+.answer-sheet {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-inline: -20px;
+  padding-inline: 20px;
+  border-radius: 28px 28px 0 0;
+  animation: answer-sheet-rise 260ms var(--ease-out);
+}
+
+.answer-sheet.is-correct {
+  background: color-mix(in srgb, var(--action) 14%, var(--paper));
+}
+
+.answer-sheet.is-wrong {
+  background: color-mix(in srgb, var(--wrong) 15%, var(--paper));
+}
+
+.answer-sheet-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.answer-sheet-mark {
+  display: flex;
+  width: 42px;
+  height: 42px;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: #fff;
+}
+
+.answer-sheet.is-correct .answer-sheet-mark { background: var(--action); }
+.answer-sheet.is-wrong .answer-sheet-mark { background: var(--wrong); }
+
+.answer-sheet-head strong {
+  font-size: 1.25rem;
+  font-weight: 800;
+}
+
+.answer-sheet.is-correct .answer-sheet-head strong { color: color-mix(in srgb, var(--action) 78%, var(--ink)); }
+.answer-sheet.is-wrong .answer-sheet-head strong { color: color-mix(in srgb, var(--wrong) 72%, var(--ink)); }
+
+.answer-sheet-head small {
+  margin-left: auto;
+  padding: 6px 11px;
+  border-radius: 999px;
+  color: var(--ink-soft);
+  font-size: 0.75rem;
+  font-weight: 650;
+  background: color-mix(in srgb, var(--paper) 70%, transparent);
+}
+
+.answer-sheet > p {
+  margin: 0;
+  color: var(--ink);
+  font-size: 0.94rem;
+  line-height: 1.66;
+  text-wrap: pretty;
+}
+
+.answer-sheet > .game-button.primary {
+  width: 100%;
+  min-height: 56px;
+  border-radius: 20px;
+  font-size: 1.06rem;
+}
+
+.answer-sheet.is-wrong > .game-button.primary {
+  background: var(--wrong);
+  box-shadow: 0 8px 22px color-mix(in srgb, var(--wrong) 28%, transparent);
+}
+
+@keyframes answer-sheet-rise {
+  from { transform: translateY(14px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Touch input --------------------------------------------------------- */
+
+/* A/B/C/D badges and the Enter hint are keyboard affordances; on a phone they
+   are three pieces of chrome per option that mean nothing. */
+@media (hover: none) {
+  .choice-key,
+  .key-hint {
+    display: none;
+  }
+}
+
+@media (max-width: 760px) {
+  .key-hint {
+    display: none;
+  }
+
+  .challenge-question {
+    padding-top: 24px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .answer-sheet {
+    animation: none;
+  }
+}
+
+/* The question-type chip inherited the track tone, which on the 识字 track is
+   the same red that means 表意部首 everywhere else. It is a neutral label. */
+.question-tag {
+  color: var(--violet);
+  background: var(--violet-soft);
+}

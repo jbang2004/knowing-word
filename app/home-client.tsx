@@ -4,15 +4,13 @@ import { useRouter } from "next/navigation";
 import {
   ArrowRight,
   BookOpenText,
-  ChartNoAxesColumnIncreasing,
-  Cloud,
+  Check,
   CloudOff,
+  CircleCheckBig,
+  Flame,
   Home as HomeIcon,
-  Layers3,
-  Route,
-  Sparkles,
+  LayoutGrid,
   UserRound,
-  type LucideIcon,
 } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
 import {
@@ -258,196 +256,185 @@ export default function HomeLanding() {
   }, [likelyPath, router]);
 
   const today = profile.daily[todayKey()] || { attempts: 0, correct: 0, skips: 0, readSessions: 0 };
+  const streak = currentStreak(profile.daily);
   const nextWord = nextCandidate("words", profile);
-  const wordProgress = trackProgress(profile, "words");
-  const currentLesson = homeCourse.lessons.find((lesson) => lesson.id === nextWord?.lessonId) || homeCourse.lessons[0];
-  const currentLessonProgress = trackProgress(profile, "words", currentLesson.id);
-  const currentLessonIndex = Math.max(0, homeCourse.lessons.findIndex((lesson) => lesson.id === currentLesson.id));
-  const nearbyLessons = homeCourse.lessons.slice(Math.max(0, currentLessonIndex - 1), Math.min(homeCourse.lessons.length, currentLessonIndex + 5));
-  const reinforcementProgress = practiceTrackIds.reduce(
-    (summary, track) => {
-      const progress = trackProgress(profile, track, currentLesson.id);
-      return { completed: summary.completed + progress.completed, total: summary.total + progress.total };
-    },
-    { completed: 0, total: 0 },
-  );
+  const currentLesson =
+    homeCourse.lessons.find((lesson) => lesson.id === nextWord?.lessonId) || homeCourse.lessons[0];
+  const lessonProgress = trackProgress(profile, "words", currentLesson.id);
+  const nodes = buildLessonPath(profile, currentLesson.id, nextWord?.id);
   const name = profile.name || "小探险家";
   const navigate = (path: string) => router.push(path);
 
   return (
-    <main className="game-shell">
-      <HomeNavigation name={profile.name} onNavigate={navigate} />
-      <div className="page home-page">
-        <section className="home-command-center" aria-label="继续学习">
-          <article className="home-resume-card">
-            <div className="home-resume-copy">
-              <div className="home-course-line">
-                <span>语文 · 五年级上册</span>
-                <i>第 {currentLesson.position} 课</i>
-              </div>
-              <p className="home-greeting">你好，{name}</p>
-              <h1>接着认识<em>「{nextWord?.hanzi || "鹭"}」</em></h1>
-              <p className="home-resume-intro">
-                回到《{currentLesson.title}》的词语里，先弄懂字义和字形，再用不同方法把它记牢。
-              </p>
-              <div className="home-resume-actions">
-                <button className="game-button primary" onClick={() => navigate(continuePath("words", nextWord))}>
-                  {nextWord ? "继续这个字" : "开始识字"} <ArrowRight aria-hidden="true" />
+    <main className="path-home">
+      <header className="path-header">
+        <button className="path-avatar" onClick={() => navigate("/account")} aria-label="打开学习空间">
+          {name.slice(0, 1)}
+        </button>
+        <span className="path-greeting">
+          <strong>你好，{name}</strong>
+          <small>{homeCourse.title}</small>
+        </span>
+        <span className="path-metric is-streak" title="连续学习天数">
+          <Flame aria-hidden="true" size={15} />
+          {streak}
+        </span>
+        <span className="path-metric is-today" title="今日作答次数">
+          <CircleCheckBig aria-hidden="true" size={14} />
+          {today.attempts}
+        </span>
+      </header>
+
+      <section className="path-lesson" aria-label={`第 ${currentLesson.position} 课 ${currentLesson.title}`}>
+        <div>
+          <small>第 {currentLesson.position} 课</small>
+          <strong>{currentLesson.title}</strong>
+          <span className="path-lesson-progress">
+            <i>
+              <b style={{ width: `${lessonProgress.total ? (lessonProgress.completed / lessonProgress.total) * 100 : 0}%` }} />
+            </i>
+            <small>{lessonProgress.completed} / {lessonProgress.total} 字</small>
+          </span>
+        </div>
+        <button onClick={() => navigate(`/lessons/${currentLesson.id}`)}>
+          <BookOpenText aria-hidden="true" size={20} />
+          <small>课文</small>
+        </button>
+      </section>
+
+      {(!hydrated || syncState === "local") && (
+        <p className="path-sync" role="status">
+          <CloudOff aria-hidden="true" size={14} />
+          {hydrated ? "当前离线，学习记录会在联网后自动同步" : "正在准备学习空间"}
+        </p>
+      )}
+
+      <ol className="path-track">
+        {nodes.map((node, index) => {
+          const offset = PATH_OFFSETS[index % PATH_OFFSETS.length];
+          if (node.kind === "reinforce") {
+            const meta = trackMeta[node.track];
+            return (
+              <li className="path-gate" key={node.key}>
+                <button onClick={() => navigate(trackLessonPath(node.track, currentLesson.id))}>
+                  <span className={`path-gate-glyph tone-${meta.tone}`} aria-hidden="true">{meta.glyph}</span>
+                  <span>
+                    <strong>巩固关 · {meta.label}</strong>
+                    <small>{meta.eyebrow} · 已完成 {node.completed}/{node.total}</small>
+                  </span>
+                  <ArrowRight aria-hidden="true" size={18} />
                 </button>
-                <button className="game-button ghost" onClick={() => navigate(`/lessons/${currentLesson.id}`)}>
-                  <BookOpenText aria-hidden="true" />回到本课
-                </button>
-              </div>
-            </div>
-            <div className="home-resume-art">
-              <picture>
-                <source media="(max-width: 760px)" srcSet="/illustrations/system/home-hero-640.avif" type="image/avif" />
-                <img
-                  src="/illustrations/system/home-hero.webp"
-                  alt="两名孩子跟随蓝金色喜鹊，在桂花与书卷之间探索汉字"
-                  width="896"
-                  height="896"
-                  decoding="async"
-                  fetchPriority="high"
-                />
-              </picture>
-              <span className="home-art-caption"><Sparkles aria-hidden="true" /> 从一个字，看见一方世界</span>
-            </div>
-          </article>
+              </li>
+            );
+          }
 
-          <aside className="home-today-card">
-            <div className="home-today-heading">
-              <div><span>今日学习</span><strong>完成一个字，就很好</strong></div>
-              <i>{currentLessonProgress.completed}/{currentLessonProgress.total}</i>
-            </div>
-            <div className="home-lesson-progress" aria-label={`本课已完成 ${currentLessonProgress.completed} 个，共 ${currentLessonProgress.total} 个字`}>
-              <i style={{ width: `${currentLessonProgress.total ? (currentLessonProgress.completed / currentLessonProgress.total) * 100 : 0}%` }} />
-            </div>
-            <dl className="home-today-metrics">
-              <div><dt>今日作答</dt><dd>{today.attempts}<small> 次</small></dd></div>
-              <div><dt>全册识字</dt><dd>{wordProgress.completed}<small> / {wordProgress.total}</small></dd></div>
-              <div><dt>朗读练习</dt><dd>{profile.readSessions}<small> 次</small></dd></div>
-            </dl>
-            <button className="home-course-link" onClick={() => navigate("/lessons")}>
-              查看完整课程地图 <ArrowRight aria-hidden="true" />
-            </button>
-            <div className="home-sync-state">
-              {syncState === "local" ? <CloudOff aria-hidden="true" /> : <Cloud aria-hidden="true" />}
-              {!hydrated ? "正在准备学习空间" : syncState === "synced" ? "学习记录已同步" : "当前离线，稍后自动同步"}
-            </div>
-          </aside>
-        </section>
-
-        <section className="home-learning-flow" aria-labelledby="home-flow-title">
-          <div className="home-section-heading">
-            <div><p className="kicker">本课学习路径</p><h2 id="home-flow-title">先学懂，再练会，最后读出来</h2></div>
-            <span>《{currentLesson.title}》</span>
-          </div>
-          <ol>
-            <li>
-              <button onClick={() => navigate(`/lessons/${currentLesson.id}`)}>
-                <i>01</i><span><small>进入课文</small><strong>读懂本课</strong></span><b>查看内容 <ArrowRight aria-hidden="true" /></b>
+          return (
+            <li className={`path-node is-${node.state}`} key={node.key} style={{ marginLeft: offset }}>
+              {node.state === "current" && <span className="path-node-bubble">开始</span>}
+              <button
+                onClick={() => navigate(node.href)}
+                disabled={node.state === "locked"}
+                aria-label={`${node.hanzi}${node.state === "done" ? "，已学会" : node.state === "current" ? "，从这里继续" : "，尚未解锁"}`}
+              >
+                {node.hanzi}
               </button>
+              {node.state === "done" && (
+                <span className="path-node-check" aria-hidden="true">
+                  <Check size={12} strokeWidth={3.4} />
+                </span>
+              )}
             </li>
-            <li className="is-current">
-              <button onClick={() => navigate(continuePath("words", nextWord))}>
-                <i>02</i><span><small>当前任务</small><strong>认识字词</strong></span><b>{currentLessonProgress.completed}/{currentLessonProgress.total} 字 <ArrowRight aria-hidden="true" /></b>
-              </button>
-            </li>
-            <li>
-              <button onClick={() => navigate("/practice")}>
-                <i>03</i><span><small>换种方法</small><strong>三种巩固</strong></span><b>{reinforcementProgress.completed}/{reinforcementProgress.total} 关 <ArrowRight aria-hidden="true" /></b>
-              </button>
-            </li>
-            <li>
-              <button onClick={() => navigate("/read-aloud")}>
-                <i>04</i><span><small>读出声音</small><strong>朗读收尾</strong></span><b>{profile.readSessions} 次 <ArrowRight aria-hidden="true" /></b>
-              </button>
-            </li>
-          </ol>
-        </section>
+          );
+        })}
+      </ol>
 
-        <section className="home-practice-section" aria-labelledby="home-practice-title">
-          <div className="home-section-heading">
-            <div><p className="kicker">本课巩固</p><h2 id="home-practice-title">同一批字，换三种眼光再看一遍</h2></div>
-            <button className="text-button" onClick={() => navigate("/practice")}>进入练习中心 <ArrowRight aria-hidden="true" /></button>
-          </div>
-          <div className="home-practice-grid">
-            {practiceTrackIds.map((track, index) => {
-              const meta = trackMeta[track];
-              const lessonProgress = trackProgress(profile, track, currentLesson.id);
-              return (
-                <article className={`home-practice-card ${meta.tone}`} key={track}>
-                  <div className="home-practice-index"><span>{String(index + 1).padStart(2, "0")}</span><i>{lessonProgress.completed}/{lessonProgress.total}</i></div>
-                  <span className="home-practice-glyph">{meta.glyph}</span>
-                  <div><p>{meta.eyebrow}</p><h3>{meta.label}</h3></div>
-                  <button onClick={() => navigate(trackLessonPath(track, currentLesson.id))}>练习本课 <ArrowRight aria-hidden="true" /></button>
-                </article>
-              );
-            })}
-          </div>
-        </section>
-
-        <section className="home-course-section" aria-labelledby="home-course-title">
-          <div className="home-section-heading">
-            <div><p className="kicker">课程进度</p><h2 id="home-course-title">从这一课，继续往前走</h2></div>
-            <button className="text-button" onClick={() => navigate("/lessons")}>全部 26 课 <ArrowRight aria-hidden="true" /></button>
-          </div>
-          <div className="home-course-strip">
-            {nearbyLessons.map((lesson) => {
-              const progress = trackProgress(profile, "words", lesson.id);
-              const isCurrent = lesson.id === currentLesson.id;
-              return (
-                <button className={isCurrent ? "is-current" : ""} key={lesson.id} onClick={() => navigate(`/lessons/${lesson.id}`)}>
-                  <span>{String(lesson.position).padStart(2, "0")}</span>
-                  <strong>{lesson.title}</strong>
-                  <small>{progress.completed}/{progress.total} 字</small>
-                  <i><ArrowRight aria-hidden="true" /></i>
-                </button>
-              );
-            })}
-          </div>
-        </section>
-
-        <section className="home-method-note">
-          <div><Sparkles aria-hidden="true" /><span><small>学习方法</small><strong>不是看过图片就算会了，而是能理解、能拆解、能在没有图片时想起来。</strong></span></div>
-          <button onClick={() => navigate("/literacy-lab")}>看看识字方法 <ArrowRight aria-hidden="true" /></button>
-        </section>
-      </div>
+      <nav className="path-tabs" aria-label="主菜单">
+        <button className="is-active" onClick={() => navigate("/")}>
+          <HomeIcon aria-hidden="true" size={22} />
+          <small>学习</small>
+        </button>
+        <button onClick={() => navigate("/lessons")}>
+          <BookOpenText aria-hidden="true" size={22} />
+          <small>课本</small>
+        </button>
+        <button onClick={() => navigate("/practice")}>
+          <LayoutGrid aria-hidden="true" size={22} />
+          <small>练习</small>
+        </button>
+        <button onClick={() => navigate("/account")}>
+          <UserRound aria-hidden="true" size={22} />
+          <small>我的</small>
+        </button>
+      </nav>
     </main>
   );
 }
 
-function HomeNavigation({ name, onNavigate }: { name: string; onNavigate: (path: string) => void }) {
-  const nav: { label: string; path: string; icon: LucideIcon }[] = [
-    { label: "首页", path: "/", icon: HomeIcon },
-    { label: "课本", path: "/lessons", icon: BookOpenText },
-    { label: "练习", path: "/practice", icon: Route },
-    { label: "部件", path: "/bujian", icon: Layers3 },
-    { label: "记录", path: "/records", icon: ChartNoAxesColumnIncreasing },
-  ];
+// A gentle S so consecutive nodes never line up in a column.
+const PATH_OFFSETS = [0, 56, 78, 34, -34, -78, -56, 0];
 
-  return (
-    <header className="top-navigation">
-      <button className="wordmark" onClick={() => onNavigate("/")} aria-label="回到 Knowing Word 首页">
-        <span className="brand-seal" aria-hidden="true">知</span>
-        <span className="wordmark-copy"><strong>KNOWING WORD</strong><span className="wordmark-flag">从一个字，看见一方世界</span></span>
-      </button>
-      <nav aria-label="主菜单">
-        {nav.map((item) => {
-          const Icon = item.icon;
-          return (
-            <button className={item.path === "/" ? "is-active" : ""} key={item.label} onClick={() => onNavigate(item.path)}>
-              <Icon aria-hidden="true" /><span>{item.label}</span>
-            </button>
-          );
-        })}
-      </nav>
-      <button className="profile-pill" onClick={() => onNavigate("/account")} aria-label={`打开${name || "我的"}学习空间`}>
-        <span>{name ? name.slice(0, 1) : "学"}</span>
-        <small>{name || "学习空间"}</small>
-        <UserRound aria-hidden="true" />
-      </button>
-    </header>
+// Consecutive days ending today or yesterday that have at least one answer.
+function currentStreak(daily: HomeProfile["daily"]) {
+  const active = new Set(
+    Object.entries(daily)
+      .filter(([, value]) => (value?.attempts || 0) > 0 || (value?.readSessions || 0) > 0)
+      .map(([date]) => date),
   );
+  if (!active.size) return 0;
+
+  const cursor = new Date(`${todayKey()}T00:00:00Z`);
+  if (!active.has(todayKey())) cursor.setUTCDate(cursor.getUTCDate() - 1);
+
+  let streak = 0;
+  while (streak < 400) {
+    const key = cursor.toISOString().slice(0, 10);
+    if (!active.has(key)) break;
+    streak += 1;
+    cursor.setUTCDate(cursor.getUTCDate() - 1);
+  }
+  return streak;
+}
+
+type PathNode =
+  | { kind: "character"; key: string; hanzi: string; href: string; state: "done" | "current" | "locked" }
+  | { kind: "reinforce"; key: string; track: HomeTrackId; completed: number; total: number };
+
+// One line instead of four parallel maps: the lesson's characters in order,
+// with a reinforcement gate after every fourth character cycling through the
+// three practice routes. Children previously had to switch between separate
+// 识字 / 拆字 / 红蓝 / 结构 maps to see what a lesson still owed them.
+const GATE_EVERY = 4;
+
+function buildLessonPath(profile: HomeProfile, lessonId: string, currentId: string | undefined) {
+  const lessonWords = homeCandidates.words.filter((candidate) => candidate.lessonId === lessonId);
+  const nodes: PathNode[] = [];
+  let seenCurrent = false;
+
+  lessonWords.forEach((candidate, index) => {
+    const done = profile.completed.words.includes(candidate.id);
+    const isCurrent = !done && (candidate.id === currentId || !seenCurrent);
+    if (isCurrent) seenCurrent = true;
+    nodes.push({
+      kind: "character",
+      key: candidate.id,
+      hanzi: candidate.hanzi,
+      href: `/lessons/${lessonId}/words/${candidate.id}`,
+      state: done ? "done" : isCurrent ? "current" : "locked",
+    });
+
+    const gateIndex = index + 1;
+    if (gateIndex % GATE_EVERY === 0) {
+      const track = practiceTrackIds[(gateIndex / GATE_EVERY - 1) % practiceTrackIds.length];
+      const progress = trackProgress(profile, track, lessonId);
+      nodes.push({
+        kind: "reinforce",
+        key: `${lessonId}-gate-${gateIndex}`,
+        track,
+        completed: progress.completed,
+        total: progress.total,
+      });
+    }
+  });
+
+  return nodes;
 }

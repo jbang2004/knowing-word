@@ -29,14 +29,16 @@ test("server-renders the task-first Knowing Word learning experience", async () 
   const html = await response.text();
   assert.match(html, /Knowing Word/i);
   assert.match(html, /五年级上册 26 课汉字学习地图/);
-  assert.match(html, /KNOWING/);
-  assert.match(html, /接着认识/);
-  assert.match(html, /本课学习路径/);
-  assert.match(html, /先学懂，再练会，最后读出来/);
+  // The landing is one path: the current lesson, its characters in order, and
+  // the reinforcement gates that fold the three practice routes into the line.
+  assert.match(html, /第 1 课/);
+  assert.match(html, /白鹭/);
+  assert.match(html, /巩固关/);
   assert.match(html, /课后练习/);
   assert.match(html, /红蓝练习/);
   assert.match(html, /空间结构/);
-  assert.match(html, /朗读收尾/);
+  assert.match(html, /path-node is-current/);
+  assert.match(html, /path-tabs/);
 
   const practiceResponse = await render("/practice");
   assert.equal(practiceResponse.status, 200);
@@ -51,16 +53,28 @@ test("character pages render the complete picture-to-character memory flow", asy
   );
   assert.equal(response.status, 200);
   const html = await response.text();
-  assert.match(html, /图中嵌字/);
-  assert.match(html, /长进画面里/);
-  assert.match(html, /先看本义场景/);
+  // The 物象图 is the screen, with one primary action into the narration.
+  assert.match(html, /画面本身就是字形/);
+  assert.match(html, /听字义讲解/);
+  assert.match(html, /看意象/);
   assert.match(html, /找部首/);
   assert.match(html, /找部件/);
   assert.match(html, /合成字/);
-  assert.match(html, /听字义讲解/);
-  assert.match(html, /audio\/webm; codecs=&quot;opus&quot;/);
+  // Reference material sits in the drawer but still server-renders, so every
+  // learning URL stays a complete, shareable page.
+  assert.match(html, /部件来历/);
+  assert.match(html, /字形演变/);
+  assert.match(html, /课文语境/);
+  // The audio element itself lives in the narration screen; the study screen
+  // prefetches the same versioned R2 object so the first play is not cold.
   assert.match(html, /\/media\/narration\/v3\//);
   assert.match(html, /audio\.webm\?v=narration-v3-qwen3-4bit-r37e955a/);
+
+  const pageSource = await readFile(
+    new URL("../app/experience.tsx", import.meta.url),
+    "utf8",
+  );
+  assert.match(pageSource, /type='audio\/webm; codecs="opus"'/);
 });
 
 test("lesson 3 renders the method pilot and picture-withdrawal flow", async () => {
@@ -309,19 +323,26 @@ test("mnemonic artwork is never cropped or hidden by its caption", async () => {
     new URL("../app/globals.css", import.meta.url),
     "utf8",
   );
+  const studySheet = await readFile(
+    new URL("../app/study.css", import.meta.url),
+    "utf8",
+  );
 
-  assert.match(pageSource, /className="mnemonic-art-frame"/);
-  assert.match(pageSource, /className="mnemonic-scene-art"/);
+  assert.match(pageSource, /className="study-scene-art"/);
+  assert.match(pageSource, /className="memory-stage-art"/);
   assert.equal(
     (pageSource.match(/objectFit: "contain", objectPosition: "center"/g) ?? []).length,
-    4,
+    5,
     "all full-view learning image families need an inline contain override",
   );
-  assert.match(stylesheet, /\.mnemonic-scene-art\s*\{[^}]*object-fit:\s*contain/s);
+  assert.match(studySheet, /\.study-scene img\s*\{[^}]*object-fit:\s*contain/s);
+  assert.match(studySheet, /\.memory-stage-scene img\s*\{[^}]*object-fit:\s*contain/s);
   assert.match(stylesheet, /\.meaning-illustration img\s*\{[^}]*object-fit:\s*contain/s);
-  assert.doesNotMatch(stylesheet, /\.mnemonic-scene\.stage-[^{]+\{[^}]*transform:\s*scale/s);
+  // The spotlight dims with a gradient; it must never scale or crop the plate.
+  assert.doesNotMatch(studySheet, /\.memory-stage-scene[^{]*\{[^}]*transform:\s*scale/s);
   assert.doesNotMatch(stylesheet, /\.choice-card:hover \.meaning-illustration img\s*\{[^}]*transform:/s);
-  assert.match(stylesheet, /\.mnemonic-scene figcaption\s*\{[^}]*background:\s*#18223a/s);
+  // The caption is a pill in the corner, not a bar across the artwork.
+  assert.match(studySheet, /\.study-scene-caption\s*\{[^}]*position:\s*absolute/s);
 });
 
 test("the public learning catalog preserves the course and practice-route structure", async () => {

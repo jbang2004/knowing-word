@@ -6,19 +6,15 @@ import {
   ArrowLeft,
   ArrowRight,
   BookOpenText,
-  ChartNoAxesColumnIncreasing,
-  Cloud,
-  CloudOff,
   CircleStop,
   CheckCircle2,
   Home as HomeIcon,
-  Layers3,
+  LayoutGrid,
   LogOut,
   Map as MapIcon,
   Mic2,
   MoonStar,
   RotateCcw,
-  Route,
   Sparkles,
   SunMedium,
   UserRound,
@@ -61,6 +57,7 @@ import {
   getMnemonicLayout,
   getMnemonicScene,
 } from "./data/mnemonic-scenes";
+import { getPartFocusRegions, mergeFocusRegions } from "./lib/mnemonic-focus";
 import {
   getMnemonicStageCopy,
   getMnemonicStagePartIndices,
@@ -770,8 +767,18 @@ export default function Home({ initialPath = "/" }: { initialPath?: string }) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [screen, celebration, currentQuestion, result, selectedOptions, wrote, orderedOptions]);
 
+  useEffect(() => {
+    if (screen === "home") window.location.replace("/");
+  }, [screen]);
+
   function navigatePath(path: string, replace = false) {
     const route = resolveAppRoute(path);
+    if (route.screen === "home") {
+      // The path home lives at "/" as its own server-rendered route; a
+      // client-side push would leave the engine showing an empty shell.
+      window.location[replace ? "replace" : "assign"]("/");
+      return;
+    }
     window.history[replace ? "replaceState" : "pushState"]({}, "", path);
     applyRoute(route);
   }
@@ -1075,26 +1082,16 @@ export default function Home({ initialPath = "/" }: { initialPath?: string }) {
     });
   }
 
-  return (
-    <main className="game-shell">
-      <TopNavigation
-        active={screen}
-        name={profile.name}
-        onNavigate={navigate}
-        onProfile={() => navigate("profile")}
-      />
+  const immersive = screen === "character";
 
-      {screen === "home" && (
-        <HomeHub
-          profile={profile}
-          hydrated={hydrated}
-          syncState={syncState}
-          onCourse={() => navigate("course")}
-          onLesson={openLesson}
-          onPractice={() => navigate("practice")}
-          onTrackLesson={openTrackLesson}
-          onContinue={continueTrack}
-          onRead={() => navigate("read")}
+  return (
+    <main className={immersive ? "game-shell is-immersive" : "game-shell"}>
+      {!immersive && (
+        <TopNavigation
+          active={screen}
+          name={profile.name}
+          onNavigate={navigate}
+          onProfile={() => navigate("profile")}
         />
       )}
 
@@ -1127,12 +1124,14 @@ export default function Home({ initialPath = "/" }: { initialPath?: string }) {
 
       {screen === "character" && (
         <CharacterStudy
+          key={selectedCharacter.id}
           character={selectedCharacter}
           profile={profile}
           favorite={favoriteSet.has(selectedCharacter.id)}
           onBack={() => openLesson(selectedCharacter.lessonId)}
           onFavorite={() => toggleFavorite(selectedCharacter.id)}
           onStart={() => openChallenge("words", selectedCharacter)}
+          onReadAloud={() => navigate("read")}
           onComponent={(glyph) => {
             const component = allComponents.find((item) => item.glyph === glyph);
             if (component) {
@@ -1288,11 +1287,10 @@ function TopNavigation({
   onProfile: () => void;
 }) {
   const nav: { label: string; screen: Screen; active: Screen[]; icon: LucideIcon }[] = [
-    { label: "首页", screen: "home", active: ["home"], icon: HomeIcon },
+    { label: "学习", screen: "home", active: ["home"], icon: HomeIcon },
     { label: "课本", screen: "course", active: ["course", "lesson", "character"], icon: BookOpenText },
-    { label: "练习", screen: "practice", active: ["practice", "trackMap", "trackLesson", "challenge"], icon: Route },
-    { label: "部件", screen: "components", active: ["components"], icon: Layers3 },
-    { label: "记录", screen: "records", active: ["records", "recordDetail"], icon: ChartNoAxesColumnIncreasing },
+    { label: "练习", screen: "practice", active: ["practice", "trackMap", "trackLesson", "challenge", "components"], icon: LayoutGrid },
+    { label: "我的", screen: "profile", active: ["profile", "records", "recordDetail", "read"], icon: UserRound },
   ];
 
   return (
@@ -1322,170 +1320,8 @@ function TopNavigation({
       <button className="profile-pill" onClick={onProfile} aria-label={`打开${name || "我的"}学习空间`}>
         <span>{name ? name.slice(0, 1) : "学"}</span>
         <small>{name || "学习空间"}</small>
-        <UserRound aria-hidden="true" />
       </button>
     </header>
-  );
-}
-
-function HomeHub({
-  profile,
-  hydrated,
-  syncState,
-  onCourse,
-  onLesson,
-  onPractice,
-  onTrackLesson,
-  onContinue,
-  onRead,
-}: {
-  profile: StudyProfile;
-  hydrated: boolean;
-  syncState: "loading" | "synced" | "local";
-  onCourse: () => void;
-  onLesson: (lessonId: string) => void;
-  onPractice: () => void;
-  onTrackLesson: (track: TrackId, lessonId: string) => void;
-  onContinue: (track: TrackId) => void;
-  onRead: () => void;
-}) {
-  const nextWord = getNextCharacter("words", profile);
-  const wordProgress = trackProgress(profile, "words");
-  const currentLesson = lessonList.find((lesson) => lesson.id === nextWord?.lessonId) || initialLesson;
-  const currentLessonProgress = trackProgress(profile, "words", currentLesson.id);
-  const currentLessonIndex = Math.max(0, lessonList.findIndex((lesson) => lesson.id === currentLesson.id));
-  const nearbyLessons = lessonList.slice(
-    Math.max(0, currentLessonIndex - 1),
-    Math.min(lessonList.length, currentLessonIndex + 5),
-  );
-  const reinforcementProgress = practiceTrackIds.reduce(
-    (summary, track) => {
-      const progress = trackProgress(profile, track, currentLesson.id);
-      return { completed: summary.completed + progress.completed, total: summary.total + progress.total };
-    },
-    { completed: 0, total: 0 },
-  );
-  const name = profile.name || "小探险家";
-  const today = profile.daily[todayKey()] || { attempts: 0, correct: 0, skips: 0, readSessions: 0 };
-
-  return (
-    <div className="page home-page">
-      <section className="home-command-center" aria-label="继续学习">
-        <article className="home-resume-card">
-          <div className="home-resume-copy">
-            <div className="home-course-line">
-              <span>语文 · 五年级上册</span>
-              <i>第 {currentLesson.position} 课</i>
-            </div>
-            <p className="home-greeting">你好，{name}</p>
-            <h1>接着认识<em>「{nextWord?.hanzi || "鹭"}」</em></h1>
-            <p className="home-resume-intro">
-              回到《{currentLesson.title}》的词语里，先弄懂字义和字形，再用不同方法把它记牢。
-            </p>
-            <div className="home-resume-actions">
-              <button className="game-button primary" onClick={() => onContinue("words")}>
-                {nextWord ? "继续这个字" : "开始识字"} <ArrowRight aria-hidden="true" />
-              </button>
-              <button className="game-button ghost" onClick={() => onLesson(currentLesson.id)}>
-                <BookOpenText aria-hidden="true" />回到本课
-              </button>
-            </div>
-          </div>
-          <div className="home-resume-art">
-            <Image
-              src="/illustrations/system/home-hero.webp"
-              alt="两名孩子跟随蓝金色喜鹊，在桂花与书卷之间探索汉字"
-              fill
-              priority
-              sizes="(max-width: 760px) 100vw, 42vw"
-            />
-            <span className="home-art-caption"><Sparkles aria-hidden="true" /> 从一个字，看见一方世界</span>
-          </div>
-        </article>
-
-        <aside className="home-today-card">
-          <div className="home-today-heading">
-            <div><span>今日学习</span><strong>完成一个字，就很好</strong></div>
-            <i>{currentLessonProgress.completed}/{currentLessonProgress.total}</i>
-          </div>
-          <div className="home-lesson-progress" aria-label={`本课已完成 ${currentLessonProgress.completed} 个，共 ${currentLessonProgress.total} 个字`}>
-            <i style={{ width: `${currentLessonProgress.total ? (currentLessonProgress.completed / currentLessonProgress.total) * 100 : 0}%` }} />
-          </div>
-          <dl className="home-today-metrics">
-            <div><dt>今日作答</dt><dd>{today.attempts}<small> 次</small></dd></div>
-            <div><dt>全册识字</dt><dd>{wordProgress.completed}<small> / {wordProgress.total}</small></dd></div>
-            <div><dt>朗读练习</dt><dd>{profile.readSessions}<small> 次</small></dd></div>
-          </dl>
-          <button className="home-course-link" onClick={onCourse}>
-            查看完整课程地图 <ArrowRight aria-hidden="true" />
-          </button>
-          <div className="home-sync-state">
-            {syncState === "local" ? <CloudOff aria-hidden="true" /> : <Cloud aria-hidden="true" />}
-            {!hydrated ? "正在准备学习空间" : syncState === "synced" ? "学习记录已同步" : "当前离线，稍后自动同步"}
-          </div>
-        </aside>
-      </section>
-
-      <section className="home-learning-flow" aria-labelledby="home-flow-title">
-        <div className="home-section-heading">
-          <div><p className="kicker">本课学习路径</p><h2 id="home-flow-title">先学懂，再练会，最后读出来</h2></div>
-          <span>《{currentLesson.title}》</span>
-        </div>
-        <ol>
-          <li><button onClick={() => onLesson(currentLesson.id)}><i>01</i><span><small>进入课文</small><strong>读懂本课</strong></span><b>查看内容 <ArrowRight aria-hidden="true" /></b></button></li>
-          <li className="is-current"><button onClick={() => onContinue("words")}><i>02</i><span><small>当前任务</small><strong>认识字词</strong></span><b>{currentLessonProgress.completed}/{currentLessonProgress.total} 字 <ArrowRight aria-hidden="true" /></b></button></li>
-          <li><button onClick={onPractice}><i>03</i><span><small>换种方法</small><strong>三种巩固</strong></span><b>{reinforcementProgress.completed}/{reinforcementProgress.total} 关 <ArrowRight aria-hidden="true" /></b></button></li>
-          <li><button onClick={onRead}><i>04</i><span><small>读出声音</small><strong>朗读收尾</strong></span><b>{profile.readSessions} 次 <ArrowRight aria-hidden="true" /></b></button></li>
-        </ol>
-      </section>
-
-      <section className="home-practice-section" aria-labelledby="home-practice-title">
-        <div className="home-section-heading">
-          <div><p className="kicker">本课巩固</p><h2 id="home-practice-title">同一批字，换三种眼光再看一遍</h2></div>
-          <button className="text-button" onClick={onPractice}>进入练习中心 <ArrowRight aria-hidden="true" /></button>
-        </div>
-        <div className="home-practice-grid">
-          {practiceTrackIds.map((track, index) => {
-            const meta = trackMeta[track];
-            const lessonProgress = trackProgress(profile, track, currentLesson.id);
-            return (
-              <article className={`home-practice-card ${meta.tone}`} key={track}>
-                <div className="home-practice-index"><span>{String(index + 1).padStart(2, "0")}</span><i>{lessonProgress.completed}/{lessonProgress.total}</i></div>
-                <span className="home-practice-glyph">{meta.glyph}</span>
-                <div><p>{meta.eyebrow}</p><h3>{meta.label}</h3></div>
-                <button onClick={() => onTrackLesson(track, currentLesson.id)}>练习本课 <ArrowRight aria-hidden="true" /></button>
-              </article>
-            );
-          })}
-        </div>
-      </section>
-
-      <section className="home-course-section" aria-labelledby="home-course-title">
-        <div className="home-section-heading">
-          <div><p className="kicker">课程进度</p><h2 id="home-course-title">从这一课，继续往前走</h2></div>
-          <button className="text-button" onClick={onCourse}>全部 26 课 <ArrowRight aria-hidden="true" /></button>
-        </div>
-        <div className="home-course-strip">
-          {nearbyLessons.map((lesson) => {
-            const progress = trackProgress(profile, "words", lesson.id);
-            const isCurrent = lesson.id === currentLesson.id;
-            return (
-              <button className={isCurrent ? "is-current" : ""} key={lesson.id} onClick={() => onLesson(lesson.id)}>
-                <span>{String(lesson.position).padStart(2, "0")}</span>
-                <strong>{lesson.title}</strong>
-                <small>{progress.completed}/{progress.total} 字</small>
-                <i><ArrowRight aria-hidden="true" /></i>
-              </button>
-            );
-          })}
-        </div>
-      </section>
-
-      <section className="home-method-note">
-        <div><Sparkles aria-hidden="true" /><span><small>学习方法</small><strong>不是看过图片就算会了，而是能理解、能拆解、能在没有图片时想起来。</strong></span></div>
-        <Link className="home-method-link" href="/literacy-lab">看看识字方法 <ArrowRight aria-hidden="true" /></Link>
-      </section>
-    </div>
   );
 }
 
@@ -1858,7 +1694,17 @@ function narrationMediaSource(source: string | undefined) {
   return `/media/narration/v3/${source.slice("/narration/".length)}`;
 }
 
-function NarratedDescription({ character }: { character: CharacterItem }) {
+function NarrationTheatre({
+  character,
+  onClose,
+  onFinished,
+  onReadAloud,
+}: {
+  character: CharacterItem;
+  onClose: () => void;
+  onFinished: () => void;
+  onReadAloud: () => void;
+}) {
   const narrationAsset = narrationAssets[character.id];
   const releasedTranscript = releasedNarrationTranscripts[character.id]?.transcript || character.description;
   const narrationVersion = "narration-v3-qwen3-4bit-r37e955a";
@@ -1870,7 +1716,6 @@ function NarratedDescription({ character }: { character: CharacterItem }) {
   const [elapsed, setElapsed] = useState(0);
   const [duration, setDuration] = useState(0);
   const [playing, setPlaying] = useState(false);
-  const [transcriptExpanded, setTranscriptExpanded] = useState(false);
 
   useEffect(() => {
     if (!playing || !audioSource) return;
@@ -1910,13 +1755,11 @@ function NarratedDescription({ character }: { character: CharacterItem }) {
   function toggleNarration() {
     const audio = audioRef.current;
     if (!audioSource || !audio) {
-      setTranscriptExpanded(true);
       setPlaying(true);
       speak(releasedTranscript, () => setPlaying(false));
       return;
     }
     if (audio.paused) {
-      setTranscriptExpanded(true);
       const audioDuration = Number.isFinite(audio.duration) ? audio.duration : duration;
       if (audio.ended || (audioDuration > 0 && audio.currentTime >= audioDuration - 0.08)) {
         audio.currentTime = 0;
@@ -1958,33 +1801,73 @@ function NarratedDescription({ character }: { character: CharacterItem }) {
           ? "逐字跟读已就绪"
           : "标准普通话讲解";
 
+  const visual = characterVisuals[character.hanzi];
+  const spokenSeconds = timelineDuration || 0;
+  // Bar heights must be identical on the server and the client, so derive them
+  // from the record id rather than Math.random.
+  const waveBars = useMemo(() => {
+    const base = [...character.id].reduce((total, char) => (total * 31 + char.charCodeAt(0)) % 100000, 7);
+    return Array.from({ length: 18 }, (_, index) => {
+      const mixed = (base + index * 2654435761) % 2147483648;
+      return 26 + ((mixed >> 8) % 74);
+    });
+  }, [character.id]);
+
+  function seekToPhraseStart(offset: number) {
+    const audio = audioRef.current;
+    if (!audio || !marks.length) return;
+    const current = activePhraseIndex >= 0 ? activePhraseIndex : 0;
+    const target = Math.max(0, current + offset);
+    const markIndex = phraseByMark.findIndex((phrase) => phrase === target);
+    audio.currentTime = markIndex >= 0 ? marks[markIndex]?.start ?? 0 : 0;
+    setElapsed(audio.currentTime);
+  }
+
   return (
-    <div className={`narrated-description${playing ? " is-playing" : ""}${finished ? " is-finished" : ""}`}>
-      <div className="narration-toolbar">
-        <button className={playing ? "listen-button is-playing" : "listen-button"} onClick={toggleNarration} aria-pressed={playing}>
-          <span aria-hidden="true">{playing ? "Ⅱ" : "▶"}</span>
-          {playing ? "暂停讲解" : finished ? "重新播放" : "听字义讲解"}
+    <div className="narration-theatre">
+      {visual && (
+        <div
+          className="narration-theatre-backdrop"
+          style={{ backgroundImage: `url(${visual.src})` }}
+          aria-hidden="true"
+        />
+      )}
+
+      <div className="narration-theatre-bar">
+        <button onClick={onClose} aria-label="收起讲解">
+          <ArrowLeft aria-hidden="true" size={20} />
         </button>
-        <span className="narration-status" aria-hidden="true">
-          <i className="narration-equalizer"><b /><b /><b /></i>
-          {narrationStatus}
-        </span>
+        <span>字义讲解 · 逐字跟读</span>
+        <span aria-hidden="true">{marks.length ? `${completedCount}/${marks.length}` : ""}</span>
       </div>
-      <div className={`narration-copy${transcriptExpanded ? " is-expanded" : ""}`}>
+
+      <div className="narration-theatre-chip">
+        {visual && <Image src={visual.src} alt="" aria-hidden="true" width={46} height={46} />}
+        <div>
+          <strong>{character.hanzi} · {character.pinyin}</strong>
+          <small>{finished ? "讲解完成，可以进入物象四步" : narrationStatus}</small>
+        </div>
+        <i className="narration-equalizer" aria-hidden="true"><b /><b /><b /></i>
+      </div>
+
+      <div className="narration-theatre-text">
         {marks.length ? (
-          <p className="narration-transcript" aria-label={transcript.map((token) => token.text).join("")}>
+          <p aria-label={transcript.map((token) => token.text).join("")}>
             {transcript.map((token, index) => {
               if (token.kind === "punctuation") return null;
               const completed = token.completionTime <= elapsed;
               const currentPhrase = phraseByMark[token.markIndex] === activePhraseIndex;
               const punctuation = transcript[index + 1]?.kind === "punctuation" ? transcript[index + 1] : null;
-              const phraseClass = currentPhrase ? " is-current-phrase" : "";
-              const className = `narration-token${activeMarkIndices.has(token.markIndex) ? " is-active" : completed ? " is-complete" : " is-upcoming"}${phraseClass}`;
+              const className = `narration-token${activeMarkIndices.has(token.markIndex) ? " is-active" : completed ? " is-complete" : " is-upcoming"}`;
               return (
-                <span className="narration-unit" key={`${token.kind}-${token.markIndex}-${index}`} aria-hidden="true">
+                <span
+                  className={`narration-unit${currentPhrase ? " is-current-phrase" : ""}`}
+                  key={`${token.kind}-${token.markIndex}-${index}`}
+                  aria-hidden="true"
+                >
                   <span className={className}>{token.text}</span>
                   {punctuation && (
-                    <span className={`narration-token is-punctuation${completed ? " is-complete" : ""}${phraseClass}`}>
+                    <span className={`narration-token is-punctuation${completed ? " is-complete" : ""}`}>
                       {punctuation.text}
                     </span>
                   )}
@@ -1996,15 +1879,45 @@ function NarratedDescription({ character }: { character: CharacterItem }) {
           <p>{releasedTranscript}</p>
         )}
       </div>
-      <button
-        className="narration-toggle"
-        type="button"
-        onClick={() => setTranscriptExpanded((value) => !value)}
-        aria-expanded={transcriptExpanded}
-      >
-        {transcriptExpanded ? "收起逐字讲解" : "展开完整讲解"}<span aria-hidden="true">⌄</span>
-      </button>
-      <div className="narration-progress" aria-hidden="true"><i style={{ width: `${progress}%` }} /></div>
+
+      <div className="narration-theatre-controls">
+        <div className="narration-wave" aria-hidden="true">
+          {waveBars.map((height, index) => (
+            <i
+              className={progress >= ((index + 1) / waveBars.length) * 100 ? "is-played" : ""}
+              key={index}
+              style={{ height: `${height}%` }}
+            />
+          ))}
+        </div>
+
+        <div className="narration-theatre-time">
+          <span>{formatClock(elapsed)}</span>
+          <span>{marks.length ? `已读 ${completedCount} / ${marks.length} 字` : "标准普通话讲解"}</span>
+          <span>{formatClock(spokenSeconds)}</span>
+        </div>
+
+        <div className="narration-theatre-buttons">
+          <button onClick={() => seekToPhraseStart(-1)} disabled={!marks.length}>
+            <RotateCcw aria-hidden="true" size={20} />
+            <small>上一句</small>
+          </button>
+          {finished ? (
+            <button className="is-play" onClick={onFinished} aria-label="进入物象四步">
+              <ArrowRight aria-hidden="true" size={26} />
+            </button>
+          ) : (
+            <button className="is-play" onClick={toggleNarration} aria-label={playing ? "暂停讲解" : "播放讲解"} aria-pressed={playing}>
+              {playing ? <CircleStop aria-hidden="true" size={26} /> : <Volume2 aria-hidden="true" size={26} />}
+            </button>
+          )}
+          <button className="is-record" onClick={onReadAloud}>
+            <Mic2 aria-hidden="true" size={20} />
+            <small>我来读</small>
+          </button>
+        </div>
+      </div>
+
       {audioSource && (
         <audio
           ref={audioRef}
@@ -2031,6 +1944,12 @@ function NarratedDescription({ character }: { character: CharacterItem }) {
   );
 }
 
+function formatClock(seconds: number) {
+  if (!Number.isFinite(seconds) || seconds <= 0) return "0:00";
+  const whole = Math.floor(seconds);
+  return `${Math.floor(whole / 60)}:${String(whole % 60).padStart(2, "0")}`;
+}
+
 function MnemonicSceneFocus({
   character,
   stage,
@@ -2055,15 +1974,19 @@ function MnemonicSceneFocus({
   );
 }
 
-function MnemonicMemory({
+function MemoryStage({
   character,
+  onClose,
   onComponent,
+  onFinish,
 }: {
   character: CharacterItem;
+  onClose: () => void;
   onComponent: (glyph: string) => void;
+  onFinish: () => void;
 }) {
   const [stage, setStage] = useState<MnemonicStage>(0);
-  const [autoPlay, setAutoPlay] = useState(false);
+  const swipeStart = useRef<{ x: number; y: number } | null>(null);
   const visual = characterVisuals[character.hanzi];
   const scene = getMnemonicScene(character);
   const copy = getMnemonicStageCopy(character, stage);
@@ -2071,108 +1994,208 @@ function MnemonicMemory({
   const parts = character.parts.length
     ? character.parts
     : [{ char: character.hanzi, radical: true }];
+  const lastStage = (mnemonicStageLabels.length - 1) as MnemonicStage;
 
-  useEffect(() => {
-    if (!autoPlay) return;
-    const timer = window.setInterval(() => {
-      setStage((current) => ((current + 1) % mnemonicStageLabels.length) as MnemonicStage);
-    }, 2100);
-    return () => window.clearInterval(timer);
-  }, [autoPlay]);
+  const regions = useMemo(
+    () => getPartFocusRegions(character.decomposition, parts.length),
+    [character.decomposition, parts.length],
+  );
+  // Stage 0 shows the whole picture and stage 4 takes it away, so only the two
+  // middle stages aim a spotlight.
+  const focus = useMemo(
+    () =>
+      stage === 0 || stage === lastStage
+        ? null
+        : mergeFocusRegions(activePartIndices.map((index) => regions[index]).filter(Boolean)),
+    [activePartIndices, lastStage, regions, stage],
+  );
 
-  function selectStage(next: MnemonicStage) {
-    setAutoPlay(false);
-    setStage(next);
+  const accent = stage === 1 ? "var(--n-radical)" : stage === 2 ? "var(--n-part)" : "var(--n-action)";
+  const glow =
+    stage === 1
+      ? "rgba(255, 122, 82, 0.13)"
+      : stage === 2
+        ? "rgba(95, 180, 220, 0.13)"
+        : "rgba(53, 194, 149, 0.11)";
+
+  function go(next: number) {
+    setStage(Math.min(lastStage, Math.max(0, next)) as MnemonicStage);
+  }
+
+  function onPointerDown(event: ReactPointerEvent<HTMLDivElement>) {
+    swipeStart.current = { x: event.clientX, y: event.clientY };
+  }
+
+  function onPointerUp(event: ReactPointerEvent<HTMLDivElement>) {
+    const origin = swipeStart.current;
+    swipeStart.current = null;
+    if (!origin) return;
+    const dx = event.clientX - origin.x;
+    const dy = event.clientY - origin.y;
+    if (Math.abs(dx) < 48 || Math.abs(dx) < Math.abs(dy)) return;
+    go(dx < 0 ? stage + 1 : stage - 1);
   }
 
   return (
-    <section className="mnemonic-card" aria-labelledby={`mnemonic-title-${character.id}`}>
-      <div className="mnemonic-heading">
-        <div>
-          <p className="kicker">图中嵌字 · 物象四步记忆法</p>
-          <h2 id={`mnemonic-title-${character.id}`}>让“{character.hanzi}”长进画面里</h2>
-          <p>先看本义场景，再观察物体本身怎样长成部首和部件；暖红、靛蓝只负责聚焦，不把大字贴在画面上。</p>
-        </div>
-        <button className={autoPlay ? "memory-autoplay is-playing" : "memory-autoplay"} onClick={() => setAutoPlay((value) => !value)} aria-pressed={autoPlay}>
-          <span aria-hidden="true">{autoPlay ? "Ⅱ" : "▶"}</span>{autoPlay ? "暂停演示" : "自动演示"}
+    <div
+      className="memory-stage"
+      style={{ ["--stage-accent" as string]: accent, ["--stage-glow" as string]: glow }}
+      onPointerDown={onPointerDown}
+      onPointerUp={onPointerUp}
+      onKeyDown={(event) => {
+        if (event.key === "ArrowLeft") go(stage - 1);
+        if (event.key === "ArrowRight") go(stage + 1);
+      }}
+      tabIndex={0}
+      role="group"
+      aria-label={`物象四步，第 ${stage + 1} 步：${mnemonicStageLabels[stage]}`}
+    >
+      <div className="memory-stage-progress" aria-hidden="true">
+        {mnemonicStageLabels.map((label, index) => (
+          <i className={index < stage ? "is-past" : index === stage ? "is-current" : ""} key={label} />
+        ))}
+      </div>
+
+      <div className="memory-stage-bar">
+        <button onClick={() => (stage === 0 ? onClose() : go(stage - 1))} aria-label="上一步">
+          <ArrowLeft aria-hidden="true" size={20} />
+        </button>
+        <span>物象四步 · {character.hanzi}</span>
+        <button onClick={onClose} aria-label="退出演示">
+          <ArrowRight aria-hidden="true" size={20} />
         </button>
       </div>
 
-      <div className="mnemonic-layout">
-        <figure
-          className={`mnemonic-scene stage-${stage}`}
-          tabIndex={0}
-          onKeyDown={(event) => {
-            if (event.key === "ArrowLeft") selectStage(Math.max(0, stage - 1) as MnemonicStage);
-            if (event.key === "ArrowRight") selectStage(Math.min(3, stage + 1) as MnemonicStage);
-          }}
-          aria-label={`图中嵌字演示，当前是第${stage + 1}步：${mnemonicStageLabels[stage]}。可使用左右方向键切换。`}
-        >
-          <div className="mnemonic-art-frame">
-            <Image
-              className="mnemonic-scene-backdrop"
-              src={visual.src}
-              alt=""
-              fill
-              aria-hidden="true"
-              sizes="(max-width: 760px) 100vw, 720px"
-            />
-            <Image
-              className="mnemonic-scene-art"
-              src={visual.src}
-              alt={`${visual.alt}。${scene.scene}`}
-              fill
-              priority
-              sizes="(max-width: 760px) 100vw, 720px"
-              style={{ objectFit: "contain", objectPosition: "center" }}
-            />
-            <div className="mnemonic-vignette" aria-hidden="true" />
-            <MnemonicSceneFocus character={character} stage={stage} />
+      {stage === lastStage ? (
+        <>
+          <div className="memory-stage-recall">
+            {visual && <Image src={visual.src} alt="" aria-hidden="true" width={44} height={44} />}
+            <span>
+              <strong>图片先收起来了</strong>
+              <small>能离开画面想起字形，才算记住</small>
+            </span>
+            <button onClick={() => go(0)}>再看图</button>
           </div>
-          <figcaption><span>画面本身就是字形</span><strong>{visual.label}</strong></figcaption>
-        </figure>
 
-        <aside className={`mnemonic-story stage-${stage}`} aria-live="polite">
-          <div className="memory-step-number"><span>0{stage + 1}</span><small>/ 04</small></div>
-          <p>{copy.eyebrow}</p>
-          <h3>{copy.title}</h3>
-          <p className="memory-step-copy">{copy.body}</p>
-          {stage === 3 && (
-            <div className="memory-equation" aria-label={`完整字形：${parts.map((part) => part.char).join("加")}等于${character.hanzi}`}>
-              <div>{parts.map((part, index) => <span key={`${part.char}-${index}`}>{part.char}</span>)}</div>
-              <b aria-hidden="true">→</b>
-              <strong>{character.hanzi}</strong>
+          <div className="memory-stage-equation" aria-label={`${parts.map((part) => part.char).join("加")}等于${character.hanzi}`}>
+            <div className={`memory-stage-parts${character.decomposition?.includes("左右") ? " is-beside" : ""}`}>
+              {parts.map((part, index) => (
+                <span className={part.radical ? "is-radical" : "is-component"} key={`${part.char}-${index}`}>
+                  {part.char}
+                </span>
+              ))}
             </div>
-          )}
-          <div className="memory-part-list">
+            <ArrowRight aria-hidden="true" size={30} color="rgba(244,240,230,.5)" />
+            <span className="memory-stage-result">{character.hanzi}</span>
+          </div>
+
+          <div className="memory-stage-legend" aria-hidden="true">
+            <span><i style={{ background: "var(--n-radical)" }} />表意部首</span>
+            <span><i style={{ background: "var(--n-part)" }} />形音部件</span>
+            <span>{character.decomposition}</span>
+          </div>
+
+          <p className="memory-stage-copy" style={{ paddingTop: 26 }}>{copy.body}</p>
+        </>
+      ) : (
+        <>
+          <figure className="memory-stage-scene">
+            <span className="memory-stage-art">
+              {visual && (
+                <Image
+                  src={visual.src}
+                  alt={`${visual.alt}。${scene.scene}`}
+                  fill
+                  priority
+                  sizes="(max-width: 900px) 100vw, 520px"
+                  style={{ objectFit: "contain", objectPosition: "center" }}
+                />
+              )}
+            </span>
+            {focus && (
+              <>
+                <span
+                  className="memory-stage-spot"
+                  aria-hidden="true"
+                  style={{
+                    background: `radial-gradient(ellipse ${focus.w / 2}% ${focus.h / 2}% at ${focus.x}% ${focus.y}%, rgba(15,22,20,0) 0%, rgba(15,22,20,0) 62%, rgba(15,22,20,.66) 100%)`,
+                  }}
+                />
+                <span
+                  className="memory-stage-tint"
+                  aria-hidden="true"
+                  style={{
+                    background: `radial-gradient(ellipse ${focus.w / 2}% ${focus.h / 2}% at ${focus.x}% ${focus.y}%, ${stage === 1 ? "rgba(217,84,47,.26)" : "rgba(46,108,138,.26)"} 0%, transparent 72%)`,
+                  }}
+                />
+                <span
+                  className="memory-stage-ring"
+                  aria-hidden="true"
+                  style={{
+                    top: `${focus.y}%`,
+                    left: `${focus.x}%`,
+                    width: `${focus.w}%`,
+                    height: `${focus.h}%`,
+                  }}
+                />
+              </>
+            )}
+          </figure>
+
+          <div className="memory-stage-copy">
+            <p className="memory-stage-eyebrow"><b>{stage + 1}</b>{copy.eyebrow}</p>
+            <h2>{copy.title}</h2>
+            <p>{copy.body}</p>
+          </div>
+        </>
+      )}
+
+      <div className="study-spacer" />
+
+      <div className="memory-stage-foot">
+        {stage !== lastStage && (
+          <div className="memory-stage-chips">
             {parts.map((part, index) => {
               const isActive = activePartIndices.includes(index);
               return (
                 <button
-                  className={`${part.radical ? "is-radical" : "is-component"}${stage > 0 && isActive ? " is-active" : ""}${stage > 0 && !isActive ? " is-muted" : ""}`}
+                  className={`${part.radical ? "is-radical" : "is-component"}${stage > 0 && isActive ? " is-active" : ""}`}
                   key={`${part.char}-${index}`}
                   onClick={() => onComponent(part.char)}
                 >
                   <span>{part.char}</span>
-                  <span><strong>{part.radical ? "表意部首" : "字形 / 读音线索"}</strong><small>{scene.cues[index] || "顺着画面中的物体轮廓找到这个部件。"}</small></span>
+                  <span>
+                    <strong>{part.radical ? "表意部首" : "形音部件"}</strong>
+                    <small>{stage > 0 && isActive ? "正在看" : scene.cues[index] ? "点开看来历" : "字形线索"}</small>
+                  </span>
                 </button>
               );
             })}
           </div>
-          <p className="memory-keyboard-tip">提示：点击右侧部件卡可继续查看来历；键盘可用 ← → 切换观察步骤。</p>
-        </aside>
-      </div>
+        )}
 
-      <nav className="mnemonic-steps" aria-label="图中嵌字演示步骤">
-        {mnemonicStageLabels.map((label, index) => (
-          <button className={stage === index ? "is-active" : stage > index ? "is-past" : ""} key={label} onClick={() => selectStage(index as MnemonicStage)} aria-current={stage === index ? "step" : undefined}>
-            <span>{index + 1}</span><strong>{label}</strong><small>{index === 0 ? "先找物象" : index === 1 ? "暖红表意" : index === 2 ? "靛蓝补形" : "离图回忆"}</small>
-          </button>
-        ))}
-      </nav>
-    </section>
+        {stage === lastStage ? (
+          <>
+            <button className="memory-stage-next is-finish" onClick={onFinish}>
+              学会了，去练一练
+              <ArrowRight aria-hidden="true" size={20} />
+            </button>
+            <button className="memory-stage-secondary" onClick={onClose}>回到这个字</button>
+          </>
+        ) : (
+          <>
+            <button className="memory-stage-next" onClick={() => go(stage + 1)}>
+              看下一步
+              <ArrowRight aria-hidden="true" size={19} />
+            </button>
+            <p className="memory-stage-hint">左右滑动也可以切换四步</p>
+          </>
+        )}
+      </div>
+    </div>
   );
 }
+
 
 function LessonThreeMemory({
   character,
@@ -2272,6 +2295,7 @@ function CharacterStudy({
   onFavorite,
   onStart,
   onComponent,
+  onReadAloud,
 }: {
   character: CharacterItem;
   profile: StudyProfile;
@@ -2280,13 +2304,31 @@ function CharacterStudy({
   onFavorite: () => void;
   onStart: () => void;
   onComponent: (glyph: string) => void;
+  onReadAloud: () => void;
 }) {
+  // One screen, one thing: the picture and a single primary action. Reference
+  // material — component origins, script history, the textbook sentence — lives
+  // in a pull-up drawer instead of seven stacked cards.
+  const [view, setView] = useState<"study" | "listen" | "memory">("study");
+  const [drawerOpen, setDrawerOpen] = useState(false);
+
   const exercises = getTrackExercises(character, "words");
   const isComplete = profile.completed.words.includes(character.id);
   const completedQuestions = exercises.filter((question) => profile.answers[question.id]?.lastCorrect).length;
   const heritage = heritageAssets[character.id];
   const hasExercises = exercises.length > 0;
   const pilotKnowledge = character.lessonId === LESSON_THREE_ID ? getLessonThreeKnowledge(character.hanzi) : undefined;
+  const visual = characterVisuals[character.hanzi];
+  const scene = !pilotKnowledge ? getMnemonicScene(character) : undefined;
+  const narrationSeconds = releasedNarrationTranscripts[character.id]?.transcript?.length;
+  const narrationVersion = "narration-v3-qwen3-4bit-r37e955a";
+  const narrationHref = withAssetVersion(
+    narrationMediaSource(narrationAssets[character.id]?.audio),
+    narrationVersion,
+  );
+  const parts = character.parts.length
+    ? character.parts
+    : [{ char: character.hanzi, radical: true }];
   const roleLabel = character.official === false
     ? "语境拓展"
     : character.polyphonic
@@ -2295,51 +2337,200 @@ function CharacterStudy({
         ? "课内会写"
         : "课内会认";
 
+  if (view === "listen") {
+    return (
+      <NarrationTheatre
+        character={character}
+        key={character.id}
+        onClose={() => setView("study")}
+        onFinished={() => setView(visual && !pilotKnowledge ? "memory" : "study")}
+        onReadAloud={onReadAloud}
+      />
+    );
+  }
+
+  if (view === "memory" && visual && !pilotKnowledge) {
+    return (
+      <MemoryStage
+        character={character}
+        key={character.id}
+        onClose={() => setView("study")}
+        onComponent={onComponent}
+        onFinish={onStart}
+      />
+    );
+  }
+
   return (
-    <div className="page character-page">
-      <div className="character-topbar">
-        <button className="back-button" onClick={onBack}>← 返回词语表</button>
-        <div>
-          <p>{character.lessonTitle} · {character.word}</p>
-          <h1>{character.hanzi}<small>{character.pinyin}</small></h1>
+    <main className="study-shell">
+      {narrationHref && <link rel="prefetch" as="audio" href={narrationHref} />}
+
+      <div className="study-topbar">
+        <button onClick={onBack} aria-label="返回词语表">
+          <ArrowLeft aria-hidden="true" size={22} />
+        </button>
+        <div className="study-breadcrumb">
+          <span>{character.lessonTitle}</span>
+          <i aria-hidden="true" />
+          <span>{character.word}</span>
         </div>
-        <button className={"favorite-star " + (favorite ? "is-active" : "")} onClick={onFavorite} aria-label={favorite ? "取消收藏" : "收藏这个字"}>
+        <button
+          className={"favorite-star " + (favorite ? "is-active" : "")}
+          onClick={onFavorite}
+          aria-label={favorite ? "取消收藏" : "收藏这个字"}
+        >
           {favorite ? "★" : "☆"}
         </button>
       </div>
 
-      <section className="character-story-card">
-        <div className="story-character-column">
-          <div className="story-glyph">{character.hanzi}</div>
-          <span className="character-pinyin">{character.pinyin}</span>
-          <span className={isComplete ? "learned-badge is-complete" : "learned-badge"}>
-            {isComplete ? "✓ 已学会" : "正在认识"}
-          </span>
-        </div>
-        <div className="story-copy">
-          <div className="story-meta">
-            <span className={`curriculum-role role-${character.curriculumRole || "extension"}`}>{roleLabel}</span>
-            <span>{pilotKnowledge?.methodLabel || character.charType}</span>
-            <span>{character.decomposition}</span>
-            <span>{character.official === false ? "本义" : "本课词语"}：{character.originalMeaning}</span>
-          </div>
-          {pilotKnowledge ? (
-            <div className="pilot-story-explanation">
-              <span>本课构形说明</span><p>{pilotKnowledge.explanation}</p><small>{pilotKnowledge.evidence}</small>
-            </div>
+      <div className="study-body">
+        <figure className={visual ? "study-scene" : "study-scene is-glyph"}>
+          {visual ? (
+            <>
+              <span className="study-scene-art">
+                <Image
+                  src={visual.src}
+                  alt={`${visual.alt}${scene ? `。${scene.scene}` : ""}`}
+                  fill
+                  priority
+                  sizes="(max-width: 900px) 100vw, 520px"
+                  style={{ objectFit: "contain", objectPosition: "center" }}
+                />
+              </span>
+              <figcaption className="study-scene-caption">
+                <Sparkles aria-hidden="true" />
+                画面本身就是字形
+              </figcaption>
+            </>
           ) : (
-            <NarratedDescription character={character} key={character.id} />
+            <strong>{character.hanzi}</strong>
           )}
+        </figure>
+
+        <div>
+          <div className="study-identity">
+            <span className="study-glyph">{character.hanzi}</span>
+            <div>
+              <span className="study-reading">
+                <b>{character.pinyin}</b>
+                <button onClick={() => speak(character.hanzi)} aria-label={`朗读${character.hanzi}`}>
+                  <Volume2 aria-hidden="true" size={14} />
+                </button>
+              </span>
+              <span className="study-tags">
+                <span className="is-role">{roleLabel}</span>
+                <span>{pilotKnowledge?.methodLabel || character.charType}</span>
+                <span>{character.decomposition}</span>
+              </span>
+            </div>
+          </div>
+
+          <p className="study-meaning">
+            {character.official === false ? character.originalMeaning : `本课词语「${character.word}」：${character.originalMeaning}`}
+          </p>
+
+          <div className="study-spacer" />
+
+          <div className="study-launch">
+            <button className="study-listen-button" onClick={() => setView("listen")}>
+              <span className="study-equalizer" aria-hidden="true"><b /><b /><b /><b /><b /></span>
+              <span>
+                <strong>听字义讲解</strong>
+                <small>{narrationSeconds ? `${narrationSeconds} 字 · 逐字跟读` : "标准普通话讲解"}</small>
+              </span>
+              <ArrowRight aria-hidden="true" size={20} />
+            </button>
+
+            {visual && !pilotKnowledge && (
+              <button className="study-next-steps" onClick={() => setView("memory")}>
+                <small>接着是</small>
+                <div>
+                  {mnemonicStageLabels.map((label, index) => (
+                    <span
+                      className={index === 1 ? "is-radical" : index === 2 ? "is-part" : ""}
+                      key={label}
+                    >
+                      {label}
+                    </span>
+                  ))}
+                </div>
+              </button>
+            )}
+
+            <button className="study-drawer-handle" onClick={() => setDrawerOpen(true)}>
+              <ArrowLeft aria-hidden="true" size={18} style={{ transform: "rotate(90deg)" }} />
+              上滑查看部件、语境与书写
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {drawerOpen && (
+        <button
+          className="study-drawer-backdrop"
+          onClick={() => setDrawerOpen(false)}
+          aria-label="收起更多内容"
+        />
+      )}
+
+      <section
+        className={drawerOpen ? "study-drawer is-open" : "study-drawer"}
+        aria-label="更多助记内容"
+        aria-hidden={drawerOpen ? undefined : true}
+        inert={drawerOpen ? undefined : true}
+      >
+          <span className="study-drawer-grip" aria-hidden="true" />
+
+          {pilotKnowledge ? (
+            <>
+              <h2>本课构形说明</h2>
+              <div className="study-note">
+                <Sparkles aria-hidden="true" size={19} />
+                <div>
+                  <strong>{pilotKnowledge.explanation}</strong>
+                  <small>{pilotKnowledge.evidence}</small>
+                </div>
+              </div>
+              <div className="study-legacy-panel">
+                <LessonThreeMemory character={character} onComponent={onComponent} />
+              </div>
+            </>
+          ) : (
+            <>
+              <h2>部件来历</h2>
+              <div className="study-part-list">
+                {parts.map((part, index) => {
+                  const composition = character.compositions.find((item) => item.char === part.char);
+                  return (
+                    <button
+                      className={part.radical ? "is-radical" : "is-component"}
+                      key={`${part.char}-${index}`}
+                      onClick={() => onComponent(part.char)}
+                    >
+                      <span className="study-part-glyph">{part.char}</span>
+                      <span className="study-part-copy">
+                        <strong>{part.char} · {part.radical ? "表意部首" : "形音部件"}</strong>
+                        <small>{composition?.description || scene?.cues[index] || "顺着画面里的物体轮廓找到这个部件。"}</small>
+                      </span>
+                      <ArrowRight aria-hidden="true" size={18} />
+                    </button>
+                  );
+                })}
+              </div>
+            </>
+          )}
+
+          <h2>字形演变</h2>
           {heritage?.stages.length ? (
-            <div className="script-line" aria-label="真实字形演变资料">
+            <div className="study-script-line" aria-label="真实字形演变资料">
               {heritage.stages.map((stage) => (
                 <div key={stage.src}>
-                  <span className="script-image">
+                  <span className="study-script-image">
                     <Image
                       src={stage.src}
                       alt={`${character.hanzi}的${stage.label}字形`}
                       fill
-                      sizes="74px"
+                      sizes="78px"
                       style={{ objectFit: "contain", objectPosition: "center" }}
                     />
                   </span>
@@ -2348,74 +2539,43 @@ function CharacterStudy({
               ))}
             </div>
           ) : (
-            <div className="script-note">本字暂无可靠的古文字图版，保留现代楷书，不虚构演变形态。</div>
+            <div className="study-note">
+              <CheckCircle2 aria-hidden="true" size={19} />
+              <div>
+                <strong>本字暂无可靠的古文字图版</strong>
+                <small>保留现代楷书，不虚构演变形态。</small>
+              </div>
+            </div>
           )}
-          <blockquote>{character.official === false ? "课文语境" : "学习语境"}：{character.originalText}</blockquote>
-        </div>
-      </section>
 
-      {pilotKnowledge ? (
-        <LessonThreeMemory character={character} key={character.id} onComponent={onComponent} />
-      ) : (
-        <MnemonicMemory character={character} key={character.id} onComponent={onComponent} />
-      )}
+          <h2>课文语境</h2>
+          <div className="study-quote">
+            <p>{character.originalText}</p>
+            <small>《{character.lessonTitle}》· 本课词语「{character.word}」</small>
+          </div>
 
-      {!pilotKnowledge && <section className="character-map-card">
-        <div className="map-card-heading">
-          <div>
-            <p className="kicker">字形推理图</p>
-            <h2>点击部件，看它从哪里来</h2>
+          <h2>接着可以做</h2>
+          <div className="study-drawer-actions">
+            <button onClick={onStart} disabled={!hasExercises}>
+              <MapIcon aria-hidden="true" size={21} color="var(--n-action)" />
+              <span>
+                <strong>{hasExercises ? (isComplete ? "再练一轮" : "识字小测") : "小测暂未开放"}</strong>
+                <small>{hasExercises ? `${completedQuestions} / ${exercises.length} 题` : "拓展字稍后开放"}</small>
+              </span>
+            </button>
+            <button onClick={onReadAloud}>
+              <Mic2 aria-hidden="true" size={21} color="var(--n-warn)" />
+              <span>
+                <strong>朗读录音</strong>
+                <small>读一遍本课词语</small>
+              </span>
+            </button>
           </div>
-          <span>{character.parts.length || 1} 个主要部件</span>
-        </div>
-        <div className="character-tree">
-          <div className="tree-root">{character.hanzi}</div>
-          <div className="tree-branches">
-            {(character.parts.length ? character.parts : [{ char: character.hanzi, radical: true }]).map((part, index) => {
-              const composition = character.compositions.find((item) => item.char === part.char);
-              return (
-                <div className="tree-branch" key={part.char + index}>
-                  <button className={part.radical ? "is-radical" : ""} onClick={() => onComponent(part.char)}>
-                    {part.char}
-                    <small>{part.radical ? "表意" : "字形线索"}</small>
-                  </button>
-                  {composition?.children.length ? (
-                    <div className="tree-children">
-                      {composition.children.map((child, childIndex) => <span key={child + childIndex}>{child}</span>)}
-                    </div>
-                  ) : (
-                    <p>{composition?.description || "这个字形部件正在等待你去发现。"}</p>
-                  )}
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>}
-
-      <section className="word-quest-card">
-        <div>
-          <p className="kicker">识字闯关</p>
-          <h2>理解过后，马上练一练</h2>
-          <p>{hasExercises
-            ? pilotKnowledge
-              ? `按照“词语判断 → 构形线索 → 无图组字${character.curriculumRole === "write" ? " → 自主书写" : ""}”完成 ${exercises.length} 题。`
-              : `按照“本义 → 结构 → 图意 → 组字 → 书写”的顺序完成 ${exercises.length} 题。`
-            : "这个拓展字已开放字义故事、红蓝和结构练习，完整识字小测稍后开放。"}</p>
-          <div className="quest-dots">
-            {exercises.map((exercise) => (
-              <span className={profile.answers[exercise.id]?.lastCorrect ? "is-done" : ""} key={exercise.id} title={questionTypeLabel(exercise, "words")} />
-            ))}
-            <small>{completedQuestions} / {exercises.length}</small>
-          </div>
-        </div>
-        <button className="game-button primary" onClick={onStart} disabled={!hasExercises}>
-          {hasExercises ? (isComplete ? "再练一轮" : "学会了，练习一下") + " →" : "识字小测暂未开放"}
-        </button>
-      </section>
-    </div>
+        </section>
+    </main>
   );
 }
+
 
 function TrackMap({
   track,
@@ -2658,23 +2818,22 @@ function ChallengeRoom({
 
   return (
     <div className={"challenge-page challenge-centered track-" + meta.tone}>
-      <header className="challenge-header">
-        <button className="back-button" onClick={onBack}>← 返回</button>
-        <div>
-          <p>{meta.label} · {character.lessonTitle}</p>
-          <h1>{meta.menu} · <span>{character.hanzi}</span></h1>
+      <header className="challenge-bar">
+        <button className="challenge-close" onClick={onBack} aria-label="退出练习">
+          <ArrowLeft aria-hidden="true" size={21} />
+        </button>
+        <div
+          className="challenge-progress"
+          role="progressbar"
+          aria-valuemin={0}
+          aria-valuemax={total}
+          aria-valuenow={questionIndex + (result === null ? 0 : 1)}
+          aria-label={`${meta.menu} · ${character.hanzi}`}
+        >
+          <i style={{ width: ((result === null ? questionIndex : questionIndex + 1) / total) * 100 + "%" }} />
         </div>
-        <span className="challenge-count">第 {questionIndex + 1} / {total} 题</span>
+        <span className="challenge-count">{questionIndex + 1}/{total}</span>
       </header>
-      <div
-        className="challenge-progress"
-        role="progressbar"
-        aria-valuemin={0}
-        aria-valuemax={total}
-        aria-valuenow={questionIndex + (result === null ? 0 : 1)}
-      >
-        <i style={{ width: ((result === null ? questionIndex : questionIndex + 1) / total) * 100 + "%" }} />
-      </div>
 
       <section className="challenge-board">
         <div className="challenge-question">
@@ -2725,35 +2884,42 @@ function ChallengeRoom({
           />
         )}
 
-        <div className="challenge-footer">
-          {result === null ? (
-            <div className="question-navigation">
-              <div className="question-nav-left">
-                <button className="game-button ghost" disabled={questionIndex === 0} onClick={onPrevious}>← 上一题</button>
-                <span className="key-hint">按 <kbd>A</kbd>–<kbd>D</kbd> 选择 · <kbd>Enter</kbd> 确认</span>
-              </div>
-              <button className="text-button" onClick={onSkip}>跳过这一题 →</button>
-              <button className="game-button primary" disabled={!ready} onClick={onCheck}>核对答案 ⏎</button>
-            </div>
-          ) : (
-            <div className={"answer-feedback " + (result ? "is-correct" : "is-wrong")}>
-              <span>{result ? "✓" : "!"}</span>
-              <div>
-                <strong>{result ? (question.kind === "write" && character.lessonId === LESSON_THREE_ID ? "已记录书写，请对照自查" : "答得真棒！") : "再试一次，慢慢来。"}</strong>
-                <p>
-                  {result
-                    ? question.explanation || (finalStep ? "这一关完成了，回到地图看看下一站。" : "记住这个线索，再去下一题。")
-                    : "正确线索是：" + (question.kind === "write" ? "在方格里写完整的“" + character.hanzi + "”" : answerText || "仔细看字形。")}
-                </p>
-                {record && <small>本题已尝试 {record.attempts} 次</small>}
-              </div>
-              <button className="game-button ghost" onClick={onNext}>
-                {result ? (finalStep ? "查看成绩 🎉" : "下一题 →") : "重新作答"}
-              </button>
-            </div>
-          )}
-        </div>
       </section>
+
+      {result === null ? (
+        <div className="challenge-actions">
+          <button className="game-button primary" disabled={!ready} onClick={onCheck}>核对答案</button>
+          <div className="challenge-actions-row">
+            <button className="text-button" disabled={questionIndex === 0} onClick={onPrevious}>← 上一题</button>
+            <span className="key-hint">按 <kbd>A</kbd>–<kbd>D</kbd> 选择 · <kbd>Enter</kbd> 确认</span>
+            <button className="text-button" onClick={onSkip}>跳过这一题 →</button>
+          </div>
+        </div>
+      ) : (
+        <div className={"answer-sheet " + (result ? "is-correct" : "is-wrong")} role="status">
+          <div className="answer-sheet-head">
+            <span className="answer-sheet-mark" aria-hidden="true">
+              {result
+                ? <CheckCircle2 size={24} strokeWidth={2.6} />
+                : <RotateCcw size={22} strokeWidth={2.6} />}
+            </span>
+            <strong>
+              {result
+                ? (question.kind === "write" && character.lessonId === LESSON_THREE_ID ? "已记录书写，请对照自查" : "答对了")
+                : "再看一眼"}
+            </strong>
+            {record && <small>已尝试 {record.attempts} 次</small>}
+          </div>
+          <p>
+            {result
+              ? question.explanation || (finalStep ? "这一关完成了，回到地图看看下一站。" : "记住这个线索，再去下一题。")
+              : "正确答案是：" + (question.kind === "write" ? "在方格里写完整的「" + character.hanzi + "」" : answerText || "仔细看字形。")}
+          </p>
+          <button className="game-button primary" onClick={onNext}>
+            {result ? (finalStep ? "查看成绩" : "继续") : "知道了"}
+          </button>
+        </div>
+      )}
     </div>
   );
 }
@@ -2822,9 +2988,7 @@ function ChoiceExercise({
               </span>
             ) : question.kind === "structure" ? (
               <StructureShape code={option.idcCode} />
-            ) : (
-              <span className="choice-dot" />
-            )}
+            ) : null}
             {visual ? (
               showVisualCaption && <strong>{illustration!.label}</strong>
             ) : (
