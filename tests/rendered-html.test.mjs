@@ -60,6 +60,36 @@ test("secondary tools server-render with a contextual return query", async () =>
   assert.match(await readResponse.text(), /朗读/);
 });
 
+test("dense pages keep progressive and shareable responsive contracts", async () => {
+  const componentResponse = await render("/bujian");
+  const componentHtml = await componentResponse.text();
+  assert.match(componentHtml, /显示 36 \/ 401/);
+  assert.match(componentHtml, /component-load-more/);
+
+  const recordsResponse = await render("/records/words");
+  const recordsHtml = await recordsResponse.text();
+  assert.match(recordsHtml, /record-zero-state/);
+  assert.match(recordsHtml, /显示全部 26 课/);
+
+  const readResponse = await render("/read-aloud?lessonId=g5v1-l05");
+  const readHtml = await readResponse.text();
+  assert.match(readHtml, /read-lesson-picker/);
+  assert.match(readHtml, /value="g5v1-l05" selected=""/);
+
+  const courseResponse = await render("/lessons");
+  const courseHtml = await courseResponse.text();
+  assert.equal((courseHtml.match(/id="course-unit-/g) ?? []).length, 8);
+
+  const layoutSource = await readFile(new URL("../app/layout.tsx", import.meta.url), "utf8");
+  const globalCss = await readFile(new URL("../app/globals.css", import.meta.url), "utf8");
+  const utilityCss = await readFile(new URL("../app/utility-pages.css", import.meta.url), "utf8");
+  assert.match(layoutSource, /\.\/catalog\.css/);
+  assert.doesNotMatch(layoutSource, /home-redesign/);
+  assert.doesNotMatch(globalCss, /\.home-hero|\.mission-card|\.read-lesson-tabs/);
+  assert.match(utilityCss, /\.component-story-sheet[\s\S]*position: fixed/);
+  assert.match(utilityCss, /\.read-lesson-picker[\s\S]*min-height: 44px/);
+});
+
 test("unknown paths no longer fall through to the learning client", async () => {
   const response = await render("/this-route-does-not-exist");
   assert.equal(response.status, 404);

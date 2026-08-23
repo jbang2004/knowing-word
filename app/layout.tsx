@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { headers } from "next/headers";
 import "./globals.css";
-import "./home-redesign.css";
+import "./catalog.css";
 import "./study.css";
 import "./challenge.css";
 import "./home-path.css";

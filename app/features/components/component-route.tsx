@@ -90,8 +90,6 @@ export default function ComponentRoute({
   const connected = homeCandidates.words.filter((character) => connectedGlyphs.has(character.hanzi));
   const recent = allComponents.find((component) => component.id === profile.recentComponents[0]);
 
-  useEffect(() => setVisibleLimit(COMPONENT_PAGE_SIZE), [search, sortMode]);
-
   useEffect(() => {
     if (!detailsOpen || !window.matchMedia("(max-width: 760px)").matches) return;
     const previousOverflow = document.body.style.overflow;
@@ -120,6 +118,11 @@ export default function ComponentRoute({
     router.replace(`/bujian?${query}`, { scroll: false });
   }
 
+  function chooseSortMode(mode: "frequency" | "recent") {
+    setSortMode(mode);
+    setVisibleLimit(COMPONENT_PAGE_SIZE);
+  }
+
   return (
     <LearningPageShell active="practice" name={profile.name}>
       <div className="page components-page">
@@ -129,10 +132,10 @@ export default function ComponentRoute({
           <section className="component-browser">
             <div className="component-browser-toolbar">
               <div className="component-sort-tabs">
-                <button aria-pressed={sortMode === "frequency"} className={sortMode === "frequency" ? "is-active" : ""} onClick={() => setSortMode("frequency")}>常用部件</button>
-                <button aria-pressed={sortMode === "recent"} className={sortMode === "recent" ? "is-active" : ""} onClick={() => setSortMode("recent")}>最近学习</button>
+                <button aria-pressed={sortMode === "frequency"} className={sortMode === "frequency" ? "is-active" : ""} onClick={() => chooseSortMode("frequency")}>常用部件</button>
+                <button aria-pressed={sortMode === "recent"} className={sortMode === "recent" ? "is-active" : ""} onClick={() => chooseSortMode("recent")}>最近学习</button>
               </div>
-              <label className="component-search"><span className="sr-only">搜索部件或例字</span><i aria-hidden="true">⌕</i><input value={search} onChange={(event) => setSearch(event.target.value)} placeholder="搜部件或例字" /></label>
+              <label className="component-search"><span className="sr-only">搜索部件或例字</span><i aria-hidden="true">⌕</i><input value={search} onChange={(event) => { setSearch(event.target.value); setVisibleLimit(COMPONENT_PAGE_SIZE); }} placeholder="搜部件或例字" /></label>
             </div>
             <div className="component-browser-summary" aria-live="polite">
               <strong>{sortMode === "recent" ? "最近打开的部件" : search ? `“${search}”的结果` : "按课内出现频率排列"}</strong>
@@ -162,7 +165,7 @@ export default function ComponentRoute({
               <div className="component-empty">
                 <strong>{sortMode === "recent" ? "还没有最近学习的部件" : "没有找到匹配的部件"}</strong>
                 <p>{sortMode === "recent" ? "打开一个常用部件后，它会出现在这里。" : "可以换一个部件名称或例字再试。"}</p>
-                {sortMode === "recent" && <button onClick={() => setSortMode("frequency")}>查看常用部件</button>}
+                {sortMode === "recent" && <button onClick={() => chooseSortMode("frequency")}>查看常用部件</button>}
               </div>
             )}
           </section>
