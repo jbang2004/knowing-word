@@ -5,7 +5,7 @@ the learning rhythm of a planned Chinese course: start from a lesson’s word
 list, understand one character, complete its ordered mini-quiz, then revisit
 the same characters through three focused practice routes.
 
-![Knowing Word social card](public/og.png)
+![Knowing Word social card](public/og-cover.jpg)
 
 ## What is included
 
@@ -17,7 +17,7 @@ the same characters through three focused practice routes.
   and 220 writing targets; all polyphonic targets include in-context reading checks
 - Four aligned learning routes: word-list mini quizzes, character assembly,
   radical-color recognition, and spatial-structure recognition
-- A component studio that ranks 394 components by their course appearance
+- A component studio that ranks 401 components by their course appearance
 - Per-question attempts, last-answer status, character-level completion, and
   resume points for each route
 - Real, shareable URLs for all 2,007 active learning and practice routes
@@ -30,8 +30,9 @@ the same characters through three focused practice routes.
 - 359 responsive picture-embedded official character visuals, 26 original
   lesson scenes, the original deep-dive illustration set, six supplemental
   scenes, and a new social sharing card
-- One consistent local VoxCPM2 “封” reference voice across all 423 unique
-  character narrations, with punctuated transcripts and persistent word timing
+- One approved “封” reference voice cloned with Qwen3-TTS 1.7B Base 4-bit
+  across all 423 unique character narrations, with punctuated transcripts,
+  forced-alignment timing, and a human-listening release gate
 
 The application uses its own visual language and a fully authored mnemonic
 system: natural objects carry the component geometry instead of placing large
@@ -43,6 +44,8 @@ See [the course-flow alignment notes](docs/course-flow-alignment.md) for the
 implemented learning sequence and each route's completion rule.
 See [the illustration system](docs/illustration-system.md) for the source-page
 visual audit, asset coverage, and art direction.
+See [the architecture guide](docs/architecture.md) for runtime boundaries,
+generated-data rules, persistence, and production invariants.
 
 ## Run locally
 
@@ -54,13 +57,16 @@ Then visit the local URL printed by the development server.
 
 ## Quality checks
 
-    npm run lint
+    npm run check
     npm test
+    npm run check:bundle
 
 The test command builds the app, server-renders all 2,007 active routes, checks
 resume/completion regressions, validates every illustration and historical
 resource, verifies all 423 narration timelines, and confirms that the public
 catalog contains no credentials, textbook scans, or signed media links.
+The bundle check enforces a 450 KB ceiling per client chunk and rejects any
+return of the former all-routes client engine.
 
 ## Privacy and content boundaries
 

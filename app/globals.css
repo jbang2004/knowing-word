@@ -117,6 +117,11 @@ select {
   font: inherit;
 }
 
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
 button {
   border: 0;
   color: inherit;
@@ -129,6 +134,7 @@ button:disabled {
 }
 
 button:focus-visible,
+a:focus-visible,
 input:focus-visible,
 select:focus-visible,
 canvas:focus-visible {

@@ -37,7 +37,7 @@
     "check:vinext": "vinext check",
     "check:bundle": "node scripts/check-production-budgets.mjs",
     "check": "npm run lint && npm run typecheck && npm run check:vinext",
-    "verify": "npm run check && npm run test",
+    "verify": "npm run check && npm run test && npm run check:bundle",
     "lint": "eslint . --ignore-pattern dist --ignore-pattern .next"
   },
   "dependencies": {

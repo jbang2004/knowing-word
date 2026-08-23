@@ -11,10 +11,6 @@ import { trackIds, type TrackId } from "../../lib/profile-model";
 import { useStudyProfile } from "../profile/use-study-profile";
 import { LearningPageShell, PageHeading } from "../shell/learning-page-shell";
 
-function questionPrefix(characterId: string, track: TrackId) {
-  return `${characterId}-${track}-`;
-}
-
 function formatDate(value: string) {
   return new Intl.DateTimeFormat("zh-CN", { month: "numeric", day: "numeric", hour: "2-digit", minute: "2-digit" }).format(new Date(value));
 }
@@ -23,7 +19,17 @@ export function RecordsRoute({ track }: { track: TrackId }) {
   const { profile } = useStudyProfile({ writable: false });
   const meta = trackMeta[track];
   const candidates = homeCandidates[track];
-  const answerEntries = Object.entries(profile.answers).filter(([id]) => candidates.some((item) => id.startsWith(questionPrefix(item.id, track))));
+  const candidateIds = new Set(candidates.map((item) => item.id));
+  const answersByCharacter = new Map<string, [string, typeof profile.answers[string]][]>();
+  const trackMarker = `-${track}-`;
+  for (const entry of Object.entries(profile.answers)) {
+    const markerIndex = entry[0].indexOf(trackMarker);
+    if (markerIndex < 0) continue;
+    const characterId = entry[0].slice(0, markerIndex);
+    if (!candidateIds.has(characterId)) continue;
+    answersByCharacter.set(characterId, [...(answersByCharacter.get(characterId) ?? []), entry]);
+  }
+  const answerEntries = [...answersByCharacter.values()].flat();
   const attempts = answerEntries.reduce((sum, [, stat]) => sum + stat.attempts, 0);
   const correct = answerEntries.reduce((sum, [, stat]) => sum + stat.correct, 0);
 
@@ -40,7 +46,7 @@ export function RecordsRoute({ track }: { track: TrackId }) {
         <section className="record-lessons">
           {grade5Lessons.map((lesson) => {
             const lessonCandidates = candidates.filter((item) => item.lessonId === lesson.id);
-            const recorded = lessonCandidates.filter((character) => Object.keys(profile.answers).some((id) => id.startsWith(questionPrefix(character.id, track))));
+            const recorded = lessonCandidates.filter((character) => answersByCharacter.has(character.id));
             const completed = lessonCandidates.filter((item) => profile.completed[track].includes(item.id)).length;
             return (
               <article className="record-lesson" key={lesson.id}>
@@ -48,7 +54,7 @@ export function RecordsRoute({ track }: { track: TrackId }) {
                 {recorded.length ? (
                   <div className="record-character-list">
                     {recorded.map((character) => {
-                      const stats = Object.entries(profile.answers).filter(([id]) => id.startsWith(questionPrefix(character.id, track)));
+                      const stats = answersByCharacter.get(character.id) ?? [];
                       return (
                         <Link href={`/records/${track}/${character.id}`} key={character.id}>
                           <strong>{character.hanzi}</strong>
