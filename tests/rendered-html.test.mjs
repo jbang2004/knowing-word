@@ -33,7 +33,7 @@ test("server-renders the task-first Knowing Word learning experience", async () 
   // the reinforcement gates that fold the three practice routes into the line.
   assert.match(html, /第 1 课/);
   assert.match(html, /白鹭/);
-  assert.match(html, /巩固关/);
+  assert.match(html, /巩固练习/);
   assert.match(html, /课后练习/);
   assert.match(html, /红蓝练习/);
   assert.match(html, /空间结构/);

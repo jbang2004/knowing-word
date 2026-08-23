@@ -19,7 +19,7 @@ import {
   type HomeCandidate,
   type HomeTrackId,
 } from "./data/home-index.generated";
-import { nextCandidateId } from "./lib/progress-model";
+import { candidatePathStates, nextCandidateId } from "./lib/progress-model";
 
 type ResumePoint = {
   lessonId: string;
@@ -319,7 +319,7 @@ export default function HomeLanding() {
                 <button onClick={() => navigate(trackLessonPath(node.track, currentLesson.id))}>
                   <span className={`path-gate-glyph tone-${meta.tone}`} aria-hidden="true">{meta.glyph}</span>
                   <span>
-                    <strong>巩固关 · {meta.label}</strong>
+                    <strong>巩固练习 · {meta.label}</strong>
                     <small>{meta.eyebrow} · 已完成 {node.completed}/{node.total}</small>
                   </span>
                   <ArrowRight aria-hidden="true" size={18} />
@@ -400,26 +400,27 @@ type PathNode =
   | { kind: "reinforce"; key: string; track: HomeTrackId; completed: number; total: number };
 
 // One line instead of four parallel maps: the lesson's characters in order,
-// with a reinforcement gate after every fourth character cycling through the
-// three practice routes. Children previously had to switch between separate
+// with a reinforcement prompt after every fourth character cycling through
+// the three practice routes. Children previously had to switch between separate
 // 识字 / 拆字 / 红蓝 / 结构 maps to see what a lesson still owed them.
 const GATE_EVERY = 4;
 
 function buildLessonPath(profile: HomeProfile, lessonId: string, currentId: string | undefined) {
   const lessonWords = homeCandidates.words.filter((candidate) => candidate.lessonId === lessonId);
   const nodes: PathNode[] = [];
-  let seenCurrent = false;
+  const states = candidatePathStates(
+    lessonWords.map((candidate) => candidate.id),
+    profile.completed.words,
+    currentId,
+  );
 
   lessonWords.forEach((candidate, index) => {
-    const done = profile.completed.words.includes(candidate.id);
-    const isCurrent = !done && (candidate.id === currentId || !seenCurrent);
-    if (isCurrent) seenCurrent = true;
     nodes.push({
       kind: "character",
       key: candidate.id,
       hanzi: candidate.hanzi,
       href: `/lessons/${lessonId}/words/${candidate.id}`,
-      state: done ? "done" : isCurrent ? "current" : "locked",
+      state: states[candidate.id],
     });
 
     const gateIndex = index + 1;

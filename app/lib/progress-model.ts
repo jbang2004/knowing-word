@@ -14,6 +14,31 @@ export function nextCandidateId(
   return ordered.find((id) => !completedIds.includes(id)) || ordered[0];
 }
 
+export type CandidatePathState = "done" | "current" | "locked";
+
+// A resume point may sit after another unfinished item (for example after a
+// direct lesson visit). Resolve the preferred item once, rather than deciding
+// independently inside the render loop, so a path can never expose two
+// "current" nodes.
+export function candidatePathStates(
+  candidateIds: string[],
+  completedIds: string[],
+  preferredCandidateId?: string,
+): Record<string, CandidatePathState> {
+  const completed = new Set(completedIds);
+  const preferredIndex = preferredCandidateId
+    ? candidateIds.findIndex((id) => id === preferredCandidateId && !completed.has(id))
+    : -1;
+  const currentIndex = preferredIndex >= 0
+    ? preferredIndex
+    : candidateIds.findIndex((id) => !completed.has(id));
+
+  return Object.fromEntries(candidateIds.map((id, index) => [
+    id,
+    completed.has(id) ? "done" : index === currentIndex ? "current" : "locked",
+  ]));
+}
+
 export function updateCompletion(
   completedIds: string[],
   candidateId: string,

@@ -1,11 +1,27 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 import {
+  candidatePathStates,
   isQuestionSetComplete,
   nextCandidateId,
   nextResumeIndex,
   updateCompletion,
 } from "../app/lib/progress-model.ts";
+
+test("a lesson path has exactly one current item even when resume skips an unfinished item", () => {
+  assert.deepEqual(
+    candidatePathStates(["鹭", "嫌", "嵌", "匣"], [], "嵌"),
+    { 鹭: "locked", 嫌: "locked", 嵌: "current", 匣: "locked" },
+  );
+  assert.deepEqual(
+    candidatePathStates(["鹭", "嫌", "嵌"], ["鹭"], "missing"),
+    { 鹭: "done", 嫌: "current", 嵌: "locked" },
+  );
+  assert.deepEqual(
+    candidatePathStates(["鹭", "嫌"], ["鹭", "嫌"], "嫌"),
+    { 鹭: "done", 嫌: "done" },
+  );
+});
 
 test("resume stays on an unfinished character and the exact unanswered question", () => {
   assert.equal(nextCandidateId(["桂", "花", "故"], ["桂"], "花"), "花");
