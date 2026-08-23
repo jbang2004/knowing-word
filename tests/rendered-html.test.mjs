@@ -34,10 +34,14 @@ test("server-renders the task-first Knowing Word learning experience", async () 
   assert.match(html, /第 1 课/);
   assert.match(html, /白鹭/);
   assert.match(html, /巩固练习/);
-  assert.match(html, /课后练习/);
+  assert.match(html, /拆字练习/);
   assert.match(html, /红蓝练习/);
   assert.match(html, /空间结构/);
-  assert.match(html, /path-node is-current/);
+  assert.match(html, /本课学习路线/);
+  assert.match(html, /练习驿站/);
+  assert.match(html, /查看本课完整路线/);
+  assert.match(html, /path-mobile-progress/);
+  assert.match(html, /path-node path-character-row is-current/);
   assert.match(html, /path-workspace/);
   assert.match(html, /top-navigation/);
   assert.doesNotMatch(html, /path-tabs/);
@@ -82,10 +86,13 @@ test("dense pages keep progressive and shareable responsive contracts", async ()
 
   const layoutSource = await readFile(new URL("../app/layout.tsx", import.meta.url), "utf8");
   const globalCss = await readFile(new URL("../app/globals.css", import.meta.url), "utf8");
+  const homeCss = await readFile(new URL("../app/home-path.css", import.meta.url), "utf8");
   const utilityCss = await readFile(new URL("../app/utility-pages.css", import.meta.url), "utf8");
   assert.match(layoutSource, /\.\/catalog\.css/);
   assert.doesNotMatch(layoutSource, /home-redesign/);
   assert.doesNotMatch(globalCss, /\.home-hero|\.mission-card|\.read-lesson-tabs/);
+  assert.match(homeCss, /max-height: 700px/);
+  assert.match(homeCss, /\.path-track:not\(\.is-expanded\) \.is-mobile-hidden/);
   assert.match(utilityCss, /\.component-story-sheet[\s\S]*position: fixed/);
   assert.match(utilityCss, /\.read-lesson-picker[\s\S]*min-height: 44px/);
 });
