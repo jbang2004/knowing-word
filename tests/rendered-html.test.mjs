@@ -90,7 +90,7 @@ test("character pages render the complete picture-to-character memory flow", asy
   assert.match(html, /audio\.webm\?v=narration-v3-qwen3-4bit-r37e955a/);
 
   const pageSource = await readFile(
-    new URL("../app/experience.tsx", import.meta.url),
+    new URL("../app/features/character-study/character-study.tsx", import.meta.url),
     "utf8",
   );
   assert.match(pageSource, /function InlineNarrationPlayer/);
@@ -354,10 +354,10 @@ test("every source character has a complete, authored object-shaped mnemonic", a
 });
 
 test("mnemonic artwork is never cropped or hidden by its caption", async () => {
-  const pageSource = await readFile(
-    new URL("../app/experience.tsx", import.meta.url),
-    "utf8",
-  );
+  const pageSource = (await Promise.all([
+    "../app/features/character-study/character-study.tsx",
+    "../app/features/practice-session/practice-session-view.tsx",
+  ].map((path) => readFile(new URL(path, import.meta.url), "utf8")))).join("\n");
   const stylesheet = await readFile(
     new URL("../app/globals.css", import.meta.url),
     "utf8",
@@ -543,7 +543,10 @@ test("narration timing becomes a punctuated, phrase-paced reading transcript", a
   assert.deepEqual(activeNarrationMarkIndices(groupedMarks, 2.5), [2]);
   assert.deepEqual(activeNarrationMarkIndices(groupedMarks, 3), []);
 
-  const pageSource = await readFile(new URL("../app/experience.tsx", import.meta.url), "utf8");
+  const pageSource = await readFile(
+    new URL("../app/features/character-study/character-study.tsx", import.meta.url),
+    "utf8",
+  );
   assert.match(pageSource, /requestAnimationFrame\(sampleAudioTime\)/);
   assert.match(pageSource, /is-complete/);
   assert.match(pageSource, /withAssetVersion/);

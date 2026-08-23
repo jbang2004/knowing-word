@@ -1,4 +1,4 @@
-import LearningRoute from "../../../../_shared/learning-route";
+import PracticeRoutePage from "../../../../_shared/practice-route-page";
 
 export default async function HonglanCharacterPage({
   params,
@@ -6,5 +6,5 @@ export default async function HonglanCharacterPage({
   params: Promise<{ lessonId: string; characterId: string }>;
 }) {
   const { lessonId, characterId } = await params;
-  return <LearningRoute path={`/honglan-exercise/${lessonId}/lesson_words/${characterId}`} />;
+  return <PracticeRoutePage lessonId={lessonId} characterId={characterId} track="honglan" />;
 }

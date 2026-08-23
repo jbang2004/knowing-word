@@ -52,3 +52,7 @@ export function getCharacter(characterId: string) {
 export function getLessonCharacters(lessonId: string) {
   return lessonCharacters.get(lessonId) ?? [];
 }
+
+export function getComponentByGlyph(glyph: string) {
+  return componentsByGlyph.get(glyph);
+}

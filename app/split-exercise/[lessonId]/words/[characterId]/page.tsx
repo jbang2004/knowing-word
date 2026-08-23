@@ -1,4 +1,4 @@
-import LearningRoute from "../../../../_shared/learning-route";
+import PracticeRoutePage from "../../../../_shared/practice-route-page";
 
 export default async function SplitCharacterPage({
   params,
@@ -6,5 +6,5 @@ export default async function SplitCharacterPage({
   params: Promise<{ lessonId: string; characterId: string }>;
 }) {
   const { lessonId, characterId } = await params;
-  return <LearningRoute path={`/split-exercise/${lessonId}/words/${characterId}`} />;
+  return <PracticeRoutePage lessonId={lessonId} characterId={characterId} track="split" />;
 }

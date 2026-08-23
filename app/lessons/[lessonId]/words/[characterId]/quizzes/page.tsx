@@ -1,4 +1,4 @@
-import LearningRoute from "../../../../../_shared/learning-route";
+import PracticeRoutePage from "../../../../../_shared/practice-route-page";
 
 export default async function WordQuizzesPage({
   params,
@@ -6,5 +6,5 @@ export default async function WordQuizzesPage({
   params: Promise<{ lessonId: string; characterId: string }>;
 }) {
   const { lessonId, characterId } = await params;
-  return <LearningRoute path={`/lessons/${lessonId}/words/${characterId}/quizzes`} />;
+  return <PracticeRoutePage lessonId={lessonId} characterId={characterId} track="words" />;
 }

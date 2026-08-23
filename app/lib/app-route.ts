@@ -26,6 +26,7 @@ export type AppRoute = {
   characterId?: string;
   track?: TrackId;
   playground?: PlaygroundKind;
+  componentId?: string;
   returnTo?: string;
 };
 
@@ -54,7 +55,8 @@ function knownCharacter(characterId: string | undefined, lessonId?: string) {
 }
 
 export function resolveAppRoute(pathValue: string): AppRoute {
-  const pathname = pathValue.split("?")[0].replace(/\/+$/, "") || "/";
+  const url = new URL(pathValue, "https://knowing-word.local");
+  const pathname = url.pathname.replace(/\/+$/, "") || "/";
   const parts = pathname.split("/").filter(Boolean);
   if (!parts.length) return { screen: "home" };
   if (parts[0] === "account") return { screen: "profile" };
@@ -66,7 +68,14 @@ export function resolveAppRoute(pathValue: string): AppRoute {
       ? { screen: "recordDetail", track, lessonId, characterId: parts[2] }
       : { screen: "records", track };
   }
-  if (parts[0] === "bujian") return { screen: "components", returnTo: returnPathFromUrl(pathValue) };
+  if (parts[0] === "bujian") {
+    const componentId = url.searchParams.get("component") || undefined;
+    return {
+      screen: "components",
+      componentId: componentId && componentId.length <= 80 ? componentId : undefined,
+      returnTo: returnPathFromUrl(pathValue),
+    };
+  }
   if (parts[0] === "read-aloud") return { screen: "read", returnTo: returnPathFromUrl(pathValue) };
   if (parts[0] === "playground") {
     const playground = (["kit", "lesson", "puzzle", "quiz"].includes(parts[1]) ? parts[1] : "kit") as PlaygroundKind;

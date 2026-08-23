@@ -48,4 +48,12 @@ test("route parsing is independent from the full curriculum payload", () => {
     routeForTrack("honglan", "g5v1-l01", "g5v1-l01-c05-u55dc"),
     "/honglan-exercise/g5v1-l01/lesson_words/g5v1-l01-c05-u55dc",
   );
+  assert.deepEqual(
+    resolveAppRoute("/bujian?component=g5-component-u6728&returnTo=%2Flessons"),
+    {
+      screen: "components",
+      componentId: "g5-component-u6728",
+      returnTo: "/lessons",
+    },
+  );
 });
