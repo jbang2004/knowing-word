@@ -47,6 +47,17 @@ test("server-renders the task-first Knowing Word learning experience", async () 
   assert.match(practiceHtml, /先拆组成，再辨功能，最后看空间/);
 });
 
+test("secondary tools server-render with a contextual return query", async () => {
+  const characterPath = "/lessons/g5v1-l01/words/g5v1-l01-c01-u9e6d";
+  const componentResponse = await render(`/bujian?returnTo=${encodeURIComponent(characterPath)}`);
+  assert.equal(componentResponse.status, 200);
+  assert.match(await componentResponse.text(), /从常见部件入手，识字更轻松/);
+
+  const readResponse = await render(`/read-aloud?returnTo=${encodeURIComponent(characterPath)}`);
+  assert.equal(readResponse.status, 200);
+  assert.match(await readResponse.text(), /朗读/);
+});
+
 test("character pages render the complete picture-to-character memory flow", async () => {
   const response = await render(
     "/lessons/g5v1-l01/words/g5v1-l01-c01-u9e6d",

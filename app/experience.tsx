@@ -76,7 +76,12 @@ import {
   buildNarrationTokens,
   narrationPhraseIndexByMark,
 } from "./lib/narration";
-import { primaryNavigation, type PrimaryNavigationId } from "./lib/navigation";
+import {
+  primaryNavigation,
+  returnPathFromUrl,
+  withReturnTo,
+  type PrimaryNavigationId,
+} from "./lib/navigation";
 import {
   emptyProfile,
   normalizeProfile,
@@ -119,6 +124,7 @@ type AppRoute = {
   characterId?: string;
   track?: TrackId;
   playground?: PlaygroundKind;
+  returnTo?: string;
 };
 
 type TrackMeta = {
@@ -232,8 +238,8 @@ function resolveAppRoute(pathValue: string): AppRoute {
       ? { screen: "recordDetail", track, lessonId: character.lessonId, characterId: character.id }
       : { screen: "records", track };
   }
-  if (parts[0] === "bujian") return { screen: "components" };
-  if (parts[0] === "read-aloud") return { screen: "read" };
+  if (parts[0] === "bujian") return { screen: "components", returnTo: returnPathFromUrl(pathValue) };
+  if (parts[0] === "read-aloud") return { screen: "read", returnTo: returnPathFromUrl(pathValue) };
   if (parts[0] === "playground") {
     const playground = (["kit", "lesson", "puzzle", "quiz"].includes(parts[1]) ? parts[1] : "kit") as PlaygroundKind;
     return { screen: "playground", playground };
@@ -503,9 +509,13 @@ export default function Home({ initialPath = "/" }: { initialPath?: string }) {
   const [syncState, setSyncState] = useState<"loading" | "synced" | "local">("loading");
   const [sessionResults, setSessionResults] = useState<boolean[]>([]);
   const [celebration, setCelebration] = useState(false);
+  const [secondaryReturnPath, setSecondaryReturnPath] = useState(initialRoute.returnTo);
 
   const applyRoute = useCallback((route: AppRoute) => {
     setScreen(route.screen);
+    setSecondaryReturnPath(
+      route.screen === "components" || route.screen === "read" ? route.returnTo : undefined,
+    );
     if (route.lessonId) setSelectedLessonId(route.lessonId);
     if (route.characterId) setSelectedCharacterId(route.characterId);
     if (route.track) {
@@ -601,7 +611,7 @@ export default function Home({ initialPath = "/" }: { initialPath?: string }) {
   }, [hydrated, profile]);
 
   useEffect(() => {
-    const onPopState = () => applyRoute(resolveAppRoute(window.location.pathname));
+    const onPopState = () => applyRoute(resolveAppRoute(`${window.location.pathname}${window.location.search}`));
     window.addEventListener("popstate", onPopState);
     return () => window.removeEventListener("popstate", onPopState);
   }, [applyRoute]);
@@ -1011,13 +1021,19 @@ export default function Home({ initialPath = "/" }: { initialPath?: string }) {
           onBack={() => openLesson(selectedCharacter.lessonId)}
           onFavorite={() => toggleFavorite(selectedCharacter.id)}
           onStart={() => openChallenge("words", selectedCharacter)}
-          onReadAloud={() => navigate("read")}
+          onReadAloud={() => navigatePath(withReturnTo(
+            "/read-aloud",
+            `/lessons/${selectedCharacter.lessonId}/words/${selectedCharacter.id}`,
+          ))}
           onComponent={(glyph) => {
             const component = allComponents.find((item) => item.glyph === glyph);
             if (component) {
               setSelectedComponentId(component.id);
               markComponentLearned(component.id);
-              navigate("components");
+              navigatePath(withReturnTo(
+                "/bujian",
+                `/lessons/${selectedCharacter.lessonId}/words/${selectedCharacter.id}`,
+              ));
             }
           }}
         />
@@ -1088,7 +1104,7 @@ export default function Home({ initialPath = "/" }: { initialPath?: string }) {
           profile={profile}
           selected={selectedComponent}
           search={componentSearch}
-          onBack={() => navigate("home")}
+          onBack={() => navigatePath(secondaryReturnPath || "/practice")}
           onSearch={setComponentSearch}
           onSelect={(component) => {
             setSelectedComponentId(component.id);
@@ -1121,7 +1137,7 @@ export default function Home({ initialPath = "/" }: { initialPath?: string }) {
       {screen === "read" && (
         <ReadAloud
           profile={profile}
-          onBack={() => navigate("home")}
+          onBack={() => navigatePath(secondaryReturnPath || "/account")}
           onSession={completeReadSession}
         />
       )}
