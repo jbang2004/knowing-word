@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { useState } from "react";
 import type { CharacterItem } from "../../data/catalog-types";
 import { grade5Lessons } from "../../data/generated/grade5-volume1/course";
 import { homeCandidates } from "../../data/home-index.generated";
@@ -17,6 +18,7 @@ function formatDate(value: string) {
 
 export function RecordsRoute({ track }: { track: TrackId }) {
   const { profile } = useStudyProfile({ writable: false });
+  const [showAllLessons, setShowAllLessons] = useState(false);
   const meta = trackMeta[track];
   const candidates = homeCandidates[track];
   const candidateIds = new Set(candidates.map((item) => item.id));
@@ -32,24 +34,60 @@ export function RecordsRoute({ track }: { track: TrackId }) {
   const answerEntries = [...answersByCharacter.values()].flat();
   const attempts = answerEntries.reduce((sum, [, stat]) => sum + stat.attempts, 0);
   const correct = answerEntries.reduce((sum, [, stat]) => sum + stat.correct, 0);
+  const lessonRows = grade5Lessons.map((lesson) => {
+    const lessonCandidates = candidates.filter((item) => item.lessonId === lesson.id);
+    const recorded = lessonCandidates.filter((character) => answersByCharacter.has(character.id));
+    const completed = lessonCandidates.filter((item) => profile.completed[track].includes(item.id)).length;
+    const latestAt = recorded
+      .flatMap((character) => answersByCharacter.get(character.id) ?? [])
+      .reduce((latest, [, stat]) => stat.lastAt > latest ? stat.lastAt : latest, "");
+    return { lesson, lessonCandidates, recorded, completed, latestAt };
+  });
+  const activeLessons = lessonRows.filter((row) => row.recorded.length > 0 || row.completed > 0);
+  const visibleLessons = showAllLessons ? lessonRows : activeLessons;
+  const recentCharacters = candidates
+    .map((character) => {
+      const stats = answersByCharacter.get(character.id) ?? [];
+      const latestAt = stats.reduce((latest, [, stat]) => stat.lastAt > latest ? stat.lastAt : latest, "");
+      return { character, stats, latestAt };
+    })
+    .filter((item) => item.stats.length > 0)
+    .sort((left, right) => right.latestAt.localeCompare(left.latestAt))
+    .slice(0, 6);
 
   return (
     <LearningPageShell active="profile" name={profile.name}>
       <div className="page records-page">
-        <PageHeading kicker="学习记录" title="看见自己一步一步学会的过程" copy="每道题记录做了几次、答对几次，以及最后一次是否答对。" backHref="/" />
+        <PageHeading density="utility" kicker="学习记录" title="看见自己一步一步学会的过程" copy="优先呈现最近练习和已有记录，需要时再展开全部课次。" backHref="/" />
         <section className="record-stat-row">
           <div><span>已完成</span><strong>{profile.completed[track].length}</strong><small>个本关字</small></div>
           <div><span>累计作答</span><strong>{attempts}</strong><small>次</small></div>
           <div><span>答对次数</span><strong>{correct}</strong><small>次</small></div>
         </section>
         <div className="record-tabs">{trackIds.map((id) => <Link className={id === track ? "is-active" : ""} href={`/records/${id}`} key={id}>{trackMeta[id].menu}</Link>)}</div>
+        {recentCharacters.length > 0 && (
+          <section className="record-recent" aria-labelledby="record-recent-title">
+            <header><div><p className="kicker">最近练习</p><h2 id="record-recent-title">从刚才学到的地方继续</h2></div><span>最近 {recentCharacters.length} 个字</span></header>
+            <div>
+              {recentCharacters.map(({ character, stats, latestAt }) => (
+                <Link href={`/records/${track}/${character.id}`} key={character.id}>
+                  <strong>{character.hanzi}</strong>
+                  <span>{profile.completed[track].includes(character.id) ? "已完成" : "正在练习"}</span>
+                  <small>{stats.reduce((sum, [, stat]) => sum + stat.attempts, 0)} 次作答 · {formatDate(latestAt)}</small>
+                </Link>
+              ))}
+            </div>
+          </section>
+        )}
+        <div className="record-scope-bar">
+          <div><strong>{activeLessons.length} 课有记录</strong><span>{showAllLessons ? `正在显示全部 ${lessonRows.length} 课` : "默认隐藏尚未开始的课次"}</span></div>
+          <button aria-pressed={showAllLessons} onClick={() => setShowAllLessons((visible) => !visible)}>
+            {showAllLessons ? "只看有记录" : `显示全部 ${lessonRows.length} 课`}
+          </button>
+        </div>
         <section className="record-lessons">
-          {grade5Lessons.map((lesson) => {
-            const lessonCandidates = candidates.filter((item) => item.lessonId === lesson.id);
-            const recorded = lessonCandidates.filter((character) => answersByCharacter.has(character.id));
-            const completed = lessonCandidates.filter((item) => profile.completed[track].includes(item.id)).length;
-            return (
-              <article className="record-lesson" key={lesson.id}>
+          {visibleLessons.length ? visibleLessons.map(({ lesson, lessonCandidates, recorded, completed }) => (
+              <article className={`record-lesson${recorded.length ? "" : " is-empty"}`} key={lesson.id}>
                 <header><div><p>第 {lesson.position} 课</p><h2>{lesson.title}</h2></div><span>{completed}/{lessonCandidates.length} 已完成</span></header>
                 {recorded.length ? (
                   <div className="record-character-list">
@@ -64,10 +102,16 @@ export function RecordsRoute({ track }: { track: TrackId }) {
                       );
                     })}
                   </div>
-                ) : <div className="record-empty">这一课的{meta.menu}记录，会在第一次闯关后出现在这里。</div>}
+                ) : <div className="record-empty">尚未开始{meta.menu}</div>}
               </article>
-            );
-          })}
+          )) : (
+            <div className="record-zero-state">
+              <span aria-hidden="true">✦</span>
+              <h2>还没有{meta.menu}记录</h2>
+              <p>完成第一次闯关后，最近练习与课次记录会自动整理在这里。</p>
+              <Link className="game-button primary" href={routeForTrack(track, candidates[0].lessonId, candidates[0].id)}>开始第一次练习</Link>
+            </div>
+          )}
         </section>
       </div>
     </LearningPageShell>

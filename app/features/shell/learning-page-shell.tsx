@@ -64,14 +64,16 @@ export function PageHeading({
   title,
   copy,
   backHref,
+  density = "editorial",
 }: {
   kicker: string;
   title: string;
   copy: string;
   backHref?: string;
+  density?: "editorial" | "utility";
 }) {
   return (
-    <header className={backHref ? "page-heading" : "page-heading is-root"}>
+    <header className={`${backHref ? "page-heading" : "page-heading is-root"}${density === "utility" ? " is-utility" : ""}`}>
       {backHref && <Link className="back-button" href={backHref}><ArrowLeft aria-hidden="true" />返回</Link>}
       <div>
         <p className="kicker">{kicker}</p>

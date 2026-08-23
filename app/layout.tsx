@@ -5,6 +5,7 @@ import "./home-redesign.css";
 import "./study.css";
 import "./challenge.css";
 import "./home-path.css";
+import "./utility-pages.css";
 import ServiceWorkerRegistration from "./service-worker-registration";
 
 export async function generateMetadata(): Promise<Metadata> {
