@@ -4,6 +4,10 @@
     "voice": "封",
     "formalCloneModel": "mlx-community/Qwen3-TTS-12Hz-1.7B-Base-4bit",
     "formalModelRevision": "37e955a1deb861c088ae5f3a67043185f3d1a60c",
+    "formalAsrModel": "mlx-community/whisper-large-v3-turbo-asr-fp16",
+    "formalAsrModelRevision": "624c19c9af5603fa73b83bce14d4aeea96156d18",
+    "formalAlignmentModel": "mlx-community/Qwen3-ForcedAligner-0.6B-8bit",
+    "formalAlignmentModelRevision": "0e1a68e91d815300c7c9754b2a7639378b23db15",
     "formalGenerationPolicy": "qwen3-clone-2026-08-22-v3",
     "formalReferenceId": "019f0554-ea22-762e-966c-32d678fd6bf6",
     "formalReferenceSha256": "eb07e06ee13a20ee4577b1b481df6d33d42127c1b3876bfa5d5e5362ae349f19"

@@ -6,14 +6,33 @@ import { fileURLToPath } from "node:url";
 import { characters } from "../app/data/catalog.ts";
 import { heritageAssets } from "../app/data/heritage-assets.ts";
 import { characterVisuals } from "../app/data/illustrations.ts";
+import {
+  FORMAL_ALIGNER,
+  FORMAL_ALIGNER_REVISION,
+  FORMAL_ASR_MODEL,
+  FORMAL_ASR_MODEL_REVISION,
+  FORMAL_MODEL,
+  FORMAL_MODEL_REVISION,
+  FORMAL_POLICY,
+  FORMAL_REFERENCE_ID,
+  FORMAL_REFERENCE_SHA256,
+  FORMAL_SEED,
+  FORMAL_VOICE,
+} from "./narration-policy.mjs";
 
-export const FORMAL_MODEL = "mlx-community/Qwen3-TTS-12Hz-1.7B-Base-4bit";
-export const FORMAL_MODEL_REVISION = "37e955a1deb861c088ae5f3a67043185f3d1a60c";
-export const FORMAL_POLICY = "qwen3-clone-2026-08-22-v3";
-export const FORMAL_VOICE = "封";
-export const FORMAL_SEED = 20260822;
-export const FORMAL_REFERENCE_ID = "019f0554-ea22-762e-966c-32d678fd6bf6";
-export const FORMAL_REFERENCE_SHA256 = "eb07e06ee13a20ee4577b1b481df6d33d42127c1b3876bfa5d5e5362ae349f19";
+export {
+  FORMAL_ALIGNER,
+  FORMAL_ALIGNER_REVISION,
+  FORMAL_ASR_MODEL,
+  FORMAL_ASR_MODEL_REVISION,
+  FORMAL_MODEL,
+  FORMAL_MODEL_REVISION,
+  FORMAL_POLICY,
+  FORMAL_REFERENCE_ID,
+  FORMAL_REFERENCE_SHA256,
+  FORMAL_SEED,
+  FORMAL_VOICE,
+};
 
 const MODULE_DIRECTORY = dirname(fileURLToPath(import.meta.url));
 const PROJECT_ROOT = resolve(MODULE_DIRECTORY, "..");
@@ -109,7 +128,7 @@ async function assertPublicAsset(recordId, label, source) {
   if (!info.isFile()) throw new Error(`${recordId}: ${label}资源不是文件`);
 }
 
-export function validateListeningInputs(book, manifest, expectedRecordCount = 430) {
+export function validateListeningInputs(book, manifest, expectedRecordCount = characters.length) {
   if (book?.version !== "narration-v3-book") {
     throw new Error("输入不是批准版 narration-v3-book");
   }
@@ -119,6 +138,18 @@ export function validateListeningInputs(book, manifest, expectedRecordCount = 43
   }
   if (book.modelPolicy?.formalModelRevision !== FORMAL_MODEL_REVISION) {
     throw new Error("批准书正式模型 revision 与当前政策不一致");
+  }
+  if (book.modelPolicy?.formalAsrModel !== FORMAL_ASR_MODEL) {
+    throw new Error("批准书正式ASR模型与当前政策不一致");
+  }
+  if (book.modelPolicy?.formalAsrModelRevision !== FORMAL_ASR_MODEL_REVISION) {
+    throw new Error("批准书正式ASR模型 revision 与当前政策不一致");
+  }
+  if (book.modelPolicy?.formalAlignmentModel !== FORMAL_ALIGNER) {
+    throw new Error("批准书正式对齐模型与当前政策不一致");
+  }
+  if (book.modelPolicy?.formalAlignmentModelRevision !== FORMAL_ALIGNER_REVISION) {
+    throw new Error("批准书正式对齐模型 revision 与当前政策不一致");
   }
   if (book.modelPolicy?.formalGenerationPolicy !== FORMAL_POLICY) {
     throw new Error("批准书正式音频生成策略与当前政策不一致");
@@ -192,7 +223,7 @@ export function buildListeningPayload({
 }) {
   const manifestDirectory = dirname(manifestPath);
   return {
-    version: "qwen3-human-listening-v3",
+    version: "qwen3-human-listening-v4",
     status: "pending",
     reviewer: "",
     generatedAt,
@@ -267,6 +298,154 @@ export function buildListeningPayload({
       };
     }),
   };
+}
+
+async function reviewAssetEvidence(value) {
+  if (!value || typeof value.source !== "string" || !value.source.startsWith("/")) return null;
+  const absolute = resolve(PUBLIC_ROOT, value.source.slice(1));
+  if (!isInside(PUBLIC_ROOT, absolute)) throw new Error(`看审资源路径越出 public 目录：${value.source}`);
+  return {
+    source: value.source,
+    label: value.label || "",
+    alt: value.alt || "",
+    sha256: sha256(await readFile(absolute)),
+  };
+}
+
+export async function reviewEvidenceHash(record) {
+  const mnemonicVisual = await reviewAssetEvidence(record.mnemonicVisual);
+  const heritageStages = [];
+  for (const stage of record.heritageStages || []) {
+    heritageStages.push(await reviewAssetEvidence(stage));
+  }
+  const redBlueVisual = await reviewAssetEvidence(record.redBlueVisual);
+  return sha256(JSON.stringify({
+    schema: "qwen3-listening-evidence-v1",
+    recordId: record.recordId,
+    glyph: record.glyph,
+    lessonId: record.lessonId,
+    lessonTitle: record.lessonTitle || "",
+    word: record.word,
+    script: record.script,
+    ttsText: record.ttsText,
+    contentHash: record.contentHash,
+    audioSha256: record.audioSha256,
+    pinyin: record.pinyin || "",
+    characterType: record.characterType || "",
+    decomposition: record.decomposition || "",
+    components: record.components || [],
+    lessonContext: record.lessonContext || "",
+    mnemonicVisual,
+    heritageStages,
+    redBlueVisual,
+  }));
+}
+
+function previousRecordPassed(previous, record) {
+  return Boolean(
+    previous?.status === "complete"
+    && previous.reviewer
+    && record
+    && record.listenCompleted === true
+    && record.mnemonicMatchPass === true
+    && record.heritageBoundaryPass === true
+    && record.pronunciationPass === true
+    && record.prosodyPass === true
+    && record.verdict === "pass"
+  );
+}
+
+function legacyReviewSnapshot(record) {
+  return {
+    recordId: record.recordId,
+    glyph: record.glyph,
+    word: record.word,
+    lessonId: record.lessonId,
+    lessonTitle: record.lessonTitle || "",
+    script: record.script,
+    ttsText: record.ttsText,
+    pinyin: record.pinyin || "",
+    characterType: record.characterType || "",
+    decomposition: record.decomposition || "",
+    components: record.components || [],
+    lessonContext: record.lessonContext || "",
+    mnemonicVisual: record.mnemonicVisual ? {
+      source: record.mnemonicVisual.source,
+      label: record.mnemonicVisual.label || "",
+      alt: record.mnemonicVisual.alt || "",
+    } : null,
+    heritageStages: (record.heritageStages || []).map(stage => ({
+      source: stage.source,
+      label: stage.label || "",
+    })),
+    redBlueVisual: record.redBlueVisual ? { source: record.redBlueVisual.source } : null,
+    contentHash: record.contentHash,
+    audioSha256: record.audioSha256,
+  };
+}
+
+export function carryForwardListeningReview(
+  payload,
+  previous,
+  previousPath,
+  previousSha256,
+  { confirmLegacyVisualsUnchanged = false } = {},
+) {
+  if (
+    !previous
+    || !new Set(["qwen3-human-listening-v3", "qwen3-human-listening-v4"]).has(previous.version)
+    || previous.status !== "complete"
+    || !previous.reviewer
+  ) {
+    return { carried: 0, pending: payload.records.length };
+  }
+  const previousById = new Map((previous.records || []).map(record => [record.recordId, record]));
+  let carried = 0;
+  payload.records = payload.records.map(record => {
+    const prior = previousById.get(record.recordId);
+    if (!previousRecordPassed(previous, prior)) return record;
+    const evidenceMatches = Boolean(
+      prior.reviewEvidenceHash
+      && prior.reviewEvidenceHash === record.reviewEvidenceHash
+    );
+    const legacyEvidenceRebound = Boolean(
+      !prior.reviewEvidenceHash
+      && confirmLegacyVisualsUnchanged
+      && previous.version === "qwen3-human-listening-v3"
+      && previous.source?.approvedBookSha256 === payload.source.approvedBookSha256
+      && previous.source?.qwenManifestSha256 === payload.source.qwenManifestSha256
+      && JSON.stringify(legacyReviewSnapshot(prior)) === JSON.stringify(legacyReviewSnapshot(record))
+    );
+    if (!evidenceMatches && !legacyEvidenceRebound) return record;
+    carried += 1;
+    return {
+      ...record,
+      listenCompleted: true,
+      mnemonicMatchPass: true,
+      heritageBoundaryPass: true,
+      pronunciationPass: true,
+      prosodyPass: true,
+      verdict: "pass",
+      note: prior.note || "",
+      reviewReuse: {
+        carried: true,
+        reviewer: previous.reviewer,
+        reviewedAt: previous.updatedAt || previous.generatedAt || null,
+        sourceReviewEvidenceHash: prior.reviewEvidenceHash || null,
+        legacyEvidenceRebound,
+      },
+    };
+  });
+  payload.source.previousListening = previousPath;
+  payload.source.previousListeningSha256 = previousSha256;
+  payload.carriedRecordCount = carried;
+  const pending = payload.records.length - carried;
+  if (pending === 0) {
+    payload.status = "complete";
+    payload.reviewer = previous.reviewer;
+    payload.updatedAt = previous.updatedAt || previous.generatedAt || payload.generatedAt;
+  }
+  return { carried, pending };
 }
 
 export function renderListeningHtml(payload) {
@@ -824,9 +1003,11 @@ export async function prepareHumanListening({
   manifestPath,
   outputDirectory,
   force = false,
-  expectedRecordCount = 430,
+  expectedRecordCount = characters.length,
   verifyAudio = true,
   generatedAt,
+  previousListeningPath,
+  confirmLegacyVisualsUnchanged = false,
 }) {
   const approvedPath = resolve(bookPath);
   const qwenManifestPath = resolve(manifestPath);
@@ -890,6 +1071,20 @@ export async function prepareHumanListening({
     if (record.redBlueVisual) {
       await assertPublicAsset(record.recordId, "红蓝合字", record.redBlueVisual.source);
     }
+    record.reviewEvidenceHash = await reviewEvidenceHash(record);
+    record.reviewReuse = null;
+  }
+  let carryResult = { carried: 0, pending: payload.records.length };
+  if (previousListeningPath) {
+    const previousPath = resolve(previousListeningPath);
+    const previousRaw = await readFile(previousPath, "utf8");
+    carryResult = carryForwardListeningReview(
+      payload,
+      JSON.parse(previousRaw),
+      previousPath,
+      sha256(previousRaw),
+      { confirmLegacyVisualsUnchanged },
+    );
   }
   const html = renderListeningHtml(payload);
   await mkdir(outputPath, { recursive: true });
@@ -897,11 +1092,17 @@ export async function prepareHumanListening({
     writeFile(jsonPath, `${JSON.stringify(payload, null, 2)}\n`, "utf8"),
     writeFile(htmlPath, html, "utf8"),
   ]);
-  return { jsonPath, htmlPath, recordCount: payload.records.length };
+  return {
+    jsonPath,
+    htmlPath,
+    recordCount: payload.records.length,
+    carriedRecordCount: carryResult.carried,
+    pendingRecordCount: carryResult.pending,
+  };
 }
 
 function usage() {
-  return "Usage: node scripts/prepare-qwen3-human-listening.mjs <approved-book.json> <qwen-manifest.json> <output-directory> [--force]";
+  return "Usage: node scripts/prepare-qwen3-human-listening.mjs <approved-book.json> <qwen-manifest.json> <output-directory> [--previous <human-listening.json>] [--confirm-legacy-visuals-unchanged] [--force]";
 }
 
 async function main() {
@@ -910,9 +1111,22 @@ async function main() {
     process.stdout.write(`${usage()}\n`);
     return;
   }
-  const unknownFlags = args.filter(arg => arg.startsWith("-") && arg !== "--force");
-  if (unknownFlags.length) throw new Error(`未知参数：${unknownFlags.join(", ")}\n${usage()}`);
-  const positional = args.filter(arg => !arg.startsWith("-"));
+  let previousListeningPath;
+  const positional = [];
+  for (let index = 0; index < args.length; index += 1) {
+    const arg = args[index];
+    if (arg === "--force") continue;
+    if (arg === "--confirm-legacy-visuals-unchanged") continue;
+    if (arg === "--previous") {
+      const value = args[index + 1];
+      if (!value || value.startsWith("-")) throw new Error(`--previous 缺少路径\n${usage()}`);
+      previousListeningPath = value;
+      index += 1;
+      continue;
+    }
+    if (arg.startsWith("-")) throw new Error(`未知参数：${arg}\n${usage()}`);
+    positional.push(arg);
+  }
   if (positional.length !== 3) throw new Error(usage());
   const [bookPath, manifestPath, outputDirectory] = positional;
   const result = await prepareHumanListening({
@@ -920,8 +1134,13 @@ async function main() {
     manifestPath,
     outputDirectory,
     force: args.includes("--force"),
+    previousListeningPath,
+    confirmLegacyVisualsUnchanged: args.includes("--confirm-legacy-visuals-unchanged"),
   });
-  process.stdout.write(`Prepared ${result.recordCount} pending listening records.\n`);
+  process.stdout.write(
+    `Prepared ${result.recordCount} listening records: `
+      + `${result.carriedRecordCount} safely carried, ${result.pendingRecordCount} pending.\n`,
+  );
   process.stdout.write(`Template: ${result.jsonPath}\n`);
   process.stdout.write(`Open: ${result.htmlPath}\n`);
 }

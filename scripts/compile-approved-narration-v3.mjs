@@ -2,6 +2,7 @@ import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { dirname, join, resolve } from "node:path";
 
 import { characters } from "../app/data/catalog.ts";
+import { formalNarrationBookPolicy } from "./narration-policy.mjs";
 import { narrationRecordDigest } from "./narration-review-digest.mjs";
 import { ttsSafeNarration } from "./narration-tts-text.mjs";
 
@@ -20,6 +21,8 @@ const factSources = [
   "facts/facts-08-16.json",
   "facts/facts-17-26.json",
 ];
+const expectedRecordCount = characters.length;
+const expectedGlyphCount = new Set(characters.map((row) => row.hanzi)).size;
 
 async function rowsFrom(relativePath, field) {
   const payload = JSON.parse(await readFile(join(artifactRoot, relativePath), "utf8"));
@@ -78,8 +81,8 @@ for (const sourcePath of factSources) {
   }
 }
 
-assertUnique(narrations, "recordId", 430, "讲稿");
-assertUnique(factCards, "glyph", 423, "事实卡");
+assertUnique(narrations, "recordId", expectedRecordCount, "讲稿");
+assertUnique(factCards, "glyph", expectedGlyphCount, "事实卡");
 
 const expectedRecordIds = new Set(characters.map((row) => row.id));
 const expectedGlyphs = new Set(characters.map((row) => row.hanzi));
@@ -100,7 +103,7 @@ try {
 if (verdictPayload.reviewer !== "root") throw new Error("root-review.json 必须由 root 主审签署");
 const verdicts = verdictPayload.records;
 if (!Array.isArray(verdicts)) throw new Error("root-review.json 缺少 records");
-assertUnique(verdicts, "recordId", 430, "主审结论");
+assertUnique(verdicts, "recordId", expectedRecordCount, "主审结论");
 const verdictById = new Map(verdicts.map((row) => [row.recordId, row]));
 for (const row of narrations) {
   const verdict = verdictById.get(row.recordId);
@@ -125,14 +128,7 @@ factCards.sort((left, right) =>
 await mkdir(dirname(outputPath), { recursive: true });
 await writeFile(outputPath, `${JSON.stringify({
   version: "narration-v3-book",
-  modelPolicy: {
-    voice: "封",
-    formalCloneModel: "mlx-community/Qwen3-TTS-12Hz-1.7B-Base-4bit",
-    formalModelRevision: "37e955a1deb861c088ae5f3a67043185f3d1a60c",
-    formalGenerationPolicy: "qwen3-clone-2026-08-22-v3",
-    formalReferenceId: "019f0554-ea22-762e-966c-32d678fd6bf6",
-    formalReferenceSha256: "eb07e06ee13a20ee4577b1b481df6d33d42127c1b3876bfa5d5e5362ae349f19",
-  },
+  modelPolicy: formalNarrationBookPolicy,
   factCards,
   records: narrations,
 }, null, 2)}\n`);

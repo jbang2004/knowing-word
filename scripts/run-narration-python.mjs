@@ -6,8 +6,9 @@ const [tool, ...args] = process.argv.slice(2);
 const allowed = new Map([
   ["generate", "generate-qwen3-narration.py"],
   ["verify", "verify-qwen3-narration.py"],
+  ["toolchain", "validate-narration-toolchain.py"],
 ]);
-if (!allowed.has(tool)) throw new Error("Usage: node scripts/run-narration-python.mjs <generate|verify> [...args]");
+if (!allowed.has(tool)) throw new Error("Usage: node scripts/run-narration-python.mjs <generate|verify|toolchain> [...args]");
 
 const projectRoot = resolve(import.meta.dirname, "..");
 const localPython = join(projectRoot, ".venv/bin/python");

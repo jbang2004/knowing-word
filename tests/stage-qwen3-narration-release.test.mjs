@@ -6,18 +6,29 @@ import { dirname, join } from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 import { spawnSync } from "node:child_process";
 import test from "node:test";
+import {
+  buildListeningPayload,
+  reviewEvidenceHash,
+} from "../scripts/prepare-qwen3-human-listening.mjs";
+import {
+  FORMAL_ALIGNER as ALIGNER,
+  FORMAL_ALIGNER_REVISION as ALIGNER_REVISION,
+  FORMAL_ASR_MODEL as ASR_MODEL,
+  FORMAL_ASR_MODEL_REVISION as ASR_MODEL_REVISION,
+  FORMAL_MODEL as MODEL,
+  FORMAL_MODEL_REVISION as MODEL_REVISION,
+  FORMAL_MINIMUM_ASR_SIMILARITY as MINIMUM_ASR_SIMILARITY,
+  FORMAL_PHONETIC_POLICY as PHONETIC_POLICY,
+  FORMAL_POLICY as POLICY,
+  FORMAL_REFERENCE_ID as REFERENCE_ID,
+  FORMAL_REFERENCE_SHA256 as REFERENCE_SHA256,
+  FORMAL_SEED as SEED,
+  FORMAL_VOICE as VOICE,
+} from "../scripts/narration-policy.mjs";
 
 const projectRoot = fileURLToPath(new URL("..", import.meta.url));
 const stageScript = join(projectRoot, "scripts", "stage-qwen3-narration-release.mjs");
-const MODEL = "mlx-community/Qwen3-TTS-12Hz-1.7B-Base-4bit";
-const MODEL_REVISION = "37e955a1deb861c088ae5f3a67043185f3d1a60c";
 const LEGACY_BF16_MODEL = "mlx-community/Qwen3-TTS-12Hz-1.7B-Base-bf16";
-const ALIGNER = "mlx-community/Qwen3-ForcedAligner-0.6B-8bit";
-const POLICY = "qwen3-clone-2026-08-22-v3";
-const VOICE = "封";
-const SEED = 20260822;
-const REFERENCE_ID = "019f0554-ea22-762e-966c-32d678fd6bf6";
-const REFERENCE_SHA256 = "eb07e06ee13a20ee4577b1b481df6d33d42127c1b3876bfa5d5e5362ae349f19";
 
 function pythonFlatJson(object) {
   return `{${Object.entries(object)
@@ -60,18 +71,19 @@ async function writeReleaseFixture(root, { listeningComplete }) {
   const referenceHash = REFERENCE_SHA256;
   const records = Array.from({ length: 430 }, (_, index) => {
     const recordId = `record-${String(index).padStart(3, "0")}`;
+    const ttsText = index === 0 ? "木兰花的木。" : index === 1 ? "木棒的木。" : "这是同一份内容寻址音频。";
     return {
       recordId,
       glyph: index < 2 ? "木" : `字${index}`,
       lessonId: `fixture-lesson-${String(index).padStart(3, "0")}`,
       word: index === 0 ? "木兰花" : index === 1 ? "木棒" : "相同教学词",
-      ttsText: index === 0 ? "木兰花的木。" : index === 1 ? "木棒的木。" : "这是同一份内容寻址音频。",
+      script: ttsText,
+      ttsText,
       status: "approved",
     };
   });
   const manifestRecords = {};
   const checks = [];
-  const listeningRecords = [];
   const contentObjects = new Map();
 
   for (const record of records) {
@@ -96,17 +108,6 @@ async function writeReleaseFixture(root, { listeningComplete }) {
       alignmentWritten: true,
       alignmentGroupCount: 0,
     });
-    listeningRecords.push({
-      recordId: record.recordId,
-      contentHash: digest,
-      audioSha256: audioHash,
-      listenCompleted: true,
-      verdict: "pass",
-      mnemonicMatchPass: true,
-      heritageBoundaryPass: true,
-      pronunciationPass: true,
-      prosodyPass: true,
-    });
   }
 
   for (const [digest, object] of contentObjects) {
@@ -116,16 +117,17 @@ async function writeReleaseFixture(root, { listeningComplete }) {
       writeFile(join(objectRoot, "audio.webm"), object.audioContent),
       writeFile(join(objectRoot, "audio-marks.json"), `${JSON.stringify({
         transcript: object.text,
-      model: MODEL,
-      model_revision: MODEL_REVISION,
-      generation_policy: POLICY,
-      voice_reference: VOICE,
-      reference_id: REFERENCE_ID,
-      reference_sha256: REFERENCE_SHA256,
+        model: MODEL,
+        model_revision: MODEL_REVISION,
+        generation_policy: POLICY,
+        voice_reference: VOICE,
+        reference_id: REFERENCE_ID,
+        reference_sha256: REFERENCE_SHA256,
         seed: SEED,
         content_hash: digest,
         timing_source: "qwen3-forced-aligner",
         alignment_model: ALIGNER,
+        alignment_model_revision: ALIGNER_REVISION,
         aligned_audio_sha256: object.audioHash,
         alignment_groups: [],
         marks: alignedMarks(object.text),
@@ -136,19 +138,23 @@ async function writeReleaseFixture(root, { listeningComplete }) {
   const bookPath = join(root, "approved-book.json");
   const manifestPath = join(outputRoot, "manifest.json");
   await mkdir(dirname(manifestPath), { recursive: true });
-  const bookRaw = `${JSON.stringify({
+  const book = {
     version: "narration-v3-book",
     modelPolicy: {
       voice: VOICE,
       formalCloneModel: MODEL,
       formalModelRevision: MODEL_REVISION,
+      formalAsrModel: ASR_MODEL,
+      formalAsrModelRevision: ASR_MODEL_REVISION,
+      formalAlignmentModel: ALIGNER,
+      formalAlignmentModelRevision: ALIGNER_REVISION,
       formalGenerationPolicy: POLICY,
       formalReferenceId: REFERENCE_ID,
       formalReferenceSha256: REFERENCE_SHA256,
     },
     records,
-  }, null, 2)}\n`;
-  const manifestRaw = `${JSON.stringify({
+  };
+  const manifest = {
     version: "narration-v3-qwen3",
     model: MODEL,
     modelRevision: MODEL_REVISION,
@@ -156,30 +162,53 @@ async function writeReleaseFixture(root, { listeningComplete }) {
     voice: VOICE,
     reference: { id: REFERENCE_ID, sha256: referenceHash },
     records: manifestRecords,
-  }, null, 2)}\n`;
+  };
+  const bookRaw = `${JSON.stringify(book, null, 2)}\n`;
+  const manifestRaw = `${JSON.stringify(manifest, null, 2)}\n`;
+  const generatedAt = "2026-08-23T00:00:00.000Z";
+  const expectedReview = buildListeningPayload({
+    book,
+    manifest,
+    bookPath,
+    manifestPath,
+    bookSha256: sha256(bookRaw),
+    manifestSha256: sha256(manifestRaw),
+    audioSha256ById: Object.fromEntries(records.map(record => [
+      record.recordId,
+      contentObjects.get(manifestRecords[record.recordId].contentHash).audioHash,
+    ])),
+    outputDirectory: outputRoot,
+    generatedAt,
+  });
+  const listeningRecords = await Promise.all(expectedReview.records.map(async record => ({
+    ...record,
+    reviewEvidenceHash: await reviewEvidenceHash(record),
+    listenCompleted: true,
+    verdict: "pass",
+    mnemonicMatchPass: true,
+    heritageBoundaryPass: true,
+    pronunciationPass: true,
+    prosodyPass: true,
+  })));
   await Promise.all([
     writeFile(bookPath, bookRaw),
     writeFile(manifestPath, manifestRaw),
     writeFile(join(outputRoot, "asr-verification.json"), `${JSON.stringify({
-      minimumSimilarity: 0.88,
-      phoneticPolicy: "pinyin-pro-3.28.1-tone-number-v1",
+      model: ASR_MODEL,
+      modelRevision: ASR_MODEL_REVISION,
+      alignmentModel: ALIGNER,
+      alignmentModelRevision: ALIGNER_REVISION,
+      minimumSimilarity: MINIMUM_ASR_SIMILARITY,
+      phoneticPolicy: PHONETIC_POLICY,
       automatedPass: true,
       checks,
     }, null, 2)}\n`),
     writeFile(join(outputRoot, "human-listening.json"), `${JSON.stringify({
-      version: "qwen3-human-listening-v3",
+      version: "qwen3-human-listening-v4",
       reviewer: "fixture-reviewer",
       status: listeningComplete ? "complete" : "incomplete",
-      source: {
-        approvedBookSha256: sha256(bookRaw),
-        qwenManifestSha256: sha256(manifestRaw),
-        model: MODEL,
-        modelRevision: MODEL_REVISION,
-        generationPolicy: POLICY,
-        voice: VOICE,
-        referenceId: REFERENCE_ID,
-        referenceSha256: REFERENCE_SHA256,
-      },
+      generatedAt,
+      source: expectedReview.source,
       records: listeningRecords,
     }, null, 2)}\n`),
   ]);
@@ -207,6 +236,21 @@ test("a missing formal release gate leaves no staging directory or temporary rel
   const rootEntries = await readdir(root);
   assert.equal(rootEntries.includes("blocked-stage"), false);
   assert.equal(rootEntries.some((entry) => entry.startsWith(".blocked-stage.tmp-")), false);
+});
+
+test("legacy v3 listening approval cannot pass the v4 evidence gate", async (t) => {
+  const root = await mkdtemp(join(tmpdir(), "knowing-word-stage-listening-v3-"));
+  t.after(() => rm(root, { recursive: true, force: true }));
+  const fixture = await writeReleaseFixture(root, { listeningComplete: true });
+  const listeningPath = join(dirname(fixture.manifestPath), "human-listening.json");
+  const listening = JSON.parse(await readFile(listeningPath, "utf8"));
+  listening.version = "qwen3-human-listening-v3";
+  await writeFile(listeningPath, `${JSON.stringify(listening, null, 2)}\n`);
+
+  const result = runStage(fixture.bookPath, fixture.manifestPath, join(root, "blocked-v3-stage"));
+
+  assert.notEqual(result.status, 0);
+  assert.match(result.stderr, /正式发布只接受.*qwen3-human-listening-v4/u);
 });
 
 test("a legacy bf16 manifest cannot be staged as formal 4bit audio", async (t) => {
@@ -335,6 +379,8 @@ test("a gated local stage covers 430 recordId paths and never deduplicates repea
   assert.equal(stageManifest.recordCount, 430);
   assert.equal(stageManifest.source.model, MODEL);
   assert.equal(stageManifest.source.modelRevision, MODEL_REVISION);
+  assert.equal(stageManifest.source.asrModelRevision, ASR_MODEL_REVISION);
+  assert.equal(stageManifest.source.alignmentModelRevision, ALIGNER_REVISION);
   assert.equal(stageManifest.source.generationPolicy, POLICY);
   assert.equal(stageManifest.source.referenceSha256, REFERENCE_SHA256);
   assert.deepEqual(stageManifest.duplicateGlyphs.木, woodRecords.map((record) => record.recordId));

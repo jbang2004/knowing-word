@@ -24,6 +24,8 @@
     "prepare:narration-root-review": "node scripts/prepare-narration-root-review.mjs",
     "generate:narration-qwen3": "node scripts/run-narration-python.mjs generate",
     "verify:narration-qwen3": "node scripts/run-narration-python.mjs verify",
+    "validate:narration-toolchain": "node scripts/run-narration-python.mjs toolchain",
+    "migrate:narration-listening-v4": "node scripts/migrate-qwen3-human-listening-v4.mjs",
     "validate:narration-qwen3-release": "node scripts/validate-qwen3-narration-release.mjs",
     "build:kai": "node scripts/build-kai-subset.mjs",
     "clean:assets": "node scripts/clean-source-assets.mjs",

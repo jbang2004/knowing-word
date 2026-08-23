@@ -1,0 +1,48 @@
+{
+  "version": "narration-toolchain-v1",
+  "platform": "darwin-arm64",
+  "python": "3.12.13",
+  "ffmpeg": "8.1.2",
+  "packages": {
+    "huggingface-hub": "1.27.0",
+    "mlx": "0.32.0",
+    "mlx-audio": "0.4.7",
+    "mlx-lm": "0.31.3",
+    "mlx-metal": "0.32.0",
+    "numpy": "2.5.2",
+    "safetensors": "0.8.0",
+    "scipy": "1.18.0",
+    "sentencepiece": "0.2.2",
+    "soundfile": "0.14.0",
+    "tokenizers": "0.22.2",
+    "transformers": "5.15.0"
+  },
+  "models": {
+    "tts": {
+      "id": "mlx-community/Qwen3-TTS-12Hz-1.7B-Base-4bit",
+      "revision": "37e955a1deb861c088ae5f3a67043185f3d1a60c"
+    },
+    "asr": {
+      "id": "mlx-community/whisper-large-v3-turbo-asr-fp16",
+      "revision": "624c19c9af5603fa73b83bce14d4aeea96156d18"
+    },
+    "aligner": {
+      "id": "mlx-community/Qwen3-ForcedAligner-0.6B-8bit",
+      "revision": "0e1a68e91d815300c7c9754b2a7639378b23db15"
+    }
+  },
+  "formal": {
+    "generationPolicy": "qwen3-clone-2026-08-22-v3",
+    "voice": "封",
+    "seed": 20260822,
+    "sampleRate": 24000,
+    "minimumAsrSimilarity": 0.88,
+    "phoneticPolicy": "pinyin-pro-3.28.1-tone-number-v1",
+    "reference": {
+      "id": "019f0554-ea22-762e-966c-32d678fd6bf6",
+      "sha256": "eb07e06ee13a20ee4577b1b481df6d33d42127c1b3876bfa5d5e5362ae349f19",
+      "text": "封，封锁的封。会意字，左右结构，本义是地界，左边的圭。",
+      "duration": 7.95
+    }
+  }
+}

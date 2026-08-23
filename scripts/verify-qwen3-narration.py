@@ -15,10 +15,17 @@ from mlx_audio.stt import load as load_stt_model
 from mlx_audio.stt.generate import generate_transcription
 from mlx_audio.stt.utils import load_model
 
+from narration_toolchain import load_toolchain_lock, validate_toolchain
 
-MODEL_ID = "mlx-community/whisper-large-v3-turbo-asr-fp16"
-ALIGNER_ID = "mlx-community/Qwen3-ForcedAligner-0.6B-8bit"
-PHONETIC_POLICY = "pinyin-pro-3.28.1-tone-number-v1"
+
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
+TOOLCHAIN_LOCK = load_toolchain_lock(PROJECT_ROOT)
+MODEL_ID = TOOLCHAIN_LOCK["models"]["asr"]["id"]
+MODEL_REVISION = TOOLCHAIN_LOCK["models"]["asr"]["revision"]
+ALIGNER_ID = TOOLCHAIN_LOCK["models"]["aligner"]["id"]
+ALIGNER_REVISION = TOOLCHAIN_LOCK["models"]["aligner"]["revision"]
+PHONETIC_POLICY = TOOLCHAIN_LOCK["formal"]["phoneticPolicy"]
+MINIMUM_SIMILARITY = TOOLCHAIN_LOCK["formal"]["minimumAsrSimilarity"]
 PHONETIC_HELPER = Path(__file__).with_name("qwen3-phonetic-signature.mjs")
 
 
@@ -32,6 +39,10 @@ def sha256_file(path: Path) -> str:
         for chunk in iter(lambda: handle.read(1024 * 1024), b""):
             digest.update(chunk)
     return digest.hexdigest()
+
+
+def sha256_text(text: str) -> str:
+    return hashlib.sha256(text.encode("utf-8")).hexdigest()
 
 
 def phonetic_similarity(record_id: str, expected: str, actual: str) -> float:
@@ -227,24 +238,48 @@ def forced_alignment_marks(text: str, result) -> tuple[list[dict], list[dict]]:
 
 
 def main() -> None:
+    project_root = PROJECT_ROOT
     parser = argparse.ArgumentParser()
     parser.add_argument("--manifest", type=Path, required=True)
     parser.add_argument("--model", default=MODEL_ID)
-    parser.add_argument("--minimum-similarity", type=float, default=0.88)
+    parser.add_argument("--minimum-similarity", type=float, default=MINIMUM_SIMILARITY)
     parser.add_argument("--aligner-model", default=ALIGNER_ID)
     parser.add_argument("--write-aligned-marks", action="store_true")
     parser.add_argument(
         "--resume",
         action="store_true",
-        help="Reuse ASR text and aligned marks only when they are newer than, and bound to, the current audio.",
+        help="Reuse ASR text and aligned marks only when prior digests bind them to the current audio.",
     )
     args = parser.parse_args()
+
+    if args.model != MODEL_ID or args.aligner_model != ALIGNER_ID:
+        raise ValueError("Formal verification is locked to the approved ASR and ForcedAligner models")
+    validate_toolchain(project_root)
 
     manifest_path = args.manifest.resolve()
     root = manifest_path.parent
     manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
-    model = load_model(args.model)
-    aligner = load_stt_model(args.aligner_model) if args.write_aligned_marks else None
+    verification_path = root / "asr-verification.json"
+    previous_verification = (
+        json.loads(verification_path.read_text(encoding="utf-8"))
+        if verification_path.exists()
+        else {}
+    )
+    previous_asr_matches = (
+        previous_verification.get("model") == MODEL_ID
+        and previous_verification.get("modelRevision") == MODEL_REVISION
+    )
+    previous_checks = {
+        check.get("recordId"): check
+        for check in previous_verification.get("checks", [])
+        if isinstance(check, dict) and isinstance(check.get("recordId"), str)
+    }
+    model = load_model(args.model, revision=MODEL_REVISION)
+    aligner = (
+        load_stt_model(args.aligner_model, revision=ALIGNER_REVISION)
+        if args.write_aligned_marks
+        else None
+    )
     checks = []
 
     for record_id, record in manifest["records"].items():
@@ -253,13 +288,22 @@ def main() -> None:
         audio_path = root / record["audio"]
         audio_hash = sha256_file(audio_path)
         asr_path = root / "asr" / f"{record['contentHash']}.txt"
+        cached_transcript = (
+            asr_path.read_text(encoding="utf-8").strip()
+            if asr_path.exists()
+            else None
+        )
+        previous_check = previous_checks.get(record_id, {})
         asr_reused = bool(
             args.resume
-            and asr_path.exists()
-            and asr_path.stat().st_mtime_ns >= audio_path.stat().st_mtime_ns
+            and previous_asr_matches
+            and cached_transcript is not None
+            and previous_check.get("contentHash") == record["contentHash"]
+            and previous_check.get("audioSha256") == audio_hash
+            and previous_check.get("asrTranscriptSha256") == sha256_text(cached_transcript)
         )
         if asr_reused:
-            transcript = asr_path.read_text(encoding="utf-8").strip()
+            transcript = cached_transcript
         else:
             output = generate_transcription(
                 model=model,
@@ -295,6 +339,7 @@ def main() -> None:
                 args.resume
                 and marks.get("timing_source") == "qwen3-forced-aligner"
                 and marks.get("alignment_model") == args.aligner_model
+                and marks.get("alignment_model_revision") == ALIGNER_REVISION
                 and marks.get("aligned_audio_sha256") == audio_hash
                 and isinstance(marks.get("alignment_groups"), list)
             )
@@ -307,6 +352,7 @@ def main() -> None:
                     marks["marks"], alignment_groups = forced_alignment_marks(expected, alignment)
                     marks["timing_source"] = "qwen3-forced-aligner"
                     marks["alignment_model"] = args.aligner_model
+                    marks["alignment_model_revision"] = ALIGNER_REVISION
                     marks["aligned_audio_sha256"] = audio_hash
                     marks["alignment_groups"] = alignment_groups
                     marks_path.write_text(
@@ -325,6 +371,7 @@ def main() -> None:
                 "contentHash": record["contentHash"],
                 "expected": expected,
                 "asrTranscript": transcript,
+                "asrTranscriptSha256": sha256_text(transcript),
                 "similarity": round(similarity, 4),
                 "phoneticSimilarity": round(phonetic_score, 4) if phonetic_score is not None else None,
                 "phoneticPolicy": PHONETIC_POLICY if phonetic_score is not None else None,
@@ -354,14 +401,16 @@ def main() -> None:
     result = {
         "version": "narration-v3-qwen3-asr-roundtrip",
         "model": args.model,
+        "modelRevision": MODEL_REVISION,
         "minimumSimilarity": args.minimum_similarity,
         "phoneticPolicy": PHONETIC_POLICY,
         "alignmentModel": args.aligner_model if args.write_aligned_marks else None,
+        "alignmentModelRevision": ALIGNER_REVISION if args.write_aligned_marks else None,
         "checks": checks,
         "automatedPass": all(check["automatedPass"] for check in checks),
         "humanListening": "pending",
     }
-    (root / "asr-verification.json").write_text(
+    verification_path.write_text(
         json.dumps(result, ensure_ascii=False, indent=2) + "\n",
         encoding="utf-8",
     )

@@ -2,6 +2,18 @@ import { readFile } from "node:fs/promises";
 import { resolve } from "node:path";
 import { characters } from "../app/data/catalog.ts";
 import { containsLatinPinyin } from "./narration-tts-text.mjs";
+import {
+  FORMAL_ALIGNER,
+  FORMAL_ALIGNER_REVISION,
+  FORMAL_ASR_MODEL,
+  FORMAL_ASR_MODEL_REVISION,
+  FORMAL_MODEL,
+  FORMAL_MODEL_REVISION,
+  FORMAL_POLICY,
+  FORMAL_REFERENCE_ID,
+  FORMAL_REFERENCE_SHA256,
+  FORMAL_VOICE,
+} from "./narration-policy.mjs";
 
 const args = process.argv.slice(2);
 const fileArg = args.find((arg) => !arg.startsWith("--"));
@@ -134,21 +146,41 @@ for (const card of factCards) {
 }
 
 if (approvedMode) {
-  if ((records || []).length !== 430) errors.push(`批准库讲稿应为 430 条，实际 ${(records || []).length}`);
-  if (factCards.length !== 423) errors.push(`批准库事实卡应为 423 张，实际 ${factCards.length}`);
-  if (payload?.modelPolicy?.formalCloneModel !== "mlx-community/Qwen3-TTS-12Hz-1.7B-Base-4bit") {
+  const expectedGlyphCount = new Set(characters.map((record) => record.hanzi)).size;
+  if ((records || []).length !== characters.length) {
+    errors.push(`批准库讲稿应为 ${characters.length} 条，实际 ${(records || []).length}`);
+  }
+  if (factCards.length !== expectedGlyphCount) {
+    errors.push(`批准库事实卡应为 ${expectedGlyphCount} 张，实际 ${factCards.length}`);
+  }
+  if (payload?.modelPolicy?.formalCloneModel !== FORMAL_MODEL) {
     errors.push("批准库正式克隆模型必须是 Qwen3-TTS 1.7B Base 4bit");
   }
-  if (payload?.modelPolicy?.formalModelRevision !== "37e955a1deb861c088ae5f3a67043185f3d1a60c") {
+  if (payload?.modelPolicy?.formalModelRevision !== FORMAL_MODEL_REVISION) {
     errors.push("批准库正式克隆模型 revision 不一致");
   }
-  if (payload?.modelPolicy?.formalGenerationPolicy !== "qwen3-clone-2026-08-22-v3") {
+  if (payload?.modelPolicy?.voice !== FORMAL_VOICE) {
+    errors.push("批准库正式音色标杆不一致");
+  }
+  if (payload?.modelPolicy?.formalAsrModel !== FORMAL_ASR_MODEL) {
+    errors.push("批准库正式ASR模型不一致");
+  }
+  if (payload?.modelPolicy?.formalAsrModelRevision !== FORMAL_ASR_MODEL_REVISION) {
+    errors.push("批准库正式ASR模型 revision 不一致");
+  }
+  if (payload?.modelPolicy?.formalAlignmentModel !== FORMAL_ALIGNER) {
+    errors.push("批准库正式对齐模型不一致");
+  }
+  if (payload?.modelPolicy?.formalAlignmentModelRevision !== FORMAL_ALIGNER_REVISION) {
+    errors.push("批准库正式对齐模型 revision 不一致");
+  }
+  if (payload?.modelPolicy?.formalGenerationPolicy !== FORMAL_POLICY) {
     errors.push("批准库正式音频生成策略版本不一致");
   }
-  if (payload?.modelPolicy?.formalReferenceId !== "019f0554-ea22-762e-966c-32d678fd6bf6") {
+  if (payload?.modelPolicy?.formalReferenceId !== FORMAL_REFERENCE_ID) {
     errors.push("批准库正式参考音记录不一致");
   }
-  if (payload?.modelPolicy?.formalReferenceSha256 !== "eb07e06ee13a20ee4577b1b481df6d33d42127c1b3876bfa5d5e5362ae349f19") {
+  if (payload?.modelPolicy?.formalReferenceSha256 !== FORMAL_REFERENCE_SHA256) {
     errors.push("批准库正式参考音摘要不一致");
   }
 }

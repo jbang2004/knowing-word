@@ -1,21 +1,33 @@
 import { createHash } from "node:crypto";
 import { readFile } from "node:fs/promises";
 import { resolve, join } from "node:path";
+import { characters } from "../app/data/catalog.ts";
+import {
+  buildListeningPayload,
+  reviewEvidenceHash,
+} from "./prepare-qwen3-human-listening.mjs";
+import {
+  FORMAL_ALIGNER as ALIGNER,
+  FORMAL_ALIGNER_REVISION as ALIGNER_REVISION,
+  FORMAL_ASR_MODEL as ASR_MODEL,
+  FORMAL_ASR_MODEL_REVISION as ASR_MODEL_REVISION,
+  FORMAL_MINIMUM_ASR_SIMILARITY as MINIMUM_ASR_SIMILARITY,
+  FORMAL_MODEL as MODEL,
+  FORMAL_MODEL_REVISION as MODEL_REVISION,
+  FORMAL_PHONETIC_POLICY as PHONETIC_POLICY,
+  FORMAL_POLICY as POLICY,
+  FORMAL_REFERENCE_ID as REFERENCE_ID,
+  FORMAL_REFERENCE_SHA256 as REFERENCE_SHA256,
+  FORMAL_SEED as SEED,
+  FORMAL_VOICE as VOICE,
+} from "./narration-policy.mjs";
 
 const [bookArg, manifestArg] = process.argv.slice(2);
 if (!bookArg || !manifestArg) {
   throw new Error("Usage: node scripts/validate-qwen3-narration-release.mjs <approved-book.json> <qwen-manifest.json>");
 }
 
-const MODEL = "mlx-community/Qwen3-TTS-12Hz-1.7B-Base-4bit";
-const MODEL_REVISION = "37e955a1deb861c088ae5f3a67043185f3d1a60c";
-const ALIGNER = "mlx-community/Qwen3-ForcedAligner-0.6B-8bit";
-const PHONETIC_POLICY = "pinyin-pro-3.28.1-tone-number-v1";
-const POLICY = "qwen3-clone-2026-08-22-v3";
-const VOICE = "封";
-const SEED = 20260822;
-const REFERENCE_ID = "019f0554-ea22-762e-966c-32d678fd6bf6";
-const REFERENCE_SHA256 = "eb07e06ee13a20ee4577b1b481df6d33d42127c1b3876bfa5d5e5362ae349f19";
+const EXPECTED_RECORD_COUNT = characters.length;
 
 const bookPath = resolve(bookArg);
 const manifestPath = resolve(manifestArg);
@@ -63,9 +75,15 @@ function spokenCharacters(text) {
 }
 
 if (book.version !== "narration-v3-book") errors.push("输入不是批准版 narration-v3-book");
-if (book.records?.length !== 430) errors.push(`批准讲稿应为430条，实际${book.records?.length ?? 0}`);
+if (book.records?.length !== EXPECTED_RECORD_COUNT) {
+  errors.push(`批准讲稿应为${EXPECTED_RECORD_COUNT}条，实际${book.records?.length ?? 0}`);
+}
 if (book.modelPolicy?.formalCloneModel !== MODEL) errors.push("批准书正式克隆模型与发布门不一致");
 if (book.modelPolicy?.formalModelRevision !== MODEL_REVISION) errors.push("批准书正式模型 revision 与发布门不一致");
+if (book.modelPolicy?.formalAsrModel !== ASR_MODEL) errors.push("批准书正式ASR模型与发布门不一致");
+if (book.modelPolicy?.formalAsrModelRevision !== ASR_MODEL_REVISION) errors.push("批准书正式ASR模型 revision 与发布门不一致");
+if (book.modelPolicy?.formalAlignmentModel !== ALIGNER) errors.push("批准书正式对齐模型与发布门不一致");
+if (book.modelPolicy?.formalAlignmentModelRevision !== ALIGNER_REVISION) errors.push("批准书正式对齐模型 revision 与发布门不一致");
 if (book.modelPolicy?.formalGenerationPolicy !== POLICY) errors.push("批准书正式音频生成策略与发布门不一致");
 if (book.modelPolicy?.voice !== VOICE) errors.push("批准书正式音色标杆与发布门不一致");
 if (book.modelPolicy?.formalReferenceId !== REFERENCE_ID) errors.push("批准书正式参考音记录与发布门不一致");
@@ -77,14 +95,20 @@ if (manifest.voice !== VOICE) errors.push("音色标杆不是封");
 if (manifest.reference?.id !== REFERENCE_ID) errors.push("音频清单参考音记录不是正式封字标杆");
 if (manifest.reference?.sha256 !== REFERENCE_SHA256) errors.push("音频清单参考音摘要不一致");
 if (
-  verification.minimumSimilarity !== 0.88
+  verification.model !== ASR_MODEL
+  || verification.modelRevision !== ASR_MODEL_REVISION
+  || verification.alignmentModel !== ALIGNER
+  || verification.alignmentModelRevision !== ALIGNER_REVISION
+  || verification.minimumSimilarity !== MINIMUM_ASR_SIMILARITY
   || verification.phoneticPolicy !== PHONETIC_POLICY
   || verification.automatedPass !== true
 ) {
   errors.push("ASR回读尚未以0.88阈值全量通过");
 }
 if (!listening.reviewer || listening.status !== "complete") errors.push("缺少已完成的人耳听审签名");
-if (listening.version !== "qwen3-human-listening-v3") errors.push("人耳听审数据版本不支持正式4bit发布");
+if (listening.version !== "qwen3-human-listening-v4") {
+  errors.push("正式发布只接受绑定完整视觉证据的 qwen3-human-listening-v4");
+}
 if (listening.source?.approvedBookSha256 !== sha256(bookRaw)) errors.push("人耳听审未绑定当前批准书");
 if (listening.source?.qwenManifestSha256 !== sha256(manifestRaw)) errors.push("人耳听审未绑定当前音频清单");
 if (listening.source?.model !== manifest.model) errors.push("人耳听审模型与音频清单不一致");
@@ -101,6 +125,29 @@ if (Object.keys(manifest.records || {}).length !== approvedIds.size) errors.push
 if (verificationById.size !== approvedIds.size) errors.push("ASR回读未精确覆盖批准讲稿");
 if (listeningById.size !== approvedIds.size) errors.push("人耳听审未精确覆盖批准讲稿");
 
+const actualAudioHashes = Object.fromEntries(await Promise.all((book.records || []).map(async (record) => {
+  const audio = manifest.records?.[record.recordId];
+  return [record.recordId, audio ? await sha256File(join(audioRoot, audio.audio)) : null];
+})));
+const expectedReviewEvidenceById = new Map();
+const expectedReview = buildListeningPayload({
+  book,
+  manifest,
+  bookPath,
+  manifestPath,
+  bookSha256: sha256(bookRaw),
+  manifestSha256: sha256(manifestRaw),
+  audioSha256ById: actualAudioHashes,
+  outputDirectory: audioRoot,
+  generatedAt: listening.generatedAt,
+});
+for (const reviewRecord of expectedReview.records) {
+  expectedReviewEvidenceById.set(
+    reviewRecord.recordId,
+    await reviewEvidenceHash(reviewRecord),
+  );
+}
+
 for (const record of book.records || []) {
   const audio = manifest.records?.[record.recordId];
   if (!audio) {
@@ -109,9 +156,8 @@ for (const record of book.records || []) {
   }
   const expectedHash = contentHash(record.ttsText, manifest.reference.sha256);
   if (audio.contentHash !== expectedHash) errors.push(`${record.recordId}: 音频不是由当前批准文本生成`);
-  const audioPath = join(audioRoot, audio.audio);
   const marksPath = join(audioRoot, audio.audioMarks);
-  const actualAudioHash = await sha256File(audioPath);
+  const actualAudioHash = actualAudioHashes[record.recordId];
   const marks = JSON.parse(await readFile(marksPath, "utf8"));
   if (marks.model !== MODEL) errors.push(`${record.recordId}: marks模型不是正式1.7B Base 4bit`);
   if (marks.model_revision !== MODEL_REVISION) errors.push(`${record.recordId}: marks模型 revision 不一致`);
@@ -124,6 +170,9 @@ for (const record of book.records || []) {
   if (marks.content_hash !== expectedHash) errors.push(`${record.recordId}: marks内容摘要不一致`);
   if (marks.timing_source !== "qwen3-forced-aligner" || marks.alignment_model !== ALIGNER) {
     errors.push(`${record.recordId}: 尚未完成正式强制对齐`);
+  }
+  if (marks.alignment_model_revision !== ALIGNER_REVISION) {
+    errors.push(`${record.recordId}: 强制对齐模型 revision 不一致`);
   }
   if (!Array.isArray(marks.alignment_groups)) errors.push(`${record.recordId}: 缺少强制对齐共同高亮组审计记录`);
   if (marks.aligned_audio_sha256 !== actualAudioHash) errors.push(`${record.recordId}: 对齐后音频发生变化`);
@@ -206,9 +255,9 @@ for (const record of book.records || []) {
     previousGroup = mark.alignment_group || null;
   }
   const asr = verificationById.get(record.recordId);
-  const textAsrPass = asr?.similarity >= 0.88;
+  const textAsrPass = asr?.similarity >= MINIMUM_ASR_SIMILARITY;
   const phoneticAsrPass = asr?.phoneticPolicy === PHONETIC_POLICY
-    && asr?.phoneticSimilarity >= 0.88;
+    && asr?.phoneticSimilarity >= MINIMUM_ASR_SIMILARITY;
   if (
     !asr
     || asr.contentHash !== expectedHash
@@ -222,6 +271,9 @@ for (const record of book.records || []) {
   }
   if (asr?.audioSha256 !== actualAudioHash) errors.push(`${record.recordId}: ASR后音频发生变化`);
   const human = listeningById.get(record.recordId);
+  if (human?.reviewEvidenceHash !== expectedReviewEvidenceById.get(record.recordId)) {
+    errors.push(`${record.recordId}: 人耳听审证据与当前文案、音频或看审资源不一致`);
+  }
   if (
     !human
     || human.contentHash !== expectedHash
@@ -243,5 +295,5 @@ if (errors.length) {
   for (const error of errors) process.stderr.write(`ERROR ${error}\n`);
   process.exitCode = 1;
 } else {
-  process.stdout.write("Qwen3 narration release gate passed for 430 approved records.\n");
+  process.stdout.write(`Qwen3 narration release gate passed for ${EXPECTED_RECORD_COUNT} approved records.\n`);
 }

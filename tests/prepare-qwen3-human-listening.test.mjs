@@ -6,6 +6,10 @@ import { tmpdir } from "node:os";
 import test from "node:test";
 
 import {
+  FORMAL_ALIGNER,
+  FORMAL_ALIGNER_REVISION,
+  FORMAL_ASR_MODEL,
+  FORMAL_ASR_MODEL_REVISION,
   FORMAL_MODEL,
   FORMAL_MODEL_REVISION,
   FORMAL_POLICY,
@@ -49,6 +53,10 @@ function fixture(count) {
         voice: FORMAL_VOICE,
         formalCloneModel: FORMAL_MODEL,
         formalModelRevision: FORMAL_MODEL_REVISION,
+        formalAsrModel: FORMAL_ASR_MODEL,
+        formalAsrModelRevision: FORMAL_ASR_MODEL_REVISION,
+        formalAlignmentModel: FORMAL_ALIGNER,
+        formalAlignmentModelRevision: FORMAL_ALIGNER_REVISION,
         formalGenerationPolicy: FORMAL_POLICY,
         formalReferenceId: FORMAL_REFERENCE_ID,
         formalReferenceSha256: FORMAL_REFERENCE_SHA256,
@@ -91,9 +99,11 @@ test("prepares a pending, non-auto-approved listening bundle with a static revie
       generatedAt: "2026-08-22T00:00:00.000Z",
     });
     assert.equal(result.recordCount, 2);
+    assert.equal(result.carriedRecordCount, 0);
+    assert.equal(result.pendingRecordCount, 2);
     const payload = JSON.parse(await readFile(result.jsonPath, "utf8"));
     assert.equal(payload.status, "pending");
-    assert.equal(payload.version, "qwen3-human-listening-v3");
+    assert.equal(payload.version, "qwen3-human-listening-v4");
     assert.equal(payload.reviewer, "");
     assert.equal(payload.records[0].mnemonicMatchPass, null);
     assert.equal(payload.records[0].heritageBoundaryPass, null);
@@ -101,6 +111,8 @@ test("prepares a pending, non-auto-approved listening bundle with a static revie
     assert.equal(payload.records[0].listenCompleted, false);
     assert.equal(payload.records[0].prosodyPass, null);
     assert.equal(payload.records[0].verdict, "pending");
+    assert.match(payload.records[0].reviewEvidenceHash, /^[a-f0-9]{64}$/u);
+    assert.equal(payload.records[0].reviewReuse, null);
     assert.equal(
       payload.records[0].audioSha256,
       createHash("sha256").update("test-audio").digest("hex"),
@@ -134,6 +146,113 @@ test("prepares a pending, non-auto-approved listening bundle with a static revie
       prepareHumanListening({ bookPath, manifestPath, outputDirectory, expectedRecordCount: 2 }),
       /拒绝覆盖人工进度/,
     );
+  } finally {
+    await rm(directory, { recursive: true, force: true });
+  }
+});
+
+test("carries only unchanged per-record listening evidence into a new bundle", async () => {
+  const directory = await mkdtemp(join(tmpdir(), "qwen3-human-listening-carry-"));
+  try {
+    const { book, manifest } = fixture(2);
+    const bookPath = join(directory, "book.json");
+    const manifestPath = join(directory, "audio", "manifest.json");
+    await mkdir(join(directory, "audio"), { recursive: true });
+    await writeFile(bookPath, JSON.stringify(book), "utf8");
+    await writeFile(manifestPath, JSON.stringify(manifest), "utf8");
+    for (const record of Object.values(manifest.records)) {
+      const audioPath = join(directory, "audio", record.audio);
+      await mkdir(join(audioPath, ".."), { recursive: true });
+      await writeFile(audioPath, `audio-${record.glyph}`, "utf8");
+    }
+
+    const first = await prepareHumanListening({
+      bookPath,
+      manifestPath,
+      outputDirectory: join(directory, "review-1"),
+      expectedRecordCount: 2,
+      generatedAt: "2026-08-22T00:00:00.000Z",
+    });
+    const previous = JSON.parse(await readFile(first.jsonPath, "utf8"));
+    previous.status = "complete";
+    previous.reviewer = "human-reviewer";
+    previous.updatedAt = "2026-08-22T01:00:00.000Z";
+    previous.records = previous.records.map(record => ({
+      ...record,
+      listenCompleted: true,
+      mnemonicMatchPass: true,
+      heritageBoundaryPass: true,
+      pronunciationPass: true,
+      prosodyPass: true,
+      verdict: "pass",
+    }));
+    await writeFile(first.jsonPath, `${JSON.stringify(previous, null, 2)}\n`, "utf8");
+
+    const carried = await prepareHumanListening({
+      bookPath,
+      manifestPath,
+      outputDirectory: join(directory, "review-2"),
+      expectedRecordCount: 2,
+      previousListeningPath: first.jsonPath,
+    });
+    assert.equal(carried.carriedRecordCount, 2);
+    assert.equal(carried.pendingRecordCount, 0);
+    const carriedPayload = JSON.parse(await readFile(carried.jsonPath, "utf8"));
+    assert.equal(carriedPayload.records[0].verdict, "pass");
+    assert.equal(carriedPayload.records[0].reviewReuse.carried, true);
+    assert.equal(carriedPayload.records[0].reviewReuse.reviewer, "human-reviewer");
+    assert.equal(carriedPayload.status, "complete");
+    assert.equal(carriedPayload.reviewer, "human-reviewer");
+
+    const legacy = {
+      ...previous,
+      version: "qwen3-human-listening-v3",
+      records: previous.records.map(record => {
+        const legacyRecord = { ...record };
+        delete legacyRecord.reviewEvidenceHash;
+        return legacyRecord;
+      }),
+    };
+    const legacyPath = join(directory, "legacy-human-listening.json");
+    await writeFile(legacyPath, `${JSON.stringify(legacy, null, 2)}\n`, "utf8");
+    const legacyRejected = await prepareHumanListening({
+      bookPath,
+      manifestPath,
+      outputDirectory: join(directory, "review-legacy-rejected"),
+      expectedRecordCount: 2,
+      previousListeningPath: legacyPath,
+    });
+    assert.equal(legacyRejected.carriedRecordCount, 0);
+    const legacyRebound = await prepareHumanListening({
+      bookPath,
+      manifestPath,
+      outputDirectory: join(directory, "review-legacy-rebound"),
+      expectedRecordCount: 2,
+      previousListeningPath: legacyPath,
+      confirmLegacyVisualsUnchanged: true,
+    });
+    assert.equal(legacyRebound.carriedRecordCount, 2);
+    assert.equal(legacyRebound.pendingRecordCount, 0);
+    const reboundPayload = JSON.parse(await readFile(legacyRebound.jsonPath, "utf8"));
+    assert.equal(reboundPayload.version, "qwen3-human-listening-v4");
+    assert.equal(reboundPayload.status, "complete");
+    assert.equal(reboundPayload.records[0].reviewReuse.legacyEvidenceRebound, true);
+
+    const changedMedia = manifest.records["record-2"];
+    await writeFile(join(directory, "audio", changedMedia.audio), "changed-audio", "utf8");
+    const partial = await prepareHumanListening({
+      bookPath,
+      manifestPath,
+      outputDirectory: join(directory, "review-3"),
+      expectedRecordCount: 2,
+      previousListeningPath: first.jsonPath,
+    });
+    assert.equal(partial.carriedRecordCount, 1);
+    assert.equal(partial.pendingRecordCount, 1);
+    const partialPayload = JSON.parse(await readFile(partial.jsonPath, "utf8"));
+    assert.equal(partialPayload.records[0].verdict, "pass");
+    assert.equal(partialPayload.records[1].verdict, "pending");
+    assert.equal(partialPayload.records[1].reviewReuse, null);
   } finally {
     await rm(directory, { recursive: true, force: true });
   }

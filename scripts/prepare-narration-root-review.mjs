@@ -87,7 +87,11 @@ for (const item of packages) {
 
 const uniqueIds = new Set(records.map((row) => row.recordId));
 const expectedIds = new Set(characters.map((row) => row.id));
-if (records.length !== 430 || uniqueIds.size !== 430) throw new Error(`主审输入覆盖应为 430，实际 ${records.length}/${uniqueIds.size}`);
+if (records.length !== expectedIds.size || uniqueIds.size !== expectedIds.size) {
+  throw new Error(
+    `主审输入覆盖应为 ${expectedIds.size}，实际 ${records.length}/${uniqueIds.size}`,
+  );
+}
 for (const id of expectedIds) if (!uniqueIds.has(id)) unresolved.push(id);
 if (unresolved.length) {
   throw new Error(`仍有 ${new Set(unresolved).size} 条未过交叉复核，禁止签署 root-review.json：${[...new Set(unresolved)].join(", ")}`);

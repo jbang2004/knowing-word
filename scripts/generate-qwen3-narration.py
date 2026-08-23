@@ -16,16 +16,21 @@ import numpy as np
 import soundfile as sf
 from mlx_audio.tts.utils import load_model
 
+from narration_toolchain import formal_book_policy, load_toolchain_lock, validate_toolchain
 
-MODEL_ID = "mlx-community/Qwen3-TTS-12Hz-1.7B-Base-4bit"
-MODEL_REVISION = "37e955a1deb861c088ae5f3a67043185f3d1a60c"
-SAMPLE_RATE = 24_000
-VOICE_NAME = "封"
-SEED = 20260822
-GENERATION_POLICY = "qwen3-clone-2026-08-22-v3"
-REFERENCE_ID = "019f0554-ea22-762e-966c-32d678fd6bf6"
-REFERENCE_SHA256 = "eb07e06ee13a20ee4577b1b481df6d33d42127c1b3876bfa5d5e5362ae349f19"
-REFERENCE_TEXT = "封，封锁的封。会意字，左右结构，本义是地界，左边的圭。"
+
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
+TOOLCHAIN_LOCK = load_toolchain_lock(PROJECT_ROOT)
+MODEL_ID = TOOLCHAIN_LOCK["models"]["tts"]["id"]
+MODEL_REVISION = TOOLCHAIN_LOCK["models"]["tts"]["revision"]
+SAMPLE_RATE = TOOLCHAIN_LOCK["formal"]["sampleRate"]
+VOICE_NAME = TOOLCHAIN_LOCK["formal"]["voice"]
+SEED = TOOLCHAIN_LOCK["formal"]["seed"]
+GENERATION_POLICY = TOOLCHAIN_LOCK["formal"]["generationPolicy"]
+REFERENCE_ID = TOOLCHAIN_LOCK["formal"]["reference"]["id"]
+REFERENCE_SHA256 = TOOLCHAIN_LOCK["formal"]["reference"]["sha256"]
+REFERENCE_TEXT = TOOLCHAIN_LOCK["formal"]["reference"]["text"]
+REFERENCE_DURATION = TOOLCHAIN_LOCK["formal"]["reference"]["duration"]
 SPOKEN_PATTERN = re.compile(r"[\w\u3400-\u9fff]", re.UNICODE)
 
 
@@ -118,7 +123,7 @@ def prepare_reference(source: Path, target: Path) -> None:
             "-i",
             str(source),
             "-t",
-            "7.95",
+            str(REFERENCE_DURATION),
             "-ar",
             str(SAMPLE_RATE),
             "-ac",
@@ -173,6 +178,9 @@ def encode_audio(source: Path, target: Path) -> None:
 
 def load_records(path: Path) -> list[dict]:
     payload = json.loads(path.read_text(encoding="utf-8"))
+    if isinstance(payload, dict) and payload.get("version") == "narration-v3-book":
+        if payload.get("modelPolicy") != formal_book_policy(TOOLCHAIN_LOCK):
+            raise ValueError("Approved narration book policy differs from the locked formal toolchain")
     records = payload if isinstance(payload, list) else payload.get("records")
     if not isinstance(records, list):
         raise ValueError("Input must be an array or an object with a records array")
@@ -220,7 +228,7 @@ def generate_take(model, text: str, reference: Path, digest: str) -> tuple[np.nd
 
 
 def main() -> None:
-    project_root = Path(__file__).resolve().parents[1]
+    project_root = PROJECT_ROOT
     parser = argparse.ArgumentParser()
     parser.add_argument("--input", type=Path, required=True)
     parser.add_argument("--record", action="append", default=[])
@@ -239,6 +247,8 @@ def main() -> None:
     parser.add_argument("--allow-draft", action="store_true")
     parser.add_argument("--force", action="store_true")
     args = parser.parse_args()
+
+    validate_toolchain(project_root)
 
     if args.model != MODEL_ID:
         raise ValueError(
@@ -291,7 +301,7 @@ def main() -> None:
             "source": str(args.reference.resolve()),
             "sha256": reference_hash,
             "text": REFERENCE_TEXT,
-            "duration": 7.95,
+            "duration": REFERENCE_DURATION,
         },
         "records": {},
     }

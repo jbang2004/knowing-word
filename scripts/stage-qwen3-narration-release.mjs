@@ -12,8 +12,9 @@ import {
   writeFile,
 } from "node:fs/promises";
 import { basename, dirname, isAbsolute, join, relative, resolve } from "node:path";
+import { characters } from "../app/data/catalog.ts";
 
-const EXPECTED_RECORD_COUNT = 430;
+const EXPECTED_RECORD_COUNT = characters.length;
 const projectRoot = resolve(import.meta.dirname, "..");
 const publicRoot = join(projectRoot, "public");
 const releaseValidatorPath = join(import.meta.dirname, "validate-qwen3-narration-release.mjs");
@@ -259,6 +260,12 @@ async function buildStagingDirectory(tempRoot, sourceSnapshot) {
     if (marks.model !== manifest.model || marks.model_revision !== manifest.modelRevision) {
       throw new Error(`${record.recordId}: 暂存 marks 模型来源不一致`);
     }
+    if (
+      marks.alignment_model !== verification.alignmentModel
+      || marks.alignment_model_revision !== verification.alignmentModelRevision
+    ) {
+      throw new Error(`${record.recordId}: 暂存 marks 对齐模型来源不一致`);
+    }
     if (marks.generation_policy !== manifest.generationPolicy) {
       throw new Error(`${record.recordId}: 暂存 marks 生成策略不一致`);
     }
@@ -317,6 +324,10 @@ async function buildStagingDirectory(tempRoot, sourceSnapshot) {
         humanListeningSha256: sourceSnapshot.humanListening.sha256,
         model: manifest.model,
         modelRevision: manifest.modelRevision,
+        asrModel: verification.model,
+        asrModelRevision: verification.modelRevision,
+        alignmentModel: verification.alignmentModel,
+        alignmentModelRevision: verification.alignmentModelRevision,
         generationPolicy: manifest.generationPolicy,
         voice: manifest.voice,
         referenceId: manifest.reference.id,
