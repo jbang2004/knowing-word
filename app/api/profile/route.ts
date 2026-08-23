@@ -1,4 +1,5 @@
 import { getDb, getMedia, jsonWithIdentity, resolveIdentity } from "../../lib/server-store";
+import { normalizeProfile } from "../../lib/profile-model";
 
 export const dynamic = "force-dynamic";
 
@@ -34,7 +35,7 @@ export async function PUT(request: Request) {
     if (!payload || typeof payload !== "object" || Array.isArray(payload)) {
       return jsonWithIdentity(identity, { error: "学习档案格式无效" }, { status: 400 });
     }
-    const serialized = JSON.stringify(payload);
+    const serialized = JSON.stringify(normalizeProfile(payload));
     if (serialized.length > 400_000) {
       return jsonWithIdentity(identity, { error: "学习档案过大" }, { status: 413 });
     }

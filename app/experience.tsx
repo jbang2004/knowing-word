@@ -19,7 +19,6 @@ import {
   SunMedium,
   UserRound,
   Volume2,
-  type LucideIcon,
 } from "lucide-react";
 import {
   type PointerEvent as ReactPointerEvent,
@@ -77,6 +76,18 @@ import {
   buildNarrationTokens,
   narrationPhraseIndexByMark,
 } from "./lib/narration";
+import { primaryNavigation, type PrimaryNavigationId } from "./lib/navigation";
+import {
+  emptyProfile,
+  normalizeProfile,
+  PROFILE_STORAGE_KEY,
+  PROFILE_UPDATED_STORAGE_KEY,
+  todayKey,
+  trackIds,
+  type AnswerStat,
+  type StudyProfile,
+  type TrackId,
+} from "./lib/profile-model";
 
 type Screen =
   | "home"
@@ -93,37 +104,6 @@ type Screen =
   | "read"
   | "profile"
   | "playground";
-
-type TrackId = "words" | "split" | "honglan" | "structure";
-
-type AnswerStat = {
-  attempts: number;
-  correct: number;
-  lastCorrect: boolean;
-  lastAt: string;
-};
-
-type ResumePoint = {
-  lessonId: string;
-  characterId: string;
-  questionIndex: number;
-};
-
-type StudyProfile = {
-  version: 3;
-  name: string;
-  grade: number;
-  courseId: string;
-  theme: "light" | "night";
-  favorites: string[];
-  completed: Record<TrackId, string[]>;
-  last: Record<TrackId, ResumePoint | null>;
-  answers: Record<string, AnswerStat>;
-  learnedComponents: string[];
-  recentComponents: string[];
-  daily: Record<string, { attempts: number; correct: number; skips: number; readSessions: number }>;
-  readSessions: number;
-};
 
 type AccountIdentity = {
   displayName: string;
@@ -160,12 +140,7 @@ const initialLesson = lessonList[0];
 const initialCharacter =
   allCharacters.find((item) => item.lessonId === initialLesson.id && item.primary) ||
   allCharacters[0];
-const trackIds: TrackId[] = ["words", "split", "honglan", "structure"];
 const practiceTrackIds: Exclude<TrackId, "words">[] = ["split", "honglan", "structure"];
-const STORAGE_KEY = "knowing-word:course-progress:v3";
-const STORAGE_UPDATED_KEY = "knowing-word:course-progress:updated-at";
-const VERSION_TWO_STORAGE_KEY = "knowing-word:course-progress:v2";
-const LEGACY_STORAGE_KEY = "knowing-word:local-profile:v1";
 
 const trackMeta: Record<TrackId, TrackMeta> = {
   words: {
@@ -299,96 +274,6 @@ function resolveAppRoute(pathValue: string): AppRoute {
       : { screen: "trackMap", track: routeTrack };
   }
   return { screen: "home" };
-}
-
-function todayKey() {
-  return new Intl.DateTimeFormat("en-CA", {
-    timeZone: "Asia/Shanghai",
-    year: "numeric",
-    month: "2-digit",
-    day: "2-digit",
-  }).format(new Date());
-}
-
-function emptyProfile(): StudyProfile {
-  return {
-    version: 3,
-    name: "",
-    grade: course.grade,
-    courseId: "chinese-grade-5-volume-1",
-    theme: "light",
-    favorites: [],
-    completed: {
-      words: [],
-      split: [],
-      honglan: [],
-      structure: [],
-    },
-    last: {
-      words: null,
-      split: null,
-      honglan: null,
-      structure: null,
-    },
-    answers: {},
-    learnedComponents: [],
-    recentComponents: [],
-    daily: {},
-    readSessions: 0,
-  };
-}
-
-function normalizeProfile(value: unknown): StudyProfile {
-  const raw = (value || {}) as Partial<StudyProfile> & { mastered?: unknown };
-  const fallback = emptyProfile();
-  const legacyMastered = Array.isArray(raw.mastered)
-    ? raw.mastered.filter((item): item is string => typeof item === "string")
-    : [];
-
-  for (const id of trackIds) {
-    const rawCompleted = raw.completed?.[id];
-    fallback.completed[id] = Array.isArray(rawCompleted)
-      ? rawCompleted.filter((item): item is string => typeof item === "string")
-      : id === "words"
-        ? legacyMastered
-        : [];
-
-    const rawLast = raw.last?.[id];
-    fallback.last[id] =
-      rawLast &&
-      typeof rawLast.lessonId === "string" &&
-      typeof rawLast.characterId === "string" &&
-      typeof rawLast.questionIndex === "number"
-        ? rawLast
-        : null;
-  }
-
-  return {
-    ...fallback,
-    version: 3,
-    name: typeof raw.name === "string" ? raw.name.slice(0, 18) : "",
-    grade: typeof raw.grade === "number" ? raw.grade : course.grade,
-    courseId: typeof raw.courseId === "string" ? raw.courseId : "chinese-grade-5-volume-1",
-    theme: raw.theme === "night" ? "night" : "light",
-    favorites: Array.isArray(raw.favorites)
-      ? raw.favorites.filter((item): item is string => typeof item === "string")
-      : [],
-    answers:
-      raw.answers && typeof raw.answers === "object"
-        ? (raw.answers as Record<string, AnswerStat>)
-        : {},
-    learnedComponents: Array.isArray(raw.learnedComponents)
-      ? raw.learnedComponents.filter((item): item is string => typeof item === "string")
-      : [],
-    recentComponents: Array.isArray(raw.recentComponents)
-      ? raw.recentComponents.filter((item): item is string => typeof item === "string").slice(0, 24)
-      : [],
-    daily: raw.daily && typeof raw.daily === "object" ? raw.daily : {},
-    readSessions:
-      typeof raw.readSessions === "number" && Number.isFinite(raw.readSessions)
-        ? raw.readSessions
-        : 0,
-  };
 }
 
 function getLessonCharacters(lessonId: string) {
@@ -645,14 +530,11 @@ export default function Home({ initialPath = "/" }: { initialPath?: string }) {
       let localProfile: StudyProfile | null = null;
       let localUpdatedAt = 0;
       try {
-        const stored =
-          window.localStorage.getItem(STORAGE_KEY) ||
-          window.localStorage.getItem(VERSION_TWO_STORAGE_KEY) ||
-          window.localStorage.getItem(LEGACY_STORAGE_KEY);
+        const stored = window.localStorage.getItem(PROFILE_STORAGE_KEY);
         if (stored) localProfile = normalizeProfile(JSON.parse(stored));
-        localUpdatedAt = Date.parse(window.localStorage.getItem(STORAGE_UPDATED_KEY) || "") || 0;
+        localUpdatedAt = Date.parse(window.localStorage.getItem(PROFILE_UPDATED_STORAGE_KEY) || "") || 0;
       } catch {
-        window.localStorage.removeItem(STORAGE_KEY);
+        window.localStorage.removeItem(PROFILE_STORAGE_KEY);
       }
       try {
         const response = await fetch("/api/profile", { cache: "no-store" });
@@ -700,8 +582,8 @@ export default function Home({ initialPath = "/" }: { initialPath?: string }) {
 
   useEffect(() => {
     if (!hydrated) return;
-    window.localStorage.setItem(STORAGE_KEY, JSON.stringify(profile));
-    window.localStorage.setItem(STORAGE_UPDATED_KEY, new Date().toISOString());
+    window.localStorage.setItem(PROFILE_STORAGE_KEY, JSON.stringify(profile));
+    window.localStorage.setItem(PROFILE_UPDATED_STORAGE_KEY, new Date().toISOString());
     document.documentElement.dataset.theme = profile.theme;
     const timer = window.setTimeout(async () => {
       try {
@@ -1062,8 +944,8 @@ export default function Home({ initialPath = "/" }: { initialPath?: string }) {
       try {
         await fetch("/api/profile", { method: "DELETE" });
       } finally {
-        window.localStorage.removeItem(STORAGE_KEY);
-        window.localStorage.removeItem(STORAGE_UPDATED_KEY);
+        window.localStorage.removeItem(PROFILE_STORAGE_KEY);
+        window.localStorage.removeItem(PROFILE_UPDATED_STORAGE_KEY);
         setProfile(next);
       }
     })();
@@ -1283,12 +1165,18 @@ function TopNavigation({
   onNavigate: (screen: Screen) => void;
   onProfile: () => void;
 }) {
-  const nav: { label: string; screen: Screen; active: Screen[]; icon: LucideIcon }[] = [
-    { label: "学习", screen: "home", active: ["home"], icon: HomeIcon },
-    { label: "课本", screen: "course", active: ["course", "lesson", "character"], icon: BookOpenText },
-    { label: "练习", screen: "practice", active: ["practice", "trackMap", "trackLesson", "challenge", "components"], icon: LayoutGrid },
-    { label: "我的", screen: "profile", active: ["profile", "records", "recordDetail", "read"], icon: UserRound },
-  ];
+  const activeScreens: Record<PrimaryNavigationId, Screen[]> = {
+    home: ["home"],
+    course: ["course", "lesson", "character"],
+    practice: ["practice", "trackMap", "trackLesson", "challenge", "components"],
+    profile: ["profile", "records", "recordDetail", "read"],
+  };
+  const icons: Record<PrimaryNavigationId, typeof HomeIcon> = {
+    home: HomeIcon,
+    course: BookOpenText,
+    practice: LayoutGrid,
+    profile: UserRound,
+  };
 
   return (
     <header className={`top-navigation${active === "challenge" ? " is-focus" : ""}`}>
@@ -1300,13 +1188,13 @@ function TopNavigation({
         </span>
       </button>
       <nav aria-label="主菜单">
-        {nav.map((item) => {
-          const Icon = item.icon;
+        {primaryNavigation.map((item) => {
+          const Icon = icons[item.id];
           return (
             <button
-              className={item.active.includes(active) ? "is-active" : ""}
-              key={item.label}
-              onClick={() => onNavigate(item.screen)}
+              className={activeScreens[item.id].includes(active) ? "is-active" : ""}
+              key={item.id}
+              onClick={() => onNavigate(item.id)}
             >
               <Icon aria-hidden="true" />
               <span>{item.label}</span>

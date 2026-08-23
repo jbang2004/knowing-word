@@ -17,25 +17,18 @@ import {
   homeCandidates,
   homeCourse,
   type HomeCandidate,
-  type HomeTrackId,
 } from "./data/home-index.generated";
+import { primaryNavigation, type PrimaryNavigationId } from "./lib/navigation";
+import {
+  emptyProfile,
+  normalizeProfile,
+  PROFILE_STORAGE_KEY,
+  PROFILE_UPDATED_STORAGE_KEY,
+  todayKey,
+  type StudyProfile,
+  type TrackId,
+} from "./lib/profile-model";
 import { candidatePathStates, nextCandidateId } from "./lib/progress-model";
-
-type ResumePoint = {
-  lessonId: string;
-  characterId: string;
-  questionIndex: number;
-};
-
-type HomeProfile = {
-  name: string;
-  courseId: string;
-  theme: "light" | "night";
-  completed: Record<HomeTrackId, string[]>;
-  last: Record<HomeTrackId, ResumePoint | null>;
-  daily: Record<string, { attempts: number; correct: number; skips: number; readSessions: number }>;
-  readSessions: number;
-};
 
 type TrackMeta = {
   label: string;
@@ -45,14 +38,9 @@ type TrackMeta = {
   tone: string;
 };
 
-const trackIds: HomeTrackId[] = ["words", "split", "honglan", "structure"];
-const practiceTrackIds: HomeTrackId[] = ["split", "honglan", "structure"];
-const STORAGE_KEY = "knowing-word:course-progress:v3";
-const STORAGE_UPDATED_KEY = "knowing-word:course-progress:updated-at";
-const VERSION_TWO_STORAGE_KEY = "knowing-word:course-progress:v2";
-const LEGACY_STORAGE_KEY = "knowing-word:local-profile:v1";
+const practiceTrackIds: TrackId[] = ["split", "honglan", "structure"];
 
-const trackMeta: Record<HomeTrackId, TrackMeta> = {
+const trackMeta: Record<TrackId, TrackMeta> = {
   words: {
     label: "词语表与写字表",
     eyebrow: "理解字义，认识字形",
@@ -83,64 +71,7 @@ const trackMeta: Record<HomeTrackId, TrackMeta> = {
   },
 };
 
-function emptyProfile(): HomeProfile {
-  return {
-    name: "",
-    courseId: "chinese-grade-5-volume-1",
-    theme: "light",
-    completed: { words: [], split: [], honglan: [], structure: [] },
-    last: { words: null, split: null, honglan: null, structure: null },
-    daily: {},
-    readSessions: 0,
-  };
-}
-
-function normalizeProfile(value: unknown): HomeProfile {
-  const raw = (value || {}) as Partial<HomeProfile> & { mastered?: unknown };
-  const normalized = emptyProfile();
-  const legacyMastered = Array.isArray(raw.mastered)
-    ? raw.mastered.filter((item): item is string => typeof item === "string")
-    : [];
-
-  for (const track of trackIds) {
-    const completed = raw.completed?.[track];
-    normalized.completed[track] = Array.isArray(completed)
-      ? completed.filter((item): item is string => typeof item === "string")
-      : track === "words"
-        ? legacyMastered
-        : [];
-    const resume = raw.last?.[track];
-    normalized.last[track] =
-      resume &&
-      typeof resume.lessonId === "string" &&
-      typeof resume.characterId === "string" &&
-      typeof resume.questionIndex === "number"
-        ? resume
-        : null;
-  }
-
-  normalized.name = typeof raw.name === "string" ? raw.name.slice(0, 18) : "";
-  normalized.courseId = typeof raw.courseId === "string"
-    ? raw.courseId
-    : "chinese-grade-5-volume-1";
-  normalized.theme = raw.theme === "night" ? "night" : "light";
-  normalized.daily = raw.daily && typeof raw.daily === "object" ? raw.daily : {};
-  normalized.readSessions = typeof raw.readSessions === "number" && Number.isFinite(raw.readSessions)
-    ? raw.readSessions
-    : 0;
-  return normalized;
-}
-
-function todayKey() {
-  return new Intl.DateTimeFormat("en-CA", {
-    timeZone: "Asia/Shanghai",
-    year: "numeric",
-    month: "2-digit",
-    day: "2-digit",
-  }).format(new Date());
-}
-
-function nextCandidate(track: HomeTrackId, profile: HomeProfile) {
+function nextCandidate(track: TrackId, profile: StudyProfile) {
   const candidates = homeCandidates[track];
   const id = nextCandidateId(
     candidates.map((candidate) => candidate.id),
@@ -150,7 +81,7 @@ function nextCandidate(track: HomeTrackId, profile: HomeProfile) {
   return candidates.find((candidate) => candidate.id === id);
 }
 
-function trackProgress(profile: HomeProfile, track: HomeTrackId, lessonId?: string) {
+function trackProgress(profile: StudyProfile, track: TrackId, lessonId?: string) {
   const targets = lessonId
     ? homeCandidates[track].filter((candidate) => candidate.lessonId === lessonId)
     : homeCandidates[track];
@@ -160,18 +91,18 @@ function trackProgress(profile: HomeProfile, track: HomeTrackId, lessonId?: stri
   };
 }
 
-function trackMapPath(track: HomeTrackId) {
+function trackMapPath(track: TrackId) {
   if (track === "words") return "/lessons";
   if (track === "split") return "/split-exercise";
   if (track === "honglan") return "/honglan-exercise";
   return "/space-structure-exercise";
 }
 
-function trackLessonPath(track: HomeTrackId, lessonId: string) {
+function trackLessonPath(track: TrackId, lessonId: string) {
   return track === "words" ? `/lessons/${lessonId}` : `${trackMapPath(track)}/${lessonId}`;
 }
 
-function continuePath(track: HomeTrackId, candidate: HomeCandidate | undefined) {
+function continuePath(track: TrackId, candidate: HomeCandidate | undefined) {
   if (!candidate) return trackMapPath(track);
   if (track === "words") {
     return `/lessons/${candidate.lessonId}/words/${candidate.id}/quizzes`;
@@ -183,24 +114,21 @@ function continuePath(track: HomeTrackId, candidate: HomeCandidate | undefined) 
 
 export default function HomeLanding() {
   const router = useRouter();
-  const [profile, setProfile] = useState<HomeProfile>(emptyProfile);
+  const [profile, setProfile] = useState<StudyProfile>(emptyProfile);
   const [hydrated, setHydrated] = useState(false);
   const [syncState, setSyncState] = useState<"loading" | "synced" | "local">("loading");
 
   useEffect(() => {
     let active = true;
     const timer = window.setTimeout(async () => {
-      let localProfile: HomeProfile | null = null;
+      let localProfile: StudyProfile | null = null;
       let localUpdatedAt = 0;
       try {
-        const stored =
-          window.localStorage.getItem(STORAGE_KEY) ||
-          window.localStorage.getItem(VERSION_TWO_STORAGE_KEY) ||
-          window.localStorage.getItem(LEGACY_STORAGE_KEY);
+        const stored = window.localStorage.getItem(PROFILE_STORAGE_KEY);
         if (stored) localProfile = normalizeProfile(JSON.parse(stored));
-        localUpdatedAt = Date.parse(window.localStorage.getItem(STORAGE_UPDATED_KEY) || "") || 0;
+        localUpdatedAt = Date.parse(window.localStorage.getItem(PROFILE_UPDATED_STORAGE_KEY) || "") || 0;
       } catch {
-        window.localStorage.removeItem(STORAGE_KEY);
+        window.localStorage.removeItem(PROFILE_STORAGE_KEY);
       }
 
       try {
@@ -349,22 +277,19 @@ export default function HomeLanding() {
       </ol>
 
       <nav className="path-tabs" aria-label="主菜单">
-        <button className="is-active" onClick={() => navigate("/")}>
-          <HomeIcon aria-hidden="true" size={22} />
-          <small>学习</small>
-        </button>
-        <button onClick={() => navigate("/lessons")}>
-          <BookOpenText aria-hidden="true" size={22} />
-          <small>课本</small>
-        </button>
-        <button onClick={() => navigate("/practice")}>
-          <LayoutGrid aria-hidden="true" size={22} />
-          <small>练习</small>
-        </button>
-        <button onClick={() => navigate("/account")}>
-          <UserRound aria-hidden="true" size={22} />
-          <small>我的</small>
-        </button>
+        {primaryNavigation.map((item) => {
+          const Icon = homeNavigationIcons[item.id];
+          return (
+            <button
+              className={item.id === "home" ? "is-active" : ""}
+              key={item.id}
+              onClick={() => navigate(item.href)}
+            >
+              <Icon aria-hidden="true" size={22} />
+              <small>{item.label}</small>
+            </button>
+          );
+        })}
       </nav>
     </main>
   );
@@ -374,7 +299,14 @@ export default function HomeLanding() {
 const PATH_OFFSETS = [0, 56, 78, 34, -34, -78, -56, 0];
 
 // Consecutive days ending today or yesterday that have at least one answer.
-function currentStreak(daily: HomeProfile["daily"]) {
+const homeNavigationIcons: Record<PrimaryNavigationId, typeof HomeIcon> = {
+  home: HomeIcon,
+  course: BookOpenText,
+  practice: LayoutGrid,
+  profile: UserRound,
+};
+
+function currentStreak(daily: StudyProfile["daily"]) {
   const active = new Set(
     Object.entries(daily)
       .filter(([, value]) => (value?.attempts || 0) > 0 || (value?.readSessions || 0) > 0)
@@ -397,7 +329,7 @@ function currentStreak(daily: HomeProfile["daily"]) {
 
 type PathNode =
   | { kind: "character"; key: string; hanzi: string; href: string; state: "done" | "current" | "locked" }
-  | { kind: "reinforce"; key: string; track: HomeTrackId; completed: number; total: number };
+  | { kind: "reinforce"; key: string; track: TrackId; completed: number; total: number };
 
 // One line instead of four parallel maps: the lesson's characters in order,
 // with a reinforcement prompt after every fourth character cycling through
@@ -405,7 +337,7 @@ type PathNode =
 // 识字 / 拆字 / 红蓝 / 结构 maps to see what a lesson still owed them.
 const GATE_EVERY = 4;
 
-function buildLessonPath(profile: HomeProfile, lessonId: string, currentId: string | undefined) {
+function buildLessonPath(profile: StudyProfile, lessonId: string, currentId: string | undefined) {
   const lessonWords = homeCandidates.words.filter((candidate) => candidate.lessonId === lessonId);
   const nodes: PathNode[] = [];
   const states = candidatePathStates(
