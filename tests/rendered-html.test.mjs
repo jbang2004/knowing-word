@@ -21,7 +21,7 @@ async function render(pathname = "/") {
   );
 }
 
-test("server-renders the course-first Knowing Word learning experience", async () => {
+test("server-renders the task-first Knowing Word learning experience", async () => {
   const response = await render();
   assert.equal(response.status, 200);
   assert.match(response.headers.get("content-type") ?? "", /^text\/html\b/i);
@@ -30,12 +30,19 @@ test("server-renders the course-first Knowing Word learning experience", async (
   assert.match(html, /Knowing Word/i);
   assert.match(html, /五年级上册 26 课汉字学习地图/);
   assert.match(html, /KNOWING/);
-  assert.match(html, /五条学习路线/);
-  assert.match(html, /词语表与写字表/);
+  assert.match(html, /接着认识/);
+  assert.match(html, /本课学习路径/);
+  assert.match(html, /先学懂，再练会，最后读出来/);
   assert.match(html, /课后练习/);
   assert.match(html, /红蓝练习/);
   assert.match(html, /空间结构/);
-  assert.match(html, /日日朗读/);
+  assert.match(html, /朗读收尾/);
+
+  const practiceResponse = await render("/practice");
+  assert.equal(practiceResponse.status, 200);
+  const practiceHtml = await practiceResponse.text();
+  assert.match(practiceHtml, /同一批字，换三种眼光再看一遍/);
+  assert.match(practiceHtml, /先拆组成，再辨功能，最后看空间/);
 });
 
 test("character pages render the complete picture-to-character memory flow", async () => {
