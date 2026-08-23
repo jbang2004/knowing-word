@@ -11,7 +11,6 @@
  */
 
 .study-shell,
-.narration-theatre,
 .memory-stage {
   --night: #0f1614;
   --night-2: #16211e;
@@ -635,219 +634,267 @@
   font-size: 0.73rem;
 }
 
-/* Narration theatre --------------------------------------------------- */
+/* In-place narration ------------------------------------------------- */
 
-.narration-theatre {
-  position: relative;
+.study-narration-player {
+  padding: 16px;
+  border: 1px solid rgba(53, 194, 149, 0.26);
+  border-radius: 22px;
+  background: linear-gradient(145deg, rgba(53, 194, 149, 0.12), rgba(244, 240, 230, 0.055));
+  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.22);
+}
+
+.study-narration-head {
   display: flex;
-  min-height: 100vh;
-  min-height: 100dvh;
-  flex-direction: column;
-  overflow: hidden;
-  color: var(--n-ink);
-  background: var(--night);
-  font-family: var(--sans);
-}
-
-.narration-theatre-backdrop {
-  position: absolute;
-  inset: 0;
-  background-size: 150% auto;
-  background-position: center 12%;
-  opacity: 0.13;
-  filter: blur(3px) saturate(0.7);
-}
-
-.narration-theatre::after {
-  position: absolute;
-  z-index: 0;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(15, 22, 20, 0.5) 0%, rgba(15, 22, 20, 0.94) 34%, #0f1614 60%);
-  content: "";
-  pointer-events: none;
-}
-
-.narration-theatre > *:not(.narration-theatre-backdrop) {
-  position: relative;
-  z-index: 1;
-}
-
-.narration-theatre-bar {
-  display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
-  gap: 8px;
-  padding: max(14px, env(safe-area-inset-top)) 12px 4px;
-}
-
-.narration-theatre-bar > span {
-  color: var(--n-ink-2);
-  font-size: 0.81rem;
-  font-weight: 600;
-}
-
-.narration-theatre-bar button {
-  display: flex;
-  min-width: 44px;
-  height: 44px;
-  align-items: center;
-  justify-content: center;
-  padding: 0 10px;
-  border-radius: 999px;
-  color: var(--n-ink);
-  font-size: 0.81rem;
-  font-weight: 600;
-  background: transparent;
-}
-
-.narration-theatre-chip {
-  display: flex;
-  align-items: center;
   gap: 12px;
-  margin: 4px 20px 0;
-  padding: 10px 12px;
-  border-radius: 18px;
-  background: rgba(244, 240, 230, 0.05);
 }
 
-.narration-theatre-chip div {
+.study-narration-head > span {
   display: flex;
+  min-width: 0;
   flex-direction: column;
   gap: 3px;
-  flex-grow: 1;
 }
 
-.narration-theatre-chip strong { font-size: 0.88rem; font-weight: 600; }
-.narration-theatre-chip small { color: var(--n-ink-3); font-size: 0.72rem; }
-
-.narration-theatre-text {
-  position: relative;
-  flex-grow: 1;
-  margin-top: 18px;
-  padding: 0 20px;
-  overflow-y: auto;
-  scrollbar-width: none;
+.study-narration-head strong {
+  font-size: 0.9rem;
+  font-weight: 700;
 }
 
-.narration-theatre-text::-webkit-scrollbar { display: none; }
-
-.narration-theatre-text p {
-  margin: 0;
-  font-size: 1.44rem;
-  font-weight: 450;
-  line-height: 2.02;
-  letter-spacing: 0.012em;
-  text-wrap: pretty;
-}
-
-/* The inline component styled these for the light page: a saffron underline
-   for read text and a coral halo on the active character. Both are wrong here —
-   the underline reads as olive blocks on the dark ground, and coral is the
-   reserved 表意部首 colour. */
-.narration-theatre .narration-token {
-  color: rgba(244, 240, 230, 0.8);
-  box-shadow: none;
-  background: transparent;
-  transform: none;
-  transition: color 140ms linear;
-}
-
-.narration-theatre .narration-token.is-punctuation {
-  color: rgba(244, 240, 230, 0.55);
-}
-
-.narration-theatre .narration-token.is-current-phrase:not(.is-active) {
-  color: rgba(244, 240, 230, 0.8);
-  background: transparent;
-}
-
-.narration-theatre .narration-token.is-complete {
-  color: rgba(244, 240, 230, 0.26);
-}
-
-.narration-theatre .narration-unit.is-current-phrase .narration-token.is-complete {
-  color: rgba(244, 240, 230, 0.52);
-}
-
-.narration-theatre .narration-token.is-active {
-  padding: 0 3px;
-  border-radius: 6px;
-  color: var(--night);
-  font-weight: 650;
-  background: var(--n-action);
-  box-shadow: 0 0 0 3px rgba(53, 194, 149, 0.18);
-}
-
-.narration-theatre-controls {
-  padding: 10px 20px calc(22px + env(safe-area-inset-bottom));
-  background: linear-gradient(180deg, rgba(15, 22, 20, 0), #0f1614 22px);
-}
-
-.narration-wave {
-  display: flex;
-  height: 30px;
-  align-items: flex-end;
-  gap: 2.5px;
-  margin-bottom: 9px;
-}
-
-.narration-wave i {
-  flex-grow: 1;
-  border-radius: 2px;
-  background: rgba(244, 240, 230, 0.16);
-  transition: background 120ms linear;
-}
-
-.narration-wave i.is-played {
-  background: var(--n-action);
-}
-
-.narration-theatre-time {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 20px;
-  color: var(--n-ink-3);
+.study-narration-head small {
+  color: var(--n-ink-2);
   font-size: 0.72rem;
+}
+
+.study-narration-head button {
+  display: flex;
+  width: 34px;
+  height: 34px;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border-radius: 999px;
+  color: var(--n-ink-2);
+  background: rgba(244, 240, 230, 0.07);
+}
+
+.study-narration-phrase {
+  min-height: 3.2em;
+  margin: 14px 0 13px;
+  color: var(--n-ink);
+  font-family: var(--kai);
+  font-size: clamp(1.15rem, 3vw, 1.45rem);
+  font-weight: 500;
+  line-height: 1.6;
+  text-wrap: balance;
+}
+
+.study-narration-progress {
+  height: 4px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: rgba(244, 240, 230, 0.13);
+}
+
+.study-narration-progress i {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--n-action);
+  transition: width 120ms linear;
+}
+
+.study-narration-time {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 6px;
+  color: var(--n-ink-3);
+  font-size: 0.68rem;
   font-variant-numeric: tabular-nums;
 }
 
-.narration-theatre-buttons {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
+.study-narration-actions {
+  display: grid;
+  margin-top: 12px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 7px;
 }
 
-.narration-theatre-buttons > button {
+.study-narration-actions button {
   display: flex;
-  width: 64px;
-  height: 58px;
+  min-width: 0;
+  min-height: 52px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 3px;
-  padding: 0;
-  border-radius: 18px;
+  gap: 4px;
+  padding: 6px 3px;
+  border-radius: 15px;
   color: var(--n-ink-2);
-  background: transparent;
+  background: rgba(244, 240, 230, 0.06);
 }
 
-.narration-theatre-buttons > button small { font-size: 0.66rem; }
+.study-narration-actions button:disabled {
+  opacity: 0.35;
+}
 
-.narration-theatre-buttons .is-play {
-  width: 74px;
-  height: 74px;
-  border-radius: 999px;
+.study-narration-actions button small {
+  overflow: hidden;
+  max-width: 100%;
+  font-size: 0.66rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.study-narration-actions .is-primary {
   color: var(--night);
   background: var(--n-action);
-  box-shadow: 0 12px 32px rgba(53, 194, 149, 0.34);
+  box-shadow: 0 7px 20px rgba(53, 194, 149, 0.25);
 }
 
-.narration-theatre-buttons .is-record {
-  border: 1px solid rgba(233, 176, 74, 0.42);
+.study-narration-actions .is-record {
   color: var(--n-warn);
-  background: rgba(233, 176, 74, 0.11);
+  background: rgba(233, 176, 74, 0.1);
+}
+
+.study-narration-next {
+  display: flex;
+  width: 100%;
+  min-height: 46px;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  margin-top: 12px;
+  border-radius: 15px;
+  color: var(--night);
+  font-size: 0.88rem;
+  font-weight: 700;
+  background: var(--n-ink);
+}
+
+.study-transcript-backdrop {
+  position: fixed;
+  z-index: 40;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border-radius: 0;
+  background: rgba(5, 10, 9, 0.72);
+  backdrop-filter: blur(5px);
+}
+
+.study-transcript-sheet {
+  position: fixed;
+  z-index: 41;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  max-height: min(82dvh, 720px);
+  flex-direction: column;
+  padding: 18px 20px calc(20px + env(safe-area-inset-bottom));
+  overflow: hidden;
+  border-radius: 26px 26px 0 0;
+  color: #17211e;
+  background: #f7f1e4;
+  box-shadow: 0 -22px 70px rgba(0, 0, 0, 0.42);
+  animation: study-transcript-in 220ms var(--ease-out) both;
+}
+
+@keyframes study-transcript-in {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.study-transcript-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(23, 33, 30, 0.1);
+}
+
+.study-transcript-head > span {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.study-transcript-head small {
+  color: rgba(23, 33, 30, 0.52);
+  font-size: 0.7rem;
+}
+
+.study-transcript-head strong {
+  font-size: 1.08rem;
+}
+
+.study-transcript-head button {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border-radius: 999px;
+  color: #17211e;
+  background: rgba(23, 33, 30, 0.07);
+}
+
+.study-transcript-text {
+  flex-grow: 1;
+  padding: 20px 2px;
+  overflow-y: auto;
+}
+
+.study-transcript-text p {
+  margin: 0;
+  font-size: 1.28rem;
+  line-height: 2;
+  letter-spacing: 0.01em;
+  text-wrap: pretty;
+}
+
+.study-transcript-sheet .narration-token {
+  border-radius: 5px;
+  color: rgba(23, 33, 30, 0.72);
+  transition: color 140ms linear, background 140ms linear;
+}
+
+.study-transcript-sheet .narration-token.is-punctuation {
+  color: rgba(23, 33, 30, 0.42);
+}
+
+.study-transcript-sheet .narration-token.is-complete {
+  color: rgba(23, 33, 30, 0.34);
+}
+
+.study-transcript-sheet .narration-unit.is-current-phrase .narration-token {
+  color: #17211e;
+  background: rgba(53, 194, 149, 0.11);
+}
+
+.study-transcript-sheet .narration-token.is-active {
+  padding: 1px 3px;
+  color: #f7f1e4;
+  font-weight: 700;
+  background: #198466;
+  box-shadow: 0 0 0 3px rgba(25, 132, 102, 0.12);
+}
+
+.study-transcript-close {
+  min-height: 48px;
+  border-radius: 16px;
+  color: #f7f1e4;
+  font-size: 0.9rem;
+  font-weight: 700;
+  background: #17211e;
 }
 
 /* Four-step memory stage ---------------------------------------------- */
@@ -1233,7 +1280,6 @@
 
 @media (min-width: 900px) {
   .study-shell,
-  .narration-theatre,
   .memory-stage {
     min-height: 100vh;
   }
@@ -1277,12 +1323,6 @@
     transform: translate(50%, 0);
   }
 
-  .narration-theatre-text p { font-size: 1.62rem; }
-
-  .narration-theatre-text,
-  .narration-theatre-controls,
-  .narration-theatre-chip,
-  .narration-theatre-bar,
   .memory-stage-progress,
   .memory-stage-bar,
   .memory-stage-scene,
@@ -1294,10 +1334,26 @@
   }
 
   .memory-stage-scene { max-width: 520px; }
+
+  .study-transcript-sheet {
+    top: 0;
+    left: auto;
+    width: min(520px, 48vw);
+    max-height: none;
+    padding: 28px 30px;
+    border-radius: 26px 0 0 26px;
+  }
+
+  @keyframes study-transcript-in {
+    from { opacity: 0; transform: translateX(24px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .study-listen-button,
+  .study-narration-progress i,
+  .study-transcript-sheet,
   .memory-stage-spot,
   .memory-stage-tint,
   .memory-stage-ring,

@@ -64,9 +64,11 @@ test("character pages render the complete picture-to-character memory flow", asy
   );
   assert.equal(response.status, 200);
   const html = await response.text();
-  // The 物象图 is the screen, with one primary action into the narration.
+  // The 物象图 remains the screen while narration is mounted in place. The
+  // launcher makes that continuity explicit instead of routing to a theatre.
   assert.match(html, /画面本身就是字形/);
   assert.match(html, /听字义讲解/);
+  assert.match(html, /留在画面边看边听/);
   assert.match(html, /看意象/);
   assert.match(html, /找部首/);
   assert.match(html, /找部件/);
@@ -76,8 +78,9 @@ test("character pages render the complete picture-to-character memory flow", asy
   assert.match(html, /部件来历/);
   assert.match(html, /字形演变/);
   assert.match(html, /课文语境/);
-  // The audio element itself lives in the narration screen; the study screen
-  // prefetches the same versioned R2 object so the first play is not cold.
+  // The audio element now lives on the study page, so the first user click can
+  // play directly without mounting or navigating to a second screen.
+  assert.match(html, /<audio/);
   assert.match(html, /\/media\/narration\/v3\//);
   assert.match(html, /audio\.webm\?v=narration-v3-qwen3-4bit-r37e955a/);
 
@@ -85,6 +88,9 @@ test("character pages render the complete picture-to-character memory flow", asy
     new URL("../app/experience.tsx", import.meta.url),
     "utf8",
   );
+  assert.match(pageSource, /function InlineNarrationPlayer/);
+  assert.match(pageSource, /可选辅助 · 不影响字画页/);
+  assert.doesNotMatch(pageSource, /setView\("listen"\)/);
   assert.match(pageSource, /type='audio\/webm; codecs="opus"'/);
 });
 

@@ -1591,15 +1591,13 @@ function narrationMediaSource(source: string | undefined) {
   return `/media/narration/v3/${source.slice("/narration/".length)}`;
 }
 
-function NarrationTheatre({
+function InlineNarrationPlayer({
   character,
-  onClose,
   onFinished,
   onReadAloud,
 }: {
   character: CharacterItem;
-  onClose: () => void;
-  onFinished: () => void;
+  onFinished?: () => void;
   onReadAloud: () => void;
 }) {
   const narrationAsset = narrationAssets[character.id];
@@ -1613,6 +1611,8 @@ function NarrationTheatre({
   const [elapsed, setElapsed] = useState(0);
   const [duration, setDuration] = useState(0);
   const [playing, setPlaying] = useState(false);
+  const [started, setStarted] = useState(false);
+  const [transcriptOpen, setTranscriptOpen] = useState(false);
 
   useEffect(() => {
     if (!playing || !audioSource) return;
@@ -1649,6 +1649,15 @@ function NarrationTheatre({
     };
   }, [audioMarksSource]);
 
+  useEffect(() => {
+    if (!transcriptOpen) return;
+    const closeOnEscape = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setTranscriptOpen(false);
+    };
+    document.addEventListener("keydown", closeOnEscape);
+    return () => document.removeEventListener("keydown", closeOnEscape);
+  }, [transcriptOpen]);
+
   function toggleNarration() {
     const audio = audioRef.current;
     if (!audioSource || !audio) {
@@ -1684,7 +1693,7 @@ function NarrationTheatre({
   );
   const timelineDuration = duration || marks.at(-1)?.end || 0;
   const completedCount = marks.reduce((count, mark) => count + (mark.end <= elapsed ? 1 : 0), 0);
-  const finished = marks.length > 0 && completedCount === marks.length && !playing;
+  const finished = timelineDuration > 0 && elapsed >= timelineDuration - 0.08 && !playing;
   const progress = timelineDuration > 0 ? Math.min(100, (elapsed / timelineDuration) * 100) : 0;
   const narrationStatus = finished
     ? "讲解完成 · 点击可重听"
@@ -1698,17 +1707,14 @@ function NarrationTheatre({
           ? "逐字跟读已就绪"
           : "标准普通话讲解";
 
-  const visual = characterVisuals[character.hanzi];
   const spokenSeconds = timelineDuration || 0;
-  // Bar heights must be identical on the server and the client, so derive them
-  // from the record id rather than Math.random.
-  const waveBars = useMemo(() => {
-    const base = [...character.id].reduce((total, char) => (total * 31 + char.charCodeAt(0)) % 100000, 7);
-    return Array.from({ length: 18 }, (_, index) => {
-      const mixed = (base + index * 2654435761) % 2147483648;
-      return 26 + ((mixed >> 8) % 74);
-    });
-  }, [character.id]);
+  const currentPhraseText = useMemo(() => {
+    if (activePhraseIndex < 0) return releasedTranscript;
+    return transcript
+      .filter((token) => phraseByMark[token.markIndex] === activePhraseIndex)
+      .map((token) => token.text)
+      .join("");
+  }, [activePhraseIndex, phraseByMark, releasedTranscript, transcript]);
 
   function seekToPhraseStart(offset: number) {
     const audio = audioRef.current;
@@ -1720,99 +1726,140 @@ function NarrationTheatre({
     setElapsed(audio.currentTime);
   }
 
+  function startNarration() {
+    setStarted(true);
+    toggleNarration();
+  }
+
+  function collapseNarration() {
+    audioRef.current?.pause();
+    setPlaying(false);
+    setStarted(false);
+    setTranscriptOpen(false);
+  }
+
   return (
-    <div className="narration-theatre">
-      {visual && (
-        <div
-          className="narration-theatre-backdrop"
-          style={{ backgroundImage: `url(${visual.src})` }}
-          aria-hidden="true"
-        />
-      )}
-
-      <div className="narration-theatre-bar">
-        <button onClick={onClose} aria-label="收起讲解">
-          <ArrowLeft aria-hidden="true" size={20} />
+    <>
+      {!started ? (
+        <button className="study-listen-button" onClick={startNarration}>
+          <span className="study-equalizer" aria-hidden="true"><b /><b /><b /><b /><b /></span>
+          <span>
+            <strong>{elapsed > 0 && !finished ? "继续字义讲解" : "听字义讲解"}</strong>
+            <small>{releasedTranscript.length} 字 · 留在画面边看边听</small>
+          </span>
+          <ArrowRight aria-hidden="true" size={20} />
         </button>
-        <span>字义讲解 · 逐字跟读</span>
-        <span aria-hidden="true">{marks.length ? `${completedCount}/${marks.length}` : ""}</span>
-      </div>
-
-      <div className="narration-theatre-chip">
-        <div>
-          <strong>{character.hanzi} · {character.pinyin}</strong>
-          <small>{finished ? "讲解完成，可以进入物象四步" : narrationStatus}</small>
-        </div>
-        <i className="narration-equalizer" aria-hidden="true"><b /><b /><b /></i>
-      </div>
-
-      <div className="narration-theatre-text">
-        {marks.length ? (
-          <p aria-label={transcript.map((token) => token.text).join("")}>
-            {transcript.map((token, index) => {
-              if (token.kind === "punctuation") return null;
-              const completed = token.completionTime <= elapsed;
-              const currentPhrase = phraseByMark[token.markIndex] === activePhraseIndex;
-              const punctuation = transcript[index + 1]?.kind === "punctuation" ? transcript[index + 1] : null;
-              const className = `narration-token${activeMarkIndices.has(token.markIndex) ? " is-active" : completed ? " is-complete" : " is-upcoming"}`;
-              return (
-                <span
-                  className={`narration-unit${currentPhrase ? " is-current-phrase" : ""}`}
-                  key={`${token.kind}-${token.markIndex}-${index}`}
-                  aria-hidden="true"
-                >
-                  <span className={className}>{token.text}</span>
-                  {punctuation && (
-                    <span className={`narration-token is-punctuation${completed ? " is-complete" : ""}`}>
-                      {punctuation.text}
-                    </span>
-                  )}
-                </span>
-              );
-            })}
-          </p>
-        ) : (
-          <p>{releasedTranscript}</p>
-        )}
-      </div>
-
-      <div className="narration-theatre-controls">
-        <div className="narration-wave" aria-hidden="true">
-          {waveBars.map((height, index) => (
-            <i
-              className={progress >= ((index + 1) / waveBars.length) * 100 ? "is-played" : ""}
-              key={index}
-              style={{ height: `${height}%` }}
-            />
-          ))}
-        </div>
-
-        <div className="narration-theatre-time">
-          <span>{formatClock(elapsed)}</span>
-          <span>{marks.length ? `已读 ${completedCount} / ${marks.length} 字` : "标准普通话讲解"}</span>
-          <span>{formatClock(spokenSeconds)}</span>
-        </div>
-
-        <div className="narration-theatre-buttons">
-          <button onClick={() => seekToPhraseStart(-1)} disabled={!marks.length}>
-            <RotateCcw aria-hidden="true" size={20} />
-            <small>上一句</small>
-          </button>
-          {finished ? (
-            <button className="is-play" onClick={onFinished} aria-label="进入物象四步">
-              <ArrowRight aria-hidden="true" size={26} />
+      ) : (
+        <section className={`study-narration-player${playing ? " is-playing" : ""}`} aria-label="字义讲解播放器">
+          <div className="study-narration-head">
+            <span>
+              <strong>{character.hanzi} · {character.pinyin}</strong>
+              <small>{narrationStatus}</small>
+            </span>
+            <button onClick={collapseNarration} aria-label="收起字义讲解">
+              <ArrowLeft aria-hidden="true" size={18} style={{ transform: "rotate(-90deg)" }} />
             </button>
-          ) : (
-            <button className="is-play" onClick={toggleNarration} aria-label={playing ? "暂停讲解" : "播放讲解"} aria-pressed={playing}>
-              {playing ? <CircleStop aria-hidden="true" size={26} /> : <Volume2 aria-hidden="true" size={26} />}
+          </div>
+
+          <p className="study-narration-phrase" aria-label="当前讲解内容">
+            {currentPhraseText || releasedTranscript}
+          </p>
+
+          <div className="study-narration-progress" aria-hidden="true">
+            <i style={{ width: `${progress}%` }} />
+          </div>
+          <div className="study-narration-time">
+            <span>{formatClock(elapsed)}</span>
+            <span>{formatClock(spokenSeconds)}</span>
+          </div>
+
+          <div className="study-narration-actions">
+            <button onClick={() => seekToPhraseStart(-1)} disabled={!marks.length}>
+              <RotateCcw aria-hidden="true" size={18} />
+              <small>上一句</small>
+            </button>
+            <button className="is-primary" onClick={toggleNarration} aria-label={playing ? "暂停讲解" : finished ? "重新播放讲解" : "继续播放讲解"} aria-pressed={playing}>
+              {playing ? <CircleStop aria-hidden="true" size={21} /> : <Volume2 aria-hidden="true" size={21} />}
+              <small>{playing ? "暂停" : finished ? "重听" : "继续"}</small>
+            </button>
+            <button onClick={() => setTranscriptOpen(true)} aria-expanded={transcriptOpen}>
+              <BookOpenText aria-hidden="true" size={18} />
+              <small>逐字稿</small>
+            </button>
+            <button className="is-record" onClick={onReadAloud}>
+              <Mic2 aria-hidden="true" size={18} />
+              <small>我来读</small>
+            </button>
+          </div>
+
+          {finished && onFinished && (
+            <button className="study-narration-next" onClick={onFinished}>
+              跟着画面找部件
+              <ArrowRight aria-hidden="true" size={18} />
             </button>
           )}
-          <button className="is-record" onClick={onReadAloud}>
-            <Mic2 aria-hidden="true" size={20} />
-            <small>我来读</small>
-          </button>
-        </div>
-      </div>
+        </section>
+      )}
+
+      {transcriptOpen && (
+        <>
+          <button
+            className="study-transcript-backdrop"
+            onClick={() => setTranscriptOpen(false)}
+            aria-label="关闭逐字稿"
+          />
+          <section
+            className="study-transcript-sheet"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby={`transcript-title-${character.id}`}
+          >
+            <div className="study-transcript-head">
+              <span>
+                <small>可选辅助 · 不影响字画页</small>
+                <strong id={`transcript-title-${character.id}`}>{character.hanzi}的逐字稿</strong>
+              </span>
+              <button onClick={() => setTranscriptOpen(false)} aria-label="收起逐字稿">
+                <ArrowRight aria-hidden="true" size={20} style={{ transform: "rotate(90deg)" }} />
+              </button>
+            </div>
+
+            <div className="study-transcript-text">
+              {marks.length ? (
+                <p aria-label={transcript.map((token) => token.text).join("")}>
+                  {transcript.map((token, index) => {
+                    if (token.kind === "punctuation") return null;
+                    const completed = token.completionTime <= elapsed;
+                    const currentPhrase = phraseByMark[token.markIndex] === activePhraseIndex;
+                    const punctuation = transcript[index + 1]?.kind === "punctuation" ? transcript[index + 1] : null;
+                    const className = `narration-token${activeMarkIndices.has(token.markIndex) ? " is-active" : completed ? " is-complete" : " is-upcoming"}`;
+                    return (
+                      <span
+                        className={`narration-unit${currentPhrase ? " is-current-phrase" : ""}`}
+                        key={`${token.kind}-${token.markIndex}-${index}`}
+                        aria-hidden="true"
+                      >
+                        <span className={className}>{token.text}</span>
+                        {punctuation && (
+                          <span className={`narration-token is-punctuation${completed ? " is-complete" : ""}`}>
+                            {punctuation.text}
+                          </span>
+                        )}
+                      </span>
+                    );
+                  })}
+                </p>
+              ) : (
+                <p>{releasedTranscript}</p>
+              )}
+            </div>
+
+            <button className="study-transcript-close" onClick={() => setTranscriptOpen(false)}>
+              回到字画
+            </button>
+          </section>
+        </>
+      )}
 
       {audioSource && (
         <audio
@@ -1836,7 +1883,7 @@ function NarrationTheatre({
           <source src={audioSource} type='audio/webm; codecs="opus"' />
         </audio>
       )}
-    </div>
+    </>
   );
 }
 
@@ -2205,7 +2252,7 @@ function CharacterStudy({
   // One screen, one thing: the picture and a single primary action. Reference
   // material — component origins, script history, the textbook sentence — lives
   // in a pull-up drawer instead of seven stacked cards.
-  const [view, setView] = useState<"study" | "listen" | "memory">("study");
+  const [view, setView] = useState<"study" | "memory">("study");
   const [drawerOpen, setDrawerOpen] = useState(false);
 
   const exercises = getTrackExercises(character, "words");
@@ -2216,7 +2263,6 @@ function CharacterStudy({
   const pilotKnowledge = character.lessonId === LESSON_THREE_ID ? getLessonThreeKnowledge(character.hanzi) : undefined;
   const visual = characterVisuals[character.hanzi];
   const scene = !pilotKnowledge ? getMnemonicScene(character) : undefined;
-  const narrationSeconds = releasedNarrationTranscripts[character.id]?.transcript?.length;
   const narrationVersion = "narration-v3-qwen3-4bit-r37e955a";
   const narrationHref = withAssetVersion(
     narrationMediaSource(narrationAssets[character.id]?.audio),
@@ -2232,18 +2278,6 @@ function CharacterStudy({
       : character.curriculumRole === "write"
         ? "课内会写"
         : "课内会认";
-
-  if (view === "listen") {
-    return (
-      <NarrationTheatre
-        character={character}
-        key={character.id}
-        onClose={() => setView("study")}
-        onFinished={() => setView(visual && !pilotKnowledge ? "memory" : "study")}
-        onReadAloud={onReadAloud}
-      />
-    );
-  }
 
   if (view === "memory" && visual && !pilotKnowledge) {
     return (
@@ -2328,14 +2362,12 @@ function CharacterStudy({
           <div className="study-spacer" />
 
           <div className="study-launch">
-            <button className="study-listen-button" onClick={() => setView("listen")}>
-              <span className="study-equalizer" aria-hidden="true"><b /><b /><b /><b /><b /></span>
-              <span>
-                <strong>听字义讲解</strong>
-                <small>{narrationSeconds ? `${narrationSeconds} 字 · 逐字跟读` : "标准普通话讲解"}</small>
-              </span>
-              <ArrowRight aria-hidden="true" size={20} />
-            </button>
+            <InlineNarrationPlayer
+              character={character}
+              key={character.id}
+              onFinished={visual && !pilotKnowledge ? () => setView("memory") : undefined}
+              onReadAloud={onReadAloud}
+            />
 
             {visual && !pilotKnowledge && (
               <button className="study-next-steps" onClick={() => setView("memory")}>
