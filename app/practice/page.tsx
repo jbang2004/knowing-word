@@ -1,5 +1,5 @@
-import LearningRoute from "../_shared/learning-route";
+import { PracticeHubRoute } from "../features/catalog/catalog-routes";
 
 export default function PracticePage() {
-  return <LearningRoute path="/practice" />;
+  return <PracticeHubRoute />;
 }

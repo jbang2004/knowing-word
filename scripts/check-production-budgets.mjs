@@ -8,7 +8,7 @@ const budgets = [
   {
     label: "single client JavaScript chunk",
     match: (path) => path.endsWith(".js"),
-    maxBytes: 3_400_000,
+    maxBytes: 450_000,
   },
   {
     label: "single client stylesheet",
@@ -34,6 +34,9 @@ try {
 }
 
 const violations = [];
+const legacyEngine = files.find((path) => /(?:^|\/)experience-[^/]+\.js$/u.test(path));
+if (legacyEngine) violations.push(`legacy full-route client bundle returned: ${relative(root, legacyEngine)}`);
+
 for (const budget of budgets) {
   const candidates = files.filter(budget.match);
   for (const path of candidates) {
@@ -44,6 +47,16 @@ for (const budget of budgets) {
       );
     }
   }
+}
+
+const clientJavaScript = files.filter((path) => path.endsWith(".js"));
+const totalJavaScriptBytes = (
+  await Promise.all(clientJavaScript.map(async (path) => (await stat(path)).size))
+).reduce((total, size) => total + size, 0);
+if (totalJavaScriptBytes > 1_800_000) {
+  violations.push(
+    `total client JavaScript is ${totalJavaScriptBytes.toLocaleString()} bytes; budget is 1,800,000 bytes`,
+  );
 }
 
 if (violations.length) {

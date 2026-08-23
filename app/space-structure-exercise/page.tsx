@@ -1,5 +1,5 @@
-import LearningRoute from "../_shared/learning-route";
+import { TrackMapRoute } from "../features/catalog/catalog-routes";
 
 export default function SpaceStructurePage() {
-  return <LearningRoute path="/space-structure-exercise" />;
+  return <TrackMapRoute track="structure" />;
 }

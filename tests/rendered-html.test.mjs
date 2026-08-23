@@ -388,6 +388,8 @@ test("the public learning catalog preserves the course and practice-route struct
   const publicCatalogSources = await Promise.all([
     "../app/data/grade5-volume1-generated.ts",
     "../app/data/extension-catalog.ts",
+    "../app/data/extension-characters.ts",
+    "../app/data/generated/grade5-volume1/lessons/g5v1-l01.ts",
   ].map((path) => readFile(new URL(path, import.meta.url), "utf8")));
   const publicCatalog = publicCatalogSources.join("\n");
 
@@ -702,20 +704,23 @@ test("production output excludes superseded heritage narration copies", async ()
   );
 });
 
-test("the public home shell is split from the full learning engine", async () => {
+test("route clients stay split instead of rebuilding a full learning engine", async () => {
   const { readdir, stat } = await import("node:fs/promises");
   const assetsRoot = new URL("../dist/client/assets/", import.meta.url);
   const entries = await readdir(assetsRoot);
   const homeEntry = entries.find((entry) => /^home-client-.*\.js$/u.test(entry));
   const experienceEntry = entries.find((entry) => /^experience-.*\.js$/u.test(entry));
   assert.ok(homeEntry, "compact home client entry is missing");
-  assert.ok(experienceEntry, "full learning engine entry is missing");
-  const [homeStat, experienceStat] = await Promise.all([
-    stat(new URL(homeEntry, assetsRoot)),
-    stat(new URL(experienceEntry, assetsRoot)),
-  ]);
+  assert.equal(experienceEntry, undefined, "legacy full learning engine was emitted again");
+  const homeStat = await stat(new URL(homeEntry, assetsRoot));
   assert.ok(homeStat.size < 150_000, `home entry is too large: ${homeStat.size}`);
-  assert.ok(experienceStat.size > homeStat.size * 10, "learning engine was folded back into the home entry");
+  const clientEntries = entries.filter((entry) => entry.endsWith(".js"));
+  const clientStats = await Promise.all(clientEntries.map(async (entry) => ({
+    entry,
+    size: (await stat(new URL(entry, assetsRoot))).size,
+  })));
+  const largest = clientStats.sort((left, right) => right.size - left.size)[0];
+  assert.ok(largest.size < 900_000, `route chunk is too large: ${largest.entry} (${largest.size})`);
 });
 
 test("versioned assets run through the cache-header worker path", async () => {

@@ -4,7 +4,8 @@ import {
   grade5Course,
   grade5Lessons,
 } from "./grade5-volume1-generated.ts";
-import { extensionCharacters, extensionComponents } from "./extension-catalog.ts";
+import { extensionCharacters } from "./extension-characters.ts";
+import { extensionComponents } from "./extension-components.ts";
 import type { CharacterItem, ComponentItem, LessonItem } from "./catalog-types";
 
 export type {

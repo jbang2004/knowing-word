@@ -1,4 +1,6 @@
-import LearningRoute from "../../_shared/learning-route";
+import { notFound } from "next/navigation";
+import { RecordsRoute } from "../../features/records/records-routes";
+import { trackIds, type TrackId } from "../../lib/profile-model";
 
 export default async function TrackRecordsPage({
   params,
@@ -6,5 +8,6 @@ export default async function TrackRecordsPage({
   params: Promise<{ track: string }>;
 }) {
   const { track } = await params;
-  return <LearningRoute path={`/records/${track}`} />;
+  if (!trackIds.includes(track as TrackId)) notFound();
+  return <RecordsRoute track={track as TrackId} />;
 }

@@ -1,5 +1,12 @@
-import LearningRoute, { pathWithSearch, type RouteSearchParams } from "../_shared/learning-route";
+import { ReadAloudRoute } from "../features/tools/utility-routes";
+import { safeInternalReturnPath } from "../lib/navigation";
 
-export default async function ReadAloudPage({ searchParams }: { searchParams: RouteSearchParams }) {
-  return <LearningRoute path={pathWithSearch("/read-aloud", await searchParams)} />;
+export default async function ReadAloudPage({
+  searchParams,
+}: {
+  searchParams: Promise<Record<string, string | string[] | undefined>>;
+}) {
+  const params = await searchParams;
+  const returnTo = safeInternalReturnPath(params.returnTo);
+  return <ReadAloudRoute returnTo={returnTo} />;
 }

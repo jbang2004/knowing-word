@@ -1,5 +1,5 @@
-import LearningRoute from "../_shared/learning-route";
+import { CourseMapRoute } from "../features/catalog/catalog-routes";
 
 export default function LessonsPage() {
-  return <LearningRoute path="/lessons" />;
+  return <CourseMapRoute />;
 }

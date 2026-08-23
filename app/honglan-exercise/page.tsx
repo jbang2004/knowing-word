@@ -1,5 +1,5 @@
-import LearningRoute from "../_shared/learning-route";
+import { TrackMapRoute } from "../features/catalog/catalog-routes";
 
 export default function HonglanExercisePage() {
-  return <LearningRoute path="/honglan-exercise" />;
+  return <TrackMapRoute track="honglan" />;
 }

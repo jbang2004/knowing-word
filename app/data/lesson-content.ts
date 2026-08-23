@@ -1,4 +1,4 @@
-import { extensionCharacters } from "./extension-catalog.ts";
+import { extensionCharacters } from "./extension-characters.ts";
 import {
   grade5LessonLoaders,
   type Grade5LessonId,

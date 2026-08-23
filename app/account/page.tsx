@@ -1,5 +1,5 @@
-import LearningRoute from "../_shared/learning-route";
+import { AccountRoute } from "../features/tools/utility-routes";
 
 export default function AccountPage() {
-  return <LearningRoute path="/account" />;
+  return <AccountRoute />;
 }

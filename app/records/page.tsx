@@ -1,5 +1,5 @@
-import LearningRoute from "../_shared/learning-route";
+import { RecordsRoute } from "../features/records/records-routes";
 
 export default function RecordsPage() {
-  return <LearningRoute path="/records" />;
+  return <RecordsRoute track="words" />;
 }
