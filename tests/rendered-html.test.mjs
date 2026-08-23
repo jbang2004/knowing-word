@@ -58,6 +58,11 @@ test("secondary tools server-render with a contextual return query", async () =>
   assert.match(await readResponse.text(), /朗读/);
 });
 
+test("unknown paths no longer fall through to the learning client", async () => {
+  const response = await render("/this-route-does-not-exist");
+  assert.equal(response.status, 404);
+});
+
 test("character pages render the complete picture-to-character memory flow", async () => {
   const response = await render(
     "/lessons/g5v1-l01/words/g5v1-l01-c01-u9e6d",

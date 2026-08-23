@@ -78,10 +78,16 @@ import {
 } from "./lib/narration";
 import {
   primaryNavigation,
-  returnPathFromUrl,
   withReturnTo,
   type PrimaryNavigationId,
 } from "./lib/navigation";
+import {
+  resolveAppRoute,
+  routeForTrack,
+  type AppRoute,
+  type PlaygroundKind,
+  type Screen,
+} from "./lib/app-route";
 import {
   emptyProfile,
   normalizeProfile,
@@ -94,37 +100,10 @@ import {
   type TrackId,
 } from "./lib/profile-model";
 
-type Screen =
-  | "home"
-  | "practice"
-  | "course"
-  | "lesson"
-  | "character"
-  | "trackMap"
-  | "trackLesson"
-  | "challenge"
-  | "components"
-  | "records"
-  | "recordDetail"
-  | "read"
-  | "profile"
-  | "playground";
-
 type AccountIdentity = {
   displayName: string;
   email: string | null;
   mode: "workspace" | "device";
-};
-
-type PlaygroundKind = "kit" | "lesson" | "puzzle" | "quiz";
-
-type AppRoute = {
-  screen: Screen;
-  lessonId?: string;
-  characterId?: string;
-  track?: TrackId;
-  playground?: PlaygroundKind;
-  returnTo?: string;
 };
 
 type TrackMeta = {
@@ -195,12 +174,6 @@ const trackMeta: Record<TrackId, TrackMeta> = {
   },
 };
 
-const trackBase: Record<Exclude<TrackId, "words">, string> = {
-  split: "/split-exercise",
-  honglan: "/honglan-exercise",
-  structure: "/space-structure-exercise",
-};
-
 const courseUnits = [
   { label: "第一单元", start: 1, end: 4 },
   { label: "第二单元", start: 5, end: 8 },
@@ -211,76 +184,6 @@ const courseUnits = [
   { label: "第七单元", start: 21, end: 24 },
   { label: "第八单元", start: 25, end: 26 },
 ];
-
-function routeForTrack(track: TrackId, lessonId?: string, characterId?: string) {
-  if (track === "words") {
-    if (lessonId && characterId) return `/lessons/${lessonId}/words/${characterId}/quizzes`;
-    if (lessonId) return `/lessons/${lessonId}`;
-    return "/lessons";
-  }
-  const base = trackBase[track];
-  if (!lessonId) return base;
-  if (!characterId) return `${base}/${lessonId}`;
-  const segment = track === "split" ? "words" : "lesson_words";
-  return `${base}/${lessonId}/${segment}/${characterId}`;
-}
-
-function resolveAppRoute(pathValue: string): AppRoute {
-  const pathname = pathValue.split("?")[0].replace(/\/+$/, "") || "/";
-  const parts = pathname.split("/").filter(Boolean);
-  if (!parts.length) return { screen: "home" };
-  if (parts[0] === "account") return { screen: "profile" };
-  if (parts[0] === "practice") return { screen: "practice" };
-  if (parts[0] === "records") {
-    const track = trackIds.includes(parts[1] as TrackId) ? parts[1] as TrackId : undefined;
-    const character = allCharacters.find((item) => item.id === parts[2]);
-    return character && track
-      ? { screen: "recordDetail", track, lessonId: character.lessonId, characterId: character.id }
-      : { screen: "records", track };
-  }
-  if (parts[0] === "bujian") return { screen: "components", returnTo: returnPathFromUrl(pathValue) };
-  if (parts[0] === "read-aloud") return { screen: "read", returnTo: returnPathFromUrl(pathValue) };
-  if (parts[0] === "playground") {
-    const playground = (["kit", "lesson", "puzzle", "quiz"].includes(parts[1]) ? parts[1] : "kit") as PlaygroundKind;
-    return { screen: "playground", playground };
-  }
-  if (parts[0] === "lessons") {
-    if (!parts[1]) return { screen: "course" };
-    const lesson = lessonList.find((item) => item.id === parts[1]);
-    if (!lesson) return { screen: "course" };
-    const character = allCharacters.find((item) => item.id === parts[3] && item.lessonId === lesson.id);
-    if (parts[2] === "words" && character) {
-      return {
-        screen: parts[4] === "quizzes" ? "challenge" : "character",
-        track: "words",
-        lessonId: lesson.id,
-        characterId: character.id,
-      };
-    }
-    return { screen: "lesson", lessonId: lesson.id };
-  }
-
-  const routeTrack: TrackId | undefined =
-    parts[0] === "split-exercise"
-      ? "split"
-      : parts[0] === "honglan-exercise"
-        ? "honglan"
-        : parts[0] === "space-structure-exercise"
-          ? "structure"
-          : undefined;
-  if (routeTrack) {
-    if (!parts[1]) return { screen: "trackMap", track: routeTrack };
-    const lesson = lessonList.find((item) => item.id === parts[1]);
-    const character = allCharacters.find((item) => item.id === parts[3] && item.lessonId === lesson?.id);
-    if (lesson && character) {
-      return { screen: "challenge", track: routeTrack, lessonId: lesson.id, characterId: character.id };
-    }
-    return lesson
-      ? { screen: "trackLesson", track: routeTrack, lessonId: lesson.id }
-      : { screen: "trackMap", track: routeTrack };
-  }
-  return { screen: "home" };
-}
 
 function getLessonCharacters(lessonId: string) {
   return allCharacters.filter((item) => item.lessonId === lessonId && item.primary);
