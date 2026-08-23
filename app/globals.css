@@ -3508,27 +3508,16 @@ html[data-theme="night"] .hero-illustration img {
 }
 
 .record-stat-row > div {
-  min-height: 128px;
+  min-height: 112px;
   padding: 18px;
-  border: 1px solid var(--line);
-  border-radius: 19px;
+  border: 1.5px solid var(--line);
+  border-radius: 18px;
   background: var(--paper);
   box-shadow: var(--shadow-xs);
 }
 
-.record-stat-row > div:nth-child(1) {
-  border-color: rgba(45, 154, 120, 0.35);
-  background: linear-gradient(145deg, var(--jade-soft), var(--paper));
-}
-
-.record-stat-row > div:nth-child(2) {
-  border-color: rgba(67, 117, 232, 0.3);
-  background: linear-gradient(145deg, var(--lapis-soft), var(--paper));
-}
-
-.record-stat-row > div:nth-child(3) {
-  border-color: rgba(242, 181, 63, 0.35);
-  background: linear-gradient(145deg, var(--saffron-soft), var(--paper));
+.record-stat-row > div:nth-child(1) strong {
+  color: var(--action);
 }
 
 .record-stat-row span,
@@ -3813,24 +3802,36 @@ html[data-theme="night"] .hero-illustration img {
 
 .read-lesson-tabs {
   display: flex;
-  flex-wrap: wrap;
   gap: 8px;
   margin-bottom: 16px;
+  padding-bottom: 4px;
+  overflow-x: auto;
+  scroll-snap-type: x proximity;
+  scrollbar-width: none;
+}
+
+.read-lesson-tabs::-webkit-scrollbar {
+  display: none;
 }
 
 .read-lesson-tabs button {
-  padding: 9px 12px;
-  border: 1px solid var(--line);
-  border-radius: 11px;
+  flex: 0 0 auto;
+  min-height: 44px;
+  padding: 9px 14px;
+  border: 1.5px solid var(--line);
+  border-radius: 12px;
   color: var(--ink-soft);
-  font-size: 0.73rem;
+  font-size: 0.79rem;
+  white-space: nowrap;
+  scroll-snap-align: start;
   background: var(--paper);
 }
 
 .read-lesson-tabs button.is-active {
-  border-color: var(--violet);
-  color: var(--violet);
-  background: var(--violet-soft);
+  border-color: var(--action);
+  color: var(--action);
+  font-weight: 700;
+  background: var(--action-soft);
 }
 
 .read-studio {
@@ -3838,12 +3839,10 @@ html[data-theme="night"] .hero-illustration img {
   grid-template-columns: 88px minmax(0, 1fr) auto;
   align-items: center;
   gap: 21px;
-  padding: 23px;
-  border: 1px solid rgba(129, 91, 232, 0.28);
-  border-radius: 24px;
-  background:
-    radial-gradient(circle at 94% 3%, rgba(242, 181, 63, 0.3), transparent 14rem),
-    linear-gradient(135deg, var(--violet-soft), var(--paper));
+  padding: 20px;
+  border: 1.5px solid var(--line);
+  border-radius: 20px;
+  background: var(--paper);
   box-shadow: var(--shadow-xs);
 }
 
@@ -3852,20 +3851,19 @@ html[data-theme="night"] .hero-illustration img {
   width: 80px;
   height: 80px;
   place-items: center;
-  border-radius: 23px;
-  color: #fff;
+  border-radius: 20px;
+  color: var(--action);
   font-family: var(--kai);
-  font-size: 3rem;
-  font-weight: 900;
-  background: linear-gradient(135deg, var(--violet), #a17bed);
-  box-shadow: 0 13px 22px rgba(129, 91, 232, 0.22);
+  font-size: 2.5rem;
+  font-weight: 500;
+  background: var(--action-soft);
 }
 
 .read-studio h2 {
   margin: 0;
   color: var(--navy);
   font-family: var(--serif);
-  font-size: 1.62rem;
+  font-size: 1.38rem;
 }
 
 .read-studio p:not(.kicker) {
@@ -4876,11 +4874,17 @@ html[data-theme="night"] .hero-illustration img {
   }
 
   .record-stat-row {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
   }
 
   .record-stat-row > div {
-    min-height: 87px;
+    min-height: 0;
+    padding: 13px 12px;
+  }
+
+  .record-stat-row strong {
+    font-size: 1.72rem;
   }
 
   .record-character-list {
@@ -7318,4 +7322,10 @@ html[data-theme="night"] .profile-card {
   align-items: center;
   gap: 13px;
   min-width: 0;
+}
+
+/* Tab destinations have no back button, so the heading reclaims that column. */
+.page-heading.is-root {
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0;
 }

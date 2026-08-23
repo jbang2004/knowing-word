@@ -730,17 +730,16 @@
   align-items: center;
   justify-content: space-between;
   gap: 32px;
-  margin-bottom: 18px;
-  padding: 25px 30px;
-  border: 1px solid color-mix(in srgb, var(--coral) 21%, var(--line));
-  border-radius: 25px;
-  background:
-    radial-gradient(circle at 90% 40%, color-mix(in srgb, var(--saffron) 20%, transparent), transparent 13rem),
-    color-mix(in srgb, var(--coral-soft) 38%, var(--paper));
+  margin-bottom: 14px;
+  padding: 18px 20px;
+  border: 1.5px solid var(--line);
+  border-radius: 20px;
+  background: var(--paper);
+  box-shadow: var(--shadow-xs);
 }
 
 .practice-context-band span {
-  color: var(--coral);
+  color: var(--action);
   font-size: .72rem;
   font-weight: 860;
   letter-spacing: .12em;
@@ -762,18 +761,17 @@
 
 .practice-context-band > i {
   display: grid;
-  flex: 0 0 88px;
-  width: 88px;
-  height: 88px;
+  flex: 0 0 64px;
+  width: 64px;
+  height: 64px;
   place-items: center;
-  border: 1px solid color-mix(in srgb, var(--coral) 25%, transparent);
-  border-radius: 28% 72% 63% 37% / 58% 40% 60% 42%;
-  color: var(--coral);
-  font-family: var(--serif);
-  font-size: 3rem;
+  border-radius: 18px;
+  color: var(--action);
+  font-family: var(--kai);
+  font-size: 2.1rem;
   font-style: normal;
-  font-weight: 900;
-  background: color-mix(in srgb, var(--paper) 72%, transparent);
+  font-weight: 500;
+  background: var(--action-soft);
 }
 
 .practice-route-grid {
@@ -786,14 +784,12 @@
   --practice-accent: var(--saffron);
   --practice-soft: var(--saffron-soft);
   display: flex;
-  min-height: 370px;
   flex-direction: column;
-  padding: 27px;
-  border: 1px solid color-mix(in srgb, var(--practice-accent) 26%, var(--line));
-  border-radius: 27px;
-  background:
-    radial-gradient(circle at 80% 10%, color-mix(in srgb, var(--practice-accent) 15%, transparent), transparent 13rem),
-    color-mix(in srgb, var(--practice-soft) 32%, var(--paper));
+  padding: 18px;
+  border: 1.5px solid var(--line);
+  border-radius: 20px;
+  background: var(--paper);
+  box-shadow: var(--shadow-xs);
 }
 
 .practice-route-card.lapis {
@@ -808,50 +804,57 @@
 
 .practice-route-top {
   display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+}
+
+.practice-route-top > div {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
 .practice-route-top > span {
-  color: var(--practice-accent);
+  flex: 0 0 auto;
+  color: var(--ink-faint);
   font-size: .74rem;
-  font-weight: 900;
+  font-weight: 800;
   letter-spacing: .12em;
 }
 
 .practice-route-top > i {
   display: grid;
-  width: 76px;
-  height: 76px;
+  width: 52px;
+  height: 52px;
   place-items: center;
-  border: 1px solid color-mix(in srgb, var(--practice-accent) 25%, transparent);
-  border-radius: 24px;
+  border-radius: 16px;
   color: var(--practice-accent);
-  font-family: var(--serif);
-  font-size: 1.45rem;
+  font-family: var(--kai);
+  font-size: 1.28rem;
   font-style: normal;
-  font-weight: 900;
-  background: color-mix(in srgb, var(--paper) 68%, transparent);
+  font-weight: 500;
+  background: var(--practice-soft);
 }
 
-.practice-route-card > p {
-  margin: 42px 0 7px;
+.practice-route-top p {
+  margin: 0 0 3px;
   color: var(--practice-accent);
   font-size: .75rem;
   font-weight: 780;
 }
 
-.practice-route-card > h2 {
+.practice-route-top h2 {
   margin: 0;
   color: var(--navy);
   font-family: var(--serif);
-  font-size: 1.65rem;
+  font-size: 1.32rem;
 }
 
 .practice-route-progress {
   display: flex;
   gap: 15px;
-  margin-top: 19px;
+  margin-top: 12px;
   color: var(--ink-soft);
   font-size: .74rem;
   font-weight: 720;
@@ -861,11 +864,12 @@
   display: flex;
   align-items: center;
   gap: 15px;
-  margin-top: auto;
+  margin-top: 16px;
 }
 
+/* "Go forward" is one colour everywhere; the track tone stays on the glyph. */
 .practice-route-card .game-button.primary {
-  background: var(--practice-accent);
+  background: var(--action);
   box-shadow: none;
 }
 

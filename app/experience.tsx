@@ -1098,7 +1098,6 @@ export default function Home({ initialPath = "/" }: { initialPath?: string }) {
       {screen === "practice" && (
         <PracticeHub
           profile={profile}
-          onBack={() => navigate("home")}
           onTrack={openTrackMap}
           onLesson={openTrackLesson}
         />
@@ -1107,7 +1106,6 @@ export default function Home({ initialPath = "/" }: { initialPath?: string }) {
       {screen === "course" && (
         <CourseMap
           profile={profile}
-          onBack={() => navigate("home")}
           onLesson={openLesson}
         />
       )}
@@ -1251,7 +1249,6 @@ export default function Home({ initialPath = "/" }: { initialPath?: string }) {
           profile={profile}
           identity={identity}
           syncState={syncState}
-          onBack={() => navigate("home")}
           onName={(name) => updateProfile((previous) => ({ ...previous, name }))}
           onGrade={(grade) => updateProfile((previous) => ({ ...previous, grade }))}
           onTheme={() =>
@@ -1327,12 +1324,10 @@ function TopNavigation({
 
 function PracticeHub({
   profile,
-  onBack,
   onTrack,
   onLesson,
 }: {
   profile: StudyProfile;
-  onBack: () => void;
   onTrack: (track: TrackId) => void;
   onLesson: (track: TrackId, lessonId: string) => void;
 }) {
@@ -1346,7 +1341,6 @@ function PracticeHub({
         kicker="巩固练习"
         title="同一批字，换三种眼光再看一遍"
         copy="拆字看组成，红蓝看部件分工，结构看空间站位。三种方法服务于同一个目标：离开图片后，仍然能把字想起来。"
-        onBack={onBack}
       />
 
       <section className="practice-context-band" aria-label="当前课程">
@@ -1366,11 +1360,13 @@ function PracticeHub({
           return (
             <article className={`practice-route-card ${meta.tone}`} key={track}>
               <div className="practice-route-top">
-                <span>{String(index + 1).padStart(2, "0")}</span>
                 <i>{meta.glyph}</i>
+                <div>
+                  <p>{meta.eyebrow}</p>
+                  <h2>{meta.label}</h2>
+                </div>
+                <span>{String(index + 1).padStart(2, "0")}</span>
               </div>
-              <p>{meta.eyebrow}</p>
-              <h2>{meta.label}</h2>
               <div className="practice-route-progress">
                 <span>本课 {lessonProgress.completed}/{lessonProgress.total}</span>
                 <span>全册 {totalProgress.completed}/{totalProgress.total}</span>
@@ -1397,11 +1393,9 @@ function PracticeHub({
 
 function CourseMap({
   profile,
-  onBack,
   onLesson,
 }: {
   profile: StudyProfile;
-  onBack: () => void;
   onLesson: (lessonId: string) => void;
 }) {
   return (
@@ -1410,7 +1404,6 @@ function CourseMap({
         kicker="课程地图"
         title={course.title}
         copy="新版五年级上册共 26 课：按官方会认、会写和多音字清单学习，再用专项关卡反复巩固。"
-        onBack={onBack}
       />
       <div className="course-units">
         {courseUnits.map((unit) => {
@@ -3703,7 +3696,6 @@ function ProfilePanel({
   profile,
   identity,
   syncState,
-  onBack,
   onName,
   onGrade,
   onTheme,
@@ -3712,7 +3704,6 @@ function ProfilePanel({
   profile: StudyProfile;
   identity: AccountIdentity | null;
   syncState: "loading" | "synced" | "local";
-  onBack: () => void;
   onName: (name: string) => void;
   onGrade: (grade: number) => void;
   onTheme: () => void;
@@ -3725,7 +3716,6 @@ function ProfilePanel({
         kicker="我的账户"
         title="这是属于你的学习空间"
         copy={syncState === "synced" ? "学习进度已经安全同步，换设备后也能从上次的位置继续。" : "当前处于离线模式，恢复网络后会自动同步。"}
-        onBack={onBack}
       />
       <section className="account-identity-card">
         <div><span>{identity?.mode === "workspace" ? "已登录账户" : "本设备学习身份"}</span><strong>{identity?.email || identity?.displayName || "小探险家"}</strong></div>
@@ -3820,11 +3810,11 @@ function PageHeading({
   kicker: string;
   title: string;
   copy: string;
-  onBack: () => void;
+  onBack?: () => void;
 }) {
   return (
-    <header className="page-heading">
-      <button className="back-button" onClick={onBack}><ArrowLeft aria-hidden="true" />返回</button>
+    <header className={onBack ? "page-heading" : "page-heading is-root"}>
+      {onBack && <button className="back-button" onClick={onBack}><ArrowLeft aria-hidden="true" />返回</button>}
       <div>
         <p className="kicker">{kicker}</p>
         <h1>{title}</h1>
