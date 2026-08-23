@@ -1842,7 +1842,6 @@ function NarrationTheatre({
       </div>
 
       <div className="narration-theatre-chip">
-        {visual && <Image src={visual.src} alt="" aria-hidden="true" width={46} height={46} />}
         <div>
           <strong>{character.hanzi} · {character.pinyin}</strong>
           <small>{finished ? "讲解完成，可以进入物象四步" : narrationStatus}</small>

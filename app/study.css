@@ -710,14 +710,6 @@
   background: rgba(244, 240, 230, 0.05);
 }
 
-.narration-theatre-chip img {
-  width: 46px;
-  height: 46px;
-  border-radius: 12px;
-  object-fit: contain;
-  background: #f7f1e4;
-}
-
 .narration-theatre-chip div {
   display: flex;
   flex-direction: column;
@@ -748,9 +740,25 @@
   text-wrap: pretty;
 }
 
+/* The inline component styled these for the light page: a saffron underline
+   for read text and a coral halo on the active character. Both are wrong here —
+   the underline reads as olive blocks on the dark ground, and coral is the
+   reserved 表意部首 colour. */
 .narration-theatre .narration-token {
   color: rgba(244, 240, 230, 0.8);
+  box-shadow: none;
+  background: transparent;
+  transform: none;
   transition: color 140ms linear;
+}
+
+.narration-theatre .narration-token.is-punctuation {
+  color: rgba(244, 240, 230, 0.55);
+}
+
+.narration-theatre .narration-token.is-current-phrase:not(.is-active) {
+  color: rgba(244, 240, 230, 0.8);
+  background: transparent;
 }
 
 .narration-theatre .narration-token.is-complete {
@@ -767,6 +775,7 @@
   color: var(--night);
   font-weight: 650;
   background: var(--n-action);
+  box-shadow: 0 0 0 3px rgba(53, 194, 149, 0.18);
 }
 
 .narration-theatre-controls {
