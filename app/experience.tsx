@@ -1592,11 +1592,15 @@ function narrationMediaSource(source: string | undefined) {
 }
 
 function InlineNarrationPlayer({
+  active,
   character,
+  onActiveChange,
   onFinished,
   onReadAloud,
 }: {
+  active: boolean;
   character: CharacterItem;
+  onActiveChange: (active: boolean) => void;
   onFinished?: () => void;
   onReadAloud: () => void;
 }) {
@@ -1617,7 +1621,6 @@ function InlineNarrationPlayer({
   const [elapsed, setElapsed] = useState(0);
   const [duration, setDuration] = useState(0);
   const [playing, setPlaying] = useState(false);
-  const [started, setStarted] = useState(false);
   const [transcriptOpen, setTranscriptOpen] = useState(false);
 
   useEffect(() => {
@@ -1656,35 +1659,53 @@ function InlineNarrationPlayer({
   }, [audioMarksSource]);
 
   useEffect(() => {
-    if (!started) {
+    if (!active) {
       if (!restoreLauncherFocusRef.current) return;
       restoreLauncherFocusRef.current = false;
       const focusFrame = window.requestAnimationFrame(() => launcherRef.current?.focus({ preventScroll: true }));
       return () => window.cancelAnimationFrame(focusFrame);
     }
 
-    const revealFrame = window.requestAnimationFrame(() => {
-      const player = playerRef.current;
-      if (!player) return;
-      player.focus({ preventScroll: true });
-      if (!window.matchMedia("(max-width: 899px)").matches) return;
+    let revealFrame = 0;
+    let resizeTimer = 0;
+    const revealPlayer = (focus = false) => {
+      window.cancelAnimationFrame(revealFrame);
+      revealFrame = window.requestAnimationFrame(() => {
+        const player = playerRef.current;
+        if (!player) return;
+        if (focus) player.focus({ preventScroll: true });
+        if (!window.matchMedia("(max-width: 899px)").matches) return;
 
-      const viewport = window.visualViewport;
-      const viewportTop = viewport?.offsetTop || 0;
-      const viewportBottom = viewportTop + (viewport?.height || window.innerHeight);
-      const bounds = player.getBoundingClientRect();
-      const fullyVisible = bounds.top >= viewportTop + 8 && bounds.bottom <= viewportBottom - 16;
-      if (fullyVisible) return;
+        const viewport = window.visualViewport;
+        const viewportTop = viewport?.offsetTop || 0;
+        const viewportBottom = viewportTop + (viewport?.height || window.innerHeight);
+        const bounds = player.getBoundingClientRect();
+        const fullyVisible = bounds.top >= viewportTop + 8 && bounds.bottom <= viewportBottom - 16;
+        if (fullyVisible) return;
 
-      const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-      player.scrollIntoView({
-        behavior: reduceMotion ? "auto" : "smooth",
-        block: "nearest",
-        inline: "nearest",
+        const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        player.scrollIntoView({
+          behavior: reduceMotion ? "auto" : "smooth",
+          block: "nearest",
+          inline: "nearest",
+        });
       });
-    });
-    return () => window.cancelAnimationFrame(revealFrame);
-  }, [started]);
+    };
+    const revealAfterResize = () => {
+      window.clearTimeout(resizeTimer);
+      resizeTimer = window.setTimeout(() => revealPlayer(), 140);
+    };
+
+    revealPlayer(true);
+    window.addEventListener("resize", revealAfterResize);
+    window.visualViewport?.addEventListener("resize", revealAfterResize);
+    return () => {
+      window.cancelAnimationFrame(revealFrame);
+      window.clearTimeout(resizeTimer);
+      window.removeEventListener("resize", revealAfterResize);
+      window.visualViewport?.removeEventListener("resize", revealAfterResize);
+    };
+  }, [active]);
 
   useEffect(() => {
     if (!transcriptOpen) return;
@@ -1778,6 +1799,19 @@ function InlineNarrationPlayer({
           ? "逐字跟读已就绪"
           : "标准普通话讲解";
 
+  useEffect(() => {
+    if (!active || !finished || !window.matchMedia("(max-width: 899px)").matches) return;
+    const revealFrame = window.requestAnimationFrame(() => {
+      const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      playerRef.current?.scrollIntoView({
+        behavior: reduceMotion ? "auto" : "smooth",
+        block: "nearest",
+        inline: "nearest",
+      });
+    });
+    return () => window.cancelAnimationFrame(revealFrame);
+  }, [active, finished]);
+
   const spokenSeconds = timelineDuration || 0;
   const currentPhraseText = useMemo(() => {
     if (activePhraseIndex < 0) return releasedTranscript;
@@ -1798,7 +1832,7 @@ function InlineNarrationPlayer({
   }
 
   function startNarration() {
-    setStarted(true);
+    onActiveChange(true);
     toggleNarration();
   }
 
@@ -1806,13 +1840,13 @@ function InlineNarrationPlayer({
     audioRef.current?.pause();
     setPlaying(false);
     restoreLauncherFocusRef.current = true;
-    setStarted(false);
+    onActiveChange(false);
     setTranscriptOpen(false);
   }
 
   return (
     <>
-      {!started ? (
+      {!active ? (
         <button className="study-listen-button" onClick={startNarration} ref={launcherRef}>
           <span className="study-equalizer" aria-hidden="true"><b /><b /><b /><b /><b /></span>
           <span>
@@ -1823,7 +1857,7 @@ function InlineNarrationPlayer({
         </button>
       ) : (
         <section
-          className={`study-narration-player${playing ? " is-playing" : ""}`}
+          className={`study-narration-player${playing ? " is-playing" : ""}${finished ? " is-finished" : ""}`}
           aria-label="字义讲解播放器"
           ref={playerRef}
           tabIndex={-1}
@@ -2338,6 +2372,7 @@ function CharacterStudy({
   // in a pull-up drawer instead of seven stacked cards.
   const [view, setView] = useState<"study" | "memory">("study");
   const [drawerOpen, setDrawerOpen] = useState(false);
+  const [narrationActive, setNarrationActive] = useState(false);
 
   const exercises = getTrackExercises(character, "words");
   const isComplete = profile.completed.words.includes(character.id);
@@ -2376,7 +2411,7 @@ function CharacterStudy({
   }
 
   return (
-    <main className="study-shell">
+    <main className={`study-shell${narrationActive ? " is-listening" : ""}`}>
       {narrationHref && <link rel="prefetch" as="audio" href={narrationHref} />}
 
       <div className="study-topbar">
@@ -2447,14 +2482,22 @@ function CharacterStudy({
 
           <div className="study-launch">
             <InlineNarrationPlayer
+              active={narrationActive}
               character={character}
               key={character.id}
-              onFinished={visual && !pilotKnowledge ? () => setView("memory") : undefined}
+              onActiveChange={setNarrationActive}
+              onFinished={visual && !pilotKnowledge ? () => {
+                setNarrationActive(false);
+                setView("memory");
+              } : undefined}
               onReadAloud={onReadAloud}
             />
 
             {visual && !pilotKnowledge && (
-              <button className="study-next-steps" onClick={() => setView("memory")}>
+              <button className="study-next-steps" onClick={() => {
+                setNarrationActive(false);
+                setView("memory");
+              }}>
                 <small>接着是</small>
                 <div>
                   {mnemonicStageLabels.map((label, index) => (

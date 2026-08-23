@@ -95,6 +95,8 @@ test("character pages render the complete picture-to-character memory flow", asy
   // while reduced-motion users get the same layout without smooth movement.
   assert.match(pageSource, /player\.scrollIntoView/);
   assert.match(pageSource, /prefers-reduced-motion: reduce/);
+  assert.match(pageSource, /visualViewport\?\.addEventListener\("resize"/);
+  assert.match(pageSource, /study-shell\$\{narrationActive \? " is-listening"/);
   assert.match(pageSource, /type='audio\/webm; codecs="opus"'/);
 
   const studyCss = await readFile(
@@ -102,7 +104,10 @@ test("character pages render the complete picture-to-character memory flow", asy
     "utf8",
   );
   assert.match(studyCss, /scroll-margin-block:[^;]*safe-area-inset-bottom/);
+  assert.match(studyCss, /@media \(max-width: 899px\) and \(max-height: 820px\)/);
   assert.match(studyCss, /@media \(max-width: 899px\) and \(max-height: 760px\)/);
+  assert.match(studyCss, /@media \(max-width: 899px\) and \(max-height: 620px\)/);
+  assert.match(studyCss, /\.study-shell\.is-listening \.study-scene/);
   assert.match(studyCss, /\.study-transcript-text \{[^}]*min-height: 0;/s);
 });
 
