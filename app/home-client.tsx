@@ -12,7 +12,7 @@ import {
   LayoutGrid,
   UserRound,
 } from "lucide-react";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo } from "react";
 import {
   homeCandidates,
   homeCourse,
@@ -20,15 +20,12 @@ import {
 } from "./data/home-index.generated";
 import { primaryNavigation, type PrimaryNavigationId } from "./lib/navigation";
 import {
-  emptyProfile,
-  normalizeProfile,
-  PROFILE_STORAGE_KEY,
-  PROFILE_UPDATED_STORAGE_KEY,
   todayKey,
   type StudyProfile,
   type TrackId,
 } from "./lib/profile-model";
 import { candidatePathStates, nextCandidateId } from "./lib/progress-model";
+import { useStudyProfile } from "./features/profile/use-study-profile";
 
 type TrackMeta = {
   label: string;
@@ -114,52 +111,7 @@ function continuePath(track: TrackId, candidate: HomeCandidate | undefined) {
 
 export default function HomeLanding() {
   const router = useRouter();
-  const [profile, setProfile] = useState<StudyProfile>(emptyProfile);
-  const [hydrated, setHydrated] = useState(false);
-  const [syncState, setSyncState] = useState<"loading" | "synced" | "local">("loading");
-
-  useEffect(() => {
-    let active = true;
-    const timer = window.setTimeout(async () => {
-      let localProfile: StudyProfile | null = null;
-      let localUpdatedAt = 0;
-      try {
-        const stored = window.localStorage.getItem(PROFILE_STORAGE_KEY);
-        if (stored) localProfile = normalizeProfile(JSON.parse(stored));
-        localUpdatedAt = Date.parse(window.localStorage.getItem(PROFILE_UPDATED_STORAGE_KEY) || "") || 0;
-      } catch {
-        window.localStorage.removeItem(PROFILE_STORAGE_KEY);
-      }
-
-      try {
-        const response = await fetch("/api/profile", { cache: "no-store" });
-        if (!response.ok) throw new Error("profile unavailable");
-        const payload = await response.json() as { profile?: unknown; updatedAt?: string | null };
-        if (!active) return;
-        const serverUpdatedAt = Date.parse(payload.updatedAt || "") || 0;
-        if (payload.profile && (!localProfile || serverUpdatedAt >= localUpdatedAt)) {
-          setProfile(normalizeProfile(payload.profile));
-        } else if (localProfile) {
-          setProfile(localProfile);
-        }
-        setSyncState("synced");
-      } catch {
-        if (active && localProfile) setProfile(localProfile);
-        if (active) setSyncState("local");
-      } finally {
-        if (active) setHydrated(true);
-      }
-    }, 0);
-
-    return () => {
-      active = false;
-      window.clearTimeout(timer);
-    };
-  }, []);
-
-  useEffect(() => {
-    document.documentElement.dataset.theme = profile.theme;
-  }, [profile.theme]);
+  const { profile, hydrated, syncState } = useStudyProfile({ writable: false });
 
   const likelyPath = useMemo(
     () => continuePath("words", nextCandidate("words", profile)),

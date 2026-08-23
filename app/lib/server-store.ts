@@ -24,10 +24,11 @@ export function getMedia() {
 }
 
 export function resolveIdentity(request: Request): RequestIdentity {
+  const authenticatedUserId = request.headers.get("oai-authenticated-user-id")?.trim();
   const email = request.headers.get("oai-authenticated-user-email")?.trim().toLowerCase();
   const encodedName = request.headers.get("oai-authenticated-user-full-name");
   const nameEncoding = request.headers.get("oai-authenticated-user-full-name-encoding");
-  if (email) {
+  if (authenticatedUserId || email) {
     let fullName: string | null = null;
     if (encodedName && nameEncoding === "percent-encoded-utf-8") {
       try {
@@ -37,9 +38,9 @@ export function resolveIdentity(request: Request): RequestIdentity {
       }
     }
     return {
-      userId: `workspace:${email}`,
-      displayName: fullName || email.split("@")[0] || "学习者",
-      email,
+      userId: `workspace:${authenticatedUserId || email}`,
+      displayName: fullName || email?.split("@")[0] || "学习者",
+      email: email || null,
       mode: "workspace",
     };
   }

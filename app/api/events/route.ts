@@ -1,22 +1,13 @@
 import { dayKey, getDb, jsonWithIdentity, resolveIdentity } from "../../lib/server-store";
+import { parseLearningEvent } from "../../domain/learning-event";
 
 export const dynamic = "force-dynamic";
-
-type EventPayload = {
-  action?: "answer" | "skip" | "read";
-  track?: string;
-  lessonId?: string;
-  characterId?: string;
-  questionId?: string;
-  correct?: boolean;
-  selected?: string[];
-};
 
 export async function POST(request: Request) {
   const identity = resolveIdentity(request);
   try {
-    const payload = (await request.json()) as EventPayload;
-    if (!payload.action || !["answer", "skip", "read"].includes(payload.action)) {
+    const payload = parseLearningEvent(await request.json());
+    if (!payload) {
       return jsonWithIdentity(identity, { error: "无效的学习事件" }, { status: 400 });
     }
     const now = new Date().toISOString();
@@ -25,15 +16,14 @@ export async function POST(request: Request) {
     const correctDelta = payload.action === "answer" && payload.correct ? 1 : 0;
     const skipDelta = payload.action === "skip" ? 1 : 0;
     const readDelta = payload.action === "read" ? 1 : 0;
-    const eventId = crypto.randomUUID();
     const db = getDb();
     await db.batch([
       db.prepare(
-        `INSERT INTO learning_events
+        `INSERT OR IGNORE INTO learning_events
          (id, user_id, action, track, lesson_id, character_id, question_id, correct, selection_json, created_at)
          VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?9, ?10)`,
       ).bind(
-        eventId,
+        payload.eventId,
         identity.userId,
         payload.action,
         payload.track || null,
@@ -47,7 +37,7 @@ export async function POST(request: Request) {
       db.prepare(
         `INSERT INTO daily_activity
          (user_id, activity_date, attempts, correct, skips, read_sessions, updated_at)
-         VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7)
+         SELECT ?1, ?2, ?3, ?4, ?5, ?6, ?7 WHERE changes() = 1
          ON CONFLICT(user_id, activity_date) DO UPDATE SET
            attempts = attempts + excluded.attempts,
            correct = correct + excluded.correct,
@@ -56,7 +46,7 @@ export async function POST(request: Request) {
            updated_at = excluded.updated_at`,
       ).bind(identity.userId, date, answerDelta, correctDelta, skipDelta, readDelta, now),
     ]);
-    return jsonWithIdentity(identity, { ok: true, id: eventId });
+    return jsonWithIdentity(identity, { ok: true, id: payload.eventId });
   } catch (error) {
     return jsonWithIdentity(
       identity,

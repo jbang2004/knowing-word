@@ -89,22 +89,19 @@ import {
   type Screen,
 } from "./lib/app-route";
 import {
-  emptyProfile,
-  normalizeProfile,
-  PROFILE_STORAGE_KEY,
-  PROFILE_UPDATED_STORAGE_KEY,
   todayKey,
   trackIds,
   type AnswerStat,
   type StudyProfile,
   type TrackId,
 } from "./lib/profile-model";
-
-type AccountIdentity = {
-  displayName: string;
-  email: string | null;
-  mode: "workspace" | "device";
-};
+import {
+  useStudyProfile,
+  type AccountIdentity,
+  type ProfileSyncState,
+} from "./features/profile/use-study-profile";
+import { queueLearningEvent } from "./infrastructure/browser/learning-event-outbox";
+import type { LearningEventInput } from "./domain/learning-event";
 
 type TrackMeta = {
   id: TrackId;
@@ -394,8 +391,8 @@ function speak(text: string, onEnd?: () => void) {
 
 export default function Home({ initialPath = "/" }: { initialPath?: string }) {
   const initialRoute = useMemo(() => resolveAppRoute(initialPath), [initialPath]);
+  const { profile, setProfile, identity, syncState, resetProfile: clearProfile } = useStudyProfile();
   const [screen, setScreen] = useState<Screen>(initialRoute.screen);
-  const [profile, setProfile] = useState<StudyProfile>(emptyProfile);
   const [selectedLessonId, setSelectedLessonId] = useState(initialRoute.lessonId || initialLesson.id);
   const [selectedCharacterId, setSelectedCharacterId] = useState(initialRoute.characterId || initialCharacter.id);
   const [selectedTrack, setSelectedTrack] = useState<TrackId>(initialRoute.track || "words");
@@ -407,9 +404,6 @@ export default function Home({ initialPath = "/" }: { initialPath?: string }) {
   const [selectedOptions, setSelectedOptions] = useState<string[]>([]);
   const [wrote, setWrote] = useState(false);
   const [result, setResult] = useState<boolean | null>(null);
-  const [hydrated, setHydrated] = useState(false);
-  const [identity, setIdentity] = useState<AccountIdentity | null>(null);
-  const [syncState, setSyncState] = useState<"loading" | "synced" | "local">("loading");
   const [sessionResults, setSessionResults] = useState<boolean[]>([]);
   const [celebration, setCelebration] = useState(false);
   const [secondaryReturnPath, setSecondaryReturnPath] = useState(initialRoute.returnTo);
@@ -436,82 +430,6 @@ export default function Home({ initialPath = "/" }: { initialPath?: string }) {
     }
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
-
-  useEffect(() => {
-    let active = true;
-    const timer = window.setTimeout(async () => {
-      let localProfile: StudyProfile | null = null;
-      let localUpdatedAt = 0;
-      try {
-        const stored = window.localStorage.getItem(PROFILE_STORAGE_KEY);
-        if (stored) localProfile = normalizeProfile(JSON.parse(stored));
-        localUpdatedAt = Date.parse(window.localStorage.getItem(PROFILE_UPDATED_STORAGE_KEY) || "") || 0;
-      } catch {
-        window.localStorage.removeItem(PROFILE_STORAGE_KEY);
-      }
-      try {
-        const response = await fetch("/api/profile", { cache: "no-store" });
-        if (!response.ok) throw new Error("profile unavailable");
-        const payload = await response.json() as {
-          identity?: AccountIdentity;
-          profile?: unknown;
-          updatedAt?: string | null;
-        };
-        if (!active) return;
-        if (payload.identity) setIdentity(payload.identity);
-        const serverUpdatedAt = Date.parse(payload.updatedAt || "") || 0;
-        if (payload.profile && (!localProfile || serverUpdatedAt >= localUpdatedAt)) {
-          setProfile(normalizeProfile(payload.profile));
-          setSyncState("synced");
-        } else if (localProfile) {
-          setProfile(localProfile);
-          try {
-            // Only report "synced" once the cloud actually accepted the local
-            // profile; a failed upload must surface as "local", not as success.
-            const putResponse = await fetch("/api/profile", {
-              method: "PUT",
-              headers: { "content-type": "application/json" },
-              body: JSON.stringify(localProfile),
-            });
-            if (active) setSyncState(putResponse.ok ? "synced" : "local");
-          } catch {
-            if (active) setSyncState("local");
-          }
-        } else {
-          setSyncState("synced");
-        }
-      } catch {
-        if (active && localProfile) setProfile(localProfile);
-        if (active) setSyncState("local");
-      } finally {
-        if (active) setHydrated(true);
-      }
-    }, 0);
-    return () => {
-      active = false;
-      window.clearTimeout(timer);
-    };
-  }, []);
-
-  useEffect(() => {
-    if (!hydrated) return;
-    window.localStorage.setItem(PROFILE_STORAGE_KEY, JSON.stringify(profile));
-    window.localStorage.setItem(PROFILE_UPDATED_STORAGE_KEY, new Date().toISOString());
-    document.documentElement.dataset.theme = profile.theme;
-    const timer = window.setTimeout(async () => {
-      try {
-        const response = await fetch("/api/profile", {
-          method: "PUT",
-          headers: { "content-type": "application/json" },
-          body: JSON.stringify(profile),
-        });
-        setSyncState(response.ok ? "synced" : "local");
-      } catch {
-        setSyncState("local");
-      }
-    }, 650);
-    return () => window.clearTimeout(timer);
-  }, [hydrated, profile]);
 
   useEffect(() => {
     const onPopState = () => applyRoute(resolveAppRoute(`${window.location.pathname}${window.location.search}`));
@@ -664,12 +582,8 @@ export default function Home({ initialPath = "/" }: { initialPath?: string }) {
     setSelectedOptions((previous) => previous.filter((item) => item !== optionId));
   }
 
-  function logLearningEvent(payload: Record<string, unknown>) {
-    void fetch("/api/events", {
-      method: "POST",
-      headers: { "content-type": "application/json" },
-      body: JSON.stringify(payload),
-    }).catch(() => undefined);
+  function logLearningEvent(payload: LearningEventInput) {
+    queueLearningEvent(payload);
   }
 
   function checkAnswer() {
@@ -851,17 +765,7 @@ export default function Home({ initialPath = "/" }: { initialPath?: string }) {
 
   function resetProfile() {
     if (!window.confirm("清除你的学习足迹吗？课程内容不会受影响。")) return;
-    const next = { ...emptyProfile(), theme: profile.theme };
-    setSyncState("loading");
-    void (async () => {
-      try {
-        await fetch("/api/profile", { method: "DELETE" });
-      } finally {
-        window.localStorage.removeItem(PROFILE_STORAGE_KEY);
-        window.localStorage.removeItem(PROFILE_UPDATED_STORAGE_KEY);
-        setProfile(next);
-      }
-    })();
+    void clearProfile();
   }
 
   function completeReadSession() {
@@ -3669,7 +3573,7 @@ function ProfilePanel({
 }: {
   profile: StudyProfile;
   identity: AccountIdentity | null;
-  syncState: "loading" | "synced" | "local";
+  syncState: ProfileSyncState;
   onName: (name: string) => void;
   onGrade: (grade: number) => void;
   onTheme: () => void;

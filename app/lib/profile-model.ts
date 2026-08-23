@@ -38,7 +38,6 @@ export type StudyProfile = {
 
 export const trackIds: TrackId[] = ["words", "split", "honglan", "structure"];
 export const PROFILE_STORAGE_KEY = "knowing-word:course-progress:v3";
-export const PROFILE_UPDATED_STORAGE_KEY = "knowing-word:course-progress:updated-at";
 
 const DEFAULT_COURSE_ID = "chinese-grade-5-volume-1";
 const DEFAULT_GRADE = 5;
