@@ -13,6 +13,10 @@ test("context returns accept only known internal learning routes", () => {
     "/lessons/l1/words/c1?view=memory",
   );
   assert.equal(safeInternalReturnPath("/"), "/");
+  assert.equal(
+    safeInternalReturnPath("/lessons/l1?view=read#lesson-paragraph-3"),
+    "/lessons/l1?view=read#lesson-paragraph-3",
+  );
   assert.equal(safeInternalReturnPath("https://example.com/lessons/l1"), undefined);
   assert.equal(safeInternalReturnPath("//example.com/lessons/l1"), undefined);
   assert.equal(safeInternalReturnPath("/\\example.com/lessons/l1"), undefined);

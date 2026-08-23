@@ -794,6 +794,7 @@ export function CharacterStudy({
   character,
   profile,
   favorite,
+  backLabel = "返回词语表",
   onBack,
   onFavorite,
   onStart,
@@ -803,6 +804,7 @@ export function CharacterStudy({
   character: CharacterItem;
   profile: StudyProfile;
   favorite: boolean;
+  backLabel?: string;
   onBack: () => void;
   onFavorite: () => void;
   onStart: () => void;
@@ -857,7 +859,7 @@ export function CharacterStudy({
       {narrationHref && <link rel="prefetch" as="audio" href={narrationHref} />}
 
       <div className="study-topbar">
-        <button onClick={onBack} aria-label="返回词语表">
+        <button onClick={onBack} aria-label={backLabel}>
           <ArrowLeft aria-hidden="true" size={22} />
         </button>
         <div className="study-breadcrumb">
@@ -1045,10 +1047,10 @@ export function CharacterStudy({
             </div>
           )}
 
-          <h2>课文语境</h2>
+          <h2>本课主题语境</h2>
           <div className="study-quote">
             <p>{character.originalText}</p>
-            <small>《{character.lessonTitle}》· 本课词语「{character.word}」</small>
+            <small>原创学习摘要 · 本课词语「{character.word}」</small>
           </div>
 
           <h2>接着可以做</h2>

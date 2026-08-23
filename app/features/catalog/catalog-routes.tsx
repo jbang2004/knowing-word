@@ -7,6 +7,7 @@ import type { CharacterItem, LessonItem } from "../../data/catalog-types";
 import { homeCandidates } from "../../data/home-index.generated";
 import { grade5Course, grade5Lessons } from "../../data/generated/grade5-volume1/course";
 import { lessonVisuals } from "../../data/illustrations";
+import type { LessonDocument } from "../../data/lesson-documents";
 import {
   LESSON_THREE_ID,
   getLessonThreeKnowledge,
@@ -19,6 +20,11 @@ import { routeForTrack } from "../../lib/app-route";
 import type { StudyProfile, TrackId } from "../../lib/profile-model";
 import { nextCandidateId } from "../../lib/progress-model";
 import { LearningPageShell, PageHeading } from "../shell/learning-page-shell";
+import {
+  LessonReader,
+  LessonViewNavigation,
+  type LessonView,
+} from "../lesson-reader/lesson-reader";
 
 const practiceTrackIds: Exclude<TrackId, "words">[] = ["split", "honglan", "structure"];
 const courseUnits = [
@@ -243,50 +249,96 @@ function LessonThreeOverview({ characters }: { characters: CharacterItem[] }) {
   );
 }
 
-export function LessonRoute({ lesson, characters }: { lesson: LessonItem; characters: CharacterItem[] }) {
+export function LessonRoute({
+  lesson,
+  characters,
+  document,
+  view = "read",
+}: {
+  lesson: LessonItem;
+  characters: CharacterItem[];
+  document?: LessonDocument;
+  view?: LessonView;
+}) {
   const { profile } = useStudyProfile({ writable: false });
   const officialGroups = wordGroups(characters, false);
   const extensionGroups = wordGroups(characters, true);
   const completed = new Set(profile.completed.words);
   const progress = trackProgress(profile, "words", lesson.id);
   const illustration = lessonVisuals[lesson.id];
+  const usesReader = Boolean(document);
+  const usesGuide = document?.format === "guide";
+  const headingCopy = view === "read"
+    ? usesGuide
+      ? `带着三条阅读线索打开课本，本课 ${progress.total} 个字都能从重点词进入字卡`
+      : `在原创语境中发现本课 ${progress.total} 个字，点击标注生字可直接进入字卡`
+    : view === "words"
+      ? `${lesson.skimming ? "会认字" : "识字写字表"} · ${progress.completed} / ${progress.total} 个课内字已完成整套识字小测`
+      : "读完语境、看过字卡后，再用三种方法把字形真正记牢";
   return (
     <LearningPageShell active="course" name={profile.name}>
-      <div className="page lesson-page">
+      <div className={`page lesson-page${usesReader ? " has-reader" : ""}`}>
         <PageHeading
           kicker={`第 ${lesson.position} 课${lesson.skimming ? " · 略读" : ""}`}
           title={lesson.title}
-          copy={`${lesson.skimming ? "会认字" : "识字写字表"} · ${progress.completed} / ${progress.total} 个课内字已完成整套识字小测`}
+          copy={usesReader ? headingCopy : `${lesson.skimming ? "会认字" : "识字写字表"} · ${progress.completed} / ${progress.total} 个课内字已完成整套识字小测`}
           backHref="/lessons"
         />
-        <section className="lesson-scene-banner">
-          <Image src={illustration.src} alt={illustration.alt} fill priority sizes="(max-width: 760px) 100vw, 920px" />
-          <div><span>课文场景</span><strong>{lesson.title}</strong><small>{lesson.context ?? "先进入画面，再从词语认识汉字"}</small></div>
-        </section>
-        <section className="lesson-learning-path" aria-label={`${lesson.title}内容理解路线`}>
-          <div className="learning-path-heading">
-            <span>{lesson.mode ?? "课文理解"}</span>
-            <div><strong>先读懂课文，再把字放回故事里</strong><small>{lesson.skimming ? "略读课：抓住关键变化，练习复述" : "精读课：沿内容顺序理解、识字、巩固"}</small></div>
-          </div>
-          <ol>{(lesson.learningPath ?? []).map((step, index) => <li key={step}><i>{index + 1}</i><span>{step}</span></li>)}</ol>
-        </section>
-        {lesson.id === LESSON_THREE_ID && <LessonThreeOverview characters={characters.filter((item) => item.official !== false)} />}
-        <WordBoard groups={officialGroups} completed={completed} extension={false} />
-        {extensionGroups.length > 0 && <WordBoard groups={extensionGroups} completed={completed} extension />}
-        <section className="lesson-practice-strip">
-          <div><p className="kicker">学完词语表，再来巩固</p><h2>同一批字，换三种方式练习</h2></div>
-          <div className="practice-strip-items">
-            {practiceTrackIds.map((track) => {
-              const meta = trackMeta[track];
-              const itemProgress = trackProgress(profile, track, lesson.id);
-              return (
-                <Link className={meta.tone} href={routeForTrack(track, lesson.id)} key={track}>
-                  <span>{meta.glyph}</span><strong>{meta.menu}</strong><small>{itemProgress.completed}/{itemProgress.total}</small>
-                </Link>
-              );
-            })}
-          </div>
-        </section>
+        {usesReader && <LessonViewNavigation lessonId={lesson.id} view={view} format={document?.format} />}
+
+        {usesReader && view === "read" && document && (
+          <LessonReader
+            lesson={lesson}
+            document={document}
+            characters={characters}
+            completed={completed}
+            illustration={illustration}
+          />
+        )}
+
+        {(!usesReader || view === "words") && <>
+          <section className="lesson-scene-banner">
+            <Image src={illustration.src} alt={illustration.alt} fill priority sizes="(max-width: 760px) 100vw, 920px" />
+            <div><span>{usesReader ? "主题场景" : "课文场景"}</span><strong>{lesson.title}</strong><small>{lesson.context ?? "先进入画面，再从词语认识汉字"}</small></div>
+          </section>
+          {!usesReader && <section className="lesson-learning-path" aria-label={`${lesson.title}内容理解路线`}>
+            <div className="learning-path-heading">
+              <span>{lesson.mode ?? "课文理解"}</span>
+              <div><strong>先读懂课文，再把字放回故事里</strong><small>{lesson.skimming ? "略读课：抓住关键变化，练习复述" : "精读课：沿内容顺序理解、识字、巩固"}</small></div>
+            </div>
+            <ol>{(lesson.learningPath ?? []).map((step, index) => <li key={step}><i>{index + 1}</i><span>{step}</span></li>)}</ol>
+          </section>}
+          {lesson.id === LESSON_THREE_ID && <LessonThreeOverview characters={characters.filter((item) => item.official !== false)} />}
+          <WordBoard groups={officialGroups} completed={completed} extension={false} />
+          {extensionGroups.length > 0 && <WordBoard groups={extensionGroups} completed={completed} extension />}
+        </>}
+
+        {(!usesReader || view === "practice") && <>
+          {usesReader && <section className="lesson-learning-path" aria-label={`${lesson.title}内容理解路线`}>
+            <div className="learning-path-heading">
+              <span>{usesGuide ? "课文导读线索" : "原创阅读线索"}</span>
+              <div>
+                <strong>{usesGuide ? "沿着三个问题，再把字放回重点词里" : "沿着三段语境，再把字放回词语里"}</strong>
+                <small>{usesGuide ? "回到纸质课本阅读全文，再用导读中的词语巩固本课生字" : "回看阅读顺序，用熟悉的上下文巩固本课生字"}</small>
+              </div>
+            </div>
+            <ol>{document?.sections.map((section, index) => <li key={section.id}><i>{index + 1}</i><span>{section.title}</span></li>)}</ol>
+          </section>}
+          <section className="lesson-practice-strip">
+            <div><p className="kicker">学完词语表，再来巩固</p><h2>同一批字，换三种方式练习</h2></div>
+            <div className="practice-strip-items">
+              {practiceTrackIds.map((track) => {
+                const meta = trackMeta[track];
+                const itemProgress = trackProgress(profile, track, lesson.id);
+                return (
+                  <Link className={meta.tone} href={routeForTrack(track, lesson.id)} key={track}>
+                    <span>{meta.glyph}</span><strong>{meta.menu}</strong><small>{itemProgress.completed}/{itemProgress.total}</small>
+                  </Link>
+                );
+              })}
+            </div>
+          </section>
+        </>}
       </div>
     </LearningPageShell>
   );

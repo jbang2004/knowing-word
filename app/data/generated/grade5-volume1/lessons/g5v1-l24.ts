@@ -83,7 +83,7 @@ export const characters = [
           },
           {
             "id": "g5v1-l24-c01-u803b-words-context-2",
-            "text": "罢了",
+            "text": "矣",
             "correct": false,
             "radical": false,
             "idcCode": ""
@@ -788,7 +788,7 @@ export const characters = [
           },
           {
             "id": "g5v1-l24-c03-u5bdd-words-context-3",
-            "text": "罢了",
+            "text": "矣",
             "correct": false,
             "radical": false,
             "idcCode": ""
@@ -1150,21 +1150,21 @@ export const characters = [
           },
           {
             "id": "g5v1-l24-c04-u77e3-words-context-1",
-            "text": "就寝",
+            "text": "岂能",
             "correct": false,
             "radical": false,
             "idcCode": ""
           },
           {
             "id": "g5v1-l24-c04-u77e3-words-context-2",
-            "text": "罢了",
+            "text": "教诲",
             "correct": false,
             "radical": false,
             "idcCode": ""
           },
           {
             "id": "g5v1-l24-c04-u77e3-words-context-3",
-            "text": "岂能",
+            "text": "所谓",
             "correct": false,
             "radical": false,
             "idcCode": ""
@@ -1801,7 +1801,7 @@ export const characters = [
           },
           {
             "id": "g5v1-l24-c06-u8bf2-words-context-2",
-            "text": "罢了",
+            "text": "矣",
             "correct": false,
             "radical": false,
             "idcCode": ""
@@ -2470,7 +2470,7 @@ export const characters = [
           },
           {
             "id": "g5v1-l24-c08-u8bf5-words-context-3",
-            "text": "罢了",
+            "text": "矣",
             "correct": false,
             "radical": false,
             "idcCode": ""

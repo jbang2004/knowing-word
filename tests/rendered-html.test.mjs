@@ -64,6 +64,50 @@ test("secondary tools server-render with a contextual return query", async () =>
   assert.match(await readResponse.text(), /朗读/);
 });
 
+test("the lesson guide connects reading clues to cards and back", async () => {
+  const lessonResponse = await render("/lessons/g5v1-l01");
+  assert.equal(lessonResponse.status, 200);
+  const lessonHtml = await lessonResponse.text();
+  assert.match(lessonHtml, /读《白鹭》，看见朴素之美/);
+  assert.match(lessonHtml, /原创课文导读/);
+  assert.match(lessonHtml, /不展示教材正文/);
+  assert.match(lessonHtml, /课文导读/);
+  assert.match(lessonHtml, /先带着问题读/);
+  assert.match(lessonHtml, /本段重点词/);
+  assert.match(lessonHtml, /这些比较让你看见了怎样的白鹭/);
+  assert.match(lessonHtml, /reader-focus-word/);
+  assert.match(lessonHtml, /学生字/);
+  assert.match(lessonHtml, /做练习/);
+  assert.match(lessonHtml, /lesson-paragraph-1/);
+  assert.match(lessonHtml, /returnTo=%2Flessons%2Fg5v1-l01%23lesson-paragraph-1/);
+
+  const wordsResponse = await render("/lessons/g5v1-l01?view=words");
+  assert.equal(wordsResponse.status, 200);
+  const wordsHtml = await wordsResponse.text();
+  assert.match(wordsHtml, /课内识字写字表/);
+  assert.doesNotMatch(wordsHtml, /lesson-reader-layout/);
+
+  const returnTo = encodeURIComponent("/lessons/g5v1-l01#lesson-paragraph-1");
+  const cardResponse = await render(
+    `/lessons/g5v1-l01/words/g5v1-l01-c01-u9e6d?returnTo=${returnTo}`,
+  );
+  assert.equal(cardResponse.status, 200);
+  assert.match(await cardResponse.text(), /返回《白鹭》导读/);
+
+  for (const [lessonId, documentTitle] of [
+    ["g5v1-l02", "读《落花生》，读懂朴素的分量"],
+    ["g5v1-l14", "读《圆明园的毁灭》，在盛景与毁灭之间"],
+    ["g5v1-l26", "读《我的“长生果”》，看阅读怎样长成文字"],
+  ]) {
+    const response = await render(`/lessons/${lessonId}`);
+    assert.equal(response.status, 200);
+    const html = await response.text();
+    assert.match(html, new RegExp(documentTitle));
+    assert.match(html, /原创课文导读/);
+    assert.match(html, /lesson-reader-paper reader-genre-.* is-guide/);
+  }
+});
+
 test("dense pages keep progressive and shareable responsive contracts", async () => {
   const componentResponse = await render("/bujian");
   const componentHtml = await componentResponse.text();
@@ -88,6 +132,7 @@ test("dense pages keep progressive and shareable responsive contracts", async ()
   const globalCss = await readFile(new URL("../app/globals.css", import.meta.url), "utf8");
   const homeCss = await readFile(new URL("../app/home-path.css", import.meta.url), "utf8");
   const utilityCss = await readFile(new URL("../app/utility-pages.css", import.meta.url), "utf8");
+  const readerCss = await readFile(new URL("../app/lesson-reader.css", import.meta.url), "utf8");
   assert.match(layoutSource, /\.\/catalog\.css/);
   assert.doesNotMatch(layoutSource, /home-redesign/);
   assert.doesNotMatch(globalCss, /\.home-hero|\.mission-card|\.read-lesson-tabs/);
@@ -95,6 +140,12 @@ test("dense pages keep progressive and shareable responsive contracts", async ()
   assert.match(homeCss, /\.path-track:not\(\.is-expanded\) \.is-mobile-hidden/);
   assert.match(utilityCss, /\.component-story-sheet[\s\S]*position: fixed/);
   assert.match(utilityCss, /\.read-lesson-picker[\s\S]*min-height: 44px/);
+  assert.match(readerCss, /\.reader-mobile-index[\s\S]*position: fixed/);
+  assert.match(readerCss, /max-height: min\(56vh, 450px\)/);
+  assert.match(readerCss, /max-height: 700px/);
+  assert.match(readerCss, /animation: none/);
+  assert.match(readerCss, /\.reader-focus-words[\s\S]*grid-template-columns/);
+  assert.match(readerCss, /\.reader-section\.is-guide-clue > p[\s\S]*text-indent: 0/);
 });
 
 test("unknown paths no longer fall through to the learning client", async () => {
@@ -121,7 +172,7 @@ test("character pages render the complete picture-to-character memory flow", asy
   // learning URL stays a complete, shareable page.
   assert.match(html, /部件来历/);
   assert.match(html, /字形演变/);
-  assert.match(html, /课文语境/);
+  assert.match(html, /本课主题语境/);
   // The audio element now lives on the study page, so the first user click can
   // play directly without mounting or navigating to a second screen.
   assert.match(html, /<audio/);
@@ -166,7 +217,7 @@ test("character pages render the complete picture-to-character memory flow", asy
 });
 
 test("lesson 3 renders the method pilot and picture-withdrawal flow", async () => {
-  const lessonResponse = await render("/lessons/g5v1-l03");
+  const lessonResponse = await render("/lessons/g5v1-l03?view=words");
   assert.equal(lessonResponse.status, 200);
   const lessonHtml = await lessonResponse.text();
   assert.match(lessonHtml, /第三课 · 识字方法试点/);

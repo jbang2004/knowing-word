@@ -39,7 +39,7 @@ export function safeInternalReturnPath(value: unknown) {
     if (url.origin !== "https://knowing-word.local") return undefined;
     const root = url.pathname.split("/").filter(Boolean)[0];
     if (root && !appRouteRoots.has(root)) return undefined;
-    return `${url.pathname}${url.search}`;
+    return `${url.pathname}${url.search}${url.hash}`;
   } catch {
     return undefined;
   }
