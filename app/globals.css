@@ -89,7 +89,10 @@ html[data-theme="night"] {
 }
 
 html {
-  min-width: 320px;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  overflow-x: clip;
   background: var(--sky);
   scroll-behavior: smooth;
   color-scheme: light;
@@ -98,10 +101,13 @@ html {
 html[data-theme="night"] { color-scheme: dark; }
 
 body {
-  min-width: 320px;
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
   margin: 0;
   color: var(--ink);
   overflow-x: hidden;
+  overflow-x: clip;
   background:
     radial-gradient(circle at 7% 4%, color-mix(in srgb, var(--coral) 8%, transparent), transparent 25rem),
     radial-gradient(circle at 94% 12%, color-mix(in srgb, var(--jade) 9%, transparent), transparent 31rem),

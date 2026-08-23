@@ -108,6 +108,16 @@ test("character pages render the complete picture-to-character memory flow", asy
     new URL("../app/study.css", import.meta.url),
     "utf8",
   );
+  const globalCss = await readFile(
+    new URL("../app/globals.css", import.meta.url),
+    "utf8",
+  );
+  // Root scrolling is vertical-only even in narrow Android webviews or under
+  // browser zoom. Purposeful chip rails keep their own horizontal scrolling.
+  assert.match(globalCss, /html \{[^}]*overflow-x: clip;/s);
+  assert.match(globalCss, /body \{[^}]*min-width: 0;[^}]*overflow-x: clip;/s);
+  assert.match(studyCss, /\.study-shell \{[^}]*max-width: 100%;[^}]*overflow-x: clip;/s);
+  assert.match(studyCss, /\.study-next-steps div \{[^}]*overscroll-behavior-inline: contain;/s);
   assert.match(studyCss, /scroll-margin-block:[^;]*safe-area-inset-bottom/);
   assert.match(studyCss, /@media \(max-width: 899px\) and \(max-height: 820px\)/);
   assert.match(studyCss, /@media \(max-width: 899px\) and \(max-height: 760px\)/);

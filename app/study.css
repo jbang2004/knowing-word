@@ -28,9 +28,14 @@
 .study-shell {
   position: relative;
   display: flex;
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
   min-height: 100vh;
   min-height: 100dvh;
   flex-direction: column;
+  overflow-x: hidden;
+  overflow-x: clip;
   color: var(--n-ink);
   background: var(--night);
   font-family: var(--sans);
@@ -53,6 +58,18 @@
 .study-shell > * {
   position: relative;
   z-index: 1;
+  min-width: 0;
+}
+
+.study-body {
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+}
+
+.study-body > * {
+  min-width: 0;
+  max-width: 100%;
 }
 
 /* Top bar ------------------------------------------------------------- */
@@ -335,9 +352,12 @@
 
 .study-next-steps div {
   display: flex;
+  min-width: 0;
+  max-width: 100%;
   gap: 6px;
   flex-grow: 1;
   overflow-x: auto;
+  overscroll-behavior-inline: contain;
   scrollbar-width: none;
 }
 
@@ -537,9 +557,11 @@
 
 .study-script-line {
   display: flex;
+  max-width: 100%;
   gap: 10px;
   padding-bottom: 4px;
   overflow-x: auto;
+  overscroll-behavior-inline: contain;
   scrollbar-width: none;
 }
 
@@ -999,6 +1021,26 @@
   .study-shell.is-listening .study-next-steps,
   .study-shell.is-listening .study-drawer-handle {
     display: none;
+  }
+}
+
+@media (max-width: 899px) {
+  .study-scene {
+    width: calc(100% - 40px);
+    max-width: calc(100% - 40px);
+  }
+
+  .study-identity,
+  .study-meaning,
+  .study-launch {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .study-drawer,
+  .study-transcript-sheet {
+    width: 100%;
+    max-width: 100%;
   }
 }
 
