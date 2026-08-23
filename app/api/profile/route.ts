@@ -1,5 +1,5 @@
-import { getDb, getMedia, jsonWithIdentity, resolveIdentity } from "../../lib/server-store";
-import { normalizeProfile } from "../../lib/profile-model";
+import { getDb, getMedia, jsonError, jsonWithIdentity, resolveIdentity } from "../../lib/server-store.ts";
+import { normalizeProfile } from "../../lib/profile-model.ts";
 
 export const dynamic = "force-dynamic";
 
@@ -16,25 +16,26 @@ export async function GET(request: Request) {
         email: identity.email,
         mode: identity.mode,
       },
-      profile: row ? JSON.parse(row.payload_json) : null,
+      profile: row ? normalizeProfile(JSON.parse(row.payload_json)) : null,
       updatedAt: row?.updated_at || null,
     });
   } catch (error) {
-    return jsonWithIdentity(
-      identity,
-      { error: error instanceof Error ? error.message : "无法读取学习档案" },
-      { status: 503 },
-    );
+    return jsonError(identity, request, "暂时无法读取学习档案", error);
   }
 }
 
 export async function PUT(request: Request) {
   const identity = resolveIdentity(request);
+  let payload: unknown;
   try {
-    const payload = await request.json();
-    if (!payload || typeof payload !== "object" || Array.isArray(payload)) {
-      return jsonWithIdentity(identity, { error: "学习档案格式无效" }, { status: 400 });
-    }
+    payload = await request.json();
+  } catch {
+    return jsonWithIdentity(identity, { error: "学习档案不是有效的 JSON" }, { status: 400 });
+  }
+  if (!payload || typeof payload !== "object" || Array.isArray(payload)) {
+    return jsonWithIdentity(identity, { error: "学习档案格式无效" }, { status: 400 });
+  }
+  try {
     const serialized = JSON.stringify(normalizeProfile(payload));
     if (serialized.length > 400_000) {
       return jsonWithIdentity(identity, { error: "学习档案过大" }, { status: 413 });
@@ -50,11 +51,7 @@ export async function PUT(request: Request) {
       .run();
     return jsonWithIdentity(identity, { ok: true, updatedAt: now });
   } catch (error) {
-    return jsonWithIdentity(
-      identity,
-      { error: error instanceof Error ? error.message : "无法保存学习档案" },
-      { status: 503 },
-    );
+    return jsonError(identity, request, "暂时无法保存学习档案", error);
   }
 }
 
@@ -66,20 +63,16 @@ export async function DELETE(request: Request) {
       .prepare("SELECT object_key FROM recordings WHERE user_id = ?1")
       .bind(identity.userId)
       .all<{ object_key: string }>();
+    const objectKeys = recordingRows.results.map((row) => row.object_key);
+    if (objectKeys.length) await getMedia().delete(objectKeys);
     await db.batch([
       db.prepare("DELETE FROM study_profiles WHERE user_id = ?1").bind(identity.userId),
       db.prepare("DELETE FROM learning_events WHERE user_id = ?1").bind(identity.userId),
       db.prepare("DELETE FROM daily_activity WHERE user_id = ?1").bind(identity.userId),
       db.prepare("DELETE FROM recordings WHERE user_id = ?1").bind(identity.userId),
     ]);
-    const objectKeys = recordingRows.results.map((row) => row.object_key);
-    if (objectKeys.length) await getMedia().delete(objectKeys);
     return jsonWithIdentity(identity, { ok: true });
   } catch (error) {
-    return jsonWithIdentity(
-      identity,
-      { error: error instanceof Error ? error.message : "无法清除学习档案" },
-      { status: 503 },
-    );
+    return jsonError(identity, request, "暂时无法清除学习档案", error);
   }
 }

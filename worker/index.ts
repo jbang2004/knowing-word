@@ -1,6 +1,7 @@
 /** Cloudflare Worker entry point for the vinext-starter template. */
 import { handleImageOptimization, DEFAULT_DEVICE_SIZES, DEFAULT_IMAGE_SIZES } from "vinext/server/image-optimization";
 import handler from "vinext/server/app-router-entry";
+import { runWithRuntimeEnv } from "../app/lib/runtime-env.ts";
 
 type RuntimeEnv = Partial<Env> & { IMAGES?: ImagesBinding };
 
@@ -55,39 +56,6 @@ function narrationHeaders(relative: string, size?: number, etag?: string) {
   return headers;
 }
 
-async function migrateSeededNarration(
-  env: RuntimeEnv,
-  version: string,
-  relative: string,
-  objectKey: string,
-) {
-  if (!env.DB || !env.MEDIA) return null;
-  const seedTag = `builtin:narration:${version}:${relative}`;
-  const row = await env.DB
-    .prepare(
-      "SELECT id, object_key FROM recordings WHERE lesson_id = ?1 ORDER BY created_at DESC LIMIT 1",
-    )
-    .bind(seedTag)
-    .first<{ id: string; object_key: string }>();
-  if (!row) return null;
-
-  const seed = await env.MEDIA.get(row.object_key);
-  if (!seed?.body) return null;
-  const bytes = await seed.arrayBuffer();
-  await env.MEDIA.put(objectKey, bytes, {
-    httpMetadata: {
-      cacheControl: IMMUTABLE_CACHE,
-      contentType: narrationContentType(relative),
-    },
-    customMetadata: { assetVersion: version, source: "knowing-word" },
-  });
-  await Promise.all([
-    env.MEDIA.delete(row.object_key),
-    env.DB.prepare("DELETE FROM recordings WHERE id = ?1").bind(row.id).run(),
-  ]);
-  return env.MEDIA.head(objectKey);
-}
-
 async function serveNarration(
   request: Request,
   env: RuntimeEnv,
@@ -100,14 +68,7 @@ async function serveNarration(
   }
 
   const objectKey = `built-in/narration/${version}/${relative}`;
-  let stored = env.MEDIA ? await env.MEDIA.head(objectKey) : null;
-  if (!stored) {
-    try {
-      stored = await migrateSeededNarration(env, version, relative, objectKey);
-    } catch {
-      stored = null;
-    }
-  }
+  const stored = env.MEDIA ? await env.MEDIA.head(objectKey) : null;
   if (stored) {
     const headers = narrationHeaders(relative, stored.size, stored.httpEtag);
     headers.set("x-knowing-word-media", "r2");
@@ -202,7 +163,6 @@ function isDeliveryAsset(pathname: string) {
 
 const worker = {
   async fetch(request: Request, env: RuntimeEnv, ctx: ExecutionContext): Promise<Response> {
-    (globalThis as typeof globalThis & { __KNOWING_WORD_ENV__?: RuntimeEnv }).__KNOWING_WORD_ENV__ = env;
     const url = new URL(request.url);
 
     const narrationPath = narrationRequestPath(url.pathname);
@@ -248,7 +208,7 @@ const worker = {
       }, allowedWidths);
     }
 
-    const response = await handler.fetch(request, env, ctx);
+    const response = await runWithRuntimeEnv(env, () => handler.fetch(request, env, ctx));
     return withDeliveryCache(response, url.pathname);
   },
 };

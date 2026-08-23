@@ -1,12 +1,31 @@
-import { getDb, getMedia, jsonWithIdentity, resolveIdentity } from "../../lib/server-store";
+import { isGrade5LessonId } from "../../data/lesson-content.ts";
+import { getDb, getMedia, jsonError, jsonWithIdentity, resolveIdentity } from "../../lib/server-store.ts";
 
 export const dynamic = "force-dynamic";
+
+const MAX_RECORDING_BYTES = 12 * 1024 * 1024;
+const recordingTypes = new Map([
+  ["audio/webm", "webm"],
+  ["audio/mp4", "m4a"],
+  ["audio/ogg", "ogg"],
+]);
+const recordingIdPattern = /^[a-f0-9]{8}-[a-f0-9]{4}-4[a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}$/iu;
+
+function baseContentType(value: string | null) {
+  return (value || "").split(";", 1)[0].trim().toLowerCase();
+}
 
 export async function GET(request: Request) {
   const identity = resolveIdentity(request);
   const url = new URL(request.url);
   const id = url.searchParams.get("id");
   const lessonId = url.searchParams.get("lessonId");
+  if (id && !recordingIdPattern.test(id)) {
+    return jsonWithIdentity(identity, { error: "录音编号无效" }, { status: 400 });
+  }
+  if (lessonId && !isGrade5LessonId(lessonId)) {
+    return jsonWithIdentity(identity, { error: "课次编号无效" }, { status: 400 });
+  }
   try {
     const db = getDb();
     if (!id) {
@@ -35,38 +54,47 @@ export async function GET(request: Request) {
       .first<{ object_key: string; content_type: string }>();
     if (!row) return jsonWithIdentity(identity, { error: "录音不存在" }, { status: 404 });
     const object = await getMedia().get(row.object_key);
-    if (!object) return jsonWithIdentity(identity, { error: "录音文件不存在" }, { status: 404 });
+    if (!object?.body) return jsonWithIdentity(identity, { error: "录音文件不存在" }, { status: 404 });
     const headers = new Headers();
     headers.set("content-type", row.content_type);
-    headers.set("cache-control", "private, max-age=300");
+    headers.set("content-length", String(object.size));
+    headers.set("cache-control", "private, no-store");
+    headers.set("x-content-type-options", "nosniff");
     return new Response(object.body, { headers });
   } catch (error) {
-    return jsonWithIdentity(
-      identity,
-      { error: error instanceof Error ? error.message : "无法读取录音" },
-      { status: 503 },
-    );
+    return jsonError(identity, request, "暂时无法读取录音", error);
   }
 }
 
 export async function POST(request: Request) {
   const identity = resolveIdentity(request);
-  const lessonId = new URL(request.url).searchParams.get("lessonId") || "unknown";
-  const contentType = request.headers.get("content-type") || "audio/webm";
-  if (!contentType.toLowerCase().startsWith("audio/")) {
-    return jsonWithIdentity(identity, { error: "只接受音频录音" }, { status: 415 });
+  const lessonId = new URL(request.url).searchParams.get("lessonId");
+  if (!lessonId || !isGrade5LessonId(lessonId)) {
+    return jsonWithIdentity(identity, { error: "课次编号无效" }, { status: 400 });
   }
-  const bytes = await request.arrayBuffer();
-  if (!bytes.byteLength || bytes.byteLength > 12 * 1024 * 1024) {
+  const contentType = baseContentType(request.headers.get("content-type"));
+  const extension = recordingTypes.get(contentType);
+  if (!extension) return jsonWithIdentity(identity, { error: "录音格式不受支持" }, { status: 415 });
+  const declaredLength = Number(request.headers.get("content-length"));
+  if (Number.isFinite(declaredLength) && declaredLength > MAX_RECORDING_BYTES) {
     return jsonWithIdentity(identity, { error: "录音需要小于 12MB" }, { status: 413 });
   }
+  const bytes = await request.arrayBuffer();
+  if (!bytes.byteLength || bytes.byteLength > MAX_RECORDING_BYTES) {
+    return jsonWithIdentity(identity, { error: "录音需要小于 12MB" }, { status: 413 });
+  }
+  let objectKey: string | null = null;
   try {
     const id = crypto.randomUUID();
     const identityHash = Array.from(
       new Uint8Array(await crypto.subtle.digest("SHA-256", new TextEncoder().encode(identity.userId))),
     ).slice(0, 12).map((item) => item.toString(16).padStart(2, "0")).join("");
-    const objectKey = `recordings/${identityHash}/${id}.webm`;
-    await getMedia().put(objectKey, bytes, { httpMetadata: { contentType } });
+    objectKey = `recordings/${identityHash}/${id}.${extension}`;
+    const media = getMedia();
+    await media.put(objectKey, bytes, {
+      httpMetadata: { contentType },
+      customMetadata: { lessonId, owner: identityHash },
+    });
     const now = new Date().toISOString();
     await getDb()
       .prepare(
@@ -79,10 +107,13 @@ export async function POST(request: Request) {
       recording: { id, lessonId, contentType, byteSize: bytes.byteLength, createdAt: now, url: `/api/recordings?id=${id}` },
     }, { status: 201 });
   } catch (error) {
-    return jsonWithIdentity(
-      identity,
-      { error: error instanceof Error ? error.message : "无法保存录音" },
-      { status: 503 },
-    );
+    if (objectKey) {
+      try {
+        await getMedia().delete(objectKey);
+      } catch (cleanupError) {
+        console.error("recording cleanup failed", cleanupError);
+      }
+    }
+    return jsonError(identity, request, "暂时无法保存录音", error);
   }
 }

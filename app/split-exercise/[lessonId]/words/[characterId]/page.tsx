@@ -2,9 +2,10 @@ import PracticeRoutePage from "../../../../_shared/practice-route-page";
 
 export default async function SplitCharacterPage({
   params,
+  searchParams,
 }: {
   params: Promise<{ lessonId: string; characterId: string }>;
+  searchParams: Promise<Record<string, string | string[] | undefined>>;
 }) {
-  const { lessonId, characterId } = await params;
-  return <PracticeRoutePage lessonId={lessonId} characterId={characterId} track="split" />;
+  return <PracticeRoutePage params={params} searchParams={searchParams} track="split" />;
 }

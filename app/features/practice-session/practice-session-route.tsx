@@ -1,7 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState, type Dispatch, type SetStateAction } from "react";
 import type { CharacterItem } from "../../data/catalog-types";
 import {
   expectedAnswerIds,
@@ -17,7 +17,7 @@ import {
   nextResumeIndex,
   updateCompletion,
 } from "../../lib/progress-model";
-import { todayKey, type TrackId } from "../../lib/profile-model";
+import { todayKey, type StudyProfile, type TrackId } from "../../lib/profile-model";
 import { queueLearningEvent } from "../../infrastructure/browser/learning-event-outbox";
 import { useStudyProfile } from "../profile/use-study-profile";
 import { CelebrationOverlay, ChallengeRoom } from "./practice-session-view";
@@ -26,17 +26,51 @@ export default function PracticeSessionRoute({
   character,
   track,
   candidateIds,
+  initialQuestionIndex,
 }: {
   character: CharacterItem;
   track: TrackId;
   candidateIds: string[];
+  initialQuestionIndex?: number;
+}) {
+  const { profile, setProfile, hydrated } = useStudyProfile();
+  if (!hydrated) {
+    return <main className="challenge-page challenge-centered" aria-busy="true"><section className="challenge-board"><h2>正在恢复学习进度…</h2></section></main>;
+  }
+  return (
+    <HydratedPracticeSession
+      character={character}
+      track={track}
+      candidateIds={candidateIds}
+      initialQuestionIndex={initialQuestionIndex}
+      profile={profile}
+      setProfile={setProfile}
+    />
+  );
+}
+
+function HydratedPracticeSession({
+  character,
+  track,
+  candidateIds,
+  initialQuestionIndex,
+  profile,
+  setProfile,
+}: {
+  character: CharacterItem;
+  track: TrackId;
+  candidateIds: string[];
+  initialQuestionIndex?: number;
+  profile: StudyProfile;
+  setProfile: Dispatch<SetStateAction<StudyProfile>>;
 }) {
   const router = useRouter();
-  const { profile, setProfile } = useStudyProfile();
   const exercises = useMemo(() => getTrackExercises(character, track), [character, track]);
-  const resumedIndex = profile.last[track]?.characterId === character.id
-    ? profile.last[track]?.questionIndex ?? 0
-    : 0;
+  const resumedIndex = initialQuestionIndex ?? (
+    profile.last[track]?.characterId === character.id
+      ? profile.last[track]?.questionIndex ?? 0
+      : 0
+  );
   const [questionIndex, setQuestionIndex] = useState(() =>
     Math.min(Math.max(resumedIndex, 0), Math.max(0, exercises.length - 1)),
   );

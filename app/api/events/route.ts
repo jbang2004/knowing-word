@@ -1,15 +1,21 @@
-import { dayKey, getDb, jsonWithIdentity, resolveIdentity } from "../../lib/server-store";
-import { parseLearningEvent } from "../../domain/learning-event";
+import { dayKey, getDb, jsonError, jsonWithIdentity, resolveIdentity } from "../../lib/server-store.ts";
+import { parseLearningEvent } from "../../domain/learning-event.ts";
 
 export const dynamic = "force-dynamic";
 
 export async function POST(request: Request) {
   const identity = resolveIdentity(request);
+  let input: unknown;
   try {
-    const payload = parseLearningEvent(await request.json());
-    if (!payload) {
-      return jsonWithIdentity(identity, { error: "无效的学习事件" }, { status: 400 });
-    }
+    input = await request.json();
+  } catch {
+    return jsonWithIdentity(identity, { error: "学习事件不是有效的 JSON" }, { status: 400 });
+  }
+  const payload = parseLearningEvent(input);
+  if (!payload) {
+    return jsonWithIdentity(identity, { error: "无效的学习事件" }, { status: 400 });
+  }
+  try {
     const now = new Date().toISOString();
     const date = dayKey(new Date(now));
     const answerDelta = payload.action === "answer" ? 1 : 0;
@@ -48,10 +54,6 @@ export async function POST(request: Request) {
     ]);
     return jsonWithIdentity(identity, { ok: true, id: payload.eventId });
   } catch (error) {
-    return jsonWithIdentity(
-      identity,
-      { error: error instanceof Error ? error.message : "无法保存学习事件" },
-      { status: 503 },
-    );
+    return jsonError(identity, request, "暂时无法保存学习事件", error);
   }
 }

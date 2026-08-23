@@ -72,6 +72,7 @@ export function useStudyProfile({ writable = true }: { writable?: boolean } = {}
         if (!response.ok) throw new Error("profile unavailable");
         const payload = await response.json() as ProfileResponse;
         if (!active) return;
+        if (cacheTimer !== undefined) window.clearTimeout(cacheTimer);
         if (payload.identity) setIdentity(payload.identity);
         const authoritative = payload.profile ? normalizeProfile(payload.profile) : emptyProfile();
         lastSaved.current = JSON.stringify(authoritative);

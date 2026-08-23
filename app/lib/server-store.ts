@@ -1,4 +1,4 @@
-type RuntimeEnv = Partial<Pick<Env, "DB" | "MEDIA">>;
+import { getRuntimeEnv } from "./runtime-env.ts";
 
 export type RequestIdentity = {
   userId: string;
@@ -12,13 +12,13 @@ const DEVICE_COOKIE = "knowing_word_device";
 const DEVICE_PATTERN = /^[a-f0-9-]{20,64}$/i;
 
 export function getDb() {
-  const db = (globalThis as typeof globalThis & { __KNOWING_WORD_ENV__?: RuntimeEnv }).__KNOWING_WORD_ENV__?.DB;
+  const db = getRuntimeEnv()?.DB;
   if (!db) throw new Error("D1 binding DB is unavailable");
   return db;
 }
 
 export function getMedia() {
-  const media = (globalThis as typeof globalThis & { __KNOWING_WORD_ENV__?: RuntimeEnv }).__KNOWING_WORD_ENV__?.MEDIA;
+  const media = getRuntimeEnv()?.MEDIA;
   if (!media) throw new Error("R2 binding MEDIA is unavailable");
   return media;
 }
@@ -69,6 +69,24 @@ export function jsonWithIdentity(identity: RequestIdentity, body: unknown, init?
   headers.set("cache-control", "no-store");
   if (identity.cookie) headers.append("set-cookie", identity.cookie);
   return new Response(JSON.stringify(body), { ...init, headers });
+}
+
+export function jsonError(
+  identity: RequestIdentity,
+  request: Request,
+  publicMessage: string,
+  error: unknown,
+  status = 503,
+) {
+  const requestId = request.headers.get("cf-ray")?.slice(0, 80) || crypto.randomUUID();
+  console.error(JSON.stringify({
+    level: "error",
+    requestId,
+    method: request.method,
+    pathname: new URL(request.url).pathname,
+    message: error instanceof Error ? error.message : String(error),
+  }));
+  return jsonWithIdentity(identity, { error: publicMessage, requestId }, { status });
 }
 
 export function dayKey(value = new Date()) {
