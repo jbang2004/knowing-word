@@ -1,4 +1,4 @@
-import type { CharacterItem } from "./catalog";
+import type { CharacterItem } from "./catalog-types";
 import { grade5MnemonicScenes } from "./grade5-volume1-mnemonics.generated.ts";
 
 export type MnemonicScene = {

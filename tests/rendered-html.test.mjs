@@ -380,19 +380,20 @@ test("mnemonic artwork is never cropped or hidden by its caption", async () => {
 });
 
 test("the public learning catalog preserves the course and practice-route structure", async () => {
-  const catalog = await readFile(
-    new URL("../app/data/catalog.ts", import.meta.url),
-    "utf8",
-  );
+  const publicCatalogSources = await Promise.all([
+    "../app/data/grade5-volume1-generated.ts",
+    "../app/data/extension-catalog.ts",
+  ].map((path) => readFile(new URL(path, import.meta.url), "utf8")));
+  const publicCatalog = publicCatalogSources.join("\n");
 
-  assert.match(catalog, /"characters": \[/);
-  assert.match(catalog, /"components": \[/);
-  assert.match(catalog, /"识字小测"/);
-  assert.match(catalog, /"拆一拆"/);
-  assert.match(catalog, /"红蓝字"/);
-  assert.match(catalog, /"空间结构"/);
-  assert.doesNotMatch(catalog, /auth_key|course-assets|access_token/i);
-  assert.doesNotMatch(catalog, /password\s*[:=]|account\s*[:=]/i);
+  assert.match(publicCatalog, /grade5Characters|extensionCharacters/);
+  assert.match(publicCatalog, /grade5Components|extensionComponents/);
+  assert.match(publicCatalog, /"识字小测"/);
+  assert.match(publicCatalog, /"拆一拆"/);
+  assert.match(publicCatalog, /"红蓝字"/);
+  assert.match(publicCatalog, /"空间结构"/);
+  assert.doesNotMatch(publicCatalog, /auth_key|course-assets|access_token/i);
+  assert.doesNotMatch(publicCatalog, /password\s*[:=]|account\s*[:=]/i);
 
   const { characters, components, lessons } = await import(
     new URL("../app/data/catalog.ts", import.meta.url).href,

@@ -1,4 +1,4 @@
-import type { CharacterItem } from "./catalog";
+import type { CharacterItem } from "./catalog-types";
 import { getMnemonicScene } from "./mnemonic-scenes.ts";
 
 export type MnemonicStage = 0 | 1 | 2 | 3;
