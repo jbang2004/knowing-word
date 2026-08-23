@@ -642,6 +642,12 @@
   border-radius: 22px;
   background: linear-gradient(145deg, rgba(53, 194, 149, 0.12), rgba(244, 240, 230, 0.055));
   box-shadow: 0 16px 34px rgba(0, 0, 0, 0.22);
+  scroll-margin-block: 12px calc(16px + env(safe-area-inset-bottom));
+}
+
+.study-narration-player:focus-visible {
+  outline: 2px solid rgba(53, 194, 149, 0.72);
+  outline-offset: 4px;
 }
 
 .study-narration-head {
@@ -664,8 +670,11 @@
 }
 
 .study-narration-head small {
+  overflow: hidden;
   color: var(--n-ink-2);
   font-size: 0.72rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .study-narration-head button {
@@ -794,7 +803,7 @@
   bottom: 0;
   left: 0;
   display: flex;
-  max-height: min(82dvh, 720px);
+  height: min(82dvh, 720px);
   flex-direction: column;
   padding: 18px 20px calc(20px + env(safe-area-inset-bottom));
   overflow: hidden;
@@ -848,9 +857,13 @@
 }
 
 .study-transcript-text {
+  min-height: 0;
   flex-grow: 1;
   padding: 20px 2px;
   overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-gutter: stable;
+  -webkit-overflow-scrolling: touch;
 }
 
 .study-transcript-text p {
@@ -895,6 +908,51 @@
   font-size: 0.9rem;
   font-weight: 700;
   background: #17211e;
+}
+
+/* Short phones keep every control comfortably tappable while trimming only
+   whitespace. The viewport-following logic still handles any remaining
+   overflow, so this is an enhancement rather than a second layout mode. */
+@media (max-width: 899px) and (max-height: 760px) {
+  .study-narration-player {
+    padding: 12px 14px;
+    border-radius: 20px;
+  }
+
+  .study-narration-phrase {
+    min-height: 2.8em;
+    margin: 8px 0;
+    font-size: 1.08rem;
+    line-height: 1.4;
+  }
+
+  .study-narration-actions {
+    margin-top: 8px;
+  }
+
+  .study-narration-actions button {
+    min-height: 46px;
+    border-radius: 13px;
+  }
+
+  .study-narration-next {
+    min-height: 42px;
+    margin-top: 8px;
+  }
+
+  .study-transcript-sheet {
+    height: 90dvh;
+    padding: 14px 18px calc(16px + env(safe-area-inset-bottom));
+  }
+
+  .study-transcript-text {
+    padding: 14px 2px;
+  }
+
+  .study-transcript-text p {
+    font-size: 1.15rem;
+    line-height: 1.85;
+  }
 }
 
 /* Four-step memory stage ---------------------------------------------- */
@@ -1339,7 +1397,7 @@
     top: 0;
     left: auto;
     width: min(520px, 48vw);
-    max-height: none;
+    height: auto;
     padding: 28px 30px;
     border-radius: 26px 0 0 26px;
   }

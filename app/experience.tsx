@@ -1606,6 +1606,12 @@ function InlineNarrationPlayer({
   const audioSource = withAssetVersion(narrationMediaSource(narrationAsset?.audio), narrationVersion);
   const audioMarksSource = withAssetVersion(narrationMediaSource(narrationAsset?.audioMarks), narrationVersion);
   const audioRef = useRef<HTMLAudioElement>(null);
+  const launcherRef = useRef<HTMLButtonElement>(null);
+  const playerRef = useRef<HTMLElement>(null);
+  const transcriptTriggerRef = useRef<HTMLButtonElement>(null);
+  const transcriptSheetRef = useRef<HTMLElement>(null);
+  const transcriptCloseRef = useRef<HTMLButtonElement>(null);
+  const restoreLauncherFocusRef = useRef(false);
   const [marks, setMarks] = useState<AudioMark[]>([]);
   const [transcriptText, setTranscriptText] = useState(releasedTranscript);
   const [elapsed, setElapsed] = useState(0);
@@ -1650,12 +1656,77 @@ function InlineNarrationPlayer({
   }, [audioMarksSource]);
 
   useEffect(() => {
+    if (!started) {
+      if (!restoreLauncherFocusRef.current) return;
+      restoreLauncherFocusRef.current = false;
+      const focusFrame = window.requestAnimationFrame(() => launcherRef.current?.focus({ preventScroll: true }));
+      return () => window.cancelAnimationFrame(focusFrame);
+    }
+
+    const revealFrame = window.requestAnimationFrame(() => {
+      const player = playerRef.current;
+      if (!player) return;
+      player.focus({ preventScroll: true });
+      if (!window.matchMedia("(max-width: 899px)").matches) return;
+
+      const viewport = window.visualViewport;
+      const viewportTop = viewport?.offsetTop || 0;
+      const viewportBottom = viewportTop + (viewport?.height || window.innerHeight);
+      const bounds = player.getBoundingClientRect();
+      const fullyVisible = bounds.top >= viewportTop + 8 && bounds.bottom <= viewportBottom - 16;
+      if (fullyVisible) return;
+
+      const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      player.scrollIntoView({
+        behavior: reduceMotion ? "auto" : "smooth",
+        block: "nearest",
+        inline: "nearest",
+      });
+    });
+    return () => window.cancelAnimationFrame(revealFrame);
+  }, [started]);
+
+  useEffect(() => {
     if (!transcriptOpen) return;
-    const closeOnEscape = (event: KeyboardEvent) => {
-      if (event.key === "Escape") setTranscriptOpen(false);
+    const returnFocusTo = transcriptTriggerRef.current;
+    const focusFrame = window.requestAnimationFrame(() => transcriptCloseRef.current?.focus({ preventScroll: true }));
+    const handleDialogKeyboard = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        event.preventDefault();
+        setTranscriptOpen(false);
+        return;
+      }
+      if (event.key !== "Tab") return;
+
+      const sheet = transcriptSheetRef.current;
+      if (!sheet) return;
+      const focusable = Array.from(
+        sheet.querySelectorAll<HTMLElement>(
+          'button:not(:disabled), [href], input:not(:disabled), select:not(:disabled), textarea:not(:disabled), [tabindex]:not([tabindex="-1"])',
+        ),
+      );
+      const first = focusable[0];
+      const last = focusable.at(-1);
+      if (!first || !last) return;
+      if (!sheet.contains(document.activeElement)) {
+        event.preventDefault();
+        (event.shiftKey ? last : first).focus();
+      } else if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+      }
     };
-    document.addEventListener("keydown", closeOnEscape);
-    return () => document.removeEventListener("keydown", closeOnEscape);
+    document.addEventListener("keydown", handleDialogKeyboard);
+    return () => {
+      window.cancelAnimationFrame(focusFrame);
+      document.removeEventListener("keydown", handleDialogKeyboard);
+      window.requestAnimationFrame(() => {
+        if (returnFocusTo?.isConnected) returnFocusTo.focus({ preventScroll: true });
+      });
+    };
   }, [transcriptOpen]);
 
   function toggleNarration() {
@@ -1734,6 +1805,7 @@ function InlineNarrationPlayer({
   function collapseNarration() {
     audioRef.current?.pause();
     setPlaying(false);
+    restoreLauncherFocusRef.current = true;
     setStarted(false);
     setTranscriptOpen(false);
   }
@@ -1741,7 +1813,7 @@ function InlineNarrationPlayer({
   return (
     <>
       {!started ? (
-        <button className="study-listen-button" onClick={startNarration}>
+        <button className="study-listen-button" onClick={startNarration} ref={launcherRef}>
           <span className="study-equalizer" aria-hidden="true"><b /><b /><b /><b /><b /></span>
           <span>
             <strong>{elapsed > 0 && !finished ? "继续字义讲解" : "听字义讲解"}</strong>
@@ -1750,7 +1822,12 @@ function InlineNarrationPlayer({
           <ArrowRight aria-hidden="true" size={20} />
         </button>
       ) : (
-        <section className={`study-narration-player${playing ? " is-playing" : ""}`} aria-label="字义讲解播放器">
+        <section
+          className={`study-narration-player${playing ? " is-playing" : ""}`}
+          aria-label="字义讲解播放器"
+          ref={playerRef}
+          tabIndex={-1}
+        >
           <div className="study-narration-head">
             <span>
               <strong>{character.hanzi} · {character.pinyin}</strong>
@@ -1782,7 +1859,12 @@ function InlineNarrationPlayer({
               {playing ? <CircleStop aria-hidden="true" size={21} /> : <Volume2 aria-hidden="true" size={21} />}
               <small>{playing ? "暂停" : finished ? "重听" : "继续"}</small>
             </button>
-            <button onClick={() => setTranscriptOpen(true)} aria-expanded={transcriptOpen}>
+            <button
+              onClick={() => setTranscriptOpen(true)}
+              aria-controls={`transcript-sheet-${character.id}`}
+              aria-expanded={transcriptOpen}
+              ref={transcriptTriggerRef}
+            >
               <BookOpenText aria-hidden="true" size={18} />
               <small>逐字稿</small>
             </button>
@@ -1810,16 +1892,18 @@ function InlineNarrationPlayer({
           />
           <section
             className="study-transcript-sheet"
+            id={`transcript-sheet-${character.id}`}
             role="dialog"
             aria-modal="true"
             aria-labelledby={`transcript-title-${character.id}`}
+            ref={transcriptSheetRef}
           >
             <div className="study-transcript-head">
               <span>
                 <small>可选辅助 · 不影响字画页</small>
                 <strong id={`transcript-title-${character.id}`}>{character.hanzi}的逐字稿</strong>
               </span>
-              <button onClick={() => setTranscriptOpen(false)} aria-label="收起逐字稿">
+              <button onClick={() => setTranscriptOpen(false)} aria-label="收起逐字稿" ref={transcriptCloseRef}>
                 <ArrowRight aria-hidden="true" size={20} style={{ transform: "rotate(90deg)" }} />
               </button>
             </div>

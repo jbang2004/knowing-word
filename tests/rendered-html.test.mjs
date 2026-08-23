@@ -91,7 +91,19 @@ test("character pages render the complete picture-to-character memory flow", asy
   assert.match(pageSource, /function InlineNarrationPlayer/);
   assert.match(pageSource, /可选辅助 · 不影响字画页/);
   assert.doesNotMatch(pageSource, /setView\("listen"\)/);
+  // On short mobile viewports the expanded player follows the visible area,
+  // while reduced-motion users get the same layout without smooth movement.
+  assert.match(pageSource, /player\.scrollIntoView/);
+  assert.match(pageSource, /prefers-reduced-motion: reduce/);
   assert.match(pageSource, /type='audio\/webm; codecs="opus"'/);
+
+  const studyCss = await readFile(
+    new URL("../app/study.css", import.meta.url),
+    "utf8",
+  );
+  assert.match(studyCss, /scroll-margin-block:[^;]*safe-area-inset-bottom/);
+  assert.match(studyCss, /@media \(max-width: 899px\) and \(max-height: 760px\)/);
+  assert.match(studyCss, /\.study-transcript-text \{[^}]*min-height: 0;/s);
 });
 
 test("lesson 3 renders the method pilot and picture-withdrawal flow", async () => {
