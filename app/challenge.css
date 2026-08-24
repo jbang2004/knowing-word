@@ -130,21 +130,21 @@
 
 .choice-card.is-selected {
   border-color: var(--part);
-  color: var(--part-deep);
+  color: var(--part-text);
   background: var(--part-soft);
   box-shadow: 0 var(--press) 0 var(--part-edge);
 }
 
 .choice-card.is-correct {
   border-color: var(--action);
-  color: var(--action-deep);
+  color: var(--action-text);
   background: var(--action-soft);
   box-shadow: 0 var(--press) 0 var(--action-edge);
 }
 
 .choice-card.is-wrong {
   border-color: var(--wrong);
-  color: var(--wrong-deep);
+  color: var(--wrong-text);
   background: var(--wrong-soft);
   box-shadow: 0 var(--press) 0 var(--wrong-edge);
 }
@@ -176,7 +176,7 @@
 }
 
 .challenge-actions > .game-button.primary:disabled {
-  color: #b3aa97;
+  color: var(--disabled-ink);
   background: var(--sky-deep);
   box-shadow: 0 var(--press) 0 var(--line-deep);
   opacity: 1;
@@ -207,7 +207,7 @@
 }
 
 .answer-sheet.is-correct {
-  color: #fff;
+  color: var(--action-ink);
   background: var(--action);
 }
 
@@ -233,12 +233,12 @@
 }
 
 .answer-sheet.is-correct .answer-sheet-mark {
-  color: var(--action-deep);
+  color: var(--action-on-white);
   background: #fff;
 }
 
 .answer-sheet.is-wrong .answer-sheet-mark {
-  color: var(--wrong-deep);
+  color: var(--wrong-on-white);
   background: #fff;
 }
 
@@ -276,8 +276,8 @@
   box-shadow: 0 var(--press) 0 rgba(0, 0, 0, 0.18);
 }
 
-.answer-sheet.is-correct > .game-button.primary { color: var(--action-deep); }
-.answer-sheet.is-wrong > .game-button.primary { color: var(--wrong-deep); }
+.answer-sheet.is-correct > .game-button.primary { color: var(--action-on-white); }
+.answer-sheet.is-wrong > .game-button.primary { color: var(--wrong-on-white); }
 
 @keyframes answer-sheet-rise {
   from { transform: translateY(14px); opacity: 0; }
@@ -316,7 +316,7 @@
 .question-tag {
   padding: 6px 13px;
   border-radius: 999px;
-  color: var(--part-deep);
+  color: var(--part-text);
   font-size: 0.875rem;
   font-weight: 900;
   background: var(--part-soft);

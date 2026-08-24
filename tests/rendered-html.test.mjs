@@ -157,6 +157,12 @@ test("dense pages keep progressive and shareable responsive contracts", async ()
   assert.doesNotMatch(globalCss, /\.celebration-stars|@keyframes star-pop/);
   assert.match(solidBlocksCss, /\.word-map-board,[\s\S]*?box-shadow: 0 var\(--press\) 0 var\(--line\)/);
   assert.match(solidBlocksCss, /\.choice-card:not\(:disabled\):active[\s\S]*?box-shadow: none/);
+  // Generic white surfaces must never override components whose captions are
+  // intentionally inverse. These regressions render as white text on white.
+  assert.doesNotMatch(solidBlocksCss, /\.lesson-practice-strip/);
+  assert.doesNotMatch(solidBlocksCss, /\.practice-strip-items/);
+  assert.doesNotMatch(solidBlocksCss, /\.reader-mobile-index summary/);
+  assert.match(globalCss, /--ink-faint: #5e6e68/);
   const shellCss = await readFile(new URL("../app/app-shell.css", import.meta.url), "utf8");
   assert.match(shellCss, /\.app-tabbar \{[\s\S]*?position: fixed/);
   assert.match(shellCss, /@media \(min-width: 900px\)[\s\S]*?\.app-tabbar \{\s*display: none/);

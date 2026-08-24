@@ -58,7 +58,7 @@
 }
 
 .app-tabbar a.is-active {
-  color: var(--action);
+  color: var(--action-text);
 }
 
 .app-tabbar a.is-active svg {
@@ -90,7 +90,7 @@
   flex: 0 0 auto;
   place-items: center;
   border-radius: 14px 14px 14px 4px;
-  color: #fff;
+  color: var(--radical-ink);
   font-family: var(--kai);
   font-size: 1.25rem;
   background: var(--radical);
@@ -149,7 +149,7 @@
 }
 
 .app-sidebar-links a.is-active {
-  color: #fff;
+  color: var(--action-ink);
   background: var(--action);
   box-shadow: 0 var(--press) 0 var(--action-deep);
 }
@@ -177,7 +177,7 @@
   flex: 0 0 auto;
   place-items: center;
   border-radius: 14px 14px 14px 4px;
-  color: #fff;
+  color: var(--radical-ink);
   font-family: var(--kai);
   font-size: 1.25rem;
   background: var(--radical);

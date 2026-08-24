@@ -17,8 +17,8 @@
   --night-3: #1d2b27;
   --night-line: rgba(242, 238, 228, 0.12);
   --n-ink: #f4f0e6;
-  --n-ink-2: rgba(244, 240, 230, 0.64);
-  --n-ink-3: rgba(244, 240, 230, 0.4);
+  --n-ink-2: rgba(244, 240, 230, 0.72);
+  --n-ink-3: rgba(244, 240, 230, 0.55);
   --n-action: #35c295;
   --n-radical: #ff7a52;
   --n-part: #5fb4dc;
@@ -860,7 +860,7 @@
 }
 
 .study-transcript-head small {
-  color: rgba(23, 33, 30, 0.52);
+  color: rgba(23, 33, 30, 0.64);
   font-size: 0.7rem;
 }
 
@@ -906,11 +906,11 @@
 }
 
 .study-transcript-sheet .narration-token.is-punctuation {
-  color: rgba(23, 33, 30, 0.42);
+  color: rgba(23, 33, 30, 0.64);
 }
 
 .study-transcript-sheet .narration-token.is-complete {
-  color: rgba(23, 33, 30, 0.34);
+  color: rgba(23, 33, 30, 0.64);
 }
 
 .study-transcript-sheet .narration-unit.is-current-phrase .narration-token {

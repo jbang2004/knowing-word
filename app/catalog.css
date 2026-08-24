@@ -14,7 +14,7 @@
 }
 
 .practice-context-band span {
-  color: var(--action);
+  color: var(--action-text);
   font-size: .72rem;
   font-weight: 860;
   letter-spacing: .12em;
@@ -41,7 +41,7 @@
   height: 64px;
   place-items: center;
   border-radius: 18px;
-  color: var(--action);
+  color: var(--action-text);
   font-family: var(--kai);
   font-size: 2.1rem;
   font-style: normal;
@@ -57,6 +57,7 @@
 
 .practice-route-card {
   --practice-accent: var(--part);
+  --practice-text: var(--part-text);
   --practice-soft: var(--part-soft);
   --practice-edge: var(--part-edge);
   display: flex;
@@ -70,12 +71,14 @@
 
 .practice-route-card.radical {
   --practice-accent: var(--radical);
+  --practice-text: var(--radical-text);
   --practice-soft: var(--radical-soft);
   --practice-edge: var(--radical-edge);
 }
 
 .practice-route-card.wrong {
   --practice-accent: var(--wrong);
+  --practice-text: var(--wrong-text);
   --practice-soft: var(--wrong-soft);
   --practice-edge: var(--wrong-edge);
 }
@@ -107,7 +110,7 @@
   height: 52px;
   place-items: center;
   border-radius: 16px;
-  color: var(--practice-accent);
+  color: var(--practice-text);
   font-family: var(--kai);
   font-size: 1.28rem;
   font-style: normal;
@@ -117,7 +120,7 @@
 
 .practice-route-top p {
   margin: 0 0 3px;
-  color: var(--practice-accent);
+  color: var(--practice-text);
   font-size: .75rem;
   font-weight: 780;
 }
@@ -172,7 +175,7 @@
   height: 47px;
   place-items: center;
   border-radius: 50%;
-  color: var(--saffron);
+  color: var(--wrong-text);
   background: var(--navy);
 }
 
@@ -202,7 +205,7 @@
 
 .practice-sequence-note li:not(:last-child)::after {
   margin-left: 6px;
-  color: var(--coral);
+  color: var(--radical-text);
   content: "→";
 }
 
@@ -252,7 +255,7 @@
 
 .course-unit-nav a:hover,
 .course-unit-nav a:focus-visible {
-  color: var(--action);
+  color: var(--action-text);
   background: var(--action-soft);
 }
 
@@ -271,7 +274,7 @@
 }
 
 .course-unit > header span {
-  color: var(--coral);
+  color: var(--radical-text);
   font-size: .72rem;
   font-weight: 900;
   letter-spacing: .12em;
@@ -293,6 +296,7 @@
 
 .course-unit .lesson-route-card.lesson-tone-3 {
   --route: var(--saffron);
+  --route-text: var(--wrong-text);
 }
 
 .course-unit + .course-unit .lesson-route {

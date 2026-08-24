@@ -93,6 +93,8 @@
 .lesson-reader-paper {
   --reader-accent: var(--jade);
   --reader-accent-soft: var(--jade-soft);
+  --reader-accent-ink: var(--action-ink);
+  --reader-accent-text: var(--action-text);
   min-width: 0;
   overflow: hidden;
   border: 1px solid color-mix(in srgb, var(--line) 88%, transparent);
@@ -104,28 +106,76 @@
 }
 
 .reader-genre-story {
-  --reader-accent: #ad6b35;
+  --reader-accent: #9f5e2d;
   --reader-accent-soft: #f6eadb;
+  --reader-accent-ink: #fff;
+  --reader-accent-text: #74421f;
 }
 
 .reader-genre-history {
   --reader-accent: #96584f;
   --reader-accent-soft: #f4e7e3;
+  --reader-accent-ink: #fff;
+  --reader-accent-text: #753f38;
 }
 
 .reader-genre-science {
   --reader-accent: #397493;
   --reader-accent-soft: #e4f0f4;
+  --reader-accent-ink: #fff;
+  --reader-accent-text: #285c77;
 }
 
 .reader-genre-poetry {
   --reader-accent: #6f628b;
   --reader-accent-soft: #ece8f3;
+  --reader-accent-ink: #fff;
+  --reader-accent-text: #55466e;
 }
 
 .reader-genre-reflection {
   --reader-accent: #8c5a69;
   --reader-accent-soft: #f2e7eb;
+  --reader-accent-ink: #fff;
+  --reader-accent-text: #703f50;
+}
+
+/* Genre palettes need their own night surfaces. Reusing the light cream
+   fills here makes a pale card while `--navy` and `--ink` have already turned
+   light, which recreates the same light-on-light failure as the practice bar. */
+html[data-theme="night"] .reader-genre-story {
+  --reader-accent: #e5a56e;
+  --reader-accent-soft: #3a2b21;
+  --reader-accent-ink: #0f1614;
+  --reader-accent-text: #f0bd91;
+}
+
+html[data-theme="night"] .reader-genre-history {
+  --reader-accent: #d58f84;
+  --reader-accent-soft: #382725;
+  --reader-accent-ink: #0f1614;
+  --reader-accent-text: #e7aaa1;
+}
+
+html[data-theme="night"] .reader-genre-science {
+  --reader-accent: #70b8db;
+  --reader-accent-soft: #22343a;
+  --reader-accent-ink: #0f1614;
+  --reader-accent-text: #8bcceb;
+}
+
+html[data-theme="night"] .reader-genre-poetry {
+  --reader-accent: #b4a2d6;
+  --reader-accent-soft: #302b3a;
+  --reader-accent-ink: #0f1614;
+  --reader-accent-text: #c8b8e4;
+}
+
+html[data-theme="night"] .reader-genre-reflection {
+  --reader-accent: #d39aab;
+  --reader-accent-soft: #392831;
+  --reader-accent-ink: #0f1614;
+  --reader-accent-text: #e5afbf;
 }
 
 .lesson-reader-masthead {
@@ -147,7 +197,7 @@
 }
 
 .lesson-reader-masthead > span {
-  color: var(--reader-accent);
+  color: var(--reader-accent-text);
   font-size: .66rem;
   font-weight: 850;
   letter-spacing: .18em;
@@ -192,7 +242,7 @@
   height: 15px;
   flex: 0 0 auto;
   margin-top: 2px;
-  color: var(--saffron);
+  color: var(--wrong-text);
 }
 
 .reader-source-note span {
@@ -224,7 +274,7 @@
 }
 
 .lesson-guide-intro > span {
-  color: var(--reader-accent);
+  color: var(--reader-accent-text);
   font-size: .67rem;
   font-weight: 850;
   letter-spacing: .13em;
@@ -254,7 +304,7 @@
 .lesson-guide-intro > small svg {
   width: 14px;
   height: 14px;
-  color: var(--reader-accent);
+  color: var(--reader-accent-text);
 }
 
 .reader-section {
@@ -279,7 +329,7 @@
   height: 35px;
   place-items: center;
   border-radius: 50% 50% 50% 8px;
-  color: #fff9f1;
+  color: var(--reader-accent-ink);
   font-family: var(--kai);
   font-size: .95rem;
   font-style: normal;
@@ -343,7 +393,7 @@
 }
 
 .reader-clue-question > span {
-  color: var(--reader-accent);
+  color: var(--reader-accent-text);
   font-size: .65rem;
   font-weight: 850;
   letter-spacing: .1em;
@@ -426,13 +476,13 @@
   place-items: center;
   margin-inline: .04em;
   border-radius: 7px 7px 7px 3px;
-  color: var(--coral);
+  color: var(--radical-text);
   background: var(--coral-soft);
   transition: color 160ms ease, background 160ms ease, transform 160ms var(--ease-out);
 }
 
 .reader-focus-glyph:hover {
-  color: #fffaf3;
+  color: var(--radical-ink);
   background: var(--coral);
   transform: translateY(-1px);
 }
@@ -457,7 +507,7 @@
   right: 10px;
   width: 14px;
   height: 14px;
-  color: var(--jade);
+  color: var(--action-text);
   stroke-width: 3;
 }
 
@@ -467,7 +517,7 @@
 }
 
 .reader-focus-word.is-complete .reader-focus-glyph {
-  color: var(--jade);
+  color: var(--action-text);
   background: var(--jade-soft);
 }
 
@@ -482,7 +532,7 @@
   margin-inline: .02em;
   border-bottom: 1.5px solid var(--coral);
   border-radius: 4px 4px 2px 2px;
-  color: color-mix(in srgb, var(--coral) 76%, var(--ink));
+  color: var(--radical-text);
   text-indent: 0;
   background: linear-gradient(180deg, transparent 48%, color-mix(in srgb, var(--coral-soft) 88%, transparent) 48%);
   box-decoration-break: clone;
@@ -504,7 +554,7 @@
 }
 
 .reader-target:hover {
-  color: var(--coral);
+  color: var(--radical-text);
   background: var(--coral-soft);
 }
 
@@ -517,7 +567,7 @@
 }
 
 .reader-target.is-complete:hover {
-  color: var(--jade);
+  color: var(--action-text);
   background: var(--jade-soft);
 }
 
@@ -546,7 +596,7 @@
   height: 47px;
   place-items: center;
   border-radius: 15px 15px 15px 5px;
-  color: #fff;
+  color: var(--action-ink);
   font-family: var(--kai);
   font-size: 1.38rem;
   background: var(--jade);
@@ -557,7 +607,7 @@
 }
 
 .lesson-reader-finish small {
-  color: var(--jade);
+  color: var(--action-text);
   font-size: .65rem;
   font-weight: 850;
   letter-spacing: .12em;
@@ -707,7 +757,7 @@
 }
 
 .reader-progress-card header > i {
-  color: var(--jade);
+  color: var(--action-text);
   font-size: .71rem;
   font-style: normal;
   font-weight: 850;
@@ -765,14 +815,14 @@
   height: 37px;
   place-items: center;
   border-radius: 12px 12px 12px 4px;
-  color: var(--coral);
+  color: var(--radical-text);
   font-family: var(--kai);
   font-size: 1.25rem;
   background: var(--coral-soft);
 }
 
 .reader-word-index > a.is-complete strong {
-  color: var(--jade);
+  color: var(--action-text);
   background: var(--jade-soft);
 }
 
@@ -801,7 +851,7 @@
 }
 
 .reader-word-index > a.is-complete > svg {
-  color: var(--jade);
+  color: var(--action-text);
 }
 
 .reader-route-card {
@@ -832,7 +882,7 @@
   height: 23px;
   place-items: center;
   border-radius: 50%;
-  color: var(--jade);
+  color: var(--action-text);
   font-size: .6rem;
   font-style: normal;
   font-weight: 850;
@@ -886,7 +936,9 @@
     border: 1px solid color-mix(in srgb, var(--jade) 32%, var(--line));
     border-radius: 17px;
     color: #fff;
-    background: color-mix(in srgb, var(--navy) 94%, transparent);
+    /* This control is always an inverse floating surface. `--navy` changes
+       from dark to light in night mode, so it cannot safely be its fill. */
+    background: rgba(18, 60, 51, .96);
     box-shadow: 0 13px 34px rgba(18, 34, 28, .24);
     backdrop-filter: blur(18px);
     cursor: pointer;
