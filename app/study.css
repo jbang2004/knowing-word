@@ -1640,3 +1640,191 @@
     padding-bottom: 0;
   }
 }
+
+/* Tactile dark learning layer ---------------------------------------------
+ * The artwork still owns a dark stage, while every control now uses the same
+ * outlined block, hard lower edge and pressed motion as the light courses. */
+
+.study-shell,
+.memory-stage {
+  --study-edge: #34443e;
+  --study-floor: #080d0b;
+  background: #111b19;
+}
+
+.study-shell::before,
+.memory-stage::before { display: none; }
+
+.study-scene,
+.memory-stage-scene {
+  border: 2px solid var(--study-edge);
+  border-radius: 24px;
+  box-shadow: 0 6px 0 var(--study-floor);
+}
+
+.study-scene-caption {
+  border: 2px solid var(--study-edge);
+  color: var(--n-ink);
+  background: #192521;
+  backdrop-filter: none;
+}
+
+.study-scene.is-glyph {
+  background: #192521;
+  box-shadow: 0 6px 0 var(--study-floor);
+}
+
+.study-tags span,
+.study-next-steps span {
+  border: 1px solid var(--study-edge);
+  background: #192521;
+}
+
+.study-drawer,
+.study-narration-player,
+.study-transcript-sheet,
+.study-legacy-panel,
+.study-note,
+.study-quote,
+.memory-stage-recall,
+.memory-stage-parts {
+  border: 2px solid var(--study-edge);
+  background: #192521;
+  box-shadow: 0 5px 0 var(--study-floor);
+}
+
+.study-drawer {
+  border-right: 0;
+  border-bottom: 0;
+  border-left: 0;
+  box-shadow: 0 -5px 0 var(--study-edge);
+}
+
+.study-narration-player { background: #1d2b27; }
+
+.study-transcript-sheet {
+  color: #22302c;
+  border-color: #d5cdba;
+  background: #fffdf8;
+  box-shadow: 0 -5px 0 #d5cdba;
+}
+
+.study-transcript-backdrop,
+.study-drawer-backdrop { backdrop-filter: none; }
+
+:is(
+  .study-topbar button,
+  .study-reading button,
+  .study-listen-button,
+  .study-drawer-handle,
+  .study-part-list button,
+  .study-drawer-actions button,
+  .study-narration-head button,
+  .study-narration-actions button,
+  .study-narration-next,
+  .study-transcript-head button,
+  .study-transcript-close,
+  .memory-stage-bar button,
+  .memory-stage-recall button,
+  .memory-stage-chips button,
+  .memory-stage-next,
+  .memory-stage-secondary
+) {
+  border: 2px solid var(--study-edge);
+  background: #1d2b27;
+  box-shadow: 0 4px 0 var(--study-floor);
+  transition: transform 90ms ease, box-shadow 90ms ease, border-color 140ms ease, background 140ms ease;
+}
+
+:is(
+  .study-topbar button,
+  .study-reading button,
+  .study-listen-button,
+  .study-drawer-handle,
+  .study-part-list button,
+  .study-drawer-actions button,
+  .study-narration-head button,
+  .study-narration-actions button,
+  .study-narration-next,
+  .study-transcript-head button,
+  .study-transcript-close,
+  .memory-stage-bar button,
+  .memory-stage-recall button,
+  .memory-stage-chips button,
+  .memory-stage-next,
+  .memory-stage-secondary
+):not(:disabled):active {
+  transform: translateY(4px);
+  box-shadow: none;
+}
+
+.study-listen-button:hover:not(:disabled) { transform: none; }
+
+.study-listen-button,
+.study-narration-actions .is-primary,
+.memory-stage-next.is-finish {
+  border-color: #1d8f6b;
+  color: #0f1614;
+  background: var(--n-action);
+  box-shadow: 0 5px 0 #1d8f6b;
+}
+
+.study-narration-actions .is-record {
+  border-color: #b3822a;
+  color: var(--n-warn);
+  background: #39311f;
+  box-shadow: 0 4px 0 #b3822a;
+}
+
+.study-narration-next,
+.memory-stage-next {
+  color: #22302c;
+  border-color: #d5cdba;
+  background: var(--n-ink);
+  box-shadow: 0 5px 0 #d5cdba;
+}
+
+.study-transcript-head button,
+.study-transcript-close {
+  border-color: #d5cdba;
+  color: #22302c;
+  background: #fff;
+  box-shadow: 0 4px 0 #d5cdba;
+}
+
+.study-transcript-close {
+  border-color: #0f8c64;
+  color: #fff;
+  background: #17b686;
+  box-shadow: 0 4px 0 #0f8c64;
+}
+
+.memory-stage-ring { box-shadow: none; }
+.memory-stage-result { text-shadow: none; }
+
+:is(
+  .study-scene-caption,
+  .study-tags span,
+  .study-listen-button small,
+  .study-next-steps > small,
+  .study-next-steps span,
+  .study-drawer-handle,
+  .study-part-list small,
+  .study-note small,
+  .study-script-line small,
+  .study-quote small,
+  .study-drawer-actions small,
+  .study-narration-head small,
+  .study-narration-time,
+  .study-narration-actions button small,
+  .study-transcript-head small,
+  .memory-stage-eyebrow,
+  .memory-stage-legend,
+  .memory-stage-recall small,
+  .memory-stage-recall button,
+  .memory-stage-chips strong,
+  .memory-stage-chips small,
+  .memory-stage-hint
+) {
+  font-size: .78rem;
+}

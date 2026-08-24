@@ -474,3 +474,37 @@
   line-height: 1.7;
   text-wrap: pretty;
 }
+
+/* 9 · Late stragglers ------------------------------------------------- */
+
+.record-recent a {
+  border: 2px solid var(--line);
+  border-radius: 16px;
+  background: var(--paper);
+  box-shadow: 0 var(--press) 0 var(--line);
+  transition: transform 90ms ease, box-shadow 90ms ease, border-color 140ms ease, background 140ms ease;
+}
+
+.record-recent a:hover {
+  border-color: var(--part-edge);
+  background: var(--part-soft);
+}
+
+.record-recent a:active {
+  transform: translateY(var(--press));
+  box-shadow: none;
+}
+
+.record-recent a span,
+.record-recent a small { font-size: .8125rem; }
+
+html[data-theme="night"] .profile-avatar {
+  background: var(--radical);
+  box-shadow: 0 3px 0 var(--radical-deep);
+}
+
+html[data-theme="night"] .profile-card {
+  border-color: var(--line);
+  background: var(--paper);
+  box-shadow: 0 var(--press) 0 var(--line);
+}
