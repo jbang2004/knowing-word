@@ -5,7 +5,7 @@ import {
   safeInternalReturnPath,
   withReturnTo,
 } from "../app/lib/navigation.ts";
-import { resolveAppRoute, routeForTrack } from "../app/lib/app-route.ts";
+import { routeForTrack } from "../app/lib/app-route.ts";
 
 test("context returns accept only known internal learning routes", () => {
   assert.equal(
@@ -33,31 +33,10 @@ test("secondary routes preserve and recover a safe return destination", () => {
   );
 });
 
-test("route parsing is independent from the full curriculum payload", () => {
-  assert.deepEqual(resolveAppRoute("/lessons/g5v1-l01"), {
-    screen: "lesson",
-    lessonId: "g5v1-l01",
-  });
-  assert.deepEqual(
-    resolveAppRoute("/lessons/g5v1-l01/words/g5v1-l01-c05-u55dc"),
-    {
-      screen: "character",
-      track: "words",
-      lessonId: "g5v1-l01",
-      characterId: "g5v1-l01-c05-u55dc",
-    },
-  );
-  assert.deepEqual(resolveAppRoute("/lessons/not-a-lesson"), { screen: "course" });
+test("track route construction follows the filesystem router", () => {
   assert.equal(
     routeForTrack("honglan", "g5v1-l01", "g5v1-l01-c05-u55dc"),
     "/honglan-exercise/g5v1-l01/lesson_words/g5v1-l01-c05-u55dc",
   );
-  assert.deepEqual(
-    resolveAppRoute("/bujian?component=g5-component-u6728&returnTo=%2Flessons"),
-    {
-      screen: "components",
-      componentId: "g5-component-u6728",
-      returnTo: "/lessons",
-    },
-  );
+  assert.equal(routeForTrack("words", "g5v1-l01"), "/lessons/g5v1-l01");
 });

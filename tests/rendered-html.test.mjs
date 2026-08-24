@@ -251,16 +251,12 @@ test("character pages render the complete picture-to-character memory flow", asy
   assert.match(studyCss, /\.study-transcript-text \{[^}]*min-height: 0;/s);
 });
 
-test("lesson 3 renders the method pilot and picture-withdrawal flow", async () => {
+test("lesson 3 uses the same bounded learning flow as every other lesson", async () => {
   const lessonResponse = await render("/lessons/g5v1-l03?view=words");
   assert.equal(lessonResponse.status, 200);
   const lessonHtml = await lessonResponse.text();
-  assert.match(lessonHtml, /第三课 · 识字方法试点/);
-  assert.match(lessonHtml, /先分方法，再使用图片/);
-  assert.match(lessonHtml, /形旁 \+ 声旁/);
-  assert.match(lessonHtml, /部件 \+ 位置/);
-  assert.match(lessonHtml, /声旁家族/);
-  assert.match(lessonHtml, /间隔复习/);
+  assert.match(lessonHtml, /课内识字写字表/);
+  assert.doesNotMatch(lessonHtml, /识字方法试点|pilot-/);
 
   const { characters } = await import(
     new URL("../app/data/catalog.ts", import.meta.url).href,
@@ -273,11 +269,9 @@ test("lesson 3 renders the method pilot and picture-withdrawal flow", async () =
   const characterResponse = await render(`/lessons/g5v1-l03/words/${pickup.id}`);
   assert.equal(characterResponse.status, 200);
   const characterHtml = await characterResponse.text();
-  assert.match(characterHtml, /图片是桥梁 · 不是答案/);
-  assert.match(characterHtml, /从画面走到无图回忆/);
-  assert.match(characterHtml, /构形助记图 · 非字源图/);
-  assert.match(characterHtml, /词语回忆/);
-  assert.match(characterHtml, /规范字形教学拆分|现代规范字形/);
+  assert.match(characterHtml, /画面本身就是字形/);
+  assert.match(characterHtml, /部件来历/);
+  assert.doesNotMatch(characterHtml, /pilot-|第三课 · 识字方法试点/);
 });
 
 test("all catalog routes server-render with real, shareable URLs", async () => {
@@ -295,10 +289,6 @@ test("all catalog routes server-render with real, shareable URLs", async () => {
     "/split-exercise",
     "/space-structure-exercise",
     "/read-aloud",
-    "/playground/kit",
-    "/playground/lesson",
-    "/playground/puzzle",
-    "/playground/quiz",
   ];
 
   for (const lesson of lessons) {
@@ -322,7 +312,7 @@ test("all catalog routes server-render with real, shareable URLs", async () => {
   }
 
   assert.equal(sourceCharacters.length, 430);
-  assert.equal(routes.length, 2007);
+  assert.equal(routes.length, 2003);
   assert.equal(new Set(routes).size, routes.length);
 
   for (let offset = 0; offset < routes.length; offset += 20) {
@@ -480,7 +470,7 @@ test("every source character has a complete, authored object-shaped mnemonic", a
     assert.ok(scene.scene.length >= 18, `mnemonic scene is too vague for ${character.hanzi}`);
     assert.ok(["left-right", "top-bottom", "surround", "single"].includes(getMnemonicLayout(character)));
     for (let stage = 0; stage < 4; stage += 1) {
-      const copy = getMnemonicStageCopy(character, stage);
+      const copy = getMnemonicStageCopy(character, scene, stage);
       assert.ok(copy.eyebrow && copy.title && copy.body, `missing stage copy for ${character.hanzi}`);
       const activeParts = getMnemonicStagePartIndices(character, stage);
       assert.ok(activeParts.every((index) => index >= 0 && index < parts));
@@ -522,8 +512,8 @@ test("mnemonic artwork is never cropped or hidden by its caption", async () => {
 test("the public learning catalog preserves the course and practice-route structure", async () => {
   const publicCatalogSources = await Promise.all([
     "../app/data/grade5-volume1-generated.ts",
-    "../app/data/extension-catalog.ts",
     "../app/data/extension-characters.ts",
+    "../app/data/extension-components.ts",
     "../app/data/generated/grade5-volume1/lessons/g5v1-l01.ts",
   ].map((path) => readFile(new URL(path, import.meta.url), "utf8")));
   const publicCatalog = publicCatalogSources.join("\n");
@@ -680,81 +670,16 @@ test("narration timing becomes a punctuated, phrase-paced reading transcript", a
   assert.deepEqual(activeNarrationMarkIndices(groupedMarks, 2.5), [2]);
   assert.deepEqual(activeNarrationMarkIndices(groupedMarks, 3), []);
 
-  const pageSource = await readFile(
-    new URL("../app/features/character-study/character-study.tsx", import.meta.url),
-    "utf8",
-  );
+  const pageSource = await Promise.all([
+    "../app/features/character-study/character-study.tsx",
+    "../app/domain/narration-media.ts",
+  ].map((path) => readFile(new URL(path, import.meta.url), "utf8"))).then((sources) => sources.join("\n"));
   assert.match(pageSource, /requestAnimationFrame\(sampleAudioTime\)/);
   assert.match(pageSource, /is-complete/);
-  assert.match(pageSource, /withAssetVersion/);
   assert.match(pageSource, /activeMarkIndices\.has\(token\.markIndex\)/);
   assert.match(pageSource, /narration-v3-qwen3-4bit-r37e955a/);
   assert.match(pageSource, /is-current-phrase/);
   assert.doesNotMatch(pageSource, /onEnded=\{\(\) => \{[\s\S]*setElapsed\(0\)/);
-});
-
-test("all narration scripts use the child-first four-beat teaching structure", async () => {
-  const { characters } = await import(
-    new URL("../app/data/catalog.ts", import.meta.url).href,
-  );
-  const { narrationScripts } = await import(
-    new URL("../app/data/narration-scripts.ts", import.meta.url).href,
-  );
-  const uniqueCharacters = [...new Map(
-    characters.map((character) => [character.hanzi, character]),
-  ).values()];
-  assert.equal(uniqueCharacters.length, 423);
-  assert.deepEqual(new Set(Object.keys(narrationScripts)), new Set(uniqueCharacters.map((item) => item.hanzi)));
-
-  const longestSharedSpan = (left, right) => {
-    const a = Array.from(left);
-    const b = Array.from(right);
-    const previous = new Uint16Array(b.length + 1);
-    const current = new Uint16Array(b.length + 1);
-    let longest = 0;
-    for (let row = 1; row <= a.length; row += 1) {
-      current.fill(0);
-      for (let column = 1; column <= b.length; column += 1) {
-        if (a[row - 1] === b[column - 1]) {
-          current[column] = previous[column - 1] + 1;
-          longest = Math.max(longest, current[column]);
-        }
-      }
-      previous.set(current);
-    }
-    return longest;
-  };
-
-  for (const character of uniqueCharacters) {
-    const script = narrationScripts[character.hanzi];
-    const length = Array.from(script).length;
-    const [minimumLength, maximumLength] = character.official !== false
-      ? [80, 230]
-      : [33, 115];
-    assert.ok(
-      length >= minimumLength && length <= maximumLength,
-      `wrong child-first length for ${character.hanzi}: ${length}`,
-    );
-    if (character.polyphonic) {
-      assert.ok(script.startsWith(`先读“${character.word}”`), `missing contextual opening for ${character.hanzi}`);
-    } else {
-      assert.ok(script.startsWith(`${character.hanzi}，`), `missing spoken opening for ${character.hanzi}`);
-    }
-    assert.ok((script.match(/[。！？]/gu) || []).length >= 4, `missing four teaching beats for ${character.hanzi}`);
-    assert.notEqual(script, character.description, `catalog prose copied verbatim into ${character.hanzi}`);
-    assert.ok(longestSharedSpan(script, character.originalText) <= 18, `lesson text copied into ${character.hanzi}`);
-    assert.doesNotMatch(script, /声符[“"]?貧|刺瞎|就是这样造出来|真正的造字过程/u);
-    assert.doesNotMatch(script, /看图找部件|故事道具|轮廓像/u);
-  }
-
-  for (const character of uniqueCharacters) {
-    const words = characters.filter((item) => item.hanzi === character.hanzi).map((item) => item.word);
-    assert.ok(
-      words.some((word) => narrationScripts[character.hanzi].includes(word))
-        || words.some((word) => word.includes(character.hanzi)),
-      `missing course context for ${character.hanzi}`,
-    );
-  }
 });
 
 test("every character record has a complete Feng-voice narration and authored timeline", async () => {
@@ -781,11 +706,11 @@ test("every character record has a complete Feng-voice narration and authored ti
     assert.ok(asset, `missing narration mapping for ${character.hanzi} (${character.id})`);
     assert.equal(asset.voice, "封");
     assert.match(asset.audio, /\/audio\.webm$/u);
-    await access(new URL(`../public${asset.audio}`, import.meta.url));
-    await access(new URL(`../public${asset.audioMarks}`, import.meta.url));
+    await access(new URL(`../release${asset.audio}`, import.meta.url));
+    await access(new URL(`../release${asset.audioMarks}`, import.meta.url));
 
     const payload = JSON.parse(
-      await readFile(new URL(`../public${asset.audioMarks}`, import.meta.url), "utf8"),
+      await readFile(new URL(`../release${asset.audioMarks}`, import.meta.url), "utf8"),
     );
     assert.equal(payload.voice_reference, "封");
     assert.equal(payload.script_version, "narration-v3");
@@ -827,7 +752,7 @@ test("every character record has a complete Feng-voice narration and authored ti
   );
 });
 
-test("production output excludes superseded heritage narration copies", async () => {
+test("production output excludes release-only narration and superseded heritage copies", async () => {
   const { readdir } = await import("node:fs/promises");
   const heritageRoot = new URL("../dist/client/heritage/", import.meta.url);
   const entries = await readdir(heritageRoot, { recursive: true });
@@ -869,19 +794,6 @@ test("versioned assets run through the cache-header worker path", async () => {
     "/heritage/*",
     "/og-cover.jpg",
   ]);
-});
-
-test("repeat visits cache hashed assets and revalidate visual assets locally", async () => {
-  const registration = await readFile(
-    new URL("../app/service-worker-registration.tsx", import.meta.url),
-    "utf8",
-  );
-  const worker = await readFile(new URL("../public/sw.js", import.meta.url), "utf8");
-  assert.match(registration, /serviceWorker\.register\("\/sw\.js"/u);
-  assert.match(registration, /updateViaCache: "none"/u);
-  assert.match(worker, /IMMUTABLE_PREFIX = "\/assets\/"/u);
-  assert.match(worker, /staleWhileRevalidate/u);
-  assert.doesNotMatch(worker, /\/api\//u);
 });
 
 test("R2 narration delivery supports immutable byte ranges", async () => {

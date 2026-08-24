@@ -1,5 +1,5 @@
 import type { CharacterItem } from "./catalog-types";
-import { getMnemonicScene } from "./mnemonic-scenes.ts";
+import type { MnemonicScene } from "./mnemonic-scenes.ts";
 
 export type MnemonicStage = 0 | 1 | 2 | 3;
 
@@ -24,9 +24,9 @@ export function getMnemonicStagePartIndices(
 
 export function getMnemonicStageCopy(
   character: CharacterItem,
+  scene: MnemonicScene,
   stage: MnemonicStage,
 ) {
-  const scene = getMnemonicScene(character);
   const parts = character.parts.length
     ? character.parts
     : [{ char: character.hanzi, radical: true }];

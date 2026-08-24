@@ -333,7 +333,7 @@ test("a gated local stage covers 430 recordId paths and never deduplicates repea
   assert.match(result.stdout, /release gate passed for 430/u);
   assert.match(result.stdout, /No public files were changed and nothing was uploaded/u);
 
-  const narrationRoot = join(stagingPath, "public", "narration");
+  const narrationRoot = join(stagingPath, "release", "narration");
   const recordDirectories = (await readdir(narrationRoot, { withFileTypes: true }))
     .filter((entry) => entry.isDirectory())
     .map((entry) => entry.name);

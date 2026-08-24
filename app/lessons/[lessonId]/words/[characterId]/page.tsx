@@ -1,7 +1,9 @@
 import { notFound } from "next/navigation";
-import { getComponentByGlyph } from "../../../../data/catalog";
+import { getComponentByGlyph } from "../../../../data/component-index";
 import { loadLessonContent } from "../../../../data/lesson-content";
 import { getPublishableLessonDocument } from "../../../../data/lesson-documents";
+import { loadLessonMedia } from "../../../../data/lesson-media";
+import { narrationMedia } from "../../../../domain/narration-media";
 import CharacterStudyRoute from "../../../../features/character-study/character-study-route";
 import { safeInternalReturnPath } from "../../../../lib/navigation";
 
@@ -14,9 +16,13 @@ export default async function CharacterPage({
 }) {
   const { lessonId, characterId } = await params;
   const { returnTo: returnToParam } = await searchParams;
-  const content = await loadLessonContent(lessonId);
+  const [content, lessonMedia] = await Promise.all([
+    loadLessonContent(lessonId),
+    loadLessonMedia(lessonId),
+  ]);
   const character = content?.characters.find((item) => item.id === characterId);
-  if (!character) notFound();
+  const media = lessonMedia?.[characterId];
+  if (!character || !media) notFound();
   const document = getPublishableLessonDocument(lessonId);
   const componentIds = Object.fromEntries(
     character.parts
@@ -27,6 +33,12 @@ export default async function CharacterPage({
     <CharacterStudyRoute
       character={character}
       componentIds={componentIds}
+      media={{
+        visual: media.visual,
+        heritage: media.heritage,
+        scene: media.scene,
+        narration: narrationMedia(character.id, media.transcript),
+      }}
       returnTo={safeInternalReturnPath(returnToParam)}
       returnContextLabel={document?.format === "guide" ? "导读" : "语境"}
     />

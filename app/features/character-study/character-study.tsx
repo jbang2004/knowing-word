@@ -21,15 +21,9 @@ import {
   useState,
 } from "react";
 import type { CharacterItem } from "../../data/catalog-types";
-import { characterVisuals } from "../../data/illustrations";
-import { heritageAssets, type AudioMark } from "../../data/heritage-assets";
-import { narrationAssets } from "../../data/narration-assets";
-import { releasedNarrationTranscripts } from "../../data/released-narration-transcripts.generated";
-import {
-  LESSON_THREE_ID,
-  getLessonThreeKnowledge,
-} from "../../data/lesson3-literacy";
-import { getMnemonicScene } from "../../data/mnemonic-scenes";
+import type { HeritageAsset, AudioMark } from "../../data/heritage-assets";
+import type { LearningVisual } from "../../data/illustrations";
+import type { MnemonicScene } from "../../data/mnemonic-scenes";
 import {
   getMnemonicStageCopy,
   getMnemonicStagePartIndices,
@@ -45,36 +39,34 @@ import {
 } from "../../lib/narration";
 import type { StudyProfile } from "../../lib/profile-model";
 import { getTrackExercises } from "../../domain/practice";
+import type { NarrationMedia } from "../../domain/narration-media";
 import { speak } from "../../infrastructure/browser/speech";
 
-function withAssetVersion(source: string | undefined, version: string) {
-  if (!source) return undefined;
-  return `${source}${source.includes("?") ? "&" : "?"}v=${encodeURIComponent(version)}`;
-}
-
-function narrationMediaSource(source: string | undefined) {
-  if (!source?.startsWith("/narration/")) return source;
-  return `/media/narration/v3/${source.slice("/narration/".length)}`;
-}
+export type CharacterStudyMedia = {
+  visual?: LearningVisual;
+  heritage?: HeritageAsset;
+  scene: MnemonicScene;
+  narration: NarrationMedia;
+};
 
 function InlineNarrationPlayer({
   active,
   character,
+  narration,
   onActiveChange,
   onFinished,
   onReadAloud,
 }: {
   active: boolean;
   character: CharacterItem;
+  narration: NarrationMedia;
   onActiveChange: (active: boolean) => void;
   onFinished?: () => void;
   onReadAloud: () => void;
 }) {
-  const narrationAsset = narrationAssets[character.id];
-  const releasedTranscript = releasedNarrationTranscripts[character.id]?.transcript || character.description;
-  const narrationVersion = "narration-v3-qwen3-4bit-r37e955a";
-  const audioSource = withAssetVersion(narrationMediaSource(narrationAsset?.audio), narrationVersion);
-  const audioMarksSource = withAssetVersion(narrationMediaSource(narrationAsset?.audioMarks), narrationVersion);
+  const audioSource = narration.audio;
+  const audioMarksSource = narration.marks;
+  const releasedTranscript = narration.transcript;
   const audioRef = useRef<HTMLAudioElement>(null);
   const launcherRef = useRef<HTMLButtonElement>(null);
   const playerRef = useRef<HTMLElement>(null);
@@ -83,7 +75,7 @@ function InlineNarrationPlayer({
   const transcriptCloseRef = useRef<HTMLButtonElement>(null);
   const restoreLauncherFocusRef = useRef(false);
   const [marks, setMarks] = useState<AudioMark[]>([]);
-  const [transcriptText, setTranscriptText] = useState(releasedTranscript);
+  const [transcriptText, setTranscriptText] = useState(narration.transcript);
   const [elapsed, setElapsed] = useState(0);
   const [duration, setDuration] = useState(0);
   const [playing, setPlaying] = useState(false);
@@ -115,14 +107,14 @@ function InlineNarrationPlayer({
         : Promise.reject(new Error("marks unavailable")))
       .then((payload: { marks?: AudioMark[]; transcript?: string }) => {
         setMarks((payload.marks || []).filter((mark) => Number.isFinite(mark.start) && Number.isFinite(mark.end)));
-        setTranscriptText(payload.transcript || "");
+        setTranscriptText(payload.transcript || narration.transcript);
       })
       .catch(() => undefined);
     return () => {
       controller.abort();
       audio?.pause();
     };
-  }, [audioMarksSource]);
+  }, [audioMarksSource, narration.transcript]);
 
   useEffect(() => {
     if (!active) {
@@ -479,20 +471,22 @@ function formatClock(seconds: number) {
 
 function MemoryStage({
   character,
+  visual,
+  scene,
   onClose,
   onComponent,
   onFinish,
 }: {
   character: CharacterItem;
+  visual: LearningVisual;
+  scene: MnemonicScene;
   onClose: () => void;
   onComponent: (glyph: string) => void;
   onFinish: () => void;
 }) {
   const [stage, setStage] = useState<MnemonicStage>(0);
   const swipeStart = useRef<{ x: number; y: number } | null>(null);
-  const visual = characterVisuals[character.hanzi];
-  const scene = getMnemonicScene(character);
-  const copy = getMnemonicStageCopy(character, stage);
+  const copy = getMnemonicStageCopy(character, scene, stage);
   const activePartIndices = getMnemonicStagePartIndices(character, stage);
   const parts = character.parts.length
     ? character.parts
@@ -700,98 +694,9 @@ function MemoryStage({
 }
 
 
-function LessonThreeMemory({
-  character,
-  onComponent,
-}: {
-  character: CharacterItem;
-  onComponent: (glyph: string) => void;
-}) {
-  const knowledge = getLessonThreeKnowledge(character.hanzi)!;
-  const visual = characterVisuals[character.hanzi];
-  const [stage, setStage] = useState(0);
-  const [revealed, setRevealed] = useState(false);
-  const labels = ["图字同现", "图片淡出", "只看汉字", "词语回忆"];
-  const maskedWord = character.word.split(character.hanzi).join("□");
-
-  function selectStage(next: number) {
-    setStage(next);
-    if (next === 3) setRevealed(false);
-  }
-
-  return (
-    <section className="pilot-memory-card" aria-labelledby={`pilot-memory-${character.id}`}>
-      <div className="pilot-memory-heading">
-        <div>
-          <p className="kicker">图片是桥梁 · 不是答案</p>
-          <h2 id={`pilot-memory-${character.id}`}>从画面走到无图回忆</h2>
-          <p>每次向后一步，图片提示都会减少；最后只凭词义、结构和读音把字找回来。</p>
-        </div>
-        <span>{knowledge.methodLabel}</span>
-      </div>
-
-      <div className={`pilot-memory-stage stage-${stage}`}>
-        <div className="pilot-memory-visual">
-          {stage <= 1 && (
-            <div className="pilot-memory-image">
-              <Image src={visual.src} alt={stage === 0 ? visual.alt : "逐渐淡出的助记画面"} fill priority sizes="(max-width: 760px) 100vw, 620px" style={{ objectFit: "contain" }} />
-              <span>构形助记图 · 非字源图</span>
-            </div>
-          )}
-          {stage === 0 && <strong className="pilot-memory-glyph is-over-image">{character.hanzi}</strong>}
-          {stage === 1 && (
-            <div className="pilot-memory-equation-on-image">
-              {knowledge.components.map((component) => <span key={component.glyph}>{component.glyph}<small>{component.label}</small></span>)}
-            </div>
-          )}
-          {stage === 2 && (
-            <div className="pilot-memory-glyph-only">
-              <span>图片已经拿走</span><strong>{character.hanzi}</strong><small>{character.pinyin} · {character.word}</small>
-            </div>
-          )}
-          {stage === 3 && (
-            <div className="pilot-memory-recall">
-              <span>不看图片，补出方框里的字</span>
-              <strong>{revealed ? character.word : maskedWord}</strong>
-              <small>{character.pinyin} · {character.originalMeaning}</small>
-              <button onClick={() => setRevealed((value) => !value)}>{revealed ? "再次遮住" : "显示答案"}</button>
-            </div>
-          )}
-        </div>
-
-        <aside className="pilot-memory-copy" aria-live="polite">
-          <span className="pilot-step-index">0{stage + 1} / 04</span>
-          {stage === 0 && <><h3>先把字放进词义画面</h3><p>观察“{character.word}”的意思，同时保持规范汉字清楚可见。图片只负责建立第一次联系。</p></>}
-          {stage === 1 && <><h3>图片退后，部件站出来</h3><p>{knowledge.explanation}</p></>}
-          {stage === 2 && <><h3>只留下规范汉字</h3><p>{knowledge.recallCue} 现在用手指沿字形空写一遍。</p></>}
-          {stage === 3 && <><h3>从词语主动提取</h3><p>{revealed ? `答案是“${character.hanzi}”。核对结构后，再遮住重来一次。` : "先读词义和拼音，在心里写出答案，再点击核对。"}</p></>}
-
-          {stage < 3 && (
-            <div className="pilot-component-roles">
-              {knowledge.components.map((component) => (
-                <button key={component.glyph} onClick={() => onComponent(component.glyph)}>
-                  <strong>{component.glyph}</strong><span><b>{component.label}</b><small>{component.note}</small></span>
-                </button>
-              ))}
-            </div>
-          )}
-          <div className="pilot-evidence-note"><b>依据说明</b><span>{knowledge.evidence}</span></div>
-        </aside>
-      </div>
-
-      <nav className="pilot-memory-nav" aria-label="图片提示逐步撤除">
-        {labels.map((label, index) => (
-          <button className={stage === index ? "is-active" : stage > index ? "is-past" : ""} key={label} onClick={() => selectStage(index)} aria-current={stage === index ? "step" : undefined}>
-            <span>{index + 1}</span><strong>{label}</strong><small>{index === 0 ? "图 + 字" : index === 1 ? "图淡化" : index === 2 ? "仅字形" : "无图提取"}</small>
-          </button>
-        ))}
-      </nav>
-    </section>
-  );
-}
-
 export function CharacterStudy({
   character,
+  media,
   profile,
   favorite,
   backLabel = "返回词语表",
@@ -802,6 +707,7 @@ export function CharacterStudy({
   onReadAloud,
 }: {
   character: CharacterItem;
+  media: CharacterStudyMedia;
   profile: StudyProfile;
   favorite: boolean;
   backLabel?: string;
@@ -821,16 +727,11 @@ export function CharacterStudy({
   const exercises = getTrackExercises(character, "words");
   const isComplete = profile.completed.words.includes(character.id);
   const completedQuestions = exercises.filter((question) => profile.answers[question.id]?.lastCorrect).length;
-  const heritage = heritageAssets[character.id];
+  const heritage = media.heritage;
   const hasExercises = exercises.length > 0;
-  const pilotKnowledge = character.lessonId === LESSON_THREE_ID ? getLessonThreeKnowledge(character.hanzi) : undefined;
-  const visual = characterVisuals[character.hanzi];
-  const scene = !pilotKnowledge ? getMnemonicScene(character) : undefined;
-  const narrationVersion = "narration-v3-qwen3-4bit-r37e955a";
-  const narrationHref = withAssetVersion(
-    narrationMediaSource(narrationAssets[character.id]?.audio),
-    narrationVersion,
-  );
+  const visual = media.visual;
+  const scene = media.scene;
+  const narrationHref = media.narration.audio;
   const parts = character.parts.length
     ? character.parts
     : [{ char: character.hanzi, radical: true }];
@@ -842,10 +743,12 @@ export function CharacterStudy({
         ? "课内会写"
         : "课内会认";
 
-  if (view === "memory" && visual && !pilotKnowledge) {
+  if (view === "memory" && visual) {
     return (
       <MemoryStage
         character={character}
+        visual={visual}
+        scene={scene}
         key={character.id}
         onClose={() => setView("study")}
         onComponent={onComponent}
@@ -912,7 +815,7 @@ export function CharacterStudy({
               </span>
               <span className="study-tags">
                 <span className="is-role">{roleLabel}</span>
-                <span>{pilotKnowledge?.methodLabel || character.charType}</span>
+                <span>{character.charType}</span>
                 <span>{character.decomposition}</span>
               </span>
             </div>
@@ -928,16 +831,17 @@ export function CharacterStudy({
             <InlineNarrationPlayer
               active={narrationActive}
               character={character}
+              narration={media.narration}
               key={character.id}
               onActiveChange={setNarrationActive}
-              onFinished={visual && !pilotKnowledge ? () => {
+              onFinished={visual ? () => {
                 setNarrationActive(false);
                 setView("memory");
               } : undefined}
               onReadAloud={onReadAloud}
             />
 
-            {visual && !pilotKnowledge && (
+            {visual && (
               <button className="study-next-steps" onClick={() => {
                 setNarrationActive(false);
                 setView("memory");
@@ -980,44 +884,26 @@ export function CharacterStudy({
       >
           <span className="study-drawer-grip" aria-hidden="true" />
 
-          {pilotKnowledge ? (
-            <>
-              <h2>本课构形说明</h2>
-              <div className="study-note">
-                <Sparkles aria-hidden="true" size={19} />
-                <div>
-                  <strong>{pilotKnowledge.explanation}</strong>
-                  <small>{pilotKnowledge.evidence}</small>
-                </div>
-              </div>
-              <div className="study-legacy-panel">
-                <LessonThreeMemory character={character} onComponent={onComponent} />
-              </div>
-            </>
-          ) : (
-            <>
-              <h2>部件来历</h2>
-              <div className="study-part-list">
-                {parts.map((part, index) => {
-                  const composition = character.compositions.find((item) => item.char === part.char);
-                  return (
-                    <button
-                      className={part.radical ? "is-radical" : "is-component"}
-                      key={`${part.char}-${index}`}
-                      onClick={() => onComponent(part.char)}
-                    >
-                      <span className="study-part-glyph">{part.char}</span>
-                      <span className="study-part-copy">
-                        <strong>{part.char} · {part.radical ? "表意部首" : "形音部件"}</strong>
-                        <small>{composition?.description || scene?.cues[index] || "顺着画面里的物体轮廓找到这个部件。"}</small>
-                      </span>
-                      <ArrowRight aria-hidden="true" size={18} />
-                    </button>
-                  );
-                })}
-              </div>
-            </>
-          )}
+          <h2>部件来历</h2>
+          <div className="study-part-list">
+            {parts.map((part, index) => {
+              const composition = character.compositions.find((item) => item.char === part.char);
+              return (
+                <button
+                  className={part.radical ? "is-radical" : "is-component"}
+                  key={`${part.char}-${index}`}
+                  onClick={() => onComponent(part.char)}
+                >
+                  <span className="study-part-glyph">{part.char}</span>
+                  <span className="study-part-copy">
+                    <strong>{part.char} · {part.radical ? "表意部首" : "形音部件"}</strong>
+                    <small>{composition?.description || scene.cues[index] || "顺着画面里的物体轮廓找到这个部件。"}</small>
+                  </span>
+                  <ArrowRight aria-hidden="true" size={18} />
+                </button>
+              );
+            })}
+          </div>
 
           <h2>字形演变</h2>
           {heritage?.stages.length ? (

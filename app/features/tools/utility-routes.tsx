@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import {
-  ArrowRight,
   CheckCircle2,
   ChevronLeft,
   ChevronRight,
@@ -17,9 +16,9 @@ import {
 } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { grade5Lessons } from "../../data/generated/grade5-volume1/course";
+import { learningDayKey, totalReadSessions } from "../../domain/learning-day";
 import { queueLearningEvent } from "../../infrastructure/browser/learning-event-outbox";
 import { speak } from "../../infrastructure/browser/speech";
-import type { PlaygroundKind } from "../../lib/app-route";
 import { trackIds } from "../../lib/profile-model";
 import { useStudyProfile } from "../profile/use-study-profile";
 import { LearningPageShell, PageHeading } from "../shell/learning-page-shell";
@@ -130,11 +129,10 @@ export function ReadAloudRoute({
   function countReadSession() {
     queueLearningEvent({ action: "read", lessonId });
     setProfile((previous) => {
-      const date = new Intl.DateTimeFormat("en-CA", { timeZone: "Asia/Shanghai" }).format(new Date());
+      const date = learningDayKey();
       const day = previous.daily[date] ?? { attempts: 0, correct: 0, skips: 0, readSessions: 0 };
       return {
         ...previous,
-        readSessions: previous.readSessions + 1,
         daily: { ...previous.daily, [date]: { ...day, readSessions: day.readSessions + 1 } },
       };
     });
@@ -187,7 +185,7 @@ export function ReadAloudRoute({
   return (
     <LearningPageShell active="course" name={profile.name}>
       <div className="page read-page">
-        <PageHeading density="utility" kicker="日日朗读" title="先听一遍，再把句子读出来" copy={`已完成 ${profile.readSessions} 次朗读练习。登录状态下，录音可跨设备回听。`} backHref={returnTo} />
+        <PageHeading density="utility" kicker="日日朗读" title="先听一遍，再把句子读出来" copy={`已完成 ${totalReadSessions(profile.daily)} 次朗读练习。登录状态下，录音可跨设备回听。`} backHref={returnTo} />
         <div className="read-lesson-picker">
           <button disabled={lessonIndex <= 0} aria-label="上一课" onClick={() => selectLesson(grade5Lessons[lessonIndex - 1]?.id)}><ChevronLeft aria-hidden="true" /></button>
           <label>
@@ -219,46 +217,6 @@ export function ReadAloudRoute({
             <audio controls src={recordingUrl} />
           </section>
         )}
-      </div>
-    </LearningPageShell>
-  );
-}
-
-const semanticRoles = [
-  { token: "--action", label: "行动", use: "主按钮 · 进度 · 答对" },
-  { token: "--radical", label: "表意部首", use: "四步第 2 步 · 红蓝的红" },
-  { token: "--part", label: "形音部件", use: "四步第 3 步 · 红蓝的蓝" },
-  { token: "--wrong", label: "再试", use: "答错 · 待复习" },
-  { token: "--violet", label: "题型标签", use: "中性分类，不表对错" },
-] as const;
-
-export function PlaygroundRoute({ kind }: { kind: PlaygroundKind }) {
-  const { profile } = useStudyProfile({ writable: false });
-  const [presses, setPresses] = useState(0);
-  const [grade, setGrade] = useState("一年级");
-  const [puzzle, setPuzzle] = useState<string[]>([]);
-  const [quiz, setQuiz] = useState<string | null>(null);
-  const labels: Record<PlaygroundKind, string> = { kit: "组件 Kit", lesson: "课程动效", puzzle: "拆字拼图", quiz: "答题反馈" };
-  return (
-    <LearningPageShell active="home" name={profile.name}>
-      <div className="page playground-page">
-        <PageHeading density="utility" kicker="设计实验室" title={labels[kind]} copy="用于验证游戏化组件、动效、触控和学习反馈的内部体验页面。" backHref="/" />
-        <nav className="playground-tabs" aria-label="实验页面">
-          {(Object.keys(labels) as PlaygroundKind[]).map((id) => <Link className={id === kind ? "is-active" : ""} href={`/playground/${id}`} key={id}>{labels[id]}</Link>)}
-        </nav>
-        {kind === "kit" && (
-          <section className="playground-board">
-            <h2>语义色 · 一个颜色一个意思</h2>
-            <div className="kit-swatches">{semanticRoles.map((role) => <div key={role.token}><i style={{ background: `var(${role.token})` }} /><strong>{role.label}</strong><small>{role.use}</small></div>)}</div>
-            <h2>GameButton · 变体</h2>
-            <div className="kit-buttons"><button className="game-button primary" onClick={() => setPresses((value) => value + 1)}>继续 <ArrowRight aria-hidden="true" /></button><button className="game-button ghost">次要操作</button><button className="game-button ghost" disabled>禁用</button></div>
-            <p>主按钮被按了 {presses} 次</p>
-            <label>Selector · 年级<select value={grade} onChange={(event) => setGrade(event.target.value)}>{["一年级", "二年级", "三年级"].map((item) => <option key={item}>{item}</option>)}</select></label>
-          </section>
-        )}
-        {kind === "lesson" && <section className="playground-board lesson-demo"><span className="demo-sun">日</span><span className="demo-arrow">→</span><span className="demo-glyph">字</span><h2>一句讲清字形，再把线索放回课文</h2><p>动效遵循“出现—聚焦—连接—完成”的节奏，不让装饰抢走学习注意力。</p></section>}
-        {kind === "puzzle" && <section className="playground-board puzzle-demo"><h2>把“桂”字搭出来</h2><div className="puzzle-slots"><span>{puzzle[0] || "?"}</span><b>＋</b><span>{puzzle[1] || "?"}</span></div><div className="kit-buttons">{["木", "圭", "女", "寸"].map((part) => <button className={puzzle.includes(part) ? "is-selected" : ""} key={part} disabled={puzzle.length >= 2 && !puzzle.includes(part)} onClick={() => setPuzzle((value) => value.includes(part) ? value.filter((item) => item !== part) : [...value, part])}>{part}</button>)}</div><p>{puzzle.join("") === "木圭" ? "搭对了：木表意，圭提示读音。" : "选择两个部件，顺序也很重要。"}</p></section>}
-        {kind === "quiz" && <section className="playground-board quiz-demo"><h2>“桂”是什么结构？</h2><div className="kit-buttons">{["左右结构", "上下结构", "独体字", "半包围结构"].map((option) => <button className={quiz === option ? (option === "左右结构" ? "is-correct" : "is-wrong") : ""} key={option} onClick={() => setQuiz(option)}>{option}</button>)}</div>{quiz && <p>{quiz === "左右结构" ? "正确，木和圭左右站立。" : "再看看两个部件的位置。"}</p>}</section>}
       </div>
     </LearningPageShell>
   );

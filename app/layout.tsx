@@ -8,7 +8,6 @@ import "./home-path.css";
 import "./utility-pages.css";
 import "./lesson-reader.css";
 import "./solid-blocks.css";
-import ServiceWorkerRegistration from "./service-worker-registration";
 
 export function generateMetadata(): Metadata {
   const origin = new URL("https://knowing-word.jbang2004.chatgpt.site");
@@ -46,7 +45,6 @@ export default function RootLayout({
     <html lang="zh-CN" suppressHydrationWarning>
       <body>
         {children}
-        <ServiceWorkerRegistration />
       </body>
     </html>
   );

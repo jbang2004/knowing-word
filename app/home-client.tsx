@@ -17,41 +17,15 @@ import {
   homeCourse,
   type HomeCandidate,
 } from "./data/home-index.generated";
-import {
-  todayKey,
-  type StudyProfile,
-  type TrackId,
-} from "./lib/profile-model";
-import { candidatePathStates, nextCandidateId } from "./lib/progress-model";
+import { nextTrackCandidate, trackProgress } from "./domain/catalog-progress";
+import { learningDayKey } from "./domain/learning-day";
+import { practiceTrackIds, trackMeta } from "./domain/tracks";
+import { routeForTrack } from "./lib/app-route";
+import type { StudyProfile, TrackId } from "./lib/profile-model";
+import { candidatePathStates } from "./lib/progress-model";
 import { useStudyProfile } from "./features/profile/use-study-profile";
 import { LearningPageShell } from "./features/shell/learning-page-shell";
 import { Magpie } from "./features/shell/magpie";
-
-type TrackMeta = {
-  label: string;
-  glyph: string;
-};
-
-const practiceTrackIds: TrackId[] = ["split", "honglan", "structure"];
-
-const trackMeta: Record<TrackId, TrackMeta> = {
-  words: {
-    label: "词语表与写字表",
-    glyph: "字",
-  },
-  split: {
-    label: "拆字练习",
-    glyph: "拆",
-  },
-  honglan: {
-    label: "红蓝练习",
-    glyph: "辨",
-  },
-  structure: {
-    label: "空间结构",
-    glyph: "构",
-  },
-};
 
 const phaseMeta = [
   { title: "认识字义", copy: "把字放回课文，先听懂它的意思" },
@@ -59,45 +33,14 @@ const phaseMeta = [
   { title: "回到课文", copy: "再次辨认朗读，把整课串联起来" },
 ] as const;
 
-function nextCandidate(track: TrackId, profile: StudyProfile) {
-  const candidates = homeCandidates[track];
-  const id = nextCandidateId(
-    candidates.map((candidate) => candidate.id),
-    profile.completed[track],
-    profile.last[track]?.characterId,
-  );
-  return candidates.find((candidate) => candidate.id === id);
-}
-
-function trackProgress(profile: StudyProfile, track: TrackId, lessonId?: string) {
-  const targets = lessonId
-    ? homeCandidates[track].filter((candidate) => candidate.lessonId === lessonId)
-    : homeCandidates[track];
-  return {
-    completed: targets.filter((candidate) => profile.completed[track].includes(candidate.id)).length,
-    total: targets.length,
-  };
-}
-
-function trackMapPath(track: TrackId) {
-  if (track === "words") return "/lessons";
-  if (track === "split") return "/split-exercise";
-  if (track === "honglan") return "/honglan-exercise";
-  return "/space-structure-exercise";
-}
-
 function trackLessonPath(track: TrackId, lessonId: string) {
-  return track === "words" ? `/lessons/${lessonId}` : `${trackMapPath(track)}/${lessonId}`;
+  return routeForTrack(track, lessonId);
 }
 
 function continuePath(track: TrackId, candidate: HomeCandidate | undefined) {
-  if (!candidate) return trackMapPath(track);
-  if (track === "words") {
-    return `/lessons/${candidate.lessonId}/words/${candidate.id}/quizzes`;
-  }
-  const base = trackMapPath(track);
-  const segment = track === "split" ? "words" : "lesson_words";
-  return `${base}/${candidate.lessonId}/${segment}/${candidate.id}`;
+  return candidate
+    ? routeForTrack(track, candidate.lessonId, candidate.id)
+    : routeForTrack(track);
 }
 
 export default function HomeLanding() {
@@ -105,7 +48,7 @@ export default function HomeLanding() {
   const { profile, hydrated, syncState } = useStudyProfile({ writable: false });
 
   const likelyPath = useMemo(
-    () => continuePath("words", nextCandidate("words", profile)),
+    () => continuePath("words", nextTrackCandidate("words", profile)),
     [profile],
   );
 
@@ -126,9 +69,9 @@ export default function HomeLanding() {
     return () => window.clearTimeout(id);
   }, [likelyPath, router]);
 
-  const today = profile.daily[todayKey()] || { attempts: 0, correct: 0, skips: 0, readSessions: 0 };
+  const today = profile.daily[learningDayKey()] || { attempts: 0, correct: 0, skips: 0, readSessions: 0 };
   const streak = currentStreak(profile.daily);
-  const nextWord = nextCandidate("words", profile);
+  const nextWord = nextTrackCandidate("words", profile);
   const currentLesson =
     homeCourse.lessons.find((lesson) => lesson.id === nextWord?.lessonId) || homeCourse.lessons[0];
   const lessonProgress = trackProgress(profile, "words", currentLesson.id);
@@ -310,8 +253,9 @@ function currentStreak(daily: StudyProfile["daily"]) {
   );
   if (!active.size) return 0;
 
-  const cursor = new Date(`${todayKey()}T00:00:00Z`);
-  if (!active.has(todayKey())) cursor.setUTCDate(cursor.getUTCDate() - 1);
+  const today = learningDayKey();
+  const cursor = new Date(`${today}T00:00:00Z`);
+  if (!active.has(today)) cursor.setUTCDate(cursor.getUTCDate() - 1);
 
   let streak = 0;
   while (streak < 400) {

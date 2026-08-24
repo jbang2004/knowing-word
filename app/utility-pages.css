@@ -336,11 +336,6 @@
   padding: 9px 13px;
 }
 
-.playground-tabs :is(a, button),
-.playground-board select {
-  min-height: 44px;
-}
-
 @media (max-width: 760px) {
   .page-heading.is-utility {
     grid-template-columns: minmax(0, 1fr) 32px;

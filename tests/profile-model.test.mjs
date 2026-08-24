@@ -4,8 +4,8 @@ import {
   emptyProfile,
   normalizeProfile,
   PROFILE_STORAGE_KEY,
-  todayKey,
 } from "../app/lib/profile-model.ts";
+import { learningDayKey } from "../app/domain/learning-day.ts";
 
 test("the shared profile model exposes one current storage schema", () => {
   assert.equal(PROFILE_STORAGE_KEY, "knowing-word:course-progress:v3");
@@ -22,7 +22,6 @@ test("the shared profile model exposes one current storage schema", () => {
     learnedComponents: [],
     recentComponents: [],
     daily: {},
-    readSessions: 0,
   });
 });
 
@@ -48,7 +47,6 @@ test("normalization keeps current data valid without reviving legacy mastered st
       "2026-08-23": { attempts: 3.9, correct: 2, skips: -2, readSessions: 1 },
       yesterday: { attempts: 9 },
     },
-    readSessions: Number.POSITIVE_INFINITY,
   });
 
   assert.equal(profile.name, "一位名字特别特别特别特别长的学习者".slice(0, 18));
@@ -75,11 +73,10 @@ test("normalization keeps current data valid without reviving legacy mastered st
     readSessions: 1,
   });
   assert.equal(profile.daily.yesterday, undefined);
-  assert.equal(profile.readSessions, 0);
 
   assert.deepEqual(normalizeProfile({ mastered: ["旧"] }).completed.words, []);
 });
 
 test("today keys use the product's Shanghai learning day", () => {
-  assert.equal(todayKey(new Date("2026-08-22T16:30:00.000Z")), "2026-08-23");
+  assert.equal(learningDayKey(new Date("2026-08-22T16:30:00.000Z")), "2026-08-23");
 });

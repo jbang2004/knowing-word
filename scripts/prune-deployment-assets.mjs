@@ -1,11 +1,8 @@
 import { access, readFile, readdir, rm, writeFile } from "node:fs/promises";
-import { join, relative, resolve, sep } from "node:path";
+import { join, resolve } from "node:path";
 
 const projectRoot = resolve(import.meta.dirname, "..");
 const clientRoot = join(projectRoot, "dist/client");
-const narrationRoot = join(clientRoot, "narration");
-const narrationManifest = join(projectRoot, "app/data/narration-assets.ts");
-const narrationReadyMarker = join(projectRoot, "config/narration-r2-ready-v3.json");
 const wranglerConfigPath = join(projectRoot, "dist/server/wrangler.json");
 const legacyNarrationFiles = new Set(["audio.mp3", "audio-marks.json"]);
 
@@ -42,12 +39,6 @@ async function removeMatching(directory, predicate) {
   return removed;
 }
 
-function manifestNarrationPaths(source) {
-  return new Set(
-    [...source.matchAll(/["']\/narration\/([^"']+)["']/g)].map((match) => match[1]),
-  );
-}
-
 const counts = {
   heritage: await removeMatching(
     join(clientRoot, "heritage"),
@@ -57,22 +48,8 @@ const counts = {
     join(clientRoot, "illustrations/mnemonics"),
     (_path, name) => /^g5-.*\.svg$/.test(name),
   ),
-  narration: 0,
   starter: 0,
 };
-
-if (await exists(narrationReadyMarker)) {
-  if (await exists(narrationRoot)) {
-    await rm(narrationRoot, { recursive: true });
-    counts.narration = -1;
-  }
-} else {
-  const referenced = manifestNarrationPaths(await readFile(narrationManifest, "utf8"));
-  counts.narration = await removeMatching(narrationRoot, (path) => {
-    const assetPath = relative(narrationRoot, path).split(sep).join("/");
-    return !referenced.has(assetPath);
-  });
-}
 
 for (const name of ["file.svg", "globe.svg", "window.svg"]) {
   const path = join(clientRoot, name);
@@ -95,11 +72,8 @@ wranglerConfig.assets = {
 };
 await writeFile(wranglerConfigPath, `${JSON.stringify(wranglerConfig)}\n`);
 
-const narrationSummary = counts.narration === -1
-  ? "removed the R2-backed narration directory"
-  : `removed ${counts.narration} unreferenced narration files`;
 process.stdout.write(
   `Deployment assets pruned: ${counts.heritage} legacy heritage files, ` +
-  `${counts.mnemonicSvg} unused mnemonic SVGs, ${narrationSummary}, ` +
+  `${counts.mnemonicSvg} unused mnemonic SVGs, ` +
   `${counts.starter} starter icons; enabled cache-header routing.\n`,
 );

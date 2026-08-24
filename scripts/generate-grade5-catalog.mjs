@@ -21,7 +21,6 @@ const generatedLessonRoot = join(generatedCatalogRoot, "lessons");
 const outputModule = join(root, "app/data/grade5-volume1-generated.ts");
 const visualModule = join(root, "app/data/grade5-volume1-visuals.generated.ts");
 const mnemonicModule = join(root, "app/data/grade5-volume1-mnemonics.generated.ts");
-const narrationModule = join(root, "app/data/grade5-volume1-narration.generated.ts");
 const promptModule = join(root, "scripts/generated/grade5-volume1-image-prompts.generated.ts");
 const mnemonicRoot = join(root, "public/illustrations/mnemonics-v2");
 
@@ -222,17 +221,6 @@ function makeDescription(character, pinyinText, word, structure, parts, radical,
   return `${character}，读${pinyinText}，是“${word}”里的字。${roleCopy}。先看整体：它是${structure}，按顺序能看到${parts.map((part) => `“${part}”`).join("和")}。${etymologyCopy(record, parts, radical)}。看图时，${trimStop(plan.scene)}。${trimStop(plan.meaning)}。这幅物象图用于记笔画和位置，不代替完整字源。最后回到“${word}”里读一遍。`;
 }
 
-function makeNarration(character, word, pinyinText, structure, parts, radical, polyphonic, plan, record) {
-  const visibleParts = parts.map((part) => `“${part}”`).join("和");
-  const body = `它是${structure}，按顺序能看到${visibleParts}。${etymologyCopy(record, parts, radical)}。看图时，${trimStop(plan.scene)}。${trimStop(plan.meaning)}。这是一幅帮助记笔画和位置的记忆画面，不是完整字源。`;
-  if (polyphonic) {
-    const wordIndex = Math.max(0, Array.from(word).indexOf(character));
-    const ordinal = ["一", "二", "三", "四", "五"][wordIndex] || String(wordIndex + 1);
-    return `先读“${word}”。这里的第${ordinal}个字是“${character}”，在这个词里读${pinyinText}，多音字要跟着语境选读音。${body}最后再读一遍：${word}。`;
-  }
-  return `${character}，“${word}”的“${character}”，读${pinyinText}。${body}最后再读一遍：${word}。`;
-}
-
 function sceneCues(plan, parts) {
   const clauses = plan.scene.split(/[，；。]/u).map((item) => item.trim()).filter(Boolean);
   return parts.map((part, index) => {
@@ -272,7 +260,6 @@ const lessons = [];
 const characters = [];
 const visuals = {};
 const scenes = {};
-const narrations = {};
 const imagePrompts = {};
 const componentMap = new Map();
 
@@ -312,7 +299,6 @@ for (const lesson of grade5Volume1Lessons) {
     };
     characters.push(item);
     scenes[character] ||= { scene, cues: sceneCues(plan, parts) };
-    narrations[character] ||= makeNarration(character, word, pinyinText, structure, parts, teachingRadical, polyphonic.has(character), plan, record);
     visuals[character] ||= { src: `/illustrations/mnemonics-v2/g5-${codeId(character)}.webp`, label: word, alt: `${trimStop(plan.meaning)} 图中${parts.map((part) => `“${part}”`).join("与")}按${structure}自然长成“${character}”。` };
     imagePrompts[character] ||= { character, word, lesson: lesson.title, structure, parts, radical: teachingRadical, filename: `g5-${codeId(character)}.jpg`, prompt: imagePrompt({ character, word, lesson, structure, parts, radical: teachingRadical, plan }) };
     for (const [partIndex, part] of parts.entries()) if (!componentMap.has(part)) componentMap.set(part, { id: `g5-component-${codeId(part)}`, title: part, glyph: part, examples: [character], description: componentDescription(part, plan, parts, partIndex), characterSet: [character], group: componentMap.size + 600, sequence: componentMap.size + 600 }); else { const component = componentMap.get(part); if (!component.examples.includes(character)) component.examples.push(character); if (!component.characterSet.includes(character)) component.characterSet.push(character); }
@@ -364,6 +350,5 @@ await writeFile(
 );
 await writeFile(visualModule, `${serialize("grade5CharacterVisuals", visuals)}\n${serialize("grade5LessonVisuals", Object.fromEntries(grade5Volume1Lessons.map((lesson) => [lessonId(lesson.position), { src: `/illustrations/lessons/g5-${String(lesson.position).padStart(2, "0")}.webp`, label: lesson.title, alt: lesson.visual }])))}`);
 await writeFile(mnemonicModule, serialize("grade5MnemonicScenes", scenes));
-await writeFile(narrationModule, serialize("grade5NarrationScripts", narrations));
 await writeFile(promptModule, serialize("grade5ImagePrompts", imagePrompts));
 process.stdout.write(`Generated ${lessons.length} lessons, ${characters.length} lesson-character records, ${Object.keys(visuals).length} unique glyph visuals and ${componentMap.size} components.\n`);

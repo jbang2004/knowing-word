@@ -60,3 +60,9 @@ export const trackMeta: Record<TrackId, TrackMeta> = {
     tone: "wrong",
   },
 };
+
+export const practiceTrackIds: readonly Exclude<TrackId, "words">[] = [
+  "split",
+  "honglan",
+  "structure",
+];

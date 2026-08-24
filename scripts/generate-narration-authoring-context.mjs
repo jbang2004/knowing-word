@@ -1,7 +1,7 @@
 import { mkdir, writeFile } from "node:fs/promises";
 import { resolve, join } from "node:path";
 import { characters, lessons } from "../app/data/catalog.ts";
-import { narrationScripts } from "../app/data/narration-scripts.ts";
+import { releasedNarrationTranscripts } from "../app/data/released-narration-transcripts.generated.ts";
 
 const projectRoot = resolve(import.meta.dirname, "..");
 const outputPath = join(projectRoot, "artifacts/narration-v3/authoring-context.json");
@@ -28,7 +28,7 @@ const records = characters.map((record) => {
     lessonContext: lesson?.context || "",
     lessonMode: lesson?.mode || "",
     learningPath: lesson?.learningPath || [],
-    currentNarration: narrationScripts[record.hanzi] || "",
+    currentNarration: releasedNarrationTranscripts[record.id]?.transcript || "",
   };
 });
 

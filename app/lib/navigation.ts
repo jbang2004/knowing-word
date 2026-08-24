@@ -16,7 +16,6 @@ const appRouteRoots = new Set([
   "bujian",
   "honglan-exercise",
   "lessons",
-  "playground",
   "practice",
   "read-aloud",
   "records",

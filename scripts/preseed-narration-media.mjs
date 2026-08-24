@@ -8,7 +8,7 @@ const run = promisify(execFile);
 const projectRoot = resolve(import.meta.dirname, "..");
 const narrationVersion = "v3";
 const narrationSourceRoot = resolve(
-  process.env.NARRATION_SOURCE_ROOT || join(projectRoot, "public/narration"),
+  process.env.NARRATION_SOURCE_ROOT || join(projectRoot, "release/narration"),
 );
 const wranglerConfig = resolve(
   process.env.WRANGLER_CONFIG || join(projectRoot, "dist/server/wrangler.json"),

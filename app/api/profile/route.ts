@@ -68,7 +68,6 @@ export async function DELETE(request: Request) {
     await db.batch([
       db.prepare("DELETE FROM study_profiles WHERE user_id = ?1").bind(identity.userId),
       db.prepare("DELETE FROM learning_events WHERE user_id = ?1").bind(identity.userId),
-      db.prepare("DELETE FROM daily_activity WHERE user_id = ?1").bind(identity.userId),
       db.prepare("DELETE FROM recordings WHERE user_id = ?1").bind(identity.userId),
     ]);
     return jsonWithIdentity(identity, { ok: true });

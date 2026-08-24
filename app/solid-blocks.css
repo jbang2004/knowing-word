@@ -34,8 +34,7 @@
 .recording-result,
 .component-story,
 .component-empty,
-.component-browser-summary,
-.playground-board,
+  .component-browser-summary,
 .lesson-reader-paper,
 .reader-scene-card,
 .reader-word-index,
@@ -43,13 +42,7 @@
 .reader-route-card,
 .lesson-guide-intro,
 .reader-source-note,
-.reader-clue-question,
-.pilot-method-overview,
-.pilot-method-lane,
-.pilot-review-card,
-.pilot-family-card,
-.pilot-memory-card,
-.pilot-evidence-note {
+  .reader-clue-question {
   border: 2px solid var(--line);
   border-radius: 22px;
   background: var(--paper);
@@ -67,9 +60,7 @@
 .component-resume,
 .component-load-more,
 .component-sheet-close,
-.component-empty button,
-.pilot-character-list :is(button, a),
-.pilot-component-roles button,
+  .component-empty button,
 .assembly-choices button,
 .assembly-slot,
 .redblue-options button,
@@ -95,9 +86,7 @@
 .component-resume:active,
 .component-load-more:active,
 .component-sheet-close:active,
-.component-empty button:active,
-.pilot-character-list :is(button, a):active,
-.pilot-component-roles button:active,
+  .component-empty button:active,
 .assembly-choices button:not(:disabled):active,
 .redblue-options button:not(:disabled):active,
 .reader-focus-word:active,
@@ -116,8 +105,7 @@
 .track-character-grid :is(button, a):hover,
 .component-card-grid button:hover,
 .word-chip:hover,
-.lesson-route-card:hover,
-.pilot-character-list :is(button, a):hover,
+  .lesson-route-card:hover,
 .sentence-list article:hover {
   transform: none;
 }
@@ -164,8 +152,7 @@
 .track-symbol,
 .component-story-glyph,
 .record-detail-glyph,
-.profile-avatar,
-.pilot-memory-glyph,
+  .profile-avatar,
 .assembly-target > span,
 .path-gate-glyph {
   border-radius: 22px 22px 22px 7px;
@@ -388,50 +375,6 @@
 .lesson-reader-finish-actions a:active {
   transform: translateY(3px);
   box-shadow: none;
-}
-
-/* Lesson-three pilot panels. */
-.pilot-memory-heading > span,
-.pilot-family-flow > span,
-.pilot-memory-equation-on-image > span,
-.pilot-memory-nav button > span {
-  border: 2px solid var(--line);
-  border-radius: 14px;
-  background: var(--paper);
-}
-
-.pilot-memory-nav button.is-active > span {
-  border-color: var(--action-deep);
-  color: #fff;
-  background: var(--action);
-}
-
-/* The design-kit playground documents the system, so it must obey it. */
-.kit-buttons > button:not(.game-button) {
-  border: 2px solid var(--line);
-  border-radius: 16px;
-  font-weight: 900;
-  background: var(--paper);
-  box-shadow: 0 var(--press) 0 var(--line);
-}
-
-.kit-buttons > button:not(.game-button).is-selected {
-  border-color: var(--part);
-  color: var(--part-deep);
-  background: var(--part-soft);
-  box-shadow: 0 var(--press) 0 var(--part-edge);
-}
-
-.kit-buttons > button:not(.game-button):not(:disabled):active {
-  transform: translateY(var(--press));
-  box-shadow: none;
-}
-
-.kit-swatches > div {
-  border: 2px solid var(--line);
-  border-radius: 18px;
-  background: var(--paper);
-  box-shadow: 0 3px 0 var(--line);
 }
 
 /* The back arrow is a bare icon button, not a block. */

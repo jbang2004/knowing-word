@@ -33,6 +33,7 @@ source of truth. `npm run generate:grade5` produces:
 - one module for course and lesson metadata;
 - one bounded character module per lesson;
 - dynamic lesson loaders;
+- one bounded media/view-model module per lesson;
 - lightweight route and home indexes;
 - the official component index and visual/narration metadata.
 
@@ -55,7 +56,8 @@ debounced and retried when connectivity returns.
 Answer, skip, and read events use client-generated UUIDs. The browser outbox
 persists events before delivery, removes only the acknowledged UUID, and is safe
 when another action or browser tab appends an event during a request. D1 uses the
-UUID as the idempotency key, so retries do not increment daily totals twice.
+UUID as the idempotency key. Daily totals live only in the authoritative profile;
+the event table remains an idempotent audit trail rather than a second aggregate.
 
 Read-aloud recordings are private per workspace or anonymous device identity.
 The API accepts only known lesson ids and supported browser audio types, caps
@@ -64,8 +66,9 @@ metadata transaction fails. A full reset removes R2 objects before deleting D1
 metadata.
 
 Built-in narration is not uploaded through the user-recording API. The release
-script writes approved audio and timing objects directly to the versioned R2
-namespace. The Worker serves that namespace with immutable caching and byte
+script reads approved files from `release/narration`, writes them directly to
+the versioned R2 namespace, and never copies them into the application static
+directory. The Worker serves that namespace with immutable caching and byte
 range support; a missing formal v3 object fails closed.
 
 ## Production invariants

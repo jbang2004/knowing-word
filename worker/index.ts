@@ -5,12 +5,11 @@ import { runWithRuntimeEnv } from "../app/lib/runtime-env.ts";
 
 type RuntimeEnv = Partial<Env> & { IMAGES?: ImagesBinding };
 
-const NARRATION_VERSIONS = new Set(["v2", "v3"]);
 const IMMUTABLE_CACHE = "public, max-age=31536000, immutable";
 
 function narrationRequestPath(pathname: string) {
   const match = /^\/media\/narration\/(v\d+)\/([a-z0-9-]+\/(?:audio\.webm|audio-marks\.json))$/.exec(pathname);
-  if (!match || !NARRATION_VERSIONS.has(match[1])) return null;
+  if (!match || match[1] !== "v3") return null;
   return { version: match[1], relative: match[2] };
 }
 
@@ -59,7 +58,6 @@ function narrationHeaders(relative: string, size?: number, etag?: string) {
 async function serveNarration(
   request: Request,
   env: RuntimeEnv,
-  ctx: ExecutionContext,
   version: string,
   relative: string,
 ) {
@@ -97,34 +95,7 @@ async function serveNarration(
     return new Response(object.body, { status: range ? 206 : 200, headers });
   }
 
-  // v3 is R2-only. Falling back to the v2 static path would silently pair the
-  // new transcript/timing data with old audio, so a missing v3 object must fail closed.
-  if (version !== "v2" || !env.ASSETS) return new Response("Media not found", { status: 404 });
-  const sourceUrl = new URL(`/narration/${relative}`, request.url);
-  const sourceRequest = new Request(sourceUrl, {
-    method: request.method,
-    headers: request.headers,
-  });
-  sourceRequest.headers.delete("range");
-  sourceRequest.headers.delete("if-none-match");
-  const source = await env.ASSETS.fetch(sourceRequest);
-  if (!source.ok) return new Response("Media not found", { status: 404 });
-
-  const headers = narrationHeaders(relative, Number(source.headers.get("content-length")) || undefined);
-  headers.set("x-knowing-word-media", "static-fallback");
-  if (request.method === "GET" && env.MEDIA && source.body) {
-    const copy = source.clone();
-    ctx.waitUntil(
-      copy.arrayBuffer().then((bytes) => env.MEDIA!.put(objectKey, bytes, {
-        httpMetadata: {
-          cacheControl: IMMUTABLE_CACHE,
-          contentType: narrationContentType(relative),
-        },
-        customMetadata: { assetVersion: version, source: "knowing-word" },
-      })).then(() => undefined),
-    );
-  }
-  return new Response(request.method === "HEAD" ? null : source.body, { status: 200, headers });
+  return new Response("Media not found", { status: 404 });
 }
 
 function withDeliveryCache(response: Response, pathname: string) {
@@ -155,19 +126,13 @@ function isDeliveryAsset(pathname: string) {
     pathname === "/og-cover.jpg";
 }
 
-// Image security config. SVG sources with .svg extension auto-skip the
-// optimization endpoint on the client side (served directly, no proxy).
-// To route SVGs through the optimizer (with security headers), set
-// dangerouslyAllowSVG: true in next.config.js and uncomment below:
-// const imageConfig: ImageConfig = { dangerouslyAllowSVG: true };
-
 const worker = {
   async fetch(request: Request, env: RuntimeEnv, ctx: ExecutionContext): Promise<Response> {
     const url = new URL(request.url);
 
     const narrationPath = narrationRequestPath(url.pathname);
     if (narrationPath) {
-      return serveNarration(request, env, ctx, narrationPath.version, narrationPath.relative);
+      return serveNarration(request, env, narrationPath.version, narrationPath.relative);
     }
 
     if (isDeliveryAsset(url.pathname) && env.ASSETS) {

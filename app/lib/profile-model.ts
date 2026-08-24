@@ -33,7 +33,6 @@ export type StudyProfile = {
   learnedComponents: string[];
   recentComponents: string[];
   daily: Record<string, DailyActivity>;
-  readSessions: number;
 };
 
 export const trackIds: TrackId[] = ["words", "split", "honglan", "structure"];
@@ -122,7 +121,6 @@ export function emptyProfile(): StudyProfile {
     learnedComponents: [],
     recentComponents: [],
     daily: {},
-    readSessions: 0,
   };
 }
 
@@ -155,15 +153,5 @@ export function normalizeProfile(value: unknown): StudyProfile {
     learnedComponents: stringList(raw.learnedComponents),
     recentComponents: stringList(raw.recentComponents, 24),
     daily: normalizeDaily(raw.daily),
-    readSessions: countValue(raw.readSessions),
   };
-}
-
-export function todayKey(date = new Date()) {
-  return new Intl.DateTimeFormat("en-CA", {
-    timeZone: "Asia/Shanghai",
-    year: "numeric",
-    month: "2-digit",
-    day: "2-digit",
-  }).format(date);
 }

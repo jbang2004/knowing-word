@@ -9,9 +9,7 @@ import {
   useState,
 } from "react";
 import type { CharacterItem, Exercise } from "../../data/catalog-types";
-import { characterVisuals, getVisualOption } from "../../data/illustrations";
-import { heritageAssets } from "../../data/heritage-assets";
-import { LESSON_THREE_ID } from "../../data/lesson3-literacy";
+import type { LearningVisual } from "../../data/illustrations";
 import {
   expectedAnswerIds as getExpectedIds,
   questionTypeLabel,
@@ -21,6 +19,12 @@ import { trackMeta } from "../../domain/tracks";
 import type { StudyProfile, TrackId } from "../../lib/profile-model";
 import { MnemonicSceneFocus } from "../character-study/mnemonic-scene-focus";
 import { Magpie } from "../shell/magpie";
+
+export type PracticeMedia = {
+  answerLabel?: string;
+  optionVisuals: Readonly<Record<string, LearningVisual>>;
+  redBlueAsset?: string;
+};
 
 function optionText(option: Exercise["options"][number], character: CharacterItem) {
   if (option.text) return option.text;
@@ -112,6 +116,7 @@ export function CelebrationOverlay({
 export function ChallengeRoom({
   track,
   character,
+  media,
   question,
   questionIndex,
   total,
@@ -132,6 +137,7 @@ export function ChallengeRoom({
 }: {
   track: TrackId;
   character: CharacterItem;
+  media: PracticeMedia;
   question: Exercise;
   questionIndex: number;
   total: number;
@@ -155,7 +161,7 @@ export function ChallengeRoom({
   const needsMultiple = expected.length > 1;
   const ready = question.kind === "write" ? wrote : selected.length > 0;
   const answerText = question.questionType === "image_single_select"
-    ? (characterVisuals[character.hanzi]?.label || character.originalMeaning)
+    ? (media.answerLabel || character.originalMeaning)
     : expected
         .map((id) => question.options.find((option) => option.id === id))
         .filter(Boolean)
@@ -197,7 +203,7 @@ export function ChallengeRoom({
         {question.kind === "write" ? (
           <WritingPad
             character={character.hanzi}
-            guided={character.lessonId !== LESSON_THREE_ID}
+            guided
             revealAnswer={result !== null}
             onWrite={onWrite}
             onClear={onClearWrite}
@@ -215,6 +221,7 @@ export function ChallengeRoom({
         ) : question.kind === "components" && track === "honglan" ? (
           <RedBlueExercise
             character={character}
+            redBlueAsset={media.redBlueAsset}
             question={question}
             orderedOptions={orderedOptions}
             selected={selected}
@@ -224,6 +231,7 @@ export function ChallengeRoom({
         ) : (
           <ChoiceExercise
             character={character}
+            optionVisuals={media.optionVisuals}
             question={question}
             orderedOptions={orderedOptions}
             selected={selected}
@@ -253,7 +261,7 @@ export function ChallengeRoom({
             </span>
             <strong>
               {result
-                ? (question.kind === "write" && character.lessonId === LESSON_THREE_ID ? "已记录书写，请对照自查" : "答对了")
+                ? "答对了"
                 : "再看一眼"}
             </strong>
             {record && <small>已尝试 {record.attempts} 次</small>}
@@ -274,6 +282,7 @@ export function ChallengeRoom({
 
 function ChoiceExercise({
   character,
+  optionVisuals,
   question,
   orderedOptions,
   selected,
@@ -281,6 +290,7 @@ function ChoiceExercise({
   onChoose,
 }: {
   character: CharacterItem;
+  optionVisuals: PracticeMedia["optionVisuals"];
   question: Exercise;
   orderedOptions: Exercise["options"];
   selected: string[];
@@ -297,11 +307,8 @@ function ChoiceExercise({
     <div className={"choice-grid " + (visual ? "is-visual " : "") + (visual && !showVisualCaption ? "no-visual-captions" : "")}>
       {displayedOptions.map((option, index) => {
         const isSelected = selected.includes(option.id);
-        const wrongSlot = displayedOptions
-          .slice(0, index)
-          .filter((item) => !item.correct).length;
         const illustration = visual
-          ? getVisualOption(character.hanzi, question.id, option.correct, wrongSlot, option.text)
+          ? optionVisuals[`${question.id}:${option.id}`]
           : null;
         const state =
           result === null
@@ -417,6 +424,7 @@ function AssemblyExercise({
 
 function RedBlueExercise({
   character,
+  redBlueAsset,
   question,
   orderedOptions,
   selected,
@@ -424,13 +432,13 @@ function RedBlueExercise({
   onChoose,
 }: {
   character: CharacterItem;
+  redBlueAsset?: string;
   question: Exercise;
   orderedOptions: Exercise["options"];
   selected: string[];
   result: boolean | null;
   onChoose: (id: string) => void;
 }) {
-  const redBlueAsset = heritageAssets[character.id]?.redBlue;
   const choices = orderedOptions.length ? orderedOptions : stableOptionOrder(question.options, question.id);
   return (
     <div className="redblue-exercise">

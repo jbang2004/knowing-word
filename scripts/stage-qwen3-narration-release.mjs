@@ -213,10 +213,10 @@ async function buildStagingDirectory(tempRoot, sourceSnapshot) {
   }
 
   const manifestRoot = dirname(sourceSnapshot.qwenManifest.path);
-  const stagedPublicRoot = join(tempRoot, "public", "narration");
+  const stagedNarrationRoot = join(tempRoot, "release", "narration");
   const stagedDataRoot = join(tempRoot, "app", "data");
   await Promise.all([
-    mkdir(stagedPublicRoot, { recursive: true }),
+    mkdir(stagedNarrationRoot, { recursive: true }),
     mkdir(stagedDataRoot, { recursive: true }),
   ]);
 
@@ -236,7 +236,7 @@ async function buildStagingDirectory(tempRoot, sourceSnapshot) {
       throw new Error(`${record.recordId}: marks 不是标准内容寻址路径`);
     }
 
-    const recordRoot = join(stagedPublicRoot, record.recordId);
+    const recordRoot = join(stagedNarrationRoot, record.recordId);
     const stagedAudio = join(recordRoot, "audio.webm");
     const stagedMarks = join(recordRoot, "audio-marks.json");
     await mkdir(recordRoot);
@@ -302,8 +302,8 @@ async function buildStagingDirectory(tempRoot, sourceSnapshot) {
       contentHash: source.contentHash,
       audioSha256,
       audioMarksSha256: sourceHashes.marksSha256,
-      audio: `public/narration/${record.recordId}/audio.webm`,
-      audioMarks: `public/narration/${record.recordId}/audio-marks.json`,
+      audio: `release/narration/${record.recordId}/audio.webm`,
+      audioMarks: `release/narration/${record.recordId}/audio-marks.json`,
     };
   }
 

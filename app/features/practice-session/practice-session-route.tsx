@@ -9,6 +9,7 @@ import {
   isPracticeAnswerCorrect,
   stableOptionOrder,
 } from "../../domain/practice";
+import { learningDayKey } from "../../domain/learning-day";
 import { routeForTrack } from "../../lib/app-route";
 import {
   advanceResumeIndex,
@@ -17,20 +18,22 @@ import {
   nextResumeIndex,
   updateCompletion,
 } from "../../lib/progress-model";
-import { todayKey, type StudyProfile, type TrackId } from "../../lib/profile-model";
+import type { StudyProfile, TrackId } from "../../lib/profile-model";
 import { queueLearningEvent } from "../../infrastructure/browser/learning-event-outbox";
 import { useStudyProfile } from "../profile/use-study-profile";
-import { CelebrationOverlay, ChallengeRoom } from "./practice-session-view";
+import { CelebrationOverlay, ChallengeRoom, type PracticeMedia } from "./practice-session-view";
 
 export default function PracticeSessionRoute({
   character,
   track,
   candidateIds,
+  media,
   initialQuestionIndex,
 }: {
   character: CharacterItem;
   track: TrackId;
   candidateIds: string[];
+  media: PracticeMedia;
   initialQuestionIndex?: number;
 }) {
   const { profile, setProfile, hydrated } = useStudyProfile();
@@ -42,6 +45,7 @@ export default function PracticeSessionRoute({
       character={character}
       track={track}
       candidateIds={candidateIds}
+      media={media}
       initialQuestionIndex={initialQuestionIndex}
       profile={profile}
       setProfile={setProfile}
@@ -53,6 +57,7 @@ function HydratedPracticeSession({
   character,
   track,
   candidateIds,
+  media,
   initialQuestionIndex,
   profile,
   setProfile,
@@ -60,6 +65,7 @@ function HydratedPracticeSession({
   character: CharacterItem;
   track: TrackId;
   candidateIds: string[];
+  media: PracticeMedia;
   initialQuestionIndex?: number;
   profile: StudyProfile;
   setProfile: Dispatch<SetStateAction<StudyProfile>>;
@@ -183,7 +189,7 @@ function HydratedPracticeSession({
         character.id,
         isQuestionSetComplete(exercises.map((exercise) => exercise.id), currentQuestion.id, correct, answers),
       );
-      const date = todayKey();
+      const date = learningDayKey();
       const day = previous.daily[date] ?? { attempts: 0, correct: 0, skips: 0, readSessions: 0 };
       return {
         ...previous,
@@ -219,7 +225,7 @@ function HydratedPracticeSession({
       questionId: currentQuestion.id,
     });
     setProfile((previous) => {
-      const date = todayKey();
+      const date = learningDayKey();
       const day = previous.daily[date] ?? { attempts: 0, correct: 0, skips: 0, readSessions: 0 };
       return {
         ...previous,
@@ -264,6 +270,7 @@ function HydratedPracticeSession({
       <ChallengeRoom
         track={track}
         character={character}
+        media={media}
         question={currentQuestion}
         questionIndex={questionIndex}
         total={exercises.length}

@@ -1615,19 +1615,6 @@
   }
 }
 
-/* The lesson-three pilot ships its own authored memory panel, written for the
-   light surface; host it as a light card inside the drawer rather than
-   half-porting it to the dark layer. */
-.study-legacy-panel {
-  margin-top: 12px;
-  padding: 2px 14px 14px;
-  border-radius: 22px;
-  color: var(--ink);
-  background: var(--paper);
-}
-
-.study-legacy-panel .kicker { color: var(--violet); }
-
 /* The immersive screens own the whole viewport; the app shell reserves bottom
    space for the floating tab bar, which would otherwise sit over the drawer
    handle. */

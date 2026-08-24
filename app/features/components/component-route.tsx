@@ -5,17 +5,11 @@ import { useRouter } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
 import { createPortal } from "react-dom";
 import type { ComponentItem } from "../../data/catalog-types";
-import { extensionComponents } from "../../data/extension-components.ts";
-import { grade5Components } from "../../data/generated/grade5-volume1/components";
-import { homeCandidates } from "../../data/home-index.generated";
+import type { HomeCandidate } from "../../data/home-index.generated";
 import { safeInternalReturnPath } from "../../lib/navigation";
 import { useStudyProfile } from "../profile/use-study-profile";
 import { LearningPageShell, PageHeading } from "../shell/learning-page-shell";
 
-const componentByGlyph = new Map<string, ComponentItem>();
-for (const component of grade5Components as unknown as ComponentItem[]) componentByGlyph.set(component.glyph, component);
-for (const component of extensionComponents) componentByGlyph.set(component.glyph, component);
-const allComponents = [...componentByGlyph.values()];
 const COMPONENT_PAGE_SIZE = 36;
 
 function ComponentStoryContent({
@@ -23,7 +17,7 @@ function ComponentStoryContent({
   connected,
 }: {
   selected: ComponentItem;
-  connected: typeof homeCandidates.words;
+  connected: HomeCandidate[];
 }) {
   return (
     <>
@@ -53,13 +47,18 @@ function ComponentStoryContent({
 }
 
 export default function ComponentRoute({
+  components,
+  characters,
   initialComponentId,
   returnTo = "/practice",
 }: {
+  components: ComponentItem[];
+  characters: HomeCandidate[];
   initialComponentId?: string;
   returnTo?: string;
 }) {
   const router = useRouter();
+  const allComponents = components;
   const { profile, setProfile } = useStudyProfile();
   const [selectedId, setSelectedId] = useState(
     allComponents.some((item) => item.id === initialComponentId) ? initialComponentId! : allComponents[0].id,
@@ -84,10 +83,10 @@ export default function ComponentRoute({
     return sortMode === "recent"
       ? filtered.filter((component) => profile.recentComponents.includes(component.id))
       : filtered;
-  }, [profile.recentComponents, search, sortMode]);
+  }, [allComponents, profile.recentComponents, search, sortMode]);
   const visiblePage = visible.slice(0, visibleLimit);
   const connectedGlyphs = new Set(selected.characterSet.length ? selected.characterSet : selected.examples);
-  const connected = homeCandidates.words.filter((character) => connectedGlyphs.has(character.hanzi));
+  const connected = characters.filter((character) => connectedGlyphs.has(character.hanzi));
   const recent = allComponents.find((component) => component.id === profile.recentComponents[0]);
 
   useEffect(() => {

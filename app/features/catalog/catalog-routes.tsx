@@ -4,21 +4,15 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Sparkles } from "lucide-react";
 import type { CharacterItem, LessonItem } from "../../data/catalog-types";
-import { homeCandidates } from "../../data/home-index.generated";
 import { grade5Course, grade5Lessons } from "../../data/generated/grade5-volume1/course";
 import { lessonVisuals } from "../../data/illustrations";
 import type { LessonDocument } from "../../data/lesson-documents";
-import {
-  LESSON_THREE_ID,
-  getLessonThreeKnowledge,
-  qianPhoneticFamily,
-} from "../../data/lesson3-literacy";
+import { nextTrackCandidate, trackCandidates, trackProgress } from "../../domain/catalog-progress";
 import { getTrackExercises } from "../../domain/practice";
-import { trackMeta } from "../../domain/tracks";
+import { practiceTrackIds, trackMeta } from "../../domain/tracks";
 import { useStudyProfile } from "../profile/use-study-profile";
 import { routeForTrack } from "../../lib/app-route";
-import type { StudyProfile, TrackId } from "../../lib/profile-model";
-import { nextCandidateId } from "../../lib/progress-model";
+import type { TrackId } from "../../lib/profile-model";
 import { LearningPageShell, PageHeading } from "../shell/learning-page-shell";
 import {
   LessonReader,
@@ -27,7 +21,6 @@ import {
 } from "../lesson-reader/lesson-reader";
 import { Magpie } from "../shell/magpie";
 
-const practiceTrackIds: Exclude<TrackId, "words">[] = ["split", "honglan", "structure"];
 const courseUnits = [
   { label: "第一单元", start: 1, end: 4 },
   { label: "第二单元", start: 5, end: 8 },
@@ -38,30 +31,6 @@ const courseUnits = [
   { label: "第七单元", start: 21, end: 24 },
   { label: "第八单元", start: 25, end: 26 },
 ] as const;
-
-function targets(track: TrackId, lessonId?: string) {
-  return lessonId
-    ? homeCandidates[track].filter((item) => item.lessonId === lessonId)
-    : homeCandidates[track];
-}
-
-function trackProgress(profile: StudyProfile, track: TrackId, lessonId?: string) {
-  const candidates = targets(track, lessonId);
-  return {
-    completed: candidates.filter((item) => profile.completed[track].includes(item.id)).length,
-    total: candidates.length,
-  };
-}
-
-function nextCandidate(track: TrackId, profile: StudyProfile) {
-  const candidates = homeCandidates[track];
-  const id = nextCandidateId(
-    candidates.map((item) => item.id),
-    profile.completed[track],
-    profile.last[track]?.characterId,
-  );
-  return candidates.find((item) => item.id === id);
-}
 
 function wordGroups(characters: CharacterItem[], extension: boolean) {
   const groups = new Map<string, CharacterItem[]>();
@@ -74,13 +43,9 @@ function wordGroups(characters: CharacterItem[], extension: boolean) {
   return [...groups.values()];
 }
 
-function challengePath(track: TrackId, lessonId: string, characterId: string) {
-  return routeForTrack(track, lessonId, characterId);
-}
-
 export function PracticeHubRoute() {
   const { profile } = useStudyProfile({ writable: false });
-  const nextWord = nextCandidate("words", profile);
+  const nextWord = nextTrackCandidate("words", profile);
   const currentLesson = grade5Lessons.find((lesson) => lesson.id === nextWord?.lessonId) ?? grade5Lessons[0];
   const wordProgress = trackProgress(profile, "words", currentLesson.id);
 
@@ -164,7 +129,7 @@ export function CourseMapRoute() {
                 </header>
                 <div className="lesson-route">
                   {lessons.map((lesson) => {
-                    const chars = targets("words", lesson.id);
+                    const chars = trackCandidates("words", lesson.id);
                     const itemProgress = trackProgress(profile, "words", lesson.id);
                     const illustration = lessonVisuals[lesson.id];
                     return (
@@ -198,55 +163,6 @@ export function CourseMapRoute() {
         </section>
       </div>
     </LearningPageShell>
-  );
-}
-
-function LessonThreeOverview({ characters }: { characters: CharacterItem[] }) {
-  const phonosemantic = characters.filter((item) => getLessonThreeKnowledge(item.hanzi)?.method === "phonosemantic");
-  const structural = characters.filter((item) => getLessonThreeKnowledge(item.hanzi)?.method === "structure");
-  return (
-    <section className="pilot-method-overview" aria-labelledby="pilot-method-title">
-      <div className="pilot-overview-heading">
-        <div>
-          <p className="kicker">第三课 · 识字方法试点</p>
-          <h2 id="pilot-method-title">先分方法，再使用图片</h2>
-          <p>本课 11 个课内字按构形关系分组：图片只在开始时搭桥，最后必须离图认读和回忆。</p>
-        </div>
-        <span className="pilot-source-badge">规范字形教学拆分<br /><small>不等同历史字源</small></span>
-      </div>
-      <div className="pilot-method-grid">
-        {([
-          ["01", "形旁 + 声旁", "用字族迁移", phonosemantic, "is-phonetic"],
-          ["02", "部件 + 位置", "不强编字源", structural, "is-structure"],
-        ] as const).map(([index, title, copy, items, tone]) => (
-          <article className={`pilot-method-lane ${tone}`} key={index}>
-            <div><span>{index}</span><p><strong>{title}</strong><small>{items.length} 个字 · {copy}</small></p></div>
-            <div className="pilot-character-list">
-              {items.map((character) => (
-                <Link href={`/lessons/${character.lessonId}/words/${character.id}`} key={character.id}>
-                  <strong>{character.hanzi}</strong><small>{getLessonThreeKnowledge(character.hanzi)?.equation}</small>
-                </Link>
-              ))}
-            </div>
-          </article>
-        ))}
-      </div>
-      <div className="pilot-overview-bottom">
-        <article className="pilot-family-card">
-          <div><span>声旁家族</span><strong>佥</strong><small>读音只提供线索，不保证完全相同</small></div>
-          <div className="pilot-family-flow">
-            {qianPhoneticFamily.map((member) => (
-              <span className={member.active ? "is-active" : ""} key={member.hanzi}>
-                <b>{member.semantic}</b><i>+</i><b>佥</b><i>→</i><strong>{member.hanzi}</strong><small>{member.word} · {member.lesson}</small>
-              </span>
-            ))}
-          </div>
-        </article>
-        <article className="pilot-review-card">
-          <div><span>间隔复习</span><strong>{characters.length} 个待学习</strong><small>答错立即再练；答对后按 1、3、7 天拉开间隔</small></div>
-        </article>
-      </div>
-    </section>
   );
 }
 
@@ -309,7 +225,6 @@ export function LessonRoute({
             </div>
             <ol>{(lesson.learningPath ?? []).map((step, index) => <li key={step}><i>{index + 1}</i><span>{step}</span></li>)}</ol>
           </section>}
-          {lesson.id === LESSON_THREE_ID && <LessonThreeOverview characters={characters.filter((item) => item.official !== false)} />}
           <WordBoard groups={officialGroups} completed={completed} extension={false} />
           {extensionGroups.length > 0 && <WordBoard groups={extensionGroups} completed={completed} extension />}
         </>}
@@ -373,7 +288,6 @@ function WordBoard({
                 <strong>{character.hanzi}</strong>
                 <b>{character.pinyin}</b>
                 {completed.has(character.id) ? <small aria-label="已学会">✓</small> : <em>{extension ? "拓" : character.polyphonic ? "多" : character.curriculumRole === "write" ? "写" : "认"}</em>}
-                {character.lessonId === LESSON_THREE_ID && <span className="pilot-chip-method">{getLessonThreeKnowledge(character.hanzi)?.method === "phonosemantic" ? "形声" : "部件"}</span>}
               </Link>
             ))}</div>
           </article>
@@ -386,10 +300,10 @@ function WordBoard({
 export function TrackMapRoute({ track }: { track: Exclude<TrackId, "words"> }) {
   const { profile } = useStudyProfile({ writable: false });
   const meta = trackMeta[track];
-  const next = nextCandidate(track, profile);
+  const next = nextTrackCandidate(track, profile);
   const nextLesson = grade5Lessons.find((lesson) => lesson.id === next?.lessonId);
   const progress = trackProgress(profile, track);
-  const continueHref = next ? challengePath(track, next.lessonId, next.id) : routeForTrack(track, grade5Lessons[0].id);
+  const continueHref = next ? routeForTrack(track, next.lessonId, next.id) : routeForTrack(track, grade5Lessons[0].id);
   return (
     <LearningPageShell active="practice" name={profile.name}>
       <div className={`page track-map-page ${meta.tone}`}>
@@ -444,7 +358,7 @@ export function TrackLessonRoute({
           <div className="track-lesson-note"><Magpie size={48} /><p>{meta.copy}</p></div>
           <div className="track-character-grid">
             {eligible.map((character, index) => (
-              <Link className={completed.has(character.id) ? "is-complete" : ""} href={challengePath(track, lesson.id, character.id)} key={character.id}>
+              <Link className={completed.has(character.id) ? "is-complete" : ""} href={routeForTrack(track, lesson.id, character.id)} key={character.id}>
                 <small>{String(index + 1).padStart(2, "0")}</small><strong>{character.hanzi}</strong><i>{completed.has(character.id) ? "✓" : "开始"}</i>
               </Link>
             ))}

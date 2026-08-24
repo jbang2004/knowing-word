@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import { loadLessonContent } from "../data/lesson-content";
+import { loadLessonMedia } from "../data/lesson-media";
 import { getTrackExercises } from "../domain/practice";
 import PracticeSessionRoute from "../features/practice-session/practice-session-route";
 import type { TrackId } from "../lib/profile-model";
@@ -17,9 +18,13 @@ export default async function PracticeRoutePage({
     params,
     searchParams ?? Promise.resolve({} as Record<string, string | string[] | undefined>),
   ]);
-  const content = await loadLessonContent(lessonId);
+  const [content, lessonMedia] = await Promise.all([
+    loadLessonContent(lessonId),
+    loadLessonMedia(lessonId),
+  ]);
   const character = content?.characters.find((item) => item.id === characterId);
-  if (!content || !character || !getTrackExercises(character, track).length) notFound();
+  const media = lessonMedia?.[characterId];
+  if (!content || !character || !media || !getTrackExercises(character, track).length) notFound();
   const candidateIds = content.characters
     .filter((item) => item.primary && item.official !== false && getTrackExercises(item, track).length > 0)
     .map((item) => item.id);
@@ -36,6 +41,11 @@ export default async function PracticeRoutePage({
       track={track}
       candidateIds={candidateIds}
       initialQuestionIndex={initialQuestionIndex}
+      media={{
+        answerLabel: media.visual?.label,
+        optionVisuals: media.practiceOptionVisuals,
+        redBlueAsset: media.heritage?.redBlue,
+      }}
     />
   );
 }
