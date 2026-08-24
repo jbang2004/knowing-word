@@ -3,10 +3,7 @@ import { handleImageOptimization, DEFAULT_DEVICE_SIZES, DEFAULT_IMAGE_SIZES } fr
 import handler from "vinext/server/app-router-entry";
 import { runWithRuntimeEnv } from "../app/lib/runtime-env.ts";
 
-type RuntimeEnv = Partial<Env> & {
-  IMAGES?: ImagesBinding;
-  NARRATION_SEED_TOKEN?: string;
-};
+type RuntimeEnv = Partial<Env> & { IMAGES?: ImagesBinding };
 
 const IMMUTABLE_CACHE = "public, max-age=31536000, immutable";
 
@@ -101,44 +98,6 @@ async function serveNarration(
   return new Response("Media not found", { status: 404 });
 }
 
-async function seedNarration(request: Request, env: RuntimeEnv) {
-  if (request.method !== "POST") {
-    return new Response("Method not allowed", { status: 405, headers: { allow: "POST" } });
-  }
-
-  const token = env.NARRATION_SEED_TOKEN;
-  if (!token || request.headers.get("x-narration-seed-token") !== token) {
-    return new Response("Not found", { status: 404 });
-  }
-
-  const relative = new URL(request.url).searchParams.get("relative") || "";
-  if (!/^[a-z0-9-]+\/(?:audio\.webm|audio-marks\.json)$/.test(relative)) {
-    return new Response("Invalid narration path", { status: 400 });
-  }
-
-  const contentType = relative.endsWith(".webm")
-    ? "audio/webm; codecs=opus"
-    : "application/json; charset=utf-8";
-  const declaredLength = Number(request.headers.get("content-length"));
-  if (Number.isFinite(declaredLength) && declaredLength > 16 * 1024 * 1024) {
-    return new Response("Narration file is too large", { status: 413 });
-  }
-  const bytes = await request.arrayBuffer();
-  if (!bytes.byteLength || bytes.byteLength > 16 * 1024 * 1024) {
-    return new Response("Narration file is too large", { status: 413 });
-  }
-
-  if (!env.MEDIA) return new Response("Media binding unavailable", { status: 503 });
-  const objectKey = `built-in/narration/v4/${relative}`;
-  await env.MEDIA.put(objectKey, bytes, {
-    httpMetadata: {
-      contentType,
-      cacheControl: IMMUTABLE_CACHE,
-    },
-  });
-  return Response.json({ relative, bytes: bytes.byteLength });
-}
-
 function withDeliveryCache(response: Response, pathname: string) {
   if (!response.ok) return response;
   const headers = new Headers(response.headers);
@@ -174,10 +133,6 @@ const worker = {
     const narrationPath = narrationRequestPath(url.pathname);
     if (narrationPath) {
       return serveNarration(request, env, narrationPath.version, narrationPath.relative);
-    }
-
-    if (url.pathname === "/api/internal/narration-seed") {
-      return seedNarration(request, env);
     }
 
     if (isDeliveryAsset(url.pathname) && env.ASSETS) {
