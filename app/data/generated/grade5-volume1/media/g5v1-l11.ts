@@ -6,7 +6,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u4fed.webp",
       "label": "节俭",
-      "alt": "节俭就是生活有计划，不随意浪费物品和钱财 图中“亻”与“佥”按左右结构自然长成“俭”。"
+      "alt": "节俭是生活俭朴不奢华；牛郎织女生活节俭踏实，小家庭洋溢着欢声笑语与温情 图中“亻”与“佥”按左右结构自然长成“俭”。"
     },
     "scene": {
       "scene": "左边站立人物形成“亻”，右边屋盖下把物品仔细合拢、逐件清点，手和横线沿“佥”排列，组成“俭”。",
@@ -25,12 +25,12 @@ export const characterMedia = {
       "g5v1-l11-c01-u4fed-words-image:g5v1-l11-c01-u4fed-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u51a4.webp",
         "label": "冤枉",
-        "alt": "冤枉是没有事实根据却被错误责怪或受到不公平对待 图中“冖”与“兔”按上下结构自然长成“冤”。"
+        "alt": "冤枉委屈历历在目；童年受到的无端冤枉，在父亲温暖宽厚的怀抱里得到了最大的安慰 图中“冖”与“兔”按上下结构自然长成“冤”。"
       },
       "g5v1-l11-c01-u4fed-words-image:g5v1-l11-c01-u4fed-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u4fed.webp",
         "label": "节俭",
-        "alt": "节俭就是生活有计划，不随意浪费物品和钱财 图中“亻”与“佥”按左右结构自然长成“俭”。"
+        "alt": "节俭是生活俭朴不奢华；牛郎织女生活节俭踏实，小家庭洋溢着欢声笑语与温情 图中“亻”与“佥”按左右结构自然长成“俭”。"
       }
     }
   },
@@ -38,7 +38,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u7687.webp",
       "label": "富丽堂皇",
-      "alt": "皇帝是中国古代国家的最高统治者 图中“白”与“王”按上下结构自然长成“皇”。"
+      "alt": "矞矞皇皇形容光彩夺目富丽灿烂；少年中国的壮丽前景如旭日初升，光芒万丈 图中“白”与“王”按上下结构自然长成“皇”。"
     },
     "scene": {
       "scene": "上方明亮冠帽形成“白”，下方三层玉座和中轴沿“王”搭起，上下组成“皇”。",
@@ -57,12 +57,12 @@ export const characterMedia = {
       "g5v1-l11-c02-u7687-words-image:g5v1-l11-c02-u7687-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u5f3a.webp",
         "label": "强迫",
-        "alt": "强迫就是用压力逼别人做不愿意做的事 图中“弓”与“虽”按左右结构自然长成“强”。"
+        "alt": "强迫是用强力逼迫他人顺从；面对秦王的强硬态度，蔺相如据理力争，毫无惧色 图中“弓”与“虽”按左右结构自然长成“强”。"
       },
       "g5v1-l11-c02-u7687-words-image:g5v1-l11-c02-u7687-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u7687.webp",
         "label": "富丽堂皇",
-        "alt": "皇帝是中国古代国家的最高统治者 图中“白”与“王”按上下结构自然长成“皇”。"
+        "alt": "矞矞皇皇形容光彩夺目富丽灿烂；少年中国的壮丽前景如旭日初升，光芒万丈 图中“白”与“王”按上下结构自然长成“皇”。"
       }
     }
   },
@@ -70,7 +70,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u504e.webp",
       "label": "依偎",
-      "alt": "依偎就是亲近地靠在别人身旁 图中“亻”与“畏”按左右结构自然长成“偎”。"
+      "alt": "依偎指亲热地靠在一起；孩子们依偎在父母身旁，一家人其乐融融，其情切切 图中“亻”与“畏”按左右结构自然长成“偎”。"
     },
     "scene": {
       "scene": "左边一个站立人物形成“亻”，右边另一人带着衣褶沿“畏”的笔画靠近，两人相依组成“偎”。",
@@ -89,12 +89,12 @@ export const characterMedia = {
       "g5v1-l11-c03-u504e-words-image:g5v1-l11-c03-u504e-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u6258.webp",
         "label": "托着纱衣",
-        "alt": "托付就是把重要的人或事情交给可信任的人照管 图中“扌”与“乇”按左右结构自然长成“托”。"
+        "alt": "托举是用手掌向上托承；牛郎托着轻柔的纱衣，与织女相知相许，定下了终身之约 图中“扌”与“乇”按左右结构自然长成“托”。"
       },
       "g5v1-l11-c03-u504e-words-image:g5v1-l11-c03-u504e-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u504e.webp",
         "label": "依偎",
-        "alt": "依偎就是亲近地靠在别人身旁 图中“亻”与“畏”按左右结构自然长成“偎”。"
+        "alt": "依偎指亲热地靠在一起；孩子们依偎在父母身旁，一家人其乐融融，其情切切 图中“亻”与“畏”按左右结构自然长成“偎”。"
       }
     }
   },
@@ -102,7 +102,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u8870.webp",
       "label": "衰老",
-      "alt": "衰老表示身体机能随着年岁增长逐渐减弱 图中“衰”按独体结构自然长成“衰”。"
+      "alt": "衰老虽至童心永驻；读书让心灵永远保持年轻与充实，即使岁月流逝、容颜衰老，精神依然丰盈 图中“衰”按独体结构自然长成“衰”。"
     },
     "scene": {
       "scene": "一件长衣从肩领到下摆沿“衰”的笔画垂落，中央叶片由鲜绿变淡，表现岁月变化。",
@@ -115,7 +115,7 @@ export const characterMedia = {
       "g5v1-l11-c04-u8870-words-image:g5v1-l11-c04-u8870-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u8870.webp",
         "label": "衰老",
-        "alt": "衰老表示身体机能随着年岁增长逐渐减弱 图中“衰”按独体结构自然长成“衰”。"
+        "alt": "衰老虽至童心永驻；读书让心灵永远保持年轻与充实，即使岁月流逝、容颜衰老，精神依然丰盈 图中“衰”按独体结构自然长成“衰”。"
       },
       "g5v1-l11-c04-u8870-words-image:g5v1-l11-c04-u8870-words-image-2": {
         "src": "/illustrations/meanings/m07.webp",
@@ -125,7 +125,7 @@ export const characterMedia = {
       "g5v1-l11-c04-u8870-words-image:g5v1-l11-c04-u8870-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u708a.webp",
         "label": "炊事员",
-        "alt": "炊烟是做饭烧火时升起的烟 图中“火”与“欠”按左右结构自然长成“炊”。"
+        "alt": "炊事员细心烹饪；炊事员把仅有的一点新鲜蔬菜精心做成菜汤，表达对首长的由衷敬重 图中“火”与“欠”按左右结构自然长成“炊”。"
       }
     }
   },
@@ -133,7 +133,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u73ca.webp",
       "label": "珊瑚",
-      "alt": "珊瑚是海中珊瑚虫形成的坚硬骨骼群体，形态像枝丛 图中“王”与“册”按左右结构自然长成“珊”。"
+      "alt": "珊瑚是海洋中的奇珍异宝；王母恶狠狠地威胁要追至天涯海角珊瑚之岛，展现了专横残忍 图中“王”与“册”按左右结构自然长成“珊”。"
     },
     "scene": {
       "scene": "左边三层玉架形成“王”，右边两片并排珊瑚枝板沿“册”展开，组成“珊”。",
@@ -147,7 +147,7 @@ export const characterMedia = {
       "g5v1-l11-c05-u73ca-words-image:g5v1-l11-c05-u73ca-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u73ca.webp",
         "label": "珊瑚",
-        "alt": "珊瑚是海中珊瑚虫形成的坚硬骨骼群体，形态像枝丛 图中“王”与“册”按左右结构自然长成“珊”。"
+        "alt": "珊瑚是海洋中的奇珍异宝；王母恶狠狠地威胁要追至天涯海角珊瑚之岛，展现了专横残忍 图中“王”与“册”按左右结构自然长成“珊”。"
       },
       "g5v1-l11-c05-u73ca-words-image:g5v1-l11-c05-u73ca-words-image-0": {
         "src": "/illustrations/meanings/m07.webp",
@@ -157,7 +157,7 @@ export const characterMedia = {
       "g5v1-l11-c05-u73ca-words-image:g5v1-l11-c05-u73ca-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u9675.webp",
         "label": "武陵春色",
-        "alt": "陵园是安葬并纪念逝者的园地，应当保持庄重 图中“阝”与“夌”按左右结构自然长成“陵”。"
+        "alt": "武陵春色宛若世外桃源；漫步园中如行画中，令人如痴如醉、流连忘返 图中“阝”与“夌”按左右结构自然长成“陵”。"
       }
     }
   },
@@ -165,7 +165,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u745a.webp",
       "label": "珊瑚",
-      "alt": "珊瑚常生活在温暖清澈的海水中，能形成珊瑚礁 图中“王”与“胡”按左右结构自然长成“瑚”。"
+      "alt": "珊瑚礁是绚丽的海底奇观；王母即便追至辽远的珊瑚海礁也不肯放过织女，故事转入紧张高潮 图中“王”与“胡”按左右结构自然长成“瑚”。"
     },
     "scene": {
       "scene": "左边温润玉石架形成“王”，右边古月形海湾与珊瑚枝沿“胡”排列，组成“瑚”。",
@@ -174,7 +174,7 @@ export const characterMedia = {
         "右边古月形海湾与珊瑚枝沿“胡”排列。"
       ]
     },
-    "transcript": "王母说织女就算藏到大海中心的珊瑚礁上，她也一定要追回来。瑚要和珊连在一起认，左边是王字旁，右边是胡。可以把右边想成海湾里舒展的枝丛，左边添上温润的玉石光泽，帮助记住两边的位置。课文把珊瑚礁放进王母的狠话里，让这场追赶显得又远又紧迫。",
+    "transcript": "瑚，珊瑚的瑚，读第二声。瑚通常与珊连用成词，它是左右结构，左边的王字旁表明玉石光泽，右边的“胡”提示读音，两边并立组合成瑚。珊瑚是生长在海洋中的绚丽骨骼。课文中王母声称即便织女藏到大海中心的珊瑚礁也要追回，突出了仙凡阻隔的辽远与追赶的紧迫。",
     "practiceOptionVisuals": {
       "g5v1-l11-c06-u745a-words-image:g5v1-l11-c06-u745a-words-image-0": {
         "src": "/illustrations/meanings/m05.webp",
@@ -184,12 +184,12 @@ export const characterMedia = {
       "g5v1-l11-c06-u745a-words-image:g5v1-l11-c06-u745a-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u727a.webp",
         "label": "牺牲",
-        "alt": "牺牲是为了更重要的人或事情舍弃自己的利益，甚至生命 图中“牛”与“西”按左右结构自然长成“牺”。"
+        "alt": "牺牲是为了正义与他人利益放弃生命；海力布为了拯救全村乡亲不惜牺牲自己，化作了坚硬的石头 图中“牛”与“西”按左右结构自然长成“牺”。"
       },
       "g5v1-l11-c06-u745a-words-image:g5v1-l11-c06-u745a-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u745a.webp",
         "label": "珊瑚",
-        "alt": "珊瑚常生活在温暖清澈的海水中，能形成珊瑚礁 图中“王”与“胡”按左右结构自然长成“瑚”。"
+        "alt": "珊瑚礁是绚丽的海底奇观；王母即便追至辽远的珊瑚海礁也不肯放过织女，故事转入紧张高潮 图中“王”与“胡”按左右结构自然长成“瑚”。"
       }
     }
   },
@@ -197,7 +197,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u7901.webp",
       "label": "珊瑚礁",
-      "alt": "暗礁是水面下不容易看见、可能影响航行的岩石 图中“石”与“焦”按左右结构自然长成“礁”。"
+      "alt": "礁石是海中突出的岩石；波涛汹涌的险峻暗礁，象征着追求幸福道路上的艰难险阻 图中“石”与“焦”按左右结构自然长成“礁”。"
     },
     "scene": {
       "scene": "左边突出水面的岩石形成“石”，右边鸟形警示标与四点灯火沿“焦”站在水下，组成“礁”。",
@@ -211,7 +211,7 @@ export const characterMedia = {
       "g5v1-l11-c07-u7901-words-image:g5v1-l11-c07-u7901-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u7901.webp",
         "label": "珊瑚礁",
-        "alt": "暗礁是水面下不容易看见、可能影响航行的岩石 图中“石”与“焦”按左右结构自然长成“礁”。"
+        "alt": "礁石是海中突出的岩石；波涛汹涌的险峻暗礁，象征着追求幸福道路上的艰难险阻 图中“石”与“焦”按左右结构自然长成“礁”。"
       },
       "g5v1-l11-c07-u7901-words-image:g5v1-l11-c07-u7901-words-image-0": {
         "src": "/illustrations/meanings/m08.webp",
@@ -221,7 +221,7 @@ export const characterMedia = {
       "g5v1-l11-c07-u7901-words-image:g5v1-l11-c07-u7901-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u635f.webp",
         "label": "损失",
-        "alt": "损失是失去原有的人、财物、机会或价值 图中“扌”与“员”按左右结构自然长成“损”。"
+        "alt": "损失惨重令人扼腕叹息；无数孤本文物与稀世奇珍化为乌有，这是全人类文明的巨大损失 图中“扌”与“员”按左右结构自然长成“损”。"
       }
     }
   },
@@ -229,12 +229,12 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u7b50.webp",
       "label": "两个筐",
-      "alt": "竹筐是用竹条编成、可以盛放物品的器具 图中“⺮”与“匡”按上下结构自然长成“筐”。"
+      "alt": "竹筐是用竹篾编成的挑篓；牛郎用一对竹筐挑着一双儿女，披上牛皮急急追赶天河 图中“⺮”与“匡”按上下结构自然长成“筐”。"
     },
     "scene": {
-      "scene": "上方两簇竹叶形成“⺮”，下方竹条四面围成“匡”形筐体，组成“筐”。",
+      "scene": "上方竹条编织的竹字头“⺮”，下方竹条四面围成“匡”形筐体，组成“筐”。",
       "cues": [
-        "上方两簇竹叶形成“⺮”。",
+        "上方竹条编织的竹字头“⺮”。",
         "下方竹条四面围成“匡”形筐体。"
       ]
     },
@@ -248,12 +248,12 @@ export const characterMedia = {
       "g5v1-l11-c08-u7b50-words-image:g5v1-l11-c08-u7b50-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u9489.webp",
         "label": "钉子",
-        "alt": "钉子是一端尖、一端有帽，用来固定物体的金属小件 图中“钅”与“丁”按左右结构自然长成“钉”。"
+        "alt": "钉鞋补舟手艺精湛；父亲用粗糙的双手修补旧船、钉好鞋底，把每一件小事都做得扎扎实实 图中“钅”与“丁”按左右结构自然长成“钉”。"
       },
       "g5v1-l11-c08-u7b50-words-image:g5v1-l11-c08-u7b50-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u7b50.webp",
         "label": "两个筐",
-        "alt": "竹筐是用竹条编成、可以盛放物品的器具 图中“⺮”与“匡”按上下结构自然长成“筐”。"
+        "alt": "竹筐是用竹篾编成的挑篓；牛郎用一对竹筐挑着一双儿女，披上牛皮急急追赶天河 图中“⺮”与“匡”按上下结构自然长成“筐”。"
       }
     }
   },
@@ -261,7 +261,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u62d7.webp",
       "label": "拗不过",
-      "alt": "执拗形容坚持自己的想法，不容易听进劝说 图中“扌”与“幼”按左右结构自然长成“拗”。"
+      "alt": "拗不过指无法扭转对方的执着坚持；王母最终拗不过织女坚贞的守望，只得准许七夕相会 图中“扌”与“幼”按左右结构自然长成“拗”。"
     },
     "scene": {
       "scene": "左边拉住绳子的手形成“扌”，右边幼小树苗和弯绳沿“幼”倔强地反向拉紧，组成“拗”。",
@@ -280,12 +280,12 @@ export const characterMedia = {
       "g5v1-l11-c09-u62d7-words-image:g5v1-l11-c09-u62d7-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u6b47.webp",
         "label": "歇息",
-        "alt": "歇息就是暂时停下活动，让身体恢复精神 图中“曷”与“欠”按左右结构自然长成“歇”。"
+        "alt": "歇息指短暂休息养神；松鼠白天常在树窝里安静歇息，黄昏才出来觅食活动 图中“曷”与“欠”按左右结构自然长成“歇”。"
       },
       "g5v1-l11-c09-u62d7-words-image:g5v1-l11-c09-u62d7-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u62d7.webp",
         "label": "拗不过",
-        "alt": "执拗形容坚持自己的想法，不容易听进劝说 图中“扌”与“幼”按左右结构自然长成“拗”。"
+        "alt": "拗不过指无法扭转对方的执着坚持；王母最终拗不过织女坚贞的守望，只得准许七夕相会 图中“扌”与“幼”按左右结构自然长成“拗”。"
       }
     }
   }

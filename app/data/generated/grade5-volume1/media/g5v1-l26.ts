@@ -6,7 +6,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u55bb.webp",
       "label": "比喻",
-      "alt": "比喻是用有相似点的事物来说明另一个事物 图中“口”与“俞”按左右结构自然长成“喻”。"
+      "alt": "比喻形象生动传神；作者把书籍比喻为滋养人生的长生果，形象地写出了阅读对精神成长的重要意义 图中“口”与“俞”按左右结构自然长成“喻”。"
     },
     "scene": {
       "scene": "左边说明的口形成“口”，右边屋顶下小船和双刃比较尺沿“俞”排列，把两件相似事物放在一起，组成“喻”。",
@@ -20,7 +20,7 @@ export const characterMedia = {
       "g5v1-l26-c01-u55bb-words-image:g5v1-l26-c01-u55bb-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u55bb.webp",
         "label": "比喻",
-        "alt": "比喻是用有相似点的事物来说明另一个事物 图中“口”与“俞”按左右结构自然长成“喻”。"
+        "alt": "比喻形象生动传神；作者把书籍比喻为滋养人生的长生果，形象地写出了阅读对精神成长的重要意义 图中“口”与“俞”按左右结构自然长成“喻”。"
       },
       "g5v1-l26-c01-u55bb-words-image:g5v1-l26-c01-u55bb-words-image-0": {
         "src": "/illustrations/meanings/m03.webp",
@@ -30,7 +30,7 @@ export const characterMedia = {
       "g5v1-l26-c01-u55bb-words-image:g5v1-l26-c01-u55bb-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u7709.webp",
         "label": "眉毛",
-        "alt": "眉毛是长在眼睛上方的一列毛发 图中“𠃜”与“目”按左上包围结构自然长成“眉”。"
+        "alt": "舒展眉头赞叹天地；目睹这片充满生机的绿色胜境，游人舒展眉头，心旷神怡 图中“𠃜”与“目”按左上包围结构自然长成“眉”。"
       }
     }
   },
@@ -38,7 +38,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u5dee.webp",
       "label": "差事",
-      "alt": "“差事”指被派去做的任务，这里读chāi；“差别”读chā，“较差”读chà 图中“⺶”与“工”按左上包围结构自然长成“差”。"
+      "alt": "差事指打发跑腿的差使；童年给大人跑差事换来几分钱借看小画片，在艰难条件中依然如饥似渴地阅读 图中“⺶”与“工”按左上包围结构自然长成“差”。"
     },
     "scene": {
       "scene": "上方羊角任务牌沿“⺶”展开，下方工形路线标明派出的工作形成“工”，领任务出发，组成“差”。",
@@ -57,12 +57,12 @@ export const characterMedia = {
       "g5v1-l26-c02-u5dee-words-image:g5v1-l26-c02-u5dee-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u6691.webp",
         "label": "酷暑",
-        "alt": "暑表示炎热的季节或天气，如酷暑、暑假 图中“日”与“者”按上下结构自然长成“暑”。"
+        "alt": "暑热蒸腾坚韧不屈；母亲在漫长暑热中默默忍受辛劳，用柔弱的肩膀挑起家庭的重担 图中“日”与“者”按上下结构自然长成“暑”。"
       },
       "g5v1-l26-c02-u5dee-words-image:g5v1-l26-c02-u5dee-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u5dee.webp",
         "label": "差事",
-        "alt": "“差事”指被派去做的任务，这里读chāi；“差别”读chā，“较差”读chà 图中“⺶”与“工”按左上包围结构自然长成“差”。"
+        "alt": "差事指打发跑腿的差使；童年给大人跑差事换来几分钱借看小画片，在艰难条件中依然如饥似渴地阅读 图中“⺶”与“工”按左上包围结构自然长成“差”。"
       }
     }
   },
@@ -70,7 +70,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u763e.webp",
       "label": "上瘾",
-      "alt": "上瘾表示对某种事物形成难以控制、总想继续的依赖 图中“疒”与“隐”按左上包围结构自然长成“瘾”。"
+      "alt": "过瘾着迷如饥似渴；借到一本厚厚的连环画让小作者大呼过瘾，废寝忘食地沉浸在故事世界中 图中“疒”与“隐”按左上包围结构自然长成“瘾”。"
     },
     "scene": {
       "scene": "外面病床帘形成“疒”，里面坡道、双手和心灯沿“隐”被牵住，心反复被同一事物拉回，组成“瘾”。",
@@ -84,7 +84,7 @@ export const characterMedia = {
       "g5v1-l26-c03-u763e-words-image:g5v1-l26-c03-u763e-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u763e.webp",
         "label": "上瘾",
-        "alt": "上瘾表示对某种事物形成难以控制、总想继续的依赖 图中“疒”与“隐”按左上包围结构自然长成“瘾”。"
+        "alt": "过瘾着迷如饥似渴；借到一本厚厚的连环画让小作者大呼过瘾，废寝忘食地沉浸在故事世界中 图中“疒”与“隐”按左上包围结构自然长成“瘾”。"
       },
       "g5v1-l26-c03-u763e-words-image:g5v1-l26-c03-u763e-words-image-2": {
         "src": "/illustrations/meanings/m08.webp",
@@ -94,7 +94,7 @@ export const characterMedia = {
       "g5v1-l26-c03-u763e-words-image:g5v1-l26-c03-u763e-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u6069.webp",
         "label": "恩惠",
-        "alt": "恩惠是别人给予的帮助和好处，值得记在心里 图中“因”与“心”按上下结构自然长成“恩”。"
+        "alt": "恩惠是他人给予的关怀与帮助；白鹭常在水田乡村活动，宛如大自然赐予人间的清雅恩惠 图中“因”与“心”按上下结构自然长成“恩”。"
       }
     }
   },
@@ -102,7 +102,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u5954.webp",
       "label": "奔向",
-      "alt": "“奔向”表示急速朝某处去，这里读bēn；“投奔”中读bèn 图中“大”与“卉”按上下结构自然长成“奔”。"
+      "alt": "奔向书摊迫不及待；一有零钱便飞奔向文化站和小书摊，展现了孩童对知识宝库无比渴求的热情 图中“大”与“卉”按上下结构自然长成“奔”。"
     },
     "scene": {
       "scene": "上方人物伸展双臂形成“大”，下方十字路口和两条快跑腿沿“卉”冲向前方，组成飞奔的“奔”。",
@@ -126,7 +126,7 @@ export const characterMedia = {
       "g5v1-l26-c04-u5954-words-image:g5v1-l26-c04-u5954-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u5954.webp",
         "label": "奔向",
-        "alt": "“奔向”表示急速朝某处去，这里读bēn；“投奔”中读bèn 图中“大”与“卉”按上下结构自然长成“奔”。"
+        "alt": "奔向书摊迫不及待；一有零钱便飞奔向文化站和小书摊，展现了孩童对知识宝库无比渴求的热情 图中“大”与“卉”按上下结构自然长成“奔”。"
       }
     }
   },
@@ -134,13 +134,13 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u7c4d.webp",
       "label": "书籍",
-      "alt": "书籍是装订成册、记录文字或图画的读物 图中“⺮”与“耤”按上下结构自然长成“籍”。"
+      "alt": "书籍是人类进步的阶梯；从图画本到文学典籍，阅读的范围逐步拓展，写作的源泉也越发深厚 图中“⺮”与“耤”按上下结构自然长成“籍”。"
     },
     "scene": {
-      "scene": "上方两排竹简形成“⺮”，下方木耒、草席和昔日书页沿“耤”层层装订，组成一册“籍”。",
+      "scene": "上方两排整齐的竹简排成竹字头“⺮”，下方木耒、草席和昔日书页“耤”层层装订，组成一册“籍”。",
       "cues": [
-        "上方两排竹简形成“⺮”。",
-        "下方木耒、草席和昔日书页沿“耤”层层装订。"
+        "上方两排整齐的竹简排成竹字头“⺮”。",
+        "下方木耒、草席和昔日书页“耤”层层装订。"
       ]
     },
     "transcript": "装订成册、记录文字或图画的读物叫书籍，籍读第二声。籍是上下结构，上面竹字头，下面笔画较多，口播时把下部整体记住。认字时，可以想象一册册书整齐排在竹架下，等着读者取阅。书籍能保存知识、故事和经验。文章从连环画写到中外小说，各种书籍一步步打开作者的想象，也影响她后来写作文。",
@@ -158,7 +158,7 @@ export const characterMedia = {
       "g5v1-l26-c05-u7c4d-words-image:g5v1-l26-c05-u7c4d-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u7c4d.webp",
         "label": "书籍",
-        "alt": "书籍是装订成册、记录文字或图画的读物 图中“⺮”与“耤”按上下结构自然长成“籍”。"
+        "alt": "书籍是人类进步的阶梯；从图画本到文学典籍，阅读的范围逐步拓展，写作的源泉也越发深厚 图中“⺮”与“耤”按上下结构自然长成“籍”。"
       }
     }
   },
@@ -166,7 +166,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u9965.webp",
       "label": "饥饿",
-      "alt": "饥饿是身体因为缺少食物而产生的需要进食的感觉 图中“饣”与“几”按左右结构自然长成“饥”。"
+      "alt": "如饥似渴汲取营养；作者像饥饿的人扑在面包上一样如饥似渴地博览群书，充实了自己的精神粮仓 图中“饣”与“几”按左右结构自然长成“饥”。"
     },
     "scene": {
       "scene": "左边空着的带盖食器形成“饣”，右边只剩一张小桌和弯脚形成“几”，食器没有食物，组成“饥”。",
@@ -180,7 +180,7 @@ export const characterMedia = {
       "g5v1-l26-c06-u9965-words-image:g5v1-l26-c06-u9965-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u9965.webp",
         "label": "饥饿",
-        "alt": "饥饿是身体因为缺少食物而产生的需要进食的感觉 图中“饣”与“几”按左右结构自然长成“饥”。"
+        "alt": "如饥似渴汲取营养；作者像饥饿的人扑在面包上一样如饥似渴地博览群书，充实了自己的精神粮仓 图中“饣”与“几”按左右结构自然长成“饥”。"
       },
       "g5v1-l26-c06-u9965-words-image:g5v1-l26-c06-u9965-words-image-2": {
         "src": "/illustrations/meanings/m03.webp",
@@ -198,7 +198,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u507f.webp",
       "label": "补偿",
-      "alt": "补偿是用金钱、物品或行动弥补别人的损失 图中“亻”与“尝”按左右结构自然长成“偿”。"
+      "alt": "如愿以偿欢喜无限；终于读到朝思暮想的大部头文学名著，内心的满足与喜悦难以言表 图中“亻”与“尝”按左右结构自然长成“偿”。"
     },
     "scene": {
       "scene": "左边付出行动的人形成“亻”，右边屋顶下贝物、云形交换券沿“尝”摆好，人物拿出东西弥补，组成“偿”。",
@@ -212,7 +212,7 @@ export const characterMedia = {
       "g5v1-l26-c07-u507f-words-image:g5v1-l26-c07-u507f-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u507f.webp",
         "label": "补偿",
-        "alt": "补偿是用金钱、物品或行动弥补别人的损失 图中“亻”与“尝”按左右结构自然长成“偿”。"
+        "alt": "如愿以偿欢喜无限；终于读到朝思暮想的大部头文学名著，内心的满足与喜悦难以言表 图中“亻”与“尝”按左右结构自然长成“偿”。"
       },
       "g5v1-l26-c07-u507f-words-image:g5v1-l26-c07-u507f-words-image-0": {
         "src": "/illustrations/meanings/m03.webp",
@@ -222,7 +222,7 @@ export const characterMedia = {
       "g5v1-l26-c07-u507f-words-image:g5v1-l26-c07-u507f-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u9489.webp",
         "label": "钉子",
-        "alt": "钉子是一端尖、一端有帽，用来固定物体的金属小件 图中“钅”与“丁”按左右结构自然长成“钉”。"
+        "alt": "钉鞋补舟手艺精湛；父亲用粗糙的双手修补旧船、钉好鞋底，把每一件小事都做得扎扎实实 图中“钅”与“丁”按左右结构自然长成“钉”。"
       }
     }
   },
@@ -230,7 +230,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u7538.webp",
       "label": "沉甸甸",
-      "alt": "沉甸甸形容东西很重、向下坠的样子 图中“勹”与“田”按右上包围结构自然长成“甸”。"
+      "alt": "沉甸甸的收获装满行囊；大量的阅读积累化为沉甸甸的精神财富，在一次次作文中结出了丰硕成果 图中“勹”与“田”按右上包围结构自然长成“甸”。"
     },
     "scene": {
       "scene": "外面弯曲提绳形成“勹”，里面装满四格收成“田”的沉重粮篮，把绳索压弯，组成“甸”。",
@@ -244,7 +244,7 @@ export const characterMedia = {
       "g5v1-l26-c08-u7538-words-image:g5v1-l26-c08-u7538-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u7538.webp",
         "label": "沉甸甸",
-        "alt": "沉甸甸形容东西很重、向下坠的样子 图中“勹”与“田”按右上包围结构自然长成“甸”。"
+        "alt": "沉甸甸的收获装满行囊；大量的阅读积累化为沉甸甸的精神财富，在一次次作文中结出了丰硕成果 图中“勹”与“田”按右上包围结构自然长成“甸”。"
       },
       "g5v1-l26-c08-u7538-words-image:g5v1-l26-c08-u7538-words-image-0": {
         "src": "/illustrations/meanings/m05.webp",
@@ -254,7 +254,7 @@ export const characterMedia = {
       "g5v1-l26-c08-u7538-words-image:g5v1-l26-c08-u7538-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u768e.webp",
         "label": "皎洁",
-        "alt": "皎洁形容月光明亮而洁白 图中“白”与“交”按左右结构自然长成“皎”。"
+        "alt": "皎洁月色照亮文思；月光皎洁的夜晚静坐写作，将平日从书中汲取的文采化作笔端流淌的生动篇章 图中“白”与“交”按左右结构自然长成“皎”。"
       }
     }
   },
@@ -262,7 +262,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u609f.webp",
       "label": "领悟",
-      "alt": "领悟就是经过思考后明白其中的意思或道理 图中“忄”与“吾”按左右结构自然长成“悟”。"
+      "alt": "领悟写作精妙心法；在长期的阅读思考中作者终于领悟到：作文要有真情实感，要写出独特的真知灼见 图中“忄”与“吾”按左右结构自然长成“悟”。"
     },
     "scene": {
       "scene": "左边突然亮起的心灯形成“忄”，右边交叉线、屋顶和方口沿“吾”组成一句明白的话，心里想通，组成“悟”。",
@@ -276,7 +276,7 @@ export const characterMedia = {
       "g5v1-l26-c09-u609f-words-image:g5v1-l26-c09-u609f-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u609f.webp",
         "label": "领悟",
-        "alt": "领悟就是经过思考后明白其中的意思或道理 图中“忄”与“吾”按左右结构自然长成“悟”。"
+        "alt": "领悟写作精妙心法；在长期的阅读思考中作者终于领悟到：作文要有真情实感，要写出独特的真知灼见 图中“忄”与“吾”按左右结构自然长成“悟”。"
       },
       "g5v1-l26-c09-u609f-words-image:g5v1-l26-c09-u609f-words-image-2": {
         "src": "/illustrations/meanings/m06.webp",
@@ -294,7 +294,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u9988.webp",
       "label": "反馈",
-      "alt": "反馈是把结果、意见或信息返回给对方 图中“饣”与“贵”按左右结构自然长成“馈”。"
+      "alt": "馈赠厚重丰润人生；书籍是大自然与人类文明最慷慨的馈赠，让作者的童年与少年时代绚丽多彩 图中“饣”与“贵”按左右结构自然长成“馈”。"
     },
     "scene": {
       "scene": "左边带盖信息盒形成“饣”，右边中形通道和贝形回执沿“贵”送回原处，消息来回传递，组成“馈”。",
@@ -308,7 +308,7 @@ export const characterMedia = {
       "g5v1-l26-c10-u9988-words-image:g5v1-l26-c10-u9988-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u9988.webp",
         "label": "反馈",
-        "alt": "反馈是把结果、意见或信息返回给对方 图中“饣”与“贵”按左右结构自然长成“馈”。"
+        "alt": "馈赠厚重丰润人生；书籍是大自然与人类文明最慷慨的馈赠，让作者的童年与少年时代绚丽多彩 图中“饣”与“贵”按左右结构自然长成“馈”。"
       },
       "g5v1-l26-c10-u9988-words-image:g5v1-l26-c10-u9988-words-image-0": {
         "src": "/illustrations/meanings/m05.webp",
@@ -318,7 +318,7 @@ export const characterMedia = {
       "g5v1-l26-c10-u9988-words-image:g5v1-l26-c10-u9988-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u5dee.webp",
         "label": "差事",
-        "alt": "“差事”指被派去做的任务，这里读chāi；“差别”读chā，“较差”读chà 图中“⺶”与“工”按左上包围结构自然长成“差”。"
+        "alt": "差事指打发跑腿的差使；童年给大人跑差事换来几分钱借看小画片，在艰难条件中依然如饥似渴地阅读 图中“⺶”与“工”按左上包围结构自然长成“差”。"
       }
     }
   },
@@ -326,7 +326,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u78c1.webp",
       "label": "磁铁",
-      "alt": "磁铁能吸引铁、镍等材料，也有南北两个磁极 图中“石”与“兹”按左右结构自然长成“磁”。"
+      "alt": "磁石般深深吸引；优秀文学作品宛如强力的磁铁，紧紧吸引着作者的心灵，激发了无限的创作灵感 图中“石”与“兹”按左右结构自然长成“磁”。"
     },
     "scene": {
       "scene": "左边带切面的矿石形成“石”，右边两束丝线被上方磁极牵成“兹”的弧线，石头产生吸力，组成“磁”。",
@@ -340,7 +340,7 @@ export const characterMedia = {
       "g5v1-l26-c11-u78c1-words-image:g5v1-l26-c11-u78c1-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u78c1.webp",
         "label": "磁铁",
-        "alt": "磁铁能吸引铁、镍等材料，也有南北两个磁极 图中“石”与“兹”按左右结构自然长成“磁”。"
+        "alt": "磁石般深深吸引；优秀文学作品宛如强力的磁铁，紧紧吸引着作者的心灵，激发了无限的创作灵感 图中“石”与“兹”按左右结构自然长成“磁”。"
       },
       "g5v1-l26-c11-u78c1-words-image:g5v1-l26-c11-u78c1-words-image-0": {
         "src": "/illustrations/meanings/m07.webp",
@@ -358,7 +358,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u9175.webp",
       "label": "发酵",
-      "alt": "发酵是微生物作用使食物等发生变化的过程 图中“酉”与“孝”按左右结构自然长成“酵”。"
+      "alt": "悄然发酵孕育佳作；平时的阅读积累如酵母在心田悄然发酵，最终让灵感的嫩芽长成一篇篇动人文章 图中“酉”与“孝”按左右结构自然长成“酵”。"
     },
     "scene": {
       "scene": "左边封口发酵坛形成“酉”，右边老人照看坛中小生命沿“孝”站好，耐心等待变化，组成“酵”。",
@@ -367,12 +367,12 @@ export const characterMedia = {
         "右边老人照看坛中小生命沿“孝”站好。"
       ]
     },
-    "transcript": "面团放一阵后慢慢鼓起，其中经历了发酵，酵读第四声。酵是左右结构，左边酉字旁，右边是孝，写时左窄右宽。可以想象坛子里的食物安静变化，细小气泡一点点冒出，这个场景帮助记形。发酵是微生物作用使食物等发生变化的过程。作者把积累的词语比作酵母，写作文时它们发挥作用，让真实感受慢慢长成文字。",
+    "transcript": "酵，发酵的酵，读第四声。它是左右结构，左边的酉字旁代表酒坛器具，右边的“孝”提示读音，酒坛中物质孕育变化即为酵。发酵指微生物作用引起质的变化。课文中作者把平时的阅读积累比作酵母，在写作时悄然发酵，最终让真情实感孕育出一篇篇饱满生动的佳作。",
     "practiceOptionVisuals": {
       "g5v1-l26-c12-u9175-words-image:g5v1-l26-c12-u9175-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u9175.webp",
         "label": "发酵",
-        "alt": "发酵是微生物作用使食物等发生变化的过程 图中“酉”与“孝”按左右结构自然长成“酵”。"
+        "alt": "悄然发酵孕育佳作；平时的阅读积累如酵母在心田悄然发酵，最终让灵感的嫩芽长成一篇篇动人文章 图中“酉”与“孝”按左右结构自然长成“酵”。"
       },
       "g5v1-l26-c12-u9175-words-image:g5v1-l26-c12-u9175-words-image-0": {
         "src": "/illustrations/meanings/m07.webp",
@@ -382,7 +382,7 @@ export const characterMedia = {
       "g5v1-l26-c12-u9175-words-image:g5v1-l26-c12-u9175-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u9965.webp",
         "label": "饥饿",
-        "alt": "饥饿是身体因为缺少食物而产生的需要进食的感觉 图中“饣”与“几”按左右结构自然长成“饥”。"
+        "alt": "如饥似渴汲取营养；作者像饥饿的人扑在面包上一样如饥似渴地博览群书，充实了自己的精神粮仓 图中“饣”与“几”按左右结构自然长成“饥”。"
       }
     }
   },
@@ -390,7 +390,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u768e.webp",
       "label": "皎洁",
-      "alt": "皎洁形容月光明亮而洁白 图中“白”与“交”按左右结构自然长成“皎”。"
+      "alt": "皎洁月色照亮文思；月光皎洁的夜晚静坐写作，将平日从书中汲取的文采化作笔端流淌的生动篇章 图中“白”与“交”按左右结构自然长成“皎”。"
     },
     "scene": {
       "scene": "左边明亮白窗形成“白”，右边屋顶下两束月光交叉沿“交”洒下，洁白光线相交，组成“皎”。",
@@ -409,12 +409,12 @@ export const characterMedia = {
       "g5v1-l26-c13-u768e-words-image:g5v1-l26-c13-u768e-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u5792.webp",
         "label": "堡垒",
-        "alt": "堡垒是用于防守的坚固建筑或工事 图中“厽”与“土”按上下结构自然长成“垒”。"
+        "alt": "堡垒是坚固的防御建筑；纵横交错的地道成了保护人民生命、打击侵略者的地下堡垒 图中“厽”与“土”按上下结构自然长成“垒”。"
       },
       "g5v1-l26-c13-u768e-words-image:g5v1-l26-c13-u768e-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u768e.webp",
         "label": "皎洁",
-        "alt": "皎洁形容月光明亮而洁白 图中“白”与“交”按左右结构自然长成“皎”。"
+        "alt": "皎洁月色照亮文思；月光皎洁的夜晚静坐写作，将平日从书中汲取的文采化作笔端流淌的生动篇章 图中“白”与“交”按左右结构自然长成“皎”。"
       }
     }
   },
@@ -422,7 +422,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u9274.webp",
       "label": "鉴赏",
-      "alt": "鉴赏就是通过观察和思考来辨别、欣赏作品的特点和价值 图中“〢”与“丿”与“一”与“丶”与“金”按上下结构自然长成“鉴”。"
+      "alt": "鉴别品味日益成熟；从最初囫囵吞枣到后来懂得细细鉴赏，作者在阅读中练就了一双敏锐睿智的慧眼 图中“〢”与“丿”与“一”与“丶”与“金”按上下结构自然长成“鉴”。"
     },
     "scene": {
       "scene": "上方双栏“〢”、斜望线“丿”、横栏“一”和视线点“丶”组成观察架，下方金属镜盘形成“金”，合成“鉴”。",
@@ -434,12 +434,12 @@ export const characterMedia = {
         "下方金属镜盘形成“金”。"
       ]
     },
-    "transcript": "认真观察作品，分辨它的特点和价值，叫鉴赏，鉴读第四声。鉴是上下结构，上部笔画零散，下边是金，口播时只记上部展开、下部托稳。可以想象读者把书放在亮处，边读边比较语言、人物和情节，画面帮助记形。鉴赏包含欣赏，也包含判断。作者读得越来越多，逐渐会挑选、会做笔记，也形成了自己的鉴赏眼光。",
+    "transcript": "鉴，鉴赏的鉴，读第四声。它是上下结构，上方是仔细观察审视的部件，下方由“金”字底托稳，明镜鉴察即为鉴。鉴赏包含仔细品味与深入判断。课文中作者回顾自己的读书历程，从最初看热闹到后来学会挑选优质书籍、细细鉴赏，阅读品味与写作眼光日益成熟。",
     "practiceOptionVisuals": {
       "g5v1-l26-c14-u9274-words-image:g5v1-l26-c14-u9274-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u9274.webp",
         "label": "鉴赏",
-        "alt": "鉴赏就是通过观察和思考来辨别、欣赏作品的特点和价值 图中“〢”与“丿”与“一”与“丶”与“金”按上下结构自然长成“鉴”。"
+        "alt": "鉴别品味日益成熟；从最初囫囵吞枣到后来懂得细细鉴赏，作者在阅读中练就了一双敏锐睿智的慧眼 图中“〢”与“丿”与“一”与“丶”与“金”按上下结构自然长成“鉴”。"
       },
       "g5v1-l26-c14-u9274-words-image:g5v1-l26-c14-u9274-words-image-0": {
         "src": "/illustrations/meanings/m03.webp",
@@ -449,7 +449,7 @@ export const characterMedia = {
       "g5v1-l26-c14-u9274-words-image:g5v1-l26-c14-u9274-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u6734.webp",
         "label": "朴实",
-        "alt": "朴实形容不浮夸，真实自然 图中“木”与“卜”按左右结构自然长成“朴”。"
+        "alt": "质朴名言字字珠玑；“读书好，多读书，读好书”，这九字真言质朴无华，成为指引一生的座右铭 图中“木”与“卜”按左右结构自然长成“朴”。"
       }
     }
   },
@@ -457,7 +457,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u6ca5.webp",
       "label": "呕心沥血",
-      "alt": "呕心沥血比喻费尽心思和精力 图中“氵”与“历”按左右结构自然长成“沥”。"
+      "alt": "呕心沥血精益求精；写作需要呕心沥血的构思与反复打磨，唯有用真情实感倾注的文字才能打动读者 图中“氵”与“历”按左右结构自然长成“沥”。"
     },
     "scene": {
       "scene": "左边三股水滴形成“氵”，右边山崖下弯曲手臂用力挤压沿“历”滴出最后水珠，合成一滴滴的“沥”。",
@@ -476,12 +476,12 @@ export const characterMedia = {
       "g5v1-l26-c15-u6ca5-words-image:g5v1-l26-c15-u6ca5-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u7cae.webp",
         "label": "粮食",
-        "alt": "粮食是供人食用的谷物、豆类和薯类等食物原料 图中“米”与“良”按左右结构自然长成“粮”。"
+        "alt": "粮食作物离不开阳光滋养；充足的日照使庄稼茁壮成长，为人类生活提供了丰富的粮食来源 图中“米”与“良”按左右结构自然长成“粮”。"
       },
       "g5v1-l26-c15-u6ca5-words-image:g5v1-l26-c15-u6ca5-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u6ca5.webp",
         "label": "呕心沥血",
-        "alt": "呕心沥血比喻费尽心思和精力 图中“氵”与“历”按左右结构自然长成“沥”。"
+        "alt": "呕心沥血精益求精；写作需要呕心沥血的构思与反复打磨，唯有用真情实感倾注的文字才能打动读者 图中“氵”与“历”按左右结构自然长成“沥”。"
       }
     }
   }

@@ -6,7 +6,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u6084.webp",
       "label": "悄没声儿",
-      "alt": "“悄没声儿”表示一点声音也没有，这里读qiǎo；“悄悄”中常读qiāo 图中“忄”与“肖”按左右结构自然长成“悄”。"
+      "alt": "悄没声儿月影潜入；中秋夜月亮悄悄爬上窗台照亮竹帘，孩子们惊喜地发现了月亮的踪迹 图中“忄”与“肖”按左右结构自然长成“悄”。"
     },
     "scene": {
       "scene": "左边安静收拢的心灯形成“忄”，右边小月形灯藏在树梢般的架子下沿“肖”不发声，组成“悄”。",
@@ -25,12 +25,12 @@ export const characterMedia = {
       "g5v1-l23-c01-u6084-words-image:g5v1-l23-c01-u6084-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u679a.webp",
         "label": "一枚",
-        "alt": "枚是量词，可以用来数较小、形状相近的东西 图中“木”与“⺙”按左右结构自然长成“枚”。"
+        "alt": "枚是用于计算细长物件的量词；一枚火箭携带着巨大的能量冲向太空，展现了科技的力量 图中“木”与“⺙”按左右结构自然长成“枚”。"
       },
       "g5v1-l23-c01-u6084-words-image:g5v1-l23-c01-u6084-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u6084.webp",
         "label": "悄没声儿",
-        "alt": "“悄没声儿”表示一点声音也没有，这里读qiǎo；“悄悄”中常读qiāo 图中“忄”与“肖”按左右结构自然长成“悄”。"
+        "alt": "悄没声儿月影潜入；中秋夜月亮悄悄爬上窗台照亮竹帘，孩子们惊喜地发现了月亮的踪迹 图中“忄”与“肖”按左右结构自然长成“悄”。"
       }
     }
   },
@@ -38,7 +38,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u7d2f.webp",
       "label": "累累",
-      "alt": "“累累”在课文中形容接连成串，这里读léi；表示疲劳时读lèi 图中“田”与“糸”按上下结构自然长成“累”。"
+      "alt": "累累骨朵含苞待放；桂花树上挂满累累的花骨朵，在皎洁月光下散发着若有若无的清香 图中“田”与“糸”按上下结构自然长成“累”。"
     },
     "scene": {
       "scene": "上方一格格果园形成“田”，下方长丝穿起许多小果形成“糸”，一串接一串，组成“累”。",
@@ -47,7 +47,7 @@ export const characterMedia = {
         "下方长丝穿起许多小果形成“糸”。"
       ]
     },
-    "transcript": "“累累的骨朵儿”里，累读第二声，表示接连成串，不能读成疲累的第四声。累是上下结构，上面像田格，下边绞丝底收拢。可以想象一串花骨朵沿细丝垂下，一个挨着一个，这个场景帮助记形。累累形容数量多，成串相连。月光落在院里，孩子看见桂树上累累的骨朵儿，也继续追寻月亮的踪迹。",
+    "transcript": "累，累累的累，读第二声。它是上下结构，上面的“田”像整齐排列的果实，下边的绞丝底像细丝绳将它们串连在一起，层层叠挂即为累。累累形容接连成串、数量繁多。课文中月光洒在中秋庭院，孩子们看见桂树上挂满累累的花骨朵，在芳香中开启了充满诗意的寻月历程。",
     "practiceOptionVisuals": {
       "g5v1-l23-c02-u7d2f-words-image:g5v1-l23-c02-u7d2f-words-image-2": {
         "src": "/illustrations/meanings/m08.webp",
@@ -57,12 +57,12 @@ export const characterMedia = {
       "g5v1-l23-c02-u7d2f-words-image:g5v1-l23-c02-u7d2f-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u4e43.webp",
         "label": "乃至",
-        "alt": "乃是文言词，在不同句子中可以表示“是”“于是”等意思 图中“乃”按独体结构自然长成“乃”。"
+        "alt": "乃至于此表示甚至如此；陆游临终前至死不忘收复中原，爱国赤诚感人肺腑 图中“乃”按独体结构自然长成“乃”。"
       },
       "g5v1-l23-c02-u7d2f-words-image:g5v1-l23-c02-u7d2f-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u7d2f.webp",
         "label": "累累",
-        "alt": "“累累”在课文中形容接连成串，这里读léi；表示疲劳时读lèi 图中“田”与“糸”按上下结构自然长成“累”。"
+        "alt": "累累骨朵含苞待放；桂花树上挂满累累的花骨朵，在皎洁月光下散发着若有若无的清香 图中“田”与“糸”按上下结构自然长成“累”。"
       }
     }
   },
@@ -70,7 +70,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u5ae6.webp",
       "label": "嫦娥",
-      "alt": "嫦娥是中国古代神话中居住在月宫的人物 图中“女”与“常”按左右结构自然长成“嫦”。"
+      "alt": "嫦娥仙子月宫弄影；孩子们听奶奶讲起嫦娥与玉兔的神话，在纯真的想象中追寻月亮的美好 图中“女”与“常”按左右结构自然长成“嫦”。"
     },
     "scene": {
       "scene": "左边飘带人物收成“女”，右边月宫屋顶、垂帘和方形宫门沿“常”搭起，人物站在月宫旁，组成“嫦”。",
@@ -79,12 +79,12 @@ export const characterMedia = {
         "右边月宫屋顶、垂帘和方形宫门沿“常”搭起。"
       ]
     },
-    "transcript": "嫦娥的嫦，读第二声。从左往右看，嫦先写女字旁，右边是经常的常，写时左窄右宽。可以想象月宫中的女子站在长长云带旁，衣袖被月光照亮，这只是神话助记画面。嫦娥是中国古代月亮神话中的人物。这一课里孩子听奶奶讲起嫦娥，月亮便有了故事，也把一家人的寻月游戏带进想象。",
+    "transcript": "嫦娥的嫦，读第二声。嫦是左右结构，左边女字旁点明女子身份，右边的“常”提示读音，书写时左窄右宽。看图时，月宫仙子倚在祥云与桂树旁，衣袂飘飘。嫦娥是中国古代月亮神话中的仙子。课文里，孩子们听奶奶讲起嫦娥的故事，在中秋月夜展开了充满童趣的寻月之旅。",
     "practiceOptionVisuals": {
       "g5v1-l23-c03-u5ae6-words-image:g5v1-l23-c03-u5ae6-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u5ae6.webp",
         "label": "嫦娥",
-        "alt": "嫦娥是中国古代神话中居住在月宫的人物 图中“女”与“常”按左右结构自然长成“嫦”。"
+        "alt": "嫦娥仙子月宫弄影；孩子们听奶奶讲起嫦娥与玉兔的神话，在纯真的想象中追寻月亮的美好 图中“女”与“常”按左右结构自然长成“嫦”。"
       },
       "g5v1-l23-c03-u5ae6-words-image:g5v1-l23-c03-u5ae6-words-image-0": {
         "src": "/illustrations/meanings/m07.webp",
@@ -94,7 +94,7 @@ export const characterMedia = {
       "g5v1-l23-c03-u5ae6-words-image:g5v1-l23-c03-u5ae6-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u5632.webp",
         "label": "嘲笑",
-        "alt": "嘲笑是用言语或表情取笑别人，容易伤害他人 图中“口”与“朝”按左右结构自然长成“嘲”。"
+        "alt": "嘲笑讥讽不足为惧；面对外人的冷眼与嘲笑，父子俩乘坐一叶扁舟坚定前行，矢志不渝 图中“口”与“朝”按左右结构自然长成“嘲”。"
       }
     }
   },
@@ -102,7 +102,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u5a25.webp",
       "label": "嫦娥",
-      "alt": "嫦娥是中国古代关于月亮的神话人物 图中“女”与“我”按左右结构自然长成“娥”。"
+      "alt": "仙娥弄月童趣盎然；美丽的传说为静谧的月夜抹上了一层神秘色彩，点燃了孩子们的探索热情 图中“女”与“我”按左右结构自然长成“娥”。"
     },
     "scene": {
       "scene": "左边飘带人物形成“女”，右边她手持长戈、身姿和斜线沿“我”舒展，合成仪态优美的“娥”。",
@@ -121,12 +121,12 @@ export const characterMedia = {
       "g5v1-l23-c04-u5a25-words-image:g5v1-l23-c04-u5a25-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u50fb.webp",
         "label": "偏僻",
-        "alt": "偏僻形容地方离主要道路或人群较远，来往不方便 图中“亻”与“辟”按左右结构自然长成“僻”。"
+        "alt": "偏僻乡间求学不易；为了让孩子走出偏僻乡村开阔眼界，父亲倾尽全力支持孩子读书求学 图中“亻”与“辟”按左右结构自然长成“僻”。"
       },
       "g5v1-l23-c04-u5a25-words-image:g5v1-l23-c04-u5a25-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u5a25.webp",
         "label": "嫦娥",
-        "alt": "嫦娥是中国古代关于月亮的神话人物 图中“女”与“我”按左右结构自然长成“娥”。"
+        "alt": "仙娥弄月童趣盎然；美丽的传说为静谧的月夜抹上了一层神秘色彩，点燃了孩子们的探索热情 图中“女”与“我”按左右结构自然长成“娥”。"
       }
     }
   },
@@ -134,7 +134,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u5ac9.webp",
       "label": "嫉妒",
-      "alt": "嫉妒是看见别人比自己好而产生不舒服甚至怨恨的心理 图中“女”与“疾”按左右结构自然长成“嫉”。"
+      "alt": "心生嫉妒纯真可爱；听说月亮跑进了三妹的眼睛里，大家忍不住心生羡慕与小小的嫉妒，童趣盎然 图中“女”与“疾”按左右结构自然长成“嫉”。"
     },
     "scene": {
       "scene": "左边人物形成“女”，右边病床帘下的短箭沿“疾”刺向心口，提醒这种情绪会伤人伤己，组成“嫉”。",
@@ -143,7 +143,7 @@ export const characterMedia = {
         "右边病床帘下的短箭沿“疾”刺向心口。"
       ]
     },
-    "transcript": "看到别人得到喜爱，自己心里不舒服，可能是嫉妒，嫉读第二声。嫉按左右排列，女字旁在左，右边是疾；女字旁不表示女性爱嫉妒。可以想象心里冒出急躁火气，先停下来看看自己在意什么，这个场景帮助记形。嫉妒会让人只盯着别人拥有的东西。孩子听见月亮属于三妹，心里嫉妒，也显出争月亮时真实的童心。",
+    "transcript": "嫉，嫉妒的嫉，读第二声。它是左右结构，左边是女字旁，右边的“疾”提示读音，两边并列组合成嫉。嫉妒是因为别人拥有长处或喜爱而心生不平。课文里孩子们争论月亮究竟属于谁，当听说月亮在三妹眼里时大家心生嫉妒，纯真而生动地流露出孩童争月时真实有趣的心理。",
     "practiceOptionVisuals": {
       "g5v1-l23-c05-u5ac9-words-image:g5v1-l23-c05-u5ac9-words-image-0": {
         "src": "/illustrations/meanings/m06.webp",
@@ -153,12 +153,12 @@ export const characterMedia = {
       "g5v1-l23-c05-u5ac9-words-image:g5v1-l23-c05-u5ac9-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u9c81.webp",
         "label": "鲁莽",
-        "alt": "鲁莽形容说话做事不细想，行动冒失 图中“鱼”与“日”按上下结构自然长成“鲁”。"
+        "alt": "鲁莽好汉性格率真；鲁智深虽性格有些鲁莽却嫉恶如仇、重情重义，给作者留下了深刻印象 图中“鱼”与“日”按上下结构自然长成“鲁”。"
       },
       "g5v1-l23-c05-u5ac9-words-image:g5v1-l23-c05-u5ac9-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u5ac9.webp",
         "label": "嫉妒",
-        "alt": "嫉妒是看见别人比自己好而产生不舒服甚至怨恨的心理 图中“女”与“疾”按左右结构自然长成“嫉”。"
+        "alt": "心生嫉妒纯真可爱；听说月亮跑进了三妹的眼睛里，大家忍不住心生羡慕与小小的嫉妒，童趣盎然 图中“女”与“疾”按左右结构自然长成“嫉”。"
       }
     }
   },
@@ -166,7 +166,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u5992.webp",
       "label": "嫉妒",
-      "alt": "嫉妒会让人只盯着别人的长处，忽略自己的成长 图中“女”与“户”按左右结构自然长成“妒”。"
+      "alt": "争月妒月展现童心；孩子们在院子里、小河中到处寻找月亮，发现每个人心里都拥有一轮明月 图中“女”与“户”按左右结构自然长成“妒”。"
     },
     "scene": {
       "scene": "左边侧身人物形成“女”，右边紧闭单扇门形成“户”，人物把心门关住，合成“妒”。",
@@ -190,7 +190,7 @@ export const characterMedia = {
       "g5v1-l23-c06-u5992-words-image:g5v1-l23-c06-u5992-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u5992.webp",
         "label": "嫉妒",
-        "alt": "嫉妒会让人只盯着别人的长处，忽略自己的成长 图中“女”与“户”按左右结构自然长成“妒”。"
+        "alt": "争月妒月展现童心；孩子们在院子里、小河中到处寻找月亮，发现每个人心里都拥有一轮明月 图中“女”与“户”按左右结构自然长成“妒”。"
       }
     }
   },
@@ -198,7 +198,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u74f7.webp",
       "label": "瓷器",
-      "alt": "瓷器是用瓷土制成、经过高温烧制的器物 图中“次”与“瓦”按上下结构自然长成“瓷”。"
+      "alt": "瓷盆映月清光荡漾；月影落在装满清水的瓷盆中央，孩子们用小手掬起水月，捧起了整个世界的纯真 图中“次”与“瓦”按上下结构自然长成“瓷”。"
     },
     "scene": {
       "scene": "上方冰纹与张口人物沿“次”排成烧制前的釉纹，下方圆腹瓦器形成“瓦”，上下烧成一件“瓷”。",
@@ -212,7 +212,7 @@ export const characterMedia = {
       "g5v1-l23-c07-u74f7-words-image:g5v1-l23-c07-u74f7-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u74f7.webp",
         "label": "瓷器",
-        "alt": "瓷器是用瓷土制成、经过高温烧制的器物 图中“次”与“瓦”按上下结构自然长成“瓷”。"
+        "alt": "瓷盆映月清光荡漾；月影落在装满清水的瓷盆中央，孩子们用小手掬起水月，捧起了整个世界的纯真 图中“次”与“瓦”按上下结构自然长成“瓷”。"
       },
       "g5v1-l23-c07-u74f7-words-image:g5v1-l23-c07-u74f7-words-image-0": {
         "src": "/illustrations/meanings/m04.webp",

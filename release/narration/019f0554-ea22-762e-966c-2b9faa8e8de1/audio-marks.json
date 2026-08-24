@@ -3,515 +3,654 @@
     {
       "index": 0,
       "char": "原",
-      "start": 0.32,
-      "end": 0.64
+      "start": 0.08,
+      "end": 0.48
     },
     {
       "index": 1,
       "char": "平",
-      "start": 1.12,
-      "end": 1.44
+      "start": 0.72,
+      "end": 0.96
     },
     {
       "index": 2,
       "char": "原",
-      "start": 1.44,
-      "end": 1.6
+      "start": 0.96,
+      "end": 1.12
     },
     {
       "index": 3,
       "char": "的",
-      "start": 1.6,
-      "end": 1.68
+      "start": 1.12,
+      "end": 1.2
     },
     {
       "index": 4,
       "char": "原",
-      "start": 1.68,
-      "end": 2.0
+      "start": 1.2,
+      "end": 1.52
     },
     {
       "index": 5,
-      "char": "它",
-      "start": 2.24,
-      "end": 2.4
+      "char": "读",
+      "start": 1.76,
+      "end": 1.92
     },
     {
       "index": 6,
-      "char": "是",
-      "start": 2.4,
-      "end": 2.64
+      "char": "第",
+      "start": 1.92,
+      "end": 2.08
     },
     {
       "index": 7,
-      "char": "左",
-      "start": 2.64,
-      "end": 2.72
+      "char": "二",
+      "start": 2.08,
+      "end": 2.24
     },
     {
       "index": 8,
-      "char": "上",
-      "start": 2.8,
-      "end": 3.04
+      "char": "声",
+      "start": 2.24,
+      "end": 2.64
     },
     {
       "index": 9,
-      "char": "包",
-      "start": 3.04,
-      "end": 3.28
-    },
-    {
-      "index": 10,
-      "char": "围",
-      "start": 3.28,
-      "end": 3.36
-    },
-    {
-      "index": 11,
-      "char": "结",
+      "char": "它",
       "start": 3.36,
       "end": 3.52
     },
     {
-      "index": 12,
-      "char": "构",
+      "index": 10,
+      "char": "是",
       "start": 3.52,
+      "end": 3.68
+    },
+    {
+      "index": 11,
+      "char": "左",
+      "start": 3.68,
       "end": 3.84
     },
     {
+      "index": 12,
+      "char": "上",
+      "start": 3.84,
+      "end": 4.08
+    },
+    {
       "index": 13,
-      "char": "外",
-      "start": 4.4,
-      "end": 4.56
+      "char": "包",
+      "start": 4.08,
+      "end": 4.24
     },
     {
       "index": 14,
-      "char": "面",
-      "start": 4.56,
-      "end": 4.8
+      "char": "围",
+      "start": 4.24,
+      "end": 4.4
     },
     {
       "index": 15,
-      "char": "像",
-      "start": 4.8,
-      "end": 4.96
+      "char": "结",
+      "start": 4.4,
+      "end": 4.64
     },
     {
       "index": 16,
-      "char": "山",
-      "start": 4.96,
-      "end": 5.28
+      "char": "构",
+      "start": 4.64,
+      "end": 4.88
     },
     {
       "index": 17,
-      "char": "崖",
+      "char": "左",
       "start": 5.28,
-      "end": 5.6
+      "end": 5.44
     },
     {
       "index": 18,
-      "char": "里",
-      "start": 5.84,
-      "end": 6.0
+      "char": "上",
+      "start": 5.52,
+      "end": 5.68
     },
     {
       "index": 19,
-      "char": "面",
-      "start": 6.0,
-      "end": 6.16
+      "char": "方",
+      "start": 5.68,
+      "end": 5.84
     },
     {
       "index": 20,
-      "char": "可",
-      "start": 6.16,
-      "end": 6.32
+      "char": "的",
+      "start": 5.84,
+      "end": 5.92
     },
     {
       "index": 21,
-      "char": "以",
-      "start": 6.32,
+      "char": "厂",
+      "start": 5.92,
       "end": 6.4
     },
     {
       "index": 22,
-      "char": "想",
-      "start": 6.4,
-      "end": 6.72
+      "char": "像",
+      "start": 6.56,
+      "end": 6.88
     },
     {
       "index": 23,
-      "char": "成",
-      "start": 6.72,
-      "end": 6.96
+      "char": "广",
+      "start": 6.88,
+      "end": 7.04
     },
     {
       "index": 24,
-      "char": "一",
-      "start": 6.96,
-      "end": 7.12
+      "char": "袤",
+      "start": 7.04,
+      "end": 7.2
     },
     {
       "index": 25,
-      "char": "眼",
-      "start": 7.12,
-      "end": 7.28
+      "char": "开",
+      "start": 7.2,
+      "end": 7.44
     },
     {
       "index": 26,
-      "char": "泉",
-      "start": 7.28,
-      "end": 7.52
+      "char": "阔",
+      "start": 7.44,
+      "end": 7.6
     },
     {
       "index": 27,
-      "char": "水",
-      "start": 7.52,
-      "end": 7.84
+      "char": "的",
+      "start": 7.6,
+      "end": 7.68
     },
     {
       "index": 28,
-      "char": "从",
-      "start": 7.92,
-      "end": 8.08
+      "char": "山",
+      "start": 7.68,
+      "end": 8
     },
     {
       "index": 29,
       "char": "崖",
-      "start": 8.08,
+      "start": 8,
       "end": 8.24
     },
     {
       "index": 30,
-      "char": "下",
-      "start": 8.24,
-      "end": 8.48
+      "char": "内",
+      "start": 8.64,
+      "end": 8.88
     },
     {
       "index": 31,
-      "char": "流",
-      "start": 8.48,
-      "end": 8.64
+      "char": "部",
+      "start": 8.88,
+      "end": 9.04
     },
     {
       "index": 32,
-      "char": "出",
-      "start": 8.64,
-      "end": 8.96
+      "char": "的",
+      "start": 9.04,
+      "end": 9.12
     },
     {
       "index": 33,
-      "char": "山",
-      "start": 9.2,
-      "end": 9.6
+      "char": "泉",
+      "start": 9.12,
+      "end": 9.52
     },
     {
       "index": 34,
-      "char": "崖",
-      "start": 9.6,
-      "end": 9.76
-    },
-    {
-      "index": 35,
-      "char": "和",
+      "char": "像",
       "start": 9.76,
       "end": 9.92
     },
     {
-      "index": 36,
-      "char": "泉",
+      "index": 35,
+      "char": "源",
       "start": 9.92,
       "end": 10.16
     },
     {
-      "index": 37,
-      "char": "水",
+      "index": 36,
+      "char": "源",
       "start": 10.16,
       "end": 10.32
     },
     {
-      "index": 38,
-      "char": "的",
+      "index": 37,
+      "char": "流",
       "start": 10.32,
-      "end": 10.4
+      "end": 10.48
     },
     {
-      "index": 39,
-      "char": "画",
-      "start": 10.4,
+      "index": 38,
+      "char": "出",
+      "start": 10.48,
       "end": 10.64
     },
     {
-      "index": 40,
-      "char": "面",
+      "index": 39,
+      "char": "的",
       "start": 10.64,
-      "end": 10.88
+      "end": 10.72
+    },
+    {
+      "index": 40,
+      "char": "清",
+      "start": 10.72,
+      "end": 11.04
     },
     {
       "index": 41,
-      "char": "只",
-      "start": 11.12,
-      "end": 11.28
+      "char": "泉",
+      "start": 11.04,
+      "end": 11.36
     },
     {
       "index": 42,
-      "char": "帮",
-      "start": 11.28,
-      "end": 11.44
+      "char": "崖",
+      "start": 11.92,
+      "end": 12.08
     },
     {
       "index": 43,
-      "char": "助",
-      "start": 11.44,
-      "end": 11.6
+      "char": "下",
+      "start": 12.08,
+      "end": 12.32
     },
     {
       "index": 44,
-      "char": "记",
-      "start": 11.6,
-      "end": 11.84
+      "char": "流",
+      "start": 12.32,
+      "end": 12.48
     },
     {
       "index": 45,
-      "char": "字",
-      "start": 11.84,
-      "end": 12.16
-    },
-    {
-      "index": 46,
-      "char": "不",
+      "char": "泉",
       "start": 12.48,
-      "end": 12.64
-    },
-    {
-      "index": 47,
-      "char": "说",
-      "start": 12.64,
       "end": 12.88
     },
     {
-      "index": 48,
-      "char": "明",
-      "start": 12.88,
-      "end": 13.12
-    },
-    {
-      "index": 49,
-      "char": "这",
-      "start": 13.12,
+      "index": 46,
+      "char": "延",
+      "start": 13.04,
       "end": 13.2
     },
     {
-      "index": 50,
-      "char": "个",
+      "index": 47,
+      "char": "伸",
       "start": 13.2,
-      "end": 13.28
+      "end": 13.44
     },
     {
-      "index": 51,
-      "char": "词",
-      "start": 13.28,
-      "end": 13.52
-    },
-    {
-      "index": 52,
-      "char": "的",
-      "start": 13.52,
+      "index": 48,
+      "char": "开",
+      "start": 13.44,
       "end": 13.6
     },
     {
-      "index": 53,
+      "index": 49,
       "char": "来",
       "start": 13.6,
       "end": 13.76
     },
     {
-      "index": 54,
-      "char": "历",
+      "index": 50,
+      "char": "即",
       "start": 13.76,
+      "end": 13.92
+    },
+    {
+      "index": 51,
+      "char": "为",
+      "start": 13.92,
       "end": 14.08
     },
     {
+      "index": 52,
+      "char": "原",
+      "start": 14.08,
+      "end": 14.4
+    },
+    {
+      "index": 53,
+      "char": "平",
+      "start": 14.64,
+      "end": 14.88
+    },
+    {
+      "index": 54,
+      "char": "原",
+      "start": 14.88,
+      "end": 15.12
+    },
+    {
       "index": 55,
-      "char": "课",
-      "start": 14.32,
-      "end": 14.56
+      "char": "指",
+      "start": 15.12,
+      "end": 15.28
     },
     {
       "index": 56,
-      "char": "文",
-      "start": 14.56,
-      "end": 14.72
+      "char": "宽",
+      "start": 15.28,
+      "end": 15.52
     },
     {
       "index": 57,
-      "char": "写",
-      "start": 14.72,
-      "end": 14.96
+      "char": "广",
+      "start": 15.52,
+      "end": 15.76
     },
     {
       "index": 58,
-      "char": "冀",
-      "start": 14.96,
-      "end": 15.2
+      "char": "平",
+      "start": 15.76,
+      "end": 15.92
     },
     {
       "index": 59,
-      "char": "中",
-      "start": 15.2,
-      "end": 15.36
+      "char": "坦",
+      "start": 15.92,
+      "end": 16.08
     },
     {
       "index": 60,
-      "char": "平",
-      "start": 15.36,
-      "end": 15.6
+      "char": "的",
+      "start": 16.08,
+      "end": 16.24
     },
     {
       "index": 61,
-      "char": "原",
-      "start": 15.6,
-      "end": 15.84
+      "char": "大",
+      "start": 16.24,
+      "end": 16.4
     },
     {
       "index": 62,
-      "char": "地",
-      "start": 15.84,
-      "end": 16.0
-    },
-    {
-      "index": 63,
-      "char": "底",
-      "start": 16.0,
-      "end": 16.16
-    },
-    {
-      "index": 64,
-      "char": "下",
-      "start": 16.16,
-      "end": 16.48
-    },
-    {
-      "index": 65,
-      "char": "有",
-      "start": 16.48,
+      "char": "片",
+      "start": 16.4,
       "end": 16.64
     },
     {
-      "index": 66,
-      "char": "无",
+      "index": 63,
+      "char": "土",
       "start": 16.64,
       "end": 16.8
     },
     {
-      "index": 67,
-      "char": "数",
+      "index": 64,
+      "char": "地",
       "start": 16.8,
       "end": 17.04
     },
     {
+      "index": 65,
+      "char": "课",
+      "start": 17.36,
+      "end": 17.52
+    },
+    {
+      "index": 66,
+      "char": "文",
+      "start": 17.52,
+      "end": 17.68
+    },
+    {
+      "index": 67,
+      "char": "写",
+      "start": 17.68,
+      "end": 17.92
+    },
+    {
       "index": 68,
-      "char": "地",
-      "start": 17.04,
-      "end": 17.2
+      "char": "冀",
+      "start": 17.92,
+      "end": 18.08
     },
     {
       "index": 69,
-      "char": "道",
-      "start": 17.2,
-      "end": 17.52
+      "char": "中",
+      "start": 18.08,
+      "end": 18.24
     },
     {
       "index": 70,
       "char": "平",
-      "start": 17.68,
-      "end": 18.0
+      "start": 18.24,
+      "end": 18.48
     },
     {
       "index": 71,
       "char": "原",
-      "start": 18.0,
-      "end": 18.24
+      "start": 18.48,
+      "end": 18.8
     },
     {
       "index": 72,
-      "char": "就",
-      "start": 18.24,
-      "end": 18.4
+      "char": "地",
+      "start": 18.88,
+      "end": 19.04
     },
     {
       "index": 73,
-      "char": "是",
-      "start": 18.4,
-      "end": 18.56
+      "char": "底",
+      "start": 19.04,
+      "end": 19.12
     },
     {
       "index": 74,
-      "char": "宽",
-      "start": 18.56,
-      "end": 18.88
-    },
-    {
-      "index": 75,
-      "char": "广",
-      "start": 18.88,
-      "end": 19.2
-    },
-    {
-      "index": 76,
-      "char": "而",
-      "start": 19.28,
+      "char": "下",
+      "start": 19.2,
       "end": 19.36
     },
     {
-      "index": 77,
-      "char": "较",
+      "index": 75,
+      "char": "修",
       "start": 19.36,
-      "end": 19.52
+      "end": 19.6
+    },
+    {
+      "index": 76,
+      "char": "筑",
+      "start": 19.6,
+      "end": 19.76
+    },
+    {
+      "index": 77,
+      "char": "起",
+      "start": 19.76,
+      "end": 19.92
     },
     {
       "index": 78,
-      "char": "平",
-      "start": 19.52,
-      "end": 19.84
-    },
-    {
-      "index": 79,
-      "char": "坦",
-      "start": 19.84,
-      "end": 20.0
-    },
-    {
-      "index": 80,
-      "char": "的",
-      "start": 20.0,
+      "char": "无",
+      "start": 19.92,
       "end": 20.08
     },
     {
-      "index": 81,
-      "char": "土",
+      "index": 79,
+      "char": "数",
       "start": 20.08,
-      "end": 20.24
+      "end": 20.32
+    },
+    {
+      "index": 80,
+      "char": "神",
+      "start": 20.32,
+      "end": 20.48
+    },
+    {
+      "index": 81,
+      "char": "奇",
+      "start": 20.48,
+      "end": 20.64
     },
     {
       "index": 82,
       "char": "地",
-      "start": 20.24,
-      "end": 20.56
+      "start": 20.64,
+      "end": 20.88
+    },
+    {
+      "index": 83,
+      "char": "道",
+      "start": 20.88,
+      "end": 21.12
+    },
+    {
+      "index": 84,
+      "char": "展",
+      "start": 21.52,
+      "end": 21.68
+    },
+    {
+      "index": 85,
+      "char": "现",
+      "start": 21.68,
+      "end": 21.84
+    },
+    {
+      "index": 86,
+      "char": "了",
+      "start": 21.84,
+      "end": 22
+    },
+    {
+      "index": 87,
+      "char": "平",
+      "start": 22,
+      "end": 22.16
+    },
+    {
+      "index": 88,
+      "char": "原",
+      "start": 22.16,
+      "end": 22.32
+    },
+    {
+      "index": 89,
+      "char": "人",
+      "start": 22.32,
+      "end": 22.48
+    },
+    {
+      "index": 90,
+      "char": "民",
+      "start": 22.48,
+      "end": 22.8
+    },
+    {
+      "index": 91,
+      "char": "在",
+      "start": 22.88,
+      "end": 23.04
+    },
+    {
+      "index": 92,
+      "char": "辽",
+      "start": 23.04,
+      "end": 23.28
+    },
+    {
+      "index": 93,
+      "char": "阔",
+      "start": 23.28,
+      "end": 23.44
+    },
+    {
+      "index": 94,
+      "char": "大",
+      "start": 23.44,
+      "end": 23.6
+    },
+    {
+      "index": 95,
+      "char": "地",
+      "start": 23.6,
+      "end": 23.84
+    },
+    {
+      "index": 96,
+      "char": "上",
+      "start": 23.84,
+      "end": 24.08
+    },
+    {
+      "index": 97,
+      "char": "抗",
+      "start": 24.16,
+      "end": 24.4
+    },
+    {
+      "index": 98,
+      "char": "击",
+      "start": 24.4,
+      "end": 24.56
+    },
+    {
+      "index": 99,
+      "char": "敌",
+      "start": 24.56,
+      "end": 24.72
+    },
+    {
+      "index": 100,
+      "char": "寇",
+      "start": 24.72,
+      "end": 24.88
+    },
+    {
+      "index": 101,
+      "char": "的",
+      "start": 24.88,
+      "end": 25.04
+    },
+    {
+      "index": 102,
+      "char": "无",
+      "start": 25.04,
+      "end": 25.12
+    },
+    {
+      "index": 103,
+      "char": "穷",
+      "start": 25.12,
+      "end": 25.36
+    },
+    {
+      "index": 104,
+      "char": "智",
+      "start": 25.36,
+      "end": 25.6
+    },
+    {
+      "index": 105,
+      "char": "慧",
+      "start": 25.6,
+      "end": 25.76
     }
   ],
-  "transcript": "原，平原的原。它是左上包围结构，外面像山崖，里面可以想成一眼泉水从崖下流出。山崖和泉水的画面只帮助记字，不说明这个词的来历。课文写冀中平原地底下有无数地道，平原就是宽广而较平坦的土地。",
+  "transcript": "原，平原的原，读第二声。它是左上包围结构，左上方的“厂”像广袤开阔的山崖，内部的“泉”像源源流出的清泉，崖下流泉延伸开来即为原。平原指宽广平坦的大片土地。课文写冀中平原地底下修筑起无数神奇地道，展现了平原人民在辽阔大地上抗击敌寇的无穷智慧。",
   "voice_reference": "封",
   "reference_id": "019f0554-ea22-762e-966c-32d678fd6bf6",
   "reference_sha256": "eb07e06ee13a20ee4577b1b481df6d33d42127c1b3876bfa5d5e5362ae349f19",
   "timing_source": "qwen3-forced-aligner",
-  "script_version": "narration-v3",
-  "model": "mlx-community/Qwen3-TTS-12Hz-1.7B-Base-4bit",
-  "model_revision": "37e955a1deb861c088ae5f3a67043185f3d1a60c",
-  "generation_policy": "qwen3-clone-2026-08-22-v3",
-  "seed": 20260822,
-  "content_hash": "a9d96533a090abf6a558",
-  "duration": 20.628,
+  "script_version": "narration-fish-v1",
+  "model": "fishaudio/s2.1-pro-free",
+  "model_revision": "s2.1-pro-free",
+  "generation_policy": "narration-fish-s2.1-zero-shot-2026-08-24",
+  "seed": null,
+  "content_hash": "655431d80112e7dcfa4c",
   "alignment_model": "mlx-community/Qwen3-ForcedAligner-0.6B-8bit",
-  "aligned_audio_sha256": "fe88a0a9cb313e0e3d183751170c0574ee493baed6d2750b7344876b449914fa",
-  "alignment_groups": []
+  "alignment_model_revision": "0e1a68e91d815300c7c9754b2a7639378b23db15",
+  "aligned_audio_sha256": "b33652359e92c3eea4a15f587698992186ac045f495085b0c0ad3c83a5a363f4",
+  "alignment_groups": [],
+  "duration": 25.999
 }

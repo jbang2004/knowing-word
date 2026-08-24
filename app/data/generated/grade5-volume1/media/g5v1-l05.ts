@@ -6,7 +6,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u6c5b.webp",
       "label": "汛期",
-      "alt": "汛期是江河水位集中上涨、需要留意洪水的时段 图中“氵”与“卂”按左右结构自然长成“汛”。"
+      "alt": "汛期是江河水位上涨的时期；每年汛期过后，乡亲们便齐心协力摆放搭石，方便两岸通行 图中“氵”与“卂”按左右结构自然长成“汛”。"
     },
     "scene": {
       "scene": "左边三股上涨水流排成“氵”，右边水位警示杆、横梁和弯钩搭成“卂”，合成“汛”。",
@@ -20,7 +20,7 @@ export const characterMedia = {
       "g5v1-l05-c01-u6c5b-words-image:g5v1-l05-c01-u6c5b-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u6c5b.webp",
         "label": "汛期",
-        "alt": "汛期是江河水位集中上涨、需要留意洪水的时段 图中“氵”与“卂”按左右结构自然长成“汛”。"
+        "alt": "汛期是江河水位上涨的时期；每年汛期过后，乡亲们便齐心协力摆放搭石，方便两岸通行 图中“氵”与“卂”按左右结构自然长成“汛”。"
       },
       "g5v1-l05-c01-u6c5b-words-image:g5v1-l05-c01-u6c5b-words-image-2": {
         "src": "/illustrations/meanings/m04.webp",
@@ -30,7 +30,7 @@ export const characterMedia = {
       "g5v1-l05-c01-u6c5b-words-image:g5v1-l05-c01-u6c5b-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u5ec9.webp",
         "label": "廉颇",
-        "alt": "廉颇是《将相和》中的赵国名将 图中“广”与“兼”按左上包围结构自然长成“廉”。"
+        "alt": "廉颇是赵国勇冠三军的战将；他起初因争功而心生不服，最终在明晓大义后真心悔改 图中“广”与“兼”按左上包围结构自然长成“廉”。"
       }
     }
   },
@@ -38,7 +38,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u633d.webp",
       "label": "挽裤",
-      "alt": "挽留就是拉住或劝说将要离开的人留下来 图中“扌”与“免”按左右结构自然长成“挽”。"
+      "alt": "挽起是卷起衣袖或裤脚；秋凉水冷无法挽裤过溪，搭石就成了人们日常出行必不可少的依靠 图中“扌”与“免”按左右结构自然长成“挽”。"
     },
     "scene": {
       "scene": "左边伸出的手臂形成“扌”，右边一位转身的人和弯带沿“免”的笔画站好，手拉住衣带组成“挽”。",
@@ -52,7 +52,7 @@ export const characterMedia = {
       "g5v1-l05-c02-u633d-words-image:g5v1-l05-c02-u633d-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u633d.webp",
         "label": "挽裤",
-        "alt": "挽留就是拉住或劝说将要离开的人留下来 图中“扌”与“免”按左右结构自然长成“挽”。"
+        "alt": "挽起是卷起衣袖或裤脚；秋凉水冷无法挽裤过溪，搭石就成了人们日常出行必不可少的依靠 图中“扌”与“免”按左右结构自然长成“挽”。"
       },
       "g5v1-l05-c02-u633d-words-image:g5v1-l05-c02-u633d-words-image-2": {
         "src": "/illustrations/meanings/m03.webp",
@@ -70,7 +70,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u95f4.webp",
       "label": "间隔",
-      "alt": "间隔是两个事物之间留出的距离或时间 图中“门”与“日”按上三包围结构自然长成“间”。"
+      "alt": "间隔指两座搭石之间留出的适宜距离；两尺左右的间隔经过精心排布，便于行人稳步踏过 图中“门”与“日”按上三包围结构自然长成“间”。"
     },
     "scene": {
       "scene": "两扇门围成“门”，一轮日光正好停在门缝中央形成“日”，中间留白清楚表现“间”。",
@@ -89,12 +89,12 @@ export const characterMedia = {
       "g5v1-l05-c03-u95f4-words-image:g5v1-l05-c03-u95f4-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u8bf5.webp",
         "label": "诵读",
-        "alt": "诵读就是有声音、有节奏地朗读或背读 图中“讠”与“甬”按左右结构自然长成“诵”。"
+        "alt": "朗朗诵读口诵心惟；读书时口中清晰诵读，心中深入思考，眼口心合一才能真正掌握精髓 图中“讠”与“甬”按左右结构自然长成“诵”。"
       },
       "g5v1-l05-c03-u95f4-words-image:g5v1-l05-c03-u95f4-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u95f4.webp",
         "label": "间隔",
-        "alt": "间隔是两个事物之间留出的距离或时间 图中“门”与“日”按上三包围结构自然长成“间”。"
+        "alt": "间隔指两座搭石之间留出的适宜距离；两尺左右的间隔经过精心排布，便于行人稳步踏过 图中“门”与“日”按上三包围结构自然长成“间”。"
       }
     }
   },
@@ -102,7 +102,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u60f0.webp",
       "label": "懒惰",
-      "alt": "懒惰就是不愿劳动或行动，总想少做事情 图中“忄”与“左”与“月”按左右结构自然长成“惰”。"
+      "alt": "懒惰是不肯勤快出力的心态；乡亲们走过搭石绝不懒惰停留，而是保持匀速，确保步伐轻稳 图中“忄”与“左”与“月”按左右结构自然长成“惰”。"
     },
     "scene": {
       "scene": "左边低垂心灯排成“忄”，右上方人物靠着“左”形椅架，右下方“月”形软垫托住身体，合成“惰”。",
@@ -117,7 +117,7 @@ export const characterMedia = {
       "g5v1-l05-c04-u60f0-words-image:g5v1-l05-c04-u60f0-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u60f0.webp",
         "label": "懒惰",
-        "alt": "懒惰就是不愿劳动或行动，总想少做事情 图中“忄”与“左”与“月”按左右结构自然长成“惰”。"
+        "alt": "懒惰是不肯勤快出力的心态；乡亲们走过搭石绝不懒惰停留，而是保持匀速，确保步伐轻稳 图中“忄”与“左”与“月”按左右结构自然长成“惰”。"
       },
       "g5v1-l05-c04-u60f0-words-image:g5v1-l05-c04-u60f0-words-image-2": {
         "src": "/illustrations/meanings/m05.webp",
@@ -135,7 +135,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u8861.webp",
       "label": "平衡",
-      "alt": "平衡就是两边轻重、力量或状态保持相称 图中“彳”与“田”与“大”与“亍”按穿插结构自然长成“衡”。"
+      "alt": "平衡指身体保持稳当不偏斜；踏着搭石快步向前保持平衡，步调整齐宛如一首流动的乐章 图中“彳”与“田”与“大”与“亍”按穿插结构自然长成“衡”。"
     },
     "scene": {
       "scene": "左边行走刻度形成“彳”，中央“田”形秤盘压着“大”形砝码，右边支柱形成“亍”，共同搭成平稳的“衡”。",
@@ -151,7 +151,7 @@ export const characterMedia = {
       "g5v1-l05-c05-u8861-words-image:g5v1-l05-c05-u8861-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u8861.webp",
         "label": "平衡",
-        "alt": "平衡就是两边轻重、力量或状态保持相称 图中“彳”与“田”与“大”与“亍”按穿插结构自然长成“衡”。"
+        "alt": "平衡指身体保持稳当不偏斜；踏着搭石快步向前保持平衡，步调整齐宛如一首流动的乐章 图中“彳”与“田”与“大”与“亍”按穿插结构自然长成“衡”。"
       },
       "g5v1-l05-c05-u8861-words-image:g5v1-l05-c05-u8861-words-image-2": {
         "src": "/illustrations/meanings/m07.webp",
@@ -169,7 +169,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u534f.webp",
       "label": "协调",
-      "alt": "协调就是不同部分互相配合，行动一致 图中“十”与“办”按左右结构自然长成“协”。"
+      "alt": "协调指相互配合一致；一行人走搭石协调有序，前呼后应，充满了默契的人情美 图中“十”与“办”按左右结构自然长成“协”。"
     },
     "scene": {
       "scene": "左边十字联结架形成“十”，右边两个人合力转动绞盘沿“办”的笔画发力，合成“协”。",
@@ -183,7 +183,7 @@ export const characterMedia = {
       "g5v1-l05-c06-u534f-words-image:g5v1-l05-c06-u534f-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u534f.webp",
         "label": "协调",
-        "alt": "协调就是不同部分互相配合，行动一致 图中“十”与“办”按左右结构自然长成“协”。"
+        "alt": "协调指相互配合一致；一行人走搭石协调有序，前呼后应，充满了默契的人情美 图中“十”与“办”按左右结构自然长成“协”。"
       },
       "g5v1-l05-c06-u534f-words-image:g5v1-l05-c06-u534f-words-image-2": {
         "src": "/illustrations/meanings/m07.webp",
@@ -201,7 +201,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u7ef0.webp",
       "label": "人影绰绰",
-      "alt": "绰绰有余表示数量或能力充足，用起来还有剩余 图中“纟”与“卓”按左右结构自然长成“绰”。"
+      "alt": "人影绰绰形容人影摇曳美好的姿态；清晨溪水上映出绰绰人影，构成了山村最动人的晨景 图中“纟”与“卓”按左右结构自然长成“绰”。"
     },
     "scene": {
       "scene": "左边一束丝线盘成“纟”，右边高桌上整齐叠着仍有余量的布匹，桌架沿“卓”站立，合成“绰”。",
@@ -215,7 +215,7 @@ export const characterMedia = {
       "g5v1-l05-c07-u7ef0-words-image:g5v1-l05-c07-u7ef0-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u7ef0.webp",
         "label": "人影绰绰",
-        "alt": "绰绰有余表示数量或能力充足，用起来还有剩余 图中“纟”与“卓”按左右结构自然长成“绰”。"
+        "alt": "人影绰绰形容人影摇曳美好的姿态；清晨溪水上映出绰绰人影，构成了山村最动人的晨景 图中“纟”与“卓”按左右结构自然长成“绰”。"
       },
       "g5v1-l05-c07-u7ef0-words-image:g5v1-l05-c07-u7ef0-words-image-2": {
         "src": "/illustrations/meanings/m06.webp",
@@ -225,7 +225,7 @@ export const characterMedia = {
       "g5v1-l05-c07-u7ef0-words-image:g5v1-l05-c07-u7ef0-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u4efb.webp",
         "label": "任丘",
-        "alt": "任丘是河北省的一座城市，这里的“任”读rén 图中“亻”与“壬”按左右结构自然长成“任”。"
+        "alt": "任丘是河北省的地名；任丘等地的平原上遍布着神奇的地道网络，连通着村村落落 图中“亻”与“壬”按左右结构自然长成“任”。"
       }
     }
   },
@@ -233,7 +233,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u6d2a.webp",
       "label": "洪水",
-      "alt": "洪水是水位猛涨后漫出河道的大水 图中“氵”与“共”按左右结构自然长成“洪”。"
+      "alt": "洪水是漫过河堤的急流；山洪退去后留下的浅滩上，搭石连起了两岸百姓温暖的生活 图中“氵”与“共”按左右结构自然长成“洪”。"
     },
     "scene": {
       "scene": "左边三股大水形成“氵”，右边众人共同抬起的防洪木架沿“共”的笔画展开，合成“洪”。",
@@ -252,12 +252,12 @@ export const characterMedia = {
       "g5v1-l05-c08-u6d2a-words-image:g5v1-l05-c08-u6d2a-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u635f.webp",
         "label": "损失",
-        "alt": "损失是失去原有的人、财物、机会或价值 图中“扌”与“员”按左右结构自然长成“损”。"
+        "alt": "损失惨重令人扼腕叹息；无数孤本文物与稀世奇珍化为乌有，这是全人类文明的巨大损失 图中“扌”与“员”按左右结构自然长成“损”。"
       },
       "g5v1-l05-c08-u6d2a-words-image:g5v1-l05-c08-u6d2a-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u6d2a.webp",
         "label": "洪水",
-        "alt": "洪水是水位猛涨后漫出河道的大水 图中“氵”与“共”按左右结构自然长成“洪”。"
+        "alt": "洪水是漫过河堤的急流；山洪退去后留下的浅滩上，搭石连起了两岸百姓温暖的生活 图中“氵”与“共”按左右结构自然长成“洪”。"
       }
     }
   },
@@ -265,7 +265,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u8bbf.webp",
       "label": "访问",
-      "alt": "访问就是有目的地去看望别人或了解情况 图中“讠”与“方”按左右结构自然长成“访”。"
+      "alt": "访问指登门探望与往来；搭石不仅方便了走亲访友，更将乡亲们朴实互助的心紧紧相连 图中“讠”与“方”按左右结构自然长成“访”。"
     },
     "scene": {
       "scene": "左边问候短句从“讠”形话筒飞出，右边方形门牌和来访路线沿“方”排列，合成“访”。",
@@ -284,12 +284,12 @@ export const characterMedia = {
       "g5v1-l05-c09-u8bbf-words-image:g5v1-l05-c09-u8bbf-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u8df7.webp",
         "label": "跷跷板",
-        "alt": "跷跷板是一种两端轮流升降的儿童游戏设施 图中“⻊”与“尧”按左右结构自然长成“跷”。"
+        "alt": "跷跷板荡起童年欢乐；在赶考途中的庙会上，父亲难得给孩子买了一只小玩具，装满了温情 图中“⻊”与“尧”按左右结构自然长成“跷”。"
       },
       "g5v1-l05-c09-u8bbf-words-image:g5v1-l05-c09-u8bbf-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u8bbf.webp",
         "label": "访问",
-        "alt": "访问就是有目的地去看望别人或了解情况 图中“讠”与“方”按左右结构自然长成“访”。"
+        "alt": "访问指登门探望与往来；搭石不仅方便了走亲访友，更将乡亲们朴实互助的心紧紧相连 图中“讠”与“方”按左右结构自然长成“访”。"
       }
     }
   },
@@ -297,7 +297,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u978b.webp",
       "label": "鞋子",
-      "alt": "鞋子穿在脚上，用来保护脚并帮助行走 图中“革”与“圭”按左右结构自然长成“鞋”。"
+      "alt": "鞋子是行走时的脚部保护；有了平稳的搭石，乡亲们走过溪流不用脱鞋挽裤，出行方便从容 图中“革”与“圭”按左右结构自然长成“鞋”。"
     },
     "scene": {
       "scene": "左边皮革鞋面和系带沿“革”缝合，右边上下两层鞋底土台叠成“圭”，合成一只“鞋”。",
@@ -311,7 +311,7 @@ export const characterMedia = {
       "g5v1-l05-c10-u978b-words-image:g5v1-l05-c10-u978b-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u978b.webp",
         "label": "鞋子",
-        "alt": "鞋子穿在脚上，用来保护脚并帮助行走 图中“革”与“圭”按左右结构自然长成“鞋”。"
+        "alt": "鞋子是行走时的脚部保护；有了平稳的搭石，乡亲们走过溪流不用脱鞋挽裤，出行方便从容 图中“革”与“圭”按左右结构自然长成“鞋”。"
       },
       "g5v1-l05-c10-u978b-words-image:g5v1-l05-c10-u978b-words-image-2": {
         "src": "/illustrations/meanings/m08.webp",
@@ -321,7 +321,7 @@ export const characterMedia = {
       "g5v1-l05-c10-u978b-words-image:g5v1-l05-c10-u978b-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u6094.webp",
         "label": "后悔",
-        "alt": "后悔是事后觉得原来的做法不对，希望能够改正 图中“忄”与“每”按左右结构自然长成“悔”。"
+        "alt": "后悔指事后感到惋惜懊恼；海力布为了乡亲们的生命说出真相，虽然变成石头却无怨无悔 图中“忄”与“每”按左右结构自然长成“悔”。"
       }
     }
   },
@@ -329,7 +329,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u9694.webp",
       "label": "间隔",
-      "alt": "间隔也表示两个事物之间隔着一定距离 图中“阝”与“鬲”按左右结构自然长成“隔”。"
+      "alt": "间隔指两地或两物的空间阻隔；搭石跨越了溪水的阻隔，默默传递着无私奉献的人间温情 图中“阝”与“鬲”按左右结构自然长成“隔”。"
     },
     "scene": {
       "scene": "左边高低土坡形成“阝”，右边锅盖、隔层和支脚搭成“鬲”，像一道分隔两边的屏障，合成“隔”。",
@@ -348,12 +348,12 @@ export const characterMedia = {
       "g5v1-l05-c11-u9694-words-image:g5v1-l05-c11-u9694-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u778c.webp",
         "label": "瞌睡",
-        "alt": "瞌睡是困倦得想闭上眼睛 图中“目”与“盍”按左右结构自然长成“瞌”。"
+        "alt": "瞌睡指困倦想要入眠；牛郎在草棚旁打瞌睡时，老牛忽然开口说话，开启了奇妙故事 图中“目”与“盍”按左右结构自然长成“瞌”。"
       },
       "g5v1-l05-c11-u9694-words-image:g5v1-l05-c11-u9694-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u9694.webp",
         "label": "间隔",
-        "alt": "间隔也表示两个事物之间隔着一定距离 图中“阝”与“鬲”按左右结构自然长成“隔”。"
+        "alt": "间隔指两地或两物的空间阻隔；搭石跨越了溪水的阻隔，默默传递着无私奉献的人间温情 图中“阝”与“鬲”按左右结构自然长成“隔”。"
       }
     }
   },
@@ -361,7 +361,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u61d2.webp",
       "label": "懒惰",
-      "alt": "懒惰是不愿意动脑或动手做应该做的事 图中“忄”与“赖”按左右结构自然长成“懒”。"
+      "alt": "懒惰是遇事推诿不肯动手；若是搭石不稳，无论谁路过都会立刻找石头修垫，绝不偷懒推托 图中“忄”与“赖”按左右结构自然长成“懒”。"
     },
     "scene": {
       "scene": "左边松散心灯组成“忄”，右边人物靠着装满物品的推车，身体和车架沿“赖”的笔画摊开，合成“懒”。",
@@ -375,7 +375,7 @@ export const characterMedia = {
       "g5v1-l05-c12-u61d2-words-image:g5v1-l05-c12-u61d2-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u61d2.webp",
         "label": "懒惰",
-        "alt": "懒惰是不愿意动脑或动手做应该做的事 图中“忄”与“赖”按左右结构自然长成“懒”。"
+        "alt": "懒惰是遇事推诿不肯动手；若是搭石不稳，无论谁路过都会立刻找石头修垫，绝不偷懒推托 图中“忄”与“赖”按左右结构自然长成“懒”。"
       },
       "g5v1-l05-c12-u61d2-words-image:g5v1-l05-c12-u61d2-words-image-0": {
         "src": "/illustrations/meanings/m03.webp",
@@ -385,7 +385,7 @@ export const characterMedia = {
       "g5v1-l05-c12-u61d2-words-image:g5v1-l05-c12-u61d2-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u67dc.webp",
         "label": "书柜",
-        "alt": "书柜是分层收藏和摆放书籍的柜子 图中“木”与“巨”按左右结构自然长成“柜”。"
+        "alt": "书柜是摆放书籍的木柜；小鸟在书柜与书架间灵巧穿梭，把书房当作了温暖的游戏天地 图中“木”与“巨”按左右结构自然长成“柜”。"
       }
     }
   },
@@ -393,7 +393,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u7a33.webp",
       "label": "安稳",
-      "alt": "安稳就是平静、牢靠，不摇晃也不慌乱 图中“禾”与“急”按左右结构自然长成“稳”。"
+      "alt": "安稳指牢靠平稳不摇晃；踏上一块块平稳的搭石，行人心中涌起的是踏实与邻里的信任 图中“禾”与“急”按左右结构自然长成“稳”。"
     },
     "scene": {
       "scene": "左边低垂禾穗形成“禾”，右边双手把心灯稳稳按在屋架下沿“急”排好，合成“稳”。",
@@ -407,7 +407,7 @@ export const characterMedia = {
       "g5v1-l05-c13-u7a33-words-image:g5v1-l05-c13-u7a33-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u7a33.webp",
         "label": "安稳",
-        "alt": "安稳就是平静、牢靠，不摇晃也不慌乱 图中“禾”与“急”按左右结构自然长成“稳”。"
+        "alt": "安稳指牢靠平稳不摇晃；踏上一块块平稳的搭石，行人心中涌起的是踏实与邻里的信任 图中“禾”与“急”按左右结构自然长成“稳”。"
       },
       "g5v1-l05-c13-u7a33-words-image:g5v1-l05-c13-u7a33-words-image-2": {
         "src": "/illustrations/meanings/m07.webp",
@@ -417,7 +417,7 @@ export const characterMedia = {
       "g5v1-l05-c13-u7a33-words-image:g5v1-l05-c13-u7a33-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u64de.webp",
         "label": "抖擞",
-        "alt": "抖擞表示振作精神、显得有活力 图中“扌”与“数”按左右结构自然长成“擞”。"
+        "alt": "抖擞精神形容振奋精神充满活力；诗人呼唤社会振作精神扫除沉闷，展现了变革图强的雄心 图中“扌”与“数”按左右结构自然长成“擞”。"
       }
     }
   },
@@ -425,7 +425,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u514d.webp",
       "label": "免得",
-      "alt": "免得表示为了避免出现某种不希望的情况 图中“⺈”与“口”与“儿”按上下结构自然长成“免”。"
+      "alt": "免得表示预先防备避免麻烦；走搭石时彼此礼让止步，免得发生碰撞，处处洋溢着尊老爱幼的乡风 图中“⺈”与“口”与“儿”按上下结构自然长成“免”。"
     },
     "scene": {
       "scene": "上方帽檐沿“⺈”弯下，中间方形安全门框形成“口”，下方转身人物的两条腿稳稳站成“儿”，人物及时从门边避开，形成“免”。",
@@ -440,7 +440,7 @@ export const characterMedia = {
       "g5v1-l05-c14-u514d-words-image:g5v1-l05-c14-u514d-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u514d.webp",
         "label": "免得",
-        "alt": "免得表示为了避免出现某种不希望的情况 图中“⺈”与“口”与“儿”按上下结构自然长成“免”。"
+        "alt": "免得表示预先防备避免麻烦；走搭石时彼此礼让止步，免得发生碰撞，处处洋溢着尊老爱幼的乡风 图中“⺈”与“口”与“儿”按上下结构自然长成“免”。"
       },
       "g5v1-l05-c14-u514d-words-image:g5v1-l05-c14-u514d-words-image-0": {
         "src": "/illustrations/meanings/m08.webp",
@@ -450,7 +450,7 @@ export const characterMedia = {
       "g5v1-l05-c14-u514d-words-image:g5v1-l05-c14-u514d-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u7965.webp",
         "label": "慈祥",
-        "alt": "吉祥表示幸运、顺利，是人们对美好生活的祝愿 图中“礻”与“羊”按左右结构自然长成“祥”。"
+        "alt": "慈祥温和充满深情；母亲慈祥热切的赞扬保护了孩子的创作幼苗，赋予他前进的勇气 图中“礻”与“羊”按左右结构自然长成“祥”。"
       }
     }
   }

@@ -6,7 +6,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u6986.webp",
       "label": "榆树",
-      "alt": "榆树是一种常见落叶树，木材坚实，果实叫榆钱 图中“木”与“俞”按左右结构自然长成“榆”。"
+      "alt": "榆关塞外风雪交加；将士们行军至山海关榆关防线，塞外夜色更显苍凉雄浑 图中“木”与“俞”按左右结构自然长成“榆”。"
     },
     "scene": {
       "scene": "左边树干、横枝和根脚形成“木”，右边屋顶下的小船和双刃修枝刀沿“俞”排列，合成一棵“榆”。",
@@ -20,7 +20,7 @@ export const characterMedia = {
       "g5v1-l21-c01-u6986-words-image:g5v1-l21-c01-u6986-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u6986.webp",
         "label": "榆树",
-        "alt": "榆树是一种常见落叶树，木材坚实，果实叫榆钱 图中“木”与“俞”按左右结构自然长成“榆”。"
+        "alt": "榆关塞外风雪交加；将士们行军至山海关榆关防线，塞外夜色更显苍凉雄浑 图中“木”与“俞”按左右结构自然长成“榆”。"
       },
       "g5v1-l21-c01-u6986-words-image:g5v1-l21-c01-u6986-words-image-0": {
         "src": "/illustrations/meanings/m07.webp",
@@ -38,7 +38,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u7554.webp",
       "label": "河畔",
-      "alt": "河畔就是河边靠近水的地方 图中“田”与“半”按左右结构自然长成“畔”。"
+      "alt": "河畔扎营寒夜漫漫；风雪夜宿在冰冷的河畔营帐中，阵阵风声勾起了将士们深沉的思乡之情 图中“田”与“半”按左右结构自然长成“畔”。"
     },
     "scene": {
       "scene": "左边四格田地形成“田”，右边半边护栏、竖杆和横岸沿“半”搭起，田与河岸相接，组成“畔”。",
@@ -62,7 +62,7 @@ export const characterMedia = {
       "g5v1-l21-c02-u7554-words-image:g5v1-l21-c02-u7554-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u7554.webp",
         "label": "河畔",
-        "alt": "河畔就是河边靠近水的地方 图中“田”与“半”按左右结构自然长成“畔”。"
+        "alt": "河畔扎营寒夜漫漫；风雪夜宿在冰冷的河畔营帐中，阵阵风声勾起了将士们深沉的思乡之情 图中“田”与“半”按左右结构自然长成“畔”。"
       }
     }
   },
@@ -70,7 +70,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u66f4.webp",
       "label": "一更",
-      "alt": "“一更”是旧时夜间计时的一段，这里读gēng；“更加”中读gèng 图中“更”按独体结构自然长成“更”。"
+      "alt": "风一更雪一更更声悠长；更深夜静风雪呼啸，纳兰性德辗转难眠，满怀对故园的眷恋 图中“更”按独体结构自然长成“更”。"
     },
     "scene": {
       "scene": "一座夜间更鼓架贯穿日形鼓面，敲鼓人的长撇和脚步沿“更”的全部笔画舒展，表示夜里报更。",
@@ -83,7 +83,7 @@ export const characterMedia = {
       "g5v1-l21-c03-u66f4-words-image:g5v1-l21-c03-u66f4-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u66f4.webp",
         "label": "一更",
-        "alt": "“一更”是旧时夜间计时的一段，这里读gēng；“更加”中读gèng 图中“更”按独体结构自然长成“更”。"
+        "alt": "风一更雪一更更声悠长；更深夜静风雪呼啸，纳兰性德辗转难眠，满怀对故园的眷恋 图中“更”按独体结构自然长成“更”。"
       },
       "g5v1-l21-c03-u66f4-words-image:g5v1-l21-c03-u66f4-words-image-2": {
         "src": "/illustrations/meanings/m06.webp",
@@ -93,7 +93,7 @@ export const characterMedia = {
       "g5v1-l21-c03-u66f4-words-image:g5v1-l21-c03-u66f4-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u8bae.webp",
         "label": "商议",
-        "alt": "商议就是几个人一起讨论并想办法 图中“讠”与“义”按左右结构自然长成“议”。"
+        "alt": "商议是共同探讨谋划办法；君臣商议之后决定派相如入秦，由此开启了完璧归赵的壮举 图中“讠”与“义”按左右结构自然长成“议”。"
       }
     }
   },
@@ -101,7 +101,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u8052.webp",
       "label": "聒噪",
-      "alt": "聒噪形容声音嘈杂，令人难以安静 图中“耳”与“舌”按左右结构自然长成“聒”。"
+      "alt": "聒碎乡心彻夜难眠；帐外风雪喧嚣之声打破了梦境，故园温暖的灯火成了心中唯一的牵挂 图中“耳”与“舌”按左右结构自然长成“聒”。"
     },
     "scene": {
       "scene": "左边竖起的耳朵形成“耳”，右边舌形铃槌不停敲响方口鼓沿“舌”震动，噪声直钻耳朵，组成“聒”。",
@@ -120,12 +120,12 @@ export const characterMedia = {
       "g5v1-l21-c04-u8052-words-image:g5v1-l21-c04-u8052-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u6c0f.webp",
         "label": "摄氏",
-        "alt": "摄氏中的“氏”来自科学家摄尔修斯姓氏的译名 图中“氏”按独体结构自然长成“氏”。"
+        "alt": "摄氏温标科学精准；课文用摄氏度准确说明太阳的热度，展现了科普说明文的严谨科学性 图中“氏”按独体结构自然长成“氏”。"
       },
       "g5v1-l21-c04-u8052-words-image:g5v1-l21-c04-u8052-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u8052.webp",
         "label": "聒噪",
-        "alt": "聒噪形容声音嘈杂，令人难以安静 图中“耳”与“舌”按左右结构自然长成“聒”。"
+        "alt": "聒碎乡心彻夜难眠；帐外风雪喧嚣之声打破了梦境，故园温暖的灯火成了心中唯一的牵挂 图中“耳”与“舌”按左右结构自然长成“聒”。"
       }
     }
   },
@@ -133,7 +133,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u5b59.webp",
       "label": "子孙",
-      "alt": "子孙指儿子、孙子等后代 图中“子”与“小”按左右结构自然长成“孙”。"
+      "alt": "竹喧归浣女莲动下渔舟；王维笔下的山居秋夜清新明净，洋溢着淳朴宁静的生活情趣 图中“子”与“小”按左右结构自然长成“孙”。"
     },
     "scene": {
       "scene": "左边被托住的孩子形成“子”，右边一大两小的光点形成“小”，孩子旁又有小孩子，组成“孙”。",
@@ -152,12 +152,12 @@ export const characterMedia = {
       "g5v1-l21-c05-u5b59-words-image:g5v1-l21-c05-u5b59-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u6740.webp",
         "label": "杀菌",
-        "alt": "杀菌就是消灭或减少有害细菌；生活中要按安全方法操作 图中“乂”与“朩”按上下结构自然长成“杀”。"
+        "alt": "杀菌消毒保障健康；多晒太阳可以杀菌防病，让人们在阳光的沐浴下健康快乐地生活 图中“乂”与“朩”按上下结构自然长成“杀”。"
       },
       "g5v1-l21-c05-u5b59-words-image:g5v1-l21-c05-u5b59-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u5b59.webp",
         "label": "子孙",
-        "alt": "子孙指儿子、孙子等后代 图中“子”与“小”按左右结构自然长成“孙”。"
+        "alt": "竹喧归浣女莲动下渔舟；王维笔下的山居秋夜清新明净，洋溢着淳朴宁静的生活情趣 图中“子”与“小”按左右结构自然长成“孙”。"
       }
     }
   },
@@ -165,7 +165,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u6cca.webp",
       "label": "停泊",
-      "alt": "停泊就是船靠岸停下；“湖泊”的“泊”读pō 图中“氵”与“白”按左右结构自然长成“泊”。"
+      "alt": "夜泊枫桥月落乌啼；客船夜泊在清冷的江边，旅人的愁绪在钟声与渔火中幽幽流淌 图中“氵”与“白”按左右结构自然长成“泊”。"
     },
     "scene": {
       "scene": "左边三股水流形成“氵”，右边一扇白色船帆形成“白”，船帆静静停在水边，组成“泊”。",
@@ -189,7 +189,7 @@ export const characterMedia = {
       "g5v1-l21-c06-u6cca-words-image:g5v1-l21-c06-u6cca-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u6cca.webp",
         "label": "停泊",
-        "alt": "停泊就是船靠岸停下；“湖泊”的“泊”读pō 图中“氵”与“白”按左右结构自然长成“泊”。"
+        "alt": "夜泊枫桥月落乌啼；客船夜泊在清冷的江边，旅人的愁绪在钟声与渔火中幽幽流淌 图中“氵”与“白”按左右结构自然长成“泊”。"
       }
     }
   },
@@ -197,7 +197,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u6101.webp",
       "label": "发愁",
-      "alt": "发愁就是因为困难或担心而心里不安 图中“秋”与“心”按上下结构自然长成“愁”。"
+      "alt": "江枫渔火对愁眠；张继借江桥渔火与寒山寺钟声，将千古孤寂的羁旅愁思渲染到了极致 图中“秋”与“心”按上下结构自然长成“愁”。"
     },
     "scene": {
       "scene": "上方秋天的禾穗和火色落叶形成“秋”，下方一颗沉重心灯形成“心”，秋意压在心头，组成“愁”。",
@@ -211,7 +211,7 @@ export const characterMedia = {
       "g5v1-l21-c07-u6101-words-image:g5v1-l21-c07-u6101-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u6101.webp",
         "label": "发愁",
-        "alt": "发愁就是因为困难或担心而心里不安 图中“秋”与“心”按上下结构自然长成“愁”。"
+        "alt": "江枫渔火对愁眠；张继借江桥渔火与寒山寺钟声，将千古孤寂的羁旅愁思渲染到了极致 图中“秋”与“心”按上下结构自然长成“愁”。"
       },
       "g5v1-l21-c07-u6101-words-image:g5v1-l21-c07-u6101-words-image-2": {
         "src": "/illustrations/meanings/m08.webp",
@@ -229,7 +229,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u5bfa.webp",
       "label": "寺庙",
-      "alt": "寺庙是供奉宗教神像、进行相关活动的建筑 图中“土”与“寸”按上下结构自然长成“寺”。"
+      "alt": "姑苏城外寒山寺；半夜传来的悠悠钟声穿越古今，让枫桥夜泊成为千古绝唱 图中“土”与“寸”按上下结构自然长成“寺”。"
     },
     "scene": {
       "scene": "上方分层土台形成“土”，下方带刻度的守时手腕形成“寸”，台阶与礼仪位置上下对齐，组成“寺”。",
@@ -248,12 +248,12 @@ export const characterMedia = {
       "g5v1-l21-c08-u5bfa-words-image:g5v1-l21-c08-u5bfa-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u60f0.webp",
         "label": "懒惰",
-        "alt": "懒惰就是不愿劳动或行动，总想少做事情 图中“忄”与“左”与“月”按左右结构自然长成“惰”。"
+        "alt": "懒惰是不肯勤快出力的心态；乡亲们走过搭石绝不懒惰停留，而是保持匀速，确保步伐轻稳 图中“忄”与“左”与“月”按左右结构自然长成“惰”。"
       },
       "g5v1-l21-c08-u5bfa-words-image:g5v1-l21-c08-u5bfa-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u5bfa.webp",
         "label": "寺庙",
-        "alt": "寺庙是供奉宗教神像、进行相关活动的建筑 图中“土”与“寸”按上下结构自然长成“寺”。"
+        "alt": "姑苏城外寒山寺；半夜传来的悠悠钟声穿越古今，让枫桥夜泊成为千古绝唱 图中“土”与“寸”按上下结构自然长成“寺”。"
       }
     }
   }

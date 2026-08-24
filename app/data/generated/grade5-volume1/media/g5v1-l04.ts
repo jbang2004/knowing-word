@@ -6,7 +6,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u8513.webp",
       "label": "蔓延",
-      "alt": "蔓延表示像藤蔓一样不断向四周伸展 图中“艹”与“曼”按上下结构自然长成“蔓”。"
+      "alt": "蔓延是藤蔓植物向四周延伸舒展；垂蔓蒙盖着鸟笼，为胆小的珍珠鸟营造出幽静安全的隐蔽天地 图中“艹”与“曼”按上下结构自然长成“蔓”。"
     },
     "scene": {
       "scene": "上方新叶组成“艹”，下方藤条绕过日轮和舒展双手沿“曼”的笔画延伸，长成“蔓”。",
@@ -20,7 +20,7 @@ export const characterMedia = {
       "g5v1-l04-c01-u8513-words-image:g5v1-l04-c01-u8513-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u8513.webp",
         "label": "蔓延",
-        "alt": "蔓延表示像藤蔓一样不断向四周伸展 图中“艹”与“曼”按上下结构自然长成“蔓”。"
+        "alt": "蔓延是藤蔓植物向四周延伸舒展；垂蔓蒙盖着鸟笼，为胆小的珍珠鸟营造出幽静安全的隐蔽天地 图中“艹”与“曼”按上下结构自然长成“蔓”。"
       },
       "g5v1-l04-c01-u8513-words-image:g5v1-l04-c01-u8513-words-image-2": {
         "src": "/illustrations/meanings/m08.webp",
@@ -38,7 +38,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u5e7d.webp",
       "label": "幽深",
-      "alt": "幽深形容地方安静、深远，光线也比较暗 图中“幺”与“幺”与“山”按半包围结构自然长成“幽”。"
+      "alt": "幽深形容环境清幽宁静；幽深的绿林窗景渐渐消除了小鸟的戒备，为彼此靠近提供了可能 图中“幺”与“幺”与“山”按半包围结构自然长成“幽”。"
     },
     "scene": {
       "scene": "两束细藤沿两个“幺”盘绕，中间山谷立成“山”，外侧岩壁收拢，形成幽深的“幽”。",
@@ -53,7 +53,7 @@ export const characterMedia = {
       "g5v1-l04-c02-u5e7d-words-image:g5v1-l04-c02-u5e7d-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u5e7d.webp",
         "label": "幽深",
-        "alt": "幽深形容地方安静、深远，光线也比较暗 图中“幺”与“幺”与“山”按半包围结构自然长成“幽”。"
+        "alt": "幽深形容环境清幽宁静；幽深的绿林窗景渐渐消除了小鸟的戒备，为彼此靠近提供了可能 图中“幺”与“幺”与“山”按半包围结构自然长成“幽”。"
       },
       "g5v1-l04-c02-u5e7d-words-image:g5v1-l04-c02-u5e7d-words-image-2": {
         "src": "/illustrations/meanings/m07.webp",
@@ -63,7 +63,7 @@ export const characterMedia = {
       "g5v1-l04-c02-u5e7d-words-image:g5v1-l04-c02-u5e7d-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u6bbf.webp",
         "label": "宫殿",
-        "alt": "宫殿是古代帝王处理政事、居住或举行仪式的大型建筑 图中“𡱒”与“殳”按左右结构自然长成“殿”。"
+        "alt": "殿堂巍峨收藏极富；园内金碧辉煌的殿堂里珍藏着无数青铜器、名人字画与传世孤本 图中“𡱒”与“殳”按左右结构自然长成“殿”。"
       }
     }
   },
@@ -71,7 +71,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u6089.webp",
       "label": "熟悉",
-      "alt": "熟悉就是对人或事了解得很清楚，不感到陌生 图中“釆”与“心”按上下结构自然长成“悉”。"
+      "alt": "熟悉是对周围环境不再感到陌生；随着日渐熟悉，小鸟渐渐敢飞出笼子在书房里自由活动 图中“釆”与“心”按上下结构自然长成“悉”。"
     },
     "scene": {
       "scene": "上方手指分拣米粒排成“釆”，下方发亮的心形灯带组成“心”，心里分辨清楚就是“悉”。",
@@ -85,7 +85,7 @@ export const characterMedia = {
       "g5v1-l04-c03-u6089-words-image:g5v1-l04-c03-u6089-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u6089.webp",
         "label": "熟悉",
-        "alt": "熟悉就是对人或事了解得很清楚，不感到陌生 图中“釆”与“心”按上下结构自然长成“悉”。"
+        "alt": "熟悉是对周围环境不再感到陌生；随着日渐熟悉，小鸟渐渐敢飞出笼子在书房里自由活动 图中“釆”与“心”按上下结构自然长成“悉”。"
       },
       "g5v1-l04-c03-u6089-words-image:g5v1-l04-c03-u6089-words-image-0": {
         "src": "/illustrations/meanings/m04.webp",
@@ -95,7 +95,7 @@ export const characterMedia = {
       "g5v1-l04-c03-u6089-words-image:g5v1-l04-c03-u6089-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u5254.webp",
         "label": "剔透",
-        "alt": "剔透形容器物明亮透明、雕刻精细 图中“易”与“刂”按左右结构自然长成“剔”。"
+        "alt": "玲珑剔透形容工艺极其精湛通透；圆明园荟萃历代名园精粹，堪称园林艺术的巅峰之作 图中“易”与“刂”按左右结构自然长成“剔”。"
       }
     }
   },
@@ -103,7 +103,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u96cf.webp",
       "label": "雏鸟",
-      "alt": "雏鸟是刚孵出或还没有长大的小鸟 图中“刍”与“隹”按左右结构自然长成“雏”。"
+      "alt": "雏鸟是刚出生不久的幼鸟；可爱的雏鸟毛茸茸地探出头来，显得格外娇小惹人怜爱 图中“刍”与“隹”按左右结构自然长成“雏”。"
     },
     "scene": {
       "scene": "左边柔软鸟巢和小鸟轮廓收成“刍”，右边幼鸟站姿与翅羽排成“隹”，合成“雏”。",
@@ -122,12 +122,12 @@ export const characterMedia = {
       "g5v1-l04-c04-u96cf-words-image:g5v1-l04-c04-u96cf-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u9c81.webp",
         "label": "鲁莽",
-        "alt": "鲁莽形容说话做事不细想，行动冒失 图中“鱼”与“日”按上下结构自然长成“鲁”。"
+        "alt": "鲁莽好汉性格率真；鲁智深虽性格有些鲁莽却嫉恶如仇、重情重义，给作者留下了深刻印象 图中“鱼”与“日”按上下结构自然长成“鲁”。"
       },
       "g5v1-l04-c04-u96cf-words-image:g5v1-l04-c04-u96cf-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u96cf.webp",
         "label": "雏鸟",
-        "alt": "雏鸟是刚孵出或还没有长大的小鸟 图中“刍”与“隹”按左右结构自然长成“雏”。"
+        "alt": "雏鸟是刚出生不久的幼鸟；可爱的雏鸟毛茸茸地探出头来，显得格外娇小惹人怜爱 图中“刍”与“隹”按左右结构自然长成“雏”。"
       }
     }
   },
@@ -135,7 +135,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u54df.webp",
       "label": "哟",
-      "alt": "哟是表示惊讶、提醒等语气的声音 图中“口”与“约”按左右结构自然长成“哟”。"
+      "alt": "哟是表达惊喜赞叹的语气词；看着小鸟亲昵地落在肩头，作者忍不住发出一声轻柔的赞叹 图中“口”与“约”按左右结构自然长成“哟”。"
     },
     "scene": {
       "scene": "左边张口发声形成“口”，右边丝绳打结并牵出小点沿“约”的笔画摆好，像一声突然的“哟”。",
@@ -149,7 +149,7 @@ export const characterMedia = {
       "g5v1-l04-c05-u54df-words-image:g5v1-l04-c05-u54df-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u54df.webp",
         "label": "哟",
-        "alt": "哟是表示惊讶、提醒等语气的声音 图中“口”与“约”按左右结构自然长成“哟”。"
+        "alt": "哟是表达惊喜赞叹的语气词；看着小鸟亲昵地落在肩头，作者忍不住发出一声轻柔的赞叹 图中“口”与“约”按左右结构自然长成“哟”。"
       },
       "g5v1-l04-c05-u54df-words-image:g5v1-l04-c05-u54df-words-image-0": {
         "src": "/illustrations/meanings/m04.webp",
@@ -167,7 +167,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u67dc.webp",
       "label": "书柜",
-      "alt": "书柜是分层收藏和摆放书籍的柜子 图中“木”与“巨”按左右结构自然长成“柜”。"
+      "alt": "书柜是摆放书籍的木柜；小鸟在书柜与书架间灵巧穿梭，把书房当作了温暖的游戏天地 图中“木”与“巨”按左右结构自然长成“柜”。"
     },
     "scene": {
       "scene": "左边木材枝干长成“木”，右边方正柜体和开口层板围成“巨”，合成“柜”。",
@@ -186,12 +186,12 @@ export const characterMedia = {
       "g5v1-l04-c06-u67dc-words-image:g5v1-l04-c06-u67dc-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u77ee.webp",
         "label": "矮小",
-        "alt": "矮小表示从下到上的高度比较低 图中“矢”与“委”按左右结构自然长成“矮”。"
+        "alt": "矮小表示高度较低；花生的果实矮矮地埋在地底，虽不张扬，却有默默奉献的真价值 图中“矢”与“委”按左右结构自然长成“矮”。"
       },
       "g5v1-l04-c06-u67dc-words-image:g5v1-l04-c06-u67dc-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u67dc.webp",
         "label": "书柜",
-        "alt": "书柜是分层收藏和摆放书籍的柜子 图中“木”与“巨”按左右结构自然长成“柜”。"
+        "alt": "书柜是摆放书籍的木柜；小鸟在书柜与书架间灵巧穿梭，把书房当作了温暖的游戏天地 图中“木”与“巨”按左右结构自然长成“柜”。"
       }
     }
   },
@@ -199,7 +199,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u4eab.webp",
       "label": "享受",
-      "alt": "享受就是从生活或活动中得到满足和愉快 图中“亠”与“口”与“子”按上中下结构自然长成“享”。"
+      "alt": "享受是获得内心的宁静与满足；小鸟在作者肩头安然入睡，静静享受着人与鸟之间的全然信赖 图中“亠”与“口”与“子”按上中下结构自然长成“享”。"
     },
     "scene": {
       "scene": "上方屋檐形成“亠”，中间方桌边缘围成“口”，下方孩子张开手臂形成“子”，一家人在屋里分享美好时光，组成“享”。",
@@ -219,12 +219,12 @@ export const characterMedia = {
       "g5v1-l04-c07-u4eab-words-image:g5v1-l04-c07-u4eab-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u9694.webp",
         "label": "间隔",
-        "alt": "间隔也表示两个事物之间隔着一定距离 图中“阝”与“鬲”按左右结构自然长成“隔”。"
+        "alt": "间隔指两地或两物的空间阻隔；搭石跨越了溪水的阻隔，默默传递着无私奉献的人间温情 图中“阝”与“鬲”按左右结构自然长成“隔”。"
       },
       "g5v1-l04-c07-u4eab-words-image:g5v1-l04-c07-u4eab-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u4eab.webp",
         "label": "享受",
-        "alt": "享受就是从生活或活动中得到满足和愉快 图中“亠”与“口”与“子”按上中下结构自然长成“享”。"
+        "alt": "享受是获得内心的宁静与满足；小鸟在作者肩头安然入睡，静静享受着人与鸟之间的全然信赖 图中“亠”与“口”与“子”按上中下结构自然长成“享”。"
       }
     }
   },
@@ -232,7 +232,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u966a.webp",
       "label": "陪伴",
-      "alt": "陪伴就是留在别人身边，一起经历一段时间 图中“阝”与“咅”按左右结构自然长成“陪”。"
+      "alt": "陪伴求学一路护航；从乡村到县城，那叶小舟始终陪伴着孩子，驶向广阔的人生天地 图中“阝”与“咅”按左右结构自然长成“陪”。"
     },
     "scene": {
       "scene": "左边相连的土坡形成“阝”，右边一盏灯、平台和说话口沿“咅”搭起，像两处始终相伴，合成“陪”。",
@@ -246,7 +246,7 @@ export const characterMedia = {
       "g5v1-l04-c08-u966a-words-image:g5v1-l04-c08-u966a-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u966a.webp",
         "label": "陪伴",
-        "alt": "陪伴就是留在别人身边，一起经历一段时间 图中“阝”与“咅”按左右结构自然长成“陪”。"
+        "alt": "陪伴求学一路护航；从乡村到县城，那叶小舟始终陪伴着孩子，驶向广阔的人生天地 图中“阝”与“咅”按左右结构自然长成“陪”。"
       },
       "g5v1-l04-c08-u966a-words-image:g5v1-l04-c08-u966a-words-image-2": {
         "src": "/illustrations/meanings/m06.webp",
@@ -256,7 +256,7 @@ export const characterMedia = {
       "g5v1-l04-c08-u966a-words-image:g5v1-l04-c08-u966a-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u7597.webp",
         "label": "治疗",
-        "alt": "治疗就是用合适的方法帮助疾病或伤痛好转 图中“疒”与“了”按左上包围结构自然长成“疗”。"
+        "alt": "治疗疾病带来健康；阳光中的紫外线能够杀灭细菌，对预防和治疗多种疾病大有益处 图中“疒”与“了”按左上包围结构自然长成“疗”。"
       }
     }
   },
@@ -264,12 +264,12 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u8db4.webp",
       "label": "趴下",
-      "alt": "趴下就是身体朝下贴近地面或桌面 图中“⻊”与“八”按左右结构自然长成“趴”。"
+      "alt": "趴下是身体放松地贴近桌面；小鸟趴在作者手边安心打盹，展现了信赖带来的无拘无束 图中“⻊”与“八”按左右结构自然长成“趴”。"
     },
     "scene": {
-      "scene": "左边脚印和落脚台组成“⻊”，右边孩子两臂向下撑开成“八”，身体压低，合成“趴”。",
+      "scene": "左边脚印和落脚台组成足字旁“⻊”，右边孩子两臂向下撑开成“八”，身体压低，合成“趴”。",
       "cues": [
-        "左边脚印和落脚台组成“⻊”。",
+        "左边脚印和落脚台组成足字旁“⻊”。",
         "右边孩子两臂向下撑开成“八”。"
       ]
     },
@@ -278,7 +278,7 @@ export const characterMedia = {
       "g5v1-l04-c09-u8db4-words-image:g5v1-l04-c09-u8db4-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u8db4.webp",
         "label": "趴下",
-        "alt": "趴下就是身体朝下贴近地面或桌面 图中“⻊”与“八”按左右结构自然长成“趴”。"
+        "alt": "趴下是身体放松地贴近桌面；小鸟趴在作者手边安心打盹，展现了信赖带来的无拘无束 图中“⻊”与“八”按左右结构自然长成“趴”。"
       },
       "g5v1-l04-c09-u8db4-words-image:g5v1-l04-c09-u8db4-words-image-2": {
         "src": "/illustrations/meanings/m07.webp",
@@ -296,7 +296,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u7751.webp",
       "label": "眼睑",
-      "alt": "眼睑就是眼睛外面能够开合的皮肤，也叫眼皮 图中“目”与“佥”按左右结构自然长成“睑”。"
+      "alt": "眼睑是保护眼球的眼皮；小鸟闭上浅红色的眼睑安心入睡，将信任的细节表现得细腻动人 图中“目”与“佥”按左右结构自然长成“睑”。"
     },
     "scene": {
       "scene": "左边清楚的眼框形成“目”，右边上盖、短横和两侧眼皮沿“佥”合拢，组成“睑”。",
@@ -315,12 +315,12 @@ export const characterMedia = {
       "g5v1-l04-c10-u7751-words-image:g5v1-l04-c10-u7751-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u9b44.webp",
         "label": "魂魄",
-        "alt": "魂魄在课文语境中表示人的精神和心神 图中“白”与“鬼”按左右结构自然长成“魄”。"
+        "alt": "失魂落魄形容心神极度慌乱；孩子因为急需买书而失魂落魄，脚步匆匆奔向母亲工作的工厂 图中“白”与“鬼”按左右结构自然长成“魄”。"
       },
       "g5v1-l04-c10-u7751-words-image:g5v1-l04-c10-u7751-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u7751.webp",
         "label": "眼睑",
-        "alt": "眼睑就是眼睛外面能够开合的皮肤，也叫眼皮 图中“目”与“佥”按左右结构自然长成“睑”。"
+        "alt": "眼睑是保护眼球的眼皮；小鸟闭上浅红色的眼睑安心入睡，将信任的细节表现得细腻动人 图中“目”与“佥”按左右结构自然长成“睑”。"
       }
     }
   },
@@ -328,7 +328,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u7738.webp",
       "label": "眼眸",
-      "alt": "眼眸指眼睛，尤其是眼珠和目光 图中“目”与“牟”按左右结构自然长成“眸”。"
+      "alt": "眼眸指清澈灵动的目光；小鸟眸子里闪烁的警惕慢慢化为信赖，见证了爱与尊重的力量 图中“目”与“牟”按左右结构自然长成“眸”。"
     },
     "scene": {
       "scene": "左边眼框与眼珠形成“目”，右边牛角般的眉线和中心瞳孔沿“牟”排好，合成“眸”。",
@@ -342,7 +342,7 @@ export const characterMedia = {
       "g5v1-l04-c11-u7738-words-image:g5v1-l04-c11-u7738-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u7738.webp",
         "label": "眼眸",
-        "alt": "眼眸指眼睛，尤其是眼珠和目光 图中“目”与“牟”按左右结构自然长成“眸”。"
+        "alt": "眼眸指清澈灵动的目光；小鸟眸子里闪烁的警惕慢慢化为信赖，见证了爱与尊重的力量 图中“目”与“牟”按左右结构自然长成“眸”。"
       },
       "g5v1-l04-c11-u7738-words-image:g5v1-l04-c11-u7738-words-image-2": {
         "src": "/illustrations/meanings/m07.webp",
@@ -352,7 +352,7 @@ export const characterMedia = {
       "g5v1-l04-c11-u7738-words-image:g5v1-l04-c11-u7738-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u60eb.webp",
         "label": "疲惫",
-        "alt": "疲惫就是身体和精神都很累，需要休息 图中“备”与“心”按上下结构自然长成“惫”。"
+        "alt": "疲惫不堪的身影令人心酸；母亲极其瘦弱疲惫的身躯，深深震撼了前来要钱买书的孩子 图中“备”与“心”按上下结构自然长成“惫”。"
       }
     }
   },
@@ -360,7 +360,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u5482.webp",
       "label": "咂嘴",
-      "alt": "咂嘴是嘴唇开合并发出轻微声音的动作 图中“口”与“匝”按左右结构自然长成“咂”。"
+      "alt": "咂嘴是开合嘴唇发出的轻微细语；小鸟在梦中咂嘴发出微响，将信赖的境界刻画得淋漓尽致 图中“口”与“匝”按左右结构自然长成“咂”。"
     },
     "scene": {
       "scene": "左边嘴巴形成“口”，右边一圈围巾把小物包住并沿“匝”转折，像嘴唇包拢，合成“咂”。",
@@ -374,7 +374,7 @@ export const characterMedia = {
       "g5v1-l04-c12-u5482-words-image:g5v1-l04-c12-u5482-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u5482.webp",
         "label": "咂嘴",
-        "alt": "咂嘴是嘴唇开合并发出轻微声音的动作 图中“口”与“匝”按左右结构自然长成“咂”。"
+        "alt": "咂嘴是开合嘴唇发出的轻微细语；小鸟在梦中咂嘴发出微响，将信赖的境界刻画得淋漓尽致 图中“口”与“匝”按左右结构自然长成“咂”。"
       },
       "g5v1-l04-c12-u5482-words-image:g5v1-l04-c12-u5482-words-image-2": {
         "src": "/illustrations/meanings/m08.webp",
@@ -384,7 +384,7 @@ export const characterMedia = {
       "g5v1-l04-c12-u5482-words-image:g5v1-l04-c12-u5482-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u9489.webp",
         "label": "钉子",
-        "alt": "钉子是一端尖、一端有帽，用来固定物体的金属小件 图中“钅”与“丁”按左右结构自然长成“钉”。"
+        "alt": "钉鞋补舟手艺精湛；父亲用粗糙的双手修补旧船、钉好鞋底，把每一件小事都做得扎扎实实 图中“钅”与“丁”按左右结构自然长成“钉”。"
       }
     }
   }

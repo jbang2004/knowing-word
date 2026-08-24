@@ -7,7 +7,7 @@ export const grade5Components = [
     "examples": [
       "鹭"
     ],
-    "description": "上方一条弯曲石路沿“路”的笔画铺开。先认清“路”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "远景上方一条弯曲田埂小路沿“路”的笔画铺开。它在字形中作为“路”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "鹭"
     ],
@@ -23,7 +23,7 @@ export const grade5Components = [
       "鹤",
       "鸵"
     ],
-    "description": "下方白鹭收拢翅尾站成“鸟”。先认清“鸟”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "近景下方白鹭收拢翅尾站成“鸟”。它在字形中作为“鸟”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "鹭",
       "鹤",
@@ -50,7 +50,7 @@ export const grade5Components = [
       "嫉",
       "妒"
     ],
-    "description": "左边人物侧身收成“女”。先认清“女”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "左边人物侧身收成“女”。它在字形中作为“女”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "嫌",
       "婆",
@@ -77,7 +77,7 @@ export const grade5Components = [
       "廉",
       "兼"
     ],
-    "description": "右边两只并提的竹篮搭成“兼”。先认清“兼”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边两只并提的竹篮搭成“兼”。它在字形中作为“兼”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "嫌",
       "廉",
@@ -98,7 +98,7 @@ export const grade5Components = [
       "炭",
       "岂"
     ],
-    "description": "上方山石隆起成“山”。先认清“山”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "上方山石隆起成“山”。它在字形中作为“山”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "嵌",
       "幽",
@@ -117,7 +117,7 @@ export const grade5Components = [
     "examples": [
       "嵌"
     ],
-    "description": "槽口和托架沿“𣢟”的笔画闭合。先认清“𣢟”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "槽口与托架“𣢟”严丝合缝地闭合。它在字形中作为“𣢟”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "嵌"
     ],
@@ -131,7 +131,7 @@ export const grade5Components = [
     "examples": [
       "匣"
     ],
-    "description": "木盒的左壁、顶盖和底板围成“匚”。先认清“匚”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "木盒的左壁、顶盖和底板围成“匚”。它在字形中作为“匚”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "匣"
     ],
@@ -145,7 +145,7 @@ export const grade5Components = [
     "examples": [
       "匣"
     ],
-    "description": "盒内一格格收藏槽排成“甲”。先认清“甲”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "盒内一格格收藏槽排成“甲”。它在字形中作为“甲”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "匣"
     ],
@@ -185,7 +185,7 @@ export const grade5Components = [
       "呻",
       "喻"
     ],
-    "description": "左边张开的传声窗形成“口”。先认清“口”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "左边张开的传声窗形成“口”。它在字形中作为“口”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "嗜",
       "哨",
@@ -225,7 +225,7 @@ export const grade5Components = [
     "examples": [
       "嗜"
     ],
-    "description": "身体、手杖和日轮排成“耆”。先认清“耆”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "身体、手杖和日轮排成“耆”。它在字形中作为“耆”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "嗜"
     ],
@@ -245,7 +245,7 @@ export const grade5Components = [
       "宴",
       "寇"
     ],
-    "description": "安稳屋顶覆盖成“宀”。先认清“宀”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "安稳屋顶覆盖成“宀”。它在字形中作为“宀”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "宜",
       "宫",
@@ -265,7 +265,7 @@ export const grade5Components = [
     "examples": [
       "宜"
     ],
-    "description": "下面两层尺寸刚好的置物台排成“且”。先认清“且”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "下面两层尺寸刚好的置物台排成“且”。它在字形中作为“且”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "宜"
     ],
@@ -279,7 +279,7 @@ export const grade5Components = [
     "examples": [
       "鹤"
     ],
-    "description": "左边高挑鹤影沿“隺”的轮廓站立。先认清“隺”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "左边高挑鹤影沿“隺”的轮廓站立。它在字形中作为“隺”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "鹤"
     ],
@@ -293,7 +293,7 @@ export const grade5Components = [
     "examples": [
       "朱"
     ],
-    "description": "下方枝干交叠成“未”形树架。先认清“未”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "下方枝干交叠成“未”形树架。它在字形中作为“未”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "朱"
     ],
@@ -307,7 +307,7 @@ export const grade5Components = [
     "examples": [
       "朱"
     ],
-    "description": "顶端一笔“㇒”挑出朱红果实。先认清“㇒”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "顶端一笔“㇒”挑出朱红果实。它在字形中作为“㇒”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "朱"
     ],
@@ -344,7 +344,7 @@ export const grade5Components = [
       "某",
       "朴"
     ],
-    "description": "左边树干与根枝长成“木”。先认清“木”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "左边树干与根枝长成“木”。它在字形中作为“木”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "框",
       "榨",
@@ -382,7 +382,7 @@ export const grade5Components = [
       "框",
       "筐"
     ],
-    "description": "右边四根木条围成“匡”形画框。先认清“匡”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边四根木条围成“匡”形画框。它在字形中作为“匡”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "框",
       "筐"
@@ -402,7 +402,7 @@ export const grade5Components = [
       "梢",
       "悄"
     ],
-    "description": "右边哨管、挂环和高低音孔沿“肖”的笔画排列。先认清“肖”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边哨管、挂环和高低音孔沿“肖”的笔画排列。它在字形中作为“肖”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "哨",
       "削",
@@ -421,7 +421,7 @@ export const grade5Components = [
     "examples": [
       "恩"
     ],
-    "description": "上方一份被方框珍藏的帮助排成“因”。先认清“因”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "上方一份被方框珍藏的帮助排成“因”。它在字形中作为“因”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "恩"
     ],
@@ -440,7 +440,7 @@ export const grade5Components = [
       "忍",
       "愁"
     ],
-    "description": "下方一颗发亮的心长成“心”。先认清“心”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "下方一颗发亮的心长成“心”。它在字形中作为“心”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "恩",
       "悉",
@@ -460,7 +460,7 @@ export const grade5Components = [
       "韵",
       "竟"
     ],
-    "description": "左边编钟和回声波排成“音”。先认清“音”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "左边编钟和回声波排成“音”。它在字形中作为“音”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "韵",
       "竟"
@@ -475,7 +475,7 @@ export const grade5Components = [
     "examples": [
       "韵"
     ],
-    "description": "右边均匀摆动的两枚音锤形成“匀”。先认清“匀”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边均匀摆动的两枚音锤形成“匀”。它在字形中作为“匀”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "韵"
     ],
@@ -491,7 +491,7 @@ export const grade5Components = [
       "亭",
       "享"
     ],
-    "description": "田野上方一条地界横梁形成“亠”。先认清“亠”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "田野上方一条地界横梁形成“亠”。它在字形中作为“亠”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "亩",
       "亭",
@@ -512,7 +512,7 @@ export const grade5Components = [
       "累",
       "甸"
     ],
-    "description": "下面四格庄稼地清楚排成“田”。先认清“田”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "下面四格庄稼地清楚排成“田”。它在字形中作为“田”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "亩",
       "衡",
@@ -532,7 +532,7 @@ export const grade5Components = [
       "吩",
       "岔"
     ],
-    "description": "右边把任务分成两份的木架和双手排成“分”。先认清“分”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边把任务分成两份的木架和双手排成“分”。它在字形中作为“分”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "吩",
       "岔"
@@ -547,7 +547,7 @@ export const grade5Components = [
     "examples": [
       "榨"
     ],
-    "description": "右边狭窄压油槽的屋顶与夹板搭成“窄”。先认清“窄”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边狭窄压油槽的屋顶与夹板搭成“窄”。它在字形中作为“窄”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "榨"
     ],
@@ -562,7 +562,7 @@ export const grade5Components = [
       "榴",
       "溜"
     ],
-    "description": "右边系带果篮、田格和果实沿“留”的笔画叠放。先认清“留”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边系带果篮、田格和果实沿“留”的笔画叠放。它在字形中作为“留”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "榴",
       "溜"
@@ -579,7 +579,7 @@ export const grade5Components = [
       "矫",
       "矣"
     ],
-    "description": "左边一支短箭沿“矢”站立。先认清“矢”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "左边一支短箭沿“矢”站立。它在字形中作为“矢”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "矮",
       "矫",
@@ -595,7 +595,7 @@ export const grade5Components = [
     "examples": [
       "矮"
     ],
-    "description": "右边低垂禾穗和弯身人物叠成“委”。先认清“委”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边低垂禾穗和弯身人物叠成“委”。它在字形中作为“委”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "矮"
     ],
@@ -630,7 +630,7 @@ export const grade5Components = [
       "抑",
       "抛"
     ],
-    "description": "左边撒种的手臂形成“扌”。先认清“扌”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "左边撒种的手臂形成“扌”。它在字形中作为“扌”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "播",
       "捡",
@@ -665,7 +665,7 @@ export const grade5Components = [
     "examples": [
       "播"
     ],
-    "description": "右边谷粒、筛盘和田垄排成“番”。先认清“番”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边谷粒、筛盘和田垄排成“番”。它在字形中作为“番”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "播"
     ],
@@ -692,7 +692,7 @@ export const grade5Components = [
       "津",
       "沥"
     ],
-    "description": "左边三股水流排成“氵”。先认清“氵”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "左边三股水流排成“氵”。它在字形中作为“氵”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "浇",
       "浸",
@@ -720,7 +720,7 @@ export const grade5Components = [
       "浇",
       "跷"
     ],
-    "description": "右边高低水闸和弯管沿“尧”的笔画搭起。先认清“尧”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边高低水闸和弯管沿“尧”的笔画搭起。它在字形中作为“尧”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "浇",
       "跷"
@@ -735,7 +735,7 @@ export const grade5Components = [
     "examples": [
       "咐"
     ],
-    "description": "人物和手腕排成“付”。先认清“付”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "人物和手腕排成“付”。它在字形中作为“付”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "咐"
     ],
@@ -754,7 +754,7 @@ export const grade5Components = [
       "冤",
       "寝"
     ],
-    "description": "窗下横梁围成“冖”。先认清“冖”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "窗下横梁围成“冖”。它在字形中作为“冖”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "亭",
       "浸",
@@ -775,7 +775,7 @@ export const grade5Components = [
       "叮",
       "钉"
     ],
-    "description": "最下面笔直亭柱落成“丁”。先认清“丁”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "最下面笔直亭柱落成“丁”。它在字形中作为“丁”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "亭",
       "叮",
@@ -791,7 +791,7 @@ export const grade5Components = [
     "examples": [
       "慕"
     ],
-    "description": "上方暮色中的草叶与日影叠成“莫”。先认清“莫”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "上方暮色中的草叶与日影叠成“莫”。它在字形中作为“莫”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "慕"
     ],
@@ -805,7 +805,7 @@ export const grade5Components = [
     "examples": [
       "慕"
     ],
-    "description": "下方一颗带微光的心沿“⺗”舒展。先认清“⺗”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "下方一颗由衷发光的小心底“⺗”舒展。它在字形中作为“⺗”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "慕"
     ],
@@ -830,7 +830,7 @@ export const grade5Components = [
       "谓",
       "诵"
     ],
-    "description": "左边一句句话从“讠”形话筒飞出。先认清“讠”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "左边一句句话从“讠”形话筒飞出。它在字形中作为“讠”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "谈",
       "访",
@@ -855,7 +855,7 @@ export const grade5Components = [
     "examples": [
       "谈"
     ],
-    "description": "右边两团温暖火光上下叠成“炎”。先认清“炎”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边两团温暖火光上下叠成“炎”。它在字形中作为“炎”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "谈"
     ],
@@ -876,7 +876,7 @@ export const grade5Components = [
       "筷",
       "籍"
     ],
-    "description": "上方两簇竹叶排成“⺮”。先认清“⺮”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "上方两簇青翠竹叶排成竹字头“⺮”。它在字形中作为“⺮”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "箩",
       "箭",
@@ -897,7 +897,7 @@ export const grade5Components = [
     "examples": [
       "箩"
     ],
-    "description": "下方竹篾网和筐口沿“罗”的笔画编织。先认清“罗”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "下方竹篾网和筐口沿“罗”的笔画编织。它在字形中作为“罗”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "箩"
     ],
@@ -911,7 +911,7 @@ export const grade5Components = [
     "examples": [
       "杭"
     ],
-    "description": "右边桥墩与弯拱沿“亢”的笔画立起。先认清“亢”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边桥墩与弯拱沿“亢”的笔画立起。它在字形中作为“亢”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "杭"
     ],
@@ -935,7 +935,7 @@ export const grade5Components = [
       "悄",
       "悟"
     ],
-    "description": "左边发亮的心灯排成“忄”。先认清“忄”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "左边发亮的心灯排成“忄”。它在字形中作为“忄”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "懂",
       "惰",
@@ -959,7 +959,7 @@ export const grade5Components = [
     "examples": [
       "懂"
     ],
-    "description": "右边草冠、重叠书页和土地沿“董”的笔画码好。先认清“董”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边草冠、重叠书页和土地沿“董”的笔画码好。它在字形中作为“董”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "懂"
     ],
@@ -973,7 +973,7 @@ export const grade5Components = [
     "examples": [
       "兰"
     ],
-    "description": "上方两片花瓣舒展成“丷”。先认清“丷”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "上方两片花瓣舒展成“丷”。它在字形中作为“丷”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "兰"
     ],
@@ -988,7 +988,7 @@ export const grade5Components = [
       "兰",
       "承"
     ],
-    "description": "下方三层兰叶横铺成“三”。先认清“三”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "下方三层兰叶横铺成“三”。它在字形中作为“三”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "兰",
       "承"
@@ -1003,7 +1003,7 @@ export const grade5Components = [
     "examples": [
       "婆"
     ],
-    "description": "上方披肩的水波纹折成“波”。先认清“波”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "上方披肩的水波纹折成“波”。它在字形中作为“波”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "婆"
     ],
@@ -1019,7 +1019,7 @@ export const grade5Components = [
       "粮",
       "糖"
     ],
-    "description": "左边米架和四散米粒组成“米”。先认清“米”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "左边米架和四散米粒组成“米”。它在字形中作为“米”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "糕",
       "粮",
@@ -1035,7 +1035,7 @@ export const grade5Components = [
     "examples": [
       "糕"
     ],
-    "description": "右边羊角蒸笼与四点火光搭成“羔”。先认清“羔”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边羊角蒸笼与四点火光搭成“羔”。它在字形中作为“羔”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "糕"
     ],
@@ -1051,7 +1051,7 @@ export const grade5Components = [
       "饥",
       "馈"
     ],
-    "description": "左边带盖食盒排成“饣”。先认清“饣”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "左边带盖食盒排成“饣”。它在字形中作为“饣”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "饼",
       "饥",
@@ -1067,7 +1067,7 @@ export const grade5Components = [
     "examples": [
       "饼"
     ],
-    "description": "右边两张并排圆饼和夹具形成“并”。先认清“并”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边两张并排圆饼和夹具形成“并”。它在字形中作为“并”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "饼"
     ],
@@ -1084,7 +1084,7 @@ export const grade5Components = [
       "妻",
       "寝"
     ],
-    "description": "右边手形夹具“彐”压在“冖”形水盖上。先认清“彐”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边手形夹具“彐”压在“冖”形水盖上。它在字形中作为“彐”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "浸",
       "侵",
@@ -1105,7 +1105,7 @@ export const grade5Components = [
       "权",
       "寝"
     ],
-    "description": "最下方“又”形手托住浸泡物。先认清“又”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "最下方“又”形手托住浸泡物。它在字形中作为“又”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "浸",
       "侵",
@@ -1130,7 +1130,7 @@ export const grade5Components = [
       "纠",
       "统"
     ],
-    "description": "左边细丝盘绕成“纟”。先认清“纟”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "左边细丝盘绕成绞丝旁“纟”。它在字形中作为“纟”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "缠",
       "绰",
@@ -1151,7 +1151,7 @@ export const grade5Components = [
     "examples": [
       "缠"
     ],
-    "description": "右边长绳沿房檐、田格和土台一层层绕成“㢆”。先认清“㢆”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边长绳沿房檐、田格和土台构架“㢆”一层层缠绕。它在字形中作为“㢆”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "缠"
     ],
@@ -1174,7 +1174,7 @@ export const grade5Components = [
       "茧",
       "葛"
     ],
-    "description": "上方嫩芽长成“艹”。先认清“艹”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "上方嫩芽长成“艹”。它在字形中作为“艹”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "茶",
       "蔓",
@@ -1198,7 +1198,7 @@ export const grade5Components = [
       "茶",
       "亥"
     ],
-    "description": "中间采茶“人”舒展双臂。先认清“人”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "中间采茶“人”舒展双臂。它在字形中作为“人”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "茶",
       "亥"
@@ -1215,7 +1215,7 @@ export const grade5Components = [
       "睑",
       "俭"
     ],
-    "description": "右边屋顶、短横和合拢双手排成“佥”。先认清“佥”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边屋顶、短横和合拢双手排成“佥”。它在字形中作为“佥”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "捡",
       "睑",
@@ -1231,7 +1231,7 @@ export const grade5Components = [
     "examples": [
       "蔓"
     ],
-    "description": "下方藤条绕过日轮和舒展双手沿“曼”的笔画延伸。先认清“曼”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "下方藤条绕过日轮和舒展双手沿“曼”的笔画延伸。它在字形中作为“曼”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "蔓"
     ],
@@ -1245,7 +1245,7 @@ export const grade5Components = [
     "examples": [
       "幽"
     ],
-    "description": "两束细藤沿两个“幺”盘绕。先认清“幺”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "两束细藤沿两个“幺”盘绕。它在字形中作为“幺”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "幽"
     ],
@@ -1259,7 +1259,7 @@ export const grade5Components = [
     "examples": [
       "悉"
     ],
-    "description": "上方手指分拣米粒排成“釆”。先认清“釆”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "上方手指分拣米粒排成“釆”。它在字形中作为“釆”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "悉"
     ],
@@ -1274,7 +1274,7 @@ export const grade5Components = [
       "雏",
       "煞"
     ],
-    "description": "左边柔软鸟巢和小鸟轮廓收成“刍”。先认清“刍”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "左边柔软鸟巢和小鸟轮廓收成“刍”。它在字形中作为“刍”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "雏",
       "煞"
@@ -1291,7 +1291,7 @@ export const grade5Components = [
       "焦",
       "锥"
     ],
-    "description": "右边幼鸟站姿与翅羽排成“隹”。先认清“隹”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边幼鸟站姿与翅羽排成“隹”。它在字形中作为“隹”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "雏",
       "焦",
@@ -1307,7 +1307,7 @@ export const grade5Components = [
     "examples": [
       "哟"
     ],
-    "description": "右边丝绳打结并牵出小点沿“约”的笔画摆好。先认清“约”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边丝绳打结并牵出小点沿“约”的笔画摆好。它在字形中作为“约”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "哟"
     ],
@@ -1322,7 +1322,7 @@ export const grade5Components = [
       "柜",
       "拒"
     ],
-    "description": "右边方正柜体和开口层板围成“巨”。先认清“巨”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边方正柜体和开口层板围成“巨”。它在字形中作为“巨”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "柜",
       "拒"
@@ -1338,7 +1338,7 @@ export const grade5Components = [
       "享",
       "孙"
     ],
-    "description": "下方孩子张开手臂形成“子”。先认清“子”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "下方孩子张开手臂形成“子”。它在字形中作为“子”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "享",
       "孙"
@@ -1358,7 +1358,7 @@ export const grade5Components = [
       "陵",
       "限"
     ],
-    "description": "左边相连的土坡形成“阝”。先认清“阝”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "左边相连的土坡形成“阝”。它在字形中作为“阝”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "陪",
       "隔",
@@ -1377,7 +1377,7 @@ export const grade5Components = [
     "examples": [
       "陪"
     ],
-    "description": "右边一盏灯、平台和说话口沿“咅”搭起。先认清“咅”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边一盏灯、平台和说话口沿“咅”搭起。它在字形中作为“咅”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "陪"
     ],
@@ -1392,7 +1392,7 @@ export const grade5Components = [
       "趴",
       "跷"
     ],
-    "description": "左边脚印和落脚台组成“⻊”。先认清“⻊”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "左边脚印和落脚台组成足字旁“⻊”。它在字形中作为“⻊”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "趴",
       "跷"
@@ -1408,7 +1408,7 @@ export const grade5Components = [
       "趴",
       "典"
     ],
-    "description": "右边孩子两臂向下撑开成“八”。先认清“八”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边孩子两臂向下撑开成“八”。它在字形中作为“八”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "趴",
       "典"
@@ -1428,7 +1428,7 @@ export const grade5Components = [
       "盾",
       "眉"
     ],
-    "description": "左边清楚的眼框形成“目”。先认清“目”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "左边清楚的眼框形成“目”。它在字形中作为“目”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "睑",
       "眸",
@@ -1447,7 +1447,7 @@ export const grade5Components = [
     "examples": [
       "眸"
     ],
-    "description": "右边牛角般的眉线和中心瞳孔沿“牟”排好。先认清“牟”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边牛角般的眉线和中心瞳孔沿“牟”排好。它在字形中作为“牟”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "眸"
     ],
@@ -1461,7 +1461,7 @@ export const grade5Components = [
     "examples": [
       "咂"
     ],
-    "description": "右边一圈围巾把小物包住并沿“匝”转折。先认清“匝”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边一圈围巾把小物包住并沿“匝”转折。它在字形中作为“匝”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "咂"
     ],
@@ -1475,7 +1475,7 @@ export const grade5Components = [
     "examples": [
       "汛"
     ],
-    "description": "右边水位警示杆、横梁和弯钩搭成“卂”。先认清“卂”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边水位警示杆、横梁和弯钩搭成“卂”。它在字形中作为“卂”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "汛"
     ],
@@ -1490,7 +1490,7 @@ export const grade5Components = [
       "挽",
       "勉"
     ],
-    "description": "右边一位转身的人和弯带沿“免”的笔画站好。先认清“免”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边一位转身的人和弯带沿“免”的笔画站好。它在字形中作为“免”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "挽",
       "勉"
@@ -1506,7 +1506,7 @@ export const grade5Components = [
       "间",
       "闯"
     ],
-    "description": "两扇门围成“门”。先认清“门”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "两扇门围成“门”。它在字形中作为“门”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "间",
       "闯"
@@ -1524,7 +1524,7 @@ export const grade5Components = [
       "暇",
       "鲁"
     ],
-    "description": "一轮日光正好停在门缝中央形成“日”。先认清“日”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "一轮日光正好停在门缝中央形成“日”。它在字形中作为“日”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "间",
       "暑",
@@ -1541,7 +1541,7 @@ export const grade5Components = [
     "examples": [
       "惰"
     ],
-    "description": "右上方人物靠着“左”形椅架。先认清“左”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右上方人物靠着“左”形椅架。它在字形中作为“左”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "惰"
     ],
@@ -1559,7 +1559,7 @@ export const grade5Components = [
       "腼",
       "腆"
     ],
-    "description": "右下方“月”形软垫托住身体。先认清“月”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右下方“月”形软垫托住身体。它在字形中作为“月”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "惰",
       "祭",
@@ -1578,7 +1578,7 @@ export const grade5Components = [
       "衡",
       "御"
     ],
-    "description": "左边行走刻度形成“彳”。先认清“彳”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "左边行走刻度形成“彳”。它在字形中作为“彳”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "衡",
       "御"
@@ -1594,7 +1594,7 @@ export const grade5Components = [
       "衡",
       "奔"
     ],
-    "description": "中央“田”形秤盘压着“大”形砝码。先认清“大”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "中央“田”形秤盘压着“大”形砝码。它在字形中作为“大”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "衡",
       "奔"
@@ -1609,7 +1609,7 @@ export const grade5Components = [
     "examples": [
       "衡"
     ],
-    "description": "右边支柱形成“亍”。先认清“亍”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边支柱形成“亍”。它在字形中作为“亍”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "衡"
     ],
@@ -1626,7 +1626,7 @@ export const grade5Components = [
       "盾",
       "毕"
     ],
-    "description": "左边十字联结架形成“十”。先认清“十”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "左边十字联结架形成“十”。它在字形中作为“十”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "协",
       "妻",
@@ -1643,7 +1643,7 @@ export const grade5Components = [
     "examples": [
       "协"
     ],
-    "description": "右边两个人合力转动绞盘沿“办”的笔画发力。先认清“办”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边两个人合力转动绞盘沿“办”的笔画发力。它在字形中作为“办”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "协"
     ],
@@ -1658,7 +1658,7 @@ export const grade5Components = [
       "绰",
       "罩"
     ],
-    "description": "桌架沿“卓”站立。先认清“卓”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "桌架沿“卓”站立。它在字形中作为“卓”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "绰",
       "罩"
@@ -1674,7 +1674,7 @@ export const grade5Components = [
       "洪",
       "拱"
     ],
-    "description": "右边众人共同抬起的防洪木架沿“共”的笔画展开。先认清“共”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边众人共同抬起的防洪木架沿“共”的笔画展开。它在字形中作为“共”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "洪",
       "拱"
@@ -1690,7 +1690,7 @@ export const grade5Components = [
       "访",
       "妨"
     ],
-    "description": "右边方形门牌和来访路线沿“方”排列。先认清“方”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边方形门牌和来访路线沿“方”排列。它在字形中作为“方”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "访",
       "妨"
@@ -1705,7 +1705,7 @@ export const grade5Components = [
     "examples": [
       "鞋"
     ],
-    "description": "左边皮革鞋面和系带沿“革”缝合。先认清“革”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "左边皮革鞋面和系带沿“革”缝合。它在字形中作为“革”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "鞋"
     ],
@@ -1720,7 +1720,7 @@ export const grade5Components = [
       "鞋",
       "哇"
     ],
-    "description": "右边上下两层鞋底土台叠成“圭”。先认清“圭”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边上下两层鞋底土台叠成“圭”。它在字形中作为“圭”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "鞋",
       "哇"
@@ -1735,7 +1735,7 @@ export const grade5Components = [
     "examples": [
       "隔"
     ],
-    "description": "右边锅盖、隔层和支脚搭成“鬲”。先认清“鬲”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边锅盖、隔层和支脚搭成“鬲”。它在字形中作为“鬲”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "隔"
     ],
@@ -1749,7 +1749,7 @@ export const grade5Components = [
     "examples": [
       "懒"
     ],
-    "description": "身体和车架沿“赖”的笔画摊开。先认清“赖”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "身体和车架沿“赖”的笔画摊开。它在字形中作为“赖”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "懒"
     ],
@@ -1765,7 +1765,7 @@ export const grade5Components = [
       "秀",
       "委"
     ],
-    "description": "左边低垂禾穗形成“禾”。先认清“禾”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "左边低垂禾穗形成“禾”。它在字形中作为“禾”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "稳",
       "秀",
@@ -1781,7 +1781,7 @@ export const grade5Components = [
     "examples": [
       "稳"
     ],
-    "description": "右边双手把心灯稳稳按在屋架下沿“急”排好。先认清“急”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边双手把心灯稳稳按在屋架下沿“急”排好。它在字形中作为“急”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "稳"
     ],
@@ -1795,7 +1795,7 @@ export const grade5Components = [
     "examples": [
       "免"
     ],
-    "description": "上方帽檐沿“⺈”弯下。先认清“⺈”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "上方帽檐沿“⺈”弯下。它在字形中作为“⺈”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "免"
     ],
@@ -1810,7 +1810,7 @@ export const grade5Components = [
       "免",
       "竟"
     ],
-    "description": "下方转身人物的两条腿稳稳站成“儿”。先认清“儿”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "下方转身人物的两条腿稳稳站成“儿”。它在字形中作为“儿”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "免",
       "竟"
@@ -1826,7 +1826,7 @@ export const grade5Components = [
       "璧",
       "僻"
     ],
-    "description": "上方带城墙纹样的玉环和守护架沿“辟”排开。先认清“辟”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "上方带城墙纹样的玉环和守护架沿“辟”排开。它在字形中作为“辟”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "璧",
       "僻"
@@ -1841,7 +1841,7 @@ export const grade5Components = [
     "examples": [
       "璧"
     ],
-    "description": "下方一枚温润玉石形成“玉”。先认清“玉”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "下方一枚温润玉石形成“玉”。它在字形中作为“玉”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "璧"
     ],
@@ -1855,7 +1855,7 @@ export const grade5Components = [
     "examples": [
       "臣"
     ],
-    "description": "冠帽、身体和衣袖严格沿“臣”的方折轮廓收拢。先认清“臣”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "冠帽、身体和衣袖严格沿“臣”的方折轮廓收拢。它在字形中作为“臣”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "臣"
     ],
@@ -1870,7 +1870,7 @@ export const grade5Components = [
       "强",
       "疆"
     ],
-    "description": "左边绷紧的弓形成“弓”。先认清“弓”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "左边绷紧的弓形成“弓”。它在字形中作为“弓”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "强",
       "疆"
@@ -1885,7 +1885,7 @@ export const grade5Components = [
     "examples": [
       "强"
     ],
-    "description": "身体与围栏沿“虽”搭起。先认清“虽”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "身体与围栏沿“虽”搭起。它在字形中作为“虽”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "强"
     ],
@@ -1899,7 +1899,7 @@ export const grade5Components = [
     "examples": [
       "诺"
     ],
-    "description": "右边草冠下点头的人和说话口沿“若”排列。先认清“若”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边草冠下点头的人和说话口沿“若”排列。它在字形中作为“若”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "诺"
     ],
@@ -1913,7 +1913,7 @@ export const grade5Components = [
     "examples": [
       "划"
     ],
-    "description": "左边古代戈形路线笔沿“戈”画出步骤。先认清“戈”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "左边古代戈形路线笔沿“戈”画出步骤。它在字形中作为“戈”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "划"
     ],
@@ -1930,7 +1930,7 @@ export const grade5Components = [
       "剔",
       "刊"
     ],
-    "description": "右边直立裁纸刀形成“刂”。先认清“刂”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边直立裁纸刀形成“刂”。它在字形中作为“刂”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "划",
       "削",
@@ -1947,7 +1947,7 @@ export const grade5Components = [
     "examples": [
       "典"
     ],
-    "description": "上方展开的礼仪册页沿“曲”折叠。先认清“曲”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "上方展开的礼仪册页沿“曲”折叠。它在字形中作为“曲”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "典"
     ],
@@ -1963,7 +1963,7 @@ export const grade5Components = [
       "置",
       "罩"
     ],
-    "description": "上方一张检查网形成“罒”。先认清“罒”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "上方一张检查网形成“罒”。它在字形中作为“罒”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "罪",
       "置",
@@ -1980,7 +1980,7 @@ export const grade5Components = [
       "罪",
       "辈"
     ],
-    "description": "下方两边相背的羽片沿“非”分开。先认清“非”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "下方两边相背的羽片沿“非”分开。它在字形中作为“非”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "罪",
       "辈"
@@ -1997,7 +1997,7 @@ export const grade5Components = [
       "唐",
       "席"
     ],
-    "description": "外面宫殿长檐形成“广”。先认清“广”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "外面宫殿长檐形成“广”。它在字形中作为“广”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "廉",
       "唐",
@@ -2013,7 +2013,7 @@ export const grade5Components = [
     "examples": [
       "抵"
     ],
-    "description": "右边盾牌底座和低压斜杆沿“氐”支撑。先认清“氐”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边盾牌底座和低压斜杆沿“氐”支撑。它在字形中作为“氐”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "抵"
     ],
@@ -2027,7 +2027,7 @@ export const grade5Components = [
     "examples": [
       "御"
     ],
-    "description": "身体与护栏沿“卸”排开。先认清“卸”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "身体与护栏沿“卸”排开。它在字形中作为“卸”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "御"
     ],
@@ -2042,7 +2042,7 @@ export const grade5Components = [
       "辞",
       "聒"
     ],
-    "description": "左边伸出的舌与说话牌形成“舌”。先认清“舌”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "左边伸出的舌与说话牌形成“舌”。它在字形中作为“舌”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "辞",
       "聒"
@@ -2057,7 +2057,7 @@ export const grade5Components = [
     "examples": [
       "辞"
     ],
-    "description": "右边辛劳工具和拒绝标记沿“辛”排列。先认清“辛”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边辛劳工具和拒绝标记沿“辛”排列。它在字形中作为“辛”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "辞"
     ],
@@ -2071,7 +2071,7 @@ export const grade5Components = [
     "examples": [
       "辱"
     ],
-    "description": "山崖般的晨光框架沿“辰”弯下。先认清“辰”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "山崖般的晨光框架沿“辰”弯下。它在字形中作为“辰”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "辱"
     ],
@@ -2086,7 +2086,7 @@ export const grade5Components = [
       "辱",
       "寺"
     ],
-    "description": "右下方一只带刻度的手形成“寸”。先认清“寸”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右下方一只带刻度的手形成“寸”。它在字形中作为“寸”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "辱",
       "寺"
@@ -2101,7 +2101,7 @@ export const grade5Components = [
     "examples": [
       "擅"
     ],
-    "description": "右边层层舞台、回环帷幕与中心横梁沿“亶”搭好。先认清“亶”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边层层舞台、回环帷幕与中心横梁沿“亶”搭好。它在字形中作为“亶”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "擅"
     ],
@@ -2115,7 +2115,7 @@ export const grade5Components = [
     "examples": [
       "缶"
     ],
-    "description": "陶罐上方提梁沿“午”交叉。先认清“午”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "陶罐上方提梁沿“午”交叉。它在字形中作为“午”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "缶"
     ],
@@ -2129,7 +2129,7 @@ export const grade5Components = [
     "examples": [
       "卿"
     ],
-    "description": "中间两扇朝门和台阶排成“卯”。先认清“卯”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "中间两扇朝门和台阶排成“卯”。它在字形中作为“卯”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "卿"
     ],
@@ -2144,7 +2144,7 @@ export const grade5Components = [
       "袍",
       "褐"
     ],
-    "description": "左边展开衣襟形成“衤”。先认清“衤”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "左边展开衣襟形成“衤”。它在字形中作为“衤”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "袍",
       "褐"
@@ -2159,7 +2159,7 @@ export const grade5Components = [
     "examples": [
       "袍"
     ],
-    "description": "右边头盔、包裹和弯身人物沿“包”站好。先认清“包”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边头盔、包裹和弯身人物沿“包”站好。它在字形中作为“包”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "袍"
     ],
@@ -2173,7 +2173,7 @@ export const grade5Components = [
     "examples": [
       "召"
     ],
-    "description": "上方弯柄响铃和召集刀牌形成“刀”。先认清“刀”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "上方弯柄响铃和召集刀牌形成“刀”。它在字形中作为“刀”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "召"
     ],
@@ -2187,7 +2187,7 @@ export const grade5Components = [
     "examples": [
       "议"
     ],
-    "description": "沿“义”的笔画站好。先认清“义”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "沿“义”的笔画站好。它在字形中作为“义”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "议"
     ],
@@ -2202,7 +2202,7 @@ export const grade5Components = [
       "缺",
       "瑶"
     ],
-    "description": "左边陶罐沿“缶”站立。先认清“缶”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "左边陶罐沿“缶”站立。它在字形中作为“缶”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "缺",
       "瑶"
@@ -2217,7 +2217,7 @@ export const grade5Components = [
     "examples": [
       "缺"
     ],
-    "description": "右边一只手从缺口处掰开形成“夬”。先认清“夬”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边一只手从缺口处掰开形成“夬”。它在字形中作为“夬”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "缺"
     ],
@@ -2231,7 +2231,7 @@ export const grade5Components = [
     "examples": [
       "宫"
     ],
-    "description": "下方两重宫门一上一下排成“吕”。先认清“吕”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "下方两重宫门一上一下排成“吕”。它在字形中作为“吕”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "宫"
     ],
@@ -2245,7 +2245,7 @@ export const grade5Components = [
     "examples": [
       "献"
     ],
-    "description": "左边双手托着礼盒与十字架台沿“南”搭起。先认清“南”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "左边双手托着礼盒与十字架台沿“南”搭起。它在字形中作为“南”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "献"
     ],
@@ -2260,7 +2260,7 @@ export const grade5Components = [
       "献",
       "狱"
     ],
-    "description": "右边守礼的小犬形成“犬”。先认清“犬”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边守礼的小犬形成“犬”。它在字形中作为“犬”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "献",
       "狱"
@@ -2275,7 +2275,7 @@ export const grade5Components = [
     "examples": [
       "承"
     ],
-    "description": "三层水波与横梁沿“氶”和“三”承接。先认清“氶”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "三层水波与横梁沿“氶”和“三”承接。它在字形中作为“氶”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "承"
     ],
@@ -2290,7 +2290,7 @@ export const grade5Components = [
       "抄",
       "纱"
     ],
-    "description": "右边少量墨点和小字沿“少”的笔画落在纸上。先认清“少”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边少量墨点和小字沿“少”的笔画落在纸上。它在字形中作为“少”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "抄",
       "纱"
@@ -2305,7 +2305,7 @@ export const grade5Components = [
     "examples": [
       "怯"
     ],
-    "description": "身体和台阶沿“去”收起。先认清“去”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "身体和台阶沿“去”收起。它在字形中作为“去”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "怯"
     ],
@@ -2319,7 +2319,7 @@ export const grade5Components = [
     "examples": [
       "荆"
     ],
-    "description": "左边草叶与交叉枝条沿“艹”和“刑”长成荆枝。先认清“刑”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "左边草叶与交叉枝条沿“艹”和“刑”长成荆枝。它在字形中作为“刑”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "荆"
     ],
@@ -2333,7 +2333,7 @@ export const grade5Components = [
     "examples": [
       "鸵"
     ],
-    "description": "右边长颈和身体绕着沙丘沿“它”弯下。先认清“它”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边长颈和身体绕着沙丘沿“它”弯下。它在字形中作为“它”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "鸵"
     ],
@@ -2347,7 +2347,7 @@ export const grade5Components = [
     "examples": [
       "赢"
     ],
-    "description": "上方胜利旗、比赛台和并肩队员层层搭成“𣎆”。先认清“𣎆”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "上方胜利旗、比赛台和并肩队员搭成齐心合力的队伍“𣎆”。它在字形中作为“𣎆”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "赢"
     ],
@@ -2363,7 +2363,7 @@ export const grade5Components = [
       "贾",
       "琐"
     ],
-    "description": "下方珍贵奖杯托着“贝”。先认清“贝”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "下方珍贵奖杯托着“贝”。它在字形中作为“贝”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "赢",
       "贾",
@@ -2379,7 +2379,7 @@ export const grade5Components = [
     "examples": [
       "冠"
     ],
-    "description": "下方帽冠、手腕和奖台沿“㝴”组合。先认清“㝴”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "下方帽冠、手腕和奖台沿“㝴”组合。它在字形中作为“㝴”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "冠"
     ],
@@ -2401,7 +2401,7 @@ export const grade5Components = [
       "传",
       "偿"
     ],
-    "description": "左边侧身人物形成“亻”。先认清“亻”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "左边侧身人物形成“亻”。它在字形中作为“亻”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "俯",
       "侵",
@@ -2423,7 +2423,7 @@ export const grade5Components = [
     "examples": [
       "俯"
     ],
-    "description": "右边高台、弯腰身体和向下路线沿“府”展开。先认清“府”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边高台、弯腰身体和向下路线沿“府”展开。它在字形中作为“府”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "俯"
     ],
@@ -2437,7 +2437,7 @@ export const grade5Components = [
     "examples": [
       "喷"
     ],
-    "description": "右边压力罐、交叉管和喷出颗粒沿“贲”排列。先认清“贲”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边压力罐、交叉管和喷出颗粒沿“贲”排列。它在字形中作为“贲”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "喷"
     ],
@@ -2451,7 +2451,7 @@ export const grade5Components = [
     "examples": [
       "枚"
     ],
-    "description": "右边一只手用短杖逐个点数果实沿“⺙”迈步。先认清“⺙”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边一只手用短杖逐个点数果实沿“⺙”迈步。它在字形中作为“⺙”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "枚"
     ],
@@ -2465,7 +2465,7 @@ export const grade5Components = [
     "examples": [
       "箭"
     ],
-    "description": "下方箭头、弓台和月形箭槽沿“前”排列。先认清“前”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "下方箭头、弓台和前行方向“前”紧密组合。它在字形中作为“前”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "箭"
     ],
@@ -2480,7 +2480,7 @@ export const grade5Components = [
       "浩",
       "酷"
     ],
-    "description": "右边高台上的号角和方形回声口沿“告”立起。先认清“告”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边高台上的号角和方形回声口沿“告”立起。它在字形中作为“告”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "浩",
       "酷"
@@ -2495,7 +2495,7 @@ export const grade5Components = [
     "examples": [
       "筒"
     ],
-    "description": "下方圆筒顶口、筒壁和内孔沿“同”搭成。先认清“同”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "下方圆筒顶口、筒壁和内孔“同”搭成。它在字形中作为“同”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "筒"
     ],
@@ -2509,7 +2509,7 @@ export const grade5Components = [
     "examples": [
       "赤"
     ],
-    "description": "形成“赤”。先认清“赤”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "形成“赤”。它在字形中作为“赤”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "赤"
     ],
@@ -2523,7 +2523,7 @@ export const grade5Components = [
     "examples": [
       "圈"
     ],
-    "description": "外面一圈围栏形成“囗”。先认清“囗”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "外面一圈围栏形成“囗”。它在字形中作为“囗”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "圈"
     ],
@@ -2537,7 +2537,7 @@ export const grade5Components = [
     "examples": [
       "圈"
     ],
-    "description": "里面卷起的软垫和弯腿沿“卷”盘好。先认清“卷”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "里面卷起的软垫和弯腿沿“卷”盘好。它在字形中作为“卷”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "圈"
     ],
@@ -2552,7 +2552,7 @@ export const grade5Components = [
       "置",
       "殖"
     ],
-    "description": "下方笔直标杆、观察眼和底座沿“直”对齐。先认清“直”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "下方笔直标杆、观察眼和底座沿“直”对齐。它在字形中作为“直”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "置",
       "殖"
@@ -2567,7 +2567,7 @@ export const grade5Components = [
     "examples": [
       "略"
     ],
-    "description": "右边外来脚步、转折和说话口沿“各”闯入。先认清“各”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边外来脚步、转折和说话口沿“各”闯入。它在字形中作为“各”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "略"
     ],
@@ -2581,7 +2581,7 @@ export const grade5Components = [
     "examples": [
       "垒"
     ],
-    "description": "上方三层石块反复叠成“厽”。先认清“厽”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "上方三层石块反复叠成“厽”。它在字形中作为“厽”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "垒"
     ],
@@ -2602,7 +2602,7 @@ export const grade5Components = [
       "寺",
       "塔"
     ],
-    "description": "下方厚实土台形成“土”。先认清“土”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "下方厚实土台形成“土”。它在字形中作为“土”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "垒",
       "堡",
@@ -2623,7 +2623,7 @@ export const grade5Components = [
     "examples": [
       "任"
     ],
-    "description": "右边城市路牌、横梁与中心立柱沿“壬”搭起。先认清“壬”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边城市路牌、横梁与中心立柱沿“壬”搭起。它在字形中作为“壬”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "任"
     ],
@@ -2638,7 +2638,7 @@ export const grade5Components = [
       "丘",
       "斩"
     ],
-    "description": "下方土坡剖面和测量斧形标记沿“斤”铺开。先认清“斤”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "下方土坡剖面和测量斧形标记沿“斤”铺开。它在字形中作为“斤”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "丘",
       "斩"
@@ -2657,7 +2657,7 @@ export const grade5Components = [
       "览",
       "鉴"
     ],
-    "description": "一条长地平线形成“一”。先认清“一”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "一条长地平线形成“一”。它在字形中作为“一”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "丘",
       "歹",
@@ -2675,7 +2675,7 @@ export const grade5Components = [
     "examples": [
       "搁"
     ],
-    "description": "右边门框里一层置物阁沿“阁”搭起。先认清“阁”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边门框里一层置物阁沿“阁”搭起。它在字形中作为“阁”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "搁"
     ],
@@ -2689,7 +2689,7 @@ export const grade5Components = [
     "examples": [
       "陷"
     ],
-    "description": "手脚和坑沿排成“臽”。先认清“臽”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "手脚和坑沿排成“臽”。它在字形中作为“臽”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "陷"
     ],
@@ -2703,7 +2703,7 @@ export const grade5Components = [
     "examples": [
       "拐"
     ],
-    "description": "右边路口标牌和转弯坡道沿“另”折向一边。先认清“另”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边路口标牌和转弯坡道沿“另”折向一边。它在字形中作为“另”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "拐"
     ],
@@ -2717,7 +2717,7 @@ export const grade5Components = [
     "examples": [
       "筑"
     ],
-    "description": "下方工匠双手夯土、工具和地基沿“巩”搭起。先认清“巩”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "下方工匠双手夯土、工具和地基沿“巩”搭起。它在字形中作为“巩”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "筑"
     ],
@@ -2731,7 +2731,7 @@ export const grade5Components = [
     "examples": [
       "堡"
     ],
-    "description": "上方守卫、城墙和呆口沿“保”搭成防守塔。先认清“保”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "上方守卫、城墙和呆口沿“保”搭成防守塔。它在字形中作为“保”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "堡"
     ],
@@ -2745,7 +2745,7 @@ export const grade5Components = [
     "examples": [
       "党"
     ],
-    "description": "上方灯棚形成“龸”。先认清“龸”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "上方灯棚形成“龸”。它在字形中作为“龸”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "党"
     ],
@@ -2759,7 +2759,7 @@ export const grade5Components = [
     "examples": [
       "党"
     ],
-    "description": "中间并肩人物沿“兄”站立。先认清“兄”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "中间并肩人物沿“兄”站立。它在字形中作为“兄”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "党"
     ],
@@ -2773,7 +2773,7 @@ export const grade5Components = [
     "examples": [
       "蔽"
     ],
-    "description": "下方破旧遮网、手杖和布幕沿“敝”展开。先认清“敝”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "下方破旧遮网、手杖和布幕沿“敝”展开。它在字形中作为“敝”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "蔽"
     ],
@@ -2791,7 +2791,7 @@ export const grade5Components = [
       "酸",
       "酵"
     ],
-    "description": "左边封口酒坛形成“酉”。先认清“酉”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "左边封口酒坛形成“酉”。它在字形中作为“酉”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "酬",
       "酿",
@@ -2809,7 +2809,7 @@ export const grade5Components = [
     "examples": [
       "酬"
     ],
-    "description": "右边三道水渠般的回礼台沿“州”排列。先认清“州”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边三道水渠般的回礼台沿“州”排列。它在字形中作为“州”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "酬"
     ],
@@ -2823,7 +2823,7 @@ export const grade5Components = [
     "examples": [
       "誓"
     ],
-    "description": "上方双手折下信物沿“折”交叉。先认清“折”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "上方双手折下信物沿“折”交叉。它在字形中作为“折”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "誓"
     ],
@@ -2838,7 +2838,7 @@ export const grade5Components = [
       "誓",
       "誊"
     ],
-    "description": "下方郑重说出的话排成“言”。先认清“言”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "下方郑重说出的话排成“言”。它在字形中作为“言”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "誓",
       "誊"
@@ -2853,7 +2853,7 @@ export const grade5Components = [
     "examples": [
       "谎"
     ],
-    "description": "右边荒草、弯路和隐藏人物沿“荒”铺开。先认清“荒”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边荒草、弯路和隐藏人物沿“荒”铺开。它在字形中作为“荒”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "谎"
     ],
@@ -2867,7 +2867,7 @@ export const grade5Components = [
     "examples": [
       "牺"
     ],
-    "description": "左边守护家园的牛形成“牛”。先认清“牛”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "左边守护家园的牛形成“牛”。它在字形中作为“牛”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "牺"
     ],
@@ -2881,7 +2881,7 @@ export const grade5Components = [
     "examples": [
       "牺"
     ],
-    "description": "右边夕阳落在西方窗格沿“西”铺开。先认清“西”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边夕阳落在西方窗格沿“西”铺开。它在字形中作为“西”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "牺"
     ],
@@ -2903,7 +2903,7 @@ export const grade5Components = [
       "枉",
       "琐"
     ],
-    "description": "左边三层玉架形成“王”。先认清“王”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "左边三层玉架形成“王”。它在字形中作为“王”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "珍",
       "皇",
@@ -2925,7 +2925,7 @@ export const grade5Components = [
     "examples": [
       "珍"
     ],
-    "description": "手指和珠光沿“㐱”排列。先认清“㐱”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "手指和珠光沿“㐱”排列。它在字形中作为“㐱”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "珍"
     ],
@@ -2939,7 +2939,7 @@ export const grade5Components = [
     "examples": [
       "嘱"
     ],
-    "description": "右边长长任务清单、屋檐和脚步沿“属”展开。先认清“属”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边长长任务清单、屋檐和脚步沿“属”展开。它在字形中作为“属”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "嘱"
     ],
@@ -2953,7 +2953,7 @@ export const grade5Components = [
     "examples": [
       "塌"
     ],
-    "description": "右边屋顶和双翼支架沿“𦐇”下沉折叠。先认清“𦐇”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边失去支撑的屋顶和折叠支架“𦐇”向下坠落。它在字形中作为“𦐇”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "塌"
     ],
@@ -2969,7 +2969,7 @@ export const grade5Components = [
       "煮",
       "煞"
     ],
-    "description": "下方四点热火形成“灬”。先认清“灬”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "下方四点热火形成“灬”。它在字形中作为“灬”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "焦",
       "煮",
@@ -2985,7 +2985,7 @@ export const grade5Components = [
     "examples": [
       "延"
     ],
-    "description": "一条长廊沿“廴”转折延伸。先认清“廴”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "一条长廊沿“廴”转折延伸。它在字形中作为“廴”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "延"
     ],
@@ -3002,7 +3002,7 @@ export const grade5Components = [
       "览",
       "鉴"
     ],
-    "description": "入口一笔“丿”引向内部“止”形脚步。先认清“丿”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "入口一笔“丿”引向内部“止”形脚步。它在字形中作为“丿”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "延",
       "监",
@@ -3021,7 +3021,7 @@ export const grade5Components = [
       "歧",
       "耻"
     ],
-    "description": "入口一笔“丿”引向内部“止”形脚步。先认清“止”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "入口一笔“丿”引向内部“止”形脚步。它在字形中作为“止”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "延",
       "歧",
@@ -3040,7 +3040,7 @@ export const grade5Components = [
       "烬",
       "炊"
     ],
-    "description": "下方火焰沿“火”升起。先认清“火”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "下方火焰沿“火”升起。它在字形中作为“火”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "灾",
       "煌",
@@ -3058,7 +3058,7 @@ export const grade5Components = [
       "悔",
       "诲"
     ],
-    "description": "右边每天翻看的改错日历沿“每”排列。先认清“每”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边每天翻看的改错日历沿“每”排列。它在字形中作为“每”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "悔",
       "诲"
@@ -3073,7 +3073,7 @@ export const grade5Components = [
     "examples": [
       "扶"
     ],
-    "description": "右边张开双臂站立的人形成“夫”。先认清“夫”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边张开双臂站立的人形成“夫”。它在字形中作为“夫”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "扶"
     ],
@@ -3087,7 +3087,7 @@ export const grade5Components = [
     "examples": [
       "嫂"
     ],
-    "description": "身体与工具沿“叟”站好。先认清“叟”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "身体与工具沿“叟”站好。它在字形中作为“叟”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "嫂"
     ],
@@ -3102,7 +3102,7 @@ export const grade5Components = [
       "恳",
       "限"
     ],
-    "description": "上方跪坐人物和回转手势沿“艮”收拢。先认清“艮”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "上方跪坐人物和回转手势沿“艮”收拢。它在字形中作为“艮”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "恳",
       "限"
@@ -3117,7 +3117,7 @@ export const grade5Components = [
     "examples": [
       "筛"
     ],
-    "description": "下方师傅手中的网筛、横杆和垂布沿“师”搭起。先认清“师”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "下方师傅手中的网筛、横杆和垂布“师”搭起。它在字形中作为“师”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "筛"
     ],
@@ -3132,7 +3132,7 @@ export const grade5Components = [
       "歹",
       "桨"
     ],
-    "description": "下方夜色月影沿“夕”弯下。先认清“夕”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "下方夜色月影沿“夕”弯下。它在字形中作为“夕”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "歹",
       "桨"
@@ -3147,7 +3147,7 @@ export const grade5Components = [
     "examples": [
       "罕"
     ],
-    "description": "上方稀疏网眼形成“⺳”。先认清“⺳”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "上方稀疏网眼形成“⺳”。它在字形中作为“⺳”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "罕"
     ],
@@ -3162,7 +3162,7 @@ export const grade5Components = [
       "罕",
       "刊"
     ],
-    "description": "下方孤零零的一根晾杆沿“干”站立。先认清“干”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "下方孤零零的一根晾杆沿“干”站立。它在字形中作为“干”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "罕",
       "刊"
@@ -3178,7 +3178,7 @@ export const grade5Components = [
       "梭",
       "酸"
     ],
-    "description": "右边梭舟、脚步和回转线沿“夋”快速穿梭。先认清“夋”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边梭舟、脚步和回转线沿“夋”快速穿梭。它在字形中作为“夋”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "梭",
       "酸"
@@ -3195,7 +3195,7 @@ export const grade5Components = [
       "览",
       "鉴"
     ],
-    "description": "高处双栏形成“〢”。先认清“〢”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "高处双栏形成“〢”。它在字形中作为“〢”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "监",
       "览",
@@ -3214,7 +3214,7 @@ export const grade5Components = [
       "勺",
       "鉴"
     ],
-    "description": "横栏“一”和观察点“丶”对准下方“皿”形场地。先认清“丶”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "横栏“一”和观察点“丶”对准下方“皿”形场地。它在字形中作为“丶”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "监",
       "览",
@@ -3231,7 +3231,7 @@ export const grade5Components = [
     "examples": [
       "监"
     ],
-    "description": "横栏“一”和观察点“丶”对准下方“皿”形场地。先认清“皿”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "横栏“一”和观察点“丶”对准下方“皿”形场地。它在字形中作为“皿”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "监"
     ],
@@ -3246,7 +3246,7 @@ export const grade5Components = [
       "狱",
       "狭"
     ],
-    "description": "左边守卫犬的侧影形成“犭”。先认清“犭”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "左边守卫犬的侧影形成“犭”。它在字形中作为“犭”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "狱",
       "狭"
@@ -3263,7 +3263,7 @@ export const grade5Components = [
       "郎",
       "粮"
     ],
-    "description": "右边优质谷物、发酵布和流下酒液沿“良”排列。先认清“良”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边优质谷物、发酵布和流下酒液沿“良”排列。它在字形中作为“良”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "酿",
       "郎",
@@ -3279,7 +3279,7 @@ export const grade5Components = [
     "examples": [
       "瞌"
     ],
-    "description": "右边上盖、器皿和低垂头部沿“盍”收拢。先认清“盍”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边上盖、器皿和低垂头部沿“盍”收拢。它在字形中作为“盍”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "瞌"
     ],
@@ -3293,7 +3293,7 @@ export const grade5Components = [
     "examples": [
       "落"
     ],
-    "description": "水、路与停步点排成“洛”。先认清“洛”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "水、路与停步点排成“洛”。它在字形中作为“洛”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "落"
     ],
@@ -3307,7 +3307,7 @@ export const grade5Components = [
     "examples": [
       "婚"
     ],
-    "description": "右边黄昏日轮与相会身影沿“昏”排列。先认清“昏”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边黄昏日轮与相会身影沿“昏”排列。它在字形中作为“昏”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "婚"
     ],
@@ -3321,7 +3321,7 @@ export const grade5Components = [
     "examples": [
       "爹"
     ],
-    "description": "上方父亲张开手臂形成“父”。先认清“父”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "上方父亲张开手臂形成“父”。它在字形中作为“父”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "爹"
     ],
@@ -3335,7 +3335,7 @@ export const grade5Components = [
     "examples": [
       "爹"
     ],
-    "description": "下方两个孩子依偎成“多”的层次。先认清“多”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "下方两个孩子依偎成“多”的层次。它在字形中作为“多”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "爹"
     ],
@@ -3351,7 +3351,7 @@ export const grade5Components = [
       "辈",
       "斩"
     ],
-    "description": "左边车轮、车轴和车架形成“车”。先认清“车”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "左边车轮、车轴和车架形成“车”。它在字形中作为“车”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "辆",
       "辈",
@@ -3368,7 +3368,7 @@ export const grade5Components = [
       "辆",
       "瞒"
     ],
-    "description": "右边两排座位与双轮沿“两”排列。先认清“两”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边两排座位与双轮沿“两”排列。它在字形中作为“两”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "辆",
       "瞒"
@@ -3383,7 +3383,7 @@ export const grade5Components = [
     "examples": [
       "趟"
     ],
-    "description": "左下方连续脚步和道路形成“走”。先认清“走”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "左下方连续脚步和道路形成“走”。它在字形中作为“走”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "趟"
     ],
@@ -3397,7 +3397,7 @@ export const grade5Components = [
     "examples": [
       "趟"
     ],
-    "description": "右上方高屋与传声口沿“尚”站立。先认清“尚”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右上方高屋与传声口沿“尚”站立。它在字形中作为“尚”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "趟"
     ],
@@ -3411,7 +3411,7 @@ export const grade5Components = [
     "examples": [
       "托"
     ],
-    "description": "右边一件被稳稳托住的包裹和弯钩沿“乇”放好。先认清“乇”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边一件被稳稳托住的包裹和弯钩沿“乇”放好。它在字形中作为“乇”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "托"
     ],
@@ -3425,7 +3425,7 @@ export const grade5Components = [
     "examples": [
       "挨"
     ],
-    "description": "身体和护具沿“矣”收拢。先认清“矣”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "身体和护具沿“矣”收拢。它在字形中作为“矣”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "挨"
     ],
@@ -3442,7 +3442,7 @@ export const grade5Components = [
       "泊",
       "皎"
     ],
-    "description": "上方明亮冠帽形成“白”。先认清“白”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "上方明亮冠帽形成“白”。它在字形中作为“白”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "皇",
       "魄",
@@ -3459,7 +3459,7 @@ export const grade5Components = [
     "examples": [
       "偎"
     ],
-    "description": "右边另一人带着衣褶沿“畏”的笔画靠近。先认清“畏”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边另一人带着衣褶沿“畏”的笔画靠近。它在字形中作为“畏”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "偎"
     ],
@@ -3473,7 +3473,7 @@ export const grade5Components = [
     "examples": [
       "衰"
     ],
-    "description": "一件长衣从肩领到下摆沿“衰”的笔画垂落。先认清“衰”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "一件长衣从肩领到下摆沿“衰”的笔画垂落。它在字形中作为“衰”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "衰"
     ],
@@ -3487,7 +3487,7 @@ export const grade5Components = [
     "examples": [
       "珊"
     ],
-    "description": "右边两片并排珊瑚枝板沿“册”展开。先认清“册”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边两片并排珊瑚枝板沿“册”展开。它在字形中作为“册”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "珊"
     ],
@@ -3501,7 +3501,7 @@ export const grade5Components = [
     "examples": [
       "瑚"
     ],
-    "description": "右边古月形海湾与珊瑚枝沿“胡”排列。先认清“胡”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边古月形海湾与珊瑚枝沿“胡”排列。它在字形中作为“胡”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "瑚"
     ],
@@ -3517,7 +3517,7 @@ export const grade5Components = [
       "碌",
       "磁"
     ],
-    "description": "左边突出水面的岩石形成“石”。先认清“石”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "左边突出水面的岩石形成“石”。它在字形中作为“石”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "礁",
       "碌",
@@ -3533,7 +3533,7 @@ export const grade5Components = [
     "examples": [
       "礁"
     ],
-    "description": "右边鸟形警示标与四点灯火沿“焦”站在水下。先认清“焦”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边鸟形警示标与四点灯火沿“焦”站在水下。它在字形中作为“焦”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "礁"
     ],
@@ -3547,7 +3547,7 @@ export const grade5Components = [
     "examples": [
       "拗"
     ],
-    "description": "右边幼小树苗和弯绳沿“幼”倔强地反向拉紧。先认清“幼”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边幼小树苗和弯绳沿“幼”倔强地反向拉紧。它在字形中作为“幼”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "拗"
     ],
@@ -3562,7 +3562,7 @@ export const grade5Components = [
       "乃",
       "秀"
     ],
-    "description": "两笔自然长成“乃”。先认清“乃”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "两笔自然长成“乃”。它在字形中作为“乃”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "乃",
       "秀"
@@ -3577,7 +3577,7 @@ export const grade5Components = [
     "examples": [
       "熏"
     ],
-    "description": "上方香炉、层层香料和窗格沿“熏”的上部叠放。先认清“熏”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "上方香炉、层层香料和窗格沿“熏”的上部叠放。它在字形中作为“熏”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "熏"
     ],
@@ -3591,7 +3591,7 @@ export const grade5Components = [
     "examples": [
       "恃"
     ],
-    "description": "右边寺院土台、手腕和屋梁沿“寺”站高。先认清“寺”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边寺院土台、手腕和屋梁沿“寺”站高。它在字形中作为“寺”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "恃"
     ],
@@ -3605,7 +3605,7 @@ export const grade5Components = [
     "examples": [
       "擞"
     ],
-    "description": "右边算盘珠、脚步和短杖沿“数”快速抖动。先认清“数”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边算盘珠、脚步和短杖沿“数”快速抖动。它在字形中作为“数”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "擞"
     ],
@@ -3619,7 +3619,7 @@ export const grade5Components = [
     "examples": [
       "祭"
     ],
-    "description": "下方礼台与光点形成“示”。先认清“示”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "下方礼台与光点形成“示”。它在字形中作为“示”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "祭"
     ],
@@ -3633,7 +3633,7 @@ export const grade5Components = [
     "examples": [
       "哀"
     ],
-    "description": "外面低垂衣袖和衣襟沿“衣”包住身体。先认清“衣”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "外面低垂衣袖和衣襟沿“衣”包住身体。它在字形中作为“衣”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "哀"
     ],
@@ -3647,7 +3647,7 @@ export const grade5Components = [
     "examples": [
       "拘"
     ],
-    "description": "右边弯绳把一句话和人物围成“句”。先认清“句”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边弯绳把一句话和人物围成“句”。它在字形中作为“句”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "拘"
     ],
@@ -3661,7 +3661,7 @@ export const grade5Components = [
     "examples": [
       "泻"
     ],
-    "description": "右边屋盖下的水槽和向下斜流沿“写”铺开。先认清“写”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边屋盖下的水槽和向下斜流沿“写”铺开。它在字形中作为“写”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "泻"
     ],
@@ -3676,7 +3676,7 @@ export const grade5Components = [
       "鳞",
       "鲁"
     ],
-    "description": "左边鱼头、鳍和尾巴形成“鱼”。先认清“鱼”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "左边鱼头、鳍和尾巴形成“鱼”。它在字形中作为“鱼”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "鳞",
       "鲁"
@@ -3691,7 +3691,7 @@ export const grade5Components = [
     "examples": [
       "鳞"
     ],
-    "description": "右边米粒状鳞片与火光层层排列成“粦”。先认清“粦”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边米粒状鳞片与火光层层排列成“粦”。它在字形中作为“粦”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "鳞"
     ],
@@ -3706,7 +3706,7 @@ export const grade5Components = [
       "惶",
       "煌"
     ],
-    "description": "右边高冠和玉座沿“皇”压下来。先认清“皇”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边高冠和玉座沿“皇”压下来。它在字形中作为“皇”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "惶",
       "煌"
@@ -3721,7 +3721,7 @@ export const grade5Components = [
     "examples": [
       "胎"
     ],
-    "description": "右边小生命蜷在台形保护空间沿“台”安稳躺下。先认清“台”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边小生命蜷在台形保护空间沿“台”安稳躺下。它在字形中作为“台”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "胎"
     ],
@@ -3737,7 +3737,7 @@ export const grade5Components = [
       "尾",
       "屑"
     ],
-    "description": "外面屋身和脚步形成“尸”形长靴。先认清“尸”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "外面屋身和脚步形成“尸”形长靴。它在字形中作为“尸”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "履",
       "尾",
@@ -3753,7 +3753,7 @@ export const grade5Components = [
     "examples": [
       "履"
     ],
-    "description": "里面一遍遍往返的路线、日程和脚印沿“復”展开。先认清“復”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "里面一遍遍往返的路线、日程和脚印沿“復”展开。它在字形中作为“復”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "履"
     ],
@@ -3767,7 +3767,7 @@ export const grade5Components = [
     "examples": [
       "哉"
     ],
-    "description": "右上旗杆、横梁和弯钩沿“𢦏”扬起。先认清“𢦏”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右上飘扬的旗杆、横梁和弯钩“𢦏”扬起。它在字形中作为“𢦏”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "哉"
     ],
@@ -3781,7 +3781,7 @@ export const grade5Components = [
     "examples": [
       "潜"
     ],
-    "description": "身体和日轮沿“替”叠放。先认清“替”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "身体和日轮沿“替”叠放。它在字形中作为“替”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "潜"
     ],
@@ -3795,7 +3795,7 @@ export const grade5Components = [
     "examples": [
       "试"
     ],
-    "description": "右边试卷格线、工具和标记沿“式”搭成。先认清“式”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边试卷格线、工具和标记沿“式”搭成。它在字形中作为“式”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "试"
     ],
@@ -3809,7 +3809,7 @@ export const grade5Components = [
     "examples": [
       "纵"
     ],
-    "description": "右边两个人一前一后形成“从”。先认清“从”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边两个人一前一后形成“从”。它在字形中作为“从”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "纵"
     ],
@@ -3823,7 +3823,7 @@ export const grade5Components = [
     "examples": [
       "疆"
     ],
-    "description": "右边三层界线和两块田地沿“畺”分区。先认清“畺”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边三层界线和两块田地沿“畺”分区。它在字形中作为“畺”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "疆"
     ],
@@ -3837,7 +3837,7 @@ export const grade5Components = [
     "examples": [
       "估"
     ],
-    "description": "右边古老算筹台、十字刻度和方口沿“古”摆好。先认清“古”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边古老算筹台、十字刻度和方口沿“古”摆好。它在字形中作为“古”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "估"
     ],
@@ -3852,7 +3852,7 @@ export const grade5Components = [
       "珑",
       "咙"
     ],
-    "description": "右边盘旋小龙的角、身和尾沿“龙”收拢。先认清“龙”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边盘旋小龙的角、身和尾沿“龙”收拢。它在字形中作为“龙”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "珑",
       "咙"
@@ -3867,7 +3867,7 @@ export const grade5Components = [
     "examples": [
       "剔"
     ],
-    "description": "左边日光穿过层层透明玉片沿“易”展开。先认清“易”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "左边日光穿过层层透明玉片沿“易”展开。它在字形中作为“易”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "剔"
     ],
@@ -3881,7 +3881,7 @@ export const grade5Components = [
     "examples": [
       "澜"
     ],
-    "description": "右边门栏内层层翻起的水纹沿“阑”铺开。先认清“阑”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边门栏内层层翻起的水纹沿“阑”铺开。它在字形中作为“阑”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "澜"
     ],
@@ -3896,7 +3896,7 @@ export const grade5Components = [
       "瑶",
       "舀"
     ],
-    "description": "右上方“爫”形手捧玉饰。先认清“爫”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右上方“爫”形手捧玉饰。它在字形中作为“爫”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "瑶",
       "舀"
@@ -3911,7 +3911,7 @@ export const grade5Components = [
     "examples": [
       "陵"
     ],
-    "description": "右边山路、台阶和行走脚步沿“夌”上升。先认清“夌”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边山路、台阶和行走脚步沿“夌”上升。它在字形中作为“夌”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "陵"
     ],
@@ -3925,7 +3925,7 @@ export const grade5Components = [
     "examples": [
       "宏"
     ],
-    "description": "下方大跨度拱梁和回转支撑沿“厷”撑开。先认清“厷”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "下方大跨度拱梁和回转支撑沿“厷”撑开。它在字形中作为“厷”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "宏"
     ],
@@ -3939,7 +3939,7 @@ export const grade5Components = [
     "examples": [
       "奉"
     ],
-    "description": "下方双手托起命令卷轴和横架沿“𡗗”排列。先认清“𡗗”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "下方双手托起命令卷轴和横架“𡗗”排列。它在字形中作为“𡗗”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "奉"
     ],
@@ -3953,7 +3953,7 @@ export const grade5Components = [
     "examples": [
       "烬"
     ],
-    "description": "右边空器皿和最后两点余灰沿“尽”落下。先认清“尽”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边空器皿和最后两点余灰沿“尽”落下。它在字形中作为“尽”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "烬"
     ],
@@ -3969,7 +3969,7 @@ export const grade5Components = [
       "舀",
       "舅"
     ],
-    "description": "左上方“臼”形旧墙连接左下方“工”形建筑架。先认清“臼”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "左上方“臼”形旧墙连接左下方“工”形建筑架。它在字形中作为“臼”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "毁",
       "舀",
@@ -3986,7 +3986,7 @@ export const grade5Components = [
       "毁",
       "差"
     ],
-    "description": "左上方“臼”形旧墙连接左下方“工”形建筑架。先认清“工”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "左上方“臼”形旧墙连接左下方“工”形建筑架。它在字形中作为“工”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "毁",
       "差"
@@ -4002,7 +4002,7 @@ export const grade5Components = [
       "毁",
       "殿"
     ],
-    "description": "右边“殳”形手持短杖轻敲模型。先认清“殳”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边“殳”形手持短杖轻敲模型。它在字形中作为“殳”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "毁",
       "殿"
@@ -4017,7 +4017,7 @@ export const grade5Components = [
     "examples": [
       "损"
     ],
-    "description": "箱口与人影沿“员”排列。先认清“员”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "箱口与人影沿“员”排列。它在字形中作为“员”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "损"
     ],
@@ -4033,7 +4033,7 @@ export const grade5Components = [
       "恍",
       "耀"
     ],
-    "description": "左边小灯与四散光线组成“光”。先认清“光”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "左边小灯与四散光线组成“光”。它在字形中作为“光”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "辉",
       "恍",
@@ -4049,7 +4049,7 @@ export const grade5Components = [
     "examples": [
       "辉"
     ],
-    "description": "右边军旗、车轮和横轴沿“军”转动。先认清“军”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边军旗、车轮和横轴沿“军”转动。它在字形中作为“军”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "辉"
     ],
@@ -4063,7 +4063,7 @@ export const grade5Components = [
     "examples": [
       "殿"
     ],
-    "description": "左边高大殿堂、台阶和屋梁沿“𡱒”铺开。先认清“𡱒”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "左边巍峨的高大殿堂骨架“𡱒”铺开。它在字形中作为“𡱒”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "殿"
     ],
@@ -4077,7 +4077,7 @@ export const grade5Components = [
     "examples": [
       "览"
     ],
-    "description": "下方观察者形成“见”。先认清“见”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "下方观察者形成“见”。它在字形中作为“见”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "览"
     ],
@@ -4091,7 +4091,7 @@ export const grade5Components = [
     "examples": [
       "境"
     ],
-    "description": "右边立起的观景台、日光和人物沿“竟”展开。先认清“竟”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边立起的观景台、日光和人物沿“竟”展开。它在字形中作为“竟”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "境"
     ],
@@ -4105,7 +4105,7 @@ export const grade5Components = [
     "examples": [
       "唐"
     ],
-    "description": "里面上方交错宫梁沿“肀”搭起。先认清“肀”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "里面上方交错宫梁沿“肀”搭起。它在字形中作为“肀”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "唐"
     ],
@@ -4120,7 +4120,7 @@ export const grade5Components = [
       "闯",
       "驯"
     ],
-    "description": "里面一匹马收起四蹄沿“马”冲进门内。先认清“马”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "里面一匹马收起四蹄沿“马”冲进门内。它在字形中作为“马”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "闯",
       "驯"
@@ -4137,7 +4137,7 @@ export const grade5Components = [
       "锥",
       "钉"
     ],
-    "description": "左边金属工具架形成“钅”。先认清“钅”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "左边金属工具架形成“钅”。它在字形中作为“钅”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "销",
       "锥",
@@ -4153,7 +4153,7 @@ export const grade5Components = [
     "examples": [
       "域"
     ],
-    "description": "右边海湾、边界线和小岛沿“或”的笔画圈出范围。先认清“或”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边海湾、边界线和小岛沿“或”的笔画圈出范围。它在字形中作为“或”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "域"
     ],
@@ -4167,7 +4167,7 @@ export const grade5Components = [
     "examples": [
       "艇"
     ],
-    "description": "左边细长船身形成“舟”。先认清“舟”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "左边细长船身形成“舟”。它在字形中作为“舟”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "艇"
     ],
@@ -4181,7 +4181,7 @@ export const grade5Components = [
     "examples": [
       "艇"
     ],
-    "description": "右边船桅、甲板和延伸航线沿“廷”排列。先认清“廷”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边船桅、甲板和延伸航线沿“廷”排列。它在字形中作为“廷”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "艇"
     ],
@@ -4195,7 +4195,7 @@ export const grade5Components = [
     "examples": [
       "矛"
     ],
-    "description": "从尖头、长柄到侧钩严格沿“矛”的全部笔画弯折。先认清“矛”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "从尖头、长柄到侧钩严格沿“矛”的全部笔画弯折。它在字形中作为“矛”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "矛"
     ],
@@ -4209,7 +4209,7 @@ export const grade5Components = [
     "examples": [
       "盾"
     ],
-    "description": "外面斜握护臂和盾边形成“⺁”。先认清“⺁”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "外面斜握护臂和盾边形成“⺁”。它在字形中作为“⺁”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "盾"
     ],
@@ -4223,7 +4223,7 @@ export const grade5Components = [
     "examples": [
       "筷"
     ],
-    "description": "手腕和筷影沿“快”排列。先认清“快”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "手腕和筷影“快”排列。它在字形中作为“快”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "筷"
     ],
@@ -4238,7 +4238,7 @@ export const grade5Components = [
       "炊",
       "歇"
     ],
-    "description": "右边人物张口轻吹、身体后仰沿“欠”站好。先认清“欠”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边人物张口轻吹、身体后仰沿“欠”站好。它在字形中作为“欠”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "炊",
       "歇"
@@ -4253,7 +4253,7 @@ export const grade5Components = [
     "examples": [
       "哼"
     ],
-    "description": "右边气流穿过长管和共鸣箱沿“亨”振动。先认清“亨”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边气流穿过长管和共鸣箱沿“亨”振动。它在字形中作为“亨”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "哼"
     ],
@@ -4267,7 +4267,7 @@ export const grade5Components = [
     "examples": [
       "喉"
     ],
-    "description": "右边人物、喉管和吞咽路线沿“侯”排列。先认清“侯”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边人物、喉管和吞咽路线沿“侯”排列。它在字形中作为“侯”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "喉"
     ],
@@ -4282,7 +4282,7 @@ export const grade5Components = [
       "哽",
       "更"
     ],
-    "description": "右边一更又一更的横栏和卡住气流沿“更”排列。先认清“更”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边一更又一更的横栏和卡住气流沿“更”排列。它在字形中作为“更”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "哽",
       "更"
@@ -4298,7 +4298,7 @@ export const grade5Components = [
       "勺",
       "甸"
     ],
-    "description": "弯曲长柄围成“勹”。先认清“勹”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "弯曲长柄围成“勹”。它在字形中作为“勹”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "勺",
       "甸"
@@ -4313,7 +4313,7 @@ export const grade5Components = [
     "examples": [
       "搅"
     ],
-    "description": "右边旋转碗、观察眼和搅拌架沿“觉”排列。先认清“觉”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边旋转碗、观察眼和搅拌架沿“觉”排列。它在字形中作为“觉”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "搅"
     ],
@@ -4327,7 +4327,7 @@ export const grade5Components = [
     "examples": [
       "摄"
     ],
-    "description": "右边三只耳形感温片叠成“聂”。先认清“聂”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边三只耳形感温片叠成“聂”。它在字形中作为“聂”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "摄"
     ],
@@ -4341,7 +4341,7 @@ export const grade5Components = [
     "examples": [
       "殖"
     ],
-    "description": "左边生命循环的骨形标本沿“歹”摆放。先认清“歹”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "左边生命循环的骨形标本沿“歹”摆放。它在字形中作为“歹”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "殖"
     ],
@@ -4355,7 +4355,7 @@ export const grade5Components = [
     "examples": [
       "炭"
     ],
-    "description": "下方黑色煤块、火焰和灰沿“灰”排列。先认清“灰”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "下方黑色煤块、火焰和灰沿“灰”排列。它在字形中作为“灰”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "炭"
     ],
@@ -4371,7 +4371,7 @@ export const grade5Components = [
       "疼",
       "瘾"
     ],
-    "description": "外面医院床帘和药箱形成“疒”。先认清“疒”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "外面医院床帘和药箱形成“疒”。它在字形中作为“疒”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "疗",
       "疼",
@@ -4387,7 +4387,7 @@ export const grade5Components = [
     "examples": [
       "疗"
     ],
-    "description": "里面康复路线从弯处走到终点沿“了”舒展。先认清“了”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "里面康复路线从弯处走到终点沿“了”舒展。它在字形中作为“了”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "疗"
     ],
@@ -4401,7 +4401,7 @@ export const grade5Components = [
     "examples": [
       "氏"
     ],
-    "description": "温度计底座、斜置刻度尺和弯曲水银柱严格沿“氏”的全部笔画组合。先认清“氏”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "温度计底座、斜置刻度尺和弯曲水银柱严格沿“氏”的全部笔画组合。它在字形中作为“氏”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "氏"
     ],
@@ -4415,7 +4415,7 @@ export const grade5Components = [
     "examples": [
       "区"
     ],
-    "description": "外面三面边界围成“匸”。先认清“匸”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "外面三面边界围成“匸”。它在字形中作为“匸”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "区"
     ],
@@ -4430,7 +4430,7 @@ export const grade5Components = [
       "区",
       "杀"
     ],
-    "description": "里面两条路线交叉形成“乂”。先认清“乂”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "里面两条路线交叉形成“乂”。它在字形中作为“乂”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "区",
       "杀"
@@ -4445,7 +4445,7 @@ export const grade5Components = [
     "examples": [
       "杀"
     ],
-    "description": "下方木架和四点设备沿“朩”承托。先认清“朩”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "下方木架和四点设备沿“朩”承托。它在字形中作为“朩”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "杀"
     ],
@@ -4459,7 +4459,7 @@ export const grade5Components = [
     "examples": [
       "菌"
     ],
-    "description": "下方方框培养箱围住谷粒状菌点沿“囷”排列。先认清“囷”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "下方方框培养箱围住谷粒状菌点沿“囷”排列。它在字形中作为“囷”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "菌"
     ],
@@ -4473,7 +4473,7 @@ export const grade5Components = [
     "examples": [
       "驯"
     ],
-    "description": "右边三道平缓河岸横线组成“川”。先认清“川”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边三道平缓河岸横线组成“川”。它在字形中作为“川”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "驯"
     ],
@@ -4487,7 +4487,7 @@ export const grade5Components = [
     "examples": [
       "矫"
     ],
-    "description": "右边高桥、人物和跨步桥脚沿“乔”展开。先认清“乔”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边高桥、人物和跨步桥脚沿“乔”展开。它在字形中作为“乔”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "矫"
     ],
@@ -4503,7 +4503,7 @@ export const grade5Components = [
       "褐",
       "葛"
     ],
-    "description": "左边日晷旁的人坐下形成“曷”。先认清“曷”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "左边日晷旁的人坐下形成“曷”。它在字形中作为“曷”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "歇",
       "褐",
@@ -4519,7 +4519,7 @@ export const grade5Components = [
     "examples": [
       "杈"
     ],
-    "description": "右边分叉的小枝像伸开的右手形成“叉”。先认清“叉”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边分叉的小枝像伸开的右手形成“叉”。它在字形中作为“叉”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "杈"
     ],
@@ -4533,7 +4533,7 @@ export const grade5Components = [
     "examples": [
       "藓"
     ],
-    "description": "下方小鱼形水痕和羊角状叶丛沿“鲜”排开。先认清“鲜”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "下方小鱼形水痕和羊角状叶丛沿“鲜”排开。它在字形中作为“鲜”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "藓"
     ],
@@ -4547,7 +4547,7 @@ export const grade5Components = [
     "examples": [
       "狭"
     ],
-    "description": "板与人沿“夹”排列。先认清“夹”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "板与人沿“夹”排列。它在字形中作为“夹”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "狭"
     ],
@@ -4563,7 +4563,7 @@ export const grade5Components = [
       "励",
       "抛"
     ],
-    "description": "右边弯曲手臂用力托住形成“力”。先认清“力”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边弯曲手臂用力托住形成“力”。它在字形中作为“力”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "勉",
       "励",
@@ -4579,7 +4579,7 @@ export const grade5Components = [
     "examples": [
       "鼠"
     ],
-    "description": "整只松鼠长成“鼠”。先认清“鼠”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "整只松鼠长成“鼠”。它在字形中作为“鼠”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "鼠"
     ],
@@ -4593,7 +4593,7 @@ export const grade5Components = [
     "examples": [
       "玲"
     ],
-    "description": "绳结和铃身沿“令”排列。先认清“令”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "绳结和铃身沿“令”排列。它在字形中作为“令”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "玲"
     ],
@@ -4609,7 +4609,7 @@ export const grade5Components = [
       "吊",
       "席"
     ],
-    "description": "左边垂直布幅形成“巾”。先认清“巾”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "左边垂直布幅形成“巾”。它在字形中作为“巾”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "帽",
       "吊",
@@ -4625,7 +4625,7 @@ export const grade5Components = [
     "examples": [
       "帽"
     ],
-    "description": "右边帽顶、帽檐和观察窗沿“冒”叠放。先认清“冒”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边帽顶、帽檐和观察窗沿“冒”叠放。它在字形中作为“冒”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "帽"
     ],
@@ -4639,7 +4639,7 @@ export const grade5Components = [
     "examples": [
       "尾"
     ],
-    "description": "下方一束蓬松长毛沿“毛”的笔画甩出。先认清“毛”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "下方一束蓬松长毛沿“毛”的笔画甩出。它在字形中作为“毛”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "尾"
     ],
@@ -4653,7 +4653,7 @@ export const grade5Components = [
     "examples": [
       "窝"
     ],
-    "description": "上方洞顶和两个采光点形成“穴”。先认清“穴”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "上方洞顶和两个采光点形成“穴”。它在字形中作为“穴”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "窝"
     ],
@@ -4667,7 +4667,7 @@ export const grade5Components = [
     "examples": [
       "窝"
     ],
-    "description": "下方圆口巢穴包住两根支枝沿“呙”搭好。先认清“呙”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "下方圆口巢穴包住两根支枝沿“呙”搭好。它在字形中作为“呙”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "窝"
     ],
@@ -4681,7 +4681,7 @@ export const grade5Components = [
     "examples": [
       "滑"
     ],
-    "description": "右边骨节状滑道沿“骨”搭起。先认清“骨”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边骨节状滑道沿“骨”搭起。它在字形中作为“骨”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "滑"
     ],
@@ -4695,7 +4695,7 @@ export const grade5Components = [
     "examples": [
       "拾"
     ],
-    "description": "横台和方盒沿“合”排列。先认清“合”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "横台和方盒沿“合”排列。它在字形中作为“合”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "拾"
     ],
@@ -4709,7 +4709,7 @@ export const grade5Components = [
     "examples": [
       "梳"
     ],
-    "description": "右边头发从顶点分流、发束和弯脚形成“㐬”。先认清“㐬”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边头发从顶点分流、发束和弯脚形成“㐬”。它在字形中作为“㐬”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "梳"
     ],
@@ -4723,7 +4723,7 @@ export const grade5Components = [
     "examples": [
       "魄"
     ],
-    "description": "右边戴角面具、弯身和长尾沿“鬼”展开。先认清“鬼”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边戴角面具、弯身和长尾沿“鬼”展开。它在字形中作为“鬼”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "魄"
     ],
@@ -4737,7 +4737,7 @@ export const grade5Components = [
     "examples": [
       "抑"
     ],
-    "description": "右边低头人物被两块挡板夹住沿“卬”收紧。先认清“卬”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边低头人物被两块挡板夹住沿“卬”收紧。它在字形中作为“卬”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "抑"
     ],
@@ -4751,7 +4751,7 @@ export const grade5Components = [
     "examples": [
       "颓"
     ],
-    "description": "左边低垂禾穗和弯脚沿“秃”下垂。先认清“秃”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "左边低垂禾穗和弯脚沿“秃”下垂。它在字形中作为“秃”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "颓"
     ],
@@ -4765,7 +4765,7 @@ export const grade5Components = [
     "examples": [
       "颓"
     ],
-    "description": "右边耷拉头部的人影形成“页”。先认清“页”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边耷拉头部的人影形成“页”。它在字形中作为“页”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "颓"
     ],
@@ -4780,7 +4780,7 @@ export const grade5Components = [
       "纫",
       "忍"
     ],
-    "description": "右边小刀形穿线器托住一点针眼沿“刃”排列。先认清“刃”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边小刀形穿线器托住一点针眼沿“刃”排列。它在字形中作为“刃”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "纫",
       "忍"
@@ -4795,7 +4795,7 @@ export const grade5Components = [
     "examples": [
       "噪"
     ],
-    "description": "右边三个喇叭口叠在木架上沿“喿”震动。先认清“喿”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边三个喇叭口叠在木架上沿“喿”震动。它在字形中作为“喿”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "噪"
     ],
@@ -4809,7 +4809,7 @@ export const grade5Components = [
     "examples": [
       "惫"
     ],
-    "description": "上方背着重物走远路的人弯成“备”。先认清“备”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "上方背着重物走远路的人弯成“备”。它在字形中作为“备”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "惫"
     ],
@@ -4825,7 +4825,7 @@ export const grade5Components = [
       "聒",
       "耻"
     ],
-    "description": "左边竖起的耳朵形成“耳”。先认清“耳”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "左边竖起的耳朵形成“耳”。它在字形中作为“耳”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "耽",
       "聒",
@@ -4842,7 +4842,7 @@ export const grade5Components = [
       "耽",
       "枕"
     ],
-    "description": "右边人物被屋盖和弯钩牵住沿“冘”停步。先认清“冘”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边人物被屋盖和弯钩牵住沿“冘”停步。它在字形中作为“冘”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "耽",
       "枕"
@@ -4857,7 +4857,7 @@ export const grade5Components = [
     "examples": [
       "兜"
     ],
-    "description": "里面白色布片与提带严格沿“兜”的其余笔画收口。先认清“兜”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "里面白色布片与提带严格沿“兜”的其余笔画收口。它在字形中作为“兜”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "兜"
     ],
@@ -4871,7 +4871,7 @@ export const grade5Components = [
     "examples": [
       "碌"
     ],
-    "description": "手、水和路线沿“录”排列。先认清“录”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "手、水和路线沿“录”排列。它在字形中作为“录”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "碌"
     ],
@@ -4886,7 +4886,7 @@ export const grade5Components = [
       "暑",
       "煮"
     ],
-    "description": "下方一位老人站在日影和土台间沿“者”避暑。先认清“者”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "下方一位老人站在日影和土台间沿“者”避暑。它在字形中作为“者”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "暑",
       "煮"
@@ -4901,7 +4901,7 @@ export const grade5Components = [
     "examples": [
       "脊"
     ],
-    "description": "两侧肌肉与下方月形躯干沿“脊”的点撇横画对称展开。先认清“脊”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "两侧肌肉与下方月形躯干沿“脊”的点撇横画对称展开。它在字形中作为“脊”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "脊"
     ],
@@ -4915,7 +4915,7 @@ export const grade5Components = [
     "examples": [
       "械"
     ],
-    "description": "右边齿轮、护栏和工具沿“戒”互相咬合。先认清“戒”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边齿轮、护栏和工具沿“戒”互相咬合。它在字形中作为“戒”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "械"
     ],
@@ -4930,7 +4930,7 @@ export const grade5Components = [
       "茧",
       "蚕"
     ],
-    "description": "下方一条小蚕把丝线绕成“虫”的弯身和点画。先认清“虫”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "下方一条小蚕把丝线绕成“虫”的弯身和点画。它在字形中作为“虫”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "茧",
       "蚕"
@@ -4945,7 +4945,7 @@ export const grade5Components = [
     "examples": [
       "栈"
     ],
-    "description": "右边浅层楼梯、门栓和短戈沿“戋”搭起一间小旅舍。先认清“戋”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边浅层楼梯、门栓和短戈沿“戋”搭起一间小旅舍。它在字形中作为“戋”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "栈"
     ],
@@ -4959,7 +4959,7 @@ export const grade5Components = [
     "examples": [
       "冤"
     ],
-    "description": "下方一只本来无错的兔子收成“兔”。先认清“兔”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "下方一只本来无错的兔子收成“兔”。它在字形中作为“兔”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "冤"
     ],
@@ -4973,7 +4973,7 @@ export const grade5Components = [
     "examples": [
       "惚"
     ],
-    "description": "右边快速掠过的气流和下方心影沿“忽”飘动。先认清“忽”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边快速掠过的气流和下方心影沿“忽”飘动。它在字形中作为“忽”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "惚"
     ],
@@ -4988,7 +4988,7 @@ export const grade5Components = [
       "迪",
       "述"
     ],
-    "description": "左下方道路形成“辶”。先认清“辶”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "左下方道路形成“辶”。它在字形中作为“辶”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "迪",
       "述"
@@ -5003,7 +5003,7 @@ export const grade5Components = [
     "examples": [
       "迪"
     ],
-    "description": "中央一粒想法从田格般的“由”中冒出。先认清“由”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "中央一粒想法从田格般的“由”中冒出。它在字形中作为“由”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "迪"
     ],
@@ -5017,7 +5017,7 @@ export const grade5Components = [
     "examples": [
       "嫁"
     ],
-    "description": "右边屋顶下的家人和小猪沿“家”相聚。先认清“家”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边屋顶下的家人和小猪沿“家”相聚。它在字形中作为“家”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "嫁"
     ],
@@ -5031,7 +5031,7 @@ export const grade5Components = [
     "examples": [
       "缴"
     ],
-    "description": "右边白色票据、方向标和轻敲确认杖沿“敫”排开。先认清“敫”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边白色票据、方向标和轻敲确认杖沿“敫”排开。它在字形中作为“敫”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "缴"
     ],
@@ -5045,7 +5045,7 @@ export const grade5Components = [
     "examples": [
       "榜"
     ],
-    "description": "右边灯台、屋盖和方向牌沿“旁”立在一侧。先认清“旁”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边灯台、屋盖和方向牌沿“旁”立在一侧。它在字形中作为“旁”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "榜"
     ],
@@ -5059,7 +5059,7 @@ export const grade5Components = [
     "examples": [
       "嘲"
     ],
-    "description": "右边清晨日轮、十字架和月形听众沿“朝”相对。先认清“朝”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边清晨日轮、十字架和月形听众沿“朝”相对。它在字形中作为“朝”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "嘲"
     ],
@@ -5073,7 +5073,7 @@ export const grade5Components = [
     "examples": [
       "蚕"
     ],
-    "description": "上方天空横梁和伸展人物沿“天”展开。先认清“天”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "上方天空横梁和伸展人物沿“天”展开。它在字形中作为“天”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "蚕"
     ],
@@ -5087,7 +5087,7 @@ export const grade5Components = [
     "examples": [
       "考"
     ],
-    "description": "上方一位老人和长杖形成“耂”。先认清“耂”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "上方一位老人和长杖形成“耂”。它在字形中作为“耂”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "考"
     ],
@@ -5101,7 +5101,7 @@ export const grade5Components = [
     "examples": [
       "考"
     ],
-    "description": "下方弯曲答题纸和笔钩形成“丂”。先认清“丂”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "下方弯曲答题纸和笔钩形成“丂”。它在字形中作为“丂”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "考"
     ],
@@ -5115,7 +5115,7 @@ export const grade5Components = [
     "examples": [
       "疼"
     ],
-    "description": "里面脚步和两点药滴沿“冬”落下。先认清“冬”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "里面脚步和两点药滴沿“冬”落下。它在字形中作为“冬”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "疼"
     ],
@@ -5129,7 +5129,7 @@ export const grade5Components = [
     "examples": [
       "席"
     ],
-    "description": "里面交叉草篾和下垂布幅沿“廿”“巾”编好。先认清“廿”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "里面交叉草篾和下垂布幅沿“廿”“巾”编好。它在字形中作为“廿”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "席"
     ],
@@ -5143,7 +5143,7 @@ export const grade5Components = [
     "examples": [
       "糖"
     ],
-    "description": "右边屋檐下的熬糖锅、长杵和方口沿“唐”排列。先认清“唐”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边屋檐下的熬糖锅、长杵和方口沿“唐”排列。它在字形中作为“唐”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "糖"
     ],
@@ -5157,7 +5157,7 @@ export const grade5Components = [
     "examples": [
       "毕"
     ],
-    "description": "上方两名同学并排形成“比”。先认清“比”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "上方两名同学并排形成“比”。它在字形中作为“比”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "毕"
     ],
@@ -5171,7 +5171,7 @@ export const grade5Components = [
     "examples": [
       "腼"
     ],
-    "description": "右边一张低垂的脸藏在方框轮廓里沿“面”收紧。先认清“面”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边一张低垂的脸藏在方框轮廓里沿“面”收紧。它在字形中作为“面”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "腼"
     ],
@@ -5185,7 +5185,7 @@ export const grade5Components = [
     "examples": [
       "腆"
     ],
-    "description": "右边礼物册和托手沿“典”郑重摆好。先认清“典”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边礼物册和托手沿“典”郑重摆好。它在字形中作为“典”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "腆"
     ],
@@ -5200,7 +5200,7 @@ export const grade5Components = [
       "誊",
       "卷"
     ],
-    "description": "上方双手托着原稿沿“龹”展开。先认清“龹”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "上方双手托着原稿沿“龹”展开。它在字形中作为“龹”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "誊",
       "卷"
@@ -5215,7 +5215,7 @@ export const grade5Components = [
     "examples": [
       "励"
     ],
-    "description": "左边山崖下磨刀石和长柄工具沿“厉”磨亮。先认清“厉”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "左边山崖下磨刀石和长柄工具沿“厉”磨亮。它在字形中作为“厉”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "励"
     ],
@@ -5229,7 +5229,7 @@ export const grade5Components = [
     "examples": [
       "版"
     ],
-    "description": "左边竖直印版木片形成“片”。先认清“片”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "左边竖直印版木片形成“片”。它在字形中作为“片”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "版"
     ],
@@ -5243,7 +5243,7 @@ export const grade5Components = [
     "examples": [
       "版"
     ],
-    "description": "右边伸手翻转印纸沿“反”回折。先认清“反”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边伸手翻转印纸沿“反”回折。它在字形中作为“反”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "版"
     ],
@@ -5257,7 +5257,7 @@ export const grade5Components = [
     "examples": [
       "祥"
     ],
-    "description": "左边礼仪台和祝愿牌形成“礻”。先认清“礻”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "左边礼仪台和祝愿牌形成“礻”。它在字形中作为“礻”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "祥"
     ],
@@ -5271,7 +5271,7 @@ export const grade5Components = [
     "examples": [
       "祥"
     ],
-    "description": "右边对称羊角和身体沿“羊”站好。先认清“羊”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边对称羊角和身体沿“羊”站好。它在字形中作为“羊”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "祥"
     ],
@@ -5285,7 +5285,7 @@ export const grade5Components = [
     "examples": [
       "歧"
     ],
-    "description": "右边一条主路在十字支架处分成叉路沿“支”伸开。先认清“支”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边一条主路在十字支架处分成叉路沿“支”伸开。它在字形中作为“支”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "歧"
     ],
@@ -5299,7 +5299,7 @@ export const grade5Components = [
     "examples": [
       "谨"
     ],
-    "description": "右边草束、方口和层层检查横线沿“堇”排列。先认清“堇”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边草束、方口和层层检查横线沿“堇”排列。它在字形中作为“堇”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "谨"
     ],
@@ -5314,7 +5314,7 @@ export const grade5Components = [
       "榆",
       "喻"
     ],
-    "description": "右边屋顶下的小船和双刃修枝刀沿“俞”排列。先认清“俞”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边屋顶下的小船和双刃修枝刀沿“俞”排列。它在字形中作为“俞”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "榆",
       "喻"
@@ -5329,7 +5329,7 @@ export const grade5Components = [
     "examples": [
       "畔"
     ],
-    "description": "右边半边护栏、竖杆和横岸沿“半”搭起。先认清“半”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边半边护栏、竖杆和横岸沿“半”搭起。它在字形中作为“半”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "畔"
     ],
@@ -5343,7 +5343,7 @@ export const grade5Components = [
     "examples": [
       "孙"
     ],
-    "description": "右边一大两小的光点形成“小”。先认清“小”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边一大两小的光点形成“小”。它在字形中作为“小”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "孙"
     ],
@@ -5357,7 +5357,7 @@ export const grade5Components = [
     "examples": [
       "愁"
     ],
-    "description": "上方秋天的禾穗和火色落叶形成“秋”。先认清“秋”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "上方秋天的禾穗和火色落叶形成“秋”。它在字形中作为“秋”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "愁"
     ],
@@ -5372,7 +5372,7 @@ export const grade5Components = [
       "桨",
       "寝"
     ],
-    "description": "上方左侧握桨支架形成“丬”。先认清“丬”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "上方左侧握桨支架形成“丬”。它在字形中作为“丬”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "桨",
       "寝"
@@ -5387,7 +5387,7 @@ export const grade5Components = [
     "examples": [
       "桩"
     ],
-    "description": "右边屋檐下粗壮立柱和土台沿“庄”扎进地面。先认清“庄”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边屋檐下粗壮立柱和土台沿“庄”扎进地面。它在字形中作为“庄”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "桩"
     ],
@@ -5401,7 +5401,7 @@ export const grade5Components = [
     "examples": [
       "暇"
     ],
-    "description": "右边人物放下工具、靠着台阶伸手休息沿“叚”展开。先认清“叚”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边人物放下工具、靠着台阶伸手休息沿“叚”展开。它在字形中作为“叚”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "暇"
     ],
@@ -5415,7 +5415,7 @@ export const grade5Components = [
     "examples": [
       "榕"
     ],
-    "description": "右边屋顶下许多气生根和宽口树洞沿“容”垂落。先认清“容”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边屋顶下许多气生根和宽口树洞沿“容”垂落。它在字形中作为“容”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "榕"
     ],
@@ -5429,7 +5429,7 @@ export const grade5Components = [
     "examples": [
       "纠"
     ],
-    "description": "右边弯钩把走偏的线拉回直道沿“丩”收紧。先认清“丩”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边弯钩把走偏的线拉回直道沿“丩”收紧。它在字形中作为“丩”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "纠"
     ],
@@ -5443,7 +5443,7 @@ export const grade5Components = [
     "examples": [
       "耀"
     ],
-    "description": "右边双羽在高处展开、中心鸟身沿“翟”发亮。先认清“翟”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边双羽在高处展开、中心鸟身沿“翟”发亮。它在字形中作为“翟”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "耀"
     ],
@@ -5457,7 +5457,7 @@ export const grade5Components = [
     "examples": [
       "涨"
     ],
-    "description": "右边拉长的弓形水位尺沿“张”越升越高。先认清“张”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边拉长的弓形水位尺沿“张”越升越高。它在字形中作为“张”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "涨"
     ],
@@ -5471,7 +5471,7 @@ export const grade5Components = [
     "examples": [
       "塔"
     ],
-    "description": "右边草形飞檐、屋顶和层门沿“荅”逐层收尖。先认清“荅”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边草形飞檐、屋顶和层门沿“荅”逐层收尖。它在字形中作为“荅”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "塔"
     ],
@@ -5485,7 +5485,7 @@ export const grade5Components = [
     "examples": [
       "眉"
     ],
-    "description": "上方弯曲眉骨和短毛形成“𠃜”。先认清“𠃜”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "上方舒展的弯曲眉毛与眉骨“𠃜”。它在字形中作为“𠃜”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "眉"
     ],
@@ -5499,7 +5499,7 @@ export const grade5Components = [
     "examples": [
       "抛"
     ],
-    "description": "右边物体沿弧线飞过弯钩、人物用力迈腿形成“九”“力”。先认清“九”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边物体沿弧线飞过弯钩、人物用力迈腿形成“九”“力”。它在字形中作为“九”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "抛"
     ],
@@ -5513,7 +5513,7 @@ export const grade5Components = [
     "examples": [
       "累"
     ],
-    "description": "下方长丝穿起许多小果形成“糸”。先认清“糸”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "下方长丝穿起许多小果形成“糸”。它在字形中作为“糸”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "累"
     ],
@@ -5527,7 +5527,7 @@ export const grade5Components = [
     "examples": [
       "嫦"
     ],
-    "description": "右边月宫屋顶、垂帘和方形宫门沿“常”搭起。先认清“常”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边月宫屋顶、垂帘和方形宫门沿“常”搭起。它在字形中作为“常”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "嫦"
     ],
@@ -5541,7 +5541,7 @@ export const grade5Components = [
     "examples": [
       "娥"
     ],
-    "description": "右边她手持长戈、身姿和斜线沿“我”舒展。先认清“我”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边她手持长戈、身姿和斜线沿“我”舒展。它在字形中作为“我”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "娥"
     ],
@@ -5555,7 +5555,7 @@ export const grade5Components = [
     "examples": [
       "嫉"
     ],
-    "description": "右边病床帘下的短箭沿“疾”刺向心口。先认清“疾”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边病床帘下的短箭沿“疾”刺向心口。它在字形中作为“疾”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "嫉"
     ],
@@ -5569,7 +5569,7 @@ export const grade5Components = [
     "examples": [
       "妒"
     ],
-    "description": "右边紧闭单扇门形成“户”。先认清“户”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边紧闭单扇门形成“户”。它在字形中作为“户”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "妒"
     ],
@@ -5583,7 +5583,7 @@ export const grade5Components = [
     "examples": [
       "瓷"
     ],
-    "description": "上方冰纹与张口人物沿“次”排成烧制前的釉纹。先认清“次”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "上方冰纹与张口人物沿“次”排成烧制前的釉纹。它在字形中作为“次”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "瓷"
     ],
@@ -5597,7 +5597,7 @@ export const grade5Components = [
     "examples": [
       "瓷"
     ],
-    "description": "下方圆腹瓦器形成“瓦”。先认清“瓦”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "下方圆腹瓦器形成“瓦”。它在字形中作为“瓦”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "瓷"
     ],
@@ -5611,7 +5611,7 @@ export const grade5Components = [
     "examples": [
       "识"
     ],
-    "description": "右边一枚只放进心里、不说出口的认知印记沿“只”托起。先认清“只”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边一枚只放进心里、不说出口的认知印记沿“只”托起。它在字形中作为“只”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "识"
     ],
@@ -5625,7 +5625,7 @@ export const grade5Components = [
     "examples": [
       "矣"
     ],
-    "description": "上方一缕话音回转成“厶”。先认清“厶”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "上方一缕话音回转成“厶”。它在字形中作为“厶”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "矣"
     ],
@@ -5639,7 +5639,7 @@ export const grade5Components = [
     "examples": [
       "岂"
     ],
-    "description": "下方弯曲台阶和站立人物沿“己”回身反问。先认清“己”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "下方弯曲台阶和站立人物沿“己”回身反问。它在字形中作为“己”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "岂"
     ],
@@ -5653,7 +5653,7 @@ export const grade5Components = [
     "examples": [
       "谓"
     ],
-    "description": "右边田格般的话题上托着月形内容沿“胃”排列。先认清“胃”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边田格般的话题上托着月形内容沿“胃”排列。它在字形中作为“胃”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "谓"
     ],
@@ -5667,7 +5667,7 @@ export const grade5Components = [
     "examples": [
       "诵"
     ],
-    "description": "右边气流沿管道向上涌、穿过方口共鸣箱形成“甬”。先认清“甬”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边气流沿管道向上涌、穿过方口共鸣箱形成“甬”。它在字形中作为“甬”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "诵"
     ],
@@ -5681,7 +5681,7 @@ export const grade5Components = [
     "examples": [
       "舅"
     ],
-    "description": "下方男子在田地旁用力劳作沿“男”站好。先认清“男”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "下方男子在田地旁用力劳作沿“男”站好。它在字形中作为“男”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "舅"
     ],
@@ -5695,7 +5695,7 @@ export const grade5Components = [
     "examples": [
       "宴"
     ],
-    "description": "下方人物坐姿沿“妟”围桌。先认清“妟”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "下方人物坐姿沿“妟”围桌。它在字形中作为“妟”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "宴"
     ],
@@ -5709,7 +5709,7 @@ export const grade5Components = [
     "examples": [
       "凯"
     ],
-    "description": "左边山形胜利台和鼓架沿“岂”搭起。先认清“岂”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "左边山形胜利台和鼓架沿“岂”搭起。它在字形中作为“岂”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "凯"
     ],
@@ -5724,7 +5724,7 @@ export const grade5Components = [
       "凯",
       "饥"
     ],
-    "description": "右边风帆与弯脚形成“几”。先认清“几”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边风帆与弯脚形成“几”。它在字形中作为“几”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "凯",
       "饥"
@@ -5739,7 +5739,7 @@ export const grade5Components = [
     "examples": [
       "述"
     ],
-    "description": "中央木形故事树多出一点细节形成“术”。先认清“术”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "中央木形故事树多出一点细节形成“术”。它在字形中作为“术”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "述"
     ],
@@ -5753,7 +5753,7 @@ export const grade5Components = [
     "examples": [
       "传"
     ],
-    "description": "右边一卷专门记录人物经历的竹简沿“专”转开。先认清“专”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边一卷专门记录人物经历的竹简沿“专”转开。它在字形中作为“专”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "传"
     ],
@@ -5767,7 +5767,7 @@ export const grade5Components = [
     "examples": [
       "煞"
     ],
-    "description": "旁边短杖动作形成“攵”。先认清“攵”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "旁边短杖动作形成“攵”。它在字形中作为“攵”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "煞"
     ],
@@ -5781,7 +5781,7 @@ export const grade5Components = [
     "examples": [
       "寇"
     ],
-    "description": "下方闯入者越过元形门槛、手持短杖沿“元”“攴”进入。先认清“元”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "下方闯入者越过元形门槛、手持短杖沿“元”“攴”进入。它在字形中作为“元”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "寇"
     ],
@@ -5795,7 +5795,7 @@ export const grade5Components = [
     "examples": [
       "寇"
     ],
-    "description": "下方闯入者越过元形门槛、手持短杖沿“元”“攴”进入。先认清“攴”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "下方闯入者越过元形门槛、手持短杖沿“元”“攴”进入。它在字形中作为“攴”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "寇"
     ],
@@ -5809,7 +5809,7 @@ export const grade5Components = [
     "examples": [
       "贾"
     ],
-    "description": "上方封好的货箱盖沿“覀”覆盖。先认清“覀”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "上方封好的货箱盖沿“覀”覆盖。它在字形中作为“覀”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "贾"
     ],
@@ -5823,7 +5823,7 @@ export const grade5Components = [
     "examples": [
       "卷"
     ],
-    "description": "下方弯曲纸尾形成“㔾”。先认清“㔾”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "下方弯曲纸尾形成“㔾”。它在字形中作为“㔾”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "卷"
     ],
@@ -5837,7 +5837,7 @@ export const grade5Components = [
     "examples": [
       "琐"
     ],
-    "description": "右上方三粒小光点形成“⺌”。先认清“⺌”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右上方三粒小光点形成“⺌”。它在字形中作为“⺌”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "琐"
     ],
@@ -5851,7 +5851,7 @@ export const grade5Components = [
     "examples": [
       "呻"
     ],
-    "description": "右边身体被中线牵直沿“申”伸展。先认清“申”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边身体被中线牵直沿“申”伸展。它在字形中作为“申”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "呻"
     ],
@@ -5865,7 +5865,7 @@ export const grade5Components = [
     "examples": [
       "某"
     ],
-    "description": "上方甜味标记和隐藏名牌沿“甘”遮住身份。先认清“甘”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "上方甜味标记和隐藏名牌沿“甘”遮住身份。它在字形中作为“甘”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "某"
     ],
@@ -5879,7 +5879,7 @@ export const grade5Components = [
     "examples": [
       "津"
     ],
-    "description": "右边手持渡船撑杆、横梁和船桨沿“聿”排列。先认清“聿”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边手持渡船撑杆、横梁和船桨沿“聿”排列。它在字形中作为“聿”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "津"
     ],
@@ -5893,7 +5893,7 @@ export const grade5Components = [
     "examples": [
       "统"
     ],
-    "description": "右边顶点、弯线和两脚沿“充”汇入同一线轴。先认清“充”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边顶点、弯线和两脚沿“充”汇入同一线轴。它在字形中作为“充”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "统"
     ],
@@ -5907,7 +5907,7 @@ export const grade5Components = [
     "examples": [
       "朴"
     ],
-    "description": "右边一枚简单垂直标记和小点形成“卜”。先认清“卜”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边一枚简单垂直标记和小点形成“卜”。它在字形中作为“卜”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "朴"
     ],
@@ -5921,7 +5921,7 @@ export const grade5Components = [
     "examples": [
       "差"
     ],
-    "description": "上方羊角任务牌沿“⺶”展开。先认清“⺶”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "上方羊角任务牌沿“⺶”展开。它在字形中作为“⺶”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "差"
     ],
@@ -5935,7 +5935,7 @@ export const grade5Components = [
     "examples": [
       "瘾"
     ],
-    "description": "里面坡道、双手和心灯沿“隐”被牵住。先认清“隐”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "里面坡道、双手和心灯沿“隐”被牵住。它在字形中作为“隐”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "瘾"
     ],
@@ -5949,7 +5949,7 @@ export const grade5Components = [
     "examples": [
       "奔"
     ],
-    "description": "下方十字路口和两条快跑腿沿“卉”冲向前方。先认清“卉”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "下方十字路口和两条快跑腿沿“卉”冲向前方。它在字形中作为“卉”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "奔"
     ],
@@ -5963,7 +5963,7 @@ export const grade5Components = [
     "examples": [
       "籍"
     ],
-    "description": "下方木耒、草席和昔日书页沿“耤”层层装订。先认清“耤”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "下方木耒、草席和昔日书页“耤”层层装订。它在字形中作为“耤”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "籍"
     ],
@@ -5977,7 +5977,7 @@ export const grade5Components = [
     "examples": [
       "偿"
     ],
-    "description": "右边屋顶下贝物、云形交换券沿“尝”摆好。先认清“尝”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边屋顶下贝物、云形交换券沿“尝”摆好。它在字形中作为“尝”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "偿"
     ],
@@ -5991,7 +5991,7 @@ export const grade5Components = [
     "examples": [
       "悟"
     ],
-    "description": "右边交叉线、屋顶和方口沿“吾”组成一句明白的话。先认清“吾”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边交叉线、屋顶和方口沿“吾”组成一句明白的话。它在字形中作为“吾”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "悟"
     ],
@@ -6005,7 +6005,7 @@ export const grade5Components = [
     "examples": [
       "馈"
     ],
-    "description": "右边中形通道和贝形回执沿“贵”送回原处。先认清“贵”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边中形通道和贝形回执沿“贵”送回原处。它在字形中作为“贵”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "馈"
     ],
@@ -6019,7 +6019,7 @@ export const grade5Components = [
     "examples": [
       "磁"
     ],
-    "description": "右边两束丝线被上方磁极牵成“兹”的弧线。先认清“兹”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边两束丝线被上方磁极牵成“兹”的弧线。它在字形中作为“兹”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "磁"
     ],
@@ -6033,7 +6033,7 @@ export const grade5Components = [
     "examples": [
       "酵"
     ],
-    "description": "右边老人照看坛中小生命沿“孝”站好。先认清“孝”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边老人照看坛中小生命沿“孝”站好。它在字形中作为“孝”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "酵"
     ],
@@ -6047,7 +6047,7 @@ export const grade5Components = [
     "examples": [
       "皎"
     ],
-    "description": "右边屋顶下两束月光交叉沿“交”洒下。先认清“交”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边屋顶下两束月光交叉沿“交”洒下。它在字形中作为“交”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "皎"
     ],
@@ -6061,7 +6061,7 @@ export const grade5Components = [
     "examples": [
       "鉴"
     ],
-    "description": "下方金属镜盘形成“金”。先认清“金”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "下方金属镜盘形成“金”。它在字形中作为“金”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "鉴"
     ],
@@ -6075,7 +6075,7 @@ export const grade5Components = [
     "examples": [
       "沥"
     ],
-    "description": "右边山崖下弯曲手臂用力挤压沿“历”滴出最后水珠。先认清“历”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。",
+    "description": "右边山崖下弯曲手臂用力挤压沿“历”滴出最后水珠。它在字形中作为“历”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "沥"
     ],

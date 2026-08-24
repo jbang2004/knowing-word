@@ -6,7 +6,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u6868.webp",
       "label": "船桨",
-      "alt": "船桨是划船时拨水推动船前进的工具 图中“丬”与“夕”与“木”按上下结构自然长成“桨”。"
+      "alt": "摇桨泛舟穿行水乡；巴金与友人摇动双桨荡舟河上，在夕阳余晖中探访神奇的榕树 图中“丬”与“夕”与“木”按上下结构自然长成“桨”。"
     },
     "scene": {
       "scene": "上方左侧握桨支架形成“丬”，右侧水滴和弯月桨叶形成“夕”，下方木制长桨形成“木”，合成“桨”。",
@@ -21,7 +21,7 @@ export const characterMedia = {
       "g5v1-l22-c01-u6868-words-image:g5v1-l22-c01-u6868-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u6868.webp",
         "label": "船桨",
-        "alt": "船桨是划船时拨水推动船前进的工具 图中“丬”与“夕”与“木”按上下结构自然长成“桨”。"
+        "alt": "摇桨泛舟穿行水乡；巴金与友人摇动双桨荡舟河上，在夕阳余晖中探访神奇的榕树 图中“丬”与“夕”与“木”按上下结构自然长成“桨”。"
       },
       "g5v1-l22-c01-u6868-words-image:g5v1-l22-c01-u6868-words-image-0": {
         "src": "/illustrations/meanings/m03.webp",
@@ -31,7 +31,7 @@ export const characterMedia = {
       "g5v1-l22-c01-u6868-words-image:g5v1-l22-c01-u6868-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u68b3.webp",
         "label": "梳理",
-        "alt": "梳理就是用梳子把头发或毛发整理整齐 图中“木”与“㐬”按左右结构自然长成“梳”。"
+        "alt": "梳理毛发整洁漂亮；松鼠常常坐着用前爪梳理面部与尾巴上的毛发，显得十分爱干净 图中“木”与“㐬”按左右结构自然长成“梳”。"
       }
     }
   },
@@ -39,7 +39,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u6869.webp",
       "label": "木桩",
-      "alt": "木桩是打入地面、用来固定或支撑物体的木柱 图中“木”与“庄”按左右结构自然长成“桩”。"
+      "alt": "木桩系缆泊船树下；小船轻轻系在河边的木桩旁，作者得以近距离领略大榕树的壮观 图中“木”与“庄”按左右结构自然长成“桩”。"
     },
     "scene": {
       "scene": "左边一棵树形成“木”，右边屋檐下粗壮立柱和土台沿“庄”扎进地面，组成牢固的“桩”。",
@@ -58,12 +58,12 @@ export const characterMedia = {
       "g5v1-l22-c02-u6869-words-image:g5v1-l22-c02-u6869-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u9cde.webp",
         "label": "鱼鳞",
-        "alt": "鱼鳞是覆盖在鱼身体表面的薄片，能保护鱼体 图中“鱼”与“粦”按左右结构自然长成“鳞”。"
+        "alt": "潜龙腾渊鳞爪飞扬；飞腾的巨龙展现出冲破羁绊、翱翔九天的威猛神采 图中“鱼”与“粦”按左右结构自然长成“鳞”。"
       },
       "g5v1-l22-c02-u6869-words-image:g5v1-l22-c02-u6869-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u6869.webp",
         "label": "木桩",
-        "alt": "木桩是打入地面、用来固定或支撑物体的木柱 图中“木”与“庄”按左右结构自然长成“桩”。"
+        "alt": "木桩系缆泊船树下；小船轻轻系在河边的木桩旁，作者得以近距离领略大榕树的壮观 图中“木”与“庄”按左右结构自然长成“桩”。"
       }
     }
   },
@@ -71,7 +71,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u6687.webp",
       "label": "闲暇",
-      "alt": "闲暇是没有工作或学习任务、可以自由安排的时间 图中“日”与“叚”按左右结构自然长成“暇”。"
+      "alt": "应接不暇群鸟飞鸣；清晨群鸟齐飞欢唱，到处都是鸟声鸟影，令人眼睛应接不暇、流连忘返 图中“日”与“叚”按左右结构自然长成“暇”。"
     },
     "scene": {
       "scene": "左边日轮形成“日”，右边人物放下工具、靠着台阶伸手休息沿“叚”展开，阳光里有了空闲，组成“暇”。",
@@ -90,12 +90,12 @@ export const characterMedia = {
       "g5v1-l22-c03-u6687-words-image:g5v1-l22-c03-u6687-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u9675.webp",
         "label": "武陵春色",
-        "alt": "陵园是安葬并纪念逝者的园地，应当保持庄重 图中“阝”与“夌”按左右结构自然长成“陵”。"
+        "alt": "武陵春色宛若世外桃源；漫步园中如行画中，令人如痴如醉、流连忘返 图中“阝”与“夌”按左右结构自然长成“陵”。"
       },
       "g5v1-l22-c03-u6687-words-image:g5v1-l22-c03-u6687-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u6687.webp",
         "label": "闲暇",
-        "alt": "闲暇是没有工作或学习任务、可以自由安排的时间 图中“日”与“叚”按左右结构自然长成“暇”。"
+        "alt": "应接不暇群鸟飞鸣；清晨群鸟齐飞欢唱，到处都是鸟声鸟影，令人眼睛应接不暇、流连忘返 图中“日”与“叚”按左右结构自然长成“暇”。"
       }
     }
   },
@@ -103,7 +103,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u6995.webp",
       "label": "榕树",
-      "alt": "榕树枝叶繁茂，常有从枝条垂下并扎入土中的气生根 图中“木”与“容”按左右结构自然长成“榕”。"
+      "alt": "独木成林郁郁葱葱；巨大的榕树枝干垂下无数气根扎入泥土，展现出大自然顽强勃发的生命力 图中“木”与“容”按左右结构自然长成“榕”。"
     },
     "scene": {
       "scene": "左边主干根枝形成“木”，右边屋顶下许多气生根和宽口树洞沿“容”垂落，组成繁茂的“榕”。",
@@ -122,12 +122,12 @@ export const characterMedia = {
       "g5v1-l22-c04-u6995-words-image:g5v1-l22-c04-u6995-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u65a9.webp",
         "label": "斩断",
-        "alt": "斩断就是用利器把连接的东西砍断 图中“车”与“斤”按左右结构自然长成“斩”。"
+        "alt": "斩将过关引人入胜；关羽斩颜良诛文丑的精彩情节让年幼的作者如痴如醉，手不释卷 图中“车”与“斤”按左右结构自然长成“斩”。"
       },
       "g5v1-l22-c04-u6995-words-image:g5v1-l22-c04-u6995-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u6995.webp",
         "label": "榕树",
-        "alt": "榕树枝叶繁茂，常有从枝条垂下并扎入土中的气生根 图中“木”与“容”按左右结构自然长成“榕”。"
+        "alt": "独木成林郁郁葱葱；巨大的榕树枝干垂下无数气根扎入泥土，展现出大自然顽强勃发的生命力 图中“木”与“容”按左右结构自然长成“榕”。"
       }
     }
   },
@@ -135,7 +135,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u7ea0.webp",
       "label": "纠正",
-      "alt": "纠正就是发现错误后把它改正确 图中“纟”与“丩”按左右结构自然长成“纠”。"
+      "alt": "纠正误解恍然大悟；友人纠正了作者的判断，告诉他眼前这片巨大的绿色树林其实只是一株榕树 图中“纟”与“丩”按左右结构自然长成“纠”。"
     },
     "scene": {
       "scene": "左边盘绕细线形成“纟”，右边弯钩把走偏的线拉回直道沿“丩”收紧，合成“纠”。",
@@ -149,7 +149,7 @@ export const characterMedia = {
       "g5v1-l22-c05-u7ea0-words-image:g5v1-l22-c05-u7ea0-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u7ea0.webp",
         "label": "纠正",
-        "alt": "纠正就是发现错误后把它改正确 图中“纟”与“丩”按左右结构自然长成“纠”。"
+        "alt": "纠正误解恍然大悟；友人纠正了作者的判断，告诉他眼前这片巨大的绿色树林其实只是一株榕树 图中“纟”与“丩”按左右结构自然长成“纠”。"
       },
       "g5v1-l22-c05-u7ea0-words-image:g5v1-l22-c05-u7ea0-words-image-2": {
         "src": "/illustrations/meanings/m08.webp",
@@ -159,7 +159,7 @@ export const characterMedia = {
       "g5v1-l22-c05-u7ea0-words-image:g5v1-l22-c05-u7ea0-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u77ee.webp",
         "label": "矮小",
-        "alt": "矮小表示从下到上的高度比较低 图中“矢”与“委”按左右结构自然长成“矮”。"
+        "alt": "矮小表示高度较低；花生的果实矮矮地埋在地底，虽不张扬，却有默默奉献的真价值 图中“矢”与“委”按左右结构自然长成“矮”。"
       }
     }
   },
@@ -167,7 +167,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u8000.webp",
       "label": "闪耀",
-      "alt": "闪耀就是明亮的光快速跳动、不断显现 图中“光”与“翟”按左右结构自然长成“耀”。"
+      "alt": "翠绿明耀照亮水面；阳光洒在榕树的新叶上闪闪发亮，每一片绿叶都仿佛在颤动着蓬勃生机 图中“光”与“翟”按左右结构自然长成“耀”。"
     },
     "scene": {
       "scene": "左边四散光线和弯脚形成“光”，右边双羽在高处展开、中心鸟身沿“翟”发亮，合成耀眼的“耀”。",
@@ -181,7 +181,7 @@ export const characterMedia = {
       "g5v1-l22-c06-u8000-words-image:g5v1-l22-c06-u8000-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u8000.webp",
         "label": "闪耀",
-        "alt": "闪耀就是明亮的光快速跳动、不断显现 图中“光”与“翟”按左右结构自然长成“耀”。"
+        "alt": "翠绿明耀照亮水面；阳光洒在榕树的新叶上闪闪发亮，每一片绿叶都仿佛在颤动着蓬勃生机 图中“光”与“翟”按左右结构自然长成“耀”。"
       },
       "g5v1-l22-c06-u8000-words-image:g5v1-l22-c06-u8000-words-image-2": {
         "src": "/illustrations/meanings/m06.webp",
@@ -191,7 +191,7 @@ export const characterMedia = {
       "g5v1-l22-c06-u8000-words-image:g5v1-l22-c06-u8000-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u778c.webp",
         "label": "瞌睡",
-        "alt": "瞌睡是困倦得想闭上眼睛 图中“目”与“盍”按左右结构自然长成“瞌”。"
+        "alt": "瞌睡指困倦想要入眠；牛郎在草棚旁打瞌睡时，老牛忽然开口说话，开启了奇妙故事 图中“目”与“盍”按左右结构自然长成“瞌”。"
       }
     }
   },
@@ -199,7 +199,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u6da8.webp",
       "label": "涨潮",
-      "alt": "涨潮是海水或江河水面在一定时间内升高 图中“氵”与“张”按左右结构自然长成“涨”。"
+      "alt": "潮水涨落滋润古树；河水涨潮退潮滋养着广阔的水网，为鸟类繁衍生息提供了天堂般的乐土 图中“氵”与“张”按左右结构自然长成“涨”。"
     },
     "scene": {
       "scene": "左边三股上升水流形成“氵”，右边拉长的弓形水位尺沿“张”越升越高，组成“涨”。",
@@ -213,7 +213,7 @@ export const characterMedia = {
       "g5v1-l22-c07-u6da8-words-image:g5v1-l22-c07-u6da8-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u6da8.webp",
         "label": "涨潮",
-        "alt": "涨潮是海水或江河水面在一定时间内升高 图中“氵”与“张”按左右结构自然长成“涨”。"
+        "alt": "潮水涨落滋润古树；河水涨潮退潮滋养着广阔的水网，为鸟类繁衍生息提供了天堂般的乐土 图中“氵”与“张”按左右结构自然长成“涨”。"
       },
       "g5v1-l22-c07-u6da8-words-image:g5v1-l22-c07-u6da8-words-image-2": {
         "src": "/illustrations/meanings/m08.webp",
@@ -223,7 +223,7 @@ export const characterMedia = {
       "g5v1-l22-c07-u6da8-words-image:g5v1-l22-c07-u6da8-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u5c94.webp",
         "label": "岔道",
-        "alt": "岔道是从一条路分出去的另一条路 图中“分”与“山”按上下结构自然长成“岔”。"
+        "alt": "岔道是分岔交错的通道；纵横交织的岔道如同地下迷宫，使敌人晕头转向、寸步难行 图中“分”与“山”按上下结构自然长成“岔”。"
       }
     }
   },
@@ -231,7 +231,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u5854.webp",
       "label": "宝塔",
-      "alt": "宝塔是层层向上、常有尖顶的高大建筑 图中“土”与“荅”按左右结构自然长成“塔”。"
+      "alt": "宝塔倒影相映成趣；远处古朴的石塔倒映在清澈的河面上，为鸟的天堂增添了典雅的诗意 图中“土”与“荅”按左右结构自然长成“塔”。"
     },
     "scene": {
       "scene": "左边夯实土基形成“土”，右边草形飞檐、屋顶和层门沿“荅”逐层收尖，组成“塔”。",
@@ -245,7 +245,7 @@ export const characterMedia = {
       "g5v1-l22-c08-u5854-words-image:g5v1-l22-c08-u5854-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u5854.webp",
         "label": "宝塔",
-        "alt": "宝塔是层层向上、常有尖顶的高大建筑 图中“土”与“荅”按左右结构自然长成“塔”。"
+        "alt": "宝塔倒影相映成趣；远处古朴的石塔倒映在清澈的河面上，为鸟的天堂增添了典雅的诗意 图中“土”与“荅”按左右结构自然长成“塔”。"
       },
       "g5v1-l22-c08-u5854-words-image:g5v1-l22-c08-u5854-words-image-0": {
         "src": "/illustrations/meanings/m06.webp",
@@ -255,7 +255,7 @@ export const characterMedia = {
       "g5v1-l22-c08-u5854-words-image:g5v1-l22-c08-u5854-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u5a5a.webp",
         "label": "结婚",
-        "alt": "结婚是两个人依法建立夫妻关系 图中“女”与“昏”按左右结构自然长成“婚”。"
+        "alt": "结婚是男女结为夫妻；牛郎与织女喜结良缘，用勤劳的双手把小家庭经营得温暖充实 图中“女”与“昏”按左右结构自然长成“婚”。"
       }
     }
   },
@@ -263,7 +263,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u68a2.webp",
       "label": "树梢",
-      "alt": "树梢是树木枝干最上方或最末端的部分 图中“木”与“肖”按左右结构自然长成“梢”。"
+      "alt": "树梢飞鸣百鸟欢腾；无数飞鸟站在高高的树梢上引吭高歌，展现了人与自然和谐共生的美好画卷 图中“木”与“肖”按左右结构自然长成“梢”。"
     },
     "scene": {
       "scene": "左边完整树干与根枝形成“木”，右边小月形嫩叶和细枝沿“肖”长到顶端，组成“梢”。",
@@ -282,12 +282,12 @@ export const characterMedia = {
       "g5v1-l22-c09-u68a2-words-image:g5v1-l22-c09-u68a2-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u6cfb.webp",
         "label": "倾泻",
-        "alt": "倾泻形容大量的水、光等快速向下流 图中“氵”与“写”按左右结构自然长成“泻”。"
+        "alt": "倾泻指江河水势奔腾而下；黄河奔流直泻汪洋，象征着少年中国不可阻挡的磅礴伟力 图中“氵”与“写”按左右结构自然长成“泻”。"
       },
       "g5v1-l22-c09-u68a2-words-image:g5v1-l22-c09-u68a2-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u68a2.webp",
         "label": "树梢",
-        "alt": "树梢是树木枝干最上方或最末端的部分 图中“木”与“肖”按左右结构自然长成“梢”。"
+        "alt": "树梢飞鸣百鸟欢腾；无数飞鸟站在高高的树梢上引吭高歌，展现了人与自然和谐共生的美好画卷 图中“木”与“肖”按左右结构自然长成“梢”。"
       }
     }
   },
@@ -295,13 +295,13 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u7709.webp",
       "label": "眉毛",
-      "alt": "眉毛是长在眼睛上方的一列毛发 图中“𠃜”与“目”按左上包围结构自然长成“眉”。"
+      "alt": "舒展眉头赞叹天地；目睹这片充满生机的绿色胜境，游人舒展眉头，心旷神怡 图中“𠃜”与“目”按左上包围结构自然长成“眉”。"
     },
     "scene": {
-      "scene": "上方弯曲眉骨和短毛形成“𠃜”，下方一只清楚的眼睛形成“目”，眉在眼上，组成“眉”。",
+      "scene": "上方舒展的弯曲眉毛与眉骨“𠃜”，下方一只清澈明亮的眼睛“目”，眉在眼上，组成“眉”。",
       "cues": [
-        "上方弯曲眉骨和短毛形成“𠃜”。",
-        "下方一只清楚的眼睛形成“目”。"
+        "上方舒展的弯曲眉毛与眉骨“𠃜”。",
+        "下方一只清澈明亮的眼睛“目”。"
       ]
     },
     "transcript": "眉毛的眉，读第二声。眉是左上包围结构，上部弯折像眉形，下边的目要写稳，口播时直接记上弯下目。可以想象一弯眉毛护在眼睛上方，眼睛正望着枝头小鸟，先借这个画面记住字形。眉毛是长在眼睛上方的一列毛发。文章写一只画眉鸟飞出叶丛，站在小枝上鸣叫，名字里的眉就和我们脸上的眉毛相同。",
@@ -309,7 +309,7 @@ export const characterMedia = {
       "g5v1-l22-c10-u7709-words-image:g5v1-l22-c10-u7709-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u7709.webp",
         "label": "眉毛",
-        "alt": "眉毛是长在眼睛上方的一列毛发 图中“𠃜”与“目”按左上包围结构自然长成“眉”。"
+        "alt": "舒展眉头赞叹天地；目睹这片充满生机的绿色胜境，游人舒展眉头，心旷神怡 图中“𠃜”与“目”按左上包围结构自然长成“眉”。"
       },
       "g5v1-l22-c10-u7709-words-image:g5v1-l22-c10-u7709-words-image-2": {
         "src": "/illustrations/meanings/m08.webp",
@@ -319,7 +319,7 @@ export const characterMedia = {
       "g5v1-l22-c10-u7709-words-image:g5v1-l22-c10-u7709-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u51ef.webp",
         "label": "凯旋",
-        "alt": "凯旋指军队获胜归来，也泛指胜利归来 图中“岂”与“几”按左右结构自然长成“凯”。"
+        "alt": "凯旋而归豪情满怀；小说中英雄人物凯旋的壮烈故事，点燃了作者心中对于正义与勇气的向往 图中“岂”与“几”按左右结构自然长成“凯”。"
       }
     }
   },
@@ -327,7 +327,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u629b.webp",
       "label": "抛开",
-      "alt": "抛开就是用手把东西扔出去，也可比喻暂时放下 图中“扌”与“九”与“力”按左右结构自然长成“抛”。"
+      "alt": "抛开烦扰沉醉自然；漫步在鸟的天堂，一切尘世纷扰都被抛在脑后，唯余对自然的无限敬畏 图中“扌”与“九”与“力”按左右结构自然长成“抛”。"
     },
     "scene": {
       "scene": "左边挥动手臂形成“扌”，右边物体沿弧线飞过弯钩、人物用力迈腿形成“九”“力”，组成“抛”。",
@@ -352,7 +352,7 @@ export const characterMedia = {
       "g5v1-l22-c11-u629b-words-image:g5v1-l22-c11-u629b-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u629b.webp",
         "label": "抛开",
-        "alt": "抛开就是用手把东西扔出去，也可比喻暂时放下 图中“扌”与“九”与“力”按左右结构自然长成“抛”。"
+        "alt": "抛开烦扰沉醉自然；漫步在鸟的天堂，一切尘世纷扰都被抛在脑后，唯余对自然的无限敬畏 图中“扌”与“九”与“力”按左右结构自然长成“抛”。"
       }
     }
   }

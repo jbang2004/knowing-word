@@ -6,7 +6,7 @@ import { narrationAssets } from "../app/data/narration-assets.ts";
 
 const run = promisify(execFile);
 const projectRoot = resolve(import.meta.dirname, "..");
-const narrationVersion = "v3";
+const narrationVersion = "v4";
 const narrationSourceRoot = resolve(
   process.env.NARRATION_SOURCE_ROOT || join(projectRoot, "release/narration"),
 );

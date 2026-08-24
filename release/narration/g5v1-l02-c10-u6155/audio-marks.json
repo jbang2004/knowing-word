@@ -3,701 +3,678 @@
     {
       "index": 0,
       "char": "慕",
-      "start": 0.08,
-      "end": 0.48
+      "start": 0,
+      "end": 0.4
     },
     {
       "index": 1,
       "char": "爱",
-      "start": 0.64,
-      "end": 0.88
+      "start": 0.8,
+      "end": 0.96
     },
     {
       "index": 2,
       "char": "慕",
-      "start": 0.88,
-      "end": 1.04
+      "start": 0.96,
+      "end": 1.12
     },
     {
       "index": 3,
       "char": "的",
-      "start": 1.04,
-      "end": 1.12
+      "start": 1.12,
+      "end": 1.28
     },
     {
       "index": 4,
       "char": "慕",
-      "start": 1.12,
-      "end": 1.44
+      "start": 1.28,
+      "end": 1.6
     },
     {
       "index": 5,
-      "char": "爱",
+      "char": "读",
       "start": 2.08,
       "end": 2.24
     },
     {
       "index": 6,
-      "char": "慕",
+      "char": "第",
       "start": 2.24,
-      "end": 2.48
+      "end": 2.4
     },
     {
       "index": 7,
-      "char": "是",
-      "start": 2.48,
-      "end": 2.64
+      "char": "四",
+      "start": 2.4,
+      "end": 2.56
     },
     {
       "index": 8,
-      "char": "因",
-      "start": 2.64,
-      "end": 2.8
+      "char": "声",
+      "start": 2.56,
+      "end": 2.96
     },
     {
       "index": 9,
-      "char": "为",
-      "start": 2.8,
-      "end": 2.88
-    },
-    {
-      "index": 10,
-      "char": "欣",
-      "start": 2.88,
-      "end": 3.12
-    },
-    {
-      "index": 11,
-      "char": "赏",
-      "start": 3.12,
-      "end": 3.52
-    },
-    {
-      "index": 12,
-      "char": "而",
+      "char": "它",
       "start": 3.52,
       "end": 3.68
     },
     {
-      "index": 13,
-      "char": "真",
+      "index": 10,
+      "char": "是",
       "start": 3.68,
       "end": 3.84
     },
     {
-      "index": 14,
-      "char": "心",
+      "index": 11,
+      "char": "上",
       "start": 3.84,
-      "end": 4.0
+      "end": 4
     },
     {
-      "index": 15,
-      "char": "喜",
-      "start": 4.0,
+      "index": 12,
+      "char": "下",
+      "start": 4.08,
       "end": 4.24
     },
     {
-      "index": 16,
-      "char": "欢",
+      "index": 13,
+      "char": "结",
       "start": 4.24,
-      "end": 4.56
+      "end": 4.48
+    },
+    {
+      "index": 14,
+      "char": "构",
+      "start": 4.48,
+      "end": 4.8
+    },
+    {
+      "index": 15,
+      "char": "上",
+      "start": 5.12,
+      "end": 5.44
+    },
+    {
+      "index": 16,
+      "char": "方",
+      "start": 5.44,
+      "end": 5.76
     },
     {
       "index": 17,
-      "char": "向",
-      "start": 4.72,
-      "end": 5.04
+      "char": "是",
+      "start": 5.76,
+      "end": 5.92
     },
     {
       "index": 18,
-      "char": "往",
-      "start": 5.04,
-      "end": 5.28
-    },
-    {
-      "index": 19,
-      "char": "这",
-      "start": 5.84,
-      "end": 6.0
-    },
-    {
-      "index": 20,
-      "char": "个",
-      "start": 6.0,
+      "char": "由",
+      "start": 5.92,
       "end": 6.08
     },
     {
-      "index": 21,
-      "char": "字",
+      "index": 19,
+      "char": "草",
       "start": 6.08,
-      "end": 6.32
+      "end": 6.24
     },
     {
-      "index": 22,
-      "char": "上",
-      "start": 6.32,
+      "index": 20,
+      "char": "木",
+      "start": 6.24,
       "end": 6.56
     },
     {
+      "index": 21,
+      "char": "与",
+      "start": 6.56,
+      "end": 6.72
+    },
+    {
+      "index": 22,
+      "char": "日",
+      "start": 6.72,
+      "end": 6.88
+    },
+    {
       "index": 23,
-      "char": "方",
-      "start": 6.64,
-      "end": 6.8
+      "char": "影",
+      "start": 6.88,
+      "end": 7.04
     },
     {
       "index": 24,
-      "char": "笔",
-      "start": 6.8,
-      "end": 6.96
-    },
-    {
-      "index": 25,
-      "char": "画",
-      "start": 6.96,
+      "char": "叠",
+      "start": 7.04,
       "end": 7.2
     },
     {
-      "index": 26,
-      "char": "铺",
+      "index": 25,
+      "char": "成",
       "start": 7.2,
       "end": 7.36
     },
     {
-      "index": 27,
-      "char": "开",
+      "index": 26,
+      "char": "的",
       "start": 7.36,
-      "end": 7.68
+      "end": 7.44
+    },
+    {
+      "index": 27,
+      "char": "莫",
+      "start": 7.44,
+      "end": 7.76
     },
     {
       "index": 28,
       "char": "下",
-      "start": 8.0,
-      "end": 8.24
+      "start": 8.24,
+      "end": 8.56
     },
     {
       "index": 29,
-      "char": "面",
-      "start": 8.24,
-      "end": 8.4
+      "char": "方",
+      "start": 8.56,
+      "end": 8.8
     },
     {
       "index": 30,
-      "char": "像",
-      "start": 8.4,
-      "end": 8.64
+      "char": "是",
+      "start": 8.8,
+      "end": 8.96
     },
     {
       "index": 31,
       "char": "一",
-      "start": 8.64,
-      "end": 8.72
+      "start": 8.96,
+      "end": 9.12
     },
     {
       "index": 32,
       "char": "颗",
-      "start": 8.72,
-      "end": 8.88
-    },
-    {
-      "index": 33,
-      "char": "小",
-      "start": 8.88,
-      "end": 9.12
-    },
-    {
-      "index": 34,
-      "char": "小",
       "start": 9.12,
       "end": 9.28
     },
     {
-      "index": 35,
-      "char": "的",
+      "index": 33,
+      "char": "微",
       "start": 9.28,
       "end": 9.44
     },
     {
-      "index": 36,
-      "char": "心",
+      "index": 34,
+      "char": "微",
       "start": 9.44,
+      "end": 9.52
+    },
+    {
+      "index": 35,
+      "char": "发",
+      "start": 9.52,
       "end": 9.76
     },
     {
+      "index": 36,
+      "char": "光",
+      "start": 9.76,
+      "end": 9.92
+    },
+    {
       "index": 37,
-      "char": "可",
-      "start": 10.24,
-      "end": 10.32
+      "char": "的",
+      "start": 9.92,
+      "end": 10
     },
     {
       "index": 38,
-      "char": "以",
-      "start": 10.32,
-      "end": 10.48
+      "char": "心",
+      "start": 10,
+      "end": 10.32
     },
     {
       "index": 39,
-      "char": "想",
-      "start": 10.48,
-      "end": 10.64
-    },
-    {
-      "index": 40,
-      "char": "象",
-      "start": 10.64,
+      "char": "由",
+      "start": 10.8,
       "end": 10.96
     },
     {
-      "index": 41,
-      "char": "目",
+      "index": 40,
+      "char": "衷",
       "start": 10.96,
       "end": 11.2
     },
     {
-      "index": 42,
-      "char": "光",
+      "index": 41,
+      "char": "的",
       "start": 11.2,
-      "end": 11.36
+      "end": 11.28
+    },
+    {
+      "index": 42,
+      "char": "向",
+      "start": 11.28,
+      "end": 11.52
     },
     {
       "index": 43,
-      "char": "追",
-      "start": 11.36,
-      "end": 11.6
-    },
-    {
-      "index": 44,
-      "char": "着",
-      "start": 11.6,
+      "char": "往",
+      "start": 11.52,
       "end": 11.68
     },
     {
-      "index": 45,
-      "char": "枝",
+      "index": 44,
+      "char": "在",
       "start": 11.68,
-      "end": 11.92
+      "end": 11.84
+    },
+    {
+      "index": 45,
+      "char": "心",
+      "start": 11.84,
+      "end": 12.08
     },
     {
       "index": 46,
-      "char": "头",
-      "start": 11.92,
-      "end": 12.16
+      "char": "中",
+      "start": 12.08,
+      "end": 12.24
     },
     {
       "index": 47,
-      "char": "鲜",
-      "start": 12.16,
-      "end": 12.32
+      "char": "升",
+      "start": 12.24,
+      "end": 12.4
     },
     {
       "index": 48,
-      "char": "亮",
-      "start": 12.32,
-      "end": 12.56
-    },
-    {
-      "index": 49,
-      "char": "的",
-      "start": 12.56,
+      "char": "起",
+      "start": 12.4,
       "end": 12.64
     },
     {
-      "index": 50,
-      "char": "果",
+      "index": 49,
+      "char": "即",
       "start": 12.64,
-      "end": 12.88
+      "end": 12.8
+    },
+    {
+      "index": 50,
+      "char": "为",
+      "start": 12.8,
+      "end": 12.96
     },
     {
       "index": 51,
-      "char": "子",
-      "start": 12.88,
-      "end": 13.2
+      "char": "慕",
+      "start": 12.96,
+      "end": 13.28
     },
     {
       "index": 52,
-      "char": "喜",
-      "start": 13.6,
-      "end": 13.84
+      "char": "爱",
+      "start": 13.76,
+      "end": 14
     },
     {
       "index": 53,
-      "char": "欢",
-      "start": 13.84,
-      "end": 14.0
+      "char": "慕",
+      "start": 14,
+      "end": 14.24
     },
     {
       "index": 54,
-      "char": "之",
-      "start": 14.0,
-      "end": 14.16
+      "char": "是",
+      "start": 14.24,
+      "end": 14.4
     },
     {
       "index": 55,
-      "char": "情",
-      "start": 14.16,
+      "char": "因",
+      "start": 14.4,
       "end": 14.48
     },
     {
       "index": 56,
-      "char": "落",
+      "char": "为",
       "start": 14.48,
       "end": 14.64
     },
     {
       "index": 57,
-      "char": "进",
+      "char": "欣",
       "start": 14.64,
-      "end": 14.8
+      "end": 14.88
     },
     {
       "index": 58,
-      "char": "心",
-      "start": 14.8,
+      "char": "赏",
+      "start": 14.88,
       "end": 15.04
     },
     {
       "index": 59,
-      "char": "里",
+      "char": "而",
       "start": 15.04,
-      "end": 15.28
+      "end": 15.2
     },
     {
       "index": 60,
-      "char": "这",
-      "start": 15.68,
-      "end": 15.84
+      "char": "真",
+      "start": 15.2,
+      "end": 15.36
     },
     {
       "index": 61,
-      "char": "个",
-      "start": 15.84,
-      "end": 15.92
+      "char": "心",
+      "start": 15.36,
+      "end": 15.52
     },
     {
       "index": 62,
-      "char": "场",
-      "start": 15.92,
-      "end": 16.16
+      "char": "向",
+      "start": 15.52,
+      "end": 15.76
     },
     {
       "index": 63,
-      "char": "景",
-      "start": 16.16,
-      "end": 16.48
+      "char": "往",
+      "start": 15.76,
+      "end": 16
     },
     {
       "index": 64,
-      "char": "只",
-      "start": 16.56,
-      "end": 16.72
+      "char": "课",
+      "start": 16.4,
+      "end": 16.64
     },
     {
       "index": 65,
-      "char": "帮",
-      "start": 16.72,
+      "char": "文",
+      "start": 16.64,
       "end": 16.88
     },
     {
       "index": 66,
-      "char": "助",
+      "char": "写",
       "start": 16.88,
       "end": 17.04
     },
     {
       "index": 67,
-      "char": "记",
+      "char": "桃",
       "start": 17.04,
-      "end": 17.2
+      "end": 17.28
     },
     {
       "index": 68,
-      "char": "住",
-      "start": 17.2,
-      "end": 17.36
+      "char": "子",
+      "start": 17.28,
+      "end": 17.52
     },
     {
       "index": 69,
-      "char": "上",
-      "start": 17.36,
-      "end": 17.6
+      "char": "石",
+      "start": 17.76,
+      "end": 18.08
     },
     {
       "index": 70,
-      "char": "下",
-      "start": 17.6,
-      "end": 17.84
+      "char": "榴",
+      "start": 18.08,
+      "end": 18.4
     },
     {
       "index": 71,
-      "char": "位",
-      "start": 17.84,
-      "end": 18.0
-    },
-    {
-      "index": 72,
-      "char": "置",
-      "start": 18.0,
-      "end": 18.32
-    },
-    {
-      "index": 73,
-      "char": "课",
-      "start": 18.56,
-      "end": 18.8
-    },
-    {
-      "index": 74,
-      "char": "文",
-      "start": 18.8,
+      "char": "苹",
+      "start": 18.72,
       "end": 18.96
     },
     {
-      "index": 75,
-      "char": "说",
+      "index": 72,
+      "char": "果",
       "start": 18.96,
-      "end": 19.12
+      "end": 19.2
+    },
+    {
+      "index": 73,
+      "char": "把",
+      "start": 19.28,
+      "end": 19.36
+    },
+    {
+      "index": 74,
+      "char": "鲜",
+      "start": 19.36,
+      "end": 19.6
+    },
+    {
+      "index": 75,
+      "char": "红",
+      "start": 19.6,
+      "end": 19.84
     },
     {
       "index": 76,
-      "char": "桃",
-      "start": 19.12,
-      "end": 19.44
+      "char": "嫩",
+      "start": 19.84,
+      "end": 20
     },
     {
       "index": 77,
-      "char": "子",
-      "start": 19.44,
-      "end": 19.76
+      "char": "绿",
+      "start": 20,
+      "end": 20.08
     },
     {
       "index": 78,
-      "char": "石",
-      "start": 19.84,
-      "end": 20.16
+      "char": "的",
+      "start": 20.08,
+      "end": 20.24
     },
     {
       "index": 79,
-      "char": "榴",
-      "start": 20.16,
-      "end": 20.48
+      "char": "果",
+      "start": 20.24,
+      "end": 20.4
     },
     {
       "index": 80,
-      "char": "苹",
-      "start": 20.64,
-      "end": 20.96
+      "char": "实",
+      "start": 20.4,
+      "end": 20.64
     },
     {
       "index": 81,
-      "char": "果",
-      "start": 20.96,
-      "end": 21.2
+      "char": "高",
+      "start": 20.64,
+      "end": 20.8
     },
     {
       "index": 82,
-      "char": "把",
-      "start": 21.36,
-      "end": 21.52
+      "char": "挂",
+      "start": 20.8,
+      "end": 20.96
     },
     {
       "index": 83,
-      "char": "鲜",
-      "start": 21.52,
-      "end": 21.76
+      "char": "枝",
+      "start": 20.96,
+      "end": 21.12
     },
     {
       "index": 84,
-      "char": "红",
-      "start": 21.76,
-      "end": 22.08
+      "char": "头",
+      "start": 21.12,
+      "end": 21.52
     },
     {
       "index": 85,
-      "char": "嫩",
-      "start": 22.08,
-      "end": 22.16
+      "char": "使",
+      "start": 21.84,
+      "end": 22.08
     },
     {
       "index": 86,
-      "char": "绿",
-      "start": 22.16,
-      "end": 22.32
+      "char": "人",
+      "start": 22.08,
+      "end": 22.24
     },
     {
       "index": 87,
-      "char": "的",
-      "start": 22.32,
+      "char": "一",
+      "start": 22.24,
       "end": 22.4
     },
     {
       "index": 88,
-      "char": "果",
+      "char": "见",
       "start": 22.4,
       "end": 22.64
     },
     {
       "index": 89,
-      "char": "实",
+      "char": "就",
       "start": 22.64,
-      "end": 22.88
+      "end": 22.72
     },
     {
       "index": 90,
-      "char": "高",
-      "start": 22.88,
-      "end": 23.12
+      "char": "生",
+      "start": 22.72,
+      "end": 22.96
     },
     {
       "index": 91,
-      "char": "挂",
-      "start": 23.12,
-      "end": 23.28
+      "char": "爱",
+      "start": 22.96,
+      "end": 23.12
     },
     {
       "index": 92,
-      "char": "枝",
-      "start": 23.28,
-      "end": 23.52
+      "char": "慕",
+      "start": 23.12,
+      "end": 23.2
     },
     {
       "index": 93,
-      "char": "头",
-      "start": 23.52,
-      "end": 23.92
+      "char": "之",
+      "start": 23.2,
+      "end": 23.36
     },
     {
       "index": 94,
-      "char": "使",
-      "start": 24.08,
-      "end": 24.24
+      "char": "心",
+      "start": 23.36,
+      "end": 23.68
     },
     {
       "index": 95,
-      "char": "人",
+      "char": "花",
       "start": 24.24,
-      "end": 24.4
-    },
-    {
-      "index": 96,
-      "char": "一",
-      "start": 24.4,
       "end": 24.48
     },
     {
-      "index": 97,
-      "char": "见",
+      "index": 96,
+      "char": "生",
       "start": 24.48,
       "end": 24.8
     },
     {
-      "index": 98,
-      "char": "就",
+      "index": 97,
+      "char": "却",
       "start": 24.8,
       "end": 24.88
     },
     {
-      "index": 99,
-      "char": "生",
+      "index": 98,
+      "char": "把",
       "start": 24.88,
-      "end": 25.12
+      "end": 25.04
+    },
+    {
+      "index": 99,
+      "char": "果",
+      "start": 25.04,
+      "end": 25.28
     },
     {
       "index": 100,
-      "char": "爱",
-      "start": 25.2,
-      "end": 25.36
+      "char": "实",
+      "start": 25.28,
+      "end": 25.44
     },
     {
       "index": 101,
-      "char": "慕",
-      "start": 25.36,
-      "end": 25.52
+      "char": "藏",
+      "start": 25.44,
+      "end": 25.6
     },
     {
       "index": 102,
-      "char": "之",
-      "start": 25.52,
-      "end": 25.68
+      "char": "在",
+      "start": 25.6,
+      "end": 25.76
     },
     {
       "index": 103,
-      "char": "心",
-      "start": 25.68,
-      "end": 26.08
+      "char": "地",
+      "start": 25.76,
+      "end": 26
     },
     {
       "index": 104,
-      "char": "花",
-      "start": 26.56,
-      "end": 26.8
+      "char": "里",
+      "start": 26,
+      "end": 26.24
     },
     {
       "index": 105,
-      "char": "生",
-      "start": 26.8,
-      "end": 27.12
+      "char": "质",
+      "start": 26.48,
+      "end": 26.72
     },
     {
       "index": 106,
-      "char": "却",
-      "start": 27.12,
-      "end": 27.28
+      "char": "朴",
+      "start": 26.72,
+      "end": 26.88
     },
     {
       "index": 107,
-      "char": "把",
-      "start": 27.28,
-      "end": 27.44
+      "char": "而",
+      "start": 26.88,
+      "end": 27.04
     },
     {
       "index": 108,
-      "char": "果",
-      "start": 27.44,
-      "end": 27.6
+      "char": "深",
+      "start": 27.04,
+      "end": 27.28
     },
     {
       "index": 109,
-      "char": "实",
-      "start": 27.6,
-      "end": 27.76
-    },
-    {
-      "index": 110,
-      "char": "藏",
-      "start": 27.76,
-      "end": 27.92
-    },
-    {
-      "index": 111,
-      "char": "在",
-      "start": 27.92,
-      "end": 28.08
-    },
-    {
-      "index": 112,
-      "char": "地",
-      "start": 28.08,
-      "end": 28.32
-    },
-    {
-      "index": 113,
-      "char": "里",
-      "start": 28.32,
-      "end": 28.48
+      "char": "沉",
+      "start": 27.28,
+      "end": 27.6
     }
   ],
-  "transcript": "慕，爱慕的慕。爱慕是因为欣赏而真心喜欢、向往。这个字上方笔画铺开，下面像一颗小小的心，可以想象目光追着枝头鲜亮的果子，喜欢之情落进心里。这个场景只帮助记住上下位置。课文说桃子、石榴、苹果把鲜红嫩绿的果实高挂枝头，使人一见就生爱慕之心；花生却把果实藏在地里。",
+  "transcript": "慕，爱慕的慕，读第四声。它是上下结构，上方是由草木与日影叠成的莫，下方是一颗微微发光的心，由衷的向往在心中升起即为慕。爱慕是因为欣赏而真心向往。课文写桃子、石榴、苹果把鲜红嫩绿的果实高挂枝头，使人一见就生爱慕之心；花生却把果实藏在地里，质朴而深沉。",
   "voice_reference": "封",
   "reference_id": "019f0554-ea22-762e-966c-32d678fd6bf6",
   "reference_sha256": "eb07e06ee13a20ee4577b1b481df6d33d42127c1b3876bfa5d5e5362ae349f19",
   "timing_source": "qwen3-forced-aligner",
-  "script_version": "narration-v3",
-  "model": "mlx-community/Qwen3-TTS-12Hz-1.7B-Base-4bit",
-  "model_revision": "37e955a1deb861c088ae5f3a67043185f3d1a60c",
-  "generation_policy": "qwen3-clone-2026-08-22-v3",
-  "seed": 20260822,
-  "content_hash": "754ce70359df3576a2e4",
-  "duration": 28.524,
+  "script_version": "narration-fish-v1",
+  "model": "fishaudio/s2.1-pro-free",
+  "model_revision": "s2.1-pro-free",
+  "generation_policy": "narration-fish-s2.1-zero-shot-2026-08-24",
+  "seed": null,
+  "content_hash": "bd710c8d0dd504e99219",
   "alignment_model": "mlx-community/Qwen3-ForcedAligner-0.6B-8bit",
-  "aligned_audio_sha256": "6fbfb72c0b4f84d2381add3576d8f3091a097ab24b37f45ab3f21d9fa2ff9b08",
-  "alignment_groups": []
+  "alignment_model_revision": "0e1a68e91d815300c7c9754b2a7639378b23db15",
+  "aligned_audio_sha256": "27e5d004c587b294fbc0de96e245af5611d251b5489b4775b4316d73537024b4",
+  "alignment_groups": [],
+  "duration": 27.75
 }

@@ -6,7 +6,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u8327.webp",
       "label": "蚕茧",
-      "alt": "蚕茧是蚕吐丝包住自己形成的椭圆形外壳 图中“艹”与“虫”按上下结构自然长成“茧”。"
+      "alt": "蚕茧是江南水乡的丰收希望；父亲在春蚕吐丝结茧的季节起早贪黑，卖了蚕茧供孩子上学 图中“艹”与“虫”按上下结构自然长成“茧”。"
     },
     "scene": {
       "scene": "上方桑叶嫩芽形成“艹”，下方一条小蚕把丝线绕成“虫”的弯身和点画，外缘收成茧形，组成“茧”。",
@@ -25,12 +25,12 @@ export const characterMedia = {
       "g5v1-l19-c01-u8327-words-image:g5v1-l19-c01-u8327-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u61d2.webp",
         "label": "懒惰",
-        "alt": "懒惰是不愿意动脑或动手做应该做的事 图中“忄”与“赖”按左右结构自然长成“懒”。"
+        "alt": "懒惰是遇事推诿不肯动手；若是搭石不稳，无论谁路过都会立刻找石头修垫，绝不偷懒推托 图中“忄”与“赖”按左右结构自然长成“懒”。"
       },
       "g5v1-l19-c01-u8327-words-image:g5v1-l19-c01-u8327-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u8327.webp",
         "label": "蚕茧",
-        "alt": "蚕茧是蚕吐丝包住自己形成的椭圆形外壳 图中“艹”与“虫”按上下结构自然长成“茧”。"
+        "alt": "蚕茧是江南水乡的丰收希望；父亲在春蚕吐丝结茧的季节起早贪黑，卖了蚕茧供孩子上学 图中“艹”与“虫”按上下结构自然长成“茧”。"
       }
     }
   },
@@ -38,7 +38,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u6808.webp",
       "label": "客栈",
-      "alt": "客栈是旧时供旅客住宿的地方，类似旅店 图中“木”与“戋”按左右结构自然长成“栈”。"
+      "alt": "客栈歇宿节省开支；父亲为了省下住客栈的房钱，夜里就摇着小船带着孩子宿在船舱中 图中“木”与“戋”按左右结构自然长成“栈”。"
     },
     "scene": {
       "scene": "左边木梁与柱脚组成“木”，右边浅层楼梯、门栓和短戈沿“戋”搭起一间小旅舍，组成“栈”。",
@@ -57,12 +57,12 @@ export const characterMedia = {
       "g5v1-l19-c02-u6808-words-image:g5v1-l19-c02-u6808-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u9675.webp",
         "label": "武陵春色",
-        "alt": "陵园是安葬并纪念逝者的园地，应当保持庄重 图中“阝”与“夌”按左右结构自然长成“陵”。"
+        "alt": "武陵春色宛若世外桃源；漫步园中如行画中，令人如痴如醉、流连忘返 图中“阝”与“夌”按左右结构自然长成“陵”。"
       },
       "g5v1-l19-c02-u6808-words-image:g5v1-l19-c02-u6808-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u6808.webp",
         "label": "客栈",
-        "alt": "客栈是旧时供旅客住宿的地方，类似旅店 图中“木”与“戋”按左右结构自然长成“栈”。"
+        "alt": "客栈歇宿节省开支；父亲为了省下住客栈的房钱，夜里就摇着小船带着孩子宿在船舱中 图中“木”与“戋”按左右结构自然长成“栈”。"
       }
     }
   },
@@ -70,7 +70,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u51a4.webp",
       "label": "冤枉",
-      "alt": "冤枉是没有事实根据却被错误责怪或受到不公平对待 图中“冖”与“兔”按上下结构自然长成“冤”。"
+      "alt": "冤枉委屈历历在目；童年受到的无端冤枉，在父亲温暖宽厚的怀抱里得到了最大的安慰 图中“冖”与“兔”按上下结构自然长成“冤”。"
     },
     "scene": {
       "scene": "上方屋盖形成“冖”，下方一只本来无错的兔子收成“兔”，却被盖在误会下面，组成“冤”。",
@@ -89,12 +89,12 @@ export const characterMedia = {
       "g5v1-l19-c03-u51a4-words-image:g5v1-l19-c03-u51a4-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u6bc1.webp",
         "label": "毁灭",
-        "alt": "毁灭就是严重破坏，使原有事物不复存在 图中“臼”与“工”与“殳”按左右结构自然长成“毁”。"
+        "alt": "毁灭是彻底破坏不复存在；圆明园惨遭毁灭的历史警示我们，落后就要挨打，唯有自强不息 图中“臼”与“工”与“殳”按左右结构自然长成“毁”。"
       },
       "g5v1-l19-c03-u51a4-words-image:g5v1-l19-c03-u51a4-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u51a4.webp",
         "label": "冤枉",
-        "alt": "冤枉是没有事实根据却被错误责怪或受到不公平对待 图中“冖”与“兔”按上下结构自然长成“冤”。"
+        "alt": "冤枉委屈历历在目；童年受到的无端冤枉，在父亲温暖宽厚的怀抱里得到了最大的安慰 图中“冖”与“兔”按上下结构自然长成“冤”。"
       }
     }
   },
@@ -102,7 +102,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u6789.webp",
       "label": "冤枉",
-      "alt": "冤枉中的“枉”表示歪曲事实，使人受到不公平对待 图中“木”与“王”按左右结构自然长成“枉”。"
+      "alt": "无端枉受责备令人委屈；父亲用温和坚定的信任驱散了孩子心中的阴霾，照亮了前路 图中“木”与“王”按左右结构自然长成“枉”。"
     },
     "scene": {
       "scene": "左边笔直树干形成“木”，右边三层准则架形成“王”，准则被树枝压弯，左右合成“枉”。",
@@ -126,7 +126,7 @@ export const characterMedia = {
       "g5v1-l19-c04-u6789-words-image:g5v1-l19-c04-u6789-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u6789.webp",
         "label": "冤枉",
-        "alt": "冤枉中的“枉”表示歪曲事实，使人受到不公平对待 图中“木”与“王”按左右结构自然长成“枉”。"
+        "alt": "无端枉受责备令人委屈；父亲用温和坚定的信任驱散了孩子心中的阴霾，照亮了前路 图中“木”与“王”按左右结构自然长成“枉”。"
       }
     }
   },
@@ -134,7 +134,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u604d.webp",
       "label": "恍惚",
-      "alt": "恍惚形容注意力不集中，神志或感觉不清楚 图中“忄”与“光”按左右结构自然长成“恍”。"
+      "alt": "恍恍惚惚如在梦境；多年后作者在梦中恍惚又见到了那条承载着深沉父爱的小渔船 图中“忄”与“光”按左右结构自然长成“恍”。"
     },
     "scene": {
       "scene": "左边忽明忽暗的心灯形成“忄”，右边散开的光线和人物沿“光”摇晃，心神被晃得模糊，组成“恍”。",
@@ -153,12 +153,12 @@ export const characterMedia = {
       "g5v1-l19-c05-u604d-words-image:g5v1-l19-c05-u604d-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u85d3.webp",
         "label": "苔藓",
-        "alt": "苔藓是一类贴着潮湿地面或树皮生长的绿色小植物 图中“艹”与“鲜”按上下结构自然长成“藓”。"
+        "alt": "苔藓柔软保温干燥；松鼠采集柔软的苔藓铺在窝底，把小窝打理得格外暖和舒坦 图中“艹”与“鲜”按上下结构自然长成“藓”。"
       },
       "g5v1-l19-c05-u604d-words-image:g5v1-l19-c05-u604d-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u604d.webp",
         "label": "恍惚",
-        "alt": "恍惚形容注意力不集中，神志或感觉不清楚 图中“忄”与“光”按左右结构自然长成“恍”。"
+        "alt": "恍恍惚惚如在梦境；多年后作者在梦中恍惚又见到了那条承载着深沉父爱的小渔船 图中“忄”与“光”按左右结构自然长成“恍”。"
       }
     }
   },
@@ -166,7 +166,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u60da.webp",
       "label": "恍惚",
-      "alt": "恍惚表示精神不集中，眼前和心里的感觉都不清晰 图中“忄”与“忽”按左右结构自然长成“惚”。"
+      "alt": "恍惚入梦追忆往昔；梦中父亲摇橹的背影依然清晰，无声的父爱穿越岁月历久弥新 图中“忄”与“忽”按左右结构自然长成“惚”。"
     },
     "scene": {
       "scene": "左边心灯形成“忄”，右边快速掠过的气流和下方心影沿“忽”飘动，念头忽远忽近，组成“惚”。",
@@ -180,7 +180,7 @@ export const characterMedia = {
       "g5v1-l19-c06-u60da-words-image:g5v1-l19-c06-u60da-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u60da.webp",
         "label": "恍惚",
-        "alt": "恍惚表示精神不集中，眼前和心里的感觉都不清晰 图中“忄”与“忽”按左右结构自然长成“惚”。"
+        "alt": "恍惚入梦追忆往昔；梦中父亲摇橹的背影依然清晰，无声的父爱穿越岁月历久弥新 图中“忄”与“忽”按左右结构自然长成“惚”。"
       },
       "g5v1-l19-c06-u60da-words-image:g5v1-l19-c06-u60da-words-image-0": {
         "src": "/illustrations/meanings/m07.webp",
@@ -190,7 +190,7 @@ export const characterMedia = {
       "g5v1-l19-c06-u60da-words-image:g5v1-l19-c06-u60da-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u6284.webp",
         "label": "抄写",
-        "alt": "抄写就是照着文字重新写一遍 图中“扌”与“少”按左右结构自然长成“抄”。"
+        "alt": "抄小路指绕过大路快速行进；随从化装成平民抄小路潜回赵国，确保了和氏璧的安全 图中“扌”与“少”按左右结构自然长成“抄”。"
       }
     }
   },
@@ -198,13 +198,13 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u8df7.webp",
       "label": "跷跷板",
-      "alt": "跷跷板是一种两端轮流升降的儿童游戏设施 图中“⻊”与“尧”按左右结构自然长成“跷”。"
+      "alt": "跷跷板荡起童年欢乐；在赶考途中的庙会上，父亲难得给孩子买了一只小玩具，装满了温情 图中“⻊”与“尧”按左右结构自然长成“跷”。"
     },
     "scene": {
-      "scene": "左边脚印和踏板形成“⻊”，右边高低两端的板、支点和弯脚沿“尧”搭起，脚一踩就翘起，组成“跷”。",
+      "scene": "左边踏步踩低的足字旁“⻊”，右边高低两端的板与支架“尧”搭起，脚一踩就翘起，组成“跷”。",
       "cues": [
-        "左边脚印和踏板形成“⻊”。",
-        "右边高低两端的板、支点和弯脚沿“尧”搭起。"
+        "左边踏步踩低的足字旁“⻊”。",
+        "右边高低两端的板与支架“尧”搭起。"
       ]
     },
     "transcript": "跷跷板的跷，读第一声，两个人分坐木板两端，一头升起，另一头就落下。跷在左边写足字旁，右边笔画向上挑，左右要相让。庙会上，踩高跷的艺人把高跷绑在腿上，站得高高的表演。跷跷板和高跷都是带脚和抬高动作的物件，读词时要分清。父亲陪孩子看着满街热闹，手里不多的钱却得仔细盘算。",
@@ -217,12 +217,12 @@ export const characterMedia = {
       "g5v1-l19-c07-u8df7-words-image:g5v1-l19-c07-u8df7-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u60eb.webp",
         "label": "疲惫",
-        "alt": "疲惫就是身体和精神都很累，需要休息 图中“备”与“心”按上下结构自然长成“惫”。"
+        "alt": "疲惫不堪的身影令人心酸；母亲极其瘦弱疲惫的身躯，深深震撼了前来要钱买书的孩子 图中“备”与“心”按上下结构自然长成“惫”。"
       },
       "g5v1-l19-c07-u8df7-words-image:g5v1-l19-c07-u8df7-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u8df7.webp",
         "label": "跷跷板",
-        "alt": "跷跷板是一种两端轮流升降的儿童游戏设施 图中“⻊”与“尧”按左右结构自然长成“跷”。"
+        "alt": "跷跷板荡起童年欢乐；在赶考途中的庙会上，父亲难得给孩子买了一只小玩具，装满了温情 图中“⻊”与“尧”按左右结构自然长成“跷”。"
       }
     }
   },
@@ -230,7 +230,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u50fb.webp",
       "label": "偏僻",
-      "alt": "偏僻形容地方离主要道路或人群较远，来往不方便 图中“亻”与“辟”按左右结构自然长成“僻”。"
+      "alt": "偏僻乡间求学不易；为了让孩子走出偏僻乡村开阔眼界，父亲倾尽全力支持孩子读书求学 图中“亻”与“辟”按左右结构自然长成“僻”。"
     },
     "scene": {
       "scene": "左边独自站立的人形成“亻”，右边关闭的侧门、分岔路牌和辛形界线沿“辟”展开，合成远离人群的“僻”。",
@@ -254,7 +254,7 @@ export const characterMedia = {
       "g5v1-l19-c08-u50fb-words-image:g5v1-l19-c08-u50fb-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u50fb.webp",
         "label": "偏僻",
-        "alt": "偏僻形容地方离主要道路或人群较远，来往不方便 图中“亻”与“辟”按左右结构自然长成“僻”。"
+        "alt": "偏僻乡间求学不易；为了让孩子走出偏僻乡村开阔眼界，父亲倾尽全力支持孩子读书求学 图中“亻”与“辟”按左右结构自然长成“僻”。"
       }
     }
   },
@@ -262,7 +262,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u59d4.webp",
       "label": "委屈",
-      "alt": "委屈是受到不公平对待或误解时产生的难过感受 图中“禾”与“女”按上下结构自然长成“委”。"
+      "alt": "委屈难过烟消云散；父亲深沉的陪伴与理解，化解了求学路上的一切委屈与挫折 图中“禾”与“女”按上下结构自然长成“委”。"
     },
     "scene": {
       "scene": "上方低垂禾穗形成“禾”，下方人物收拢身体成“女”，像受了委屈低下头，上下组成“委”。",
@@ -286,7 +286,7 @@ export const characterMedia = {
       "g5v1-l19-c09-u59d4-words-image:g5v1-l19-c09-u59d4-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u59d4.webp",
         "label": "委屈",
-        "alt": "委屈是受到不公平对待或误解时产生的难过感受 图中“禾”与“女”按上下结构自然长成“委”。"
+        "alt": "委屈难过烟消云散；父亲深沉的陪伴与理解，化解了求学路上的一切委屈与挫折 图中“禾”与“女”按上下结构自然长成“委”。"
       }
     }
   },
@@ -294,7 +294,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u8fea.webp",
       "label": "启迪",
-      "alt": "启迪就是引导人获得新的认识或思考 图中“辶”与“由”按左下包围结构自然长成“迪”。"
+      "alt": "启迪心智指引前程；父亲虽不多言，却用脚踏实地的行动启迪孩子要堂堂正正做人 图中“辶”与“由”按左下包围结构自然长成“迪”。"
     },
     "scene": {
       "scene": "中央一粒想法从田格般的“由”中冒出，左下方道路形成“辶”，沿着新思路向前，组成“迪”。",
@@ -313,12 +313,12 @@ export const characterMedia = {
       "g5v1-l19-c10-u8fea-words-image:g5v1-l19-c10-u8fea-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u803d.webp",
         "label": "耽误",
-        "alt": "耽误就是因为拖延或受阻而错过时间、影响事情 图中“耳”与“冘”按左右结构自然长成“耽”。"
+        "alt": "耽误工时扣减收入；母亲唯恐耽误做工时间，手里的缝纫活一刻也不肯停歇 图中“耳”与“冘”按左右结构自然长成“耽”。"
       },
       "g5v1-l19-c10-u8fea-words-image:g5v1-l19-c10-u8fea-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u8fea.webp",
         "label": "启迪",
-        "alt": "启迪就是引导人获得新的认识或思考 图中“辶”与“由”按左下包围结构自然长成“迪”。"
+        "alt": "启迪心智指引前程；父亲虽不多言，却用脚踏实地的行动启迪孩子要堂堂正正做人 图中“辶”与“由”按左下包围结构自然长成“迪”。"
       }
     }
   },
@@ -326,7 +326,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u5ac1.webp",
       "label": "出嫁",
-      "alt": "出嫁旧时多指女子结婚后到配偶家庭生活 图中“女”与“家”按左右结构自然长成“嫁”。"
+      "alt": "出嫁置办嫁妆艰辛；父亲为姐姐出嫁东奔西走，在艰难拮据的生活中尽力照顾好每一个子女 图中“女”与“家”按左右结构自然长成“嫁”。"
     },
     "scene": {
       "scene": "左边人物形成“女”，右边屋顶下的家人和小猪沿“家”相聚，人物走向新家庭，组成“嫁”。",
@@ -345,12 +345,12 @@ export const characterMedia = {
       "g5v1-l19-c11-u5ac1-words-image:g5v1-l19-c11-u5ac1-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u745a.webp",
         "label": "珊瑚",
-        "alt": "珊瑚常生活在温暖清澈的海水中，能形成珊瑚礁 图中“王”与“胡”按左右结构自然长成“瑚”。"
+        "alt": "珊瑚礁是绚丽的海底奇观；王母即便追至辽远的珊瑚海礁也不肯放过织女，故事转入紧张高潮 图中“王”与“胡”按左右结构自然长成“瑚”。"
       },
       "g5v1-l19-c11-u5ac1-words-image:g5v1-l19-c11-u5ac1-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u5ac1.webp",
         "label": "出嫁",
-        "alt": "出嫁旧时多指女子结婚后到配偶家庭生活 图中“女”与“家”按左右结构自然长成“嫁”。"
+        "alt": "出嫁置办嫁妆艰辛；父亲为姐姐出嫁东奔西走，在艰难拮据的生活中尽力照顾好每一个子女 图中“女”与“家”按左右结构自然长成“嫁”。"
       }
     }
   },
@@ -358,7 +358,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u7f34.webp",
       "label": "缴费",
-      "alt": "缴费就是按照规定交付费用 图中“纟”与“敫”按左右结构自然长成“缴”。"
+      "alt": "缴纳学费东挪西凑；为了凑齐新学期缴费的银元，父亲卖掉心爱的物品，四处奔波借钱 图中“纟”与“敫”按左右结构自然长成“缴”。"
     },
     "scene": {
       "scene": "左边盘绕账单线形成“纟”，右边白色票据、方向标和轻敲确认杖沿“敫”排开，交付并核验，组成“缴”。",
@@ -372,7 +372,7 @@ export const characterMedia = {
       "g5v1-l19-c12-u7f34-words-image:g5v1-l19-c12-u7f34-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u7f34.webp",
         "label": "缴费",
-        "alt": "缴费就是按照规定交付费用 图中“纟”与“敫”按左右结构自然长成“缴”。"
+        "alt": "缴纳学费东挪西凑；为了凑齐新学期缴费的银元，父亲卖掉心爱的物品，四处奔波借钱 图中“纟”与“敫”按左右结构自然长成“缴”。"
       },
       "g5v1-l19-c12-u7f34-words-image:g5v1-l19-c12-u7f34-words-image-2": {
         "src": "/illustrations/meanings/m07.webp",
@@ -382,7 +382,7 @@ export const characterMedia = {
       "g5v1-l19-c12-u7f34-words-image:g5v1-l19-c12-u7f34-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u715e.webp",
         "label": "煞气",
-        "alt": "煞气在故事语境中指凶恶、逼人的气势 图中“刍”与“攵”与“灬”按上下结构自然长成“煞”。"
+        "alt": "煞有介事引人入胜；精彩的小说情节跌宕起伏，把各种人物描写得煞有介事、栩栩如生 图中“刍”与“攵”与“灬”按上下结构自然长成“煞”。"
       }
     }
   },
@@ -390,7 +390,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u699c.webp",
       "label": "榜样",
-      "alt": "榜样是值得学习和模仿的人或事物 图中“木”与“旁”按左右结构自然长成“榜”。"
+      "alt": "榜上有名欣慰宽怀；得知儿子考取师范榜上有名的喜讯，饱经沧桑的父亲露出了舒心的笑容 图中“木”与“旁”按左右结构自然长成“榜”。"
     },
     "scene": {
       "scene": "左边木制公告牌形成“木”，右边灯台、屋盖和方向牌沿“旁”立在一侧，大家看着榜牌学习，组成“榜”。",
@@ -409,12 +409,12 @@ export const characterMedia = {
       "g5v1-l19-c13-u699c-words-image:g5v1-l19-c13-u699c-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u8bfa.webp",
         "label": "承诺",
-        "alt": "承诺就是认真答应别人，并准备做到 图中“讠”与“若”按左右结构自然长成“诺”。"
+        "alt": "承诺是许诺答应并且务必兑现；秦王虽然许下以城换璧的承诺，却并无诚意，被相如一眼识破 图中“讠”与“若”按左右结构自然长成“诺”。"
       },
       "g5v1-l19-c13-u699c-words-image:g5v1-l19-c13-u699c-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u699c.webp",
         "label": "榜样",
-        "alt": "榜样是值得学习和模仿的人或事物 图中“木”与“旁”按左右结构自然长成“榜”。"
+        "alt": "榜上有名欣慰宽怀；得知儿子考取师范榜上有名的喜讯，饱经沧桑的父亲露出了舒心的笑容 图中“木”与“旁”按左右结构自然长成“榜”。"
       }
     }
   },
@@ -422,7 +422,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u517c.webp",
       "label": "兼职",
-      "alt": "兼职是在本职之外还承担另一份工作 图中“兼”按独体结构自然长成“兼”。"
+      "alt": "兼顾辛劳毫无保留；父亲既要在田间水上辛勤劳作，又要兼顾孩子的学业前程，默默付出 图中“兼”按独体结构自然长成“兼”。"
     },
     "scene": {
       "scene": "一双手同时提起左右两束禾穗，中央竖杆和层层横梁严格沿“兼”的笔画连接，表现一人兼做两事。",
@@ -435,7 +435,7 @@ export const characterMedia = {
       "g5v1-l19-c14-u517c-words-image:g5v1-l19-c14-u517c-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u517c.webp",
         "label": "兼职",
-        "alt": "兼职是在本职之外还承担另一份工作 图中“兼”按独体结构自然长成“兼”。"
+        "alt": "兼顾辛劳毫无保留；父亲既要在田间水上辛勤劳作，又要兼顾孩子的学业前程，默默付出 图中“兼”按独体结构自然长成“兼”。"
       },
       "g5v1-l19-c14-u517c-words-image:g5v1-l19-c14-u517c-words-image-0": {
         "src": "/illustrations/meanings/m07.webp",
@@ -445,7 +445,7 @@ export const characterMedia = {
       "g5v1-l19-c14-u517c-words-image:g5v1-l19-c14-u517c-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u768e.webp",
         "label": "皎洁",
-        "alt": "皎洁形容月光明亮而洁白 图中“白”与“交”按左右结构自然长成“皎”。"
+        "alt": "皎洁月色照亮文思；月光皎洁的夜晚静坐写作，将平日从书中汲取的文采化作笔端流淌的生动篇章 图中“白”与“交”按左右结构自然长成“皎”。"
       }
     }
   },
@@ -453,7 +453,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u5632.webp",
       "label": "嘲笑",
-      "alt": "嘲笑是用言语或表情取笑别人，容易伤害他人 图中“口”与“朝”按左右结构自然长成“嘲”。"
+      "alt": "嘲笑讥讽不足为惧；面对外人的冷眼与嘲笑，父子俩乘坐一叶扁舟坚定前行，矢志不渝 图中“口”与“朝”按左右结构自然长成“嘲”。"
     },
     "scene": {
       "scene": "左边说话口形成“口”，右边清晨日轮、十字架和月形听众沿“朝”相对，讥笑声从口中射向别人，组成“嘲”。",
@@ -467,7 +467,7 @@ export const characterMedia = {
       "g5v1-l19-c15-u5632-words-image:g5v1-l19-c15-u5632-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u5632.webp",
         "label": "嘲笑",
-        "alt": "嘲笑是用言语或表情取笑别人，容易伤害他人 图中“口”与“朝”按左右结构自然长成“嘲”。"
+        "alt": "嘲笑讥讽不足为惧；面对外人的冷眼与嘲笑，父子俩乘坐一叶扁舟坚定前行，矢志不渝 图中“口”与“朝”按左右结构自然长成“嘲”。"
       },
       "g5v1-l19-c15-u5632-words-image:g5v1-l19-c15-u5632-words-image-2": {
         "src": "/illustrations/meanings/m08.webp",
@@ -477,7 +477,7 @@ export const characterMedia = {
       "g5v1-l19-c15-u5632-words-image:g5v1-l19-c15-u5632-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u60eb.webp",
         "label": "疲惫",
-        "alt": "疲惫就是身体和精神都很累，需要休息 图中“备”与“心”按上下结构自然长成“惫”。"
+        "alt": "疲惫不堪的身影令人心酸；母亲极其瘦弱疲惫的身躯，深深震撼了前来要钱买书的孩子 图中“备”与“心”按上下结构自然长成“惫”。"
       }
     }
   },
@@ -485,7 +485,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u6795.webp",
       "label": "枕头",
-      "alt": "枕头是睡觉时垫在头下、支撑头颈的用品 图中“木”与“冘”按左右结构自然长成“枕”。"
+      "alt": "枕木船舱承载梦想；夜宿在小船枕席之上，听着水声潺潺，孩子在父亲的守护下安然入梦 图中“木”与“冘”按左右结构自然长成“枕”。"
     },
     "scene": {
       "scene": "左边木床架形成“木”，右边软枕、垂带和弯脚沿“冘”放在床头，合成“枕”。",
@@ -504,12 +504,12 @@ export const characterMedia = {
       "g5v1-l19-c16-u6795-words-image:g5v1-l19-c16-u6795-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u8ff0.webp",
         "label": "讲述",
-        "alt": "讲述就是把事情有次序地说出来 图中“辶”与“术”按左下包围结构自然长成“述”。"
+        "alt": "讲述心得言辞诚恳；冰心先生深情讲述自己数十年的读书经历，向青少年传授宝贵的选书智慧 图中“辶”与“术”按左下包围结构自然长成“述”。"
       },
       "g5v1-l19-c16-u6795-words-image:g5v1-l19-c16-u6795-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u6795.webp",
         "label": "枕头",
-        "alt": "枕头是睡觉时垫在头下、支撑头颈的用品 图中“木”与“冘”按左右结构自然长成“枕”。"
+        "alt": "枕木船舱承载梦想；夜宿在小船枕席之上，听着水声潺潺，孩子在父亲的守护下安然入梦 图中“木”与“冘”按左右结构自然长成“枕”。"
       }
     }
   },
@@ -517,7 +517,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u8695.webp",
       "label": "蚕茧",
-      "alt": "蚕是一种会吐丝结茧的昆虫，常以桑叶为食 图中“天”与“虫”按上下结构自然长成“蚕”。"
+      "alt": "养蚕缫丝维持生计；全家人日夜照料春蚕，辛勤劳动换来的每一分钱都倾注在孩子的学业上 图中“天”与“虫”按上下结构自然长成“蚕”。"
     },
     "scene": {
       "scene": "上方天空横梁和伸展人物沿“天”展开，下方一条吐丝小虫盘成“虫”，上下组成“蚕”。",
@@ -536,12 +536,12 @@ export const characterMedia = {
       "g5v1-l19-c17-u8695-words-image:g5v1-l19-c17-u8695-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u4fef.webp",
         "label": "俯冲",
-        "alt": "俯冲就是从高处向下快速冲去 图中“亻”与“府”按左右结构自然长成“俯”。"
+        "alt": "俯冲指从高空向下急速冲去；游隼在俯冲捕食时展现出的极速，令人叹为观止 图中“亻”与“府”按左右结构自然长成“俯”。"
       },
       "g5v1-l19-c17-u8695-words-image:g5v1-l19-c17-u8695-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u8695.webp",
         "label": "蚕茧",
-        "alt": "蚕是一种会吐丝结茧的昆虫，常以桑叶为食 图中“天”与“虫”按上下结构自然长成“蚕”。"
+        "alt": "养蚕缫丝维持生计；全家人日夜照料春蚕，辛勤劳动换来的每一分钱都倾注在孩子的学业上 图中“天”与“虫”按上下结构自然长成“蚕”。"
       }
     }
   },
@@ -549,7 +549,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u8003.webp",
       "label": "考试",
-      "alt": "考试是用题目或操作检查知识和能力的一种方式 图中“耂”与“丂”按左上包围结构自然长成“考”。"
+      "alt": "报考师范求索前途；父亲摇着小船一路护送孩子进城赶考，小舟载着希望破浪向前 图中“耂”与“丂”按左上包围结构自然长成“考”。"
     },
     "scene": {
       "scene": "上方一位老人和长杖形成“耂”，下方弯曲答题纸和笔钩形成“丂”，伏案作答组成“考”。",
@@ -568,12 +568,12 @@ export const characterMedia = {
       "g5v1-l19-c18-u8003-words-image:g5v1-l19-c18-u8003-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u52b1.webp",
         "label": "鼓励",
-        "alt": "鼓励就是用肯定和支持帮助别人增强信心 图中“厉”与“力”按左右结构自然长成“励”。"
+        "alt": "鼓励赞美激发信心；母亲“精彩极了”的热情鼓励，像春风般吹拂起孩子对写作的无限热爱 图中“厉”与“力”按左右结构自然长成“励”。"
       },
       "g5v1-l19-c18-u8003-words-image:g5v1-l19-c18-u8003-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u8003.webp",
         "label": "考试",
-        "alt": "考试是用题目或操作检查知识和能力的一种方式 图中“耂”与“丂”按左上包围结构自然长成“考”。"
+        "alt": "报考师范求索前途；父亲摇着小船一路护送孩子进城赶考，小舟载着希望破浪向前 图中“耂”与“丂”按左上包围结构自然长成“考”。"
       }
     }
   },
@@ -581,7 +581,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u75bc.webp",
       "label": "疼爱",
-      "alt": "疼爱是关心、爱护；“疼”本身也可表示身体痛 图中“疒”与“冬”按左上包围结构自然长成“疼”。"
+      "alt": "疼爱怜惜无微不至；在风雨飘摇的求学路上，父亲深沉的疼爱化作了遮风挡雨的港湾 图中“疒”与“冬”按左上包围结构自然长成“疼”。"
     },
     "scene": {
       "scene": "外面病床帘形成“疒”，里面脚步和两点药滴沿“冬”落下，受伤处得到照料，组成“疼”。",
@@ -595,7 +595,7 @@ export const characterMedia = {
       "g5v1-l19-c19-u75bc-words-image:g5v1-l19-c19-u75bc-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u75bc.webp",
         "label": "疼爱",
-        "alt": "疼爱是关心、爱护；“疼”本身也可表示身体痛 图中“疒”与“冬”按左上包围结构自然长成“疼”。"
+        "alt": "疼爱怜惜无微不至；在风雨飘摇的求学路上，父亲深沉的疼爱化作了遮风挡雨的港湾 图中“疒”与“冬”按左上包围结构自然长成“疼”。"
       },
       "g5v1-l19-c19-u75bc-words-image:g5v1-l19-c19-u75bc-words-image-0": {
         "src": "/illustrations/meanings/m05.webp",
@@ -605,7 +605,7 @@ export const characterMedia = {
       "g5v1-l19-c19-u75bc-words-image:g5v1-l19-c19-u75bc-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u55bb.webp",
         "label": "比喻",
-        "alt": "比喻是用有相似点的事物来说明另一个事物 图中“口”与“俞”按左右结构自然长成“喻”。"
+        "alt": "比喻形象生动传神；作者把书籍比喻为滋养人生的长生果，形象地写出了阅读对精神成长的重要意义 图中“口”与“俞”按左右结构自然长成“喻”。"
       }
     }
   },
@@ -613,7 +613,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u5e2d.webp",
       "label": "草席",
-      "alt": "草席是用草茎、竹篾等编成、可以铺坐或铺睡的用品 图中“广”与“廿”与“巾”按左上包围结构自然长成“席”。"
+      "alt": "草席一领简朴无华；父亲带着一领凉席在船头守夜，把狭小的船舱全部让给孩子安睡 图中“广”与“廿”与“巾”按左上包围结构自然长成“席”。"
     },
     "scene": {
       "scene": "上方宽屋檐形成“广”，里面交叉草篾和下垂布幅沿“廿”“巾”编好，铺成一张“席”。",
@@ -633,12 +633,12 @@ export const characterMedia = {
       "g5v1-l19-c20-u5e2d-words-image:g5v1-l19-c20-u5e2d-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u62b5.webp",
         "label": "抵御",
-        "alt": "抵御就是挡住外来的攻击或压力 图中“扌”与“氐”按左右结构自然长成“抵”。"
+        "alt": "抵御指挡住外来强敌的进攻；正是因为武有廉颇抵御强敌，文有相如机智善辩，赵国才得以安宁 图中“扌”与“氐”按左右结构自然长成“抵”。"
       },
       "g5v1-l19-c20-u5e2d-words-image:g5v1-l19-c20-u5e2d-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u5e2d.webp",
         "label": "草席",
-        "alt": "草席是用草茎、竹篾等编成、可以铺坐或铺睡的用品 图中“广”与“廿”与“巾”按左上包围结构自然长成“席”。"
+        "alt": "草席一领简朴无华；父亲带着一领凉席在船头守夜，把狭小的船舱全部让给孩子安睡 图中“广”与“廿”与“巾”按左上包围结构自然长成“席”。"
       }
     }
   },
@@ -646,7 +646,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u7cd6.webp",
       "label": "糖果",
-      "alt": "糖是有甜味的食物成分，也指糖果等甜食 图中“米”与“唐”按左右结构自然长成“糖”。"
+      "alt": "糖果虽小甜透心田；庙会上父亲特意买给孩子的一块麦芽糖，成为童年最甜美的记忆 图中“米”与“唐”按左右结构自然长成“糖”。"
     },
     "scene": {
       "scene": "左边米粒和米架形成“米”，右边屋檐下的熬糖锅、长杵和方口沿“唐”排列，煮出甜糖，组成“糖”。",
@@ -665,12 +665,12 @@ export const characterMedia = {
       "g5v1-l19-c21-u7cd6-words-image:g5v1-l19-c21-u7cd6-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u85d3.webp",
         "label": "苔藓",
-        "alt": "苔藓是一类贴着潮湿地面或树皮生长的绿色小植物 图中“艹”与“鲜”按上下结构自然长成“藓”。"
+        "alt": "苔藓柔软保温干燥；松鼠采集柔软的苔藓铺在窝底，把小窝打理得格外暖和舒坦 图中“艹”与“鲜”按上下结构自然长成“藓”。"
       },
       "g5v1-l19-c21-u7cd6-words-image:g5v1-l19-c21-u7cd6-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u7cd6.webp",
         "label": "糖果",
-        "alt": "糖是有甜味的食物成分，也指糖果等甜食 图中“米”与“唐”按左右结构自然长成“糖”。"
+        "alt": "糖果虽小甜透心田；庙会上父亲特意买给孩子的一块麦芽糖，成为童年最甜美的记忆 图中“米”与“唐”按左右结构自然长成“糖”。"
       }
     }
   },
@@ -678,7 +678,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u5c51.webp",
       "label": "纸屑",
-      "alt": "纸屑是纸张破碎后留下的小片 图中“尸”与“肖”按左上包围结构自然长成“屑”。"
+      "alt": "纸屑碎屑毫不在意；父亲细心帮孩子整理书箱文具，不放过任何一个关照的细节 图中“尸”与“肖”按左上包围结构自然长成“屑”。"
     },
     "scene": {
       "scene": "上方弯曲纸盒形成“尸”，下方小月形纸片和散点沿“肖”落下，纸片碎成屑，组成“屑”。",
@@ -702,7 +702,7 @@ export const characterMedia = {
       "g5v1-l19-c22-u5c51-words-image:g5v1-l19-c22-u5c51-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u5c51.webp",
         "label": "纸屑",
-        "alt": "纸屑是纸张破碎后留下的小片 图中“尸”与“肖”按左上包围结构自然长成“屑”。"
+        "alt": "纸屑碎屑毫不在意；父亲细心帮孩子整理书箱文具，不放过任何一个关照的细节 图中“尸”与“肖”按左上包围结构自然长成“屑”。"
       }
     }
   },
@@ -710,7 +710,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u9489.webp",
       "label": "钉子",
-      "alt": "钉子是一端尖、一端有帽，用来固定物体的金属小件 图中“钅”与“丁”按左右结构自然长成“钉”。"
+      "alt": "钉鞋补舟手艺精湛；父亲用粗糙的双手修补旧船、钉好鞋底，把每一件小事都做得扎扎实实 图中“钅”与“丁”按左右结构自然长成“钉”。"
     },
     "scene": {
       "scene": "左边金属工具架形成“钅”，右边一根直钉与钉帽严格沿“丁”站立，左右合成“钉”。",
@@ -724,7 +724,7 @@ export const characterMedia = {
       "g5v1-l19-c23-u9489-words-image:g5v1-l19-c23-u9489-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u9489.webp",
         "label": "钉子",
-        "alt": "钉子是一端尖、一端有帽，用来固定物体的金属小件 图中“钅”与“丁”按左右结构自然长成“钉”。"
+        "alt": "钉鞋补舟手艺精湛；父亲用粗糙的双手修补旧船、钉好鞋底，把每一件小事都做得扎扎实实 图中“钅”与“丁”按左右结构自然长成“钉”。"
       },
       "g5v1-l19-c23-u9489-words-image:g5v1-l19-c23-u9489-words-image-2": {
         "src": "/illustrations/meanings/m05.webp",
@@ -734,7 +734,7 @@ export const characterMedia = {
       "g5v1-l19-c23-u9489-words-image:g5v1-l19-c23-u9489-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u6155.webp",
         "label": "爱慕",
-        "alt": "爱慕就是因为欣赏而真心喜欢、向往 图中“莫”与“⺗”按上下结构自然长成“慕”。"
+        "alt": "爱慕是因欣赏而真心向往；做人要做有花生那样的内在品格，而不只是追求外在令人爱慕 图中“莫”与“⺗”按上下结构自然长成“慕”。"
       }
     }
   },
@@ -742,7 +742,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u966a.webp",
       "label": "陪伴",
-      "alt": "陪伴就是留在别人身边，一起经历一段时间 图中“阝”与“咅”按左右结构自然长成“陪”。"
+      "alt": "陪伴求学一路护航；从乡村到县城，那叶小舟始终陪伴着孩子，驶向广阔的人生天地 图中“阝”与“咅”按左右结构自然长成“陪”。"
     },
     "scene": {
       "scene": "左边相连的土坡形成“阝”，右边一盏灯、平台和说话口沿“咅”搭起，像两处始终相伴，合成“陪”。",
@@ -756,7 +756,7 @@ export const characterMedia = {
       "g5v1-l19-c24-u966a-words-image:g5v1-l19-c24-u966a-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u966a.webp",
         "label": "陪伴",
-        "alt": "陪伴就是留在别人身边，一起经历一段时间 图中“阝”与“咅”按左右结构自然长成“陪”。"
+        "alt": "陪伴求学一路护航；从乡村到县城，那叶小舟始终陪伴着孩子，驶向广阔的人生天地 图中“阝”与“咅”按左右结构自然长成“陪”。"
       },
       "g5v1-l19-c24-u966a-words-image:g5v1-l19-c24-u966a-words-image-2": {
         "src": "/illustrations/meanings/m08.webp",
@@ -766,7 +766,7 @@ export const characterMedia = {
       "g5v1-l19-c24-u966a-words-image:g5v1-l19-c24-u966a-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u6043.webp",
         "label": "恃强",
-        "alt": "恃强就是依仗自己强大而欺压别人 图中“忄”与“寺”按左右结构自然长成“恃”。"
+        "alt": "恃指依仗凭借；诗人劝诫天地不要拘泥成法，应当不拘一格降下栋梁英才 图中“忄”与“寺”按左右结构自然长成“恃”。"
       }
     }
   },
@@ -774,7 +774,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u6bd5.webp",
       "label": "毕业",
-      "alt": "毕业表示在学校或训练机构完成规定的学习 图中“比”与“十”按上下结构自然长成“毕”。"
+      "alt": "毕业成才不负厚望；孩子顺利毕业走上工作岗位，终于实现了父亲托举一生的宏愿 图中“比”与“十”按上下结构自然长成“毕”。"
     },
     "scene": {
       "scene": "上方两名同学并排形成“比”，下方十字毕业台形成“十”，两人一起走到学习终点，组成“毕”。",
@@ -793,12 +793,12 @@ export const characterMedia = {
       "g5v1-l19-c25-u6bd5-words-image:g5v1-l19-c25-u6bd5-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u8bc6.webp",
         "label": "默而识之",
-        "alt": "“默而识之”中的“识”表示记住，读zhì；表示认识时读shí 图中“讠”与“只”按左右结构自然长成“识”。"
+        "alt": "默而识之记在心中；读书不仅要理解领会，更要默默积累记在心中，做到融会贯通 图中“讠”与“只”按左右结构自然长成“识”。"
       },
       "g5v1-l19-c25-u6bd5-words-image:g5v1-l19-c25-u6bd5-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u6bd5.webp",
         "label": "毕业",
-        "alt": "毕业表示在学校或训练机构完成规定的学习 图中“比”与“十”按上下结构自然长成“毕”。"
+        "alt": "毕业成才不负厚望；孩子顺利毕业走上工作岗位，终于实现了父亲托举一生的宏愿 图中“比”与“十”按上下结构自然长成“毕”。"
       }
     }
   },
@@ -806,7 +806,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u716e.webp",
       "label": "煮饭",
-      "alt": "煮饭是把食物放在水里或锅里加热至熟 图中“者”与“灬”按上下结构自然长成“煮”。"
+      "alt": "煮饭热茶暖意融融；船舱里升起腾腾热气，父亲亲手煮好简单的饭菜，温暖着赶考的游子 图中“者”与“灬”按上下结构自然长成“煮”。"
     },
     "scene": {
       "scene": "上方人物守着锅台沿“者”站立，下方四点炉火形成“灬”，火从锅底加热，组成“煮”。",
@@ -820,7 +820,7 @@ export const characterMedia = {
       "g5v1-l19-c26-u716e-words-image:g5v1-l19-c26-u716e-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u716e.webp",
         "label": "煮饭",
-        "alt": "煮饭是把食物放在水里或锅里加热至熟 图中“者”与“灬”按上下结构自然长成“煮”。"
+        "alt": "煮饭热茶暖意融融；船舱里升起腾腾热气，父亲亲手煮好简单的饭菜，温暖着赶考的游子 图中“者”与“灬”按上下结构自然长成“煮”。"
       },
       "g5v1-l19-c26-u716e-words-image:g5v1-l19-c26-u716e-words-image-2": {
         "src": "/illustrations/meanings/m05.webp",

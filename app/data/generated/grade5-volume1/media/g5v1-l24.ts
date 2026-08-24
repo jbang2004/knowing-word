@@ -6,7 +6,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u803b.webp",
       "label": "羞耻",
-      "alt": "羞耻是意识到自己的错误或不恰当行为时感到惭愧 图中“耳”与“止”按左右结构自然长成“耻”。"
+      "alt": "不耻下问虚心求教；孔子教导我们向不如自己的人请教并不可耻，唯有虚心好学才能不断长进 图中“耳”与“止”按左右结构自然长成“耻”。"
     },
     "scene": {
       "scene": "左边竖起的耳朵形成“耳”，右边一只脚停在界线前形成“止”，听见提醒就止步改正，组成“耻”。",
@@ -20,7 +20,7 @@ export const characterMedia = {
       "g5v1-l24-c01-u803b-words-image:g5v1-l24-c01-u803b-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u803b.webp",
         "label": "羞耻",
-        "alt": "羞耻是意识到自己的错误或不恰当行为时感到惭愧 图中“耳”与“止”按左右结构自然长成“耻”。"
+        "alt": "不耻下问虚心求教；孔子教导我们向不如自己的人请教并不可耻，唯有虚心好学才能不断长进 图中“耳”与“止”按左右结构自然长成“耻”。"
       },
       "g5v1-l24-c01-u803b-words-image:g5v1-l24-c01-u803b-words-image-0": {
         "src": "/illustrations/meanings/m04.webp",
@@ -38,7 +38,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u8bc6.webp",
       "label": "默而识之",
-      "alt": "“默而识之”中的“识”表示记住，读zhì；表示认识时读shí 图中“讠”与“只”按左右结构自然长成“识”。"
+      "alt": "默而识之记在心中；读书不仅要理解领会，更要默默积累记在心中，做到融会贯通 图中“讠”与“只”按左右结构自然长成“识”。"
     },
     "scene": {
       "scene": "左边无声记下的短句形成“讠”，右边一枚只放进心里、不说出口的认知印记沿“只”托起，组成“识”。",
@@ -47,7 +47,7 @@ export const characterMedia = {
         "右边一枚只放进心里、不说出口的认知印记沿“只”托起。"
       ]
     },
-    "transcript": "先读“默而识之”。这里的识读“志”，第四声，不读平常“认识”里的“时”。识是左右结构，左边是言字旁，右边是只；可以想象读书人不出声，只把要点稳稳收进心里。这个画面帮助记住字形和词义。课文借古人的话告诉我们，读书要先看懂，也要专心记住、不断积累。",
+    "transcript": "识，默而识之的识，读第四声。这里的识不读认识的第二声，表示默默记在心里。它是左右结构，左边的言字旁代表知识言语，右边的“只”提示专一，专心将言语记于心中即为识。孔子说“默而识之”，教导我们读书不仅要读懂领会，更要默默积累、内化于心。",
     "practiceOptionVisuals": {
       "g5v1-l24-c02-u8bc6-words-image:g5v1-l24-c02-u8bc6-words-image-2": {
         "src": "/illustrations/meanings/m07.webp",
@@ -57,12 +57,12 @@ export const characterMedia = {
       "g5v1-l24-c02-u8bc6-words-image:g5v1-l24-c02-u8bc6-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u89c8.webp",
         "label": "游览",
-        "alt": "游览就是从容地观看风景、建筑或展览 图中“〢”与“丿”与“一”与“丶”与“见”按上下结构自然长成“览”。"
+        "alt": "游览观赏令人心旷神怡；漫步在园中游览，不仅能饱览江南名胜，更能体验异国情调 图中“〢”与“丿”与“一”与“丶”与“见”按上下结构自然长成“览”。"
       },
       "g5v1-l24-c02-u8bc6-words-image:g5v1-l24-c02-u8bc6-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u8bc6.webp",
         "label": "默而识之",
-        "alt": "“默而识之”中的“识”表示记住，读zhì；表示认识时读shí 图中“讠”与“只”按左右结构自然长成“识”。"
+        "alt": "默而识之记在心中；读书不仅要理解领会，更要默默积累记在心中，做到融会贯通 图中“讠”与“只”按左右结构自然长成“识”。"
       }
     }
   },
@@ -70,7 +70,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u5bdd.webp",
       "label": "就寝",
-      "alt": "就寝就是上床睡觉 图中“宀”与“丬”与“彐”与“冖”与“又”按上下结构自然长成“寝”。"
+      "alt": "废寝忘食专心致志；古人读书专心致志甚至忘记睡眠休息，体现了求知若渴的刻苦精神 图中“宀”与“丬”与“彐”与“冖”与“又”按上下结构自然长成“寝”。"
     },
     "scene": {
       "scene": "上方屋顶形成“宀”，中间床架“丬”和卧姿“彐”放在“冖”形被盖下，最下方“又”形手收好被角，组成“寝”。",
@@ -92,12 +92,12 @@ export const characterMedia = {
       "g5v1-l24-c03-u5bdd-words-image:g5v1-l24-c03-u5bdd-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u9893.webp",
         "label": "颓败",
-        "alt": "颓败形容衰落、破败，失去原有的精神或样子 图中“秃”与“页”按左右结构自然长成“颓”。"
+        "alt": "颓败破旧的劳作车间；在极其艰苦狭窄的车间里，母亲为了养家糊口日复一日辛苦劳作 图中“秃”与“页”按左右结构自然长成“颓”。"
       },
       "g5v1-l24-c03-u5bdd-words-image:g5v1-l24-c03-u5bdd-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u5bdd.webp",
         "label": "就寝",
-        "alt": "就寝就是上床睡觉 图中“宀”与“丬”与“彐”与“冖”与“又”按上下结构自然长成“寝”。"
+        "alt": "废寝忘食专心致志；古人读书专心致志甚至忘记睡眠休息，体现了求知若渴的刻苦精神 图中“宀”与“丬”与“彐”与“冖”与“又”按上下结构自然长成“寝”。"
       }
     }
   },
@@ -105,7 +105,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u77e3.webp",
       "label": "矣",
-      "alt": "矣是文言语气词，常放在句末，表示肯定、完成或感叹 图中“厶”与“矢”按上下结构自然长成“矣”。"
+      "alt": "学而不厌诲人不倦矣；朱熹与孔子的读书心法跨越千年，至今依然指引着求学者的方向 图中“厶”与“矢”按上下结构自然长成“矣”。"
     },
     "scene": {
       "scene": "上方一缕话音回转成“厶”，下方一支短箭形成“矢”，声音像箭落到句末，组成“矣”。",
@@ -119,7 +119,7 @@ export const characterMedia = {
       "g5v1-l24-c04-u77e3-words-image:g5v1-l24-c04-u77e3-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u77e3.webp",
         "label": "矣",
-        "alt": "矣是文言语气词，常放在句末，表示肯定、完成或感叹 图中“厶”与“矢”按上下结构自然长成“矣”。"
+        "alt": "学而不厌诲人不倦矣；朱熹与孔子的读书心法跨越千年，至今依然指引着求学者的方向 图中“厶”与“矢”按上下结构自然长成“矣”。"
       },
       "g5v1-l24-c04-u77e3-words-image:g5v1-l24-c04-u77e3-words-image-2": {
         "src": "/illustrations/meanings/m06.webp",
@@ -137,7 +137,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u5c82.webp",
       "label": "岂能",
-      "alt": "岂能表示反问，相当于“怎么能”“难道能” 图中“山”与“己”按上下结构自然长成“岂”。"
+      "alt": "岂能荒废大好光阴；古人告诫读书切莫三心二意，岂能轻易辜负宝贵的青春年华 图中“山”与“己”按上下结构自然长成“岂”。"
     },
     "scene": {
       "scene": "上方山峰形成“山”，下方弯曲台阶和站立人物沿“己”回身反问，山路在此折回，组成“岂”。",
@@ -151,7 +151,7 @@ export const characterMedia = {
       "g5v1-l24-c05-u5c82-words-image:g5v1-l24-c05-u5c82-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u5c82.webp",
         "label": "岂能",
-        "alt": "岂能表示反问，相当于“怎么能”“难道能” 图中“山”与“己”按上下结构自然长成“岂”。"
+        "alt": "岂能荒废大好光阴；古人告诫读书切莫三心二意，岂能轻易辜负宝贵的青春年华 图中“山”与“己”按上下结构自然长成“岂”。"
       },
       "g5v1-l24-c05-u5c82-words-image:g5v1-l24-c05-u5c82-words-image-2": {
         "src": "/illustrations/meanings/m03.webp",
@@ -169,7 +169,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u8bf2.webp",
       "label": "教诲",
-      "alt": "教诲是长辈或老师耐心地教导 图中“讠”与“每”按左右结构自然长成“诲”。"
+      "alt": "诲人不倦耐心施教；老师耐心地教导学生而不感到厌烦，展现了崇高博大的师德风范 图中“讠”与“每”按左右结构自然长成“诲”。"
     },
     "scene": {
       "scene": "左边一句句教导形成“讠”，右边母亲在发簪和格框旁指点沿“每”展开，耐心开口组成“诲”。",
@@ -193,7 +193,7 @@ export const characterMedia = {
       "g5v1-l24-c06-u8bf2-words-image:g5v1-l24-c06-u8bf2-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u8bf2.webp",
         "label": "教诲",
-        "alt": "教诲是长辈或老师耐心地教导 图中“讠”与“每”按左右结构自然长成“诲”。"
+        "alt": "诲人不倦耐心施教；老师耐心地教导学生而不感到厌烦，展现了崇高博大的师德风范 图中“讠”与“每”按左右结构自然长成“诲”。"
       }
     }
   },
@@ -201,7 +201,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u8c13.webp",
       "label": "所谓",
-      "alt": "所谓表示所说的、所指的内容 图中“讠”与“胃”按左右结构自然长成“谓”。"
+      "alt": "余尝谓读书有三到；朱熹认为读书必须做到心到、眼到、口到，其中尤以心到最为关键 图中“讠”与“胃”按左右结构自然长成“谓”。"
     },
     "scene": {
       "scene": "左边说明短句形成“讠”，右边田格般的话题上托着月形内容沿“胃”排列，把所指说清楚，组成“谓”。",
@@ -215,7 +215,7 @@ export const characterMedia = {
       "g5v1-l24-c07-u8c13-words-image:g5v1-l24-c07-u8c13-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u8c13.webp",
         "label": "所谓",
-        "alt": "所谓表示所说的、所指的内容 图中“讠”与“胃”按左右结构自然长成“谓”。"
+        "alt": "余尝谓读书有三到；朱熹认为读书必须做到心到、眼到、口到，其中尤以心到最为关键 图中“讠”与“胃”按左右结构自然长成“谓”。"
       },
       "g5v1-l24-c07-u8c13-words-image:g5v1-l24-c07-u8c13-words-image-2": {
         "src": "/illustrations/meanings/m04.webp",
@@ -225,7 +225,7 @@ export const characterMedia = {
       "g5v1-l24-c07-u8c13-words-image:g5v1-l24-c07-u8c13-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u79c0.webp",
         "label": "清秀",
-        "alt": "清秀形容外表清爽、秀丽，让人感到舒服 图中“禾”与“乃”按上下结构自然长成“秀”。"
+        "alt": "面容清秀惹人怜爱；松鼠玲珑的小面孔配上清秀机灵的目光，显得格外聪明活泼 图中“禾”与“乃”按上下结构自然长成“秀”。"
       }
     }
   },
@@ -233,7 +233,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u8bf5.webp",
       "label": "诵读",
-      "alt": "诵读就是有声音、有节奏地朗读或背读 图中“讠”与“甬”按左右结构自然长成“诵”。"
+      "alt": "朗朗诵读口诵心惟；读书时口中清晰诵读，心中深入思考，眼口心合一才能真正掌握精髓 图中“讠”与“甬”按左右结构自然长成“诵”。"
     },
     "scene": {
       "scene": "左边朗读短句形成“讠”，右边气流沿管道向上涌、穿过方口共鸣箱形成“甬”，组成响亮的“诵”。",
@@ -247,7 +247,7 @@ export const characterMedia = {
       "g5v1-l24-c08-u8bf5-words-image:g5v1-l24-c08-u8bf5-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u8bf5.webp",
         "label": "诵读",
-        "alt": "诵读就是有声音、有节奏地朗读或背读 图中“讠”与“甬”按左右结构自然长成“诵”。"
+        "alt": "朗朗诵读口诵心惟；读书时口中清晰诵读，心中深入思考，眼口心合一才能真正掌握精髓 图中“讠”与“甬”按左右结构自然长成“诵”。"
       },
       "g5v1-l24-c08-u8bf5-words-image:g5v1-l24-c08-u8bf5-words-image-2": {
         "src": "/illustrations/meanings/m07.webp",
@@ -257,7 +257,7 @@ export const characterMedia = {
       "g5v1-l24-c08-u8bf5-words-image:g5v1-l24-c08-u8bf5-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u917f.webp",
         "label": "酿的葡萄酒",
-        "alt": "酿酒是让粮食或水果经过发酵变成酒 图中“酉”与“良”按左右结构自然长成“酿”。"
+        "alt": "酿造是用粮食果品制酒；牛郎织女用山葡萄酿出甘甜的果酒，品味着劳动创造的甜蜜 图中“酉”与“良”按左右结构自然长成“酿”。"
       }
     }
   }

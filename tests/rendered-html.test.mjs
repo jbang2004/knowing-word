@@ -243,8 +243,8 @@ test("character pages render the complete picture-to-character memory flow", asy
   // The audio element now lives on the study page, so the first user click can
   // play directly without mounting or navigating to a second screen.
   assert.match(html, /<audio/);
-  assert.match(html, /\/media\/narration\/v3\//);
-  assert.match(html, /audio\.webm\?v=narration-v3-qwen3-4bit-r37e955a/);
+  assert.match(html, /\/media\/narration\/v4\//);
+  assert.match(html, /audio\.webm\?v=narration-v4-fish-s2\.1-pro-free-20260824/);
 
   const pageSource = await readFile(
     new URL("../app/features/character-study/character-study.tsx", import.meta.url),
@@ -709,7 +709,7 @@ test("narration timing becomes a punctuated, phrase-paced reading transcript", a
   assert.match(pageSource, /requestAnimationFrame\(sampleAudioTime\)/);
   assert.match(pageSource, /is-complete/);
   assert.match(pageSource, /activeMarkIndices\.has\(token\.markIndex\)/);
-  assert.match(pageSource, /narration-v3-qwen3-4bit-r37e955a/);
+  assert.match(pageSource, /narration-v4-fish-s2\.1-pro-free-20260824/);
   assert.match(pageSource, /is-current-phrase/);
   assert.doesNotMatch(pageSource, /onEnded=\{\(\) => \{[\s\S]*setElapsed\(0\)/);
 });
@@ -745,9 +745,15 @@ test("every character record has a complete Feng-voice narration and authored ti
       await readFile(new URL(`../release${asset.audioMarks}`, import.meta.url), "utf8"),
     );
     assert.equal(payload.voice_reference, "封");
-    assert.equal(payload.script_version, "narration-v3");
-    assert.equal(payload.model, "mlx-community/Qwen3-TTS-12Hz-1.7B-Base-4bit");
-    assert.equal(payload.model_revision, "37e955a1deb861c088ae5f3a67043185f3d1a60c");
+    if (payload.script_version === "narration-fish-v1") {
+      assert.equal(payload.model, "fishaudio/s2.1-pro-free");
+      assert.equal(payload.model_revision, "s2.1-pro-free");
+      assert.equal(payload.timing_source, "qwen3-forced-aligner");
+    } else {
+      assert.equal(payload.script_version, "narration-v3");
+      assert.equal(payload.model, "mlx-community/Qwen3-TTS-12Hz-1.7B-Base-4bit");
+      assert.equal(payload.model_revision, "37e955a1deb861c088ae5f3a67043185f3d1a60c");
+    }
     assert.equal(payload.transcript, releasedNarrationTranscripts[character.id].transcript);
     assert.ok(Array.isArray(payload.marks) && payload.marks.length > 0, `missing marks for ${character.hanzi}`);
     assert.ok(typeof payload.transcript === "string" && payload.transcript.length > 0);

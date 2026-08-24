@@ -2,774 +2,714 @@
   "marks": [
     {
       "index": 0,
-      "char": "面",
-      "start": 0.08,
-      "end": 0.24
+      "char": "酵",
+      "start": 0,
+      "end": 1.04,
+      "alignment_group": "align-group-0-1",
+      "alignment_group_text": "酵发"
     },
     {
       "index": 1,
-      "char": "团",
-      "start": 0.24,
-      "end": 0.48
+      "char": "发",
+      "start": 0,
+      "end": 1.04,
+      "alignment_group": "align-group-0-1",
+      "alignment_group_text": "酵发"
     },
     {
       "index": 2,
-      "char": "放",
-      "start": 0.48,
-      "end": 0.56
+      "char": "酵",
+      "start": 1.04,
+      "end": 1.28
     },
     {
       "index": 3,
-      "char": "一",
-      "start": 0.56,
-      "end": 0.8
-    },
-    {
-      "index": 4,
-      "char": "阵",
-      "start": 0.8,
-      "end": 0.96
-    },
-    {
-      "index": 5,
-      "char": "后",
-      "start": 0.96,
+      "char": "的",
+      "start": 1.28,
       "end": 1.36
     },
     {
-      "index": 6,
-      "char": "慢",
+      "index": 4,
+      "char": "酵",
       "start": 1.36,
-      "end": 1.52
+      "end": 1.76
     },
     {
-      "index": 7,
-      "char": "慢",
-      "start": 1.52,
-      "end": 1.68
-    },
-    {
-      "index": 8,
-      "char": "鼓",
-      "start": 1.68,
-      "end": 1.92
-    },
-    {
-      "index": 9,
-      "char": "起",
-      "start": 1.92,
+      "index": 5,
+      "char": "读",
+      "start": 2.08,
       "end": 2.24
     },
     {
-      "index": 10,
-      "char": "其",
+      "index": 6,
+      "char": "第",
+      "start": 2.24,
+      "end": 2.4
+    },
+    {
+      "index": 7,
+      "char": "四",
+      "start": 2.4,
+      "end": 2.64
+    },
+    {
+      "index": 8,
+      "char": "声",
       "start": 2.64,
-      "end": 2.88
+      "end": 2.96
     },
     {
-      "index": 11,
-      "char": "中",
-      "start": 2.88,
-      "end": 3.2
+      "index": 9,
+      "char": "它",
+      "start": 3.6,
+      "end": 3.76
     },
     {
-      "index": 12,
-      "char": "经",
-      "start": 3.2,
-      "end": 3.44
-    },
-    {
-      "index": 13,
-      "char": "历",
-      "start": 3.44,
-      "end": 3.52
-    },
-    {
-      "index": 14,
-      "char": "了",
-      "start": 3.52,
-      "end": 3.68
-    },
-    {
-      "index": 15,
-      "char": "发",
-      "start": 3.68,
+      "index": 10,
+      "char": "是",
+      "start": 3.76,
       "end": 3.92
     },
     {
-      "index": 16,
-      "char": "酵",
+      "index": 11,
+      "char": "左",
       "start": 3.92,
-      "end": 4.32
+      "end": 4
     },
     {
-      "index": 17,
-      "char": "酵",
+      "index": 12,
+      "char": "右",
+      "start": 4.08,
+      "end": 4.24
+    },
+    {
+      "index": 13,
+      "char": "结",
+      "start": 4.24,
+      "end": 4.48
+    },
+    {
+      "index": 14,
+      "char": "构",
       "start": 4.48,
-      "end": 4.8
+      "end": 4.72
     },
     {
-      "index": 18,
-      "char": "读",
-      "start": 4.8,
-      "end": 4.96
-    },
-    {
-      "index": 19,
-      "char": "第",
-      "start": 4.96,
+      "index": 15,
+      "char": "左",
+      "start": 5.12,
       "end": 5.2
     },
     {
-      "index": 20,
-      "char": "四",
-      "start": 5.2,
+      "index": 16,
+      "char": "边",
+      "start": 5.28,
       "end": 5.44
     },
     {
-      "index": 21,
-      "char": "声",
+      "index": 17,
+      "char": "的",
       "start": 5.44,
-      "end": 5.76
+      "end": 5.52
+    },
+    {
+      "index": 18,
+      "char": "酉",
+      "start": 5.52,
+      "end": 5.68
+    },
+    {
+      "index": 19,
+      "char": "字",
+      "start": 5.68,
+      "end": 5.84
+    },
+    {
+      "index": 20,
+      "char": "旁",
+      "start": 5.84,
+      "end": 6.16
+    },
+    {
+      "index": 21,
+      "char": "代",
+      "start": 6.16,
+      "end": 6.32
     },
     {
       "index": 22,
-      "char": "酵",
-      "start": 6.4,
-      "end": 6.72
+      "char": "表",
+      "start": 6.32,
+      "end": 6.56
     },
     {
       "index": 23,
-      "char": "是",
-      "start": 6.8,
-      "end": 6.96
+      "char": "酒",
+      "start": 6.56,
+      "end": 6.72
     },
     {
       "index": 24,
-      "char": "左",
-      "start": 6.96,
-      "end": 7.12
+      "char": "坛",
+      "start": 6.72,
+      "end": 6.88
     },
     {
       "index": 25,
-      "char": "右",
-      "start": 7.12,
-      "end": 7.36
+      "char": "器",
+      "start": 6.88,
+      "end": 7.2
     },
     {
       "index": 26,
-      "char": "结",
-      "start": 7.36,
-      "end": 7.6
+      "char": "具",
+      "start": 7.2,
+      "end": 7.44
     },
     {
       "index": 27,
-      "char": "构",
-      "start": 7.6,
-      "end": 7.84
+      "char": "右",
+      "start": 7.84,
+      "end": 8
     },
     {
       "index": 28,
-      "char": "左",
-      "start": 8.08,
-      "end": 8.24
+      "char": "边",
+      "start": 8,
+      "end": 8.16
     },
     {
       "index": 29,
-      "char": "边",
-      "start": 8.32,
-      "end": 8.56
+      "char": "的",
+      "start": 8.16,
+      "end": 8.24
     },
     {
       "index": 30,
-      "char": "酉",
-      "start": 8.56,
-      "end": 8.72
+      "char": "孝",
+      "start": 8.24,
+      "end": 8.64
     },
     {
       "index": 31,
-      "char": "字",
+      "char": "提",
       "start": 8.72,
       "end": 8.88
     },
     {
       "index": 32,
-      "char": "旁",
+      "char": "示",
       "start": 8.88,
-      "end": 9.28
+      "end": 9.04
     },
     {
       "index": 33,
-      "char": "右",
-      "start": 9.68,
-      "end": 9.76
+      "char": "读",
+      "start": 9.04,
+      "end": 9.2
     },
     {
       "index": 34,
-      "char": "边",
-      "start": 9.76,
-      "end": 10.0
+      "char": "音",
+      "start": 9.2,
+      "end": 9.52
     },
     {
       "index": 35,
-      "char": "是",
-      "start": 10.0,
-      "end": 10.16
+      "char": "酒",
+      "start": 10,
+      "end": 10.24
     },
     {
       "index": 36,
-      "char": "孝",
-      "start": 10.16,
-      "end": 10.56
+      "char": "坛",
+      "start": 10.24,
+      "end": 10.4
     },
     {
       "index": 37,
-      "char": "写",
-      "start": 10.8,
-      "end": 11.04
+      "char": "中",
+      "start": 10.4,
+      "end": 10.72
     },
     {
       "index": 38,
-      "char": "时",
-      "start": 11.04,
-      "end": 11.44
+      "char": "物",
+      "start": 10.72,
+      "end": 10.8
     },
     {
       "index": 39,
-      "char": "左",
-      "start": 11.44,
-      "end": 11.6
+      "char": "质",
+      "start": 10.8,
+      "end": 10.96
     },
     {
       "index": 40,
-      "char": "窄",
-      "start": 11.68,
-      "end": 11.84
+      "char": "孕",
+      "start": 10.96,
+      "end": 11.2
     },
     {
       "index": 41,
-      "char": "右",
-      "start": 11.84,
-      "end": 12.0
+      "char": "育",
+      "start": 11.2,
+      "end": 11.28
     },
     {
       "index": 42,
-      "char": "宽",
-      "start": 12.0,
-      "end": 12.4
+      "char": "变",
+      "start": 11.28,
+      "end": 11.52
     },
     {
       "index": 43,
-      "char": "可",
-      "start": 12.72,
-      "end": 12.88
+      "char": "化",
+      "start": 11.52,
+      "end": 11.84
     },
     {
       "index": 44,
-      "char": "以",
-      "start": 12.88,
-      "end": 12.96
+      "char": "即",
+      "start": 11.84,
+      "end": 12
     },
     {
       "index": 45,
-      "char": "想",
-      "start": 12.96,
-      "end": 13.2
+      "char": "为",
+      "start": 12,
+      "end": 12.16
     },
     {
       "index": 46,
-      "char": "象",
-      "start": 13.2,
-      "end": 13.52
+      "char": "酵",
+      "start": 12.16,
+      "end": 12.56
     },
     {
       "index": 47,
-      "char": "坛",
-      "start": 13.52,
-      "end": 13.76
+      "char": "发",
+      "start": 12.64,
+      "end": 12.8
     },
     {
       "index": 48,
-      "char": "子",
-      "start": 13.76,
-      "end": 13.92
+      "char": "酵",
+      "start": 12.8,
+      "end": 13.2
     },
     {
       "index": 49,
-      "char": "里",
-      "start": 13.92,
-      "end": 14.0
+      "char": "指",
+      "start": 13.2,
+      "end": 13.36
     },
     {
       "index": 50,
-      "char": "的",
-      "start": 14.0,
-      "end": 14.16
+      "char": "微",
+      "start": 13.36,
+      "end": 13.52
     },
     {
       "index": 51,
-      "char": "食",
-      "start": 14.16,
-      "end": 14.4
+      "char": "生",
+      "start": 13.52,
+      "end": 13.84
     },
     {
       "index": 52,
       "char": "物",
-      "start": 14.4,
-      "end": 14.56
+      "start": 13.84,
+      "end": 14.08,
+      "alignment_group": "align-group-52-53",
+      "alignment_group_text": "物作"
     },
     {
       "index": 53,
-      "char": "安",
-      "start": 14.56,
-      "end": 14.72
+      "char": "作",
+      "start": 13.84,
+      "end": 14.08,
+      "alignment_group": "align-group-52-53",
+      "alignment_group_text": "物作"
     },
     {
       "index": 54,
-      "char": "静",
-      "start": 14.72,
-      "end": 14.96
+      "char": "用",
+      "start": 14.08,
+      "end": 14.32
     },
     {
       "index": 55,
-      "char": "变",
-      "start": 14.96,
-      "end": 15.12
+      "char": "引",
+      "start": 14.4,
+      "end": 14.48
     },
     {
       "index": 56,
-      "char": "化",
-      "start": 15.12,
-      "end": 15.44
+      "char": "起",
+      "start": 14.48,
+      "end": 14.72
     },
     {
       "index": 57,
-      "char": "细",
-      "start": 15.68,
-      "end": 16.0
+      "char": "质",
+      "start": 14.72,
+      "end": 14.88
     },
     {
       "index": 58,
-      "char": "小",
-      "start": 16.0,
-      "end": 16.32
+      "char": "的",
+      "start": 14.88,
+      "end": 14.96
     },
     {
       "index": 59,
-      "char": "气",
-      "start": 16.48,
-      "end": 16.64
+      "char": "变",
+      "start": 14.96,
+      "end": 15.2
     },
     {
       "index": 60,
-      "char": "泡",
-      "start": 16.64,
-      "end": 16.88
+      "char": "化",
+      "start": 15.2,
+      "end": 15.52
     },
     {
       "index": 61,
-      "char": "一",
-      "start": 16.88,
-      "end": 17.04
+      "char": "课",
+      "start": 15.76,
+      "end": 15.92
     },
     {
       "index": 62,
-      "char": "点",
-      "start": 17.04,
-      "end": 17.2
+      "char": "文",
+      "start": 15.92,
+      "end": 16.16
     },
     {
       "index": 63,
-      "char": "点",
-      "start": 17.2,
-      "end": 17.36
+      "char": "中",
+      "start": 16.16,
+      "end": 16.32
     },
     {
       "index": 64,
-      "char": "冒",
-      "start": 17.36,
-      "end": 17.6
+      "char": "作",
+      "start": 16.32,
+      "end": 16.48
     },
     {
       "index": 65,
-      "char": "出",
-      "start": 17.6,
-      "end": 17.92
+      "char": "者",
+      "start": 16.48,
+      "end": 16.8
     },
     {
       "index": 66,
-      "char": "这",
-      "start": 18.32,
-      "end": 18.48
+      "char": "把",
+      "start": 16.88,
+      "end": 16.96
     },
     {
       "index": 67,
-      "char": "个",
-      "start": 18.48,
-      "end": 18.56
+      "char": "平",
+      "start": 16.96,
+      "end": 17.2
     },
     {
       "index": 68,
-      "char": "场",
-      "start": 18.56,
-      "end": 18.88
+      "char": "时",
+      "start": 17.2,
+      "end": 17.28
     },
     {
       "index": 69,
-      "char": "景",
-      "start": 18.88,
-      "end": 18.96
+      "char": "的",
+      "start": 17.28,
+      "end": 17.44
     },
     {
       "index": 70,
-      "char": "帮",
-      "start": 19.12,
-      "end": 19.28
+      "char": "阅",
+      "start": 17.44,
+      "end": 17.6
     },
     {
       "index": 71,
-      "char": "助",
-      "start": 19.28,
-      "end": 19.44
+      "char": "读",
+      "start": 17.6,
+      "end": 17.76
     },
     {
       "index": 72,
-      "char": "记",
-      "start": 19.44,
-      "end": 19.68
+      "char": "积",
+      "start": 17.76,
+      "end": 17.92
     },
     {
       "index": 73,
-      "char": "形",
-      "start": 19.68,
-      "end": 20.08
+      "char": "累",
+      "start": 17.92,
+      "end": 18.24
     },
     {
       "index": 74,
-      "char": "发",
-      "start": 20.4,
-      "end": 20.64
+      "char": "比",
+      "start": 18.24,
+      "end": 18.4
     },
     {
       "index": 75,
-      "char": "酵",
-      "start": 20.64,
-      "end": 20.88
+      "char": "作",
+      "start": 18.4,
+      "end": 18.56
     },
     {
       "index": 76,
-      "char": "是",
-      "start": 20.88,
-      "end": 21.12
+      "char": "酵",
+      "start": 18.56,
+      "end": 18.8
     },
     {
       "index": 77,
-      "char": "微",
-      "start": 21.12,
-      "end": 21.2
+      "char": "母",
+      "start": 18.8,
+      "end": 19.04
     },
     {
       "index": 78,
-      "char": "生",
-      "start": 21.2,
-      "end": 21.44
+      "char": "在",
+      "start": 19.44,
+      "end": 19.6
     },
     {
       "index": 79,
-      "char": "物",
-      "start": 21.44,
-      "end": 21.6
+      "char": "写",
+      "start": 19.6,
+      "end": 19.84
     },
     {
       "index": 80,
       "char": "作",
+      "start": 19.84,
+      "end": 20
+    },
+    {
+      "index": 81,
+      "char": "时",
+      "start": 20,
+      "end": 20.32
+    },
+    {
+      "index": 82,
+      "char": "悄",
+      "start": 20.32,
+      "end": 20.56
+    },
+    {
+      "index": 83,
+      "char": "然",
+      "start": 20.56,
+      "end": 20.72
+    },
+    {
+      "index": 84,
+      "char": "发",
+      "start": 20.72,
+      "end": 20.88
+    },
+    {
+      "index": 85,
+      "char": "酵",
+      "start": 20.88,
+      "end": 21.2
+    },
+    {
+      "index": 86,
+      "char": "最",
       "start": 21.6,
       "end": 21.76
     },
     {
-      "index": 81,
-      "char": "用",
+      "index": 87,
+      "char": "终",
       "start": 21.76,
-      "end": 22.0
+      "end": 22.08
     },
     {
-      "index": 82,
-      "char": "使",
-      "start": 22.16,
-      "end": 22.4
+      "index": 88,
+      "char": "让",
+      "start": 22.08,
+      "end": 22.24
     },
     {
-      "index": 83,
-      "char": "食",
-      "start": 22.4,
-      "end": 22.56
+      "index": 89,
+      "char": "真",
+      "start": 22.24,
+      "end": 22.48
     },
     {
-      "index": 84,
-      "char": "物",
-      "start": 22.56,
-      "end": 22.72
+      "index": 90,
+      "char": "情",
+      "start": 22.48,
+      "end": 22.64
     },
     {
-      "index": 85,
-      "char": "等",
-      "start": 22.72,
-      "end": 22.8
+      "index": 91,
+      "char": "实",
+      "start": 22.64,
+      "end": 22.88
     },
     {
-      "index": 86,
-      "char": "发",
+      "index": 92,
+      "char": "感",
       "start": 22.88,
       "end": 23.12
     },
     {
-      "index": 87,
-      "char": "生",
-      "start": 23.12,
-      "end": 23.28
+      "index": 93,
+      "char": "孕",
+      "start": 23.2,
+      "end": 23.36
     },
     {
-      "index": 88,
-      "char": "变",
-      "start": 23.28,
+      "index": 94,
+      "char": "育",
+      "start": 23.36,
       "end": 23.52
     },
     {
-      "index": 89,
-      "char": "化",
+      "index": 95,
+      "char": "出",
       "start": 23.52,
       "end": 23.68
     },
     {
-      "index": 90,
-      "char": "的",
-      "start": 23.68,
-      "end": 23.76
-    },
-    {
-      "index": 91,
-      "char": "过",
-      "start": 23.76,
-      "end": 24.0
-    },
-    {
-      "index": 92,
-      "char": "程",
-      "start": 24.0,
-      "end": 24.32
-    },
-    {
-      "index": 93,
-      "char": "作",
-      "start": 24.8,
-      "end": 25.04
-    },
-    {
-      "index": 94,
-      "char": "者",
-      "start": 25.04,
-      "end": 25.28
-    },
-    {
-      "index": 95,
-      "char": "把",
-      "start": 25.28,
-      "end": 25.52
-    },
-    {
       "index": 96,
-      "char": "积",
-      "start": 25.52,
-      "end": 25.76
+      "char": "一",
+      "start": 23.68,
+      "end": 23.84
     },
     {
       "index": 97,
-      "char": "累",
-      "start": 25.76,
-      "end": 25.92
+      "char": "篇",
+      "start": 23.84,
+      "end": 24
     },
     {
       "index": 98,
-      "char": "的",
-      "start": 25.92,
-      "end": 26.0
+      "char": "篇",
+      "start": 24,
+      "end": 24.32
     },
     {
       "index": 99,
-      "char": "词",
-      "start": 26.0,
-      "end": 26.24
+      "char": "饱",
+      "start": 24.32,
+      "end": 24.48
     },
     {
       "index": 100,
-      "char": "语",
-      "start": 26.24,
-      "end": 26.48
+      "char": "满",
+      "start": 24.48,
+      "end": 24.72
     },
     {
       "index": 101,
-      "char": "比",
-      "start": 26.48,
-      "end": 26.64
+      "char": "生",
+      "start": 24.72,
+      "end": 24.88
     },
     {
       "index": 102,
-      "char": "作",
-      "start": 26.64,
-      "end": 26.8
+      "char": "动",
+      "start": 24.88,
+      "end": 25.04
     },
     {
       "index": 103,
-      "char": "酵",
-      "start": 26.8,
-      "end": 27.12
+      "char": "的",
+      "start": 25.04,
+      "end": 25.12
     },
     {
       "index": 104,
-      "char": "母",
-      "start": 27.12,
-      "end": 27.36
+      "char": "佳",
+      "start": 25.12,
+      "end": 25.36
     },
     {
       "index": 105,
-      "char": "写",
-      "start": 27.76,
-      "end": 27.92
-    },
-    {
-      "index": 106,
       "char": "作",
-      "start": 27.92,
-      "end": 28.08
-    },
-    {
-      "index": 107,
-      "char": "文",
-      "start": 28.08,
-      "end": 28.24
-    },
-    {
-      "index": 108,
-      "char": "时",
-      "start": 28.24,
-      "end": 28.48
-    },
-    {
-      "index": 109,
-      "char": "它",
-      "start": 28.48,
-      "end": 28.64
-    },
-    {
-      "index": 110,
-      "char": "们",
-      "start": 28.64,
-      "end": 28.8
-    },
-    {
-      "index": 111,
-      "char": "发",
-      "start": 28.8,
-      "end": 28.96
-    },
-    {
-      "index": 112,
-      "char": "挥",
-      "start": 28.96,
-      "end": 29.12
-    },
-    {
-      "index": 113,
-      "char": "作",
-      "start": 29.12,
-      "end": 29.36
-    },
-    {
-      "index": 114,
-      "char": "用",
-      "start": 29.36,
-      "end": 29.6
-    },
-    {
-      "index": 115,
-      "char": "让",
-      "start": 29.92,
-      "end": 30.08
-    },
-    {
-      "index": 116,
-      "char": "真",
-      "start": 30.08,
-      "end": 30.32
-    },
-    {
-      "index": 117,
-      "char": "实",
-      "start": 30.32,
-      "end": 30.48
-    },
-    {
-      "index": 118,
-      "char": "感",
-      "start": 30.48,
-      "end": 30.72
-    },
-    {
-      "index": 119,
-      "char": "受",
-      "start": 30.72,
-      "end": 30.96
-    },
-    {
-      "index": 120,
-      "char": "慢",
-      "start": 30.96,
-      "end": 31.12
-    },
-    {
-      "index": 121,
-      "char": "慢",
-      "start": 31.12,
-      "end": 31.28
-    },
-    {
-      "index": 122,
-      "char": "长",
-      "start": 31.28,
-      "end": 31.44
-    },
-    {
-      "index": 123,
-      "char": "成",
-      "start": 31.44,
-      "end": 31.68
-    },
-    {
-      "index": 124,
-      "char": "文",
-      "start": 31.68,
-      "end": 31.84
-    },
-    {
-      "index": 125,
-      "char": "字",
-      "start": 31.84,
-      "end": 32.08
+      "start": 25.36,
+      "end": 25.68
     }
   ],
-  "transcript": "面团放一阵后慢慢鼓起，其中经历了发酵，酵读第四声。酵是左右结构，左边酉字旁，右边是孝，写时左窄右宽。可以想象坛子里的食物安静变化，细小气泡一点点冒出，这个场景帮助记形。发酵是微生物作用使食物等发生变化的过程。作者把积累的词语比作酵母，写作文时它们发挥作用，让真实感受慢慢长成文字。",
+  "transcript": "酵，发酵的酵，读第四声。它是左右结构，左边的酉字旁代表酒坛器具，右边的“孝”提示读音，酒坛中物质孕育变化即为酵。发酵指微生物作用引起质的变化。课文中作者把平时的阅读积累比作酵母，在写作时悄然发酵，最终让真情实感孕育出一篇篇饱满生动的佳作。",
   "voice_reference": "封",
   "reference_id": "019f0554-ea22-762e-966c-32d678fd6bf6",
   "reference_sha256": "eb07e06ee13a20ee4577b1b481df6d33d42127c1b3876bfa5d5e5362ae349f19",
   "timing_source": "qwen3-forced-aligner",
-  "script_version": "narration-v3",
-  "model": "mlx-community/Qwen3-TTS-12Hz-1.7B-Base-4bit",
-  "model_revision": "37e955a1deb861c088ae5f3a67043185f3d1a60c",
-  "generation_policy": "qwen3-clone-2026-08-22-v3",
-  "seed": 20260822,
-  "content_hash": "8061f7e3fb560b91c4fc",
-  "duration": 32.166,
+  "script_version": "narration-fish-v1",
+  "model": "fishaudio/s2.1-pro-free",
+  "model_revision": "s2.1-pro-free",
+  "generation_policy": "narration-fish-s2.1-zero-shot-2026-08-24",
+  "seed": null,
+  "content_hash": "3d9a0bca7bca4989c1aa",
   "alignment_model": "mlx-community/Qwen3-ForcedAligner-0.6B-8bit",
-  "aligned_audio_sha256": "454353143476ece511bf5569f242ef13d75a03f26e5281d33c90777c8ac0b516",
-  "alignment_groups": []
+  "alignment_model_revision": "0e1a68e91d815300c7c9754b2a7639378b23db15",
+  "aligned_audio_sha256": "c6275c6d023c1c50c60788573a06cd796bddd58d6634e801026da3261cb1f50d",
+  "alignment_groups": [
+    {
+      "id": "align-group-0-1",
+      "text": "酵发",
+      "indices": [
+        0,
+        1
+      ],
+      "start": 0,
+      "end": 1.04,
+      "method": "zero-anchor-right-envelope",
+      "rawIntervals": [
+        {
+          "index": 0,
+          "char": "酵",
+          "start": 0,
+          "end": 0
+        },
+        {
+          "index": 1,
+          "char": "发",
+          "start": 0.8,
+          "end": 1.04
+        }
+      ]
+    },
+    {
+      "id": "align-group-52-53",
+      "text": "物作",
+      "indices": [
+        52,
+        53
+      ],
+      "start": 13.84,
+      "end": 14.08,
+      "method": "shared-right-model-interval",
+      "rawIntervals": [
+        {
+          "index": 52,
+          "char": "物",
+          "start": 13.84,
+          "end": 13.84
+        },
+        {
+          "index": 53,
+          "char": "作",
+          "start": 13.84,
+          "end": 14.08
+        }
+      ]
+    }
+  ],
+  "duration": 25.817
 }

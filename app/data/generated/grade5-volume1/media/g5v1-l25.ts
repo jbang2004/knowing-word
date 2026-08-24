@@ -6,7 +6,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u8205.webp",
       "label": "舅舅",
-      "alt": "舅舅是母亲的兄弟 图中“臼”与“男”按上下结构自然长成“舅”。"
+      "alt": "舅舅指引开启阅读大门；作者在童年时受到表舅的启发，第一次接触并爱上了古典小说《三国演义》 图中“臼”与“男”按上下结构自然长成“舅”。"
     },
     "scene": {
       "scene": "上方家族记录册和旧印章沿“臼”围成头像，下方男子在田地旁用力劳作沿“男”站好，上下组成“舅”。",
@@ -30,7 +30,7 @@ export const characterMedia = {
       "g5v1-l25-c01-u8205-words-image:g5v1-l25-c01-u8205-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u8205.webp",
         "label": "舅舅",
-        "alt": "舅舅是母亲的兄弟 图中“臼”与“男”按上下结构自然长成“舅”。"
+        "alt": "舅舅指引开启阅读大门；作者在童年时受到表舅的启发，第一次接触并爱上了古典小说《三国演义》 图中“臼”与“男”按上下结构自然长成“舅”。"
       }
     }
   },
@@ -38,7 +38,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u5bb4.webp",
       "label": "宴会",
-      "alt": "宴会是多人聚在一起吃饭、庆祝或交流的活动 图中“宀”与“妟”按上下结构自然长成“宴”。"
+      "alt": "盛宴比喻精神食粮；一本本经典好书宛如精神的饕餮盛宴，滋养着作者不断成长丰富的心灵 图中“宀”与“妟”按上下结构自然长成“宴”。"
     },
     "scene": {
       "scene": "上方大厅屋顶形成“宀”，中间日形餐桌明亮，下方人物坐姿沿“妟”围桌，组成热闹有序的“宴”。",
@@ -62,7 +62,7 @@ export const characterMedia = {
       "g5v1-l25-c02-u5bb4-words-image:g5v1-l25-c02-u5bb4-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u5bb4.webp",
         "label": "宴会",
-        "alt": "宴会是多人聚在一起吃饭、庆祝或交流的活动 图中“宀”与“妟”按上下结构自然长成“宴”。"
+        "alt": "盛宴比喻精神食粮；一本本经典好书宛如精神的饕餮盛宴，滋养着作者不断成长丰富的心灵 图中“宀”与“妟”按上下结构自然长成“宴”。"
       }
     }
   },
@@ -70,7 +70,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u65a9.webp",
       "label": "斩断",
-      "alt": "斩断就是用利器把连接的东西砍断 图中“车”与“斤”按左右结构自然长成“斩”。"
+      "alt": "斩将过关引人入胜；关羽斩颜良诛文丑的精彩情节让年幼的作者如痴如醉，手不释卷 图中“车”与“斤”按左右结构自然长成“斩”。"
     },
     "scene": {
       "scene": "左边车架和轮轴形成“车”，右边斜落的斧刃形成“斤”，斧刃切断车轴，组成“斩”。",
@@ -84,7 +84,7 @@ export const characterMedia = {
       "g5v1-l25-c03-u65a9-words-image:g5v1-l25-c03-u65a9-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u65a9.webp",
         "label": "斩断",
-        "alt": "斩断就是用利器把连接的东西砍断 图中“车”与“斤”按左右结构自然长成“斩”。"
+        "alt": "斩将过关引人入胜；关羽斩颜良诛文丑的精彩情节让年幼的作者如痴如醉，手不释卷 图中“车”与“斤”按左右结构自然长成“斩”。"
       },
       "g5v1-l25-c03-u65a9-words-image:g5v1-l25-c03-u65a9-words-image-2": {
         "src": "/illustrations/meanings/m05.webp",
@@ -94,7 +94,7 @@ export const characterMedia = {
       "g5v1-l25-c03-u65a9-words-image:g5v1-l25-c03-u65a9-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u7b77.webp",
         "label": "筷子",
-        "alt": "筷子是一双细长餐具，用来夹取食物 图中“⺮”与“快”按上下结构自然长成“筷”。"
+        "alt": "筷子轻夹见证深情厚谊；将军将筷子伸向菜盘又停住，舍不得吃下战士们用汗水浇灌的蔬菜 图中“⺮”与“快”按上下结构自然长成“筷”。"
       }
     }
   },
@@ -102,7 +102,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u51ef.webp",
       "label": "凯旋",
-      "alt": "凯旋指军队获胜归来，也泛指胜利归来 图中“岂”与“几”按左右结构自然长成“凯”。"
+      "alt": "凯旋而归豪情满怀；小说中英雄人物凯旋的壮烈故事，点燃了作者心中对于正义与勇气的向往 图中“岂”与“几”按左右结构自然长成“凯”。"
     },
     "scene": {
       "scene": "左边山形胜利台和鼓架沿“岂”搭起，右边风帆与弯脚形成“几”，旗帜乘风归来，组成“凯”。",
@@ -116,7 +116,7 @@ export const characterMedia = {
       "g5v1-l25-c04-u51ef-words-image:g5v1-l25-c04-u51ef-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u51ef.webp",
         "label": "凯旋",
-        "alt": "凯旋指军队获胜归来，也泛指胜利归来 图中“岂”与“几”按左右结构自然长成“凯”。"
+        "alt": "凯旋而归豪情满怀；小说中英雄人物凯旋的壮烈故事，点燃了作者心中对于正义与勇气的向往 图中“岂”与“几”按左右结构自然长成“凯”。"
       },
       "g5v1-l25-c04-u51ef-words-image:g5v1-l25-c04-u51ef-words-image-2": {
         "src": "/illustrations/meanings/m08.webp",
@@ -126,7 +126,7 @@ export const characterMedia = {
       "g5v1-l25-c04-u51ef-words-image:g5v1-l25-c04-u51ef-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u9e6d.webp",
         "label": "白鹭",
-        "alt": "白鹭是羽毛洁白、常在水田和河滩活动的鸟 图中“路”与“鸟”按上下结构自然长成“鹭”。"
+        "alt": "白鹭羽色洁白、身段精巧，在清水田里漫步伫立，如同一首韵味悠长的小诗 图中“路”与“鸟”按上下结构自然长成“鹭”。"
       }
     }
   },
@@ -134,7 +134,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u845b.webp",
       "label": "葛布",
-      "alt": "葛是一种藤本植物，葛布可以用它的纤维织成 图中“艹”与“曷”按上下结构自然长成“葛”。"
+      "alt": "诸葛孔明神机妙算；诸葛亮出神入化的智慧谋略让小作者深深着迷，从此一发不可收拾地爱上读书 图中“艹”与“曷”按上下结构自然长成“葛”。"
     },
     "scene": {
       "scene": "上方藤叶形成“艹”，下方日光、弯藤和包裹根块沿“曷”缠绕，整株葛藤长成“葛”。",
@@ -153,12 +153,12 @@ export const characterMedia = {
       "g5v1-l25-c05-u845b-words-image:g5v1-l25-c05-u845b-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u9e35.webp",
         "label": "鸵鸟",
-        "alt": "鸵鸟是不会飞、但奔跑速度很快的大型鸟 图中“鸟”与“它”按左右结构自然长成“鸵”。"
+        "alt": "鸵鸟是善于奔跑的巨型鸟类；课文以鸵鸟为起点展开速度对比，引人入胜 图中“鸟”与“它”按左右结构自然长成“鸵”。"
       },
       "g5v1-l25-c05-u845b-words-image:g5v1-l25-c05-u845b-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u845b.webp",
         "label": "葛布",
-        "alt": "葛是一种藤本植物，葛布可以用它的纤维织成 图中“艹”与“曷”按上下结构自然长成“葛”。"
+        "alt": "诸葛孔明神机妙算；诸葛亮出神入化的智慧谋略让小作者深深着迷，从此一发不可收拾地爱上读书 图中“艹”与“曷”按上下结构自然长成“葛”。"
       }
     }
   },
@@ -166,7 +166,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u8ff0.webp",
       "label": "讲述",
-      "alt": "讲述就是把事情有次序地说出来 图中“辶”与“术”按左下包围结构自然长成“述”。"
+      "alt": "讲述心得言辞诚恳；冰心先生深情讲述自己数十年的读书经历，向青少年传授宝贵的选书智慧 图中“辶”与“术”按左下包围结构自然长成“述”。"
     },
     "scene": {
       "scene": "中央木形故事树多出一点细节形成“术”，左下方道路形成“辶”，故事沿路线一步步展开，组成“述”。",
@@ -185,12 +185,12 @@ export const characterMedia = {
       "g5v1-l25-c06-u8ff0-words-image:g5v1-l25-c06-u8ff0-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u6361.webp",
         "label": "捡起",
-        "alt": "捡起就是用手把地上的东西拿起来 图中“扌”与“佥”按左右结构自然长成“捡”。"
+        "alt": "捡起是用手把地上的物品拾起；孩子们欢快地在树下捡拾落下的碎金桂花，享受着丰收般的喜悦 图中“扌”与“佥”按左右结构自然长成“捡”。"
       },
       "g5v1-l25-c06-u8ff0-words-image:g5v1-l25-c06-u8ff0-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u8ff0.webp",
         "label": "讲述",
-        "alt": "讲述就是把事情有次序地说出来 图中“辶”与“术”按左下包围结构自然长成“述”。"
+        "alt": "讲述心得言辞诚恳；冰心先生深情讲述自己数十年的读书经历，向青少年传授宝贵的选书智慧 图中“辶”与“术”按左下包围结构自然长成“述”。"
       }
     }
   },
@@ -198,7 +198,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u4f20.webp",
       "label": "传记",
-      "alt": "“传记”中的“传”读zhuàn，指记述人物经历的文章；“传递”中读chuán 图中“亻”与“专”按左右结构自然长成“传”。"
+      "alt": "水浒传记人物鲜活；读《水浒传》结识梁山好汉，鲜明的人物性格与生动的语言让作者大开眼界 图中“亻”与“专”按左右结构自然长成“传”。"
     },
     "scene": {
       "scene": "左边讲故事的人形成“亻”，右边一卷专门记录人物经历的竹简沿“专”转开，人物与专卷组成“传”。",
@@ -212,7 +212,7 @@ export const characterMedia = {
       "g5v1-l25-c07-u4f20-words-image:g5v1-l25-c07-u4f20-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u4f20.webp",
         "label": "传记",
-        "alt": "“传记”中的“传”读zhuàn，指记述人物经历的文章；“传递”中读chuán 图中“亻”与“专”按左右结构自然长成“传”。"
+        "alt": "水浒传记人物鲜活；读《水浒传》结识梁山好汉，鲜明的人物性格与生动的语言让作者大开眼界 图中“亻”与“专”按左右结构自然长成“传”。"
       },
       "g5v1-l25-c07-u4f20-words-image:g5v1-l25-c07-u4f20-words-image-0": {
         "src": "/illustrations/meanings/m04.webp",
@@ -222,7 +222,7 @@ export const characterMedia = {
       "g5v1-l25-c07-u4f20-words-image:g5v1-l25-c07-u4f20-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u5b59.webp",
         "label": "子孙",
-        "alt": "子孙指儿子、孙子等后代 图中“子”与“小”按左右结构自然长成“孙”。"
+        "alt": "竹喧归浣女莲动下渔舟；王维笔下的山居秋夜清新明净，洋溢着淳朴宁静的生活情趣 图中“子”与“小”按左右结构自然长成“孙”。"
       }
     }
   },
@@ -230,7 +230,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u9c81.webp",
       "label": "鲁莽",
-      "alt": "鲁莽形容说话做事不细想，行动冒失 图中“鱼”与“日”按上下结构自然长成“鲁”。"
+      "alt": "鲁莽好汉性格率真；鲁智深虽性格有些鲁莽却嫉恶如仇、重情重义，给作者留下了深刻印象 图中“鱼”与“日”按上下结构自然长成“鲁”。"
     },
     "scene": {
       "scene": "上方一条鱼完整形成“鱼”，下方日轮像警示灯形成“日”，鱼猛冲到亮灯上方，提醒先想再做，组成“鲁”。",
@@ -249,12 +249,12 @@ export const characterMedia = {
       "g5v1-l25-c08-u9c81-words-image:g5v1-l25-c08-u9c81-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u916c.webp",
         "label": "酬谢",
-        "alt": "酬谢就是用财物、行动或话语感谢别人 图中“酉”与“州”按左右结构自然长成“酬”。"
+        "alt": "酬谢是用财物或情意报答恩情；龙王拿出珍宝酬谢海力布救女之恩，开启了故事的序幕 图中“酉”与“州”按左右结构自然长成“酬”。"
       },
       "g5v1-l25-c08-u9c81-words-image:g5v1-l25-c08-u9c81-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u9c81.webp",
         "label": "鲁莽",
-        "alt": "鲁莽形容说话做事不细想，行动冒失 图中“鱼”与“日”按上下结构自然长成“鲁”。"
+        "alt": "鲁莽好汉性格率真；鲁智深虽性格有些鲁莽却嫉恶如仇、重情重义，给作者留下了深刻印象 图中“鱼”与“日”按上下结构自然长成“鲁”。"
       }
     }
   },
@@ -262,7 +262,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u715e.webp",
       "label": "煞气",
-      "alt": "煞气在故事语境中指凶恶、逼人的气势 图中“刍”与“攵”与“灬”按上下结构自然长成“煞”。"
+      "alt": "煞有介事引人入胜；精彩的小说情节跌宕起伏，把各种人物描写得煞有介事、栩栩如生 图中“刍”与“攵”与“灬”按上下结构自然长成“煞”。"
     },
     "scene": {
       "scene": "上方急停人物形成“刍”，旁边短杖动作形成“攵”，下方四点强烈火光形成“灬”，三部分组成“煞”。",
@@ -282,12 +282,12 @@ export const characterMedia = {
       "g5v1-l25-c09-u715e-words-image:g5v1-l25-c09-u715e-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u6c0f.webp",
         "label": "摄氏",
-        "alt": "摄氏中的“氏”来自科学家摄尔修斯姓氏的译名 图中“氏”按独体结构自然长成“氏”。"
+        "alt": "摄氏温标科学精准；课文用摄氏度准确说明太阳的热度，展现了科普说明文的严谨科学性 图中“氏”按独体结构自然长成“氏”。"
       },
       "g5v1-l25-c09-u715e-words-image:g5v1-l25-c09-u715e-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u715e.webp",
         "label": "煞气",
-        "alt": "煞气在故事语境中指凶恶、逼人的气势 图中“刍”与“攵”与“灬”按上下结构自然长成“煞”。"
+        "alt": "煞有介事引人入胜；精彩的小说情节跌宕起伏，把各种人物描写得煞有介事、栩栩如生 图中“刍”与“攵”与“灬”按上下结构自然长成“煞”。"
       }
     }
   },
@@ -295,7 +295,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u5bc7.webp",
       "label": "敌寇",
-      "alt": "敌寇是侵犯别国或别处的敌人 图中“宀”与“元”与“攴”按上下结构自然长成“寇”。"
+      "alt": "荡寇评话别有滋味；作者广泛涉猎各类古代小说，在大量的比较阅读中逐渐提高了鉴赏能力 图中“宀”与“元”与“攴”按上下结构自然长成“寇”。"
     },
     "scene": {
       "scene": "上方屋顶形成“宀”，下方闯入者越过元形门槛、手持短杖沿“元”“攴”进入，表现外来侵扰，组成“寇”。",
@@ -315,12 +315,12 @@ export const characterMedia = {
       "g5v1-l25-c10-u5bc7-words-image:g5v1-l25-c10-u5bc7-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u5178.webp",
         "label": "典礼",
-        "alt": "典礼是按一定礼仪举行的隆重仪式 图中“曲”与“八”按上下结构自然长成“典”。"
+        "alt": "典礼是隆重的礼仪仪式；相如要求秦王举行正式典礼才肯献璧，以此争取时间、维护国家尊严 图中“曲”与“八”按上下结构自然长成“典”。"
       },
       "g5v1-l25-c10-u5bc7-words-image:g5v1-l25-c10-u5bc7-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u5bc7.webp",
         "label": "敌寇",
-        "alt": "敌寇是侵犯别国或别处的敌人 图中“宀”与“元”与“攴”按上下结构自然长成“寇”。"
+        "alt": "荡寇评话别有滋味；作者广泛涉猎各类古代小说，在大量的比较阅读中逐渐提高了鉴赏能力 图中“宀”与“元”与“攴”按上下结构自然长成“寇”。"
       }
     }
   },
@@ -328,7 +328,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u8d3e.webp",
       "label": "商贾",
-      "alt": "商贾是旧时对商人的称呼，这里的“贾”读gǔ；作为姓氏时读jiǎ 图中“覀”与“贝”按上下结构自然长成“贾”。"
+      "alt": "商贾富户人生百态；《红楼梦》中贾府的兴衰荣辱让成熟后的作者读出了更深沉的人生悲喜与社会世相 图中“覀”与“贝”按上下结构自然长成“贾”。"
     },
     "scene": {
       "scene": "上方封好的货箱盖沿“覀”覆盖，下方一枚贝壳货币形成“贝”，货物与钱币上下相合，组成“贾”。",
@@ -342,7 +342,7 @@ export const characterMedia = {
       "g5v1-l25-c11-u8d3e-words-image:g5v1-l25-c11-u8d3e-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u8d3e.webp",
         "label": "商贾",
-        "alt": "商贾是旧时对商人的称呼，这里的“贾”读gǔ；作为姓氏时读jiǎ 图中“覀”与“贝”按上下结构自然长成“贾”。"
+        "alt": "商贾富户人生百态；《红楼梦》中贾府的兴衰荣辱让成熟后的作者读出了更深沉的人生悲喜与社会世相 图中“覀”与“贝”按上下结构自然长成“贾”。"
       },
       "g5v1-l25-c11-u8d3e-words-image:g5v1-l25-c11-u8d3e-words-image-2": {
         "src": "/illustrations/meanings/m05.webp",
@@ -352,7 +352,7 @@ export const characterMedia = {
       "g5v1-l25-c11-u8d3e-words-image:g5v1-l25-c11-u8d3e-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u803d.webp",
         "label": "耽误",
-        "alt": "耽误就是因为拖延或受阻而错过时间、影响事情 图中“耳”与“冘”按左右结构自然长成“耽”。"
+        "alt": "耽误工时扣减收入；母亲唯恐耽误做工时间，手里的缝纫活一刻也不肯停歇 图中“耳”与“冘”按左右结构自然长成“耽”。"
       }
     }
   },
@@ -360,7 +360,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u5377.webp",
       "label": "试卷",
-      "alt": "“试卷”中的“卷”读juàn，指成套的考试纸；“卷起”中读juǎn 图中“龹”与“㔾”按上下结构自然长成“卷”。"
+      "alt": "读书万卷受益终生；作者总结一生经验告诫年轻人要读万卷书，在浩瀚的书海中汲取智慧 图中“龹”与“㔾”按上下结构自然长成“卷”。"
     },
     "scene": {
       "scene": "上方双手托着展开的试题页沿“龹”铺开，下方弯曲纸尾形成“㔾”，一份卷面自然弯起，组成“卷”。",
@@ -379,12 +379,12 @@ export const characterMedia = {
       "g5v1-l25-c12-u5377-words-image:g5v1-l25-c12-u5377-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u60da.webp",
         "label": "恍惚",
-        "alt": "恍惚表示精神不集中，眼前和心里的感觉都不清晰 图中“忄”与“忽”按左右结构自然长成“惚”。"
+        "alt": "恍惚入梦追忆往昔；梦中父亲摇橹的背影依然清晰，无声的父爱穿越岁月历久弥新 图中“忄”与“忽”按左右结构自然长成“惚”。"
       },
       "g5v1-l25-c12-u5377-words-image:g5v1-l25-c12-u5377-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u5377.webp",
         "label": "试卷",
-        "alt": "“试卷”中的“卷”读juàn，指成套的考试纸；“卷起”中读juǎn 图中“龹”与“㔾”按上下结构自然长成“卷”。"
+        "alt": "读书万卷受益终生；作者总结一生经验告诫年轻人要读万卷书，在浩瀚的书海中汲取智慧 图中“龹”与“㔾”按上下结构自然长成“卷”。"
       }
     }
   },
@@ -392,7 +392,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u520a.webp",
       "label": "刊物",
-      "alt": "刊物是定期或不定期出版的杂志、报纸等读物 图中“干”与“刂”按左右结构自然长成“刊”。"
+      "alt": "报刊杂志拓展视野；除了古典名著，作者还广泛阅读现代报刊杂志，时刻保持思想的敏锐与开阔 图中“干”与“刂”按左右结构自然长成“刊”。"
     },
     "scene": {
       "scene": "左边纸页刻度和横线形成“干”，右边竖直裁纸刀形成“刂”，纸张刻印裁齐，组成“刊”。",
@@ -406,7 +406,7 @@ export const characterMedia = {
       "g5v1-l25-c13-u520a-words-image:g5v1-l25-c13-u520a-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u520a.webp",
         "label": "刊物",
-        "alt": "刊物是定期或不定期出版的杂志、报纸等读物 图中“干”与“刂”按左右结构自然长成“刊”。"
+        "alt": "报刊杂志拓展视野；除了古典名著，作者还广泛阅读现代报刊杂志，时刻保持思想的敏锐与开阔 图中“干”与“刂”按左右结构自然长成“刊”。"
       },
       "g5v1-l25-c13-u520a-words-image:g5v1-l25-c13-u520a-words-image-2": {
         "src": "/illustrations/meanings/m07.webp",
@@ -416,7 +416,7 @@ export const characterMedia = {
       "g5v1-l25-c13-u520a-words-image:g5v1-l25-c13-u520a-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u7f36.webp",
         "label": "击缶",
-        "alt": "缶是古代盛水或酒的陶器，也可以敲击发声 图中“午”与“山”按上下结构自然长成“缶”。"
+        "alt": "缶是古代用来盛酒与敲击伴奏的瓦器；渑池会上秦王被迫击缶，赵国的国格尊严得到了有力捍卫 图中“午”与“山”按上下结构自然长成“缶”。"
       }
     }
   },
@@ -424,7 +424,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u7410.webp",
       "label": "琐事",
-      "alt": "琐事是细小、零碎的事情 图中“王”与“⺌”与“贝”按左右结构自然长成“琐”。"
+      "alt": "繁琐小事不值一提；在书籍构筑的崇高精神世界里，生活中的繁琐烦扰都变得微不足道 图中“王”与“⺌”与“贝”按左右结构自然长成“琐”。"
     },
     "scene": {
       "scene": "左边三层玉架形成“王”，右上方三粒小光点形成“⺌”，右下方收纳盒形成“贝”，一件件小物合成“琐”。",
@@ -444,12 +444,12 @@ export const characterMedia = {
       "g5v1-l25-c14-u7410-words-image:g5v1-l25-c14-u7410-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u745a.webp",
         "label": "珊瑚",
-        "alt": "珊瑚常生活在温暖清澈的海水中，能形成珊瑚礁 图中“王”与“胡”按左右结构自然长成“瑚”。"
+        "alt": "珊瑚礁是绚丽的海底奇观；王母即便追至辽远的珊瑚海礁也不肯放过织女，故事转入紧张高潮 图中“王”与“胡”按左右结构自然长成“瑚”。"
       },
       "g5v1-l25-c14-u7410-words-image:g5v1-l25-c14-u7410-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u7410.webp",
         "label": "琐事",
-        "alt": "琐事是细小、零碎的事情 图中“王”与“⺌”与“贝”按左右结构自然长成“琐”。"
+        "alt": "繁琐小事不值一提；在书籍构筑的崇高精神世界里，生活中的繁琐烦扰都变得微不足道 图中“王”与“⺌”与“贝”按左右结构自然长成“琐”。"
       }
     }
   },
@@ -457,7 +457,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u547b.webp",
       "label": "呻吟",
-      "alt": "呻吟是因为痛苦或不适而发出的低沉声音 图中“口”与“申”按左右结构自然长成“呻”。"
+      "alt": "无病呻吟坚决摈弃；作者强调选择好书要有鉴别眼光，那些无病呻吟的文字绝不值得浪费时间 图中“口”与“申”按左右结构自然长成“呻”。"
     },
     "scene": {
       "scene": "左边轻轻张开的口形成“口”，右边身体被中线牵直沿“申”伸展，低声从受苦的人口中发出，组成“呻”。",
@@ -476,12 +476,12 @@ export const characterMedia = {
       "g5v1-l25-c15-u547b-words-image:g5v1-l25-c15-u547b-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u78c1.webp",
         "label": "磁铁",
-        "alt": "磁铁能吸引铁、镍等材料，也有南北两个磁极 图中“石”与“兹”按左右结构自然长成“磁”。"
+        "alt": "磁石般深深吸引；优秀文学作品宛如强力的磁铁，紧紧吸引着作者的心灵，激发了无限的创作灵感 图中“石”与“兹”按左右结构自然长成“磁”。"
       },
       "g5v1-l25-c15-u547b-words-image:g5v1-l25-c15-u547b-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u547b.webp",
         "label": "呻吟",
-        "alt": "呻吟是因为痛苦或不适而发出的低沉声音 图中“口”与“申”按左右结构自然长成“呻”。"
+        "alt": "无病呻吟坚决摈弃；作者强调选择好书要有鉴别眼光，那些无病呻吟的文字绝不值得浪费时间 图中“口”与“申”按左右结构自然长成“呻”。"
       }
     }
   },
@@ -489,7 +489,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u67d0.webp",
       "label": "某人",
-      "alt": "某人表示没有说出或不需要说出姓名的一个人 图中“甘”与“木”按上下结构自然长成“某”。"
+      "alt": "某人某书批判吸收；阅读时要有独立思考的眼光，不能盲从某人的一家之言，要挑真正耐读的经典 图中“甘”与“木”按上下结构自然长成“某”。"
     },
     "scene": {
       "scene": "上方甜味标记和隐藏名牌沿“甘”遮住身份，下方人物站在木形台上形成“木”，姓名未写明，组成“某”。",
@@ -508,12 +508,12 @@ export const characterMedia = {
       "g5v1-l25-c16-u67d0-words-image:g5v1-l25-c16-u67d0-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u7b77.webp",
         "label": "筷子",
-        "alt": "筷子是一双细长餐具，用来夹取食物 图中“⺮”与“快”按上下结构自然长成“筷”。"
+        "alt": "筷子轻夹见证深情厚谊；将军将筷子伸向菜盘又停住，舍不得吃下战士们用汗水浇灌的蔬菜 图中“⺮”与“快”按上下结构自然长成“筷”。"
       },
       "g5v1-l25-c16-u67d0-words-image:g5v1-l25-c16-u67d0-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u67d0.webp",
         "label": "某人",
-        "alt": "某人表示没有说出或不需要说出姓名的一个人 图中“甘”与“木”按上下结构自然长成“某”。"
+        "alt": "某人某书批判吸收；阅读时要有独立思考的眼光，不能盲从某人的一家之言，要挑真正耐读的经典 图中“甘”与“木”按上下结构自然长成“某”。"
       }
     }
   },
@@ -521,7 +521,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u6d25.webp",
       "label": "天津",
-      "alt": "天津是中国的直辖市；“津”也可指渡口或唾液 图中“氵”与“聿”按左右结构自然长成“津”。"
+      "alt": "津津有味沉醉书香；读书不仅能开阔眼界增长见识，更能带来津津有味的无穷乐趣与精神享受 图中“氵”与“聿”按左右结构自然长成“津”。"
     },
     "scene": {
       "scene": "左边三股河水形成“氵”，右边手持渡船撑杆、横梁和船桨沿“聿”排列，水边渡口组成“津”。",
@@ -540,12 +540,12 @@ export const characterMedia = {
       "g5v1-l25-c17-u6d25-words-image:g5v1-l25-c17-u6d25-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u6bc1.webp",
         "label": "毁灭",
-        "alt": "毁灭就是严重破坏，使原有事物不复存在 图中“臼”与“工”与“殳”按左右结构自然长成“毁”。"
+        "alt": "毁灭是彻底破坏不复存在；圆明园惨遭毁灭的历史警示我们，落后就要挨打，唯有自强不息 图中“臼”与“工”与“殳”按左右结构自然长成“毁”。"
       },
       "g5v1-l25-c17-u6d25-words-image:g5v1-l25-c17-u6d25-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u6d25.webp",
         "label": "天津",
-        "alt": "天津是中国的直辖市；“津”也可指渡口或唾液 图中“氵”与“聿”按左右结构自然长成“津”。"
+        "alt": "津津有味沉醉书香；读书不仅能开阔眼界增长见识，更能带来津津有味的无穷乐趣与精神享受 图中“氵”与“聿”按左右结构自然长成“津”。"
       }
     }
   },
@@ -553,7 +553,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u9650.webp",
       "label": "限制",
-      "alt": "限制就是规定范围，不让数量、时间或行动超过界线 图中“阝”与“艮”按左右结构自然长成“限”。"
+      "alt": "无限书海畅游其中；生命的长度有限，书籍却为我们打开了通向古今中外无限时空的壮美通道 图中“阝”与“艮”按左右结构自然长成“限”。"
     },
     "scene": {
       "scene": "左边高低边界坡形成“阝”，右边眼形观察口和弯脚沿“艮”停在栏前，到了界线不能再走，组成“限”。",
@@ -567,7 +567,7 @@ export const characterMedia = {
       "g5v1-l25-c18-u9650-words-image:g5v1-l25-c18-u9650-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u9650.webp",
         "label": "限制",
-        "alt": "限制就是规定范围，不让数量、时间或行动超过界线 图中“阝”与“艮”按左右结构自然长成“限”。"
+        "alt": "无限书海畅游其中；生命的长度有限，书籍却为我们打开了通向古今中外无限时空的壮美通道 图中“阝”与“艮”按左右结构自然长成“限”。"
       },
       "g5v1-l25-c18-u9650-words-image:g5v1-l25-c18-u9650-words-image-0": {
         "src": "/illustrations/meanings/m08.webp",
@@ -577,7 +577,7 @@ export const characterMedia = {
       "g5v1-l25-c18-u9650-words-image:g5v1-l25-c18-u9650-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u533a.webp",
         "label": "地区",
-        "alt": "地区是具有一定范围的地方 图中“匸”与“乂”按左三包围结构自然长成“区”。"
+        "alt": "地区气候各具特色；太阳光照在地球不同地区分布不均，形成了温带、热带等丰富多样的气候区 图中“匸”与“乂”按左三包围结构自然长成“区”。"
       }
     }
   },
@@ -585,7 +585,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u8870.webp",
       "label": "衰老",
-      "alt": "衰老表示身体机能随着年岁增长逐渐减弱 图中“衰”按独体结构自然长成“衰”。"
+      "alt": "衰老虽至童心永驻；读书让心灵永远保持年轻与充实，即使岁月流逝、容颜衰老，精神依然丰盈 图中“衰”按独体结构自然长成“衰”。"
     },
     "scene": {
       "scene": "一件长衣从肩领到下摆沿“衰”的笔画垂落，中央叶片由鲜绿变淡，表现岁月变化。",
@@ -598,7 +598,7 @@ export const characterMedia = {
       "g5v1-l25-c19-u8870-words-image:g5v1-l25-c19-u8870-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u8870.webp",
         "label": "衰老",
-        "alt": "衰老表示身体机能随着年岁增长逐渐减弱 图中“衰”按独体结构自然长成“衰”。"
+        "alt": "衰老虽至童心永驻；读书让心灵永远保持年轻与充实，即使岁月流逝、容颜衰老，精神依然丰盈 图中“衰”按独体结构自然长成“衰”。"
       },
       "g5v1-l25-c19-u8870-words-image:g5v1-l25-c19-u8870-words-image-2": {
         "src": "/illustrations/meanings/m08.webp",
@@ -608,7 +608,7 @@ export const characterMedia = {
       "g5v1-l25-c19-u8870-words-image:g5v1-l25-c19-u8870-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u77e3.webp",
         "label": "矣",
-        "alt": "矣是文言语气词，常放在句末，表示肯定、完成或感叹 图中“厶”与“矢”按上下结构自然长成“矣”。"
+        "alt": "学而不厌诲人不倦矣；朱熹与孔子的读书心法跨越千年，至今依然指引着求学者的方向 图中“厶”与“矢”按上下结构自然长成“矣”。"
       }
     }
   },
@@ -616,7 +616,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u7edf.webp",
       "label": "统一",
-      "alt": "统一就是把分散的事物合在共同标准或整体之中 图中“纟”与“充”按左右结构自然长成“统”。"
+      "alt": "系统阅读构建体系；循序渐进地系统阅读经典好书，能够帮助我们建立起宏大完整的知识格局 图中“纟”与“充”按左右结构自然长成“统”。"
     },
     "scene": {
       "scene": "左边许多丝线形成“纟”，右边顶点、弯线和两脚沿“充”汇入同一线轴，分散线头合一，组成“统”。",
@@ -630,7 +630,7 @@ export const characterMedia = {
       "g5v1-l25-c20-u7edf-words-image:g5v1-l25-c20-u7edf-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u7edf.webp",
         "label": "统一",
-        "alt": "统一就是把分散的事物合在共同标准或整体之中 图中“纟”与“充”按左右结构自然长成“统”。"
+        "alt": "系统阅读构建体系；循序渐进地系统阅读经典好书，能够帮助我们建立起宏大完整的知识格局 图中“纟”与“充”按左右结构自然长成“统”。"
       },
       "g5v1-l25-c20-u7edf-words-image:g5v1-l25-c20-u7edf-words-image-0": {
         "src": "/illustrations/meanings/m07.webp",
@@ -640,7 +640,7 @@ export const characterMedia = {
       "g5v1-l25-c20-u7edf-words-image:g5v1-l25-c20-u7edf-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u8ff0.webp",
         "label": "讲述",
-        "alt": "讲述就是把事情有次序地说出来 图中“辶”与“术”按左下包围结构自然长成“述”。"
+        "alt": "讲述心得言辞诚恳；冰心先生深情讲述自己数十年的读书经历，向青少年传授宝贵的选书智慧 图中“辶”与“术”按左下包围结构自然长成“述”。"
       }
     }
   },
@@ -648,7 +648,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u6734.webp",
       "label": "朴实",
-      "alt": "朴实形容不浮夸，真实自然 图中“木”与“卜”按左右结构自然长成“朴”。"
+      "alt": "质朴名言字字珠玑；“读书好，多读书，读好书”，这九字真言质朴无华，成为指引一生的座右铭 图中“木”与“卜”按左右结构自然长成“朴”。"
     },
     "scene": {
       "scene": "左边不加装饰的树形成“木”，右边一枚简单垂直标记和小点形成“卜”，材料原本的样子组成“朴”。",
@@ -662,7 +662,7 @@ export const characterMedia = {
       "g5v1-l25-c21-u6734-words-image:g5v1-l25-c21-u6734-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u6734.webp",
         "label": "朴实",
-        "alt": "朴实形容不浮夸，真实自然 图中“木”与“卜”按左右结构自然长成“朴”。"
+        "alt": "质朴名言字字珠玑；“读书好，多读书，读好书”，这九字真言质朴无华，成为指引一生的座右铭 图中“木”与“卜”按左右结构自然长成“朴”。"
       },
       "g5v1-l25-c21-u6734-words-image:g5v1-l25-c21-u6734-words-image-0": {
         "src": "/illustrations/meanings/m04.webp",
@@ -672,7 +672,7 @@ export const characterMedia = {
       "g5v1-l25-c21-u6734-words-image:g5v1-l25-c21-u6734-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u6795.webp",
         "label": "枕头",
-        "alt": "枕头是睡觉时垫在头下、支撑头颈的用品 图中“木”与“冘”按左右结构自然长成“枕”。"
+        "alt": "枕木船舱承载梦想；夜宿在小船枕席之上，听着水声潺潺，孩子在父亲的守护下安然入梦 图中“木”与“冘”按左右结构自然长成“枕”。"
       }
     }
   }

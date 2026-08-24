@@ -6,7 +6,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u916c.webp",
       "label": "酬谢",
-      "alt": "酬谢就是用财物、行动或话语感谢别人 图中“酉”与“州”按左右结构自然长成“酬”。"
+      "alt": "酬谢是用财物或情意报答恩情；龙王拿出珍宝酬谢海力布救女之恩，开启了故事的序幕 图中“酉”与“州”按左右结构自然长成“酬”。"
     },
     "scene": {
       "scene": "左边封口酒坛形成“酉”，右边三道水渠般的回礼台沿“州”排列，双手送上谢礼，组成“酬”。",
@@ -20,7 +20,7 @@ export const characterMedia = {
       "g5v1-l09-c01-u916c-words-image:g5v1-l09-c01-u916c-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u916c.webp",
         "label": "酬谢",
-        "alt": "酬谢就是用财物、行动或话语感谢别人 图中“酉”与“州”按左右结构自然长成“酬”。"
+        "alt": "酬谢是用财物或情意报答恩情；龙王拿出珍宝酬谢海力布救女之恩，开启了故事的序幕 图中“酉”与“州”按左右结构自然长成“酬”。"
       },
       "g5v1-l09-c01-u916c-words-image:g5v1-l09-c01-u916c-words-image-2": {
         "src": "/illustrations/meanings/m05.webp",
@@ -30,7 +30,7 @@ export const characterMedia = {
       "g5v1-l09-c01-u916c-words-image:g5v1-l09-c01-u916c-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u6b67.webp",
         "label": "歧途",
-        "alt": "歧途是偏离正确方向的道路，也比喻错误的发展方向 图中“止”与“支”按左右结构自然长成“歧”。"
+        "alt": "误入歧途需要警醒；父亲“糟糕透了”的严厉批评如同一剂良药，防止孩子在赞美中误入歧途 图中“止”与“支”按左右结构自然长成“歧”。"
       }
     }
   },
@@ -38,7 +38,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u8a93.webp",
       "label": "发誓",
-      "alt": "发誓就是非常郑重地说出自己的决心或保证 图中“折”与“言”按上下结构自然长成“誓”。"
+      "alt": "发誓指庄严立下誓言；海力布发誓绝不把动物的语言泄露给别人，默默遵守着约定 图中“折”与“言”按上下结构自然长成“誓”。"
     },
     "scene": {
       "scene": "上方双手折下信物沿“折”交叉，下方郑重说出的话排成“言”，上下组成“誓”。",
@@ -52,7 +52,7 @@ export const characterMedia = {
       "g5v1-l09-c02-u8a93-words-image:g5v1-l09-c02-u8a93-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u8a93.webp",
         "label": "发誓",
-        "alt": "发誓就是非常郑重地说出自己的决心或保证 图中“折”与“言”按上下结构自然长成“誓”。"
+        "alt": "发誓指庄严立下誓言；海力布发誓绝不把动物的语言泄露给别人，默默遵守着约定 图中“折”与“言”按上下结构自然长成“誓”。"
       },
       "g5v1-l09-c02-u8a93-words-image:g5v1-l09-c02-u8a93-words-image-0": {
         "src": "/illustrations/meanings/m08.webp",
@@ -62,7 +62,7 @@ export const characterMedia = {
       "g5v1-l09-c02-u8a93-words-image:g5v1-l09-c02-u8a93-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u80ce.webp",
         "label": "胎儿",
-        "alt": "胎儿是在母体内尚未出生的孩子 图中“月”与“台”按左右结构自然长成“胎”。"
+        "alt": "奇花初胎矞矞皇皇；含苞初绽的鲜花蕴含着无限生机，象征着蓬勃美好的新时代 图中“月”与“台”按左右结构自然长成“胎”。"
       }
     }
   },
@@ -70,7 +70,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u8c0e.webp",
       "label": "谎话",
-      "alt": "谎话是不真实、故意欺骗别人的话 图中“讠”与“荒”按左右结构自然长成“谎”。"
+      "alt": "谎话是不符合事实的假话；海力布为人诚实正直，从不说谎骗人，深得乡亲们的敬重 图中“讠”与“荒”按左右结构自然长成“谎”。"
     },
     "scene": {
       "scene": "左边说话框形成“讠”，右边荒草、弯路和隐藏人物沿“荒”铺开，话语走进荒路，组成“谎”。",
@@ -84,7 +84,7 @@ export const characterMedia = {
       "g5v1-l09-c03-u8c0e-words-image:g5v1-l09-c03-u8c0e-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u8c0e.webp",
         "label": "谎话",
-        "alt": "谎话是不真实、故意欺骗别人的话 图中“讠”与“荒”按左右结构自然长成“谎”。"
+        "alt": "谎话是不符合事实的假话；海力布为人诚实正直，从不说谎骗人，深得乡亲们的敬重 图中“讠”与“荒”按左右结构自然长成“谎”。"
       },
       "g5v1-l09-c03-u8c0e-words-image:g5v1-l09-c03-u8c0e-words-image-0": {
         "src": "/illustrations/meanings/m06.webp",
@@ -94,7 +94,7 @@ export const characterMedia = {
       "g5v1-l09-c03-u8c0e-words-image:g5v1-l09-c03-u8c0e-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u62d8.webp",
         "label": "拘束",
-        "alt": "拘束就是言行不自然，放不开 图中“扌”与“句”按左右结构自然长成“拘”。"
+        "alt": "拘束指受到局限束缚；诗人呼唤破除陈腐规矩的拘束，展现了求新求变的开阔眼界 图中“扌”与“句”按左右结构自然长成“拘”。"
       }
     }
   },
@@ -102,7 +102,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u727a.webp",
       "label": "牺牲",
-      "alt": "牺牲是为了更重要的人或事情舍弃自己的利益，甚至生命 图中“牛”与“西”按左右结构自然长成“牺”。"
+      "alt": "牺牲是为了正义与他人利益放弃生命；海力布为了拯救全村乡亲不惜牺牲自己，化作了坚硬的石头 图中“牛”与“西”按左右结构自然长成“牺”。"
     },
     "scene": {
       "scene": "左边守护家园的牛形成“牛”，右边夕阳落在西方窗格沿“西”铺开，牛坚定站立，组成“牺”。",
@@ -116,7 +116,7 @@ export const characterMedia = {
       "g5v1-l09-c04-u727a-words-image:g5v1-l09-c04-u727a-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u727a.webp",
         "label": "牺牲",
-        "alt": "牺牲是为了更重要的人或事情舍弃自己的利益，甚至生命 图中“牛”与“西”按左右结构自然长成“牺”。"
+        "alt": "牺牲是为了正义与他人利益放弃生命；海力布为了拯救全村乡亲不惜牺牲自己，化作了坚硬的石头 图中“牛”与“西”按左右结构自然长成“牺”。"
       },
       "g5v1-l09-c04-u727a-words-image:g5v1-l09-c04-u727a-words-image-2": {
         "src": "/illustrations/meanings/m04.webp",
@@ -126,7 +126,7 @@ export const characterMedia = {
       "g5v1-l09-c04-u727a-words-image:g5v1-l09-c04-u727a-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u6b96.webp",
         "label": "繁殖",
-        "alt": "繁殖是生物产生新个体，使种群延续 图中“歹”与“直”按左右结构自然长成“殖”。"
+        "alt": "繁殖生长生生不息；没有太阳提供的光和热，地球上的植物和动物就无法生存和繁衍后代 图中“歹”与“直”按左右结构自然长成“殖”。"
       }
     }
   },
@@ -134,7 +134,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u73cd.webp",
       "label": "珍宝",
-      "alt": "珍宝是珍贵、值得好好保存的物品 图中“王”与“㐱”按左右结构自然长成“珍”。"
+      "alt": "珍宝是极其贵重的宝物；龙王赠予海力布神奇的宝珠，让他能听懂飞禽走兽的语言 图中“王”与“㐱”按左右结构自然长成“珍”。"
     },
     "scene": {
       "scene": "左边三层玉架形成“王”，右边双手捧起细密宝珠，手指和珠光沿“㐱”排列，组成“珍”。",
@@ -148,7 +148,7 @@ export const characterMedia = {
       "g5v1-l09-c05-u73cd-words-image:g5v1-l09-c05-u73cd-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u73cd.webp",
         "label": "珍宝",
-        "alt": "珍宝是珍贵、值得好好保存的物品 图中“王”与“㐱”按左右结构自然长成“珍”。"
+        "alt": "珍宝是极其贵重的宝物；龙王赠予海力布神奇的宝珠，让他能听懂飞禽走兽的语言 图中“王”与“㐱”按左右结构自然长成“珍”。"
       },
       "g5v1-l09-c05-u73cd-words-image:g5v1-l09-c05-u73cd-words-image-0": {
         "src": "/illustrations/meanings/m05.webp",
@@ -158,7 +158,7 @@ export const characterMedia = {
       "g5v1-l09-c05-u73cd-words-image:g5v1-l09-c05-u73cd-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u6d25.webp",
         "label": "天津",
-        "alt": "天津是中国的直辖市；“津”也可指渡口或唾液 图中“氵”与“聿”按左右结构自然长成“津”。"
+        "alt": "津津有味沉醉书香；读书不仅能开阔眼界增长见识，更能带来津津有味的无穷乐趣与精神享受 图中“氵”与“聿”按左右结构自然长成“津”。"
       }
     }
   },
@@ -166,7 +166,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u53ee.webp",
       "label": "叮嘱",
-      "alt": "叮嘱就是反复、认真地提醒别人要记住某件事 图中“口”与“丁”按左右结构自然长成“叮”。"
+      "alt": "叮嘱是再三嘱咐提醒；龙女再三叮嘱含着宝珠不能泄露秘密，埋下了后来情节发展的伏笔 图中“口”与“丁”按左右结构自然长成“叮”。"
     },
     "scene": {
       "scene": "左边张口提醒形成“口”，右边一枚钉形提示牌沿“丁”立起，清脆提醒组成“叮”。",
@@ -185,12 +185,12 @@ export const characterMedia = {
       "g5v1-l09-c06-u53ee-words-image:g5v1-l09-c06-u53ee-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u7751.webp",
         "label": "眼睑",
-        "alt": "眼睑就是眼睛外面能够开合的皮肤，也叫眼皮 图中“目”与“佥”按左右结构自然长成“睑”。"
+        "alt": "眼睑是保护眼球的眼皮；小鸟闭上浅红色的眼睑安心入睡，将信任的细节表现得细腻动人 图中“目”与“佥”按左右结构自然长成“睑”。"
       },
       "g5v1-l09-c06-u53ee-words-image:g5v1-l09-c06-u53ee-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u53ee.webp",
         "label": "叮嘱",
-        "alt": "叮嘱就是反复、认真地提醒别人要记住某件事 图中“口”与“丁”按左右结构自然长成“叮”。"
+        "alt": "叮嘱是再三嘱咐提醒；龙女再三叮嘱含着宝珠不能泄露秘密，埋下了后来情节发展的伏笔 图中“口”与“丁”按左右结构自然长成“叮”。"
       }
     }
   },
@@ -198,7 +198,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u5631.webp",
       "label": "叮嘱",
-      "alt": "叮嘱表示认真告诉别人应该怎样做，并希望他记住 图中“口”与“属”按左右结构自然长成“嘱”。"
+      "alt": "嘱咐指再三叮咛关照；海力布牢记龙女的嘱咐，运用听懂鸟语的本领打到更多猎物分给大家 图中“口”与“属”按左右结构自然长成“嘱”。"
     },
     "scene": {
       "scene": "左边说话口形成“口”，右边长长任务清单、屋檐和脚步沿“属”展开，合成“嘱”。",
@@ -212,7 +212,7 @@ export const characterMedia = {
       "g5v1-l09-c07-u5631-words-image:g5v1-l09-c07-u5631-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u5631.webp",
         "label": "叮嘱",
-        "alt": "叮嘱表示认真告诉别人应该怎样做，并希望他记住 图中“口”与“属”按左右结构自然长成“嘱”。"
+        "alt": "嘱咐指再三叮咛关照；海力布牢记龙女的嘱咐，运用听懂鸟语的本领打到更多猎物分给大家 图中“口”与“属”按左右结构自然长成“嘱”。"
       },
       "g5v1-l09-c07-u5631-words-image:g5v1-l09-c07-u5631-words-image-0": {
         "src": "/illustrations/meanings/m07.webp",
@@ -222,7 +222,7 @@ export const characterMedia = {
       "g5v1-l09-c07-u5631-words-image:g5v1-l09-c07-u5631-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u6986.webp",
         "label": "榆树",
-        "alt": "榆树是一种常见落叶树，木材坚实，果实叫榆钱 图中“木”与“俞”按左右结构自然长成“榆”。"
+        "alt": "榆关塞外风雪交加；将士们行军至山海关榆关防线，塞外夜色更显苍凉雄浑 图中“木”与“俞”按左右结构自然长成“榆”。"
       }
     }
   },
@@ -230,13 +230,13 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u584c.webp",
       "label": "倒塌",
-      "alt": "倒塌就是建筑或堆放的东西向下坠落、失去支撑 图中“土”与“𦐇”按左右结构自然长成“塌”。"
+      "alt": "倒塌指山体崩塌滑落；听到大山即将倒塌的消息，海力布焦急地劝说乡亲们立刻搬家 图中“土”与“𦐇”按左右结构自然长成“塌”。"
     },
     "scene": {
-      "scene": "左边土墙形成“土”，右边屋顶和双翼支架沿“𦐇”下沉折叠，墙架一起倒下，组成“塌”。",
+      "scene": "左边坚实土墙“土”，右边失去支撑的屋顶和折叠支架“𦐇”向下坠落，墙架一起倒下，组成“塌”。",
       "cues": [
-        "左边土墙形成“土”。",
-        "右边屋顶和双翼支架沿“𦐇”下沉折叠。"
+        "左边坚实土墙“土”。",
+        "右边失去支撑的屋顶和折叠支架“𦐇”向下坠落。"
       ]
     },
     "transcript": "鸟儿告诉海力布，大山将要倒塌，洪水会淹没村庄。塌是左右结构，左边是提土旁，右边可以想成失去支撑的屋顶和折叠支架。墙架向下坠落。倒塌就是建筑或堆放物失去支撑，向下落下。正因为大山会倒塌，乡亲们必须马上搬走，不能再等。",
@@ -244,7 +244,7 @@ export const characterMedia = {
       "g5v1-l09-c08-u584c-words-image:g5v1-l09-c08-u584c-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u584c.webp",
         "label": "倒塌",
-        "alt": "倒塌就是建筑或堆放的东西向下坠落、失去支撑 图中“土”与“𦐇”按左右结构自然长成“塌”。"
+        "alt": "倒塌指山体崩塌滑落；听到大山即将倒塌的消息，海力布焦急地劝说乡亲们立刻搬家 图中“土”与“𦐇”按左右结构自然长成“塌”。"
       },
       "g5v1-l09-c08-u584c-words-image:g5v1-l09-c08-u584c-words-image-0": {
         "src": "/illustrations/meanings/m05.webp",
@@ -262,7 +262,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u7126.webp",
       "label": "焦急",
-      "alt": "焦急就是心里非常着急，难以平静 图中“隹”与“灬”按上下结构自然长成“焦”。"
+      "alt": "焦急是心里十分着急；眼看灾难即将来临乡亲们却不肯搬迁，海力布急得热泪盈眶 图中“隹”与“灬”按上下结构自然长成“焦”。"
     },
     "scene": {
       "scene": "上方一只来回张望的鸟形“隹”站在架上，下方四点热火形成“灬”，像急得发热，组成“焦”。",
@@ -281,12 +281,12 @@ export const characterMedia = {
       "g5v1-l09-c09-u7126-words-image:g5v1-l09-c09-u7126-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u7f55.webp",
         "label": "稀罕",
-        "alt": "稀罕表示少见而让人觉得新奇，也可以表示喜爱 图中“⺳”与“干”按上下结构自然长成“罕”。"
+        "alt": "稀罕指稀奇少见；牛郎织女男耕女织、情深意重，过着令人羡慕的平静美好日子 图中“⺳”与“干”按上下结构自然长成“罕”。"
       },
       "g5v1-l09-c09-u7126-words-image:g5v1-l09-c09-u7126-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u7126.webp",
         "label": "焦急",
-        "alt": "焦急就是心里非常着急，难以平静 图中“隹”与“灬”按上下结构自然长成“焦”。"
+        "alt": "焦急是心里十分着急；眼看灾难即将来临乡亲们却不肯搬迁，海力布急得热泪盈眶 图中“隹”与“灬”按上下结构自然长成“焦”。"
       }
     }
   },
@@ -294,7 +294,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u5ef6.webp",
       "label": "延迟",
-      "alt": "延迟就是比原定时间更晚发生或完成 图中“廴”与“丿”与“止”按上下结构自然长成“延”。"
+      "alt": "延迟指拖延耽误时间；灾难迫在眉睫容不得半点延迟，海力布果断作出了最后的抉择 图中“廴”与“丿”与“止”按上下结构自然长成“延”。"
     },
     "scene": {
       "scene": "一条长廊沿“廴”转折延伸，入口一笔“丿”引向内部“止”形脚步，绕远后才到终点，形成“延”。",
@@ -314,12 +314,12 @@ export const characterMedia = {
       "g5v1-l09-c10-u5ef6-words-image:g5v1-l09-c10-u5ef6-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u77e3.webp",
         "label": "矣",
-        "alt": "矣是文言语气词，常放在句末，表示肯定、完成或感叹 图中“厶”与“矢”按上下结构自然长成“矣”。"
+        "alt": "学而不厌诲人不倦矣；朱熹与孔子的读书心法跨越千年，至今依然指引着求学者的方向 图中“厶”与“矢”按上下结构自然长成“矣”。"
       },
       "g5v1-l09-c10-u5ef6-words-image:g5v1-l09-c10-u5ef6-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u5ef6.webp",
         "label": "延迟",
-        "alt": "延迟就是比原定时间更晚发生或完成 图中“廴”与“丿”与“止”按上下结构自然长成“延”。"
+        "alt": "延迟指拖延耽误时间；灾难迫在眉睫容不得半点延迟，海力布果断作出了最后的抉择 图中“廴”与“丿”与“止”按上下结构自然长成“延”。"
       }
     }
   },
@@ -327,7 +327,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u707e.webp",
       "label": "灾难",
-      "alt": "灾难是给生命、生活或环境造成严重损害的事情 图中“宀”与“火”按上下结构自然长成“灾”。"
+      "alt": "灾难是可怕的祸患危机；面对即将覆灭村庄的大水灾难，海力布把众人的安危放在第一位 图中“宀”与“火”按上下结构自然长成“灾”。"
     },
     "scene": {
       "scene": "上方屋顶形成“宀”，下方火焰沿“火”升起；安全画面中人们及时灭火，屋与火组成“灾”。",
@@ -346,12 +346,12 @@ export const characterMedia = {
       "g5v1-l09-c11-u707e-words-image:g5v1-l09-c11-u707e-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u9e64.webp",
         "label": "白鹤",
-        "alt": "白鹤是长腿、长颈、羽毛洁白的大型水鸟 图中“隺”与“鸟”按左右结构自然长成“鹤”。"
+        "alt": "白鹤是体型较大、羽色洁白的水鸟；课文用白鹤与白鹭对比，更显出白鹭身段的玲珑适度 图中“隺”与“鸟”按左右结构自然长成“鹤”。"
       },
       "g5v1-l09-c11-u707e-words-image:g5v1-l09-c11-u707e-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u707e.webp",
         "label": "灾难",
-        "alt": "灾难是给生命、生活或环境造成严重损害的事情 图中“宀”与“火”按上下结构自然长成“灾”。"
+        "alt": "灾难是可怕的祸患危机；面对即将覆灭村庄的大水灾难，海力布把众人的安危放在第一位 图中“宀”与“火”按上下结构自然长成“灾”。"
       }
     }
   },
@@ -359,7 +359,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u6094.webp",
       "label": "后悔",
-      "alt": "后悔是事后觉得原来的做法不对，希望能够改正 图中“忄”与“每”按左右结构自然长成“悔”。"
+      "alt": "后悔指事后感到惋惜懊恼；海力布为了乡亲们的生命说出真相，虽然变成石头却无怨无悔 图中“忄”与“每”按左右结构自然长成“悔”。"
     },
     "scene": {
       "scene": "左边一颗回头反思的心形成“忄”，右边每天翻看的改错日历沿“每”排列，组成“悔”。",
@@ -378,12 +378,12 @@ export const characterMedia = {
       "g5v1-l09-c12-u6094-words-image:g5v1-l09-c12-u6094-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u96cf.webp",
         "label": "雏鸟",
-        "alt": "雏鸟是刚孵出或还没有长大的小鸟 图中“刍”与“隹”按左右结构自然长成“雏”。"
+        "alt": "雏鸟是刚出生不久的幼鸟；可爱的雏鸟毛茸茸地探出头来，显得格外娇小惹人怜爱 图中“刍”与“隹”按左右结构自然长成“雏”。"
       },
       "g5v1-l09-c12-u6094-words-image:g5v1-l09-c12-u6094-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u6094.webp",
         "label": "后悔",
-        "alt": "后悔是事后觉得原来的做法不对，希望能够改正 图中“忄”与“每”按左右结构自然长成“悔”。"
+        "alt": "后悔指事后感到惋惜懊恼；海力布为了乡亲们的生命说出真相，虽然变成石头却无怨无悔 图中“忄”与“每”按左右结构自然长成“悔”。"
       }
     }
   },
@@ -391,7 +391,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u6276.webp",
       "label": "扶着老人",
-      "alt": "扶持就是用手帮助别人站稳或继续前进 图中“扌”与“夫”按左右结构自然长成“扶”。"
+      "alt": "扶老携幼是相互照顾奔走；乡亲们含着热泪扶老携幼撤离村庄，永远铭记海力布的恩情 图中“扌”与“夫”按左右结构自然长成“扶”。"
     },
     "scene": {
       "scene": "左边伸出的手臂形成“扌”，右边张开双臂站立的人形成“夫”，手托住人，组成“扶”。",
@@ -410,12 +410,12 @@ export const characterMedia = {
       "g5v1-l09-c13-u6276-words-image:g5v1-l09-c13-u6276-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u4ea9.webp",
         "label": "半亩",
-        "alt": "亩是计量土地面积的单位，常用来计算田地大小 图中“亠”与“田”按上下结构自然长成“亩”。"
+        "alt": "亩是计算土地面积的单位；一家人在后园半亩空地上辛勤翻土播种，收获了饱满朴实的花生 图中“亠”与“田”按上下结构自然长成“亩”。"
       },
       "g5v1-l09-c13-u6276-words-image:g5v1-l09-c13-u6276-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u6276.webp",
         "label": "扶着老人",
-        "alt": "扶持就是用手帮助别人站稳或继续前进 图中“扌”与“夫”按左右结构自然长成“扶”。"
+        "alt": "扶老携幼是相互照顾奔走；乡亲们含着热泪扶老携幼撤离村庄，永远铭记海力布的恩情 图中“扌”与“夫”按左右结构自然长成“扶”。"
       }
     }
   }

@@ -6,7 +6,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u9e35.webp",
       "label": "鸵鸟",
-      "alt": "鸵鸟是不会飞、但奔跑速度很快的大型鸟 图中“鸟”与“它”按左右结构自然长成“鸵”。"
+      "alt": "鸵鸟是善于奔跑的巨型鸟类；课文以鸵鸟为起点展开速度对比，引人入胜 图中“鸟”与“它”按左右结构自然长成“鸵”。"
     },
     "scene": {
       "scene": "左边鸵鸟的翅尾收成“鸟”，右边长颈和身体绕着沙丘沿“它”弯下，合成奔跑的“鸵”。",
@@ -30,7 +30,7 @@ export const characterMedia = {
       "g5v1-l07-c01-u9e35-words-image:g5v1-l07-c01-u9e35-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u9e35.webp",
         "label": "鸵鸟",
-        "alt": "鸵鸟是不会飞、但奔跑速度很快的大型鸟 图中“鸟”与“它”按左右结构自然长成“鸵”。"
+        "alt": "鸵鸟是善于奔跑的巨型鸟类；课文以鸵鸟为起点展开速度对比，引人入胜 图中“鸟”与“它”按左右结构自然长成“鸵”。"
       }
     }
   },
@@ -38,12 +38,12 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u8d62.webp",
       "label": "赢家",
-      "alt": "赢家是在比赛或较量中取得胜利的人 图中“𣎆”与“贝”按上下结构自然长成“赢”。"
+      "alt": "赢家指在竞争中胜出的一方；在陆地奔跑的较量中，猎豹成了当之无愧的赢家 图中“𣎆”与“贝”按上下结构自然长成“赢”。"
     },
     "scene": {
-      "scene": "上方胜利旗、比赛台和并肩队员层层搭成“𣎆”，下方珍贵奖杯托着“贝”，共同组成“赢”。",
+      "scene": "上方胜利旗、比赛台和并肩队员搭成齐心合力的队伍“𣎆”，下方珍贵奖杯托着“贝”，共同组成“赢”。",
       "cues": [
-        "上方胜利旗、比赛台和并肩队员层层搭成“𣎆”。",
+        "上方胜利旗、比赛台和并肩队员搭成齐心合力的队伍“𣎆”。",
         "下方珍贵奖杯托着“贝”。"
       ]
     },
@@ -57,12 +57,12 @@ export const characterMedia = {
       "g5v1-l07-c02-u8d62-words-image:g5v1-l07-c02-u8d62-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u60f0.webp",
         "label": "懒惰",
-        "alt": "懒惰就是不愿劳动或行动，总想少做事情 图中“忄”与“左”与“月”按左右结构自然长成“惰”。"
+        "alt": "懒惰是不肯勤快出力的心态；乡亲们走过搭石绝不懒惰停留，而是保持匀速，确保步伐轻稳 图中“忄”与“左”与“月”按左右结构自然长成“惰”。"
       },
       "g5v1-l07-c02-u8d62-words-image:g5v1-l07-c02-u8d62-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u8d62.webp",
         "label": "赢家",
-        "alt": "赢家是在比赛或较量中取得胜利的人 图中“𣎆”与“贝”按上下结构自然长成“赢”。"
+        "alt": "赢家指在竞争中胜出的一方；在陆地奔跑的较量中，猎豹成了当之无愧的赢家 图中“𣎆”与“贝”按上下结构自然长成“赢”。"
       }
     }
   },
@@ -70,7 +70,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u51a0.webp",
       "label": "冠军",
-      "alt": "冠军是在比赛中取得第一名的人或队伍 图中“冖”与“㝴”按上下结构自然长成“冠”。"
+      "alt": "冠军是夺得第一名的优胜者；游隼向下俯冲的速度惊人，是俯冲运动中的速度冠军 图中“冖”与“㝴”按上下结构自然长成“冠”。"
     },
     "scene": {
       "scene": "上方领奖棚盖形成“冖”，下方帽冠、手腕和奖台沿“㝴”组合，像把冠军冠冕戴好，组成“冠”。",
@@ -84,7 +84,7 @@ export const characterMedia = {
       "g5v1-l07-c03-u51a0-words-image:g5v1-l07-c03-u51a0-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u51a0.webp",
         "label": "冠军",
-        "alt": "冠军是在比赛中取得第一名的人或队伍 图中“冖”与“㝴”按上下结构自然长成“冠”。"
+        "alt": "冠军是夺得第一名的优胜者；游隼向下俯冲的速度惊人，是俯冲运动中的速度冠军 图中“冖”与“㝴”按上下结构自然长成“冠”。"
       },
       "g5v1-l07-c03-u51a0-words-image:g5v1-l07-c03-u51a0-words-image-2": {
         "src": "/illustrations/meanings/m03.webp",
@@ -94,7 +94,7 @@ export const characterMedia = {
       "g5v1-l07-c03-u51a0-words-image:g5v1-l07-c03-u51a0-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u60da.webp",
         "label": "恍惚",
-        "alt": "恍惚表示精神不集中，眼前和心里的感觉都不清晰 图中“忄”与“忽”按左右结构自然长成“惚”。"
+        "alt": "恍惚入梦追忆往昔；梦中父亲摇橹的背影依然清晰，无声的父爱穿越岁月历久弥新 图中“忄”与“忽”按左右结构自然长成“惚”。"
       }
     }
   },
@@ -102,7 +102,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u4fef.webp",
       "label": "俯冲",
-      "alt": "俯冲就是从高处向下快速冲去 图中“亻”与“府”按左右结构自然长成“俯”。"
+      "alt": "俯冲指从高空向下急速冲去；游隼在俯冲捕食时展现出的极速，令人叹为观止 图中“亻”与“府”按左右结构自然长成“俯”。"
     },
     "scene": {
       "scene": "左边侧身人物形成“亻”，右边高台、弯腰身体和向下路线沿“府”展开，合成“俯”。",
@@ -121,12 +121,12 @@ export const characterMedia = {
       "g5v1-l07-c04-u4fef-words-image:g5v1-l07-c04-u4fef-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u537f.webp",
         "label": "上卿",
-        "alt": "上卿是古代地位很高的官职 图中“卯”按独体结构自然长成“卿”。"
+        "alt": "上卿是古代地位尊崇的高级官职；蔺相如因功被拜为上卿，由此引发了与廉颇的一场风波 图中“卯”按独体结构自然长成“卿”。"
       },
       "g5v1-l07-c04-u4fef-words-image:g5v1-l07-c04-u4fef-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u4fef.webp",
         "label": "俯冲",
-        "alt": "俯冲就是从高处向下快速冲去 图中“亻”与“府”按左右结构自然长成“俯”。"
+        "alt": "俯冲指从高空向下急速冲去；游隼在俯冲捕食时展现出的极速，令人叹为观止 图中“亻”与“府”按左右结构自然长成“俯”。"
       }
     }
   },
@@ -134,7 +134,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u55b7.webp",
       "label": "喷气",
-      "alt": "喷气就是气体从小口中快速冲出来 图中“口”与“贲”按左右结构自然长成“喷”。"
+      "alt": "喷气是气体高速向外喷射；喷气式飞机依靠反冲力量飞翔，速度远超普通鸟类 图中“口”与“贲”按左右结构自然长成“喷”。"
     },
     "scene": {
       "scene": "左边喷口形成“口”，右边压力罐、交叉管和喷出颗粒沿“贲”排列，合成“喷”。",
@@ -153,12 +153,12 @@ export const characterMedia = {
       "g5v1-l07-c05-u55b7-words-image:g5v1-l07-c05-u55b7-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u5fcd.webp",
         "label": "忍受",
-        "alt": "忍受就是遇到困难或痛苦时暂时承受住 图中“刃”与“心”按上下结构自然长成“忍”。"
+        "alt": "忍受艰辛毫无怨言；母亲默默忍受着常人难以想象的辛苦，一心只盼望着孩子能多读好书 图中“刃”与“心”按上下结构自然长成“忍”。"
       },
       "g5v1-l07-c05-u55b7-words-image:g5v1-l07-c05-u55b7-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u55b7.webp",
         "label": "喷气",
-        "alt": "喷气就是气体从小口中快速冲出来 图中“口”与“贲”按左右结构自然长成“喷”。"
+        "alt": "喷气是气体高速向外喷射；喷气式飞机依靠反冲力量飞翔，速度远超普通鸟类 图中“口”与“贲”按左右结构自然长成“喷”。"
       }
     }
   },
@@ -166,7 +166,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u679a.webp",
       "label": "一枚",
-      "alt": "枚是量词，可以用来数较小、形状相近的东西 图中“木”与“⺙”按左右结构自然长成“枚”。"
+      "alt": "枚是用于计算细长物件的量词；一枚火箭携带着巨大的能量冲向太空，展现了科技的力量 图中“木”与“⺙”按左右结构自然长成“枚”。"
     },
     "scene": {
       "scene": "左边枝干清楚的树形成“木”，右边一只手用短杖逐个点数果实沿“⺙”迈步，合成“枚”。",
@@ -180,7 +180,7 @@ export const characterMedia = {
       "g5v1-l07-c06-u679a-words-image:g5v1-l07-c06-u679a-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u679a.webp",
         "label": "一枚",
-        "alt": "枚是量词，可以用来数较小、形状相近的东西 图中“木”与“⺙”按左右结构自然长成“枚”。"
+        "alt": "枚是用于计算细长物件的量词；一枚火箭携带着巨大的能量冲向太空，展现了科技的力量 图中“木”与“⺙”按左右结构自然长成“枚”。"
       },
       "g5v1-l07-c06-u679a-words-image:g5v1-l07-c06-u679a-words-image-0": {
         "src": "/illustrations/meanings/m06.webp",
@@ -190,7 +190,7 @@ export const characterMedia = {
       "g5v1-l07-c06-u679a-words-image:g5v1-l07-c06-u679a-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u54c7.webp",
         "label": "好哇",
-        "alt": "哇是表示惊讶、赞叹等语气的声音 图中“口”与“圭”按左右结构自然长成“哇”。"
+        "alt": "哇地一声热泪盈眶；目睹母亲在工厂里的艰辛劳作，孩子心中涌起无尽的酸楚与感激 图中“口”与“圭”按左右结构自然长成“哇”。"
       }
     }
   },
@@ -198,16 +198,16 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u7bad.webp",
       "label": "火箭",
-      "alt": "弓箭由弓和箭组成，箭射出后速度很快 图中“⺮”与“前”按上下结构自然长成“箭”。"
+      "alt": "火箭是能飞出大气层的航天器；火箭的高速飞行为人类探索浩瀚宇宙打开了大门 图中“⺮”与“前”按上下结构自然长成“箭”。"
     },
     "scene": {
-      "scene": "上方两簇箭羽形成“⺮”，下方箭头、弓台和月形箭槽沿“前”排列，组成“箭”。",
+      "scene": "上方两簇轻盈竹羽排成竹字头“⺮”，下方箭头、弓台和前行方向“前”紧密组合，组成“箭”。",
       "cues": [
-        "上方两簇箭羽形成“⺮”。",
-        "下方箭头、弓台和月形箭槽沿“前”排列。"
+        "上方两簇轻盈竹羽排成竹字头“⺮”。",
+        "下方箭头、弓台和前行方向“前”紧密组合。"
       ]
     },
-    "transcript": "课文说，想到月球去需要一枚火箭，它的最大速度能达到每小时四万千米。火箭是靠发动机产生推力、能够高速飞行的飞行器。箭是上下结构，上面竹字头像两簇箭羽，下面前字指向前方。把箭羽和前进方向放在一起，只是帮助记住字形。火箭进入比较以后，喷气式飞机的速度也显得慢了许多。",
+    "transcript": "箭，火箭的箭，读第四声。它是上下结构，上面竹字头像两簇轻盈的箭羽，下面由前字指向正前方，箭羽与朝向相合即为箭。火箭是依靠推力高速飞行的航天器。课文用火箭每小时四万千米的高速与飞机对比，说明速度的层层递进，带领我们一步步追向浩瀚太空。",
     "practiceOptionVisuals": {
       "g5v1-l07-c07-u7bad-words-image:g5v1-l07-c07-u7bad-words-image-2": {
         "src": "/illustrations/meanings/m08.webp",
@@ -217,12 +217,12 @@ export const characterMedia = {
       "g5v1-l07-c07-u7bad-words-image:g5v1-l07-c07-u7bad-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u9274.webp",
         "label": "鉴赏",
-        "alt": "鉴赏就是通过观察和思考来辨别、欣赏作品的特点和价值 图中“〢”与“丿”与“一”与“丶”与“金”按上下结构自然长成“鉴”。"
+        "alt": "鉴别品味日益成熟；从最初囫囵吞枣到后来懂得细细鉴赏，作者在阅读中练就了一双敏锐睿智的慧眼 图中“〢”与“丿”与“一”与“丶”与“金”按上下结构自然长成“鉴”。"
       },
       "g5v1-l07-c07-u7bad-words-image:g5v1-l07-c07-u7bad-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u7bad.webp",
         "label": "火箭",
-        "alt": "弓箭由弓和箭组成，箭射出后速度很快 图中“⺮”与“前”按上下结构自然长成“箭”。"
+        "alt": "火箭是能飞出大气层的航天器；火箭的高速飞行为人类探索浩瀚宇宙打开了大门 图中“⺮”与“前”按上下结构自然长成“箭”。"
       }
     }
   },
@@ -230,7 +230,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u6d69.webp",
       "label": "浩瀚",
-      "alt": "浩大形容水势、声势或规模非常大 图中“氵”与“告”按左右结构自然长成“浩”。"
+      "alt": "浩瀚形容广大辽阔无边无际；在浩瀚的宇宙星空中，光速成了传递信息的最快使者 图中“氵”与“告”按左右结构自然长成“浩”。"
     },
     "scene": {
       "scene": "左边三股宽阔水流形成“氵”，右边高台上的号角和方形回声口沿“告”立起，合成“浩”。",
@@ -249,12 +249,12 @@ export const characterMedia = {
       "g5v1-l07-c08-u6d69-words-image:g5v1-l07-c08-u6d69-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u85d3.webp",
         "label": "苔藓",
-        "alt": "苔藓是一类贴着潮湿地面或树皮生长的绿色小植物 图中“艹”与“鲜”按上下结构自然长成“藓”。"
+        "alt": "苔藓柔软保温干燥；松鼠采集柔软的苔藓铺在窝底，把小窝打理得格外暖和舒坦 图中“艹”与“鲜”按上下结构自然长成“藓”。"
       },
       "g5v1-l07-c08-u6d69-words-image:g5v1-l07-c08-u6d69-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u6d69.webp",
         "label": "浩瀚",
-        "alt": "浩大形容水势、声势或规模非常大 图中“氵”与“告”按左右结构自然长成“浩”。"
+        "alt": "浩瀚形容广大辽阔无边无际；在浩瀚的宇宙星空中，光速成了传递信息的最快使者 图中“氵”与“告”按左右结构自然长成“浩”。"
       }
     }
   },
@@ -262,13 +262,13 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u7b52.webp",
       "label": "手电筒",
-      "alt": "圆筒是上下粗细相近、内部中空的圆柱形物体 图中“⺮”与“同”按上下结构自然长成“筒”。"
+      "alt": "手电筒是便携的照明工具；打开手电筒射出一束光柱，课文由身边事物引出了惊人的光速 图中“⺮”与“同”按上下结构自然长成“筒”。"
     },
     "scene": {
-      "scene": "上方两簇竹叶形成“⺮”，下方圆筒顶口、筒壁和内孔沿“同”搭成，组成“筒”。",
+      "scene": "上方青翠竹节排成竹字头“⺮”，下方圆筒顶口、筒壁和内孔“同”搭成，组成“筒”。",
       "cues": [
-        "上方两簇竹叶形成“⺮”。",
-        "下方圆筒顶口、筒壁和内孔沿“同”搭成。"
+        "上方青翠竹节排成竹字头“⺮”。",
+        "下方圆筒顶口、筒壁和内孔“同”搭成。"
       ]
     },
     "transcript": "按下手电筒的开关，立刻出现一束光柱，课文由这个身边物件讲到光速。手电筒是能发出光束、方便携带的照明工具。筒是上下结构，上面竹字头像两簇竹叶，下面相同的同可以想成直筒的筒壁和内孔。光从筒口射出，字的上下位置也跟着清楚了。这个小物件让每秒三十万千米的光速不再遥远。",
@@ -276,7 +276,7 @@ export const characterMedia = {
       "g5v1-l07-c09-u7b52-words-image:g5v1-l07-c09-u7b52-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u7b52.webp",
         "label": "手电筒",
-        "alt": "圆筒是上下粗细相近、内部中空的圆柱形物体 图中“⺮”与“同”按上下结构自然长成“筒”。"
+        "alt": "手电筒是便携的照明工具；打开手电筒射出一束光柱，课文由身边事物引出了惊人的光速 图中“⺮”与“同”按上下结构自然长成“筒”。"
       },
       "g5v1-l07-c09-u7b52-words-image:g5v1-l07-c09-u7b52-words-image-0": {
         "src": "/illustrations/meanings/m06.webp",
@@ -286,7 +286,7 @@ export const characterMedia = {
       "g5v1-l07-c09-u7b52-words-image:g5v1-l07-c09-u7b52-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u74a7.webp",
         "label": "和氏璧",
-        "alt": "和氏璧是故事中非常珍贵的一块美玉 图中“辟”与“玉”按上下结构自然长成“璧”。"
+        "alt": "和氏璧是天下闻名的绝世美玉；围绕和氏璧的归属，蔺相如在秦廷上机智周旋，完璧归赵 图中“辟”与“玉”按上下结构自然长成“璧”。"
       }
     }
   },
@@ -294,7 +294,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u675f.webp",
       "label": "一束",
-      "alt": "一束表示捆在一起的一把东西，也可以形容聚拢的光 图中“木”与“口”按穿插结构自然长成“束”。"
+      "alt": "一束指聚拢在一起的一线光芒；一束光线以每秒三十万千米的速度前行，快得令人难以置信 图中“木”与“口”按穿插结构自然长成“束”。"
     },
     "scene": {
       "scene": "树枝沿“木”伸展，中央方形束带形成“口”把枝条扎紧，整捆自然长成“束”。",
@@ -308,7 +308,7 @@ export const characterMedia = {
       "g5v1-l07-c10-u675f-words-image:g5v1-l07-c10-u675f-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u675f.webp",
         "label": "一束",
-        "alt": "一束表示捆在一起的一把东西，也可以形容聚拢的光 图中“木”与“口”按穿插结构自然长成“束”。"
+        "alt": "一束指聚拢在一起的一线光芒；一束光线以每秒三十万千米的速度前行，快得令人难以置信 图中“木”与“口”按穿插结构自然长成“束”。"
       },
       "g5v1-l07-c10-u675f-words-image:g5v1-l07-c10-u675f-words-image-2": {
         "src": "/illustrations/meanings/m08.webp",
@@ -318,7 +318,7 @@ export const characterMedia = {
       "g5v1-l07-c10-u675f-words-image:g5v1-l07-c10-u675f-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u8c28.webp",
         "label": "谨慎",
-        "alt": "谨慎就是做事认真小心，事先想到可能的问题 图中“讠”与“堇”按左右结构自然长成“谨”。"
+        "alt": "谨慎审视不断精进；在爱与警醒的双轨伴随下，作者学会了谨慎修改作品，走得更加稳健成熟 图中“讠”与“堇”按左右结构自然长成“谨”。"
       }
     }
   },
@@ -326,7 +326,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u8d64.webp",
       "label": "赤道",
-      "alt": "赤道是环绕地球中部、与南北两极距离相等的假想线 图中“赤”按独体结构自然长成“赤”。"
+      "alt": "赤道是地球表面最长的纬线圈；光一秒钟能在地球赤道转七圈多，形象地说明了光速之快 图中“赤”按独体结构自然长成“赤”。"
     },
     "scene": {
       "scene": "一条红色地面横线和中央观测柱沿“土”架起，下方四点热光补齐笔势，形成“赤”。",
@@ -344,12 +344,12 @@ export const characterMedia = {
       "g5v1-l07-c11-u8d64-words-image:g5v1-l07-c11-u8d64-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u53ec.webp",
         "label": "召集",
-        "alt": "召集就是通知许多人到同一个地方集合 图中“刀”与“口”按上下结构自然长成“召”。"
+        "alt": "召集是通知众人聚集商量；赵王召集大臣商议对策，在危难关头相如挺身而出 图中“刀”与“口”按上下结构自然长成“召”。"
       },
       "g5v1-l07-c11-u8d64-words-image:g5v1-l07-c11-u8d64-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u8d64.webp",
         "label": "赤道",
-        "alt": "赤道是环绕地球中部、与南北两极距离相等的假想线 图中“赤”按独体结构自然长成“赤”。"
+        "alt": "赤道是地球表面最长的纬线圈；光一秒钟能在地球赤道转七圈多，形象地说明了光速之快 图中“赤”按独体结构自然长成“赤”。"
       }
     }
   },
@@ -357,7 +357,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u5708.webp",
       "label": "圆圈",
-      "alt": "圆圈是首尾相连、没有棱角的环形 图中“囗”与“卷”按全包围结构自然长成“圈”。"
+      "alt": "圆圈指环绕一周的轨迹；光芒环绕地球转圈的生动比喻，让抽象的天文数字变得可感可知 图中“囗”与“卷”按全包围结构自然长成“圈”。"
     },
     "scene": {
       "scene": "外面一圈围栏形成“囗”，里面卷起的软垫和弯腿沿“卷”盘好，组成里外相套的“圈”。",
@@ -381,7 +381,7 @@ export const characterMedia = {
       "g5v1-l07-c12-u5708-words-image:g5v1-l07-c12-u5708-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u5708.webp",
         "label": "圆圈",
-        "alt": "圆圈是首尾相连、没有棱角的环形 图中“囗”与“卷”按全包围结构自然长成“圈”。"
+        "alt": "圆圈指环绕一周的轨迹；光芒环绕地球转圈的生动比喻，让抽象的天文数字变得可感可知 图中“囗”与“卷”按全包围结构自然长成“圈”。"
       }
     }
   },
@@ -389,7 +389,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u7f6e.webp",
       "label": "难以置信",
-      "alt": "位置表示人或物所在的地方 图中“罒”与“直”按上下结构自然长成“置”。"
+      "alt": "难以置信形容超出想象难以相信；光速的不可思议，激发了我们探索自然规律的无限好奇 图中“罒”与“直”按上下结构自然长成“置”。"
     },
     "scene": {
       "scene": "上方定位网格形成“罒”，下方笔直标杆、观察眼和底座沿“直”对齐，组成“置”。",
@@ -403,7 +403,7 @@ export const characterMedia = {
       "g5v1-l07-c13-u7f6e-words-image:g5v1-l07-c13-u7f6e-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u7f6e.webp",
         "label": "难以置信",
-        "alt": "位置表示人或物所在的地方 图中“罒”与“直”按上下结构自然长成“置”。"
+        "alt": "难以置信形容超出想象难以相信；光速的不可思议，激发了我们探索自然规律的无限好奇 图中“罒”与“直”按上下结构自然长成“置”。"
       },
       "g5v1-l07-c13-u7f6e-words-image:g5v1-l07-c13-u7f6e-words-image-0": {
         "src": "/illustrations/meanings/m03.webp",
@@ -413,7 +413,7 @@ export const characterMedia = {
       "g5v1-l07-c13-u7f6e-words-image:g5v1-l07-c13-u7f6e-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u524a.webp",
         "label": "削弱",
-        "alt": "削弱就是使力量、能力或影响变小 图中“肖”与“刂”按左右结构自然长成“削”。"
+        "alt": "削弱指使力量或威望变小；秦国企图削弱赵国的威势，却屡屡在相如面前碰壁 图中“肖”与“刂”按左右结构自然长成“削”。"
       }
     }
   }

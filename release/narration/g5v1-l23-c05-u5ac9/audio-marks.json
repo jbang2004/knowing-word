@@ -2,762 +2,673 @@
   "marks": [
     {
       "index": 0,
-      "char": "看",
-      "start": 0.24,
+      "char": "嫉",
+      "start": 0.08,
       "end": 0.48
     },
     {
       "index": 1,
-      "char": "到",
-      "start": 0.48,
-      "end": 0.64
+      "char": "嫉",
+      "start": 0.88,
+      "end": 1.04
     },
     {
       "index": 2,
-      "char": "别",
-      "start": 0.64,
-      "end": 0.8
+      "char": "妒",
+      "start": 1.04,
+      "end": 1.2
     },
     {
       "index": 3,
-      "char": "人",
-      "start": 0.8,
-      "end": 0.96
+      "char": "的",
+      "start": 1.2,
+      "end": 1.36
     },
     {
       "index": 4,
-      "char": "得",
-      "start": 0.96,
-      "end": 1.12
-    },
-    {
-      "index": 5,
-      "char": "到",
-      "start": 1.12,
-      "end": 1.28
-    },
-    {
-      "index": 6,
-      "char": "喜",
-      "start": 1.28,
-      "end": 1.44
-    },
-    {
-      "index": 7,
-      "char": "爱",
-      "start": 1.44,
+      "char": "嫉",
+      "start": 1.36,
       "end": 1.76
     },
     {
-      "index": 8,
-      "char": "自",
+      "index": 5,
+      "char": "读",
       "start": 2.16,
       "end": 2.32
     },
     {
-      "index": 9,
-      "char": "己",
+      "index": 6,
+      "char": "第",
       "start": 2.32,
       "end": 2.4
     },
     {
-      "index": 10,
-      "char": "心",
+      "index": 7,
+      "char": "二",
       "start": 2.4,
       "end": 2.64
     },
     {
-      "index": 11,
-      "char": "里",
+      "index": 8,
+      "char": "声",
       "start": 2.64,
-      "end": 2.8
+      "end": 3.04
+    },
+    {
+      "index": 9,
+      "char": "它",
+      "start": 3.68,
+      "end": 3.84
+    },
+    {
+      "index": 10,
+      "char": "是",
+      "start": 3.84,
+      "end": 3.92
+    },
+    {
+      "index": 11,
+      "char": "左",
+      "start": 3.92,
+      "end": 4
     },
     {
       "index": 12,
-      "char": "不",
-      "start": 2.8,
-      "end": 2.96
-    },
-    {
-      "index": 13,
-      "char": "舒",
-      "start": 2.96,
-      "end": 3.2
-    },
-    {
-      "index": 14,
-      "char": "服",
-      "start": 3.2,
-      "end": 3.44
-    },
-    {
-      "index": 15,
-      "char": "可",
-      "start": 3.84,
-      "end": 4.0
-    },
-    {
-      "index": 16,
-      "char": "能",
-      "start": 4.0,
-      "end": 4.16
-    },
-    {
-      "index": 17,
-      "char": "是",
-      "start": 4.16,
+      "char": "右",
+      "start": 4.08,
       "end": 4.32
     },
     {
-      "index": 18,
-      "char": "嫉",
+      "index": 13,
+      "char": "结",
       "start": 4.32,
-      "end": 4.56
+      "end": 4.48
     },
     {
-      "index": 19,
-      "char": "妒",
-      "start": 4.56,
+      "index": 14,
+      "char": "构",
+      "start": 4.48,
       "end": 4.8
     },
     {
-      "index": 20,
-      "char": "嫉",
-      "start": 5.04,
-      "end": 5.28
-    },
-    {
-      "index": 21,
-      "char": "读",
+      "index": 15,
+      "char": "左",
       "start": 5.28,
       "end": 5.44
     },
     {
-      "index": 22,
-      "char": "第",
-      "start": 5.44,
-      "end": 5.6
+      "index": 16,
+      "char": "边",
+      "start": 5.52,
+      "end": 5.68
     },
     {
-      "index": 23,
-      "char": "二",
-      "start": 5.6,
-      "end": 5.76
+      "index": 17,
+      "char": "是",
+      "start": 5.68,
+      "end": 5.84
     },
     {
-      "index": 24,
-      "char": "声",
-      "start": 5.76,
+      "index": 18,
+      "char": "女",
+      "start": 5.84,
+      "end": 6
+    },
+    {
+      "index": 19,
+      "char": "字",
+      "start": 6,
       "end": 6.16
     },
     {
-      "index": 25,
-      "char": "嫉",
-      "start": 6.24,
-      "end": 6.48
+      "index": 20,
+      "char": "旁",
+      "start": 6.16,
+      "end": 6.56
     },
     {
-      "index": 26,
-      "char": "按",
-      "start": 6.48,
-      "end": 6.8
-    },
-    {
-      "index": 27,
-      "char": "左",
-      "start": 6.8,
-      "end": 6.88
-    },
-    {
-      "index": 28,
+      "index": 21,
       "char": "右",
-      "start": 6.88,
-      "end": 7.12
+      "start": 7.04,
+      "end": 7.2
     },
     {
-      "index": 29,
-      "char": "排",
-      "start": 7.12,
+      "index": 22,
+      "char": "边",
+      "start": 7.2,
       "end": 7.36
     },
     {
-      "index": 30,
-      "char": "列",
+      "index": 23,
+      "char": "的",
       "start": 7.36,
-      "end": 7.68
+      "end": 7.52
     },
     {
-      "index": 31,
-      "char": "女",
-      "start": 8.0,
-      "end": 8.16
+      "index": 24,
+      "char": "疾",
+      "start": 7.52,
+      "end": 7.92
     },
     {
-      "index": 32,
-      "char": "字",
-      "start": 8.16,
-      "end": 8.32
+      "index": 25,
+      "char": "提",
+      "start": 7.92,
+      "end": 8.08
     },
     {
-      "index": 33,
-      "char": "旁",
-      "start": 8.32,
-      "end": 8.56
+      "index": 26,
+      "char": "示",
+      "start": 8.08,
+      "end": 8.24
     },
     {
-      "index": 34,
-      "char": "在",
-      "start": 8.56,
+      "index": 27,
+      "char": "读",
+      "start": 8.24,
+      "end": 8.4
+    },
+    {
+      "index": 28,
+      "char": "音",
+      "start": 8.4,
       "end": 8.72
     },
     {
-      "index": 35,
-      "char": "左",
-      "start": 8.72,
-      "end": 8.88
+      "index": 29,
+      "char": "两",
+      "start": 9.2,
+      "end": 9.36
     },
     {
-      "index": 36,
-      "char": "右",
-      "start": 9.36,
-      "end": 9.52
-    },
-    {
-      "index": 37,
+      "index": 30,
       "char": "边",
-      "start": 9.52,
+      "start": 9.36,
+      "end": 9.6
+    },
+    {
+      "index": 31,
+      "char": "并",
+      "start": 9.6,
       "end": 9.76
     },
     {
-      "index": 38,
-      "char": "是",
+      "index": 32,
+      "char": "列",
       "start": 9.76,
       "end": 9.92
     },
     {
-      "index": 39,
-      "char": "疾",
+      "index": 33,
+      "char": "组",
       "start": 9.92,
-      "end": 10.4
+      "end": 10.08
     },
     {
-      "index": 40,
-      "char": "女",
+      "index": 34,
+      "char": "合",
+      "start": 10.08,
+      "end": 10.24
+    },
+    {
+      "index": 35,
+      "char": "成",
+      "start": 10.24,
+      "end": 10.48
+    },
+    {
+      "index": 36,
+      "char": "嫉",
       "start": 10.48,
-      "end": 10.64
-    },
-    {
-      "index": 41,
-      "char": "字",
-      "start": 10.64,
       "end": 10.8
     },
     {
-      "index": 42,
-      "char": "旁",
-      "start": 10.8,
-      "end": 11.04
-    },
-    {
-      "index": 43,
-      "char": "不",
-      "start": 11.04,
-      "end": 11.12
-    },
-    {
-      "index": 44,
-      "char": "表",
-      "start": 11.12,
-      "end": 11.36
-    },
-    {
-      "index": 45,
-      "char": "示",
-      "start": 11.36,
-      "end": 11.52
-    },
-    {
-      "index": 46,
-      "char": "女",
-      "start": 11.52,
-      "end": 11.68
-    },
-    {
-      "index": 47,
-      "char": "性",
-      "start": 11.68,
-      "end": 11.84
-    },
-    {
-      "index": 48,
-      "char": "爱",
-      "start": 11.84,
-      "end": 12.0
-    },
-    {
-      "index": 49,
+      "index": 37,
       "char": "嫉",
-      "start": 12.0,
+      "start": 11.52,
+      "end": 11.76
+    },
+    {
+      "index": 38,
+      "char": "妒",
+      "start": 11.76,
+      "end": 12
+    },
+    {
+      "index": 39,
+      "char": "是",
+      "start": 12,
+      "end": 12.08
+    },
+    {
+      "index": 40,
+      "char": "因",
+      "start": 12.08,
       "end": 12.24
     },
     {
-      "index": 50,
-      "char": "妒",
+      "index": 41,
+      "char": "为",
       "start": 12.24,
-      "end": 12.56
+      "end": 12.32
     },
     {
-      "index": 51,
-      "char": "可",
+      "index": 42,
+      "char": "别",
+      "start": 12.32,
+      "end": 12.48
+    },
+    {
+      "index": 43,
+      "char": "人",
+      "start": 12.48,
+      "end": 12.64
+    },
+    {
+      "index": 44,
+      "char": "拥",
+      "start": 12.64,
+      "end": 12.8
+    },
+    {
+      "index": 45,
+      "char": "有",
       "start": 12.8,
       "end": 12.96
     },
     {
-      "index": 52,
-      "char": "以",
+      "index": 46,
+      "char": "长",
       "start": 12.96,
-      "end": 13.04
+      "end": 13.2
     },
     {
-      "index": 53,
-      "char": "想",
-      "start": 13.04,
-      "end": 13.28
-    },
-    {
-      "index": 54,
-      "char": "象",
-      "start": 13.28,
+      "index": 47,
+      "char": "处",
+      "start": 13.2,
       "end": 13.44
     },
     {
-      "index": 55,
-      "char": "心",
+      "index": 48,
+      "char": "或",
       "start": 13.44,
       "end": 13.68
     },
     {
-      "index": 56,
-      "char": "里",
+      "index": 49,
+      "char": "喜",
       "start": 13.68,
-      "end": 13.76
+      "end": 13.92
     },
     {
-      "index": 57,
-      "char": "冒",
-      "start": 13.76,
-      "end": 14.0
+      "index": 50,
+      "char": "爱",
+      "start": 13.92,
+      "end": 14.24
     },
     {
-      "index": 58,
-      "char": "出",
-      "start": 14.0,
-      "end": 14.16
-    },
-    {
-      "index": 59,
-      "char": "急",
-      "start": 14.16,
+      "index": 51,
+      "char": "而",
+      "start": 14.24,
       "end": 14.4
     },
     {
-      "index": 60,
-      "char": "躁",
+      "index": 52,
+      "char": "心",
       "start": 14.4,
       "end": 14.56
     },
     {
-      "index": 61,
-      "char": "火",
+      "index": 53,
+      "char": "生",
       "start": 14.56,
-      "end": 14.8
+      "end": 14.72
     },
     {
-      "index": 62,
-      "char": "气",
-      "start": 14.8,
-      "end": 15.2
+      "index": 54,
+      "char": "不",
+      "start": 14.72,
+      "end": 14.88
     },
     {
-      "index": 63,
-      "char": "先",
+      "index": 55,
+      "char": "平",
+      "start": 14.88,
+      "end": 15.28
+    },
+    {
+      "index": 56,
+      "char": "课",
       "start": 15.68,
       "end": 15.84
     },
     {
-      "index": 64,
-      "char": "停",
+      "index": 57,
+      "char": "文",
       "start": 15.84,
       "end": 16.08
     },
     {
-      "index": 65,
-      "char": "下",
+      "index": 58,
+      "char": "里",
       "start": 16.08,
       "end": 16.24
     },
     {
-      "index": 66,
-      "char": "来",
-      "start": 16.24,
-      "end": 16.4
+      "index": 59,
+      "char": "孩",
+      "start": 16.32,
+      "end": 16.48
     },
     {
-      "index": 67,
-      "char": "看",
-      "start": 16.4,
+      "index": 60,
+      "char": "子",
+      "start": 16.48,
       "end": 16.64
     },
     {
-      "index": 68,
-      "char": "看",
+      "index": 61,
+      "char": "们",
       "start": 16.64,
+      "end": 16.72
+    },
+    {
+      "index": 62,
+      "char": "争",
+      "start": 16.72,
       "end": 16.96
     },
     {
+      "index": 63,
+      "char": "论",
+      "start": 16.96,
+      "end": 17.12
+    },
+    {
+      "index": 64,
+      "char": "月",
+      "start": 17.12,
+      "end": 17.28
+    },
+    {
+      "index": 65,
+      "char": "亮",
+      "start": 17.28,
+      "end": 17.52
+    },
+    {
+      "index": 66,
+      "char": "究",
+      "start": 17.52,
+      "end": 17.68
+    },
+    {
+      "index": 67,
+      "char": "竟",
+      "start": 17.68,
+      "end": 17.84
+    },
+    {
+      "index": 68,
+      "char": "属",
+      "start": 17.84,
+      "end": 18
+    },
+    {
       "index": 69,
-      "char": "自",
-      "start": 17.04,
-      "end": 17.2
+      "char": "于",
+      "start": 18,
+      "end": 18.16
     },
     {
       "index": 70,
-      "char": "己",
-      "start": 17.2,
-      "end": 17.44
+      "char": "谁",
+      "start": 18.16,
+      "end": 18.56
     },
     {
       "index": 71,
-      "char": "在",
-      "start": 17.44,
-      "end": 17.6
+      "char": "当",
+      "start": 18.96,
+      "end": 19.12
     },
     {
       "index": 72,
-      "char": "意",
-      "start": 17.6,
-      "end": 17.76
+      "char": "听",
+      "start": 19.12,
+      "end": 19.28
     },
     {
       "index": 73,
-      "char": "什",
-      "start": 17.76,
-      "end": 17.92
+      "char": "说",
+      "start": 19.28,
+      "end": 19.52
     },
     {
       "index": 74,
-      "char": "么",
-      "start": 17.92,
-      "end": 18.24
-    },
-    {
-      "index": 75,
-      "char": "这",
-      "start": 18.72,
-      "end": 18.8
-    },
-    {
-      "index": 76,
-      "char": "个",
-      "start": 18.8,
-      "end": 18.88
-    },
-    {
-      "index": 77,
-      "char": "场",
-      "start": 18.88,
-      "end": 19.2
-    },
-    {
-      "index": 78,
-      "char": "景",
-      "start": 19.2,
-      "end": 19.36
-    },
-    {
-      "index": 79,
-      "char": "帮",
-      "start": 19.36,
-      "end": 19.6
-    },
-    {
-      "index": 80,
-      "char": "助",
-      "start": 19.6,
+      "char": "月",
+      "start": 19.52,
       "end": 19.68
     },
     {
-      "index": 81,
-      "char": "记",
+      "index": 75,
+      "char": "亮",
       "start": 19.68,
-      "end": 19.92
+      "end": 19.84
+    },
+    {
+      "index": 76,
+      "char": "在",
+      "start": 19.84,
+      "end": 20
+    },
+    {
+      "index": 77,
+      "char": "三",
+      "start": 20,
+      "end": 20.24
+    },
+    {
+      "index": 78,
+      "char": "妹",
+      "start": 20.24,
+      "end": 20.4
+    },
+    {
+      "index": 79,
+      "char": "眼",
+      "start": 20.4,
+      "end": 20.56
+    },
+    {
+      "index": 80,
+      "char": "里",
+      "start": 20.56,
+      "end": 20.72
+    },
+    {
+      "index": 81,
+      "char": "时",
+      "start": 20.72,
+      "end": 21.04
     },
     {
       "index": 82,
-      "char": "形",
-      "start": 19.92,
-      "end": 20.32
+      "char": "大",
+      "start": 21.04,
+      "end": 21.2
     },
     {
       "index": 83,
-      "char": "嫉",
-      "start": 20.4,
-      "end": 20.64
-    },
-    {
-      "index": 84,
-      "char": "妒",
-      "start": 20.64,
-      "end": 20.96
-    },
-    {
-      "index": 85,
-      "char": "会",
-      "start": 21.04,
-      "end": 21.28
-    },
-    {
-      "index": 86,
-      "char": "让",
-      "start": 21.28,
+      "char": "家",
+      "start": 21.2,
       "end": 21.36
     },
     {
-      "index": 87,
-      "char": "人",
+      "index": 84,
+      "char": "心",
       "start": 21.36,
-      "end": 21.6
+      "end": 21.52
     },
     {
-      "index": 88,
-      "char": "只",
-      "start": 21.6,
+      "index": 85,
+      "char": "生",
+      "start": 21.52,
       "end": 21.76
     },
     {
-      "index": 89,
-      "char": "盯",
+      "index": 86,
+      "char": "嫉",
       "start": 21.76,
       "end": 21.92
     },
     {
-      "index": 90,
-      "char": "着",
+      "index": 87,
+      "char": "妒",
       "start": 21.92,
-      "end": 22.08
-    },
-    {
-      "index": 91,
-      "char": "别",
-      "start": 22.08,
       "end": 22.24
     },
     {
+      "index": 88,
+      "char": "纯",
+      "start": 22.64,
+      "end": 22.88
+    },
+    {
+      "index": 89,
+      "char": "真",
+      "start": 22.88,
+      "end": 23.12
+    },
+    {
+      "index": 90,
+      "char": "而",
+      "start": 23.2,
+      "end": 23.28
+    },
+    {
+      "index": 91,
+      "char": "生",
+      "start": 23.28,
+      "end": 23.52
+    },
+    {
       "index": 92,
-      "char": "人",
-      "start": 22.24,
-      "end": 22.4
+      "char": "动",
+      "start": 23.52,
+      "end": 23.68
     },
     {
       "index": 93,
-      "char": "拥",
-      "start": 22.4,
-      "end": 22.56
-    },
-    {
-      "index": 94,
-      "char": "有",
-      "start": 22.56,
-      "end": 22.72
-    },
-    {
-      "index": 95,
-      "char": "的",
-      "start": 22.72,
-      "end": 22.8
-    },
-    {
-      "index": 96,
-      "char": "东",
-      "start": 22.8,
-      "end": 22.96
-    },
-    {
-      "index": 97,
-      "char": "西",
-      "start": 22.96,
-      "end": 23.36
-    },
-    {
-      "index": 98,
-      "char": "孩",
-      "start": 23.6,
+      "char": "地",
+      "start": 23.68,
       "end": 23.76
     },
     {
-      "index": 99,
-      "char": "子",
+      "index": 94,
+      "char": "流",
       "start": 23.76,
       "end": 23.92
     },
     {
-      "index": 100,
-      "char": "听",
+      "index": 95,
+      "char": "露",
       "start": 23.92,
       "end": 24.08
     },
     {
-      "index": 101,
-      "char": "见",
+      "index": 96,
+      "char": "出",
       "start": 24.08,
       "end": 24.32
     },
     {
-      "index": 102,
-      "char": "月",
+      "index": 97,
+      "char": "孩",
       "start": 24.32,
-      "end": 24.48
+      "end": 24.56
     },
     {
-      "index": 103,
-      "char": "亮",
-      "start": 24.48,
+      "index": 98,
+      "char": "童",
+      "start": 24.56,
       "end": 24.72
     },
     {
-      "index": 104,
-      "char": "属",
-      "start": 24.8,
+      "index": 99,
+      "char": "争",
+      "start": 24.72,
       "end": 24.96
     },
     {
-      "index": 105,
-      "char": "于",
+      "index": 100,
+      "char": "月",
       "start": 24.96,
-      "end": 25.04
+      "end": 25.12
     },
     {
-      "index": 106,
-      "char": "三",
-      "start": 25.04,
-      "end": 25.28
+      "index": 101,
+      "char": "时",
+      "start": 25.12,
+      "end": 25.36
     },
     {
-      "index": 107,
-      "char": "妹",
-      "start": 25.28,
+      "index": 102,
+      "char": "真",
+      "start": 25.36,
       "end": 25.6
     },
     {
-      "index": 108,
-      "char": "心",
-      "start": 25.84,
+      "index": 103,
+      "char": "实",
+      "start": 25.6,
+      "end": 25.76
+    },
+    {
+      "index": 104,
+      "char": "有",
+      "start": 25.76,
+      "end": 25.92
+    },
+    {
+      "index": 105,
+      "char": "趣",
+      "start": 25.92,
       "end": 26.08
     },
     {
-      "index": 109,
-      "char": "里",
-      "start": 26.08,
-      "end": 26.24
-    },
-    {
-      "index": 110,
-      "char": "嫉",
-      "start": 26.24,
-      "end": 26.48
-    },
-    {
-      "index": 111,
-      "char": "妒",
-      "start": 26.48,
-      "end": 26.88
-    },
-    {
-      "index": 112,
-      "char": "也",
-      "start": 26.88,
-      "end": 27.04
-    },
-    {
-      "index": 113,
-      "char": "显",
-      "start": 27.04,
-      "end": 27.28
-    },
-    {
-      "index": 114,
-      "char": "出",
-      "start": 27.28,
-      "end": 27.52
-    },
-    {
-      "index": 115,
-      "char": "争",
-      "start": 27.52,
-      "end": 27.76
-    },
-    {
-      "index": 116,
-      "char": "月",
-      "start": 27.76,
-      "end": 27.92
-    },
-    {
-      "index": 117,
-      "char": "亮",
-      "start": 27.92,
-      "end": 28.16
-    },
-    {
-      "index": 118,
-      "char": "时",
-      "start": 28.16,
-      "end": 28.4
-    },
-    {
-      "index": 119,
-      "char": "真",
-      "start": 28.4,
-      "end": 28.56
-    },
-    {
-      "index": 120,
-      "char": "实",
-      "start": 28.56,
-      "end": 28.72
-    },
-    {
-      "index": 121,
+      "index": 106,
       "char": "的",
-      "start": 28.72,
-      "end": 28.8
+      "start": 26.08,
+      "end": 26.16
     },
     {
-      "index": 122,
-      "char": "童",
-      "start": 28.8,
-      "end": 29.04
-    },
-    {
-      "index": 123,
+      "index": 107,
       "char": "心",
-      "start": 29.04,
-      "end": 29.36
+      "start": 26.16,
+      "end": 26.4
+    },
+    {
+      "index": 108,
+      "char": "理",
+      "start": 26.4,
+      "end": 26.56
     }
   ],
-  "transcript": "看到别人得到喜爱，自己心里不舒服，可能是嫉妒，嫉读第二声。嫉按左右排列，女字旁在左，右边是疾；女字旁不表示女性爱嫉妒。可以想象心里冒出急躁火气，先停下来看看自己在意什么，这个场景帮助记形。嫉妒会让人只盯着别人拥有的东西。孩子听见月亮属于三妹，心里嫉妒，也显出争月亮时真实的童心。",
+  "transcript": "嫉，嫉妒的嫉，读第二声。它是左右结构，左边是女字旁，右边的“疾”提示读音，两边并列组合成嫉。嫉妒是因为别人拥有长处或喜爱而心生不平。课文里孩子们争论月亮究竟属于谁，当听说月亮在三妹眼里时大家心生嫉妒，纯真而生动地流露出孩童争月时真实有趣的心理。",
   "voice_reference": "封",
   "reference_id": "019f0554-ea22-762e-966c-32d678fd6bf6",
   "reference_sha256": "eb07e06ee13a20ee4577b1b481df6d33d42127c1b3876bfa5d5e5362ae349f19",
   "timing_source": "qwen3-forced-aligner",
-  "script_version": "narration-v3",
-  "model": "mlx-community/Qwen3-TTS-12Hz-1.7B-Base-4bit",
-  "model_revision": "37e955a1deb861c088ae5f3a67043185f3d1a60c",
-  "generation_policy": "qwen3-clone-2026-08-22-v3",
-  "seed": 20260822,
-  "content_hash": "ca28b7018a485cd37c9a",
-  "duration": 29.397,
+  "script_version": "narration-fish-v1",
+  "model": "fishaudio/s2.1-pro-free",
+  "model_revision": "s2.1-pro-free",
+  "generation_policy": "narration-fish-s2.1-zero-shot-2026-08-24",
+  "seed": null,
+  "content_hash": "08523ecdeade7da83549",
   "alignment_model": "mlx-community/Qwen3-ForcedAligner-0.6B-8bit",
-  "aligned_audio_sha256": "bb3858a1cd2b8ad461a9b05a4e3f3a0606094b5b323ca9661e72a28f53976d10",
-  "alignment_groups": []
+  "alignment_model_revision": "0e1a68e91d815300c7c9754b2a7639378b23db15",
+  "aligned_audio_sha256": "917fd910c74a9a075451a3308a2e0db6884477f21e443fb7e8d7d495f37d9442",
+  "alignment_groups": [],
+  "duration": 26.731
 }

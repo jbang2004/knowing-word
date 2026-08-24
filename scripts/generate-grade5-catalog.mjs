@@ -137,7 +137,7 @@ function pickDistractorWords(lesson, character, word, index, count) {
   return picks;
 }
 
-function exerciseSet(character, index, lesson, parts, radical, structure, writing, polyphonic, word, pinyinText) {
+function exerciseSet(character, index, lesson, parts, radical, structure, writing, polyphonic, word, pinyinText, plan) {
   const base = charId(lesson.position, index, character);
   const distractorWords = pickDistractorWords(lesson, character, word, index, 3);
   const componentPool = unique([...parts, "木", "口", "土", "日", "人"]).slice(0, Math.max(4, parts.length + 2));
@@ -163,8 +163,8 @@ function exerciseSet(character, index, lesson, parts, radical, structure, writin
   const redBlueQuestion = `${base}-honglan-components`;
   const structureTrackQuestion = `${base}-structure-choice`;
   const list = [
-    { id: wordQuestion, origin: "识字小测", kind: "single", questionType: "single_select", prompt: `“${character}”在本课哪个词语中出现？`, options: makeOptions(wordQuestion, unique([word, ...distractorWords]), [word]), explanation: `“${character}”就在“${word}”中。先把字放回词语，字义会更清楚。` },
-    { id: structureQuestion, origin: "识字小测", kind: "structure", questionType: "character_structure_select", prompt: `“${character}”是什么结构？`, options: makeOptions(structureQuestion, structures, [structure], [], structureCodes), explanation: `“${character}”是${structure}。先看部件站位，再看笔画细节。` },
+    { id: wordQuestion, origin: "识字小测", kind: "single", questionType: "single_select", prompt: `“${character}”在本课哪个词语中出现？`, options: makeOptions(wordQuestion, unique([word, ...distractorWords]), [word]), explanation: `“${character}”在文中组成词语“${word}”。${trimStop(plan.meaning)}。` },
+    { id: structureQuestion, origin: "识字小测", kind: "structure", questionType: "character_structure_select", prompt: `“${character}”是什么结构？`, options: makeOptions(structureQuestion, structures, [structure], [], structureCodes), explanation: `“${character}”是${structure}，各部件排布舒展、层次分明。` },
     { id: imageQuestion, origin: "识字小测", kind: "single", questionType: "image_single_select", prompt: `哪幅图把“${character}”的部件藏得最完整？`, options: [0, 1, 2].map((slot) => ({ id: `${imageQuestion}-${slot}`, text: "", correct: slot === 1, radical: false, idcCode: "" })), explanation: `正确画面把${parts.map((part) => `“${part}”`).join("和")}按${structure}嵌进了“${character}”。` },
     { id: componentQuestion, origin: "识字小测", kind: "components", questionType: "composition_select_to_text", prompt: `选择“${character}”的主要部件。`, options: makeOptions(componentQuestion, componentPool, parts, [radical]), explanation: `${parts.join(" + ")}，按${structure}组合成“${character}”。` },
     { id: splitQuestion, origin: "拆一拆", kind: "components", questionType: "composition_select_to_text", prompt: `按顺序搭出“${character}”。`, options: makeOptions(splitQuestion, componentPool, parts, [radical]), explanation: `先按${structure}排好部件，再找到表意线索“${radical}”。` },
@@ -199,7 +199,7 @@ function exerciseSet(character, index, lesson, parts, radical, structure, writin
 
 function componentDescription(part, plan, parts, index) {
   const sceneCue = sceneCues(plan, parts)[index];
-  return `${sceneCue}先认清“${part}”的完整轮廓和所在位置，再回到整幅图里把各部件合成字。`;
+  return `${sceneCue}它在字形中作为“${part}”部件，轮廓舒展、位置清晰。`;
 }
 
 function trimStop(value) {
@@ -210,15 +210,16 @@ function etymologyCopy(record, parts, radical) {
   const semantic = record?.etymology?.semantic;
   const phonetic = record?.etymology?.phonetic;
   if (record?.etymology?.type?.includes("pictophonetic") && semantic && phonetic) {
-    return `从构字分工看，“${semantic}”提示意义类别，“${phonetic}”提供读音线索`;
+    return `其中“${phonetic}”提示读音，“${semantic}”表明含义类别`;
   }
-  if (parts.length > 1) return `从构字分工看，“${radical}”先提示意义类别，其余部件补足字形`;
-  return "这个字适合顺着完整轮廓来记";
+  if (parts.length > 1) return `部首“${radical}”是理解字义与分类的关键线索`;
+  return "笔画连贯一体，适合顺着整体轮廓来观察";
 }
 
 function makeDescription(character, pinyinText, word, structure, parts, radical, role, plan, record) {
-  const roleCopy = role === "write" ? "这是本课要求会写的字" : role === "polyphonic" ? "这是本课要留意读音变化的多音字" : "这是本课要求会认的字";
-  return `${character}，读${pinyinText}，是“${word}”里的字。${roleCopy}。先看整体：它是${structure}，按顺序能看到${parts.map((part) => `“${part}”`).join("和")}。${etymologyCopy(record, parts, radical)}。看图时，${trimStop(plan.scene)}。${trimStop(plan.meaning)}。这幅物象图用于记笔画和位置，不代替完整字源。最后回到“${word}”里读一遍。`;
+  const etym = etymologyCopy(record, parts, radical);
+  const partList = parts.length > 1 ? `由${parts.map((part) => `“${part}”`).join("和")}组合而成` : `为独体结构`;
+  return `${character}，读 ${pinyinText}，出自词语“${word}”。它是${structure}，${partList}；${etym}。画面中，${trimStop(plan.scene)}。${trimStop(plan.meaning)}。`;
 }
 
 function sceneCues(plan, parts) {
@@ -226,7 +227,7 @@ function sceneCues(plan, parts) {
   return parts.map((part, index) => {
     const exact = clauses.find((clause) => clause.includes(`“${part}”`));
     if (exact) return `${exact}。`;
-    return `${index === 0 ? "先" : "再"}在专属画面中找到“${part}”的完整位置；${trimStop(plan.scene)}。`;
+    return `${index === 0 ? "先" : "再"}在画面中找到“${part}”的完整位置；${trimStop(plan.scene)}。`;
   });
 }
 
@@ -294,7 +295,7 @@ for (const lesson of grade5Volume1Lessons) {
       pinyin: pinyinText, charType: typeNames[record?.etymology?.type] || "字形字", decomposition: structure,
       originalMeaning: plan.meaning, description: makeDescription(character, pinyinText, word, structure, parts, teachingRadical, role, plan, record), originalText: lesson.context,
       parts: parts.map((part) => ({ char: part, radical: part === teachingRadical })), compositions,
-      exercises: exerciseSet(character, index, lesson, parts, teachingRadical, structure, writing.has(character), polyphonic.has(character), word, pinyinText),
+      exercises: exerciseSet(character, index, lesson, parts, teachingRadical, structure, writing.has(character), polyphonic.has(character), word, pinyinText, plan),
       curriculumRole: role, polyphonic: polyphonic.has(character), official: true, tier: "curriculum",
     };
     characters.push(item);

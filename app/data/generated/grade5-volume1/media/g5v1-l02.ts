@@ -6,7 +6,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u4ea9.webp",
       "label": "半亩",
-      "alt": "亩是计量土地面积的单位，常用来计算田地大小 图中“亠”与“田”按上下结构自然长成“亩”。"
+      "alt": "亩是计算土地面积的单位；一家人在后园半亩空地上辛勤翻土播种，收获了饱满朴实的花生 图中“亠”与“田”按上下结构自然长成“亩”。"
     },
     "scene": {
       "scene": "田野上方一条地界横梁形成“亠”，下面四格庄稼地清楚排成“田”，合成一“亩”地。",
@@ -15,12 +15,12 @@ export const characterMedia = {
         "下面四格庄稼地清楚排成“田”。"
       ]
     },
-    "transcript": "亩，半亩的亩，读第三声。亩是计算田地面积的单位，半亩就是半亩大小的一块地。这个字是上下结构，上面像一条地界，下面是分成小格的田；把它看成量好边界的一片田，只是帮助记形。课文开头，母亲让孩子们把后园的半亩空地开辟出来种花生。半亩不算大，一家人却认真翻地、播种，后来有了收获。",
+    "transcript": "亩，半亩的亩，读第三声。它是上下结构，上面是田野的地界横梁，下面是分成小格的田地，上下相合即为一亩田。亩是计算土地面积的单位。课文开头，母亲带着孩子们把后园的半亩空地开辟出来种花生；地方虽不算大，一家人辛勤翻地、播种，最终收获了饱满朴实的花生。",
     "practiceOptionVisuals": {
       "g5v1-l02-c01-u4ea9-words-image:g5v1-l02-c01-u4ea9-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u4ea9.webp",
         "label": "半亩",
-        "alt": "亩是计量土地面积的单位，常用来计算田地大小 图中“亠”与“田”按上下结构自然长成“亩”。"
+        "alt": "亩是计算土地面积的单位；一家人在后园半亩空地上辛勤翻土播种，收获了饱满朴实的花生 图中“亠”与“田”按上下结构自然长成“亩”。"
       },
       "g5v1-l02-c01-u4ea9-words-image:g5v1-l02-c01-u4ea9-words-image-0": {
         "src": "/illustrations/meanings/m06.webp",
@@ -62,7 +62,7 @@ export const characterMedia = {
       "g5v1-l02-c02-u5429-words-image:g5v1-l02-c02-u5429-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u540a.webp",
         "label": "吊起",
-        "alt": "吊起就是用绳索等把物体悬在空中或向上提起 图中“口”与“巾”按上下结构自然长成“吊”。"
+        "alt": "吊扇无力难消酷暑；厂房上方吊着简陋的电扇，依然挡不住闷热难耐的高温暑气 图中“口”与“巾”按上下结构自然长成“吊”。"
       }
     }
   },
@@ -70,7 +70,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u69a8.webp",
       "label": "榨油",
-      "alt": "榨油就是用压力把花生等原料里的油挤出来 图中“木”与“窄”按左右结构自然长成“榨”。"
+      "alt": "榨油就是用压力挤出果实里的油脂；花生虽矮小埋在地下，榨出的香油却实实在在地造福他人 图中“木”与“窄”按左右结构自然长成“榨”。"
     },
     "scene": {
       "scene": "左边木梁、树干和根脚组成“木”，右边狭窄压油槽的屋顶与夹板搭成“窄”，合成“榨”。",
@@ -84,7 +84,7 @@ export const characterMedia = {
       "g5v1-l02-c03-u69a8-words-image:g5v1-l02-c03-u69a8-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u69a8.webp",
         "label": "榨油",
-        "alt": "榨油就是用压力把花生等原料里的油挤出来 图中“木”与“窄”按左右结构自然长成“榨”。"
+        "alt": "榨油就是用压力挤出果实里的油脂；花生虽矮小埋在地下，榨出的香油却实实在在地造福他人 图中“木”与“窄”按左右结构自然长成“榨”。"
       },
       "g5v1-l02-c03-u69a8-words-image:g5v1-l02-c03-u69a8-words-image-0": {
         "src": "/illustrations/meanings/m03.webp",
@@ -102,7 +102,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u69b4.webp",
       "label": "石榴",
-      "alt": "石榴是一种果皮厚、里面有许多红色籽粒的水果 图中“木”与“留”按左右结构自然长成“榴”。"
+      "alt": "石榴是果粒繁多、色彩鲜艳的水果；与石榴的高挂枝头相比，花生更显得朴实无华、不图虚名 图中“木”与“留”按左右结构自然长成“榴”。"
     },
     "scene": {
       "scene": "左边石榴树长成“木”，右边系带果篮、田格和果实沿“留”的笔画叠放，形成“榴”。",
@@ -121,12 +121,12 @@ export const characterMedia = {
       "g5v1-l02-c04-u69b4-words-image:g5v1-l02-c04-u69b4-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u6bd5.webp",
         "label": "毕业",
-        "alt": "毕业表示在学校或训练机构完成规定的学习 图中“比”与“十”按上下结构自然长成“毕”。"
+        "alt": "毕业成才不负厚望；孩子顺利毕业走上工作岗位，终于实现了父亲托举一生的宏愿 图中“比”与“十”按上下结构自然长成“毕”。"
       },
       "g5v1-l02-c04-u69b4-words-image:g5v1-l02-c04-u69b4-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u69b4.webp",
         "label": "石榴",
-        "alt": "石榴是一种果皮厚、里面有许多红色籽粒的水果 图中“木”与“留”按左右结构自然长成“榴”。"
+        "alt": "石榴是果粒繁多、色彩鲜艳的水果；与石榴的高挂枝头相比，花生更显得朴实无华、不图虚名 图中“木”与“留”按左右结构自然长成“榴”。"
       }
     }
   },
@@ -134,7 +134,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u77ee.webp",
       "label": "矮小",
-      "alt": "矮小表示从下到上的高度比较低 图中“矢”与“委”按左右结构自然长成“矮”。"
+      "alt": "矮小表示高度较低；花生的果实矮矮地埋在地底，虽不张扬，却有默默奉献的真价值 图中“矢”与“委”按左右结构自然长成“矮”。"
     },
     "scene": {
       "scene": "左边一支短箭沿“矢”站立，右边低垂禾穗和弯身人物叠成“委”，一高一低显出“矮”。",
@@ -148,7 +148,7 @@ export const characterMedia = {
       "g5v1-l02-c05-u77ee-words-image:g5v1-l02-c05-u77ee-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u77ee.webp",
         "label": "矮小",
-        "alt": "矮小表示从下到上的高度比较低 图中“矢”与“委”按左右结构自然长成“矮”。"
+        "alt": "矮小表示高度较低；花生的果实矮矮地埋在地底，虽不张扬，却有默默奉献的真价值 图中“矢”与“委”按左右结构自然长成“矮”。"
       },
       "g5v1-l02-c05-u77ee-words-image:g5v1-l02-c05-u77ee-words-image-0": {
         "src": "/illustrations/meanings/m05.webp",
@@ -158,7 +158,7 @@ export const characterMedia = {
       "g5v1-l02-c05-u77ee-words-image:g5v1-l02-c05-u77ee-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u7eb5.webp",
         "label": "纵横",
-        "alt": "纵横表示竖向和横向，也形容交错广布 图中“纟”与“从”按左右结构自然长成“纵”。"
+        "alt": "纵有千古横有八荒；少年中国前途广阔无垠，承载着跨越古今的豪迈梦想 图中“纟”与“从”按左右结构自然长成“纵”。"
       }
     }
   },
@@ -166,7 +166,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u64ad.webp",
       "label": "播种",
-      "alt": "播种就是把种子均匀撒进土里，让它们生长 图中“扌”与“番”按左右结构自然长成“播”。"
+      "alt": "播种是将种子播撒进土壤中；家人在半亩地里认真播种翻土，在劳动中体会收获的来之不易 图中“扌”与“番”按左右结构自然长成“播”。"
     },
     "scene": {
       "scene": "左边撒种的手臂形成“扌”，右边谷粒、筛盘和田垄排成“番”，合成正在播种的“播”。",
@@ -190,7 +190,7 @@ export const characterMedia = {
       "g5v1-l02-c06-u64ad-words-image:g5v1-l02-c06-u64ad-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u64ad.webp",
         "label": "播种",
-        "alt": "播种就是把种子均匀撒进土里，让它们生长 图中“扌”与“番”按左右结构自然长成“播”。"
+        "alt": "播种是将种子播撒进土壤中；家人在半亩地里认真播种翻土，在劳动中体会收获的来之不易 图中“扌”与“番”按左右结构自然长成“播”。"
       }
     }
   },
@@ -249,7 +249,7 @@ export const characterMedia = {
       "g5v1-l02-c08-u5490-words-image:g5v1-l02-c08-u5490-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u62d8.webp",
         "label": "拘束",
-        "alt": "拘束就是言行不自然，放不开 图中“扌”与“句”按左右结构自然长成“拘”。"
+        "alt": "拘束指受到局限束缚；诗人呼唤破除陈腐规矩的拘束，展现了求新求变的开阔眼界 图中“扌”与“句”按左右结构自然长成“拘”。"
       },
       "g5v1-l02-c08-u5490-words-image:g5v1-l02-c08-u5490-words-image-1": {
         "src": "/illustrations/mnemonics/m73.webp",
@@ -288,7 +288,7 @@ export const characterMedia = {
       "g5v1-l02-c09-u4ead-words-image:g5v1-l02-c09-u4ead-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u803b.webp",
         "label": "羞耻",
-        "alt": "羞耻是意识到自己的错误或不恰当行为时感到惭愧 图中“耳”与“止”按左右结构自然长成“耻”。"
+        "alt": "不耻下问虚心求教；孔子教导我们向不如自己的人请教并不可耻，唯有虚心好学才能不断长进 图中“耳”与“止”按左右结构自然长成“耻”。"
       }
     }
   },
@@ -296,21 +296,21 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u6155.webp",
       "label": "爱慕",
-      "alt": "爱慕就是因为欣赏而真心喜欢、向往 图中“莫”与“⺗”按上下结构自然长成“慕”。"
+      "alt": "爱慕是因欣赏而真心向往；做人要做有花生那样的内在品格，而不只是追求外在令人爱慕 图中“莫”与“⺗”按上下结构自然长成“慕”。"
     },
     "scene": {
-      "scene": "上方暮色中的草叶与日影叠成“莫”，下方一颗带微光的心沿“⺗”舒展，合成“慕”。",
+      "scene": "上方暮色中的草叶与日影叠成“莫”，下方一颗由衷发光的小心底“⺗”舒展，合成“慕”。",
       "cues": [
         "上方暮色中的草叶与日影叠成“莫”。",
-        "下方一颗带微光的心沿“⺗”舒展。"
+        "下方一颗由衷发光的小心底“⺗”舒展。"
       ]
     },
-    "transcript": "慕，爱慕的慕。爱慕是因为欣赏而真心喜欢、向往。这个字上方笔画铺开，下面像一颗小小的心，可以想象目光追着枝头鲜亮的果子，喜欢之情落进心里。这个场景只帮助记住上下位置。课文说桃子、石榴、苹果把鲜红嫩绿的果实高挂枝头，使人一见就生爱慕之心；花生却把果实藏在地里。",
+    "transcript": "慕，爱慕的慕，读第四声。它是上下结构，上方是由草木与日影叠成的莫，下方是一颗微微发光的心，由衷的向往在心中升起即为慕。爱慕是因为欣赏而真心向往。课文写桃子、石榴、苹果把鲜红嫩绿的果实高挂枝头，使人一见就生爱慕之心；花生却把果实藏在地里，质朴而深沉。",
     "practiceOptionVisuals": {
       "g5v1-l02-c10-u6155-words-image:g5v1-l02-c10-u6155-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u6155.webp",
         "label": "爱慕",
-        "alt": "爱慕就是因为欣赏而真心喜欢、向往 图中“莫”与“⺗”按上下结构自然长成“慕”。"
+        "alt": "爱慕是因欣赏而真心向往；做人要做有花生那样的内在品格，而不只是追求外在令人爱慕 图中“莫”与“⺗”按上下结构自然长成“慕”。"
       },
       "g5v1-l02-c10-u6155-words-image:g5v1-l02-c10-u6155-words-image-0": {
         "src": "/illustrations/meanings/m06.webp",
@@ -320,7 +320,7 @@ export const characterMedia = {
       "g5v1-l02-c10-u6155-words-image:g5v1-l02-c10-u6155-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u7f69.webp",
         "label": "笼罩",
-        "alt": "笼罩就是像网、雾或光一样从上面覆盖住 图中“罒”与“卓”按上下结构自然长成“罩”。"
+        "alt": "口罩遮掩难掩慈祥；母亲拉下口罩时那张满是汗水与疲倦的脸庞，深深烙印在孩子心头 图中“罒”与“卓”按上下结构自然长成“罩”。"
       }
     }
   },
@@ -328,7 +328,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u8c08.webp",
       "label": "谈论",
-      "alt": "谈论就是几个人围绕一件事交换看法 图中“讠”与“炎”按左右结构自然长成“谈”。"
+      "alt": "谈论是大家围聚在一起交流看法；父亲借谈论花生的好处，启迪孩子们要做一个有用的人 图中“讠”与“炎”按左右结构自然长成“谈”。"
     },
     "scene": {
       "scene": "左边一句句话从“讠”形话筒飞出，右边两团温暖火光上下叠成“炎”，合成热烈交谈的“谈”。",
@@ -347,12 +347,12 @@ export const characterMedia = {
       "g5v1-l02-c11-u8c08-words-image:g5v1-l02-c11-u8c08-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u7239.webp",
         "label": "爹娘",
-        "alt": "爹是对父亲的口语称呼 图中“父”与“多”按上下结构自然长成“爹”。"
+        "alt": "爹娘是生养抚育自己的父母；牛郎幼年失去爹娘，历经坎坷，却依然心地善良 图中“父”与“多”按上下结构自然长成“爹”。"
       },
       "g5v1-l02-c11-u8c08-words-image:g5v1-l02-c11-u8c08-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u8c08.webp",
         "label": "谈论",
-        "alt": "谈论就是几个人围绕一件事交换看法 图中“讠”与“炎”按左右结构自然长成“谈”。"
+        "alt": "谈论是大家围聚在一起交流看法；父亲借谈论花生的好处，启迪孩子们要做一个有用的人 图中“讠”与“炎”按左右结构自然长成“谈”。"
       }
     }
   },
@@ -411,7 +411,7 @@ export const characterMedia = {
       "019f310c-3f0c-72e3-a1d9-e82d89af3611:019f310c-3f0c-72e3-a1d9-e82d89af3611-0": {
         "src": "/illustrations/mnemonics-v2/g5-u62d7.webp",
         "label": "拗不过",
-        "alt": "执拗形容坚持自己的想法，不容易听进劝说 图中“扌”与“幼”按左右结构自然长成“拗”。"
+        "alt": "拗不过指无法扭转对方的执着坚持；王母最终拗不过织女坚贞的守望，只得准许七夕相会 图中“扌”与“幼”按左右结构自然长成“拗”。"
       },
       "019f310c-3f0c-72e3-a1d9-e82d89af3611:019f310c-3f0c-72e3-a1d9-e82d89af3611-2": {
         "src": "/illustrations/mnemonics/m27.webp",
@@ -426,7 +426,7 @@ export const characterMedia = {
       "019f310c-3f0c-72e3-a1d9-f268fe325bf9:019f310c-3f0c-72e3-a1d9-f268fe325bf9-2": {
         "src": "/illustrations/mnemonics-v2/g5-u73b2.webp",
         "label": "玲珑",
-        "alt": "玲珑形容物体精巧细致，也形容人灵活可爱 图中“王”与“令”按左右结构自然长成“玲”。"
+        "alt": "玲珑小巧姿态优美；松鼠小巧玲珑的身段在林间闪转腾挪，宛如林中灵巧的小精灵 图中“王”与“令”按左右结构自然长成“玲”。"
       },
       "019f310c-3f0c-72e3-a1d9-f268fe325bf9:019f310c-3f0c-72e3-a1d9-f268fe325bf9-0": {
         "src": "/illustrations/mnemonics/m27.webp",
@@ -489,7 +489,7 @@ export const characterMedia = {
       "019f310c-3f09-7721-9c61-2841e9f753f2:019f310c-3f09-7721-9c61-2841e9f753f2-1": {
         "src": "/illustrations/mnemonics-v2/g5-u5377.webp",
         "label": "试卷",
-        "alt": "“试卷”中的“卷”读juàn，指成套的考试纸；“卷起”中读juǎn 图中“龹”与“㔾”按上下结构自然长成“卷”。"
+        "alt": "读书万卷受益终生；作者总结一生经验告诫年轻人要读万卷书，在浩瀚的书海中汲取智慧 图中“龹”与“㔾”按上下结构自然长成“卷”。"
       },
       "019f310c-3f09-7721-9c61-328f96730704:019f310c-3f09-7721-9c61-328f96730704-2": {
         "src": "/illustrations/meanings/m04.webp",
@@ -499,7 +499,7 @@ export const characterMedia = {
       "019f310c-3f09-7721-9c61-328f96730704:019f310c-3f09-7721-9c61-328f96730704-0": {
         "src": "/illustrations/mnemonics-v2/g5-u520a.webp",
         "label": "刊物",
-        "alt": "刊物是定期或不定期出版的杂志、报纸等读物 图中“干”与“刂”按左右结构自然长成“刊”。"
+        "alt": "报刊杂志拓展视野；除了古典名著，作者还广泛阅读现代报刊杂志，时刻保持思想的敏锐与开阔 图中“干”与“刂”按左右结构自然长成“刊”。"
       },
       "019f310c-3f09-7721-9c61-328f96730704:019f310c-3f09-7721-9c61-328f96730704-1": {
         "src": "/illustrations/mnemonics/m89.webp",
@@ -559,7 +559,7 @@ export const characterMedia = {
       "019f310c-3f11-715e-90fe-5b60a72480f0:019f310c-3f11-715e-90fe-5b60a72480f0-2": {
         "src": "/illustrations/mnemonics-v2/g5-u584c.webp",
         "label": "倒塌",
-        "alt": "倒塌就是建筑或堆放的东西向下坠落、失去支撑 图中“土”与“𦐇”按左右结构自然长成“塌”。"
+        "alt": "倒塌指山体崩塌滑落；听到大山即将倒塌的消息，海力布焦急地劝说乡亲们立刻搬家 图中“土”与“𦐇”按左右结构自然长成“塌”。"
       },
       "019f310c-3f11-715e-90fe-5b60a72480f0:019f310c-3f11-715e-90fe-5b60a72480f0-0": {
         "src": "/illustrations/mnemonics/m88.webp",
@@ -569,7 +569,7 @@ export const characterMedia = {
       "019f310c-3f11-715e-90fe-5b60a72480f0:019f310c-3f11-715e-90fe-5b60a72480f0-1": {
         "src": "/illustrations/mnemonics-v2/g5-u5ef6.webp",
         "label": "延迟",
-        "alt": "延迟就是比原定时间更晚发生或完成 图中“廴”与“丿”与“止”按上下结构自然长成“延”。"
+        "alt": "延迟指拖延耽误时间；灾难迫在眉睫容不得半点延迟，海力布果断作出了最后的抉择 图中“廴”与“丿”与“止”按上下结构自然长成“延”。"
       },
       "019f310c-3f11-715e-90fe-62af3366c2ec:019f310c-3f11-715e-90fe-62af3366c2ec-0": {
         "src": "/illustrations/meanings/m06.webp",
@@ -584,7 +584,7 @@ export const characterMedia = {
       "019f310c-3f11-715e-90fe-62af3366c2ec:019f310c-3f11-715e-90fe-62af3366c2ec-1": {
         "src": "/illustrations/mnemonics-v2/g5-u60da.webp",
         "label": "恍惚",
-        "alt": "恍惚表示精神不集中，眼前和心里的感觉都不清晰 图中“忄”与“忽”按左右结构自然长成“惚”。"
+        "alt": "恍惚入梦追忆往昔；梦中父亲摇橹的背影依然清晰，无声的父爱穿越岁月历久弥新 图中“忄”与“忽”按左右结构自然长成“惚”。"
       }
     }
   },
@@ -640,7 +640,7 @@ export const characterMedia = {
       "019f310c-3f0d-7549-8585-79afd7716756:019f310c-3f0d-7549-8585-79afd7716756-0": {
         "src": "/illustrations/mnemonics-v2/g5-u604d.webp",
         "label": "恍惚",
-        "alt": "恍惚形容注意力不集中，神志或感觉不清楚 图中“忄”与“光”按左右结构自然长成“恍”。"
+        "alt": "恍恍惚惚如在梦境；多年后作者在梦中恍惚又见到了那条承载着深沉父爱的小渔船 图中“忄”与“光”按左右结构自然长成“恍”。"
       },
       "019f310c-3f0d-7549-8585-79afd7716756:019f310c-3f0d-7549-8585-79afd7716756-1": {
         "src": "/illustrations/mnemonics/m48.webp",
@@ -655,7 +655,7 @@ export const characterMedia = {
       "019f310c-3f0d-7549-8585-83edccaebd16:019f310c-3f0d-7549-8585-83edccaebd16-0": {
         "src": "/illustrations/mnemonics-v2/g5-u6cfb.webp",
         "label": "倾泻",
-        "alt": "倾泻形容大量的水、光等快速向下流 图中“氵”与“写”按左右结构自然长成“泻”。"
+        "alt": "倾泻指江河水势奔腾而下；黄河奔流直泻汪洋，象征着少年中国不可阻挡的磅礴伟力 图中“氵”与“写”按左右结构自然长成“泻”。"
       },
       "019f310c-3f0d-7549-8585-83edccaebd16:019f310c-3f0d-7549-8585-83edccaebd16-1": {
         "src": "/illustrations/mnemonics/m48.webp",
@@ -712,7 +712,7 @@ export const characterMedia = {
       "019f310c-3f0e-73fc-b4c9-a4f50fcd0a02:019f310c-3f0e-73fc-b4c9-a4f50fcd0a02-2": {
         "src": "/illustrations/mnemonics-v2/g5-u7edf.webp",
         "label": "统一",
-        "alt": "统一就是把分散的事物合在共同标准或整体之中 图中“纟”与“充”按左右结构自然长成“统”。"
+        "alt": "系统阅读构建体系；循序渐进地系统阅读经典好书，能够帮助我们建立起宏大完整的知识格局 图中“纟”与“充”按左右结构自然长成“统”。"
       },
       "019f310c-3f0e-73fc-b4c9-a4f50fcd0a02:019f310c-3f0e-73fc-b4c9-a4f50fcd0a02-0": {
         "src": "/illustrations/mnemonics/m31.webp",
@@ -732,7 +732,7 @@ export const characterMedia = {
       "019f310c-3f0e-73fc-b4c9-acad83f92f18:019f310c-3f0e-73fc-b4c9-acad83f92f18-1": {
         "src": "/illustrations/mnemonics-v2/g5-u6bd5.webp",
         "label": "毕业",
-        "alt": "毕业表示在学校或训练机构完成规定的学习 图中“比”与“十”按上下结构自然长成“毕”。"
+        "alt": "毕业成才不负厚望；孩子顺利毕业走上工作岗位，终于实现了父亲托举一生的宏愿 图中“比”与“十”按上下结构自然长成“毕”。"
       }
     }
   },
@@ -812,7 +812,7 @@ export const characterMedia = {
       "019f310c-3f07-71c3-87a2-4046cb0bd7a5:019f310c-3f07-71c3-87a2-4046cb0bd7a5-1": {
         "src": "/illustrations/mnemonics-v2/g5-u64ad.webp",
         "label": "播种",
-        "alt": "播种就是把种子均匀撒进土里，让它们生长 图中“扌”与“番”按左右结构自然长成“播”。"
+        "alt": "播种是将种子播撒进土壤中；家人在半亩地里认真播种翻土，在劳动中体会收获的来之不易 图中“扌”与“番”按左右结构自然长成“播”。"
       }
     }
   },
@@ -865,7 +865,7 @@ export const characterMedia = {
       "019f3890-3a2b-71f9-86d2-d2cd198e8f9c:019f3890-3a2b-71f9-86d2-d2cd198e8f9c-1": {
         "src": "/illustrations/mnemonics-v2/g5-u9c81.webp",
         "label": "鲁莽",
-        "alt": "鲁莽形容说话做事不细想，行动冒失 图中“鱼”与“日”按上下结构自然长成“鲁”。"
+        "alt": "鲁莽好汉性格率真；鲁智深虽性格有些鲁莽却嫉恶如仇、重情重义，给作者留下了深刻印象 图中“鱼”与“日”按上下结构自然长成“鲁”。"
       },
       "019f3890-3a2b-71f9-86d2-db74937e5b84:019f3890-3a2b-71f9-86d2-db74937e5b84-2": {
         "src": "/illustrations/meanings/m03.webp",
@@ -875,7 +875,7 @@ export const characterMedia = {
       "019f3890-3a2b-71f9-86d2-db74937e5b84:019f3890-3a2b-71f9-86d2-db74937e5b84-0": {
         "src": "/illustrations/mnemonics-v2/g5-u803d.webp",
         "label": "耽误",
-        "alt": "耽误就是因为拖延或受阻而错过时间、影响事情 图中“耳”与“冘”按左右结构自然长成“耽”。"
+        "alt": "耽误工时扣减收入；母亲唯恐耽误做工时间，手里的缝纫活一刻也不肯停歇 图中“耳”与“冘”按左右结构自然长成“耽”。"
       },
       "019f3890-3a2b-71f9-86d2-db74937e5b84:019f3890-3a2b-71f9-86d2-db74937e5b84-1": {
         "src": "/illustrations/mnemonics/m45.webp",
@@ -916,7 +916,7 @@ export const characterMedia = {
       "019f310c-3f0b-733e-8a13-c3f52a4a7c57:019f310c-3f0b-733e-8a13-c3f52a4a7c57-2": {
         "src": "/illustrations/mnemonics-v2/g5-u6868.webp",
         "label": "船桨",
-        "alt": "船桨是划船时拨水推动船前进的工具 图中“丬”与“夕”与“木”按上下结构自然长成“桨”。"
+        "alt": "摇桨泛舟穿行水乡；巴金与友人摇动双桨荡舟河上，在夕阳余晖中探访神奇的榕树 图中“丬”与“夕”与“木”按上下结构自然长成“桨”。"
       },
       "019f310c-3f0b-733e-8a13-c3f52a4a7c57:019f310c-3f0b-733e-8a13-c3f52a4a7c57-0": {
         "src": "/illustrations/mnemonics/m61.webp",
@@ -936,7 +936,7 @@ export const characterMedia = {
       "019f310c-3f0b-733e-8a13-c8fca51d3df7:019f310c-3f0b-733e-8a13-c8fca51d3df7-1": {
         "src": "/illustrations/mnemonics-v2/g5-u4ea9.webp",
         "label": "半亩",
-        "alt": "亩是计量土地面积的单位，常用来计算田地大小 图中“亠”与“田”按上下结构自然长成“亩”。"
+        "alt": "亩是计算土地面积的单位；一家人在后园半亩空地上辛勤翻土播种，收获了饱满朴实的花生 图中“亠”与“田”按上下结构自然长成“亩”。"
       }
     }
   },
@@ -991,7 +991,7 @@ export const characterMedia = {
       "019f310c-3f0f-7239-acbe-4fe087904c43:019f310c-3f0f-7239-acbe-4fe087904c43-0": {
         "src": "/illustrations/mnemonics-v2/g5-u7f36.webp",
         "label": "击缶",
-        "alt": "缶是古代盛水或酒的陶器，也可以敲击发声 图中“午”与“山”按上下结构自然长成“缶”。"
+        "alt": "缶是古代用来盛酒与敲击伴奏的瓦器；渑池会上秦王被迫击缶，赵国的国格尊严得到了有力捍卫 图中“午”与“山”按上下结构自然长成“缶”。"
       },
       "019f310c-3f0f-7239-acbe-4fe087904c43:019f310c-3f0f-7239-acbe-4fe087904c43-2": {
         "src": "/illustrations/mnemonics/m43.webp",
@@ -1083,7 +1083,7 @@ export const characterMedia = {
       "019f310c-3f05-77fe-b934-8f8aec4e9538:019f310c-3f05-77fe-b934-8f8aec4e9538-1": {
         "src": "/illustrations/mnemonics-v2/g5-u7b5b.webp",
         "label": "筛干草",
-        "alt": "筛子是有许多小孔、用来分开粗细颗粒的工具 图中“⺮”与“师”按上下结构自然长成“筛”。"
+        "alt": "筛干草是用竹筛清理草料；牛郎每天细心给老牛筛草喂料，展现了对伙伴的深厚情义 图中“⺮”与“师”按上下结构自然长成“筛”。"
       }
     }
   }

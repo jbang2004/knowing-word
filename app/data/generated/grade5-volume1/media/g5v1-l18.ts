@@ -6,7 +6,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u9b44.webp",
       "label": "魂魄",
-      "alt": "魂魄在课文语境中表示人的精神和心神 图中“白”与“鬼”按左右结构自然长成“魄”。"
+      "alt": "失魂落魄形容心神极度慌乱；孩子因为急需买书而失魂落魄，脚步匆匆奔向母亲工作的工厂 图中“白”与“鬼”按左右结构自然长成“魄”。"
     },
     "scene": {
       "scene": "左边一扇明亮白窗形成“白”，右边戴角面具、弯身和长尾沿“鬼”展开，像精神影子依着人，组成“魄”。",
@@ -25,12 +25,12 @@ export const characterMedia = {
       "g5v1-l18-c01-u9b44-words-image:g5v1-l18-c01-u9b44-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u6401.webp",
         "label": "搁东西",
-        "alt": "搁置就是把东西放下，暂时不处理 图中“扌”与“阁”按左右结构自然长成“搁”。"
+        "alt": "搁置指放置摆放物资；地道深处开辟出专门搁放粮食与工具的储藏洞，保障了长期坚守 图中“扌”与“阁”按左右结构自然长成“搁”。"
       },
       "g5v1-l18-c01-u9b44-words-image:g5v1-l18-c01-u9b44-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u9b44.webp",
         "label": "魂魄",
-        "alt": "魂魄在课文语境中表示人的精神和心神 图中“白”与“鬼”按左右结构自然长成“魄”。"
+        "alt": "失魂落魄形容心神极度慌乱；孩子因为急需买书而失魂落魄，脚步匆匆奔向母亲工作的工厂 图中“白”与“鬼”按左右结构自然长成“魄”。"
       }
     }
   },
@@ -38,7 +38,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u6291.webp",
       "label": "压抑",
-      "alt": "压抑形容心情或感情受到压制，不能自然表达 图中“扌”与“卬”按左右结构自然长成“抑”。"
+      "alt": "压抑沉闷的工厂环境；低矮破旧的厂房里机器轰鸣、光线昏暗，压抑的气氛扑面而来 图中“扌”与“卬”按左右结构自然长成“抑”。"
     },
     "scene": {
       "scene": "左边一只手向下按形成“扌”，右边低头人物被两块挡板夹住沿“卬”收紧，合成被压住的“抑”。",
@@ -62,7 +62,7 @@ export const characterMedia = {
       "g5v1-l18-c02-u6291-words-image:g5v1-l18-c02-u6291-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u6291.webp",
         "label": "压抑",
-        "alt": "压抑形容心情或感情受到压制，不能自然表达 图中“扌”与“卬”按左右结构自然长成“抑”。"
+        "alt": "压抑沉闷的工厂环境；低矮破旧的厂房里机器轰鸣、光线昏暗，压抑的气氛扑面而来 图中“扌”与“卬”按左右结构自然长成“抑”。"
       }
     }
   },
@@ -70,7 +70,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u9893.webp",
       "label": "颓败",
-      "alt": "颓败形容衰落、破败，失去原有的精神或样子 图中“秃”与“页”按左右结构自然长成“颓”。"
+      "alt": "颓败破旧的劳作车间；在极其艰苦狭窄的车间里，母亲为了养家糊口日复一日辛苦劳作 图中“秃”与“页”按左右结构自然长成“颓”。"
     },
     "scene": {
       "scene": "左边低垂禾穗和弯脚沿“秃”下垂，右边耷拉头部的人影形成“页”，两边都失去挺拔姿态，组成“颓”。",
@@ -84,7 +84,7 @@ export const characterMedia = {
       "g5v1-l18-c03-u9893-words-image:g5v1-l18-c03-u9893-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u9893.webp",
         "label": "颓败",
-        "alt": "颓败形容衰落、破败，失去原有的精神或样子 图中“秃”与“页”按左右结构自然长成“颓”。"
+        "alt": "颓败破旧的劳作车间；在极其艰苦狭窄的车间里，母亲为了养家糊口日复一日辛苦劳作 图中“秃”与“页”按左右结构自然长成“颓”。"
       },
       "g5v1-l18-c03-u9893-words-image:g5v1-l18-c03-u9893-words-image-0": {
         "src": "/illustrations/meanings/m03.webp",
@@ -94,7 +94,7 @@ export const characterMedia = {
       "g5v1-l18-c03-u9893-words-image:g5v1-l18-c03-u9893-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u7901.webp",
         "label": "珊瑚礁",
-        "alt": "暗礁是水面下不容易看见、可能影响航行的岩石 图中“石”与“焦”按左右结构自然长成“礁”。"
+        "alt": "礁石是海中突出的岩石；波涛汹涌的险峻暗礁，象征着追求幸福道路上的艰难险阻 图中“石”与“焦”按左右结构自然长成“礁”。"
       }
     }
   },
@@ -102,7 +102,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u7eab.webp",
       "label": "缝纫",
-      "alt": "缝纫就是用针线把布料连接或缝制成衣物 图中“纟”与“刃”按左右结构自然长成“纫”。"
+      "alt": "缝纫劳作手脚不停；母亲伏在缝纫机前双脚踩动踏板，针线飞针走线，忙碌得顾不上抬头 图中“纟”与“刃”按左右结构自然长成“纫”。"
     },
     "scene": {
       "scene": "左边盘绕细线形成“纟”，右边小刀形穿线器托住一点针眼沿“刃”排列，丝线穿过针眼，组成“纫”。",
@@ -111,7 +111,7 @@ export const characterMedia = {
         "右边小刀形穿线器托住一点针眼沿“刃”排列。"
       ]
     },
-    "transcript": "针线穿过布料，把两片布连起来，这项活叫缝纫，纫读第四声。纫是左右结构，左边绞丝旁，右边是刀刃的刃。记字时，可以想象一根丝线贴着裁布的小刀穿行，这幅画只帮助记住左右位置。缝纫就是用针线连接布料或制作衣物。这篇文章中的母亲在工厂忙着缝纫，手脚不停，孩子也从这个动作看见她工作的辛苦。",
+    "transcript": "纫，缝纫的纫，读第四声。它是左右结构，左边的绞丝旁代表缝衣细线，右边的“刃”像裁切布料的小刀，丝线连着利刃即为纫。缝纫是用针线连接布料制作衣物。课文写母亲在昏暗嘈杂的工厂里忙着缝纫，双脚踏着缝纫机踏板不停劳作，真实展现了母亲无私奉献的辛劳。",
     "practiceOptionVisuals": {
       "g5v1-l18-c04-u7eab-words-image:g5v1-l18-c04-u7eab-words-image-2": {
         "src": "/illustrations/meanings/m08.webp",
@@ -126,7 +126,7 @@ export const characterMedia = {
       "g5v1-l18-c04-u7eab-words-image:g5v1-l18-c04-u7eab-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u7eab.webp",
         "label": "缝纫",
-        "alt": "缝纫就是用针线把布料连接或缝制成衣物 图中“纟”与“刃”按左右结构自然长成“纫”。"
+        "alt": "缝纫劳作手脚不停；母亲伏在缝纫机前双脚踩动踏板，针线飞针走线，忙碌得顾不上抬头 图中“纟”与“刃”按左右结构自然长成“纫”。"
       }
     }
   },
@@ -134,7 +134,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u566a.webp",
       "label": "噪声",
-      "alt": "噪声是嘈杂、刺耳或妨碍人正常活动的声音 图中“口”与“喿”按左右结构自然长成“噪”。"
+      "alt": "噪声震耳欲聋；车间里巨大的机械噪声让彼此说话都得大声喊叫，工作环境十分艰辛 图中“口”与“喿”按左右结构自然长成“噪”。"
     },
     "scene": {
       "scene": "左边张开的发声口形成“口”，右边三个喇叭口叠在木架上沿“喿”震动，许多声音一起冒出，组成“噪”。",
@@ -153,12 +153,12 @@ export const characterMedia = {
       "g5v1-l18-c05-u566a-words-image:g5v1-l18-c05-u566a-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u69a8.webp",
         "label": "榨油",
-        "alt": "榨油就是用压力把花生等原料里的油挤出来 图中“木”与“窄”按左右结构自然长成“榨”。"
+        "alt": "榨油就是用压力挤出果实里的油脂；花生虽矮小埋在地下，榨出的香油却实实在在地造福他人 图中“木”与“窄”按左右结构自然长成“榨”。"
       },
       "g5v1-l18-c05-u566a-words-image:g5v1-l18-c05-u566a-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u566a.webp",
         "label": "噪声",
-        "alt": "噪声是嘈杂、刺耳或妨碍人正常活动的声音 图中“口”与“喿”按左右结构自然长成“噪”。"
+        "alt": "噪声震耳欲聋；车间里巨大的机械噪声让彼此说话都得大声喊叫，工作环境十分艰辛 图中“口”与“喿”按左右结构自然长成“噪”。"
       }
     }
   },
@@ -166,7 +166,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u8910.webp",
       "label": "褐色",
-      "alt": "褐色是一种接近树皮、泥土的棕色 图中“衤”与“曷”按左右结构自然长成“褐”。"
+      "alt": "褐色口罩沾满灰尘；母亲戴着被棉絮染成褐色的口罩，在粉尘弥漫中为孩子拼命挣钱 图中“衤”与“曷”按左右结构自然长成“褐”。"
     },
     "scene": {
       "scene": "左边展开衣襟形成“衤”，右边日轮下的弯钩衣架和人物沿“曷”挂起一件棕褐外衣，组成“褐”。",
@@ -180,7 +180,7 @@ export const characterMedia = {
       "g5v1-l18-c06-u8910-words-image:g5v1-l18-c06-u8910-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u8910.webp",
         "label": "褐色",
-        "alt": "褐色是一种接近树皮、泥土的棕色 图中“衤”与“曷”按左右结构自然长成“褐”。"
+        "alt": "褐色口罩沾满灰尘；母亲戴着被棉絮染成褐色的口罩，在粉尘弥漫中为孩子拼命挣钱 图中“衤”与“曷”按左右结构自然长成“褐”。"
       },
       "g5v1-l18-c06-u8910-words-image:g5v1-l18-c06-u8910-words-image-0": {
         "src": "/illustrations/meanings/m07.webp",
@@ -190,7 +190,7 @@ export const characterMedia = {
       "g5v1-l18-c06-u8910-words-image:g5v1-l18-c06-u8910-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u89c8.webp",
         "label": "游览",
-        "alt": "游览就是从容地观看风景、建筑或展览 图中“〢”与“丿”与“一”与“丶”与“见”按上下结构自然长成“览”。"
+        "alt": "游览观赏令人心旷神怡；漫步在园中游览，不仅能饱览江南名胜，更能体验异国情调 图中“〢”与“丿”与“一”与“丶”与“见”按上下结构自然长成“览”。"
       }
     }
   },
@@ -198,7 +198,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u60eb.webp",
       "label": "疲惫",
-      "alt": "疲惫就是身体和精神都很累，需要休息 图中“备”与“心”按上下结构自然长成“惫”。"
+      "alt": "疲惫不堪的身影令人心酸；母亲极其瘦弱疲惫的身躯，深深震撼了前来要钱买书的孩子 图中“备”与“心”按上下结构自然长成“惫”。"
     },
     "scene": {
       "scene": "上方背着重物走远路的人弯成“备”，下方心灯暗淡形成“心”，上下都显出劳累，组成“惫”。",
@@ -212,7 +212,7 @@ export const characterMedia = {
       "g5v1-l18-c07-u60eb-words-image:g5v1-l18-c07-u60eb-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u60eb.webp",
         "label": "疲惫",
-        "alt": "疲惫就是身体和精神都很累，需要休息 图中“备”与“心”按上下结构自然长成“惫”。"
+        "alt": "疲惫不堪的身影令人心酸；母亲极其瘦弱疲惫的身躯，深深震撼了前来要钱买书的孩子 图中“备”与“心”按上下结构自然长成“惫”。"
       },
       "g5v1-l18-c07-u60eb-words-image:g5v1-l18-c07-u60eb-words-image-2": {
         "src": "/illustrations/meanings/m03.webp",
@@ -230,7 +230,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u803d.webp",
       "label": "耽误",
-      "alt": "耽误就是因为拖延或受阻而错过时间、影响事情 图中“耳”与“冘”按左右结构自然长成“耽”。"
+      "alt": "耽误工时扣减收入；母亲唯恐耽误做工时间，手里的缝纫活一刻也不肯停歇 图中“耳”与“冘”按左右结构自然长成“耽”。"
     },
     "scene": {
       "scene": "左边竖起的耳朵形成“耳”，右边人物被屋盖和弯钩牵住沿“冘”停步，听着听着误了时间，组成“耽”。",
@@ -249,12 +249,12 @@ export const characterMedia = {
       "g5v1-l18-c08-u803d-words-image:g5v1-l18-c08-u803d-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u7a9d.webp",
         "label": "鸟窝",
-        "alt": "鸟窝是鸟用树枝、草叶等搭成的栖息和育雏处 图中“穴”与“呙”按上下结构自然长成“窝”。"
+        "alt": "精巧小窝温暖安全；松鼠挑选高大老树搭窝，用树枝和苔藓搭建起舒适温暖的家园 图中“穴”与“呙”按上下结构自然长成“窝”。"
       },
       "g5v1-l18-c08-u803d-words-image:g5v1-l18-c08-u803d-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u803d.webp",
         "label": "耽误",
-        "alt": "耽误就是因为拖延或受阻而错过时间、影响事情 图中“耳”与“冘”按左右结构自然长成“耽”。"
+        "alt": "耽误工时扣减收入；母亲唯恐耽误做工时间，手里的缝纫活一刻也不肯停歇 图中“耳”与“冘”按左右结构自然长成“耽”。"
       }
     }
   },
@@ -262,7 +262,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u515c.webp",
       "label": "衣兜",
-      "alt": "衣兜是衣服上用来装小物品的口袋 图中“兜”按独体结构自然长成“兜”。"
+      "alt": "贴身衣兜掏出深沉母爱；母亲从破旧的衣兜里掏出一卷揉得皱巴巴的毛票，毫不犹豫递给孩子买书 图中“兜”按独体结构自然长成“兜”。"
     },
     "scene": {
       "scene": "外侧两条衣边和下方弯脚围成口袋，里面白色布片与提带严格沿“兜”的其余笔画收口，整只衣兜长成“兜”。",
@@ -270,12 +270,12 @@ export const characterMedia = {
         "里面白色布片与提带严格沿“兜”的其余笔画收口。"
       ]
     },
-    "transcript": "母亲把钱从衣服的小口袋里掏出来，这个口袋就是衣兜，兜读第一声。兜是独体字，外面的弯笔像口袋边缘，里面的笔画像被稳稳兜住的小物件。顺着口袋把东西围住的样子整体记字，这只是联想。衣兜是衣服上用来装小物品的口袋。文中那笔买书的钱从母亲衣兜中拿出，小小动作装着她对孩子读书的支持。",
+    "transcript": "母亲把钱从衣服的小口袋里掏出来，这个口袋就是衣兜，兜读第一声。兜是独体字，外面的弯折笔画围成口袋外缘，内部笔画宛如被稳稳装入的物品。衣兜是衣服上装小物的地方。课文中，那笔买书的钱被母亲从贴身衣兜中取出，短短的动作凝聚着深沉而坚定的母爱。",
     "practiceOptionVisuals": {
       "g5v1-l18-c09-u515c-words-image:g5v1-l18-c09-u515c-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u515c.webp",
         "label": "衣兜",
-        "alt": "衣兜是衣服上用来装小物品的口袋 图中“兜”按独体结构自然长成“兜”。"
+        "alt": "贴身衣兜掏出深沉母爱；母亲从破旧的衣兜里掏出一卷揉得皱巴巴的毛票，毫不犹豫递给孩子买书 图中“兜”按独体结构自然长成“兜”。"
       },
       "g5v1-l18-c09-u515c-words-image:g5v1-l18-c09-u515c-words-image-0": {
         "src": "/illustrations/meanings/m08.webp",
@@ -285,7 +285,7 @@ export const characterMedia = {
       "g5v1-l18-c09-u515c-words-image:g5v1-l18-c09-u515c-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u9988.webp",
         "label": "反馈",
-        "alt": "反馈是把结果、意见或信息返回给对方 图中“饣”与“贵”按左右结构自然长成“馈”。"
+        "alt": "馈赠厚重丰润人生；书籍是大自然与人类文明最慷慨的馈赠，让作者的童年与少年时代绚丽多彩 图中“饣”与“贵”按左右结构自然长成“馈”。"
       }
     }
   },
@@ -293,7 +293,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u6743.webp",
       "label": "权利",
-      "alt": "权利是依法或依照规则可以做某件事、享有某种利益的资格 图中“木”与“又”按左右结构自然长成“权”。"
+      "alt": "有权选择读书求知；母亲坚定地支持孩子读书，用辛勤的汗水为孩子撑起求知的大门 图中“木”与“又”按左右结构自然长成“权”。"
     },
     "scene": {
       "scene": "左边一棵有主干根枝的树形成“木”，右边一只握住选择牌的手形成“又”，手在树旁作出决定，合成“权”。",
@@ -307,7 +307,7 @@ export const characterMedia = {
       "g5v1-l18-c10-u6743-words-image:g5v1-l18-c10-u6743-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u6743.webp",
         "label": "权利",
-        "alt": "权利是依法或依照规则可以做某件事、享有某种利益的资格 图中“木”与“又”按左右结构自然长成“权”。"
+        "alt": "有权选择读书求知；母亲坚定地支持孩子读书，用辛勤的汗水为孩子撑起求知的大门 图中“木”与“又”按左右结构自然长成“权”。"
       },
       "g5v1-l18-c10-u6743-words-image:g5v1-l18-c10-u6743-words-image-0": {
         "src": "/illustrations/meanings/m04.webp",
@@ -325,7 +325,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u8f9e.webp",
       "label": "推辞",
-      "alt": "推辞就是表示不接受某件事或某种安排 图中“舌”与“辛”按左右结构自然长成“辞”。"
+      "alt": "辞别母亲走出工厂；紧握着母亲给的买书钱，孩子眼中含着热泪走出车间，懂得了母爱的伟大 图中“舌”与“辛”按左右结构自然长成“辞”。"
     },
     "scene": {
       "scene": "左边伸出的舌与说话牌形成“舌”，右边辛劳工具和拒绝标记沿“辛”排列，合成开口推辞的“辞”。",
@@ -339,7 +339,7 @@ export const characterMedia = {
       "g5v1-l18-c11-u8f9e-words-image:g5v1-l18-c11-u8f9e-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u8f9e.webp",
         "label": "推辞",
-        "alt": "推辞就是表示不接受某件事或某种安排 图中“舌”与“辛”按左右结构自然长成“辞”。"
+        "alt": "辞别母亲走出工厂；紧握着母亲给的买书钱，孩子眼中含着热泪走出车间，懂得了母爱的伟大 图中“舌”与“辛”按左右结构自然长成“辞”。"
       },
       "g5v1-l18-c11-u8f9e-words-image:g5v1-l18-c11-u8f9e-words-image-0": {
         "src": "/illustrations/meanings/m07.webp",
@@ -349,7 +349,7 @@ export const characterMedia = {
       "g5v1-l18-c11-u8f9e-words-image:g5v1-l18-c11-u8f9e-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u68ad.webp",
         "label": "梭子",
-        "alt": "梭子是织布时牵引纬线来回穿行的工具 图中“木”与“夋”按左右结构自然长成“梭”。"
+        "alt": "梭子是织布时牵引纬线的工具；织女手中的织布梭上下翻飞，织出了如晚霞般美丽的锦缎 图中“木”与“夋”按左右结构自然长成“梭”。"
       }
     }
   },
@@ -357,7 +357,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u788c.webp",
       "label": "忙碌",
-      "alt": "忙碌形容事情多，手脚不停，很少有空闲 图中“石”与“录”按左右结构自然长成“碌”。"
+      "alt": "忙碌不休操劳一生；母亲在昏暗的车间里忙碌不停的身影，成为作者一生刻骨铭心的记忆 图中“石”与“录”按左右结构自然长成“碌”。"
     },
     "scene": {
       "scene": "左边一块带切面的石头形成“石”，右边手持工具在水边反复奔走，手、水和路线沿“录”排列，组成不停劳作的“碌”。",
@@ -371,7 +371,7 @@ export const characterMedia = {
       "g5v1-l18-c12-u788c-words-image:g5v1-l18-c12-u788c-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u788c.webp",
         "label": "忙碌",
-        "alt": "忙碌形容事情多，手脚不停，很少有空闲 图中“石”与“录”按左右结构自然长成“碌”。"
+        "alt": "忙碌不休操劳一生；母亲在昏暗的车间里忙碌不停的身影，成为作者一生刻骨铭心的记忆 图中“石”与“录”按左右结构自然长成“碌”。"
       },
       "g5v1-l18-c12-u788c-words-image:g5v1-l18-c12-u788c-words-image-0": {
         "src": "/illustrations/meanings/m08.webp",
@@ -381,7 +381,7 @@ export const characterMedia = {
       "g5v1-l18-c12-u788c-words-image:g5v1-l18-c12-u788c-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u7cd6.webp",
         "label": "糖果",
-        "alt": "糖是有甜味的食物成分，也指糖果等甜食 图中“米”与“唐”按左右结构自然长成“糖”。"
+        "alt": "糖果虽小甜透心田；庙会上父亲特意买给孩子的一块麦芽糖，成为童年最甜美的记忆 图中“米”与“唐”按左右结构自然长成“糖”。"
       }
     }
   },
@@ -389,7 +389,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u540a.webp",
       "label": "吊起",
-      "alt": "吊起就是用绳索等把物体悬在空中或向上提起 图中“口”与“巾”按上下结构自然长成“吊”。"
+      "alt": "吊扇无力难消酷暑；厂房上方吊着简陋的电扇，依然挡不住闷热难耐的高温暑气 图中“口”与“巾”按上下结构自然长成“吊”。"
     },
     "scene": {
       "scene": "上方方形滑轮口形成“口”，下方长巾被绳索从中央提起形成“巾”，上下组成悬吊的“吊”。",
@@ -408,12 +408,12 @@ export const characterMedia = {
       "g5v1-l18-c13-u540a-words-image:g5v1-l18-c13-u540a-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u7f34.webp",
         "label": "缴费",
-        "alt": "缴费就是按照规定交付费用 图中“纟”与“敫”按左右结构自然长成“缴”。"
+        "alt": "缴纳学费东挪西凑；为了凑齐新学期缴费的银元，父亲卖掉心爱的物品，四处奔波借钱 图中“纟”与“敫”按左右结构自然长成“缴”。"
       },
       "g5v1-l18-c13-u540a-words-image:g5v1-l18-c13-u540a-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u540a.webp",
         "label": "吊起",
-        "alt": "吊起就是用绳索等把物体悬在空中或向上提起 图中“口”与“巾”按上下结构自然长成“吊”。"
+        "alt": "吊扇无力难消酷暑；厂房上方吊着简陋的电扇，依然挡不住闷热难耐的高温暑气 图中“口”与“巾”按上下结构自然长成“吊”。"
       }
     }
   },
@@ -421,7 +421,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u9177.webp",
       "label": "酷暑",
-      "alt": "酷暑是天气非常炎热的时节 图中“酉”与“告”按左右结构自然长成“酷”。"
+      "alt": "酷暑难耐汗流浃背；在酷热难当的三伏天里，母亲依然坚持在闷热的车间里挥汗如雨 图中“酉”与“告”按左右结构自然长成“酷”。"
     },
     "scene": {
       "scene": "左边封口坛和内部刻度形成“酉”，右边高台号角与烈日告示沿“告”立起，像热浪发出警报，组成“酷”。",
@@ -435,7 +435,7 @@ export const characterMedia = {
       "g5v1-l18-c14-u9177-words-image:g5v1-l18-c14-u9177-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u9177.webp",
         "label": "酷暑",
-        "alt": "酷暑是天气非常炎热的时节 图中“酉”与“告”按左右结构自然长成“酷”。"
+        "alt": "酷暑难耐汗流浃背；在酷热难当的三伏天里，母亲依然坚持在闷热的车间里挥汗如雨 图中“酉”与“告”按左右结构自然长成“酷”。"
       },
       "g5v1-l18-c14-u9177-words-image:g5v1-l18-c14-u9177-words-image-2": {
         "src": "/illustrations/meanings/m08.webp",
@@ -445,7 +445,7 @@ export const characterMedia = {
       "g5v1-l18-c14-u9177-words-image:g5v1-l18-c14-u9177-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u679a.webp",
         "label": "一枚",
-        "alt": "枚是量词，可以用来数较小、形状相近的东西 图中“木”与“⺙”按左右结构自然长成“枚”。"
+        "alt": "枚是用于计算细长物件的量词；一枚火箭携带着巨大的能量冲向太空，展现了科技的力量 图中“木”与“⺙”按左右结构自然长成“枚”。"
       }
     }
   },
@@ -453,7 +453,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u6691.webp",
       "label": "酷暑",
-      "alt": "暑表示炎热的季节或天气，如酷暑、暑假 图中“日”与“者”按上下结构自然长成“暑”。"
+      "alt": "暑热蒸腾坚韧不屈；母亲在漫长暑热中默默忍受辛劳，用柔弱的肩膀挑起家庭的重担 图中“日”与“者”按上下结构自然长成“暑”。"
     },
     "scene": {
       "scene": "上方炽热日轮形成“日”，下方一位老人站在日影和土台间沿“者”避暑，烈日压顶组成“暑”。",
@@ -467,7 +467,7 @@ export const characterMedia = {
       "g5v1-l18-c15-u6691-words-image:g5v1-l18-c15-u6691-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u6691.webp",
         "label": "酷暑",
-        "alt": "暑表示炎热的季节或天气，如酷暑、暑假 图中“日”与“者”按上下结构自然长成“暑”。"
+        "alt": "暑热蒸腾坚韧不屈；母亲在漫长暑热中默默忍受辛劳，用柔弱的肩膀挑起家庭的重担 图中“日”与“者”按上下结构自然长成“暑”。"
       },
       "g5v1-l18-c15-u6691-words-image:g5v1-l18-c15-u6691-words-image-2": {
         "src": "/illustrations/meanings/m05.webp",
@@ -485,7 +485,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u810a.webp",
       "label": "脊背",
-      "alt": "脊背是人或动物躯干后面中央的一条骨肉区域 图中“脊”按独体结构自然长成“脊”。"
+      "alt": "脊背弯曲瘦小辛劳；母亲弯曲瘦弱的脊背宛如一张弓，背负着沉重的生活与对孩子的期望 图中“脊”按独体结构自然长成“脊”。"
     },
     "scene": {
       "scene": "中央一条竖直脊柱贯穿上下，两侧肌肉与下方月形躯干沿“脊”的点撇横画对称展开，整幅背部长成“脊”。",
@@ -503,12 +503,12 @@ export const characterMedia = {
       "g5v1-l18-c16-u810a-words-image:g5v1-l18-c16-u810a-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u72ed.webp",
         "label": "狭窄",
-        "alt": "狭窄表示宽度小，能通过的空间不大 图中“犭”与“夹”按左右结构自然长成“狭”。"
+        "alt": "狭窄洞口便于防御；松鼠窝的洞口狭窄朝上，不仅能阻挡雨水，还能有效防备天敌侵扰 图中“犭”与“夹”按左右结构自然长成“狭”。"
       },
       "g5v1-l18-c16-u810a-words-image:g5v1-l18-c16-u810a-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u810a.webp",
         "label": "脊背",
-        "alt": "脊背是人或动物躯干后面中央的一条骨肉区域 图中“脊”按独体结构自然长成“脊”。"
+        "alt": "脊背弯曲瘦小辛劳；母亲弯曲瘦弱的脊背宛如一张弓，背负着沉重的生活与对孩子的期望 图中“脊”按独体结构自然长成“脊”。"
       }
     }
   },
@@ -516,7 +516,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u7f69.webp",
       "label": "笼罩",
-      "alt": "笼罩就是像网、雾或光一样从上面覆盖住 图中“罒”与“卓”按上下结构自然长成“罩”。"
+      "alt": "口罩遮掩难掩慈祥；母亲拉下口罩时那张满是汗水与疲倦的脸庞，深深烙印在孩子心头 图中“罒”与“卓”按上下结构自然长成“罩”。"
     },
     "scene": {
       "scene": "上方一张方格罩网形成“罒”，下方高桌和早晨日影沿“卓”立起，网从高处罩下，组成“罩”。",
@@ -535,12 +535,12 @@ export const characterMedia = {
       "g5v1-l18-c17-u7f69-words-image:g5v1-l18-c17-u7f69-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u8910.webp",
         "label": "褐色",
-        "alt": "褐色是一种接近树皮、泥土的棕色 图中“衤”与“曷”按左右结构自然长成“褐”。"
+        "alt": "褐色口罩沾满灰尘；母亲戴着被棉絮染成褐色的口罩，在粉尘弥漫中为孩子拼命挣钱 图中“衤”与“曷”按左右结构自然长成“褐”。"
       },
       "g5v1-l18-c17-u7f69-words-image:g5v1-l18-c17-u7f69-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u7f69.webp",
         "label": "笼罩",
-        "alt": "笼罩就是像网、雾或光一样从上面覆盖住 图中“罒”与“卓”按上下结构自然长成“罩”。"
+        "alt": "口罩遮掩难掩慈祥；母亲拉下口罩时那张满是汗水与疲倦的脸庞，深深烙印在孩子心头 图中“罒”与“卓”按上下结构自然长成“罩”。"
       }
     }
   },
@@ -548,7 +548,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u7adf.webp",
       "label": "竟然",
-      "alt": "竟然表示事情出乎原先的意料 图中“音”与“儿”按上下结构自然长成“竟”。"
+      "alt": "竟然支持孩子买书；在生活如此艰难的情况下，母亲竟然毫不犹豫支持孩子买书，深情动人 图中“音”与“儿”按上下结构自然长成“竟”。"
     },
     "scene": {
       "scene": "上方舞台顶灯和横梁形成“音”的上部，下方一位走到终点的人伸出双腿成“儿”，意外抵达尽头，组成“竟”。",
@@ -562,7 +562,7 @@ export const characterMedia = {
       "g5v1-l18-c18-u7adf-words-image:g5v1-l18-c18-u7adf-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u7adf.webp",
         "label": "竟然",
-        "alt": "竟然表示事情出乎原先的意料 图中“音”与“儿”按上下结构自然长成“竟”。"
+        "alt": "竟然支持孩子买书；在生活如此艰难的情况下，母亲竟然毫不犹豫支持孩子买书，深情动人 图中“音”与“儿”按上下结构自然长成“竟”。"
       },
       "g5v1-l18-c18-u7adf-words-image:g5v1-l18-c18-u7adf-words-image-0": {
         "src": "/illustrations/meanings/m06.webp",
@@ -572,7 +572,7 @@ export const characterMedia = {
       "g5v1-l18-c18-u7adf-words-image:g5v1-l18-c18-u7adf-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u8bc6.webp",
         "label": "默而识之",
-        "alt": "“默而识之”中的“识”表示记住，读zhì；表示认识时读shí 图中“讠”与“只”按左右结构自然长成“识”。"
+        "alt": "默而识之记在心中；读书不仅要理解领会，更要默默积累记在心中，做到融会贯通 图中“讠”与“只”按左右结构自然长成“识”。"
       }
     }
   },
@@ -580,7 +580,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u54c7.webp",
       "label": "好哇",
-      "alt": "哇是表示惊讶、赞叹等语气的声音 图中“口”与“圭”按左右结构自然长成“哇”。"
+      "alt": "哇地一声热泪盈眶；目睹母亲在工厂里的艰辛劳作，孩子心中涌起无尽的酸楚与感激 图中“口”与“圭”按左右结构自然长成“哇”。"
     },
     "scene": {
       "scene": "左边张开的嘴形成“口”，右边上下两层土台叠成“圭”，声音越过两层高台传出来，组成“哇”。",
@@ -599,12 +599,12 @@ export const characterMedia = {
       "g5v1-l18-c19-u54c7-words-image:g5v1-l18-c19-u54c7-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u7adf.webp",
         "label": "竟然",
-        "alt": "竟然表示事情出乎原先的意料 图中“音”与“儿”按上下结构自然长成“竟”。"
+        "alt": "竟然支持孩子买书；在生活如此艰难的情况下，母亲竟然毫不犹豫支持孩子买书，深情动人 图中“音”与“儿”按上下结构自然长成“竟”。"
       },
       "g5v1-l18-c19-u54c7-words-image:g5v1-l18-c19-u54c7-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u54c7.webp",
         "label": "好哇",
-        "alt": "哇是表示惊讶、赞叹等语气的声音 图中“口”与“圭”按左右结构自然长成“哇”。"
+        "alt": "哇地一声热泪盈眶；目睹母亲在工厂里的艰辛劳作，孩子心中涌起无尽的酸楚与感激 图中“口”与“圭”按左右结构自然长成“哇”。"
       }
     }
   },
@@ -612,7 +612,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u5fcd.webp",
       "label": "忍受",
-      "alt": "忍受就是遇到困难或痛苦时暂时承受住 图中“刃”与“心”按上下结构自然长成“忍”。"
+      "alt": "忍受艰辛毫无怨言；母亲默默忍受着常人难以想象的辛苦，一心只盼望着孩子能多读好书 图中“刃”与“心”按上下结构自然长成“忍”。"
     },
     "scene": {
       "scene": "上方刀刃带一点锋芒形成“刃”，下方心形灯带形成“心”，心稳稳托住压力，组成“忍”。",
@@ -631,12 +631,12 @@ export const characterMedia = {
       "g5v1-l18-c20-u5fcd-words-image:g5v1-l18-c20-u5fcd-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u7476.webp",
         "label": "瑶台",
-        "alt": "瑶台是传说中用美玉建成的台，也常用来形容美丽楼台 图中“王”与“爫”与“缶”按左右结构自然长成“瑶”。"
+        "alt": "瑶台倒映湖光水色；宛如人间仙境的蓬莱瑶台，展现了古代匠人的奇思妙想与超凡技艺 图中“王”与“爫”与“缶”按左右结构自然长成“瑶”。"
       },
       "g5v1-l18-c20-u5fcd-words-image:g5v1-l18-c20-u5fcd-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u5fcd.webp",
         "label": "忍受",
-        "alt": "忍受就是遇到困难或痛苦时暂时承受住 图中“刃”与“心”按上下结构自然长成“忍”。"
+        "alt": "忍受艰辛毫无怨言；母亲默默忍受着常人难以想象的辛苦，一心只盼望着孩子能多读好书 图中“刃”与“心”按上下结构自然长成“忍”。"
       }
     }
   },
@@ -644,7 +644,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u68b0.webp",
       "label": "机械",
-      "alt": "机械是利用零件和动力完成工作的装置 图中“木”与“戒”按左右结构自然长成“械”。"
+      "alt": "机械轰鸣震动耳膜；在冰冷刺耳的机械声中，母亲温热的手和递过来的毛票点亮了孩子的精神世界 图中“木”与“戒”按左右结构自然长成“械”。"
     },
     "scene": {
       "scene": "左边木制机架形成“木”，右边齿轮、护栏和工具沿“戒”互相咬合，像一台有秩序运转的机器，组成“械”。",
@@ -658,7 +658,7 @@ export const characterMedia = {
       "g5v1-l18-c21-u68b0-words-image:g5v1-l18-c21-u68b0-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u68b0.webp",
         "label": "机械",
-        "alt": "机械是利用零件和动力完成工作的装置 图中“木”与“戒”按左右结构自然长成“械”。"
+        "alt": "机械轰鸣震动耳膜；在冰冷刺耳的机械声中，母亲温热的手和递过来的毛票点亮了孩子的精神世界 图中“木”与“戒”按左右结构自然长成“械”。"
       },
       "g5v1-l18-c21-u68b0-words-image:g5v1-l18-c21-u68b0-words-image-0": {
         "src": "/illustrations/meanings/m08.webp",
@@ -668,7 +668,7 @@ export const characterMedia = {
       "g5v1-l18-c21-u68b0-words-image:g5v1-l18-c21-u68b0-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u5f3a.webp",
         "label": "强迫",
-        "alt": "强迫就是用压力逼别人做不愿意做的事 图中“弓”与“虽”按左右结构自然长成“强”。"
+        "alt": "强迫是用强力逼迫他人顺从；面对秦王的强硬态度，蔺相如据理力争，毫无惧色 图中“弓”与“虽”按左右结构自然长成“强”。"
       }
     }
   },
@@ -676,7 +676,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u9178.webp",
       "label": "心酸",
-      "alt": "心酸形容心里难过；“酸”也可以表示一种基本味道 图中“酉”与“夋”按左右结构自然长成“酸”。"
+      "alt": "心酸感动化为力量；那本用母亲心血换来的长篇小说，激励着作者在文学道路上奋力前行 图中“酉”与“夋”按左右结构自然长成“酸”。"
     },
     "scene": {
       "scene": "左边封口调味坛形成“酉”，右边人物弯腰尝味、脚下水纹和酸果沿“夋”收紧，尝到酸味缩身，组成“酸”。",
@@ -695,12 +695,12 @@ export const characterMedia = {
       "g5v1-l18-c22-u9178-words-image:g5v1-l18-c22-u9178-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u6e9c.webp",
         "label": "溜出来",
-        "alt": "溜走就是趁人不注意，悄悄而快速地离开 图中“氵”与“留”按左右结构自然长成“溜”。"
+        "alt": "溜出指悄悄离开；仙女们趁王母不备溜出天宫来到凡间，展现了对自由人间的向往 图中“氵”与“留”按左右结构自然长成“溜”。"
       },
       "g5v1-l18-c22-u9178-words-image:g5v1-l18-c22-u9178-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u9178.webp",
         "label": "心酸",
-        "alt": "心酸形容心里难过；“酸”也可以表示一种基本味道 图中“酉”与“夋”按左右结构自然长成“酸”。"
+        "alt": "心酸感动化为力量；那本用母亲心血换来的长篇小说，激励着作者在文学道路上奋力前行 图中“酉”与“夋”按左右结构自然长成“酸”。"
       }
     }
   }

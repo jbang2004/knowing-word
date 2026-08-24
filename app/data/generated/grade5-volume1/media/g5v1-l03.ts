@@ -6,12 +6,12 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u7ba9.webp",
       "label": "箩筐",
-      "alt": "箩筐是用竹篾编成、用来盛东西的器具 图中“⺮”与“罗”按上下结构自然长成“箩”。"
+      "alt": "箩筐是用竹篾编成的盛物器具；摇落的花雨纷纷落入箩筐，装满了童年的欢声笑语 图中“⺮”与“罗”按上下结构自然长成“箩”。"
     },
     "scene": {
-      "scene": "上方两簇竹叶排成“⺮”，下方竹篾网和筐口沿“罗”的笔画编织，形成“箩”。",
+      "scene": "上方两簇青翠竹叶排成竹字头“⺮”，下方竹篾网和筐口沿“罗”的笔画编织，形成“箩”。",
       "cues": [
-        "上方两簇竹叶排成“⺮”。",
+        "上方两簇青翠竹叶排成竹字头“⺮”。",
         "下方竹篾网和筐口沿“罗”的笔画编织。"
       ]
     },
@@ -30,7 +30,7 @@ export const characterMedia = {
       "g5v1-l03-c01-u7ba9-words-image:g5v1-l03-c01-u7ba9-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u7ba9.webp",
         "label": "箩筐",
-        "alt": "箩筐是用竹篾编成、用来盛东西的器具 图中“⺮”与“罗”按上下结构自然长成“箩”。"
+        "alt": "箩筐是用竹篾编成的盛物器具；摇落的花雨纷纷落入箩筐，装满了童年的欢声笑语 图中“⺮”与“罗”按上下结构自然长成“箩”。"
       }
     }
   },
@@ -38,7 +38,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u676d.webp",
       "label": "杭州",
-      "alt": "杭州是浙江省的一座城市，以西湖和江南风景闻名 图中“木”与“亢”按左右结构自然长成“杭”。"
+      "alt": "杭州西湖歌舞升平；诗人借杭州景致针砭时弊，警醒世人切莫沉溺享乐而忘却国难 图中“木”与“亢”按左右结构自然长成“杭”。"
     },
     "scene": {
       "scene": "左边湖畔柳树长成“木”，右边桥墩与弯拱沿“亢”的笔画立起，组成“杭”。",
@@ -57,12 +57,12 @@ export const characterMedia = {
       "g5v1-l03-c02-u676d-words-image:g5v1-l03-c02-u676d-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u70ec.webp",
         "label": "灰烬",
-        "alt": "灰烬是物体燃烧后留下的灰和少量未烧尽物 图中“火”与“尽”按左右结构自然长成“烬”。"
+        "alt": "化为灰烬令人痛心疾首；三天大火将万园之园化为一片灰烬，历史的伤痛催人警醒奋发 图中“火”与“尽”按左右结构自然长成“烬”。"
       },
       "g5v1-l03-c02-u676d-words-image:g5v1-l03-c02-u676d-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u676d.webp",
         "label": "杭州",
-        "alt": "杭州是浙江省的一座城市，以西湖和江南风景闻名 图中“木”与“亢”按左右结构自然长成“杭”。"
+        "alt": "杭州西湖歌舞升平；诗人借杭州景致针砭时弊，警醒世人切莫沉溺享乐而忘却国难 图中“木”与“亢”按左右结构自然长成“杭”。"
       }
     }
   },
@@ -70,7 +70,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u61c2.webp",
       "label": "懂得",
-      "alt": "懂得就是明白一件事的意思或道理 图中“忄”与“董”按左右结构自然长成“懂”。"
+      "alt": "懂得就是明白事理与感受；母亲懂得家乡桂花的特别滋味，那是一份割舍不下的浓浓乡情 图中“忄”与“董”按左右结构自然长成“懂”。"
     },
     "scene": {
       "scene": "左边发亮的心灯排成“忄”，右边草冠、重叠书页和土地沿“董”的笔画码好，合成“懂”。",
@@ -89,12 +89,12 @@ export const characterMedia = {
       "g5v1-l03-c03-u61c2-words-image:g5v1-l03-c03-u61c2-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u6995.webp",
         "label": "榕树",
-        "alt": "榕树枝叶繁茂，常有从枝条垂下并扎入土中的气生根 图中“木”与“容”按左右结构自然长成“榕”。"
+        "alt": "独木成林郁郁葱葱；巨大的榕树枝干垂下无数气根扎入泥土，展现出大自然顽强勃发的生命力 图中“木”与“容”按左右结构自然长成“榕”。"
       },
       "g5v1-l03-c03-u61c2-words-image:g5v1-l03-c03-u61c2-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u61c2.webp",
         "label": "懂得",
-        "alt": "懂得就是明白一件事的意思或道理 图中“忄”与“董”按左右结构自然长成“懂”。"
+        "alt": "懂得就是明白事理与感受；母亲懂得家乡桂花的特别滋味，那是一份割舍不下的浓浓乡情 图中“忄”与“董”按左右结构自然长成“懂”。"
       }
     }
   },
@@ -121,7 +121,7 @@ export const characterMedia = {
       "g5v1-l03-c04-u5170-words-image:g5v1-l03-c04-u5170-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u633d.webp",
         "label": "挽裤",
-        "alt": "挽留就是拉住或劝说将要离开的人留下来 图中“扌”与“免”按左右结构自然长成“挽”。"
+        "alt": "挽起是卷起衣袖或裤脚；秋凉水冷无法挽裤过溪，搭石就成了人们日常出行必不可少的依靠 图中“扌”与“免”按左右结构自然长成“挽”。"
       },
       "g5v1-l03-c04-u5170-words-image:g5v1-l03-c04-u5170-words-image-1": {
         "src": "/illustrations/mnemonics/m41.webp",
@@ -158,7 +158,7 @@ export const characterMedia = {
       "g5v1-l03-c05-u5a46-words-image:g5v1-l03-c05-u5a46-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u6284.webp",
         "label": "抄写",
-        "alt": "抄写就是照着文字重新写一遍 图中“扌”与“少”按左右结构自然长成“抄”。"
+        "alt": "抄小路指绕过大路快速行进；随从化装成平民抄小路潜回赵国，确保了和氏璧的安全 图中“扌”与“少”按左右结构自然长成“抄”。"
       }
     }
   },
@@ -190,7 +190,7 @@ export const characterMedia = {
       "g5v1-l03-c06-u7cd5-words-image:g5v1-l03-c06-u7cd5-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u89c8.webp",
         "label": "游览",
-        "alt": "游览就是从容地观看风景、建筑或展览 图中“〢”与“丿”与“一”与“丶”与“见”按上下结构自然长成“览”。"
+        "alt": "游览观赏令人心旷神怡；漫步在园中游览，不仅能饱览江南名胜，更能体验异国情调 图中“〢”与“丿”与“一”与“丶”与“见”按上下结构自然长成“览”。"
       }
     }
   },
@@ -222,7 +222,7 @@ export const characterMedia = {
       "g5v1-l03-c07-u997c-words-image:g5v1-l03-c07-u997c-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u4fed.webp",
         "label": "节俭",
-        "alt": "节俭就是生活有计划，不随意浪费物品和钱财 图中“亻”与“佥”按左右结构自然长成“俭”。"
+        "alt": "节俭是生活俭朴不奢华；牛郎织女生活节俭踏实，小家庭洋溢着欢声笑语与温情 图中“亻”与“佥”按左右结构自然长成“俭”。"
       }
     }
   },
@@ -230,7 +230,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u6d78.webp",
       "label": "沉浸",
-      "alt": "沉浸原指泡在水里，也常表示全心进入某种感受 图中“氵”与“彐”与“冖”与“又”按左右结构自然长成“浸”。"
+      "alt": "沉浸指全心进入某种美妙体验；中秋桂花盛开时，整个村子都浸在浓郁甜美的香气里 图中“氵”与“彐”与“冖”与“又”按左右结构自然长成“浸”。"
     },
     "scene": {
       "scene": "左边三股水流形成“氵”，右边手形夹具“彐”压在“冖”形水盖上，最下方“又”形手托住浸泡物，合成“浸”。",
@@ -241,12 +241,12 @@ export const characterMedia = {
         "最下方“又”形手托住浸泡物。"
       ]
     },
-    "transcript": "浸，沉浸的浸。浸原来可以说东西泡在水里，沉浸也可以表示全心进入一种感受。浸是左右结构，左边三点水很清楚，右边笔画较多，可以整体想成双手把东西轻轻按入水中。这个动作只帮助记字形。课文说桂花盛开时，整个村子都浸在桂花的香气里，香气像水一样包围四周，让人处处都能闻见。",
+    "transcript": "浸，沉浸的浸，读第四声。它是左右结构，左边的三点水表明与水相连，右边像双手将物件缓缓浸入水中，左右相合即为浸。沉浸原指泡在水中，也指全心进入某种美好感受。课文写桂花盛开时，整个村子都浸在桂花的香气里，甜美浓郁的乡情像水波一样缓缓包围着人们。",
     "practiceOptionVisuals": {
       "g5v1-l03-c08-u6d78-words-image:g5v1-l03-c08-u6d78-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u6d78.webp",
         "label": "沉浸",
-        "alt": "沉浸原指泡在水里，也常表示全心进入某种感受 图中“氵”与“彐”与“冖”与“又”按左右结构自然长成“浸”。"
+        "alt": "沉浸指全心进入某种美妙体验；中秋桂花盛开时，整个村子都浸在浓郁甜美的香气里 图中“氵”与“彐”与“冖”与“又”按左右结构自然长成“浸”。"
       },
       "g5v1-l03-c08-u6d78-words-image:g5v1-l03-c08-u6d78-words-image-2": {
         "src": "/illustrations/meanings/m08.webp",
@@ -256,7 +256,7 @@ export const characterMedia = {
       "g5v1-l03-c08-u6d78-words-image:g5v1-l03-c08-u6d78-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u9175.webp",
         "label": "发酵",
-        "alt": "发酵是微生物作用使食物等发生变化的过程 图中“酉”与“孝”按左右结构自然长成“酵”。"
+        "alt": "悄然发酵孕育佳作；平时的阅读积累如酵母在心田悄然发酵，最终让灵感的嫩芽长成一篇篇动人文章 图中“酉”与“孝”按左右结构自然长成“酵”。"
       }
     }
   },
@@ -264,13 +264,13 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u7f20.webp",
       "label": "纠缠",
-      "alt": "纠缠就是丝线或事情相互绕住，难以分开 图中“纟”与“㢆”按左右结构自然长成“缠”。"
+      "alt": "纠缠指丝线或情思相互缠绕；桂花的香气缠绕在衣襟与心间，化作无论走多远也剪不断的思乡之情 图中“纟”与“㢆”按左右结构自然长成“缠”。"
     },
     "scene": {
-      "scene": "左边细丝盘绕成“纟”，右边长绳沿房檐、田格和土台一层层绕成“㢆”，合成“缠”。",
+      "scene": "左边细丝盘绕成绞丝旁“纟”，右边长绳沿房檐、田格和土台构架“㢆”一层层缠绕，合成“缠”。",
       "cues": [
-        "左边细丝盘绕成“纟”。",
-        "右边长绳沿房檐、田格和土台一层层绕成“㢆”。"
+        "左边细丝盘绕成绞丝旁“纟”。",
+        "右边长绳沿房檐、田格和土台构架“㢆”一层层缠绕。"
       ]
     },
     "transcript": "摇桂花前，我总是缠着母亲问，怎么还不摇呢。这里的缠写孩子一遍遍跟着问，舍不得停下。纠缠也可以说丝线彼此绕住，或人和事情反复牵扯。缠是左右结构，左边绞丝旁像细线，右边可以想成线绕过层层架子。孩子急着摇花的动作一出来，这个字便有了声音和心情。",
@@ -283,12 +283,12 @@ export const characterMedia = {
       "g5v1-l03-c09-u7f20-words-image:g5v1-l03-c09-u7f20-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u62fe.webp",
         "label": "拾取",
-        "alt": "拾取就是用手把地上或散落的东西拿起来 图中“扌”与“合”按左右结构自然长成“拾”。"
+        "alt": "拾取橡栗储藏冬粮；秋天松鼠忙着在林间拾取果实藏进树洞，为度过寒冬做好准备 图中“扌”与“合”按左右结构自然长成“拾”。"
       },
       "g5v1-l03-c09-u7f20-words-image:g5v1-l03-c09-u7f20-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u7f20.webp",
         "label": "纠缠",
-        "alt": "纠缠就是丝线或事情相互绕住，难以分开 图中“纟”与“㢆”按左右结构自然长成“缠”。"
+        "alt": "纠缠指丝线或情思相互缠绕；桂花的香气缠绕在衣襟与心间，化作无论走多远也剪不断的思乡之情 图中“纟”与“㢆”按左右结构自然长成“缠”。"
       }
     }
   },
@@ -316,7 +316,7 @@ export const characterMedia = {
       "g5v1-l03-c10-u8336-words-image:g5v1-l03-c10-u8336-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u77ee.webp",
         "label": "矮小",
-        "alt": "矮小表示从下到上的高度比较低 图中“矢”与“委”按左右结构自然长成“矮”。"
+        "alt": "矮小表示高度较低；花生的果实矮矮地埋在地底，虽不张扬，却有默默奉献的真价值 图中“矢”与“委”按左右结构自然长成“矮”。"
       },
       "g5v1-l03-c10-u8336-words-image:g5v1-l03-c10-u8336-words-image-1": {
         "src": "/illustrations/mnemonics/m10.webp",
@@ -329,7 +329,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u6361.webp",
       "label": "捡起",
-      "alt": "捡起就是用手把地上的东西拿起来 图中“扌”与“佥”按左右结构自然长成“捡”。"
+      "alt": "捡起是用手把地上的物品拾起；孩子们欢快地在树下捡拾落下的碎金桂花，享受着丰收般的喜悦 图中“扌”与“佥”按左右结构自然长成“捡”。"
     },
     "scene": {
       "scene": "左边伸手下探形成“扌”，右边屋顶、短横和合拢双手排成“佥”，像把花瓣捡起，合成“捡”。",
@@ -343,7 +343,7 @@ export const characterMedia = {
       "g5v1-l03-c11-u6361-words-image:g5v1-l03-c11-u6361-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u6361.webp",
         "label": "捡起",
-        "alt": "捡起就是用手把地上的东西拿起来 图中“扌”与“佥”按左右结构自然长成“捡”。"
+        "alt": "捡起是用手把地上的物品拾起；孩子们欢快地在树下捡拾落下的碎金桂花，享受着丰收般的喜悦 图中“扌”与“佥”按左右结构自然长成“捡”。"
       },
       "g5v1-l03-c11-u6361-words-image:g5v1-l03-c11-u6361-words-image-0": {
         "src": "/illustrations/meanings/m05.webp",
@@ -353,7 +353,7 @@ export const characterMedia = {
       "g5v1-l03-c11-u6361-words-image:g5v1-l03-c11-u6361-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u54e8.webp",
         "label": "口哨",
-        "alt": "口哨既可以指用嘴吹出的声音，也可以指能吹响的小哨子 图中“口”与“肖”按左右结构自然长成“哨”。"
+        "alt": "口哨指吹出的清脆哨音；白鹭在树顶望哨守望，为宁静的黄昏平添了几分悠远生机 图中“口”与“肖”按左右结构自然长成“哨”。"
       }
     }
   },
@@ -395,7 +395,7 @@ export const characterMedia = {
         "玉圭立在上下两层土台上，外轮廓正好组成“圭”。"
       ]
     },
-    "transcript": "桂，桂花的桂。它是左右结构，左边的木字旁让人想到桂树，右边可以看成上下叠好的两层土台。想象一棵桂树站在土台旁，枝头开满细小金黄的花，树和土台一左一右组成桂；这只是记字画面。课文里，中秋前后故乡桂花盛开，桂花就是桂树开的花，香气也牵着作者想起故乡。",
+    "transcript": "桂，桂花的桂，读第四声。它是左右结构，左边的“木”表明它是树木，右边的“圭”提示读音。看图时，左边挺立着枝繁叶茂的桂树，右边土台耸立，树与土台并肩组成“桂”。课文里，中秋前后故乡桂花盛开，摇落的花雨香甜浓郁，也将童年与故乡的思念久久留在作者心间。",
     "practiceOptionVisuals": {
       "019f140f-d764-7510-b938-f076f8dce58b:019f140f-d764-7510-b938-f076f8dce58b-1": {
         "src": "/illustrations/meanings/m07.webp",
@@ -425,7 +425,7 @@ export const characterMedia = {
       "019f140f-d764-7510-b938-f8a402d03c0a:019f140f-d764-7510-b938-f8a402d03c0a-1": {
         "src": "/illustrations/mnemonics-v2/g5-u6995.webp",
         "label": "榕树",
-        "alt": "榕树枝叶繁茂，常有从枝条垂下并扎入土中的气生根 图中“木”与“容”按左右结构自然长成“榕”。"
+        "alt": "独木成林郁郁葱葱；巨大的榕树枝干垂下无数气根扎入泥土，展现出大自然顽强勃发的生命力 图中“木”与“容”按左右结构自然长成“榕”。"
       }
     }
   },
@@ -461,7 +461,7 @@ export const characterMedia = {
       "019f140f-d767-735e-8064-fe71d3ec0881:019f140f-d767-735e-8064-fe71d3ec0881-2": {
         "src": "/illustrations/mnemonics-v2/g5-u5b59.webp",
         "label": "子孙",
-        "alt": "子孙指儿子、孙子等后代 图中“子”与“小”按左右结构自然长成“孙”。"
+        "alt": "竹喧归浣女莲动下渔舟；王维笔下的山居秋夜清新明净，洋溢着淳朴宁静的生活情趣 图中“子”与“小”按左右结构自然长成“孙”。"
       },
       "019f140f-d767-735e-8064-fe71d3ec0881:019f140f-d767-735e-8064-fe71d3ec0881-1": {
         "src": "/illustrations/mnemonics/m28.webp",
@@ -476,7 +476,7 @@ export const characterMedia = {
       "019f140f-d767-735e-8065-05681be565aa:019f140f-d767-735e-8065-05681be565aa-0": {
         "src": "/illustrations/mnemonics-v2/g5-u732e.webp",
         "label": "献上",
-        "alt": "献上就是恭敬地把物品或心意送给别人 图中“南”与“犬”按左右结构自然长成“献”。"
+        "alt": "献上是恭敬地呈奉礼品；秦王本想坐收相如献上的宝玉，却未料到对方一身傲骨不可动摇 图中“南”与“犬”按左右结构自然长成“献”。"
       },
       "019f140f-d767-735e-8065-05681be565aa:019f140f-d767-735e-8065-05681be565aa-2": {
         "src": "/illustrations/mnemonics/m28.webp",
@@ -537,7 +537,7 @@ export const characterMedia = {
       "019f140f-d762-75c4-8f47-d28af829f539:019f140f-d762-75c4-8f47-d28af829f539-0": {
         "src": "/illustrations/mnemonics-v2/g5-u635f.webp",
         "label": "损失",
-        "alt": "损失是失去原有的人、财物、机会或价值 图中“扌”与“员”按左右结构自然长成“损”。"
+        "alt": "损失惨重令人扼腕叹息；无数孤本文物与稀世奇珍化为乌有，这是全人类文明的巨大损失 图中“扌”与“员”按左右结构自然长成“损”。"
       },
       "019f140f-d762-75c4-8f47-d28af829f539:019f140f-d762-75c4-8f47-d28af829f539-2": {
         "src": "/illustrations/mnemonics/m91.webp",
@@ -608,7 +608,7 @@ export const characterMedia = {
       "019f140f-d759-749d-a8f3-ff4eb79869ef:019f140f-d759-749d-a8f3-ff4eb79869ef-2": {
         "src": "/illustrations/mnemonics-v2/g5-u6743.webp",
         "label": "权利",
-        "alt": "权利是依法或依照规则可以做某件事、享有某种利益的资格 图中“木”与“又”按左右结构自然长成“权”。"
+        "alt": "有权选择读书求知；母亲坚定地支持孩子读书，用辛勤的汗水为孩子撑起求知的大门 图中“木”与“又”按左右结构自然长成“权”。"
       },
       "019f140f-d759-749d-a8f3-ff4eb79869ef:019f140f-d759-749d-a8f3-ff4eb79869ef-1": {
         "src": "/illustrations/mnemonics/m17.webp",
@@ -628,7 +628,7 @@ export const characterMedia = {
       "019f140f-d759-749d-a8f4-047a5112e2bc:019f140f-d759-749d-a8f4-047a5112e2bc-1": {
         "src": "/illustrations/mnemonics-v2/g5-u77ee.webp",
         "label": "矮小",
-        "alt": "矮小表示从下到上的高度比较低 图中“矢”与“委”按左右结构自然长成“矮”。"
+        "alt": "矮小表示高度较低；花生的果实矮矮地埋在地底，虽不张扬，却有默默奉献的真价值 图中“矢”与“委”按左右结构自然长成“矮”。"
       }
     }
   },
@@ -695,7 +695,7 @@ export const characterMedia = {
       "019f140f-d769-70e8-bd35-92f7ea289fdf:019f140f-d769-70e8-bd35-92f7ea289fdf-2": {
         "src": "/illustrations/mnemonics-v2/g5-u6073.webp",
         "label": "勤勤恳恳",
-        "alt": "恳求就是态度真诚、急切地请求别人 图中“艮”与“心”按上下结构自然长成“恳”。"
+        "alt": "勤勤恳恳形容辛勤踏实；牛郎织女勤勤恳恳地耕织劳作，把日子过得有滋有味 图中“艮”与“心”按上下结构自然长成“恳”。"
       },
       "019f140f-d769-70e8-bd35-92f7ea289fdf:019f140f-d769-70e8-bd35-92f7ea289fdf-1": {
         "src": "/illustrations/mnemonics/m33.webp",
@@ -749,7 +749,7 @@ export const characterMedia = {
       "019f140f-d765-7578-94e7-77f0ef3dbcb9:019f140f-d765-7578-94e7-77f0ef3dbcb9-2": {
         "src": "/illustrations/mnemonics-v2/g5-u584c.webp",
         "label": "倒塌",
-        "alt": "倒塌就是建筑或堆放的东西向下坠落、失去支撑 图中“土”与“𦐇”按左右结构自然长成“塌”。"
+        "alt": "倒塌指山体崩塌滑落；听到大山即将倒塌的消息，海力布焦急地劝说乡亲们立刻搬家 图中“土”与“𦐇”按左右结构自然长成“塌”。"
       },
       "019f140f-d765-7578-94e7-7ea3c5d08fa2:019f140f-d765-7578-94e7-7ea3c5d08fa2-1": {
         "src": "/illustrations/meanings/m06.webp",
@@ -828,7 +828,7 @@ export const characterMedia = {
       "019f140f-d763-70a0-a0cb-436873f6d04e:019f140f-d763-70a0-a0cb-436873f6d04e-0": {
         "src": "/illustrations/mnemonics-v2/g5-u5632.webp",
         "label": "嘲笑",
-        "alt": "嘲笑是用言语或表情取笑别人，容易伤害他人 图中“口”与“朝”按左右结构自然长成“嘲”。"
+        "alt": "嘲笑讥讽不足为惧；面对外人的冷眼与嘲笑，父子俩乘坐一叶扁舟坚定前行，矢志不渝 图中“口”与“朝”按左右结构自然长成“嘲”。"
       },
       "019f140f-d763-70a0-a0cb-4b5f8e0539ad:019f140f-d763-70a0-a0cb-4b5f8e0539ad-2": {
         "src": "/illustrations/meanings/m07.webp",
@@ -838,7 +838,7 @@ export const characterMedia = {
       "019f140f-d763-70a0-a0cb-4b5f8e0539ad:019f140f-d763-70a0-a0cb-4b5f8e0539ad-0": {
         "src": "/illustrations/mnemonics-v2/g5-u9489.webp",
         "label": "钉子",
-        "alt": "钉子是一端尖、一端有帽，用来固定物体的金属小件 图中“钅”与“丁”按左右结构自然长成“钉”。"
+        "alt": "钉鞋补舟手艺精湛；父亲用粗糙的双手修补旧船、钉好鞋底，把每一件小事都做得扎扎实实 图中“钅”与“丁”按左右结构自然长成“钉”。"
       },
       "019f140f-d763-70a0-a0cb-4b5f8e0539ad:019f140f-d763-70a0-a0cb-4b5f8e0539ad-1": {
         "src": "/illustrations/mnemonics/m63.webp",
@@ -900,7 +900,7 @@ export const characterMedia = {
       "019f140f-d769-70e8-bd35-9cbac8086326:019f140f-d769-70e8-bd35-9cbac8086326-0": {
         "src": "/illustrations/mnemonics-v2/g5-u6f9c.webp",
         "label": "安澜园",
-        "alt": "波澜是较大的水波，也可以比喻事情的起伏变化 图中“氵”与“阑”按左右结构自然长成“澜”。"
+        "alt": "安澜园再现江南胜景；圆明园汇集了天南海北的著名园林景致，集天下大美于一园 图中“氵”与“阑”按左右结构自然长成“澜”。"
       },
       "019f140f-d769-70e8-bd35-a58e06c35664:019f140f-d769-70e8-bd35-a58e06c35664-1": {
         "src": "/illustrations/meanings/m05.webp",
@@ -915,7 +915,7 @@ export const characterMedia = {
       "019f140f-d769-70e8-bd35-a58e06c35664:019f140f-d769-70e8-bd35-a58e06c35664-2": {
         "src": "/illustrations/mnemonics-v2/g5-u54c7.webp",
         "label": "好哇",
-        "alt": "哇是表示惊讶、赞叹等语气的声音 图中“口”与“圭”按左右结构自然长成“哇”。"
+        "alt": "哇地一声热泪盈眶；目睹母亲在工厂里的艰辛劳作，孩子心中涌起无尽的酸楚与感激 图中“口”与“圭”按左右结构自然长成“哇”。"
       }
     }
   },
@@ -964,7 +964,7 @@ export const characterMedia = {
         "上方回折土坡收成“厶”，下方方正平台形成“口”，合起来就是完整的“台”。"
       ]
     },
-    "transcript": "台，台风的台。台字可以整体看成上方小坡和下方平台，像一座高而平的台子；这只帮助记住轮廓。台本来可以表示高台，可在台风这个天气名称里，要和风连在一起理解。课文说故乡靠海，八月是台风季节，强风可能把开得正盛的桂花吹落。认清台风这个固定词，就能明白母亲为什么担心花开过头。",
+    "transcript": "台，台风的台，读第二声。台是上下结构，上方是回折升起的山坡，下方是方正平稳的基座，上坡下基组合成台。台风指发生在热带海洋上的强热带气旋。课文写江南故乡八月正值台风季节，狂风暴雨容易吹落桂花，母亲因而时刻牵挂着适时摇花，体现了对乡土收成的珍惜。",
     "practiceOptionVisuals": {
       "019f140f-d75e-76b0-8e7c-6ebd08ecb722:019f140f-d75e-76b0-8e7c-6ebd08ecb722-1": {
         "src": "/illustrations/meanings/m06.webp",
@@ -974,7 +974,7 @@ export const characterMedia = {
       "019f140f-d75e-76b0-8e7c-6ebd08ecb722:019f140f-d75e-76b0-8e7c-6ebd08ecb722-2": {
         "src": "/illustrations/mnemonics-v2/g5-u60da.webp",
         "label": "恍惚",
-        "alt": "恍惚表示精神不集中，眼前和心里的感觉都不清晰 图中“忄”与“忽”按左右结构自然长成“惚”。"
+        "alt": "恍惚入梦追忆往昔；梦中父亲摇橹的背影依然清晰，无声的父爱穿越岁月历久弥新 图中“忄”与“忽”按左右结构自然长成“惚”。"
       },
       "019f140f-d75e-76b0-8e7c-6ebd08ecb722:019f140f-d75e-76b0-8e7c-6ebd08ecb722-0": {
         "src": "/illustrations/mnemonics/m81.webp",
@@ -994,7 +994,7 @@ export const characterMedia = {
       "019f140f-d75e-76b0-8e7c-77edd11ce11c:019f140f-d75e-76b0-8e7c-77edd11ce11c-1": {
         "src": "/illustrations/mnemonics-v2/g5-u7a33.webp",
         "label": "安稳",
-        "alt": "安稳就是平静、牢靠，不摇晃也不慌乱 图中“禾”与“急”按左右结构自然长成“稳”。"
+        "alt": "安稳指牢靠平稳不摇晃；踏上一块块平稳的搭石，行人心中涌起的是踏实与邻里的信任 图中“禾”与“急”按左右结构自然长成“稳”。"
       }
     }
   },
@@ -1059,7 +1059,7 @@ export const characterMedia = {
       "019f140f-d766-70dd-b8ff-286959f41045:019f140f-d766-70dd-b8ff-286959f41045-1": {
         "src": "/illustrations/mnemonics-v2/g5-u60eb.webp",
         "label": "疲惫",
-        "alt": "疲惫就是身体和精神都很累，需要休息 图中“备”与“心”按上下结构自然长成“惫”。"
+        "alt": "疲惫不堪的身影令人心酸；母亲极其瘦弱疲惫的身躯，深深震撼了前来要钱买书的孩子 图中“备”与“心”按上下结构自然长成“惫”。"
       },
       "019f140f-d766-70dd-b8ff-326e2ffaed20:019f140f-d766-70dd-b8ff-326e2ffaed20-2": {
         "src": "/illustrations/mnemonics/m52.webp",
@@ -1074,7 +1074,7 @@ export const characterMedia = {
       "019f140f-d766-70dd-b8ff-326e2ffaed20:019f140f-d766-70dd-b8ff-326e2ffaed20-1": {
         "src": "/illustrations/mnemonics-v2/g5-u67d0.webp",
         "label": "某人",
-        "alt": "某人表示没有说出或不需要说出姓名的一个人 图中“甘”与“木”按上下结构自然长成“某”。"
+        "alt": "某人某书批判吸收；阅读时要有独立思考的眼光，不能盲从某人的一家之言，要挑真正耐读的经典 图中“甘”与“木”按上下结构自然长成“某”。"
       }
     }
   },
@@ -1153,7 +1153,7 @@ export const characterMedia = {
       "019f140f-d75c-73ff-b09c-9f18ce695ca7:019f140f-d75c-73ff-b09c-9f18ce695ca7-1": {
         "src": "/illustrations/mnemonics-v2/g5-u843d.webp",
         "label": "落在后边",
-        "alt": "“落在后边”表示没有跟上，位置到了后面；这里读là 图中“艹”与“洛”按上下结构自然长成“落”。"
+        "alt": "落在后边指跟不上队伍；仙女们在湖中戏水嬉戏，生怕落在后边，充满活泼的生机 图中“艹”与“洛”按上下结构自然长成“落”。"
       }
     }
   },
@@ -1209,7 +1209,7 @@ export const characterMedia = {
       "019f140f-d761-70eb-9cbf-7e759afd865b:019f140f-d761-70eb-9cbf-7e759afd865b-0": {
         "src": "/illustrations/mnemonics-v2/g5-u796d.webp",
         "label": "祭祀",
-        "alt": "祭祀是古人按照礼仪表达追思或敬意的活动 图中“月”与“又”与“示”按上下结构自然长成“祭”。"
+        "alt": "祭祀是祭奠祖先寄托哀思；陆游叮嘱儿孙王师北定中原之日，家祭无忘告乃翁 图中“月”与“又”与“示”按上下结构自然长成“祭”。"
       },
       "019f140f-d761-70eb-9cbf-85b1437b8cb1:019f140f-d761-70eb-9cbf-85b1437b8cb1-1": {
         "src": "/illustrations/meanings/m07.webp",
@@ -1219,7 +1219,7 @@ export const characterMedia = {
       "019f140f-d761-70eb-9cbf-85b1437b8cb1:019f140f-d761-70eb-9cbf-85b1437b8cb1-2": {
         "src": "/illustrations/mnemonics-v2/g5-u8ff0.webp",
         "label": "讲述",
-        "alt": "讲述就是把事情有次序地说出来 图中“辶”与“术”按左下包围结构自然长成“述”。"
+        "alt": "讲述心得言辞诚恳；冰心先生深情讲述自己数十年的读书经历，向青少年传授宝贵的选书智慧 图中“辶”与“术”按左下包围结构自然长成“述”。"
       },
       "019f140f-d761-70eb-9cbf-85b1437b8cb1:019f140f-d761-70eb-9cbf-85b1437b8cb1-0": {
         "src": "/illustrations/mnemonics/m90.webp",
@@ -1273,7 +1273,7 @@ export const characterMedia = {
       "019f140f-d75d-747b-b8df-16cf2a3492e0:019f140f-d75d-747b-b8df-16cf2a3492e0-2": {
         "src": "/illustrations/mnemonics-v2/g5-u6d2a.webp",
         "label": "洪水",
-        "alt": "洪水是水位猛涨后漫出河道的大水 图中“氵”与“共”按左右结构自然长成“洪”。"
+        "alt": "洪水是漫过河堤的急流；山洪退去后留下的浅滩上，搭石连起了两岸百姓温暖的生活 图中“氵”与“共”按左右结构自然长成“洪”。"
       },
       "019f140f-d75d-747b-b8df-1e7f03f5d5a1:019f140f-d75d-747b-b8df-1e7f03f5d5a1-0": {
         "src": "/illustrations/meanings/m03.webp",
@@ -1283,7 +1283,7 @@ export const characterMedia = {
       "019f140f-d75d-747b-b8df-1e7f03f5d5a1:019f140f-d75d-747b-b8df-1e7f03f5d5a1-2": {
         "src": "/illustrations/mnemonics-v2/g5-u9cde.webp",
         "label": "鱼鳞",
-        "alt": "鱼鳞是覆盖在鱼身体表面的薄片，能保护鱼体 图中“鱼”与“粦”按左右结构自然长成“鳞”。"
+        "alt": "潜龙腾渊鳞爪飞扬；飞腾的巨龙展现出冲破羁绊、翱翔九天的威猛神采 图中“鱼”与“粦”按左右结构自然长成“鳞”。"
       },
       "019f140f-d75d-747b-b8df-1e7f03f5d5a1:019f140f-d75d-747b-b8df-1e7f03f5d5a1-1": {
         "src": "/illustrations/mnemonics/m01.webp",
@@ -1368,7 +1368,7 @@ export const characterMedia = {
       "019f140f-d75a-743e-884a-f06f294929d9:019f140f-d75a-743e-884a-f06f294929d9-0": {
         "src": "/illustrations/mnemonics-v2/g5-u7a33.webp",
         "label": "安稳",
-        "alt": "安稳就是平静、牢靠，不摇晃也不慌乱 图中“禾”与“急”按左右结构自然长成“稳”。"
+        "alt": "安稳指牢靠平稳不摇晃；踏上一块块平稳的搭石，行人心中涌起的是踏实与邻里的信任 图中“禾”与“急”按左右结构自然长成“稳”。"
       }
     }
   },
@@ -1421,7 +1421,7 @@ export const characterMedia = {
       "019f140f-d75f-7543-9e68-8ef749c498d4:019f140f-d75f-7543-9e68-8ef749c498d4-1": {
         "src": "/illustrations/mnemonics-v2/g5-u7eab.webp",
         "label": "缝纫",
-        "alt": "缝纫就是用针线把布料连接或缝制成衣物 图中“纟”与“刃”按左右结构自然长成“纫”。"
+        "alt": "缝纫劳作手脚不停；母亲伏在缝纫机前双脚踩动踏板，针线飞针走线，忙碌得顾不上抬头 图中“纟”与“刃”按左右结构自然长成“纫”。"
       },
       "019f140f-d75f-7543-9e68-94c5986972a0:019f140f-d75f-7543-9e68-94c5986972a0-2": {
         "src": "/illustrations/meanings/m03.webp",
@@ -1431,7 +1431,7 @@ export const characterMedia = {
       "019f140f-d75f-7543-9e68-94c5986972a0:019f140f-d75f-7543-9e68-94c5986972a0-0": {
         "src": "/illustrations/mnemonics-v2/g5-u7b51.webp",
         "label": "修筑",
-        "alt": "修筑就是建造道路、工事或建筑 图中“⺮”与“巩”按上下结构自然长成“筑”。"
+        "alt": "修筑指建造工程设施；冀中人民齐心协力修筑地道，在平原地下筑起了一道道长城 图中“⺮”与“巩”按上下结构自然长成“筑”。"
       },
       "019f140f-d75f-7543-9e68-94c5986972a0:019f140f-d75f-7543-9e68-94c5986972a0-1": {
         "src": "/illustrations/mnemonics/m64.webp",

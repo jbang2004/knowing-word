@@ -6,7 +6,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u4e43.webp",
       "label": "乃至",
-      "alt": "乃是文言词，在不同句子中可以表示“是”“于是”等意思 图中“乃”按独体结构自然长成“乃”。"
+      "alt": "乃至于此表示甚至如此；陆游临终前至死不忘收复中原，爱国赤诚感人肺腑 图中“乃”按独体结构自然长成“乃”。"
     },
     "scene": {
       "scene": "一条长撇像转身衣带向左落下，右边折钩像回身道路包住它，两笔自然长成“乃”。",
@@ -24,12 +24,12 @@ export const characterMedia = {
       "g5v1-l12-c01-u4e43-words-image:g5v1-l12-c01-u4e43-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u5bb4.webp",
         "label": "宴会",
-        "alt": "宴会是多人聚在一起吃饭、庆祝或交流的活动 图中“宀”与“妟”按上下结构自然长成“宴”。"
+        "alt": "盛宴比喻精神食粮；一本本经典好书宛如精神的饕餮盛宴，滋养着作者不断成长丰富的心灵 图中“宀”与“妟”按上下结构自然长成“宴”。"
       },
       "g5v1-l12-c01-u4e43-words-image:g5v1-l12-c01-u4e43-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u4e43.webp",
         "label": "乃至",
-        "alt": "乃是文言词，在不同句子中可以表示“是”“于是”等意思 图中“乃”按独体结构自然长成“乃”。"
+        "alt": "乃至于此表示甚至如此；陆游临终前至死不忘收复中原，爱国赤诚感人肺腑 图中“乃”按独体结构自然长成“乃”。"
       }
     }
   },
@@ -37,7 +37,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u718f.webp",
       "label": "熏陶",
-      "alt": "熏陶比喻长期受到好思想、好习惯或文化的影响 图中“熏”按独体结构自然长成“熏”。"
+      "alt": "熏陶指长期沉浸受到感染；西湖的暖风熏得游人沉醉迷离，诗篇深刻讽刺了偏安享乐的醉生梦死 图中“熏”按独体结构自然长成“熏”。"
     },
     "scene": {
       "scene": "上方香炉、层层香料和窗格沿“熏”的上部叠放，下方四点温热香气形成“灬”，组成“熏”。",
@@ -55,12 +55,12 @@ export const characterMedia = {
       "g5v1-l12-c02-u718f-words-image:g5v1-l12-c02-u718f-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u5178.webp",
         "label": "典礼",
-        "alt": "典礼是按一定礼仪举行的隆重仪式 图中“曲”与“八”按上下结构自然长成“典”。"
+        "alt": "典礼是隆重的礼仪仪式；相如要求秦王举行正式典礼才肯献璧，以此争取时间、维护国家尊严 图中“曲”与“八”按上下结构自然长成“典”。"
       },
       "g5v1-l12-c02-u718f-words-image:g5v1-l12-c02-u718f-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u718f.webp",
         "label": "熏陶",
-        "alt": "熏陶比喻长期受到好思想、好习惯或文化的影响 图中“熏”按独体结构自然长成“熏”。"
+        "alt": "熏陶指长期沉浸受到感染；西湖的暖风熏得游人沉醉迷离，诗篇深刻讽刺了偏安享乐的醉生梦死 图中“熏”按独体结构自然长成“熏”。"
       }
     }
   },
@@ -68,7 +68,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u4ea5.webp",
       "label": "己亥",
-      "alt": "亥时是古代计时名称，大约相当于晚上九点到十一点 图中“人”按独体结构自然长成“亥”。"
+      "alt": "己亥是古代干支纪年；龚自珍在己亥年写下慷慨诗篇，抒发了忧国忧民的浩荡胸怀 图中“人”按独体结构自然长成“亥”。"
     },
     "scene": {
       "scene": "上方夜幕横梁形成“亠”，下方归家的人与弯曲夜路沿“人”的姿态交叠，组成“亥”。",
@@ -86,12 +86,12 @@ export const characterMedia = {
       "g5v1-l12-c03-u4ea5-words-image:g5v1-l12-c03-u4ea5-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u515c.webp",
         "label": "衣兜",
-        "alt": "衣兜是衣服上用来装小物品的口袋 图中“兜”按独体结构自然长成“兜”。"
+        "alt": "贴身衣兜掏出深沉母爱；母亲从破旧的衣兜里掏出一卷揉得皱巴巴的毛票，毫不犹豫递给孩子买书 图中“兜”按独体结构自然长成“兜”。"
       },
       "g5v1-l12-c03-u4ea5-words-image:g5v1-l12-c03-u4ea5-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u4ea5.webp",
         "label": "己亥",
-        "alt": "亥时是古代计时名称，大约相当于晚上九点到十一点 图中“人”按独体结构自然长成“亥”。"
+        "alt": "己亥是古代干支纪年；龚自珍在己亥年写下慷慨诗篇，抒发了忧国忧民的浩荡胸怀 图中“人”按独体结构自然长成“亥”。"
       }
     }
   },
@@ -99,7 +99,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u6043.webp",
       "label": "恃强",
-      "alt": "恃强就是依仗自己强大而欺压别人 图中“忄”与“寺”按左右结构自然长成“恃”。"
+      "alt": "恃指依仗凭借；诗人劝诫天地不要拘泥成法，应当不拘一格降下栋梁英才 图中“忄”与“寺”按左右结构自然长成“恃”。"
     },
     "scene": {
       "scene": "左边偏斜心灯形成“忄”，右边寺院土台、手腕和屋梁沿“寺”站高，像把高台当依靠，组成“恃”。",
@@ -113,7 +113,7 @@ export const characterMedia = {
       "g5v1-l12-c04-u6043-words-image:g5v1-l12-c04-u6043-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u6043.webp",
         "label": "恃强",
-        "alt": "恃强就是依仗自己强大而欺压别人 图中“忄”与“寺”按左右结构自然长成“恃”。"
+        "alt": "恃指依仗凭借；诗人劝诫天地不要拘泥成法，应当不拘一格降下栋梁英才 图中“忄”与“寺”按左右结构自然长成“恃”。"
       },
       "g5v1-l12-c04-u6043-words-image:g5v1-l12-c04-u6043-words-image-2": {
         "src": "/illustrations/meanings/m08.webp",
@@ -123,7 +123,7 @@ export const characterMedia = {
       "g5v1-l12-c04-u6043-words-image:g5v1-l12-c04-u6043-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u9988.webp",
         "label": "反馈",
-        "alt": "反馈是把结果、意见或信息返回给对方 图中“饣”与“贵”按左右结构自然长成“馈”。"
+        "alt": "馈赠厚重丰润人生；书籍是大自然与人类文明最慷慨的馈赠，让作者的童年与少年时代绚丽多彩 图中“饣”与“贵”按左右结构自然长成“馈”。"
       }
     }
   },
@@ -131,7 +131,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u64de.webp",
       "label": "抖擞",
-      "alt": "抖擞表示振作精神、显得有活力 图中“扌”与“数”按左右结构自然长成“擞”。"
+      "alt": "抖擞精神形容振奋精神充满活力；诗人呼唤社会振作精神扫除沉闷，展现了变革图强的雄心 图中“扌”与“数”按左右结构自然长成“擞”。"
     },
     "scene": {
       "scene": "左边振动的手形成“扌”，右边算盘珠、脚步和短杖沿“数”快速抖动，组成精神抖擞的“擞”。",
@@ -145,7 +145,7 @@ export const characterMedia = {
       "g5v1-l12-c05-u64de-words-image:g5v1-l12-c05-u64de-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u64de.webp",
         "label": "抖擞",
-        "alt": "抖擞表示振作精神、显得有活力 图中“扌”与“数”按左右结构自然长成“擞”。"
+        "alt": "抖擞精神形容振奋精神充满活力；诗人呼唤社会振作精神扫除沉闷，展现了变革图强的雄心 图中“扌”与“数”按左右结构自然长成“擞”。"
       },
       "g5v1-l12-c05-u64de-words-image:g5v1-l12-c05-u64de-words-image-2": {
         "src": "/illustrations/meanings/m07.webp",
@@ -163,7 +163,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u796d.webp",
       "label": "祭祀",
-      "alt": "祭祀是古人按照礼仪表达追思或敬意的活动 图中“月”与“又”与“示”按上下结构自然长成“祭”。"
+      "alt": "祭祀是祭奠祖先寄托哀思；陆游叮嘱儿孙王师北定中原之日，家祭无忘告乃翁 图中“月”与“又”与“示”按上下结构自然长成“祭”。"
     },
     "scene": {
       "scene": "上方“月”形供品由“又”形双手托起，下方礼台与光点形成“示”，上下合成庄重的“祭”。",
@@ -178,7 +178,7 @@ export const characterMedia = {
       "g5v1-l12-c06-u796d-words-image:g5v1-l12-c06-u796d-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u796d.webp",
         "label": "祭祀",
-        "alt": "祭祀是古人按照礼仪表达追思或敬意的活动 图中“月”与“又”与“示”按上下结构自然长成“祭”。"
+        "alt": "祭祀是祭奠祖先寄托哀思；陆游叮嘱儿孙王师北定中原之日，家祭无忘告乃翁 图中“月”与“又”与“示”按上下结构自然长成“祭”。"
       },
       "g5v1-l12-c06-u796d-words-image:g5v1-l12-c06-u796d-words-image-2": {
         "src": "/illustrations/meanings/m03.webp",
@@ -188,7 +188,7 @@ export const characterMedia = {
       "g5v1-l12-c06-u796d-words-image:g5v1-l12-c06-u796d-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u79c0.webp",
         "label": "清秀",
-        "alt": "清秀形容外表清爽、秀丽，让人感到舒服 图中“禾”与“乃”按上下结构自然长成“秀”。"
+        "alt": "面容清秀惹人怜爱；松鼠玲珑的小面孔配上清秀机灵的目光，显得格外聪明活泼 图中“禾”与“乃”按上下结构自然长成“秀”。"
       }
     }
   },
@@ -196,7 +196,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u676d.webp",
       "label": "杭州",
-      "alt": "杭州是浙江省的一座城市，以西湖和江南风景闻名 图中“木”与“亢”按左右结构自然长成“杭”。"
+      "alt": "杭州西湖歌舞升平；诗人借杭州景致针砭时弊，警醒世人切莫沉溺享乐而忘却国难 图中“木”与“亢”按左右结构自然长成“杭”。"
     },
     "scene": {
       "scene": "左边湖畔柳树长成“木”，右边桥墩与弯拱沿“亢”的笔画立起，组成“杭”。",
@@ -215,12 +215,12 @@ export const characterMedia = {
       "g5v1-l12-c07-u676d-words-image:g5v1-l12-c07-u676d-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u602f.webp",
         "label": "胆怯",
-        "alt": "胆怯就是害怕、缺少勇气 图中“忄”与“去”按左右结构自然长成“怯”。"
+        "alt": "胆怯是害怕恐惧失去勇气；相如在强秦面前绝无半点胆怯，以浩然正气化解了一次次危机 图中“忄”与“去”按左右结构自然长成“怯”。"
       },
       "g5v1-l12-c07-u676d-words-image:g5v1-l12-c07-u676d-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u676d.webp",
         "label": "杭州",
-        "alt": "杭州是浙江省的一座城市，以西湖和江南风景闻名 图中“木”与“亢”按左右结构自然长成“杭”。"
+        "alt": "杭州西湖歌舞升平；诗人借杭州景致针砭时弊，警醒世人切莫沉溺享乐而忘却国难 图中“木”与“亢”按左右结构自然长成“杭”。"
       }
     }
   },
@@ -228,7 +228,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u54c0.webp",
       "label": "可哀",
-      "alt": "哀伤就是因为失去、忧虑等感到深深悲伤 图中“衣”与“口”按穿插结构自然长成“哀”。"
+      "alt": "可哀指令人悲痛伤感；陆游临终只见九州未同，满腔悲壮与赤子之心跃然纸上 图中“衣”与“口”按穿插结构自然长成“哀”。"
     },
     "scene": {
       "scene": "中央轻声叹息的口形成“口”，外面低垂衣袖和衣襟沿“衣”包住身体，组成“哀”。",
@@ -247,12 +247,12 @@ export const characterMedia = {
       "g5v1-l12-c08-u54c0-words-image:g5v1-l12-c08-u54c0-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u7792.webp",
         "label": "隐瞒",
-        "alt": "隐瞒就是知道事实却故意不告诉别人 图中“目”与“艹”与“两”按左右结构自然长成“瞒”。"
+        "alt": "隐瞒实情出于真挚心意；战士们默默隐瞒种菜的辛苦，一心想把珍贵的绿色奉献给将军 图中“目”与“艹”与“两”按左右结构自然长成“瞒”。"
       },
       "g5v1-l12-c08-u54c0-words-image:g5v1-l12-c08-u54c0-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u54c0.webp",
         "label": "可哀",
-        "alt": "哀伤就是因为失去、忧虑等感到深深悲伤 图中“衣”与“口”按穿插结构自然长成“哀”。"
+        "alt": "可哀指令人悲痛伤感；陆游临终只见九州未同，满腔悲壮与赤子之心跃然纸上 图中“衣”与“口”按穿插结构自然长成“哀”。"
       }
     }
   },
@@ -260,7 +260,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u62d8.webp",
       "label": "拘束",
-      "alt": "拘束就是言行不自然，放不开 图中“扌”与“句”按左右结构自然长成“拘”。"
+      "alt": "拘束指受到局限束缚；诗人呼唤破除陈腐规矩的拘束，展现了求新求变的开阔眼界 图中“扌”与“句”按左右结构自然长成“拘”。"
     },
     "scene": {
       "scene": "左边收紧的手形成“扌”，右边弯绳把一句话和人物围成“句”，手与绳合成“拘”。",
@@ -279,12 +279,12 @@ export const characterMedia = {
       "g5v1-l12-c09-u62d8-words-image:g5v1-l12-c09-u62d8-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u4eab.webp",
         "label": "享受",
-        "alt": "享受就是从生活或活动中得到满足和愉快 图中“亠”与“口”与“子”按上中下结构自然长成“享”。"
+        "alt": "享受是获得内心的宁静与满足；小鸟在作者肩头安然入睡，静静享受着人与鸟之间的全然信赖 图中“亠”与“口”与“子”按上中下结构自然长成“享”。"
       },
       "g5v1-l12-c09-u62d8-words-image:g5v1-l12-c09-u62d8-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u62d8.webp",
         "label": "拘束",
-        "alt": "拘束就是言行不自然，放不开 图中“扌”与“句”按左右结构自然长成“拘”。"
+        "alt": "拘束指受到局限束缚；诗人呼唤破除陈腐规矩的拘束，展现了求新求变的开阔眼界 图中“扌”与“句”按左右结构自然长成“拘”。"
       }
     }
   }

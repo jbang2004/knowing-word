@@ -6,7 +6,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u7792.webp",
       "label": "隐瞒",
-      "alt": "隐瞒就是知道事实却故意不告诉别人 图中“目”与“艹”与“两”按左右结构自然长成“瞒”。"
+      "alt": "隐瞒实情出于真挚心意；战士们默默隐瞒种菜的辛苦，一心想把珍贵的绿色奉献给将军 图中“目”与“艹”与“两”按左右结构自然长成“瞒”。"
     },
     "scene": {
       "scene": "左边观察眼形成“目”，右上方草帘形成“艹”，右下方布帘遮住两件物品形成“两”，合成“瞒”。",
@@ -26,12 +26,12 @@ export const characterMedia = {
       "g5v1-l15-c01-u7792-words-image:g5v1-l15-c01-u7792-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u7965.webp",
         "label": "慈祥",
-        "alt": "吉祥表示幸运、顺利，是人们对美好生活的祝愿 图中“礻”与“羊”按左右结构自然长成“祥”。"
+        "alt": "慈祥温和充满深情；母亲慈祥热切的赞扬保护了孩子的创作幼苗，赋予他前进的勇气 图中“礻”与“羊”按左右结构自然长成“祥”。"
       },
       "g5v1-l15-c01-u7792-words-image:g5v1-l15-c01-u7792-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u7792.webp",
         "label": "隐瞒",
-        "alt": "隐瞒就是知道事实却故意不告诉别人 图中“目”与“艹”与“两”按左右结构自然长成“瞒”。"
+        "alt": "隐瞒实情出于真挚心意；战士们默默隐瞒种菜的辛苦，一心想把珍贵的绿色奉献给将军 图中“目”与“艹”与“两”按左右结构自然长成“瞒”。"
       }
     }
   },
@@ -39,7 +39,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u57df.webp",
       "label": "海域",
-      "alt": "海域是一定范围内的海洋水面和水体 图中“土”与“或”按左右结构自然长成“域”。"
+      "alt": "海域辽阔海防重任在肩；守岛战士在祖国偏远的海域默默站岗，守卫着万家灯火的安宁 图中“土”与“或”按左右结构自然长成“域”。"
     },
     "scene": {
       "scene": "左边界土形成“土”，右边海湾、边界线和小岛沿“或”的笔画圈出范围，组成“域”。",
@@ -58,12 +58,12 @@ export const characterMedia = {
       "g5v1-l15-c02-u57df-words-image:g5v1-l15-c02-u57df-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u4ea5.webp",
         "label": "己亥",
-        "alt": "亥时是古代计时名称，大约相当于晚上九点到十一点 图中“人”按独体结构自然长成“亥”。"
+        "alt": "己亥是古代干支纪年；龚自珍在己亥年写下慷慨诗篇，抒发了忧国忧民的浩荡胸怀 图中“人”按独体结构自然长成“亥”。"
       },
       "g5v1-l15-c02-u57df-words-image:g5v1-l15-c02-u57df-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u57df.webp",
         "label": "海域",
-        "alt": "海域是一定范围内的海洋水面和水体 图中“土”与“或”按左右结构自然长成“域”。"
+        "alt": "海域辽阔海防重任在肩；守岛战士在祖国偏远的海域默默站岗，守卫着万家灯火的安宁 图中“土”与“或”按左右结构自然长成“域”。"
       }
     }
   },
@@ -71,7 +71,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u8247.webp",
       "label": "小艇",
-      "alt": "小艇是体形较小、在水上行驶的船 图中“舟”与“廷”按左右结构自然长成“艇”。"
+      "alt": "巡逻快艇破浪前行；将军乘着小艇登上孤岛视察，感受到了海防前线环境的艰苦卓绝 图中“舟”与“廷”按左右结构自然长成“艇”。"
     },
     "scene": {
       "scene": "左边细长船身形成“舟”，右边船桅、甲板和延伸航线沿“廷”排列，组成“艇”。",
@@ -90,12 +90,12 @@ export const characterMedia = {
       "g5v1-l15-c03-u8247-words-image:g5v1-l15-c03-u8247-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u7b77.webp",
         "label": "筷子",
-        "alt": "筷子是一双细长餐具，用来夹取食物 图中“⺮”与“快”按上下结构自然长成“筷”。"
+        "alt": "筷子轻夹见证深情厚谊；将军将筷子伸向菜盘又停住，舍不得吃下战士们用汗水浇灌的蔬菜 图中“⺮”与“快”按上下结构自然长成“筷”。"
       },
       "g5v1-l15-c03-u8247-words-image:g5v1-l15-c03-u8247-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u8247.webp",
         "label": "小艇",
-        "alt": "小艇是体形较小、在水上行驶的船 图中“舟”与“廷”按左右结构自然长成“艇”。"
+        "alt": "巡逻快艇破浪前行；将军乘着小艇登上孤岛视察，感受到了海防前线环境的艰苦卓绝 图中“舟”与“廷”按左右结构自然长成“艇”。"
       }
     }
   },
@@ -103,7 +103,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u77db.webp",
       "label": "矛盾",
-      "alt": "矛是古代一种有长柄和尖头的兵器 图中“矛”按独体结构自然长成“矛”。"
+      "alt": "矛盾交织体现两难情感；面对战士们特意端来的一盘油菜，将军内心充满了感动与心疼的矛盾 图中“矛”按独体结构自然长成“矛”。"
     },
     "scene": {
       "scene": "一支博物馆里的安全陈列矛，从尖头、长柄到侧钩严格沿“矛”的全部笔画弯折。",
@@ -121,12 +121,12 @@ export const characterMedia = {
       "g5v1-l15-c04-u77db-words-image:g5v1-l15-c04-u77db-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u7cae.webp",
         "label": "粮食",
-        "alt": "粮食是供人食用的谷物、豆类和薯类等食物原料 图中“米”与“良”按左右结构自然长成“粮”。"
+        "alt": "粮食作物离不开阳光滋养；充足的日照使庄稼茁壮成长，为人类生活提供了丰富的粮食来源 图中“米”与“良”按左右结构自然长成“粮”。"
       },
       "g5v1-l15-c04-u77db-words-image:g5v1-l15-c04-u77db-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u77db.webp",
         "label": "矛盾",
-        "alt": "矛是古代一种有长柄和尖头的兵器 图中“矛”按独体结构自然长成“矛”。"
+        "alt": "矛盾交织体现两难情感；面对战士们特意端来的一盘油菜，将军内心充满了感动与心疼的矛盾 图中“矛”按独体结构自然长成“矛”。"
       }
     }
   },
@@ -134,7 +134,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u76fe.webp",
       "label": "矛盾",
-      "alt": "盾是用来遮挡和防护的器具 图中“⺁”与“十”与“目”按左上包围结构自然长成“盾”。"
+      "alt": "盾牌象征坚不可摧的防线；海岛虽小却是祖国的钢铁盾牌，战士们用青春筑起了海上长城 图中“⺁”与“十”与“目”按左上包围结构自然长成“盾”。"
     },
     "scene": {
       "scene": "外面斜握护臂和盾边形成“⺁”，上方十字握把形成“十”，里面观察窗形成“目”，三部分组成“盾”。",
@@ -159,7 +159,7 @@ export const characterMedia = {
       "g5v1-l15-c05-u76fe-words-image:g5v1-l15-c05-u76fe-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u76fe.webp",
         "label": "矛盾",
-        "alt": "盾是用来遮挡和防护的器具 图中“⺁”与“十”与“目”按左上包围结构自然长成“盾”。"
+        "alt": "盾牌象征坚不可摧的防线；海岛虽小却是祖国的钢铁盾牌，战士们用青春筑起了海上长城 图中“⺁”与“十”与“目”按左上包围结构自然长成“盾”。"
       }
     }
   },
@@ -167,13 +167,13 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u7b77.webp",
       "label": "筷子",
-      "alt": "筷子是一双细长餐具，用来夹取食物 图中“⺮”与“快”按上下结构自然长成“筷”。"
+      "alt": "筷子轻夹见证深情厚谊；将军将筷子伸向菜盘又停住，舍不得吃下战士们用汗水浇灌的蔬菜 图中“⺮”与“快”按上下结构自然长成“筷”。"
     },
     "scene": {
-      "scene": "上方两双竹梢形成“⺮”，下方一只手快速夹菜，手腕和筷影沿“快”排列，组成“筷”。",
+      "scene": "上方两双青翠竹梢排成竹字头“⺮”，下方一只手快速夹菜，手腕和筷影“快”排列，组成“筷”。",
       "cues": [
-        "上方两双竹梢形成“⺮”。",
-        "手腕和筷影沿“快”排列。"
+        "上方两双青翠竹梢排成竹字头“⺮”。",
+        "手腕和筷影“快”排列。"
       ]
     },
     "transcript": "战士和将军围坐吃饭，筷子夹起的是小岛上格外珍贵的青菜。先看“筷”上面的竹字头，再把下面的“快”当作快速拿起、稳稳夹住的动作提示。一双筷子开合几下，菜便从盘中送到碗里。这个普通餐具放进课文，却连着战士们对将军的一片心意。",
@@ -191,7 +191,7 @@ export const characterMedia = {
       "g5v1-l15-c06-u7b77-words-image:g5v1-l15-c06-u7b77-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u7b77.webp",
         "label": "筷子",
-        "alt": "筷子是一双细长餐具，用来夹取食物 图中“⺮”与“快”按上下结构自然长成“筷”。"
+        "alt": "筷子轻夹见证深情厚谊；将军将筷子伸向菜盘又停住，舍不得吃下战士们用汗水浇灌的蔬菜 图中“⺮”与“快”按上下结构自然长成“筷”。"
       }
     }
   },
@@ -199,7 +199,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u708a.webp",
       "label": "炊事员",
-      "alt": "炊烟是做饭烧火时升起的烟 图中“火”与“欠”按左右结构自然长成“炊”。"
+      "alt": "炊事员细心烹饪；炊事员把仅有的一点新鲜蔬菜精心做成菜汤，表达对首长的由衷敬重 图中“火”与“欠”按左右结构自然长成“炊”。"
     },
     "scene": {
       "scene": "左边炉火形成“火”，右边人物张口轻吹、身体后仰沿“欠”站好，火受风升起炊烟，组成“炊”。",
@@ -218,12 +218,12 @@ export const characterMedia = {
       "g5v1-l15-c07-u708a-words-image:g5v1-l15-c07-u708a-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u845b.webp",
         "label": "葛布",
-        "alt": "葛是一种藤本植物，葛布可以用它的纤维织成 图中“艹”与“曷”按上下结构自然长成“葛”。"
+        "alt": "诸葛孔明神机妙算；诸葛亮出神入化的智慧谋略让小作者深深着迷，从此一发不可收拾地爱上读书 图中“艹”与“曷”按上下结构自然长成“葛”。"
       },
       "g5v1-l15-c07-u708a-words-image:g5v1-l15-c07-u708a-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u708a.webp",
         "label": "炊事员",
-        "alt": "炊烟是做饭烧火时升起的烟 图中“火”与“欠”按左右结构自然长成“炊”。"
+        "alt": "炊事员细心烹饪；炊事员把仅有的一点新鲜蔬菜精心做成菜汤，表达对首长的由衷敬重 图中“火”与“欠”按左右结构自然长成“炊”。"
       }
     }
   },
@@ -231,7 +231,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u54fc.webp",
       "label": "哼",
-      "alt": "课文里的“哼！”表示不满或不赞同，这里读hng 图中“口”与“亨”按左右结构自然长成“哼”。"
+      "alt": "轻哼一声带着亲切关怀；将军故意轻哼一声化解尴尬，眼神里满是对战士们的心疼与慈爱 图中“口”与“亨”按左右结构自然长成“哼”。"
     },
     "scene": {
       "scene": "左边发声的口形成“口”，右边气流穿过长管和共鸣箱沿“亨”振动，一声短促的“哼”组成“哼”。",
@@ -250,12 +250,12 @@ export const characterMedia = {
       "g5v1-l15-c08-u54fc-words-image:g5v1-l15-c08-u54fc-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u8695.webp",
         "label": "蚕茧",
-        "alt": "蚕是一种会吐丝结茧的昆虫，常以桑叶为食 图中“天”与“虫”按上下结构自然长成“蚕”。"
+        "alt": "养蚕缫丝维持生计；全家人日夜照料春蚕，辛勤劳动换来的每一分钱都倾注在孩子的学业上 图中“天”与“虫”按上下结构自然长成“蚕”。"
       },
       "g5v1-l15-c08-u54fc-words-image:g5v1-l15-c08-u54fc-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u54fc.webp",
         "label": "哼",
-        "alt": "课文里的“哼！”表示不满或不赞同，这里读hng 图中“口”与“亨”按左右结构自然长成“哼”。"
+        "alt": "轻哼一声带着亲切关怀；将军故意轻哼一声化解尴尬，眼神里满是对战士们的心疼与慈爱 图中“口”与“亨”按左右结构自然长成“哼”。"
       }
     }
   },
@@ -263,7 +263,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u5589.webp",
       "label": "喉咙",
-      "alt": "喉咙是颈部里面连接口腔、气管和食管的部位 图中“口”与“侯”按左右结构自然长成“喉”。"
+      "alt": "喉咙哽咽深情难抑；看着那一块中国地图形状的绿色菜地，将军喉咙哽咽，热泪盈眶 图中“口”与“侯”按左右结构自然长成“喉”。"
     },
     "scene": {
       "scene": "左边张口形成“口”，右边人物、喉管和吞咽路线沿“侯”排列，组成“喉”。",
@@ -277,7 +277,7 @@ export const characterMedia = {
       "g5v1-l15-c09-u5589-words-image:g5v1-l15-c09-u5589-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u5589.webp",
         "label": "喉咙",
-        "alt": "喉咙是颈部里面连接口腔、气管和食管的部位 图中“口”与“侯”按左右结构自然长成“喉”。"
+        "alt": "喉咙哽咽深情难抑；看着那一块中国地图形状的绿色菜地，将军喉咙哽咽，热泪盈眶 图中“口”与“侯”按左右结构自然长成“喉”。"
       },
       "g5v1-l15-c09-u5589-words-image:g5v1-l15-c09-u5589-words-image-0": {
         "src": "/illustrations/meanings/m08.webp",
@@ -295,7 +295,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u5499.webp",
       "label": "喉咙",
-      "alt": "喉咙是呼吸、吞咽和发声都会经过的部位 图中“口”与“龙”按左右结构自然长成“咙”。"
+      "alt": "咽喉深处涌起无尽感动；这片凝聚着守岛官兵赤诚爱国心的绿洲，深深震撼了将军的心灵 图中“口”与“龙”按左右结构自然长成“咙”。"
     },
     "scene": {
       "scene": "左边口腔形成“口”，右边盘旋气流像小龙沿“龙”穿过喉管，组成“咙”。",
@@ -309,7 +309,7 @@ export const characterMedia = {
       "g5v1-l15-c10-u5499-words-image:g5v1-l15-c10-u5499-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u5499.webp",
         "label": "喉咙",
-        "alt": "喉咙是呼吸、吞咽和发声都会经过的部位 图中“口”与“龙”按左右结构自然长成“咙”。"
+        "alt": "咽喉深处涌起无尽感动；这片凝聚着守岛官兵赤诚爱国心的绿洲，深深震撼了将军的心灵 图中“口”与“龙”按左右结构自然长成“咙”。"
       },
       "g5v1-l15-c10-u5499-words-image:g5v1-l15-c10-u5499-words-image-2": {
         "src": "/illustrations/meanings/m04.webp",
@@ -319,7 +319,7 @@ export const characterMedia = {
       "g5v1-l15-c10-u5499-words-image:g5v1-l15-c10-u5499-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u8052.webp",
         "label": "聒噪",
-        "alt": "聒噪形容声音嘈杂，令人难以安静 图中“耳”与“舌”按左右结构自然长成“聒”。"
+        "alt": "聒碎乡心彻夜难眠；帐外风雪喧嚣之声打破了梦境，故园温暖的灯火成了心中唯一的牵挂 图中“耳”与“舌”按左右结构自然长成“聒”。"
       }
     }
   },
@@ -327,7 +327,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u54fd.webp",
       "label": "哽咽",
-      "alt": "哽咽是因为激动或难过而一时说不出完整的话 图中“口”与“更”按左右结构自然长成“哽”。"
+      "alt": "哽咽难言情动海天；离岛时将军向着孤岛深情敬礼，在海风呼啸中流下了动情的热泪 图中“口”与“更”按左右结构自然长成“哽”。"
     },
     "scene": {
       "scene": "左边开口却停住的嘴形成“口”，右边一更又一更的横栏和卡住气流沿“更”排列，组成“哽”。",
@@ -351,7 +351,7 @@ export const characterMedia = {
       "g5v1-l15-c11-u54fd-words-image:g5v1-l15-c11-u54fd-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u54fd.webp",
         "label": "哽咽",
-        "alt": "哽咽是因为激动或难过而一时说不出完整的话 图中“口”与“更”按左右结构自然长成“哽”。"
+        "alt": "哽咽难言情动海天；离岛时将军向着孤岛深情敬礼，在海风呼啸中流下了动情的热泪 图中“口”与“更”按左右结构自然长成“哽”。"
       }
     }
   },
@@ -359,7 +359,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u52fa.webp",
       "label": "勺子",
-      "alt": "勺子是有小凹槽和长柄、用来舀取东西的器具 图中“勹”与“丶”按右上包围结构自然长成“勺”。"
+      "alt": "汤勺舀起浓浓战友情；将军亲手用勺子给每一位战士舀菜汤，将关怀送入每个人的心田 图中“勹”与“丶”按右上包围结构自然长成“勺”。"
     },
     "scene": {
       "scene": "弯曲长柄围成“勹”，凹槽里一滴汤形成“丶”，整把勺子自然长成“勺”。",
@@ -373,7 +373,7 @@ export const characterMedia = {
       "g5v1-l15-c12-u52fa-words-image:g5v1-l15-c12-u52fa-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u52fa.webp",
         "label": "勺子",
-        "alt": "勺子是有小凹槽和长柄、用来舀取东西的器具 图中“勹”与“丶”按右上包围结构自然长成“勺”。"
+        "alt": "汤勺舀起浓浓战友情；将军亲手用勺子给每一位战士舀菜汤，将关怀送入每个人的心田 图中“勹”与“丶”按右上包围结构自然长成“勺”。"
       },
       "g5v1-l15-c12-u52fa-words-image:g5v1-l15-c12-u52fa-words-image-0": {
         "src": "/illustrations/meanings/m05.webp",
@@ -383,7 +383,7 @@ export const characterMedia = {
       "g5v1-l15-c12-u52fa-words-image:g5v1-l15-c12-u52fa-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u5a25.webp",
         "label": "嫦娥",
-        "alt": "嫦娥是中国古代关于月亮的神话人物 图中“女”与“我”按左右结构自然长成“娥”。"
+        "alt": "仙娥弄月童趣盎然；美丽的传说为静谧的月夜抹上了一层神秘色彩，点燃了孩子们的探索热情 图中“女”与“我”按左右结构自然长成“娥”。"
       }
     }
   },
@@ -391,7 +391,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u6405.webp",
       "label": "搅了几下",
-      "alt": "搅拌就是用工具来回转动，使材料混合均匀 图中“扌”与“觉”按左右结构自然长成“搅”。"
+      "alt": "搅动菜汤分享温暖；将军在菜汤中轻轻搅拌几下，把珍贵的绿意均匀分给在场的每一名战士 图中“扌”与“觉”按左右结构自然长成“搅”。"
     },
     "scene": {
       "scene": "左边握勺的手形成“扌”，右边旋转碗、观察眼和搅拌架沿“觉”排列，组成“搅”。",
@@ -410,12 +410,12 @@ export const characterMedia = {
       "g5v1-l15-c13-u6405-words-image:g5v1-l15-c13-u6405-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u727a.webp",
         "label": "牺牲",
-        "alt": "牺牲是为了更重要的人或事情舍弃自己的利益，甚至生命 图中“牛”与“西”按左右结构自然长成“牺”。"
+        "alt": "牺牲是为了正义与他人利益放弃生命；海力布为了拯救全村乡亲不惜牺牲自己，化作了坚硬的石头 图中“牛”与“西”按左右结构自然长成“牺”。"
       },
       "g5v1-l15-c13-u6405-words-image:g5v1-l15-c13-u6405-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u6405.webp",
         "label": "搅了几下",
-        "alt": "搅拌就是用工具来回转动，使材料混合均匀 图中“扌”与“觉”按左右结构自然长成“搅”。"
+        "alt": "搅动菜汤分享温暖；将军在菜汤中轻轻搅拌几下，把珍贵的绿意均匀分给在场的每一名战士 图中“扌”与“觉”按左右结构自然长成“搅”。"
       }
     }
   },
@@ -423,7 +423,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u8200.webp",
       "label": "舀起一勺汤",
-      "alt": "舀水就是用勺、瓢等器具把水取出来 图中“爫”与“臼”按上下结构自然长成“舀”。"
+      "alt": "舀起一勺满满的爱国心；这碗由汗水浇灌的菜汤里，舀起的是海岛官兵扎根海防、热爱祖国的赤子深情 图中“爫”与“臼”按上下结构自然长成“舀”。"
     },
     "scene": {
       "scene": "上方一只向下抓握的手形成“爫”，下方深口水瓢沿“臼”盛水，上下组成“舀”。",
@@ -437,7 +437,7 @@ export const characterMedia = {
       "g5v1-l15-c14-u8200-words-image:g5v1-l15-c14-u8200-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u8200.webp",
         "label": "舀起一勺汤",
-        "alt": "舀水就是用勺、瓢等器具把水取出来 图中“爫”与“臼”按上下结构自然长成“舀”。"
+        "alt": "舀起一勺满满的爱国心；这碗由汗水浇灌的菜汤里，舀起的是海岛官兵扎根海防、热爱祖国的赤子深情 图中“爫”与“臼”按上下结构自然长成“舀”。"
       },
       "g5v1-l15-c14-u8200-words-image:g5v1-l15-c14-u8200-words-image-0": {
         "src": "/illustrations/meanings/m05.webp",
@@ -447,7 +447,7 @@ export const characterMedia = {
       "g5v1-l15-c14-u8200-words-image:g5v1-l15-c14-u8200-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u7b77.webp",
         "label": "筷子",
-        "alt": "筷子是一双细长餐具，用来夹取食物 图中“⺮”与“快”按上下结构自然长成“筷”。"
+        "alt": "筷子轻夹见证深情厚谊；将军将筷子伸向菜盘又停住，舍不得吃下战士们用汗水浇灌的蔬菜 图中“⺮”与“快”按上下结构自然长成“筷”。"
       }
     }
   }

@@ -6,7 +6,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u6444.webp",
       "label": "摄氏",
-      "alt": "摄氏是一种温度计量方法，符号通常写作℃ 图中“扌”与“聂”按左右结构自然长成“摄”。"
+      "alt": "摄氏度是测量温度的单位；太阳表面温度高达五千多摄氏度，中心温度更是难以想象的高 图中“扌”与“聂”按左右结构自然长成“摄”。"
     },
     "scene": {
       "scene": "左边调节温度计的手形成“扌”，右边三只耳形感温片叠成“聂”，组成“摄”。",
@@ -20,7 +20,7 @@ export const characterMedia = {
       "g5v1-l16-c01-u6444-words-image:g5v1-l16-c01-u6444-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u6444.webp",
         "label": "摄氏",
-        "alt": "摄氏是一种温度计量方法，符号通常写作℃ 图中“扌”与“聂”按左右结构自然长成“摄”。"
+        "alt": "摄氏度是测量温度的单位；太阳表面温度高达五千多摄氏度，中心温度更是难以想象的高 图中“扌”与“聂”按左右结构自然长成“摄”。"
       },
       "g5v1-l16-c01-u6444-words-image:g5v1-l16-c01-u6444-words-image-2": {
         "src": "/illustrations/meanings/m06.webp",
@@ -30,7 +30,7 @@ export const characterMedia = {
       "g5v1-l16-c01-u6444-words-image:g5v1-l16-c01-u6444-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u59d4.webp",
         "label": "委屈",
-        "alt": "委屈是受到不公平对待或误解时产生的难过感受 图中“禾”与“女”按上下结构自然长成“委”。"
+        "alt": "委屈难过烟消云散；父亲深沉的陪伴与理解，化解了求学路上的一切委屈与挫折 图中“禾”与“女”按上下结构自然长成“委”。"
       }
     }
   },
@@ -38,7 +38,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u6b96.webp",
       "label": "繁殖",
-      "alt": "繁殖是生物产生新个体，使种群延续 图中“歹”与“直”按左右结构自然长成“殖”。"
+      "alt": "繁殖生长生生不息；没有太阳提供的光和热，地球上的植物和动物就无法生存和繁衍后代 图中“歹”与“直”按左右结构自然长成“殖”。"
     },
     "scene": {
       "scene": "左边生命循环的骨形标本沿“歹”摆放，右边幼苗从笔直观察盒中长出形成“直”，组成“殖”。",
@@ -57,12 +57,12 @@ export const characterMedia = {
       "g5v1-l16-c02-u6b96-words-image:g5v1-l16-c02-u6b96-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u675f.webp",
         "label": "一束",
-        "alt": "一束表示捆在一起的一把东西，也可以形容聚拢的光 图中“木”与“口”按穿插结构自然长成“束”。"
+        "alt": "一束指聚拢在一起的一线光芒；一束光线以每秒三十万千米的速度前行，快得令人难以置信 图中“木”与“口”按穿插结构自然长成“束”。"
       },
       "g5v1-l16-c02-u6b96-words-image:g5v1-l16-c02-u6b96-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u6b96.webp",
         "label": "繁殖",
-        "alt": "繁殖是生物产生新个体，使种群延续 图中“歹”与“直”按左右结构自然长成“殖”。"
+        "alt": "繁殖生长生生不息；没有太阳提供的光和热，地球上的植物和动物就无法生存和繁衍后代 图中“歹”与“直”按左右结构自然长成“殖”。"
       }
     }
   },
@@ -70,7 +70,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u70ad.webp",
       "label": "煤炭",
-      "alt": "煤炭是古代植物遗体经过漫长地质变化形成的燃料 图中“山”与“灰”按上下结构自然长成“炭”。"
+      "alt": "煤炭是古代植物深埋地下形成的能源；我们日常使用的煤炭，追根溯源都来自太阳封存的光能 图中“山”与“灰”按上下结构自然长成“炭”。"
     },
     "scene": {
       "scene": "上方矿山形成“山”，下方黑色煤块、火焰和灰沿“灰”排列，整体组成“炭”。",
@@ -89,12 +89,12 @@ export const characterMedia = {
       "g5v1-l16-c03-u70ad-words-image:g5v1-l16-c03-u70ad-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u9c81.webp",
         "label": "鲁莽",
-        "alt": "鲁莽形容说话做事不细想，行动冒失 图中“鱼”与“日”按上下结构自然长成“鲁”。"
+        "alt": "鲁莽好汉性格率真；鲁智深虽性格有些鲁莽却嫉恶如仇、重情重义，给作者留下了深刻印象 图中“鱼”与“日”按上下结构自然长成“鲁”。"
       },
       "g5v1-l16-c03-u70ad-words-image:g5v1-l16-c03-u70ad-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u70ad.webp",
         "label": "煤炭",
-        "alt": "煤炭是古代植物遗体经过漫长地质变化形成的燃料 图中“山”与“灰”按上下结构自然长成“炭”。"
+        "alt": "煤炭是古代植物深埋地下形成的能源；我们日常使用的煤炭，追根溯源都来自太阳封存的光能 图中“山”与“灰”按上下结构自然长成“炭”。"
       }
     }
   },
@@ -102,7 +102,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u7597.webp",
       "label": "治疗",
-      "alt": "治疗就是用合适的方法帮助疾病或伤痛好转 图中“疒”与“了”按左上包围结构自然长成“疗”。"
+      "alt": "治疗疾病带来健康；阳光中的紫外线能够杀灭细菌，对预防和治疗多种疾病大有益处 图中“疒”与“了”按左上包围结构自然长成“疗”。"
     },
     "scene": {
       "scene": "外面医院床帘和药箱形成“疒”，里面康复路线从弯处走到终点沿“了”舒展，组成“疗”。",
@@ -116,7 +116,7 @@ export const characterMedia = {
       "g5v1-l16-c04-u7597-words-image:g5v1-l16-c04-u7597-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u7597.webp",
         "label": "治疗",
-        "alt": "治疗就是用合适的方法帮助疾病或伤痛好转 图中“疒”与“了”按左上包围结构自然长成“疗”。"
+        "alt": "治疗疾病带来健康；阳光中的紫外线能够杀灭细菌，对预防和治疗多种疾病大有益处 图中“疒”与“了”按左上包围结构自然长成“疗”。"
       },
       "g5v1-l16-c04-u7597-words-image:g5v1-l16-c04-u7597-words-image-0": {
         "src": "/illustrations/meanings/m05.webp",
@@ -126,7 +126,7 @@ export const characterMedia = {
       "g5v1-l16-c04-u7597-words-image:g5v1-l16-c04-u7597-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u718f.webp",
         "label": "熏陶",
-        "alt": "熏陶比喻长期受到好思想、好习惯或文化的影响 图中“熏”按独体结构自然长成“熏”。"
+        "alt": "熏陶指长期沉浸受到感染；西湖的暖风熏得游人沉醉迷离，诗篇深刻讽刺了偏安享乐的醉生梦死 图中“熏”按独体结构自然长成“熏”。"
       }
     }
   },
@@ -134,7 +134,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u6c0f.webp",
       "label": "摄氏",
-      "alt": "摄氏中的“氏”来自科学家摄尔修斯姓氏的译名 图中“氏”按独体结构自然长成“氏”。"
+      "alt": "摄氏温标科学精准；课文用摄氏度准确说明太阳的热度，展现了科普说明文的严谨科学性 图中“氏”按独体结构自然长成“氏”。"
     },
     "scene": {
       "scene": "温度计底座、斜置刻度尺和弯曲水银柱严格沿“氏”的全部笔画组合。",
@@ -147,7 +147,7 @@ export const characterMedia = {
       "g5v1-l16-c05-u6c0f-words-image:g5v1-l16-c05-u6c0f-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u6c0f.webp",
         "label": "摄氏",
-        "alt": "摄氏中的“氏”来自科学家摄尔修斯姓氏的译名 图中“氏”按独体结构自然长成“氏”。"
+        "alt": "摄氏温标科学精准；课文用摄氏度准确说明太阳的热度，展现了科普说明文的严谨科学性 图中“氏”按独体结构自然长成“氏”。"
       },
       "g5v1-l16-c05-u6c0f-words-image:g5v1-l16-c05-u6c0f-words-image-0": {
         "src": "/illustrations/meanings/m05.webp",
@@ -157,7 +157,7 @@ export const characterMedia = {
       "g5v1-l16-c05-u6c0f-words-image:g5v1-l16-c05-u6c0f-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u72ed.webp",
         "label": "狭窄",
-        "alt": "狭窄表示宽度小，能通过的空间不大 图中“犭”与“夹”按左右结构自然长成“狭”。"
+        "alt": "狭窄洞口便于防御；松鼠窝的洞口狭窄朝上，不仅能阻挡雨水，还能有效防备天敌侵扰 图中“犭”与“夹”按左右结构自然长成“狭”。"
       }
     }
   },
@@ -165,7 +165,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u7cae.webp",
       "label": "粮食",
-      "alt": "粮食是供人食用的谷物、豆类和薯类等食物原料 图中“米”与“良”按左右结构自然长成“粮”。"
+      "alt": "粮食作物离不开阳光滋养；充足的日照使庄稼茁壮成长，为人类生活提供了丰富的粮食来源 图中“米”与“良”按左右结构自然长成“粮”。"
     },
     "scene": {
       "scene": "左边谷粒和米架形成“米”，右边优质粮袋、弯口和流下谷物沿“良”排列，组成“粮”。",
@@ -179,7 +179,7 @@ export const characterMedia = {
       "g5v1-l16-c06-u7cae-words-image:g5v1-l16-c06-u7cae-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u7cae.webp",
         "label": "粮食",
-        "alt": "粮食是供人食用的谷物、豆类和薯类等食物原料 图中“米”与“良”按左右结构自然长成“粮”。"
+        "alt": "粮食作物离不开阳光滋养；充足的日照使庄稼茁壮成长，为人类生活提供了丰富的粮食来源 图中“米”与“良”按左右结构自然长成“粮”。"
       },
       "g5v1-l16-c06-u7cae-words-image:g5v1-l16-c06-u7cae-words-image-0": {
         "src": "/illustrations/meanings/m03.webp",
@@ -189,7 +189,7 @@ export const characterMedia = {
       "g5v1-l16-c06-u7cae-words-image:g5v1-l16-c06-u7cae-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u534f.webp",
         "label": "协调",
-        "alt": "协调就是不同部分互相配合，行动一致 图中“十”与“办”按左右结构自然长成“协”。"
+        "alt": "协调指相互配合一致；一行人走搭石协调有序，前呼后应，充满了默契的人情美 图中“十”与“办”按左右结构自然长成“协”。"
       }
     }
   },
@@ -197,7 +197,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u533a.webp",
       "label": "地区",
-      "alt": "地区是具有一定范围的地方 图中“匸”与“乂”按左三包围结构自然长成“区”。"
+      "alt": "地区气候各具特色；太阳光照在地球不同地区分布不均，形成了温带、热带等丰富多样的气候区 图中“匸”与“乂”按左三包围结构自然长成“区”。"
     },
     "scene": {
       "scene": "外面三面边界围成“匸”，里面两条路线交叉形成“乂”，明确圈出一个“区”。",
@@ -216,12 +216,12 @@ export const characterMedia = {
       "g5v1-l16-c07-u533a-words-image:g5v1-l16-c07-u533a-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u6073.webp",
         "label": "勤勤恳恳",
-        "alt": "恳求就是态度真诚、急切地请求别人 图中“艮”与“心”按上下结构自然长成“恳”。"
+        "alt": "勤勤恳恳形容辛勤踏实；牛郎织女勤勤恳恳地耕织劳作，把日子过得有滋有味 图中“艮”与“心”按上下结构自然长成“恳”。"
       },
       "g5v1-l16-c07-u533a-words-image:g5v1-l16-c07-u533a-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u533a.webp",
         "label": "地区",
-        "alt": "地区是具有一定范围的地方 图中“匸”与“乂”按左三包围结构自然长成“区”。"
+        "alt": "地区气候各具特色；太阳光照在地球不同地区分布不均，形成了温带、热带等丰富多样的气候区 图中“匸”与“乂”按左三包围结构自然长成“区”。"
       }
     }
   },
@@ -229,7 +229,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u6740.webp",
       "label": "杀菌",
-      "alt": "杀菌就是消灭或减少有害细菌；生活中要按安全方法操作 图中“乂”与“朩”按上下结构自然长成“杀”。"
+      "alt": "杀菌消毒保障健康；多晒太阳可以杀菌防病，让人们在阳光的沐浴下健康快乐地生活 图中“乂”与“朩”按上下结构自然长成“杀”。"
     },
     "scene": {
       "scene": "中央交叉消毒光形成“乂”，下方木架和四点设备沿“朩”承托，整体排成“杀”。",
@@ -243,7 +243,7 @@ export const characterMedia = {
       "g5v1-l16-c08-u6740-words-image:g5v1-l16-c08-u6740-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u6740.webp",
         "label": "杀菌",
-        "alt": "杀菌就是消灭或减少有害细菌；生活中要按安全方法操作 图中“乂”与“朩”按上下结构自然长成“杀”。"
+        "alt": "杀菌消毒保障健康；多晒太阳可以杀菌防病，让人们在阳光的沐浴下健康快乐地生活 图中“乂”与“朩”按上下结构自然长成“杀”。"
       },
       "g5v1-l16-c08-u6740-words-image:g5v1-l16-c08-u6740-words-image-2": {
         "src": "/illustrations/meanings/m08.webp",
@@ -253,7 +253,7 @@ export const characterMedia = {
       "g5v1-l16-c08-u6740-words-image:g5v1-l16-c08-u6740-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u52c9.webp",
         "label": "勉强",
-        "alt": "勉强表示能力或条件不够，却仍尽力去做 图中“免”与“力”按左下包围结构自然长成“勉”。"
+        "alt": "勉强通过安全巧妙；松鼠进窝时身子勉强擦过狭窄洞口，巧妙地守护着自己的小家 图中“免”与“力”按左下包围结构自然长成“勉”。"
       }
     }
   },
@@ -261,7 +261,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u83cc.webp",
       "label": "杀菌",
-      "alt": "细菌是非常微小的生物，需要借助显微镜观察 图中“艹”与“囷”按上下结构自然长成“菌”。"
+      "alt": "细菌微生物受光照抑制；阳光是大自然最好的杀菌剂，使地球始终保持着生机与活力 图中“艹”与“囷”按上下结构自然长成“菌”。"
     },
     "scene": {
       "scene": "上方培养皿里的菌落像草点形成“艹”，下方方框培养箱围住谷粒状菌点沿“囷”排列，组成“菌”。",
@@ -275,7 +275,7 @@ export const characterMedia = {
       "g5v1-l16-c09-u83cc-words-image:g5v1-l16-c09-u83cc-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u83cc.webp",
         "label": "杀菌",
-        "alt": "细菌是非常微小的生物，需要借助显微镜观察 图中“艹”与“囷”按上下结构自然长成“菌”。"
+        "alt": "细菌微生物受光照抑制；阳光是大自然最好的杀菌剂，使地球始终保持着生机与活力 图中“艹”与“囷”按上下结构自然长成“菌”。"
       },
       "g5v1-l16-c09-u83cc-words-image:g5v1-l16-c09-u83cc-words-image-2": {
         "src": "/illustrations/meanings/m07.webp",

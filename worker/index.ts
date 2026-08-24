@@ -9,7 +9,7 @@ const IMMUTABLE_CACHE = "public, max-age=31536000, immutable";
 
 function narrationRequestPath(pathname: string) {
   const match = /^\/media\/narration\/(v\d+)\/([a-z0-9-]+\/(?:audio\.webm|audio-marks\.json))$/.exec(pathname);
-  if (!match || match[1] !== "v3") return null;
+  if (!match || !new Set(["v3", "v4"]).has(match[1])) return null;
   return { version: match[1], relative: match[2] };
 }
 

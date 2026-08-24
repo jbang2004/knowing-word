@@ -6,7 +6,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u4fb5.webp",
       "label": "侵略",
-      "alt": "侵略是进入别国或别人的地方，强行侵犯权益 图中“亻”与“彐”与“冖”与“又”按左右结构自然长成“侵”。"
+      "alt": "侵略指强行进犯侵占别国领土；面对敌人的疯狂侵略，冀中人民展开了顽强的抗争 图中“亻”与“彐”与“冖”与“又”按左右结构自然长成“侵”。"
     },
     "scene": {
       "scene": "左边守卫人物形成“亻”，右边“彐”形脚步越过“冖”形边界，下方“又”形手伸入，合成“侵”。",
@@ -22,7 +22,7 @@ export const characterMedia = {
       "g5v1-l08-c01-u4fb5-words-image:g5v1-l08-c01-u4fb5-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u4fb5.webp",
         "label": "侵略",
-        "alt": "侵略是进入别国或别人的地方，强行侵犯权益 图中“亻”与“彐”与“冖”与“又”按左右结构自然长成“侵”。"
+        "alt": "侵略指强行进犯侵占别国领土；面对敌人的疯狂侵略，冀中人民展开了顽强的抗争 图中“亻”与“彐”与“冖”与“又”按左右结构自然长成“侵”。"
       },
       "g5v1-l08-c01-u4fb5-words-image:g5v1-l08-c01-u4fb5-words-image-2": {
         "src": "/illustrations/meanings/m04.webp",
@@ -32,7 +32,7 @@ export const characterMedia = {
       "g5v1-l08-c01-u4fb5-words-image:g5v1-l08-c01-u4fb5-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u5bb4.webp",
         "label": "宴会",
-        "alt": "宴会是多人聚在一起吃饭、庆祝或交流的活动 图中“宀”与“妟”按上下结构自然长成“宴”。"
+        "alt": "盛宴比喻精神食粮；一本本经典好书宛如精神的饕餮盛宴，滋养着作者不断成长丰富的心灵 图中“宀”与“妟”按上下结构自然长成“宴”。"
       }
     }
   },
@@ -40,7 +40,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u7565.webp",
       "label": "侵略",
-      "alt": "侵略指武力侵犯别国领土和人民 图中“田”与“各”按左右结构自然长成“略”。"
+      "alt": "侵略战争给家乡带来了深重苦难；冀中军民不屈不挠，用智慧建立起地下钢铁防线 图中“田”与“各”按左右结构自然长成“略”。"
     },
     "scene": {
       "scene": "左边四格家园形成“田”，右边外来脚步、转折和说话口沿“各”闯入，合成“略”。",
@@ -59,12 +59,12 @@ export const characterMedia = {
       "g5v1-l08-c02-u7565-words-image:g5v1-l08-c02-u7565-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u8003.webp",
         "label": "考试",
-        "alt": "考试是用题目或操作检查知识和能力的一种方式 图中“耂”与“丂”按左上包围结构自然长成“考”。"
+        "alt": "报考师范求索前途；父亲摇着小船一路护送孩子进城赶考，小舟载着希望破浪向前 图中“耂”与“丂”按左上包围结构自然长成“考”。"
       },
       "g5v1-l08-c02-u7565-words-image:g5v1-l08-c02-u7565-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u7565.webp",
         "label": "侵略",
-        "alt": "侵略指武力侵犯别国领土和人民 图中“田”与“各”按左右结构自然长成“略”。"
+        "alt": "侵略战争给家乡带来了深重苦难；冀中军民不屈不挠，用智慧建立起地下钢铁防线 图中“田”与“各”按左右结构自然长成“略”。"
       }
     }
   },
@@ -72,7 +72,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u5792.webp",
       "label": "堡垒",
-      "alt": "堡垒是用于防守的坚固建筑或工事 图中“厽”与“土”按上下结构自然长成“垒”。"
+      "alt": "堡垒是坚固的防御建筑；纵横交错的地道成了保护人民生命、打击侵略者的地下堡垒 图中“厽”与“土”按上下结构自然长成“垒”。"
     },
     "scene": {
       "scene": "上方三层石块反复叠成“厽”，下方厚实土台形成“土”，越垒越高，组成“垒”。",
@@ -86,7 +86,7 @@ export const characterMedia = {
       "g5v1-l08-c03-u5792-words-image:g5v1-l08-c03-u5792-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u5792.webp",
         "label": "堡垒",
-        "alt": "堡垒是用于防守的坚固建筑或工事 图中“厽”与“土”按上下结构自然长成“垒”。"
+        "alt": "堡垒是坚固的防御建筑；纵横交错的地道成了保护人民生命、打击侵略者的地下堡垒 图中“厽”与“土”按上下结构自然长成“垒”。"
       },
       "g5v1-l08-c03-u5792-words-image:g5v1-l08-c03-u5792-words-image-2": {
         "src": "/illustrations/meanings/m06.webp",
@@ -96,7 +96,7 @@ export const characterMedia = {
       "g5v1-l08-c03-u5792-words-image:g5v1-l08-c03-u5792-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u853d.webp",
         "label": "隐蔽",
-        "alt": "隐蔽就是借助遮挡把自己或物体藏起来 图中“艹”与“敝”按上下结构自然长成“蔽”。"
+        "alt": "隐蔽指掩盖藏匿不被发现；巧妙隐蔽的地道口让敌人防不胜防，确保了乡亲们的安全 图中“艹”与“敝”按上下结构自然长成“蔽”。"
       }
     }
   },
@@ -104,7 +104,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u4efb.webp",
       "label": "任丘",
-      "alt": "任丘是河北省的一座城市，这里的“任”读rén 图中“亻”与“壬”按左右结构自然长成“任”。"
+      "alt": "任丘是河北省的地名；任丘等地的平原上遍布着神奇的地道网络，连通着村村落落 图中“亻”与“壬”按左右结构自然长成“任”。"
     },
     "scene": {
       "scene": "左边站立的人形成“亻”，右边城市路牌、横梁与中心立柱沿“壬”搭起，组成地名中的“任”。",
@@ -123,12 +123,12 @@ export const characterMedia = {
       "g5v1-l08-c04-u4efb-words-image:g5v1-l08-c04-u4efb-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u68a2.webp",
         "label": "树梢",
-        "alt": "树梢是树木枝干最上方或最末端的部分 图中“木”与“肖”按左右结构自然长成“梢”。"
+        "alt": "树梢飞鸣百鸟欢腾；无数飞鸟站在高高的树梢上引吭高歌，展现了人与自然和谐共生的美好画卷 图中“木”与“肖”按左右结构自然长成“梢”。"
       },
       "g5v1-l08-c04-u4efb-words-image:g5v1-l08-c04-u4efb-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u4efb.webp",
         "label": "任丘",
-        "alt": "任丘是河北省的一座城市，这里的“任”读rén 图中“亻”与“壬”按左右结构自然长成“任”。"
+        "alt": "任丘是河北省的地名；任丘等地的平原上遍布着神奇的地道网络，连通着村村落落 图中“亻”与“壬”按左右结构自然长成“任”。"
       }
     }
   },
@@ -136,7 +136,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u4e18.webp",
       "label": "任丘",
-      "alt": "任丘是地名；丘也可以表示小土山 图中“斤”与“一”按上下结构自然长成“丘”。"
+      "alt": "丘陵土堆常被用作地道隐蔽出入口；平原上看似寻常的土丘，地下却别有洞天 图中“斤”与“一”按上下结构自然长成“丘”。"
     },
     "scene": {
       "scene": "一条长地平线形成“一”，下方土坡剖面和测量斧形标记沿“斤”铺开，合成“丘”。",
@@ -155,12 +155,12 @@ export const characterMedia = {
       "g5v1-l08-c05-u4e18-words-image:g5v1-l08-c05-u4e18-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u5e3d.webp",
         "label": "帽子",
-        "alt": "帽子戴在头上，可以保暖、遮阳或起装饰作用 图中“巾”与“冒”按左右结构自然长成“帽”。"
+        "alt": "尾巴高翘宛如遮阳小帽；松鼠常常把毛茸茸的大尾巴翘到背上，像戴着一顶天然的遮阳帽 图中“巾”与“冒”按左右结构自然长成“帽”。"
       },
       "g5v1-l08-c05-u4e18-words-image:g5v1-l08-c05-u4e18-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u4e18.webp",
         "label": "任丘",
-        "alt": "任丘是地名；丘也可以表示小土山 图中“斤”与“一”按上下结构自然长成“丘”。"
+        "alt": "丘陵土堆常被用作地道隐蔽出入口；平原上看似寻常的土丘，地下却别有洞天 图中“斤”与“一”按上下结构自然长成“丘”。"
       }
     }
   },
@@ -168,7 +168,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u6401.webp",
       "label": "搁东西",
-      "alt": "搁置就是把东西放下，暂时不处理 图中“扌”与“阁”按左右结构自然长成“搁”。"
+      "alt": "搁置指放置摆放物资；地道深处开辟出专门搁放粮食与工具的储藏洞，保障了长期坚守 图中“扌”与“阁”按左右结构自然长成“搁”。"
     },
     "scene": {
       "scene": "左边放下物品的手形成“扌”，右边门框里一层置物阁沿“阁”搭起，手把东西放进阁中，组成“搁”。",
@@ -187,12 +187,12 @@ export const characterMedia = {
       "g5v1-l08-c06-u6401-words-image:g5v1-l08-c06-u6401-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u6bc1.webp",
         "label": "毁灭",
-        "alt": "毁灭就是严重破坏，使原有事物不复存在 图中“臼”与“工”与“殳”按左右结构自然长成“毁”。"
+        "alt": "毁灭是彻底破坏不复存在；圆明园惨遭毁灭的历史警示我们，落后就要挨打，唯有自强不息 图中“臼”与“工”与“殳”按左右结构自然长成“毁”。"
       },
       "g5v1-l08-c06-u6401-words-image:g5v1-l08-c06-u6401-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u6401.webp",
         "label": "搁东西",
-        "alt": "搁置就是把东西放下，暂时不处理 图中“扌”与“阁”按左右结构自然长成“搁”。"
+        "alt": "搁置指放置摆放物资；地道深处开辟出专门搁放粮食与工具的储藏洞，保障了长期坚守 图中“扌”与“阁”按左右结构自然长成“搁”。"
       }
     }
   },
@@ -219,7 +219,7 @@ export const characterMedia = {
       "g5v1-l08-c07-u9677-words-image:g5v1-l08-c07-u9677-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u8695.webp",
         "label": "蚕茧",
-        "alt": "蚕是一种会吐丝结茧的昆虫，常以桑叶为食 图中“天”与“虫”按上下结构自然长成“蚕”。"
+        "alt": "养蚕缫丝维持生计；全家人日夜照料春蚕，辛勤劳动换来的每一分钱都倾注在孩子的学业上 图中“天”与“虫”按上下结构自然长成“蚕”。"
       },
       "g5v1-l08-c07-u9677-words-image:g5v1-l08-c07-u9677-words-image-1": {
         "src": "/illustrations/mnemonics/m124.webp",
@@ -256,7 +256,7 @@ export const characterMedia = {
       "g5v1-l08-c08-u62d0-words-image:g5v1-l08-c08-u62d0-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u9175.webp",
         "label": "发酵",
-        "alt": "发酵是微生物作用使食物等发生变化的过程 图中“酉”与“孝”按左右结构自然长成“酵”。"
+        "alt": "悄然发酵孕育佳作；平时的阅读积累如酵母在心田悄然发酵，最终让灵感的嫩芽长成一篇篇动人文章 图中“酉”与“孝”按左右结构自然长成“酵”。"
       }
     }
   },
@@ -264,7 +264,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u5c94.webp",
       "label": "岔道",
-      "alt": "岔道是从一条路分出去的另一条路 图中“分”与“山”按上下结构自然长成“岔”。"
+      "alt": "岔道是分岔交错的通道；纵横交织的岔道如同地下迷宫，使敌人晕头转向、寸步难行 图中“分”与“山”按上下结构自然长成“岔”。"
     },
     "scene": {
       "scene": "上方一条路从中央分成两股形成“分”，下方山谷三峰组成“山”，分开的山路合成“岔”。",
@@ -278,7 +278,7 @@ export const characterMedia = {
       "g5v1-l08-c09-u5c94-words-image:g5v1-l08-c09-u5c94-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u5c94.webp",
         "label": "岔道",
-        "alt": "岔道是从一条路分出去的另一条路 图中“分”与“山”按上下结构自然长成“岔”。"
+        "alt": "岔道是分岔交错的通道；纵横交织的岔道如同地下迷宫，使敌人晕头转向、寸步难行 图中“分”与“山”按上下结构自然长成“岔”。"
       },
       "g5v1-l08-c09-u5c94-words-image:g5v1-l08-c09-u5c94-words-image-2": {
         "src": "/illustrations/meanings/m08.webp",
@@ -288,7 +288,7 @@ export const characterMedia = {
       "g5v1-l08-c09-u5c94-words-image:g5v1-l08-c09-u5c94-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u8146.webp",
         "label": "腼腆",
-        "alt": "腼腆表示害羞、拘谨，面对别人时不够自然 图中“月”与“典”按左右结构自然长成“腆”。"
+        "alt": "腼腆神态真实生动；孩子渴望得到长辈的认可，在鼓励与期待中迈出了创作的第一步 图中“月”与“典”按左右结构自然长成“腆”。"
       }
     }
   },
@@ -296,12 +296,12 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u7b51.webp",
       "label": "修筑",
-      "alt": "修筑就是建造道路、工事或建筑 图中“⺮”与“巩”按上下结构自然长成“筑”。"
+      "alt": "修筑指建造工程设施；冀中人民齐心协力修筑地道，在平原地下筑起了一道道长城 图中“⺮”与“巩”按上下结构自然长成“筑”。"
     },
     "scene": {
-      "scene": "上方两排竹片形成“⺮”，下方工匠双手夯土、工具和地基沿“巩”搭起，组成“筑”。",
+      "scene": "上方修筑竹架排成竹字头“⺮”，下方工匠双手夯土、工具和地基沿“巩”搭起，组成“筑”。",
       "cues": [
-        "上方两排竹片形成“⺮”。",
+        "上方修筑竹架排成竹字头“⺮”。",
         "下方工匠双手夯土、工具和地基沿“巩”搭起。"
       ]
     },
@@ -310,7 +310,7 @@ export const characterMedia = {
       "g5v1-l08-c10-u7b51-words-image:g5v1-l08-c10-u7b51-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u7b51.webp",
         "label": "修筑",
-        "alt": "修筑就是建造道路、工事或建筑 图中“⺮”与“巩”按上下结构自然长成“筑”。"
+        "alt": "修筑指建造工程设施；冀中人民齐心协力修筑地道，在平原地下筑起了一道道长城 图中“⺮”与“巩”按上下结构自然长成“筑”。"
       },
       "g5v1-l08-c10-u7b51-words-image:g5v1-l08-c10-u7b51-words-image-0": {
         "src": "/illustrations/meanings/m08.webp",
@@ -320,7 +320,7 @@ export const characterMedia = {
       "g5v1-l08-c10-u7b51-words-image:g5v1-l08-c10-u7b51-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u584c.webp",
         "label": "倒塌",
-        "alt": "倒塌就是建筑或堆放的东西向下坠落、失去支撑 图中“土”与“𦐇”按左右结构自然长成“塌”。"
+        "alt": "倒塌指山体崩塌滑落；听到大山即将倒塌的消息，海力布焦急地劝说乡亲们立刻搬家 图中“土”与“𦐇”按左右结构自然长成“塌”。"
       }
     }
   },
@@ -328,7 +328,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u5821.webp",
       "label": "堡垒",
-      "alt": "堡垒是为了防守而修建的坚固工事 图中“保”与“土”按上下结构自然长成“堡”。"
+      "alt": "城堡式地道设施功能完备；地下堡垒既能防守又能联络，是平原人民抗战的伟大创造 图中“保”与“土”按上下结构自然长成“堡”。"
     },
     "scene": {
       "scene": "上方守卫、城墙和呆口沿“保”搭成防守塔，下方厚土台形成“土”，上下组成“堡”。",
@@ -337,7 +337,7 @@ export const characterMedia = {
         "下方厚土台形成“土”。"
       ]
     },
-    "transcript": "堡垒的堡，上面像守卫和城墙搭成的防守塔，下面是一层厚土。它是上下结构，塔要立在土台上才显得牢固。把这座小堡垒放进字里，只是记忆画面。课文把地道称作坚强的堡垒，因为它能保护人民，也能支持战斗。",
+    "transcript": "堡，堡垒的堡，读第三声。它是上下结构，上面的“保”像守卫严密的防守高塔，下面的“土”是厚实稳固的地基，高塔筑于厚土之上即为堡。堡垒是用于防御的坚固军事建筑。课文把地道称作粉碎敌人进犯的坚强堡垒，展现了冀中人民保卫家乡的智慧与力量。",
     "practiceOptionVisuals": {
       "g5v1-l08-c11-u5821-words-image:g5v1-l08-c11-u5821-words-image-2": {
         "src": "/illustrations/meanings/m06.webp",
@@ -347,12 +347,12 @@ export const characterMedia = {
       "g5v1-l08-c11-u5821-words-image:g5v1-l08-c11-u5821-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u77ee.webp",
         "label": "矮小",
-        "alt": "矮小表示从下到上的高度比较低 图中“矢”与“委”按左右结构自然长成“矮”。"
+        "alt": "矮小表示高度较低；花生的果实矮矮地埋在地底，虽不张扬，却有默默奉献的真价值 图中“矢”与“委”按左右结构自然长成“矮”。"
       },
       "g5v1-l08-c11-u5821-words-image:g5v1-l08-c11-u5821-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u5821.webp",
         "label": "堡垒",
-        "alt": "堡垒是为了防守而修建的坚固工事 图中“保”与“土”按上下结构自然长成“堡”。"
+        "alt": "城堡式地道设施功能完备；地下堡垒既能防守又能联络，是平原人民抗战的伟大创造 图中“保”与“土”按上下结构自然长成“堡”。"
       }
     }
   },
@@ -360,7 +360,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u515a.webp",
       "label": "党员",
-      "alt": "党员是加入某一政党并遵守其章程的成员 图中“龸”与“兄”按穿插结构自然长成“党”。"
+      "alt": "党员是带领群众坚决斗争的先锋；在党组织的坚强领导下，冀中地道战发挥了无穷威力 图中“龸”与“兄”按穿插结构自然长成“党”。"
     },
     "scene": {
       "scene": "上方灯棚形成“龸”，中间并肩人物沿“兄”站立，下方两腿形成“儿”，共同组成“党”。",
@@ -384,7 +384,7 @@ export const characterMedia = {
       "g5v1-l08-c12-u515a-words-image:g5v1-l08-c12-u515a-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u515a.webp",
         "label": "党员",
-        "alt": "党员是加入某一政党并遵守其章程的成员 图中“龸”与“兄”按穿插结构自然长成“党”。"
+        "alt": "党员是带领群众坚决斗争的先锋；在党组织的坚强领导下，冀中地道战发挥了无穷威力 图中“龸”与“兄”按穿插结构自然长成“党”。"
       }
     }
   },
@@ -401,7 +401,7 @@ export const characterMedia = {
         "右侧方形围栏、顶点与斜撑组成“方”。"
       ]
     },
-    "transcript": "妨，妨碍的妨。它是左右结构，左边是女字旁，右边是方向的方；这里不要把女字旁解释成女性会带来麻烦。为了好记，可以想象一块方形路障横在路口，挡住原来的方向，这只是一幅记字画面。课文里，敌人想用封锁沟和封锁墙妨碍人们来往，但地道仍能通信联络；妨碍就是挡住或影响，使事情不能顺利进行。",
+    "transcript": "妨，妨碍的妨，读第二声。它是左右结构，左边是女字旁，右边的“方”提示读音与方向。看图时，左边人物照料庄稼，右边方正木架立在一旁，左右组合成妨。妨碍就是阻碍或影响，使事情不能顺利进行。课文里敌人修筑工事企图妨碍交通，冀中军民则用神奇地道保卫了联络。",
     "practiceOptionVisuals": {
       "g5v1-l08-c13-u59a8-words-image:g5v1-l08-c13-u59a8-words-image-2": {
         "src": "/illustrations/meanings/m05.webp",
@@ -411,7 +411,7 @@ export const characterMedia = {
       "g5v1-l08-c13-u59a8-words-image:g5v1-l08-c13-u59a8-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u732e.webp",
         "label": "献上",
-        "alt": "献上就是恭敬地把物品或心意送给别人 图中“南”与“犬”按左右结构自然长成“献”。"
+        "alt": "献上是恭敬地呈奉礼品；秦王本想坐收相如献上的宝玉，却未料到对方一身傲骨不可动摇 图中“南”与“犬”按左右结构自然长成“献”。"
       },
       "g5v1-l08-c13-u59a8-words-image:g5v1-l08-c13-u59a8-words-image-1": {
         "src": "/illustrations/mnemonics/m98.webp",
@@ -424,7 +424,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u853d.webp",
       "label": "隐蔽",
-      "alt": "隐蔽就是借助遮挡把自己或物体藏起来 图中“艹”与“敝”按上下结构自然长成“蔽”。"
+      "alt": "隐蔽指掩盖藏匿不被发现；巧妙隐蔽的地道口让敌人防不胜防，确保了乡亲们的安全 图中“艹”与“敝”按上下结构自然长成“蔽”。"
     },
     "scene": {
       "scene": "上方茂密草叶形成“艹”，下方破旧遮网、手杖和布幕沿“敝”展开，把目标遮住，组成“蔽”。",
@@ -438,7 +438,7 @@ export const characterMedia = {
       "g5v1-l08-c14-u853d-words-image:g5v1-l08-c14-u853d-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u853d.webp",
         "label": "隐蔽",
-        "alt": "隐蔽就是借助遮挡把自己或物体藏起来 图中“艹”与“敝”按上下结构自然长成“蔽”。"
+        "alt": "隐蔽指掩盖藏匿不被发现；巧妙隐蔽的地道口让敌人防不胜防，确保了乡亲们的安全 图中“艹”与“敝”按上下结构自然长成“蔽”。"
       },
       "g5v1-l08-c14-u853d-words-image:g5v1-l08-c14-u853d-words-image-0": {
         "src": "/illustrations/meanings/m07.webp",
@@ -503,7 +503,7 @@ export const characterMedia = {
       "019f5658-69c7-7019-a8d5-62983081eafe:019f5658-69c7-7019-a8d5-62983081eafe-2": {
         "src": "/illustrations/mnemonics-v2/g5-u778c.webp",
         "label": "瞌睡",
-        "alt": "瞌睡是困倦得想闭上眼睛 图中“目”与“盍”按左右结构自然长成“瞌”。"
+        "alt": "瞌睡指困倦想要入眠；牛郎在草棚旁打瞌睡时，老牛忽然开口说话，开启了奇妙故事 图中“目”与“盍”按左右结构自然长成“瞌”。"
       },
       "019f5658-69c7-7019-a8d5-62983081eafe:019f5658-69c7-7019-a8d5-62983081eafe-1": {
         "src": "/illustrations/mnemonics/m85.webp",
@@ -518,7 +518,7 @@ export const characterMedia = {
       "019f5658-69c7-7019-a8d5-6b463b575640:019f5658-69c7-7019-a8d5-6b463b575640-0": {
         "src": "/illustrations/mnemonics-v2/g5-u679a.webp",
         "label": "一枚",
-        "alt": "枚是量词，可以用来数较小、形状相近的东西 图中“木”与“⺙”按左右结构自然长成“枚”。"
+        "alt": "枚是用于计算细长物件的量词；一枚火箭携带着巨大的能量冲向太空，展现了科技的力量 图中“木”与“⺙”按左右结构自然长成“枚”。"
       },
       "019f5658-69c7-7019-a8d5-6b463b575640:019f5658-69c7-7019-a8d5-6b463b575640-1": {
         "src": "/illustrations/mnemonics/m85.webp",
@@ -540,7 +540,7 @@ export const characterMedia = {
         "崖下白色泉眼与分流溪水组成“泉”。"
       ]
     },
-    "transcript": "原，平原的原。它是左上包围结构，外面像山崖，里面可以想成一眼泉水从崖下流出。山崖和泉水的画面只帮助记字，不说明这个词的来历。课文写冀中平原地底下有无数地道，平原就是宽广而较平坦的土地。",
+    "transcript": "原，平原的原，读第二声。它是左上包围结构，左上方的“厂”像广袤开阔的山崖，内部的“泉”像源源流出的清泉，崖下流泉延伸开来即为原。平原指宽广平坦的大片土地。课文写冀中平原地底下修筑起无数神奇地道，展现了平原人民在辽阔大地上抗击敌寇的无穷智慧。",
     "practiceOptionVisuals": {}
   },
   "019f0554-ea22-762e-966c-32d678fd6bf6": {
@@ -585,7 +585,7 @@ export const characterMedia = {
         "右侧横腕、竖手和小标记形成“寸”。"
       ]
     },
-    "transcript": "封，封锁的封。它是左右结构，左边像上下叠起的两层土台，右边的寸可以想成一只量位置的手。为了好记，可以想象人们在路边堆土立界，又伸手确认界线，把通道严严实实围起来；这只是记字画面。课文里，敌人修封锁沟和封锁墙，想切断人们的来往；封锁就是严密控制，不让人和物自由通过。",
+    "transcript": "封，封锁的封，读第一声。它是左右结构，左边是叠起的两层界土，右边的“寸”是一只度量界线的手，筑土立界、手按界碑组合成“封”。封锁就是用强制手段切断通道。课文里，敌人修筑封锁沟和封锁墙企图隔绝往来，冀中人民则凭借神奇的地道战粉碎了封锁。",
     "practiceOptionVisuals": {}
   },
   "019f0554-ea22-762e-966c-35da3e2ae594": {
@@ -727,7 +727,7 @@ export const characterMedia = {
       "019f5658-69cc-72cc-86ad-3f47fc9cce91:019f5658-69cc-72cc-86ad-3f47fc9cce91-1": {
         "src": "/illustrations/mnemonics-v2/g5-u8ff0.webp",
         "label": "讲述",
-        "alt": "讲述就是把事情有次序地说出来 图中“辶”与“术”按左下包围结构自然长成“述”。"
+        "alt": "讲述心得言辞诚恳；冰心先生深情讲述自己数十年的读书经历，向青少年传授宝贵的选书智慧 图中“辶”与“术”按左下包围结构自然长成“述”。"
       },
       "019f5658-69cc-72cc-86ad-456ae7821710:019f5658-69cc-72cc-86ad-456ae7821710-2": {
         "src": "/illustrations/meanings/m08.webp",
@@ -788,7 +788,7 @@ export const characterMedia = {
         "下方垂落的长裙布幅形成“巾”。"
       ]
     },
-    "transcript": "敌人走后，乡亲们从地道出来，照常种地过日子。常是上下结构，上面像高台，下面的巾像每天都要用的长布。天天取用同一件东西，只是帮助记住常的样子。照常就是仍按平时的方式生活和做事。",
+    "transcript": "常，照常的常，读第二声。它是上下结构，上面像高台上的屋檐与窗格，下面的巾像日常使用的布巾，上下组合成长久使用的常。照常表示仍按平时的习惯做事。课文写敌人撤退后，冀中乡亲们从地道回到地面照常耕田种地，表现了人民在艰难环境中的从容与乐观。",
     "practiceOptionVisuals": {}
   },
   "019f0554-ea22-762e-966c-61400fdba701": {
@@ -1027,7 +1027,7 @@ export const characterMedia = {
       "019f5658-69cb-722b-be29-e80a92442da0:019f5658-69cb-722b-be29-e80a92442da0-2": {
         "src": "/illustrations/mnemonics-v2/g5-u7f55.webp",
         "label": "稀罕",
-        "alt": "稀罕表示少见而让人觉得新奇，也可以表示喜爱 图中“⺳”与“干”按上下结构自然长成“罕”。"
+        "alt": "稀罕指稀奇少见；牛郎织女男耕女织、情深意重，过着令人羡慕的平静美好日子 图中“⺳”与“干”按上下结构自然长成“罕”。"
       },
       "019f5658-69cb-722b-be29-e80a92442da0:019f5658-69cb-722b-be29-e80a92442da0-1": {
         "src": "/illustrations/mnemonics/m44.webp",
@@ -1106,7 +1106,7 @@ export const characterMedia = {
         "右侧斧头的横刃、柄和斜势组成“斤”。"
       ]
     },
-    "transcript": "所，厕所的所。它是左右结构，左边像一扇半开的屋门，右边像一件带长柄的工具。为了好记，可以想象人在屋门旁整理工具，给每样东西安排固定的地方；这只是记字画面。课文说地道的大洞四壁还有许多小洞，有的住人，有的放东西，有的作厕所；厕所里的所表示专门使用的地方。",
+    "transcript": "所，厕所的所，读第三声。它是左右结构，左边的“户”是一扇开启的屋门，右边的“斤”是一把整齐立在门旁的斧具，门与工具相伴组合成“所”。所指特定的处所或地方。课文写冀中地道四壁开辟出许多小洞，有的住人，有的存放物资，有的用作厕所，生活设施一应俱全。",
     "practiceOptionVisuals": {}
   },
   "019f0554-ea22-762e-966c-a994523efc60": {
@@ -1284,7 +1284,7 @@ export const characterMedia = {
         "上方目框、中央穿轴、下方三道横档和右斜梭共同组成“民”。"
       ]
     },
-    "transcript": "民，民兵的民。民是独体字，弯折的笔画交错在一起，可以把它想成村庄里许多人相连的道路和屋舍。顺着这张小小的村落图把整字记住；这只是记字画面，不是字的来历。课文里，民兵拿着武器在地道中警戒，保护乡亲；民兵就是由人民组织起来、担负保卫任务的队伍。",
+    "transcript": "民，民兵的民，读第二声。民是独体字，弯折的笔画交错相连，勾勒出人们在大地上聚居劳作的村落景致。民指人民与群众。课文里，冀中民兵拿起武器在纵横交错的地道中英勇警戒，保卫家乡与乡亲；民兵就是由人民群众组织起来的武装队伍。",
     "practiceOptionVisuals": {}
   },
   "019f0554-ea22-762e-966c-d0e0bd57a9cc": {
@@ -1379,7 +1379,7 @@ export const characterMedia = {
       "019f5658-69ca-717d-8e76-f035a5e2de1e:019f5658-69ca-717d-8e76-f035a5e2de1e-1": {
         "src": "/illustrations/mnemonics-v2/g5-u7b51.webp",
         "label": "修筑",
-        "alt": "修筑就是建造道路、工事或建筑 图中“⺮”与“巩”按上下结构自然长成“筑”。"
+        "alt": "修筑指建造工程设施；冀中人民齐心协力修筑地道，在平原地下筑起了一道道长城 图中“⺮”与“巩”按上下结构自然长成“筑”。"
       },
       "019f5658-69ca-717d-8e76-f8a3f1e51568:019f5658-69ca-717d-8e76-f8a3f1e51568-1": {
         "src": "/illustrations/meanings/m05.webp",

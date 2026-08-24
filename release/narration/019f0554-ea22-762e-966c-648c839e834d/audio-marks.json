@@ -2,486 +2,685 @@
   "marks": [
     {
       "index": 0,
-      "char": "敌",
-      "start": 0.16,
-      "end": 0.32
+      "char": "常",
+      "start": 0,
+      "end": 0.48
     },
     {
       "index": 1,
-      "char": "人",
-      "start": 0.32,
-      "end": 0.56
-    },
-    {
-      "index": 2,
-      "char": "走",
-      "start": 0.56,
-      "end": 0.72
-    },
-    {
-      "index": 3,
-      "char": "后",
-      "start": 0.72,
+      "char": "照",
+      "start": 0.88,
       "end": 1.12
     },
     {
-      "index": 4,
-      "char": "乡",
-      "start": 1.2,
+      "index": 2,
+      "char": "常",
+      "start": 1.12,
+      "end": 1.36
+    },
+    {
+      "index": 3,
+      "char": "的",
+      "start": 1.36,
       "end": 1.44
     },
     {
-      "index": 5,
-      "char": "亲",
+      "index": 4,
+      "char": "常",
       "start": 1.44,
-      "end": 1.6
-    },
-    {
-      "index": 6,
-      "char": "们",
-      "start": 1.6,
       "end": 1.84
     },
     {
-      "index": 7,
-      "char": "从",
-      "start": 1.84,
-      "end": 2.08
+      "index": 5,
+      "char": "读",
+      "start": 2.32,
+      "end": 2.48
     },
     {
-      "index": 8,
-      "char": "地",
-      "start": 2.08,
-      "end": 2.24
-    },
-    {
-      "index": 9,
-      "char": "道",
-      "start": 2.24,
-      "end": 2.4
-    },
-    {
-      "index": 10,
-      "char": "出",
-      "start": 2.4,
+      "index": 6,
+      "char": "第",
+      "start": 2.48,
       "end": 2.64
     },
     {
-      "index": 11,
-      "char": "来",
+      "index": 7,
+      "char": "二",
       "start": 2.64,
       "end": 2.88
     },
     {
+      "index": 8,
+      "char": "声",
+      "start": 2.88,
+      "end": 3.2
+    },
+    {
+      "index": 9,
+      "char": "它",
+      "start": 3.76,
+      "end": 3.92
+    },
+    {
+      "index": 10,
+      "char": "是",
+      "start": 3.92,
+      "end": 4.08
+    },
+    {
+      "index": 11,
+      "char": "上",
+      "start": 4.08,
+      "end": 4.32
+    },
+    {
       "index": 12,
-      "char": "照",
-      "start": 3.2,
-      "end": 3.44
+      "char": "下",
+      "start": 4.32,
+      "end": 4.48
     },
     {
       "index": 13,
-      "char": "常",
-      "start": 3.44,
-      "end": 3.68
+      "char": "结",
+      "start": 4.48,
+      "end": 4.72
     },
     {
       "index": 14,
-      "char": "种",
-      "start": 3.68,
-      "end": 3.84
+      "char": "构",
+      "start": 4.72,
+      "end": 4.96
     },
     {
       "index": 15,
-      "char": "地",
-      "start": 3.84,
-      "end": 4.0
+      "char": "上",
+      "start": 5.44,
+      "end": 5.76
     },
     {
       "index": 16,
-      "char": "过",
-      "start": 4.0,
-      "end": 4.24
+      "char": "面",
+      "start": 5.76,
+      "end": 6
     },
     {
       "index": 17,
-      "char": "日",
-      "start": 4.24,
-      "end": 4.4
+      "char": "像",
+      "start": 6.08,
+      "end": 6.24
     },
     {
       "index": 18,
-      "char": "子",
-      "start": 4.4,
-      "end": 4.64
-    },
-    {
-      "index": 19,
-      "char": "常",
-      "start": 5.12,
-      "end": 5.36
-    },
-    {
-      "index": 20,
-      "char": "是",
-      "start": 5.36,
-      "end": 5.52
-    },
-    {
-      "index": 21,
-      "char": "上",
-      "start": 5.52,
-      "end": 5.68
-    },
-    {
-      "index": 22,
-      "char": "下",
-      "start": 5.68,
-      "end": 5.92
-    },
-    {
-      "index": 23,
-      "char": "结",
-      "start": 5.92,
-      "end": 6.08
-    },
-    {
-      "index": 24,
-      "char": "构",
-      "start": 6.08,
+      "char": "高",
+      "start": 6.24,
       "end": 6.4
     },
     {
-      "index": 25,
-      "char": "上",
-      "start": 6.64,
-      "end": 6.88
+      "index": 19,
+      "char": "台",
+      "start": 6.4,
+      "end": 6.64
     },
     {
-      "index": 26,
-      "char": "面",
-      "start": 6.88,
+      "index": 20,
+      "char": "上",
+      "start": 6.64,
+      "end": 6.8
+    },
+    {
+      "index": 21,
+      "char": "的",
+      "start": 6.8,
+      "end": 6.96
+    },
+    {
+      "index": 22,
+      "char": "屋",
+      "start": 6.96,
       "end": 7.04
     },
     {
-      "index": 27,
-      "char": "像",
+      "index": 23,
+      "char": "檐",
       "start": 7.04,
-      "end": 7.2
+      "end": 7.36
+    },
+    {
+      "index": 24,
+      "char": "与",
+      "start": 7.36,
+      "end": 7.68,
+      "alignment_group": "align-group-24-25",
+      "alignment_group_text": "与窗"
+    },
+    {
+      "index": 25,
+      "char": "窗",
+      "start": 7.36,
+      "end": 7.68,
+      "alignment_group": "align-group-24-25",
+      "alignment_group_text": "与窗"
+    },
+    {
+      "index": 26,
+      "char": "格",
+      "start": 7.68,
+      "end": 8.08
+    },
+    {
+      "index": 27,
+      "char": "下",
+      "start": 8.64,
+      "end": 8.88
     },
     {
       "index": 28,
-      "char": "高",
-      "start": 7.2,
-      "end": 7.44
+      "char": "面",
+      "start": 8.88,
+      "end": 8.96
     },
     {
       "index": 29,
-      "char": "台",
-      "start": 7.44,
-      "end": 7.84
+      "char": "的",
+      "start": 8.96,
+      "end": 9.12
     },
     {
       "index": 30,
-      "char": "下",
-      "start": 8.08,
-      "end": 8.24
+      "char": "巾",
+      "start": 9.12,
+      "end": 9.44
     },
     {
       "index": 31,
-      "char": "面",
-      "start": 8.24,
-      "end": 8.4
+      "char": "像",
+      "start": 9.68,
+      "end": 9.92
     },
     {
       "index": 32,
-      "char": "的",
-      "start": 8.4,
-      "end": 8.56
-    },
-    {
-      "index": 33,
-      "char": "巾",
-      "start": 8.56,
-      "end": 8.8
-    },
-    {
-      "index": 34,
-      "char": "像",
-      "start": 8.8,
-      "end": 9.04
-    },
-    {
-      "index": 35,
-      "char": "每",
-      "start": 9.04,
-      "end": 9.28
-    },
-    {
-      "index": 36,
-      "char": "天",
-      "start": 9.28,
-      "end": 9.52
-    },
-    {
-      "index": 37,
-      "char": "都",
-      "start": 9.52,
-      "end": 9.6
-    },
-    {
-      "index": 38,
-      "char": "要",
-      "start": 9.6,
-      "end": 9.76
-    },
-    {
-      "index": 39,
-      "char": "用",
-      "start": 9.76,
-      "end": 10.0
-    },
-    {
-      "index": 40,
-      "char": "的",
-      "start": 10.0,
+      "char": "日",
+      "start": 9.92,
       "end": 10.08
     },
     {
-      "index": 41,
-      "char": "长",
+      "index": 33,
+      "char": "常",
       "start": 10.08,
-      "end": 10.4
+      "end": 10.24
     },
     {
-      "index": 42,
-      "char": "布",
-      "start": 10.4,
+      "index": 34,
+      "char": "使",
+      "start": 10.24,
+      "end": 10.48
+    },
+    {
+      "index": 35,
+      "char": "用",
+      "start": 10.48,
+      "end": 10.56
+    },
+    {
+      "index": 36,
+      "char": "的",
+      "start": 10.56,
       "end": 10.64
     },
     {
-      "index": 43,
-      "char": "天",
-      "start": 11.12,
-      "end": 11.36
+      "index": 37,
+      "char": "布",
+      "start": 10.64,
+      "end": 10.88
     },
     {
-      "index": 44,
-      "char": "天",
-      "start": 11.36,
-      "end": 11.52
+      "index": 38,
+      "char": "巾",
+      "start": 10.88,
+      "end": 11.12
     },
     {
-      "index": 45,
-      "char": "取",
-      "start": 11.52,
-      "end": 11.76
-    },
-    {
-      "index": 46,
-      "char": "用",
+      "index": 39,
+      "char": "上",
       "start": 11.76,
       "end": 11.92
     },
     {
-      "index": 47,
-      "char": "同",
-      "start": 11.92,
+      "index": 40,
+      "char": "下",
+      "start": 12,
       "end": 12.16
     },
     {
-      "index": 48,
-      "char": "一",
+      "index": 41,
+      "char": "组",
       "start": 12.16,
-      "end": 12.32
+      "end": 12.4
     },
     {
-      "index": 49,
-      "char": "件",
-      "start": 12.32,
-      "end": 12.48
+      "index": 42,
+      "char": "合",
+      "start": 12.4,
+      "end": 12.56
     },
     {
-      "index": 50,
-      "char": "东",
-      "start": 12.48,
-      "end": 12.64
+      "index": 43,
+      "char": "成",
+      "start": 12.56,
+      "end": 12.8
     },
     {
-      "index": 51,
-      "char": "西",
-      "start": 12.64,
+      "index": 44,
+      "char": "长",
+      "start": 12.8,
       "end": 12.96
     },
     {
-      "index": 52,
-      "char": "只",
-      "start": 13.36,
-      "end": 13.44
+      "index": 45,
+      "char": "久",
+      "start": 12.96,
+      "end": 13.2
     },
     {
-      "index": 53,
-      "char": "是",
-      "start": 13.44,
+      "index": 46,
+      "char": "使",
+      "start": 13.2,
+      "end": 13.36
+    },
+    {
+      "index": 47,
+      "char": "用",
+      "start": 13.36,
+      "end": 13.52
+    },
+    {
+      "index": 48,
+      "char": "的",
+      "start": 13.52,
       "end": 13.6
     },
     {
-      "index": 54,
-      "char": "帮",
-      "start": 13.6,
-      "end": 13.84
-    },
-    {
-      "index": 55,
-      "char": "助",
-      "start": 13.84,
-      "end": 14.0
-    },
-    {
-      "index": 56,
-      "char": "记",
-      "start": 14.0,
-      "end": 14.16
-    },
-    {
-      "index": 57,
-      "char": "住",
-      "start": 14.16,
-      "end": 14.24
-    },
-    {
-      "index": 58,
+      "index": 49,
       "char": "常",
-      "start": 14.24,
+      "start": 13.6,
+      "end": 14
+    },
+    {
+      "index": 50,
+      "char": "照",
+      "start": 14.08,
+      "end": 14.32
+    },
+    {
+      "index": 51,
+      "char": "常",
+      "start": 14.32,
       "end": 14.56
     },
     {
-      "index": 59,
-      "char": "的",
+      "index": 52,
+      "char": "表",
       "start": 14.56,
-      "end": 14.64
+      "end": 14.8
     },
     {
-      "index": 60,
-      "char": "样",
-      "start": 14.64,
-      "end": 14.88
+      "index": 53,
+      "char": "示",
+      "start": 14.8,
+      "end": 15.12
     },
     {
-      "index": 61,
-      "char": "子",
-      "start": 14.88,
-      "end": 15.2
+      "index": 54,
+      "char": "仍",
+      "start": 15.28,
+      "end": 15.44
     },
     {
-      "index": 62,
-      "char": "照",
+      "index": 55,
+      "char": "按",
+      "start": 15.44,
+      "end": 15.68
+    },
+    {
+      "index": 56,
+      "char": "平",
       "start": 15.68,
       "end": 15.84
     },
     {
-      "index": 63,
-      "char": "常",
+      "index": 57,
+      "char": "时",
       "start": 15.84,
-      "end": 16.16
+      "end": 16
     },
     {
-      "index": 64,
-      "char": "就",
-      "start": 16.16,
+      "index": 58,
+      "char": "的",
+      "start": 16,
+      "end": 16.08
+    },
+    {
+      "index": 59,
+      "char": "习",
+      "start": 16.08,
       "end": 16.32
     },
     {
-      "index": 65,
-      "char": "是",
+      "index": 60,
+      "char": "惯",
       "start": 16.32,
+      "end": 16.48
+    },
+    {
+      "index": 61,
+      "char": "做",
+      "start": 16.48,
       "end": 16.64
     },
     {
-      "index": 66,
-      "char": "仍",
+      "index": 62,
+      "char": "事",
       "start": 16.64,
-      "end": 16.8
+      "end": 16.96
     },
     {
-      "index": 67,
-      "char": "按",
-      "start": 16.8,
-      "end": 17.04
-    },
-    {
-      "index": 68,
-      "char": "平",
-      "start": 17.04,
-      "end": 17.28
-    },
-    {
-      "index": 69,
-      "char": "时",
+      "index": 63,
+      "char": "课",
       "start": 17.28,
       "end": 17.44
     },
     {
-      "index": 70,
-      "char": "的",
+      "index": 64,
+      "char": "文",
       "start": 17.44,
-      "end": 17.52
+      "end": 17.68
     },
     {
-      "index": 71,
-      "char": "方",
-      "start": 17.52,
-      "end": 17.76
-    },
-    {
-      "index": 72,
-      "char": "式",
-      "start": 17.76,
+      "index": 65,
+      "char": "写",
+      "start": 17.68,
       "end": 17.92
     },
     {
-      "index": 73,
-      "char": "生",
+      "index": 66,
+      "char": "敌",
       "start": 17.92,
-      "end": 18.16
+      "end": 18.08
     },
     {
-      "index": 74,
-      "char": "活",
-      "start": 18.16,
+      "index": 67,
+      "char": "人",
+      "start": 18.08,
+      "end": 18.24
+    },
+    {
+      "index": 68,
+      "char": "撤",
+      "start": 18.24,
       "end": 18.4
     },
     {
-      "index": 75,
-      "char": "和",
+      "index": 69,
+      "char": "退",
       "start": 18.4,
-      "end": 18.48
+      "end": 18.64
+    },
+    {
+      "index": 70,
+      "char": "后",
+      "start": 18.64,
+      "end": 18.88
+    },
+    {
+      "index": 71,
+      "char": "冀",
+      "start": 19.28,
+      "end": 19.44
+    },
+    {
+      "index": 72,
+      "char": "中",
+      "start": 19.44,
+      "end": 19.6
+    },
+    {
+      "index": 73,
+      "char": "乡",
+      "start": 19.6,
+      "end": 19.84
+    },
+    {
+      "index": 74,
+      "char": "亲",
+      "start": 19.84,
+      "end": 20
+    },
+    {
+      "index": 75,
+      "char": "们",
+      "start": 20,
+      "end": 20.24
     },
     {
       "index": 76,
-      "char": "做",
-      "start": 18.48,
-      "end": 18.72
+      "char": "从",
+      "start": 20.32,
+      "end": 20.48
     },
     {
       "index": 77,
-      "char": "事",
-      "start": 18.72,
-      "end": 18.8
+      "char": "地",
+      "start": 20.48,
+      "end": 20.72
+    },
+    {
+      "index": 78,
+      "char": "道",
+      "start": 20.72,
+      "end": 20.88
+    },
+    {
+      "index": 79,
+      "char": "回",
+      "start": 20.88,
+      "end": 21.12
+    },
+    {
+      "index": 80,
+      "char": "到",
+      "start": 21.12,
+      "end": 21.2
+    },
+    {
+      "index": 81,
+      "char": "地",
+      "start": 21.2,
+      "end": 21.44
+    },
+    {
+      "index": 82,
+      "char": "面",
+      "start": 21.44,
+      "end": 21.68
+    },
+    {
+      "index": 83,
+      "char": "照",
+      "start": 21.84,
+      "end": 22
+    },
+    {
+      "index": 84,
+      "char": "常",
+      "start": 22,
+      "end": 22.24
+    },
+    {
+      "index": 85,
+      "char": "耕",
+      "start": 22.24,
+      "end": 22.4
+    },
+    {
+      "index": 86,
+      "char": "田",
+      "start": 22.4,
+      "end": 22.64
+    },
+    {
+      "index": 87,
+      "char": "种",
+      "start": 22.64,
+      "end": 22.8
+    },
+    {
+      "index": 88,
+      "char": "地",
+      "start": 22.8,
+      "end": 23.04
+    },
+    {
+      "index": 89,
+      "char": "表",
+      "start": 23.52,
+      "end": 23.68
+    },
+    {
+      "index": 90,
+      "char": "现",
+      "start": 23.68,
+      "end": 23.84
+    },
+    {
+      "index": 91,
+      "char": "了",
+      "start": 23.84,
+      "end": 24
+    },
+    {
+      "index": 92,
+      "char": "人",
+      "start": 24,
+      "end": 24.16
+    },
+    {
+      "index": 93,
+      "char": "民",
+      "start": 24.16,
+      "end": 24.48
+    },
+    {
+      "index": 94,
+      "char": "在",
+      "start": 24.56,
+      "end": 24.72
+    },
+    {
+      "index": 95,
+      "char": "艰",
+      "start": 24.72,
+      "end": 24.88
+    },
+    {
+      "index": 96,
+      "char": "难",
+      "start": 24.96,
+      "end": 25.12
+    },
+    {
+      "index": 97,
+      "char": "环",
+      "start": 25.12,
+      "end": 25.28
+    },
+    {
+      "index": 98,
+      "char": "境",
+      "start": 25.28,
+      "end": 25.44
+    },
+    {
+      "index": 99,
+      "char": "中",
+      "start": 25.44,
+      "end": 25.6
+    },
+    {
+      "index": 100,
+      "char": "的",
+      "start": 25.6,
+      "end": 25.76
+    },
+    {
+      "index": 101,
+      "char": "从",
+      "start": 25.76,
+      "end": 26
+    },
+    {
+      "index": 102,
+      "char": "容",
+      "start": 26,
+      "end": 26.24
+    },
+    {
+      "index": 103,
+      "char": "与",
+      "start": 26.32,
+      "end": 26.4
+    },
+    {
+      "index": 104,
+      "char": "乐",
+      "start": 26.4,
+      "end": 26.64
+    },
+    {
+      "index": 105,
+      "char": "观",
+      "start": 26.64,
+      "end": 26.88
     }
   ],
-  "transcript": "敌人走后，乡亲们从地道出来，照常种地过日子。常是上下结构，上面像高台，下面的巾像每天都要用的长布。天天取用同一件东西，只是帮助记住常的样子。照常就是仍按平时的方式生活和做事。",
+  "transcript": "常，照常的常，读第二声。它是上下结构，上面像高台上的屋檐与窗格，下面的巾像日常使用的布巾，上下组合成长久使用的常。照常表示仍按平时的习惯做事。课文写敌人撤退后，冀中乡亲们从地道回到地面照常耕田种地，表现了人民在艰难环境中的从容与乐观。",
   "voice_reference": "封",
   "reference_id": "019f0554-ea22-762e-966c-32d678fd6bf6",
   "reference_sha256": "eb07e06ee13a20ee4577b1b481df6d33d42127c1b3876bfa5d5e5362ae349f19",
   "timing_source": "qwen3-forced-aligner",
-  "script_version": "narration-v3",
-  "model": "mlx-community/Qwen3-TTS-12Hz-1.7B-Base-4bit",
-  "model_revision": "37e955a1deb861c088ae5f3a67043185f3d1a60c",
-  "generation_policy": "qwen3-clone-2026-08-22-v3",
-  "seed": 20260822,
-  "content_hash": "cac7e6029cdd2d1bc021",
-  "duration": 18.885,
+  "script_version": "narration-fish-v1",
+  "model": "fishaudio/s2.1-pro-free",
+  "model_revision": "s2.1-pro-free",
+  "generation_policy": "narration-fish-s2.1-zero-shot-2026-08-24",
+  "seed": null,
+  "content_hash": "3d6ba0ddae74c6444c9e",
   "alignment_model": "mlx-community/Qwen3-ForcedAligner-0.6B-8bit",
-  "aligned_audio_sha256": "18ab8f33626cdbf6161946bf1977c27320cfd658784dc3662f00ca2b7524cb8c",
-  "alignment_groups": []
+  "alignment_model_revision": "0e1a68e91d815300c7c9754b2a7639378b23db15",
+  "aligned_audio_sha256": "85c2a4499fa0f0e836d55a742997717eefaf805ae41d5ba2e1628df71fbd16c8",
+  "alignment_groups": [
+    {
+      "id": "align-group-24-25",
+      "text": "与窗",
+      "indices": [
+        24,
+        25
+      ],
+      "start": 7.36,
+      "end": 7.68,
+      "method": "shared-right-model-interval",
+      "rawIntervals": [
+        {
+          "index": 24,
+          "char": "与",
+          "start": 7.36,
+          "end": 7.36
+        },
+        {
+          "index": 25,
+          "char": "窗",
+          "start": 7.36,
+          "end": 7.68
+        }
+      ]
+    }
+  ],
+  "duration": 27.044
 }

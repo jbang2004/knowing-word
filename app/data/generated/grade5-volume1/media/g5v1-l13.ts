@@ -6,7 +6,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u6cfb.webp",
       "label": "倾泻",
-      "alt": "倾泻形容大量的水、光等快速向下流 图中“氵”与“写”按左右结构自然长成“泻”。"
+      "alt": "倾泻指江河水势奔腾而下；黄河奔流直泻汪洋，象征着少年中国不可阻挡的磅礴伟力 图中“氵”与“写”按左右结构自然长成“泻”。"
     },
     "scene": {
       "scene": "左边三股急水形成“氵”，右边屋盖下的水槽和向下斜流沿“写”铺开，合成“泻”。",
@@ -25,12 +25,12 @@ export const characterMedia = {
       "g5v1-l13-c01-u6cfb-words-image:g5v1-l13-c01-u6cfb-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u8bf5.webp",
         "label": "诵读",
-        "alt": "诵读就是有声音、有节奏地朗读或背读 图中“讠”与“甬”按左右结构自然长成“诵”。"
+        "alt": "朗朗诵读口诵心惟；读书时口中清晰诵读，心中深入思考，眼口心合一才能真正掌握精髓 图中“讠”与“甬”按左右结构自然长成“诵”。"
       },
       "g5v1-l13-c01-u6cfb-words-image:g5v1-l13-c01-u6cfb-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u6cfb.webp",
         "label": "倾泻",
-        "alt": "倾泻形容大量的水、光等快速向下流 图中“氵”与“写”按左右结构自然长成“泻”。"
+        "alt": "倾泻指江河水势奔腾而下；黄河奔流直泻汪洋，象征着少年中国不可阻挡的磅礴伟力 图中“氵”与“写”按左右结构自然长成“泻”。"
       }
     }
   },
@@ -38,7 +38,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u9cde.webp",
       "label": "鱼鳞",
-      "alt": "鱼鳞是覆盖在鱼身体表面的薄片，能保护鱼体 图中“鱼”与“粦”按左右结构自然长成“鳞”。"
+      "alt": "潜龙腾渊鳞爪飞扬；飞腾的巨龙展现出冲破羁绊、翱翔九天的威猛神采 图中“鱼”与“粦”按左右结构自然长成“鳞”。"
     },
     "scene": {
       "scene": "左边鱼头、鳍和尾巴形成“鱼”，右边米粒状鳞片与火光层层排列成“粦”，组成“鳞”。",
@@ -52,7 +52,7 @@ export const characterMedia = {
       "g5v1-l13-c02-u9cde-words-image:g5v1-l13-c02-u9cde-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u9cde.webp",
         "label": "鱼鳞",
-        "alt": "鱼鳞是覆盖在鱼身体表面的薄片，能保护鱼体 图中“鱼”与“粦”按左右结构自然长成“鳞”。"
+        "alt": "潜龙腾渊鳞爪飞扬；飞腾的巨龙展现出冲破羁绊、翱翔九天的威猛神采 图中“鱼”与“粦”按左右结构自然长成“鳞”。"
       },
       "g5v1-l13-c02-u9cde-words-image:g5v1-l13-c02-u9cde-words-image-2": {
         "src": "/illustrations/meanings/m07.webp",
@@ -62,7 +62,7 @@ export const characterMedia = {
       "g5v1-l13-c02-u9cde-words-image:g5v1-l13-c02-u9cde-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u68a2.webp",
         "label": "树梢",
-        "alt": "树梢是树木枝干最上方或最末端的部分 图中“木”与“肖”按左右结构自然长成“梢”。"
+        "alt": "树梢飞鸣百鸟欢腾；无数飞鸟站在高高的树梢上引吭高歌，展现了人与自然和谐共生的美好画卷 图中“木”与“肖”按左右结构自然长成“梢”。"
       }
     }
   },
@@ -70,7 +70,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u60f6.webp",
       "label": "惶恐",
-      "alt": "惶恐就是心里害怕、非常不安 图中“忄”与“皇”按左右结构自然长成“惶”。"
+      "alt": "惶恐指内心恐惧不安；少年中国气宇轩昂，扫除一切怯懦与惶恐，昂首屹立于世界东方 图中“忄”与“皇”按左右结构自然长成“惶”。"
     },
     "scene": {
       "scene": "左边快速跳动的心灯形成“忄”，右边高冠和玉座沿“皇”压下来，心在高台旁不安，组成“惶”。",
@@ -89,12 +89,12 @@ export const characterMedia = {
       "g5v1-l13-c03-u60f6-words-image:g5v1-l13-c03-u60f6-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u7f36.webp",
         "label": "击缶",
-        "alt": "缶是古代盛水或酒的陶器，也可以敲击发声 图中“午”与“山”按上下结构自然长成“缶”。"
+        "alt": "缶是古代用来盛酒与敲击伴奏的瓦器；渑池会上秦王被迫击缶，赵国的国格尊严得到了有力捍卫 图中“午”与“山”按上下结构自然长成“缶”。"
       },
       "g5v1-l13-c03-u60f6-words-image:g5v1-l13-c03-u60f6-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u60f6.webp",
         "label": "惶恐",
-        "alt": "惶恐就是心里害怕、非常不安 图中“忄”与“皇”按左右结构自然长成“惶”。"
+        "alt": "惶恐指内心恐惧不安；少年中国气宇轩昂，扫除一切怯懦与惶恐，昂首屹立于世界东方 图中“忄”与“皇”按左右结构自然长成“惶”。"
       }
     }
   },
@@ -102,7 +102,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u80ce.webp",
       "label": "胎儿",
-      "alt": "胎儿是在母体内尚未出生的孩子 图中“月”与“台”按左右结构自然长成“胎”。"
+      "alt": "奇花初胎矞矞皇皇；含苞初绽的鲜花蕴含着无限生机，象征着蓬勃美好的新时代 图中“月”与“台”按左右结构自然长成“胎”。"
     },
     "scene": {
       "scene": "左边柔软月形身体形成“月”，右边小生命蜷在台形保护空间沿“台”安稳躺下，组成“胎”。",
@@ -116,7 +116,7 @@ export const characterMedia = {
       "g5v1-l13-c04-u80ce-words-image:g5v1-l13-c04-u80ce-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u80ce.webp",
         "label": "胎儿",
-        "alt": "胎儿是在母体内尚未出生的孩子 图中“月”与“台”按左右结构自然长成“胎”。"
+        "alt": "奇花初胎矞矞皇皇；含苞初绽的鲜花蕴含着无限生机，象征着蓬勃美好的新时代 图中“月”与“台”按左右结构自然长成“胎”。"
       },
       "g5v1-l13-c04-u80ce-words-image:g5v1-l13-c04-u80ce-words-image-2": {
         "src": "/illustrations/meanings/m04.webp",
@@ -134,7 +134,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u5c65.webp",
       "label": "履行",
-      "alt": "履行就是按照约定或责任认真去做 图中“尸”与“復”按左上包围结构自然长成“履”。"
+      "alt": "纵横驰骋履历广阔；少年顶天立地履行历史重任，踏上民族复兴的壮丽征途 图中“尸”与“復”按左上包围结构自然长成“履”。"
     },
     "scene": {
       "scene": "外面屋身和脚步形成“尸”形长靴，里面一遍遍往返的路线、日程和脚印沿“復”展开，组成“履”。",
@@ -148,7 +148,7 @@ export const characterMedia = {
       "g5v1-l13-c05-u5c65-words-image:g5v1-l13-c05-u5c65-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u5c65.webp",
         "label": "履行",
-        "alt": "履行就是按照约定或责任认真去做 图中“尸”与“復”按左上包围结构自然长成“履”。"
+        "alt": "纵横驰骋履历广阔；少年顶天立地履行历史重任，踏上民族复兴的壮丽征途 图中“尸”与“復”按左上包围结构自然长成“履”。"
       },
       "g5v1-l13-c05-u5c65-words-image:g5v1-l13-c05-u5c65-words-image-0": {
         "src": "/illustrations/meanings/m04.webp",
@@ -158,7 +158,7 @@ export const characterMedia = {
       "g5v1-l13-c05-u5c65-words-image:g5v1-l13-c05-u5c65-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u7597.webp",
         "label": "治疗",
-        "alt": "治疗就是用合适的方法帮助疾病或伤痛好转 图中“疒”与“了”按左上包围结构自然长成“疗”。"
+        "alt": "治疗疾病带来健康；阳光中的紫外线能够杀灭细菌，对预防和治疗多种疾病大有益处 图中“疒”与“了”按左上包围结构自然长成“疗”。"
       }
     }
   },
@@ -166,13 +166,13 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u54c9.webp",
       "label": "美哉",
-      "alt": "哉是文言语气词，“美哉”就是“真美啊” 图中“𢦏”与“口”按右上包围结构自然长成“哉”。"
+      "alt": "美哉壮哉是发自肺腑的赞叹；梁启超激情洋溢地讴歌少年中国，气吞山河，振奋人心 图中“𢦏”与“口”按右上包围结构自然长成“哉”。"
     },
     "scene": {
-      "scene": "左下方赞叹的口形成“口”，右上旗杆、横梁和弯钩沿“𢦏”扬起，赞叹声随旗飞出，组成“哉”。",
+      "scene": "左下方由衷赞叹的口“口”，右上飘扬的旗杆、横梁和弯钩“𢦏”扬起，赞叹声随旗飞出，组成“哉”。",
       "cues": [
-        "右上旗杆、横梁和弯钩沿“𢦏”扬起。",
-        "左下方赞叹的口形成“口”。"
+        "右上飘扬的旗杆、横梁和弯钩“𢦏”扬起。",
+        "左下方由衷赞叹的口“口”。"
       ]
     },
     "transcript": "美哉，我少年中国，与天不老，赞叹声在句末高高扬起。哉是右上包围结构，左下是说话的口，右上部分适合整体记住。想象赞叹声随着旗帜飞出。哉是文言语气词，美哉就是今天说的真美啊。",
@@ -185,12 +185,12 @@ export const characterMedia = {
       "g5v1-l13-c06-u54c9-words-image:g5v1-l13-c06-u54c9-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u5c82.webp",
         "label": "岂能",
-        "alt": "岂能表示反问，相当于“怎么能”“难道能” 图中“山”与“己”按上下结构自然长成“岂”。"
+        "alt": "岂能荒废大好光阴；古人告诫读书切莫三心二意，岂能轻易辜负宝贵的青春年华 图中“山”与“己”按上下结构自然长成“岂”。"
       },
       "g5v1-l13-c06-u54c9-words-image:g5v1-l13-c06-u54c9-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u54c9.webp",
         "label": "美哉",
-        "alt": "哉是文言语气词，“美哉”就是“真美啊” 图中“𢦏”与“口”按右上包围结构自然长成“哉”。"
+        "alt": "美哉壮哉是发自肺腑的赞叹；梁启超激情洋溢地讴歌少年中国，气吞山河，振奋人心 图中“𢦏”与“口”按右上包围结构自然长成“哉”。"
       }
     }
   },
@@ -198,7 +198,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u6f5c.webp",
       "label": "潜水",
-      "alt": "潜水就是身体进入水面以下活动 图中“氵”与“替”按左右结构自然长成“潜”。"
+      "alt": "潜龙在渊蓄势待发；一旦潜龙腾空而起，必将激荡起改变时代的壮丽风云 图中“氵”与“替”按左右结构自然长成“潜”。"
     },
     "scene": {
       "scene": "左边三股水流形成“氵”，右边两个人轮流沉到日光下方，身体和日轮沿“替”叠放，组成“潜”。",
@@ -217,12 +217,12 @@ export const characterMedia = {
       "g5v1-l13-c07-u6f5c-words-image:g5v1-l13-c07-u6f5c-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u5c82.webp",
         "label": "岂能",
-        "alt": "岂能表示反问，相当于“怎么能”“难道能” 图中“山”与“己”按上下结构自然长成“岂”。"
+        "alt": "岂能荒废大好光阴；古人告诫读书切莫三心二意，岂能轻易辜负宝贵的青春年华 图中“山”与“己”按上下结构自然长成“岂”。"
       },
       "g5v1-l13-c07-u6f5c-words-image:g5v1-l13-c07-u6f5c-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u6f5c.webp",
         "label": "潜水",
-        "alt": "潜水就是身体进入水面以下活动 图中“氵”与“替”按左右结构自然长成“潜”。"
+        "alt": "潜龙在渊蓄势待发；一旦潜龙腾空而起，必将激荡起改变时代的壮丽风云 图中“氵”与“替”按左右结构自然长成“潜”。"
       }
     }
   },
@@ -230,7 +230,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u8bd5.webp",
       "label": "考试",
-      "alt": "考试是通过答题、操作等方式检查学习成果 图中“讠”与“式”按左右结构自然长成“试”。"
+      "alt": "鹰隼试翼风尘吸张；雄鹰展翅试飞长空，展现了少年意气风发的昂扬姿态 图中“讠”与“式”按左右结构自然长成“试”。"
     },
     "scene": {
       "scene": "左边答题短句形成“讠”，右边试卷格线、工具和标记沿“式”搭成，组成“试”。",
@@ -239,12 +239,12 @@ export const characterMedia = {
         "右边试卷格线、工具和标记沿“式”搭成。"
       ]
     },
-    "transcript": "鹰隼试翼，风尘吸张，小鹰展开翅膀试一试飞翔。试是左右结构，左边是言字旁，右边可以想成试卷格线和检查工具。答题、检查的画面只帮助记字。考试是用答题或操作检查学习成果，课文里的试翼则表示初次展翅。",
+    "transcript": "试，考试的试，读第四声。它是左右结构，左边的言字旁表明用言语或题目来检验，右边的“式”提示读音与规则，两边相合即为试。考试是用答题检查学业成果。课文中梁启超写“鹰隼试翼，风尘吸张”，用雄鹰初次展翅试飞的矫健身姿，比喻少年中国蓬勃崛起的非凡气势。",
     "practiceOptionVisuals": {
       "g5v1-l13-c08-u8bd5-words-image:g5v1-l13-c08-u8bd5-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u8bd5.webp",
         "label": "考试",
-        "alt": "考试是通过答题、操作等方式检查学习成果 图中“讠”与“式”按左右结构自然长成“试”。"
+        "alt": "鹰隼试翼风尘吸张；雄鹰展翅试飞长空，展现了少年意气风发的昂扬姿态 图中“讠”与“式”按左右结构自然长成“试”。"
       },
       "g5v1-l13-c08-u8bd5-words-image:g5v1-l13-c08-u8bd5-words-image-2": {
         "src": "/illustrations/meanings/m07.webp",
@@ -254,7 +254,7 @@ export const characterMedia = {
       "g5v1-l13-c08-u8bd5-words-image:g5v1-l13-c08-u8bd5-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u547b.webp",
         "label": "呻吟",
-        "alt": "呻吟是因为痛苦或不适而发出的低沉声音 图中“口”与“申”按左右结构自然长成“呻”。"
+        "alt": "无病呻吟坚决摈弃；作者强调选择好书要有鉴别眼光，那些无病呻吟的文字绝不值得浪费时间 图中“口”与“申”按左右结构自然长成“呻”。"
       }
     }
   },
@@ -262,7 +262,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u7687.webp",
       "label": "富丽堂皇",
-      "alt": "皇帝是中国古代国家的最高统治者 图中“白”与“王”按上下结构自然长成“皇”。"
+      "alt": "矞矞皇皇形容光彩夺目富丽灿烂；少年中国的壮丽前景如旭日初升，光芒万丈 图中“白”与“王”按上下结构自然长成“皇”。"
     },
     "scene": {
       "scene": "上方明亮冠帽形成“白”，下方三层玉座和中轴沿“王”搭起，上下组成“皇”。",
@@ -281,12 +281,12 @@ export const characterMedia = {
       "g5v1-l13-c09-u7687-words-image:g5v1-l13-c09-u7687-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u5e7d.webp",
         "label": "幽深",
-        "alt": "幽深形容地方安静、深远，光线也比较暗 图中“幺”与“幺”与“山”按半包围结构自然长成“幽”。"
+        "alt": "幽深形容环境清幽宁静；幽深的绿林窗景渐渐消除了小鸟的戒备，为彼此靠近提供了可能 图中“幺”与“幺”与“山”按半包围结构自然长成“幽”。"
       },
       "g5v1-l13-c09-u7687-words-image:g5v1-l13-c09-u7687-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u7687.webp",
         "label": "富丽堂皇",
-        "alt": "皇帝是中国古代国家的最高统治者 图中“白”与“王”按上下结构自然长成“皇”。"
+        "alt": "矞矞皇皇形容光彩夺目富丽灿烂；少年中国的壮丽前景如旭日初升，光芒万丈 图中“白”与“王”按上下结构自然长成“皇”。"
       }
     }
   },
@@ -294,7 +294,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u7eb5.webp",
       "label": "纵横",
-      "alt": "纵横表示竖向和横向，也形容交错广布 图中“纟”与“从”按左右结构自然长成“纵”。"
+      "alt": "纵有千古横有八荒；少年中国前途广阔无垠，承载着跨越古今的豪迈梦想 图中“纟”与“从”按左右结构自然长成“纵”。"
     },
     "scene": {
       "scene": "左边细丝竖着盘成“纟”，右边两个人一前一后形成“从”，纵线与队列合成“纵”。",
@@ -308,7 +308,7 @@ export const characterMedia = {
       "g5v1-l13-c10-u7eb5-words-image:g5v1-l13-c10-u7eb5-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u7eb5.webp",
         "label": "纵横",
-        "alt": "纵横表示竖向和横向，也形容交错广布 图中“纟”与“从”按左右结构自然长成“纵”。"
+        "alt": "纵有千古横有八荒；少年中国前途广阔无垠，承载着跨越古今的豪迈梦想 图中“纟”与“从”按左右结构自然长成“纵”。"
       },
       "g5v1-l13-c10-u7eb5-words-image:g5v1-l13-c10-u7eb5-words-image-0": {
         "src": "/illustrations/meanings/m04.webp",
@@ -318,7 +318,7 @@ export const characterMedia = {
       "g5v1-l13-c10-u7eb5-words-image:g5v1-l13-c10-u7eb5-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u9c81.webp",
         "label": "鲁莽",
-        "alt": "鲁莽形容说话做事不细想，行动冒失 图中“鱼”与“日”按上下结构自然长成“鲁”。"
+        "alt": "鲁莽好汉性格率真；鲁智深虽性格有些鲁莽却嫉恶如仇、重情重义，给作者留下了深刻印象 图中“鱼”与“日”按上下结构自然长成“鲁”。"
       }
     }
   },
@@ -326,7 +326,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u7586.webp",
       "label": "边疆",
-      "alt": "边疆是靠近国界的地区 图中“弓”与“土”与“畺”按左右结构自然长成“疆”。"
+      "alt": "干将发硎有作其芒；宝剑出鞘锐不可当，激励着少年儿女为保卫边疆富强国家而奋斗 图中“弓”与“土”与“畺”按左右结构自然长成“疆”。"
     },
     "scene": {
       "scene": "左边弯曲的界绳架形成“弓”，旁边界土堆形成“土”，右边三层界线和两块田地沿“畺”分区，三部分合成“疆”。",
@@ -341,7 +341,7 @@ export const characterMedia = {
       "g5v1-l13-c11-u7586-words-image:g5v1-l13-c11-u7586-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u7586.webp",
         "label": "边疆",
-        "alt": "边疆是靠近国界的地区 图中“弓”与“土”与“畺”按左右结构自然长成“疆”。"
+        "alt": "干将发硎有作其芒；宝剑出鞘锐不可当，激励着少年儿女为保卫边疆富强国家而奋斗 图中“弓”与“土”与“畺”按左右结构自然长成“疆”。"
       },
       "g5v1-l13-c11-u7586-words-image:g5v1-l13-c11-u7586-words-image-0": {
         "src": "/illustrations/meanings/m08.webp",
@@ -351,7 +351,7 @@ export const characterMedia = {
       "g5v1-l13-c11-u7586-words-image:g5v1-l13-c11-u7586-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u8f89.webp",
         "label": "辉煌",
-        "alt": "辉煌中的“辉”表示明亮闪耀的光彩 图中“光”与“军”按左右结构自然长成“辉”。"
+        "alt": "光辉灿烂彰显中华智慧；圆明园收藏着历代奇珍异宝，闪耀着五千年文明的璀璨光辉 图中“光”与“军”按左右结构自然长成“辉”。"
       }
     }
   }

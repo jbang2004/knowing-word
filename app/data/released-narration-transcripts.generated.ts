@@ -22,9 +22,9 @@ export const releasedNarrationTranscripts: Record<string, ReleasedNarrationTrans
     "glyph": "鹭",
     "lessonId": "g5v1-l01",
     "word": "白鹭",
-    "transcript": "鹭，白鹭的鹭。它是上下结构，上面是道路的路，下面是小鸟的鸟。为了好记，可以想象一条弯弯的水田小路托着一只收起翅膀的白鸟，上下合在一起就是鹭；这只是记字画面。课文从羽毛、身段和水田里的姿态写白鹭的精巧美，白鹭就是常在水田和河滩活动、羽毛洁白的鸟。",
-    "contentHash": "5d39ffd1a68f171b26fa",
-    "audioSha256": "54bb83614162c296c61840ce99a2623e230e03be7026b91e2965a5ef8b3643e6"
+    "transcript": "鹭，白鹭的鹭，读第四声。它是上下结构，上面的“路”提示读音，下面的“鸟”表明它是一种水鸟。看图时，上方是田野远方蜿蜒的小路，下方是收拢羽翼、静立水中的白鸟，上下合起来就是“鹭”。课文中，白鹭在清水田里漫步、伫立，身段精巧适宜，如同一首韵味悠长的小诗。",
+    "contentHash": "39d9f3add2ff49b7bac7",
+    "audioSha256": "f8bd9f0af0af01ac19c3eb689295add798bb982ccf1cd88172ac6db83f57dd6f"
   },
   "g5v1-l01-c02-u5acc": {
     "recordId": "g5v1-l01-c02-u5acc",
@@ -130,9 +130,9 @@ export const releasedNarrationTranscripts: Record<string, ReleasedNarrationTrans
     "glyph": "亩",
     "lessonId": "g5v1-l02",
     "word": "半亩",
-    "transcript": "亩，半亩的亩，读第三声。亩是计算田地面积的单位，半亩就是半亩大小的一块地。这个字是上下结构，上面像一条地界，下面是分成小格的田；把它看成量好边界的一片田，只是帮助记形。课文开头，母亲让孩子们把后园的半亩空地开辟出来种花生。半亩不算大，一家人却认真翻地、播种，后来有了收获。",
-    "contentHash": "76c34cbe1b43145ff445",
-    "audioSha256": "676752152daad0c22d842fdd49b470e1bcd7ef4b4cf0549a4391e01b130faad6"
+    "transcript": "亩，半亩的亩，读第三声。它是上下结构，上面是田野的地界横梁，下面是分成小格的田地，上下相合即为一亩田。亩是计算土地面积的单位。课文开头，母亲带着孩子们把后园的半亩空地开辟出来种花生；地方虽不算大，一家人辛勤翻地、播种，最终收获了饱满朴实的花生。",
+    "contentHash": "a92904b7a5a47277498d",
+    "audioSha256": "15b836dbc1336651d8409d102b6c8991a5e053f6f403196363239e56e6006dbd"
   },
   "g5v1-l02-c02-u5429": {
     "recordId": "g5v1-l02-c02-u5429",
@@ -211,9 +211,9 @@ export const releasedNarrationTranscripts: Record<string, ReleasedNarrationTrans
     "glyph": "慕",
     "lessonId": "g5v1-l02",
     "word": "爱慕",
-    "transcript": "慕，爱慕的慕。爱慕是因为欣赏而真心喜欢、向往。这个字上方笔画铺开，下面像一颗小小的心，可以想象目光追着枝头鲜亮的果子，喜欢之情落进心里。这个场景只帮助记住上下位置。课文说桃子、石榴、苹果把鲜红嫩绿的果实高挂枝头，使人一见就生爱慕之心；花生却把果实藏在地里。",
-    "contentHash": "754ce70359df3576a2e4",
-    "audioSha256": "6fbfb72c0b4f84d2381add3576d8f3091a097ab24b37f45ab3f21d9fa2ff9b08"
+    "transcript": "慕，爱慕的慕，读第四声。它是上下结构，上方是由草木与日影叠成的莫，下方是一颗微微发光的心，由衷的向往在心中升起即为慕。爱慕是因为欣赏而真心向往。课文写桃子、石榴、苹果把鲜红嫩绿的果实高挂枝头，使人一见就生爱慕之心；花生却把果实藏在地里，质朴而深沉。",
+    "contentHash": "bd710c8d0dd504e99219",
+    "audioSha256": "27e5d004c587b294fbc0de96e245af5611d251b5489b4775b4316d73537024b4"
   },
   "g5v1-l02-c11-u8c08": {
     "recordId": "g5v1-l02-c11-u8c08",
@@ -292,9 +292,9 @@ export const releasedNarrationTranscripts: Record<string, ReleasedNarrationTrans
     "glyph": "浸",
     "lessonId": "g5v1-l03",
     "word": "沉浸",
-    "transcript": "浸，沉浸的浸。浸原来可以说东西泡在水里，沉浸也可以表示全心进入一种感受。浸是左右结构，左边三点水很清楚，右边笔画较多，可以整体想成双手把东西轻轻按入水中。这个动作只帮助记字形。课文说桂花盛开时，整个村子都浸在桂花的香气里，香气像水一样包围四周，让人处处都能闻见。",
-    "contentHash": "27b4e04f4a6615675635",
-    "audioSha256": "eccad22773113b6d1a3ae4d15116450caa09c13064ea271550c7fa402de22d91"
+    "transcript": "浸，沉浸的浸，读第四声。它是左右结构，左边的三点水表明与水相连，右边像双手将物件缓缓浸入水中，左右相合即为浸。沉浸原指泡在水中，也指全心进入某种美好感受。课文写桂花盛开时，整个村子都浸在桂花的香气里，甜美浓郁的乡情像水波一样缓缓包围着人们。",
+    "contentHash": "9174d413c6a0dfcd616b",
+    "audioSha256": "25d73d71cc62ada41ebd1e7954421ed4c90314fa622df78672d06dad392f271a"
   },
   "g5v1-l03-c09-u7f20": {
     "recordId": "g5v1-l03-c09-u7f20",
@@ -625,9 +625,9 @@ export const releasedNarrationTranscripts: Record<string, ReleasedNarrationTrans
     "glyph": "廉",
     "lessonId": "g5v1-l06",
     "word": "廉颇",
-    "transcript": "廉，廉颇的廉，读第二声。廉颇是赵国名将，也是《将相和》中的重要人物。廉是左上包围结构，外面像宽阔屋檐，里面可以想成一位将军同时照看两列队伍。屋檐和队伍只是帮助记住包围位置。起初廉颇不服蔺相如，后来明白对方避让是为了国家，便负荆请罪，两人的关系由对立走向和好。",
-    "contentHash": "5c7cf5368c5667a4b0cc",
-    "audioSha256": "b16b67ca2aba0a22c964ff2ecf783f95acd2ef9e19ba1fac1f4aaa961c70c868"
+    "transcript": "廉，廉颇的廉，读第二声。廉颇是赵国名将，也是《将相和》中的重要人物。廉是左上包围结构，外面的广字头像宽阔的将府屋檐，里面的兼像将军同时调度兵马。起初廉颇不服蔺相如，后来明白蔺相如避让是为了国家大局，便背负荆条登门请罪，将相重新并肩保卫赵国。",
+    "contentHash": "975347caf66d34bc7bcc",
+    "audioSha256": "3df61e0cb19f7bbfee2d893fa975f286b0eaa55dbfacc2414ac0cb711d62111c"
   },
   "g5v1-l06-c09-u62b5": {
     "recordId": "g5v1-l06-c09-u62b5",
@@ -859,9 +859,9 @@ export const releasedNarrationTranscripts: Record<string, ReleasedNarrationTrans
     "glyph": "箭",
     "lessonId": "g5v1-l07",
     "word": "火箭",
-    "transcript": "课文说，想到月球去需要一枚火箭，它的最大速度能达到每小时四万千米。火箭是靠发动机产生推力、能够高速飞行的飞行器。箭是上下结构，上面竹字头像两簇箭羽，下面前字指向前方。把箭羽和前进方向放在一起，只是帮助记住字形。火箭进入比较以后，喷气式飞机的速度也显得慢了许多。",
-    "contentHash": "9d728a54e2a16145c028",
-    "audioSha256": "25d6a52f4cde1826cfeb0f6998bf178dc2fa4728c890a75d6a27836039284f4e"
+    "transcript": "箭，火箭的箭，读第四声。它是上下结构，上面竹字头像两簇轻盈的箭羽，下面由前字指向正前方，箭羽与朝向相合即为箭。火箭是依靠推力高速飞行的航天器。课文用火箭每小时四万千米的高速与飞机对比，说明速度的层层递进，带领我们一步步追向浩瀚太空。",
+    "contentHash": "1b0893aeadaeffa05f45",
+    "audioSha256": "3b86029765a0793cf37934e1e3ed7ebd8f72e3baa640cd0709615fd2b43bb999"
   },
   "g5v1-l07-c08-u6d69": {
     "recordId": "g5v1-l07-c08-u6d69",
@@ -1012,9 +1012,9 @@ export const releasedNarrationTranscripts: Record<string, ReleasedNarrationTrans
     "glyph": "堡",
     "lessonId": "g5v1-l08",
     "word": "堡垒",
-    "transcript": "堡垒的堡，上面像守卫和城墙搭成的防守塔，下面是一层厚土。它是上下结构，塔要立在土台上才显得牢固。把这座小堡垒放进字里，只是记忆画面。课文把地道称作坚强的堡垒，因为它能保护人民，也能支持战斗。",
-    "contentHash": "99e593e8cac5eda1e28f",
-    "audioSha256": "3e8dda8422759a42657a8fc61b195fd8dcff8784a4da47f32065e14342ba1bee"
+    "transcript": "堡，堡垒的堡，读第三声。它是上下结构，上面的“保”像守卫严密的防守高塔，下面的“土”是厚实稳固的地基，高塔筑于厚土之上即为堡。堡垒是用于防御的坚固军事建筑。课文把地道称作粉碎敌人进犯的坚强堡垒，展现了冀中人民保卫家乡的智慧与力量。",
+    "contentHash": "a67ea1199d8426cf09c4",
+    "audioSha256": "6d3dbc7ce220065b4b4557b491df4a0aec0692122fb124a767d9b4869ba16c9c"
   },
   "g5v1-l08-c12-u515a": {
     "recordId": "g5v1-l08-c12-u515a",
@@ -1030,9 +1030,9 @@ export const releasedNarrationTranscripts: Record<string, ReleasedNarrationTrans
     "glyph": "妨",
     "lessonId": "g5v1-l08",
     "word": "妨碍",
-    "transcript": "妨，妨碍的妨。它是左右结构，左边是女字旁，右边是方向的方；这里不要把女字旁解释成女性会带来麻烦。为了好记，可以想象一块方形路障横在路口，挡住原来的方向，这只是一幅记字画面。课文里，敌人想用封锁沟和封锁墙妨碍人们来往，但地道仍能通信联络；妨碍就是挡住或影响，使事情不能顺利进行。",
-    "contentHash": "e776e3c227b91bf24639",
-    "audioSha256": "abe60e2168f0101e8d5519f12deba8045bf7cc8c36320957f0510b2b6c406856"
+    "transcript": "妨，妨碍的妨，读第二声。它是左右结构，左边是女字旁，右边的“方”提示读音与方向。看图时，左边人物照料庄稼，右边方正木架立在一旁，左右组合成妨。妨碍就是阻碍或影响，使事情不能顺利进行。课文里敌人修筑工事企图妨碍交通，冀中军民则用神奇地道保卫了联络。",
+    "contentHash": "2a48a8a7d0a4a08c0f16",
+    "audioSha256": "6e2e8268e6f969ac58fc90616499080a73104424f26f417e3a293d984f1eb263"
   },
   "g5v1-l08-c14-u853d": {
     "recordId": "g5v1-l08-c14-u853d",
@@ -1408,9 +1408,9 @@ export const releasedNarrationTranscripts: Record<string, ReleasedNarrationTrans
     "glyph": "瑚",
     "lessonId": "g5v1-l11",
     "word": "珊瑚",
-    "transcript": "王母说织女就算藏到大海中心的珊瑚礁上，她也一定要追回来。瑚要和珊连在一起认，左边是王字旁，右边是胡。可以把右边想成海湾里舒展的枝丛，左边添上温润的玉石光泽，帮助记住两边的位置。课文把珊瑚礁放进王母的狠话里，让这场追赶显得又远又紧迫。",
-    "contentHash": "e10ec25e2dc936bf785b",
-    "audioSha256": "48c5eb7799288b69330b8aba501b52f186b2fc692ef9a84ba78139cf4b85bfa7"
+    "transcript": "瑚，珊瑚的瑚，读第二声。瑚通常与珊连用成词，它是左右结构，左边的王字旁表明玉石光泽，右边的“胡”提示读音，两边并立组合成瑚。珊瑚是生长在海洋中的绚丽骨骼。课文中王母声称即便织女藏到大海中心的珊瑚礁也要追回，突出了仙凡阻隔的辽远与追赶的紧迫。",
+    "contentHash": "ce2f88b9245e37c04603",
+    "audioSha256": "d30841961b8720bab12888d7fc4b52cfbd478e85a3cbad244376407522fb268d"
   },
   "g5v1-l11-c07-u7901": {
     "recordId": "g5v1-l11-c07-u7901",
@@ -1588,9 +1588,9 @@ export const releasedNarrationTranscripts: Record<string, ReleasedNarrationTrans
     "glyph": "试",
     "lessonId": "g5v1-l13",
     "word": "考试",
-    "transcript": "鹰隼试翼，风尘吸张，小鹰展开翅膀试一试飞翔。试是左右结构，左边是言字旁，右边可以想成试卷格线和检查工具。答题、检查的画面只帮助记字。考试是用答题或操作检查学习成果，课文里的试翼则表示初次展翅。",
-    "contentHash": "53d7f2495b2feaaa85d5",
-    "audioSha256": "26e4ee9f3854b5fffcac3a4f5a5c22f2e3586e4c40646fa96b6a613ed85f4c4d"
+    "transcript": "试，考试的试，读第四声。它是左右结构，左边的言字旁表明用言语或题目来检验，右边的“式”提示读音与规则，两边相合即为试。考试是用答题检查学业成果。课文中梁启超写“鹰隼试翼，风尘吸张”，用雄鹰初次展翅试飞的矫健身姿，比喻少年中国蓬勃崛起的非凡气势。",
+    "contentHash": "5b5f9967d6dad7930b37",
+    "audioSha256": "5a9449b2c40cb48de686dfab57470f29f5beadfd549dccee09a0bf1350f1816a"
   },
   "g5v1-l13-c09-u7687": {
     "recordId": "g5v1-l13-c09-u7687",
@@ -1714,9 +1714,9 @@ export const releasedNarrationTranscripts: Record<string, ReleasedNarrationTrans
     "glyph": "毁",
     "lessonId": "g5v1-l14",
     "word": "毁灭",
-    "transcript": "毁，毁灭的毁。它是左右结构，左边像旧墙和支架连在一起，右边像一只手举着短杖。为了好记，可以想象短杖落下，原本完整的墙架裂开、倒塌，这只是帮助记字形的画面。课文先写圆明园昔日的宏伟和珍贵，再写它遭到破坏后的伤痛；毁灭就是严重破坏，使原有的事物不复存在。",
-    "contentHash": "b31310e514cfb9b9292e",
-    "audioSha256": "e417b9f7efa300c2f1a132d15b3aa6f96a6a3ffcae593f8c12b10ae7e13a5294"
+    "transcript": "毁，毁灭的毁，读第三声。它是左右结构，左边是碎裂的旧墙与石臼，右边的殳像挥动手杖击打的动作，左右组合成毁。毁灭就是彻底破坏，使原有的美好事物不复存在。课文前半部分描绘圆明园昔日的辉煌与艺术瑰宝，后半部分讲述它惨遭焚毁，历史的伤痛更让我们懂得守护的责任。",
+    "contentHash": "9b09bfb9c7a9d001326a",
+    "audioSha256": "393fc1199e039dfea610cffbb17526d8169e165037aae12c9b2c3e2107a9bfbd"
   },
   "g5v1-l14-c12-u635f": {
     "recordId": "g5v1-l14-c12-u635f",
@@ -2020,9 +2020,9 @@ export const releasedNarrationTranscripts: Record<string, ReleasedNarrationTrans
     "glyph": "矫",
     "lessonId": "g5v1-l17",
     "word": "矫健",
-    "transcript": "松鼠在树枝间跳跃，动作又快又稳，作者用到了矫健这个词，矫读第三声。它是左右结构，左边是箭矢的矢，右边是乔。可以想象一支箭从高高的树旁轻快穿过，这幅画只帮助记住左右位置。矫健形容动作有力、灵活，姿态也很挺拔。观察松鼠时，矫健让我们想到它轻快攀爬和跳跃的样子。",
-    "contentHash": "4633598e0e115c1fd127",
-    "audioSha256": "959f4bc090515e2c5237c948e05637bb40f5100f7eb6c57ac71ae589486c8e2c"
+    "transcript": "矫，矫健的矫，读第三声。它是左右结构，左边是疾飞如箭的“矢”，右边的“乔”像挺拔耸立的大树，飞箭穿过高树即显矫健。矫健形容身手敏捷、姿态强健有力。课文中作者写松鼠在林间树杈轻快跳跃、攀爬自如，用矫健的身姿展现了小动物灵动活泼的生命力。",
+    "contentHash": "7acfee36495358ebd65d",
+    "audioSha256": "eb59b3c66ab359c0cee70274d52151c201221075a1ce3ab3c529b4133a0ba039"
   },
   "g5v1-l17-c03-u6b47": {
     "recordId": "g5v1-l17-c03-u6b47",
@@ -2110,9 +2110,9 @@ export const releasedNarrationTranscripts: Record<string, ReleasedNarrationTrans
     "glyph": "珑",
     "lessonId": "g5v1-l17",
     "word": "玲珑",
-    "transcript": "读玲珑时，第二个字珑读第二声。珑是左右结构，左边王字旁，右边是龙，两部分并排要写紧凑。看这个字时，可以想象一条小龙盘在精巧玉器旁，这幅画只帮助记住字形。玲珑表示物体精巧细致，也可以形容灵活可爱。作者把这个词放在松鼠的小面孔上，写出了它细巧、机灵的样子。",
-    "contentHash": "6becc4f8663de4109455",
-    "audioSha256": "745b39a418095a67bda67e770e0f056f44aa6c205b1223e9933c814eb210231c"
+    "transcript": "珑，玲珑的珑，读第二声。它常与玲连用成词，是左右结构，左边的王字旁表明温润玉石，右边的“龙”提示读音，书写时左右紧凑相依。玲珑形容物件小巧精巧、灵活敏捷。课文中作者用玲珑的面孔描写松鼠，将小动物清秀机灵、活泼惹人喜爱的神态描摹得惟妙惟肖。",
+    "contentHash": "4f23893aef4945a9f084",
+    "audioSha256": "199194fabcdc72a080fb585068328b426061e81ac956b2af7c30d9ac4c6728ba"
   },
   "g5v1-l17-c13-u5e3d": {
     "recordId": "g5v1-l17-c13-u5e3d",
@@ -2200,9 +2200,9 @@ export const releasedNarrationTranscripts: Record<string, ReleasedNarrationTrans
     "glyph": "纫",
     "lessonId": "g5v1-l18",
     "word": "缝纫",
-    "transcript": "针线穿过布料，把两片布连起来，这项活叫缝纫，纫读第四声。纫是左右结构，左边绞丝旁，右边是刀刃的刃。记字时，可以想象一根丝线贴着裁布的小刀穿行，这幅画只帮助记住左右位置。缝纫就是用针线连接布料或制作衣物。这篇文章中的母亲在工厂忙着缝纫，手脚不停，孩子也从这个动作看见她工作的辛苦。",
-    "contentHash": "05b39155241aa964d8a0",
-    "audioSha256": "556b33226e7830c0a2af67c9654ee8e015068776774083bedfbebcb081d6d94d"
+    "transcript": "纫，缝纫的纫，读第四声。它是左右结构，左边的绞丝旁代表缝衣细线，右边的“刃”像裁切布料的小刀，丝线连着利刃即为纫。缝纫是用针线连接布料制作衣物。课文写母亲在昏暗嘈杂的工厂里忙着缝纫，双脚踏着缝纫机踏板不停劳作，真实展现了母亲无私奉献的辛劳。",
+    "contentHash": "570f803eaa06027bf78c",
+    "audioSha256": "d917a214723b6c209ade9cbf3367bcc09f05480b529ace136495f9da9bcf7ebc"
   },
   "g5v1-l18-c05-u566a": {
     "recordId": "g5v1-l18-c05-u566a",
@@ -2245,9 +2245,9 @@ export const releasedNarrationTranscripts: Record<string, ReleasedNarrationTrans
     "glyph": "兜",
     "lessonId": "g5v1-l18",
     "word": "衣兜",
-    "transcript": "母亲把钱从衣服的小口袋里掏出来，这个口袋就是衣兜，兜读第一声。兜是独体字，外面的弯笔像口袋边缘，里面的笔画像被稳稳兜住的小物件。顺着口袋把东西围住的样子整体记字，这只是联想。衣兜是衣服上用来装小物品的口袋。文中那笔买书的钱从母亲衣兜中拿出，小小动作装着她对孩子读书的支持。",
-    "contentHash": "7ddc3aa6fe43705bce87",
-    "audioSha256": "606711f78ba91b67d629e97b5c7054bf72c304e314c1a7d5d73965bdc4340a1b"
+    "transcript": "母亲把钱从衣服的小口袋里掏出来，这个口袋就是衣兜，兜读第一声。兜是独体字，外面的弯折笔画围成口袋外缘，内部笔画宛如被稳稳装入的物品。衣兜是衣服上装小物的地方。课文中，那笔买书的钱被母亲从贴身衣兜中取出，短短的动作凝聚着深沉而坚定的母爱。",
+    "contentHash": "6fbc4b2f24d996a0659a",
+    "audioSha256": "6d29ebc850b0f5f54db210512c2bddb4fb0f138bef0d262522e9938b2345ee32"
   },
   "g5v1-l18-c10-u6743": {
     "recordId": "g5v1-l18-c10-u6743",
@@ -2668,9 +2668,9 @@ export const releasedNarrationTranscripts: Record<string, ReleasedNarrationTrans
     "glyph": "谨",
     "lessonId": "g5v1-l20",
     "word": "谨慎",
-    "transcript": "动笔前多想一步，修改时认真检查，这就是谨慎，谨读第三声。谨是左右结构，左边言字旁，右部笔画较多，要一层层写清。可以想象一句话出口前先在心里核对，这个场景帮助记形。谨慎表示认真小心，并预先想到可能的问题。父亲的批评让孩子学会判断作品，母亲的鼓励则让他有信心继续写下去。",
-    "contentHash": "e4ec1fc5c4e5163f5291",
-    "audioSha256": "651ee210ca9d2811941ccd9343f8367a2bc9fef3dfd22217f3fbddfc2df85ecf"
+    "transcript": "谨，谨慎的谨，读第三声。它是左右结构，左边的言字旁表明说话言语，右边的“堇”提示读音，言语事前多加思考即为谨。谨慎表示小心认真、思虑周全。课文中，父亲严厉客观的评价如同一声警钟，时刻提醒作者在写作与人生道路上保持谨慎，不迷失方向。",
+    "contentHash": "457ee87484f0f03c9905",
+    "audioSha256": "43c3cceec8bfc295fedee5d48823389885d64081521442747152c27014c3c015"
   },
   "g5v1-l21-c01-u6986": {
     "recordId": "g5v1-l21-c01-u6986",
@@ -2857,18 +2857,18 @@ export const releasedNarrationTranscripts: Record<string, ReleasedNarrationTrans
     "glyph": "累",
     "lessonId": "g5v1-l23",
     "word": "累累",
-    "transcript": "“累累的骨朵儿”里，累读第二声，表示接连成串，不能读成疲累的第四声。累是上下结构，上面像田格，下边绞丝底收拢。可以想象一串花骨朵沿细丝垂下，一个挨着一个，这个场景帮助记形。累累形容数量多，成串相连。月光落在院里，孩子看见桂树上累累的骨朵儿，也继续追寻月亮的踪迹。",
-    "contentHash": "57c07d00e6d09e564620",
-    "audioSha256": "6a3237d8bd495aad756f0e963345db784e2e31bb45b63c0c07afe84d434cab4e"
+    "transcript": "累，累累的累，读第二声。它是上下结构，上面的“田”像整齐排列的果实，下边的绞丝底像细丝绳将它们串连在一起，层层叠挂即为累。累累形容接连成串、数量繁多。课文中月光洒在中秋庭院，孩子们看见桂树上挂满累累的花骨朵，在芳香中开启了充满诗意的寻月历程。",
+    "contentHash": "af81a256220cdc09975a",
+    "audioSha256": "3830ab4fa0ff7dd35d5951867bffec848e487f3fd3dd062e4fc6cf97a2cac73e"
   },
   "g5v1-l23-c03-u5ae6": {
     "recordId": "g5v1-l23-c03-u5ae6",
     "glyph": "嫦",
     "lessonId": "g5v1-l23",
     "word": "嫦娥",
-    "transcript": "嫦娥的嫦，读第二声。从左往右看，嫦先写女字旁，右边是经常的常，写时左窄右宽。可以想象月宫中的女子站在长长云带旁，衣袖被月光照亮，这只是神话助记画面。嫦娥是中国古代月亮神话中的人物。这一课里孩子听奶奶讲起嫦娥，月亮便有了故事，也把一家人的寻月游戏带进想象。",
-    "contentHash": "9048dd02121f5e81c815",
-    "audioSha256": "412a80044ccc2f44c153c2c9c6d7e01013c4a1a2f7591d7bac939f97b842d277"
+    "transcript": "嫦娥的嫦，读第二声。嫦是左右结构，左边女字旁点明女子身份，右边的“常”提示读音，书写时左窄右宽。看图时，月宫仙子倚在祥云与桂树旁，衣袂飘飘。嫦娥是中国古代月亮神话中的仙子。课文里，孩子们听奶奶讲起嫦娥的故事，在中秋月夜展开了充满童趣的寻月之旅。",
+    "contentHash": "09a8a9b0f5c6c65c259c",
+    "audioSha256": "6c2fb79558018bd6d9450f6f61e8c4862a03827ccf5be59a82f1aed957e157cb"
   },
   "g5v1-l23-c04-u5a25": {
     "recordId": "g5v1-l23-c04-u5a25",
@@ -2884,9 +2884,9 @@ export const releasedNarrationTranscripts: Record<string, ReleasedNarrationTrans
     "glyph": "嫉",
     "lessonId": "g5v1-l23",
     "word": "嫉妒",
-    "transcript": "看到别人得到喜爱，自己心里不舒服，可能是嫉妒，嫉读第二声。嫉按左右排列，女字旁在左，右边是疾；女字旁不表示女性爱嫉妒。可以想象心里冒出急躁火气，先停下来看看自己在意什么，这个场景帮助记形。嫉妒会让人只盯着别人拥有的东西。孩子听见月亮属于三妹，心里嫉妒，也显出争月亮时真实的童心。",
-    "contentHash": "ca28b7018a485cd37c9a",
-    "audioSha256": "bb3858a1cd2b8ad461a9b05a4e3f3a0606094b5b323ca9661e72a28f53976d10"
+    "transcript": "嫉，嫉妒的嫉，读第二声。它是左右结构，左边是女字旁，右边的“疾”提示读音，两边并列组合成嫉。嫉妒是因为别人拥有长处或喜爱而心生不平。课文里孩子们争论月亮究竟属于谁，当听说月亮在三妹眼里时大家心生嫉妒，纯真而生动地流露出孩童争月时真实有趣的心理。",
+    "contentHash": "08523ecdeade7da83549",
+    "audioSha256": "917fd910c74a9a075451a3308a2e0db6884477f21e443fb7e8d7d495f37d9442"
   },
   "g5v1-l23-c06-u5992": {
     "recordId": "g5v1-l23-c06-u5992",
@@ -2920,9 +2920,9 @@ export const releasedNarrationTranscripts: Record<string, ReleasedNarrationTrans
     "glyph": "识",
     "lessonId": "g5v1-l24",
     "word": "默而识之",
-    "transcript": "先读“默而识之”。这里的识读“志”，第四声，不读平常“认识”里的“时”。识是左右结构，左边是言字旁，右边是只；可以想象读书人不出声，只把要点稳稳收进心里。这个画面帮助记住字形和词义。课文借古人的话告诉我们，读书要先看懂，也要专心记住、不断积累。",
-    "contentHash": "511c53ca9c7d0366d256",
-    "audioSha256": "bbf4385bccc228e3a9132435695fb71945d9d28805a23ad711a1936bfe1cb07f"
+    "transcript": "识，默而识之的识，读第四声。这里的识不读认识的第二声，表示默默记在心里。它是左右结构，左边的言字旁代表知识言语，右边的“只”提示专一，专心将言语记于心中即为识。孔子说“默而识之”，教导我们读书不仅要读懂领会，更要默默积累、内化于心。",
+    "contentHash": "92009bee7b3d6bfa7c22",
+    "audioSha256": "b3813f61510c113b720103bc11fa2e8ac6cadcf975417254b8d53869d1344c53"
   },
   "g5v1-l24-c03-u5bdd": {
     "recordId": "g5v1-l24-c03-u5bdd",
@@ -3271,9 +3271,9 @@ export const releasedNarrationTranscripts: Record<string, ReleasedNarrationTrans
     "glyph": "酵",
     "lessonId": "g5v1-l26",
     "word": "发酵",
-    "transcript": "面团放一阵后慢慢鼓起，其中经历了发酵，酵读第四声。酵是左右结构，左边酉字旁，右边是孝，写时左窄右宽。可以想象坛子里的食物安静变化，细小气泡一点点冒出，这个场景帮助记形。发酵是微生物作用使食物等发生变化的过程。作者把积累的词语比作酵母，写作文时它们发挥作用，让真实感受慢慢长成文字。",
-    "contentHash": "8061f7e3fb560b91c4fc",
-    "audioSha256": "454353143476ece511bf5569f242ef13d75a03f26e5281d33c90777c8ac0b516"
+    "transcript": "酵，发酵的酵，读第四声。它是左右结构，左边的酉字旁代表酒坛器具，右边的“孝”提示读音，酒坛中物质孕育变化即为酵。发酵指微生物作用引起质的变化。课文中作者把平时的阅读积累比作酵母，在写作时悄然发酵，最终让真情实感孕育出一篇篇饱满生动的佳作。",
+    "contentHash": "3d9a0bca7bca4989c1aa",
+    "audioSha256": "c6275c6d023c1c50c60788573a06cd796bddd58d6634e801026da3261cb1f50d"
   },
   "g5v1-l26-c13-u768e": {
     "recordId": "g5v1-l26-c13-u768e",
@@ -3289,9 +3289,9 @@ export const releasedNarrationTranscripts: Record<string, ReleasedNarrationTrans
     "glyph": "鉴",
     "lessonId": "g5v1-l26",
     "word": "鉴赏",
-    "transcript": "认真观察作品，分辨它的特点和价值，叫鉴赏，鉴读第四声。鉴是上下结构，上部笔画零散，下边是金，口播时只记上部展开、下部托稳。可以想象读者把书放在亮处，边读边比较语言、人物和情节，画面帮助记形。鉴赏包含欣赏，也包含判断。作者读得越来越多，逐渐会挑选、会做笔记，也形成了自己的鉴赏眼光。",
-    "contentHash": "b4e736cc4fabc30a7d6a",
-    "audioSha256": "d8f7432e12d231d36440c59eead3cbc7329f001f2bcdde0eb21793ccf0547be0"
+    "transcript": "鉴，鉴赏的鉴，读第四声。它是上下结构，上方是仔细观察审视的部件，下方由“金”字底托稳，明镜鉴察即为鉴。鉴赏包含仔细品味与深入判断。课文中作者回顾自己的读书历程，从最初看热闹到后来学会挑选优质书籍、细细鉴赏，阅读品味与写作眼光日益成熟。",
+    "contentHash": "215f602716625192357a",
+    "audioSha256": "b0053df31906d58dc03314c8ffe1277d067577c5ce648687ceb5051e5b71ced9"
   },
   "g5v1-l26-c15-u6ca5": {
     "recordId": "g5v1-l26-c15-u6ca5",
@@ -3307,9 +3307,9 @@ export const releasedNarrationTranscripts: Record<string, ReleasedNarrationTrans
     "glyph": "桂",
     "lessonId": "g5v1-l03",
     "word": "桂花",
-    "transcript": "桂，桂花的桂。它是左右结构，左边的木字旁让人想到桂树，右边可以看成上下叠好的两层土台。想象一棵桂树站在土台旁，枝头开满细小金黄的花，树和土台一左一右组成桂；这只是记字画面。课文里，中秋前后故乡桂花盛开，桂花就是桂树开的花，香气也牵着作者想起故乡。",
-    "contentHash": "08bd25462f7c53311533",
-    "audioSha256": "dfea7d6149909442b6c19f06b8742ce340a5bd9a88990bf0e33e89c81fa7abe7"
+    "transcript": "桂，桂花的桂，读第四声。它是左右结构，左边的“木”表明它是树木，右边的“圭”提示读音。看图时，左边挺立着枝繁叶茂的桂树，右边土台耸立，树与土台并肩组成“桂”。课文里，中秋前后故乡桂花盛开，摇落的花雨香甜浓郁，也将童年与故乡的思念久久留在作者心间。",
+    "contentHash": "1009ce5d270ef2e2f4c6",
+    "audioSha256": "958c54f86e4b1bafea8ef029c495bccdaa190f01a07af3842cb45a0bb99b5bfd"
   },
   "019f0554-ea21-740f-af56-91a530f5a84a": {
     "recordId": "019f0554-ea21-740f-af56-91a530f5a84a",
@@ -3379,9 +3379,9 @@ export const releasedNarrationTranscripts: Record<string, ReleasedNarrationTrans
     "glyph": "台",
     "lessonId": "g5v1-l03",
     "word": "台风",
-    "transcript": "台，台风的台。台字可以整体看成上方小坡和下方平台，像一座高而平的台子；这只帮助记住轮廓。台本来可以表示高台，可在台风这个天气名称里，要和风连在一起理解。课文说故乡靠海，八月是台风季节，强风可能把开得正盛的桂花吹落。认清台风这个固定词，就能明白母亲为什么担心花开过头。",
-    "contentHash": "c634b4c269b8f3d75c12",
-    "audioSha256": "be985f9f5e8388d4687f328f43d606f6b93f4f3ed33ff990b590f780bc3f4d37"
+    "transcript": "台，台风的台，读第二声。台是上下结构，上方是回折升起的山坡，下方是方正平稳的基座，上坡下基组合成台。台风指发生在热带海洋上的强热带气旋。课文写江南故乡八月正值台风季节，狂风暴雨容易吹落桂花，母亲因而时刻牵挂着适时摇花，体现了对乡土收成的珍惜。",
+    "contentHash": "51efe30d750c01028a7d",
+    "audioSha256": "5aeaf52e0e8cbc56f54085a88b8ee10472b579eeca3f478db6772ee7376f4383"
   },
   "019f0554-ea21-740f-af56-cee56e724f90": {
     "recordId": "019f0554-ea21-740f-af56-cee56e724f90",
@@ -3541,18 +3541,18 @@ export const releasedNarrationTranscripts: Record<string, ReleasedNarrationTrans
     "glyph": "原",
     "lessonId": "g5v1-l08",
     "word": "平原",
-    "transcript": "原，平原的原。它是左上包围结构，外面像山崖，里面可以想成一眼泉水从崖下流出。山崖和泉水的画面只帮助记字，不说明这个词的来历。课文写冀中平原地底下有无数地道，平原就是宽广而较平坦的土地。",
-    "contentHash": "a9d96533a090abf6a558",
-    "audioSha256": "fe88a0a9cb313e0e3d183751170c0574ee493baed6d2750b7344876b449914fa"
+    "transcript": "原，平原的原，读第二声。它是左上包围结构，左上方的“厂”像广袤开阔的山崖，内部的“泉”像源源流出的清泉，崖下流泉延伸开来即为原。平原指宽广平坦的大片土地。课文写冀中平原地底下修筑起无数神奇地道，展现了平原人民在辽阔大地上抗击敌寇的无穷智慧。",
+    "contentHash": "655431d80112e7dcfa4c",
+    "audioSha256": "b33652359e92c3eea4a15f587698992186ac045f495085b0c0ad3c83a5a363f4"
   },
   "019f0554-ea22-762e-966c-32d678fd6bf6": {
     "recordId": "019f0554-ea22-762e-966c-32d678fd6bf6",
     "glyph": "封",
     "lessonId": "g5v1-l08",
     "word": "封锁",
-    "transcript": "封，封锁的封。它是左右结构，左边像上下叠起的两层土台，右边的寸可以想成一只量位置的手。为了好记，可以想象人们在路边堆土立界，又伸手确认界线，把通道严严实实围起来；这只是记字画面。课文里，敌人修封锁沟和封锁墙，想切断人们的来往；封锁就是严密控制，不让人和物自由通过。",
-    "contentHash": "fb1d6b52503b70cc91e0",
-    "audioSha256": "68e32a2d920b6ea6abc1de8289b098dba300c65b3d380e75e192c1e6383eb2d1"
+    "transcript": "封，封锁的封，读第一声。它是左右结构，左边是叠起的两层界土，右边的“寸”是一只度量界线的手，筑土立界、手按界碑组合成“封”。封锁就是用强制手段切断通道。课文里，敌人修筑封锁沟和封锁墙企图隔绝往来，冀中人民则凭借神奇的地道战粉碎了封锁。",
+    "contentHash": "d219778b269192a95504",
+    "audioSha256": "269b31a90390d3e8f7dbe3e75ff07a217bb63c83c730a00bfae9403577a0af22"
   },
   "019f0554-ea22-762e-966c-35da3e2ae594": {
     "recordId": "019f0554-ea22-762e-966c-35da3e2ae594",
@@ -3622,9 +3622,9 @@ export const releasedNarrationTranscripts: Record<string, ReleasedNarrationTrans
     "glyph": "常",
     "lessonId": "g5v1-l08",
     "word": "照常",
-    "transcript": "敌人走后，乡亲们从地道出来，照常种地过日子。常是上下结构，上面像高台，下面的巾像每天都要用的长布。天天取用同一件东西，只是帮助记住常的样子。照常就是仍按平时的方式生活和做事。",
-    "contentHash": "cac7e6029cdd2d1bc021",
-    "audioSha256": "18ab8f33626cdbf6161946bf1977c27320cfd658784dc3662f00ca2b7524cb8c"
+    "transcript": "常，照常的常，读第二声。它是上下结构，上面像高台上的屋檐与窗格，下面的巾像日常使用的布巾，上下组合成长久使用的常。照常表示仍按平时的习惯做事。课文写敌人撤退后，冀中乡亲们从地道回到地面照常耕田种地，表现了人民在艰难环境中的从容与乐观。",
+    "contentHash": "3d6ba0ddae74c6444c9e",
+    "audioSha256": "85c2a4499fa0f0e836d55a742997717eefaf805ae41d5ba2e1628df71fbd16c8"
   },
   "019f0554-ea22-762e-966c-61400fdba701": {
     "recordId": "019f0554-ea22-762e-966c-61400fdba701",
@@ -3712,9 +3712,9 @@ export const releasedNarrationTranscripts: Record<string, ReleasedNarrationTrans
     "glyph": "所",
     "lessonId": "g5v1-l08",
     "word": "厕所",
-    "transcript": "所，厕所的所。它是左右结构，左边像一扇半开的屋门，右边像一件带长柄的工具。为了好记，可以想象人在屋门旁整理工具，给每样东西安排固定的地方；这只是记字画面。课文说地道的大洞四壁还有许多小洞，有的住人，有的放东西，有的作厕所；厕所里的所表示专门使用的地方。",
-    "contentHash": "82ba6500735f3e4c8108",
-    "audioSha256": "78a83842da92e38ddf1dbc008ac1adb4d8605ceba45829f6493ca1000ecf484b"
+    "transcript": "所，厕所的所，读第三声。它是左右结构，左边的“户”是一扇开启的屋门，右边的“斤”是一把整齐立在门旁的斧具，门与工具相伴组合成“所”。所指特定的处所或地方。课文写冀中地道四壁开辟出许多小洞，有的住人，有的存放物资，有的用作厕所，生活设施一应俱全。",
+    "contentHash": "74972bd792d64a3a56bc",
+    "audioSha256": "f8784215e51857cc043bd97b69b302ae785079f0ccce1fc6ebc0a8b8f0e3032e"
   },
   "019f0554-ea22-762e-966c-a994523efc60": {
     "recordId": "019f0554-ea22-762e-966c-a994523efc60",
@@ -3757,9 +3757,9 @@ export const releasedNarrationTranscripts: Record<string, ReleasedNarrationTrans
     "glyph": "民",
     "lessonId": "g5v1-l08",
     "word": "民兵",
-    "transcript": "民，民兵的民。民是独体字，弯折的笔画交错在一起，可以把它想成村庄里许多人相连的道路和屋舍。顺着这张小小的村落图把整字记住；这只是记字画面，不是字的来历。课文里，民兵拿着武器在地道中警戒，保护乡亲；民兵就是由人民组织起来、担负保卫任务的队伍。",
-    "contentHash": "c5f66d82cdae11a6118a",
-    "audioSha256": "d98c3f5e1972abdbeeae181ddfeb81104ccfe8861482b293978ad1329cc20dd7"
+    "transcript": "民，民兵的民，读第二声。民是独体字，弯折的笔画交错相连，勾勒出人们在大地上聚居劳作的村落景致。民指人民与群众。课文里，冀中民兵拿起武器在纵横交错的地道中英勇警戒，保卫家乡与乡亲；民兵就是由人民群众组织起来的武装队伍。",
+    "contentHash": "05f5880a7be3980d61ed",
+    "audioSha256": "2c9283d9651c5d1b3a5dfb0b1741870d5e4fd47d71ad2e9217c676d93b5e55c0"
   },
   "019f0554-ea22-762e-966c-d0e0bd57a9cc": {
     "recordId": "019f0554-ea22-762e-966c-d0e0bd57a9cc",

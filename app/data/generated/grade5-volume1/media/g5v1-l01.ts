@@ -6,21 +6,21 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u9e6d.webp",
       "label": "白鹭",
-      "alt": "白鹭是羽毛洁白、常在水田和河滩活动的鸟 图中“路”与“鸟”按上下结构自然长成“鹭”。"
+      "alt": "白鹭羽色洁白、身段精巧，在清水田里漫步伫立，如同一首韵味悠长的小诗 图中“路”与“鸟”按上下结构自然长成“鹭”。"
     },
     "scene": {
-      "scene": "上方一条弯曲石路沿“路”的笔画铺开，下方白鹭收拢翅尾站成“鸟”，上下合成“鹭”。",
+      "scene": "远景上方一条弯曲田埂小路沿“路”的笔画铺开，近景下方白鹭收拢翅尾站成“鸟”，上下合成“鹭”。",
       "cues": [
-        "上方一条弯曲石路沿“路”的笔画铺开。",
-        "下方白鹭收拢翅尾站成“鸟”。"
+        "远景上方一条弯曲田埂小路沿“路”的笔画铺开。",
+        "近景下方白鹭收拢翅尾站成“鸟”。"
       ]
     },
-    "transcript": "鹭，白鹭的鹭。它是上下结构，上面是道路的路，下面是小鸟的鸟。为了好记，可以想象一条弯弯的水田小路托着一只收起翅膀的白鸟，上下合在一起就是鹭；这只是记字画面。课文从羽毛、身段和水田里的姿态写白鹭的精巧美，白鹭就是常在水田和河滩活动、羽毛洁白的鸟。",
+    "transcript": "鹭，白鹭的鹭，读第四声。它是上下结构，上面的“路”提示读音，下面的“鸟”表明它是一种水鸟。看图时，上方是田野远方蜿蜒的小路，下方是收拢羽翼、静立水中的白鸟，上下合起来就是“鹭”。课文中，白鹭在清水田里漫步、伫立，身段精巧适宜，如同一首韵味悠长的小诗。",
     "practiceOptionVisuals": {
       "g5v1-l01-c01-u9e6d-words-image:g5v1-l01-c01-u9e6d-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u9e6d.webp",
         "label": "白鹭",
-        "alt": "白鹭是羽毛洁白、常在水田和河滩活动的鸟 图中“路”与“鸟”按上下结构自然长成“鹭”。"
+        "alt": "白鹭羽色洁白、身段精巧，在清水田里漫步伫立，如同一首韵味悠长的小诗 图中“路”与“鸟”按上下结构自然长成“鹭”。"
       },
       "g5v1-l01-c01-u9e6d-words-image:g5v1-l01-c01-u9e6d-words-image-0": {
         "src": "/illustrations/meanings/m08.webp",
@@ -30,7 +30,7 @@ export const characterMedia = {
       "g5v1-l01-c01-u9e6d-words-image:g5v1-l01-c01-u9e6d-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u53ee.webp",
         "label": "叮嘱",
-        "alt": "叮嘱就是反复、认真地提醒别人要记住某件事 图中“口”与“丁”按左右结构自然长成“叮”。"
+        "alt": "叮嘱是再三嘱咐提醒；龙女再三叮嘱含着宝珠不能泄露秘密，埋下了后来情节发展的伏笔 图中“口”与“丁”按左右结构自然长成“叮”。"
       }
     }
   },
@@ -38,7 +38,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u5acc.webp",
       "label": "嫌弃",
-      "alt": "嫌弃就是因为不喜欢而躲开或不愿接近 图中“女”与“兼”按左右结构自然长成“嫌”。"
+      "alt": "嫌弃表示觉得不合适或不愿接近；正如课文所赞叹，白鹭的身段增减一分都嫌不适宜，恰到好处 图中“女”与“兼”按左右结构自然长成“嫌”。"
     },
     "scene": {
       "scene": "左边人物侧身收成“女”，右边两只并提的竹篮搭成“兼”，一左一右表现转身嫌弃。",
@@ -57,12 +57,12 @@ export const characterMedia = {
       "g5v1-l01-c02-u5acc-words-image:g5v1-l01-c02-u5acc-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u9694.webp",
         "label": "间隔",
-        "alt": "间隔也表示两个事物之间隔着一定距离 图中“阝”与“鬲”按左右结构自然长成“隔”。"
+        "alt": "间隔指两地或两物的空间阻隔；搭石跨越了溪水的阻隔，默默传递着无私奉献的人间温情 图中“阝”与“鬲”按左右结构自然长成“隔”。"
       },
       "g5v1-l01-c02-u5acc-words-image:g5v1-l01-c02-u5acc-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u5acc.webp",
         "label": "嫌弃",
-        "alt": "嫌弃就是因为不喜欢而躲开或不愿接近 图中“女”与“兼”按左右结构自然长成“嫌”。"
+        "alt": "嫌弃表示觉得不合适或不愿接近；正如课文所赞叹，白鹭的身段增减一分都嫌不适宜，恰到好处 图中“女”与“兼”按左右结构自然长成“嫌”。"
       }
     }
   },
@@ -70,13 +70,13 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u5d4c.webp",
       "label": "镶嵌",
-      "alt": "镶嵌就是把一种材料牢牢装进另一种材料的空隙 图中“山”与“𣢟”按上下结构自然长成“嵌”。"
+      "alt": "镶嵌是把材料妥帖装入空隙中；白鹭立在水田中，宛如被精巧地镶嵌进大自然的画框 图中“山”与“𣢟”按上下结构自然长成“嵌”。"
     },
     "scene": {
-      "scene": "上方山石隆起成“山”，下方一枚玉片卡进木槽，槽口和托架沿“𣢟”的笔画闭合，形成“嵌”。",
+      "scene": "上方山石隆起成“山”，下方一枚玉片卡进木槽，槽口与托架“𣢟”严丝合缝地闭合，形成“嵌”。",
       "cues": [
         "上方山石隆起成“山”。",
-        "槽口和托架沿“𣢟”的笔画闭合。"
+        "槽口与托架“𣢟”严丝合缝地闭合。"
       ]
     },
     "transcript": "嵌，镶嵌的嵌，读第四声。这个字是上下结构，上方像一座山，下方笔画较密，可以整体看成卡住物件的槽口。想象一片洁白羽毛稳稳嵌进水田画面的空隙，上下两部分也就不容易放反。镶嵌就是把一种材料牢牢装进另一种材料的空隙。课文细看白鹭的色彩和姿态，一只白鹭立在水田里，也像被轻轻镶嵌进一幅清雅的画。",
@@ -84,7 +84,7 @@ export const characterMedia = {
       "g5v1-l01-c03-u5d4c-words-image:g5v1-l01-c03-u5d4c-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u5d4c.webp",
         "label": "镶嵌",
-        "alt": "镶嵌就是把一种材料牢牢装进另一种材料的空隙 图中“山”与“𣢟”按上下结构自然长成“嵌”。"
+        "alt": "镶嵌是把材料妥帖装入空隙中；白鹭立在水田中，宛如被精巧地镶嵌进大自然的画框 图中“山”与“𣢟”按上下结构自然长成“嵌”。"
       },
       "g5v1-l01-c03-u5d4c-words-image:g5v1-l01-c03-u5d4c-words-image-2": {
         "src": "/illustrations/meanings/m08.webp",
@@ -94,7 +94,7 @@ export const characterMedia = {
       "g5v1-l01-c03-u5d4c-words-image:g5v1-l01-c03-u5d4c-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u5ac9.webp",
         "label": "嫉妒",
-        "alt": "嫉妒是看见别人比自己好而产生不舒服甚至怨恨的心理 图中“女”与“疾”按左右结构自然长成“嫉”。"
+        "alt": "心生嫉妒纯真可爱；听说月亮跑进了三妹的眼睛里，大家忍不住心生羡慕与小小的嫉妒，童趣盎然 图中“女”与“疾”按左右结构自然长成“嫉”。"
       }
     }
   },
@@ -102,7 +102,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u5323.webp",
       "label": "匣子",
-      "alt": "匣子是有盖、用来收藏小物件的盒子 图中“匚”与“甲”按左三包围结构自然长成“匣”。"
+      "alt": "匣子是有盖、用来收藏珍贵小物的盒子；课文把水田比作镜匣，白鹭就是其中最精巧的一笔 图中“匚”与“甲”按左三包围结构自然长成“匣”。"
     },
     "scene": {
       "scene": "木盒的左壁、顶盖和底板围成“匚”，盒内一格格收藏槽排成“甲”，共同长成“匣”。",
@@ -116,7 +116,7 @@ export const characterMedia = {
       "g5v1-l01-c04-u5323-words-image:g5v1-l01-c04-u5323-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u5323.webp",
         "label": "匣子",
-        "alt": "匣子是有盖、用来收藏小物件的盒子 图中“匚”与“甲”按左三包围结构自然长成“匣”。"
+        "alt": "匣子是有盖、用来收藏珍贵小物的盒子；课文把水田比作镜匣，白鹭就是其中最精巧的一笔 图中“匚”与“甲”按左三包围结构自然长成“匣”。"
       },
       "g5v1-l01-c04-u5323-words-image:g5v1-l01-c04-u5323-words-image-2": {
         "src": "/illustrations/meanings/m08.webp",
@@ -126,7 +126,7 @@ export const characterMedia = {
       "g5v1-l01-c04-u5323-words-image:g5v1-l01-c04-u5323-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u5854.webp",
         "label": "宝塔",
-        "alt": "宝塔是层层向上、常有尖顶的高大建筑 图中“土”与“荅”按左右结构自然长成“塔”。"
+        "alt": "宝塔倒影相映成趣；远处古朴的石塔倒映在清澈的河面上，为鸟的天堂增添了典雅的诗意 图中“土”与“荅”按左右结构自然长成“塔”。"
       }
     }
   },
@@ -134,7 +134,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u55dc.webp",
       "label": "嗜好",
-      "alt": "嗜好指特别喜欢、常常愿意做的事情 图中“口”与“耆”按左右结构自然长成“嗜”。"
+      "alt": "嗜好指特别喜爱并乐在其中的习惯；白鹭在水田独钓巡望，成了大自然中最优雅的嗜好 图中“口”与“耆”按左右结构自然长成“嗜”。"
     },
     "scene": {
       "scene": "左边张开的传声窗形成“口”，右边一位老人守着日晷，身体、手杖和日轮排成“耆”，合成“嗜”。",
@@ -158,7 +158,7 @@ export const characterMedia = {
       "g5v1-l01-c05-u55dc-words-image:g5v1-l01-c05-u55dc-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u55dc.webp",
         "label": "嗜好",
-        "alt": "嗜好指特别喜欢、常常愿意做的事情 图中“口”与“耆”按左右结构自然长成“嗜”。"
+        "alt": "嗜好指特别喜爱并乐在其中的习惯；白鹭在水田独钓巡望，成了大自然中最优雅的嗜好 图中“口”与“耆”按左右结构自然长成“嗜”。"
       }
     }
   },
@@ -166,7 +166,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u5b9c.webp",
       "label": "适宜",
-      "alt": "适宜就是条件正合适，做起来恰到好处 图中“宀”与“且”按上下结构自然长成“宜”。"
+      "alt": "适宜指条件正合适、恰到好处；课文赞美白鹭色素与身段无不适宜，极其精巧 图中“宀”与“且”按上下结构自然长成“宜”。"
     },
     "scene": {
       "scene": "安稳屋顶覆盖成“宀”，下面两层尺寸刚好的置物台排成“且”，像一间布置适宜的小屋。",
@@ -180,7 +180,7 @@ export const characterMedia = {
       "g5v1-l01-c06-u5b9c-words-image:g5v1-l01-c06-u5b9c-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u5b9c.webp",
         "label": "适宜",
-        "alt": "适宜就是条件正合适，做起来恰到好处 图中“宀”与“且”按上下结构自然长成“宜”。"
+        "alt": "适宜指条件正合适、恰到好处；课文赞美白鹭色素与身段无不适宜，极其精巧 图中“宀”与“且”按上下结构自然长成“宜”。"
       },
       "g5v1-l01-c06-u5b9c-words-image:g5v1-l01-c06-u5b9c-words-image-2": {
         "src": "/illustrations/meanings/m04.webp",
@@ -190,7 +190,7 @@ export const characterMedia = {
       "g5v1-l01-c06-u5b9c-words-image:g5v1-l01-c06-u5b9c-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u8695.webp",
         "label": "蚕茧",
-        "alt": "蚕是一种会吐丝结茧的昆虫，常以桑叶为食 图中“天”与“虫”按上下结构自然长成“蚕”。"
+        "alt": "养蚕缫丝维持生计；全家人日夜照料春蚕，辛勤劳动换来的每一分钱都倾注在孩子的学业上 图中“天”与“虫”按上下结构自然长成“蚕”。"
       }
     }
   },
@@ -198,7 +198,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u9e64.webp",
       "label": "白鹤",
-      "alt": "白鹤是长腿、长颈、羽毛洁白的大型水鸟 图中“隺”与“鸟”按左右结构自然长成“鹤”。"
+      "alt": "白鹤是体型较大、羽色洁白的水鸟；课文用白鹤与白鹭对比，更显出白鹭身段的玲珑适度 图中“隺”与“鸟”按左右结构自然长成“鹤”。"
     },
     "scene": {
       "scene": "左边高挑鹤影沿“隺”的轮廓站立，右边羽翼和尾羽收成“鸟”，并排组成“鹤”。",
@@ -212,7 +212,7 @@ export const characterMedia = {
       "g5v1-l01-c07-u9e64-words-image:g5v1-l01-c07-u9e64-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u9e64.webp",
         "label": "白鹤",
-        "alt": "白鹤是长腿、长颈、羽毛洁白的大型水鸟 图中“隺”与“鸟”按左右结构自然长成“鹤”。"
+        "alt": "白鹤是体型较大、羽色洁白的水鸟；课文用白鹤与白鹭对比，更显出白鹭身段的玲珑适度 图中“隺”与“鸟”按左右结构自然长成“鹤”。"
       },
       "g5v1-l01-c07-u9e64-words-image:g5v1-l01-c07-u9e64-words-image-2": {
         "src": "/illustrations/meanings/m04.webp",
@@ -222,7 +222,7 @@ export const characterMedia = {
       "g5v1-l01-c07-u9e64-words-image:g5v1-l01-c07-u9e64-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u9489.webp",
         "label": "钉子",
-        "alt": "钉子是一端尖、一端有帽，用来固定物体的金属小件 图中“钅”与“丁”按左右结构自然长成“钉”。"
+        "alt": "钉鞋补舟手艺精湛；父亲用粗糙的双手修补旧船、钉好鞋底，把每一件小事都做得扎扎实实 图中“钅”与“丁”按左右结构自然长成“钉”。"
       }
     }
   },
@@ -230,7 +230,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u6731.webp",
       "label": "朱红",
-      "alt": "朱红是鲜明而温暖、略带橙色的红 图中“未”与“㇒”按穿插结构自然长成“朱”。"
+      "alt": "朱红是鲜亮温暖的红色；白鹭的铁色长喙与朱红脚爪相互映衬，显出和谐素雅的色彩美 图中“未”与“㇒”按穿插结构自然长成“朱”。"
     },
     "scene": {
       "scene": "下方枝干交叠成“未”形树架，顶端一笔“㇒”挑出朱红果实，二者穿插长成“朱”。",
@@ -254,7 +254,7 @@ export const characterMedia = {
       "g5v1-l01-c08-u6731-words-image:g5v1-l01-c08-u6731-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u6731.webp",
         "label": "朱红",
-        "alt": "朱红是鲜明而温暖、略带橙色的红 图中“未”与“㇒”按穿插结构自然长成“朱”。"
+        "alt": "朱红是鲜亮温暖的红色；白鹭的铁色长喙与朱红脚爪相互映衬，显出和谐素雅的色彩美 图中“未”与“㇒”按穿插结构自然长成“朱”。"
       }
     }
   },
@@ -262,7 +262,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u6846.webp",
       "label": "画框",
-      "alt": "画框是围在图画四周、保护并衬托画面的边框 图中“木”与“匡”按左右结构自然长成“框”。"
+      "alt": "画框是用来装裱与衬托画面的边框；水田如画框，白鹭立于其间，构成生动宁静的田园画卷 图中“木”与“匡”按左右结构自然长成“框”。"
     },
     "scene": {
       "scene": "左边树干与根枝长成“木”，右边四根木条围成“匡”形画框，左右拼成“框”。",
@@ -286,7 +286,7 @@ export const characterMedia = {
       "g5v1-l01-c09-u6846-words-image:g5v1-l01-c09-u6846-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u6846.webp",
         "label": "画框",
-        "alt": "画框是围在图画四周、保护并衬托画面的边框 图中“木”与“匡”按左右结构自然长成“框”。"
+        "alt": "画框是用来装裱与衬托画面的边框；水田如画框，白鹭立于其间，构成生动宁静的田园画卷 图中“木”与“匡”按左右结构自然长成“框”。"
       }
     }
   },
@@ -294,7 +294,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u54e8.webp",
       "label": "口哨",
-      "alt": "口哨既可以指用嘴吹出的声音，也可以指能吹响的小哨子 图中“口”与“肖”按左右结构自然长成“哨”。"
+      "alt": "口哨指吹出的清脆哨音；白鹭在树顶望哨守望，为宁静的黄昏平添了几分悠远生机 图中“口”与“肖”按左右结构自然长成“哨”。"
     },
     "scene": {
       "scene": "左边吹气的小口形成“口”，右边哨管、挂环和高低音孔沿“肖”的笔画排列，合成“哨”。",
@@ -308,7 +308,7 @@ export const characterMedia = {
       "g5v1-l01-c10-u54e8-words-image:g5v1-l01-c10-u54e8-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u54e8.webp",
         "label": "口哨",
-        "alt": "口哨既可以指用嘴吹出的声音，也可以指能吹响的小哨子 图中“口”与“肖”按左右结构自然长成“哨”。"
+        "alt": "口哨指吹出的清脆哨音；白鹭在树顶望哨守望，为宁静的黄昏平添了几分悠远生机 图中“口”与“肖”按左右结构自然长成“哨”。"
       },
       "g5v1-l01-c10-u54e8-words-image:g5v1-l01-c10-u54e8-words-image-0": {
         "src": "/illustrations/meanings/m06.webp",
@@ -318,7 +318,7 @@ export const characterMedia = {
       "g5v1-l01-c10-u54e8-words-image:g5v1-l01-c10-u54e8-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u5ef6.webp",
         "label": "延迟",
-        "alt": "延迟就是比原定时间更晚发生或完成 图中“廴”与“丿”与“止”按上下结构自然长成“延”。"
+        "alt": "延迟指拖延耽误时间；灾难迫在眉睫容不得半点延迟，海力布果断作出了最后的抉择 图中“廴”与“丿”与“止”按上下结构自然长成“延”。"
       }
     }
   },
@@ -326,7 +326,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u6069.webp",
       "label": "恩惠",
-      "alt": "恩惠是别人给予的帮助和好处，值得记在心里 图中“因”与“心”按上下结构自然长成“恩”。"
+      "alt": "恩惠是他人给予的关怀与帮助；白鹭常在水田乡村活动，宛如大自然赐予人间的清雅恩惠 图中“因”与“心”按上下结构自然长成“恩”。"
     },
     "scene": {
       "scene": "上方一份被方框珍藏的帮助排成“因”，下方一颗发亮的心长成“心”，上下组成“恩”。",
@@ -345,12 +345,12 @@ export const characterMedia = {
       "g5v1-l01-c11-u6069-words-image:g5v1-l01-c11-u6069-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u7f3a.webp",
         "label": "缺少",
-        "alt": "缺少就是数量不够，或原来完整的东西少了一部分 图中“缶”与“夬”按左右结构自然长成“缺”。"
+        "alt": "缺少是数量不足或出现缺口；相如假称和氏璧上微有瑕疵缺少完美，借机将宝玉重新拿回手中 图中“缶”与“夬”按左右结构自然长成“缺”。"
       },
       "g5v1-l01-c11-u6069-words-image:g5v1-l01-c11-u6069-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u6069.webp",
         "label": "恩惠",
-        "alt": "恩惠是别人给予的帮助和好处，值得记在心里 图中“因”与“心”按上下结构自然长成“恩”。"
+        "alt": "恩惠是他人给予的关怀与帮助；白鹭常在水田乡村活动，宛如大自然赐予人间的清雅恩惠 图中“因”与“心”按上下结构自然长成“恩”。"
       }
     }
   },
@@ -358,7 +358,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u97f5.webp",
       "label": "韵味",
-      "alt": "韵味是声音、语言或事物中耐人回味的美感 图中“音”与“匀”按左右结构自然长成“韵”。"
+      "alt": "韵味是耐人反复回味的深长意蕴；白鹭的从容身段与质朴神态，留下了令人心旷神怡的悠长韵味 图中“音”与“匀”按左右结构自然长成“韵”。"
     },
     "scene": {
       "scene": "左边编钟和回声波排成“音”，右边均匀摆动的两枚音锤形成“匀”，共同奏出“韵”。",
@@ -372,7 +372,7 @@ export const characterMedia = {
       "g5v1-l01-c12-u97f5-words-image:g5v1-l01-c12-u97f5-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u97f5.webp",
         "label": "韵味",
-        "alt": "韵味是声音、语言或事物中耐人回味的美感 图中“音”与“匀”按左右结构自然长成“韵”。"
+        "alt": "韵味是耐人反复回味的深长意蕴；白鹭的从容身段与质朴神态，留下了令人心旷神怡的悠长韵味 图中“音”与“匀”按左右结构自然长成“韵”。"
       },
       "g5v1-l01-c12-u97f5-words-image:g5v1-l01-c12-u97f5-words-image-2": {
         "src": "/illustrations/meanings/m07.webp",
