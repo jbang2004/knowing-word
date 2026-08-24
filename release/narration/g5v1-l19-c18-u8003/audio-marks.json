@@ -3,761 +3,660 @@
     {
       "index": 0,
       "char": "考",
-      "start": 0.24,
-      "end": 0.48
+      "start": 0,
+      "end": 0.64
     },
     {
       "index": 1,
-      "char": "试",
-      "start": 0.48,
-      "end": 0.72
+      "char": "报",
+      "start": 0.72,
+      "end": 0.88
     },
     {
       "index": 2,
-      "char": "的",
-      "start": 0.72,
-      "end": 0.8
+      "char": "考",
+      "start": 0.88,
+      "end": 1.04
     },
     {
       "index": 3,
-      "char": "考",
-      "start": 0.8,
+      "char": "的",
+      "start": 1.04,
       "end": 1.2
     },
     {
       "index": 4,
-      "char": "读",
-      "start": 1.52,
-      "end": 1.68
+      "char": "考",
+      "start": 1.2,
+      "end": 1.6
     },
     {
       "index": 5,
-      "char": "第",
-      "start": 1.68,
-      "end": 1.76
+      "char": "读",
+      "start": 2,
+      "end": 2.16
     },
     {
       "index": 6,
-      "char": "三",
-      "start": 1.76,
-      "end": 2.08
+      "char": "第",
+      "start": 2.16,
+      "end": 2.32
     },
     {
       "index": 7,
-      "char": "声",
-      "start": 2.08,
-      "end": 2.4
+      "char": "三",
+      "start": 2.32,
+      "end": 2.56
     },
     {
       "index": 8,
-      "char": "考",
-      "start": 3.76,
-      "end": 4.0
+      "char": "声",
+      "start": 2.56,
+      "end": 2.88
     },
     {
       "index": 9,
-      "char": "是",
-      "start": 4.0,
-      "end": 4.16
+      "char": "考",
+      "start": 3.52,
+      "end": 3.76
     },
     {
       "index": 10,
-      "char": "左",
-      "start": 4.16,
-      "end": 4.24
+      "char": "是",
+      "start": 3.76,
+      "end": 3.92
     },
     {
       "index": 11,
-      "char": "上",
-      "start": 4.32,
-      "end": 4.48
+      "char": "左",
+      "start": 3.92,
+      "end": 4.08
     },
     {
       "index": 12,
-      "char": "包",
-      "start": 4.48,
-      "end": 4.72
+      "char": "上",
+      "start": 4.16,
+      "end": 4.32
     },
     {
       "index": 13,
-      "char": "围",
-      "start": 4.8,
-      "end": 4.88
+      "char": "包",
+      "start": 4.32,
+      "end": 4.56
     },
     {
       "index": 14,
-      "char": "结",
-      "start": 4.88,
-      "end": 5.12
+      "char": "围",
+      "start": 4.56,
+      "end": 4.72
     },
     {
       "index": 15,
-      "char": "构",
-      "start": 5.12,
-      "end": 5.44
+      "char": "结",
+      "start": 4.72,
+      "end": 4.88
     },
     {
       "index": 16,
-      "char": "上",
-      "start": 5.76,
-      "end": 5.92
+      "char": "构",
+      "start": 4.88,
+      "end": 5.2
     },
     {
       "index": 17,
-      "char": "部",
-      "start": 5.92,
-      "end": 6.24
+      "char": "上",
+      "start": 5.6,
+      "end": 5.84
     },
     {
       "index": 18,
-      "char": "舒",
-      "start": 6.24,
-      "end": 6.4
+      "char": "方",
+      "start": 5.84,
+      "end": 6.08
     },
     {
       "index": 19,
-      "char": "展",
-      "start": 6.4,
-      "end": 6.72
+      "char": "像",
+      "start": 6.08,
+      "end": 6.32
     },
     {
       "index": 20,
-      "char": "下",
-      "start": 7.04,
-      "end": 7.28
+      "char": "长",
+      "start": 6.32,
+      "end": 6.56
     },
     {
       "index": 21,
-      "char": "部",
-      "start": 7.28,
-      "end": 7.52
+      "char": "者",
+      "start": 6.56,
+      "end": 6.8
     },
     {
       "index": 22,
-      "char": "弯",
-      "start": 7.52,
-      "end": 7.68
+      "char": "手",
+      "start": 6.8,
+      "end": 7.04
     },
     {
       "index": 23,
-      "char": "钩",
-      "start": 7.68,
-      "end": 7.84
+      "char": "持",
+      "start": 7.04,
+      "end": 7.2
     },
     {
       "index": 24,
-      "char": "收",
-      "start": 7.84,
-      "end": 8.08
+      "char": "教",
+      "start": 7.2,
+      "end": 7.36
     },
     {
       "index": 25,
-      "char": "紧",
-      "start": 8.08,
-      "end": 8.4
+      "char": "鞭",
+      "start": 7.36,
+      "end": 7.6
     },
     {
       "index": 26,
-      "char": "写",
-      "start": 8.8,
-      "end": 9.12
+      "char": "审",
+      "start": 7.6,
+      "end": 7.84
     },
     {
       "index": 27,
-      "char": "时",
-      "start": 9.12,
-      "end": 9.44
+      "char": "视",
+      "start": 7.84,
+      "end": 8.16
     },
     {
       "index": 28,
-      "char": "要",
-      "start": 9.44,
-      "end": 9.52
+      "char": "下",
+      "start": 8.64,
+      "end": 8.88
     },
     {
       "index": 29,
-      "char": "看",
-      "start": 9.52,
-      "end": 9.76
+      "char": "方",
+      "start": 8.88,
+      "end": 9.12
     },
     {
       "index": 30,
-      "char": "清",
-      "start": 9.76,
-      "end": 10.0
+      "char": "弯",
+      "start": 9.12,
+      "end": 9.28
     },
     {
       "index": 31,
-      "char": "转",
-      "start": 10.0,
-      "end": 10.24
+      "char": "钩",
+      "start": 9.28,
+      "end": 9.44
     },
     {
       "index": 32,
-      "char": "折",
-      "start": 10.24,
-      "end": 10.56
+      "char": "收",
+      "start": 9.44,
+      "end": 9.68
     },
     {
       "index": 33,
-      "char": "可",
-      "start": 10.96,
-      "end": 11.04
+      "char": "紧",
+      "start": 9.68,
+      "end": 10.08
     },
     {
       "index": 34,
-      "char": "以",
-      "start": 11.04,
-      "end": 11.2
+      "char": "宛",
+      "start": 10.08,
+      "end": 10.16
     },
     {
       "index": 35,
-      "char": "想",
-      "start": 11.2,
-      "end": 11.44
+      "char": "如",
+      "start": 10.16,
+      "end": 10.4
     },
     {
       "index": 36,
-      "char": "象",
-      "start": 11.44,
-      "end": 11.6
+      "char": "学",
+      "start": 10.4,
+      "end": 10.64
     },
     {
       "index": 37,
-      "char": "老",
-      "start": 11.6,
-      "end": 11.84
+      "char": "子",
+      "start": 10.64,
+      "end": 10.88
     },
     {
       "index": 38,
-      "char": "师",
-      "start": 11.84,
-      "end": 12.08
+      "char": "端",
+      "start": 10.88,
+      "end": 11.04
     },
     {
       "index": 39,
       "char": "坐",
-      "start": 12.08,
-      "end": 12.24
+      "start": 11.12,
+      "end": 11.28
     },
     {
       "index": 40,
-      "char": "在",
+      "char": "答",
+      "start": 11.28,
+      "end": 11.44
+    },
+    {
+      "index": 41,
+      "char": "题",
+      "start": 11.44,
+      "end": 11.84
+    },
+    {
+      "index": 42,
+      "char": "上",
       "start": 12.24,
       "end": 12.4
     },
     {
-      "index": 41,
-      "char": "桌",
-      "start": 12.4,
-      "end": 12.56
-    },
-    {
-      "index": 42,
-      "char": "前",
-      "start": 12.56,
-      "end": 12.88
-    },
-    {
       "index": 43,
-      "char": "查",
-      "start": 12.88,
-      "end": 13.12
+      "char": "下",
+      "start": 12.4,
+      "end": 12.64
     },
     {
       "index": 44,
-      "char": "看",
-      "start": 13.12,
-      "end": 13.28
+      "char": "组",
+      "start": 12.64,
+      "end": 12.8
     },
     {
       "index": 45,
-      "char": "答",
-      "start": 13.28,
-      "end": 13.52
+      "char": "合",
+      "start": 12.8,
+      "end": 13.04
     },
     {
       "index": 46,
-      "char": "卷",
-      "start": 13.52,
-      "end": 13.84
+      "char": "成",
+      "start": 13.04,
+      "end": 13.2
     },
     {
       "index": 47,
-      "char": "学",
-      "start": 14.08,
-      "end": 14.32
+      "char": "考",
+      "start": 13.2,
+      "end": 13.68
     },
     {
       "index": 48,
-      "char": "生",
-      "start": 14.32,
-      "end": 14.48
+      "char": "报",
+      "start": 13.84,
+      "end": 14
     },
     {
       "index": 49,
-      "char": "认",
-      "start": 14.48,
-      "end": 14.72
+      "char": "考",
+      "start": 14,
+      "end": 14.24
     },
     {
       "index": 50,
-      "char": "真",
-      "start": 14.72,
-      "end": 14.88
+      "char": "指",
+      "start": 14.24,
+      "end": 14.48
     },
     {
       "index": 51,
-      "char": "完",
-      "start": 14.88,
-      "end": 15.04
+      "char": "报",
+      "start": 14.48,
+      "end": 14.64
     },
     {
       "index": 52,
-      "char": "成",
-      "start": 15.04,
-      "end": 15.28
+      "char": "名",
+      "start": 14.64,
+      "end": 14.8
     },
     {
       "index": 53,
-      "char": "题",
-      "start": 15.28,
-      "end": 15.44
+      "char": "参",
+      "start": 14.8,
+      "end": 15.04
     },
     {
       "index": 54,
-      "char": "目",
+      "char": "加",
+      "start": 15.04,
+      "end": 15.2
+    },
+    {
+      "index": 55,
+      "char": "升",
+      "start": 15.2,
+      "end": 15.44
+    },
+    {
+      "index": 56,
+      "char": "学",
       "start": 15.44,
       "end": 15.76
     },
     {
-      "index": 55,
-      "char": "画",
-      "start": 16.16,
-      "end": 16.4
-    },
-    {
-      "index": 56,
-      "char": "面",
-      "start": 16.4,
-      "end": 16.64
-    },
-    {
       "index": 57,
-      "char": "只",
-      "start": 16.64,
-      "end": 16.88
+      "char": "或",
+      "start": 15.76,
+      "end": 15.92
     },
     {
       "index": 58,
-      "char": "帮",
-      "start": 16.88,
-      "end": 17.04
+      "char": "就",
+      "start": 15.92,
+      "end": 16.08
     },
     {
       "index": 59,
-      "char": "助",
-      "start": 17.04,
-      "end": 17.28
+      "char": "业",
+      "start": 16.08,
+      "end": 16.24
     },
     {
       "index": 60,
-      "char": "我",
-      "start": 17.28,
-      "end": 17.44,
-      "alignment_group": "align-group-60-61",
-      "alignment_group_text": "我们"
+      "char": "测",
+      "start": 16.24,
+      "end": 16.48
     },
     {
       "index": 61,
-      "char": "们",
-      "start": 17.28,
-      "end": 17.44,
-      "alignment_group": "align-group-60-61",
-      "alignment_group_text": "我们"
+      "char": "试",
+      "start": 16.48,
+      "end": 16.8
     },
     {
       "index": 62,
-      "char": "看",
-      "start": 17.44,
-      "end": 17.68
+      "char": "课",
+      "start": 17.2,
+      "end": 17.44
     },
     {
       "index": 63,
-      "char": "清",
-      "start": 17.68,
-      "end": 17.84
+      "char": "文",
+      "start": 17.44,
+      "end": 17.6
     },
     {
       "index": 64,
-      "char": "字",
+      "char": "写",
+      "start": 17.6,
+      "end": 17.84
+    },
+    {
+      "index": 65,
+      "char": "父",
       "start": 17.84,
       "end": 18.08
     },
     {
-      "index": 65,
-      "char": "形",
+      "index": 66,
+      "char": "亲",
       "start": 18.08,
+      "end": 18.24
+    },
+    {
+      "index": 67,
+      "char": "摇",
+      "start": 18.32,
       "end": 18.48
     },
     {
-      "index": 66,
-      "char": "考",
+      "index": 68,
+      "char": "着",
+      "start": 18.48,
+      "end": 18.64
+    },
+    {
+      "index": 69,
+      "char": "那",
+      "start": 18.64,
+      "end": 18.8
+    },
+    {
+      "index": 70,
+      "char": "叶",
+      "start": 18.8,
+      "end": 18.96
+    },
+    {
+      "index": 71,
+      "char": "简",
       "start": 18.96,
       "end": 19.2
     },
     {
-      "index": 67,
-      "char": "试",
-      "start": 19.2,
+      "index": 72,
+      "char": "朴",
+      "start": 19.28,
+      "end": 19.36
+    },
+    {
+      "index": 73,
+      "char": "的",
+      "start": 19.36,
       "end": 19.52
     },
     {
-      "index": 68,
-      "char": "是",
+      "index": 74,
+      "char": "小",
       "start": 19.52,
-      "end": 19.6
+      "end": 19.68
     },
     {
-      "index": 69,
-      "char": "用",
-      "start": 19.6,
-      "end": 19.76
+      "index": 75,
+      "char": "渔",
+      "start": 19.68,
+      "end": 19.84
     },
     {
-      "index": 70,
-      "char": "题",
-      "start": 19.76,
-      "end": 20.0
+      "index": 76,
+      "char": "船",
+      "start": 19.84,
+      "end": 20.16
     },
     {
-      "index": 71,
-      "char": "目",
-      "start": 20.0,
-      "end": 20.24
-    },
-    {
-      "index": 72,
-      "char": "或",
+      "index": 77,
+      "char": "一",
       "start": 20.24,
       "end": 20.4
     },
     {
-      "index": 73,
-      "char": "操",
-      "start": 20.4,
-      "end": 20.64
-    },
-    {
-      "index": 74,
-      "char": "作",
-      "start": 20.64,
-      "end": 20.8
-    },
-    {
-      "index": 75,
-      "char": "检",
-      "start": 20.8,
-      "end": 21.04
-    },
-    {
-      "index": 76,
-      "char": "查",
-      "start": 21.04,
-      "end": 21.2
-    },
-    {
-      "index": 77,
-      "char": "知",
-      "start": 21.2,
-      "end": 21.52
-    },
-    {
       "index": 78,
-      "char": "识",
-      "start": 21.52,
-      "end": 21.68
+      "char": "路",
+      "start": 20.4,
+      "end": 20.56
     },
     {
       "index": 79,
-      "char": "和",
-      "start": 21.68,
-      "end": 21.84
+      "char": "护",
+      "start": 20.56,
+      "end": 20.72
     },
     {
       "index": 80,
-      "char": "能",
-      "start": 21.84,
-      "end": 22.08
+      "char": "送",
+      "start": 20.72,
+      "end": 20.96
     },
     {
       "index": 81,
-      "char": "力",
-      "start": 22.08,
-      "end": 22.24
+      "char": "孩",
+      "start": 20.96,
+      "end": 21.12
     },
     {
       "index": 82,
-      "char": "的",
-      "start": 22.24,
-      "end": 22.32
+      "char": "子",
+      "start": 21.12,
+      "end": 21.36
     },
     {
       "index": 83,
-      "char": "一",
-      "start": 22.32,
-      "end": 22.4
+      "char": "进",
+      "start": 21.36,
+      "end": 21.52
     },
     {
       "index": 84,
-      "char": "种",
-      "start": 22.4,
-      "end": 22.56
+      "char": "城",
+      "start": 21.52,
+      "end": 21.76
     },
     {
       "index": 85,
-      "char": "方",
-      "start": 22.56,
-      "end": 22.8
+      "char": "赶",
+      "start": 21.76,
+      "end": 21.92
     },
     {
       "index": 86,
-      "char": "式",
-      "start": 22.8,
-      "end": 23.2
+      "char": "考",
+      "start": 22,
+      "end": 22.4
     },
     {
       "index": 87,
-      "char": "父",
-      "start": 23.76,
-      "end": 24.0
+      "char": "小",
+      "start": 22.8,
+      "end": 23.04
     },
     {
       "index": 88,
-      "char": "亲",
-      "start": 24.0,
-      "end": 24.16
+      "char": "舟",
+      "start": 23.04,
+      "end": 23.28
     },
     {
       "index": 89,
-      "char": "一",
-      "start": 24.16,
-      "end": 24.32
+      "char": "载",
+      "start": 23.28,
+      "end": 23.44
     },
     {
       "index": 90,
-      "char": "次",
-      "start": 24.32,
-      "end": 24.56
+      "char": "着",
+      "start": 23.44,
+      "end": 23.6
     },
     {
       "index": 91,
-      "char": "次",
-      "start": 24.56,
-      "end": 24.8
+      "char": "厚",
+      "start": 23.6,
+      "end": 23.76
     },
     {
       "index": 92,
-      "char": "坐",
-      "start": 24.8,
-      "end": 24.96
+      "char": "重",
+      "start": 23.76,
+      "end": 24
     },
     {
       "index": 93,
-      "char": "船",
-      "start": 24.96,
-      "end": 25.28
+      "char": "的",
+      "start": 24,
+      "end": 24.08
     },
     {
       "index": 94,
-      "char": "送",
-      "start": 25.28,
-      "end": 25.52
+      "char": "父",
+      "start": 24.08,
+      "end": 24.24
     },
     {
       "index": 95,
-      "char": "孩",
-      "start": 25.52,
-      "end": 25.76
+      "char": "爱",
+      "start": 24.24,
+      "end": 24.48
     },
     {
       "index": 96,
-      "char": "子",
-      "start": 25.76,
-      "end": 25.92
+      "char": "与",
+      "start": 24.56,
+      "end": 24.64
     },
     {
       "index": 97,
-      "char": "去",
-      "start": 25.92,
-      "end": 26.0
+      "char": "希",
+      "start": 24.64,
+      "end": 24.96
     },
     {
       "index": 98,
-      "char": "报",
-      "start": 26.0,
-      "end": 26.24
+      "char": "望",
+      "start": 24.96,
+      "end": 25.12
     },
     {
       "index": 99,
-      "char": "考",
+      "char": "乘",
+      "start": 25.44,
+      "end": 25.6
+    },
+    {
+      "index": 100,
+      "char": "风",
+      "start": 25.6,
+      "end": 25.76
+    },
+    {
+      "index": 101,
+      "char": "破",
+      "start": 25.84,
+      "end": 26
+    },
+    {
+      "index": 102,
+      "char": "浪",
+      "start": 26,
+      "end": 26.24
+    },
+    {
+      "index": 103,
+      "char": "驶",
       "start": 26.24,
       "end": 26.4
     },
     {
-      "index": 100,
-      "char": "学",
-      "start": 26.4,
-      "end": 26.64
-    },
-    {
-      "index": 101,
-      "char": "校",
-      "start": 26.64,
-      "end": 27.04
-    },
-    {
-      "index": 102,
-      "char": "赶",
-      "start": 27.36,
-      "end": 27.6
-    },
-    {
-      "index": 103,
-      "char": "考",
-      "start": 27.6,
-      "end": 27.92
-    },
-    {
       "index": 104,
-      "char": "成",
-      "start": 27.92,
-      "end": 28.08
+      "char": "向",
+      "start": 26.4,
+      "end": 26.56
     },
     {
       "index": 105,
-      "char": "为",
-      "start": 28.08,
-      "end": 28.24
+      "char": "远",
+      "start": 26.56,
+      "end": 26.8
     },
     {
       "index": 106,
-      "char": "那",
-      "start": 28.24,
-      "end": 28.4
-    },
-    {
-      "index": 107,
-      "char": "条",
-      "start": 28.4,
-      "end": 28.64
-    },
-    {
-      "index": 108,
-      "char": "求",
-      "start": 28.64,
-      "end": 28.8
-    },
-    {
-      "index": 109,
-      "char": "学",
-      "start": 28.8,
-      "end": 28.96
-    },
-    {
-      "index": 110,
-      "char": "小",
-      "start": 28.96,
-      "end": 29.2
-    },
-    {
-      "index": 111,
-      "char": "船",
-      "start": 29.2,
-      "end": 29.44
-    },
-    {
-      "index": 112,
-      "char": "上",
-      "start": 29.44,
-      "end": 29.6
-    },
-    {
-      "index": 113,
-      "char": "很",
-      "start": 29.6,
-      "end": 30.0
-    },
-    {
-      "index": 114,
-      "char": "重",
-      "start": 30.0,
-      "end": 30.24
-    },
-    {
-      "index": 115,
-      "char": "要",
-      "start": 30.24,
-      "end": 30.32
-    },
-    {
-      "index": 116,
-      "char": "的",
-      "start": 30.32,
-      "end": 30.48
-    },
-    {
-      "index": 117,
-      "char": "回",
-      "start": 30.48,
-      "end": 30.64
-    },
-    {
-      "index": 118,
-      "char": "忆",
-      "start": 30.64,
-      "end": 30.88
+      "char": "方",
+      "start": 26.8,
+      "end": 27.04
     }
   ],
-  "transcript": "考试的考，读第三声。考是左上包围结构，上部舒展，下部弯钩收紧，写时要看清转折。可以想象老师坐在桌前查看答卷，学生认真完成题目，画面只帮助我们看清字形。考试是用题目或操作检查知识和能力的一种方式。父亲一次次坐船送孩子去报考学校，赶考成为那条求学小船上很重要的回忆。",
+  "transcript": "考，报考的考，读第三声。考是左上包围结构，上方像长者手持教鞭审视，下方弯钩收紧宛如学子端坐答题，上下组合成考。报考指报名参加升学或就业测试。课文写父亲摇着那叶简朴的小渔船一路护送孩子进城赶考，小舟载着厚重的父爱与希望，乘风破浪驶向远方。",
   "voice_reference": "封",
   "reference_id": "019f0554-ea22-762e-966c-32d678fd6bf6",
   "reference_sha256": "eb07e06ee13a20ee4577b1b481df6d33d42127c1b3876bfa5d5e5362ae349f19",
   "timing_source": "qwen3-forced-aligner",
-  "script_version": "narration-v3",
-  "model": "mlx-community/Qwen3-TTS-12Hz-1.7B-Base-4bit",
-  "model_revision": "37e955a1deb861c088ae5f3a67043185f3d1a60c",
-  "generation_policy": "qwen3-clone-2026-08-22-v3",
-  "seed": 20260822,
-  "content_hash": "c41631af7611570ff2d2",
-  "duration": 30.966,
+  "script_version": "narration-fish-v1",
+  "model": "fishaudio/s2.1-pro-free",
+  "model_revision": "s2.1-pro-free",
+  "generation_policy": "narration-fish-s2.1-zero-shot-2026-08-24",
+  "seed": null,
+  "content_hash": "ed42f11e42bed9039b73",
   "alignment_model": "mlx-community/Qwen3-ForcedAligner-0.6B-8bit",
-  "aligned_audio_sha256": "46cf73d70655afde24e48d40ae28596e26e37896fb6e123a57ce613b585ea29d",
-  "alignment_groups": [
-    {
-      "id": "align-group-60-61",
-      "text": "我们",
-      "indices": [
-        60,
-        61
-      ],
-      "start": 17.28,
-      "end": 17.44,
-      "method": "shared-right-model-interval",
-      "rawIntervals": [
-        {
-          "index": 60,
-          "char": "我",
-          "start": 17.28,
-          "end": 17.28
-        },
-        {
-          "index": 61,
-          "char": "们",
-          "start": 17.28,
-          "end": 17.44
-        }
-      ]
-    }
-  ]
+  "alignment_model_revision": "0e1a68e91d815300c7c9754b2a7639378b23db15",
+  "aligned_audio_sha256": "39478d8c1d7c0dfe570e32b212dbaf4dd3afbdbae66e9924240a916a31abe1d4",
+  "alignment_groups": [],
+  "duration": 27.279
 }

@@ -2,869 +2,738 @@
   "marks": [
     {
       "index": 0,
-      "char": "工",
-      "start": 0.0,
-      "end": 0.24
+      "char": "噪",
+      "start": 0,
+      "end": 1.04,
+      "alignment_group": "align-group-0-1",
+      "alignment_group_text": "噪噪"
     },
     {
       "index": 1,
-      "char": "厂",
-      "start": 0.24,
-      "end": 0.4
+      "char": "噪",
+      "start": 0,
+      "end": 1.04,
+      "alignment_group": "align-group-0-1",
+      "alignment_group_text": "噪噪"
     },
     {
       "index": 2,
-      "char": "里",
-      "start": 0.4,
-      "end": 0.56
+      "char": "声",
+      "start": 1.04,
+      "end": 1.28
     },
     {
       "index": 3,
       "char": "的",
-      "start": 0.56,
-      "end": 0.64
-    },
-    {
-      "index": 4,
-      "char": "机",
-      "start": 0.64,
-      "end": 0.88
-    },
-    {
-      "index": 5,
-      "char": "器",
-      "start": 0.88,
-      "end": 1.04
-    },
-    {
-      "index": 6,
-      "char": "一",
-      "start": 1.04,
-      "end": 1.2
-    },
-    {
-      "index": 7,
-      "char": "起",
-      "start": 1.2,
+      "start": 1.28,
       "end": 1.44
     },
     {
-      "index": 8,
-      "char": "响",
+      "index": 4,
+      "char": "噪",
       "start": 1.44,
-      "end": 1.6
+      "end": 1.76
     },
     {
-      "index": 9,
-      "char": "发",
-      "start": 2.08,
+      "index": 5,
+      "char": "读",
+      "start": 2.24,
       "end": 2.32
     },
     {
-      "index": 10,
-      "char": "出",
+      "index": 6,
+      "char": "第",
       "start": 2.32,
-      "end": 2.48
-    },
-    {
-      "index": 11,
-      "char": "的",
-      "start": 2.48,
       "end": 2.56
     },
     {
-      "index": 12,
-      "char": "嘈",
+      "index": 7,
+      "char": "四",
       "start": 2.56,
-      "end": 2.8
+      "end": 2.72
     },
     {
-      "index": 13,
-      "char": "杂",
-      "start": 2.8,
-      "end": 2.96
-    },
-    {
-      "index": 14,
+      "index": 8,
       "char": "声",
-      "start": 2.96,
-      "end": 3.2
+      "start": 2.72,
+      "end": 3.12
     },
     {
-      "index": 15,
-      "char": "音",
-      "start": 3.2,
-      "end": 3.36
+      "index": 9,
+      "char": "它",
+      "start": 3.76,
+      "end": 3.84
     },
     {
-      "index": 16,
-      "char": "就",
-      "start": 3.36,
-      "end": 3.52
-    },
-    {
-      "index": 17,
+      "index": 10,
       "char": "是",
-      "start": 3.52,
-      "end": 3.68
+      "start": 3.84,
+      "end": 4
     },
     {
-      "index": 18,
-      "char": "噪",
-      "start": 3.68,
-      "end": 3.92
-    },
-    {
-      "index": 19,
-      "char": "声",
-      "start": 3.92,
+      "index": 11,
+      "char": "左",
+      "start": 4,
       "end": 4.24
     },
     {
-      "index": 20,
-      "char": "噪",
-      "start": 4.8,
-      "end": 5.12
+      "index": 12,
+      "char": "右",
+      "start": 4.24,
+      "end": 4.4
     },
     {
-      "index": 21,
-      "char": "读",
-      "start": 5.12,
-      "end": 5.28
+      "index": 13,
+      "char": "结",
+      "start": 4.4,
+      "end": 4.64
     },
     {
-      "index": 22,
-      "char": "第",
-      "start": 5.28,
-      "end": 5.44
+      "index": 14,
+      "char": "构",
+      "start": 4.64,
+      "end": 4.88
     },
     {
-      "index": 23,
-      "char": "四",
+      "index": 15,
+      "char": "左",
       "start": 5.44,
-      "end": 5.68
+      "end": 5.6
     },
     {
-      "index": 24,
-      "char": "声",
-      "start": 5.68,
+      "index": 16,
+      "char": "边",
+      "start": 5.6,
+      "end": 5.76
+    },
+    {
+      "index": 17,
+      "char": "的",
+      "start": 5.76,
+      "end": 5.84
+    },
+    {
+      "index": 18,
+      "char": "口",
+      "start": 5.84,
       "end": 6.08
     },
     {
-      "index": 25,
-      "char": "噪",
+      "index": 19,
+      "char": "字",
+      "start": 6.08,
+      "end": 6.24
+    },
+    {
+      "index": 20,
+      "char": "旁",
       "start": 6.24,
-      "end": 6.64
+      "end": 6.56
     },
     {
-      "index": 26,
-      "char": "是",
+      "index": 21,
+      "char": "代",
       "start": 6.64,
-      "end": 6.88
+      "end": 6.8
     },
     {
-      "index": 27,
-      "char": "左",
-      "start": 6.88,
+      "index": 22,
+      "char": "表",
+      "start": 6.8,
       "end": 6.96
     },
     {
-      "index": 28,
-      "char": "右",
+      "index": 23,
+      "char": "声",
       "start": 6.96,
       "end": 7.2
     },
     {
-      "index": 29,
-      "char": "结",
+      "index": 24,
+      "char": "响",
       "start": 7.2,
-      "end": 7.44
+      "end": 7.36
     },
     {
-      "index": 30,
-      "char": "构",
-      "start": 7.44,
-      "end": 7.76
+      "index": 25,
+      "char": "右",
+      "start": 8,
+      "end": 8.16
     },
     {
-      "index": 31,
-      "char": "左",
-      "start": 8.16,
-      "end": 8.24
-    },
-    {
-      "index": 32,
+      "index": 26,
       "char": "边",
-      "start": 8.32,
+      "start": 8.16,
       "end": 8.48
     },
     {
-      "index": 33,
-      "char": "口",
-      "start": 8.48,
+      "index": 27,
+      "char": "由",
+      "start": 8.56,
       "end": 8.72
     },
     {
-      "index": 34,
-      "char": "字",
+      "index": 28,
+      "char": "许",
       "start": 8.72,
       "end": 8.88
     },
     {
-      "index": 35,
-      "char": "旁",
+      "index": 29,
+      "char": "多",
       "start": 8.88,
-      "end": 9.28
+      "end": 9.04
     },
     {
-      "index": 36,
-      "char": "右",
-      "start": 9.52,
-      "end": 9.68
+      "index": 30,
+      "char": "鸟",
+      "start": 9.12,
+      "end": 9.44
     },
     {
-      "index": 37,
-      "char": "部",
-      "start": 9.68,
+      "index": 31,
+      "char": "儿",
+      "start": 9.44,
+      "end": 9.6,
+      "alignment_group": "align-group-31-32",
+      "alignment_group_text": "儿在"
+    },
+    {
+      "index": 32,
+      "char": "在",
+      "start": 9.44,
+      "end": 9.6,
+      "alignment_group": "align-group-31-32",
+      "alignment_group_text": "儿在"
+    },
+    {
+      "index": 33,
+      "char": "树",
+      "start": 9.6,
+      "end": 9.76
+    },
+    {
+      "index": 34,
+      "char": "上",
+      "start": 9.76,
       "end": 9.92
     },
     {
-      "index": 38,
-      "char": "像",
+      "index": 35,
+      "char": "喧",
       "start": 9.92,
       "end": 10.16
     },
     {
-      "index": 39,
-      "char": "许",
+      "index": 36,
+      "char": "闹",
       "start": 10.16,
       "end": 10.32
     },
     {
-      "index": 40,
-      "char": "多",
+      "index": 37,
+      "char": "的",
       "start": 10.32,
       "end": 10.48
     },
     {
-      "index": 41,
-      "char": "声",
+      "index": 38,
+      "char": "喿",
       "start": 10.48,
-      "end": 10.72
+      "end": 10.8
+    },
+    {
+      "index": 39,
+      "char": "提",
+      "start": 10.96,
+      "end": 11.12
+    },
+    {
+      "index": 40,
+      "char": "示",
+      "start": 11.12,
+      "end": 11.28
+    },
+    {
+      "index": 41,
+      "char": "读",
+      "start": 11.28,
+      "end": 11.44
     },
     {
       "index": 42,
       "char": "音",
-      "start": 10.72,
-      "end": 10.88
-    },
-    {
-      "index": 43,
-      "char": "挤",
-      "start": 10.88,
-      "end": 11.04
-    },
-    {
-      "index": 44,
-      "char": "在",
-      "start": 11.04,
-      "end": 11.2
-    },
-    {
-      "index": 45,
-      "char": "一",
-      "start": 11.2,
-      "end": 11.36
-    },
-    {
-      "index": 46,
-      "char": "起",
-      "start": 11.36,
+      "start": 11.44,
       "end": 11.76
     },
     {
-      "index": 47,
-      "char": "可",
-      "start": 12.24,
-      "end": 12.32
-    },
-    {
-      "index": 48,
-      "char": "以",
+      "index": 43,
+      "char": "群",
       "start": 12.32,
       "end": 12.48
     },
     {
-      "index": 49,
-      "char": "这",
+      "index": 44,
+      "char": "口",
       "start": 12.48,
       "end": 12.64
     },
     {
-      "index": 50,
-      "char": "样",
+      "index": 45,
+      "char": "喧",
       "start": 12.64,
-      "end": 12.8
+      "end": 12.96
     },
     {
-      "index": 51,
-      "char": "记",
-      "start": 12.8,
+      "index": 46,
+      "char": "嚷",
+      "start": 12.96,
       "end": 13.2
     },
     {
-      "index": 52,
-      "char": "几",
-      "start": 13.52,
-      "end": 13.68
+      "index": 47,
+      "char": "即",
+      "start": 13.28,
+      "end": 13.44
     },
     {
-      "index": 53,
-      "char": "张",
+      "index": 48,
+      "char": "为",
+      "start": 13.44,
+      "end": 13.6
+    },
+    {
+      "index": 49,
+      "char": "噪",
       "start": 13.68,
-      "end": 13.84
+      "end": 14
     },
     {
-      "index": 54,
-      "char": "嘴",
-      "start": 13.84,
-      "end": 14.0
-    },
-    {
-      "index": 55,
-      "char": "同",
-      "start": 14.0,
+      "index": 50,
+      "char": "噪",
+      "start": 14.08,
       "end": 14.24
     },
     {
-      "index": 56,
-      "char": "时",
+      "index": 51,
+      "char": "声",
       "start": 14.24,
-      "end": 14.4
-    },
-    {
-      "index": 57,
-      "char": "说",
-      "start": 14.4,
       "end": 14.64
     },
     {
-      "index": 58,
-      "char": "话",
+      "index": 52,
+      "char": "指",
       "start": 14.64,
-      "end": 14.96
+      "end": 14.8
     },
     {
-      "index": 59,
-      "char": "声",
-      "start": 15.2,
-      "end": 15.44
+      "index": 53,
+      "char": "嘈",
+      "start": 14.8,
+      "end": 15.04
     },
     {
-      "index": 60,
-      "char": "音",
-      "start": 15.44,
+      "index": 54,
+      "char": "杂",
+      "start": 15.04,
+      "end": 15.28
+    },
+    {
+      "index": 55,
+      "char": "刺",
+      "start": 15.28,
+      "end": 15.52
+    },
+    {
+      "index": 56,
+      "char": "耳",
+      "start": 15.52,
       "end": 15.68
     },
     {
-      "index": 61,
-      "char": "一",
-      "start": 15.68,
-      "end": 15.84
-    },
-    {
-      "index": 62,
-      "char": "层",
-      "start": 15.84,
+      "index": 57,
+      "char": "令",
+      "start": 15.92,
       "end": 16.08
     },
     {
-      "index": 63,
-      "char": "压",
+      "index": 58,
+      "char": "人",
       "start": 16.08,
       "end": 16.24
     },
     {
-      "index": 64,
-      "char": "着",
+      "index": 59,
+      "char": "不",
       "start": 16.24,
       "end": 16.4
     },
     {
-      "index": 65,
-      "char": "一",
+      "index": 60,
+      "char": "适",
       "start": 16.4,
       "end": 16.56
     },
     {
-      "index": 66,
-      "char": "层",
+      "index": 61,
+      "char": "的",
       "start": 16.56,
+      "end": 16.72
+    },
+    {
+      "index": 62,
+      "char": "声",
+      "start": 16.72,
       "end": 16.96
     },
     {
-      "index": 67,
-      "char": "画",
-      "start": 17.28,
-      "end": 17.52
+      "index": 63,
+      "char": "音",
+      "start": 16.96,
+      "end": 17.2
     },
     {
-      "index": 68,
-      "char": "面",
-      "start": 17.52,
+      "index": 64,
+      "char": "课",
+      "start": 17.6,
       "end": 17.76
     },
     {
-      "index": 69,
-      "char": "只",
+      "index": 65,
+      "char": "文",
       "start": 17.76,
-      "end": 17.92
+      "end": 18.08
     },
     {
-      "index": 70,
-      "char": "帮",
-      "start": 17.92,
-      "end": 18.16
+      "index": 66,
+      "char": "写",
+      "start": 18.08,
+      "end": 18.24
     },
     {
-      "index": 71,
-      "char": "助",
-      "start": 18.16,
-      "end": 18.4
+      "index": 67,
+      "char": "母",
+      "start": 18.24,
+      "end": 18.48
     },
     {
-      "index": 72,
-      "char": "我",
-      "start": 18.4,
-      "end": 18.56,
-      "alignment_group": "align-group-72-73",
-      "alignment_group_text": "我们"
+      "index": 68,
+      "char": "亲",
+      "start": 18.48,
+      "end": 18.64
     },
     {
-      "index": 73,
-      "char": "们",
-      "start": 18.4,
-      "end": 18.56,
-      "alignment_group": "align-group-72-73",
-      "alignment_group_text": "我们"
-    },
-    {
-      "index": 74,
-      "char": "看",
-      "start": 18.56,
+      "index": 69,
+      "char": "劳",
+      "start": 18.64,
       "end": 18.8
     },
     {
-      "index": 75,
-      "char": "清",
+      "index": 70,
+      "char": "作",
       "start": 18.8,
       "end": 18.96
     },
     {
-      "index": 76,
-      "char": "字",
+      "index": 71,
+      "char": "的",
       "start": 18.96,
       "end": 19.12
     },
     {
-      "index": 77,
-      "char": "形",
+      "index": 72,
+      "char": "车",
       "start": 19.12,
-      "end": 19.6
+      "end": 19.28
+    },
+    {
+      "index": 73,
+      "char": "间",
+      "start": 19.28,
+      "end": 19.52
+    },
+    {
+      "index": 74,
+      "char": "里",
+      "start": 19.52,
+      "end": 19.76
+    },
+    {
+      "index": 75,
+      "char": "缝",
+      "start": 19.84,
+      "end": 20.08
+    },
+    {
+      "index": 76,
+      "char": "纫",
+      "start": 20.08,
+      "end": 20.24
+    },
+    {
+      "index": 77,
+      "char": "机",
+      "start": 20.24,
+      "end": 20.56
     },
     {
       "index": 78,
-      "char": "噪",
-      "start": 20.16,
-      "end": 20.4
-    },
-    {
-      "index": 79,
       "char": "声",
-      "start": 20.4,
-      "end": 20.64
-    },
-    {
-      "index": 80,
-      "char": "会",
-      "start": 20.64,
+      "start": 20.56,
       "end": 20.8
     },
     {
-      "index": 81,
-      "char": "妨",
+      "index": 79,
+      "char": "音",
       "start": 20.8,
-      "end": 21.04
+      "end": 20.96
     },
     {
-      "index": 82,
-      "char": "碍",
-      "start": 21.04,
+      "index": 80,
+      "char": "震",
+      "start": 20.96,
       "end": 21.12
     },
     {
-      "index": 83,
-      "char": "交",
+      "index": 81,
+      "char": "耳",
       "start": 21.12,
-      "end": 21.36
+      "end": 21.28
     },
     {
-      "index": 84,
-      "char": "谈",
-      "start": 21.36,
+      "index": 82,
+      "char": "欲",
+      "start": 21.28,
+      "end": 21.44
+    },
+    {
+      "index": 83,
+      "char": "聋",
+      "start": 21.44,
       "end": 21.76
     },
     {
-      "index": 85,
-      "char": "也",
-      "start": 22.0,
-      "end": 22.08
-    },
-    {
-      "index": 86,
-      "char": "让",
-      "start": 22.08,
-      "end": 22.24
-    },
-    {
-      "index": 87,
-      "char": "人",
-      "start": 22.24,
-      "end": 22.4
-    },
-    {
-      "index": 88,
-      "char": "感",
-      "start": 22.4,
+      "index": 84,
+      "char": "刺",
+      "start": 22.32,
       "end": 22.56
     },
     {
-      "index": 89,
-      "char": "到",
+      "index": 85,
+      "char": "耳",
       "start": 22.56,
       "end": 22.72
     },
     {
-      "index": 90,
-      "char": "不",
+      "index": 86,
+      "char": "的",
       "start": 22.72,
       "end": 22.88
     },
     {
-      "index": 91,
-      "char": "舒",
+      "index": 87,
+      "char": "噪",
       "start": 22.88,
-      "end": 23.12
+      "end": 23.04
+    },
+    {
+      "index": 88,
+      "char": "声",
+      "start": 23.04,
+      "end": 23.36
+    },
+    {
+      "index": 89,
+      "char": "更",
+      "start": 23.44,
+      "end": 23.68
+    },
+    {
+      "index": 90,
+      "char": "加",
+      "start": 23.68,
+      "end": 23.84
+    },
+    {
+      "index": 91,
+      "char": "烘",
+      "start": 23.84,
+      "end": 24.08
     },
     {
       "index": 92,
-      "char": "服",
-      "start": 23.12,
-      "end": 23.52
+      "char": "托",
+      "start": 24.08,
+      "end": 24.16
     },
     {
       "index": 93,
-      "char": "文",
-      "start": 23.84,
-      "end": 24.0
+      "char": "出",
+      "start": 24.16,
+      "end": 24.48
     },
     {
       "index": 94,
-      "char": "章",
-      "start": 24.0,
-      "end": 24.24
+      "char": "母",
+      "start": 24.56,
+      "end": 24.72
     },
     {
       "index": 95,
-      "char": "把",
-      "start": 24.24,
-      "end": 24.4
-    },
-    {
-      "index": 96,
-      "char": "孩",
-      "start": 24.4,
-      "end": 24.64
-    },
-    {
-      "index": 97,
-      "char": "子",
-      "start": 24.64,
-      "end": 24.8
-    },
-    {
-      "index": 98,
-      "char": "放",
-      "start": 24.8,
+      "char": "亲",
+      "start": 24.72,
       "end": 24.88
     },
     {
-      "index": 99,
-      "char": "进",
-      "start": 24.96,
+      "index": 96,
+      "char": "日",
+      "start": 24.88,
       "end": 25.12
     },
     {
-      "index": 100,
-      "char": "震",
+      "index": 97,
+      "char": "复",
       "start": 25.12,
       "end": 25.28
     },
     {
-      "index": 101,
-      "char": "耳",
+      "index": 98,
+      "char": "一",
       "start": 25.28,
       "end": 25.44
     },
     {
-      "index": 102,
-      "char": "的",
+      "index": 99,
+      "char": "日",
       "start": 25.44,
-      "end": 25.52
+      "end": 25.68
     },
     {
-      "index": 103,
-      "char": "厂",
-      "start": 25.52,
-      "end": 25.76
-    },
-    {
-      "index": 104,
-      "char": "房",
+      "index": 100,
+      "char": "辛",
       "start": 25.76,
-      "end": 26.08
+      "end": 26
     },
     {
-      "index": 105,
-      "char": "中",
-      "start": 26.08,
+      "index": 101,
+      "char": "勤",
+      "start": 26,
+      "end": 26.24
+    },
+    {
+      "index": 102,
+      "char": "劳",
+      "start": 26.24,
       "end": 26.4
     },
     {
-      "index": 106,
-      "char": "他",
-      "start": 26.56,
-      "end": 26.72
+      "index": 103,
+      "char": "作",
+      "start": 26.4,
+      "end": 26.56
     },
     {
-      "index": 107,
-      "char": "要",
-      "start": 26.72,
+      "index": 104,
+      "char": "的",
+      "start": 26.56,
+      "end": 26.64
+    },
+    {
+      "index": 105,
+      "char": "艰",
+      "start": 26.64,
       "end": 26.88
     },
     {
-      "index": 108,
-      "char": "靠",
+      "index": 106,
+      "char": "辛",
       "start": 26.88,
-      "end": 27.04
-    },
-    {
-      "index": 109,
-      "char": "近",
-      "start": 27.04,
       "end": 27.2
     },
     {
-      "index": 110,
-      "char": "母",
-      "start": 27.2,
-      "end": 27.36
+      "index": 107,
+      "char": "与",
+      "start": 27.28,
+      "end": 27.44
     },
     {
-      "index": 111,
-      "char": "亲",
-      "start": 27.36,
-      "end": 27.68
+      "index": 108,
+      "char": "伟",
+      "start": 27.44,
+      "end": 27.6
     },
     {
-      "index": 112,
-      "char": "才",
-      "start": 27.68,
-      "end": 27.76
-    },
-    {
-      "index": 113,
-      "char": "能",
-      "start": 27.76,
-      "end": 27.92
-    },
-    {
-      "index": 114,
-      "char": "说",
-      "start": 27.92,
-      "end": 28.08
-    },
-    {
-      "index": 115,
-      "char": "话",
-      "start": 28.08,
-      "end": 28.48
-    },
-    {
-      "index": 116,
-      "char": "我",
-      "start": 28.96,
-      "end": 29.04,
-      "alignment_group": "align-group-116-117",
-      "alignment_group_text": "我们"
-    },
-    {
-      "index": 117,
-      "char": "们",
-      "start": 28.96,
-      "end": 29.04,
-      "alignment_group": "align-group-116-117",
-      "alignment_group_text": "我们"
-    },
-    {
-      "index": 118,
-      "char": "也",
-      "start": 29.04,
-      "end": 29.2
-    },
-    {
-      "index": 119,
-      "char": "更",
-      "start": 29.2,
-      "end": 29.36
-    },
-    {
-      "index": 120,
-      "char": "能",
-      "start": 29.36,
-      "end": 29.52
-    },
-    {
-      "index": 121,
-      "char": "体",
-      "start": 29.52,
-      "end": 29.76
-    },
-    {
-      "index": 122,
-      "char": "会",
-      "start": 29.76,
-      "end": 29.92
-    },
-    {
-      "index": 123,
-      "char": "母",
-      "start": 29.92,
-      "end": 30.08
-    },
-    {
-      "index": 124,
-      "char": "亲",
-      "start": 30.08,
-      "end": 30.32
-    },
-    {
-      "index": 125,
-      "char": "每",
-      "start": 30.32,
-      "end": 30.48
-    },
-    {
-      "index": 126,
-      "char": "天",
-      "start": 30.48,
-      "end": 30.64
-    },
-    {
-      "index": 127,
-      "char": "工",
-      "start": 30.64,
-      "end": 30.8
-    },
-    {
-      "index": 128,
-      "char": "作",
-      "start": 30.8,
-      "end": 30.96
-    },
-    {
-      "index": 129,
-      "char": "的",
-      "start": 30.96,
-      "end": 31.04
-    },
-    {
-      "index": 130,
-      "char": "环",
-      "start": 31.04,
-      "end": 31.28
-    },
-    {
-      "index": 131,
-      "char": "境",
-      "start": 31.28,
-      "end": 31.44
+      "index": 109,
+      "char": "大",
+      "start": 27.6,
+      "end": 27.84
     }
   ],
-  "transcript": "工厂里的机器一起响，发出的嘈杂声音就是噪声，噪读第四声。噪是左右结构，左边口字旁，右部像许多声音挤在一起。可以这样记，几张嘴同时说话，声音一层压着一层，画面只帮助我们看清字形。噪声会妨碍交谈，也让人感到不舒服。文章把孩子放进震耳的厂房中，他要靠近母亲才能说话，我们也更能体会母亲每天工作的环境。",
+  "transcript": "噪，噪声的噪，读第四声。它是左右结构，左边的口字旁代表声响，右边由许多鸟儿在树上喧闹的“喿”提示读音，群口喧嚷即为噪。噪声指嘈杂刺耳、令人不适的声音。课文写母亲劳作的车间里缝纫机声音震耳欲聋，刺耳的噪声更加烘托出母亲日复一日辛勤劳作的艰辛与伟大。",
   "voice_reference": "封",
   "reference_id": "019f0554-ea22-762e-966c-32d678fd6bf6",
   "reference_sha256": "eb07e06ee13a20ee4577b1b481df6d33d42127c1b3876bfa5d5e5362ae349f19",
   "timing_source": "qwen3-forced-aligner",
-  "script_version": "narration-v3",
-  "model": "mlx-community/Qwen3-TTS-12Hz-1.7B-Base-4bit",
-  "model_revision": "37e955a1deb861c088ae5f3a67043185f3d1a60c",
-  "generation_policy": "qwen3-clone-2026-08-22-v3",
-  "seed": 20260822,
-  "content_hash": "659ce6ef0b56c4396afe",
-  "duration": 31.489,
+  "script_version": "narration-fish-v1",
+  "model": "fishaudio/s2.1-pro-free",
+  "model_revision": "s2.1-pro-free",
+  "generation_policy": "narration-fish-s2.1-zero-shot-2026-08-24",
+  "seed": null,
+  "content_hash": "76ec1dd118eedc71e8c8",
   "alignment_model": "mlx-community/Qwen3-ForcedAligner-0.6B-8bit",
-  "aligned_audio_sha256": "6fccd17d244cc574d867dccb7ea91fd0c1a2c52b8d7cbc9250168f7fde593ff3",
+  "alignment_model_revision": "0e1a68e91d815300c7c9754b2a7639378b23db15",
+  "aligned_audio_sha256": "dfd5d078251efd275bc963a5b95804cc5005879da7ff11d1f3b34c787b3ceddf",
   "alignment_groups": [
     {
-      "id": "align-group-72-73",
-      "text": "我们",
+      "id": "align-group-0-1",
+      "text": "噪噪",
       "indices": [
-        72,
-        73
+        0,
+        1
       ],
-      "start": 18.4,
-      "end": 18.56,
-      "method": "shared-right-model-interval",
+      "start": 0,
+      "end": 1.04,
+      "method": "zero-anchor-right-envelope",
       "rawIntervals": [
         {
-          "index": 72,
-          "char": "我",
-          "start": 18.4,
-          "end": 18.4
+          "index": 0,
+          "char": "噪",
+          "start": 0,
+          "end": 0
         },
         {
-          "index": 73,
-          "char": "们",
-          "start": 18.4,
-          "end": 18.56
+          "index": 1,
+          "char": "噪",
+          "start": 0.88,
+          "end": 1.04
         }
       ]
     },
     {
-      "id": "align-group-116-117",
-      "text": "我们",
+      "id": "align-group-31-32",
+      "text": "儿在",
       "indices": [
-        116,
-        117
+        31,
+        32
       ],
-      "start": 28.96,
-      "end": 29.04,
+      "start": 9.44,
+      "end": 9.6,
       "method": "shared-right-model-interval",
       "rawIntervals": [
         {
-          "index": 116,
-          "char": "我",
-          "start": 28.96,
-          "end": 28.96
+          "index": 31,
+          "char": "儿",
+          "start": 9.44,
+          "end": 9.44
         },
         {
-          "index": 117,
-          "char": "们",
-          "start": 28.96,
-          "end": 29.04
+          "index": 32,
+          "char": "在",
+          "start": 9.44,
+          "end": 9.6
         }
       ]
     }
-  ]
+  ],
+  "duration": 28.037
 }

@@ -3,13 +3,16 @@ import { handleImageOptimization, DEFAULT_DEVICE_SIZES, DEFAULT_IMAGE_SIZES } fr
 import handler from "vinext/server/app-router-entry";
 import { runWithRuntimeEnv } from "../app/lib/runtime-env.ts";
 
-type RuntimeEnv = Partial<Env> & { IMAGES?: ImagesBinding };
+type RuntimeEnv = Partial<Env> & {
+  IMAGES?: ImagesBinding;
+  NARRATION_SEED_TOKEN?: string;
+};
 
 const IMMUTABLE_CACHE = "public, max-age=31536000, immutable";
 
 function narrationRequestPath(pathname: string) {
   const match = /^\/media\/narration\/(v\d+)\/([a-z0-9-]+\/(?:audio\.webm|audio-marks\.json))$/.exec(pathname);
-  if (!match || !new Set(["v3", "v4"]).has(match[1])) return null;
+  if (!match || !new Set(["v5"]).has(match[1])) return null;
   return { version: match[1], relative: match[2] };
 }
 
@@ -53,6 +56,55 @@ function narrationHeaders(relative: string, size?: number, etag?: string) {
   if (typeof size === "number") headers.set("content-length", String(size));
   if (etag) headers.set("etag", etag);
   return headers;
+}
+
+async function seedNarration(request: Request, env: RuntimeEnv) {
+  if (request.method !== "POST") {
+    return new Response("Method not allowed", { status: 405, headers: { allow: "POST" } });
+  }
+
+  const token = env.NARRATION_SEED_TOKEN;
+  if (!token || request.headers.get("x-narration-seed-token") !== token) {
+    return new Response("Not found", { status: 404 });
+  }
+
+  const url = new URL(request.url);
+  const relative = url.searchParams.get("relative") || "";
+  if (!/^[a-z0-9-]+\/(?:audio\.webm|audio-marks\.json)$/.test(relative)) {
+    return new Response("Invalid narration path", { status: 400 });
+  }
+  const version = url.searchParams.get("version") || "v5";
+  if (!new Set(["v3", "v4", "v5"]).has(version)) {
+    return new Response("Invalid narration version", { status: 400 });
+  }
+  if (!env.MEDIA) return new Response("Media binding unavailable", { status: 503 });
+
+  const objectKey = `built-in/narration/${version}/${relative}`;
+  if (url.searchParams.get("action") === "delete") {
+    await env.MEDIA.delete(objectKey);
+    return Response.json({ action: "delete", version, relative });
+  }
+  if (version !== "v5") return new Response("Only v5 uploads are allowed", { status: 400 });
+
+  const contentType = relative.endsWith(".webm")
+    ? "audio/webm; codecs=opus"
+    : "application/json; charset=utf-8";
+  const declaredLength = Number(request.headers.get("content-length"));
+  if (Number.isFinite(declaredLength) && declaredLength > 16 * 1024 * 1024) {
+    return new Response("Narration file is too large", { status: 413 });
+  }
+  const bytes = await request.arrayBuffer();
+  if (!bytes.byteLength || bytes.byteLength > 16 * 1024 * 1024) {
+    return new Response("Narration file is too large", { status: 413 });
+  }
+
+  await env.MEDIA.put(objectKey, bytes, {
+    httpMetadata: {
+      contentType,
+      cacheControl: IMMUTABLE_CACHE,
+    },
+  });
+  return Response.json({ action: "put", version, relative, bytes: bytes.byteLength });
 }
 
 async function serveNarration(
@@ -133,6 +185,10 @@ const worker = {
     const narrationPath = narrationRequestPath(url.pathname);
     if (narrationPath) {
       return serveNarration(request, env, narrationPath.version, narrationPath.relative);
+    }
+
+    if (url.pathname === "/api/internal/narration-seed") {
+      return seedNarration(request, env);
     }
 
     if (isDeliveryAsset(url.pathname) && env.ASSETS) {

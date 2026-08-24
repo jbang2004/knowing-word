@@ -31,9 +31,9 @@ export const releasedNarrationTranscripts: Record<string, ReleasedNarrationTrans
     "glyph": "嫌",
     "lessonId": "g5v1-l01",
     "word": "嫌弃",
-    "transcript": "白鹤太大显得生硬，粉红的朱鹭和灰色的苍鹭也大了一些，作者用比较写出白鹭的适宜。嫌弃表示因为不喜欢而躲开或不愿接近。嫌是左右结构，左边女字旁，右边兼得的兼，可以想成一个人侧身避开两只并排的篮子。这个画面只帮我们记住左右位置。再读“增之一分则嫌长，减之一分则嫌短”，嫌就是觉得不合适。",
-    "contentHash": "649f54f0380e6179fc74",
-    "audioSha256": "efe974dc0f6831a0225106e42d7a85682bffc41a3f4de385773ce202f38f92ac"
+    "transcript": "嫌，嫌弃的嫌，读第二声。嫌是左右结构，左边的女字旁点明人物，右边的兼提示读音。看图时，左边人物侧身避让，右边两只竹篮并提，左右组合成嫌。嫌弃指觉得不合适而躲开。课文赞美白鹭色素与身段无不适宜，增之一分则嫌长，减之一分则嫌短，将白鹭恰到好处的美写到了极致。",
+    "contentHash": "fc3bbb08880cb15e5d5c",
+    "audioSha256": "66cd08690c247095bf52f9d40c8e109fc8141aa84c0cc6675fdf243d4ac15296"
   },
   "g5v1-l01-c03-u5d4c": {
     "recordId": "g5v1-l01-c03-u5d4c",
@@ -193,9 +193,9 @@ export const releasedNarrationTranscripts: Record<string, ReleasedNarrationTrans
     "glyph": "咐",
     "lessonId": "g5v1-l02",
     "word": "吩咐",
-    "transcript": "咐，要和吩连起来读成“吩咐”。咐是左右结构，左边是口，右边是付，可以想象一个人开口把任务交到另一人手中。这个交任务的画面只帮助我们记住左右位置。吩咐表示用话把要做的事情交代清楚。母亲一声吩咐全家到茅亭过收获节，孩子们听懂安排，人物和场景也从田地转到了全家谈花生的夜晚。",
-    "contentHash": "e0bd8d11ba537da140ad",
-    "audioSha256": "8665007a3fddfbf5ccc1253b5cb99c711bf5da6acf9c679fe1e01431f834c30a"
+    "transcript": "咐，吩咐的咐，读第四声。咐通常与吩连用成词，它是左右结构，左边是开口说话的口字旁，右边的“付”提示读音，两边相合即为咐。吩咐指用语言交代事情。课文里母亲吩咐全家到茅亭过收获节，全家人围坐在一起品尝花生、谈论做人的道理，气氛温馨融洽。",
+    "contentHash": "4daf97e3033ef1c96847",
+    "audioSha256": "cd38040c595b807e630da7b03a0bf7dcf02cf45934872b87838a986ba476bfb0"
   },
   "g5v1-l02-c09-u4ead": {
     "recordId": "g5v1-l02-c09-u4ead",
@@ -265,9 +265,9 @@ export const releasedNarrationTranscripts: Record<string, ReleasedNarrationTrans
     "glyph": "婆",
     "lessonId": "g5v1-l03",
     "word": "老婆婆",
-    "transcript": "母亲说，要送一箩桂花给毛家老婆婆，因为她家做的糕饼多。老婆婆通常指年老的女性，课文里说的是毛家的一位老人。婆是上下结构，上面是波浪的波，下面是女字底，可以想成一位长辈披着水波纹披肩安稳坐着。披肩在上，人物在下。这个画面只帮我们记住婆的上下位置。",
-    "contentHash": "613089a75cec82560c6f",
-    "audioSha256": "a22b91009a5d3ee80362b036bb3ef201bfb7dd87bed1b2981082a4f0ece23588"
+    "transcript": "婆，老婆婆的婆，读第二声。婆是上下结构，上面的“波”提示读音，下面的“女”点明长辈女性身份，上下相合即为婆。老婆婆指慈祥年长的长辈。课文里母亲带着孩子把摇落的一箩新鲜桂花送给毛家老婆婆做糕饼，展现了江南水乡邻里之间互助互爱、亲密无间的淳朴温情。",
+    "contentHash": "ea0bd30278c12c4ac5d0",
+    "audioSha256": "ec71300badf13360778d163a583e77a29a080601597b89af0253c203a7bed125"
   },
   "g5v1-l03-c06-u7cd5": {
     "recordId": "g5v1-l03-c06-u7cd5",
@@ -931,9 +931,9 @@ export const releasedNarrationTranscripts: Record<string, ReleasedNarrationTrans
     "glyph": "略",
     "lessonId": "g5v1-l08",
     "word": "侵略",
-    "transcript": "略，侵略的略。它是左右结构，左边像一块块田地，右边可以想成外来的脚步闯到各家门前。把田地和闯入者并排放好，只是为了记住略的样子。课文写敌人侵略冀中，人民修地道保卫家园，侵略就是用武力侵犯别国领土和人民。",
-    "contentHash": "d6e6c99b1ca46c5796d0",
-    "audioSha256": "ab52aa93bbc242a30442fdb1a7dfa3d361e64eecba2dbd993145847634f17c38"
+    "transcript": "略，侵略的略，读第四声。它是左右结构，左边是一块块纵横的田地，右边的“各”像外来强盗闯入各个村庄的脚步，左右组合成略。侵略指用武力强行进犯侵占别国领土。课文写面对日本侵略者的疯狂扫荡，冀中人民在地底下修筑起神奇的地道网络，坚强地保卫了家园。",
+    "contentHash": "96417b06bcac27e02450",
+    "audioSha256": "9b58d12ce3afd3fdc12df51e47dc3499a8399aebb505e061683a1c3df174ae72"
   },
   "g5v1-l08-c03-u5792": {
     "recordId": "g5v1-l08-c03-u5792",
@@ -1399,9 +1399,9 @@ export const releasedNarrationTranscripts: Record<string, ReleasedNarrationTrans
     "glyph": "珊",
     "lessonId": "g5v1-l11",
     "word": "珊瑚",
-    "transcript": "王母娘娘发誓，就算织女藏到大海中心的珊瑚礁上，也要把她抓回来。珊瑚礁在这句话里是藏身很远、很难到达的地方，衬出王母追赶的决绝。珊的左边是王字旁，右边的册可以想成两排并列伸展的珊瑚枝。并排的枝形只帮我们看清左右位置，再把珊和瑚连起来认。",
-    "contentHash": "1b6dbb110dbddfff9bb4",
-    "audioSha256": "070f09a1be83a1f0ba406b17decffdfeba3d499f0fa56bc320511e700d85994f"
+    "transcript": "珊，珊瑚的珊，读第一声。珊常与瑚连用成词，它是左右结构，左边的王字旁表明玉石光泽，右边的“册”像两排并列舒展的珊瑚枝，左右组合成珊。珊瑚是生长在海洋中的绚丽骨骼。课文中王母恶狠狠地声称就算追到天涯海角的珊瑚礁也不放过织女，突出了追赶的决绝。",
+    "contentHash": "3167ff5943eeabd4c612",
+    "audioSha256": "dee8b3ed7226615d29c42c5ff9ee44e2f0b63d54577983aff7888bcdc9fd70d5"
   },
   "g5v1-l11-c06-u745a": {
     "recordId": "g5v1-l11-c06-u745a",
@@ -2047,9 +2047,9 @@ export const releasedNarrationTranscripts: Record<string, ReleasedNarrationTrans
     "glyph": "藓",
     "lessonId": "g5v1-l17",
     "word": "苔藓",
-    "transcript": "潮湿的树皮上常铺着一层绿绿的苔藓，藓读第三声。藓是上下结构，上面草字头，下面是鲜。看这个字时，可以想象细小绿草铺在湿润地面上，颜色鲜亮，这幅画只用来记字形。苔藓是一类贴着潮湿地面或树皮生长的小植物。文章介绍松鼠搭窝时提到苔藓，它能把窝里铺得柔软又严实。",
-    "contentHash": "bdd49e0c6b82e08b37b0",
-    "audioSha256": "d067ae1582827b4b3c2858bc634520235301cc013377861640d3fe23e9715770"
+    "transcript": "藓，苔藓的藓，读第三声。藓是上下结构，上面的草字头表明它是植物，下面的“鲜”提示读音与嫩绿色彩，上下组合成藓。苔藓是贴着潮湿树皮或地面生长的低矮植物。课文写松鼠搭窝时采来柔软干燥的苔藓铺在窝底，把小窝打理得格外暖和舒适，表现出松鼠聪明讲究的习性。",
+    "contentHash": "5d18a8dadb63c4b90a8d",
+    "audioSha256": "b6079fb228eef0d841f55309cd01fa2adaab2465cb3100c5b8ae60fbcc8c2a2c"
   },
   "g5v1-l17-c06-u72ed": {
     "recordId": "g5v1-l17-c06-u72ed",
@@ -2083,9 +2083,9 @@ export const releasedNarrationTranscripts: Record<string, ReleasedNarrationTrans
     "glyph": "鼠",
     "lessonId": "g5v1-l17",
     "word": "松鼠",
-    "transcript": "看到蓬松的大尾巴，就容易认出松鼠，鼠读第三声。鼠是独体字，笔画多，适合把上半和下半分开看，再顺着整体轮廓记。可以想象小鼠缩着头，长尾巴从身后弯出来，这幅画只帮助认字。松鼠善于攀爬和跳跃，尾巴还能帮助它保持平衡。文章从外形、动作和住处几方面观察松鼠，让这只小动物的样子十分鲜活。",
-    "contentHash": "9bac9f63c21003e22105",
-    "audioSha256": "98bbb0dd43a1a864dae7ca56b7a8d38d671a377517d40bdf2b2b864ab9b9c140"
+    "transcript": "鼠，松鼠的鼠，读第三声。鼠是独体字，上部像灵敏机警的小兽头部与胡须，下部弯折笔画与四点宛如爪子与长尾，整体勾勒出一只活泼的小动物。松鼠是一种生活在树林里的小型啮齿动物。课文从外形、活动、搭窝等多个角度细致描写松鼠，展现了小动物漂亮驯良、讨人喜欢的特质。",
+    "contentHash": "08608ae5408f44bf6e98",
+    "audioSha256": "bfed93a0208946e09364bd9b417b5a7cdb7f212adb6a601a15e52f5bb5c6c548"
   },
   "g5v1-l17-c10-u79c0": {
     "recordId": "g5v1-l17-c10-u79c0",
@@ -2146,9 +2146,9 @@ export const releasedNarrationTranscripts: Record<string, ReleasedNarrationTrans
     "glyph": "滑",
     "lessonId": "g5v1-l17",
     "word": "光滑",
-    "transcript": "手摸过去平平的，没有明显粗糙感，就叫光滑，滑读第二声。滑是左右结构，左边三点水，右边的部分笔画较密。记字时，可以想象清水从圆润石面流过，手一碰就顺顺地滑开，画面只帮助我们看清字形。光滑形容表面平整，摩擦和阻碍较小。文章写松鼠在高树上活动，光滑的树干更能衬出它攀爬的灵活。",
-    "contentHash": "df18d72412b6a3ca1f0a",
-    "audioSha256": "faab3444cd81c9188570939d09b9c9e8d50d0a5332836cec04c1ba2a4efd324e"
+    "transcript": "滑，光滑的滑，读第二声。它是左右结构，左边的三点水表明如水流般润泽，右边的“骨”像平整圆润的骨骼架子，水过润石、平整无阻即为滑。光滑形容物体表面平整不粗糙。课文写松鼠搭建的小窝内部被苔藓踩得极其光滑平整，风雨不透，生动展现了松鼠高超的筑巢本领。",
+    "contentHash": "375b619a46e7ab47fd0d",
+    "audioSha256": "0809a92a5046ce88f1b3e0a225295eb459e09fd828ce89687fb7f2077d08e985"
   },
   "g5v1-l17-c17-u62fe": {
     "recordId": "g5v1-l17-c17-u62fe",
@@ -2209,9 +2209,9 @@ export const releasedNarrationTranscripts: Record<string, ReleasedNarrationTrans
     "glyph": "噪",
     "lessonId": "g5v1-l18",
     "word": "噪声",
-    "transcript": "工厂里的机器一起响，发出的嘈杂声音就是噪声，噪读第四声。噪是左右结构，左边口字旁，右部像许多声音挤在一起。可以这样记，几张嘴同时说话，声音一层压着一层，画面只帮助我们看清字形。噪声会妨碍交谈，也让人感到不舒服。文章把孩子放进震耳的厂房中，他要靠近母亲才能说话，我们也更能体会母亲每天工作的环境。",
-    "contentHash": "659ce6ef0b56c4396afe",
-    "audioSha256": "6fccd17d244cc574d867dccb7ea91fd0c1a2c52b8d7cbc9250168f7fde593ff3"
+    "transcript": "噪，噪声的噪，读第四声。它是左右结构，左边的口字旁代表声响，右边由许多鸟儿在树上喧闹的“喿”提示读音，群口喧嚷即为噪。噪声指嘈杂刺耳、令人不适的声音。课文写母亲劳作的车间里缝纫机声音震耳欲聋，刺耳的噪声更加烘托出母亲日复一日辛勤劳作的艰辛与伟大。",
+    "contentHash": "76ec1dd118eedc71e8c8",
+    "audioSha256": "dfd5d078251efd275bc963a5b95804cc5005879da7ff11d1f3b34c787b3ceddf"
   },
   "g5v1-l18-c06-u8910": {
     "recordId": "g5v1-l18-c06-u8910",
@@ -2272,9 +2272,9 @@ export const releasedNarrationTranscripts: Record<string, ReleasedNarrationTrans
     "glyph": "碌",
     "lessonId": "g5v1-l18",
     "word": "忙碌",
-    "transcript": "忙碌的碌，读第四声。碌是左右结构，左边石字旁，右边是记录的录，左窄右宽。记字时，可以想象石轮不停转动，旁边的人一件接一件记录工作，画面只帮助我们看清字形。忙碌形容事情很多，手脚不停，很少有空闲。文章写母亲立刻又陷入机器和布料之间，那一连串动作让忙碌变得看得见。",
-    "contentHash": "ee58d440170c6cc002f3",
-    "audioSha256": "da5329a39978fca9cfe75b75da63950d465a91fa6c25c8ff24a891381ae563b9"
+    "transcript": "碌，忙碌的碌，读第四声。它是左右结构，左边的石字旁像不断转动的石碾，右边的“录”提示读音，如石轮滚滚不停歇即为碌。忙碌形容事情繁多、手脚不停地操劳。课文写母亲给完孩子买书钱后立刻又俯身陷入机器与布料之间，那忙碌而瘦小的背影深深震撼了作者的心灵。",
+    "contentHash": "105253873159edf2531b",
+    "audioSha256": "9f947bb204b6c760cc1c7b7652fe077fc683d63ae581af81c38fd77cefb7e06a"
   },
   "g5v1-l18-c13-u540a": {
     "recordId": "g5v1-l18-c13-u540a",
@@ -2398,9 +2398,9 @@ export const releasedNarrationTranscripts: Record<string, ReleasedNarrationTrans
     "glyph": "枉",
     "lessonId": "g5v1-l19",
     "word": "冤枉",
-    "transcript": "冤枉里的枉，读第三声。枉按左右排列，木字旁站在左边，右边是王，左右排列要端正。记字时，可以想象一根本来笔直的木条被压弯，事情也被说得偏离事实，画面只帮助我们看清字形。枉在冤枉中表示受到歪曲和不公平对待。父亲平日极其节省，一分冤枉钱也不肯花，却愿意把钱用在孩子读书和生活上。",
-    "contentHash": "d252756d898d4df6c0e5",
-    "audioSha256": "95985e795382f1dceea9c92a8ecaf2a6e8a3b220d0217a5df84d62174a4d8d97"
+    "transcript": "枉，冤枉的枉，读第三声。它是左右结构，左边的木字旁是一根笔直的木料，右边的“王”提示读音，直木受压弯曲即为枉。冤枉指受到无端的指责或委屈。课文写童年受到的委屈在父亲温暖的宽慰下烟消云散；父亲平日一分冤枉钱也不乱花，却全力支持孩子求学深造。",
+    "contentHash": "9d5302e1042e4f8623c9",
+    "audioSha256": "342721dd206be6bd82a62aaae6ce6c5dd637bb138b002385b661f5c3c70d4fe2"
   },
   "g5v1-l19-c05-u604d": {
     "recordId": "g5v1-l19-c05-u604d",
@@ -2524,9 +2524,9 @@ export const releasedNarrationTranscripts: Record<string, ReleasedNarrationTrans
     "glyph": "考",
     "lessonId": "g5v1-l19",
     "word": "考试",
-    "transcript": "考试的考，读第三声。考是左上包围结构，上部舒展，下部弯钩收紧，写时要看清转折。可以想象老师坐在桌前查看答卷，学生认真完成题目，画面只帮助我们看清字形。考试是用题目或操作检查知识和能力的一种方式。父亲一次次坐船送孩子去报考学校，赶考成为那条求学小船上很重要的回忆。",
-    "contentHash": "c41631af7611570ff2d2",
-    "audioSha256": "46cf73d70655afde24e48d40ae28596e26e37896fb6e123a57ce613b585ea29d"
+    "transcript": "考，报考的考，读第三声。考是左上包围结构，上方像长者手持教鞭审视，下方弯钩收紧宛如学子端坐答题，上下组合成考。报考指报名参加升学或就业测试。课文写父亲摇着那叶简朴的小渔船一路护送孩子进城赶考，小舟载着厚重的父爱与希望，乘风破浪驶向远方。",
+    "contentHash": "ed42f11e42bed9039b73",
+    "audioSha256": "39478d8c1d7c0dfe570e32b212dbaf4dd3afbdbae66e9924240a916a31abe1d4"
   },
   "g5v1-l19-c19-u75bc": {
     "recordId": "g5v1-l19-c19-u75bc",
@@ -2776,9 +2776,9 @@ export const releasedNarrationTranscripts: Record<string, ReleasedNarrationTrans
     "glyph": "榕",
     "lessonId": "g5v1-l22",
     "word": "榕树",
-    "transcript": "一棵大榕树能长出宽广树冠，榕读第二声。从左往右看，榕先写木字旁，右边是容，左右排列紧凑。可以这样记，一棵树张开许多枝条，容下鸟群、阳光和垂落的气根，画面只帮助我们看清字形。榕树枝叶繁茂，有些根会从枝条垂下并扎入土中。这篇文章里的大榕树独木成林，为许多鸟提供了安稳、热闹的家。",
-    "contentHash": "96e70c23527e695aade7",
-    "audioSha256": "91dc955a5a97244c98cb49b89f2a7660cd47af805ea2a241a5fd3a363c92f65d"
+    "transcript": "榕，榕树的榕，读第二声。它是左右结构，左边的“木”表明它是高大树木，右边的“容”提示读音，也象征树冠宽广能容纳万物。榕树是常绿大乔木，气生根扎入泥土形成独木成林。课文描绘那株枝繁叶茂的大榕树成为鸟的天堂，群鸟欢鸣跳跃，生动展现了大自然的蓬勃生机。",
+    "contentHash": "ae45cf7eff1b4058934e",
+    "audioSha256": "771846353653317eb480dcb1e2fa00cd83eebb94aac5949f33b02cc07a72dbf7"
   },
   "g5v1-l22-c05-u7ea0": {
     "recordId": "g5v1-l22-c05-u7ea0",
@@ -2902,9 +2902,9 @@ export const releasedNarrationTranscripts: Record<string, ReleasedNarrationTrans
     "glyph": "瓷",
     "lessonId": "g5v1-l23",
     "word": "瓷器",
-    "transcript": "瓷器的瓷，读第二声。瓷是上下结构，上面是次，下面是瓦，写时下部要托住上面。可以想象工匠把白净瓷土做成圆盘，再送进窑里烧成发亮的器皿，画面只帮助我们看清字形。瓷器是用瓷土成形并经过高温烧制的器物。这一课里月光落在院中的瓷花盆和水面上，明亮倒影让孩子觉得月亮到处都留下了踪迹。",
-    "contentHash": "36ec4aff0ac9facab283",
-    "audioSha256": "5ec231cbdc24ee6c65ba093778d789e463932019fb71fea23573866ca2615cb4"
+    "transcript": "瓷，瓷盆的瓷，读第二声。瓷是上下结构，上面的“次”提示读音，下面的“瓦”表明经过高温烧制，上下相合即为瓷。瓷指用瓷土烧制成的细腻器皿。课文写中秋夜晚月光洒在庭院里装满清水的白瓷盆中，孩子们用双手捧起盆中水月，在纯真童趣中感受着月光普照人间的温柔。",
+    "contentHash": "a80a917709cacf726c05",
+    "audioSha256": "7fd0aae087973eee99434eda18ea80661e8165dcbe1e68e1502815fd5f32d760"
   },
   "g5v1-l24-c01-u803b": {
     "recordId": "g5v1-l24-c01-u803b",
@@ -2974,9 +2974,9 @@ export const releasedNarrationTranscripts: Record<string, ReleasedNarrationTrans
     "glyph": "诵",
     "lessonId": "g5v1-l24",
     "word": "诵读",
-    "transcript": "把文章有声音、有节奏地读出来，就叫诵读，诵读的诵，读第四声。诵是左右结构，左边言字旁，右边是甬，写时左边收紧。可以想象声音沿着长长通道传出去，一句接着一句，画面只帮助我们看清字形。诵读可以朗读，也可以熟读成诵。古人的话提醒我们，心不专一时随意诵读，很难真正记住，所以口到要和心到、眼到配合。",
-    "contentHash": "77986d7e1b0dc2efb442",
-    "audioSha256": "d2c349420849614db8c84493207b919c77e095c857ef2f966bb931f5f177ad61"
+    "transcript": "诵，诵读的诵，读第四声。它是左右结构，左边的言字旁代表出声语言，右边的“甬”提示读音，声音如穿过长通道般连贯传出即为诵。诵读指有声有节奏地朗读书籍。朱熹教导我们读书要做到心到、眼到、口到，心若专注口中自然能字字读清，从而真正领会书中要旨。",
+    "contentHash": "e2d896fcece8f4b2356a",
+    "audioSha256": "36dc7f74afc8d0776be61a9c37d2a8afb86bdb4d707cf0b8a561847f7d7dba2e"
   },
   "g5v1-l25-c01-u8205": {
     "recordId": "g5v1-l25-c01-u8205",
@@ -3100,9 +3100,9 @@ export const releasedNarrationTranscripts: Record<string, ReleasedNarrationTrans
     "glyph": "琐",
     "lessonId": "g5v1-l25",
     "word": "琐事",
-    "transcript": "细小又零碎的事情叫琐事，琐读第三声。琐是左右结构，左边王字旁，右部上小下大，口播时把右部整体记住。可以这样记，许多小珠子散在桌面，需要一颗颗收好，画面只帮助我们看清字形。琐事常指细小、零碎的事情。文章把童年听书、借书、选书等零散往事串起来，一件件小事合成了作者长久的阅读生活。",
-    "contentHash": "cfeba1767af14c6ecb3e",
-    "audioSha256": "a21b8d849acb3fa0f6177b74e3b8a639f919c20a6efe67d0465be0912a1262aa"
+    "transcript": "琐，琐事的琐，读第三声。它是左右结构，左边的王字旁像细碎的小玉石，右边的“𧴪”像散落的细微贝壳，左右组合成琐。琐碎指细小而零碎的事情。课文里冰心先生深情回顾自己从童年起听书、借书、买书的琐碎往事，展现了漫长读书生涯带来的丰盈精神成长。",
+    "contentHash": "ac803e7f928952a4ec8f",
+    "audioSha256": "40d478d127ea82d522fb81f390de70f81af836568f1a21a92c8e920736e0801e"
   },
   "g5v1-l25-c15-u547b": {
     "recordId": "g5v1-l25-c15-u547b",
@@ -3163,9 +3163,9 @@ export const releasedNarrationTranscripts: Record<string, ReleasedNarrationTrans
     "glyph": "朴",
     "lessonId": "g5v1-l25",
     "word": "朴实",
-    "transcript": "真实自然，不浮夸，可以说朴实，朴读第三声。朴按左右排列，木字旁站在左边，右边是卜，写时左窄右宽。可以这样记，一块没有过多雕饰的木板，纹理清楚，摸起来踏实，画面只帮助我们看清字形。朴实形容表达或作风真诚自然。作者评价好文章时看重真情实感，语言即使浅显朴实，只要能打动人，就值得反复阅读。",
-    "contentHash": "1ddcb40cf3884ee361fc",
-    "audioSha256": "605756ad7a57dc133a3f27dbc2de915d0a47522e3d62242794ac39734de8647a"
+    "transcript": "朴，朴实的朴，读第三声。它是左右结构，左边的“木”像未经过多雕琢的原木，右边的“卜”提示读音，质朴天然即为朴。朴实指淳朴真诚、不加虚饰。作者在谈论读书经验时总结出“读书好，多读书，读好书”九字箴言，语言质朴深刻，成为指引后人一生的宝贵座右铭。",
+    "contentHash": "ce30af4803d7c9238c3e",
+    "audioSha256": "453503bc568073d1569746e0aadef36477000d4c140a44e5f3d514c3f2889255"
   },
   "g5v1-l26-c01-u55bb": {
     "recordId": "g5v1-l26-c01-u55bb",
@@ -3361,9 +3361,9 @@ export const releasedNarrationTranscripts: Record<string, ReleasedNarrationTrans
     "glyph": "木",
     "lessonId": "g5v1-l03",
     "word": "木兰花",
-    "transcript": "木，木兰花的木。木是独体字，可以把竖画看成树干，横画看成树枝，撇和捺像向两旁伸开的枝条和树根。顺着一棵树从枝干看到根部，木的样子就记住了；这是帮助认字的画面。课文里父亲指给孩子看梅花和木兰花，木兰是一种树，木兰花就是木兰树开的花。",
-    "contentHash": "9ecb421f03ad49206625",
-    "audioSha256": "0cd1ea6bb3c3b9faa47256cf9a662fddfdc80b308eb14cff9e4d110704b005f2"
+    "transcript": "木，木棒的木，读第四声。木是独体字，中间竖直的一笔像直立挺拔的树干，横笔像伸展的枝桠，撇捺宛如向下扎牢的根系，整体勾勒出一棵树木的形态。木棒是用木头制成的坚实短棒。课文写地道内的孑口设计极其窄小，民兵手握一根木棒就能以一当百，有力地阻击敌人的进犯。",
+    "contentHash": "907362d8190bfe99804c",
+    "audioSha256": "e219274d80209119bcb928ac9af8d3fb186776777886093ca3fa240e0c16b3f4"
   },
   "019f0554-ea21-740f-af56-c69fa0ab0a63": {
     "recordId": "019f0554-ea21-740f-af56-c69fa0ab0a63",
@@ -3784,9 +3784,9 @@ export const releasedNarrationTranscripts: Record<string, ReleasedNarrationTrans
     "glyph": "木",
     "lessonId": "g5v1-l08",
     "word": "木棒",
-    "transcript": "木，木棒的木。木是独体字，竖画像挺直的树干，横画像伸开的树枝，撇和捺像枝条和树根。想象工匠从树木上取下一段结实木料，削成一根长长的木棒；这个画面只用来记字形。课文里，地道的孑口很窄，一个人拿着木棒就能守住，木棒就是用木头做成的棒。",
-    "contentHash": "719e48064e23a3c9e469",
-    "audioSha256": "1c7e391a0313c1eebad92cb382024b71b8bb66b5bcf9d83cf041c2de2fd2c6da"
+    "transcript": "木，木棒的木，读第四声。木是独体字，中间竖直的一笔像直立挺拔的树干，横笔像伸展的枝桠，撇捺宛如向下扎牢的根系，整体勾勒出一棵树木的形态。木棒是用木头制成的坚实短棒。课文写地道内的孑口设计极其窄小，民兵手握一根木棒就能以一当百，有力地阻击敌人的进犯。",
+    "contentHash": "9b34608f4bf1ffd5d6e0",
+    "audioSha256": "56aaeb2cb5410696e8482a6c3f813db9ad01a8aa1c9ac45ca7b0c58ed3b8fad9"
   },
   "019f0554-ea22-762e-966c-e9594325cd7d": {
     "recordId": "019f0554-ea22-762e-966c-e9594325cd7d",

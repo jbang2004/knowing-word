@@ -1,6 +1,6 @@
 import { narrationAssets } from "../app/data/narration-assets.ts";
 
-const narrationVersion = "v4";
+const narrationVersion = "v5";
 
 const siteUrl = (process.env.SITE_URL || process.argv[2] || "").replace(/\/+$/, "");
 if (!/^https?:\/\//.test(siteUrl)) {

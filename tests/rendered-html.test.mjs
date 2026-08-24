@@ -243,8 +243,8 @@ test("character pages render the complete picture-to-character memory flow", asy
   // The audio element now lives on the study page, so the first user click can
   // play directly without mounting or navigating to a second screen.
   assert.match(html, /<audio/);
-  assert.match(html, /\/media\/narration\/v4\//);
-  assert.match(html, /audio\.webm\?v=narration-v4-fish-s2\.1-pro-free-20260824/);
+  assert.match(html, /\/media\/narration\/v5\//);
+  assert.match(html, /audio\.webm\?v=narration-v5-fish-s2\.1-pro-free-20260824/);
 
   const pageSource = await readFile(
     new URL("../app/features/character-study/character-study.tsx", import.meta.url),
@@ -709,7 +709,7 @@ test("narration timing becomes a punctuated, phrase-paced reading transcript", a
   assert.match(pageSource, /requestAnimationFrame\(sampleAudioTime\)/);
   assert.match(pageSource, /is-complete/);
   assert.match(pageSource, /activeMarkIndices\.has\(token\.markIndex\)/);
-  assert.match(pageSource, /narration-v4-fish-s2\.1-pro-free-20260824/);
+  assert.match(pageSource, /narration-v5-fish-s2\.1-pro-free-20260824/);
   assert.match(pageSource, /is-current-phrase/);
   assert.doesNotMatch(pageSource, /onEnded=\{\(\) => \{[\s\S]*setElapsed\(0\)/);
 });
@@ -854,7 +854,7 @@ test("R2 narration delivery supports immutable byte ranges", async () => {
   };
   const response = await worker.fetch(
     new Request(
-      "http://localhost/media/narration/v3/g5v1-l01-c01-u9e6d/audio.webm?v=test",
+      "http://localhost/media/narration/v5/g5v1-l01-c01-u9e6d/audio.webm?v=test",
       { headers: { range: "bytes=0-6" } },
     ),
     { MEDIA: media },

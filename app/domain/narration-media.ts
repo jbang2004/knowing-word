@@ -1,4 +1,4 @@
-export const NARRATION_RELEASE_VERSION = "narration-v4-fish-s2.1-pro-free-20260824";
+export const NARRATION_RELEASE_VERSION = "narration-v5-fish-s2.1-pro-free-20260824";
 
 export type NarrationMedia = {
   audio: string;
@@ -11,7 +11,7 @@ function versioned(source: string) {
 }
 
 export function narrationMedia(characterId: string, transcript: string): NarrationMedia {
-  const base = `/media/narration/v4/${characterId}`;
+  const base = `/media/narration/v5/${characterId}`;
   return {
     audio: versioned(`${base}/audio.webm`),
     marks: versioned(`${base}/audio-marks.json`),

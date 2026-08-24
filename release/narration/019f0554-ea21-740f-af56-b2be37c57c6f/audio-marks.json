@@ -3,665 +3,690 @@
     {
       "index": 0,
       "char": "木",
-      "start": 0.24,
-      "end": 1.28
+      "start": 0,
+      "end": 0.4
     },
     {
       "index": 1,
       "char": "木",
-      "start": 1.28,
-      "end": 1.52,
-      "alignment_group": "align-group-1-2",
-      "alignment_group_text": "木兰"
+      "start": 0.72,
+      "end": 0.96
     },
     {
       "index": 2,
-      "char": "兰",
-      "start": 1.28,
-      "end": 1.52,
-      "alignment_group": "align-group-1-2",
-      "alignment_group_text": "木兰"
+      "char": "棒",
+      "start": 0.96,
+      "end": 1.2
     },
     {
       "index": 3,
-      "char": "花",
-      "start": 1.52,
-      "end": 1.76
+      "char": "的",
+      "start": 1.2,
+      "end": 1.28
     },
     {
       "index": 4,
-      "char": "的",
-      "start": 1.76,
-      "end": 1.84
+      "char": "木",
+      "start": 1.28,
+      "end": 1.6
     },
     {
       "index": 5,
-      "char": "木",
-      "start": 1.84,
+      "char": "读",
+      "start": 2,
       "end": 2.16
     },
     {
       "index": 6,
-      "char": "木",
-      "start": 2.64,
-      "end": 2.96
+      "char": "第",
+      "start": 2.16,
+      "end": 2.32
     },
     {
       "index": 7,
-      "char": "是",
-      "start": 2.96,
-      "end": 3.12
+      "char": "四",
+      "start": 2.32,
+      "end": 2.56
     },
     {
       "index": 8,
-      "char": "独",
-      "start": 3.12,
-      "end": 3.28
+      "char": "声",
+      "start": 2.56,
+      "end": 2.88
     },
     {
       "index": 9,
-      "char": "体",
-      "start": 3.28,
-      "end": 3.52
-    },
-    {
-      "index": 10,
-      "char": "字",
-      "start": 3.52,
+      "char": "木",
+      "start": 3.6,
       "end": 3.84
     },
     {
+      "index": 10,
+      "char": "是",
+      "start": 3.84,
+      "end": 4
+    },
+    {
       "index": 11,
-      "char": "可",
-      "start": 4.16,
-      "end": 4.32
+      "char": "独",
+      "start": 4,
+      "end": 4.16
     },
     {
       "index": 12,
-      "char": "以",
-      "start": 4.32,
+      "char": "体",
+      "start": 4.16,
       "end": 4.4
     },
     {
       "index": 13,
-      "char": "把",
+      "char": "字",
       "start": 4.4,
-      "end": 4.56
+      "end": 4.72
     },
     {
       "index": 14,
-      "char": "竖",
-      "start": 4.56,
-      "end": 4.88
+      "char": "中",
+      "start": 5.2,
+      "end": 5.36
     },
     {
       "index": 15,
-      "char": "画",
-      "start": 4.88,
-      "end": 5.2
-    },
-    {
-      "index": 16,
-      "char": "看",
-      "start": 5.2,
-      "end": 5.44
-    },
-    {
-      "index": 17,
-      "char": "成",
-      "start": 5.44,
+      "char": "间",
+      "start": 5.36,
       "end": 5.6
     },
     {
-      "index": 18,
-      "char": "树",
+      "index": 16,
+      "char": "竖",
       "start": 5.6,
       "end": 5.76
     },
     {
-      "index": 19,
-      "char": "干",
+      "index": 17,
+      "char": "直",
       "start": 5.76,
-      "end": 6.16
+      "end": 5.92
+    },
+    {
+      "index": 18,
+      "char": "的",
+      "start": 5.92,
+      "end": 6.08
+    },
+    {
+      "index": 19,
+      "char": "一",
+      "start": 6.08,
+      "end": 6.24
     },
     {
       "index": 20,
-      "char": "横",
-      "start": 6.48,
-      "end": 6.8
+      "char": "笔",
+      "start": 6.24,
+      "end": 6.48
     },
     {
       "index": 21,
-      "char": "画",
-      "start": 6.8,
-      "end": 7.12
+      "char": "像",
+      "start": 6.48,
+      "end": 6.72
     },
     {
       "index": 22,
-      "char": "看",
-      "start": 7.2,
-      "end": 7.36
+      "char": "直",
+      "start": 6.72,
+      "end": 6.96
     },
     {
       "index": 23,
-      "char": "成",
-      "start": 7.36,
-      "end": 7.52
+      "char": "立",
+      "start": 6.96,
+      "end": 7.04
     },
     {
       "index": 24,
+      "char": "挺",
+      "start": 7.04,
+      "end": 7.2
+    },
+    {
+      "index": 25,
+      "char": "拔",
+      "start": 7.2,
+      "end": 7.44
+    },
+    {
+      "index": 26,
+      "char": "的",
+      "start": 7.44,
+      "end": 7.52
+    },
+    {
+      "index": 27,
       "char": "树",
       "start": 7.52,
       "end": 7.76
     },
     {
-      "index": 25,
-      "char": "枝",
+      "index": 28,
+      "char": "干",
       "start": 7.76,
       "end": 8.08
     },
     {
-      "index": 26,
-      "char": "撇",
-      "start": 8.48,
-      "end": 8.8
-    },
-    {
-      "index": 27,
-      "char": "和",
-      "start": 8.8,
-      "end": 9.04
-    },
-    {
-      "index": 28,
-      "char": "捺",
-      "start": 9.04,
-      "end": 9.28
-    },
-    {
       "index": 29,
-      "char": "像",
-      "start": 9.28,
-      "end": 9.52
+      "char": "横",
+      "start": 8.64,
+      "end": 8.88
     },
     {
       "index": 30,
-      "char": "向",
-      "start": 9.52,
-      "end": 9.68
+      "char": "笔",
+      "start": 8.88,
+      "end": 9.12
     },
     {
       "index": 31,
-      "char": "两",
-      "start": 9.68,
-      "end": 9.84
+      "char": "像",
+      "start": 9.12,
+      "end": 9.36
     },
     {
       "index": 32,
-      "char": "旁",
-      "start": 9.92,
-      "end": 10.08
+      "char": "伸",
+      "start": 9.36,
+      "end": 9.6
     },
     {
       "index": 33,
-      "char": "伸",
-      "start": 10.08,
-      "end": 10.32
+      "char": "展",
+      "start": 9.6,
+      "end": 9.76
     },
     {
       "index": 34,
-      "char": "开",
-      "start": 10.32,
-      "end": 10.48
+      "char": "的",
+      "start": 9.76,
+      "end": 9.84
     },
     {
       "index": 35,
-      "char": "的",
-      "start": 10.48,
-      "end": 10.56
+      "char": "枝",
+      "start": 9.84,
+      "end": 10.08
     },
     {
       "index": 36,
-      "char": "枝",
-      "start": 10.56,
-      "end": 10.8
+      "char": "桠",
+      "start": 10.08,
+      "end": 10.4
     },
     {
       "index": 37,
-      "char": "条",
-      "start": 10.8,
+      "char": "撇",
+      "start": 10.88,
       "end": 11.2
     },
     {
       "index": 38,
-      "char": "和",
+      "char": "捺",
       "start": 11.2,
       "end": 11.36
     },
     {
       "index": 39,
-      "char": "树",
-      "start": 11.36,
+      "char": "宛",
+      "start": 11.44,
       "end": 11.6
     },
     {
       "index": 40,
-      "char": "根",
+      "char": "如",
       "start": 11.6,
-      "end": 12.0
+      "end": 11.76
     },
     {
       "index": 41,
-      "char": "顺",
-      "start": 12.32,
-      "end": 12.56
+      "char": "向",
+      "start": 11.76,
+      "end": 12
     },
     {
       "index": 42,
-      "char": "着",
-      "start": 12.56,
-      "end": 12.72
+      "char": "下",
+      "start": 12,
+      "end": 12.16
     },
     {
       "index": 43,
-      "char": "一",
-      "start": 12.72,
-      "end": 12.8
+      "char": "扎",
+      "start": 12.16,
+      "end": 12.4
     },
     {
       "index": 44,
-      "char": "棵",
-      "start": 12.8,
-      "end": 13.04
+      "char": "牢",
+      "start": 12.4,
+      "end": 12.48
     },
     {
       "index": 45,
-      "char": "树",
-      "start": 13.04,
-      "end": 13.44
+      "char": "的",
+      "start": 12.48,
+      "end": 12.64
     },
     {
       "index": 46,
-      "char": "从",
-      "start": 13.44,
-      "end": 13.68
+      "char": "根",
+      "start": 12.64,
+      "end": 12.8
     },
     {
       "index": 47,
-      "char": "枝",
-      "start": 13.68,
-      "end": 13.84
+      "char": "系",
+      "start": 12.8,
+      "end": 13.2
     },
     {
       "index": 48,
-      "char": "干",
-      "start": 13.84,
-      "end": 14.16
+      "char": "整",
+      "start": 13.6,
+      "end": 13.84
     },
     {
       "index": 49,
-      "char": "看",
-      "start": 14.16,
-      "end": 14.4
+      "char": "体",
+      "start": 13.84,
+      "end": 14
     },
     {
       "index": 50,
-      "char": "到",
-      "start": 14.4,
-      "end": 14.56
+      "char": "勾",
+      "start": 14,
+      "end": 14.16
     },
     {
       "index": 51,
-      "char": "根",
-      "start": 14.56,
-      "end": 14.88
+      "char": "勒",
+      "start": 14.16,
+      "end": 14.32
     },
     {
       "index": 52,
-      "char": "部",
+      "char": "出",
+      "start": 14.32,
+      "end": 14.56
+    },
+    {
+      "index": 53,
+      "char": "一",
+      "start": 14.56,
+      "end": 14.72
+    },
+    {
+      "index": 54,
+      "char": "棵",
+      "start": 14.72,
+      "end": 14.88
+    },
+    {
+      "index": 55,
+      "char": "树",
       "start": 14.88,
       "end": 15.12
     },
     {
-      "index": 53,
-      "char": "木",
-      "start": 15.44,
-      "end": 15.6
-    },
-    {
-      "index": 54,
-      "char": "的",
-      "start": 15.6,
-      "end": 15.84
-    },
-    {
-      "index": 55,
-      "char": "样",
-      "start": 15.84,
-      "end": 16.0
-    },
-    {
       "index": 56,
-      "char": "子",
-      "start": 16.0,
-      "end": 16.24
+      "char": "木",
+      "start": 15.12,
+      "end": 15.28
     },
     {
       "index": 57,
-      "char": "就",
-      "start": 16.24,
-      "end": 16.4
+      "char": "的",
+      "start": 15.28,
+      "end": 15.36
     },
     {
       "index": 58,
-      "char": "记",
-      "start": 16.4,
-      "end": 16.64
+      "char": "形",
+      "start": 15.36,
+      "end": 15.6
     },
     {
       "index": 59,
-      "char": "住",
-      "start": 16.64,
-      "end": 16.8
+      "char": "态",
+      "start": 15.6,
+      "end": 15.92
     },
     {
       "index": 60,
-      "char": "了",
-      "start": 16.8,
-      "end": 17.12
+      "char": "木",
+      "start": 16,
+      "end": 16.16
     },
     {
       "index": 61,
-      "char": "这",
-      "start": 17.52,
-      "end": 17.6
+      "char": "棒",
+      "start": 16.16,
+      "end": 16.48
     },
     {
       "index": 62,
       "char": "是",
+      "start": 16.48,
+      "end": 16.72
+    },
+    {
+      "index": 63,
+      "char": "用",
+      "start": 16.72,
+      "end": 16.8
+    },
+    {
+      "index": 64,
+      "char": "木",
+      "start": 16.8,
+      "end": 17.04
+    },
+    {
+      "index": 65,
+      "char": "头",
+      "start": 17.04,
+      "end": 17.2
+    },
+    {
+      "index": 66,
+      "char": "制",
+      "start": 17.2,
+      "end": 17.36
+    },
+    {
+      "index": 67,
+      "char": "成",
+      "start": 17.36,
+      "end": 17.6
+    },
+    {
+      "index": 68,
+      "char": "的",
       "start": 17.6,
       "end": 17.68
     },
     {
-      "index": 63,
-      "char": "帮",
+      "index": 69,
+      "char": "坚",
       "start": 17.68,
       "end": 17.92
     },
     {
-      "index": 64,
-      "char": "助",
+      "index": 70,
+      "char": "实",
       "start": 17.92,
       "end": 18.08
     },
     {
-      "index": 65,
-      "char": "认",
+      "index": 71,
+      "char": "短",
       "start": 18.08,
       "end": 18.32
     },
     {
-      "index": 66,
-      "char": "字",
+      "index": 72,
+      "char": "棒",
       "start": 18.32,
-      "end": 18.48
-    },
-    {
-      "index": 67,
-      "char": "的",
-      "start": 18.48,
       "end": 18.64
     },
     {
-      "index": 68,
-      "char": "画",
-      "start": 18.64,
-      "end": 18.8
-    },
-    {
-      "index": 69,
-      "char": "面",
-      "start": 18.8,
-      "end": 19.12
-    },
-    {
-      "index": 70,
-      "char": "课",
-      "start": 20.32,
-      "end": 20.64
-    },
-    {
-      "index": 71,
-      "char": "文",
-      "start": 20.64,
-      "end": 20.8
-    },
-    {
-      "index": 72,
-      "char": "里",
-      "start": 20.8,
-      "end": 21.04
-    },
-    {
       "index": 73,
-      "char": "父",
-      "start": 21.04,
-      "end": 21.28
+      "char": "课",
+      "start": 18.96,
+      "end": 19.2
     },
     {
       "index": 74,
-      "char": "亲",
-      "start": 21.28,
-      "end": 21.52
+      "char": "文",
+      "start": 19.2,
+      "end": 19.36
     },
     {
       "index": 75,
-      "char": "指",
-      "start": 21.52,
-      "end": 21.68
+      "char": "写",
+      "start": 19.36,
+      "end": 19.52
     },
     {
       "index": 76,
-      "char": "给",
-      "start": 21.68,
-      "end": 21.76
+      "char": "地",
+      "start": 19.52,
+      "end": 19.68
     },
     {
       "index": 77,
-      "char": "孩",
-      "start": 21.76,
-      "end": 22.08
+      "char": "道",
+      "start": 19.68,
+      "end": 19.92
     },
     {
       "index": 78,
-      "char": "子",
-      "start": 22.08,
-      "end": 22.24
+      "char": "内",
+      "start": 19.92,
+      "end": 20
     },
     {
       "index": 79,
-      "char": "看",
-      "start": 22.24,
-      "end": 22.64
+      "char": "的",
+      "start": 20,
+      "end": 20.16
     },
     {
       "index": 80,
-      "char": "梅",
-      "start": 22.96,
-      "end": 23.12
+      "char": "孑",
+      "start": 20.16,
+      "end": 20.4
     },
     {
       "index": 81,
-      "char": "花",
-      "start": 23.12,
-      "end": 23.36
+      "char": "口",
+      "start": 20.4,
+      "end": 20.56
     },
     {
       "index": 82,
-      "char": "和",
-      "start": 23.36,
-      "end": 23.52
+      "char": "设",
+      "start": 20.56,
+      "end": 20.8
     },
     {
       "index": 83,
-      "char": "木",
-      "start": 23.52,
-      "end": 23.68
+      "char": "计",
+      "start": 20.8,
+      "end": 20.96
     },
     {
       "index": 84,
-      "char": "兰",
-      "start": 23.68,
-      "end": 23.92
+      "char": "极",
+      "start": 20.96,
+      "end": 21.2
     },
     {
       "index": 85,
-      "char": "花",
-      "start": 23.92,
-      "end": 24.4
+      "char": "其",
+      "start": 21.2,
+      "end": 21.36
     },
     {
       "index": 86,
-      "char": "木",
-      "start": 24.8,
-      "end": 24.96
+      "char": "窄",
+      "start": 21.36,
+      "end": 21.6
     },
     {
       "index": 87,
-      "char": "兰",
-      "start": 24.96,
-      "end": 25.2
+      "char": "小",
+      "start": 21.6,
+      "end": 21.92
     },
     {
       "index": 88,
-      "char": "是",
-      "start": 25.2,
-      "end": 25.28
+      "char": "民",
+      "start": 22.4,
+      "end": 22.56
     },
     {
       "index": 89,
-      "char": "一",
-      "start": 25.28,
-      "end": 25.44
+      "char": "兵",
+      "start": 22.56,
+      "end": 22.8
     },
     {
       "index": 90,
-      "char": "种",
-      "start": 25.44,
-      "end": 25.6
+      "char": "手",
+      "start": 22.8,
+      "end": 23.04
     },
     {
       "index": 91,
-      "char": "树",
-      "start": 25.6,
-      "end": 26.08
+      "char": "握",
+      "start": 23.04,
+      "end": 23.2
     },
     {
       "index": 92,
-      "char": "木",
-      "start": 26.4,
-      "end": 26.48
+      "char": "一",
+      "start": 23.2,
+      "end": 23.36
     },
     {
       "index": 93,
-      "char": "兰",
-      "start": 26.48,
-      "end": 26.72
+      "char": "根",
+      "start": 23.36,
+      "end": 23.44
     },
     {
       "index": 94,
-      "char": "花",
-      "start": 26.72,
-      "end": 27.12
+      "char": "木",
+      "start": 23.44,
+      "end": 23.68
     },
     {
       "index": 95,
-      "char": "就",
-      "start": 27.12,
-      "end": 27.36
+      "char": "棒",
+      "start": 23.68,
+      "end": 23.76
     },
     {
       "index": 96,
-      "char": "是",
-      "start": 27.36,
-      "end": 27.44
+      "char": "就",
+      "start": 24,
+      "end": 24.16
     },
     {
       "index": 97,
-      "char": "木",
-      "start": 27.44,
-      "end": 27.6
+      "char": "能",
+      "start": 24.16,
+      "end": 24.32
     },
     {
       "index": 98,
-      "char": "兰",
-      "start": 27.6,
-      "end": 27.84
+      "char": "以",
+      "start": 24.32,
+      "end": 24.4
     },
     {
       "index": 99,
-      "char": "树",
-      "start": 27.84,
-      "end": 28.0
+      "char": "一",
+      "start": 24.4,
+      "end": 24.64
     },
     {
       "index": 100,
-      "char": "开",
-      "start": 28.0,
-      "end": 28.16
+      "char": "当",
+      "start": 24.64,
+      "end": 24.8
     },
     {
       "index": 101,
-      "char": "的",
-      "start": 28.16,
-      "end": 28.32
+      "char": "百",
+      "start": 24.8,
+      "end": 25.12
     },
     {
       "index": 102,
-      "char": "花",
-      "start": 28.32,
-      "end": 28.64
+      "char": "有",
+      "start": 25.52,
+      "end": 25.68
+    },
+    {
+      "index": 103,
+      "char": "力",
+      "start": 25.68,
+      "end": 25.84
+    },
+    {
+      "index": 104,
+      "char": "地",
+      "start": 25.84,
+      "end": 26
+    },
+    {
+      "index": 105,
+      "char": "阻",
+      "start": 26,
+      "end": 26.16
+    },
+    {
+      "index": 106,
+      "char": "击",
+      "start": 26.16,
+      "end": 26.32
+    },
+    {
+      "index": 107,
+      "char": "敌",
+      "start": 26.32,
+      "end": 26.56
+    },
+    {
+      "index": 108,
+      "char": "人",
+      "start": 26.56,
+      "end": 26.64
+    },
+    {
+      "index": 109,
+      "char": "的",
+      "start": 26.64,
+      "end": 26.72
+    },
+    {
+      "index": 110,
+      "char": "进",
+      "start": 26.72,
+      "end": 26.96
+    },
+    {
+      "index": 111,
+      "char": "犯",
+      "start": 26.96,
+      "end": 27.2
     }
   ],
-  "transcript": "木，木兰花的木。木是独体字，可以把竖画看成树干，横画看成树枝，撇和捺像向两旁伸开的枝条和树根。顺着一棵树从枝干看到根部，木的样子就记住了；这是帮助认字的画面。课文里父亲指给孩子看梅花和木兰花，木兰是一种树，木兰花就是木兰树开的花。",
+  "transcript": "木，木棒的木，读第四声。木是独体字，中间竖直的一笔像直立挺拔的树干，横笔像伸展的枝桠，撇捺宛如向下扎牢的根系，整体勾勒出一棵树木的形态。木棒是用木头制成的坚实短棒。课文写地道内的孑口设计极其窄小，民兵手握一根木棒就能以一当百，有力地阻击敌人的进犯。",
   "voice_reference": "封",
   "reference_id": "019f0554-ea22-762e-966c-32d678fd6bf6",
   "reference_sha256": "eb07e06ee13a20ee4577b1b481df6d33d42127c1b3876bfa5d5e5362ae349f19",
   "timing_source": "qwen3-forced-aligner",
-  "script_version": "narration-v3",
-  "model": "mlx-community/Qwen3-TTS-12Hz-1.7B-Base-4bit",
-  "model_revision": "37e955a1deb861c088ae5f3a67043185f3d1a60c",
-  "generation_policy": "qwen3-clone-2026-08-22-v3",
-  "seed": 20260822,
-  "content_hash": "9ecb421f03ad49206625",
-  "duration": 28.697,
+  "script_version": "narration-fish-v1",
+  "model": "fishaudio/s2.1-pro-free",
+  "model_revision": "s2.1-pro-free",
+  "generation_policy": "narration-fish-s2.1-zero-shot-2026-08-24",
+  "seed": null,
+  "content_hash": "907362d8190bfe99804c",
   "alignment_model": "mlx-community/Qwen3-ForcedAligner-0.6B-8bit",
-  "aligned_audio_sha256": "0cd1ea6bb3c3b9faa47256cf9a662fddfdc80b308eb14cff9e4d110704b005f2",
-  "alignment_groups": [
-    {
-      "id": "align-group-1-2",
-      "text": "木兰",
-      "indices": [
-        1,
-        2
-      ],
-      "start": 1.28,
-      "end": 1.52,
-      "method": "shared-right-model-interval",
-      "rawIntervals": [
-        {
-          "index": 1,
-          "char": "木",
-          "start": 1.28,
-          "end": 1.28
-        },
-        {
-          "index": 2,
-          "char": "兰",
-          "start": 1.28,
-          "end": 1.52
-        }
-      ]
-    }
-  ]
+  "alignment_model_revision": "0e1a68e91d815300c7c9754b2a7639378b23db15",
+  "aligned_audio_sha256": "e219274d80209119bcb928ac9af8d3fb186776777886093ca3fa240e0c16b3f4",
+  "alignment_groups": [],
+  "duration": 27.41
 }
