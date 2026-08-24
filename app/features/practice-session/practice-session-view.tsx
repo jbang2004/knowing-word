@@ -18,7 +18,6 @@ import {
 import { trackMeta } from "../../domain/tracks";
 import type { StudyProfile, TrackId } from "../../lib/profile-model";
 import { MnemonicSceneFocus } from "../character-study/mnemonic-scene-focus";
-import { Magpie } from "../shell/magpie";
 
 export type PracticeMedia = {
   answerLabel?: string;
@@ -62,11 +61,6 @@ export function CelebrationOverlay({
   return (
     <div className="celebration-overlay" role="dialog" aria-modal="true" aria-label="本关完成">
       <div className={"celebration-card track-" + trackMeta[track].tone}>
-        <div className="celebration-greeting">
-          <Magpie size={84} />
-          <b className="celebration-bubble">{mistakes === 0 ? "全对！" : "过关！"}</b>
-        </div>
-
         <div className="celebration-glyph" aria-hidden="true">{character.hanzi}</div>
         <h2>{mistakes === 0 ? "完美通关" : "本关完成"}</h2>
         <p className="celebration-kicker">{trackMeta[track].menu} · {character.lessonTitle}</p>

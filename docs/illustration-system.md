@@ -3,7 +3,7 @@
 The original course capture contains 210 authenticated-page screenshots. Its
 visual teaching pattern is concentrated in four places:
 
-1. a playful course landscape and module mascots on the home page;
+1. a focused course path with clear learning-state cues on the home page;
 2. one mnemonic scene on each image-supported character study page;
 3. two three-option picture questions for each core character;
 4. diagrammatic red/blue, assembly, and spatial-structure exercises.
@@ -24,7 +24,6 @@ historical resources remain the factual reference layer.
 - 76 hand-directed object-shaped deep-dive mnemonic illustrations retained
   for the original extension catalog.
 - 76 character meaning illustrations retained as the literal semantic set.
-- 1 home learning scene with an original blue-and-gold magpie guide
 - 6 additional reusable semantic distractor illustrations
 - 1 original 1672 × 941 social sharing card
 

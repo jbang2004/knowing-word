@@ -1210,28 +1210,8 @@ canvas:focus-visible {
 }
 
 .track-lesson-note {
-  display: flex;
-  gap: 14px;
-  align-items: center;
   max-width: 650px;
   margin-bottom: 20px;
-}
-
-.track-lesson-note > span {
-  display: grid;
-  flex: 0 0 auto;
-  width: 46px;
-  height: 46px;
-  place-items: center;
-  border-radius: 15px;
-  color: #fff;
-  font-family: var(--serif);
-  font-size: 1.45rem;
-  background: var(--track);
-}
-
-.track-lesson-note p {
-  margin: 0;
   color: var(--ink-soft);
   font-size: 0.82rem;
   line-height: 1.65;
@@ -3655,37 +3635,6 @@ html[data-theme="night"] .profile-card {
 .celebration-actions .text-button {
   align-self: center;
   color: rgba(255, 255, 255, 0.82);
-}
-
-/* The guide delivers the result instead of a row of stars. */
-.celebration-greeting {
-  display: flex;
-  align-items: flex-end;
-  gap: 2px;
-}
-
-.celebration-bubble {
-  position: relative;
-  margin-bottom: 20px;
-  padding: 9px 16px;
-  border-radius: 16px;
-  color: var(--track-deep, var(--action-deep));
-  font-size: 1rem;
-  font-weight: 900;
-  background: #fff;
-  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.14);
-}
-
-.celebration-bubble::after {
-  position: absolute;
-  bottom: 12px;
-  left: -5px;
-  width: 11px;
-  height: 11px;
-  border-radius: 2px;
-  background: #fff;
-  transform: rotate(45deg);
-  content: "";
 }
 
 .celebration-lesson {

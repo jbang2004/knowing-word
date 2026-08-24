@@ -41,14 +41,12 @@ test("server-renders the task-first Knowing Word learning experience", async () 
   // One seal per character, carrying the glyph and its state only.
   assert.match(html, /path-node is-current/);
   assert.match(html, /class="path-seal"/);
-  assert.match(html, /path-node-callout/);
   assert.match(html, /path-chapter-rule/);
   // Primary navigation is thumb-reachable and the top bar is gone for good.
   assert.match(html, /class="app-tabbar"/);
   assert.match(html, /class="app-sidebar"/);
   assert.doesNotMatch(html, /top-navigation|path-tabs|path-mobile-progress/);
-  // The guide appears beside whatever comes next.
-  assert.match(html, /喜鹊向导/);
+  assert.doesNotMatch(html, /喜鹊向导|path-node-guide|path-node-callout/);
 
   const practiceResponse = await render("/practice");
   assert.equal(practiceResponse.status, 200);
@@ -80,7 +78,7 @@ test("the lesson guide connects reading clues to cards and back", async () => {
   assert.match(lessonHtml, /本段重点词/);
   assert.match(lessonHtml, /这些比较让你看见了怎样的白鹭/);
   assert.match(lessonHtml, /reader-focus-word/);
-  assert.match(lessonHtml, /喜鹊向导/);
+  assert.doesNotMatch(lessonHtml, /喜鹊向导/);
   assert.match(lessonHtml, /学生字/);
   assert.match(lessonHtml, /做练习/);
   assert.match(lessonHtml, /lesson-paragraph-1/);

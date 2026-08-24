@@ -13,7 +13,6 @@ import type { CharacterItem, LessonItem } from "../../data/catalog-types";
 import type { LessonDocument } from "../../data/lesson-documents";
 import type { lessonVisuals } from "../../data/illustrations";
 import { withReturnTo } from "../../lib/navigation";
-import { Magpie } from "../shell/magpie";
 
 export type LessonView = "read" | "words" | "practice";
 
@@ -312,7 +311,6 @@ export function LessonReader({
                 ))}
                 {section.question && (
                   <aside className="reader-clue-question">
-                    <Magpie size={44} />
                     <span>想一想</span>
                     <p>{section.question}</p>
                   </aside>

@@ -380,42 +380,6 @@
   box-shadow: 0 0 0 2px var(--sky);
 }
 
-/* The guide stands beside whatever comes next */
-.path-node-guide {
-  position: relative;
-  display: flex;
-  flex: 0 0 auto;
-  align-items: flex-end;
-  align-self: flex-end;
-}
-
-.path-node-callout {
-  position: absolute;
-  top: -14px;
-  right: -24px;
-  padding: 7px 14px;
-  border-radius: 13px;
-  color: #fff;
-  font-size: 0.875rem;
-  font-weight: 900;
-  letter-spacing: 0.04em;
-  white-space: nowrap;
-  background: var(--radical);
-  box-shadow: 0 4px 0 var(--radical-deep);
-}
-
-.path-node-callout::after {
-  position: absolute;
-  bottom: -5px;
-  left: 18px;
-  width: 11px;
-  height: 11px;
-  border-radius: 2px;
-  background: var(--radical);
-  transform: rotate(45deg);
-  content: "";
-}
-
 /* Practice station --------------------------------------------------- */
 
 .path-gate { display: flex; justify-content: center; }

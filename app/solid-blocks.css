@@ -383,21 +383,27 @@
   box-shadow: none;
 }
 
-/* 8 · The guide in context -------------------------------------------- */
+/* 8 · Context prompts ------------------------------------------------- */
 
 .reader-clue-question,
 .track-lesson-note {
-  display: flex;
-  align-items: center;
-  gap: 12px;
   border: 2px solid var(--wrong-edge);
   border-radius: 20px;
   background: var(--wrong-soft);
   box-shadow: 0 var(--press) 0 var(--wrong-edge);
 }
 
-.reader-clue-question > span,
-.track-lesson-note > span {
+.reader-clue-question {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.track-lesson-note {
+  padding: 14px 16px;
+}
+
+.reader-clue-question > span {
   flex: 0 0 auto;
   padding: 0;
   border: 0;
@@ -408,7 +414,7 @@
 }
 
 .reader-clue-question > p,
-.track-lesson-note > p {
+.track-lesson-note {
   min-width: 0;
   margin: 0;
   color: var(--ink-soft);

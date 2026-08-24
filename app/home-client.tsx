@@ -25,7 +25,6 @@ import type { StudyProfile, TrackId } from "./lib/profile-model";
 import { candidatePathStates } from "./lib/progress-model";
 import { useStudyProfile } from "./features/profile/use-study-profile";
 import { LearningPageShell } from "./features/shell/learning-page-shell";
-import { Magpie } from "./features/shell/magpie";
 
 const phaseMeta = [
   { title: "认识字义", copy: "把字放回课文，先听懂它的意思" },
@@ -175,12 +174,6 @@ export default function HomeLanding() {
                     <ol className="path-segment-steps">
                       {segment.characters.map((node, nodeIndex) => (
                         <li className={`path-node is-${node.state}`} key={node.key}>
-                          {node.state === "current" && (
-                            <span className="path-node-guide">
-                              <Magpie size={78} />
-                              <b className="path-node-callout">开始</b>
-                            </span>
-                          )}
                           <button
                             className="path-seal"
                             onClick={() => navigate(node.href)}
