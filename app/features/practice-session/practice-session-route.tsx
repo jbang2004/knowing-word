@@ -25,6 +25,7 @@ import {
   updateCompletion,
 } from "../../lib/progress-model";
 import type { StudyProfile, TrackId } from "../../lib/profile-model";
+import { playLearningSound } from "../../infrastructure/browser/learning-audio";
 import { queueLearningEvent } from "../../infrastructure/browser/learning-event-outbox";
 import { useStudyProfile } from "../profile/use-study-profile";
 import { CelebrationOverlay, ChallengeRoom, type PracticeMedia } from "./practice-session-view";
@@ -171,7 +172,10 @@ function HydratedPracticeSession({
       );
       const pendingIndex = firstUnpassedQuestionIndex(questionIds, passedAfterCurrent);
       if (pendingIndex >= 0) setStep(pendingIndex);
-      else setCelebration(true);
+      else {
+        playLearningSound("complete");
+        setCelebration(true);
+      }
     }
   }
 
@@ -208,6 +212,13 @@ function HydratedPracticeSession({
       selectedOptions,
       wrote,
     );
+    const trailingCorrect = sessionResults.reduceRight(
+      (count, passed) => passed ? count + 1 : count,
+      0,
+    );
+    playLearningSound(correct
+      ? trailingCorrect >= 2 ? "streak" : "correct"
+      : "retry");
     const now = new Date().toISOString();
     const passedAfterAnswer = updatePassedQuestionIds(
       passedQuestionIds,
@@ -353,6 +364,7 @@ function HydratedPracticeSession({
     }
     const nextId = nextCandidateId(candidateIds, completedAfterThisRound, character.id);
     if (nextId && nextId !== character.id) {
+      playLearningSound("encourage");
       router.push(routeForTrack(track, character.lessonId, nextId));
     } else {
       finish();
@@ -403,6 +415,7 @@ function HydratedPracticeSession({
           total={steps.length}
           sessionLabel={mode === "mastery" ? "单字过关" : undefined}
           onReplay={() => {
+            playLearningSound("start");
             setPassedQuestionIds([]);
             setSessionResults([]);
             setCelebration(false);

@@ -106,6 +106,7 @@ function withDeliveryCache(response: Response, pathname: string) {
   } else if (
     pathname.startsWith("/illustrations/") ||
     pathname.startsWith("/heritage/") ||
+    pathname.startsWith("/sfx/") ||
     pathname === "/og-cover.jpg"
   ) {
     headers.set("cache-control", "public, max-age=86400, stale-while-revalidate=604800");
@@ -123,6 +124,7 @@ function isDeliveryAsset(pathname: string) {
   return pathname.startsWith("/assets/") ||
     pathname.startsWith("/illustrations/") ||
     pathname.startsWith("/heritage/") ||
+    pathname.startsWith("/sfx/") ||
     pathname === "/og-cover.jpg";
 }
 
