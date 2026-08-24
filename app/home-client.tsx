@@ -10,6 +10,7 @@ import {
   CloudOff,
   Flame,
   LockKeyhole,
+  Mic2,
 } from "lucide-react";
 import { useEffect, useMemo, type CSSProperties } from "react";
 import {
@@ -18,6 +19,11 @@ import {
   type HomeCandidate,
 } from "./data/home-index.generated";
 import { nextTrackCandidate, trackProgress } from "./domain/catalog-progress";
+import {
+  learningTrackProgress,
+  nextLessonActivity,
+  recommendedLessonId,
+} from "./domain/learning-plan";
 import { learningDayKey } from "./domain/learning-day";
 import { practiceTrackIds, trackMeta } from "./domain/tracks";
 import { routeForTrack } from "./lib/app-route";
@@ -27,14 +33,10 @@ import { useStudyProfile } from "./features/profile/use-study-profile";
 import { LearningPageShell } from "./features/shell/learning-page-shell";
 
 const phaseMeta = [
-  { title: "认识字义", copy: "把字放回课文，先听懂它的意思" },
-  { title: "看清部件", copy: "找准偏旁与结构，建立字形线索" },
-  { title: "回到课文", copy: "再次辨认朗读，把整课串联起来" },
+  { title: "从词语认字", copy: "先听懂字义，再辨认完整字形" },
+  { title: "看清字形", copy: "观察结构和部件，建立记忆线索" },
+  { title: "独立回想", copy: "离开提示，再把这个字想起来" },
 ] as const;
-
-function trackLessonPath(track: TrackId, lessonId: string) {
-  return routeForTrack(track, lessonId);
-}
 
 function continuePath(track: TrackId, candidate: HomeCandidate | undefined) {
   return candidate
@@ -71,21 +73,30 @@ export default function HomeLanding() {
   const today = profile.daily[learningDayKey()] || { attempts: 0, correct: 0, skips: 0, readSessions: 0 };
   const streak = currentStreak(profile.daily);
   const nextWord = nextTrackCandidate("words", profile);
+  const guidedLessonId = recommendedLessonId(profile);
   const currentLesson =
-    homeCourse.lessons.find((lesson) => lesson.id === nextWord?.lessonId) || homeCourse.lessons[0];
+    homeCourse.lessons.find((lesson) => lesson.id === guidedLessonId) || homeCourse.lessons[0];
   const lessonProgress = trackProgress(profile, "words", currentLesson.id);
   const pathNodes = buildLessonPath(profile, currentLesson.id, nextWord?.id);
   const segments = segmentLessonPath(pathNodes);
-  const currentSegmentIndex = Math.max(
-    0,
-    segments.findIndex((segment) => segment.characters.some((node) => node.state === "current")),
+  const foundCurrentSegment = segments.findIndex((segment) =>
+    segment.characters.some((node) => node.state === "current"),
   );
+  const currentSegmentIndex = foundCurrentSegment >= 0
+    ? foundCurrentSegment
+    : Math.max(0, segments.length - 1);
   const currentPhase = phaseMeta[Math.min(phaseMeta.length - 1, currentSegmentIndex)];
   const progressPercent = lessonProgress.total
     ? Math.round((lessonProgress.completed / lessonProgress.total) * 100)
     : 0;
   const name = profile.name || "小探险家";
   const navigate = (path: string) => router.push(path);
+  const allWordsComplete = lessonProgress.total > 0 && lessonProgress.completed === lessonProgress.total;
+  const nextActivity = nextLessonActivity(profile, currentLesson.id);
+  const allPracticeComplete = allWordsComplete && practiceTrackIds.every((track) => {
+    const progress = learningTrackProgress(profile, track, currentLesson.id);
+    return progress.total > 0 && progress.completed === progress.total;
+  });
 
   return (
     <LearningPageShell active="home" name={profile.name}>
@@ -140,7 +151,6 @@ export default function HomeLanding() {
             <ol className="path-track" aria-label={`《${currentLesson.title}》学习路线`}>
               {segments.map((segment, segmentIndex) => {
                 const phase = phaseMeta[Math.min(segmentIndex, phaseMeta.length - 1)];
-                const gate = segment.gate;
                 const chapterDone = segment.characters.every((node) => node.state === "done");
                 const isPast = segmentIndex < currentSegmentIndex;
 
@@ -163,7 +173,6 @@ export default function HomeLanding() {
                         </span>
                         <ChevronDown aria-hidden="true" size={19} />
                       </button>
-                      {gate && <GateNode gate={gate} lessonId={currentLesson.id} navigate={navigate} />}
                     </li>
                   );
                 }
@@ -192,11 +201,51 @@ export default function HomeLanding() {
                         </li>
                       ))}
                     </ol>
-                    {gate && <GateNode gate={gate} lessonId={currentLesson.id} navigate={navigate} />}
                   </li>
                 );
               })}
             </ol>
+            <section className={`path-practice-plan${allWordsComplete ? " is-ready" : " is-locked"}`} aria-label="本课综合巩固">
+              <header>
+                <small>{allWordsComplete ? "本课生字已经学完" : `完成 ${lessonProgress.completed}/${lessonProgress.total} 个识字小测后解锁`}</small>
+                <strong>整课巩固</strong>
+                <p>按整体结构、拆字重组、部件功能的顺序，把这课生字重新想一遍。</p>
+              </header>
+              <div>
+                {practiceTrackIds.map((track) => {
+                  const progress = learningTrackProgress(profile, track, currentLesson.id);
+                  const isCurrent = allWordsComplete && nextActivity.track === track;
+                  const href = isCurrent && nextActivity.candidate
+                    ? routeForTrack(track, currentLesson.id, nextActivity.candidate.id)
+                    : routeForTrack(track, currentLesson.id);
+                  return (
+                    <GateNode
+                      available={allWordsComplete}
+                      current={isCurrent}
+                      gate={{
+                        kind: "reinforce",
+                        key: `${currentLesson.id}-${track}`,
+                        track,
+                        completed: progress.completed,
+                        total: progress.total,
+                      }}
+                      href={href}
+                      key={track}
+                      navigate={navigate}
+                    />
+                  );
+                })}
+              </div>
+              <button
+                className="path-read-finish"
+                disabled={!allPracticeComplete}
+                onClick={() => navigate(`/read-aloud?lessonId=${encodeURIComponent(currentLesson.id)}&returnTo=%2F`)}
+              >
+                <Mic2 aria-hidden="true" />
+                <span><strong>朗读收尾</strong><small>{profile.readLessons.includes(currentLesson.id) ? "本课已朗读" : allPracticeComplete ? "听范读，再完整读一遍" : "完成三项巩固后解锁"}</small></span>
+                <ArrowRight aria-hidden="true" size={19} />
+              </button>
+            </section>
           </div>
         </div>
       </div>
@@ -206,22 +255,26 @@ export default function HomeLanding() {
 
 function GateNode({
   gate,
-  lessonId,
+  href,
+  available,
+  current,
   navigate,
 }: {
   gate: ReinforcementPathNode;
-  lessonId: string;
+  href: string;
+  available: boolean;
+  current: boolean;
   navigate: (path: string) => void;
 }) {
   const meta = trackMeta[gate.track];
   const complete = gate.total > 0 && gate.completed >= gate.total;
   return (
-    <div className={`path-gate${complete ? " is-complete" : ""}`}>
-      <button onClick={() => navigate(trackLessonPath(gate.track, lessonId))}>
+    <div className={`path-gate${complete ? " is-complete" : ""}${current ? " is-current" : ""}`}>
+      <button disabled={!available} onClick={() => navigate(href)}>
         <span className="path-gate-glyph" aria-hidden="true">{meta.glyph}</span>
         <span>
-          <strong>练习驿站 · {meta.label}</strong>
-          <small>{gate.completed} / {gate.total} 已通关</small>
+          <strong>{meta.label}</strong>
+          <small>{available ? `${gate.completed} / ${gate.total} 已通关` : "学完本课生字后解锁"}</small>
         </span>
         {complete
           ? <i className="path-gate-check" aria-hidden="true"><Check size={17} strokeWidth={3.4} /></i>
@@ -282,11 +335,11 @@ type PathNode = CharacterPathNode | ReinforcementPathNode;
 type PathSegment = {
   key: string;
   characters: CharacterPathNode[];
-  gate?: ReinforcementPathNode;
 };
 
-// One route instead of four parallel maps: the lesson's characters stay in
-// reading order and each four-character chapter ends at a practice station.
+// The character path stays in reading order. Four-character chunks keep each
+// screen digestible; specialist practice now opens once at the end of the
+// lesson instead of interrupting a chunk with the whole lesson's question set.
 const GATE_EVERY = 4;
 
 function buildLessonPath(profile: StudyProfile, lessonId: string, currentId: string | undefined) {
@@ -308,40 +361,17 @@ function buildLessonPath(profile: StudyProfile, lessonId: string, currentId: str
       state: states[candidate.id],
     });
 
-    const gateIndex = index + 1;
-    if (gateIndex % GATE_EVERY === 0) {
-      const track = practiceTrackIds[(gateIndex / GATE_EVERY - 1) % practiceTrackIds.length];
-      const progress = trackProgress(profile, track, lessonId);
-      nodes.push({
-        kind: "reinforce",
-        key: `${lessonId}-gate-${gateIndex}`,
-        track,
-        completed: progress.completed,
-        total: progress.total,
-      });
-    }
   });
 
   return nodes;
 }
 
-function segmentLessonPath(nodes: PathNode[]) {
-  const segments: PathSegment[] = [];
-  let characters: CharacterPathNode[] = [];
-
-  nodes.forEach((node) => {
-    if (node.kind === "character") {
-      characters.push(node);
-      return;
-    }
-    segments.push({ key: `segment-${segments.length + 1}`, characters, gate: node });
-    characters = [];
-  });
-
-  if (characters.length) {
-    segments.push({ key: `segment-${segments.length + 1}`, characters });
-  }
-  return segments;
+function segmentLessonPath(nodes: PathNode[]): PathSegment[] {
+  const characters = nodes.filter((node): node is CharacterPathNode => node.kind === "character");
+  return Array.from({ length: Math.ceil(characters.length / GATE_EVERY) }, (_, index) => ({
+    key: `segment-${index + 1}`,
+    characters: characters.slice(index * GATE_EVERY, (index + 1) * GATE_EVERY),
+  }));
 }
 
 function chapterNumeral(index: number) {

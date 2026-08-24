@@ -1,4 +1,4 @@
-/* Practice hub: three clearly explained modes, all anchored to the learner's current lesson. */
+/* Practice hub: one recommended next step plus four freely accessible modes. */
 
 .practice-context-band {
   display: flex;
@@ -34,6 +34,11 @@
   line-height: 1.65;
 }
 
+.practice-context-band .practice-continue {
+  width: fit-content;
+  margin-top: 14px;
+}
+
 .practice-context-band > i {
   display: grid;
   flex: 0 0 64px;
@@ -51,7 +56,7 @@
 
 .practice-route-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 16px;
 }
 
@@ -74,6 +79,13 @@
   --practice-text: var(--radical-text);
   --practice-soft: var(--radical-soft);
   --practice-edge: var(--radical-edge);
+}
+
+.practice-route-card.action {
+  --practice-accent: var(--action);
+  --practice-text: var(--action-text);
+  --practice-soft: var(--action-soft);
+  --practice-edge: var(--action-edge);
 }
 
 .practice-route-card.wrong {
@@ -160,7 +172,7 @@
 
 .practice-sequence-note {
   display: grid;
-  grid-template-columns: auto minmax(0, 1fr) auto;
+  grid-template-columns: auto minmax(0, 1fr) auto auto;
   align-items: center;
   gap: 19px;
   margin-top: 30px;
@@ -168,6 +180,23 @@
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
 }
+
+.practice-read-aloud {
+  display: inline-flex;
+  min-height: 42px;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 13px;
+  border: 2px solid var(--line);
+  border-radius: 999px;
+  color: var(--ink);
+  font-size: .78rem;
+  font-weight: 850;
+  background: var(--paper);
+  box-shadow: 0 3px 0 var(--line);
+}
+
+.practice-read-aloud svg { width: 17px; height: 17px; color: var(--wrong-text); }
 
 .practice-sequence-note > span {
   display: grid;
@@ -208,6 +237,22 @@
   color: var(--radical-text);
   content: "→";
 }
+
+.track-lesson-empty {
+  display: grid;
+  justify-items: start;
+  gap: 10px;
+  padding: 28px;
+  border: 2px dashed var(--line-deep);
+  border-radius: 20px;
+  background: var(--sky-deep);
+}
+
+.track-lesson-empty h2,
+.track-lesson-empty p { margin: 0; }
+
+.track-lesson-empty h2 { color: var(--navy); font-family: var(--serif); }
+.track-lesson-empty p { max-width: 560px; color: var(--ink-soft); line-height: 1.7; }
 
 /* Course map: content is chunked by textbook unit so 26 lessons no longer read as one wall. */
 
@@ -425,6 +470,11 @@
 
   .practice-sequence-note ol {
     grid-column: 1 / -1;
+  }
+
+  .practice-read-aloud {
+    grid-column: 1 / -1;
+    justify-self: start;
   }
 
   .course-units {

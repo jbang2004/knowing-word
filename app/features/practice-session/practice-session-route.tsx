@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect, useMemo, useState, type Dispatch, type SetStateAction } from "react";
 import type { CharacterItem } from "../../data/catalog-types";
@@ -40,11 +41,27 @@ export default function PracticeSessionRoute({
   if (!hydrated) {
     return <main className="challenge-page challenge-centered" aria-busy="true"><section className="challenge-board"><h2>正在恢复学习进度…</h2></section></main>;
   }
+  if (track !== "words" && !profile.completed.words.includes(character.id)) {
+    return (
+      <main className="challenge-page challenge-centered">
+        <section className="challenge-board challenge-locked">
+          <span aria-hidden="true">字</span>
+          <h2>先认识“{character.hanzi}”</h2>
+          <p>完成这个字的识字小测后，结构、拆字和红蓝专项才会开放。</p>
+          <Link className="game-button primary" href={`/lessons/${character.lessonId}/words/${character.id}`}>
+            打开字卡
+          </Link>
+        </section>
+      </main>
+    );
+  }
   return (
     <HydratedPracticeSession
       character={character}
       track={track}
-      candidateIds={candidateIds}
+      candidateIds={track === "words"
+        ? candidateIds
+        : candidateIds.filter((id) => profile.completed.words.includes(id))}
       media={media}
       initialQuestionIndex={initialQuestionIndex}
       profile={profile}
@@ -245,11 +262,20 @@ function HydratedPracticeSession({
   }
 
   function finish() {
-    router.push(routeForTrack(track, character.lessonId));
+    router.push(track === "words"
+      ? `/lessons/${character.lessonId}?view=words`
+      : "/practice");
   }
 
   function nextCharacter() {
-    const nextId = nextCandidateId(candidateIds, profile.completed[track], character.id);
+    const completedAfterThisRound = profile.completed[track].includes(character.id)
+      ? profile.completed[track]
+      : [...profile.completed[track], character.id];
+    if (!candidateIds.some((id) => !completedAfterThisRound.includes(id))) {
+      finish();
+      return;
+    }
+    const nextId = nextCandidateId(candidateIds, completedAfterThisRound, character.id);
     if (nextId && nextId !== character.id) {
       router.push(routeForTrack(track, character.lessonId, nextId));
     } else {

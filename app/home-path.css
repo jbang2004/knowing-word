@@ -383,6 +383,49 @@
 
 /* Practice station --------------------------------------------------- */
 
+.path-practice-plan {
+  display: grid;
+  gap: 16px;
+  margin-top: 12px;
+  padding: 20px;
+  border: 2px solid var(--line);
+  border-radius: 24px;
+  background: var(--paper);
+  box-shadow: 0 var(--press) 0 var(--line);
+}
+
+.path-practice-plan > header {
+  display: grid;
+  gap: 4px;
+  text-align: center;
+}
+
+.path-practice-plan > header small { color: var(--action-text); font-weight: 850; }
+.path-practice-plan > header strong { color: var(--navy); font-family: var(--serif); font-size: 1.35rem; }
+.path-practice-plan > header p { margin: 2px auto 0; color: var(--ink-soft); font-size: .82rem; line-height: 1.6; }
+.path-practice-plan > div { display: grid; gap: 11px; }
+
+.path-read-finish {
+  display: flex;
+  min-height: 58px;
+  align-items: center;
+  gap: 12px;
+  padding: 11px 15px;
+  border: 2px solid var(--wrong-edge);
+  border-radius: 19px;
+  color: var(--ink);
+  text-align: left;
+  background: var(--wrong-soft);
+  box-shadow: 0 3px 0 var(--wrong-edge);
+}
+
+.path-read-finish > svg:first-child { color: var(--wrong-text); }
+.path-read-finish > svg:last-child { margin-left: auto; color: var(--ink-faint); }
+.path-read-finish > span { display: grid; gap: 2px; flex-grow: 1; }
+.path-read-finish strong { color: var(--navy); font-size: .92rem; }
+.path-read-finish small { color: var(--ink-soft); font-size: .76rem; font-weight: 750; }
+.path-read-finish:disabled { cursor: not-allowed; opacity: .62; box-shadow: none; }
+
 .path-gate { display: flex; justify-content: center; }
 
 .path-gate > button {
@@ -403,6 +446,17 @@
   border-color: var(--action);
   background: var(--action-soft);
   box-shadow: 0 var(--press) 0 var(--action-edge);
+}
+
+.path-gate.is-current > button {
+  border-color: var(--part);
+  box-shadow: 0 var(--press) 0 var(--part-edge), 0 0 0 4px var(--part-soft);
+}
+
+.path-gate > button:disabled {
+  cursor: not-allowed;
+  opacity: .64;
+  box-shadow: none;
 }
 
 .path-gate > button:active { transform: translateY(var(--press)); box-shadow: none; }
@@ -492,6 +546,9 @@
   .path-track,
   .path-segment-steps,
   .path-segment { gap: 24px; }
+
+  .path-practice-plan > div { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .path-gate > button { width: 100%; }
 
   .path-seal {
     width: 84px;

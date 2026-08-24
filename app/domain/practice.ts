@@ -9,7 +9,14 @@ const exerciseOrigin: Record<TrackId, string> = {
 };
 
 export function getTrackExercises(character: CharacterItem, track: TrackId) {
-  return character.exercises.filter((exercise) => exercise.origin === exerciseOrigin[track]);
+  return character.exercises.filter((exercise) => {
+    if (exercise.origin !== exerciseOrigin[track]) return false;
+    // The first check answers one question only: can the learner recognise this
+    // character in meaning and image? Structure, components and handwriting
+    // each have a dedicated later activity, so repeating the exact same items
+    // here made the path feel longer without adding a new retrieval step.
+    return track !== "words" || exercise.kind === "single";
+  });
 }
 
 export function stableOptionOrder(options: Exercise["options"], seed: string) {
@@ -60,7 +67,7 @@ export function isPracticeAnswerCorrect(
 }
 
 export function questionTypeLabel(question: Exercise, track: TrackId) {
-  if (question.kind === "write") return "写整字";
+  if (question.kind === "write") return "独立书写";
   if (track === "honglan") return "红蓝字";
   if (track === "split" || question.kind === "components") return "组字 · 选字";
   if (question.kind === "structure") return "结构选择";

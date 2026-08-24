@@ -20,7 +20,7 @@ export const trackMeta: Record<TrackId, TrackMeta> = {
     label: "词语表与写字表",
     menu: "识字",
     eyebrow: "理解字义，认识字形",
-    copy: "从课文词语出发，先听故事、看字形，再完成一套由浅入深的小测。",
+    copy: "从课文词语出发，先听懂字义、辨认字形，再把结构、部件和书写留给后续专项。",
     action: "继续识字",
     origin: "识字小测",
     glyph: "字",
@@ -28,7 +28,7 @@ export const trackMeta: Record<TrackId, TrackMeta> = {
   },
   split: {
     id: "split",
-    label: "课后练习",
+    label: "拆字重组",
     menu: "拆字",
     eyebrow: "拆一拆，再写一写",
     copy: "把汉字拆成部首和部件，自己搭回去，再落笔写完整的字。",
@@ -62,7 +62,12 @@ export const trackMeta: Record<TrackId, TrackMeta> = {
 };
 
 export const practiceTrackIds: readonly Exclude<TrackId, "words">[] = [
+  "structure",
   "split",
   "honglan",
-  "structure",
+];
+
+export const learningTrackIds: readonly TrackId[] = [
+  "words",
+  ...practiceTrackIds,
 ];

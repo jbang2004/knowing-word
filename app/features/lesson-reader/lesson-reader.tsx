@@ -23,7 +23,7 @@ type ParagraphSegment = {
   word?: string;
 };
 
-function lessonViewHref(lessonId: string, view: LessonView) {
+export function lessonViewHref(lessonId: string, view: LessonView) {
   return view === "read" ? `/lessons/${lessonId}` : `/lessons/${lessonId}?view=${view}`;
 }
 

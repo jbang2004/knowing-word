@@ -30,13 +30,14 @@ test("server-renders the task-first Knowing Word learning experience", async () 
   assert.match(html, /Knowing Word/i);
   assert.match(html, /五年级上册 26 课汉字学习地图/);
   // The landing is one path: the current lesson, its characters in order, and
-  // the reinforcement gates that fold the three practice routes into the line.
+  // the lesson ends in one integrated reinforcement plan.
   assert.match(html, /第 1 课/);
   assert.match(html, /白鹭/);
-  assert.match(html, /拆字练习/);
+  assert.match(html, /拆字重组/);
   assert.match(html, /红蓝练习/);
   assert.match(html, /空间结构/);
-  assert.match(html, /练习驿站/);
+  assert.match(html, /整课巩固/);
+  assert.match(html, /本课生字后解锁/);
   assert.match(html, /path-workspace/);
   // One seal per character, carrying the glyph and its state only.
   assert.match(html, /path-node is-current/);
@@ -51,8 +52,9 @@ test("server-renders the task-first Knowing Word learning experience", async () 
   const practiceResponse = await render("/practice");
   assert.equal(practiceResponse.status, 200);
   const practiceHtml = await practiceResponse.text();
-  assert.match(practiceHtml, /同一批字，换三种眼光再看一遍/);
-  assert.match(practiceHtml, /先拆组成，再辨功能，最后看空间/);
+  assert.match(practiceHtml, /同一批字，沿一条路线真正记牢/);
+  assert.match(practiceHtml, /识字.*结构.*拆字.*红蓝.*朗读/);
+  assert.match(practiceHtml, /自由朗读/);
 });
 
 test("secondary tools server-render with a contextual return query", async () => {
@@ -64,6 +66,10 @@ test("secondary tools server-render with a contextual return query", async () =>
   const readResponse = await render(`/read-aloud?returnTo=${encodeURIComponent(characterPath)}`);
   assert.equal(readResponse.status, 200);
   assert.match(await readResponse.text(), /朗读/);
+
+  const accountResponse = await render("/account");
+  assert.equal(accountResponse.status, 200);
+  assert.match(await accountResponse.text(), /学习记录与错题重练/);
 });
 
 test("the lesson guide connects reading clues to cards and back", async () => {
@@ -83,6 +89,14 @@ test("the lesson guide connects reading clues to cards and back", async () => {
   assert.match(lessonHtml, /做练习/);
   assert.match(lessonHtml, /lesson-paragraph-1/);
   assert.match(lessonHtml, /returnTo=%2Flessons%2Fg5v1-l01%23lesson-paragraph-1/);
+
+  const practiceResponse = await render("/lessons/g5v1-l01?view=practice");
+  const practiceHtml = await practiceResponse.text();
+  assert.match(practiceHtml, /本课统一练习路线/);
+  assert.match(practiceHtml, /识字/);
+  assert.match(practiceHtml, /结构/);
+  assert.match(practiceHtml, /拆字/);
+  assert.match(practiceHtml, /红蓝/);
 
   const wordsResponse = await render("/lessons/g5v1-l01?view=words");
   assert.equal(wordsResponse.status, 200);

@@ -21,6 +21,7 @@ test("the shared profile model exposes one current storage schema", () => {
     answers: {},
     learnedComponents: [],
     recentComponents: [],
+    readLessons: [],
     daily: {},
   });
 });
@@ -43,6 +44,7 @@ test("normalization keeps current data valid without reviving legacy mastered st
     },
     learnedComponents: ["木", "木", "圭"],
     recentComponents: Array.from({ length: 30 }, (_, index) => `p${index}`),
+    readLessons: ["g5v1-l01", "g5v1-l01", "g5v1-l02"],
     daily: {
       "2026-08-23": { attempts: 3.9, correct: 2, skips: -2, readSessions: 1 },
       yesterday: { attempts: 9 },
@@ -66,6 +68,7 @@ test("normalization keeps current data valid without reviving legacy mastered st
   assert.equal(profile.answers.broken, undefined);
   assert.deepEqual(profile.learnedComponents, ["木", "圭"]);
   assert.equal(profile.recentComponents.length, 24);
+  assert.deepEqual(profile.readLessons, ["g5v1-l01", "g5v1-l02"]);
   assert.deepEqual(profile.daily["2026-08-23"], {
     attempts: 3,
     correct: 2,

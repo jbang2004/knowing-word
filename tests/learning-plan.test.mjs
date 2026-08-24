@@ -1,0 +1,61 @@
+import assert from "node:assert/strict";
+import test from "node:test";
+import { homeCandidates } from "../app/data/home-index.generated.ts";
+import {
+  learningTrackProgress,
+  nextLessonActivity,
+  recommendedLessonId,
+} from "../app/domain/learning-plan.ts";
+import { getTrackExercises } from "../app/domain/practice.ts";
+import { loadLessonContent } from "../app/data/lesson-content.ts";
+import { emptyProfile } from "../app/lib/profile-model.ts";
+
+const firstLessonId = "g5v1-l01";
+
+test("the guided plan finishes recognition before ordered specialist practice", () => {
+  const profile = emptyProfile();
+  const words = homeCandidates.words.filter((candidate) => candidate.lessonId === firstLessonId);
+
+  assert.equal(recommendedLessonId(profile), firstLessonId);
+  assert.deepEqual(nextLessonActivity(profile, firstLessonId), {
+    track: "words",
+    candidate: words[0],
+  });
+
+  profile.completed.words = words.map((candidate) => candidate.id);
+  profile.last.words = { lessonId: firstLessonId, characterId: words.at(-1).id, questionIndex: 1 };
+  assert.equal(nextLessonActivity(profile, firstLessonId).track, "structure");
+  assert.equal(recommendedLessonId(profile), firstLessonId);
+
+  profile.completed.structure = [...profile.completed.words];
+  assert.equal(nextLessonActivity(profile, firstLessonId).track, "split");
+  profile.completed.split = [...profile.completed.words];
+  assert.equal(nextLessonActivity(profile, firstLessonId).track, "honglan");
+  profile.completed.honglan = [...profile.completed.words];
+  assert.deepEqual(nextLessonActivity(profile, firstLessonId), { track: null, candidate: null });
+  assert.equal(recommendedLessonId(profile), firstLessonId);
+  profile.readLessons = [firstLessonId];
+  assert.equal(recommendedLessonId(profile), "g5v1-l02");
+});
+
+test("specialist progress contains learned characters only", () => {
+  const profile = emptyProfile();
+  const first = homeCandidates.words.find((candidate) => candidate.lessonId === firstLessonId);
+  profile.completed.words = [first.id];
+
+  assert.deepEqual(learningTrackProgress(profile, "structure", firstLessonId), {
+    completed: 0,
+    total: 1,
+  });
+});
+
+test("the recognition check no longer repeats specialist structure, component, or writing items", async () => {
+  const content = await loadLessonContent(firstLessonId);
+  const character = content.characters.find((item) => item.primary && item.official !== false);
+  const exercises = getTrackExercises(character, "words");
+
+  assert.ok(exercises.length >= 2);
+  assert.ok(exercises.every((exercise) => exercise.kind === "single"));
+  assert.ok(getTrackExercises(character, "structure").some((exercise) => exercise.kind === "structure"));
+  assert.ok(getTrackExercises(character, "split").some((exercise) => exercise.kind === "components"));
+});

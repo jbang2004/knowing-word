@@ -32,6 +32,7 @@ export type StudyProfile = {
   answers: Record<string, AnswerStat>;
   learnedComponents: string[];
   recentComponents: string[];
+  readLessons: string[];
   daily: Record<string, DailyActivity>;
 };
 
@@ -120,6 +121,7 @@ export function emptyProfile(): StudyProfile {
     answers: {},
     learnedComponents: [],
     recentComponents: [],
+    readLessons: [],
     daily: {},
   };
 }
@@ -152,6 +154,7 @@ export function normalizeProfile(value: unknown): StudyProfile {
     answers: normalizeAnswers(raw.answers),
     learnedComponents: stringList(raw.learnedComponents),
     recentComponents: stringList(raw.recentComponents, 24),
+    readLessons: stringList(raw.readLessons),
     daily: normalizeDaily(raw.daily),
   };
 }

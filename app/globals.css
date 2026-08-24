@@ -1358,6 +1358,32 @@ canvas:focus-visible {
   box-shadow: var(--shadow);
 }
 
+.challenge-locked {
+  display: grid;
+  min-height: 420px;
+  place-items: center;
+  align-content: center;
+  gap: 12px;
+  text-align: center;
+}
+
+.challenge-locked > span {
+  display: grid;
+  width: 70px;
+  height: 70px;
+  place-items: center;
+  border-radius: 22px 22px 22px 7px;
+  color: var(--action-ink);
+  font-family: var(--kai);
+  font-size: 2.2rem;
+  background: var(--action);
+  box-shadow: 0 4px 0 var(--action-deep);
+}
+
+.challenge-locked h2,
+.challenge-locked p { margin: 0; }
+.challenge-locked p { max-width: 440px; color: var(--ink-soft); line-height: 1.7; }
+
 .challenge-question {
   max-width: 700px;
   margin-bottom: 27px;
@@ -2544,6 +2570,7 @@ canvas:focus-visible {
 }
 
 .profile-actions button > svg,
+.account-records > svg,
 .account-signout > svg {
   width: 19px;
   height: 19px;
@@ -2554,7 +2581,8 @@ canvas:focus-visible {
   color: var(--radical-text);
 }
 
-.profile-actions button:hover {
+.profile-actions button:hover,
+.account-records:hover {
   border-color: var(--violet);
   background: var(--violet-soft);
 }
@@ -2688,6 +2716,7 @@ canvas:focus-visible {
   background: var(--paper-soft);
 }
 
+.account-records,
 .account-signout {
   display: flex;
   align-items: center;
@@ -3049,7 +3078,7 @@ canvas:focus-visible {
 
   .practice-strip-items {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .practice-strip-items :is(button, a) {

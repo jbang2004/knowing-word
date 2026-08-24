@@ -100,7 +100,7 @@ export function CelebrationOverlay({
         <div className="celebration-actions">
           <button className="game-button primary" onClick={onNextCharacter}>继续 · 下一个字</button>
           <button className="game-button ghost" onClick={onReplay}><RotateCcw aria-hidden="true" /> 再练一轮</button>
-          <button className="text-button" onClick={onFinish}>返回课文地图</button>
+          <button className="text-button" onClick={onFinish}>返回学习路线</button>
         </div>
       </div>
     </div>
@@ -197,7 +197,7 @@ export function ChallengeRoom({
         {question.kind === "write" ? (
           <WritingPad
             character={character.hanzi}
-            guided
+            guided={false}
             revealAnswer={result !== null}
             onWrite={onWrite}
             onClear={onClearWrite}
@@ -238,7 +238,9 @@ export function ChallengeRoom({
 
       {result === null ? (
         <div className="challenge-actions">
-          <button className="game-button primary" disabled={!ready} onClick={onCheck}>核对答案</button>
+          <button className="game-button primary" disabled={!ready} onClick={onCheck}>
+            {question.kind === "write" ? "显示范字并对照" : "核对答案"}
+          </button>
           <div className="challenge-actions-row">
             <button className="text-button" disabled={questionIndex === 0} onClick={onPrevious}>← 上一题</button>
             <span className="key-hint">按 <kbd>A</kbd>–<kbd>D</kbd> 选择 · <kbd>Enter</kbd> 确认</span>
@@ -254,14 +256,18 @@ export function ChallengeRoom({
                 : <RotateCcw size={22} strokeWidth={2.6} />}
             </span>
             <strong>
-              {result
+              {question.kind === "write" && result
+                ? "完成一次独立书写"
+                : result
                 ? "答对了"
                 : "再看一眼"}
             </strong>
             {record && <small>已尝试 {record.attempts} 次</small>}
           </div>
           <p>
-            {result
+            {question.kind === "write" && result
+              ? "规范字已经显示。请自己检查是否漏笔、错位；需要调整可以重新写一遍。"
+              : result
               ? question.explanation || (finalStep ? "这一关完成了，回到地图看看下一站。" : "记住这个线索，再去下一题。")
               : "正确答案是：" + (question.kind === "write" ? "在方格里写完整的「" + character.hanzi + "」" : answerText || "仔细看字形。")}
           </p>

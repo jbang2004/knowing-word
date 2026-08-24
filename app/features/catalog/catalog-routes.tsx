@@ -2,14 +2,20 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Sparkles } from "lucide-react";
+import { ArrowRight, Mic2, Sparkles } from "lucide-react";
 import type { CharacterItem, LessonItem } from "../../data/catalog-types";
 import { grade5Course, grade5Lessons } from "../../data/generated/grade5-volume1/course";
 import { lessonVisuals } from "../../data/illustrations";
 import type { LessonDocument } from "../../data/lesson-documents";
-import { nextTrackCandidate, trackCandidates, trackProgress } from "../../domain/catalog-progress";
+import { trackCandidates, trackProgress } from "../../domain/catalog-progress";
+import {
+  learningTrackProgress,
+  nextLearnedPracticeCandidate,
+  nextLessonActivity,
+  recommendedLessonId,
+} from "../../domain/learning-plan";
 import { getTrackExercises } from "../../domain/practice";
-import { practiceTrackIds, trackMeta } from "../../domain/tracks";
+import { learningTrackIds, trackMeta } from "../../domain/tracks";
 import { useStudyProfile } from "../profile/use-study-profile";
 import { routeForTrack } from "../../lib/app-route";
 import type { TrackId } from "../../lib/profile-model";
@@ -17,6 +23,7 @@ import { LearningPageShell, PageHeading } from "../shell/learning-page-shell";
 import {
   LessonReader,
   LessonViewNavigation,
+  lessonViewHref,
   type LessonView,
 } from "../lesson-reader/lesson-reader";
 
@@ -44,31 +51,52 @@ function wordGroups(characters: CharacterItem[], extension: boolean) {
 
 export function PracticeHubRoute() {
   const { profile } = useStudyProfile({ writable: false });
-  const nextWord = nextTrackCandidate("words", profile);
-  const currentLesson = grade5Lessons.find((lesson) => lesson.id === nextWord?.lessonId) ?? grade5Lessons[0];
-  const wordProgress = trackProgress(profile, "words", currentLesson.id);
+  const lessonId = recommendedLessonId(profile) ?? grade5Lessons[0].id;
+  const currentLesson = grade5Lessons.find((lesson) => lesson.id === lessonId) ?? grade5Lessons[0];
+  const recommendation = nextLessonActivity(profile, currentLesson.id);
+  const wordProgress = learningTrackProgress(profile, "words", currentLesson.id);
+  const recommendationHref = recommendation.track === "words" && recommendation.candidate
+    ? `/lessons/${currentLesson.id}/words/${recommendation.candidate.id}`
+    : recommendation.track && recommendation.candidate
+      ? routeForTrack(recommendation.track, currentLesson.id, recommendation.candidate.id)
+      : `/read-aloud?lessonId=${encodeURIComponent(currentLesson.id)}&returnTo=%2Fpractice`;
+  const recommendationLabel = recommendation.track
+    ? `继续${trackMeta[recommendation.track].menu} · ${recommendation.candidate.hanzi}`
+    : "完成本课朗读";
 
   return (
     <LearningPageShell active="practice" name={profile.name}>
       <div className="page practice-hub-page">
         <PageHeading
           kicker="巩固练习"
-          title="同一批字，换三种眼光再看一遍"
-          copy="拆字看组成，红蓝看部件分工，结构看空间站位。三种方法服务于同一个目标：离开图片后，仍然能把字想起来。"
+          title="同一批字，沿一条路线真正记牢"
+          copy="先从词语认出字，再看整体结构、拆开重组、分辨部件功能，最后回到课文朗读。系统会直接带你去下一步。"
         />
         <section className="practice-context-band" aria-label="当前课程">
           <div>
             <span>当前建议</span>
             <h2>练习第 {currentLesson.position} 课《{currentLesson.title}》</h2>
-            <p>本课识字已完成 {wordProgress.completed}/{wordProgress.total} 个，练习会围绕同一批字展开。</p>
+            <p>本课识字已完成 {wordProgress.completed}/{wordProgress.total} 个；专项只会出现已经学过的字。</p>
+            <Link className="game-button primary practice-continue" href={recommendationHref}>
+              {recommendationLabel} <ArrowRight aria-hidden="true" />
+            </Link>
           </div>
-          <i>{nextWord?.hanzi ?? "字"}</i>
+          <i>{recommendation.candidate?.hanzi ?? "读"}</i>
         </section>
-        <section className="practice-route-grid" aria-label="三种巩固方式">
-          {practiceTrackIds.map((track, index) => {
+        <section className="practice-route-grid" aria-label="自由选择练习方式">
+          {learningTrackIds.map((track, index) => {
             const meta = trackMeta[track];
-            const lessonProgress = trackProgress(profile, track, currentLesson.id);
-            const totalProgress = trackProgress(profile, track);
+            const lessonProgress = learningTrackProgress(profile, track, currentLesson.id);
+            const totalProgress = learningTrackProgress(profile, track);
+            const candidates = trackCandidates(track, currentLesson.id);
+            const nextCandidate = track === "words"
+              ? candidates.find((candidate) => !profile.completed.words.includes(candidate.id)) ?? candidates[0]
+              : nextLearnedPracticeCandidate(profile, track, currentLesson.id);
+            const href = track === "words" && nextCandidate
+              ? `/lessons/${currentLesson.id}/words/${nextCandidate.id}`
+              : track !== "words" && nextCandidate
+                ? routeForTrack(track, currentLesson.id, nextCandidate.id)
+                : lessonViewHref(currentLesson.id, "words");
             return (
               <article className={`practice-route-card ${meta.tone}`} key={track}>
                 <div className="practice-route-top">
@@ -81,10 +109,12 @@ export function PracticeHubRoute() {
                   <span>全册 {totalProgress.completed}/{totalProgress.total}</span>
                 </div>
                 <div className="practice-route-actions">
-                  <Link className="game-button primary" href={routeForTrack(track, currentLesson.id)}>
-                    练习本课 <ArrowRight aria-hidden="true" />
+                  <Link className="game-button primary" href={href}>
+                    {track === "words"
+                      ? lessonProgress.total > 0 && lessonProgress.completed === lessonProgress.total ? "复习本课" : "学习本课"
+                      : lessonProgress.total ? "继续本课" : "先学生字"} <ArrowRight aria-hidden="true" />
                   </Link>
-                  <Link className="text-button" href={routeForTrack(track)}>全部课程</Link>
+                  <Link className="text-button" href={track === "words" ? "/lessons" : routeForTrack(track)}>全部课程</Link>
                 </div>
               </article>
             );
@@ -92,8 +122,11 @@ export function PracticeHubRoute() {
         </section>
         <section className="practice-sequence-note">
           <span><Sparkles aria-hidden="true" /></span>
-          <div><p className="kicker">建议顺序</p><h2>先拆组成，再辨功能，最后看空间。</h2></div>
-          <ol><li>拆一拆</li><li>涂红蓝</li><li>认结构</li></ol>
+          <div><p className="kicker">整课学习顺序</p><h2>从整体到局部，再回到词语。</h2></div>
+          <ol><li>识字</li><li>结构</li><li>拆字</li><li>红蓝</li><li>朗读</li></ol>
+          <Link className="practice-read-aloud" href={`/read-aloud?lessonId=${encodeURIComponent(currentLesson.id)}&returnTo=%2Fpractice`}>
+            <Mic2 aria-hidden="true" /> 自由朗读
+          </Link>
         </section>
       </div>
     </LearningPageShell>
@@ -190,7 +223,7 @@ export function LessonRoute({
       : `在原创语境中发现本课 ${progress.total} 个字，点击标注生字可直接进入字卡`
     : view === "words"
       ? `${lesson.skimming ? "会认字" : "识字写字表"} · ${progress.completed} / ${progress.total} 个课内字已完成整套识字小测`
-      : "读完语境、看过字卡后，再用三种方法把字形真正记牢";
+      : "读完语境、看过字卡后，沿识字、结构、拆字、红蓝的顺序把字形真正记牢";
   return (
     <LearningPageShell active="course" name={profile.name}>
       <div className={`page lesson-page${usesReader ? " has-reader" : ""}`}>
@@ -240,13 +273,21 @@ export function LessonRoute({
             <ol>{document?.sections.map((section, index) => <li key={section.id}><i>{index + 1}</i><span>{section.title}</span></li>)}</ol>
           </section>}
           <section className="lesson-practice-strip">
-            <div><p className="kicker">学完词语表，再来巩固</p><h2>同一批字，换三种方式练习</h2></div>
+            <div><p className="kicker">本课统一练习路线</p><h2>先识字，再看结构、拆字和部件功能</h2></div>
             <div className="practice-strip-items">
-              {practiceTrackIds.map((track) => {
+              {learningTrackIds.map((track) => {
                 const meta = trackMeta[track];
-                const itemProgress = trackProgress(profile, track, lesson.id);
+                const itemProgress = learningTrackProgress(profile, track, lesson.id);
+                const nextWord = characters.find((character) =>
+                  character.primary && character.official !== false && !completed.has(character.id),
+                );
+                const href = track === "words"
+                  ? nextWord
+                    ? `/lessons/${lesson.id}/words/${nextWord.id}`
+                    : lessonViewHref(lesson.id, "words")
+                  : routeForTrack(track, lesson.id);
                 return (
-                  <Link className={meta.tone} href={routeForTrack(track, lesson.id)} key={track}>
+                  <Link className={meta.tone} href={href} key={track}>
                     <span>{meta.glyph}</span><strong>{meta.menu}</strong><small>{itemProgress.completed}/{itemProgress.total}</small>
                   </Link>
                 );
@@ -299,10 +340,10 @@ function WordBoard({
 export function TrackMapRoute({ track }: { track: Exclude<TrackId, "words"> }) {
   const { profile } = useStudyProfile({ writable: false });
   const meta = trackMeta[track];
-  const next = nextTrackCandidate(track, profile);
+  const next = nextLearnedPracticeCandidate(profile, track);
   const nextLesson = grade5Lessons.find((lesson) => lesson.id === next?.lessonId);
-  const progress = trackProgress(profile, track);
-  const continueHref = next ? routeForTrack(track, next.lessonId, next.id) : routeForTrack(track, grade5Lessons[0].id);
+  const progress = learningTrackProgress(profile, track);
+  const continueHref = next ? routeForTrack(track, next.lessonId, next.id) : "/lessons";
   return (
     <LearningPageShell active="practice" name={profile.name}>
       <div className={`page track-map-page ${meta.tone}`}>
@@ -312,7 +353,7 @@ export function TrackMapRoute({ track }: { track: Exclude<TrackId, "words"> }) {
             <div className="level-map-title"><h2>选择课次</h2><span>共 {grade5Lessons.length} 课 · 完成 {progress.completed} / {progress.total}</span></div>
             <div className="level-list">
               {grade5Lessons.map((lesson) => {
-                const item = trackProgress(profile, track, lesson.id);
+                const item = learningTrackProgress(profile, track, lesson.id);
                 return (
                   <Link href={routeForTrack(track, lesson.id)} key={lesson.id}>
                     <span className="level-number">第 {lesson.position} 课</span><strong>{lesson.title}</strong><i>{item.completed}/{item.total}</i><b><ArrowRight aria-hidden="true" /></b>
@@ -324,8 +365,8 @@ export function TrackMapRoute({ track }: { track: Exclude<TrackId, "words"> }) {
           <aside className="track-map-aside">
             <section className={`track-hero ${meta.tone}`}>
               <div className="track-symbol">{meta.glyph}</div>
-              <div><p>上次学到</p><h2>{next ? `${next.hanzi} 字` : "准备开始"}</h2><span>{nextLesson ? `来自第 ${nextLesson.position} 课 · ${nextLesson.title}` : "从第一课开始闯关"}</span></div>
-              <Link className="game-button white" href={continueHref}>{meta.action} <ArrowRight aria-hidden="true" /></Link>
+              <div><p>上次学到</p><h2>{next ? `${next.hanzi} 字` : "尚未解锁"}</h2><span>{nextLesson ? `来自第 ${nextLesson.position} 课 · ${nextLesson.title}` : "先完成识字小测，再开始专项巩固"}</span></div>
+              <Link className="game-button white" href={continueHref}>{next ? meta.action : "先去学生字"} <ArrowRight aria-hidden="true" /></Link>
             </section>
             <section className="track-method-card"><p className="kicker">这项练习在训练什么</p><h2>{meta.eyebrow}</h2><p>{meta.copy}</p></section>
           </aside>
@@ -346,22 +387,29 @@ export function TrackLessonRoute({
 }) {
   const { profile } = useStudyProfile({ writable: false });
   const meta = trackMeta[track];
-  const eligible = characters.filter((item) => item.primary && item.official !== false && getTrackExercises(item, track).length > 0);
+  const learned = new Set(profile.completed.words);
+  const eligible = characters.filter((item) =>
+    item.primary && item.official !== false && learned.has(item.id) && getTrackExercises(item, track).length > 0,
+  );
   const completed = new Set(profile.completed[track]);
-  const progress = trackProgress(profile, track, lesson.id);
+  const progress = learningTrackProgress(profile, track, lesson.id);
   return (
     <LearningPageShell active="practice" name={profile.name}>
       <div className="page track-lesson-page">
         <PageHeading kicker={meta.label} title={lesson.title} copy={`选择一个字开始本关练习 · 已完成 ${progress.completed} / ${progress.total}`} backHref={routeForTrack(track)} />
         <section className={`track-lesson-board ${meta.tone}`}>
           <p className="track-lesson-note">{meta.copy}</p>
-          <div className="track-character-grid">
+          {eligible.length ? <div className="track-character-grid">
             {eligible.map((character, index) => (
               <Link className={completed.has(character.id) ? "is-complete" : ""} href={routeForTrack(track, lesson.id, character.id)} key={character.id}>
                 <small>{String(index + 1).padStart(2, "0")}</small><strong>{character.hanzi}</strong><i>{completed.has(character.id) ? "✓" : "开始"}</i>
               </Link>
             ))}
-          </div>
+          </div> : <div className="track-lesson-empty">
+            <h2>先认识本课生字</h2>
+            <p>专项练习只会使用已经完成识字小测的字，避免提前遇到陌生内容。</p>
+            <Link className="game-button primary" href={lessonViewHref(lesson.id, "words")}>打开本课字表</Link>
+          </div>}
         </section>
       </div>
     </LearningPageShell>

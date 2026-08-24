@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import {
   CheckCircle2,
+  ChartNoAxesColumnIncreasing,
   ChevronLeft,
   ChevronRight,
   CircleStop,
@@ -58,6 +59,9 @@ export function AccountRoute() {
           </div>
         </section>
         <div className="profile-actions">
+          <Link className="account-records" href="/records">
+            <ChartNoAxesColumnIncreasing aria-hidden="true" />学习记录与错题重练
+          </Link>
           <button onClick={() => setProfile((value) => ({ ...value, theme: value.theme === "light" ? "night" : "light" }))}>
             {profile.theme === "light" ? <MoonStar aria-hidden="true" /> : <SunMedium aria-hidden="true" />}
             {profile.theme === "light" ? "切换夜读模式" : "切换日间模式"}
@@ -133,6 +137,9 @@ export function ReadAloudRoute({
       const day = previous.daily[date] ?? { attempts: 0, correct: 0, skips: 0, readSessions: 0 };
       return {
         ...previous,
+        readLessons: previous.readLessons.includes(lessonId)
+          ? previous.readLessons
+          : [...previous.readLessons, lessonId],
         daily: { ...previous.daily, [date]: { ...day, readSessions: day.readSessions + 1 } },
       };
     });
