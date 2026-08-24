@@ -17,7 +17,10 @@ const wrangler = join(projectRoot, "node_modules/.bin/wrangler");
 const config = JSON.parse(await readFile(wranglerConfig, "utf8"));
 const mediaBinding = config.r2_buckets?.find((binding) => binding.binding === "MEDIA");
 const bucketName = process.env.R2_BUCKET || mediaBinding?.bucket_name;
-if (!bucketName) throw new Error("The MEDIA R2 bucket is missing from the production Wrangler config.");
+const seedUrl = (process.env.NARRATION_SEED_URL || "").replace(/\/+$/, "");
+const seedToken = process.env.NARRATION_SEED_TOKEN || "";
+if (!seedUrl && !bucketName) throw new Error("The MEDIA R2 bucket is missing from the production Wrangler config.");
+if (seedUrl && !seedToken) throw new Error("NARRATION_SEED_TOKEN is required with NARRATION_SEED_URL.");
 
 const relativePaths = [...new Set(
   Object.values(narrationAssets)
@@ -33,6 +36,20 @@ function contentType(relative) {
 
 async function upload(relative) {
   const source = join(narrationSourceRoot, relative);
+  if (seedUrl) {
+    const response = await fetch(`${seedUrl}?relative=${encodeURIComponent(relative)}`, {
+      method: "POST",
+      headers: {
+        "content-type": contentType(relative),
+        "x-narration-seed-token": seedToken,
+      },
+      body: await readFile(source),
+    });
+    if (!response.ok) {
+      throw new Error(`${response.status} ${response.statusText}: ${await response.text()}`);
+    }
+    return;
+  }
   const objectPath = `${bucketName}/built-in/narration/${narrationVersion}/${relative}`;
   await run(wrangler, [
     "r2",
