@@ -8,9 +8,9 @@ import {
 import { learningDayKey } from "../app/domain/learning-day.ts";
 
 test("the shared profile model exposes one current storage schema", () => {
-  assert.equal(PROFILE_STORAGE_KEY, "knowing-word:course-progress:v3");
+  assert.equal(PROFILE_STORAGE_KEY, "knowing-word:course-progress:v4");
   assert.deepEqual(emptyProfile(), {
-    version: 3,
+    version: 4,
     name: "",
     grade: 5,
     courseId: "chinese-grade-5-volume-1",
@@ -28,6 +28,7 @@ test("the shared profile model exposes one current storage schema", () => {
 
 test("normalization keeps current data valid without reviving legacy mastered state", () => {
   const profile = normalizeProfile({
+    version: 4,
     mastered: ["旧"],
     name: "一位名字特别特别特别特别长的学习者",
     grade: -1,
@@ -78,6 +79,22 @@ test("normalization keeps current data valid without reviving legacy mastered st
   assert.equal(profile.daily.yesterday, undefined);
 
   assert.deepEqual(normalizeProfile({ mastered: ["旧"] }).completed.words, []);
+});
+
+test("v3 completion is upgraded to the full-character mastery meaning", () => {
+  const migrated = normalizeProfile({
+    version: 3,
+    completed: {
+      words: ["只做识字", "完整学会"],
+      structure: ["完整学会"],
+      split: ["完整学会"],
+      honglan: ["完整学会"],
+    },
+  });
+
+  assert.equal(migrated.version, 4);
+  assert.deepEqual(migrated.completed.words, ["完整学会"]);
+  assert.deepEqual(migrated.completed.structure, ["完整学会"]);
 });
 
 test("today keys use the product's Shanghai learning day", () => {

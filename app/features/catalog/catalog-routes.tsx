@@ -222,7 +222,7 @@ export function LessonRoute({
       ? `带着三条阅读线索打开课本，本课 ${progress.total} 个字都能从重点词进入字卡`
       : `在原创语境中发现本课 ${progress.total} 个字，点击标注生字可直接进入字卡`
     : view === "words"
-      ? `${lesson.skimming ? "会认字" : "识字写字表"} · ${progress.completed} / ${progress.total} 个课内字已完成整套识字小测`
+      ? `${lesson.skimming ? "会认字" : "识字写字表"} · ${progress.completed} / ${progress.total} 个课内字已完成单字过关`
       : "读完语境、看过字卡后，沿识字、结构、拆字、红蓝的顺序把字形真正记牢";
   return (
     <LearningPageShell active="course" name={profile.name}>
@@ -230,7 +230,7 @@ export function LessonRoute({
         <PageHeading
           kicker={`第 ${lesson.position} 课${lesson.skimming ? " · 略读" : ""}`}
           title={lesson.title}
-          copy={usesReader ? headingCopy : `${lesson.skimming ? "会认字" : "识字写字表"} · ${progress.completed} / ${progress.total} 个课内字已完成整套识字小测`}
+          copy={usesReader ? headingCopy : `${lesson.skimming ? "会认字" : "识字写字表"} · ${progress.completed} / ${progress.total} 个课内字已完成单字过关`}
           backHref="/lessons"
         />
         {usesReader && <LessonViewNavigation lessonId={lesson.id} view={view} format={document?.format} />}
@@ -365,7 +365,7 @@ export function TrackMapRoute({ track }: { track: Exclude<TrackId, "words"> }) {
           <aside className="track-map-aside">
             <section className={`track-hero ${meta.tone}`}>
               <div className="track-symbol">{meta.glyph}</div>
-              <div><p>上次学到</p><h2>{next ? `${next.hanzi} 字` : "尚未解锁"}</h2><span>{nextLesson ? `来自第 ${nextLesson.position} 课 · ${nextLesson.title}` : "先完成识字小测，再开始专项巩固"}</span></div>
+              <div><p>上次学到</p><h2>{next ? `${next.hanzi} 字` : "尚未解锁"}</h2><span>{nextLesson ? `来自第 ${nextLesson.position} 课 · ${nextLesson.title}` : "先完成单字过关，再开始专项巩固"}</span></div>
               <Link className="game-button white" href={continueHref}>{next ? meta.action : "先去学生字"} <ArrowRight aria-hidden="true" /></Link>
             </section>
             <section className="track-method-card"><p className="kicker">这项练习在训练什么</p><h2>{meta.eyebrow}</h2><p>{meta.copy}</p></section>
@@ -407,7 +407,7 @@ export function TrackLessonRoute({
             ))}
           </div> : <div className="track-lesson-empty">
             <h2>先认识本课生字</h2>
-            <p>专项练习只会使用已经完成识字小测的字，避免提前遇到陌生内容。</p>
+            <p>专项练习只会使用已经完成单字过关的字，避免提前遇到陌生内容。</p>
             <Link className="game-button primary" href={lessonViewHref(lesson.id, "words")}>打开本课字表</Link>
           </div>}
         </section>

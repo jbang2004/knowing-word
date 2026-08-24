@@ -21,7 +21,7 @@ export type DailyActivity = {
 };
 
 export type StudyProfile = {
-  version: 3;
+  version: 4;
   name: string;
   grade: number;
   courseId: string;
@@ -37,7 +37,8 @@ export type StudyProfile = {
 };
 
 export const trackIds: TrackId[] = ["words", "split", "honglan", "structure"];
-export const PROFILE_STORAGE_KEY = "knowing-word:course-progress:v3";
+export const PROFILE_STORAGE_KEY = "knowing-word:course-progress:v4";
+export const LEGACY_PROFILE_STORAGE_KEYS = ["knowing-word:course-progress:v3"] as const;
 
 const DEFAULT_COURSE_ID = "chinese-grade-5-volume-1";
 const DEFAULT_GRADE = 5;
@@ -110,7 +111,7 @@ function normalizeDaily(value: unknown) {
 
 export function emptyProfile(): StudyProfile {
   return {
-    version: 3,
+    version: 4,
     name: "",
     grade: DEFAULT_GRADE,
     courseId: DEFAULT_COURSE_ID,
@@ -126,9 +127,6 @@ export function emptyProfile(): StudyProfile {
   };
 }
 
-// Only the current schema is accepted. There is no deployed learning history,
-// so keeping v1/v2 migration branches would add ambiguity without protecting
-// real data.
 export function normalizeProfile(value: unknown): StudyProfile {
   const raw = recordValue(value);
   const completed = recordValue(raw.completed);
@@ -138,6 +136,19 @@ export function normalizeProfile(value: unknown): StudyProfile {
   for (const track of trackIds) {
     profile.completed[track] = stringList(completed[track]);
     profile.last[track] = normalizeResume(last[track]);
+  }
+
+  if (raw.version !== 4) {
+    // Before v4, completing the short recognition check marked a word as
+    // learned even when its structure, split and red-blue work was unfinished.
+    // Preserve real history while upgrading "completed words" to mean that the
+    // whole character has been mastered.
+    const specialistCompletion = new Set(
+      profile.completed.structure.filter((id) =>
+        profile.completed.split.includes(id) && profile.completed.honglan.includes(id),
+      ),
+    );
+    profile.completed.words = profile.completed.words.filter((id) => specialistCompletion.has(id));
   }
 
   return {

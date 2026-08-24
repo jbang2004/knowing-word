@@ -35,6 +35,7 @@ export function CelebrationOverlay({
   character,
   results,
   total,
+  sessionLabel,
   onReplay,
   onNextCharacter,
   onFinish,
@@ -43,6 +44,7 @@ export function CelebrationOverlay({
   character: CharacterItem;
   results: boolean[];
   total: number;
+  sessionLabel?: string;
   onReplay: () => void;
   onNextCharacter: () => void;
   onFinish: () => void;
@@ -63,7 +65,7 @@ export function CelebrationOverlay({
       <div className={"celebration-card track-" + trackMeta[track].tone}>
         <div className="celebration-glyph" aria-hidden="true">{character.hanzi}</div>
         <h2>{mistakes === 0 ? "完美通关" : "本关完成"}</h2>
-        <p className="celebration-kicker">{trackMeta[track].menu} · {character.lessonTitle}</p>
+        <p className="celebration-kicker">{sessionLabel ?? trackMeta[track].menu} · {character.lessonTitle}</p>
 
         <dl className="celebration-stats">
           <div><dt>题目</dt><dd>{total}</dd></div>

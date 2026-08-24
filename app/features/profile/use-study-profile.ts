@@ -10,6 +10,7 @@ import {
 } from "react";
 import {
   emptyProfile,
+  LEGACY_PROFILE_STORAGE_KEYS,
   normalizeProfile,
   PROFILE_STORAGE_KEY,
   type StudyProfile,
@@ -30,16 +31,21 @@ type ProfileResponse = {
 
 function readCachedProfile() {
   try {
-    const stored = window.localStorage.getItem(PROFILE_STORAGE_KEY);
+    const stored = window.localStorage.getItem(PROFILE_STORAGE_KEY)
+      ?? LEGACY_PROFILE_STORAGE_KEYS
+        .map((key) => window.localStorage.getItem(key))
+        .find((value) => value !== null);
     return stored ? normalizeProfile(JSON.parse(stored)) : null;
   } catch {
     window.localStorage.removeItem(PROFILE_STORAGE_KEY);
+    LEGACY_PROFILE_STORAGE_KEYS.forEach((key) => window.localStorage.removeItem(key));
     return null;
   }
 }
 
 function cacheProfile(profile: StudyProfile) {
   window.localStorage.setItem(PROFILE_STORAGE_KEY, JSON.stringify(profile));
+  LEGACY_PROFILE_STORAGE_KEYS.forEach((key) => window.localStorage.removeItem(key));
 }
 
 export function useStudyProfile({ writable = true }: { writable?: boolean } = {}): {
@@ -146,6 +152,7 @@ export function useStudyProfile({ writable = true }: { writable?: boolean } = {}
       setSyncState("local");
     } finally {
       window.localStorage.removeItem(PROFILE_STORAGE_KEY);
+      LEGACY_PROFILE_STORAGE_KEYS.forEach((key) => window.localStorage.removeItem(key));
       setProfile(next);
     }
   }, [profile.theme]);

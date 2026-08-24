@@ -1,5 +1,13 @@
 import type { CharacterItem, Exercise } from "../data/catalog-types";
 import type { TrackId } from "../lib/profile-model";
+import { learningTrackIds } from "./tracks.ts";
+
+export type PracticeMode = "track" | "mastery";
+
+export type PracticeStep = {
+  exercise: Exercise;
+  track: TrackId;
+};
 
 const exerciseOrigin: Record<TrackId, string> = {
   words: "识字小测",
@@ -17,6 +25,23 @@ export function getTrackExercises(character: CharacterItem, track: TrackId) {
     // here made the path feel longer without adding a new retrieval step.
     return track !== "words" || exercise.kind === "single";
   });
+}
+
+// The card's "learned it" action is one continuous mastery check. It reuses
+// the canonical questions from each specialist track instead of restoring the
+// older duplicate structure, component and writing items under 识字小测.
+export function getPracticeSteps(
+  character: CharacterItem,
+  track: TrackId,
+  mode: PracticeMode = "track",
+): PracticeStep[] {
+  const tracks = mode === "mastery" ? learningTrackIds : [track];
+  return tracks.flatMap((stepTrack) =>
+    getTrackExercises(character, stepTrack).map((exercise) => ({
+      exercise,
+      track: stepTrack,
+    })),
+  );
 }
 
 export function stableOptionOrder(options: Exercise["options"], seed: string) {

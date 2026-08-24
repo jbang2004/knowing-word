@@ -63,6 +63,16 @@ export function advanceResumeIndex(currentIndex: number, total: number) {
   return Math.min(currentIndex + 1, Math.max(0, total - 1));
 }
 
+export function firstIncompleteQuestionIndex(
+  questionIds: string[],
+  answers: Record<string, { lastCorrect?: boolean } | undefined>,
+) {
+  const index = questionIds.findIndex((id) => !answers[id]?.lastCorrect);
+  // A completed set starts from the beginning when the learner chooses to
+  // practise again; it must not reopen on the final question forever.
+  return index >= 0 ? index : 0;
+}
+
 export function isQuestionSetComplete(
   questionIds: string[],
   currentQuestionId: string,

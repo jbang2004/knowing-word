@@ -38,7 +38,7 @@ import {
   narrationPhraseIndexByMark,
 } from "../../lib/narration";
 import type { StudyProfile } from "../../lib/profile-model";
-import { getTrackExercises } from "../../domain/practice";
+import { getPracticeSteps } from "../../domain/practice";
 import type { NarrationMedia } from "../../domain/narration-media";
 import { speak } from "../../infrastructure/browser/speech";
 
@@ -724,9 +724,9 @@ export function CharacterStudy({
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [narrationActive, setNarrationActive] = useState(false);
 
-  const exercises = getTrackExercises(character, "words");
-  const isComplete = profile.completed.words.includes(character.id);
+  const exercises = getPracticeSteps(character, "words", "mastery").map(({ exercise }) => exercise);
   const completedQuestions = exercises.filter((question) => profile.answers[question.id]?.lastCorrect).length;
+  const isComplete = exercises.length > 0 && completedQuestions === exercises.length;
   const heritage = media.heritage;
   const hasExercises = exercises.length > 0;
   const visual = media.visual;
@@ -944,7 +944,7 @@ export function CharacterStudy({
             <button onClick={onStart} disabled={!hasExercises}>
               <MapIcon aria-hidden="true" size={21} color="var(--n-action)" />
               <span>
-                <strong>{hasExercises ? (isComplete ? "再练一轮" : "识字小测") : "小测暂未开放"}</strong>
+                <strong>{hasExercises ? (isComplete ? "再练一轮" : "单字过关") : "练习暂未开放"}</strong>
                 <small>{hasExercises ? `${completedQuestions} / ${exercises.length} 题` : "拓展字稍后开放"}</small>
               </span>
             </button>

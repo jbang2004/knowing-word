@@ -6,8 +6,9 @@ import {
   nextLessonActivity,
   recommendedLessonId,
 } from "../app/domain/learning-plan.ts";
-import { getTrackExercises } from "../app/domain/practice.ts";
+import { getPracticeSteps, getTrackExercises } from "../app/domain/practice.ts";
 import { loadLessonContent } from "../app/data/lesson-content.ts";
+import { characters } from "../app/data/catalog.ts";
 import { emptyProfile } from "../app/lib/profile-model.ts";
 
 const firstLessonId = "g5v1-l01";
@@ -58,4 +59,29 @@ test("the recognition check no longer repeats specialist structure, component, o
   assert.ok(exercises.every((exercise) => exercise.kind === "single"));
   assert.ok(getTrackExercises(character, "structure").some((exercise) => exercise.kind === "structure"));
   assert.ok(getTrackExercises(character, "split").some((exercise) => exercise.kind === "components"));
+});
+
+test("the character-card mastery check includes every canonical track without duplicate questions", async () => {
+  const content = await loadLessonContent(firstLessonId);
+  const characters = content.characters.filter((item) => item.primary && item.official !== false);
+
+  for (const character of characters) {
+    const steps = getPracticeSteps(character, "words", "mastery");
+    const expected = ["words", "structure", "split", "honglan"]
+      .flatMap((track) => getTrackExercises(character, track));
+    assert.deepEqual(steps.map(({ exercise }) => exercise.id), expected.map((exercise) => exercise.id));
+    assert.equal(new Set(steps.map(({ exercise }) => exercise.id)).size, steps.length);
+    assert.ok(steps.length >= 5 && steps.length <= 7);
+  }
+});
+
+test("every official character has one complete five-to-seven-question mastery check", () => {
+  const distribution = new Map();
+  for (const character of characters.filter((item) => item.official !== false)) {
+    const steps = getPracticeSteps(character, "words", "mastery");
+    assert.equal(new Set(steps.map(({ exercise }) => exercise.id)).size, steps.length);
+    assert.ok(steps.length >= 5 && steps.length <= 7, `${character.hanzi} has ${steps.length} steps`);
+    distribution.set(steps.length, (distribution.get(steps.length) ?? 0) + 1);
+  }
+  assert.deepEqual(Object.fromEntries(distribution), { 5: 130, 6: 234, 7: 1 });
 });

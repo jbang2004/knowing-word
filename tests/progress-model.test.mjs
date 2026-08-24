@@ -2,6 +2,7 @@ import assert from "node:assert/strict";
 import test from "node:test";
 import {
   candidatePathStates,
+  firstIncompleteQuestionIndex,
   isQuestionSetComplete,
   nextCandidateId,
   nextResumeIndex,
@@ -28,6 +29,12 @@ test("resume stays on an unfinished character and the exact unanswered question"
   assert.equal(nextResumeIndex(2, 5, false), 2);
   assert.equal(nextResumeIndex(2, 5, true), 3);
   assert.equal(nextResumeIndex(4, 5, true), 4);
+});
+
+test("mastery resumes at the first unfinished question and replays completed sets from the start", () => {
+  const answers = { q1: { lastCorrect: true }, q2: { lastCorrect: false } };
+  assert.equal(firstIncompleteQuestionIndex(["q1", "q2", "q3"], answers), 1);
+  assert.equal(firstIncompleteQuestionIndex(["q1"], { q1: { lastCorrect: true } }), 0);
 });
 
 test("completed state reflects the latest full question set", () => {

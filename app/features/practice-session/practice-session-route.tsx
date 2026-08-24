@@ -6,14 +6,18 @@ import { useEffect, useMemo, useState, type Dispatch, type SetStateAction } from
 import type { CharacterItem } from "../../data/catalog-types";
 import {
   expectedAnswerIds,
+  getPracticeSteps,
   getTrackExercises,
   isPracticeAnswerCorrect,
   stableOptionOrder,
+  type PracticeMode,
 } from "../../domain/practice";
 import { learningDayKey } from "../../domain/learning-day";
+import { learningTrackIds } from "../../domain/tracks";
 import { routeForTrack } from "../../lib/app-route";
 import {
   advanceResumeIndex,
+  firstIncompleteQuestionIndex,
   isQuestionSetComplete,
   nextCandidateId,
   nextResumeIndex,
@@ -30,12 +34,14 @@ export default function PracticeSessionRoute({
   candidateIds,
   media,
   initialQuestionIndex,
+  mode = "track",
 }: {
   character: CharacterItem;
   track: TrackId;
   candidateIds: string[];
   media: PracticeMedia;
   initialQuestionIndex?: number;
+  mode?: PracticeMode;
 }) {
   const { profile, setProfile, hydrated } = useStudyProfile();
   if (!hydrated) {
@@ -47,7 +53,7 @@ export default function PracticeSessionRoute({
         <section className="challenge-board challenge-locked">
           <span aria-hidden="true">字</span>
           <h2>先认识“{character.hanzi}”</h2>
-          <p>完成这个字的识字小测后，结构、拆字和红蓝专项才会开放。</p>
+          <p>完成这个字的单字过关后，结构、拆字和红蓝专项才会开放。</p>
           <Link className="game-button primary" href={`/lessons/${character.lessonId}/words/${character.id}`}>
             打开字卡
           </Link>
@@ -59,6 +65,7 @@ export default function PracticeSessionRoute({
     <HydratedPracticeSession
       character={character}
       track={track}
+      mode={mode}
       candidateIds={track === "words"
         ? candidateIds
         : candidateIds.filter((id) => profile.completed.words.includes(id))}
@@ -76,6 +83,7 @@ function HydratedPracticeSession({
   candidateIds,
   media,
   initialQuestionIndex,
+  mode,
   profile,
   setProfile,
 }: {
@@ -84,25 +92,35 @@ function HydratedPracticeSession({
   candidateIds: string[];
   media: PracticeMedia;
   initialQuestionIndex?: number;
+  mode: PracticeMode;
   profile: StudyProfile;
   setProfile: Dispatch<SetStateAction<StudyProfile>>;
 }) {
   const router = useRouter();
-  const exercises = useMemo(() => getTrackExercises(character, track), [character, track]);
+  const steps = useMemo(() => getPracticeSteps(character, track, mode), [character, mode, track]);
+  const questionIds = useMemo(() => steps.map(({ exercise }) => exercise.id), [steps]);
   const resumedIndex = initialQuestionIndex ?? (
-    profile.last[track]?.characterId === character.id
+    mode === "mastery"
+      ? firstIncompleteQuestionIndex(questionIds, profile.answers)
+      : profile.last[track]?.characterId === character.id
       ? profile.last[track]?.questionIndex ?? 0
       : 0
   );
   const [questionIndex, setQuestionIndex] = useState(() =>
-    Math.min(Math.max(resumedIndex, 0), Math.max(0, exercises.length - 1)),
+    Math.min(Math.max(resumedIndex, 0), Math.max(0, steps.length - 1)),
   );
   const [selectedOptions, setSelectedOptions] = useState<string[]>([]);
   const [wrote, setWrote] = useState(false);
   const [result, setResult] = useState<boolean | null>(null);
-  const [sessionResults, setSessionResults] = useState<boolean[]>([]);
+  const [sessionResults, setSessionResults] = useState<boolean[]>(() =>
+    mode === "mastery"
+      ? Array(questionIndex).fill(true)
+      : [],
+  );
   const [celebration, setCelebration] = useState(false);
-  const currentQuestion = exercises[questionIndex];
+  const currentStep = steps[questionIndex];
+  const currentQuestion = currentStep?.exercise;
+  const currentTrack = currentStep?.track ?? track;
   const orderedOptions = useMemo(
     () => currentQuestion && currentQuestion.kind !== "write"
       ? stableOptionOrder(currentQuestion.options, currentQuestion.id)
@@ -111,7 +129,7 @@ function HydratedPracticeSession({
   );
 
   function setStep(index: number) {
-    setQuestionIndex(Math.min(Math.max(index, 0), exercises.length - 1));
+    setQuestionIndex(Math.min(Math.max(index, 0), steps.length - 1));
     setSelectedOptions([]);
     setWrote(false);
     setResult(null);
@@ -120,7 +138,7 @@ function HydratedPracticeSession({
 
   function chooseOption(optionId: string) {
     if (!currentQuestion || result !== null) return;
-    const multiple = expectedAnswerIds(currentQuestion, character, track).length > 1;
+    const multiple = expectedAnswerIds(currentQuestion, character, currentTrack).length > 1;
     if (!multiple) {
       setSelectedOptions([optionId]);
       return;
@@ -136,10 +154,14 @@ function HydratedPracticeSession({
       setSelectedOptions([]);
       setWrote(false);
       setResult(null);
-    } else if (questionIndex < exercises.length - 1) {
+    } else if (questionIndex < steps.length - 1) {
       setStep(questionIndex + 1);
     } else {
-      setCelebration(true);
+      const pendingIndex = questionIds.findIndex((id) =>
+        id !== currentQuestion.id && !profile.answers[id]?.lastCorrect,
+      );
+      if (pendingIndex >= 0) setStep(pendingIndex);
+      else setCelebration(true);
     }
   }
 
@@ -172,7 +194,7 @@ function HydratedPracticeSession({
     const correct = isPracticeAnswerCorrect(
       currentQuestion,
       character,
-      track,
+      currentTrack,
       selectedOptions,
       wrote,
     );
@@ -181,7 +203,7 @@ function HydratedPracticeSession({
     setSessionResults((previous) => [...previous, correct]);
     queueLearningEvent({
       action: "answer",
-      track,
+      track: currentTrack,
       lessonId: character.lessonId,
       characterId: character.id,
       questionId: currentQuestion.id,
@@ -201,11 +223,17 @@ function HydratedPracticeSession({
         },
       };
       const completed = { ...previous.completed };
-      completed[track] = updateCompletion(
-        completed[track],
-        character.id,
-        isQuestionSetComplete(exercises.map((exercise) => exercise.id), currentQuestion.id, correct, answers),
-      );
+      const completionTracks = mode === "mastery" ? learningTrackIds : [track];
+      for (const completionTrack of completionTracks) {
+        const completionQuestionIds = mode === "mastery" && completionTrack === "words"
+          ? questionIds
+          : getTrackExercises(character, completionTrack).map((exercise) => exercise.id);
+        completed[completionTrack] = updateCompletion(
+          completed[completionTrack],
+          character.id,
+          isQuestionSetComplete(completionQuestionIds, currentQuestion.id, correct, answers),
+        );
+      }
       const date = learningDayKey();
       const day = previous.daily[date] ?? { attempts: 0, correct: 0, skips: 0, readSessions: 0 };
       return {
@@ -220,14 +248,7 @@ function HydratedPracticeSession({
             correct: day.correct + Number(correct),
           },
         },
-        last: {
-          ...previous.last,
-          [track]: {
-            lessonId: character.lessonId,
-            characterId: character.id,
-            questionIndex: nextResumeIndex(questionIndex, exercises.length, correct),
-          },
-        },
+        last: updateResumePoints(previous.last, correct),
       };
     });
   }
@@ -236,7 +257,7 @@ function HydratedPracticeSession({
     if (!currentQuestion) return;
     queueLearningEvent({
       action: "skip",
-      track,
+      track: currentTrack,
       lessonId: character.lessonId,
       characterId: character.id,
       questionId: currentQuestion.id,
@@ -247,18 +268,41 @@ function HydratedPracticeSession({
       return {
         ...previous,
         daily: { ...previous.daily, [date]: { ...day, skips: day.skips + 1 } },
-        last: {
-          ...previous.last,
-          [track]: {
-            lessonId: character.lessonId,
-            characterId: character.id,
-            questionIndex: advanceResumeIndex(questionIndex, exercises.length),
-          },
-        },
+        last: updateResumePoints(previous.last),
       };
     });
-    if (questionIndex < exercises.length - 1) setStep(questionIndex + 1);
+    if (questionIndex < steps.length - 1) setStep(questionIndex + 1);
     else finish();
+  }
+
+  function updateResumePoints(
+    previous: StudyProfile["last"],
+    correct?: boolean,
+  ): StudyProfile["last"] {
+    const resumeIndex = (index: number, total: number) => correct === undefined
+      ? advanceResumeIndex(index, total)
+      : nextResumeIndex(index, total, correct);
+    const next = {
+      ...previous,
+      [track]: {
+        lessonId: character.lessonId,
+        characterId: character.id,
+        questionIndex: resumeIndex(questionIndex, steps.length),
+      },
+    };
+    if (mode === "mastery" && currentTrack !== track) {
+      const trackExercises = getTrackExercises(character, currentTrack);
+      const trackQuestionIndex = Math.max(
+        0,
+        trackExercises.findIndex((exercise) => exercise.id === currentQuestion?.id),
+      );
+      next[currentTrack] = {
+        lessonId: character.lessonId,
+        characterId: character.id,
+        questionIndex: resumeIndex(trackQuestionIndex, trackExercises.length),
+      };
+    }
+    return next;
   }
 
   function finish() {
@@ -294,12 +338,12 @@ function HydratedPracticeSession({
   return (
     <>
       <ChallengeRoom
-        track={track}
+        track={currentTrack}
         character={character}
         media={media}
         question={currentQuestion}
         questionIndex={questionIndex}
-        total={exercises.length}
+        total={steps.length}
         selected={selectedOptions}
         wrote={wrote}
         result={result}
@@ -324,7 +368,8 @@ function HydratedPracticeSession({
           track={track}
           character={character}
           results={sessionResults}
-          total={exercises.length}
+          total={steps.length}
+          sessionLabel={mode === "mastery" ? "单字过关" : undefined}
           onReplay={() => {
             setSessionResults([]);
             setCelebration(false);
