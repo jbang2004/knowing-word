@@ -16,12 +16,16 @@ function candidatesForLesson(track: TrackId, lessonId?: string) {
     : homeCandidates[track];
 }
 
-function lessonIsComplete(profile: StudyProfile, lessonId: string) {
+export function isLessonLearningComplete(profile: StudyProfile, lessonId: string) {
   const wordIds = candidatesForLesson("words", lessonId).map((candidate) => candidate.id);
   if (!wordIds.length || wordIds.some((id) => !profile.completed.words.includes(id))) return false;
   return practiceTrackIds.every((track) =>
     wordIds.every((id) => profile.completed[track].includes(id)),
-  ) && profile.readLessons.includes(lessonId);
+  );
+}
+
+function lessonIsComplete(profile: StudyProfile, lessonId: string) {
+  return isLessonLearningComplete(profile, lessonId) && profile.readLessons.includes(lessonId);
 }
 
 export function recommendedLessonId(profile: StudyProfile) {

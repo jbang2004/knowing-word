@@ -18,7 +18,9 @@ import {
 import { useEffect, useRef, useState } from "react";
 import { grade5Lessons } from "../../data/generated/grade5-volume1/course";
 import { learningDayKey, totalReadSessions } from "../../domain/learning-day";
+import { isLessonLearningComplete } from "../../domain/learning-plan";
 import { queueLearningEvent } from "../../infrastructure/browser/learning-event-outbox";
+import { playLearningSound } from "../../infrastructure/browser/learning-audio";
 import { speak } from "../../infrastructure/browser/speech";
 import { trackIds } from "../../lib/profile-model";
 import { useStudyProfile } from "../profile/use-study-profile";
@@ -132,6 +134,9 @@ export function ReadAloudRoute({
 
   function countReadSession() {
     queueLearningEvent({ action: "read", lessonId });
+    if (!profile.readLessons.includes(lessonId) && isLessonLearningComplete(profile, lessonId)) {
+      playLearningSound("dailyComplete");
+    }
     setProfile((previous) => {
       const date = learningDayKey();
       const day = previous.daily[date] ?? { attempts: 0, correct: 0, skips: 0, readSessions: 0 };

@@ -2,6 +2,7 @@ import assert from "node:assert/strict";
 import test from "node:test";
 import { homeCandidates } from "../app/data/home-index.generated.ts";
 import {
+  isLessonLearningComplete,
   learningTrackProgress,
   nextLessonActivity,
   recommendedLessonId,
@@ -37,6 +38,19 @@ test("the guided plan finishes recognition before ordered specialist practice", 
   assert.equal(recommendedLessonId(profile), firstLessonId);
   profile.readLessons = [firstLessonId];
   assert.equal(recommendedLessonId(profile), "g5v1-l02");
+});
+
+test("the completion voice waits for the whole lesson, not one character", () => {
+  const profile = emptyProfile();
+  const words = homeCandidates.words.filter((candidate) => candidate.lessonId === firstLessonId);
+
+  profile.completed.words = words.map((candidate) => candidate.id);
+  assert.equal(isLessonLearningComplete(profile, firstLessonId), false);
+
+  for (const track of ["structure", "split", "honglan"]) {
+    profile.completed[track] = [...profile.completed.words];
+  }
+  assert.equal(isLessonLearningComplete(profile, firstLessonId), true);
 });
 
 test("specialist progress contains learned characters only", () => {

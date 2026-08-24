@@ -217,7 +217,7 @@ function HydratedPracticeSession({
       0,
     );
     playLearningSound(correct
-      ? trailingCorrect >= 2 ? "streak" : "correct"
+      ? trailingCorrect === 2 ? "streak" : "correct"
       : "retry");
     const now = new Date().toISOString();
     const passedAfterAnswer = updatePassedQuestionIds(

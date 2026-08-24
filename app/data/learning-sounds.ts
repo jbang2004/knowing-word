@@ -4,7 +4,8 @@ export type LearningSoundId =
   | "streak"
   | "retry"
   | "encourage"
-  | "complete";
+  | "complete"
+  | "dailyComplete";
 
 export const learningSounds: Record<LearningSoundId, string> = {
   start: "/sfx/start.mp3",
@@ -13,4 +14,5 @@ export const learningSounds: Record<LearningSoundId, string> = {
   retry: "/sfx/retry.mp3",
   encourage: "/sfx/encourage.mp3",
   complete: "/sfx/complete.mp3",
+  dailyComplete: "/sfx/daily-complete.mp3",
 };
