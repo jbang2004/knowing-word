@@ -1,0 +1,476 @@
+/* Solid blocks · the last layer.
+ *
+ * Every surface in the light layer resolves to one of four shapes, so the app
+ * reads as one system instead of a per-page collection. Grouping the selectors
+ * here is deliberate: the alternative was repeating the same four recipes
+ * across ninety rules in six stylesheets, which is how the palette drifted
+ * apart in the first place.
+ *
+ *   1 SURFACE   a card that is not tappable — 2px edge, hard bottom edge
+ *   2 BLOCK     a tappable card — the same, plus a 4px sink when held
+ *   3 SEAL      a glyph in a cut-corner square, coloured by its role
+ *   4 PILL      a tab or chip
+ */
+
+/* 1 · Surfaces --------------------------------------------------------- */
+
+.word-map-board,
+.lesson-learning-path,
+.lesson-practice-strip,
+.course-method-card,
+.practice-context-band,
+.practice-sequence-note,
+.track-lesson-board,
+.track-method-card,
+.track-lesson-note,
+.record-recent,
+.record-scope-bar,
+.record-zero-state,
+.record-detail-summary,
+.record-empty,
+.profile-card,
+.account-identity-card,
+.read-studio,
+.recording-result,
+.component-story,
+.component-empty,
+.component-browser-summary,
+.playground-board,
+.lesson-reader-paper,
+.reader-scene-card,
+.reader-word-index,
+.reader-progress-card,
+.reader-route-card,
+.lesson-guide-intro,
+.reader-source-note,
+.reader-clue-question,
+.pilot-method-overview,
+.pilot-method-lane,
+.pilot-review-card,
+.pilot-family-card,
+.pilot-memory-card,
+.pilot-evidence-note {
+  border: 2px solid var(--line);
+  border-radius: 22px;
+  background: var(--paper);
+  box-shadow: 0 var(--press) 0 var(--line);
+}
+
+/* 2 · Tappable blocks -------------------------------------------------- */
+
+.level-list :is(button, a),
+.track-character-grid :is(button, a),
+.record-question-list article,
+.profile-actions button,
+.account-signout,
+.sentence-list article,
+.component-resume,
+.component-load-more,
+.component-sheet-close,
+.component-empty button,
+.pilot-character-list :is(button, a),
+.pilot-component-roles button,
+.assembly-choices button,
+.assembly-slot,
+.redblue-options button,
+.reader-focus-word,
+.reader-target,
+.word-chip,
+.lesson-route-card,
+.practice-strip-items :is(button, a),
+.component-card-grid button,
+.choice-card {
+  border: 2px solid var(--line);
+  border-radius: 18px;
+  background: var(--paper);
+  box-shadow: 0 var(--press) 0 var(--line);
+  transition: transform 90ms ease, box-shadow 90ms ease, border-color 140ms ease, background 140ms ease;
+}
+
+.level-list :is(button, a):active,
+.track-character-grid :is(button, a):active,
+.profile-actions button:active,
+.account-signout:active,
+.sentence-list article:active,
+.component-resume:active,
+.component-load-more:active,
+.component-sheet-close:active,
+.component-empty button:active,
+.pilot-character-list :is(button, a):active,
+.pilot-component-roles button:active,
+.assembly-choices button:not(:disabled):active,
+.redblue-options button:not(:disabled):active,
+.reader-focus-word:active,
+.word-chip:active,
+.lesson-route-card:active,
+.practice-strip-items :is(button, a):active,
+.component-card-grid button:active,
+.choice-card:not(:disabled):active {
+  transform: translateY(var(--press));
+  box-shadow: none;
+}
+
+/* Hover no longer lifts things off the page: a block with a floor cannot also
+   float. The old translateY(-3px) fought the pressed state on touch. */
+.level-list :is(button, a):hover,
+.track-character-grid :is(button, a):hover,
+.component-card-grid button:hover,
+.word-chip:hover,
+.lesson-route-card:hover,
+.pilot-character-list :is(button, a):hover,
+.sentence-list article:hover {
+  transform: none;
+}
+
+/* Completed and selected states borrow their role colour. */
+.track-character-grid :is(button, a).is-complete,
+.word-chip.is-complete,
+.record-question-list article.is-correct,
+.sentence-list article.is-speaking {
+  border-color: var(--action-edge);
+  background: var(--action-soft);
+  box-shadow: 0 var(--press) 0 var(--action-edge);
+}
+
+.record-question-list article.is-wrong {
+  border-color: var(--wrong-edge);
+  background: var(--wrong-soft);
+  box-shadow: 0 var(--press) 0 var(--wrong-edge);
+}
+
+.assembly-slot.is-correct,
+.redblue-options button.is-correct {
+  border-color: var(--action);
+  background: var(--action-soft);
+  box-shadow: 0 var(--press) 0 var(--action-edge);
+}
+
+.assembly-slot.is-wrong,
+.redblue-options button.is-wrong {
+  border-color: var(--wrong);
+  background: var(--wrong-soft);
+  box-shadow: 0 var(--press) 0 var(--wrong-edge);
+}
+
+.redblue-options button.is-selected,
+.assembly-choices button.is-picked {
+  border-color: var(--part);
+  background: var(--part-soft);
+  box-shadow: 0 var(--press) 0 var(--part-edge);
+}
+
+/* 3 · Seals ------------------------------------------------------------ */
+
+.track-symbol,
+.component-story-glyph,
+.record-detail-glyph,
+.profile-avatar,
+.pilot-memory-glyph,
+.assembly-target > span,
+.path-gate-glyph {
+  border-radius: 22px 22px 22px 7px;
+  font-family: var(--kai);
+  font-weight: 500;
+}
+
+.track-symbol,
+.record-detail-glyph {
+  color: #fff;
+  background: var(--track, var(--action));
+  box-shadow: 0 var(--press) 0 var(--track-deep, var(--action-deep));
+}
+
+.component-story-glyph {
+  color: #fff;
+  background: var(--radical);
+  box-shadow: 0 var(--press) 0 var(--radical-deep);
+}
+
+.profile-avatar {
+  color: #fff;
+  background: var(--radical);
+  box-shadow: 0 3px 0 var(--radical-deep);
+}
+
+/* 4 · Pills and tabs -------------------------------------------------- */
+
+.record-tabs :is(button, a),
+.component-sort-tabs button,
+.course-unit-nav a,
+.lesson-view-tabs :is(button, a),
+.read-lesson-picker,
+.component-browser-toolbar label {
+  border: 2px solid var(--line);
+  border-radius: 999px;
+  color: var(--ink-soft);
+  font-weight: 800;
+  background: var(--paper);
+  box-shadow: 0 3px 0 var(--line);
+}
+
+.record-tabs :is(button, a).is-active,
+.component-sort-tabs button.is-active,
+.lesson-view-tabs :is(button, a).is-active {
+  border-color: var(--action-deep);
+  color: #fff;
+  background: var(--action);
+  box-shadow: 0 3px 0 var(--action-deep);
+}
+
+.record-tabs :is(button, a):active,
+.component-sort-tabs button:active,
+.course-unit-nav a:active,
+.lesson-view-tabs :is(button, a):active {
+  transform: translateY(3px);
+  box-shadow: none;
+}
+
+/* The search field is an input, not a block to press. */
+.component-browser-toolbar label {
+  box-shadow: none;
+}
+
+/* 5 · Banners that carry a role colour -------------------------------- */
+
+.lesson-scene-banner,
+.track-hero,
+.record-stat-row > div {
+  border-radius: 24px;
+}
+
+.track-hero {
+  border: 0;
+  color: #fff;
+  background: var(--track, var(--action));
+  box-shadow: 0 5px 0 var(--track-deep, var(--action-deep));
+}
+
+.track-hero :is(p, h2, span, small, strong) {
+  color: inherit;
+}
+
+/* 6 · Progress tubes --------------------------------------------------- */
+
+.reader-progress-track,
+.challenge-progress {
+  overflow: hidden;
+  border-radius: 999px;
+  background: var(--sky-deep);
+}
+
+.reader-progress-track > i,
+.challenge-progress > i {
+  position: relative;
+  display: block;
+  height: 100%;
+  border-radius: 999px;
+  background: var(--action);
+}
+
+.reader-progress-track > i::after,
+.challenge-progress > i::after {
+  position: absolute;
+  top: 3px;
+  right: 6px;
+  left: 6px;
+  height: 3px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.45);
+  content: "";
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .level-list :is(button, a),
+  .track-character-grid :is(button, a),
+  .word-chip,
+  .lesson-route-card,
+  .component-card-grid button,
+  .choice-card {
+    transition: none;
+  }
+}
+
+/* 7 · The families the grouped recipes above did not reach ------------- */
+
+/* Assembly, red-blue and writing exercises share the answer surface with
+   .choice-card, so they take the same block treatment. */
+.redblue-exercise,
+.writing-board,
+.assembly-exercise,
+.challenge-board {
+  border: 0;
+  border-radius: 0;
+  background: none;
+  box-shadow: none;
+}
+
+.redblue-word,
+.writing-guide {
+  border: 2px solid var(--line);
+  border-radius: 20px;
+  background: var(--paper);
+  box-shadow: 0 var(--press) 0 var(--line);
+}
+
+.assembly-slot {
+  border-style: dashed;
+  border-color: var(--line-deep);
+  background: var(--sky-deep);
+  box-shadow: none;
+}
+
+.choice-key {
+  border: 0;
+  border-radius: 10px;
+  color: var(--ink-soft);
+  font-family: var(--round);
+  font-weight: 900;
+  background: var(--sky-deep);
+}
+
+.challenge-question kbd {
+  border: 0;
+  border-radius: 6px;
+  color: var(--ink-soft);
+  font-family: var(--round);
+  font-weight: 900;
+  background: var(--sky-deep);
+}
+
+/* Course map scene thumbnails are images, not pressable blocks. */
+.route-scene,
+.script-image,
+.reader-scene-card > img {
+  border: 0;
+  box-shadow: none;
+}
+
+.route-character-cloud i {
+  border: 0;
+  border-radius: 8px 8px 8px 3px;
+  color: #fff;
+  background: var(--action);
+}
+
+/* The word board groups characters; only the cells inside are pressable. */
+.word-group {
+  border: 0;
+  border-radius: 0;
+  background: none;
+  box-shadow: none;
+}
+
+/* Reader footer and the phone-only character index. */
+.lesson-reader-finish,
+.reader-mobile-index summary,
+.reader-mobile-index > div {
+  border: 2px solid var(--line);
+  border-radius: 22px;
+  background: var(--paper);
+  box-shadow: 0 var(--press) 0 var(--line);
+}
+
+.lesson-reader-finish-actions a {
+  border: 2px solid var(--line);
+  border-radius: 16px;
+  font-weight: 900;
+  background: var(--paper);
+  box-shadow: 0 3px 0 var(--line);
+}
+
+.lesson-reader-finish-actions a.is-primary {
+  border-color: var(--action-deep);
+  color: #fff;
+  background: var(--action);
+  box-shadow: 0 3px 0 var(--action-deep);
+}
+
+.lesson-reader-finish-actions a:active {
+  transform: translateY(3px);
+  box-shadow: none;
+}
+
+/* Lesson-three pilot panels. */
+.pilot-memory-heading > span,
+.pilot-family-flow > span,
+.pilot-memory-equation-on-image > span,
+.pilot-memory-nav button > span {
+  border: 2px solid var(--line);
+  border-radius: 14px;
+  background: var(--paper);
+}
+
+.pilot-memory-nav button.is-active > span {
+  border-color: var(--action-deep);
+  color: #fff;
+  background: var(--action);
+}
+
+/* The design-kit playground documents the system, so it must obey it. */
+.kit-buttons > button:not(.game-button) {
+  border: 2px solid var(--line);
+  border-radius: 16px;
+  font-weight: 900;
+  background: var(--paper);
+  box-shadow: 0 var(--press) 0 var(--line);
+}
+
+.kit-buttons > button:not(.game-button).is-selected {
+  border-color: var(--part);
+  color: var(--part-deep);
+  background: var(--part-soft);
+  box-shadow: 0 var(--press) 0 var(--part-edge);
+}
+
+.kit-buttons > button:not(.game-button):not(:disabled):active {
+  transform: translateY(var(--press));
+  box-shadow: none;
+}
+
+.kit-swatches > div {
+  border: 2px solid var(--line);
+  border-radius: 18px;
+  background: var(--paper);
+  box-shadow: 0 3px 0 var(--line);
+}
+
+/* The back arrow is a bare icon button, not a block. */
+.back-button {
+  border: 0;
+  box-shadow: none;
+}
+
+/* 8 · The guide in context -------------------------------------------- */
+
+.reader-clue-question,
+.track-lesson-note {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border: 2px solid var(--wrong-edge);
+  border-radius: 20px;
+  background: var(--wrong-soft);
+  box-shadow: 0 var(--press) 0 var(--wrong-edge);
+}
+
+.reader-clue-question > span,
+.track-lesson-note > span {
+  flex: 0 0 auto;
+  padding: 0;
+  border: 0;
+  color: var(--wrong-deep);
+  font-size: 0.875rem;
+  font-weight: 900;
+  background: none;
+}
+
+.reader-clue-question > p,
+.track-lesson-note > p {
+  min-width: 0;
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 0.9375rem;
+  font-weight: 700;
+  line-height: 1.7;
+  text-wrap: pretty;
+}

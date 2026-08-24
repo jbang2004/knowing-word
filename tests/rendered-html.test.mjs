@@ -80,6 +80,7 @@ test("the lesson guide connects reading clues to cards and back", async () => {
   assert.match(lessonHtml, /本段重点词/);
   assert.match(lessonHtml, /这些比较让你看见了怎样的白鹭/);
   assert.match(lessonHtml, /reader-focus-word/);
+  assert.match(lessonHtml, /喜鹊向导/);
   assert.match(lessonHtml, /学生字/);
   assert.match(lessonHtml, /做练习/);
   assert.match(lessonHtml, /lesson-paragraph-1/);
@@ -137,7 +138,9 @@ test("dense pages keep progressive and shareable responsive contracts", async ()
   const homeCss = await readFile(new URL("../app/home-path.css", import.meta.url), "utf8");
   const utilityCss = await readFile(new URL("../app/utility-pages.css", import.meta.url), "utf8");
   const readerCss = await readFile(new URL("../app/lesson-reader.css", import.meta.url), "utf8");
+  const solidBlocksCss = await readFile(new URL("../app/solid-blocks.css", import.meta.url), "utf8");
   assert.match(layoutSource, /\.\/catalog\.css/);
+  assert.match(layoutSource, /\.\/solid-blocks\.css/);
   assert.doesNotMatch(layoutSource, /home-redesign/);
   assert.doesNotMatch(globalCss, /\.home-hero|\.mission-card|\.read-lesson-tabs/);
   // The retired top bar leaves nothing behind.
@@ -151,6 +154,11 @@ test("dense pages keep progressive and shareable responsive contracts", async ()
   // Solid blocks: depth comes from a hard bottom edge, not a blur.
   assert.match(globalCss, /--shadow: 0 3px 0 var\(--line\)/);
   assert.match(globalCss, /\.record-detail-summary\.action \{\s*--track: var\(--action\)/);
+  assert.match(globalCss, /\.celebration-card\.track-action/);
+  assert.match(globalCss, /\.celebration-card\.track-wrong/);
+  assert.doesNotMatch(globalCss, /\.celebration-stars|@keyframes star-pop/);
+  assert.match(solidBlocksCss, /\.word-map-board,[\s\S]*?box-shadow: 0 var\(--press\) 0 var\(--line\)/);
+  assert.match(solidBlocksCss, /\.choice-card:not\(:disabled\):active[\s\S]*?box-shadow: none/);
   const shellCss = await readFile(new URL("../app/app-shell.css", import.meta.url), "utf8");
   assert.match(shellCss, /\.app-tabbar \{[\s\S]*?position: fixed/);
   assert.match(shellCss, /@media \(min-width: 900px\)[\s\S]*?\.app-tabbar \{\s*display: none/);
@@ -165,6 +173,14 @@ test("dense pages keep progressive and shareable responsive contracts", async ()
   assert.match(readerCss, /animation: none/);
   assert.match(readerCss, /\.reader-focus-words[\s\S]*grid-template-columns/);
   assert.match(readerCss, /\.reader-section\.is-guide-clue > p[\s\S]*text-indent: 0/);
+
+  const practiceSource = await readFile(
+    new URL("../app/features/practice-session/practice-session-view.tsx", import.meta.url),
+    "utf8",
+  );
+  assert.match(practiceSource, /aria-modal="true"/);
+  assert.match(practiceSource, /character\.charType\.includes\("形声"\)/);
+  assert.match(practiceSource, /补充字形线索/);
 });
 
 test("unknown paths no longer fall through to the learning client", async () => {

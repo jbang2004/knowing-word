@@ -14,11 +14,6 @@
   border: 0;
 }
 
-.page-heading.is-utility .page-heading-mark {
-  width: 38px;
-  height: 38px;
-}
-
 .component-browser-toolbar {
   align-items: stretch;
 }

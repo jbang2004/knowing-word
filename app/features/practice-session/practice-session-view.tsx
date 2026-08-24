@@ -20,6 +20,7 @@ import {
 import { trackMeta } from "../../domain/tracks";
 import type { StudyProfile, TrackId } from "../../lib/profile-model";
 import { MnemonicSceneFocus } from "../character-study/mnemonic-scene-focus";
+import { Magpie } from "../shell/magpie";
 
 function optionText(option: Exercise["options"][number], character: CharacterItem) {
   if (option.text) return option.text;
@@ -47,46 +48,60 @@ export function CelebrationOverlay({
   // one entry per ATTEMPT, so extra tries are the mistakes.
   const attempts = results.length;
   const mistakes = Math.max(0, attempts - total);
-  const stars = mistakes === 0 ? 3 : mistakes <= 2 ? 2 : 1;
   const firstTryRate = Math.min(100, Math.round((total * 100) / Math.max(attempts, total)));
+  // The screen with the most attention gets to teach one more time: how this
+  // character is actually built.
+  const parts = character.parts.length ? character.parts : [{ char: character.hanzi, radical: true }];
+  const radical = parts.find((part) => part.radical);
+  const shapePart = parts.find((part) => !part.radical);
+  const hasPhoneticRole = character.charType.includes("形声");
   return (
-    <div className="celebration-overlay" role="dialog" aria-label="本关完成">
+    <div className="celebration-overlay" role="dialog" aria-modal="true" aria-label="本关完成">
       <div className={"celebration-card track-" + trackMeta[track].tone}>
-        <div className="celebration-confetti" aria-hidden="true">
-          {Array.from({ length: 26 }).map((_, index) => (
-            <i
-              key={index}
-              className={"confetti-piece piece-" + (index % 4)}
-              style={{
-                left: ((index * 37 + 13) % 100) + "%",
-                animationDelay: ((index % 8) * 0.14).toFixed(2) + "s",
-              }}
-            />
-          ))}
+        <div className="celebration-greeting">
+          <Magpie size={84} />
+          <b className="celebration-bubble">{mistakes === 0 ? "全对！" : "过关！"}</b>
         </div>
-        <p className="celebration-kicker">{trackMeta[track].menu} · {character.lessonTitle}</p>
-        <div className="celebration-stars" aria-label={stars + " 颗星"}>
-          {[0, 1, 2].map((index) => (
-            <span key={index} className={index < stars ? "star is-lit" : "star"} style={{ animationDelay: index * 0.18 + "s" }}>★</span>
-          ))}
-        </div>
-        <h2>{mistakes === 0 ? "完美通关！" : "本关完成！"}</h2>
+
         <div className="celebration-glyph" aria-hidden="true">{character.hanzi}</div>
+        <h2>{mistakes === 0 ? "完美通关" : "本关完成"}</h2>
+        <p className="celebration-kicker">{trackMeta[track].menu} · {character.lessonTitle}</p>
+
         <dl className="celebration-stats">
-          <div><dt>题目</dt><dd>{total} 题</dd></div>
-          <div><dt>尝试</dt><dd>{attempts} 次</dd></div>
+          <div><dt>题目</dt><dd>{total}</dd></div>
+          <div><dt>尝试</dt><dd>{attempts}</dd></div>
           <div><dt>首次答对</dt><dd>{firstTryRate}%</dd></div>
         </dl>
-        <p className="celebration-note">
-          {stars === 3
-            ? "一次全对，这个字已经稳稳住进记忆里了。"
-            : stars === 2
-              ? "只错了一点点，再练一轮就能拿满三颗星。"
-              : "慢慢来，把答错的题再看一遍线索。"}
-        </p>
+
+        {parts.length > 1 && (
+          <div className="celebration-lesson">
+            <small>这一关记住了</small>
+            <div className="celebration-equation" aria-hidden="true">
+              {parts.map((part, index) => (
+                <span className={part.radical ? "is-radical" : "is-part"} key={`${part.char}-${index}`}>
+                  {part.char}
+                </span>
+              ))}
+              <i>=</i>
+              <span className="is-result">{character.hanzi}</span>
+            </div>
+            <p>
+              {radical && <><b className="is-radical">{radical.char}</b>是表意部首</>}
+              {radical && shapePart && "；"}
+              {shapePart && (
+                <>
+                  <b className="is-part">{shapePart.char}</b>
+                  {hasPhoneticRole ? "提供读音线索" : "补充字形线索"}
+                </>
+              )}
+              。{character.decomposition}
+            </p>
+          </div>
+        )}
+
         <div className="celebration-actions">
+          <button className="game-button primary" onClick={onNextCharacter}>继续 · 下一个字</button>
           <button className="game-button ghost" onClick={onReplay}><RotateCcw aria-hidden="true" /> 再练一轮</button>
-          <button className="game-button primary" onClick={onNextCharacter}>下一个字 →</button>
           <button className="text-button" onClick={onFinish}>返回课文地图</button>
         </div>
       </div>

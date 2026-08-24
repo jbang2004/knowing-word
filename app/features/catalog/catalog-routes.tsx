@@ -25,6 +25,7 @@ import {
   LessonViewNavigation,
   type LessonView,
 } from "../lesson-reader/lesson-reader";
+import { Magpie } from "../shell/magpie";
 
 const practiceTrackIds: Exclude<TrackId, "words">[] = ["split", "honglan", "structure"];
 const courseUnits = [
@@ -440,7 +441,7 @@ export function TrackLessonRoute({
       <div className="page track-lesson-page">
         <PageHeading kicker={meta.label} title={lesson.title} copy={`选择一个字开始本关练习 · 已完成 ${progress.completed} / ${progress.total}`} backHref={routeForTrack(track)} />
         <section className={`track-lesson-board ${meta.tone}`}>
-          <div className="track-lesson-note"><span>{meta.glyph}</span><p>{meta.copy}</p></div>
+          <div className="track-lesson-note"><Magpie size={48} /><p>{meta.copy}</p></div>
           <div className="track-character-grid">
             {eligible.map((character, index) => (
               <Link className={completed.has(character.id) ? "is-complete" : ""} href={challengePath(track, lesson.id, character.id)} key={character.id}>
