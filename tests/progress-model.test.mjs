@@ -2,10 +2,11 @@ import assert from "node:assert/strict";
 import test from "node:test";
 import {
   candidatePathStates,
-  firstIncompleteQuestionIndex,
+  firstUnpassedQuestionIndex,
   isQuestionSetComplete,
   nextCandidateId,
   nextResumeIndex,
+  updatePassedQuestionIds,
   updateCompletion,
 } from "../app/lib/progress-model.ts";
 
@@ -31,10 +32,15 @@ test("resume stays on an unfinished character and the exact unanswered question"
   assert.equal(nextResumeIndex(4, 5, true), 4);
 });
 
-test("mastery resumes at the first unfinished question and replays completed sets from the start", () => {
-  const answers = { q1: { lastCorrect: true }, q2: { lastCorrect: false } };
-  assert.equal(firstIncompleteQuestionIndex(["q1", "q2", "q3"], answers), 1);
-  assert.equal(firstIncompleteQuestionIndex(["q1"], { q1: { lastCorrect: true } }), 0);
+test("a practice round tracks only questions passed in that round", () => {
+  let passed = updatePassedQuestionIds([], "q1", true);
+  assert.deepEqual(passed, ["q1"]);
+  assert.equal(firstUnpassedQuestionIndex(["q1", "q2", "q3"], passed), 1);
+
+  passed = updatePassedQuestionIds(passed, "q2", true);
+  passed = updatePassedQuestionIds(passed, "q2", false);
+  assert.deepEqual(passed, ["q1"]);
+  assert.equal(firstUnpassedQuestionIndex(["q1"], passed), -1);
 });
 
 test("completed state reflects the latest full question set", () => {

@@ -196,9 +196,23 @@ test("dense pages keep progressive and shareable responsive contracts", async ()
     new URL("../app/features/practice-session/practice-session-view.tsx", import.meta.url),
     "utf8",
   );
+  const practiceRouteSource = await readFile(
+    new URL("../app/features/practice-session/practice-session-route.tsx", import.meta.url),
+    "utf8",
+  );
+  const characterRouteSource = await readFile(
+    new URL("../app/features/character-study/character-study-route.tsx", import.meta.url),
+    "utf8",
+  );
   assert.match(practiceSource, /aria-modal="true"/);
   assert.match(practiceSource, /character\.charType\.includes\("形声"\)/);
   assert.match(practiceSource, /补充字形线索/);
+  // Dynamic character routes must never inherit the previous character's
+  // question index, round results, celebration, drawer or memory state.
+  assert.match(practiceRouteSource, /key=\{`\$\{mode\}:\$\{track\}:\$\{character\.id\}/);
+  assert.match(characterRouteSource, /key=\{character\.id\}/);
+  assert.match(practiceRouteSource, /passedQuestionIds/);
+  assert.doesNotMatch(practiceRouteSource, /firstIncompleteQuestionIndex/);
 });
 
 test("unknown paths no longer fall through to the learning client", async () => {

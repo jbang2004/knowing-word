@@ -26,6 +26,7 @@ export default function CharacterStudyRoute({
 
   return (
     <CharacterStudy
+      key={character.id}
       character={character}
       media={media}
       profile={profile}

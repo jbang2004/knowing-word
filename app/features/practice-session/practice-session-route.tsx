@@ -17,10 +17,11 @@ import { learningTrackIds } from "../../domain/tracks";
 import { routeForTrack } from "../../lib/app-route";
 import {
   advanceResumeIndex,
-  firstIncompleteQuestionIndex,
+  firstUnpassedQuestionIndex,
   isQuestionSetComplete,
   nextCandidateId,
   nextResumeIndex,
+  updatePassedQuestionIds,
   updateCompletion,
 } from "../../lib/progress-model";
 import type { StudyProfile, TrackId } from "../../lib/profile-model";
@@ -63,6 +64,7 @@ export default function PracticeSessionRoute({
   }
   return (
     <HydratedPracticeSession
+      key={`${mode}:${track}:${character.id}:${initialQuestionIndex ?? "start"}`}
       character={character}
       track={track}
       mode={mode}
@@ -101,7 +103,7 @@ function HydratedPracticeSession({
   const questionIds = useMemo(() => steps.map(({ exercise }) => exercise.id), [steps]);
   const resumedIndex = initialQuestionIndex ?? (
     mode === "mastery"
-      ? firstIncompleteQuestionIndex(questionIds, profile.answers)
+      ? 0
       : profile.last[track]?.characterId === character.id
       ? profile.last[track]?.questionIndex ?? 0
       : 0
@@ -112,10 +114,15 @@ function HydratedPracticeSession({
   const [selectedOptions, setSelectedOptions] = useState<string[]>([]);
   const [wrote, setWrote] = useState(false);
   const [result, setResult] = useState<boolean | null>(null);
+  const initialPassedQuestionIds = mode === "mastery"
+    ? []
+    : steps
+        .slice(0, questionIndex)
+        .map(({ exercise }) => exercise.id)
+        .filter((id) => profile.answers[id]?.lastCorrect);
+  const [passedQuestionIds, setPassedQuestionIds] = useState<string[]>(initialPassedQuestionIds);
   const [sessionResults, setSessionResults] = useState<boolean[]>(() =>
-    mode === "mastery"
-      ? Array(questionIndex).fill(true)
-      : [],
+    Array(initialPassedQuestionIds.length).fill(true),
   );
   const [celebration, setCelebration] = useState(false);
   const currentStep = steps[questionIndex];
@@ -157,9 +164,12 @@ function HydratedPracticeSession({
     } else if (questionIndex < steps.length - 1) {
       setStep(questionIndex + 1);
     } else {
-      const pendingIndex = questionIds.findIndex((id) =>
-        id !== currentQuestion.id && !profile.answers[id]?.lastCorrect,
+      const passedAfterCurrent = updatePassedQuestionIds(
+        passedQuestionIds,
+        currentQuestion.id,
+        result === true,
       );
+      const pendingIndex = firstUnpassedQuestionIndex(questionIds, passedAfterCurrent);
       if (pendingIndex >= 0) setStep(pendingIndex);
       else setCelebration(true);
     }
@@ -199,7 +209,13 @@ function HydratedPracticeSession({
       wrote,
     );
     const now = new Date().toISOString();
+    const passedAfterAnswer = updatePassedQuestionIds(
+      passedQuestionIds,
+      currentQuestion.id,
+      correct,
+    );
     setResult(correct);
+    setPassedQuestionIds(passedAfterAnswer);
     setSessionResults((previous) => [...previous, correct]);
     queueLearningEvent({
       action: "answer",
@@ -228,11 +244,21 @@ function HydratedPracticeSession({
         const completionQuestionIds = mode === "mastery" && completionTrack === "words"
           ? questionIds
           : getTrackExercises(character, completionTrack).map((exercise) => exercise.id);
-        completed[completionTrack] = updateCompletion(
-          completed[completionTrack],
-          character.id,
-          isQuestionSetComplete(completionQuestionIds, currentQuestion.id, correct, answers),
-        );
+        if (mode === "mastery") {
+          if (completionQuestionIds.every((id) => passedAfterAnswer.includes(id))) {
+            completed[completionTrack] = updateCompletion(
+              completed[completionTrack],
+              character.id,
+              true,
+            );
+          }
+        } else {
+          completed[completionTrack] = updateCompletion(
+            completed[completionTrack],
+            character.id,
+            isQuestionSetComplete(completionQuestionIds, currentQuestion.id, correct, answers),
+          );
+        }
       }
       const date = learningDayKey();
       const day = previous.daily[date] ?? { attempts: 0, correct: 0, skips: 0, readSessions: 0 };
@@ -312,6 +338,12 @@ function HydratedPracticeSession({
   }
 
   function nextCharacter() {
+    const pendingIndex = firstUnpassedQuestionIndex(questionIds, passedQuestionIds);
+    if (pendingIndex >= 0) {
+      setCelebration(false);
+      setStep(pendingIndex);
+      return;
+    }
     const completedAfterThisRound = profile.completed[track].includes(character.id)
       ? profile.completed[track]
       : [...profile.completed[track], character.id];
@@ -371,6 +403,7 @@ function HydratedPracticeSession({
           total={steps.length}
           sessionLabel={mode === "mastery" ? "单字过关" : undefined}
           onReplay={() => {
+            setPassedQuestionIds([]);
             setSessionResults([]);
             setCelebration(false);
             setStep(0);
