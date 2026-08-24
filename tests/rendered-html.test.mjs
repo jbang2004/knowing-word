@@ -830,6 +830,7 @@ test("versioned assets run through the cache-header worker path", async () => {
     "/assets/*",
     "/illustrations/*",
     "/heritage/*",
+    "/sfx/*",
     "/og-cover.jpg",
   ]);
 });

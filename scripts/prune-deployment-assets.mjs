@@ -67,6 +67,7 @@ wranglerConfig.assets = {
     "/assets/*",
     "/illustrations/*",
     "/heritage/*",
+    "/sfx/*",
     "/og-cover.jpg",
   ],
 };
