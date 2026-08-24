@@ -8,17 +8,6 @@
   animation: none;
 }
 
-.lesson-page.has-reader .page-heading {
-  grid-template-columns: 98px minmax(0, 1fr) 52px;
-  gap: 22px;
-  margin-bottom: 27px;
-  padding-bottom: 21px;
-}
-
-.lesson-page.has-reader .page-heading h1 {
-  font-size: clamp(2rem, 3.4vw, 2.85rem);
-}
-
 .lesson-page.has-reader .page-heading > div > p:last-child {
   margin-top: 8px;
 }
@@ -26,7 +15,7 @@
 .lesson-view-tabs {
   position: sticky;
   z-index: 16;
-  top: 88px;
+  top: 8px;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 8px;
@@ -1085,7 +1074,7 @@
   }
 
   .reader-section p {
-    scroll-margin-top: 84px;
+    scroll-margin-top: 16px;
     font-size: 1.16rem;
     line-height: 2;
     letter-spacing: .025em;

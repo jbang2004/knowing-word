@@ -33,18 +33,22 @@ test("server-renders the task-first Knowing Word learning experience", async () 
   // the reinforcement gates that fold the three practice routes into the line.
   assert.match(html, /第 1 课/);
   assert.match(html, /白鹭/);
-  assert.match(html, /巩固练习/);
   assert.match(html, /拆字练习/);
   assert.match(html, /红蓝练习/);
   assert.match(html, /空间结构/);
-  assert.match(html, /本课学习路线/);
   assert.match(html, /练习驿站/);
-  assert.match(html, /查看本课完整路线/);
-  assert.match(html, /path-mobile-progress/);
-  assert.match(html, /path-node path-character-row is-current/);
   assert.match(html, /path-workspace/);
-  assert.match(html, /top-navigation/);
-  assert.doesNotMatch(html, /path-tabs/);
+  // One seal per character, carrying the glyph and its state only.
+  assert.match(html, /path-node is-current/);
+  assert.match(html, /class="path-seal"/);
+  assert.match(html, /path-node-callout/);
+  assert.match(html, /path-chapter-rule/);
+  // Primary navigation is thumb-reachable and the top bar is gone for good.
+  assert.match(html, /class="app-tabbar"/);
+  assert.match(html, /class="app-sidebar"/);
+  assert.doesNotMatch(html, /top-navigation|path-tabs|path-mobile-progress/);
+  // The guide appears beside whatever comes next.
+  assert.match(html, /喜鹊向导/);
 
   const practiceResponse = await render("/practice");
   assert.equal(practiceResponse.status, 200);
@@ -136,8 +140,23 @@ test("dense pages keep progressive and shareable responsive contracts", async ()
   assert.match(layoutSource, /\.\/catalog\.css/);
   assert.doesNotMatch(layoutSource, /home-redesign/);
   assert.doesNotMatch(globalCss, /\.home-hero|\.mission-card|\.read-lesson-tabs/);
-  assert.match(homeCss, /max-height: 700px/);
-  assert.match(homeCss, /\.path-track:not\(\.is-expanded\) \.is-mobile-hidden/);
+  // The retired top bar leaves nothing behind.
+  assert.doesNotMatch(globalCss, /\.top-navigation|\.wordmark|\.profile-pill/);
+  // Four semantic roles; the decorative hues survive only as aliases.
+  assert.match(globalCss, /--action: #17b686/);
+  assert.match(globalCss, /--radical: #ff5b34/);
+  assert.match(globalCss, /--part: #2fa8e0/);
+  assert.match(globalCss, /--wrong: #ffb020/);
+  assert.match(globalCss, /--coral: var\(--radical\)/);
+  // Solid blocks: depth comes from a hard bottom edge, not a blur.
+  assert.match(globalCss, /--shadow: 0 3px 0 var\(--line\)/);
+  assert.match(globalCss, /\.record-detail-summary\.action \{\s*--track: var\(--action\)/);
+  const shellCss = await readFile(new URL("../app/app-shell.css", import.meta.url), "utf8");
+  assert.match(shellCss, /\.app-tabbar \{[\s\S]*?position: fixed/);
+  assert.match(shellCss, /@media \(min-width: 900px\)[\s\S]*?\.app-tabbar \{\s*display: none/);
+  assert.match(homeCss, /\.path-seal \{[\s\S]*?border-radius: 24px 24px 24px 8px/);
+  assert.match(homeCss, /\.path-node\.is-current \.path-seal[\s\S]*?box-shadow: 0 5px 0/);
+  assert.doesNotMatch(homeCss, /is-mobile-hidden/);
   assert.match(utilityCss, /\.component-story-sheet[\s\S]*position: fixed/);
   assert.match(utilityCss, /\.read-lesson-picker[\s\S]*min-height: 44px/);
   assert.match(readerCss, /\.reader-mobile-index[\s\S]*position: fixed/);

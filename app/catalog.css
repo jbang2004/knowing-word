@@ -56,25 +56,28 @@
 }
 
 .practice-route-card {
-  --practice-accent: var(--saffron);
-  --practice-soft: var(--saffron-soft);
+  --practice-accent: var(--part);
+  --practice-soft: var(--part-soft);
+  --practice-edge: var(--part-edge);
   display: flex;
   flex-direction: column;
   padding: 18px;
-  border: 1.5px solid var(--line);
-  border-radius: 20px;
+  border: 2px solid var(--line);
+  border-radius: 22px;
   background: var(--paper);
-  box-shadow: var(--shadow-xs);
+  box-shadow: 0 var(--press) 0 var(--line);
 }
 
-.practice-route-card.lapis {
-  --practice-accent: var(--lapis);
-  --practice-soft: var(--lapis-soft);
+.practice-route-card.radical {
+  --practice-accent: var(--radical);
+  --practice-soft: var(--radical-soft);
+  --practice-edge: var(--radical-edge);
 }
 
-.practice-route-card.jade {
-  --practice-accent: var(--jade);
-  --practice-soft: var(--jade-soft);
+.practice-route-card.wrong {
+  --practice-accent: var(--wrong);
+  --practice-soft: var(--wrong-soft);
+  --practice-edge: var(--wrong-edge);
 }
 
 .practice-route-top {
@@ -318,7 +321,7 @@
 
 .track-map-aside {
   position: sticky;
-  top: 96px;
+  top: 8px;
   display: grid;
   gap: 14px;
 }

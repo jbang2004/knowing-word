@@ -6,15 +6,12 @@ import {
   BookOpenText,
   Check,
   ChevronDown,
-  ChevronUp,
   CircleCheckBig,
   CloudOff,
   Flame,
   LockKeyhole,
-  MapPinned,
-  Target,
 } from "lucide-react";
-import { useEffect, useMemo, useState, type CSSProperties } from "react";
+import { useEffect, useMemo, type CSSProperties } from "react";
 import {
   homeCandidates,
   homeCourse,
@@ -28,12 +25,11 @@ import {
 import { candidatePathStates, nextCandidateId } from "./lib/progress-model";
 import { useStudyProfile } from "./features/profile/use-study-profile";
 import { LearningPageShell } from "./features/shell/learning-page-shell";
+import { Magpie } from "./features/shell/magpie";
 
 type TrackMeta = {
   label: string;
-  eyebrow: string;
   glyph: string;
-  tone: string;
 };
 
 const practiceTrackIds: TrackId[] = ["split", "honglan", "structure"];
@@ -41,27 +37,19 @@ const practiceTrackIds: TrackId[] = ["split", "honglan", "structure"];
 const trackMeta: Record<TrackId, TrackMeta> = {
   words: {
     label: "词语表与写字表",
-    eyebrow: "理解字义，认识字形",
     glyph: "字",
-    tone: "coral",
   },
   split: {
     label: "拆字练习",
-    eyebrow: "拆一拆，再写一写",
     glyph: "拆",
-    tone: "saffron",
   },
   honglan: {
     label: "红蓝练习",
-    eyebrow: "分清部首与其他部件",
     glyph: "辨",
-    tone: "lapis",
   },
   structure: {
     label: "空间结构",
-    eyebrow: "像搭积木一样看汉字",
     glyph: "构",
-    tone: "jade",
   },
 };
 
@@ -115,7 +103,6 @@ function continuePath(track: TrackId, candidate: HomeCandidate | undefined) {
 export default function HomeLanding() {
   const router = useRouter();
   const { profile, hydrated, syncState } = useStudyProfile({ writable: false });
-  const [showFullRoute, setShowFullRoute] = useState(false);
 
   const likelyPath = useMemo(
     () => continuePath("words", nextCandidate("words", profile)),
@@ -147,12 +134,11 @@ export default function HomeLanding() {
   const lessonProgress = trackProgress(profile, "words", currentLesson.id);
   const pathNodes = buildLessonPath(profile, currentLesson.id, nextWord?.id);
   const segments = segmentLessonPath(pathNodes);
-  const characters = pathNodes.filter((node): node is CharacterPathNode => node.kind === "character");
-  const currentCharacter = characters.find((node) => node.state === "current") || characters.at(-1);
-  const currentPosition = currentCharacter?.position || 1;
-  const currentPhase = phaseMeta[Math.min(phaseMeta.length - 1, Math.floor((currentPosition - 1) / GATE_EVERY))];
-  const mobileWindowStart = currentPosition;
-  const mobileWindowEnd = Math.min(characters.length, currentPosition + 3);
+  const currentSegmentIndex = Math.max(
+    0,
+    segments.findIndex((segment) => segment.characters.some((node) => node.state === "current")),
+  );
+  const currentPhase = phaseMeta[Math.min(phaseMeta.length - 1, currentSegmentIndex)];
   const progressPercent = lessonProgress.total
     ? Math.round((lessonProgress.completed / lessonProgress.total) * 100)
     : 0;
@@ -163,22 +149,19 @@ export default function HomeLanding() {
     <LearningPageShell active="home" name={profile.name}>
       <div className="path-home">
         <div className="path-workspace">
-          <aside className="path-summary">
-            <header className="path-header">
+          <aside className="path-rail">
+            <header className="path-status">
               <button className="path-avatar" onClick={() => navigate("/account")} aria-label="打开学习空间">
                 {name.slice(0, 1)}
               </button>
-              <span className="path-greeting">
-                <strong>你好，{name}</strong>
-                <small>{homeCourse.title}</small>
-              </span>
+              <span className="path-status-spacer" />
               <span className="path-metric is-streak" title="连续学习天数">
-                <Flame aria-hidden="true" size={15} />
-                {streak}
+                <Flame aria-hidden="true" size={17} />
+                <b>{streak}</b>
               </span>
               <span className="path-metric is-today" title="今日作答次数">
-                <CircleCheckBig aria-hidden="true" size={14} />
-                {today.attempts}
+                <CircleCheckBig aria-hidden="true" size={17} />
+                <b>{today.attempts}</b>
               </span>
             </header>
 
@@ -187,178 +170,136 @@ export default function HomeLanding() {
                 <small>第 {currentLesson.position} 课</small>
                 <strong>{currentLesson.title}</strong>
                 <span className="path-lesson-progress">
-                  <i>
-                    <b style={{ width: `${progressPercent}%` }} />
-                  </i>
+                  <i><b style={{ width: `${progressPercent}%` }} /></i>
                   <small>{lessonProgress.completed} / {lessonProgress.total} 字</small>
                 </span>
               </div>
-              <button onClick={() => navigate(`/lessons/${currentLesson.id}`)}>
-                <BookOpenText aria-hidden="true" size={20} />
+              <button onClick={() => navigate(`/lessons/${currentLesson.id}`)} aria-label={`打开《${currentLesson.title}》课文`}>
+                <BookOpenText aria-hidden="true" size={21} />
                 <small>课文</small>
               </button>
             </section>
 
-            {currentCharacter && (
-              <section className="path-resume" aria-label="当前学习任务">
-                <div className="path-resume-heading">
-                  <span className="path-resume-glyph" aria-hidden="true">{currentCharacter.hanzi}</span>
-                  <span>
-                    <small>当前任务 · 第 {currentPosition} 字</small>
-                    <strong>继续认识「{currentCharacter.hanzi}」</strong>
-                  </span>
-                </div>
-                <p>{currentPhase.copy}</p>
-                <button onClick={() => navigate(currentCharacter.href)}>
-                  继续学习
-                  <ArrowRight aria-hidden="true" size={17} />
-                </button>
-              </section>
-            )}
-
-            <section className="path-milestone" aria-label="下一学习阶段">
-              <Target aria-hidden="true" size={18} />
-              <span>
-                <small>正在进行</small>
-                <strong>{currentPhase.title}</strong>
-              </span>
-              <b>{Math.min(GATE_EVERY, ((currentPosition - 1) % GATE_EVERY) + 1)} / {GATE_EVERY}</b>
+            <section className="path-chapter-note" aria-label="本章要学什么">
+              <small>章{chapterNumeral(currentSegmentIndex)} 正在进行</small>
+              <strong>{currentPhase.title}</strong>
+              <p>{currentPhase.copy}</p>
             </section>
 
             {(!hydrated || syncState === "local") && (
               <p className="path-sync" role="status">
-                <CloudOff aria-hidden="true" size={14} />
+                <CloudOff aria-hidden="true" size={15} />
                 {hydrated ? "当前离线，学习记录会在联网后自动同步" : "正在准备学习空间"}
               </p>
             )}
           </aside>
 
           <div className="path-main">
-            {currentCharacter && (
-              <div className="path-mobile-progress">
-                <span>
-                  <small>第 {currentLesson.position} 课 · {lessonProgress.completed}/{lessonProgress.total}</small>
-                  <strong>{currentLesson.title} · 继续「{currentCharacter.hanzi}」</strong>
-                </span>
-                <button onClick={() => navigate(currentCharacter.href)} aria-label={`继续学习${currentCharacter.hanzi}`}>
-                  <ArrowRight aria-hidden="true" size={18} />
-                </button>
-              </div>
-            )}
+            <ol className="path-track" aria-label={`《${currentLesson.title}》学习路线`}>
+              {segments.map((segment, segmentIndex) => {
+                const phase = phaseMeta[Math.min(segmentIndex, phaseMeta.length - 1)];
+                const gate = segment.gate;
+                const chapterDone = segment.characters.every((node) => node.state === "done");
+                const isPast = segmentIndex < currentSegmentIndex;
 
-            <section className="path-map" aria-labelledby="lesson-path-title">
-              <header className="path-map-header">
-                <div>
-                  <span className="path-map-kicker">
-                    <MapPinned aria-hidden="true" size={15} />
-                    本课学习路线
-                  </span>
-                  <h1 id="lesson-path-title">沿着字迹，读懂《{currentLesson.title}》</h1>
-                  <p>每认识四个字，就停下来练一练。</p>
-                </div>
-                <span className="path-map-progress" aria-label={`本课完成 ${progressPercent}%`}>
-                  <strong>{progressPercent}%</strong>
-                  <small>本课进度</small>
-                </span>
-              </header>
-
-              <ol
-                className={`path-track${showFullRoute ? " is-expanded" : ""}`}
-                style={{ "--path-progress": `${progressPercent}%` } as CSSProperties}
-              >
-                {segments.map((segment, segmentIndex) => {
-                  const phase = phaseMeta[Math.min(segmentIndex, phaseMeta.length - 1)];
-                  const gate = segment.gate;
-                  const segmentStart = segment.characters[0]?.position || 1;
-                  const segmentEnd = segment.characters.at(-1)?.position || segmentStart;
-                  const segmentVisible = segmentEnd >= mobileWindowStart && segmentStart <= mobileWindowEnd;
-                  const gateVisible = Boolean(
-                    gate && segmentEnd >= mobileWindowStart && segmentEnd <= mobileWindowEnd,
-                  );
+                // A finished chapter collapses to one row of small seals: the
+                // route stays scannable instead of replaying every learned字.
+                if (chapterDone && isPast) {
                   return (
-                    <li
-                      className={`path-segment${segmentVisible || gateVisible ? "" : " is-mobile-hidden"}`}
-                      key={segment.key}
-                    >
-                      <header className="path-segment-heading">
-                        <span>章{chapterNumeral(segmentIndex)}</span>
-                        <div>
-                          <strong>{phase.title}</strong>
-                          <small>{phase.copy}</small>
-                        </div>
-                      </header>
-
-                      <ol className="path-segment-steps">
-                        {segment.characters.map((node) => {
-                          const mobileVisible = node.position >= mobileWindowStart && node.position <= mobileWindowEnd;
-                          return (
-                            <li
-                              className={`path-node path-character-row is-${node.state}${mobileVisible ? "" : " is-mobile-hidden"}`}
-                              key={node.key}
-                            >
-                              <button
-                                className="path-character-seal"
-                                onClick={() => navigate(node.href)}
-                                disabled={node.state === "locked"}
-                                aria-label={`${node.hanzi}${node.state === "done" ? "，已学会" : node.state === "current" ? "，从这里继续" : "，完成前一步后解锁"}`}
-                              >
-                                {node.hanzi}
-                              </button>
-                              <span className="path-node-copy">
-                                <small>第 {node.position} 字</small>
-                                <strong>
-                                  {node.state === "done" && `已掌握「${node.hanzi}」`}
-                                  {node.state === "current" && `继续认识「${node.hanzi}」`}
-                                  {node.state === "locked" && `接下来认识「${node.hanzi}」`}
-                                </strong>
-                                <em>
-                                  {node.state === "done" && "字义、字形与课文线索已经点亮"}
-                                  {node.state === "current" && "当前任务 · 点击进入学习"}
-                                  {node.state === "locked" && <><LockKeyhole aria-hidden="true" size={12} /> 完成前一步后开启</>}
-                                </em>
-                              </span>
-                              {node.state === "done" && (
-                                <span className="path-node-check" aria-hidden="true">
-                                  <Check size={12} strokeWidth={3.4} />
-                                </span>
-                              )}
-                            </li>
-                          );
-                        })}
-                      </ol>
-
-                      {gate && (
-                        <div className={`path-gate${gateVisible ? "" : " is-mobile-hidden"}`}>
-                          <button onClick={() => navigate(trackLessonPath(gate.track, currentLesson.id))}>
-                            <span className={`path-gate-glyph tone-${trackMeta[gate.track].tone}`} aria-hidden="true">
-                              {trackMeta[gate.track].glyph}
-                            </span>
-                            <span>
-                              <small>练习驿站 · 已完成 {gate.completed}/{gate.total}</small>
-                              <strong>巩固练习 · {trackMeta[gate.track].label}</strong>
-                              <em>{trackMeta[gate.track].eyebrow}</em>
-                            </span>
-                            <ArrowRight aria-hidden="true" size={18} />
-                          </button>
-                        </div>
-                      )}
+                    <li className="path-segment is-collapsed" key={segment.key}>
+                      <button
+                        className="path-chapter-done"
+                        onClick={() => navigate(segment.characters[0].href)}
+                        aria-label={`章${chapterNumeral(segmentIndex)} ${phase.title}，${segment.characters.length} 个字已掌握`}
+                      >
+                        <span className="path-chapter-seals" aria-hidden="true">
+                          {segment.characters.slice(0, 4).map((node) => <i key={node.key}>{node.hanzi}</i>)}
+                        </span>
+                        <span>
+                          <strong>章{chapterNumeral(segmentIndex)} · {phase.title}</strong>
+                          <small>{segment.characters.length} 个字已掌握</small>
+                        </span>
+                        <ChevronDown aria-hidden="true" size={19} />
+                      </button>
+                      {gate && <GateNode gate={gate} lessonId={currentLesson.id} navigate={navigate} />}
                     </li>
                   );
-                })}
-              </ol>
+                }
 
-              <div className="path-route-disclosure">
-                <button onClick={() => setShowFullRoute((value) => !value)} aria-expanded={showFullRoute}>
-                  {showFullRoute ? <ChevronUp aria-hidden="true" size={17} /> : <ChevronDown aria-hidden="true" size={17} />}
-                  {showFullRoute ? "收起完整路线" : `查看本课完整路线 · ${characters.length} 字`}
-                </button>
-              </div>
-            </section>
+                return (
+                  <li className="path-segment" key={segment.key}>
+                    <p className="path-chapter-rule"><span>章{chapterNumeral(segmentIndex)} · {phase.title}</span></p>
+                    <ol className="path-segment-steps">
+                      {segment.characters.map((node, nodeIndex) => (
+                        <li className={`path-node is-${node.state}`} key={node.key}>
+                          {node.state === "current" && (
+                            <span className="path-node-guide">
+                              <Magpie size={78} />
+                              <b className="path-node-callout">开始</b>
+                            </span>
+                          )}
+                          <button
+                            className="path-seal"
+                            onClick={() => navigate(node.href)}
+                            disabled={node.state === "locked"}
+                            style={{ "--path-offset": `${nodeOffset(nodeIndex)}px` } as CSSProperties}
+                            aria-label={`${node.hanzi}${node.state === "done" ? "，已学会" : node.state === "current" ? "，从这里继续" : "，完成前一步后解锁"}`}
+                          >
+                            {node.hanzi}
+                            {node.state === "done" && (
+                              <i className="path-seal-check" aria-hidden="true"><Check size={13} strokeWidth={4} /></i>
+                            )}
+                            {node.state === "locked" && (
+                              <i className="path-seal-lock" aria-hidden="true"><LockKeyhole size={13} strokeWidth={2.6} /></i>
+                            )}
+                          </button>
+                        </li>
+                      ))}
+                    </ol>
+                    {gate && <GateNode gate={gate} lessonId={currentLesson.id} navigate={navigate} />}
+                  </li>
+                );
+              })}
+            </ol>
           </div>
         </div>
       </div>
     </LearningPageShell>
   );
+}
+
+function GateNode({
+  gate,
+  lessonId,
+  navigate,
+}: {
+  gate: ReinforcementPathNode;
+  lessonId: string;
+  navigate: (path: string) => void;
+}) {
+  const meta = trackMeta[gate.track];
+  const complete = gate.total > 0 && gate.completed >= gate.total;
+  return (
+    <div className={`path-gate${complete ? " is-complete" : ""}`}>
+      <button onClick={() => navigate(trackLessonPath(gate.track, lessonId))}>
+        <span className="path-gate-glyph" aria-hidden="true">{meta.glyph}</span>
+        <span>
+          <strong>练习驿站 · {meta.label}</strong>
+          <small>{gate.completed} / {gate.total} 已通关</small>
+        </span>
+        {complete
+          ? <i className="path-gate-check" aria-hidden="true"><Check size={17} strokeWidth={3.4} /></i>
+          : <ArrowRight aria-hidden="true" size={19} />}
+      </button>
+    </div>
+  );
+}
+
+// The route snakes so the eye tracks it as a path rather than a column.
+const PATH_OFFSETS = [0, 52, 72, 52, 0, -52, -72, -52];
+
+function nodeOffset(index: number) {
+  return PATH_OFFSETS[index % PATH_OFFSETS.length];
 }
 
 function currentStreak(daily: StudyProfile["daily"]) {

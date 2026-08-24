@@ -1,204 +1,157 @@
-/* Learning home · an editorial Chinese-academy route.
+/* Learning home · one route, one seal per character.
  *
- * The page is intentionally split into a useful task rail and a contained map
- * surface. The route is a readable journey, not a loose column of bubbles.
+ * The previous home was a two-column grid with a sticky task rail, and every
+ * character on the route rendered three lines of text (position, verb phrase,
+ * status sentence). A phone fitted four nodes and the rest were hidden by a
+ * mobile-only class. Here a character is a single 74px seal carrying only the
+ * glyph and its state; everything else moved into the card you open.
  */
 
 .path-home {
-  min-height: calc(100vh - 78px);
-  min-height: calc(100dvh - 78px);
-  padding: 24px 0 64px;
+  min-height: auto;
+  padding: 4px 0 0;
   overflow: clip;
-  background:
-    radial-gradient(circle at 12% 8%, color-mix(in srgb, var(--saffron-soft) 42%, transparent), transparent 27rem),
-    radial-gradient(circle at 88% 32%, color-mix(in srgb, var(--jade-soft) 34%, transparent), transparent 31rem),
-    var(--sky);
+  background: var(--sky);
   font-family: var(--sans);
 }
 
 .path-workspace {
   display: grid;
-  grid-template-columns: minmax(288px, 304px) minmax(0, 736px);
-  align-items: start;
-  justify-content: center;
-  gap: clamp(28px, 3.4vw, 48px);
-  width: min(1120px, calc(100% - 48px));
+  grid-template-columns: minmax(0, 1fr);
+  gap: 18px;
+  width: min(560px, calc(100% - 32px));
   margin: 0 auto;
+  padding-bottom: calc(104px + env(safe-area-inset-bottom));
 }
 
-.path-summary {
-  position: sticky;
-  top: 102px;
-  display: grid;
+/* Rail --------------------------------------------------------------- */
+
+.path-rail {
+  display: flex;
+  flex-direction: column;
   gap: 14px;
-}
-
-.path-main {
   min-width: 0;
 }
 
-/* Learner and lesson rail -------------------------------------------- */
-
-.path-header {
+.path-status {
   display: flex;
-  width: 100%;
   align-items: center;
   gap: 9px;
-  padding: 2px 0 6px;
+  min-height: 52px;
 }
+
+.path-status-spacer { flex-grow: 1; }
 
 .path-avatar {
   display: grid;
-  width: 44px;
-  height: 44px;
+  width: 40px;
+  height: 40px;
   flex: 0 0 auto;
   place-items: center;
-  border-radius: 15px 15px 15px 5px;
-  color: #fff9f2;
+  border-radius: 14px 14px 14px 4px;
+  color: #fff;
   font-family: var(--kai);
-  font-size: 1.08rem;
-  font-weight: 800;
-  background: linear-gradient(145deg, var(--coral), color-mix(in srgb, var(--coral) 72%, var(--navy)));
-  box-shadow: 0 9px 22px color-mix(in srgb, var(--coral) 24%, transparent);
+  font-size: 1.125rem;
+  font-weight: 500;
+  background: var(--radical);
+  box-shadow: 0 3px 0 var(--radical-deep);
 }
 
-.path-greeting {
-  display: flex;
-  min-width: 0;
-  flex: 1 1 auto;
-  flex-direction: column;
-  gap: 2px;
-}
-
-.path-greeting strong {
-  overflow: hidden;
-  color: var(--navy);
-  font-size: .92rem;
-  font-weight: 780;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.path-greeting small {
-  overflow: hidden;
-  color: var(--ink-faint);
-  font-size: .67rem;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
+.path-avatar:active { transform: translateY(3px); box-shadow: none; }
 
 .path-metric {
   display: inline-flex;
-  min-width: 38px;
-  min-height: 34px;
-  flex: 0 0 auto;
   align-items: center;
-  justify-content: center;
-  gap: 4px;
-  padding: 6px 8px;
+  gap: 6px;
+  min-height: 36px;
+  flex: 0 0 auto;
+  padding: 6px 13px;
   border-radius: 999px;
-  font-size: .75rem;
-  font-weight: 850;
+  font-size: 0.9375rem;
+}
+
+.path-metric b {
+  font-family: var(--round);
+  font-weight: 900;
   font-variant-numeric: tabular-nums;
 }
 
 .path-metric.is-streak {
-  color: var(--wrong);
+  color: var(--wrong-deep);
   background: var(--wrong-soft);
+  box-shadow: 0 3px 0 var(--wrong-edge);
 }
 
 .path-metric.is-today {
-  color: var(--action);
+  color: var(--action-deep);
   background: var(--action-soft);
+  box-shadow: 0 3px 0 var(--action-edge);
 }
+
+/* Lesson banner ------------------------------------------------------ */
 
 .path-lesson {
-  position: relative;
   display: flex;
-  width: 100%;
-  min-height: 142px;
-  align-items: flex-end;
-  gap: 12px;
-  overflow: hidden;
-  padding: 22px 18px 18px;
-  border: 1px solid color-mix(in srgb, var(--action) 76%, var(--navy));
-  border-radius: 27px 27px 27px 9px;
-  color: var(--action-ink);
-  background:
-    radial-gradient(circle at 89% 8%, color-mix(in srgb, #fff 18%, transparent) 0 3.6rem, transparent 3.7rem),
-    linear-gradient(145deg, color-mix(in srgb, var(--action) 88%, var(--jade)), var(--action));
-  box-shadow: 0 18px 38px color-mix(in srgb, var(--action) 24%, transparent);
-}
-
-.path-lesson::after {
-  position: absolute;
-  top: -22px;
-  right: 18px;
-  color: color-mix(in srgb, var(--action-ink) 9%, transparent);
-  font-family: var(--kai);
-  font-size: 6.2rem;
-  line-height: 1;
-  content: "课";
-  transform: rotate(-7deg);
-  pointer-events: none;
+  align-items: center;
+  gap: 14px;
+  padding: 16px;
+  border-radius: 24px;
+  color: #fff;
+  background: var(--action);
+  box-shadow: 0 5px 0 var(--action-deep);
 }
 
 .path-lesson > div {
-  position: relative;
-  z-index: 1;
   display: flex;
   min-width: 0;
-  flex: 1 1 auto;
   flex-direction: column;
-  gap: 5px;
+  gap: 8px;
+  flex-grow: 1;
 }
 
 .path-lesson small {
-  color: color-mix(in srgb, var(--action-ink) 72%, transparent);
-  font-size: .68rem;
-  font-weight: 720;
-  letter-spacing: .1em;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 0.875rem;
+  font-weight: 700;
 }
 
 .path-lesson strong {
-  font-family: var(--serif);
-  font-size: 1.35rem;
-  font-weight: 800;
+  font-size: 1.5rem;
+  font-weight: 900;
   line-height: 1.1;
 }
 
 .path-lesson-progress {
   display: flex;
   align-items: center;
-  gap: 8px;
-  margin-top: 6px;
+  gap: 10px;
 }
 
 .path-lesson-progress i {
   display: block;
-  width: min(106px, 55%);
-  height: 5px;
+  width: min(112px, 52%);
+  height: 14px;
   overflow: hidden;
-  border-radius: 4px;
-  background: color-mix(in srgb, var(--action-ink) 24%, transparent);
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.2);
 }
 
 .path-lesson-progress b {
   display: block;
   height: 100%;
-  border-radius: inherit;
-  background: var(--action-ink);
-  transition: width 300ms var(--ease-out);
+  border-radius: 999px;
+  background: #b6f2dc;
+  transition: width 320ms var(--ease-out);
 }
 
 .path-lesson-progress small {
-  color: color-mix(in srgb, var(--action-ink) 84%, transparent);
-  letter-spacing: 0;
+  color: rgba(255, 255, 255, 0.92);
+  font-family: var(--round);
+  font-weight: 900;
+  font-variant-numeric: tabular-nums;
 }
 
 .path-lesson > button {
-  position: relative;
-  z-index: 1;
   display: flex;
   width: 56px;
   height: 56px;
@@ -207,839 +160,382 @@
   align-items: center;
   justify-content: center;
   gap: 3px;
-  border: 1px solid color-mix(in srgb, var(--action-ink) 18%, transparent);
   border-radius: 18px;
-  color: var(--action-ink);
-  background: color-mix(in srgb, var(--action-ink) 13%, transparent);
-  backdrop-filter: blur(8px);
+  color: var(--action-deep);
+  background: #fff;
+  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.16);
 }
 
 .path-lesson > button small {
-  color: var(--action-ink);
-  font-size: .64rem;
-  letter-spacing: 0;
+  color: inherit;
+  font-size: 0.8125rem;
+  font-weight: 900;
 }
 
-.path-resume {
-  display: grid;
-  gap: 14px;
+.path-lesson > button:active { transform: translateY(var(--press)); box-shadow: none; }
+
+/* Chapter note (wide screens only) ----------------------------------- */
+
+.path-chapter-note {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
   padding: 18px;
-  border: 1px solid color-mix(in srgb, var(--line) 82%, var(--action));
-  border-radius: 23px;
-  background: color-mix(in srgb, var(--paper) 92%, transparent);
-  box-shadow: var(--shadow-xs);
-  backdrop-filter: blur(12px);
-}
-
-.path-resume-heading {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.path-resume-glyph {
-  display: grid;
-  width: 54px;
-  height: 54px;
-  flex: 0 0 auto;
-  place-items: center;
-  border: 2px solid color-mix(in srgb, var(--action) 64%, var(--line));
-  border-radius: 50% 50% 50% 17px;
-  color: var(--navy);
-  font-family: var(--kai);
-  font-size: 1.75rem;
+  border: 2px solid var(--line);
+  border-radius: 22px;
   background: var(--paper);
-  box-shadow: inset 0 0 0 4px var(--action-soft);
+  box-shadow: var(--shadow);
 }
 
-.path-resume-heading > span:last-child {
-  display: grid;
-  min-width: 0;
-  gap: 3px;
+.path-chapter-note small {
+  color: var(--wrong-deep);
+  font-size: 0.875rem;
+  font-weight: 900;
 }
 
-.path-resume-heading small,
-.path-milestone small {
-  color: var(--ink-faint);
-  font-size: .68rem;
-  font-style: normal;
-  font-weight: 760;
-  letter-spacing: .08em;
-}
-
-.path-resume-heading strong {
+.path-chapter-note strong {
   color: var(--navy);
-  font-family: var(--serif);
-  font-size: 1.02rem;
+  font-size: 1.125rem;
+  font-weight: 900;
 }
 
-.path-resume p {
+.path-chapter-note p {
   margin: 0;
   color: var(--ink-soft);
-  font-size: .78rem;
-  line-height: 1.65;
-}
-
-.path-resume > button {
-  display: flex;
-  min-height: 48px;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px 14px 10px 16px;
-  border-radius: 15px;
-  color: var(--action-ink);
-  font-size: .82rem;
-  font-weight: 820;
-  background: var(--action);
-  box-shadow: 0 10px 22px color-mix(in srgb, var(--action) 22%, transparent);
-}
-
-.path-milestone {
-  display: flex;
-  min-height: 64px;
-  align-items: center;
-  gap: 11px;
-  padding: 12px 14px;
-  border: 1px solid var(--line);
-  border-radius: 19px;
-  color: var(--action);
-  background: color-mix(in srgb, var(--paper-soft) 86%, transparent);
-}
-
-.path-milestone > svg {
-  flex: 0 0 auto;
-}
-
-.path-milestone > span {
-  display: grid;
-  flex: 1 1 auto;
-  gap: 2px;
-}
-
-.path-milestone strong {
-  color: var(--navy);
-  font-family: var(--serif);
-  font-size: .84rem;
-}
-
-.path-milestone b {
-  padding: 6px 9px;
-  border-radius: 999px;
-  color: var(--action);
-  font-size: .72rem;
-  font-variant-numeric: tabular-nums;
-  background: var(--action-soft);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  line-height: 1.8;
+  text-wrap: pretty;
 }
 
 .path-sync {
   display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  padding: 11px 14px;
+  border-radius: 16px;
+  color: var(--wrong-deep);
+  font-size: 0.875rem;
+  font-weight: 700;
+  background: var(--wrong-soft);
+}
+
+/* The route ---------------------------------------------------------- */
+
+.path-main { min-width: 0; }
+
+.path-track,
+.path-segment-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.path-segment {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.path-chapter-rule {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0;
+}
+
+.path-chapter-rule::before,
+.path-chapter-rule::after {
+  height: 2px;
+  flex-grow: 1;
+  border-radius: 2px;
+  background: var(--line);
+  content: "";
+}
+
+.path-chapter-rule span {
+  color: var(--ink-faint);
+  font-size: 0.875rem;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+/* A finished chapter, folded into one row */
+.path-chapter-done {
+  display: flex;
   width: 100%;
   align-items: center;
-  gap: 7px;
-  margin: 0;
-  padding: 9px 13px;
-  border-radius: 14px;
-  color: var(--ink-soft);
-  font-size: .75rem;
-  background: color-mix(in srgb, var(--line) 34%, var(--paper));
-}
-
-/* Contained route canvas --------------------------------------------- */
-
-.path-mobile-progress {
-  display: none;
-}
-
-.path-map {
-  position: relative;
-  overflow: hidden;
-  border: 1px solid color-mix(in srgb, var(--line) 92%, var(--jade));
-  border-radius: 34px 34px 34px 12px;
-  background:
-    radial-gradient(circle at 82% 4%, color-mix(in srgb, var(--saffron-soft) 38%, transparent), transparent 17rem),
-    radial-gradient(circle at 10% 58%, color-mix(in srgb, var(--jade-soft) 34%, transparent), transparent 22rem),
-    linear-gradient(155deg, color-mix(in srgb, var(--paper) 96%, #f7ecd8), var(--paper));
-  box-shadow: 0 24px 60px rgba(41, 58, 49, .1), inset 0 1px rgba(255,255,255,.7);
-}
-
-.path-map::before {
-  position: absolute;
-  inset: 0;
-  opacity: .22;
-  background-image: radial-gradient(color-mix(in srgb, var(--ink-faint) 24%, transparent) .65px, transparent .65px);
-  background-size: 9px 9px;
-  content: "";
-  pointer-events: none;
-}
-
-.path-map-header {
-  position: relative;
-  z-index: 1;
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  gap: 28px;
-  align-items: center;
-  padding: 38px 42px 32px;
-  border-bottom: 1px solid color-mix(in srgb, var(--line) 80%, transparent);
-  background: color-mix(in srgb, var(--paper) 66%, transparent);
-}
-
-.path-map-kicker {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  margin-bottom: 11px;
-  color: var(--coral);
-  font-size: .68rem;
-  font-weight: 850;
-  letter-spacing: .14em;
-}
-
-.path-map-header h1 {
-  max-width: 520px;
-  margin: 0;
-  color: var(--navy);
-  font-family: var(--serif);
-  font-size: clamp(1.72rem, 2.8vw, 2.35rem);
-  line-height: 1.18;
-  letter-spacing: -.025em;
-}
-
-.path-map-header p {
-  margin: 9px 0 0;
-  color: var(--ink-soft);
-  font-size: .78rem;
-}
-
-.path-map-progress {
-  display: grid;
-  width: 84px;
-  height: 84px;
-  place-items: center;
-  align-content: center;
-  gap: 2px;
-  border: 1px solid color-mix(in srgb, var(--action) 28%, var(--line));
-  border-radius: 50% 50% 50% 18px;
-  color: var(--action);
-  background: color-mix(in srgb, var(--action-soft) 66%, var(--paper));
-  box-shadow: inset 0 0 0 5px color-mix(in srgb, var(--paper) 68%, transparent);
-}
-
-.path-map-progress strong {
-  font-size: 1.03rem;
-  line-height: 1;
-  font-variant-numeric: tabular-nums;
-}
-
-.path-map-progress small {
-  color: var(--ink-faint);
-  font-size: .61rem;
-}
-
-.path-track {
-  --route-x: 48px;
-  position: relative;
-  z-index: 1;
-  display: grid;
-  width: calc(100% - 72px);
-  margin: 0 auto;
-  padding: 18px 0 28px;
-  list-style: none;
-}
-
-.path-track::before,
-.path-track::after {
-  position: absolute;
-  z-index: -1;
-  top: 32px;
-  left: var(--route-x);
-  width: 3px;
-  border-radius: 999px;
-  content: "";
-  transform: translateX(-50%);
-}
-
-.path-track::before {
-  bottom: 32px;
-  background: color-mix(in srgb, var(--line) 82%, var(--ink-faint));
-}
-
-.path-track::after {
-  height: var(--path-progress);
-  max-height: calc(100% - 64px);
-  background: linear-gradient(var(--action), color-mix(in srgb, var(--action) 70%, var(--jade)));
-  transition: height 420ms var(--ease-out);
-}
-
-.path-segment,
-.path-segment-steps {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.path-segment + .path-segment {
-  border-top: 1px solid color-mix(in srgb, var(--line) 64%, transparent);
-}
-
-.path-segment-heading {
-  display: flex;
-  align-items: center;
-  gap: 13px;
-  margin-left: 88px;
-  padding: 27px 0 18px;
-}
-
-.path-segment:first-child .path-segment-heading {
-  padding-top: 15px;
-}
-
-.path-segment-heading > span {
-  padding: 5px 9px;
-  border: 1px solid color-mix(in srgb, var(--coral) 28%, var(--line));
-  border-radius: 999px;
-  color: var(--coral);
-  font-size: .63rem;
-  font-weight: 850;
-  letter-spacing: .08em;
-  background: color-mix(in srgb, var(--paper) 82%, transparent);
-}
-
-.path-segment-heading > div {
-  display: grid;
-  min-width: 0;
-  gap: 3px;
-}
-
-.path-segment-heading strong {
-  color: var(--navy);
-  font-family: var(--serif);
-  font-size: 1rem;
-}
-
-.path-segment-heading small {
-  color: var(--ink-faint);
-  font-size: .69rem;
-}
-
-.path-character-row {
-  position: relative;
-  display: grid;
-  grid-template-columns: 96px minmax(0, 1fr);
-  min-height: 102px;
-  align-items: center;
-}
-
-.path-character-seal {
-  position: relative;
-  z-index: 2;
-  display: grid;
-  width: 62px;
-  height: 62px;
-  grid-column: 1;
-  place-self: center;
-  place-items: center;
-  padding: 0;
+  gap: 11px;
+  padding: 11px 14px;
   border: 2px solid var(--line);
-  border-radius: 50% 50% 50% 17px;
-  color: var(--ink-soft);
-  font-family: var(--kai);
-  font-size: 1.9rem;
-  line-height: 1;
+  border-radius: 20px;
+  color: inherit;
+  text-align: left;
   background: var(--paper);
-  box-shadow: 0 7px 18px rgba(38, 55, 48, .08), inset 0 0 0 4px color-mix(in srgb, var(--paper-soft) 75%, transparent);
-  transition: transform 200ms var(--ease-out), box-shadow 200ms ease, border-color 200ms ease;
+  box-shadow: var(--shadow);
 }
 
-.path-character-seal:hover:not(:disabled) {
-  transform: translateY(-2px) rotate(-1deg);
-  box-shadow: 0 12px 24px rgba(38, 55, 48, .13), inset 0 0 0 4px color-mix(in srgb, var(--paper-soft) 75%, transparent);
-}
+.path-chapter-done:active { transform: translateY(3px); box-shadow: none; }
 
-.path-node.is-done .path-character-seal {
-  border-color: color-mix(in srgb, var(--action) 76%, var(--navy));
-  color: var(--action-ink);
-  background: var(--action);
-  box-shadow: 0 8px 20px color-mix(in srgb, var(--action) 24%, transparent);
-}
+.path-chapter-seals { display: flex; flex: 0 0 auto; gap: 4px; }
 
-.path-node.is-current .path-character-seal {
-  width: 76px;
-  height: 76px;
-  border: 3px solid var(--action);
-  color: var(--navy);
-  font-size: 2.35rem;
-  background: var(--paper);
-  box-shadow:
-    0 13px 28px color-mix(in srgb, var(--action) 20%, transparent),
-    inset 0 0 0 6px var(--action-soft),
-    0 0 0 7px color-mix(in srgb, var(--action) 12%, transparent);
-}
-
-.path-node.is-locked .path-character-seal {
-  border-color: color-mix(in srgb, var(--line) 88%, var(--ink-faint));
-  color: color-mix(in srgb, var(--ink-soft) 72%, var(--line));
-  background: color-mix(in srgb, var(--paper-soft) 86%, var(--paper));
-  cursor: default;
-}
-
-.path-node-copy {
+.path-chapter-seals i {
   display: grid;
-  min-width: 0;
-  gap: 3px;
-  margin-right: 14px;
-  padding: 11px 16px;
-  border: 1px solid transparent;
-  border-radius: 18px;
-}
-
-.path-node-copy small {
-  color: var(--ink-faint);
-  font-size: .64rem;
-  font-style: normal;
-  font-weight: 760;
-  letter-spacing: .09em;
-}
-
-.path-node-copy strong {
-  color: var(--navy);
-  font-family: var(--serif);
-  font-size: .93rem;
-}
-
-.path-node-copy em {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  color: var(--ink-faint);
-  font-size: .69rem;
-  font-style: normal;
-  line-height: 1.45;
-}
-
-.path-node.is-current .path-node-copy {
-  border-color: color-mix(in srgb, var(--action) 25%, var(--line));
-  background: color-mix(in srgb, var(--action-soft) 48%, var(--paper));
-  box-shadow: 0 10px 28px color-mix(in srgb, var(--action) 8%, transparent);
-}
-
-.path-node.is-current .path-node-copy small,
-.path-node.is-current .path-node-copy em {
-  color: var(--action);
-}
-
-.path-node.is-locked .path-node-copy {
-  opacity: .78;
-}
-
-.path-node-check {
-  position: absolute;
-  z-index: 3;
-  top: 57px;
-  left: 62px;
-  display: grid;
-  width: 23px;
-  height: 23px;
+  width: 25px;
+  height: 25px;
   place-items: center;
-  border: 3px solid var(--paper);
-  border-radius: 50%;
-  color: var(--action);
-  background: var(--paper);
-  box-shadow: 0 3px 9px rgba(25, 50, 42, .12);
+  border-radius: 8px 8px 8px 3px;
+  color: #fff;
+  font-family: var(--kai);
+  font-size: 0.8125rem;
+  font-style: normal;
+  background: var(--action);
 }
 
-/* Practice stations are landmarks anchored to the route, not banners. */
+.path-chapter-done > span:nth-child(2) {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 1px;
+  flex-grow: 1;
+}
 
-.path-gate {
+.path-chapter-done strong { color: var(--navy); font-size: 0.875rem; font-weight: 900; }
+.path-chapter-done small { color: var(--ink-faint); font-size: 0.875rem; font-weight: 600; }
+.path-chapter-done svg { flex: 0 0 auto; color: var(--ink-faint); stroke-width: 2.6; }
+
+/* Seal nodes --------------------------------------------------------- */
+
+.path-node {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 6px;
+}
+
+.path-seal {
   position: relative;
-  margin: 10px 0 28px 96px;
+  display: grid;
+  width: 74px;
+  height: 74px;
+  flex: 0 0 auto;
+  place-items: center;
+  border: 0;
+  border-radius: 24px 24px 24px 8px;
+  font-family: var(--kai);
+  font-size: 2.25rem;
+  font-weight: 500;
+  transform: translateX(var(--path-offset, 0));
+  transition: transform 120ms ease, box-shadow 120ms ease;
 }
 
-.path-gate::before {
-  position: absolute;
-  top: 50%;
-  left: -54px;
-  width: 13px;
-  height: 13px;
-  border: 3px solid var(--paper);
-  border-radius: 4px;
-  background: var(--coral);
-  box-shadow: 0 0 0 2px color-mix(in srgb, var(--coral) 34%, var(--line));
-  content: "";
-  transform: translate(-50%, -50%) rotate(45deg);
+.path-node.is-done .path-seal {
+  color: #fff;
+  background: var(--action);
+  box-shadow: 0 5px 0 var(--action-deep);
 }
+
+.path-node.is-current .path-seal {
+  border: 3px solid var(--action);
+  color: var(--action-deep);
+  background: var(--paper);
+  box-shadow: 0 5px 0 var(--action-edge);
+}
+
+.path-node.is-locked .path-seal {
+  color: #b3aa97;
+  background: var(--sky-deep);
+  box-shadow: 0 5px 0 var(--line-deep);
+}
+
+.path-seal:not(:disabled):active {
+  transform: translateX(var(--path-offset, 0)) translateY(var(--press));
+  box-shadow: none;
+}
+
+.path-seal:disabled { cursor: default; opacity: 1; }
+
+.path-seal-check,
+.path-seal-lock {
+  position: absolute;
+  top: -7px;
+  right: -6px;
+  display: grid;
+  width: 24px;
+  height: 24px;
+  place-items: center;
+  border-radius: 999px;
+  color: #fff;
+}
+
+.path-seal-check { background: var(--action-deep); }
+
+.path-seal-lock {
+  color: var(--ink-faint);
+  background: var(--sky-deep);
+  box-shadow: 0 0 0 2px var(--sky);
+}
+
+/* The guide stands beside whatever comes next */
+.path-node-guide {
+  position: relative;
+  display: flex;
+  flex: 0 0 auto;
+  align-items: flex-end;
+  align-self: flex-end;
+}
+
+.path-node-callout {
+  position: absolute;
+  top: -14px;
+  right: -24px;
+  padding: 7px 14px;
+  border-radius: 13px;
+  color: #fff;
+  font-size: 0.875rem;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+  background: var(--radical);
+  box-shadow: 0 4px 0 var(--radical-deep);
+}
+
+.path-node-callout::after {
+  position: absolute;
+  bottom: -5px;
+  left: 18px;
+  width: 11px;
+  height: 11px;
+  border-radius: 2px;
+  background: var(--radical);
+  transform: rotate(45deg);
+  content: "";
+}
+
+/* Practice station --------------------------------------------------- */
+
+.path-gate { display: flex; justify-content: center; }
 
 .path-gate > button {
-  display: grid;
-  width: min(100%, 480px);
-  min-height: 84px;
-  grid-template-columns: auto minmax(0, 1fr) auto;
+  display: flex;
+  width: min(292px, 100%);
   align-items: center;
-  gap: 13px;
-  padding: 13px 15px;
-  border: 1px solid color-mix(in srgb, var(--coral) 26%, var(--line));
-  border-radius: 22px 22px 22px 8px;
-  color: var(--ink);
+  gap: 12px;
+  padding: 12px 15px;
+  border: 2px solid var(--line);
+  border-radius: 22px 22px 22px 7px;
+  color: inherit;
   text-align: left;
-  background:
-    linear-gradient(135deg, color-mix(in srgb, var(--wrong-soft) 42%, var(--paper)), var(--paper));
-  box-shadow: 0 11px 28px rgba(46, 53, 45, .08);
-  transition: transform 200ms var(--ease-out), box-shadow 200ms ease, border-color 200ms ease;
+  background: var(--paper);
+  box-shadow: 0 var(--press) 0 var(--line);
 }
 
-.path-gate > button:hover {
-  border-color: color-mix(in srgb, var(--coral) 48%, var(--line));
-  transform: translateY(-2px);
-  box-shadow: 0 15px 34px rgba(46, 53, 45, .12);
+.path-gate.is-complete > button {
+  border-color: var(--action);
+  background: var(--action-soft);
+  box-shadow: 0 var(--press) 0 var(--action-edge);
 }
+
+.path-gate > button:active { transform: translateY(var(--press)); box-shadow: none; }
 
 .path-gate-glyph {
   display: grid;
-  width: 48px;
-  height: 48px;
+  width: 44px;
+  height: 44px;
+  flex: 0 0 auto;
   place-items: center;
-  border-radius: 15px 15px 15px 6px;
+  border-radius: 14px 14px 14px 5px;
+  color: #fff;
   font-family: var(--kai);
-  font-size: 1.22rem;
-  background: var(--paper);
-  box-shadow: inset 0 0 0 1px var(--line);
+  font-size: 1.375rem;
+  background: var(--part);
+  box-shadow: 0 3px 0 var(--part-deep);
 }
 
-.path-gate-glyph.tone-saffron { color: var(--saffron); }
-.path-gate-glyph.tone-lapis { color: var(--lapis); }
-.path-gate-glyph.tone-jade { color: var(--jade); }
+.path-gate.is-complete .path-gate-glyph {
+  background: var(--action);
+  box-shadow: 0 3px 0 var(--action-deep);
+}
 
 .path-gate > button > span:nth-child(2) {
-  display: grid;
+  display: flex;
   min-width: 0;
-  gap: 3px;
+  flex-direction: column;
+  gap: 2px;
+  flex-grow: 1;
 }
 
-.path-gate small,
-.path-gate em {
-  color: var(--ink-faint);
-  font-size: .66rem;
-  font-style: normal;
+.path-gate strong { color: var(--navy); font-size: 0.9375rem; font-weight: 900; }
+
+.path-gate small {
+  color: var(--ink-soft);
+  font-family: var(--round);
+  font-size: 0.875rem;
+  font-weight: 900;
+  font-variant-numeric: tabular-nums;
 }
 
-.path-gate strong {
-  color: var(--navy);
-  font-family: var(--serif);
-  font-size: .88rem;
+.path-gate svg { flex: 0 0 auto; color: var(--ink-faint); }
+
+.path-gate-check {
+  display: grid;
+  width: 28px;
+  height: 28px;
+  flex: 0 0 auto;
+  place-items: center;
+  border-radius: 999px;
+  color: #fff;
+  background: var(--action);
 }
 
-.path-gate > button > svg {
-  color: var(--coral);
-}
+.path-gate-check svg { color: inherit; }
 
-.path-route-disclosure {
-  position: relative;
-  z-index: 1;
-  display: none;
-}
+/* Wide screens ------------------------------------------------------- */
 
-/* Responsive composition -------------------------------------------- */
-
-@media (max-width: 899px) {
-  .path-home {
-    min-height: 100dvh;
-    padding: max(14px, env(safe-area-inset-top)) 0 calc(34px + env(safe-area-inset-bottom));
-  }
+@media (min-width: 900px) {
+  .path-home { padding-top: 26px; }
 
   .path-workspace {
-    grid-template-columns: minmax(0, 1fr);
-    gap: 12px;
-    width: min(560px, calc(100% - 28px));
+    grid-template-columns: minmax(0, 1fr) 328px;
+    align-items: start;
+    width: min(1000px, calc(100% - 64px));
+    gap: 40px;
+    padding-bottom: 64px;
   }
 
-  .path-summary {
-    position: static;
-    gap: 12px;
-  }
-
-  .path-header {
-    padding: 0 2px 4px;
-  }
-
-  .path-lesson {
-    min-height: 128px;
-    padding: 19px 17px 16px;
-  }
-
-  /* The compact sticky row below carries the same task on phones. Keeping the
-     desktop resume and milestone cards here delayed the actual route by two
-     screens and repeated the primary action three times. */
-  .path-resume,
-  .path-milestone {
-    display: none;
-  }
-
-  .path-mobile-progress {
+  .path-rail {
     position: sticky;
-    z-index: 45;
-    top: max(8px, env(safe-area-inset-top));
-    display: flex;
-    min-height: 62px;
-    align-items: center;
-    gap: 12px;
-    margin: 2px 0 10px;
-    padding: 8px 9px 8px 15px;
-    border: 1px solid color-mix(in srgb, var(--line) 78%, transparent);
-    border-radius: 20px;
-    background: color-mix(in srgb, var(--paper) 92%, transparent);
-    box-shadow: 0 12px 34px rgba(34, 54, 45, .14);
-    backdrop-filter: blur(22px) saturate(1.25);
+    top: 26px;
+    grid-column: 2;
+    grid-row: 1;
   }
 
-  .path-mobile-progress > span {
-    display: grid;
-    min-width: 0;
-    flex: 1 1 auto;
-    gap: 2px;
-  }
+  .path-main { grid-column: 1; grid-row: 1; }
 
-  .path-mobile-progress small {
-    color: var(--ink-faint);
-    font-size: .63rem;
-    font-weight: 720;
-  }
+  /* The avatar lives in the left rail on wide screens. */
+  .path-avatar { display: none; }
 
-  .path-mobile-progress strong {
-    overflow: hidden;
-    color: var(--navy);
-    font-family: var(--serif);
-    font-size: .82rem;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
+  .path-status { justify-content: flex-end; min-height: 0; }
 
-  .path-mobile-progress > button {
-    display: grid;
-    width: 44px;
-    height: 44px;
-    flex: 0 0 auto;
-    place-items: center;
-    border-radius: 14px;
-    color: var(--action-ink);
-    background: var(--action);
-  }
+  .path-chapter-note { display: flex; }
 
-  .path-map {
-    border-radius: 28px 28px 28px 10px;
-  }
+  .path-track,
+  .path-segment-steps,
+  .path-segment { gap: 24px; }
 
-  .path-map-header {
-    gap: 14px;
-    padding: 25px 20px 22px;
-  }
-
-  .path-map-kicker {
-    margin-bottom: 9px;
-    font-size: .63rem;
-  }
-
-  .path-map-header h1 {
-    font-size: clamp(1.3rem, 6.2vw, 1.72rem);
-    line-height: 1.2;
-  }
-
-  .path-map-header p {
-    margin-top: 7px;
-    font-size: .71rem;
-  }
-
-  .path-map-progress {
-    width: 67px;
-    height: 67px;
-  }
-
-  .path-map-progress strong {
-    font-size: .88rem;
-  }
-
-  .path-track {
-    --route-x: 50px;
-    width: 100%;
-    padding: 13px 18px 10px;
-  }
-
-  .path-segment-heading {
-    margin-left: 64px;
-    padding: 23px 0 14px;
-  }
-
-  .path-segment-heading small {
-    display: none;
-  }
-
-  .path-character-row {
-    grid-template-columns: 64px minmax(0, 1fr);
-    min-height: 94px;
-  }
-
-  .path-character-seal {
-    width: 58px;
-    height: 58px;
-    font-size: 1.72rem;
-  }
-
-  .path-node.is-current .path-character-seal {
-    width: 70px;
-    height: 70px;
-    font-size: 2.12rem;
-  }
-
-  .path-node-copy {
-    margin-right: 0;
-    padding: 10px 12px;
-  }
-
-  .path-node-copy strong {
-    font-size: .84rem;
-  }
-
-  .path-node-copy em {
-    font-size: .64rem;
-  }
-
-  .path-node-check {
-    top: 52px;
-    left: 48px;
-  }
-
-  .path-gate {
-    margin: 8px 0 24px 64px;
-  }
-
-  .path-gate::before {
-    left: -32px;
-  }
-
-  .path-gate > button {
-    min-height: 78px;
-    gap: 10px;
-    padding: 11px 12px;
-    border-radius: 19px 19px 19px 7px;
-  }
-
-  .path-gate-glyph {
-    width: 40px;
-    height: 40px;
-    border-radius: 13px 13px 13px 5px;
-    font-size: 1.05rem;
-  }
-
-  .path-gate strong {
-    font-size: .78rem;
-  }
-
-  .path-gate em {
-    display: none;
-  }
-
-  .path-gate > button > svg {
-    width: 16px;
-  }
-
-  .path-track:not(.is-expanded) .is-mobile-hidden {
-    display: none;
-  }
-
-  .path-route-disclosure {
-    display: flex;
-    justify-content: center;
-    padding: 4px 18px 24px;
-  }
-
-  .path-route-disclosure button {
-    display: inline-flex;
-    min-height: 44px;
-    align-items: center;
-    justify-content: center;
-    gap: 7px;
-    padding: 9px 15px;
-    border: 1px solid var(--line);
-    border-radius: 999px;
-    color: var(--navy);
-    font-size: .74rem;
-    font-weight: 780;
-    background: color-mix(in srgb, var(--paper) 84%, transparent);
-  }
-}
-
-@media (max-width: 360px) {
-  .path-workspace {
-    width: min(100% - 22px, 560px);
-  }
-
-  .path-avatar {
-    width: 40px;
-    height: 40px;
-  }
-
-  .path-metric {
-    min-width: 34px;
-    padding-inline: 6px;
-  }
-
-  .path-map-header {
-    grid-template-columns: minmax(0, 1fr) 58px;
-    padding-inline: 17px;
-  }
-
-  .path-map-progress {
-    width: 58px;
-    height: 58px;
-  }
-
-  .path-track {
-    --route-x: 46px;
-    padding-inline: 14px;
-  }
-
-  .path-character-row {
-    grid-template-columns: 64px minmax(0, 1fr);
-  }
-
-  .path-gate > button {
-    grid-template-columns: auto minmax(0, 1fr);
-  }
-
-  .path-gate > button > svg {
-    display: none;
-  }
-}
-
-/* Short phone viewports keep the task and route, not a uniformly shrunken
-   version of every card. The compact progress row already carries the lesson
-   identity, so the larger summary can yield the first screen to learning. */
-@media (max-width: 899px) and (max-height: 700px) {
-  .path-summary {
-    display: none;
-  }
-
-  .path-mobile-progress {
-    margin-top: 0;
-  }
-
-  .path-map-header {
-    padding-block: 20px 18px;
-  }
-
-  .path-map-header p {
-    display: none;
-  }
-
-  .path-segment-heading {
-    padding-block: 18px 10px;
+  .path-seal {
+    width: 84px;
+    height: 84px;
+    border-radius: 27px 27px 27px 9px;
+    font-size: 2.625rem;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .path-character-seal,
-  .path-gate > button,
-  .path-lesson-progress b,
-  .path-track::after {
-    transition: none;
-  }
+  .path-seal,
+  .path-lesson-progress b { transition: none; }
 }

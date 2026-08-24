@@ -1,5 +1,7 @@
 import type { TrackId } from "../lib/profile-model";
 
+export type TrackTone = "action" | "part" | "radical" | "wrong";
+
 export type TrackMeta = {
   id: TrackId;
   label: string;
@@ -9,7 +11,7 @@ export type TrackMeta = {
   action: string;
   origin: string;
   glyph: string;
-  tone: string;
+  tone: TrackTone;
 };
 
 export const trackMeta: Record<TrackId, TrackMeta> = {
@@ -22,7 +24,7 @@ export const trackMeta: Record<TrackId, TrackMeta> = {
     action: "继续识字",
     origin: "识字小测",
     glyph: "字",
-    tone: "coral",
+    tone: "action",
   },
   split: {
     id: "split",
@@ -33,7 +35,7 @@ export const trackMeta: Record<TrackId, TrackMeta> = {
     action: "继续拆字",
     origin: "拆一拆",
     glyph: "拆",
-    tone: "saffron",
+    tone: "part",
   },
   honglan: {
     id: "honglan",
@@ -44,7 +46,7 @@ export const trackMeta: Record<TrackId, TrackMeta> = {
     action: "继续红蓝",
     origin: "红蓝字",
     glyph: "红蓝",
-    tone: "lapis",
+    tone: "radical",
   },
   structure: {
     id: "structure",
@@ -55,6 +57,6 @@ export const trackMeta: Record<TrackId, TrackMeta> = {
     action: "继续结构",
     origin: "空间结构",
     glyph: "构",
-    tone: "jade",
+    tone: "wrong",
   },
 };

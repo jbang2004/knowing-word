@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import { headers } from "next/headers";
 import "./globals.css";
+import "./app-shell.css";
 import "./catalog.css";
 import "./study.css";
 import "./challenge.css";
@@ -9,11 +9,8 @@ import "./utility-pages.css";
 import "./lesson-reader.css";
 import ServiceWorkerRegistration from "./service-worker-registration";
 
-export async function generateMetadata(): Promise<Metadata> {
-  const incoming = await headers();
-  const host = incoming.get("x-forwarded-host") || incoming.get("host") || "knowing-word.jbang2004.chatgpt.site";
-  const protocol = incoming.get("x-forwarded-proto") || (host.startsWith("localhost") ? "http" : "https");
-  const origin = new URL(`${protocol}://${host}`);
+export function generateMetadata(): Metadata {
+  const origin = new URL("https://knowing-word.jbang2004.chatgpt.site");
   const imageUrl = new URL("/og-cover.jpg", origin).toString();
   const description = "统编版五年级上册 26 课识字地图：用图中嵌字、字义讲解、拆字练习与写字巩固，把课内汉字真正记进脑海。";
   return {

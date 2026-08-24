@@ -370,7 +370,8 @@ function WordBoard({
                 key={character.id}
               >
                 <strong>{character.hanzi}</strong>
-                {completed.has(character.id) ? <small>✓</small> : <em>{extension ? "拓" : character.polyphonic ? "多" : character.curriculumRole === "write" ? "写" : "认"}</em>}
+                <b>{character.pinyin}</b>
+                {completed.has(character.id) ? <small aria-label="已学会">✓</small> : <em>{extension ? "拓" : character.polyphonic ? "多" : character.curriculumRole === "write" ? "写" : "认"}</em>}
                 {character.lessonId === LESSON_THREE_ID && <span className="pilot-chip-method">{getLessonThreeKnowledge(character.hanzi)?.method === "phonosemantic" ? "形声" : "部件"}</span>}
               </Link>
             ))}</div>

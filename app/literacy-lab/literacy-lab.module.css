@@ -106,7 +106,7 @@
 .sectionNav strong { align-self: end; font-size: 15px; }
 .sectionNav small { color: var(--muted); font-size: 12px; }
 
-.sampleSection { max-width: 1240px; margin: 0 auto 116px; padding: 0 26px; scroll-margin-top: 104px; }
+.sampleSection { max-width: 1240px; margin: 0 auto 116px; padding: 0 26px; scroll-margin-top: 16px; }
 .sectionHeading { display: grid; grid-template-columns: 1fr 440px; gap: 60px; align-items: end; margin-bottom: 34px; }
 .sectionHeading span { color: var(--coral); font-size: 13px; font-weight: 900; letter-spacing: .1em; }
 .sectionHeading h2 { margin: 9px 0 0; font-size: clamp(31px, 3.6vw, 48px); line-height: 1.16; letter-spacing: -.035em; }

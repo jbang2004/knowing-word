@@ -44,17 +44,42 @@
 }
 
 .challenge-bar .challenge-progress {
-  height: 12px;
+  height: 16px;
   flex-grow: 1;
   margin: 0;
+  overflow: hidden;
+  border-radius: 999px;
+  background: var(--sky-deep);
+}
+
+.challenge-bar .challenge-progress i {
+  position: relative;
+  display: block;
+  height: 100%;
+  border-radius: 999px;
+  background: var(--action);
+}
+
+/* Duolingo's bar has a highlight along the top of the fill; it is what makes
+   the bar read as a filled tube rather than a flat rectangle. */
+.challenge-bar .challenge-progress i::after {
+  position: absolute;
+  top: 3px;
+  right: 6px;
+  left: 6px;
+  height: 4px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.45);
+  content: "";
 }
 
 .challenge-bar .challenge-count {
   flex: 0 0 auto;
   padding: 0;
   color: var(--ink-soft);
-  font-size: 0.83rem;
-  font-weight: 700;
+  font-family: var(--round);
+  font-size: 0.9375rem;
+  font-weight: 900;
   font-variant-numeric: tabular-nums;
   background: transparent;
 }
@@ -77,28 +102,51 @@
 
 .challenge-question h2 {
   font-family: var(--sans);
-  font-size: clamp(1.4rem, 5.6vw, 1.72rem);
-  font-weight: 700;
-  line-height: 1.46;
+  font-size: clamp(1.5rem, 5.8vw, 1.75rem);
+  font-weight: 900;
+  line-height: 1.45;
   letter-spacing: 0;
 }
 
+/* Options are solid blocks: an edge you can see and a floor you can press. */
 .choice-card {
-  min-height: 62px;
-  border-width: 1.5px;
-  border-radius: 18px;
+  min-height: 76px;
+  border: 2.5px solid var(--line);
+  border-radius: 20px;
   background: var(--paper);
+  box-shadow: 0 var(--press) 0 var(--line);
+  transition: transform 90ms ease, box-shadow 90ms ease, border-color 140ms ease, background 140ms ease;
 }
 
 .choice-card strong {
-  font-size: 1.14rem;
+  font-size: 1.1875rem;
+  font-weight: 800;
 }
 
-.choice-card.is-selected,
-.choice-card.is-correct,
-.choice-card.is-wrong {
-  border-width: 2px;
+.choice-card:not(:disabled):active {
+  transform: translateY(var(--press));
   box-shadow: none;
+}
+
+.choice-card.is-selected {
+  border-color: var(--part);
+  color: var(--part-deep);
+  background: var(--part-soft);
+  box-shadow: 0 var(--press) 0 var(--part-edge);
+}
+
+.choice-card.is-correct {
+  border-color: var(--action);
+  color: var(--action-deep);
+  background: var(--action-soft);
+  box-shadow: 0 var(--press) 0 var(--action-edge);
+}
+
+.choice-card.is-wrong {
+  border-color: var(--wrong);
+  color: var(--wrong-deep);
+  background: var(--wrong-soft);
+  box-shadow: 0 var(--press) 0 var(--wrong-edge);
 }
 
 /* Bottom action bar --------------------------------------------------- */
@@ -123,7 +171,15 @@
   width: 100%;
   min-height: 58px;
   border-radius: 20px;
-  font-size: 1.06rem;
+  font-size: 1.0625rem;
+  font-weight: 900;
+}
+
+.challenge-actions > .game-button.primary:disabled {
+  color: #b3aa97;
+  background: var(--sky-deep);
+  box-shadow: 0 var(--press) 0 var(--line-deep);
+  opacity: 1;
 }
 
 .challenge-actions-row {
@@ -151,11 +207,13 @@
 }
 
 .answer-sheet.is-correct {
-  background: color-mix(in srgb, var(--action) 14%, var(--paper));
+  color: #fff;
+  background: var(--action);
 }
 
 .answer-sheet.is-wrong {
-  background: color-mix(in srgb, var(--wrong) 15%, var(--paper));
+  color: var(--wrong-ink);
+  background: var(--wrong);
 }
 
 .answer-sheet-head {
@@ -175,53 +233,51 @@
 }
 
 .answer-sheet.is-correct .answer-sheet-mark {
-  color: var(--action-ink);
-  background: var(--action);
+  color: var(--action-deep);
+  background: #fff;
 }
 
 .answer-sheet.is-wrong .answer-sheet-mark {
-  color: var(--wrong-ink);
-  background: var(--wrong);
+  color: var(--wrong-deep);
+  background: #fff;
 }
 
 .answer-sheet-head strong {
-  font-size: 1.25rem;
-  font-weight: 800;
+  color: inherit;
+  font-size: 1.3125rem;
+  font-weight: 900;
 }
-
-.answer-sheet.is-correct .answer-sheet-head strong { color: color-mix(in srgb, var(--action) 78%, var(--ink)); }
-.answer-sheet.is-wrong .answer-sheet-head strong { color: color-mix(in srgb, var(--wrong) 72%, var(--ink)); }
 
 .answer-sheet-head small {
   margin-left: auto;
-  padding: 6px 11px;
+  padding: 6px 12px;
   border-radius: 999px;
-  color: var(--ink-soft);
-  font-size: 0.75rem;
-  font-weight: 650;
-  background: color-mix(in srgb, var(--paper) 70%, transparent);
+  color: inherit;
+  font-size: 0.8125rem;
+  font-weight: 800;
+  background: rgba(255, 255, 255, 0.24);
 }
 
 .answer-sheet > p {
   margin: 0;
-  color: var(--ink);
-  font-size: 0.94rem;
-  line-height: 1.66;
+  color: inherit;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  line-height: 1.7;
   text-wrap: pretty;
 }
 
 .answer-sheet > .game-button.primary {
   width: 100%;
-  min-height: 56px;
+  min-height: 58px;
   border-radius: 20px;
-  font-size: 1.06rem;
+  font-size: 1.0625rem;
+  background: #fff;
+  box-shadow: 0 var(--press) 0 rgba(0, 0, 0, 0.18);
 }
 
-.answer-sheet.is-wrong > .game-button.primary {
-  color: var(--wrong-ink);
-  background: var(--wrong);
-  box-shadow: 0 8px 22px color-mix(in srgb, var(--wrong) 28%, transparent);
-}
+.answer-sheet.is-correct > .game-button.primary { color: var(--action-deep); }
+.answer-sheet.is-wrong > .game-button.primary { color: var(--wrong-deep); }
 
 @keyframes answer-sheet-rise {
   from { transform: translateY(14px); opacity: 0; }
@@ -258,6 +314,10 @@
 /* The question-type chip inherited the track tone, which on the 识字 track is
    the same red that means 表意部首 everywhere else. It is a neutral label. */
 .question-tag {
-  color: var(--violet);
-  background: var(--violet-soft);
+  padding: 6px 13px;
+  border-radius: 999px;
+  color: var(--part-deep);
+  font-size: 0.875rem;
+  font-weight: 900;
+  background: var(--part-soft);
 }
