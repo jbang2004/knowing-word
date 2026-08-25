@@ -33,10 +33,10 @@ test("server-renders the task-first Knowing Word learning experience", async () 
   // the lesson ends in one integrated reinforcement plan.
   assert.match(html, /第 1 课/);
   assert.match(html, /白鹭/);
-  assert.match(html, /拆字重组/);
-  assert.match(html, /红蓝练习/);
-  assert.match(html, /空间结构/);
-  assert.match(html, /整课巩固/);
+  assert.match(html, /拆字复习/);
+  assert.match(html, /红蓝复习/);
+  assert.match(html, /结构复习/);
+  assert.match(html, /整课巩固 · 选做/);
   assert.match(html, /本课生字后解锁/);
   assert.match(html, /path-workspace/);
   // One seal per character, carrying the glyph and its state only.
@@ -52,8 +52,8 @@ test("server-renders the task-first Knowing Word learning experience", async () 
   const practiceResponse = await render("/practice");
   assert.equal(practiceResponse.status, 200);
   const practiceHtml = await practiceResponse.text();
-  assert.match(practiceHtml, /同一批字，沿一条路线真正记牢/);
-  assert.match(practiceHtml, /识字.*结构.*拆字.*红蓝.*朗读/);
+  assert.match(practiceHtml, /先逐字过关，再按需要复习/);
+  assert.match(practiceHtml, /完整过关.*结构复习.*拆字复习.*红蓝复习.*自由朗读/);
   assert.match(practiceHtml, /自由朗读/);
 });
 
@@ -85,14 +85,14 @@ test("the lesson guide connects reading clues to cards and back", async () => {
   assert.match(lessonHtml, /这些比较让你看见了怎样的白鹭/);
   assert.match(lessonHtml, /reader-focus-word/);
   assert.doesNotMatch(lessonHtml, /喜鹊向导/);
-  assert.match(lessonHtml, /学生字/);
-  assert.match(lessonHtml, /做练习/);
+  assert.match(lessonHtml, /生字表/);
+  assert.match(lessonHtml, /复习巩固/);
   assert.match(lessonHtml, /lesson-paragraph-1/);
   assert.match(lessonHtml, /returnTo=%2Flessons%2Fg5v1-l01%23lesson-paragraph-1/);
 
   const practiceResponse = await render("/lessons/g5v1-l01?view=practice");
   const practiceHtml = await practiceResponse.text();
-  assert.match(practiceHtml, /本课统一练习路线/);
+  assert.match(practiceHtml, /本课复习方式/);
   assert.match(practiceHtml, /识字/);
   assert.match(practiceHtml, /结构/);
   assert.match(practiceHtml, /拆字/);
@@ -103,6 +103,7 @@ test("the lesson guide connects reading clues to cards and back", async () => {
   const wordsHtml = await wordsResponse.text();
   assert.match(wordsHtml, /课内识字写字表/);
   assert.doesNotMatch(wordsHtml, /lesson-reader-layout/);
+  assert.match(wordsHtml, /returnTo=%2Flessons%2Fg5v1-l01%3Fview%3Dwords/);
 
   const returnTo = encodeURIComponent("/lessons/g5v1-l01#lesson-paragraph-1");
   const cardResponse = await render(

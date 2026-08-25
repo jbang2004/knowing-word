@@ -14,7 +14,7 @@ import { emptyProfile } from "../app/lib/profile-model.ts";
 
 const firstLessonId = "g5v1-l01";
 
-test("the guided plan finishes recognition before ordered specialist practice", () => {
+test("the guided plan treats full-character mastery as the required lesson path", () => {
   const profile = emptyProfile();
   const words = homeCandidates.words.filter((candidate) => candidate.lessonId === firstLessonId);
 
@@ -26,13 +26,13 @@ test("the guided plan finishes recognition before ordered specialist practice", 
 
   profile.completed.words = words.map((candidate) => candidate.id);
   profile.last.words = { lessonId: firstLessonId, characterId: words.at(-1).id, questionIndex: 1 };
-  assert.equal(nextLessonActivity(profile, firstLessonId).track, "structure");
+  assert.deepEqual(nextLessonActivity(profile, firstLessonId), { track: null, candidate: null });
   assert.equal(recommendedLessonId(profile), firstLessonId);
 
+  // Optional specialist reviews keep independent progress without becoming a
+  // gate between the mastered words and the lesson reading finish.
   profile.completed.structure = [...profile.completed.words];
-  assert.equal(nextLessonActivity(profile, firstLessonId).track, "split");
   profile.completed.split = [...profile.completed.words];
-  assert.equal(nextLessonActivity(profile, firstLessonId).track, "honglan");
   profile.completed.honglan = [...profile.completed.words];
   assert.deepEqual(nextLessonActivity(profile, firstLessonId), { track: null, candidate: null });
   assert.equal(recommendedLessonId(profile), firstLessonId);
@@ -40,16 +40,11 @@ test("the guided plan finishes recognition before ordered specialist practice", 
   assert.equal(recommendedLessonId(profile), "g5v1-l02");
 });
 
-test("the completion voice waits for the whole lesson, not one character", () => {
+test("lesson learning completes when every character passes the full mastery round", () => {
   const profile = emptyProfile();
   const words = homeCandidates.words.filter((candidate) => candidate.lessonId === firstLessonId);
 
   profile.completed.words = words.map((candidate) => candidate.id);
-  assert.equal(isLessonLearningComplete(profile, firstLessonId), false);
-
-  for (const track of ["structure", "split", "honglan"]) {
-    profile.completed[track] = [...profile.completed.words];
-  }
   assert.equal(isLessonLearningComplete(profile, firstLessonId), true);
 });
 

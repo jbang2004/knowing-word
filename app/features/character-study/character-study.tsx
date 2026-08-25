@@ -726,7 +726,7 @@ export function CharacterStudy({
 
   const exercises = getPracticeSteps(character, "words", "mastery").map(({ exercise }) => exercise);
   const completedQuestions = exercises.filter((question) => profile.answers[question.id]?.lastCorrect).length;
-  const isComplete = exercises.length > 0 && completedQuestions === exercises.length;
+  const isComplete = profile.completed.words.includes(character.id);
   const heritage = media.heritage;
   const hasExercises = exercises.length > 0;
   const visual = media.visual;

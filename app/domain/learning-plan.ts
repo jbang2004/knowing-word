@@ -1,6 +1,5 @@
 import { homeCandidates, type HomeCandidate } from "../data/home-index.generated.ts";
 import type { StudyProfile, TrackId } from "../lib/profile-model.ts";
-import { practiceTrackIds } from "./tracks.ts";
 
 export type LearningRecommendation = {
   track: TrackId;
@@ -18,10 +17,7 @@ function candidatesForLesson(track: TrackId, lessonId?: string) {
 
 export function isLessonLearningComplete(profile: StudyProfile, lessonId: string) {
   const wordIds = candidatesForLesson("words", lessonId).map((candidate) => candidate.id);
-  if (!wordIds.length || wordIds.some((id) => !profile.completed.words.includes(id))) return false;
-  return practiceTrackIds.every((track) =>
-    wordIds.every((id) => profile.completed[track].includes(id)),
-  );
+  return wordIds.length > 0 && wordIds.every((id) => profile.completed.words.includes(id));
 }
 
 function lessonIsComplete(profile: StudyProfile, lessonId: string) {
@@ -89,11 +85,6 @@ export function nextLessonActivity(
     (candidate) => candidate.id === preferredWordId && !profile.completed.words.includes(candidate.id),
   ) ?? wordCandidates.find((candidate) => !profile.completed.words.includes(candidate.id));
   if (nextWord) return { track: "words", candidate: nextWord };
-
-  for (const track of practiceTrackIds) {
-    const candidate = nextLearnedPracticeCandidate(profile, track, lessonId);
-    if (candidate) return { track, candidate };
-  }
 
   return { track: null, candidate: null };
 }

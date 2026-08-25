@@ -33,6 +33,26 @@ test("secondary routes preserve and recover a safe return destination", () => {
   );
 });
 
+test("a card and its quiz can carry the same return context across characters", () => {
+  const lessonWords = "/lessons/g5v1-l01?view=words";
+  const card = withReturnTo(
+    "/lessons/g5v1-l01/words/g5v1-l01-c01-u9e6d",
+    lessonWords,
+  );
+  const quiz = withReturnTo(
+    "/lessons/g5v1-l01/words/g5v1-l01-c01-u9e6d/quizzes",
+    returnPathFromUrl(card),
+  );
+  const nextQuiz = withReturnTo(
+    "/lessons/g5v1-l01/words/g5v1-l01-c02-u9e6d",
+    returnPathFromUrl(quiz),
+  );
+
+  assert.equal(returnPathFromUrl(card), lessonWords);
+  assert.equal(returnPathFromUrl(quiz), lessonWords);
+  assert.equal(returnPathFromUrl(nextQuiz), lessonWords);
+});
+
 test("track route construction follows the filesystem router", () => {
   assert.equal(
     routeForTrack("honglan", "g5v1-l01", "g5v1-l01-c05-u55dc"),

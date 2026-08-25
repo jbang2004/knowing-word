@@ -13,12 +13,11 @@ import {
   type PracticeMode,
 } from "../../domain/practice";
 import { learningDayKey } from "../../domain/learning-day";
-import { learningTrackIds } from "../../domain/tracks";
 import { routeForTrack } from "../../lib/app-route";
+import { withReturnTo } from "../../lib/navigation";
 import {
   advanceResumeIndex,
   firstUnpassedQuestionIndex,
-  isQuestionSetComplete,
   nextCandidateId,
   nextResumeIndex,
   updatePassedQuestionIds,
@@ -37,6 +36,7 @@ export default function PracticeSessionRoute({
   media,
   initialQuestionIndex,
   mode = "track",
+  returnTo,
 }: {
   character: CharacterItem;
   track: TrackId;
@@ -44,6 +44,7 @@ export default function PracticeSessionRoute({
   media: PracticeMedia;
   initialQuestionIndex?: number;
   mode?: PracticeMode;
+  returnTo?: string;
 }) {
   const { profile, setProfile, hydrated } = useStudyProfile();
   if (!hydrated) {
@@ -56,7 +57,13 @@ export default function PracticeSessionRoute({
           <span aria-hidden="true">字</span>
           <h2>先认识“{character.hanzi}”</h2>
           <p>完成这个字的单字过关后，结构、拆字和红蓝专项才会开放。</p>
-          <Link className="game-button primary" href={`/lessons/${character.lessonId}/words/${character.id}`}>
+          <Link
+            className="game-button primary"
+            href={withReturnTo(
+              `/lessons/${character.lessonId}/words/${character.id}`,
+              returnTo ?? routeForTrack(track, character.lessonId),
+            )}
+          >
             打开字卡
           </Link>
         </section>
@@ -76,6 +83,7 @@ export default function PracticeSessionRoute({
       initialQuestionIndex={initialQuestionIndex}
       profile={profile}
       setProfile={setProfile}
+      returnTo={returnTo}
     />
   );
 }
@@ -89,6 +97,7 @@ function HydratedPracticeSession({
   mode,
   profile,
   setProfile,
+  returnTo,
 }: {
   character: CharacterItem;
   track: TrackId;
@@ -98,6 +107,7 @@ function HydratedPracticeSession({
   mode: PracticeMode;
   profile: StudyProfile;
   setProfile: Dispatch<SetStateAction<StudyProfile>>;
+  returnTo?: string;
 }) {
   const router = useRouter();
   const steps = useMemo(() => getPracticeSteps(character, track, mode), [character, mode, track]);
@@ -250,26 +260,16 @@ function HydratedPracticeSession({
         },
       };
       const completed = { ...previous.completed };
-      const completionTracks = mode === "mastery" ? learningTrackIds : [track];
-      for (const completionTrack of completionTracks) {
-        const completionQuestionIds = mode === "mastery" && completionTrack === "words"
-          ? questionIds
-          : getTrackExercises(character, completionTrack).map((exercise) => exercise.id);
-        if (mode === "mastery") {
-          if (completionQuestionIds.every((id) => passedAfterAnswer.includes(id))) {
-            completed[completionTrack] = updateCompletion(
-              completed[completionTrack],
-              character.id,
-              true,
-            );
-          }
-        } else {
-          completed[completionTrack] = updateCompletion(
-            completed[completionTrack],
-            character.id,
-            isQuestionSetComplete(completionQuestionIds, currentQuestion.id, correct, answers),
-          );
-        }
+      const completionTrack = mode === "mastery" ? "words" : track;
+      const completionQuestionIds = mode === "mastery"
+        ? questionIds
+        : getTrackExercises(character, completionTrack).map((exercise) => exercise.id);
+      if (completionQuestionIds.every((id) => passedAfterAnswer.includes(id))) {
+        completed[completionTrack] = updateCompletion(
+          completed[completionTrack],
+          character.id,
+          true,
+        );
       }
       const date = learningDayKey();
       const day = previous.daily[date] ?? { attempts: 0, correct: 0, skips: 0, readSessions: 0 };
@@ -308,8 +308,7 @@ function HydratedPracticeSession({
         last: updateResumePoints(previous.last),
       };
     });
-    if (questionIndex < steps.length - 1) setStep(questionIndex + 1);
-    else finish();
+    setStep(questionIndex < steps.length - 1 ? questionIndex + 1 : 0);
   }
 
   function updateResumePoints(
@@ -327,25 +326,13 @@ function HydratedPracticeSession({
         questionIndex: resumeIndex(questionIndex, steps.length),
       },
     };
-    if (mode === "mastery" && currentTrack !== track) {
-      const trackExercises = getTrackExercises(character, currentTrack);
-      const trackQuestionIndex = Math.max(
-        0,
-        trackExercises.findIndex((exercise) => exercise.id === currentQuestion?.id),
-      );
-      next[currentTrack] = {
-        lessonId: character.lessonId,
-        characterId: character.id,
-        questionIndex: resumeIndex(trackQuestionIndex, trackExercises.length),
-      };
-    }
     return next;
   }
 
   function finish() {
-    router.push(track === "words"
+    router.push(returnTo ?? (track === "words"
       ? `/lessons/${character.lessonId}?view=words`
-      : "/practice");
+      : "/practice"));
   }
 
   function nextCharacter() {
@@ -365,7 +352,8 @@ function HydratedPracticeSession({
     const nextId = nextCandidateId(candidateIds, completedAfterThisRound, character.id);
     if (nextId && nextId !== character.id) {
       playLearningSound("encourage");
-      router.push(routeForTrack(track, character.lessonId, nextId));
+      const destination = routeForTrack(track, character.lessonId, nextId);
+      router.push(returnTo ? withReturnTo(destination, returnTo) : destination);
     } else {
       finish();
     }
@@ -378,6 +366,17 @@ function HydratedPracticeSession({
       </main>
     );
   }
+
+  const completedForNext = profile.completed[track].includes(character.id)
+    ? profile.completed[track]
+    : [...profile.completed[track], character.id];
+  const hasNextCandidate = candidateIds.some((id) => !completedForNext.includes(id));
+  const nextLabel = hasNextCandidate
+    ? "继续 · 下一个字"
+    : track === "words" ? "完成本课" : "完成本项复习";
+  const finishLabel = returnTo
+    ? "返回上一页"
+    : track === "words" ? "返回本课生字表" : "返回练习";
 
   return (
     <>
@@ -395,8 +394,11 @@ function HydratedPracticeSession({
         orderedOptions={orderedOptions}
         onBack={() => router.push(
           track === "words"
-            ? `/lessons/${character.lessonId}/words/${character.id}`
-            : routeForTrack(track, character.lessonId),
+            ? withReturnTo(
+                `/lessons/${character.lessonId}/words/${character.id}`,
+                returnTo ?? `/lessons/${character.lessonId}?view=words`,
+              )
+            : returnTo ?? routeForTrack(track, character.lessonId),
         )}
         onChoose={chooseOption}
         onRemove={(id) => result === null && setSelectedOptions((items) => items.filter((item) => item !== id))}
@@ -423,6 +425,8 @@ function HydratedPracticeSession({
           }}
           onNextCharacter={nextCharacter}
           onFinish={finish}
+          nextLabel={nextLabel}
+          finishLabel={finishLabel}
         />
       )}
     </>

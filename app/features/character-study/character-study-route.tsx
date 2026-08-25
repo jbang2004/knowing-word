@@ -22,7 +22,17 @@ export default function CharacterStudyRoute({
   const router = useRouter();
   const { profile, setProfile } = useStudyProfile();
   const characterPath = `/lessons/${character.lessonId}/words/${character.id}`;
-  const returnPath = returnTo ? withReturnTo(characterPath, returnTo) : characterPath;
+  const returnDestination = returnTo ?? `/lessons/${character.lessonId}?view=words`;
+  const returnPath = withReturnTo(characterPath, returnDestination);
+  const backLabel = !returnTo || returnDestination.includes("view=words")
+    ? "返回生字表"
+    : returnDestination.includes("view=practice") || returnDestination === "/practice"
+      ? "返回复习巩固"
+      : returnDestination.startsWith("/records")
+        ? "返回学习记录"
+        : returnDestination === "/"
+          ? "返回学习首页"
+          : `返回《${character.lessonTitle}》${returnContextLabel}`;
 
   return (
     <CharacterStudy
@@ -31,15 +41,15 @@ export default function CharacterStudyRoute({
       media={media}
       profile={profile}
       favorite={profile.favorites.includes(character.id)}
-      backLabel={returnTo ? `返回《${character.lessonTitle}》${returnContextLabel}` : "返回词语表"}
-      onBack={() => router.push(returnTo ?? `/lessons/${character.lessonId}`)}
+      backLabel={backLabel}
+      onBack={() => router.push(returnDestination)}
       onFavorite={() => setProfile((previous) => ({
         ...previous,
         favorites: previous.favorites.includes(character.id)
           ? previous.favorites.filter((id) => id !== character.id)
           : [...previous.favorites, character.id],
       }))}
-      onStart={() => router.push(`${characterPath}/quizzes`)}
+      onStart={() => router.push(withReturnTo(`${characterPath}/quizzes`, returnDestination))}
       onReadAloud={() => router.push(withReturnTo(`/read-aloud?lessonId=${encodeURIComponent(character.lessonId)}`, returnPath))}
       onComponent={(glyph) => {
         const componentId = componentIds[glyph];

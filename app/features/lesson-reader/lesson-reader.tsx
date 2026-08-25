@@ -44,8 +44,8 @@ export function LessonViewNavigation({
       copy: guideMode ? "带着线索打开课本" : "在原创文字里发现字",
       Icon: BookOpenText,
     },
-    { id: "words" as const, label: "学生字", copy: "看清字义与字形", Icon: ListChecks },
-    { id: "practice" as const, label: "做练习", copy: "换方法反复巩固", Icon: LayoutGrid },
+    { id: "words" as const, label: "生字表", copy: "逐字完成理解与过关", Icon: ListChecks },
+    { id: "practice" as const, label: "复习巩固", copy: "按需要换一种方法练", Icon: LayoutGrid },
   ];
 
   return (
@@ -335,8 +335,8 @@ export function LessonReader({
               <p>{guideMode ? "完成导读后，请回到纸质课本阅读全文，再用字卡和练习巩固。" : "读完原创语境后，可以查看完整字表，也可以直接换一种方式练习。"}</p>
             </div>
             <div className="lesson-reader-finish-actions">
-              <Link href={lessonViewHref(lesson.id, "words")}>查看本课字</Link>
-              <Link className="is-primary" href={lessonViewHref(lesson.id, "practice")}>开始巩固 <ArrowRight aria-hidden="true" /></Link>
+              <Link href={lessonViewHref(lesson.id, "words")}>查看生字表</Link>
+              <Link className="is-primary" href={lessonViewHref(lesson.id, "practice")}>按需复习 <ArrowRight aria-hidden="true" /></Link>
             </div>
           </footer>
         </article>

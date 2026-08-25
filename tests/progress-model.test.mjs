@@ -43,12 +43,12 @@ test("a practice round tracks only questions passed in that round", () => {
   assert.equal(firstUnpassedQuestionIndex(["q1"], passed), -1);
 });
 
-test("completed state reflects the latest full question set", () => {
+test("completion records a passed round without being erased by later review", () => {
   const latest = { q1: { lastCorrect: true }, q2: { lastCorrect: true } };
   assert.equal(isQuestionSetComplete(["q1", "q2"], "q2", true, latest), true);
   assert.deepEqual(updateCompletion([], "桂", true), ["桂"]);
 
   const afterWrong = { ...latest, q2: { lastCorrect: false } };
   assert.equal(isQuestionSetComplete(["q1", "q2"], "q2", false, afterWrong), false);
-  assert.deepEqual(updateCompletion(["桂", "花"], "桂", false), ["花"]);
+  assert.deepEqual(updateCompletion(["桂", "花"], "桂", false), ["桂", "花"]);
 });

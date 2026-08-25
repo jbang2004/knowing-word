@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { StudyProfileProvider } from "./features/profile/use-study-profile";
 import "./globals.css";
 import "./app-shell.css";
 import "./catalog.css";
@@ -44,7 +45,7 @@ export default function RootLayout({
   return (
     <html lang="zh-CN" suppressHydrationWarning>
       <body>
-        {children}
+        <StudyProfileProvider>{children}</StudyProfileProvider>
       </body>
     </html>
   );

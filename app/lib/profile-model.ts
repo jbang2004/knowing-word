@@ -138,19 +138,6 @@ export function normalizeProfile(value: unknown): StudyProfile {
     profile.last[track] = normalizeResume(last[track]);
   }
 
-  if (raw.version !== 4) {
-    // Before v4, completing the short recognition check marked a word as
-    // learned even when its structure, split and red-blue work was unfinished.
-    // Preserve real history while upgrading "completed words" to mean that the
-    // whole character has been mastered.
-    const specialistCompletion = new Set(
-      profile.completed.structure.filter((id) =>
-        profile.completed.split.includes(id) && profile.completed.honglan.includes(id),
-      ),
-    );
-    profile.completed.words = profile.completed.words.filter((id) => specialistCompletion.has(id));
-  }
-
   return {
     ...profile,
     name: typeof raw.name === "string" ? raw.name.slice(0, 18) : "",

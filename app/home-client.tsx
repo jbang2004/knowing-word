@@ -21,12 +21,12 @@ import {
 import { nextTrackCandidate, trackProgress } from "./domain/catalog-progress";
 import {
   learningTrackProgress,
-  nextLessonActivity,
   recommendedLessonId,
 } from "./domain/learning-plan";
 import { learningDayKey } from "./domain/learning-day";
 import { practiceTrackIds, trackMeta } from "./domain/tracks";
 import { routeForTrack } from "./lib/app-route";
+import { withReturnTo } from "./lib/navigation";
 import type { StudyProfile, TrackId } from "./lib/profile-model";
 import { candidatePathStates } from "./lib/progress-model";
 import { useStudyProfile } from "./features/profile/use-study-profile";
@@ -92,8 +92,7 @@ export default function HomeLanding() {
   const name = profile.name || "小探险家";
   const navigate = (path: string) => router.push(path);
   const allWordsComplete = lessonProgress.total > 0 && lessonProgress.completed === lessonProgress.total;
-  const nextActivity = nextLessonActivity(profile, currentLesson.id);
-  const allPracticeComplete = allWordsComplete && practiceTrackIds.every((track) => {
+  const allReviewsComplete = allWordsComplete && practiceTrackIds.every((track) => {
     const progress = learningTrackProgress(profile, track, currentLesson.id);
     return progress.total > 0 && progress.completed === progress.total;
   });
@@ -205,23 +204,18 @@ export default function HomeLanding() {
                 );
               })}
             </ol>
-            <section className={`path-practice-plan${allWordsComplete ? " is-ready" : " is-locked"}`} aria-label="本课综合巩固">
+            <section className={`path-practice-plan${allWordsComplete ? " is-ready" : " is-locked"}`} aria-label="本课可选复习">
               <header>
                 <small>{allWordsComplete ? "本课生字已经学完" : `完成 ${lessonProgress.completed}/${lessonProgress.total} 个识字小测后解锁`}</small>
-                <strong>整课巩固</strong>
-                <p>按整体结构、拆字重组、部件功能的顺序，把这课生字重新想一遍。</p>
+                <strong>整课巩固 · 选做</strong>
+                <p>哪里还不牢，就选择结构、拆字或红蓝再练一次；不影响本课完成。</p>
               </header>
               <div>
                 {practiceTrackIds.map((track) => {
                   const progress = learningTrackProgress(profile, track, currentLesson.id);
-                  const isCurrent = allWordsComplete && nextActivity.track === track;
-                  const href = isCurrent && nextActivity.candidate
-                    ? routeForTrack(track, currentLesson.id, nextActivity.candidate.id)
-                    : routeForTrack(track, currentLesson.id);
                   return (
                     <GateNode
                       available={allWordsComplete}
-                      current={isCurrent}
                       gate={{
                         kind: "reinforce",
                         key: `${currentLesson.id}-${track}`,
@@ -229,7 +223,7 @@ export default function HomeLanding() {
                         completed: progress.completed,
                         total: progress.total,
                       }}
-                      href={href}
+                      href={routeForTrack(track, currentLesson.id)}
                       key={track}
                       navigate={navigate}
                     />
@@ -238,13 +232,14 @@ export default function HomeLanding() {
               </div>
               <button
                 className="path-read-finish"
-                disabled={!allPracticeComplete}
+                disabled={!allWordsComplete}
                 onClick={() => navigate(`/read-aloud?lessonId=${encodeURIComponent(currentLesson.id)}&returnTo=%2F`)}
               >
                 <Mic2 aria-hidden="true" />
-                <span><strong>朗读收尾</strong><small>{profile.readLessons.includes(currentLesson.id) ? "本课已朗读" : allPracticeComplete ? "听范读，再完整读一遍" : "完成三项巩固后解锁"}</small></span>
+                <span><strong>朗读收尾</strong><small>{profile.readLessons.includes(currentLesson.id) ? "本课已朗读" : allWordsComplete ? "听范读，再完整读一遍" : "学完本课生字后解锁"}</small></span>
                 <ArrowRight aria-hidden="true" size={19} />
               </button>
+              {allReviewsComplete && <p className="path-practice-complete">三项选做复习均已完成</p>}
             </section>
           </div>
         </div>
@@ -257,19 +252,17 @@ function GateNode({
   gate,
   href,
   available,
-  current,
   navigate,
 }: {
   gate: ReinforcementPathNode;
   href: string;
   available: boolean;
-  current: boolean;
   navigate: (path: string) => void;
 }) {
   const meta = trackMeta[gate.track];
   const complete = gate.total > 0 && gate.completed >= gate.total;
   return (
-    <div className={`path-gate${complete ? " is-complete" : ""}${current ? " is-current" : ""}`}>
+    <div className={`path-gate${complete ? " is-complete" : ""}`}>
       <button disabled={!available} onClick={() => navigate(href)}>
         <span className="path-gate-glyph" aria-hidden="true">{meta.glyph}</span>
         <span>
@@ -356,7 +349,7 @@ function buildLessonPath(profile: StudyProfile, lessonId: string, currentId: str
       kind: "character",
       key: candidate.id,
       hanzi: candidate.hanzi,
-      href: `/lessons/${lessonId}/words/${candidate.id}`,
+      href: withReturnTo(`/lessons/${lessonId}/words/${candidate.id}`, "/"),
       position: index + 1,
       state: states[candidate.id],
     });

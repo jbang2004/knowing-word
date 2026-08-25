@@ -8,6 +8,7 @@ import { homeCandidates } from "../../data/home-index.generated";
 import { getTrackExercises, questionTypeLabel } from "../../domain/practice";
 import { trackMeta } from "../../domain/tracks";
 import { routeForTrack } from "../../lib/app-route";
+import { withReturnTo } from "../../lib/navigation";
 import { trackIds, type TrackId } from "../../lib/profile-model";
 import { useStudyProfile } from "../profile/use-study-profile";
 import { LearningPageShell, PageHeading } from "../shell/learning-page-shell";
@@ -109,7 +110,15 @@ export function RecordsRoute({ track }: { track: TrackId }) {
               <span aria-hidden="true">✦</span>
               <h2>还没有{meta.menu}记录</h2>
               <p>完成第一次闯关后，最近练习与课次记录会自动整理在这里。</p>
-              <Link className="game-button primary" href={routeForTrack(track, candidates[0].lessonId, candidates[0].id)}>开始第一次练习</Link>
+              <Link
+                className="game-button primary"
+                href={withReturnTo(
+                  routeForTrack(track, candidates[0].lessonId, candidates[0].id),
+                  `/records/${track}`,
+                )}
+              >
+                开始第一次练习
+              </Link>
             </div>
           )}
         </section>
@@ -136,7 +145,8 @@ export function RecordDetailRoute({ character, track }: { character: CharacterIt
           {exercises.map((question, index) => {
             const stat = profile.answers[question.id];
             const status = !stat ? "is-new" : stat.lastCorrect ? "is-correct" : "is-wrong";
-            const href = `${routeForTrack(track, character.lessonId, character.id)}?question=${index}`;
+            const destination = `${routeForTrack(track, character.lessonId, character.id)}?question=${index}`;
+            const href = withReturnTo(destination, `/records/${track}/${character.id}`);
             return (
               <article className={status} key={question.id}>
                 <span className="record-question-index">{String(index + 1).padStart(2, "0")}</span>

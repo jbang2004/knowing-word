@@ -49,7 +49,7 @@ export function updateCompletion(
       ? completedIds
       : [...completedIds, candidateId];
   }
-  return completedIds.filter((id) => id !== candidateId);
+  return completedIds;
 }
 
 export function nextResumeIndex(currentIndex: number, total: number, correct: boolean) {

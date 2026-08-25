@@ -81,7 +81,7 @@ test("normalization keeps current data valid without reviving legacy mastered st
   assert.deepEqual(normalizeProfile({ mastered: ["旧"] }).completed.words, []);
 });
 
-test("v3 completion is upgraded to the full-character mastery meaning", () => {
+test("legacy completion is preserved instead of being coupled to optional reviews", () => {
   const migrated = normalizeProfile({
     version: 3,
     completed: {
@@ -93,7 +93,7 @@ test("v3 completion is upgraded to the full-character mastery meaning", () => {
   });
 
   assert.equal(migrated.version, 4);
-  assert.deepEqual(migrated.completed.words, ["完整学会"]);
+  assert.deepEqual(migrated.completed.words, ["只做识字", "完整学会"]);
   assert.deepEqual(migrated.completed.structure, ["完整学会"]);
 });
 

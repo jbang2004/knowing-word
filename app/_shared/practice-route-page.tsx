@@ -3,6 +3,7 @@ import { loadLessonContent } from "../data/lesson-content";
 import { loadLessonMedia } from "../data/lesson-media";
 import { getPracticeSteps, type PracticeMode } from "../domain/practice";
 import PracticeSessionRoute from "../features/practice-session/practice-session-route";
+import { safeInternalReturnPath } from "../lib/navigation";
 import type { TrackId } from "../lib/profile-model";
 
 export default async function PracticeRoutePage({
@@ -37,6 +38,8 @@ export default async function PracticeRoutePage({
   const initialQuestionIndex = parsedIndex !== undefined && parsedIndex < getPracticeSteps(character, track, mode).length
     ? parsedIndex
     : undefined;
+  const rawReturnTo = Array.isArray(query.returnTo) ? query.returnTo[0] : query.returnTo;
+  const returnTo = safeInternalReturnPath(rawReturnTo);
   return (
     <PracticeSessionRoute
       character={character}
@@ -49,6 +52,7 @@ export default async function PracticeRoutePage({
         optionVisuals: media.practiceOptionVisuals,
         redBlueAsset: media.heritage?.redBlue,
       }}
+      returnTo={returnTo}
     />
   );
 }

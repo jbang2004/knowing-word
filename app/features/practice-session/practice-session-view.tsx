@@ -39,6 +39,8 @@ export function CelebrationOverlay({
   onReplay,
   onNextCharacter,
   onFinish,
+  nextLabel,
+  finishLabel,
 }: {
   track: TrackId;
   character: CharacterItem;
@@ -48,6 +50,8 @@ export function CelebrationOverlay({
   onReplay: () => void;
   onNextCharacter: () => void;
   onFinish: () => void;
+  nextLabel: string;
+  finishLabel: string;
 }) {
   // Reaching this overlay means every question ended up correct; results holds
   // one entry per ATTEMPT, so extra tries are the mistakes.
@@ -100,9 +104,9 @@ export function CelebrationOverlay({
         )}
 
         <div className="celebration-actions">
-          <button className="game-button primary" onClick={onNextCharacter}>继续 · 下一个字</button>
+          <button className="game-button primary" onClick={onNextCharacter}>{nextLabel}</button>
           <button className="game-button ghost" onClick={onReplay}><RotateCcw aria-hidden="true" /> 再练一轮</button>
-          <button className="text-button" onClick={onFinish}>返回学习路线</button>
+          <button className="text-button" onClick={onFinish}>{finishLabel}</button>
         </div>
       </div>
     </div>

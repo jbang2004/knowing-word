@@ -425,6 +425,13 @@
 .path-read-finish strong { color: var(--navy); font-size: .92rem; }
 .path-read-finish small { color: var(--ink-soft); font-size: .76rem; font-weight: 750; }
 .path-read-finish:disabled { cursor: not-allowed; opacity: .62; box-shadow: none; }
+.path-practice-complete {
+  margin: 0;
+  color: var(--action-text);
+  text-align: center;
+  font-size: .78rem;
+  font-weight: 850;
+}
 
 .path-gate { display: flex; justify-content: center; }
 
@@ -446,11 +453,6 @@
   border-color: var(--action);
   background: var(--action-soft);
   box-shadow: 0 var(--press) 0 var(--action-edge);
-}
-
-.path-gate.is-current > button {
-  border-color: var(--part);
-  box-shadow: 0 var(--press) 0 var(--part-edge), 0 0 0 4px var(--part-soft);
 }
 
 .path-gate > button:disabled {
