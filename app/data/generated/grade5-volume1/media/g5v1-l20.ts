@@ -22,15 +22,15 @@ export const characterMedia = {
         "label": "背负、承载",
         "alt": "孩子把行囊稳稳背在背上"
       },
-      "g5v1-l20-c01-u817c-words-image:g5v1-l20-c01-u817c-words-image-2": {
-        "src": "/illustrations/mnemonics-v2/g5-u8bae.webp",
-        "label": "商议",
-        "alt": "商议是共同探讨谋划办法；君臣商议之后决定派相如入秦，由此开启了完璧归赵的壮举 图中“讠”与“义”按左右结构自然长成“议”。"
-      },
       "g5v1-l20-c01-u817c-words-image:g5v1-l20-c01-u817c-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u817c.webp",
         "label": "腼腆",
         "alt": "腼腆害羞充满期待；小男孩怀着腼腆紧张的心情，把人生第一首小诗捧给父母审阅 图中“月”与“面”按左右结构自然长成“腼”。"
+      },
+      "g5v1-l20-c01-u817c-words-image:g5v1-l20-c01-u817c-words-image-2": {
+        "src": "/illustrations/mnemonics-v2/g5-u8bae.webp",
+        "label": "商议",
+        "alt": "商议是共同探讨谋划办法；君臣商议之后决定派相如入秦，由此开启了完璧归赵的壮举 图中“讠”与“义”按左右结构自然长成“议”。"
       }
     }
   },
@@ -49,6 +49,11 @@ export const characterMedia = {
     },
     "transcript": "腼腆的第二个字是腆，读第三声。腆是左右结构，左边月字旁，右边是典，右部上下要写紧凑。记字时，可以想象一个害羞的孩子抱着作品，站在字典旁迟迟不开口。腼腆表示因害羞而拘谨。这篇文章中的孩子听母亲热情称赞时，心里高兴，面对父亲的评价又有些紧张，这种不自然正是腼腆。",
     "practiceOptionVisuals": {
+      "g5v1-l20-c02-u8146-words-image:g5v1-l20-c02-u8146-words-image-1": {
+        "src": "/illustrations/mnemonics-v2/g5-u8146.webp",
+        "label": "腼腆",
+        "alt": "腼腆神态真实生动；孩子渴望得到长辈的认可，在鼓励与期待中迈出了创作的第一步 图中“月”与“典”按左右结构自然长成“腆”。"
+      },
       "g5v1-l20-c02-u8146-words-image:g5v1-l20-c02-u8146-words-image-2": {
         "src": "/illustrations/meanings/m05.webp",
         "label": "朗声诵读",
@@ -58,11 +63,6 @@ export const characterMedia = {
         "src": "/illustrations/mnemonics-v2/g5-u68b3.webp",
         "label": "梳理",
         "alt": "梳理毛发整洁漂亮；松鼠常常坐着用前爪梳理面部与尾巴上的毛发，显得十分爱干净 图中“木”与“㐬”按左右结构自然长成“梳”。"
-      },
-      "g5v1-l20-c02-u8146-words-image:g5v1-l20-c02-u8146-words-image-1": {
-        "src": "/illustrations/mnemonics-v2/g5-u8146.webp",
-        "label": "腼腆",
-        "alt": "腼腆神态真实生动；孩子渴望得到长辈的认可，在鼓励与期待中迈出了创作的第一步 图中“月”与“典”按左右结构自然长成“腆”。"
       }
     }
   },
@@ -86,12 +86,12 @@ export const characterMedia = {
         "label": "誊写",
         "alt": "誊写端正一笔一画；孩子满怀自豪地把诗作工整地誊写在稿纸上，满心欢喜等待父亲回家 图中“龹”与“言”按上下结构自然长成“誊”。"
       },
-      "g5v1-l20-c03-u8a8a-words-image:g5v1-l20-c03-u8a8a-words-image-0": {
+      "g5v1-l20-c03-u8a8a-words-image:g5v1-l20-c03-u8a8a-words-image-2": {
         "src": "/illustrations/meanings/m07.webp",
         "label": "一代又一代",
         "alt": "祖辈、父母和孩子三代人相聚"
       },
-      "g5v1-l20-c03-u8a8a-words-image:g5v1-l20-c03-u8a8a-words-image-2": {
+      "g5v1-l20-c03-u8a8a-words-image:g5v1-l20-c03-u8a8a-words-image-0": {
         "src": "/illustrations/mnemonics/m91.webp",
         "label": "旧、从前",
         "alt": "老人打开旧物箱讲述从前的故事"
@@ -118,12 +118,12 @@ export const characterMedia = {
         "label": "鼓励",
         "alt": "鼓励赞美激发信心；母亲“精彩极了”的热情鼓励，像春风般吹拂起孩子对写作的无限热爱 图中“厉”与“力”按左右结构自然长成“励”。"
       },
-      "g5v1-l20-c04-u52b1-words-image:g5v1-l20-c04-u52b1-words-image-0": {
+      "g5v1-l20-c04-u52b1-words-image:g5v1-l20-c04-u52b1-words-image-2": {
         "src": "/illustrations/meanings/m06.webp",
         "label": "背负、承载",
         "alt": "孩子把行囊稳稳背在背上"
       },
-      "g5v1-l20-c04-u52b1-words-image:g5v1-l20-c04-u52b1-words-image-2": {
+      "g5v1-l20-c04-u52b1-words-image:g5v1-l20-c04-u52b1-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u6084.webp",
         "label": "悄没声儿",
         "alt": "悄没声儿月影潜入；中秋夜月亮悄悄爬上窗台照亮竹帘，孩子们惊喜地发现了月亮的踪迹 图中“忄”与“肖”按左右结构自然长成“悄”。"
@@ -145,6 +145,11 @@ export const characterMedia = {
     },
     "transcript": "作品经过编辑和制作，变成书刊与读者见面，这叫出版，版读第三声。版是左右结构，左边是片，右边是反，写时左边收紧。可以想象一张张书页排好版面，再装订成书，先借这个画面记住字形。出版表示把作品制作成书刊等公开发行。文中的孩子长大后成为作家，作品得以出版，两种不同评价也一直陪着他的写作。",
     "practiceOptionVisuals": {
+      "g5v1-l20-c05-u7248-words-image:g5v1-l20-c05-u7248-words-image-1": {
+        "src": "/illustrations/mnemonics-v2/g5-u7248.webp",
+        "label": "出版",
+        "alt": "出版发表成为作家；多年后作者的作品相继出版发行，成为著作等身的知名作家 图中“片”与“反”按左右结构自然长成“版”。"
+      },
       "g5v1-l20-c05-u7248-words-image:g5v1-l20-c05-u7248-words-image-0": {
         "src": "/illustrations/meanings/m08.webp",
         "label": "整齐有序",
@@ -154,11 +159,6 @@ export const characterMedia = {
         "src": "/illustrations/mnemonics-v2/g5-u5854.webp",
         "label": "宝塔",
         "alt": "宝塔倒影相映成趣；远处古朴的石塔倒映在清澈的河面上，为鸟的天堂增添了典雅的诗意 图中“土”与“荅”按左右结构自然长成“塔”。"
-      },
-      "g5v1-l20-c05-u7248-words-image:g5v1-l20-c05-u7248-words-image-1": {
-        "src": "/illustrations/mnemonics-v2/g5-u7248.webp",
-        "label": "出版",
-        "alt": "出版发表成为作家；多年后作者的作品相继出版发行，成为著作等身的知名作家 图中“片”与“反”按左右结构自然长成“版”。"
       }
     }
   },
@@ -177,20 +177,20 @@ export const characterMedia = {
     },
     "transcript": "慈祥的祥，读第二声。慈祥常用来形容长辈神情温和、态度亲切，让人感到安心。祥是左右结构，左边示字旁，右边是羊，写时两边要排稳。母亲读完孩子写的小诗，热情地称赞他，这份鼓励带着慈祥和疼爱。后来孩子懂得，母亲的鼓励和父亲的提醒共同陪伴他成长。",
     "practiceOptionVisuals": {
-      "g5v1-l20-c06-u7965-words-image:g5v1-l20-c06-u7965-words-image-2": {
+      "g5v1-l20-c06-u7965-words-image:g5v1-l20-c06-u7965-words-image-0": {
         "src": "/illustrations/meanings/m05.webp",
         "label": "朗声诵读",
         "alt": "孩子面向同伴清楚地朗读"
-      },
-      "g5v1-l20-c06-u7965-words-image:g5v1-l20-c06-u7965-words-image-0": {
-        "src": "/illustrations/mnemonics-v2/g5-u80ce.webp",
-        "label": "胎儿",
-        "alt": "奇花初胎矞矞皇皇；含苞初绽的鲜花蕴含着无限生机，象征着蓬勃美好的新时代 图中“月”与“台”按左右结构自然长成“胎”。"
       },
       "g5v1-l20-c06-u7965-words-image:g5v1-l20-c06-u7965-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u7965.webp",
         "label": "慈祥",
         "alt": "慈祥温和充满深情；母亲慈祥热切的赞扬保护了孩子的创作幼苗，赋予他前进的勇气 图中“礻”与“羊”按左右结构自然长成“祥”。"
+      },
+      "g5v1-l20-c06-u7965-words-image:g5v1-l20-c06-u7965-words-image-2": {
+        "src": "/illustrations/mnemonics-v2/g5-u80ce.webp",
+        "label": "胎儿",
+        "alt": "奇花初胎矞矞皇皇；含苞初绽的鲜花蕴含着无限生机，象征着蓬勃美好的新时代 图中“月”与“台”按左右结构自然长成“胎”。"
       }
     }
   },
@@ -209,17 +209,17 @@ export const characterMedia = {
     },
     "transcript": "路口分出岔道，若走向错误方向，就可能进入歧途，歧读第二声。歧是左右结构，左边是止，右边是支，写时两边高低相近。可以想象脚步停在分岔口前，认真辨清该走哪一支路。歧途指偏离正确方向的道路，也比喻错误的发展方向。文中的严厉提醒让孩子保持清醒，避免只听赞美后在写作上走入歧途。",
     "practiceOptionVisuals": {
+      "g5v1-l20-c07-u6b67-words-image:g5v1-l20-c07-u6b67-words-image-2": {
+        "src": "/illustrations/meanings/m08.webp",
+        "label": "整齐有序",
+        "alt": "竹简按照次序整齐排列"
+      },
       "g5v1-l20-c07-u6b67-words-image:g5v1-l20-c07-u6b67-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u6b67.webp",
         "label": "歧途",
         "alt": "误入歧途需要警醒；父亲“糟糕透了”的严厉批评如同一剂良药，防止孩子在赞美中误入歧途 图中“止”与“支”按左右结构自然长成“歧”。"
       },
       "g5v1-l20-c07-u6b67-words-image:g5v1-l20-c07-u6b67-words-image-0": {
-        "src": "/illustrations/meanings/m08.webp",
-        "label": "整齐有序",
-        "alt": "竹简按照次序整齐排列"
-      },
-      "g5v1-l20-c07-u6b67-words-image:g5v1-l20-c07-u6b67-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u7554.webp",
         "label": "河畔",
         "alt": "河畔扎营寒夜漫漫；风雪夜宿在冰冷的河畔营帐中，阵阵风声勾起了将士们深沉的思乡之情 图中“田”与“半”按左右结构自然长成“畔”。"
@@ -241,11 +241,6 @@ export const characterMedia = {
     },
     "transcript": "谨，谨慎的谨，读第三声。它是左右结构，左边的言字旁表明说话言语，右边的“堇”提示读音，言语事前多加思考即为谨。谨慎表示小心认真、思虑周全。课文中，父亲严厉客观的评价如同一声警钟，时刻提醒作者在写作与人生道路上保持谨慎，不迷失方向。",
     "practiceOptionVisuals": {
-      "g5v1-l20-c08-u8c28-words-image:g5v1-l20-c08-u8c28-words-image-1": {
-        "src": "/illustrations/mnemonics-v2/g5-u8c28.webp",
-        "label": "谨慎",
-        "alt": "谨慎审视不断精进；在爱与警醒的双轨伴随下，作者学会了谨慎修改作品，走得更加稳健成熟 图中“讠”与“堇”按左右结构自然长成“谨”。"
-      },
       "g5v1-l20-c08-u8c28-words-image:g5v1-l20-c08-u8c28-words-image-2": {
         "src": "/illustrations/meanings/m05.webp",
         "label": "朗声诵读",
@@ -255,6 +250,11 @@ export const characterMedia = {
         "src": "/illustrations/mnemonics-v2/g5-u80ce.webp",
         "label": "胎儿",
         "alt": "奇花初胎矞矞皇皇；含苞初绽的鲜花蕴含着无限生机，象征着蓬勃美好的新时代 图中“月”与“台”按左右结构自然长成“胎”。"
+      },
+      "g5v1-l20-c08-u8c28-words-image:g5v1-l20-c08-u8c28-words-image-1": {
+        "src": "/illustrations/mnemonics-v2/g5-u8c28.webp",
+        "label": "谨慎",
+        "alt": "谨慎审视不断精进；在爱与警醒的双轨伴随下，作者学会了谨慎修改作品，走得更加稳健成熟 图中“讠”与“堇”按左右结构自然长成“谨”。"
       }
     }
   }

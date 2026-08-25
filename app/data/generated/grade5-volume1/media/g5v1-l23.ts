@@ -17,6 +17,11 @@ export const characterMedia = {
     },
     "transcript": "先读“悄没声儿”，这里的悄读第三声，表示一点声音也没有。悄是左右结构，左边竖心旁，右边是肖，写时左窄右宽。可以想象孩子屏住呼吸，心也静下来，院子里只剩月光。说悄悄话时常读第一声，要跟着词语辨读音。这篇文章里的月亮悄没声儿地来到窗前，安静正是孩子寻月的开始。",
     "practiceOptionVisuals": {
+      "g5v1-l23-c01-u6084-words-image:g5v1-l23-c01-u6084-words-image-1": {
+        "src": "/illustrations/mnemonics-v2/g5-u6084.webp",
+        "label": "悄没声儿",
+        "alt": "悄没声儿月影潜入；中秋夜月亮悄悄爬上窗台照亮竹帘，孩子们惊喜地发现了月亮的踪迹 图中“忄”与“肖”按左右结构自然长成“悄”。"
+      },
       "g5v1-l23-c01-u6084-words-image:g5v1-l23-c01-u6084-words-image-0": {
         "src": "/illustrations/meanings/m08.webp",
         "label": "整齐有序",
@@ -26,11 +31,6 @@ export const characterMedia = {
         "src": "/illustrations/mnemonics-v2/g5-u679a.webp",
         "label": "一枚",
         "alt": "枚是用于计算细长物件的量词；一枚火箭携带着巨大的能量冲向太空，展现了科技的力量 图中“木”与“⺙”按左右结构自然长成“枚”。"
-      },
-      "g5v1-l23-c01-u6084-words-image:g5v1-l23-c01-u6084-words-image-1": {
-        "src": "/illustrations/mnemonics-v2/g5-u6084.webp",
-        "label": "悄没声儿",
-        "alt": "悄没声儿月影潜入；中秋夜月亮悄悄爬上窗台照亮竹帘，孩子们惊喜地发现了月亮的踪迹 图中“忄”与“肖”按左右结构自然长成“悄”。"
       }
     }
   },
@@ -49,20 +49,20 @@ export const characterMedia = {
     },
     "transcript": "累，累累的累，读第二声。它是上下结构，上面的“田”像整齐排列的果实，下边的绞丝底像细丝绳将它们串连在一起，层层叠挂即为累。累累形容接连成串、数量繁多。课文中月光洒在中秋庭院，孩子们看见桂树上挂满累累的花骨朵，在芳香中开启了充满诗意的寻月历程。",
     "practiceOptionVisuals": {
-      "g5v1-l23-c02-u7d2f-words-image:g5v1-l23-c02-u7d2f-words-image-2": {
+      "g5v1-l23-c02-u7d2f-words-image:g5v1-l23-c02-u7d2f-words-image-0": {
         "src": "/illustrations/meanings/m08.webp",
         "label": "整齐有序",
         "alt": "竹简按照次序整齐排列"
-      },
-      "g5v1-l23-c02-u7d2f-words-image:g5v1-l23-c02-u7d2f-words-image-0": {
-        "src": "/illustrations/mnemonics-v2/g5-u4e43.webp",
-        "label": "乃至",
-        "alt": "乃至于此表示甚至如此；陆游临终前至死不忘收复中原，爱国赤诚感人肺腑 图中“乃”按独体结构自然长成“乃”。"
       },
       "g5v1-l23-c02-u7d2f-words-image:g5v1-l23-c02-u7d2f-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u7d2f.webp",
         "label": "累累",
         "alt": "累累骨朵含苞待放；桂花树上挂满累累的花骨朵，在皎洁月光下散发着若有若无的清香 图中“田”与“糸”按上下结构自然长成“累”。"
+      },
+      "g5v1-l23-c02-u7d2f-words-image:g5v1-l23-c02-u7d2f-words-image-2": {
+        "src": "/illustrations/mnemonics-v2/g5-u4e43.webp",
+        "label": "乃至",
+        "alt": "“乃至”表示甚至、以至于，用来说明范围或程度进一步扩大 图中“乃”按独体结构自然长成“乃”。"
       }
     }
   },
@@ -113,6 +113,11 @@ export const characterMedia = {
     },
     "transcript": "嫦娥的娥，读第二声。娥的女字旁在左，右边是我，左右排列要紧凑，两个部分并排。不妨借一个小场景来记，月宫女子指着自己轻声说“我”，身后是一轮圆月。嫦娥是古代神话中与月亮相连的人物。课文的孩子们追着月光到院中、水面和眼睛里，嫦娥的故事也让这场寻找更有童话味。",
     "practiceOptionVisuals": {
+      "g5v1-l23-c04-u5a25-words-image:g5v1-l23-c04-u5a25-words-image-1": {
+        "src": "/illustrations/mnemonics-v2/g5-u5a25.webp",
+        "label": "嫦娥",
+        "alt": "仙娥弄月童趣盎然；美丽的传说为静谧的月夜抹上了一层神秘色彩，点燃了孩子们的探索热情 图中“女”与“我”按左右结构自然长成“娥”。"
+      },
       "g5v1-l23-c04-u5a25-words-image:g5v1-l23-c04-u5a25-words-image-2": {
         "src": "/illustrations/meanings/m04.webp",
         "label": "倚靠、凭借",
@@ -122,11 +127,6 @@ export const characterMedia = {
         "src": "/illustrations/mnemonics-v2/g5-u50fb.webp",
         "label": "偏僻",
         "alt": "偏僻乡间求学不易；为了让孩子走出偏僻乡村开阔眼界，父亲倾尽全力支持孩子读书求学 图中“亻”与“辟”按左右结构自然长成“僻”。"
-      },
-      "g5v1-l23-c04-u5a25-words-image:g5v1-l23-c04-u5a25-words-image-1": {
-        "src": "/illustrations/mnemonics-v2/g5-u5a25.webp",
-        "label": "嫦娥",
-        "alt": "仙娥弄月童趣盎然；美丽的传说为静谧的月夜抹上了一层神秘色彩，点燃了孩子们的探索热情 图中“女”与“我”按左右结构自然长成“娥”。"
       }
     }
   },
@@ -150,15 +150,15 @@ export const characterMedia = {
         "label": "背负、承载",
         "alt": "孩子把行囊稳稳背在背上"
       },
-      "g5v1-l23-c05-u5ac9-words-image:g5v1-l23-c05-u5ac9-words-image-2": {
-        "src": "/illustrations/mnemonics-v2/g5-u9c81.webp",
-        "label": "鲁莽",
-        "alt": "鲁莽好汉性格率真；鲁智深虽性格有些鲁莽却嫉恶如仇、重情重义，给作者留下了深刻印象 图中“鱼”与“日”按上下结构自然长成“鲁”。"
-      },
       "g5v1-l23-c05-u5ac9-words-image:g5v1-l23-c05-u5ac9-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u5ac9.webp",
         "label": "嫉妒",
         "alt": "心生嫉妒纯真可爱；听说月亮跑进了三妹的眼睛里，大家忍不住心生羡慕与小小的嫉妒，童趣盎然 图中“女”与“疾”按左右结构自然长成“嫉”。"
+      },
+      "g5v1-l23-c05-u5ac9-words-image:g5v1-l23-c05-u5ac9-words-image-2": {
+        "src": "/illustrations/mnemonics-v2/g5-u9c81.webp",
+        "label": "鲁莽",
+        "alt": "鲁莽好汉性格率真；鲁智深虽性格有些鲁莽却嫉恶如仇、重情重义，给作者留下了深刻印象 图中“鱼”与“日”按上下结构自然长成“鲁”。"
       }
     }
   },
@@ -177,20 +177,20 @@ export const characterMedia = {
     },
     "transcript": "嫉妒的妒，读第四声。从左往右看，妒先写女字旁，右边是户；这里同样不能把负面情绪推给女性。记字时，可以想象一扇门挡住视线，人只看见别人门里的亮光，却忘了自己身边也有月色，先借这个画面记住字形。嫉妒是因别人比自己好而产生的不舒服。文中的孩子后来发现月亮属于每个人，先前争抢和嫉妒的心也慢慢放开。",
     "practiceOptionVisuals": {
-      "g5v1-l23-c06-u5992-words-image:g5v1-l23-c06-u5992-words-image-2": {
+      "g5v1-l23-c06-u5992-words-image:g5v1-l23-c06-u5992-words-image-0": {
         "src": "/illustrations/meanings/m08.webp",
         "label": "整齐有序",
         "alt": "竹简按照次序整齐排列"
-      },
-      "g5v1-l23-c06-u5992-words-image:g5v1-l23-c06-u5992-words-image-0": {
-        "src": "/illustrations/mnemonics/m101.webp",
-        "label": "交给",
-        "alt": "一个孩子把物品交到另一个孩子手中"
       },
       "g5v1-l23-c06-u5992-words-image:g5v1-l23-c06-u5992-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u5992.webp",
         "label": "嫉妒",
         "alt": "争月妒月展现童心；孩子们在院子里、小河中到处寻找月亮，发现每个人心里都拥有一轮明月 图中“女”与“户”按左右结构自然长成“妒”。"
+      },
+      "g5v1-l23-c06-u5992-words-image:g5v1-l23-c06-u5992-words-image-2": {
+        "src": "/illustrations/mnemonics/m101.webp",
+        "label": "交给",
+        "alt": "一个孩子把物品交到另一个孩子手中"
       }
     }
   },
@@ -209,15 +209,15 @@ export const characterMedia = {
     },
     "transcript": "瓷，瓷盆的瓷，读第二声。瓷是上下结构，上面的“次”提示读音，下面的“瓦”表明经过高温烧制，上下相合即为瓷。瓷指用瓷土烧制成的细腻器皿。课文写中秋夜晚月光洒在庭院里装满清水的白瓷盆中，孩子们用双手捧起盆中水月，在纯真童趣中感受着月光普照人间的温柔。",
     "practiceOptionVisuals": {
-      "g5v1-l23-c07-u74f7-words-image:g5v1-l23-c07-u74f7-words-image-1": {
-        "src": "/illustrations/mnemonics-v2/g5-u74f7.webp",
-        "label": "瓷器",
-        "alt": "瓷盆映月清光荡漾；月影落在装满清水的瓷盆中央，孩子们用小手掬起水月，捧起了整个世界的纯真 图中“次”与“瓦”按上下结构自然长成“瓷”。"
-      },
       "g5v1-l23-c07-u74f7-words-image:g5v1-l23-c07-u74f7-words-image-0": {
         "src": "/illustrations/meanings/m04.webp",
         "label": "倚靠、凭借",
         "alt": "行路的人稳稳倚靠一根手杖"
+      },
+      "g5v1-l23-c07-u74f7-words-image:g5v1-l23-c07-u74f7-words-image-1": {
+        "src": "/illustrations/mnemonics-v2/g5-u74f7.webp",
+        "label": "瓷器",
+        "alt": "瓷盆映月清光荡漾；月影落在装满清水的瓷盆中央，孩子们用小手掬起水月，捧起了整个世界的纯真 图中“次”与“瓦”按上下结构自然长成“瓷”。"
       },
       "g5v1-l23-c07-u74f7-words-image:g5v1-l23-c07-u74f7-words-image-2": {
         "src": "/illustrations/mnemonics/m120.webp",

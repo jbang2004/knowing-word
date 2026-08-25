@@ -37,7 +37,7 @@ export default async function CharacterPage({
         visual: media.visual,
         heritage: media.heritage,
         scene: media.scene,
-        narration: narrationMedia(character.id, media.transcript),
+        narration: narrationMedia(character.id, media.transcript, character.description),
       }}
       returnTo={safeInternalReturnPath(returnToParam)}
       returnContextLabel={document?.format === "guide" ? "导读" : "语境"}

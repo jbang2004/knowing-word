@@ -159,7 +159,7 @@ function FocusWords({
                 })}
               </strong>
               <small>{targets.map((character) => character.pinyin).join(" · ")}</small>
-              {complete && <Check aria-label="已学会" />}
+              {complete && <Check aria-label="首次学习已完成" />}
             </div>
           );
         })}
@@ -217,7 +217,7 @@ function WordIndex({
           <Link
             className={complete ? "is-complete" : ""}
             href={characterHref(character, anchors.get(character.hanzi) ?? "lesson-paragraph-1")}
-            aria-label={`${character.hanzi}，${complete ? "已学会，重新查看字卡" : "进入字卡"}`}
+            aria-label={`${character.hanzi}，${complete ? "首次学习已完成，重新查看字卡" : "进入字卡"}`}
             key={character.id}
           >
             <strong>{character.hanzi}</strong>
@@ -350,7 +350,7 @@ export function LessonReader({
           <section className="reader-progress-card">
             <header><span><small>本课生字</small><strong>{completedCount} / {targets.length}</strong></span><i>{Math.round((completedCount / targets.length) * 100)}%</i></header>
             <div className="reader-progress-track"><i style={{ width: `${(completedCount / targets.length) * 100}%` }} /></div>
-            <p>{guideMode ? "每条线索下列出本段重点词。点击彩色生字进入字卡，学会后会显示完成标记。" : "正文只标出目标词里的生字。点击生字进入字卡，学会后会显示完成标记。"}</p>
+            <p>{guideMode ? "每条线索下列出本段重点词。点击彩色生字进入字卡，首次学习完成后会显示标记。" : "正文只标出目标词里的生字。点击生字进入字卡，首次学习完成后会显示标记。"}</p>
           </section>
 
           <WordIndex anchors={anchors} characters={targets} completed={completed} />

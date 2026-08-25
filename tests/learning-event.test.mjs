@@ -15,6 +15,11 @@ test("learning events require a known lesson-character pair and bounded payload"
     questionId: "g5v1-l01-c05-u55dc-words-context",
     correct: true,
     selected: ["answer-1"],
+    dimension: "semantics",
+    cueLevel: 0,
+    answerMode: "choice",
+    latencyMs: 1825.9,
+    errorTags: [],
   }), {
     eventId,
     action: "answer",
@@ -24,9 +29,26 @@ test("learning events require a known lesson-character pair and bounded payload"
     questionId: "g5v1-l01-c05-u55dc-words-context",
     correct: true,
     selected: ["answer-1"],
+    dimension: "semantics",
+    cueLevel: 0,
+    answerMode: "choice",
+    latencyMs: 1825,
   });
 
   assert.equal(parseLearningEvent({ eventId, action: "read", lessonId: "unknown" }), null);
+  assert.deepEqual(parseLearningEvent({
+    eventId,
+    action: "read",
+    lessonId: "g5v1-l01",
+    readingAccuracy: "needs-practice",
+    latencyMs: 12_000,
+  }), {
+    eventId,
+    action: "read",
+    lessonId: "g5v1-l01",
+    readingAccuracy: "needs-practice",
+    latencyMs: 12_000,
+  });
   assert.equal(parseLearningEvent({
     eventId,
     action: "skip",

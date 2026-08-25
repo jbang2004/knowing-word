@@ -17,12 +17,12 @@ export const characterMedia = {
     },
     "transcript": "舅舅的舅，读第四声，舅舅是母亲的兄弟。舅是上下结构，上部笔画紧密，下面是男，写时上窄下稳。可以想象舅父坐在孩子身边，慢慢讲一本故事书。冰心回忆童年读书，舅父给她讲《三国演义》，把她带进第一部长篇小说。这个开端让我们看见，别人讲得有趣，也能把一个孩子领进书的世界。",
     "practiceOptionVisuals": {
-      "g5v1-l25-c01-u8205-words-image:g5v1-l25-c01-u8205-words-image-0": {
+      "g5v1-l25-c01-u8205-words-image:g5v1-l25-c01-u8205-words-image-2": {
         "src": "/illustrations/meanings/m05.webp",
         "label": "朗声诵读",
         "alt": "孩子面向同伴清楚地朗读"
       },
-      "g5v1-l25-c01-u8205-words-image:g5v1-l25-c01-u8205-words-image-2": {
+      "g5v1-l25-c01-u8205-words-image:g5v1-l25-c01-u8205-words-image-0": {
         "src": "/illustrations/mnemonics/m97.webp",
         "label": "高举、显扬",
         "alt": "孩子把完成的作品高高举起展示"
@@ -54,15 +54,15 @@ export const characterMedia = {
         "label": "整齐有序",
         "alt": "竹简按照次序整齐排列"
       },
-      "g5v1-l25-c02-u5bb4-words-image:g5v1-l25-c02-u5bb4-words-image-2": {
-        "src": "/illustrations/mnemonics/m21.webp",
-        "label": "糕饼",
-        "alt": "竹盘中各式蒸糕和糕饼"
-      },
       "g5v1-l25-c02-u5bb4-words-image:g5v1-l25-c02-u5bb4-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u5bb4.webp",
         "label": "宴会",
         "alt": "盛宴比喻精神食粮；一本本经典好书宛如精神的饕餮盛宴，滋养着作者不断成长丰富的心灵 图中“宀”与“妟”按上下结构自然长成“宴”。"
+      },
+      "g5v1-l25-c02-u5bb4-words-image:g5v1-l25-c02-u5bb4-words-image-2": {
+        "src": "/illustrations/mnemonics/m21.webp",
+        "label": "糕饼",
+        "alt": "竹盘中各式蒸糕和糕饼"
       }
     }
   },
@@ -81,20 +81,20 @@ export const characterMedia = {
     },
     "transcript": "斩断的斩，读第三声。斩是左右结构，左边是车，右边是斤，写时左宽右窄。看这个字时，可以想象一把工具落下，把缠在车轮上的绳索干脆割断。斩断表示用利器把相连的东西砍断。作者读《三国演义》时，被斩黄巾等紧张情节吸引，一章接一章读得入迷。",
     "practiceOptionVisuals": {
-      "g5v1-l25-c03-u65a9-words-image:g5v1-l25-c03-u65a9-words-image-1": {
-        "src": "/illustrations/mnemonics-v2/g5-u65a9.webp",
-        "label": "斩断",
-        "alt": "斩将过关引人入胜；关羽斩颜良诛文丑的精彩情节让年幼的作者如痴如醉，手不释卷 图中“车”与“斤”按左右结构自然长成“斩”。"
-      },
-      "g5v1-l25-c03-u65a9-words-image:g5v1-l25-c03-u65a9-words-image-2": {
+      "g5v1-l25-c03-u65a9-words-image:g5v1-l25-c03-u65a9-words-image-0": {
         "src": "/illustrations/meanings/m05.webp",
         "label": "朗声诵读",
         "alt": "孩子面向同伴清楚地朗读"
       },
-      "g5v1-l25-c03-u65a9-words-image:g5v1-l25-c03-u65a9-words-image-0": {
+      "g5v1-l25-c03-u65a9-words-image:g5v1-l25-c03-u65a9-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u7b77.webp",
         "label": "筷子",
         "alt": "筷子轻夹见证深情厚谊；将军将筷子伸向菜盘又停住，舍不得吃下战士们用汗水浇灌的蔬菜 图中“⺮”与“快”按上下结构自然长成“筷”。"
+      },
+      "g5v1-l25-c03-u65a9-words-image:g5v1-l25-c03-u65a9-words-image-1": {
+        "src": "/illustrations/mnemonics-v2/g5-u65a9.webp",
+        "label": "斩断",
+        "alt": "斩将过关引人入胜；关羽斩颜良诛文丑的精彩情节让年幼的作者如痴如醉，手不释卷 图中“车”与“斤”按左右结构自然长成“斩”。"
       }
     }
   },
@@ -113,11 +113,6 @@ export const characterMedia = {
     },
     "transcript": "凯旋的凯，读第三声，凯旋指胜利归来。凯按左右写，左边是岂，右边的几稍低，两边要站稳。冰心小时候认字不多，读书时曾把凯念成岂。凯读第三声，岂读第三声，字形相近，读音却要分清。这个童年读错字的小插曲很亲切，也让我们看见她怎样从磕磕绊绊开始爱上阅读。",
     "practiceOptionVisuals": {
-      "g5v1-l25-c04-u51ef-words-image:g5v1-l25-c04-u51ef-words-image-1": {
-        "src": "/illustrations/mnemonics-v2/g5-u51ef.webp",
-        "label": "凯旋",
-        "alt": "凯旋而归豪情满怀；小说中英雄人物凯旋的壮烈故事，点燃了作者心中对于正义与勇气的向往 图中“岂”与“几”按左右结构自然长成“凯”。"
-      },
       "g5v1-l25-c04-u51ef-words-image:g5v1-l25-c04-u51ef-words-image-2": {
         "src": "/illustrations/meanings/m08.webp",
         "label": "整齐有序",
@@ -127,6 +122,11 @@ export const characterMedia = {
         "src": "/illustrations/mnemonics-v2/g5-u9e6d.webp",
         "label": "白鹭",
         "alt": "白鹭羽色洁白、身段精巧，在清水田里漫步伫立，如同一首韵味悠长的小诗 图中“路”与“鸟”按上下结构自然长成“鹭”。"
+      },
+      "g5v1-l25-c04-u51ef-words-image:g5v1-l25-c04-u51ef-words-image-1": {
+        "src": "/illustrations/mnemonics-v2/g5-u51ef.webp",
+        "label": "凯旋",
+        "alt": "凯旋而归豪情满怀；小说中英雄人物凯旋的壮烈故事，点燃了作者心中对于正义与勇气的向往 图中“岂”与“几”按左右结构自然长成“凯”。"
       }
     }
   },
@@ -145,12 +145,12 @@ export const characterMedia = {
     },
     "transcript": "葛布的葛，读第二声。葛是上下结构，上面草字头，下面笔画较多，要一层层看清。认字时，可以想象葛藤在草叶间攀爬，人们取下纤维织成结实布料。葛是一种藤本植物，葛布可用它的纤维织成。文章谈《三国演义》时也出现诸葛亮，诸葛的葛与葛布的葛是同一个字。",
     "practiceOptionVisuals": {
-      "g5v1-l25-c05-u845b-words-image:g5v1-l25-c05-u845b-words-image-2": {
+      "g5v1-l25-c05-u845b-words-image:g5v1-l25-c05-u845b-words-image-0": {
         "src": "/illustrations/meanings/m07.webp",
         "label": "一代又一代",
         "alt": "祖辈、父母和孩子三代人相聚"
       },
-      "g5v1-l25-c05-u845b-words-image:g5v1-l25-c05-u845b-words-image-0": {
+      "g5v1-l25-c05-u845b-words-image:g5v1-l25-c05-u845b-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u9e35.webp",
         "label": "鸵鸟",
         "alt": "鸵鸟是善于奔跑的巨型鸟类；课文以鸵鸟为起点展开速度对比，引人入胜 图中“鸟”与“它”按左右结构自然长成“鸵”。"
@@ -209,20 +209,20 @@ export const characterMedia = {
     },
     "transcript": "传记的传，读第四声，指记述人物生平和经历的文章或书。传按左右写，单人旁在左，专在右，写时左窄右宽。《水浒传》里的传也读第四声，冰心在童年阅读中认识了一百零八位好汉。传递的传读第二声，表示把东西从一处送到另一处。跟着词语换读音，多音字就不会在书名里读错。",
     "practiceOptionVisuals": {
-      "g5v1-l25-c07-u4f20-words-image:g5v1-l25-c07-u4f20-words-image-1": {
-        "src": "/illustrations/mnemonics-v2/g5-u4f20.webp",
-        "label": "传记",
-        "alt": "水浒传记人物鲜活；读《水浒传》结识梁山好汉，鲜明的人物性格与生动的语言让作者大开眼界 图中“亻”与“专”按左右结构自然长成“传”。"
-      },
-      "g5v1-l25-c07-u4f20-words-image:g5v1-l25-c07-u4f20-words-image-0": {
+      "g5v1-l25-c07-u4f20-words-image:g5v1-l25-c07-u4f20-words-image-2": {
         "src": "/illustrations/meanings/m04.webp",
         "label": "倚靠、凭借",
         "alt": "行路的人稳稳倚靠一根手杖"
       },
-      "g5v1-l25-c07-u4f20-words-image:g5v1-l25-c07-u4f20-words-image-2": {
+      "g5v1-l25-c07-u4f20-words-image:g5v1-l25-c07-u4f20-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u5b59.webp",
         "label": "子孙",
         "alt": "竹喧归浣女莲动下渔舟；王维笔下的山居秋夜清新明净，洋溢着淳朴宁静的生活情趣 图中“子”与“小”按左右结构自然长成“孙”。"
+      },
+      "g5v1-l25-c07-u4f20-words-image:g5v1-l25-c07-u4f20-words-image-1": {
+        "src": "/illustrations/mnemonics-v2/g5-u4f20.webp",
+        "label": "传记",
+        "alt": "水浒传记人物鲜活；读《水浒传》结识梁山好汉，鲜明的人物性格与生动的语言让作者大开眼界 图中“亻”与“专”按左右结构自然长成“传”。"
       }
     }
   },
@@ -241,28 +241,28 @@ export const characterMedia = {
     },
     "transcript": "做事没有细想，行动冒失，可以说鲁莽，鲁读第三声。鲁是上下结构，上面是鱼，下面是日，写时上宽下稳。顺着字形想一想，鱼儿迎着太阳猛冲出水面，没看清前方就撞上水草。鲁莽形容说话做事欠考虑。作者谈《水浒传》人物时，鲁智深的鲁也出现在眼前，读人物行动还要分清勇敢和鲁莽。",
     "practiceOptionVisuals": {
-      "g5v1-l25-c08-u9c81-words-image:g5v1-l25-c08-u9c81-words-image-0": {
+      "g5v1-l25-c08-u9c81-words-image:g5v1-l25-c08-u9c81-words-image-2": {
         "src": "/illustrations/meanings/m06.webp",
         "label": "背负、承载",
         "alt": "孩子把行囊稳稳背在背上"
-      },
-      "g5v1-l25-c08-u9c81-words-image:g5v1-l25-c08-u9c81-words-image-2": {
-        "src": "/illustrations/mnemonics-v2/g5-u916c.webp",
-        "label": "酬谢",
-        "alt": "酬谢是用财物或情意报答恩情；龙王拿出珍宝酬谢海力布救女之恩，开启了故事的序幕 图中“酉”与“州”按左右结构自然长成“酬”。"
       },
       "g5v1-l25-c08-u9c81-words-image:g5v1-l25-c08-u9c81-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u9c81.webp",
         "label": "鲁莽",
         "alt": "鲁莽好汉性格率真；鲁智深虽性格有些鲁莽却嫉恶如仇、重情重义，给作者留下了深刻印象 图中“鱼”与“日”按上下结构自然长成“鲁”。"
+      },
+      "g5v1-l25-c08-u9c81-words-image:g5v1-l25-c08-u9c81-words-image-0": {
+        "src": "/illustrations/mnemonics-v2/g5-u916c.webp",
+        "label": "酬谢",
+        "alt": "酬谢是用财物或情意报答恩情；龙王拿出珍宝酬谢海力布救女之恩，开启了故事的序幕 图中“酉”与“州”按左右结构自然长成“酬”。"
       }
     }
   },
   "g5v1-l25-c09-u715e": {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u715e.webp",
-      "label": "煞气",
-      "alt": "煞有介事引人入胜；精彩的小说情节跌宕起伏，把各种人物描写得煞有介事、栩栩如生 图中“刍”与“攵”与“灬”按上下结构自然长成“煞”。"
+      "label": "煞有介事",
+      "alt": "煞有介事表示装作真有那么回事；有人讲起故事时一本正经，像亲眼看见一样，这副认真的样子就是煞有介事 图中“刍”与“攵”与“灬”按上下结构自然长成“煞”。"
     },
     "scene": {
       "scene": "上方急停人物形成“刍”，旁边短杖动作形成“攵”，下方四点强烈火光形成“灬”，三部分组成“煞”。",
@@ -274,20 +274,20 @@ export const characterMedia = {
     },
     "transcript": "煞气的煞，读第四声，煞气指凶狠逼人的气势。煞是上下结构，上部笔画较密，下面四点排开，上下要对正。冰心读《水浒传》，记住了三十六天罡和七十二地煞。这里的地煞是传统故事中的名称，和一百零八位好汉的数目连在一起。书中人物众多，她却越读越明白，也越读越有兴趣。",
     "practiceOptionVisuals": {
-      "g5v1-l25-c09-u715e-words-image:g5v1-l25-c09-u715e-words-image-2": {
+      "g5v1-l25-c09-u715e-words-image:g5v1-l25-c09-u715e-words-image-0": {
         "src": "/illustrations/meanings/m06.webp",
         "label": "背负、承载",
         "alt": "孩子把行囊稳稳背在背上"
       },
-      "g5v1-l25-c09-u715e-words-image:g5v1-l25-c09-u715e-words-image-0": {
+      "g5v1-l25-c09-u715e-words-image:g5v1-l25-c09-u715e-words-image-1": {
+        "src": "/illustrations/mnemonics-v2/g5-u715e.webp",
+        "label": "煞有介事",
+        "alt": "煞有介事表示装作真有那么回事；有人讲起故事时一本正经，像亲眼看见一样，这副认真的样子就是煞有介事 图中“刍”与“攵”与“灬”按上下结构自然长成“煞”。"
+      },
+      "g5v1-l25-c09-u715e-words-image:g5v1-l25-c09-u715e-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u6c0f.webp",
         "label": "摄氏",
         "alt": "摄氏温标科学精准；课文用摄氏度准确说明太阳的热度，展现了科普说明文的严谨科学性 图中“氏”按独体结构自然长成“氏”。"
-      },
-      "g5v1-l25-c09-u715e-words-image:g5v1-l25-c09-u715e-words-image-1": {
-        "src": "/illustrations/mnemonics-v2/g5-u715e.webp",
-        "label": "煞气",
-        "alt": "煞有介事引人入胜；精彩的小说情节跌宕起伏，把各种人物描写得煞有介事、栩栩如生 图中“刍”与“攵”与“灬”按上下结构自然长成“煞”。"
       }
     }
   },
@@ -307,20 +307,20 @@ export const characterMedia = {
     },
     "transcript": "侵犯别国或别处的敌人叫敌寇，寇读第四声。寇是上下结构，上面宝盖头，下部笔画较多，口播时按屋顶和下部整体记。看这个字时，可以想象有人闯入别人的屋院，主人赶紧守住门口。敌寇指侵入别处的敌人。文中提到《荡寇志》这类旧小说，书名中的寇也让人看出故事围绕冲突和征战展开。",
     "practiceOptionVisuals": {
-      "g5v1-l25-c10-u5bc7-words-image:g5v1-l25-c10-u5bc7-words-image-0": {
+      "g5v1-l25-c10-u5bc7-words-image:g5v1-l25-c10-u5bc7-words-image-2": {
         "src": "/illustrations/meanings/m03.webp",
         "label": "检查、验证",
         "alt": "孩子用放大镜仔细检查一件物品"
-      },
-      "g5v1-l25-c10-u5bc7-words-image:g5v1-l25-c10-u5bc7-words-image-2": {
-        "src": "/illustrations/mnemonics-v2/g5-u5178.webp",
-        "label": "典礼",
-        "alt": "典礼是隆重的礼仪仪式；相如要求秦王举行正式典礼才肯献璧，以此争取时间、维护国家尊严 图中“曲”与“八”按上下结构自然长成“典”。"
       },
       "g5v1-l25-c10-u5bc7-words-image:g5v1-l25-c10-u5bc7-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u5bc7.webp",
         "label": "敌寇",
         "alt": "荡寇评话别有滋味；作者广泛涉猎各类古代小说，在大量的比较阅读中逐渐提高了鉴赏能力 图中“宀”与“元”与“攴”按上下结构自然长成“寇”。"
+      },
+      "g5v1-l25-c10-u5bc7-words-image:g5v1-l25-c10-u5bc7-words-image-0": {
+        "src": "/illustrations/mnemonics-v2/g5-u5178.webp",
+        "label": "典礼",
+        "alt": "典礼是隆重的礼仪仪式；相如要求秦王举行正式典礼才肯献璧，以此争取时间、维护国家尊严 图中“曲”与“八”按上下结构自然长成“典”。"
       }
     }
   },
@@ -339,11 +339,6 @@ export const characterMedia = {
     },
     "transcript": "商贾的贾读第三声，旧时把商人称作商贾。作为姓氏时，贾常读第三声，两个读音要跟着词语分清。贾是上下结构，上部扁宽，下面是贝，写时上下对正。冰心后来读《红楼梦》，书里的贾姓要读第三声。商贾读第三声，贾姓读第三声，一次对照就把多音字和她的阅读经历接在了一起。",
     "practiceOptionVisuals": {
-      "g5v1-l25-c11-u8d3e-words-image:g5v1-l25-c11-u8d3e-words-image-1": {
-        "src": "/illustrations/mnemonics-v2/g5-u8d3e.webp",
-        "label": "商贾",
-        "alt": "商贾富户人生百态；《红楼梦》中贾府的兴衰荣辱让成熟后的作者读出了更深沉的人生悲喜与社会世相 图中“覀”与“贝”按上下结构自然长成“贾”。"
-      },
       "g5v1-l25-c11-u8d3e-words-image:g5v1-l25-c11-u8d3e-words-image-2": {
         "src": "/illustrations/meanings/m05.webp",
         "label": "朗声诵读",
@@ -353,6 +348,11 @@ export const characterMedia = {
         "src": "/illustrations/mnemonics-v2/g5-u803d.webp",
         "label": "耽误",
         "alt": "耽误工时扣减收入；母亲唯恐耽误做工时间，手里的缝纫活一刻也不肯停歇 图中“耳”与“冘”按左右结构自然长成“耽”。"
+      },
+      "g5v1-l25-c11-u8d3e-words-image:g5v1-l25-c11-u8d3e-words-image-1": {
+        "src": "/illustrations/mnemonics-v2/g5-u8d3e.webp",
+        "label": "商贾",
+        "alt": "商贾富户人生百态；《红楼梦》中贾府的兴衰荣辱让成熟后的作者读出了更深沉的人生悲喜与社会世相 图中“覀”与“贝”按上下结构自然长成“贾”。"
       }
     }
   },
@@ -371,6 +371,11 @@ export const characterMedia = {
     },
     "transcript": "试卷的卷，读第四声，指成套的考试纸。卷还可以数书册，读万卷书里的卷也读第四声。卷起纸张时读第三声，读音随着词义变化。卷是上下结构，上部展开，下部弯曲收住，写时上下对正。冰心后来挑选、比较着读万卷书，书读得越多，选择好书的眼光也越来越清楚。",
     "practiceOptionVisuals": {
+      "g5v1-l25-c12-u5377-words-image:g5v1-l25-c12-u5377-words-image-1": {
+        "src": "/illustrations/mnemonics-v2/g5-u5377.webp",
+        "label": "试卷",
+        "alt": "读书万卷受益终生；作者总结一生经验告诫年轻人要读万卷书，在浩瀚的书海中汲取智慧 图中“龹”与“㔾”按上下结构自然长成“卷”。"
+      },
       "g5v1-l25-c12-u5377-words-image:g5v1-l25-c12-u5377-words-image-2": {
         "src": "/illustrations/meanings/m06.webp",
         "label": "背负、承载",
@@ -380,11 +385,6 @@ export const characterMedia = {
         "src": "/illustrations/mnemonics-v2/g5-u60da.webp",
         "label": "恍惚",
         "alt": "恍惚入梦追忆往昔；梦中父亲摇橹的背影依然清晰，无声的父爱穿越岁月历久弥新 图中“忄”与“忽”按左右结构自然长成“惚”。"
-      },
-      "g5v1-l25-c12-u5377-words-image:g5v1-l25-c12-u5377-words-image-1": {
-        "src": "/illustrations/mnemonics-v2/g5-u5377.webp",
-        "label": "试卷",
-        "alt": "读书万卷受益终生；作者总结一生经验告诫年轻人要读万卷书，在浩瀚的书海中汲取智慧 图中“龹”与“㔾”按上下结构自然长成“卷”。"
       }
     }
   },
@@ -403,15 +403,15 @@ export const characterMedia = {
     },
     "transcript": "刊物的刊，读第一声。刊是左右结构，左边是干，右边立刀旁，写时右部短小有力。可以想象编辑把文章排到纸上，仔细校改后印成一期读物，先借这个画面记住字形。刊物是定期或不定期出版的杂志、报纸等读物。课文回顾几十年的阅读，从长篇小说到各种书刊，作者逐渐学会比较、挑选真正适合自己的好书。",
     "practiceOptionVisuals": {
-      "g5v1-l25-c13-u520a-words-image:g5v1-l25-c13-u520a-words-image-1": {
-        "src": "/illustrations/mnemonics-v2/g5-u520a.webp",
-        "label": "刊物",
-        "alt": "报刊杂志拓展视野；除了古典名著，作者还广泛阅读现代报刊杂志，时刻保持思想的敏锐与开阔 图中“干”与“刂”按左右结构自然长成“刊”。"
-      },
       "g5v1-l25-c13-u520a-words-image:g5v1-l25-c13-u520a-words-image-2": {
         "src": "/illustrations/meanings/m07.webp",
         "label": "一代又一代",
         "alt": "祖辈、父母和孩子三代人相聚"
+      },
+      "g5v1-l25-c13-u520a-words-image:g5v1-l25-c13-u520a-words-image-1": {
+        "src": "/illustrations/mnemonics-v2/g5-u520a.webp",
+        "label": "刊物",
+        "alt": "报刊杂志拓展视野；除了古典名著，作者还广泛阅读现代报刊杂志，时刻保持思想的敏锐与开阔 图中“干”与“刂”按左右结构自然长成“刊”。"
       },
       "g5v1-l25-c13-u520a-words-image:g5v1-l25-c13-u520a-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u7f36.webp",
@@ -436,20 +436,20 @@ export const characterMedia = {
     },
     "transcript": "琐，琐事的琐，读第三声。它是左右结构，左边的王字旁像细碎的小玉石，右边的“𧴪”像散落的细微贝壳，左右组合成琐。琐碎指细小而零碎的事情。课文里冰心先生深情回顾自己从童年起听书、借书、买书的琐碎往事，展现了漫长读书生涯带来的丰盈精神成长。",
     "practiceOptionVisuals": {
-      "g5v1-l25-c14-u7410-words-image:g5v1-l25-c14-u7410-words-image-2": {
-        "src": "/illustrations/meanings/m06.webp",
-        "label": "背负、承载",
-        "alt": "孩子把行囊稳稳背在背上"
-      },
-      "g5v1-l25-c14-u7410-words-image:g5v1-l25-c14-u7410-words-image-0": {
-        "src": "/illustrations/mnemonics-v2/g5-u745a.webp",
-        "label": "珊瑚",
-        "alt": "珊瑚礁是绚丽的海底奇观；王母即便追至辽远的珊瑚海礁也不肯放过织女，故事转入紧张高潮 图中“王”与“胡”按左右结构自然长成“瑚”。"
-      },
       "g5v1-l25-c14-u7410-words-image:g5v1-l25-c14-u7410-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u7410.webp",
         "label": "琐事",
         "alt": "繁琐小事不值一提；在书籍构筑的崇高精神世界里，生活中的繁琐烦扰都变得微不足道 图中“王”与“⺌”与“贝”按左右结构自然长成“琐”。"
+      },
+      "g5v1-l25-c14-u7410-words-image:g5v1-l25-c14-u7410-words-image-0": {
+        "src": "/illustrations/meanings/m06.webp",
+        "label": "背负、承载",
+        "alt": "孩子把行囊稳稳背在背上"
+      },
+      "g5v1-l25-c14-u7410-words-image:g5v1-l25-c14-u7410-words-image-2": {
+        "src": "/illustrations/mnemonics-v2/g5-u745a.webp",
+        "label": "珊瑚",
+        "alt": "珊瑚礁是绚丽的海底奇观；王母即便追至辽远的珊瑚海礁也不肯放过织女，故事转入紧张高潮 图中“王”与“胡”按左右结构自然长成“瑚”。"
       }
     }
   },
@@ -468,6 +468,11 @@ export const characterMedia = {
     },
     "transcript": "因痛苦或不适发出的低沉声音叫呻吟，呻读第一声。呻是左右结构，左边口字旁，右边是申，写时左窄右宽。可以想象病人轻声开口，声音很低，旁人靠近才听清。呻吟表示因难受而发声。作者评价作品时提到无病呻吟的文字，作者更喜欢有真情实感、读来朴实自然的文章。",
     "practiceOptionVisuals": {
+      "g5v1-l25-c15-u547b-words-image:g5v1-l25-c15-u547b-words-image-1": {
+        "src": "/illustrations/mnemonics-v2/g5-u547b.webp",
+        "label": "呻吟",
+        "alt": "无病呻吟坚决摈弃；作者强调选择好书要有鉴别眼光，那些无病呻吟的文字绝不值得浪费时间 图中“口”与“申”按左右结构自然长成“呻”。"
+      },
       "g5v1-l25-c15-u547b-words-image:g5v1-l25-c15-u547b-words-image-2": {
         "src": "/illustrations/meanings/m07.webp",
         "label": "一代又一代",
@@ -477,11 +482,6 @@ export const characterMedia = {
         "src": "/illustrations/mnemonics-v2/g5-u78c1.webp",
         "label": "磁铁",
         "alt": "磁石般深深吸引；优秀文学作品宛如强力的磁铁，紧紧吸引着作者的心灵，激发了无限的创作灵感 图中“石”与“兹”按左右结构自然长成“磁”。"
-      },
-      "g5v1-l25-c15-u547b-words-image:g5v1-l25-c15-u547b-words-image-1": {
-        "src": "/illustrations/mnemonics-v2/g5-u547b.webp",
-        "label": "呻吟",
-        "alt": "无病呻吟坚决摈弃；作者强调选择好书要有鉴别眼光，那些无病呻吟的文字绝不值得浪费时间 图中“口”与“申”按左右结构自然长成“呻”。"
       }
     }
   },
@@ -500,20 +500,20 @@ export const characterMedia = {
     },
     "transcript": "某人的某，读第三声，表示没有明确说出姓名的人。某也能放在时间前，某年就是没有说清具体哪一年。某是上下结构，上面是甘，下面是木，写时上窄下宽。冰心按童年、少年和成年后的顺序回忆读书，有时用某年来标出一段经历。顺着这些时间词往下读，她的阅读道路也一段段清楚起来。",
     "practiceOptionVisuals": {
-      "g5v1-l25-c16-u67d0-words-image:g5v1-l25-c16-u67d0-words-image-0": {
-        "src": "/illustrations/meanings/m05.webp",
-        "label": "朗声诵读",
-        "alt": "孩子面向同伴清楚地朗读"
-      },
-      "g5v1-l25-c16-u67d0-words-image:g5v1-l25-c16-u67d0-words-image-2": {
-        "src": "/illustrations/mnemonics-v2/g5-u7b77.webp",
-        "label": "筷子",
-        "alt": "筷子轻夹见证深情厚谊；将军将筷子伸向菜盘又停住，舍不得吃下战士们用汗水浇灌的蔬菜 图中“⺮”与“快”按上下结构自然长成“筷”。"
-      },
       "g5v1-l25-c16-u67d0-words-image:g5v1-l25-c16-u67d0-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u67d0.webp",
         "label": "某人",
         "alt": "某人某书批判吸收；阅读时要有独立思考的眼光，不能盲从某人的一家之言，要挑真正耐读的经典 图中“甘”与“木”按上下结构自然长成“某”。"
+      },
+      "g5v1-l25-c16-u67d0-words-image:g5v1-l25-c16-u67d0-words-image-2": {
+        "src": "/illustrations/meanings/m05.webp",
+        "label": "朗声诵读",
+        "alt": "孩子面向同伴清楚地朗读"
+      },
+      "g5v1-l25-c16-u67d0-words-image:g5v1-l25-c16-u67d0-words-image-0": {
+        "src": "/illustrations/mnemonics-v2/g5-u7b77.webp",
+        "label": "筷子",
+        "alt": "筷子轻夹见证深情厚谊；将军将筷子伸向菜盘又停住，舍不得吃下战士们用汗水浇灌的蔬菜 图中“⺮”与“快”按上下结构自然长成“筷”。"
       }
     }
   },
@@ -532,6 +532,11 @@ export const characterMedia = {
     },
     "transcript": "天津的津，读第一声。津是左右结构，左边三点水，右部横画较多，写时要排匀。可以想象渡口边水波轻动，人们从这里乘船来往。天津是我国的直辖市，津也能表示渡口。文章写作者小时候听故事、读小说常常津津有味，津津的津和天津的津同字，放进不同词语意思会变化。",
     "practiceOptionVisuals": {
+      "g5v1-l25-c17-u6d25-words-image:g5v1-l25-c17-u6d25-words-image-1": {
+        "src": "/illustrations/mnemonics-v2/g5-u6d25.webp",
+        "label": "天津",
+        "alt": "津津有味沉醉书香；读书不仅能开阔眼界增长见识，更能带来津津有味的无穷乐趣与精神享受 图中“氵”与“聿”按左右结构自然长成“津”。"
+      },
       "g5v1-l25-c17-u6d25-words-image:g5v1-l25-c17-u6d25-words-image-2": {
         "src": "/illustrations/meanings/m06.webp",
         "label": "背负、承载",
@@ -541,11 +546,6 @@ export const characterMedia = {
         "src": "/illustrations/mnemonics-v2/g5-u6bc1.webp",
         "label": "毁灭",
         "alt": "毁灭是彻底破坏不复存在；圆明园惨遭毁灭的历史警示我们，落后就要挨打，唯有自强不息 图中“臼”与“工”与“殳”按左右结构自然长成“毁”。"
-      },
-      "g5v1-l25-c17-u6d25-words-image:g5v1-l25-c17-u6d25-words-image-1": {
-        "src": "/illustrations/mnemonics-v2/g5-u6d25.webp",
-        "label": "天津",
-        "alt": "津津有味沉醉书香；读书不仅能开阔眼界增长见识，更能带来津津有味的无穷乐趣与精神享受 图中“氵”与“聿”按左右结构自然长成“津”。"
       }
     }
   },
@@ -564,17 +564,17 @@ export const characterMedia = {
     },
     "transcript": "给时间、数量或行动划出范围，就叫限制，限读第四声。限是左右结构，左边双耳旁，右边是艮，写时左窄右宽。可以想象一道矮墙标出边界，提醒脚步不能越过。限制表示规定范围，不让事物超过界线。舅父讲到精彩处便停下，童年的作者对下文抱着无限期待，限制的限也能在无限里认出来。",
     "practiceOptionVisuals": {
+      "g5v1-l25-c18-u9650-words-image:g5v1-l25-c18-u9650-words-image-2": {
+        "src": "/illustrations/meanings/m08.webp",
+        "label": "整齐有序",
+        "alt": "竹简按照次序整齐排列"
+      },
       "g5v1-l25-c18-u9650-words-image:g5v1-l25-c18-u9650-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u9650.webp",
         "label": "限制",
         "alt": "无限书海畅游其中；生命的长度有限，书籍却为我们打开了通向古今中外无限时空的壮美通道 图中“阝”与“艮”按左右结构自然长成“限”。"
       },
       "g5v1-l25-c18-u9650-words-image:g5v1-l25-c18-u9650-words-image-0": {
-        "src": "/illustrations/meanings/m08.webp",
-        "label": "整齐有序",
-        "alt": "竹简按照次序整齐排列"
-      },
-      "g5v1-l25-c18-u9650-words-image:g5v1-l25-c18-u9650-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u533a.webp",
         "label": "地区",
         "alt": "地区气候各具特色；太阳光照在地球不同地区分布不均，形成了温带、热带等丰富多样的气候区 图中“匸”与“乂”按左三包围结构自然长成“区”。"
@@ -595,20 +595,20 @@ export const characterMedia = {
     },
     "transcript": "衰老的衰，读第一声，衰老指身体机能随着年岁增长而减弱。衰还在盛衰这个词里，盛衰说的是从兴盛走向衰落。衰是独体字，中部被上下笔画包住，可以分层观察。冰心长大后重读《红楼梦》，才尝到一个朝代和家庭兴亡盛衰的滋味。年龄和阅历变了，同一本书也能读出童年时没有体会到的分量。",
     "practiceOptionVisuals": {
-      "g5v1-l25-c19-u8870-words-image:g5v1-l25-c19-u8870-words-image-1": {
-        "src": "/illustrations/mnemonics-v2/g5-u8870.webp",
-        "label": "衰老",
-        "alt": "衰老虽至童心永驻；读书让心灵永远保持年轻与充实，即使岁月流逝、容颜衰老，精神依然丰盈 图中“衰”按独体结构自然长成“衰”。"
-      },
-      "g5v1-l25-c19-u8870-words-image:g5v1-l25-c19-u8870-words-image-2": {
+      "g5v1-l25-c19-u8870-words-image:g5v1-l25-c19-u8870-words-image-0": {
         "src": "/illustrations/meanings/m08.webp",
         "label": "整齐有序",
         "alt": "竹简按照次序整齐排列"
       },
-      "g5v1-l25-c19-u8870-words-image:g5v1-l25-c19-u8870-words-image-0": {
+      "g5v1-l25-c19-u8870-words-image:g5v1-l25-c19-u8870-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u77e3.webp",
         "label": "矣",
         "alt": "学而不厌诲人不倦矣；朱熹与孔子的读书心法跨越千年，至今依然指引着求学者的方向 图中“厶”与“矢”按上下结构自然长成“矣”。"
+      },
+      "g5v1-l25-c19-u8870-words-image:g5v1-l25-c19-u8870-words-image-1": {
+        "src": "/illustrations/mnemonics-v2/g5-u8870.webp",
+        "label": "衰老",
+        "alt": "衰老虽至童心永驻；读书让心灵永远保持年轻与充实，即使岁月流逝、容颜衰老，精神依然丰盈 图中“衰”按独体结构自然长成“衰”。"
       }
     }
   },
@@ -627,20 +627,20 @@ export const characterMedia = {
     },
     "transcript": "把分散的内容合到共同标准下，可以说统一，统读第三声。统是左右结构，左边绞丝旁，右边是充，写时左窄右宽。可以想象许多细线被收拢成一束，方向一致，排列也整齐，先借这个画面记住字形。统一表示把分散事物合成一个整体。文章最后把多年读书经验归拢起来，统一到读书好、多读书、读好书这几句朴素建议中。",
     "practiceOptionVisuals": {
-      "g5v1-l25-c20-u7edf-words-image:g5v1-l25-c20-u7edf-words-image-1": {
-        "src": "/illustrations/mnemonics-v2/g5-u7edf.webp",
-        "label": "统一",
-        "alt": "系统阅读构建体系；循序渐进地系统阅读经典好书，能够帮助我们建立起宏大完整的知识格局 图中“纟”与“充”按左右结构自然长成“统”。"
-      },
-      "g5v1-l25-c20-u7edf-words-image:g5v1-l25-c20-u7edf-words-image-0": {
+      "g5v1-l25-c20-u7edf-words-image:g5v1-l25-c20-u7edf-words-image-2": {
         "src": "/illustrations/meanings/m07.webp",
         "label": "一代又一代",
         "alt": "祖辈、父母和孩子三代人相聚"
       },
-      "g5v1-l25-c20-u7edf-words-image:g5v1-l25-c20-u7edf-words-image-2": {
+      "g5v1-l25-c20-u7edf-words-image:g5v1-l25-c20-u7edf-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u8ff0.webp",
         "label": "讲述",
         "alt": "讲述心得言辞诚恳；冰心先生深情讲述自己数十年的读书经历，向青少年传授宝贵的选书智慧 图中“辶”与“术”按左下包围结构自然长成“述”。"
+      },
+      "g5v1-l25-c20-u7edf-words-image:g5v1-l25-c20-u7edf-words-image-1": {
+        "src": "/illustrations/mnemonics-v2/g5-u7edf.webp",
+        "label": "统一",
+        "alt": "系统阅读构建体系；循序渐进地系统阅读经典好书，能够帮助我们建立起宏大完整的知识格局 图中“纟”与“充”按左右结构自然长成“统”。"
       }
     }
   },
@@ -659,17 +659,17 @@ export const characterMedia = {
     },
     "transcript": "朴，朴实的朴，读第三声。它是左右结构，左边的“木”像未经过多雕琢的原木，右边的“卜”提示读音，质朴天然即为朴。朴实指淳朴真诚、不加虚饰。作者在谈论读书经验时总结出“读书好，多读书，读好书”九字箴言，语言质朴深刻，成为指引后人一生的宝贵座右铭。",
     "practiceOptionVisuals": {
+      "g5v1-l25-c21-u6734-words-image:g5v1-l25-c21-u6734-words-image-2": {
+        "src": "/illustrations/meanings/m04.webp",
+        "label": "倚靠、凭借",
+        "alt": "行路的人稳稳倚靠一根手杖"
+      },
       "g5v1-l25-c21-u6734-words-image:g5v1-l25-c21-u6734-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u6734.webp",
         "label": "朴实",
         "alt": "质朴名言字字珠玑；“读书好，多读书，读好书”，这九字真言质朴无华，成为指引一生的座右铭 图中“木”与“卜”按左右结构自然长成“朴”。"
       },
       "g5v1-l25-c21-u6734-words-image:g5v1-l25-c21-u6734-words-image-0": {
-        "src": "/illustrations/meanings/m04.webp",
-        "label": "倚靠、凭借",
-        "alt": "行路的人稳稳倚靠一根手杖"
-      },
-      "g5v1-l25-c21-u6734-words-image:g5v1-l25-c21-u6734-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u6795.webp",
         "label": "枕头",
         "alt": "枕木船舱承载梦想；夜宿在小船枕席之上，听着水声潺潺，孩子在父亲的守护下安然入梦 图中“木”与“冘”按左右结构自然长成“枕”。"

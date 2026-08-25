@@ -2494,6 +2494,39 @@ canvas:focus-visible {
   height: 31px;
 }
 
+.recording-assessment {
+  display: flex;
+  grid-column: 2 / -1;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.recording-check-gate {
+  margin: 0;
+  color: var(--wrong-text);
+  font-weight: 750;
+  line-height: 1.6;
+}
+
+.targeted-remediation {
+  width: min(100%, 680px);
+  margin: 16px auto 0;
+  padding: 14px 16px;
+  border: 1px solid color-mix(in srgb, var(--wrong-text) 24%, transparent);
+  border-radius: 16px;
+  background: var(--wrong-soft);
+  color: var(--ink);
+}
+
+.targeted-remediation strong { color: var(--wrong-text); }
+.targeted-remediation p { margin: 5px 0 0; line-height: 1.6; }
+
+.recording-assessment .game-button {
+  min-height: 40px;
+  padding: 8px 12px;
+  font-size: 0.8125rem;
+}
+
 .profile-card {
   display: grid;
   grid-template-columns: 97px minmax(0, 1fr);
@@ -3014,6 +3047,10 @@ canvas:focus-visible {
   }
 
   .recording-result audio {
+    grid-column: 1 / -1;
+  }
+
+  .recording-assessment {
     grid-column: 1 / -1;
   }
 

@@ -5,16 +5,45 @@ import { useState } from "react";
 import type { CharacterItem } from "../../data/catalog-types";
 import { grade5Lessons } from "../../data/generated/grade5-volume1/course";
 import { homeCandidates } from "../../data/home-index.generated";
+import {
+  skillDimensions,
+  type DimensionMemory,
+  type SkillDimension,
+} from "../../domain/learning-state";
 import { getTrackExercises, questionTypeLabel } from "../../domain/practice";
 import { trackMeta } from "../../domain/tracks";
 import { routeForTrack } from "../../lib/app-route";
 import { withReturnTo } from "../../lib/navigation";
-import { trackIds, type TrackId } from "../../lib/profile-model";
+import {
+  characterMemoryFromProfile,
+  trackIds,
+  type TrackId,
+} from "../../lib/profile-model";
 import { useStudyProfile } from "../profile/use-study-profile";
 import { LearningPageShell, PageHeading } from "../shell/learning-page-shell";
 
 function formatDate(value: string) {
   return new Intl.DateTimeFormat("zh-CN", { month: "numeric", day: "numeric", hour: "2-digit", minute: "2-digit" }).format(new Date(value));
+}
+
+const dimensionMeta: Record<SkillDimension, { label: string; copy: string }> = {
+  recognition: { label: "认读", copy: "看到字，能独立认出来" },
+  phonology: { label: "读音", copy: "看到字，能读准字音" },
+  semantics: { label: "字义", copy: "理解字义和常用词义" },
+  generation: { label: "字形重构", copy: "不看答案，能按部件组出；手写自查不等于客观核验" },
+  discrimination: { label: "辨析", copy: "分清形近字和同音字" },
+  context: { label: "情境", copy: "能在新词句中正确使用" },
+};
+
+const memoryStatusMeta: Record<DimensionMemory["status"], string> = {
+  new: "新学",
+  learning: "学习中",
+  review: "复习中",
+  stable: "已稳定",
+};
+
+function formatDueAt(value: string) {
+  return value ? formatDate(value) : "尚未安排";
 }
 
 export function RecordsRoute({ track }: { track: TrackId }) {
@@ -133,14 +162,82 @@ export function RecordDetailRoute({ character, track }: { character: CharacterIt
   const exercises = getTrackExercises(character, track);
   const completed = profile.completed[track].includes(character.id);
   const correctCount = exercises.filter((question) => profile.answers[question.id]?.lastCorrect).length;
+  const storedMemory = profile.memory[character.id];
+  const memory = characterMemoryFromProfile(profile, character.id);
+  const hasStoredMemory = Boolean(storedMemory && Object.keys(storedMemory).length > 0);
+  const routeFootprints = trackIds.map((id) => {
+    const routeExercises = getTrackExercises(character, id);
+    return {
+      id,
+      completed: profile.completed[id].includes(character.id),
+      correct: routeExercises.filter((question) => profile.answers[question.id]?.lastCorrect).length,
+      questions: routeExercises.length,
+      attempts: routeExercises.reduce((sum, question) => sum + (profile.answers[question.id]?.attempts ?? 0), 0),
+    };
+  });
   return (
     <LearningPageShell active="profile" name={profile.name}>
       <div className="page record-detail-page">
         <PageHeading density="utility" kicker={`${meta.label} · 学习记录`} title={`“${character.hanzi}”的闯关足迹`} copy={`来自第 ${character.lessonPosition} 课《${character.lessonTitle}》；每一题都保留最后一次作答状态。`} backHref={`/records/${track}`} />
         <section className={`record-detail-summary ${meta.tone}`}>
           <div className="record-detail-glyph">{character.hanzi}</div>
-          <div><p>{completed ? "这一关已完成" : "还差几步，就能完成这一关"}</p><h2>{correctCount} / {exercises.length} 题最后一次答对</h2><span>{meta.copy}</span></div>
+          <div>
+            <p>首次学完 · {completed ? `${meta.menu}已达成` : `${meta.menu}尚未达成`}</p>
+            <h2>{correctCount} / {exercises.length} 题最后一次答对</h2>
+            <span>首次学完是永久保留的练习成就，不等同于下面会随复习变化的当前掌握。</span>
+          </div>
         </section>
+
+        <section className="record-mastery" aria-labelledby="record-mastery-title">
+          <header className="record-section-heading">
+            <div><p className="kicker">当前掌握</p><h2 id="record-mastery-title">六项能力，分别留下时间证据</h2></div>
+            <span>首次学完 ≠ 当前已稳定</span>
+          </header>
+          {!hasStoredMemory && (
+            <p className="record-mastery-empty" role="status">尚无独立提取证据，当前不能显示为已稳定。</p>
+          )}
+          <ul className="record-mastery-grid">
+            {skillDimensions.map((dimension) => {
+              const state = memory[dimension];
+              const hasIndependentEvidence = Boolean(state.lastIndependentCorrectAt);
+              return (
+                <li className={`record-mastery-card is-${state.status}`} data-status={state.status} key={dimension}>
+                  <header>
+                    <div><strong>{dimensionMeta[dimension].label}</strong><small>{dimensionMeta[dimension].copy}</small></div>
+                    <span><b>{state.status}</b>{memoryStatusMeta[state.status]}</span>
+                  </header>
+                  <dl>
+                    <div><dt>下次到期</dt><dd>{formatDueAt(state.dueAt)}</dd></div>
+                    <div><dt>独立连续</dt><dd>{state.independentStreak} 次</dd></div>
+                    <div><dt>遗忘次数</dt><dd>{state.lapses} 次</dd></div>
+                  </dl>
+                  <p>{hasIndependentEvidence ? `最近独立答对：${formatDate(state.lastIndependentCorrectAt!)}` : "尚无独立提取证据"}</p>
+                </li>
+              );
+            })}
+          </ul>
+        </section>
+
+        <section className="record-footprints" aria-labelledby="record-footprints-title">
+          <header className="record-section-heading">
+            <div><p className="kicker">练习足迹</p><h2 id="record-footprints-title">四条历史路线</h2></div>
+            <span>这些统计记录做过什么，不替代当前掌握</span>
+          </header>
+          <div>
+            {routeFootprints.map((footprint) => (
+              <Link className={footprint.id === track ? "is-active" : ""} href={`/records/${footprint.id}/${character.id}`} key={footprint.id}>
+                <span>{trackMeta[footprint.id].menu}</span>
+                <strong>首次学完 · {footprint.completed ? "已达成" : "未达成"}</strong>
+                <small>{footprint.correct}/{footprint.questions} 题最后答对 · 累计 {footprint.attempts} 次</small>
+              </Link>
+            ))}
+          </div>
+        </section>
+
+        <header className="record-section-heading record-question-heading">
+          <div><p className="kicker">本路线题目</p><h2>{meta.menu}的逐题足迹</h2></div>
+          <span>最后一次作答状态</span>
+        </header>
         <section className="record-question-list">
           {exercises.map((question, index) => {
             const stat = profile.answers[question.id];

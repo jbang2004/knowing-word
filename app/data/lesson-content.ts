@@ -1,4 +1,4 @@
-import { extensionCharacters } from "./extension-characters.ts";
+import { grade5ExtensionCharacters } from "./generated/grade5-volume1/extension-learning.ts";
 import {
   grade5LessonLoaders,
   type Grade5LessonId,
@@ -10,7 +10,7 @@ import {
 } from "./lesson-documents.ts";
 
 const extensionCharactersByLesson = new Map<string, CharacterItem[]>();
-for (const character of extensionCharacters) {
+for (const character of grade5ExtensionCharacters as unknown as CharacterItem[]) {
   const bucket = extensionCharactersByLesson.get(character.lessonId) ?? [];
   bucket.push(character);
   extensionCharactersByLesson.set(character.lessonId, bucket);

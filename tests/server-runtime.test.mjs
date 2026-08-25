@@ -64,7 +64,10 @@ test("the production worker exposes D1 only within its request scope", async () 
     prepare() {
       return {
         bind() {
-          return { async first() { return null; } };
+          return {
+            async first() { return null; },
+            async all() { return { results: [] }; },
+          };
         },
       };
     },

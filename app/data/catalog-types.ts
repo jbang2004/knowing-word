@@ -1,3 +1,9 @@
+import type {
+  AnswerMode,
+  ErrorTag,
+  SkillDimension,
+} from "../domain/learning-state.ts";
+
 export type ExerciseKind = "single" | "structure" | "components" | "write";
 
 export type Exercise = {
@@ -14,7 +20,16 @@ export type Exercise = {
     idcCode: string;
   }[];
   explanation: string;
+  dimension?: SkillDimension;
+  answerMode?: AnswerMode;
+  cueLevel?: 0 | 1 | 2 | 3;
+  concealTarget?: boolean;
+  spokenPrompt?: string;
+  optionErrorTags?: Record<string, ErrorTag[]>;
 };
+
+export type ComponentRole = "semantic" | "phonetic" | "graphic" | "mixed";
+export type ComponentConfidence = "verified" | "probable" | "mnemonic-only";
 
 export type CharacterItem = {
   id: string;
@@ -32,7 +47,15 @@ export type CharacterItem = {
   originalMeaning: string;
   description: string;
   originalText: string;
-  parts: { char: string; radical: boolean }[];
+  parts: {
+    char: string;
+    radical: boolean;
+    role?: ComponentRole;
+    normalizedChar?: string;
+    functionText?: string;
+    confidence?: ComponentConfidence;
+    source?: string;
+  }[];
   compositions: {
     char: string;
     description: string;

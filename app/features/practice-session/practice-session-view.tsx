@@ -10,10 +10,14 @@ import {
 } from "react";
 import type { CharacterItem, Exercise } from "../../data/catalog-types";
 import type { LearningVisual } from "../../data/illustrations";
+import { remediationGuidanceFor } from "../../domain/error-diagnosis";
 import {
   expectedAnswerIds as getExpectedIds,
   questionTypeLabel,
   stableOptionOrder,
+  writingRetrievalText,
+  type WritingPhase,
+  type WritingSelfAssessment,
 } from "../../domain/practice";
 import { trackMeta } from "../../domain/tracks";
 import type { StudyProfile, TrackId } from "../../lib/profile-model";
@@ -123,6 +127,8 @@ export function ChallengeRoom({
   selected,
   wrote,
   result,
+  writingPhase,
+  writingRevision,
   profile,
   orderedOptions,
   onBack,
@@ -130,6 +136,7 @@ export function ChallengeRoom({
   onRemove,
   onWrite,
   onClearWrite,
+  onAssessWriting,
   onCheck,
   onNext,
   onPrevious,
@@ -144,6 +151,8 @@ export function ChallengeRoom({
   selected: string[];
   wrote: boolean;
   result: boolean | null;
+  writingPhase: WritingPhase;
+  writingRevision: number;
   profile: StudyProfile;
   orderedOptions: Exercise["options"];
   onBack: () => void;
@@ -151,6 +160,7 @@ export function ChallengeRoom({
   onRemove: (id: string) => void;
   onWrite: () => void;
   onClearWrite: () => void;
+  onAssessWriting: (assessment: WritingSelfAssessment) => void;
   onCheck: () => void;
   onNext: () => void;
   onPrevious: () => void;
@@ -169,6 +179,11 @@ export function ChallengeRoom({
         .join("、");
   const finalStep = questionIndex === total - 1;
   const record = profile.answers[question.id];
+  const remediation = remediationGuidanceFor(record?.lastErrorTags ?? []);
+  const independentWriting = question.kind === "write" && question.concealTarget === true;
+  const writingReview = question.kind === "write" && writingPhase === "review" && result === null;
+  const concealWritingTarget = independentWriting && !writingReview && result === null;
+  const writingText = writingRetrievalText(question, character, !concealWritingTarget);
 
   return (
     <div className={"challenge-page challenge-centered track-" + meta.tone}>
@@ -182,7 +197,7 @@ export function ChallengeRoom({
           aria-valuemin={0}
           aria-valuemax={total}
           aria-valuenow={questionIndex + (result === null ? 0 : 1)}
-          aria-label={`${meta.menu} · ${character.hanzi}`}
+          aria-label={`${meta.menu} · ${writingText.progressTarget}`}
         >
           <i style={{ width: ((result === null ? questionIndex : questionIndex + 1) / total) * 100 + "%" }} />
         </div>
@@ -192,7 +207,12 @@ export function ChallengeRoom({
       <section className="challenge-board">
         <div className="challenge-question">
           <span className="question-tag">{questionTypeLabel(question, track)}</span>
-          <h2>{question.prompt}</h2>
+          <h2>{writingText.prompt}</h2>
+          {concealWritingTarget && (
+            <p className="multi-hint">
+              读音：<b>{character.pinyin}</b> · 词语线索：<b>{writingText.wordCue}</b>
+            </p>
+          )}
           {needsMultiple && (
             <p className="multi-hint">
               这题需要选择多个部件 · 已选 <b>{selected.length}</b> / 需要 <b>{expected.length}</b> 个
@@ -202,9 +222,12 @@ export function ChallengeRoom({
 
         {question.kind === "write" ? (
           <WritingPad
+            key={`${question.id}:${writingRevision}`}
             character={character.hanzi}
-            guided={false}
-            revealAnswer={result !== null}
+            guided={!independentWriting}
+            revealAnswer={writingReview || result !== null}
+            retrying={writingPhase === "rewrite"}
+            canvasLabel={writingText.canvasLabel}
             onWrite={onWrite}
             onClear={onClearWrite}
           />
@@ -240,17 +263,40 @@ export function ChallengeRoom({
           />
         )}
 
+        {question.kind === "write" && writingPhase === "rewrite" && remediation && (
+          <div className="targeted-remediation" role="status">
+            <strong>{remediation.title}</strong>
+            <p>{remediation.instruction}</p>
+          </div>
+        )}
+
       </section>
 
-      {result === null ? (
+      {writingReview ? (
+        <WritingAssessment onAssess={onAssessWriting} />
+      ) : result === null ? (
         <div className="challenge-actions">
           <button className="game-button primary" disabled={!ready} onClick={onCheck}>
             {question.kind === "write" ? "显示范字并对照" : "核对答案"}
           </button>
           <div className="challenge-actions-row">
-            <button className="text-button" disabled={questionIndex === 0} onClick={onPrevious}>← 上一题</button>
-            <span className="key-hint">按 <kbd>A</kbd>–<kbd>D</kbd> 选择 · <kbd>Enter</kbd> 确认</span>
-            <button className="text-button" onClick={onSkip}>跳过这一题 →</button>
+            <button
+              className="text-button"
+              disabled={questionIndex === 0 || writingPhase === "rewrite"}
+              onClick={onPrevious}
+            >
+              ← 上一题
+            </button>
+            <span className="key-hint">
+              {writingPhase === "rewrite"
+                ? "先完成这次纠错重写"
+                : question.kind === "write"
+                ? <>写完后按 <kbd>Enter</kbd> 显示范字</>
+                : <>按 <kbd>A</kbd>–<kbd>D</kbd> 选择 · <kbd>Enter</kbd> 确认</>}
+            </span>
+            <button className="text-button" disabled={writingPhase === "rewrite"} onClick={onSkip}>
+              跳过这一题 →
+            </button>
           </div>
         </div>
       ) : (
@@ -263,25 +309,49 @@ export function ChallengeRoom({
             </span>
             <strong>
               {question.kind === "write" && result
-                ? "完成一次独立书写"
+                ? "自查通过"
                 : result
                 ? "答对了"
-                : "再看一眼"}
+                : remediation?.title ?? "再看一眼"}
             </strong>
             {record && <small>已尝试 {record.attempts} 次</small>}
           </div>
           <p>
             {question.kind === "write" && result
-              ? "规范字已经显示。请自己检查是否漏笔、错位；需要调整可以重新写一遍。"
+              ? "已按你的对照自查记录为正确（未经过客观识别）；范字会保留到下一题。"
               : result
               ? question.explanation || (finalStep ? "这一关完成了，回到地图看看下一站。" : "记住这个线索，再去下一题。")
-              : "正确答案是：" + (question.kind === "write" ? "在方格里写完整的「" + character.hanzi + "」" : answerText || "仔细看字形。")}
+              : remediation
+                ? `${remediation.instruction} 正确答案是：${question.kind === "write" ? "在方格里写完整的「" + character.hanzi + "」" : answerText || "仔细看字形。"}`
+                : "正确答案是：" + (question.kind === "write" ? "在方格里写完整的「" + character.hanzi + "」" : answerText || "仔细看字形。")}
           </p>
           <button className="game-button primary" onClick={onNext}>
             {result ? (finalStep ? "查看成绩" : "继续") : "知道了"}
           </button>
         </div>
       )}
+    </div>
+  );
+}
+
+function WritingAssessment({
+  onAssess,
+}: {
+  onAssess: (assessment: WritingSelfAssessment) => void;
+}) {
+  return (
+    <div className="answer-sheet" role="group" aria-labelledby="writing-assessment-title">
+      <div className="answer-sheet-head">
+        <span className="answer-sheet-mark" aria-hidden="true"><CheckCircle2 size={24} /></span>
+        <strong id="writing-assessment-title">逐部件对照后，选择最符合的一项</strong>
+      </div>
+      <p>先看部件、位置和笔画；这是你的对照自查，不等于系统客观识别。</p>
+      <div className="challenge-actions-row">
+        <button className="game-button primary" onClick={() => onAssess("correct")}>我对照后认为一致</button>
+        <button className="game-button ghost" onClick={() => onAssess("component-error")}>部件错</button>
+        <button className="game-button ghost" onClick={() => onAssess("position-error")}>位置错</button>
+        <button className="game-button ghost" onClick={() => onAssess("stroke-error")}>漏多笔</button>
+      </div>
     </div>
   );
 }
@@ -520,12 +590,16 @@ function WritingPad({
   character,
   guided,
   revealAnswer,
+  retrying,
+  canvasLabel,
   onWrite,
   onClear,
 }: {
   character: string;
   guided: boolean;
   revealAnswer: boolean;
+  retrying: boolean;
+  canvasLabel: string;
   onWrite: () => void;
   onClear: () => void;
 }) {
@@ -533,7 +607,6 @@ function WritingPad({
   const drawingRef = useRef(false);
   const lastPointRef = useRef<{ x: number; y: number } | null>(null);
   const strokeLengthRef = useRef(0);
-  const totalLengthRef = useRef(0);
   const acceptedRef = useRef(false);
   const [strokeCount, setStrokeCount] = useState(0);
 
@@ -565,6 +638,7 @@ function WritingPad({
   }
 
   function start(event: ReactPointerEvent<HTMLCanvasElement>) {
+    if (revealAnswer) return;
     const context = canvasRef.current?.getContext("2d");
     if (!context) return;
     const point = position(event);
@@ -585,11 +659,6 @@ function WritingPad({
     if (previous) {
       const distance = Math.hypot(point.x - previous.x, point.y - previous.y);
       strokeLengthRef.current += distance;
-      totalLengthRef.current += distance;
-      if (guided && !acceptedRef.current && totalLengthRef.current >= 34) {
-        acceptedRef.current = true;
-        onWrite();
-      }
     }
     lastPointRef.current = point;
     context.lineTo(point.x, point.y);
@@ -600,7 +669,10 @@ function WritingPad({
     if (drawingRef.current && strokeLengthRef.current >= 7) {
       const nextStrokeCount = strokeCount + 1;
       setStrokeCount(nextStrokeCount);
-      if (!guided && !acceptedRef.current && nextStrokeCount >= 2 && totalLengthRef.current >= 80) {
+      // A meaningful stroke enables comparison with the model character. It
+      // never marks the answer correct; correctness is decided by the explicit
+      // post-reveal self-assessment.
+      if (!acceptedRef.current) {
         acceptedRef.current = true;
         onWrite();
       }
@@ -618,7 +690,6 @@ function WritingPad({
     drawingRef.current = false;
     lastPointRef.current = null;
     strokeLengthRef.current = 0;
-    totalLengthRef.current = 0;
     acceptedRef.current = false;
     setStrokeCount(0);
     onClear();
@@ -629,7 +700,8 @@ function WritingPad({
       {(guided || revealAnswer) && <div className="writing-guide" aria-hidden="true">{character}</div>}
       <canvas
         ref={canvasRef}
-        aria-label={"书写“" + character + "”"}
+        aria-label={canvasLabel}
+        aria-disabled={revealAnswer}
         onPointerDown={start}
         onPointerMove={draw}
         onPointerUp={stop}
@@ -642,11 +714,13 @@ function WritingPad({
             ? "规范字已显示：请逐部件对照是否漏笔、错位"
             : strokeCount
               ? `已记录 ${strokeCount} 笔，继续把字写完整`
+              : retrying
+                ? "范字已隐藏并清空：根据刚才发现的问题重新写完整"
               : guided
                 ? "沿着浅色字形认真描写，轻点一下不会算作完成"
-                : "空白书写：至少完成两笔后才能核对答案"}
+                : "空白书写：写完后再显示范字对照"}
         </span>
-        <button onClick={clear}>重新写</button>
+        {!revealAnswer && <button onClick={clear}>重新写</button>}
       </div>
     </div>
   );

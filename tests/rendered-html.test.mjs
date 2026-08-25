@@ -210,7 +210,7 @@ test("dense pages keep progressive and shareable responsive contracts", async ()
   assert.match(practiceSource, /补充字形线索/);
   // Dynamic character routes must never inherit the previous character's
   // question index, round results, celebration, drawer or memory state.
-  assert.match(practiceRouteSource, /key=\{`\$\{mode\}:\$\{track\}:\$\{character\.id\}/);
+  assert.match(practiceRouteSource, /key=\{`\$\{mode\}:\$\{track\}:\$\{review \?\? "regular"\}:\$\{character\.id\}/);
   assert.match(characterRouteSource, /key=\{character\.id\}/);
   assert.match(practiceRouteSource, /passedQuestionIds/);
   assert.doesNotMatch(practiceRouteSource, /firstIncompleteQuestionIndex/);
@@ -563,11 +563,18 @@ test("the public learning catalog preserves the course and practice-route struct
   const { characters, components, lessons } = await import(
     new URL("../app/data/catalog.ts", import.meta.url).href,
   );
+  const { getTrackExercises } = await import(
+    new URL("../app/domain/practice.ts", import.meta.url).href,
+  );
   const primary = characters.filter((character) => character.primary);
   const official = characters.filter((character) => character.official !== false);
   const countWithOrigin = (origin) =>
     primary.filter((character) =>
       character.exercises.some((exercise) => exercise.origin === origin),
+    ).length;
+  const countWithAnyOrigin = (origins) =>
+    primary.filter((character) =>
+      character.exercises.some((exercise) => origins.includes(exercise.origin)),
     ).length;
 
   assert.equal(lessons.length, 26);
@@ -587,8 +594,9 @@ test("the public learning catalog preserves the course and practice-route struct
   for (const lesson of lessons.filter((item) => item.skimming)) {
     assert.equal(lesson.writingCount, 0, `skimming lesson should not require writing: ${lesson.title}`);
   }
-  assert.equal(countWithOrigin("识字小测"), 394);
+  assert.equal(countWithAnyOrigin(["识字小测", "科学复习"]), 430);
   assert.equal(countWithOrigin("拆一拆"), 394);
+  assert.equal(primary.filter((character) => getTrackExercises(character, "split").length > 0).length, 430);
   assert.equal(countWithOrigin("红蓝字"), 430);
   assert.equal(countWithOrigin("空间结构"), 430);
 

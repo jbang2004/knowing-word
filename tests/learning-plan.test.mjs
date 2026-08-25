@@ -59,38 +59,43 @@ test("specialist progress contains learned characters only", () => {
   });
 });
 
-test("the recognition check no longer repeats specialist structure, component, or writing items", async () => {
+test("the words stage keeps one guided writing pass but not specialist structure or component items", async () => {
   const content = await loadLessonContent(firstLessonId);
-  const character = content.characters.find((item) => item.primary && item.official !== false);
+  const character = content.characters.find((item) =>
+    item.primary && item.official !== false && item.curriculumRole === "write"
+  );
   const exercises = getTrackExercises(character, "words");
 
   assert.ok(exercises.length >= 2);
-  assert.ok(exercises.every((exercise) => exercise.kind === "single"));
+  assert.ok(exercises.every((exercise) => exercise.kind === "single" || exercise.kind === "write"));
+  assert.ok(exercises.some((exercise) => exercise.kind === "write"));
+  assert.ok(exercises.filter((exercise) => exercise.kind === "write").every((exercise) => exercise.cueLevel > 0));
   assert.ok(getTrackExercises(character, "structure").some((exercise) => exercise.kind === "structure"));
   assert.ok(getTrackExercises(character, "split").some((exercise) => exercise.kind === "components"));
 });
 
-test("the character-card mastery check includes every canonical track without duplicate questions", async () => {
+test("the character-card mastery check selects one best reachable item per dimension", async () => {
   const content = await loadLessonContent(firstLessonId);
   const characters = content.characters.filter((item) => item.primary && item.official !== false);
 
   for (const character of characters) {
     const steps = getPracticeSteps(character, "words", "mastery");
-    const expected = ["words", "structure", "split", "honglan"]
-      .flatMap((track) => getTrackExercises(character, track));
-    assert.deepEqual(steps.map(({ exercise }) => exercise.id), expected.map((exercise) => exercise.id));
     assert.equal(new Set(steps.map(({ exercise }) => exercise.id)).size, steps.length);
-    assert.ok(steps.length >= 5 && steps.length <= 7);
+    assert.deepEqual(
+      [...new Set(steps.map(({ exercise }) => exercise.dimension))].sort(),
+      ["context", "discrimination", "generation", "phonology", "recognition", "semantics"],
+    );
+    assert.ok(steps.length === 6 || steps.length === 8);
   }
 });
 
-test("every official character has one complete five-to-seven-question mastery check", () => {
+test("every official character has a compact six-dimension mastery check", () => {
   const distribution = new Map();
   for (const character of characters.filter((item) => item.official !== false)) {
     const steps = getPracticeSteps(character, "words", "mastery");
     assert.equal(new Set(steps.map(({ exercise }) => exercise.id)).size, steps.length);
-    assert.ok(steps.length >= 5 && steps.length <= 7, `${character.hanzi} has ${steps.length} steps`);
+    assert.ok(steps.length === 6 || steps.length === 8, `${character.hanzi} has ${steps.length} steps`);
     distribution.set(steps.length, (distribution.get(steps.length) ?? 0) + 1);
   }
-  assert.deepEqual(Object.fromEntries(distribution), { 5: 130, 6: 234, 7: 1 });
+  assert.deepEqual(Object.fromEntries(distribution), { 6: 145, 8: 220 });
 });

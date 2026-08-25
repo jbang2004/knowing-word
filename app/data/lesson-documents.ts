@@ -585,7 +585,7 @@ const guideDetails: Readonly<Record<keyof typeof grade5LessonLearning, GuideDeta
       {
         guide: "先沿年龄梳理早期阅读经历。书从谁那里来，读到什么，感受怎样变化，这些具体回忆共同说明兴趣如何开始。",
         question: "哪些人和书打开了作者最初的阅读世界？",
-        focusWords: ["舅舅", "天津", "宴会", "斩断", "葛布", "鲁莽", "煞气", "敌寇"],
+        focusWords: ["舅舅", "天津", "宴会", "斩断", "葛布", "鲁莽", "煞有介事", "敌寇"],
       },
       {
         guide: "阅读范围扩大以后，作者开始比较不同作品。留意她用哪些感受和判断选择书，也分清故事吸引人与真正耐读的差别。",

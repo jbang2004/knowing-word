@@ -17,15 +17,15 @@ export const characterMedia = {
     },
     "transcript": "驯良写的是松鼠温顺的一面，驯读第四声。驯是左右结构，左边可以认作一匹马，右边的三竖像平缓展开的河道。为了好记，想象小马沿河慢慢走，脚步安稳，先借这个画面记住字形。驯良形容动物性情温顺，容易亲近。课文观察松鼠的性情和生活习惯，用驯良让我们先看见它温和可爱的一面。",
     "practiceOptionVisuals": {
-      "g5v1-l17-c01-u9a6f-words-image:g5v1-l17-c01-u9a6f-words-image-1": {
-        "src": "/illustrations/mnemonics-v2/g5-u9a6f.webp",
-        "label": "驯良",
-        "alt": "驯良温顺惹人喜爱；松鼠性格驯良机警，不伤害人，是一种非常讨人喜欢的小动物 图中“马”与“川”按左右结构自然长成“驯”。"
-      },
       "g5v1-l17-c01-u9a6f-words-image:g5v1-l17-c01-u9a6f-words-image-2": {
         "src": "/illustrations/meanings/m03.webp",
         "label": "检查、验证",
         "alt": "孩子用放大镜仔细检查一件物品"
+      },
+      "g5v1-l17-c01-u9a6f-words-image:g5v1-l17-c01-u9a6f-words-image-1": {
+        "src": "/illustrations/mnemonics-v2/g5-u9a6f.webp",
+        "label": "驯良",
+        "alt": "驯良温顺惹人喜爱；松鼠性格驯良机警，不伤害人，是一种非常讨人喜欢的小动物 图中“马”与“川”按左右结构自然长成“驯”。"
       },
       "g5v1-l17-c01-u9a6f-words-image:g5v1-l17-c01-u9a6f-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u54e8.webp",
@@ -49,15 +49,15 @@ export const characterMedia = {
     },
     "transcript": "矫，矫健的矫，读第三声。它是左右结构，左边是疾飞如箭的“矢”，右边的“乔”像挺拔耸立的大树，飞箭穿过高树即显矫健。矫健形容身手敏捷、姿态强健有力。课文中作者写松鼠在林间树杈轻快跳跃、攀爬自如，用矫健的身姿展现了小动物灵动活泼的生命力。",
     "practiceOptionVisuals": {
-      "g5v1-l17-c02-u77eb-words-image:g5v1-l17-c02-u77eb-words-image-1": {
-        "src": "/illustrations/mnemonics-v2/g5-u77eb.webp",
-        "label": "矫健",
-        "alt": "矫健敏捷轻快如飞；松鼠在树林高处轻快跳跃、攀爬自如，展现出强健有力的矫健身姿 图中“矢”与“乔”按左右结构自然长成“矫”。"
-      },
       "g5v1-l17-c02-u77eb-words-image:g5v1-l17-c02-u77eb-words-image-2": {
         "src": "/illustrations/meanings/m05.webp",
         "label": "朗声诵读",
         "alt": "孩子面向同伴清楚地朗读"
+      },
+      "g5v1-l17-c02-u77eb-words-image:g5v1-l17-c02-u77eb-words-image-1": {
+        "src": "/illustrations/mnemonics-v2/g5-u77eb.webp",
+        "label": "矫健",
+        "alt": "矫健敏捷轻快如飞；松鼠在树林高处轻快跳跃、攀爬自如，展现出强健有力的矫健身姿 图中“矢”与“乔”按左右结构自然长成“矫”。"
       },
       "g5v1-l17-c02-u77eb-words-image:g5v1-l17-c02-u77eb-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u635f.webp",
@@ -145,20 +145,20 @@ export const characterMedia = {
     },
     "transcript": "藓，苔藓的藓，读第三声。藓是上下结构，上面的草字头表明它是植物，下面的“鲜”提示读音与嫩绿色彩，上下组合成藓。苔藓是贴着潮湿树皮或地面生长的低矮植物。课文写松鼠搭窝时采来柔软干燥的苔藓铺在窝底，把小窝打理得格外暖和舒适，表现出松鼠聪明讲究的习性。",
     "practiceOptionVisuals": {
-      "g5v1-l17-c05-u85d3-words-image:g5v1-l17-c05-u85d3-words-image-1": {
-        "src": "/illustrations/mnemonics-v2/g5-u85d3.webp",
-        "label": "苔藓",
-        "alt": "苔藓柔软保温干燥；松鼠采集柔软的苔藓铺在窝底，把小窝打理得格外暖和舒坦 图中“艹”与“鲜”按上下结构自然长成“藓”。"
-      },
-      "g5v1-l17-c05-u85d3-words-image:g5v1-l17-c05-u85d3-words-image-2": {
+      "g5v1-l17-c05-u85d3-words-image:g5v1-l17-c05-u85d3-words-image-0": {
         "src": "/illustrations/meanings/m03.webp",
         "label": "检查、验证",
         "alt": "孩子用放大镜仔细检查一件物品"
       },
-      "g5v1-l17-c05-u85d3-words-image:g5v1-l17-c05-u85d3-words-image-0": {
+      "g5v1-l17-c05-u85d3-words-image:g5v1-l17-c05-u85d3-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u810a.webp",
         "label": "脊背",
         "alt": "脊背弯曲瘦小辛劳；母亲弯曲瘦弱的脊背宛如一张弓，背负着沉重的生活与对孩子的期望 图中“脊”按独体结构自然长成“脊”。"
+      },
+      "g5v1-l17-c05-u85d3-words-image:g5v1-l17-c05-u85d3-words-image-1": {
+        "src": "/illustrations/mnemonics-v2/g5-u85d3.webp",
+        "label": "苔藓",
+        "alt": "苔藓柔软保温干燥；松鼠采集柔软的苔藓铺在窝底，把小窝打理得格外暖和舒坦 图中“艹”与“鲜”按上下结构自然长成“藓”。"
       }
     }
   },
@@ -177,20 +177,20 @@ export const characterMedia = {
     },
     "transcript": "窝口很窄，只容小松鼠勉强进出，这就是课文里的狭窄，狭读第二声。狭是左右结构，左边反犬旁，右边是夹，写时左窄右宽。想象小松鼠收紧身子，从窄窄的窝口钻过去。狭窄表示宽度小，能通过的空间不大。这个词让我们看见松鼠怎样把窝口安排得安全又隐蔽。",
     "practiceOptionVisuals": {
-      "g5v1-l17-c06-u72ed-words-image:g5v1-l17-c06-u72ed-words-image-2": {
-        "src": "/illustrations/meanings/m06.webp",
-        "label": "背负、承载",
-        "alt": "孩子把行囊稳稳背在背上"
-      },
-      "g5v1-l17-c06-u72ed-words-image:g5v1-l17-c06-u72ed-words-image-0": {
-        "src": "/illustrations/mnemonics-v2/g5-u8327.webp",
-        "label": "蚕茧",
-        "alt": "蚕茧是江南水乡的丰收希望；父亲在春蚕吐丝结茧的季节起早贪黑，卖了蚕茧供孩子上学 图中“艹”与“虫”按上下结构自然长成“茧”。"
-      },
       "g5v1-l17-c06-u72ed-words-image:g5v1-l17-c06-u72ed-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u72ed.webp",
         "label": "狭窄",
         "alt": "狭窄洞口便于防御；松鼠窝的洞口狭窄朝上，不仅能阻挡雨水，还能有效防备天敌侵扰 图中“犭”与“夹”按左右结构自然长成“狭”。"
+      },
+      "g5v1-l17-c06-u72ed-words-image:g5v1-l17-c06-u72ed-words-image-0": {
+        "src": "/illustrations/meanings/m06.webp",
+        "label": "背负、承载",
+        "alt": "孩子把行囊稳稳背在背上"
+      },
+      "g5v1-l17-c06-u72ed-words-image:g5v1-l17-c06-u72ed-words-image-2": {
+        "src": "/illustrations/mnemonics-v2/g5-u8327.webp",
+        "label": "蚕茧",
+        "alt": "蚕茧是江南水乡的丰收希望；父亲在春蚕吐丝结茧的季节起早贪黑，卖了蚕茧供孩子上学 图中“艹”与“虫”按上下结构自然长成“茧”。"
       }
     }
   },
@@ -241,17 +241,17 @@ export const characterMedia = {
     },
     "transcript": "圆锥的锥，读第一声。锥是左右结构，左边金字旁，右部上下细长，整个字要写得左窄右宽。记字时，可以想象金属做成的尖头工具立在一只圆圆的底座上，先借这个画面记住字形。圆锥一头尖，另一头圆而宽。课文观察松鼠搭窝的形状，用圆锥能说清窝顶收尖、下部较宽的样子。",
     "practiceOptionVisuals": {
+      "g5v1-l17-c08-u9525-words-image:g5v1-l17-c08-u9525-words-image-0": {
+        "src": "/illustrations/meanings/m07.webp",
+        "label": "一代又一代",
+        "alt": "祖辈、父母和孩子三代人相聚"
+      },
       "g5v1-l17-c08-u9525-words-image:g5v1-l17-c08-u9525-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u9525.webp",
         "label": "圆锥",
         "alt": "圆锥形状利于排水；松鼠把窝顶造成圆锥形，雨水顺着斜坡滑落，窝里始终保持干爽 图中“钅”与“隹”按左右结构自然长成“锥”。"
       },
       "g5v1-l17-c08-u9525-words-image:g5v1-l17-c08-u9525-words-image-2": {
-        "src": "/illustrations/meanings/m07.webp",
-        "label": "一代又一代",
-        "alt": "祖辈、父母和孩子三代人相聚"
-      },
-      "g5v1-l17-c08-u9525-words-image:g5v1-l17-c08-u9525-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u69b4.webp",
         "label": "石榴",
         "alt": "石榴是果粒繁多、色彩鲜艳的水果；与石榴的高挂枝头相比，花生更显得朴实无华、不图虚名 图中“木”与“留”按左右结构自然长成“榴”。"
@@ -272,20 +272,20 @@ export const characterMedia = {
     },
     "transcript": "鼠，松鼠的鼠，读第三声。鼠是独体字，上部像灵敏机警的小兽头部与胡须，下部弯折笔画与四点宛如爪子与长尾，整体勾勒出一只活泼的小动物。松鼠是一种生活在树林里的小型啮齿动物。课文从外形、活动、搭窝等多个角度细致描写松鼠，展现了小动物漂亮驯良、讨人喜欢的特质。",
     "practiceOptionVisuals": {
-      "g5v1-l17-c09-u9f20-words-image:g5v1-l17-c09-u9f20-words-image-2": {
-        "src": "/illustrations/meanings/m04.webp",
-        "label": "倚靠、凭借",
-        "alt": "行路的人稳稳倚靠一根手杖"
-      },
-      "g5v1-l17-c09-u9f20-words-image:g5v1-l17-c09-u9f20-words-image-0": {
-        "src": "/illustrations/mnemonics-v2/g5-u604d.webp",
-        "label": "恍惚",
-        "alt": "恍恍惚惚如在梦境；多年后作者在梦中恍惚又见到了那条承载着深沉父爱的小渔船 图中“忄”与“光”按左右结构自然长成“恍”。"
-      },
       "g5v1-l17-c09-u9f20-words-image:g5v1-l17-c09-u9f20-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u9f20.webp",
         "label": "松鼠",
         "alt": "松鼠机灵可爱生机勃勃；课文生动描绘了松鼠的外形与习性，字里行间洋溢着对小生命的喜爱 图中“鼠”按独体结构自然长成“鼠”。"
+      },
+      "g5v1-l17-c09-u9f20-words-image:g5v1-l17-c09-u9f20-words-image-0": {
+        "src": "/illustrations/meanings/m04.webp",
+        "label": "倚靠、凭借",
+        "alt": "行路的人稳稳倚靠一根手杖"
+      },
+      "g5v1-l17-c09-u9f20-words-image:g5v1-l17-c09-u9f20-words-image-2": {
+        "src": "/illustrations/mnemonics-v2/g5-u604d.webp",
+        "label": "恍惚",
+        "alt": "恍恍惚惚如在梦境；多年后作者在梦中恍惚又见到了那条承载着深沉父爱的小渔船 图中“忄”与“光”按左右结构自然长成“恍”。"
       }
     }
   },
@@ -304,17 +304,17 @@ export const characterMedia = {
     },
     "transcript": "清秀的秀，读第四声。秀是上下结构，上面是禾，下面的弯钩要收稳，整个字上展下收。顺着字形想一想，一株清爽挺拔的禾苗，在风里轻轻弯下叶尖。清秀形容外表清爽、秀丽，让人看着舒服。文章先写松鼠的面容，用清秀把它干净、灵巧的样子带到我们眼前。",
     "practiceOptionVisuals": {
+      "g5v1-l17-c10-u79c0-words-image:g5v1-l17-c10-u79c0-words-image-2": {
+        "src": "/illustrations/meanings/m06.webp",
+        "label": "背负、承载",
+        "alt": "孩子把行囊稳稳背在背上"
+      },
       "g5v1-l17-c10-u79c0-words-image:g5v1-l17-c10-u79c0-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u79c0.webp",
         "label": "清秀",
         "alt": "面容清秀惹人怜爱；松鼠玲珑的小面孔配上清秀机灵的目光，显得格外聪明活泼 图中“禾”与“乃”按上下结构自然长成“秀”。"
       },
       "g5v1-l17-c10-u79c0-words-image:g5v1-l17-c10-u79c0-words-image-0": {
-        "src": "/illustrations/meanings/m06.webp",
-        "label": "背负、承载",
-        "alt": "孩子把行囊稳稳背在背上"
-      },
-      "g5v1-l17-c10-u79c0-words-image:g5v1-l17-c10-u79c0-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u7a33.webp",
         "label": "安稳",
         "alt": "安稳指牢靠平稳不摇晃；踏上一块块平稳的搭石，行人心中涌起的是踏实与邻里的信任 图中“禾”与“急”按左右结构自然长成“稳”。"
@@ -341,15 +341,15 @@ export const characterMedia = {
         "label": "背负、承载",
         "alt": "孩子把行囊稳稳背在背上"
       },
-      "g5v1-l17-c11-u73b2-words-image:g5v1-l17-c11-u73b2-words-image-0": {
-        "src": "/illustrations/mnemonics-v2/g5-u5632.webp",
-        "label": "嘲笑",
-        "alt": "嘲笑讥讽不足为惧；面对外人的冷眼与嘲笑，父子俩乘坐一叶扁舟坚定前行，矢志不渝 图中“口”与“朝”按左右结构自然长成“嘲”。"
-      },
       "g5v1-l17-c11-u73b2-words-image:g5v1-l17-c11-u73b2-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u73b2.webp",
         "label": "玲珑",
         "alt": "玲珑小巧姿态优美；松鼠小巧玲珑的身段在林间闪转腾挪，宛如林中灵巧的小精灵 图中“王”与“令”按左右结构自然长成“玲”。"
+      },
+      "g5v1-l17-c11-u73b2-words-image:g5v1-l17-c11-u73b2-words-image-0": {
+        "src": "/illustrations/mnemonics-v2/g5-u5632.webp",
+        "label": "嘲笑",
+        "alt": "嘲笑讥讽不足为惧；面对外人的冷眼与嘲笑，父子俩乘坐一叶扁舟坚定前行，矢志不渝 图中“口”与“朝”按左右结构自然长成“嘲”。"
       }
     }
   },
@@ -400,11 +400,6 @@ export const characterMedia = {
     },
     "transcript": "帽子戴在头上，帽读第四声。帽是左右结构，左边巾字旁，右边是冒，左右都要写得瘦长。记字时，可以想象一顶布帽扣在头上，帽檐把阳光遮住。帽子可以保暖、遮阳，也能作为装饰。文章把松鼠蓬松的尾巴写得像帽缨，借熟悉的帽子让尾巴的形状更容易想象。",
     "practiceOptionVisuals": {
-      "g5v1-l17-c13-u5e3d-words-image:g5v1-l17-c13-u5e3d-words-image-1": {
-        "src": "/illustrations/mnemonics-v2/g5-u5e3d.webp",
-        "label": "帽子",
-        "alt": "尾巴高翘宛如遮阳小帽；松鼠常常把毛茸茸的大尾巴翘到背上，像戴着一顶天然的遮阳帽 图中“巾”与“冒”按左右结构自然长成“帽”。"
-      },
       "g5v1-l17-c13-u5e3d-words-image:g5v1-l17-c13-u5e3d-words-image-2": {
         "src": "/illustrations/meanings/m05.webp",
         "label": "朗声诵读",
@@ -414,6 +409,11 @@ export const characterMedia = {
         "src": "/illustrations/mnemonics-v2/g5-u8200.webp",
         "label": "舀起一勺汤",
         "alt": "舀起一勺满满的爱国心；这碗由汗水浇灌的菜汤里，舀起的是海岛官兵扎根海防、热爱祖国的赤子深情 图中“爫”与“臼”按上下结构自然长成“舀”。"
+      },
+      "g5v1-l17-c13-u5e3d-words-image:g5v1-l17-c13-u5e3d-words-image-1": {
+        "src": "/illustrations/mnemonics-v2/g5-u5e3d.webp",
+        "label": "帽子",
+        "alt": "尾巴高翘宛如遮阳小帽；松鼠常常把毛茸茸的大尾巴翘到背上，像戴着一顶天然的遮阳帽 图中“巾”与“冒”按左右结构自然长成“帽”。"
       }
     }
   },
@@ -437,12 +437,12 @@ export const characterMedia = {
         "label": "尾巴",
         "alt": "蓬松长尾保持平衡；松鼠的大尾巴不仅能保暖御寒，在树枝间跳跃时还能帮助保持身体平衡 图中“尸”与“毛”按左上包围结构自然长成“尾”。"
       },
-      "g5v1-l17-c14-u5c3e-words-image:g5v1-l17-c14-u5c3e-words-image-2": {
+      "g5v1-l17-c14-u5c3e-words-image:g5v1-l17-c14-u5c3e-words-image-0": {
         "src": "/illustrations/meanings/m07.webp",
         "label": "一代又一代",
         "alt": "祖辈、父母和孩子三代人相聚"
       },
-      "g5v1-l17-c14-u5c3e-words-image:g5v1-l17-c14-u5c3e-words-image-0": {
+      "g5v1-l17-c14-u5c3e-words-image:g5v1-l17-c14-u5c3e-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u62fe.webp",
         "label": "拾取",
         "alt": "拾取橡栗储藏冬粮；秋天松鼠忙着在林间拾取果实藏进树洞，为度过寒冬做好准备 图中“扌”与“合”按左右结构自然长成“拾”。"
@@ -464,12 +464,12 @@ export const characterMedia = {
     },
     "transcript": "鸟窝的窝，读第一声。窝是上下结构，上面宝盖头像遮风的小屋顶，下面的部分收在屋顶里。记字时，可以想象小鸟把树枝和草叶一层层塞进小屋，围出暖暖的窝，先借这个画面记住字形。鸟窝是鸟栖息和养育幼鸟的地方。课文仔细说明松鼠怎样选地方、搬材料、整理窝，让我们看见它搭窝很有条理。",
     "practiceOptionVisuals": {
-      "g5v1-l17-c15-u7a9d-words-image:g5v1-l17-c15-u7a9d-words-image-0": {
+      "g5v1-l17-c15-u7a9d-words-image:g5v1-l17-c15-u7a9d-words-image-2": {
         "src": "/illustrations/meanings/m03.webp",
         "label": "检查、验证",
         "alt": "孩子用放大镜仔细检查一件物品"
       },
-      "g5v1-l17-c15-u7a9d-words-image:g5v1-l17-c15-u7a9d-words-image-2": {
+      "g5v1-l17-c15-u7a9d-words-image:g5v1-l17-c15-u7a9d-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u7586.webp",
         "label": "边疆",
         "alt": "干将发硎有作其芒；宝剑出鞘锐不可当，激励着少年儿女为保卫边疆富强国家而奋斗 图中“弓”与“土”与“畺”按左右结构自然长成“疆”。"
@@ -496,15 +496,15 @@ export const characterMedia = {
     },
     "transcript": "滑，光滑的滑，读第二声。它是左右结构，左边的三点水表明如水流般润泽，右边的“骨”像平整圆润的骨骼架子，水过润石、平整无阻即为滑。光滑形容物体表面平整不粗糙。课文写松鼠搭建的小窝内部被苔藓踩得极其光滑平整，风雨不透，生动展现了松鼠高超的筑巢本领。",
     "practiceOptionVisuals": {
-      "g5v1-l17-c16-u6ed1-words-image:g5v1-l17-c16-u6ed1-words-image-1": {
-        "src": "/illustrations/mnemonics-v2/g5-u6ed1.webp",
-        "label": "光滑",
-        "alt": "光滑平整干爽舒适；松鼠用爪子把窝内的苔藓整理得光滑平整，生活习性格外讲究卫生 图中“氵”与“骨”按左右结构自然长成“滑”。"
-      },
       "g5v1-l17-c16-u6ed1-words-image:g5v1-l17-c16-u6ed1-words-image-2": {
         "src": "/illustrations/meanings/m07.webp",
         "label": "一代又一代",
         "alt": "祖辈、父母和孩子三代人相聚"
+      },
+      "g5v1-l17-c16-u6ed1-words-image:g5v1-l17-c16-u6ed1-words-image-1": {
+        "src": "/illustrations/mnemonics-v2/g5-u6ed1.webp",
+        "label": "光滑",
+        "alt": "光滑平整干爽舒适；松鼠用爪子把窝内的苔藓整理得光滑平整，生活习性格外讲究卫生 图中“氵”与“骨”按左右结构自然长成“滑”。"
       },
       "g5v1-l17-c16-u6ed1-words-image:g5v1-l17-c16-u6ed1-words-image-0": {
         "src": "/illustrations/mnemonics/m128.webp",
@@ -528,11 +528,6 @@ export const characterMedia = {
     },
     "transcript": "松鼠把散落的食物拿起来，这个动作可以说拾取，拾读第二声。拾是左右结构，左边提手旁，右边是合。顺着字形想一想，一只手把地上的果实拾起，稳稳放进合拢的篮子里。拾取就是把地上或散落的东西拿起来。课文观察松鼠储食和活动，拾取食物的小动作让它勤快的样子更具体。",
     "practiceOptionVisuals": {
-      "g5v1-l17-c17-u62fe-words-image:g5v1-l17-c17-u62fe-words-image-1": {
-        "src": "/illustrations/mnemonics-v2/g5-u62fe.webp",
-        "label": "拾取",
-        "alt": "拾取橡栗储藏冬粮；秋天松鼠忙着在林间拾取果实藏进树洞，为度过寒冬做好准备 图中“扌”与“合”按左右结构自然长成“拾”。"
-      },
       "g5v1-l17-c17-u62fe-words-image:g5v1-l17-c17-u62fe-words-image-2": {
         "src": "/illustrations/meanings/m03.webp",
         "label": "检查、验证",
@@ -542,6 +537,11 @@ export const characterMedia = {
         "src": "/illustrations/mnemonics-v2/g5-u609f.webp",
         "label": "领悟",
         "alt": "领悟写作精妙心法；在长期的阅读思考中作者终于领悟到：作文要有真情实感，要写出独特的真知灼见 图中“忄”与“吾”按左右结构自然长成“悟”。"
+      },
+      "g5v1-l17-c17-u62fe-words-image:g5v1-l17-c17-u62fe-words-image-1": {
+        "src": "/illustrations/mnemonics-v2/g5-u62fe.webp",
+        "label": "拾取",
+        "alt": "拾取橡栗储藏冬粮；秋天松鼠忙着在林间拾取果实藏进树洞，为度过寒冬做好准备 图中“扌”与“合”按左右结构自然长成“拾”。"
       }
     }
   },

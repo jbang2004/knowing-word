@@ -54,12 +54,12 @@ export const characterMedia = {
         "label": "鱼鳞",
         "alt": "潜龙腾渊鳞爪飞扬；飞腾的巨龙展现出冲破羁绊、翱翔九天的威猛神采 图中“鱼”与“粦”按左右结构自然长成“鳞”。"
       },
-      "g5v1-l13-c02-u9cde-words-image:g5v1-l13-c02-u9cde-words-image-2": {
+      "g5v1-l13-c02-u9cde-words-image:g5v1-l13-c02-u9cde-words-image-0": {
         "src": "/illustrations/meanings/m07.webp",
         "label": "一代又一代",
         "alt": "祖辈、父母和孩子三代人相聚"
       },
-      "g5v1-l13-c02-u9cde-words-image:g5v1-l13-c02-u9cde-words-image-0": {
+      "g5v1-l13-c02-u9cde-words-image:g5v1-l13-c02-u9cde-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u68a2.webp",
         "label": "树梢",
         "alt": "树梢飞鸣百鸟欢腾；无数飞鸟站在高高的树梢上引吭高歌，展现了人与自然和谐共生的美好画卷 图中“木”与“肖”按左右结构自然长成“梢”。"
@@ -81,6 +81,11 @@ export const characterMedia = {
     },
     "transcript": "乳虎啸谷，百兽震惶，虎啸让群兽惊慌不安。惶是左右结构，左边是竖心旁，右边可以想成高大的冠顶和座台。心在高台旁急促跳动。惶恐就是心里害怕、非常不安，诗文用它反衬乳虎的力量。",
     "practiceOptionVisuals": {
+      "g5v1-l13-c03-u60f6-words-image:g5v1-l13-c03-u60f6-words-image-1": {
+        "src": "/illustrations/mnemonics-v2/g5-u60f6.webp",
+        "label": "惶恐",
+        "alt": "惶恐指内心恐惧不安；少年中国气宇轩昂，扫除一切怯懦与惶恐，昂首屹立于世界东方 图中“忄”与“皇”按左右结构自然长成“惶”。"
+      },
       "g5v1-l13-c03-u60f6-words-image:g5v1-l13-c03-u60f6-words-image-0": {
         "src": "/illustrations/meanings/m03.webp",
         "label": "检查、验证",
@@ -90,11 +95,6 @@ export const characterMedia = {
         "src": "/illustrations/mnemonics-v2/g5-u7f36.webp",
         "label": "击缶",
         "alt": "缶是古代用来盛酒与敲击伴奏的瓦器；渑池会上秦王被迫击缶，赵国的国格尊严得到了有力捍卫 图中“午”与“山”按上下结构自然长成“缶”。"
-      },
-      "g5v1-l13-c03-u60f6-words-image:g5v1-l13-c03-u60f6-words-image-1": {
-        "src": "/illustrations/mnemonics-v2/g5-u60f6.webp",
-        "label": "惶恐",
-        "alt": "惶恐指内心恐惧不安；少年中国气宇轩昂，扫除一切怯懦与惶恐，昂首屹立于世界东方 图中“忄”与“皇”按左右结构自然长成“惶”。"
       }
     }
   },
@@ -113,20 +113,20 @@ export const characterMedia = {
     },
     "transcript": "奇花初胎，矞矞皇皇，花苞刚刚孕育便显出明亮气象。胎是左右结构，左边是月字旁，右边可以想成小生命安稳躺在保护空间里。柔软身体靠着小平台，像被保护着的新生命。胎儿是母体内尚未出生的孩子，初胎在文中表示新生事物刚刚孕育。",
     "practiceOptionVisuals": {
-      "g5v1-l13-c04-u80ce-words-image:g5v1-l13-c04-u80ce-words-image-1": {
-        "src": "/illustrations/mnemonics-v2/g5-u80ce.webp",
-        "label": "胎儿",
-        "alt": "奇花初胎矞矞皇皇；含苞初绽的鲜花蕴含着无限生机，象征着蓬勃美好的新时代 图中“月”与“台”按左右结构自然长成“胎”。"
-      },
-      "g5v1-l13-c04-u80ce-words-image:g5v1-l13-c04-u80ce-words-image-2": {
+      "g5v1-l13-c04-u80ce-words-image:g5v1-l13-c04-u80ce-words-image-0": {
         "src": "/illustrations/meanings/m04.webp",
         "label": "倚靠、凭借",
         "alt": "行路的人稳稳倚靠一根手杖"
       },
-      "g5v1-l13-c04-u80ce-words-image:g5v1-l13-c04-u80ce-words-image-0": {
+      "g5v1-l13-c04-u80ce-words-image:g5v1-l13-c04-u80ce-words-image-2": {
         "src": "/illustrations/mnemonics/m11.webp",
         "label": "差遣、指派",
         "alt": "领到任务后出发的少年信使"
+      },
+      "g5v1-l13-c04-u80ce-words-image:g5v1-l13-c04-u80ce-words-image-1": {
+        "src": "/illustrations/mnemonics-v2/g5-u80ce.webp",
+        "label": "胎儿",
+        "alt": "奇花初胎矞矞皇皇；含苞初绽的鲜花蕴含着无限生机，象征着蓬勃美好的新时代 图中“月”与“台”按左右结构自然长成“胎”。"
       }
     }
   },
@@ -150,12 +150,12 @@ export const characterMedia = {
         "label": "履行",
         "alt": "纵横驰骋履历广阔；少年顶天立地履行历史重任，踏上民族复兴的壮丽征途 图中“尸”与“復”按左上包围结构自然长成“履”。"
       },
-      "g5v1-l13-c05-u5c65-words-image:g5v1-l13-c05-u5c65-words-image-0": {
+      "g5v1-l13-c05-u5c65-words-image:g5v1-l13-c05-u5c65-words-image-2": {
         "src": "/illustrations/meanings/m04.webp",
         "label": "倚靠、凭借",
         "alt": "行路的人稳稳倚靠一根手杖"
       },
-      "g5v1-l13-c05-u5c65-words-image:g5v1-l13-c05-u5c65-words-image-2": {
+      "g5v1-l13-c05-u5c65-words-image:g5v1-l13-c05-u5c65-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u7597.webp",
         "label": "治疗",
         "alt": "治疗疾病带来健康；阳光中的紫外线能够杀灭细菌，对预防和治疗多种疾病大有益处 图中“疒”与“了”按左上包围结构自然长成“疗”。"
@@ -182,15 +182,15 @@ export const characterMedia = {
         "label": "检查、验证",
         "alt": "孩子用放大镜仔细检查一件物品"
       },
-      "g5v1-l13-c06-u54c9-words-image:g5v1-l13-c06-u54c9-words-image-2": {
-        "src": "/illustrations/mnemonics-v2/g5-u5c82.webp",
-        "label": "岂能",
-        "alt": "岂能荒废大好光阴；古人告诫读书切莫三心二意，岂能轻易辜负宝贵的青春年华 图中“山”与“己”按上下结构自然长成“岂”。"
-      },
       "g5v1-l13-c06-u54c9-words-image:g5v1-l13-c06-u54c9-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u54c9.webp",
         "label": "美哉",
         "alt": "美哉壮哉是发自肺腑的赞叹；梁启超激情洋溢地讴歌少年中国，气吞山河，振奋人心 图中“𢦏”与“口”按右上包围结构自然长成“哉”。"
+      },
+      "g5v1-l13-c06-u54c9-words-image:g5v1-l13-c06-u54c9-words-image-2": {
+        "src": "/illustrations/mnemonics-v2/g5-u5c82.webp",
+        "label": "岂能",
+        "alt": "岂能荒废大好光阴；古人告诫读书切莫三心二意，岂能轻易辜负宝贵的青春年华 图中“山”与“己”按上下结构自然长成“岂”。"
       }
     }
   },
@@ -214,15 +214,15 @@ export const characterMedia = {
         "label": "检查、验证",
         "alt": "孩子用放大镜仔细检查一件物品"
       },
-      "g5v1-l13-c07-u6f5c-words-image:g5v1-l13-c07-u6f5c-words-image-2": {
-        "src": "/illustrations/mnemonics-v2/g5-u5c82.webp",
-        "label": "岂能",
-        "alt": "岂能荒废大好光阴；古人告诫读书切莫三心二意，岂能轻易辜负宝贵的青春年华 图中“山”与“己”按上下结构自然长成“岂”。"
-      },
       "g5v1-l13-c07-u6f5c-words-image:g5v1-l13-c07-u6f5c-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u6f5c.webp",
         "label": "潜水",
         "alt": "潜龙在渊蓄势待发；一旦潜龙腾空而起，必将激荡起改变时代的壮丽风云 图中“氵”与“替”按左右结构自然长成“潜”。"
+      },
+      "g5v1-l13-c07-u6f5c-words-image:g5v1-l13-c07-u6f5c-words-image-2": {
+        "src": "/illustrations/mnemonics-v2/g5-u5c82.webp",
+        "label": "岂能",
+        "alt": "岂能荒废大好光阴；古人告诫读书切莫三心二意，岂能轻易辜负宝贵的青春年华 图中“山”与“己”按上下结构自然长成“岂”。"
       }
     }
   },
@@ -241,17 +241,17 @@ export const characterMedia = {
     },
     "transcript": "试，考试的试，读第四声。它是左右结构，左边的言字旁表明用言语或题目来检验，右边的“式”提示读音与规则，两边相合即为试。考试是用答题检查学业成果。课文中梁启超写“鹰隼试翼，风尘吸张”，用雄鹰初次展翅试飞的矫健身姿，比喻少年中国蓬勃崛起的非凡气势。",
     "practiceOptionVisuals": {
+      "g5v1-l13-c08-u8bd5-words-image:g5v1-l13-c08-u8bd5-words-image-0": {
+        "src": "/illustrations/meanings/m07.webp",
+        "label": "一代又一代",
+        "alt": "祖辈、父母和孩子三代人相聚"
+      },
       "g5v1-l13-c08-u8bd5-words-image:g5v1-l13-c08-u8bd5-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u8bd5.webp",
         "label": "考试",
         "alt": "鹰隼试翼风尘吸张；雄鹰展翅试飞长空，展现了少年意气风发的昂扬姿态 图中“讠”与“式”按左右结构自然长成“试”。"
       },
       "g5v1-l13-c08-u8bd5-words-image:g5v1-l13-c08-u8bd5-words-image-2": {
-        "src": "/illustrations/meanings/m07.webp",
-        "label": "一代又一代",
-        "alt": "祖辈、父母和孩子三代人相聚"
-      },
-      "g5v1-l13-c08-u8bd5-words-image:g5v1-l13-c08-u8bd5-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u547b.webp",
         "label": "呻吟",
         "alt": "无病呻吟坚决摈弃；作者强调选择好书要有鉴别眼光，那些无病呻吟的文字绝不值得浪费时间 图中“口”与“申”按左右结构自然长成“呻”。"
@@ -305,17 +305,17 @@ export const characterMedia = {
     },
     "transcript": "纵有千古，横有八荒，把时间的绵长和空间的广大一同展开。纵是左右结构，左边是绞丝旁，右边像两个人一前一后排开。竖线和队列并在一起。纵横可以表示竖向和横向，也能形容事物交错广布。",
     "practiceOptionVisuals": {
+      "g5v1-l13-c10-u7eb5-words-image:g5v1-l13-c10-u7eb5-words-image-2": {
+        "src": "/illustrations/meanings/m04.webp",
+        "label": "倚靠、凭借",
+        "alt": "行路的人稳稳倚靠一根手杖"
+      },
       "g5v1-l13-c10-u7eb5-words-image:g5v1-l13-c10-u7eb5-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u7eb5.webp",
         "label": "纵横",
         "alt": "纵有千古横有八荒；少年中国前途广阔无垠，承载着跨越古今的豪迈梦想 图中“纟”与“从”按左右结构自然长成“纵”。"
       },
       "g5v1-l13-c10-u7eb5-words-image:g5v1-l13-c10-u7eb5-words-image-0": {
-        "src": "/illustrations/meanings/m04.webp",
-        "label": "倚靠、凭借",
-        "alt": "行路的人稳稳倚靠一根手杖"
-      },
-      "g5v1-l13-c10-u7eb5-words-image:g5v1-l13-c10-u7eb5-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u9c81.webp",
         "label": "鲁莽",
         "alt": "鲁莽好汉性格率真；鲁智深虽性格有些鲁莽却嫉恶如仇、重情重义，给作者留下了深刻印象 图中“鱼”与“日”按上下结构自然长成“鲁”。"

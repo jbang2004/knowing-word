@@ -6,7 +6,7 @@ export const characterMedia = {
     "visual": {
       "src": "/illustrations/mnemonics-v2/g5-u4e43.webp",
       "label": "乃至",
-      "alt": "乃至于此表示甚至如此；陆游临终前至死不忘收复中原，爱国赤诚感人肺腑 图中“乃”按独体结构自然长成“乃”。"
+      "alt": "“乃至”表示甚至、以至于，用来说明范围或程度进一步扩大 图中“乃”按独体结构自然长成“乃”。"
     },
     "scene": {
       "scene": "一条长撇像转身衣带向左落下，右边折钩像回身道路包住它，两笔自然长成“乃”。",
@@ -29,7 +29,7 @@ export const characterMedia = {
       "g5v1-l12-c01-u4e43-words-image:g5v1-l12-c01-u4e43-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u4e43.webp",
         "label": "乃至",
-        "alt": "乃至于此表示甚至如此；陆游临终前至死不忘收复中原，爱国赤诚感人肺腑 图中“乃”按独体结构自然长成“乃”。"
+        "alt": "“乃至”表示甚至、以至于，用来说明范围或程度进一步扩大 图中“乃”按独体结构自然长成“乃”。"
       }
     }
   },
@@ -47,6 +47,11 @@ export const characterMedia = {
     },
     "transcript": "暖风熏得游人醉，诗人借一个熏字写出人们沉醉享乐的状态。熏适合整体观察，上面像香炉和层层香料，下面四点像温热香气。香气慢慢散开。熏陶比喻人在长时间里受到思想、习惯或文化的影响。",
     "practiceOptionVisuals": {
+      "g5v1-l12-c02-u718f-words-image:g5v1-l12-c02-u718f-words-image-1": {
+        "src": "/illustrations/mnemonics-v2/g5-u718f.webp",
+        "label": "熏陶",
+        "alt": "熏陶指长期沉浸受到感染；西湖的暖风熏得游人沉醉迷离，诗篇深刻讽刺了偏安享乐的醉生梦死 图中“熏”按独体结构自然长成“熏”。"
+      },
       "g5v1-l12-c02-u718f-words-image:g5v1-l12-c02-u718f-words-image-2": {
         "src": "/illustrations/meanings/m05.webp",
         "label": "朗声诵读",
@@ -56,11 +61,6 @@ export const characterMedia = {
         "src": "/illustrations/mnemonics-v2/g5-u5178.webp",
         "label": "典礼",
         "alt": "典礼是隆重的礼仪仪式；相如要求秦王举行正式典礼才肯献璧，以此争取时间、维护国家尊严 图中“曲”与“八”按上下结构自然长成“典”。"
-      },
-      "g5v1-l12-c02-u718f-words-image:g5v1-l12-c02-u718f-words-image-1": {
-        "src": "/illustrations/mnemonics-v2/g5-u718f.webp",
-        "label": "熏陶",
-        "alt": "熏陶指长期沉浸受到感染；西湖的暖风熏得游人沉醉迷离，诗篇深刻讽刺了偏安享乐的醉生梦死 图中“熏”按独体结构自然长成“熏”。"
       }
     }
   },
@@ -78,12 +78,12 @@ export const characterMedia = {
     },
     "transcript": "己亥杂诗里的亥，读音和伤害的害相同。古人用天干和地支配合记年，己亥合起来就是一个年份名称，诗题点明这首诗写在己亥年。亥适合整体观察，可以想象夜幕下有人沿着弯路归家。把己和亥连在一起读，就能抓住诗题交代的写作时间。",
     "practiceOptionVisuals": {
-      "g5v1-l12-c03-u4ea5-words-image:g5v1-l12-c03-u4ea5-words-image-2": {
+      "g5v1-l12-c03-u4ea5-words-image:g5v1-l12-c03-u4ea5-words-image-0": {
         "src": "/illustrations/meanings/m03.webp",
         "label": "检查、验证",
         "alt": "孩子用放大镜仔细检查一件物品"
       },
-      "g5v1-l12-c03-u4ea5-words-image:g5v1-l12-c03-u4ea5-words-image-0": {
+      "g5v1-l12-c03-u4ea5-words-image:g5v1-l12-c03-u4ea5-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u515c.webp",
         "label": "衣兜",
         "alt": "贴身衣兜掏出深沉母爱；母亲从破旧的衣兜里掏出一卷揉得皱巴巴的毛票，毫不犹豫递给孩子买书 图中“兜”按独体结构自然长成“兜”。"
@@ -110,17 +110,17 @@ export const characterMedia = {
     },
     "transcript": "九州生气恃风雷，恃写出了依靠的意思。恃是左右结构，左边是竖心旁，右边是寺。想象一颗心靠着高台站稳。恃强就是依仗自己的强大欺压别人，读诗时还要结合风雷理解国家生气所依靠的力量。",
     "practiceOptionVisuals": {
+      "g5v1-l12-c04-u6043-words-image:g5v1-l12-c04-u6043-words-image-0": {
+        "src": "/illustrations/meanings/m08.webp",
+        "label": "整齐有序",
+        "alt": "竹简按照次序整齐排列"
+      },
       "g5v1-l12-c04-u6043-words-image:g5v1-l12-c04-u6043-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u6043.webp",
         "label": "恃强",
         "alt": "恃指依仗凭借；诗人劝诫天地不要拘泥成法，应当不拘一格降下栋梁英才 图中“忄”与“寺”按左右结构自然长成“恃”。"
       },
       "g5v1-l12-c04-u6043-words-image:g5v1-l12-c04-u6043-words-image-2": {
-        "src": "/illustrations/meanings/m08.webp",
-        "label": "整齐有序",
-        "alt": "竹简按照次序整齐排列"
-      },
-      "g5v1-l12-c04-u6043-words-image:g5v1-l12-c04-u6043-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u9988.webp",
         "label": "反馈",
         "alt": "馈赠厚重丰润人生；书籍是大自然与人类文明最慷慨的馈赠，让作者的童年与少年时代绚丽多彩 图中“饣”与“贵”按左右结构自然长成“馈”。"
@@ -142,20 +142,20 @@ export const characterMedia = {
     },
     "transcript": "“我劝天公重抖擞”，诗人盼望整个社会重新振作起来。“擞”最容易先认出左边的提手旁，右边可以看作飞快拨动的算盘珠和一串有力脚步。手一抖、珠一动，原本低落的精神也跟着提起来。抖擞就是振作精神、显出活力，放回诗句里读尤其有力量。",
     "practiceOptionVisuals": {
-      "g5v1-l12-c05-u64de-words-image:g5v1-l12-c05-u64de-words-image-1": {
-        "src": "/illustrations/mnemonics-v2/g5-u64de.webp",
-        "label": "抖擞",
-        "alt": "抖擞精神形容振奋精神充满活力；诗人呼唤社会振作精神扫除沉闷，展现了变革图强的雄心 图中“扌”与“数”按左右结构自然长成“擞”。"
-      },
-      "g5v1-l12-c05-u64de-words-image:g5v1-l12-c05-u64de-words-image-2": {
+      "g5v1-l12-c05-u64de-words-image:g5v1-l12-c05-u64de-words-image-0": {
         "src": "/illustrations/meanings/m07.webp",
         "label": "一代又一代",
         "alt": "祖辈、父母和孩子三代人相聚"
       },
-      "g5v1-l12-c05-u64de-words-image:g5v1-l12-c05-u64de-words-image-0": {
+      "g5v1-l12-c05-u64de-words-image:g5v1-l12-c05-u64de-words-image-2": {
         "src": "/illustrations/mnemonics/m39.webp",
         "label": "烤熟或蒸熟的面食",
         "alt": "蒸笼和木盘里的包子、饼和面包"
+      },
+      "g5v1-l12-c05-u64de-words-image:g5v1-l12-c05-u64de-words-image-1": {
+        "src": "/illustrations/mnemonics-v2/g5-u64de.webp",
+        "label": "抖擞",
+        "alt": "抖擞精神形容振奋精神充满活力；诗人呼唤社会振作精神扫除沉闷，展现了变革图强的雄心 图中“扌”与“数”按左右结构自然长成“擞”。"
       }
     }
   },
@@ -175,17 +175,17 @@ export const characterMedia = {
     },
     "transcript": "家祭无忘告乃翁，写的是后人按礼仪追思先人。祭是上下结构，上面可以想成双手托着供品，下面像庄重的礼台。双手和礼台上下排好。祭祀是古人按照礼仪表达追思或敬意的活动。诗人嘱咐后人家祭时，别忘告诉他国家统一的消息。",
     "practiceOptionVisuals": {
+      "g5v1-l12-c06-u796d-words-image:g5v1-l12-c06-u796d-words-image-0": {
+        "src": "/illustrations/meanings/m03.webp",
+        "label": "检查、验证",
+        "alt": "孩子用放大镜仔细检查一件物品"
+      },
       "g5v1-l12-c06-u796d-words-image:g5v1-l12-c06-u796d-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u796d.webp",
         "label": "祭祀",
         "alt": "祭祀是祭奠祖先寄托哀思；陆游叮嘱儿孙王师北定中原之日，家祭无忘告乃翁 图中“月”与“又”与“示”按上下结构自然长成“祭”。"
       },
       "g5v1-l12-c06-u796d-words-image:g5v1-l12-c06-u796d-words-image-2": {
-        "src": "/illustrations/meanings/m03.webp",
-        "label": "检查、验证",
-        "alt": "孩子用放大镜仔细检查一件物品"
-      },
-      "g5v1-l12-c06-u796d-words-image:g5v1-l12-c06-u796d-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u79c0.webp",
         "label": "清秀",
         "alt": "面容清秀惹人怜爱；松鼠玲珑的小面孔配上清秀机灵的目光，显得格外聪明活泼 图中“禾”与“乃”按上下结构自然长成“秀”。"
@@ -207,20 +207,20 @@ export const characterMedia = {
     },
     "transcript": "直把杭州作汴州，杭州在诗里是具体地名。杭是左右结构，左边是木字旁，右边可以想成西湖边的桥墩和弯拱。柳树和桥影一左一右，杭州的“杭”便有了落脚点。杭州是浙江省的一座城市，诗句借它指出统治者忘记国事、只顾享乐。",
     "practiceOptionVisuals": {
-      "g5v1-l12-c07-u676d-words-image:g5v1-l12-c07-u676d-words-image-0": {
+      "g5v1-l12-c07-u676d-words-image:g5v1-l12-c07-u676d-words-image-2": {
         "src": "/illustrations/meanings/m03.webp",
         "label": "检查、验证",
         "alt": "孩子用放大镜仔细检查一件物品"
-      },
-      "g5v1-l12-c07-u676d-words-image:g5v1-l12-c07-u676d-words-image-2": {
-        "src": "/illustrations/mnemonics-v2/g5-u602f.webp",
-        "label": "胆怯",
-        "alt": "胆怯是害怕恐惧失去勇气；相如在强秦面前绝无半点胆怯，以浩然正气化解了一次次危机 图中“忄”与“去”按左右结构自然长成“怯”。"
       },
       "g5v1-l12-c07-u676d-words-image:g5v1-l12-c07-u676d-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u676d.webp",
         "label": "杭州",
         "alt": "杭州西湖歌舞升平；诗人借杭州景致针砭时弊，警醒世人切莫沉溺享乐而忘却国难 图中“木”与“亢”按左右结构自然长成“杭”。"
+      },
+      "g5v1-l12-c07-u676d-words-image:g5v1-l12-c07-u676d-words-image-0": {
+        "src": "/illustrations/mnemonics-v2/g5-u602f.webp",
+        "label": "胆怯",
+        "alt": "胆怯是害怕恐惧失去勇气；相如在强秦面前绝无半点胆怯，以浩然正气化解了一次次危机 图中“忄”与“去”按左右结构自然长成“怯”。"
       }
     }
   },
@@ -244,15 +244,15 @@ export const characterMedia = {
         "label": "一代又一代",
         "alt": "祖辈、父母和孩子三代人相聚"
       },
-      "g5v1-l12-c08-u54c0-words-image:g5v1-l12-c08-u54c0-words-image-2": {
-        "src": "/illustrations/mnemonics-v2/g5-u7792.webp",
-        "label": "隐瞒",
-        "alt": "隐瞒实情出于真挚心意；战士们默默隐瞒种菜的辛苦，一心想把珍贵的绿色奉献给将军 图中“目”与“艹”与“两”按左右结构自然长成“瞒”。"
-      },
       "g5v1-l12-c08-u54c0-words-image:g5v1-l12-c08-u54c0-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u54c0.webp",
         "label": "可哀",
         "alt": "可哀指令人悲痛伤感；陆游临终只见九州未同，满腔悲壮与赤子之心跃然纸上 图中“衣”与“口”按穿插结构自然长成“哀”。"
+      },
+      "g5v1-l12-c08-u54c0-words-image:g5v1-l12-c08-u54c0-words-image-2": {
+        "src": "/illustrations/mnemonics-v2/g5-u7792.webp",
+        "label": "隐瞒",
+        "alt": "隐瞒实情出于真挚心意；战士们默默隐瞒种菜的辛苦，一心想把珍贵的绿色奉献给将军 图中“目”与“艹”与“两”按左右结构自然长成“瞒”。"
       }
     }
   },
@@ -271,12 +271,12 @@ export const characterMedia = {
     },
     "transcript": "“不拘一格降人才”，诗人盼望选用人才时别被旧规矩捆住。先想一根绳子越收越紧，再看“拘”的提手旁和右边弯曲的轮廓，限制人的动作便出现了。被圈住以后，言行就不容易舒展。拘束正是受到限制、显得不自然，诗里的“不拘”则要把这些束缚放开。",
     "practiceOptionVisuals": {
-      "g5v1-l12-c09-u62d8-words-image:g5v1-l12-c09-u62d8-words-image-2": {
+      "g5v1-l12-c09-u62d8-words-image:g5v1-l12-c09-u62d8-words-image-0": {
         "src": "/illustrations/meanings/m08.webp",
         "label": "整齐有序",
         "alt": "竹简按照次序整齐排列"
       },
-      "g5v1-l12-c09-u62d8-words-image:g5v1-l12-c09-u62d8-words-image-0": {
+      "g5v1-l12-c09-u62d8-words-image:g5v1-l12-c09-u62d8-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u4eab.webp",
         "label": "享受",
         "alt": "享受是获得内心的宁静与满足；小鸟在作者肩头安然入睡，静静享受着人与鸟之间的全然信赖 图中“亠”与“口”与“子”按上中下结构自然长成“享”。"

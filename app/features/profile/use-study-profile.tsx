@@ -14,6 +14,7 @@ import {
 import {
   emptyProfile,
   LEGACY_PROFILE_STORAGE_KEYS,
+  mergeStudyProfiles,
   normalizeProfile,
   PROFILE_STORAGE_KEY,
   type StudyProfile,
@@ -85,7 +86,26 @@ export function StudyProfileProvider({ children }: { children: ReactNode }) {
             body: serialized,
           });
           if (!response.ok) throw new Error("profile save rejected");
-          lastSaved.current = serialized;
+          const payload = await response.json() as { profile?: unknown };
+          const authoritative = payload.profile
+            ? normalizeProfile(payload.profile)
+            : normalizeProfile(JSON.parse(serialized));
+          const authoritativeSerialized = JSON.stringify(authoritative);
+          lastSaved.current = authoritativeSerialized;
+          if (queuedSave.current) {
+            const reconciled = mergeStudyProfiles(
+              authoritative,
+              JSON.parse(queuedSave.current),
+            );
+            const reconciledSerialized = JSON.stringify(reconciled);
+            queuedSave.current = reconciledSerialized === authoritativeSerialized
+              ? null
+              : reconciledSerialized;
+            if (active.current) setProfile(reconciled);
+          } else if (authoritativeSerialized !== serialized && active.current) {
+            setProfile(authoritative);
+            cacheProfile(authoritative);
+          }
           if (active.current) setSyncState("synced");
         } catch {
           // A queued profile is always the newest complete snapshot, so keep it
@@ -117,10 +137,13 @@ export function StudyProfileProvider({ children }: { children: ReactNode }) {
         const payload = await response.json() as ProfileResponse;
         if (!active.current) return;
         if (payload.identity) setIdentity(payload.identity);
-        const authoritative = payload.profile ? normalizeProfile(payload.profile) : cached ?? emptyProfile();
-        lastSaved.current = payload.profile
-          ? JSON.stringify(authoritative)
-          : JSON.stringify(emptyProfile());
+        const remote = payload.profile ? normalizeProfile(payload.profile) : null;
+        const authoritative = remote && cached
+          ? mergeStudyProfiles(remote, cached)
+          : remote ?? cached ?? emptyProfile();
+        // Keep the actual remote snapshot here. If merging recovered newer
+        // local evidence, the normal save effect will upload the merged result.
+        lastSaved.current = JSON.stringify(remote ?? emptyProfile());
         setProfile(authoritative);
         cacheProfile(authoritative);
         setSyncState("synced");

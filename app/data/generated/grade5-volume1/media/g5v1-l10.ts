@@ -17,20 +17,20 @@ export const characterMedia = {
     },
     "transcript": "牛郎年幼失去爹娘，后来跟着哥哥和嫂子生活。嫂是左右结构，左边是女字旁，右边可以想成一位年长者弯身做事。两个人物一左一右站好。嫂子通常指哥哥的妻子，理解人物关系时要把称呼放回家庭中。",
     "practiceOptionVisuals": {
-      "g5v1-l10-c01-u5ac2-words-image:g5v1-l10-c01-u5ac2-words-image-1": {
-        "src": "/illustrations/mnemonics-v2/g5-u5ac2.webp",
-        "label": "嫂子",
-        "alt": "嫂子指兄长的妻子；面对兄嫂的刻薄对待，牛郎毫不计较，只牵着老牛自立生活 图中“女”与“叟”按左右结构自然长成“嫂”。"
-      },
-      "g5v1-l10-c01-u5ac2-words-image:g5v1-l10-c01-u5ac2-words-image-0": {
+      "g5v1-l10-c01-u5ac2-words-image:g5v1-l10-c01-u5ac2-words-image-2": {
         "src": "/illustrations/meanings/m05.webp",
         "label": "朗声诵读",
         "alt": "孩子面向同伴清楚地朗读"
       },
-      "g5v1-l10-c01-u5ac2-words-image:g5v1-l10-c01-u5ac2-words-image-2": {
+      "g5v1-l10-c01-u5ac2-words-image:g5v1-l10-c01-u5ac2-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u83cc.webp",
         "label": "杀菌",
         "alt": "细菌微生物受光照抑制；阳光是大自然最好的杀菌剂，使地球始终保持着生机与活力 图中“艹”与“囷”按上下结构自然长成“菌”。"
+      },
+      "g5v1-l10-c01-u5ac2-words-image:g5v1-l10-c01-u5ac2-words-image-1": {
+        "src": "/illustrations/mnemonics-v2/g5-u5ac2.webp",
+        "label": "嫂子",
+        "alt": "嫂子指兄长的妻子；面对兄嫂的刻薄对待，牛郎毫不计较，只牵着老牛自立生活 图中“女”与“叟”按左右结构自然长成“嫂”。"
       }
     }
   },
@@ -49,20 +49,20 @@ export const characterMedia = {
     },
     "transcript": "老牛跟着牛郎勤勤恳恳地干活，一点儿也不偷懒。恳的下方是一颗心，上面的艮可以想成收拢身体、专心做事的人。把心放稳，把每天的活一件件做踏实，勤勤恳恳的劲头就出来了。这个词形容做事认真踏实，正好照见老牛长年陪着牛郎劳动的样子。",
     "practiceOptionVisuals": {
-      "g5v1-l10-c02-u6073-words-image:g5v1-l10-c02-u6073-words-image-0": {
-        "src": "/illustrations/meanings/m07.webp",
-        "label": "一代又一代",
-        "alt": "祖辈、父母和孩子三代人相聚"
-      },
-      "g5v1-l10-c02-u6073-words-image:g5v1-l10-c02-u6073-words-image-2": {
-        "src": "/illustrations/mnemonics-v2/g5-u515c.webp",
-        "label": "衣兜",
-        "alt": "贴身衣兜掏出深沉母爱；母亲从破旧的衣兜里掏出一卷揉得皱巴巴的毛票，毫不犹豫递给孩子买书 图中“兜”按独体结构自然长成“兜”。"
-      },
       "g5v1-l10-c02-u6073-words-image:g5v1-l10-c02-u6073-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u6073.webp",
         "label": "勤勤恳恳",
         "alt": "勤勤恳恳形容辛勤踏实；牛郎织女勤勤恳恳地耕织劳作，把日子过得有滋有味 图中“艮”与“心”按上下结构自然长成“恳”。"
+      },
+      "g5v1-l10-c02-u6073-words-image:g5v1-l10-c02-u6073-words-image-2": {
+        "src": "/illustrations/meanings/m07.webp",
+        "label": "一代又一代",
+        "alt": "祖辈、父母和孩子三代人相聚"
+      },
+      "g5v1-l10-c02-u6073-words-image:g5v1-l10-c02-u6073-words-image-0": {
+        "src": "/illustrations/mnemonics-v2/g5-u515c.webp",
+        "label": "衣兜",
+        "alt": "贴身衣兜掏出深沉母爱；母亲从破旧的衣兜里掏出一卷揉得皱巴巴的毛票，毫不犹豫递给孩子买书 图中“兜”按独体结构自然长成“兜”。"
       }
     }
   },
@@ -81,12 +81,12 @@ export const characterMedia = {
     },
     "transcript": "牛郎筛干草时格外用心，给老牛吃的干草都筛得一点儿土也没有。筛这个动作像让材料经过有小孔的工具，把细土筛下去，把干草留在上面。认字时先看上方的竹字头，再把下面的师想成握着网筛做事的师傅。筛过的干草干净了，这个字也连上了牛郎体贴老牛的具体行动。",
     "practiceOptionVisuals": {
-      "g5v1-l10-c03-u7b5b-words-image:g5v1-l10-c03-u7b5b-words-image-2": {
+      "g5v1-l10-c03-u7b5b-words-image:g5v1-l10-c03-u7b5b-words-image-0": {
         "src": "/illustrations/meanings/m06.webp",
         "label": "背负、承载",
         "alt": "孩子把行囊稳稳背在背上"
       },
-      "g5v1-l10-c03-u7b5b-words-image:g5v1-l10-c03-u7b5b-words-image-0": {
+      "g5v1-l10-c03-u7b5b-words-image:g5v1-l10-c03-u7b5b-words-image-2": {
         "src": "/illustrations/mnemonics/m80.webp",
         "label": "供行人休息的地方",
         "alt": "山路旁供行人歇脚的亭子"
@@ -113,20 +113,20 @@ export const characterMedia = {
     },
     "transcript": "嫂子分家时对牛郎说，你要知道好歹，话里带着逼他接受安排的口气。好歹放在这里，是说该分得清好坏，也该知道怎样应对眼前的处境。歹可以整体看，上面一横像一道界线，下面的夕像弯下去的路。把好和歹放在两边比较，就能记住这个词写的是对好坏、是非的判断。",
     "practiceOptionVisuals": {
-      "g5v1-l10-c04-u6b79-words-image:g5v1-l10-c04-u6b79-words-image-1": {
-        "src": "/illustrations/mnemonics-v2/g5-u6b79.webp",
-        "label": "好歹",
-        "alt": "好歹指事情的好坏与结果；牛郎不管生活好歹都悉心照料老牛，老牛也成了他最知心的伙伴 图中“一”与“夕”按上下结构自然长成“歹”。"
-      },
-      "g5v1-l10-c04-u6b79-words-image:g5v1-l10-c04-u6b79-words-image-2": {
+      "g5v1-l10-c04-u6b79-words-image:g5v1-l10-c04-u6b79-words-image-0": {
         "src": "/illustrations/meanings/m05.webp",
         "label": "朗声诵读",
         "alt": "孩子面向同伴清楚地朗读"
       },
-      "g5v1-l10-c04-u6b79-words-image:g5v1-l10-c04-u6b79-words-image-0": {
+      "g5v1-l10-c04-u6b79-words-image:g5v1-l10-c04-u6b79-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u5acc.webp",
         "label": "嫌弃",
         "alt": "嫌弃表示觉得不合适或不愿接近；正如课文所赞叹，白鹭的身段增减一分都嫌不适宜，恰到好处 图中“女”与“兼”按左右结构自然长成“嫌”。"
+      },
+      "g5v1-l10-c04-u6b79-words-image:g5v1-l10-c04-u6b79-words-image-1": {
+        "src": "/illustrations/mnemonics-v2/g5-u6b79.webp",
+        "label": "好歹",
+        "alt": "好歹指事情的好坏与结果；牛郎不管生活好歹都悉心照料老牛，老牛也成了他最知心的伙伴 图中“一”与“夕”按上下结构自然长成“歹”。"
       }
     }
   },
@@ -145,17 +145,17 @@ export const characterMedia = {
     },
     "transcript": "分家时嫂子问牛郎稀罕不稀罕那辆车，牛郎回答车他不稀罕。这里的不稀罕，就是不看重、不想要，并非看见少见东西时的惊奇。罕的上部可以想成稀疏的网眼，下方的干像孤零零的晾杆。网眼稀、晾杆少，先帮我们记住少见的感觉，再回到课文里体会牛郎对那辆车毫不留恋。",
     "practiceOptionVisuals": {
+      "g5v1-l10-c05-u7f55-words-image:g5v1-l10-c05-u7f55-words-image-2": {
+        "src": "/illustrations/meanings/m05.webp",
+        "label": "朗声诵读",
+        "alt": "孩子面向同伴清楚地朗读"
+      },
       "g5v1-l10-c05-u7f55-words-image:g5v1-l10-c05-u7f55-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u7f55.webp",
         "label": "稀罕",
         "alt": "稀罕指稀奇少见；牛郎织女男耕女织、情深意重，过着令人羡慕的平静美好日子 图中“⺳”与“干”按上下结构自然长成“罕”。"
       },
       "g5v1-l10-c05-u7f55-words-image:g5v1-l10-c05-u7f55-words-image-0": {
-        "src": "/illustrations/meanings/m05.webp",
-        "label": "朗声诵读",
-        "alt": "孩子面向同伴清楚地朗读"
-      },
-      "g5v1-l10-c05-u7f55-words-image:g5v1-l10-c05-u7f55-words-image-2": {
         "src": "/illustrations/mnemonics/m130.webp",
         "label": "正见、看得正直",
         "alt": "孩子沿笔直竹尺瞄准远处标记"
@@ -177,17 +177,17 @@ export const characterMedia = {
     },
     "transcript": "织女擅长织布，梭子会牵着纬线在织机上来回穿行。梭是左右结构，左边是木字旁，右边可以想成梭舟带着线往返。木架、细线和飞快穿梭的工具一齐动了起来。梭子是织布时牵引纬线来回移动的工具。织女的手艺就在这来回穿线的动作中显出来了。",
     "practiceOptionVisuals": {
+      "g5v1-l10-c06-u68ad-words-image:g5v1-l10-c06-u68ad-words-image-0": {
+        "src": "/illustrations/meanings/m04.webp",
+        "label": "倚靠、凭借",
+        "alt": "行路的人稳稳倚靠一根手杖"
+      },
       "g5v1-l10-c06-u68ad-words-image:g5v1-l10-c06-u68ad-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u68ad.webp",
         "label": "梭子",
         "alt": "梭子是织布时牵引纬线的工具；织女手中的织布梭上下翻飞，织出了如晚霞般美丽的锦缎 图中“木”与“夋”按左右结构自然长成“梭”。"
       },
       "g5v1-l10-c06-u68ad-words-image:g5v1-l10-c06-u68ad-words-image-2": {
-        "src": "/illustrations/meanings/m04.webp",
-        "label": "倚靠、凭借",
-        "alt": "行路的人稳稳倚靠一根手杖"
-      },
-      "g5v1-l10-c06-u68ad-words-image:g5v1-l10-c06-u68ad-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u7738.webp",
         "label": "眼眸",
         "alt": "眼眸指清澈灵动的目光；小鸟眸子里闪烁的警惕慢慢化为信赖，见证了爱与尊重的力量 图中“目”与“牟”按左右结构自然长成“眸”。"
@@ -212,12 +212,12 @@ export const characterMedia = {
     },
     "transcript": "织女成天成夜被逼着织彩锦，一会儿也不能休息，她觉得这样的日子等于关在监狱里。监的下方像一块被围住的场地，上方几笔可以想成高栏和看守的视线。高栏围得紧，失去自由的感觉也跟着出来了。课文用监狱作比，让我们一下明白织女在天上受着怎样的约束。",
     "practiceOptionVisuals": {
-      "g5v1-l10-c07-u76d1-words-image:g5v1-l10-c07-u76d1-words-image-0": {
+      "g5v1-l10-c07-u76d1-words-image:g5v1-l10-c07-u76d1-words-image-2": {
         "src": "/illustrations/meanings/m06.webp",
         "label": "背负、承载",
         "alt": "孩子把行囊稳稳背在背上"
       },
-      "g5v1-l10-c07-u76d1-words-image:g5v1-l10-c07-u76d1-words-image-2": {
+      "g5v1-l10-c07-u76d1-words-image:g5v1-l10-c07-u76d1-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u9694.webp",
         "label": "间隔",
         "alt": "间隔指两地或两物的空间阻隔；搭石跨越了溪水的阻隔，默默传递着无私奉献的人间温情 图中“阝”与“鬲”按左右结构自然长成“隔”。"
@@ -245,20 +245,20 @@ export const characterMedia = {
     },
     "transcript": "织女说天上没有自由，天天织布的生活等于关在监狱里。狱的中间能找到言字旁，两边可以想成守住出入口的犬，三部分挨得很紧。出入口被牢牢守住，人物受约束的感觉就有了具体画面。把监和狱连起来读，课文中织女向往人间自由的心情也更容易体会。",
     "practiceOptionVisuals": {
-      "g5v1-l10-c08-u72f1-words-image:g5v1-l10-c08-u72f1-words-image-0": {
-        "src": "/illustrations/meanings/m07.webp",
-        "label": "一代又一代",
-        "alt": "祖辈、父母和孩子三代人相聚"
-      },
-      "g5v1-l10-c08-u72f1-words-image:g5v1-l10-c08-u72f1-words-image-2": {
-        "src": "/illustrations/mnemonics-v2/g5-u629b.webp",
-        "label": "抛开",
-        "alt": "抛开烦扰沉醉自然；漫步在鸟的天堂，一切尘世纷扰都被抛在脑后，唯余对自然的无限敬畏 图中“扌”与“九”与“力”按左右结构自然长成“抛”。"
-      },
       "g5v1-l10-c08-u72f1-words-image:g5v1-l10-c08-u72f1-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u72f1.webp",
         "label": "监狱",
         "alt": "监狱是关押囚徒的牢房；织女在天宫如同被困深宫牢狱，渴望飞向人间广阔的天地 图中“犭”与“讠”与“犬”按左右结构自然长成“狱”。"
+      },
+      "g5v1-l10-c08-u72f1-words-image:g5v1-l10-c08-u72f1-words-image-2": {
+        "src": "/illustrations/meanings/m07.webp",
+        "label": "一代又一代",
+        "alt": "祖辈、父母和孩子三代人相聚"
+      },
+      "g5v1-l10-c08-u72f1-words-image:g5v1-l10-c08-u72f1-words-image-0": {
+        "src": "/illustrations/mnemonics-v2/g5-u629b.webp",
+        "label": "抛开",
+        "alt": "抛开烦扰沉醉自然；漫步在鸟的天堂，一切尘世纷扰都被抛在脑后，唯余对自然的无限敬畏 图中“扌”与“九”与“力”按左右结构自然长成“抛”。"
       }
     }
   },
@@ -282,15 +282,15 @@ export const characterMedia = {
         "label": "朗声诵读",
         "alt": "孩子面向同伴清楚地朗读"
       },
-      "g5v1-l10-c09-u917f-words-image:g5v1-l10-c09-u917f-words-image-0": {
-        "src": "/illustrations/mnemonics-v2/g5-u978b.webp",
-        "label": "鞋子",
-        "alt": "鞋子是行走时的脚部保护；有了平稳的搭石，乡亲们走过溪流不用脱鞋挽裤，出行方便从容 图中“革”与“圭”按左右结构自然长成“鞋”。"
-      },
       "g5v1-l10-c09-u917f-words-image:g5v1-l10-c09-u917f-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u917f.webp",
         "label": "酿的葡萄酒",
         "alt": "酿造是用粮食果品制酒；牛郎织女用山葡萄酿出甘甜的果酒，品味着劳动创造的甜蜜 图中“酉”与“良”按左右结构自然长成“酿”。"
+      },
+      "g5v1-l10-c09-u917f-words-image:g5v1-l10-c09-u917f-words-image-0": {
+        "src": "/illustrations/mnemonics-v2/g5-u978b.webp",
+        "label": "鞋子",
+        "alt": "鞋子是行走时的脚部保护；有了平稳的搭石，乡亲们走过溪流不用脱鞋挽裤，出行方便从容 图中“革”与“圭”按左右结构自然长成“鞋”。"
       }
     }
   },
@@ -309,6 +309,11 @@ export const characterMedia = {
     },
     "transcript": "王母娘娘葡萄酒喝多了，靠在宝座上打瞌睡，仙女们才有机会溜出来。瞌的左边是目字旁，先让人看见一双发沉的眼睛，右边可以想成慢慢合上的盖子。眼皮像盖子一样往下落，人困得快要睡着了。这个瞌睡接着前面的葡萄酒，也推动了仙女们离开天宫的情节。",
     "practiceOptionVisuals": {
+      "g5v1-l10-c10-u778c-words-image:g5v1-l10-c10-u778c-words-image-1": {
+        "src": "/illustrations/mnemonics-v2/g5-u778c.webp",
+        "label": "瞌睡",
+        "alt": "瞌睡指困倦想要入眠；牛郎在草棚旁打瞌睡时，老牛忽然开口说话，开启了奇妙故事 图中“目”与“盍”按左右结构自然长成“瞌”。"
+      },
       "g5v1-l10-c10-u778c-words-image:g5v1-l10-c10-u778c-words-image-2": {
         "src": "/illustrations/meanings/m07.webp",
         "label": "一代又一代",
@@ -318,11 +323,6 @@ export const characterMedia = {
         "src": "/illustrations/mnemonics-v2/g5-u5178.webp",
         "label": "典礼",
         "alt": "典礼是隆重的礼仪仪式；相如要求秦王举行正式典礼才肯献璧，以此争取时间、维护国家尊严 图中“曲”与“八”按上下结构自然长成“典”。"
-      },
-      "g5v1-l10-c10-u778c-words-image:g5v1-l10-c10-u778c-words-image-1": {
-        "src": "/illustrations/mnemonics-v2/g5-u778c.webp",
-        "label": "瞌睡",
-        "alt": "瞌睡指困倦想要入眠；牛郎在草棚旁打瞌睡时，老牛忽然开口说话，开启了奇妙故事 图中“目”与“盍”按左右结构自然长成“瞌”。"
       }
     }
   },
@@ -346,12 +346,12 @@ export const characterMedia = {
         "label": "落在后边",
         "alt": "落在后边指跟不上队伍；仙女们在湖中戏水嬉戏，生怕落在后边，充满活泼的生机 图中“艹”与“洛”按上下结构自然长成“落”。"
       },
-      "g5v1-l10-c11-u843d-words-image:g5v1-l10-c11-u843d-words-image-0": {
+      "g5v1-l10-c11-u843d-words-image:g5v1-l10-c11-u843d-words-image-2": {
         "src": "/illustrations/meanings/m06.webp",
         "label": "背负、承载",
         "alt": "孩子把行囊稳稳背在背上"
       },
-      "g5v1-l10-c11-u843d-words-image:g5v1-l10-c11-u843d-words-image-2": {
+      "g5v1-l10-c11-u843d-words-image:g5v1-l10-c11-u843d-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u7f6a.webp",
         "label": "得罪",
         "alt": "得罪指言行冒犯他人；相如不惜得罪秦王也要保全美玉，将生死置之度外 图中“罒”与“非”按上下结构自然长成“罪”。"
@@ -373,17 +373,17 @@ export const characterMedia = {
     },
     "transcript": "牛郎和织女相识相爱，后来结婚组成温暖的家庭。婚是左右结构，左边是女字旁，右边可以想成黄昏时相会的人影和日轮。两个人在暮色中相会。结婚就是两个人依法建立夫妻关系。这段关系让牛郎、织女共同生活的故事继续展开。",
     "practiceOptionVisuals": {
+      "g5v1-l10-c12-u5a5a-words-image:g5v1-l10-c12-u5a5a-words-image-2": {
+        "src": "/illustrations/meanings/m04.webp",
+        "label": "倚靠、凭借",
+        "alt": "行路的人稳稳倚靠一根手杖"
+      },
       "g5v1-l10-c12-u5a5a-words-image:g5v1-l10-c12-u5a5a-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u5a5a.webp",
         "label": "结婚",
         "alt": "结婚是男女结为夫妻；牛郎与织女喜结良缘，用勤劳的双手把小家庭经营得温暖充实 图中“女”与“昏”按左右结构自然长成“婚”。"
       },
       "g5v1-l10-c12-u5a5a-words-image:g5v1-l10-c12-u5a5a-words-image-0": {
-        "src": "/illustrations/meanings/m04.webp",
-        "label": "倚靠、凭借",
-        "alt": "行路的人稳稳倚靠一根手杖"
-      },
-      "g5v1-l10-c12-u5a5a-words-image:g5v1-l10-c12-u5a5a-words-image-2": {
         "src": "/illustrations/mnemonics/m45.webp",
         "label": "绿色",
         "alt": "深浅不同的绿叶、绿风筝和绿围巾"
@@ -405,15 +405,15 @@ export const characterMedia = {
     },
     "transcript": "牛郎是故事里的年轻男子，也是整段民间故事的主要人物。郎是左右结构，左边可以想成青年和衣带，右边像家乡的土坡。青年牵着老牛走在乡间。读懂牛郎这个名字，也就找到了故事行动的一条主线。",
     "practiceOptionVisuals": {
-      "g5v1-l10-c13-u90ce-words-image:g5v1-l10-c13-u90ce-words-image-1": {
-        "src": "/illustrations/mnemonics-v2/g5-u90ce.webp",
-        "label": "牛郎",
-        "alt": "牛郎指勤劳善良的青年牛郎；他与老牛相依为命，在艰辛的生活中保持着朴实真诚的品质 图中“良”与“阝”按左右结构自然长成“郎”。"
-      },
       "g5v1-l10-c13-u90ce-words-image:g5v1-l10-c13-u90ce-words-image-2": {
         "src": "/illustrations/meanings/m04.webp",
         "label": "倚靠、凭借",
         "alt": "行路的人稳稳倚靠一根手杖"
+      },
+      "g5v1-l10-c13-u90ce-words-image:g5v1-l10-c13-u90ce-words-image-1": {
+        "src": "/illustrations/mnemonics-v2/g5-u90ce.webp",
+        "label": "牛郎",
+        "alt": "牛郎指勤劳善良的青年牛郎；他与老牛相依为命，在艰辛的生活中保持着朴实真诚的品质 图中“良”与“阝”按左右结构自然长成“郎”。"
       },
       "g5v1-l10-c13-u90ce-words-image:g5v1-l10-c13-u90ce-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u7eab.webp",
@@ -474,12 +474,12 @@ export const characterMedia = {
         "label": "车辆",
         "alt": "一辆是计算车辆的量词；牛郎分家时只得到一辆破车和一头老牛，却踏实开创出新生活 图中“车”与“两”按左右结构自然长成“辆”。"
       },
-      "g5v1-l10-c15-u8f86-words-image:g5v1-l10-c15-u8f86-words-image-2": {
+      "g5v1-l10-c15-u8f86-words-image:g5v1-l10-c15-u8f86-words-image-0": {
         "src": "/illustrations/meanings/m07.webp",
         "label": "一代又一代",
         "alt": "祖辈、父母和孩子三代人相聚"
       },
-      "g5v1-l10-c15-u8f86-words-image:g5v1-l10-c15-u8f86-words-image-0": {
+      "g5v1-l10-c15-u8f86-words-image:g5v1-l10-c15-u8f86-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u8d64.webp",
         "label": "赤道",
         "alt": "赤道是地球表面最长的纬线圈；光一秒钟能在地球赤道转七圈多，形象地说明了光速之快 图中“赤”按独体结构自然长成“赤”。"
@@ -501,11 +501,6 @@ export const characterMedia = {
     },
     "transcript": "湖边，仙女们把纱衣放在草地上，下水玩耍，牛郎拿走了织女的纱衣。后来他双手托着纱衣，等织女来取。纱的左边是绞丝旁，右边是少，可以想象少量细线轻轻飘起，织成薄薄的衣料。纱可以指细丝线，也可以指用细线织成的轻薄织物。课文里的纱衣是湖边的具体物件，也连起牛郎和织女相识的情节。",
     "practiceOptionVisuals": {
-      "g5v1-l10-c16-u7eb1-words-image:g5v1-l10-c16-u7eb1-words-image-1": {
-        "src": "/illustrations/mnemonics-v2/g5-u7eb1.webp",
-        "label": "纱衣",
-        "alt": "纱衣是用轻薄细纱制成的衣裳；织女织出绚丽如云锦的纱衣，将天宫点缀得格外美丽 图中“纟”与“少”按左右结构自然长成“纱”。"
-      },
       "g5v1-l10-c16-u7eb1-words-image:g5v1-l10-c16-u7eb1-words-image-2": {
         "src": "/illustrations/meanings/m05.webp",
         "label": "朗声诵读",
@@ -515,6 +510,11 @@ export const characterMedia = {
         "src": "/illustrations/mnemonics-v2/g5-u547b.webp",
         "label": "呻吟",
         "alt": "无病呻吟坚决摈弃；作者强调选择好书要有鉴别眼光，那些无病呻吟的文字绝不值得浪费时间 图中“口”与“申”按左右结构自然长成“呻”。"
+      },
+      "g5v1-l10-c16-u7eb1-words-image:g5v1-l10-c16-u7eb1-words-image-1": {
+        "src": "/illustrations/mnemonics-v2/g5-u7eb1.webp",
+        "label": "纱衣",
+        "alt": "纱衣是用轻薄细纱制成的衣裳；织女织出绚丽如云锦的纱衣，将天宫点缀得格外美丽 图中“纟”与“少”按左右结构自然长成“纱”。"
       }
     }
   },
@@ -534,20 +534,20 @@ export const characterMedia = {
     },
     "transcript": "牛郎和织女结婚后，织女成为牛郎的妻子。妻是上下结构，上面可以想成发簪穿过发髻，下面是女。人物梳好头发，妻的上下位置也跟着清楚了。妻子是婚姻关系中的女性一方，人物称呼要放回家庭关系理解。",
     "practiceOptionVisuals": {
-      "g5v1-l10-c17-u59bb-words-image:g5v1-l10-c17-u59bb-words-image-0": {
+      "g5v1-l10-c17-u59bb-words-image:g5v1-l10-c17-u59bb-words-image-2": {
         "src": "/illustrations/meanings/m03.webp",
         "label": "检查、验证",
         "alt": "孩子用放大镜仔细检查一件物品"
-      },
-      "g5v1-l10-c17-u59bb-words-image:g5v1-l10-c17-u59bb-words-image-2": {
-        "src": "/illustrations/mnemonics/m64.webp",
-        "label": "树叶",
-        "alt": "枝头和地面上许多形状清楚的树叶"
       },
       "g5v1-l10-c17-u59bb-words-image:g5v1-l10-c17-u59bb-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u59bb.webp",
         "label": "妻子",
         "alt": "妻子是结为连理的伴侣；织女愿留在人间做牛郎的妻子，追求真挚平等的幸福生活 图中“十”与“彐”与“女”按上下结构自然长成“妻”。"
+      },
+      "g5v1-l10-c17-u59bb-words-image:g5v1-l10-c17-u59bb-words-image-0": {
+        "src": "/illustrations/mnemonics/m64.webp",
+        "label": "树叶",
+        "alt": "枝头和地面上许多形状清楚的树叶"
       }
     }
   },
@@ -571,15 +571,15 @@ export const characterMedia = {
         "label": "检查、验证",
         "alt": "孩子用放大镜仔细检查一件物品"
       },
-      "g5v1-l10-c18-u8d9f-words-image:g5v1-l10-c18-u8d9f-words-image-2": {
-        "src": "/illustrations/mnemonics-v2/g5-u6bd5.webp",
-        "label": "毕业",
-        "alt": "毕业成才不负厚望；孩子顺利毕业走上工作岗位，终于实现了父亲托举一生的宏愿 图中“比”与“十”按上下结构自然长成“毕”。"
-      },
       "g5v1-l10-c18-u8d9f-words-image:g5v1-l10-c18-u8d9f-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u8d9f.webp",
         "label": "一趟",
         "alt": "一趟指数算行程的量词；众仙女难得来一趟人间碧莲池，由此成就了一段美好的良缘 图中“走”与“尚”按左下包围结构自然长成“趟”。"
+      },
+      "g5v1-l10-c18-u8d9f-words-image:g5v1-l10-c18-u8d9f-words-image-2": {
+        "src": "/illustrations/mnemonics-v2/g5-u6bd5.webp",
+        "label": "毕业",
+        "alt": "毕业成才不负厚望；孩子顺利毕业走上工作岗位，终于实现了父亲托举一生的宏愿 图中“比”与“十”按上下结构自然长成“毕”。"
       }
     }
   },
@@ -598,12 +598,12 @@ export const characterMedia = {
     },
     "transcript": "牛郎来到湖边，双手托着纱衣，等织女来取。托在这里是手掌向上承住东西的动作，纱衣轻，也要稳稳拿好。认字时先看左边的提手旁，再把右边想成被手掌承住的小衣包。手掌往上一托，牛郎拿着纱衣等待织女的画面就清楚了。",
     "practiceOptionVisuals": {
-      "g5v1-l10-c19-u6258-words-image:g5v1-l10-c19-u6258-words-image-2": {
+      "g5v1-l10-c19-u6258-words-image:g5v1-l10-c19-u6258-words-image-0": {
         "src": "/illustrations/meanings/m08.webp",
         "label": "整齐有序",
         "alt": "竹简按照次序整齐排列"
       },
-      "g5v1-l10-c19-u6258-words-image:g5v1-l10-c19-u6258-words-image-0": {
+      "g5v1-l10-c19-u6258-words-image:g5v1-l10-c19-u6258-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u778c.webp",
         "label": "瞌睡",
         "alt": "瞌睡指困倦想要入眠；牛郎在草棚旁打瞌睡时，老牛忽然开口说话，开启了奇妙故事 图中“目”与“盍”按左右结构自然长成“瞌”。"
@@ -635,12 +635,12 @@ export const characterMedia = {
         "label": "溜出来",
         "alt": "溜出指悄悄离开；仙女们趁王母不备溜出天宫来到凡间，展现了对自由人间的向往 图中“氵”与“留”按左右结构自然长成“溜”。"
       },
-      "g5v1-l10-c20-u6e9c-words-image:g5v1-l10-c20-u6e9c-words-image-0": {
+      "g5v1-l10-c20-u6e9c-words-image:g5v1-l10-c20-u6e9c-words-image-2": {
         "src": "/illustrations/meanings/m04.webp",
         "label": "倚靠、凭借",
         "alt": "行路的人稳稳倚靠一根手杖"
       },
-      "g5v1-l10-c20-u6e9c-words-image:g5v1-l10-c20-u6e9c-words-image-2": {
+      "g5v1-l10-c20-u6e9c-words-image:g5v1-l10-c20-u6e9c-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u8db4.webp",
         "label": "趴下",
         "alt": "趴下是身体放松地贴近桌面；小鸟趴在作者手边安心打盹，展现了信赖带来的无拘无束 图中“⻊”与“八”按左右结构自然长成“趴”。"
@@ -699,15 +699,15 @@ export const characterMedia = {
         "label": "背负、承载",
         "alt": "孩子把行囊稳稳背在背上"
       },
-      "g5v1-l10-c22-u6328-words-image:g5v1-l10-c22-u6328-words-image-0": {
-        "src": "/illustrations/mnemonics-v2/g5-u7965.webp",
-        "label": "慈祥",
-        "alt": "慈祥温和充满深情；母亲慈祥热切的赞扬保护了孩子的创作幼苗，赋予他前进的勇气 图中“礻”与“羊”按左右结构自然长成“祥”。"
-      },
       "g5v1-l10-c22-u6328-words-image:g5v1-l10-c22-u6328-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u6328.webp",
         "label": "挨挨耳朵",
         "alt": "挨挨耳朵是亲昵温柔的动作；织女亲昵地挨挨老牛的耳朵，感激老牛在人间的牵线搭桥 图中“扌”与“矣”按左右结构自然长成“挨”。"
+      },
+      "g5v1-l10-c22-u6328-words-image:g5v1-l10-c22-u6328-words-image-0": {
+        "src": "/illustrations/mnemonics-v2/g5-u7965.webp",
+        "label": "慈祥",
+        "alt": "慈祥温和充满深情；母亲慈祥热切的赞扬保护了孩子的创作幼苗，赋予他前进的勇气 图中“礻”与“羊”按左右结构自然长成“祥”。"
       }
     }
   }

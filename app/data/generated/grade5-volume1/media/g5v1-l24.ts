@@ -22,12 +22,12 @@ export const characterMedia = {
         "label": "羞耻",
         "alt": "不耻下问虚心求教；孔子教导我们向不如自己的人请教并不可耻，唯有虚心好学才能不断长进 图中“耳”与“止”按左右结构自然长成“耻”。"
       },
-      "g5v1-l24-c01-u803b-words-image:g5v1-l24-c01-u803b-words-image-0": {
+      "g5v1-l24-c01-u803b-words-image:g5v1-l24-c01-u803b-words-image-2": {
         "src": "/illustrations/meanings/m04.webp",
         "label": "倚靠、凭借",
         "alt": "行路的人稳稳倚靠一根手杖"
       },
-      "g5v1-l24-c01-u803b-words-image:g5v1-l24-c01-u803b-words-image-2": {
+      "g5v1-l24-c01-u803b-words-image:g5v1-l24-c01-u803b-words-image-0": {
         "src": "/illustrations/mnemonics/m94.webp",
         "label": "兵器、武器",
         "alt": "博物馆中陈列的古代兵器"
@@ -49,6 +49,11 @@ export const characterMedia = {
     },
     "transcript": "识，默而识之的识，读第四声。这里的识不读认识的第二声，表示默默记在心里。它是左右结构，左边的言字旁代表知识言语，右边的“只”提示专一，专心将言语记于心中即为识。孔子说“默而识之”，教导我们读书不仅要读懂领会，更要默默积累、内化于心。",
     "practiceOptionVisuals": {
+      "g5v1-l24-c02-u8bc6-words-image:g5v1-l24-c02-u8bc6-words-image-1": {
+        "src": "/illustrations/mnemonics-v2/g5-u8bc6.webp",
+        "label": "默而识之",
+        "alt": "默而识之记在心中；读书不仅要理解领会，更要默默积累记在心中，做到融会贯通 图中“讠”与“只”按左右结构自然长成“识”。"
+      },
       "g5v1-l24-c02-u8bc6-words-image:g5v1-l24-c02-u8bc6-words-image-2": {
         "src": "/illustrations/meanings/m07.webp",
         "label": "一代又一代",
@@ -58,11 +63,6 @@ export const characterMedia = {
         "src": "/illustrations/mnemonics-v2/g5-u89c8.webp",
         "label": "游览",
         "alt": "游览观赏令人心旷神怡；漫步在园中游览，不仅能饱览江南名胜，更能体验异国情调 图中“〢”与“丿”与“一”与“丶”与“见”按上下结构自然长成“览”。"
-      },
-      "g5v1-l24-c02-u8bc6-words-image:g5v1-l24-c02-u8bc6-words-image-1": {
-        "src": "/illustrations/mnemonics-v2/g5-u8bc6.webp",
-        "label": "默而识之",
-        "alt": "默而识之记在心中；读书不仅要理解领会，更要默默积累记在心中，做到融会贯通 图中“讠”与“只”按左右结构自然长成“识”。"
       }
     }
   },
@@ -84,20 +84,20 @@ export const characterMedia = {
     },
     "transcript": "就寝的寝，读第三声，就寝就是上床睡觉。寝是上下结构，上面宝盖头像屋顶，下面笔画较密，要一层层收稳。想一想，已经到了就寝时候，人却还强撑着读书，眼皮发沉，心也跑远了。朱熹说读书要心到、眼到、口到，困得睁不开眼时，这三个到就很难守住。该休息时先睡好，醒来再专心读，才更容易把书读进心里。",
     "practiceOptionVisuals": {
-      "g5v1-l24-c03-u5bdd-words-image:g5v1-l24-c03-u5bdd-words-image-0": {
-        "src": "/illustrations/meanings/m04.webp",
-        "label": "倚靠、凭借",
-        "alt": "行路的人稳稳倚靠一根手杖"
-      },
-      "g5v1-l24-c03-u5bdd-words-image:g5v1-l24-c03-u5bdd-words-image-2": {
-        "src": "/illustrations/mnemonics-v2/g5-u9893.webp",
-        "label": "颓败",
-        "alt": "颓败破旧的劳作车间；在极其艰苦狭窄的车间里，母亲为了养家糊口日复一日辛苦劳作 图中“秃”与“页”按左右结构自然长成“颓”。"
-      },
       "g5v1-l24-c03-u5bdd-words-image:g5v1-l24-c03-u5bdd-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u5bdd.webp",
         "label": "就寝",
         "alt": "废寝忘食专心致志；古人读书专心致志甚至忘记睡眠休息，体现了求知若渴的刻苦精神 图中“宀”与“丬”与“彐”与“冖”与“又”按上下结构自然长成“寝”。"
+      },
+      "g5v1-l24-c03-u5bdd-words-image:g5v1-l24-c03-u5bdd-words-image-2": {
+        "src": "/illustrations/meanings/m04.webp",
+        "label": "倚靠、凭借",
+        "alt": "行路的人稳稳倚靠一根手杖"
+      },
+      "g5v1-l24-c03-u5bdd-words-image:g5v1-l24-c03-u5bdd-words-image-0": {
+        "src": "/illustrations/mnemonics-v2/g5-u9893.webp",
+        "label": "颓败",
+        "alt": "颓败破旧的劳作车间；在极其艰苦狭窄的车间里，母亲为了养家糊口日复一日辛苦劳作 图中“秃”与“页”按左右结构自然长成“颓”。"
       }
     }
   },
@@ -116,15 +116,15 @@ export const characterMedia = {
     },
     "transcript": "文言短句末尾常会遇到矣，读第三声。矣是上下结构，上部小，下部像展开的箭矢，口播时只按上下位置记。看这个字时，可以想象一句话走到终点，轻轻落下一个句号。矣是文言语气词，常表示肯定、完成或感叹。文中的“心既到矣”，说明心已经专注了，读到矣要听出句意在这里落稳。",
     "practiceOptionVisuals": {
-      "g5v1-l24-c04-u77e3-words-image:g5v1-l24-c04-u77e3-words-image-1": {
-        "src": "/illustrations/mnemonics-v2/g5-u77e3.webp",
-        "label": "矣",
-        "alt": "学而不厌诲人不倦矣；朱熹与孔子的读书心法跨越千年，至今依然指引着求学者的方向 图中“厶”与“矢”按上下结构自然长成“矣”。"
-      },
       "g5v1-l24-c04-u77e3-words-image:g5v1-l24-c04-u77e3-words-image-2": {
         "src": "/illustrations/meanings/m06.webp",
         "label": "背负、承载",
         "alt": "孩子把行囊稳稳背在背上"
+      },
+      "g5v1-l24-c04-u77e3-words-image:g5v1-l24-c04-u77e3-words-image-1": {
+        "src": "/illustrations/mnemonics-v2/g5-u77e3.webp",
+        "label": "矣",
+        "alt": "学而不厌诲人不倦矣；朱熹与孔子的读书心法跨越千年，至今依然指引着求学者的方向 图中“厶”与“矢”按上下结构自然长成“矣”。"
       },
       "g5v1-l24-c04-u77e3-words-image:g5v1-l24-c04-u77e3-words-image-0": {
         "src": "/illustrations/mnemonics/m127.webp",
@@ -148,11 +148,6 @@ export const characterMedia = {
     },
     "transcript": "读“眼口岂不到乎”，岂读第三声。岂是上下结构，上面山字头，下面是自己靠拢的己，写时上宽下窄。可以想象有人站在山前反问，心已经到了，眼和口怎么会不到呢。岂能带有反问语气，相当于怎么能、难道能。作者用这样的反问强调读书时心到最重要，也让语气更有力量。",
     "practiceOptionVisuals": {
-      "g5v1-l24-c05-u5c82-words-image:g5v1-l24-c05-u5c82-words-image-1": {
-        "src": "/illustrations/mnemonics-v2/g5-u5c82.webp",
-        "label": "岂能",
-        "alt": "岂能荒废大好光阴；古人告诫读书切莫三心二意，岂能轻易辜负宝贵的青春年华 图中“山”与“己”按上下结构自然长成“岂”。"
-      },
       "g5v1-l24-c05-u5c82-words-image:g5v1-l24-c05-u5c82-words-image-2": {
         "src": "/illustrations/meanings/m03.webp",
         "label": "检查、验证",
@@ -162,6 +157,11 @@ export const characterMedia = {
         "src": "/illustrations/mnemonics/m95.webp",
         "label": "厕所",
         "alt": "整洁明亮的儿童公共卫生间"
+      },
+      "g5v1-l24-c05-u5c82-words-image:g5v1-l24-c05-u5c82-words-image-1": {
+        "src": "/illustrations/mnemonics-v2/g5-u5c82.webp",
+        "label": "岂能",
+        "alt": "岂能荒废大好光阴；古人告诫读书切莫三心二意，岂能轻易辜负宝贵的青春年华 图中“山”与“己”按上下结构自然长成“岂”。"
       }
     }
   },
@@ -217,12 +217,12 @@ export const characterMedia = {
         "label": "所谓",
         "alt": "余尝谓读书有三到；朱熹认为读书必须做到心到、眼到、口到，其中尤以心到最为关键 图中“讠”与“胃”按左右结构自然长成“谓”。"
       },
-      "g5v1-l24-c07-u8c13-words-image:g5v1-l24-c07-u8c13-words-image-2": {
+      "g5v1-l24-c07-u8c13-words-image:g5v1-l24-c07-u8c13-words-image-0": {
         "src": "/illustrations/meanings/m04.webp",
         "label": "倚靠、凭借",
         "alt": "行路的人稳稳倚靠一根手杖"
       },
-      "g5v1-l24-c07-u8c13-words-image:g5v1-l24-c07-u8c13-words-image-0": {
+      "g5v1-l24-c07-u8c13-words-image:g5v1-l24-c07-u8c13-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u79c0.webp",
         "label": "清秀",
         "alt": "面容清秀惹人怜爱；松鼠玲珑的小面孔配上清秀机灵的目光，显得格外聪明活泼 图中“禾”与“乃”按上下结构自然长成“秀”。"

@@ -19,15 +19,15 @@ export const characterMedia = {
     },
     "transcript": "敌人发动侵略，冀中人民就钻进地道保护家乡。先看“侵”的左边，一个单人旁站在这里，右边那些折笔可以想成越过界线的脚步，连手也伸了进来。看到这种硬闯的动作，就知道来者侵犯了别人的地方和权益。课文正是从“侵略”写起，接着讲人民怎样用智慧守住家园。",
     "practiceOptionVisuals": {
-      "g5v1-l08-c01-u4fb5-words-image:g5v1-l08-c01-u4fb5-words-image-1": {
-        "src": "/illustrations/mnemonics-v2/g5-u4fb5.webp",
-        "label": "侵略",
-        "alt": "侵略指强行进犯侵占别国领土；面对敌人的疯狂侵略，冀中人民展开了顽强的抗争 图中“亻”与“彐”与“冖”与“又”按左右结构自然长成“侵”。"
-      },
       "g5v1-l08-c01-u4fb5-words-image:g5v1-l08-c01-u4fb5-words-image-2": {
         "src": "/illustrations/meanings/m04.webp",
         "label": "倚靠、凭借",
         "alt": "行路的人稳稳倚靠一根手杖"
+      },
+      "g5v1-l08-c01-u4fb5-words-image:g5v1-l08-c01-u4fb5-words-image-1": {
+        "src": "/illustrations/mnemonics-v2/g5-u4fb5.webp",
+        "label": "侵略",
+        "alt": "侵略指强行进犯侵占别国领土；面对敌人的疯狂侵略，冀中人民展开了顽强的抗争 图中“亻”与“彐”与“冖”与“又”按左右结构自然长成“侵”。"
       },
       "g5v1-l08-c01-u4fb5-words-image:g5v1-l08-c01-u4fb5-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u5bb4.webp",
@@ -51,6 +51,11 @@ export const characterMedia = {
     },
     "transcript": "略，侵略的略，读第四声。它是左右结构，左边是一块块纵横的田地，右边的“各”像外来强盗闯入各个村庄的脚步，左右组合成略。侵略指用武力强行进犯侵占别国领土。课文写面对日本侵略者的疯狂扫荡，冀中人民在地底下修筑起神奇的地道网络，坚强地保卫了家园。",
     "practiceOptionVisuals": {
+      "g5v1-l08-c02-u7565-words-image:g5v1-l08-c02-u7565-words-image-1": {
+        "src": "/illustrations/mnemonics-v2/g5-u7565.webp",
+        "label": "侵略",
+        "alt": "侵略战争给家乡带来了深重苦难；冀中军民不屈不挠，用智慧建立起地下钢铁防线 图中“田”与“各”按左右结构自然长成“略”。"
+      },
       "g5v1-l08-c02-u7565-words-image:g5v1-l08-c02-u7565-words-image-0": {
         "src": "/illustrations/meanings/m07.webp",
         "label": "一代又一代",
@@ -60,11 +65,6 @@ export const characterMedia = {
         "src": "/illustrations/mnemonics-v2/g5-u8003.webp",
         "label": "考试",
         "alt": "报考师范求索前途；父亲摇着小船一路护送孩子进城赶考，小舟载着希望破浪向前 图中“耂”与“丂”按左上包围结构自然长成“考”。"
-      },
-      "g5v1-l08-c02-u7565-words-image:g5v1-l08-c02-u7565-words-image-1": {
-        "src": "/illustrations/mnemonics-v2/g5-u7565.webp",
-        "label": "侵略",
-        "alt": "侵略战争给家乡带来了深重苦难；冀中军民不屈不挠，用智慧建立起地下钢铁防线 图中“田”与“各”按左右结构自然长成“略”。"
       }
     }
   },
@@ -83,17 +83,17 @@ export const characterMedia = {
     },
     "transcript": "地道战里，堡垒是用来防守的坚固工事。垒是上下结构，上面像石块一层又一层叠起，下面是一方厚实的土地。想象大家把材料稳稳垒高，筑出一道牢固屏障。冀中人民把地道变成地下堡垒，能藏、能守，也能联络。",
     "practiceOptionVisuals": {
+      "g5v1-l08-c03-u5792-words-image:g5v1-l08-c03-u5792-words-image-0": {
+        "src": "/illustrations/meanings/m06.webp",
+        "label": "背负、承载",
+        "alt": "孩子把行囊稳稳背在背上"
+      },
       "g5v1-l08-c03-u5792-words-image:g5v1-l08-c03-u5792-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u5792.webp",
         "label": "堡垒",
         "alt": "堡垒是坚固的防御建筑；纵横交错的地道成了保护人民生命、打击侵略者的地下堡垒 图中“厽”与“土”按上下结构自然长成“垒”。"
       },
       "g5v1-l08-c03-u5792-words-image:g5v1-l08-c03-u5792-words-image-2": {
-        "src": "/illustrations/meanings/m06.webp",
-        "label": "背负、承载",
-        "alt": "孩子把行囊稳稳背在背上"
-      },
-      "g5v1-l08-c03-u5792-words-image:g5v1-l08-c03-u5792-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u853d.webp",
         "label": "隐蔽",
         "alt": "隐蔽指掩盖藏匿不被发现；巧妙隐蔽的地道口让敌人防不胜防，确保了乡亲们的安全 图中“艹”与“敝”按上下结构自然长成“蔽”。"
@@ -115,6 +115,11 @@ export const characterMedia = {
     },
     "transcript": "任丘这个地名里，第一个字读作仁，和任务的任读音不同。认字时先找左边的单人旁，再把右边的壬想成带着横梁和立柱的路牌。人站在路牌旁确认地点，任丘的任就有了清楚的落脚处。课文点出河北任丘，是把冀中地道战放进真实的地方来讲。",
     "practiceOptionVisuals": {
+      "g5v1-l08-c04-u4efb-words-image:g5v1-l08-c04-u4efb-words-image-1": {
+        "src": "/illustrations/mnemonics-v2/g5-u4efb.webp",
+        "label": "任丘",
+        "alt": "任丘是河北省的地名；任丘等地的平原上遍布着神奇的地道网络，连通着村村落落 图中“亻”与“壬”按左右结构自然长成“任”。"
+      },
       "g5v1-l08-c04-u4efb-words-image:g5v1-l08-c04-u4efb-words-image-2": {
         "src": "/illustrations/meanings/m03.webp",
         "label": "检查、验证",
@@ -124,11 +129,6 @@ export const characterMedia = {
         "src": "/illustrations/mnemonics-v2/g5-u68a2.webp",
         "label": "树梢",
         "alt": "树梢飞鸣百鸟欢腾；无数飞鸟站在高高的树梢上引吭高歌，展现了人与自然和谐共生的美好画卷 图中“木”与“肖”按左右结构自然长成“梢”。"
-      },
-      "g5v1-l08-c04-u4efb-words-image:g5v1-l08-c04-u4efb-words-image-1": {
-        "src": "/illustrations/mnemonics-v2/g5-u4efb.webp",
-        "label": "任丘",
-        "alt": "任丘是河北省的地名；任丘等地的平原上遍布着神奇的地道网络，连通着村村落落 图中“亻”与“壬”按左右结构自然长成“任”。"
       }
     }
   },
@@ -179,20 +179,20 @@ export const characterMedia = {
     },
     "transcript": "地道大洞四壁的小洞，有的专门用来搁东西。写搁时，左边的提手旁接住放东西的动作，右边是阁，门字框里还要看清各自的各。可以想象一只手把物品送进门内的小格子，东西便在那里暂时放好。回到课文的地下生活空间，这个搁字就有了具体用处。",
     "practiceOptionVisuals": {
-      "g5v1-l08-c06-u6401-words-image:g5v1-l08-c06-u6401-words-image-0": {
-        "src": "/illustrations/meanings/m05.webp",
-        "label": "朗声诵读",
-        "alt": "孩子面向同伴清楚地朗读"
-      },
-      "g5v1-l08-c06-u6401-words-image:g5v1-l08-c06-u6401-words-image-2": {
-        "src": "/illustrations/mnemonics-v2/g5-u6bc1.webp",
-        "label": "毁灭",
-        "alt": "毁灭是彻底破坏不复存在；圆明园惨遭毁灭的历史警示我们，落后就要挨打，唯有自强不息 图中“臼”与“工”与“殳”按左右结构自然长成“毁”。"
-      },
       "g5v1-l08-c06-u6401-words-image:g5v1-l08-c06-u6401-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u6401.webp",
         "label": "搁东西",
         "alt": "搁置指放置摆放物资；地道深处开辟出专门搁放粮食与工具的储藏洞，保障了长期坚守 图中“扌”与“阁”按左右结构自然长成“搁”。"
+      },
+      "g5v1-l08-c06-u6401-words-image:g5v1-l08-c06-u6401-words-image-2": {
+        "src": "/illustrations/meanings/m05.webp",
+        "label": "朗声诵读",
+        "alt": "孩子面向同伴清楚地朗读"
+      },
+      "g5v1-l08-c06-u6401-words-image:g5v1-l08-c06-u6401-words-image-0": {
+        "src": "/illustrations/mnemonics-v2/g5-u6bc1.webp",
+        "label": "毁灭",
+        "alt": "毁灭是彻底破坏不复存在；圆明园惨遭毁灭的历史警示我们，落后就要挨打，唯有自强不息 图中“臼”与“工”与“殳”按左右结构自然长成“毁”。"
       }
     }
   },
@@ -211,6 +211,11 @@ export const characterMedia = {
     },
     "transcript": "地道旁边有时会挖陷坑，用来阻挡闯入的敌人。陷是左右结构，左边像高低土坡，右边可以想成一个人落进低处。人物举手提醒大家避开坑口。陷坑就是地面向下凹、容易让人或物掉进去的坑。",
     "practiceOptionVisuals": {
+      "g5v1-l08-c07-u9677-words-image:g5v1-l08-c07-u9677-words-image-1": {
+        "src": "/illustrations/mnemonics/m124.webp",
+        "label": "掉进、沉下",
+        "alt": "孩子的雨靴轻轻陷进泥地洼处"
+      },
       "g5v1-l08-c07-u9677-words-image:g5v1-l08-c07-u9677-words-image-0": {
         "src": "/illustrations/meanings/m08.webp",
         "label": "整齐有序",
@@ -220,11 +225,6 @@ export const characterMedia = {
         "src": "/illustrations/mnemonics-v2/g5-u8695.webp",
         "label": "蚕茧",
         "alt": "养蚕缫丝维持生计；全家人日夜照料春蚕，辛勤劳动换来的每一分钱都倾注在孩子的学业上 图中“天”与“虫”按上下结构自然长成“蚕”。"
-      },
-      "g5v1-l08-c07-u9677-words-image:g5v1-l08-c07-u9677-words-image-1": {
-        "src": "/illustrations/mnemonics/m124.webp",
-        "label": "掉进、沉下",
-        "alt": "孩子的雨靴轻轻陷进泥地洼处"
       }
     }
   },
@@ -275,17 +275,17 @@ export const characterMedia = {
     },
     "transcript": "走进地道，拐弯处常能遇到岔道。岔是上下结构，上面像一条路从中间分开，下面是起伏的山形。两条山路从同一点伸向不同方向。岔道就是从一条路分出去的另一条路，能让敌人难辨死道和活道。",
     "practiceOptionVisuals": {
+      "g5v1-l08-c09-u5c94-words-image:g5v1-l08-c09-u5c94-words-image-0": {
+        "src": "/illustrations/meanings/m08.webp",
+        "label": "整齐有序",
+        "alt": "竹简按照次序整齐排列"
+      },
       "g5v1-l08-c09-u5c94-words-image:g5v1-l08-c09-u5c94-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u5c94.webp",
         "label": "岔道",
         "alt": "岔道是分岔交错的通道；纵横交织的岔道如同地下迷宫，使敌人晕头转向、寸步难行 图中“分”与“山”按上下结构自然长成“岔”。"
       },
       "g5v1-l08-c09-u5c94-words-image:g5v1-l08-c09-u5c94-words-image-2": {
-        "src": "/illustrations/meanings/m08.webp",
-        "label": "整齐有序",
-        "alt": "竹简按照次序整齐排列"
-      },
-      "g5v1-l08-c09-u5c94-words-image:g5v1-l08-c09-u5c94-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u8146.webp",
         "label": "腼腆",
         "alt": "腼腆神态真实生动；孩子渴望得到长辈的认可，在鼓励与期待中迈出了创作的第一步 图中“月”与“典”按左右结构自然长成“腆”。"
@@ -339,12 +339,12 @@ export const characterMedia = {
     },
     "transcript": "堡，堡垒的堡，读第三声。它是上下结构，上面的“保”像守卫严密的防守高塔，下面的“土”是厚实稳固的地基，高塔筑于厚土之上即为堡。堡垒是用于防御的坚固军事建筑。课文把地道称作粉碎敌人进犯的坚强堡垒，展现了冀中人民保卫家乡的智慧与力量。",
     "practiceOptionVisuals": {
-      "g5v1-l08-c11-u5821-words-image:g5v1-l08-c11-u5821-words-image-2": {
+      "g5v1-l08-c11-u5821-words-image:g5v1-l08-c11-u5821-words-image-0": {
         "src": "/illustrations/meanings/m06.webp",
         "label": "背负、承载",
         "alt": "孩子把行囊稳稳背在背上"
       },
-      "g5v1-l08-c11-u5821-words-image:g5v1-l08-c11-u5821-words-image-0": {
+      "g5v1-l08-c11-u5821-words-image:g5v1-l08-c11-u5821-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u77ee.webp",
         "label": "矮小",
         "alt": "矮小表示高度较低；花生的果实矮矮地埋在地底，虽不张扬，却有默默奉献的真价值 图中“矢”与“委”按左右结构自然长成“矮”。"
@@ -376,15 +376,15 @@ export const characterMedia = {
         "label": "一代又一代",
         "alt": "祖辈、父母和孩子三代人相聚"
       },
-      "g5v1-l08-c12-u515a-words-image:g5v1-l08-c12-u515a-words-image-2": {
-        "src": "/illustrations/mnemonics/m50.webp",
-        "label": "母亲或与母亲一辈的女子",
-        "alt": "年长女性温柔地为孩子系好围巾"
-      },
       "g5v1-l08-c12-u515a-words-image:g5v1-l08-c12-u515a-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u515a.webp",
         "label": "党员",
         "alt": "党员是带领群众坚决斗争的先锋；在党组织的坚强领导下，冀中地道战发挥了无穷威力 图中“龸”与“兄”按穿插结构自然长成“党”。"
+      },
+      "g5v1-l08-c12-u515a-words-image:g5v1-l08-c12-u515a-words-image-2": {
+        "src": "/illustrations/mnemonics/m50.webp",
+        "label": "母亲或与母亲一辈的女子",
+        "alt": "年长女性温柔地为孩子系好围巾"
       }
     }
   },
@@ -403,6 +403,11 @@ export const characterMedia = {
     },
     "transcript": "妨，妨碍的妨，读第二声。它是左右结构，左边是女字旁，右边的“方”提示读音与方向。看图时，左边人物照料庄稼，右边方正木架立在一旁，左右组合成妨。妨碍就是阻碍或影响，使事情不能顺利进行。课文里敌人修筑工事企图妨碍交通，冀中军民则用神奇地道保卫了联络。",
     "practiceOptionVisuals": {
+      "g5v1-l08-c13-u59a8-words-image:g5v1-l08-c13-u59a8-words-image-1": {
+        "src": "/illustrations/mnemonics/m98.webp",
+        "label": "伤害、损害",
+        "alt": "受损的幼苗与得到保护的幼苗形成对比"
+      },
       "g5v1-l08-c13-u59a8-words-image:g5v1-l08-c13-u59a8-words-image-2": {
         "src": "/illustrations/meanings/m05.webp",
         "label": "朗声诵读",
@@ -412,11 +417,6 @@ export const characterMedia = {
         "src": "/illustrations/mnemonics-v2/g5-u732e.webp",
         "label": "献上",
         "alt": "献上是恭敬地呈奉礼品；秦王本想坐收相如献上的宝玉，却未料到对方一身傲骨不可动摇 图中“南”与“犬”按左右结构自然长成“献”。"
-      },
-      "g5v1-l08-c13-u59a8-words-image:g5v1-l08-c13-u59a8-words-image-1": {
-        "src": "/illustrations/mnemonics/m98.webp",
-        "label": "伤害、损害",
-        "alt": "受损的幼苗与得到保护的幼苗形成对比"
       }
     }
   },
@@ -435,11 +435,6 @@ export const characterMedia = {
     },
     "transcript": "敌人来了，人们钻进地道隐蔽起来，地面上很难发现。蔽是上下结构，上面的草字头像一层茂密草叶，下面可以想成展开的遮网和布幕。草叶和布幕把目标遮住。隐蔽就是借助遮挡把人或物藏起来。",
     "practiceOptionVisuals": {
-      "g5v1-l08-c14-u853d-words-image:g5v1-l08-c14-u853d-words-image-1": {
-        "src": "/illustrations/mnemonics-v2/g5-u853d.webp",
-        "label": "隐蔽",
-        "alt": "隐蔽指掩盖藏匿不被发现；巧妙隐蔽的地道口让敌人防不胜防，确保了乡亲们的安全 图中“艹”与“敝”按上下结构自然长成“蔽”。"
-      },
       "g5v1-l08-c14-u853d-words-image:g5v1-l08-c14-u853d-words-image-0": {
         "src": "/illustrations/meanings/m07.webp",
         "label": "一代又一代",
@@ -449,6 +444,11 @@ export const characterMedia = {
         "src": "/illustrations/mnemonics/m117.webp",
         "label": "破碎成小块",
         "alt": "陶片碎成许多小块并被仔细收拢"
+      },
+      "g5v1-l08-c14-u853d-words-image:g5v1-l08-c14-u853d-words-image-1": {
+        "src": "/illustrations/mnemonics-v2/g5-u853d.webp",
+        "label": "隐蔽",
+        "alt": "隐蔽指掩盖藏匿不被发现；巧妙隐蔽的地道口让敌人防不胜防，确保了乡亲们的安全 图中“艹”与“敝”按上下结构自然长成“蔽”。"
       }
     }
   },
@@ -495,17 +495,22 @@ export const characterMedia = {
     },
     "transcript": "冀中平原地势开阔，村庄下面挖着横竖相连的地道。平是独体字，可以把横画看成平直的秤梁，中间的竖画像稳稳立住的支点。两边保持一样高。平原就是地势宽广、起伏很小的大片土地。地道能在平原地下纵横相连，也和这里的地势有关。",
     "practiceOptionVisuals": {
-      "019f5658-69c7-7019-a8d5-62983081eafe:019f5658-69c7-7019-a8d5-62983081eafe-0": {
+      "019f5658-69c7-7019-a8d5-62983081eafe:019f5658-69c7-7019-a8d5-62983081eafe-1": {
+        "src": "/illustrations/mnemonics/m85.webp",
+        "label": "语气平和舒顺",
+        "alt": "两个孩子平静友好地交谈"
+      },
+      "019f5658-69c7-7019-a8d5-62983081eafe:019f5658-69c7-7019-a8d5-62983081eafe-2": {
         "src": "/illustrations/meanings/m06.webp",
         "label": "背负、承载",
         "alt": "孩子把行囊稳稳背在背上"
       },
-      "019f5658-69c7-7019-a8d5-62983081eafe:019f5658-69c7-7019-a8d5-62983081eafe-2": {
+      "019f5658-69c7-7019-a8d5-62983081eafe:019f5658-69c7-7019-a8d5-62983081eafe-0": {
         "src": "/illustrations/mnemonics-v2/g5-u778c.webp",
         "label": "瞌睡",
         "alt": "瞌睡指困倦想要入眠；牛郎在草棚旁打瞌睡时，老牛忽然开口说话，开启了奇妙故事 图中“目”与“盍”按左右结构自然长成“瞌”。"
       },
-      "019f5658-69c7-7019-a8d5-62983081eafe:019f5658-69c7-7019-a8d5-62983081eafe-1": {
+      "019f5658-69c7-7019-a8d5-6b463b575640:019f5658-69c7-7019-a8d5-6b463b575640-1": {
         "src": "/illustrations/mnemonics/m85.webp",
         "label": "语气平和舒顺",
         "alt": "两个孩子平静友好地交谈"
@@ -519,11 +524,6 @@ export const characterMedia = {
         "src": "/illustrations/mnemonics-v2/g5-u679a.webp",
         "label": "一枚",
         "alt": "枚是用于计算细长物件的量词；一枚火箭携带着巨大的能量冲向太空，展现了科技的力量 图中“木”与“⺙”按左右结构自然长成“枚”。"
-      },
-      "019f5658-69c7-7019-a8d5-6b463b575640:019f5658-69c7-7019-a8d5-6b463b575640-1": {
-        "src": "/illustrations/mnemonics/m85.webp",
-        "label": "语气平和舒顺",
-        "alt": "两个孩子平静友好地交谈"
       }
     }
   },
@@ -729,15 +729,15 @@ export const characterMedia = {
         "label": "讲述",
         "alt": "讲述心得言辞诚恳；冰心先生深情讲述自己数十年的读书经历，向青少年传授宝贵的选书智慧 图中“辶”与“术”按左下包围结构自然长成“述”。"
       },
-      "019f5658-69cc-72cc-86ad-456ae7821710:019f5658-69cc-72cc-86ad-456ae7821710-2": {
-        "src": "/illustrations/meanings/m08.webp",
-        "label": "整齐有序",
-        "alt": "竹简按照次序整齐排列"
-      },
       "019f5658-69cc-72cc-86ad-456ae7821710:019f5658-69cc-72cc-86ad-456ae7821710-0": {
         "src": "/illustrations/mnemonics/m38.webp",
         "label": "开阔",
         "alt": "孩子面向无边草原和辽阔天空"
+      },
+      "019f5658-69cc-72cc-86ad-456ae7821710:019f5658-69cc-72cc-86ad-456ae7821710-2": {
+        "src": "/illustrations/meanings/m08.webp",
+        "label": "整齐有序",
+        "alt": "竹简按照次序整齐排列"
       },
       "019f5658-69cc-72cc-86ad-456ae7821710:019f5658-69cc-72cc-86ad-456ae7821710-1": {
         "src": "/illustrations/mnemonics/m90.webp",
@@ -1004,20 +1004,20 @@ export const characterMedia = {
     },
     "transcript": "地道里每隔一段距离，就有一个洞顶牢靠的大洞。距是左右结构，左边是足字旁，右边像一把弯折的大尺。脚印从尺子这一头走到另一头。距离就是两个地方之间相隔的长度。课文写每隔一段距离就有大洞，说明地道设计得细密周全。",
     "practiceOptionVisuals": {
-      "019f5658-69cb-722b-be29-e1a9233fb0de:019f5658-69cb-722b-be29-e1a9233fb0de-1": {
-        "src": "/illustrations/mnemonics/m44.webp",
-        "label": "两处相隔的长度",
-        "alt": "两个孩子站在相隔很远的石板路两端"
-      },
-      "019f5658-69cb-722b-be29-e1a9233fb0de:019f5658-69cb-722b-be29-e1a9233fb0de-2": {
+      "019f5658-69cb-722b-be29-e1a9233fb0de:019f5658-69cb-722b-be29-e1a9233fb0de-0": {
         "src": "/illustrations/meanings/m04.webp",
         "label": "倚靠、凭借",
         "alt": "行路的人稳稳倚靠一根手杖"
       },
-      "019f5658-69cb-722b-be29-e1a9233fb0de:019f5658-69cb-722b-be29-e1a9233fb0de-0": {
+      "019f5658-69cb-722b-be29-e1a9233fb0de:019f5658-69cb-722b-be29-e1a9233fb0de-2": {
         "src": "/illustrations/mnemonics/m112.webp",
         "label": "铃铛",
         "alt": "系着红绳并正在摇响的铜铃"
+      },
+      "019f5658-69cb-722b-be29-e1a9233fb0de:019f5658-69cb-722b-be29-e1a9233fb0de-1": {
+        "src": "/illustrations/mnemonics/m44.webp",
+        "label": "两处相隔的长度",
+        "alt": "两个孩子站在相隔很远的石板路两端"
       },
       "019f5658-69cb-722b-be29-e80a92442da0:019f5658-69cb-722b-be29-e80a92442da0-0": {
         "src": "/illustrations/meanings/m05.webp",
@@ -1366,11 +1366,6 @@ export const characterMedia = {
     },
     "transcript": "木，木棒的木，读第四声。木是独体字，中间竖直的一笔像直立挺拔的树干，横笔像伸展的枝桠，撇捺宛如向下扎牢的根系，整体勾勒出一棵树木的形态。木棒是用木头制成的坚实短棒。课文写地道内的孑口设计极其窄小，民兵手握一根木棒就能以一当百，有力地阻击敌人的进犯。",
     "practiceOptionVisuals": {
-      "019f5658-69ca-717d-8e76-f035a5e2de1e:019f5658-69ca-717d-8e76-f035a5e2de1e-0": {
-        "src": "/illustrations/meanings/m06.webp",
-        "label": "背负、承载",
-        "alt": "孩子把行囊稳稳背在背上"
-      },
       "019f5658-69ca-717d-8e76-f035a5e2de1e:019f5658-69ca-717d-8e76-f035a5e2de1e-2": {
         "src": "/illustrations/mnemonics/m63.webp",
         "label": "树",
@@ -1381,7 +1376,12 @@ export const characterMedia = {
         "label": "修筑",
         "alt": "修筑指建造工程设施；冀中人民齐心协力修筑地道，在平原地下筑起了一道道长城 图中“⺮”与“巩”按上下结构自然长成“筑”。"
       },
-      "019f5658-69ca-717d-8e76-f8a3f1e51568:019f5658-69ca-717d-8e76-f8a3f1e51568-1": {
+      "019f5658-69ca-717d-8e76-f035a5e2de1e:019f5658-69ca-717d-8e76-f035a5e2de1e-0": {
+        "src": "/illustrations/mnemonics-v2/g5-u707e.webp",
+        "label": "灾难",
+        "alt": "灾难是可怕的祸患危机；面对即将覆灭村庄的大水灾难，海力布把众人的安危放在第一位 图中“宀”与“火”按上下结构自然长成“灾”。"
+      },
+      "019f5658-69ca-717d-8e76-f8a3f1e51568:019f5658-69ca-717d-8e76-f8a3f1e51568-2": {
         "src": "/illustrations/meanings/m05.webp",
         "label": "朗声诵读",
         "alt": "孩子面向同伴清楚地朗读"
@@ -1391,7 +1391,7 @@ export const characterMedia = {
         "label": "树",
         "alt": "枝干、树冠和根系清楚的大树"
       },
-      "019f5658-69ca-717d-8e76-f8a3f1e51568:019f5658-69ca-717d-8e76-f8a3f1e51568-2": {
+      "019f5658-69ca-717d-8e76-f8a3f1e51568:019f5658-69ca-717d-8e76-f8a3f1e51568-1": {
         "src": "/illustrations/mnemonics/m02.webp",
         "label": "用嘴巴发出命令",
         "alt": "小队长向同伴清楚地发出指令"

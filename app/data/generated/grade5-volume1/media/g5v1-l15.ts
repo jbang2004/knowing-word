@@ -18,12 +18,12 @@ export const characterMedia = {
     },
     "transcript": "将军来到小岛后，战士们对菜地和饭菜有些话没有立刻说明。瞒是左右结构，左边是目字旁，右边可以想成草帘和布帘遮住两件东西。眼睛看见，帘子却盖住了内容。隐瞒就是知道事实却故意不告诉别人。",
     "practiceOptionVisuals": {
-      "g5v1-l15-c01-u7792-words-image:g5v1-l15-c01-u7792-words-image-0": {
+      "g5v1-l15-c01-u7792-words-image:g5v1-l15-c01-u7792-words-image-2": {
         "src": "/illustrations/meanings/m06.webp",
         "label": "背负、承载",
         "alt": "孩子把行囊稳稳背在背上"
       },
-      "g5v1-l15-c01-u7792-words-image:g5v1-l15-c01-u7792-words-image-2": {
+      "g5v1-l15-c01-u7792-words-image:g5v1-l15-c01-u7792-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u7965.webp",
         "label": "慈祥",
         "alt": "慈祥温和充满深情；母亲慈祥热切的赞扬保护了孩子的创作幼苗，赋予他前进的勇气 图中“礻”与“羊”按左右结构自然长成“祥”。"
@@ -87,15 +87,15 @@ export const characterMedia = {
         "label": "背负、承载",
         "alt": "孩子把行囊稳稳背在背上"
       },
-      "g5v1-l15-c03-u8247-words-image:g5v1-l15-c03-u8247-words-image-2": {
-        "src": "/illustrations/mnemonics-v2/g5-u7b77.webp",
-        "label": "筷子",
-        "alt": "筷子轻夹见证深情厚谊；将军将筷子伸向菜盘又停住，舍不得吃下战士们用汗水浇灌的蔬菜 图中“⺮”与“快”按上下结构自然长成“筷”。"
-      },
       "g5v1-l15-c03-u8247-words-image:g5v1-l15-c03-u8247-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u8247.webp",
         "label": "小艇",
         "alt": "巡逻快艇破浪前行；将军乘着小艇登上孤岛视察，感受到了海防前线环境的艰苦卓绝 图中“舟”与“廷”按左右结构自然长成“艇”。"
+      },
+      "g5v1-l15-c03-u8247-words-image:g5v1-l15-c03-u8247-words-image-2": {
+        "src": "/illustrations/mnemonics-v2/g5-u7b77.webp",
+        "label": "筷子",
+        "alt": "筷子轻夹见证深情厚谊；将军将筷子伸向菜盘又停住，舍不得吃下战士们用汗水浇灌的蔬菜 图中“⺮”与“快”按上下结构自然长成“筷”。"
       }
     }
   },
@@ -113,20 +113,20 @@ export const characterMedia = {
     },
     "transcript": "队长见将军留下来很高兴，又担心他的身体吃不消，心里十分矛盾。矛是古代的长柄兵器，认字时顺着尖头、长柄和侧钩看清完整轮廓。把矛放进博物馆的安全展柜，尖头朝前的样子便容易记住。课文里的矛盾指两种想法在队长心里拉扯，让他的欢迎和担忧同时显了出来。",
     "practiceOptionVisuals": {
-      "g5v1-l15-c04-u77db-words-image:g5v1-l15-c04-u77db-words-image-0": {
+      "g5v1-l15-c04-u77db-words-image:g5v1-l15-c04-u77db-words-image-2": {
         "src": "/illustrations/meanings/m06.webp",
         "label": "背负、承载",
         "alt": "孩子把行囊稳稳背在背上"
-      },
-      "g5v1-l15-c04-u77db-words-image:g5v1-l15-c04-u77db-words-image-2": {
-        "src": "/illustrations/mnemonics-v2/g5-u7cae.webp",
-        "label": "粮食",
-        "alt": "粮食作物离不开阳光滋养；充足的日照使庄稼茁壮成长，为人类生活提供了丰富的粮食来源 图中“米”与“良”按左右结构自然长成“粮”。"
       },
       "g5v1-l15-c04-u77db-words-image:g5v1-l15-c04-u77db-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u77db.webp",
         "label": "矛盾",
         "alt": "矛盾交织体现两难情感；面对战士们特意端来的一盘油菜，将军内心充满了感动与心疼的矛盾 图中“矛”按独体结构自然长成“矛”。"
+      },
+      "g5v1-l15-c04-u77db-words-image:g5v1-l15-c04-u77db-words-image-0": {
+        "src": "/illustrations/mnemonics-v2/g5-u7cae.webp",
+        "label": "粮食",
+        "alt": "粮食作物离不开阳光滋养；充足的日照使庄稼茁壮成长，为人类生活提供了丰富的粮食来源 图中“米”与“良”按左右结构自然长成“粮”。"
       }
     }
   },
@@ -146,6 +146,11 @@ export const characterMedia = {
     },
     "transcript": "队长欢迎将军留下，却又担心他的身体受不了海岛生活，这两种想法让他很矛盾。盾是用来遮挡和防护的器具，外面的斜笔像盾边，里面的目可以想成观察窗。盾稳稳挡在身前，字的包围样子也清楚了。回到队长的心情，矛盾就是两种互相冲突的想法同时出现，让人一时难以决定。",
     "practiceOptionVisuals": {
+      "g5v1-l15-c05-u76fe-words-image:g5v1-l15-c05-u76fe-words-image-1": {
+        "src": "/illustrations/mnemonics-v2/g5-u76fe.webp",
+        "label": "矛盾",
+        "alt": "盾牌象征坚不可摧的防线；海岛虽小却是祖国的钢铁盾牌，战士们用青春筑起了海上长城 图中“⺁”与“十”与“目”按左上包围结构自然长成“盾”。"
+      },
       "g5v1-l15-c05-u76fe-words-image:g5v1-l15-c05-u76fe-words-image-0": {
         "src": "/illustrations/meanings/m07.webp",
         "label": "一代又一代",
@@ -155,11 +160,6 @@ export const characterMedia = {
         "src": "/illustrations/mnemonics/m100.webp",
         "label": "堆土植树为界",
         "alt": "孩子在界土旁栽下一棵小树"
-      },
-      "g5v1-l15-c05-u76fe-words-image:g5v1-l15-c05-u76fe-words-image-1": {
-        "src": "/illustrations/mnemonics-v2/g5-u76fe.webp",
-        "label": "矛盾",
-        "alt": "盾牌象征坚不可摧的防线；海岛虽小却是祖国的钢铁盾牌，战士们用青春筑起了海上长城 图中“⺁”与“十”与“目”按左上包围结构自然长成“盾”。"
       }
     }
   },
@@ -183,15 +183,15 @@ export const characterMedia = {
         "label": "检查、验证",
         "alt": "孩子用放大镜仔细检查一件物品"
       },
-      "g5v1-l15-c06-u7b77-words-image:g5v1-l15-c06-u7b77-words-image-2": {
-        "src": "/illustrations/mnemonics/m39.webp",
-        "label": "烤熟或蒸熟的面食",
-        "alt": "蒸笼和木盘里的包子、饼和面包"
-      },
       "g5v1-l15-c06-u7b77-words-image:g5v1-l15-c06-u7b77-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u7b77.webp",
         "label": "筷子",
         "alt": "筷子轻夹见证深情厚谊；将军将筷子伸向菜盘又停住，舍不得吃下战士们用汗水浇灌的蔬菜 图中“⺮”与“快”按上下结构自然长成“筷”。"
+      },
+      "g5v1-l15-c06-u7b77-words-image:g5v1-l15-c06-u7b77-words-image-2": {
+        "src": "/illustrations/mnemonics/m39.webp",
+        "label": "烤熟或蒸熟的面食",
+        "alt": "蒸笼和木盘里的包子、饼和面包"
       }
     }
   },
@@ -210,20 +210,20 @@ export const characterMedia = {
     },
     "transcript": "开饭时，炊事员端来一盘小白菜，将军没有独自吃下去。炊事员是在集体中负责做饭、保障饮食的人，课文里的这盘菜就由他端上来。炊的左边是火字旁，右边可以想成人微微俯身照看炉火。火旁有人忙着做饭，这个字便和小岛上的炊事工作连在了一起。",
     "practiceOptionVisuals": {
-      "g5v1-l15-c07-u708a-words-image:g5v1-l15-c07-u708a-words-image-2": {
+      "g5v1-l15-c07-u708a-words-image:g5v1-l15-c07-u708a-words-image-0": {
         "src": "/illustrations/meanings/m03.webp",
         "label": "检查、验证",
         "alt": "孩子用放大镜仔细检查一件物品"
-      },
-      "g5v1-l15-c07-u708a-words-image:g5v1-l15-c07-u708a-words-image-0": {
-        "src": "/illustrations/mnemonics-v2/g5-u845b.webp",
-        "label": "葛布",
-        "alt": "诸葛孔明神机妙算；诸葛亮出神入化的智慧谋略让小作者深深着迷，从此一发不可收拾地爱上读书 图中“艹”与“曷”按上下结构自然长成“葛”。"
       },
       "g5v1-l15-c07-u708a-words-image:g5v1-l15-c07-u708a-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u708a.webp",
         "label": "炊事员",
         "alt": "炊事员细心烹饪；炊事员把仅有的一点新鲜蔬菜精心做成菜汤，表达对首长的由衷敬重 图中“火”与“欠”按左右结构自然长成“炊”。"
+      },
+      "g5v1-l15-c07-u708a-words-image:g5v1-l15-c07-u708a-words-image-2": {
+        "src": "/illustrations/mnemonics-v2/g5-u845b.webp",
+        "label": "葛布",
+        "alt": "诸葛孔明神机妙算；诸葛亮出神入化的智慧谋略让小作者深深着迷，从此一发不可收拾地爱上读书 图中“艹”与“曷”按上下结构自然长成“葛”。"
       }
     }
   },
@@ -242,20 +242,20 @@ export const characterMedia = {
     },
     "transcript": "先听一个短短的鼻音，“哼！”课文这里就是短促地哼一声，不读平常哼唱时的“哼”，它带着不满或不赞同的语气。哼是左右结构，左边的口提醒我们，这个字和发出声音有关；右边把字形补完整。为了好记，可以想象一个人抿着嘴，从鼻子里短短地出了一声。课文里的这一声虽短，却让我们听出了人物当时的态度。",
     "practiceOptionVisuals": {
-      "g5v1-l15-c08-u54fc-words-image:g5v1-l15-c08-u54fc-words-image-0": {
+      "g5v1-l15-c08-u54fc-words-image:g5v1-l15-c08-u54fc-words-image-2": {
         "src": "/illustrations/meanings/m06.webp",
         "label": "背负、承载",
         "alt": "孩子把行囊稳稳背在背上"
-      },
-      "g5v1-l15-c08-u54fc-words-image:g5v1-l15-c08-u54fc-words-image-2": {
-        "src": "/illustrations/mnemonics-v2/g5-u8695.webp",
-        "label": "蚕茧",
-        "alt": "养蚕缫丝维持生计；全家人日夜照料春蚕，辛勤劳动换来的每一分钱都倾注在孩子的学业上 图中“天”与“虫”按上下结构自然长成“蚕”。"
       },
       "g5v1-l15-c08-u54fc-words-image:g5v1-l15-c08-u54fc-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u54fc.webp",
         "label": "哼",
         "alt": "轻哼一声带着亲切关怀；将军故意轻哼一声化解尴尬，眼神里满是对战士们的心疼与慈爱 图中“口”与“亨”按左右结构自然长成“哼”。"
+      },
+      "g5v1-l15-c08-u54fc-words-image:g5v1-l15-c08-u54fc-words-image-0": {
+        "src": "/illustrations/mnemonics-v2/g5-u8695.webp",
+        "label": "蚕茧",
+        "alt": "养蚕缫丝维持生计；全家人日夜照料春蚕，辛勤劳动换来的每一分钱都倾注在孩子的学业上 图中“天”与“虫”按上下结构自然长成“蚕”。"
       }
     }
   },
@@ -274,15 +274,15 @@ export const characterMedia = {
     },
     "transcript": "饭桌上的感动涌上来时，人的喉咙会发紧，话也可能慢下来。喉是左右结构，左边是口字旁，右边可以想成人物、喉管和吞咽路线。沿着口腔向颈部寻找通道。喉咙是颈部里面连接口腔、气管和食管的部位。",
     "practiceOptionVisuals": {
-      "g5v1-l15-c09-u5589-words-image:g5v1-l15-c09-u5589-words-image-1": {
-        "src": "/illustrations/mnemonics-v2/g5-u5589.webp",
-        "label": "喉咙",
-        "alt": "喉咙哽咽深情难抑；看着那一块中国地图形状的绿色菜地，将军喉咙哽咽，热泪盈眶 图中“口”与“侯”按左右结构自然长成“喉”。"
-      },
       "g5v1-l15-c09-u5589-words-image:g5v1-l15-c09-u5589-words-image-0": {
         "src": "/illustrations/meanings/m08.webp",
         "label": "整齐有序",
         "alt": "竹简按照次序整齐排列"
+      },
+      "g5v1-l15-c09-u5589-words-image:g5v1-l15-c09-u5589-words-image-1": {
+        "src": "/illustrations/mnemonics-v2/g5-u5589.webp",
+        "label": "喉咙",
+        "alt": "喉咙哽咽深情难抑；看着那一块中国地图形状的绿色菜地，将军喉咙哽咽，热泪盈眶 图中“口”与“侯”按左右结构自然长成“喉”。"
       },
       "g5v1-l15-c09-u5589-words-image:g5v1-l15-c09-u5589-words-image-2": {
         "src": "/illustrations/mnemonics/m83.webp",
@@ -311,12 +311,12 @@ export const characterMedia = {
         "label": "喉咙",
         "alt": "咽喉深处涌起无尽感动；这片凝聚着守岛官兵赤诚爱国心的绿洲，深深震撼了将军的心灵 图中“口”与“龙”按左右结构自然长成“咙”。"
       },
-      "g5v1-l15-c10-u5499-words-image:g5v1-l15-c10-u5499-words-image-2": {
+      "g5v1-l15-c10-u5499-words-image:g5v1-l15-c10-u5499-words-image-0": {
         "src": "/illustrations/meanings/m04.webp",
         "label": "倚靠、凭借",
         "alt": "行路的人稳稳倚靠一根手杖"
       },
-      "g5v1-l15-c10-u5499-words-image:g5v1-l15-c10-u5499-words-image-0": {
+      "g5v1-l15-c10-u5499-words-image:g5v1-l15-c10-u5499-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u8052.webp",
         "label": "聒噪",
         "alt": "聒碎乡心彻夜难眠；帐外风雪喧嚣之声打破了梦境，故园温暖的灯火成了心中唯一的牵挂 图中“耳”与“舌”按左右结构自然长成“聒”。"
@@ -338,20 +338,20 @@ export const characterMedia = {
     },
     "transcript": "将军明白战士们把珍贵青菜留给自己时，感动得一时说不出完整的话。哽是左右结构，左边是口字旁，右边可以想成一道道横栏卡住气流。嘴已经张开，声音却停在喉间。哽咽就是因为激动或难过，一时难以顺畅说话。",
     "practiceOptionVisuals": {
-      "g5v1-l15-c11-u54fd-words-image:g5v1-l15-c11-u54fd-words-image-2": {
+      "g5v1-l15-c11-u54fd-words-image:g5v1-l15-c11-u54fd-words-image-0": {
         "src": "/illustrations/meanings/m05.webp",
         "label": "朗声诵读",
         "alt": "孩子面向同伴清楚地朗读"
-      },
-      "g5v1-l15-c11-u54fd-words-image:g5v1-l15-c11-u54fd-words-image-0": {
-        "src": "/illustrations/mnemonics/m85.webp",
-        "label": "语气平和舒顺",
-        "alt": "两个孩子平静友好地交谈"
       },
       "g5v1-l15-c11-u54fd-words-image:g5v1-l15-c11-u54fd-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u54fd.webp",
         "label": "哽咽",
         "alt": "哽咽难言情动海天；离岛时将军向着孤岛深情敬礼，在海风呼啸中流下了动情的热泪 图中“口”与“更”按左右结构自然长成“哽”。"
+      },
+      "g5v1-l15-c11-u54fd-words-image:g5v1-l15-c11-u54fd-words-image-2": {
+        "src": "/illustrations/mnemonics/m85.webp",
+        "label": "语气平和舒顺",
+        "alt": "两个孩子平静友好地交谈"
       }
     }
   },
@@ -375,12 +375,12 @@ export const characterMedia = {
         "label": "勺子",
         "alt": "汤勺舀起浓浓战友情；将军亲手用勺子给每一位战士舀菜汤，将关怀送入每个人的心田 图中“勹”与“丶”按右上包围结构自然长成“勺”。"
       },
-      "g5v1-l15-c12-u52fa-words-image:g5v1-l15-c12-u52fa-words-image-0": {
+      "g5v1-l15-c12-u52fa-words-image:g5v1-l15-c12-u52fa-words-image-2": {
         "src": "/illustrations/meanings/m05.webp",
         "label": "朗声诵读",
         "alt": "孩子面向同伴清楚地朗读"
       },
-      "g5v1-l15-c12-u52fa-words-image:g5v1-l15-c12-u52fa-words-image-2": {
+      "g5v1-l15-c12-u52fa-words-image:g5v1-l15-c12-u52fa-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u5a25.webp",
         "label": "嫦娥",
         "alt": "仙娥弄月童趣盎然；美丽的传说为静谧的月夜抹上了一层神秘色彩，点燃了孩子们的探索热情 图中“女”与“我”按左右结构自然长成“娥”。"
@@ -434,15 +434,15 @@ export const characterMedia = {
     },
     "transcript": "菜被搅进桶里后，将军舀起一勺汤，走到一排排桌子前分给战士们。舀是把勺子伸进液体，再盛起来的动作，课文里的器具和盛起的东西都写得很清楚。字的上方可以想成向下抓握的手，下方像一个深口勺。手把一勺汤稳稳提起，也把将军愿意和大家分享的心意送到了每张桌前。",
     "practiceOptionVisuals": {
-      "g5v1-l15-c14-u8200-words-image:g5v1-l15-c14-u8200-words-image-1": {
-        "src": "/illustrations/mnemonics-v2/g5-u8200.webp",
-        "label": "舀起一勺汤",
-        "alt": "舀起一勺满满的爱国心；这碗由汗水浇灌的菜汤里，舀起的是海岛官兵扎根海防、热爱祖国的赤子深情 图中“爫”与“臼”按上下结构自然长成“舀”。"
-      },
       "g5v1-l15-c14-u8200-words-image:g5v1-l15-c14-u8200-words-image-0": {
         "src": "/illustrations/meanings/m05.webp",
         "label": "朗声诵读",
         "alt": "孩子面向同伴清楚地朗读"
+      },
+      "g5v1-l15-c14-u8200-words-image:g5v1-l15-c14-u8200-words-image-1": {
+        "src": "/illustrations/mnemonics-v2/g5-u8200.webp",
+        "label": "舀起一勺汤",
+        "alt": "舀起一勺满满的爱国心；这碗由汗水浇灌的菜汤里，舀起的是海岛官兵扎根海防、热爱祖国的赤子深情 图中“爫”与“臼”按上下结构自然长成“舀”。"
       },
       "g5v1-l15-c14-u8200-words-image:g5v1-l15-c14-u8200-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u7b77.webp",

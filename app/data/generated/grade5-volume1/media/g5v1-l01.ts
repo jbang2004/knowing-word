@@ -22,12 +22,12 @@ export const characterMedia = {
         "label": "白鹭",
         "alt": "白鹭羽色洁白、身段精巧，在清水田里漫步伫立，如同一首韵味悠长的小诗 图中“路”与“鸟”按上下结构自然长成“鹭”。"
       },
-      "g5v1-l01-c01-u9e6d-words-image:g5v1-l01-c01-u9e6d-words-image-0": {
+      "g5v1-l01-c01-u9e6d-words-image:g5v1-l01-c01-u9e6d-words-image-2": {
         "src": "/illustrations/meanings/m08.webp",
         "label": "整齐有序",
         "alt": "竹简按照次序整齐排列"
       },
-      "g5v1-l01-c01-u9e6d-words-image:g5v1-l01-c01-u9e6d-words-image-2": {
+      "g5v1-l01-c01-u9e6d-words-image:g5v1-l01-c01-u9e6d-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u53ee.webp",
         "label": "叮嘱",
         "alt": "叮嘱是再三嘱咐提醒；龙女再三叮嘱含着宝珠不能泄露秘密，埋下了后来情节发展的伏笔 图中“口”与“丁”按左右结构自然长成“叮”。"
@@ -54,15 +54,15 @@ export const characterMedia = {
         "label": "检查、验证",
         "alt": "孩子用放大镜仔细检查一件物品"
       },
-      "g5v1-l01-c02-u5acc-words-image:g5v1-l01-c02-u5acc-words-image-0": {
-        "src": "/illustrations/mnemonics-v2/g5-u9694.webp",
-        "label": "间隔",
-        "alt": "间隔指两地或两物的空间阻隔；搭石跨越了溪水的阻隔，默默传递着无私奉献的人间温情 图中“阝”与“鬲”按左右结构自然长成“隔”。"
-      },
       "g5v1-l01-c02-u5acc-words-image:g5v1-l01-c02-u5acc-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u5acc.webp",
         "label": "嫌弃",
         "alt": "嫌弃表示觉得不合适或不愿接近；正如课文所赞叹，白鹭的身段增减一分都嫌不适宜，恰到好处 图中“女”与“兼”按左右结构自然长成“嫌”。"
+      },
+      "g5v1-l01-c02-u5acc-words-image:g5v1-l01-c02-u5acc-words-image-0": {
+        "src": "/illustrations/mnemonics-v2/g5-u9694.webp",
+        "label": "间隔",
+        "alt": "间隔指两地或两物的空间阻隔；搭石跨越了溪水的阻隔，默默传递着无私奉献的人间温情 图中“阝”与“鬲”按左右结构自然长成“隔”。"
       }
     }
   },
@@ -81,15 +81,15 @@ export const characterMedia = {
     },
     "transcript": "嵌，镶嵌的嵌，读第四声。这个字是上下结构，上方像一座山，下方笔画较密，可以整体看成卡住物件的槽口。想象一片洁白羽毛稳稳嵌进水田画面的空隙，上下两部分也就不容易放反。镶嵌就是把一种材料牢牢装进另一种材料的空隙。课文细看白鹭的色彩和姿态，一只白鹭立在水田里，也像被轻轻镶嵌进一幅清雅的画。",
     "practiceOptionVisuals": {
-      "g5v1-l01-c03-u5d4c-words-image:g5v1-l01-c03-u5d4c-words-image-1": {
-        "src": "/illustrations/mnemonics-v2/g5-u5d4c.webp",
-        "label": "镶嵌",
-        "alt": "镶嵌是把材料妥帖装入空隙中；白鹭立在水田中，宛如被精巧地镶嵌进大自然的画框 图中“山”与“𣢟”按上下结构自然长成“嵌”。"
-      },
       "g5v1-l01-c03-u5d4c-words-image:g5v1-l01-c03-u5d4c-words-image-2": {
         "src": "/illustrations/meanings/m08.webp",
         "label": "整齐有序",
         "alt": "竹简按照次序整齐排列"
+      },
+      "g5v1-l01-c03-u5d4c-words-image:g5v1-l01-c03-u5d4c-words-image-1": {
+        "src": "/illustrations/mnemonics-v2/g5-u5d4c.webp",
+        "label": "镶嵌",
+        "alt": "镶嵌是把材料妥帖装入空隙中；白鹭立在水田中，宛如被精巧地镶嵌进大自然的画框 图中“山”与“𣢟”按上下结构自然长成“嵌”。"
       },
       "g5v1-l01-c03-u5d4c-words-image:g5v1-l01-c03-u5d4c-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u5ac9.webp",
@@ -113,11 +113,6 @@ export const characterMedia = {
     },
     "transcript": "清水田里的白鹭像一幅画，田的大小仿佛有人专门设计了一只镜匣。匣子是有盖、可以收藏小物件的盒子，镜匣就是安放镜子的匣子。匣是左三包围结构，外框像打开一侧的盒子，里面的甲像分好的收纳格。盒子把镜面稳稳护在里面。课文用镜匣来写水田，白鹭也成了画面中央最精巧的一笔。",
     "practiceOptionVisuals": {
-      "g5v1-l01-c04-u5323-words-image:g5v1-l01-c04-u5323-words-image-1": {
-        "src": "/illustrations/mnemonics-v2/g5-u5323.webp",
-        "label": "匣子",
-        "alt": "匣子是有盖、用来收藏珍贵小物的盒子；课文把水田比作镜匣，白鹭就是其中最精巧的一笔 图中“匚”与“甲”按左三包围结构自然长成“匣”。"
-      },
       "g5v1-l01-c04-u5323-words-image:g5v1-l01-c04-u5323-words-image-2": {
         "src": "/illustrations/meanings/m08.webp",
         "label": "整齐有序",
@@ -127,6 +122,11 @@ export const characterMedia = {
         "src": "/illustrations/mnemonics-v2/g5-u5854.webp",
         "label": "宝塔",
         "alt": "宝塔倒影相映成趣；远处古朴的石塔倒映在清澈的河面上，为鸟的天堂增添了典雅的诗意 图中“土”与“荅”按左右结构自然长成“塔”。"
+      },
+      "g5v1-l01-c04-u5323-words-image:g5v1-l01-c04-u5323-words-image-1": {
+        "src": "/illustrations/mnemonics-v2/g5-u5323.webp",
+        "label": "匣子",
+        "alt": "匣子是有盖、用来收藏珍贵小物的盒子；课文把水田比作镜匣，白鹭就是其中最精巧的一笔 图中“匚”与“甲”按左三包围结构自然长成“匣”。"
       }
     }
   },
@@ -145,20 +145,20 @@ export const characterMedia = {
     },
     "transcript": "嗜，嗜好的嗜，读第四声。嗜好是特别喜欢、常常愿意做的事情。这个字左边是口字旁，右边笔画较多，朗读时把右部整体记住就够了。想象小鸟张口鸣叫，又一次飞到喜欢停留的枝头，右边复杂的轮廓也容易记住了。课文观察白鹭站在枝头的姿态，还猜想它是不是在望哨，这种特别的习惯就是文中写到的嗜好。",
     "practiceOptionVisuals": {
-      "g5v1-l01-c05-u55dc-words-image:g5v1-l01-c05-u55dc-words-image-0": {
+      "g5v1-l01-c05-u55dc-words-image:g5v1-l01-c05-u55dc-words-image-2": {
         "src": "/illustrations/meanings/m03.webp",
         "label": "检查、验证",
         "alt": "孩子用放大镜仔细检查一件物品"
-      },
-      "g5v1-l01-c05-u55dc-words-image:g5v1-l01-c05-u55dc-words-image-2": {
-        "src": "/illustrations/mnemonics/m103.webp",
-        "label": "明亮、光芒",
-        "alt": "晨光穿过窗户照亮房间"
       },
       "g5v1-l01-c05-u55dc-words-image:g5v1-l01-c05-u55dc-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u55dc.webp",
         "label": "嗜好",
         "alt": "嗜好指特别喜爱并乐在其中的习惯；白鹭在水田独钓巡望，成了大自然中最优雅的嗜好 图中“口”与“耆”按左右结构自然长成“嗜”。"
+      },
+      "g5v1-l01-c05-u55dc-words-image:g5v1-l01-c05-u55dc-words-image-0": {
+        "src": "/illustrations/mnemonics/m103.webp",
+        "label": "明亮、光芒",
+        "alt": "晨光穿过窗户照亮房间"
       }
     }
   },
@@ -209,15 +209,15 @@ export const characterMedia = {
     },
     "transcript": "鹤，白鹤的鹤，读第四声。它是左右结构，左边笔画较密，可以整体看成高挑的鸟身，右边是鸟。想象一只白鹤伸着长颈、长腿站在水边，左右两部分也跟着稳稳站好。白鹤是羽毛洁白的大型水鸟。课文把白鹤与白鹭放在一起比较，白鹭身段更小巧，也更显得适宜自然。",
     "practiceOptionVisuals": {
-      "g5v1-l01-c07-u9e64-words-image:g5v1-l01-c07-u9e64-words-image-1": {
-        "src": "/illustrations/mnemonics-v2/g5-u9e64.webp",
-        "label": "白鹤",
-        "alt": "白鹤是体型较大、羽色洁白的水鸟；课文用白鹤与白鹭对比，更显出白鹭身段的玲珑适度 图中“隺”与“鸟”按左右结构自然长成“鹤”。"
-      },
       "g5v1-l01-c07-u9e64-words-image:g5v1-l01-c07-u9e64-words-image-2": {
         "src": "/illustrations/meanings/m04.webp",
         "label": "倚靠、凭借",
         "alt": "行路的人稳稳倚靠一根手杖"
+      },
+      "g5v1-l01-c07-u9e64-words-image:g5v1-l01-c07-u9e64-words-image-1": {
+        "src": "/illustrations/mnemonics-v2/g5-u9e64.webp",
+        "label": "白鹤",
+        "alt": "白鹤是体型较大、羽色洁白的水鸟；课文用白鹤与白鹭对比，更显出白鹭身段的玲珑适度 图中“隺”与“鸟”按左右结构自然长成“鹤”。"
       },
       "g5v1-l01-c07-u9e64-words-image:g5v1-l01-c07-u9e64-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u9489.webp",
@@ -241,20 +241,20 @@ export const characterMedia = {
     },
     "transcript": "课文把朱鹭和苍鹭放在白鹭旁边比较，朱鹭的朱也是朱红的朱。朱红是一种鲜明、温暖、略带橙色的红。朱适合整体观察，中间像树干，横画像枝条，上面一撇可以想成枝头的一颗红果。顺着枝条找到红果，字形就清楚了。朱鹭颜色较艳，正衬出白鹭素净清雅的美。",
     "practiceOptionVisuals": {
-      "g5v1-l01-c08-u6731-words-image:g5v1-l01-c08-u6731-words-image-2": {
-        "src": "/illustrations/meanings/m04.webp",
-        "label": "倚靠、凭借",
-        "alt": "行路的人稳稳倚靠一根手杖"
-      },
-      "g5v1-l01-c08-u6731-words-image:g5v1-l01-c08-u6731-words-image-0": {
-        "src": "/illustrations/mnemonics/m101.webp",
-        "label": "交给",
-        "alt": "一个孩子把物品交到另一个孩子手中"
-      },
       "g5v1-l01-c08-u6731-words-image:g5v1-l01-c08-u6731-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u6731.webp",
         "label": "朱红",
         "alt": "朱红是鲜亮温暖的红色；白鹭的铁色长喙与朱红脚爪相互映衬，显出和谐素雅的色彩美 图中“未”与“㇒”按穿插结构自然长成“朱”。"
+      },
+      "g5v1-l01-c08-u6731-words-image:g5v1-l01-c08-u6731-words-image-0": {
+        "src": "/illustrations/meanings/m04.webp",
+        "label": "倚靠、凭借",
+        "alt": "行路的人稳稳倚靠一根手杖"
+      },
+      "g5v1-l01-c08-u6731-words-image:g5v1-l01-c08-u6731-words-image-2": {
+        "src": "/illustrations/mnemonics/m101.webp",
+        "label": "交给",
+        "alt": "一个孩子把物品交到另一个孩子手中"
       }
     }
   },
@@ -278,15 +278,15 @@ export const characterMedia = {
         "label": "倚靠、凭借",
         "alt": "行路的人稳稳倚靠一根手杖"
       },
-      "g5v1-l01-c09-u6846-words-image:g5v1-l01-c09-u6846-words-image-2": {
-        "src": "/illustrations/mnemonics/m81.webp",
-        "label": "高而平坦的土台",
-        "alt": "用夯土筑成、顶部平坦的高台"
-      },
       "g5v1-l01-c09-u6846-words-image:g5v1-l01-c09-u6846-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u6846.webp",
         "label": "画框",
         "alt": "画框是用来装裱与衬托画面的边框；水田如画框，白鹭立于其间，构成生动宁静的田园画卷 图中“木”与“匡”按左右结构自然长成“框”。"
+      },
+      "g5v1-l01-c09-u6846-words-image:g5v1-l01-c09-u6846-words-image-2": {
+        "src": "/illustrations/mnemonics/m81.webp",
+        "label": "高而平坦的土台",
+        "alt": "用夯土筑成、顶部平坦的高台"
       }
     }
   },
@@ -305,15 +305,15 @@ export const characterMedia = {
     },
     "transcript": "哨，口哨的哨，读第四声。口哨可以是用嘴吹出的声音，也可以是能吹响的小哨子。哨是左右结构，左边是口，右边可以想成一支带小孔的哨管。看到白鹭站在枝头，人们猜它是在望哨，望哨是观察远处动静，和吹口哨不是同一件事。读到这两个词，要跟着上下文分清意思。",
     "practiceOptionVisuals": {
-      "g5v1-l01-c10-u54e8-words-image:g5v1-l01-c10-u54e8-words-image-1": {
-        "src": "/illustrations/mnemonics-v2/g5-u54e8.webp",
-        "label": "口哨",
-        "alt": "口哨指吹出的清脆哨音；白鹭在树顶望哨守望，为宁静的黄昏平添了几分悠远生机 图中“口”与“肖”按左右结构自然长成“哨”。"
-      },
       "g5v1-l01-c10-u54e8-words-image:g5v1-l01-c10-u54e8-words-image-0": {
         "src": "/illustrations/meanings/m06.webp",
         "label": "背负、承载",
         "alt": "孩子把行囊稳稳背在背上"
+      },
+      "g5v1-l01-c10-u54e8-words-image:g5v1-l01-c10-u54e8-words-image-1": {
+        "src": "/illustrations/mnemonics-v2/g5-u54e8.webp",
+        "label": "口哨",
+        "alt": "口哨指吹出的清脆哨音；白鹭在树顶望哨守望，为宁静的黄昏平添了几分悠远生机 图中“口”与“肖”按左右结构自然长成“哨”。"
       },
       "g5v1-l01-c10-u54e8-words-image:g5v1-l01-c10-u54e8-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u5ef6.webp",
@@ -337,20 +337,20 @@ export const characterMedia = {
     },
     "transcript": "黄昏的空中偶见白鹭低飞，更是乡居生活中的一种恩惠。这里的恩惠，指偶然遇见的一份难得美好，像生活送来了一件小礼物。恩是上下结构，上面是因为的因，下面是心，可以想成这幅低飞的画面被轻轻收进心里。因在上，心在下，位置便清楚了。再读课文，白鹭低飞带来的欣喜，也落在恩惠这个词里。",
     "practiceOptionVisuals": {
-      "g5v1-l01-c11-u6069-words-image:g5v1-l01-c11-u6069-words-image-2": {
-        "src": "/illustrations/meanings/m08.webp",
-        "label": "整齐有序",
-        "alt": "竹简按照次序整齐排列"
-      },
-      "g5v1-l01-c11-u6069-words-image:g5v1-l01-c11-u6069-words-image-0": {
-        "src": "/illustrations/mnemonics-v2/g5-u7f3a.webp",
-        "label": "缺少",
-        "alt": "缺少是数量不足或出现缺口；相如假称和氏璧上微有瑕疵缺少完美，借机将宝玉重新拿回手中 图中“缶”与“夬”按左右结构自然长成“缺”。"
-      },
       "g5v1-l01-c11-u6069-words-image:g5v1-l01-c11-u6069-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u6069.webp",
         "label": "恩惠",
         "alt": "恩惠是他人给予的关怀与帮助；白鹭常在水田乡村活动，宛如大自然赐予人间的清雅恩惠 图中“因”与“心”按上下结构自然长成“恩”。"
+      },
+      "g5v1-l01-c11-u6069-words-image:g5v1-l01-c11-u6069-words-image-0": {
+        "src": "/illustrations/meanings/m08.webp",
+        "label": "整齐有序",
+        "alt": "竹简按照次序整齐排列"
+      },
+      "g5v1-l01-c11-u6069-words-image:g5v1-l01-c11-u6069-words-image-2": {
+        "src": "/illustrations/mnemonics-v2/g5-u7f3a.webp",
+        "label": "缺少",
+        "alt": "缺少是数量不足或出现缺口；相如假称和氏璧上微有瑕疵缺少完美，借机将宝玉重新拿回手中 图中“缶”与“夬”按左右结构自然长成“缺”。"
       }
     }
   },

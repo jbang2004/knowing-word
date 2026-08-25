@@ -12,19 +12,27 @@ the same characters through three focused practice routes.
 - The complete current 26-lesson Grade 5 volume 1 course map, including six
   skimming lessons and an original three-step comprehension path for every text
 - 365 official lesson-character records (359 unique glyphs), plus 65 optional
-  context extensions, with 3,322 ordered practice prompts in total
+  context extensions; all 430 records carry role-aware components and real
+  recognition, phonology, semantics, generation, discrimination, and context tasks
 - Explicit curriculum roles for 200 recognition targets, 16 polyphonic targets,
   and 220 writing targets; all polyphonic targets include in-context reading checks
 - Four aligned learning routes: word-list mini quizzes, character assembly,
   radical-color recognition, and spatial-structure recognition
-- A component studio that ranks 401 components by their course appearance
-- Per-question attempts, last-answer status, character-level completion, and
-  resume points for each route
+- A component studio that ranks the generated components by course appearance
+- A Profile v5 learning model that separates first-completion achievements from
+  six current mastery dimensions, due dates, independent streaks, lapses, cue
+  levels, latency, and diagnosed error types; writing self-check is reported
+  separately from objectively scored character reconstruction
+- An old-before-new daily plan (up to 10 due characters and 5 new characters),
+  adaptive 5-minute/1/3/7/14/30-day review, slow-response caps, targeted
+  remediation, and one best retrieval task per due dimension
 - Real, shareable URLs for all 2,007 active learning and practice routes
 - D1-backed cross-device profiles, daily activity, answer events, and
-  route-specific resume state, with local-first offline fallback
-- Pronunciation, browser-only handwriting, R2-backed read-aloud recording, and
-  responsive day/night modes
+  route-specific resume state, with local-first offline fallback; answer
+  history uses eight CAS-protected rows to stay below D1's per-row limit
+- Pronunciation, guided then concealed browser handwriting with explicit
+  component/position/stroke self-check, R2-backed read-aloud recording that
+  requires complete replay and accuracy assessment, and responsive day/night modes
 - 385 localized teaching resources: 274 historical glyph stages, 58 red-blue
   character diagrams, and 53 pronunciation recordings
 - 359 responsive picture-embedded official character visuals, 26 original

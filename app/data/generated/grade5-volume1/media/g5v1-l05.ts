@@ -17,17 +17,17 @@ export const characterMedia = {
     },
     "transcript": "汛，汛期的汛，读第四声。汛期是江河水位集中上涨、需要防备洪水的一段时间。汛是左右结构，左边三点水很醒目，右边可以想成催人赶快查看水情的旗杆。水流一涨，信号马上升起。每年汛期溪水猛涨，搭石会被冲走，水退以后乡亲们又要挑选平整石头重新摆好。",
     "practiceOptionVisuals": {
+      "g5v1-l05-c01-u6c5b-words-image:g5v1-l05-c01-u6c5b-words-image-0": {
+        "src": "/illustrations/meanings/m04.webp",
+        "label": "倚靠、凭借",
+        "alt": "行路的人稳稳倚靠一根手杖"
+      },
       "g5v1-l05-c01-u6c5b-words-image:g5v1-l05-c01-u6c5b-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u6c5b.webp",
         "label": "汛期",
         "alt": "汛期是江河水位上涨的时期；每年汛期过后，乡亲们便齐心协力摆放搭石，方便两岸通行 图中“氵”与“卂”按左右结构自然长成“汛”。"
       },
       "g5v1-l05-c01-u6c5b-words-image:g5v1-l05-c01-u6c5b-words-image-2": {
-        "src": "/illustrations/meanings/m04.webp",
-        "label": "倚靠、凭借",
-        "alt": "行路的人稳稳倚靠一根手杖"
-      },
-      "g5v1-l05-c01-u6c5b-words-image:g5v1-l05-c01-u6c5b-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u5ec9.webp",
         "label": "廉颇",
         "alt": "廉颇是赵国勇冠三军的战将；他起初因争功而心生不服，最终在明晓大义后真心悔改 图中“广”与“兼”按左上包围结构自然长成“廉”。"
@@ -49,15 +49,15 @@ export const characterMedia = {
     },
     "transcript": "乡亲们来往过溪，水深一些时就要脱鞋挽裤。挽裤就是把裤腿向上卷起，免得被水打湿。挽是左右结构，左边提手旁像抬起裤脚的手，右边是免得的免。双手把裤腿一圈圈卷好，脚再踏上搭石。一个挽字把过水前的准备动作写得很清楚。",
     "practiceOptionVisuals": {
-      "g5v1-l05-c02-u633d-words-image:g5v1-l05-c02-u633d-words-image-1": {
-        "src": "/illustrations/mnemonics-v2/g5-u633d.webp",
-        "label": "挽裤",
-        "alt": "挽起是卷起衣袖或裤脚；秋凉水冷无法挽裤过溪，搭石就成了人们日常出行必不可少的依靠 图中“扌”与“免”按左右结构自然长成“挽”。"
-      },
       "g5v1-l05-c02-u633d-words-image:g5v1-l05-c02-u633d-words-image-2": {
         "src": "/illustrations/meanings/m03.webp",
         "label": "检查、验证",
         "alt": "孩子用放大镜仔细检查一件物品"
+      },
+      "g5v1-l05-c02-u633d-words-image:g5v1-l05-c02-u633d-words-image-1": {
+        "src": "/illustrations/mnemonics-v2/g5-u633d.webp",
+        "label": "挽裤",
+        "alt": "挽起是卷起衣袖或裤脚；秋凉水冷无法挽裤过溪，搭石就成了人们日常出行必不可少的依靠 图中“扌”与“免”按左右结构自然长成“挽”。"
       },
       "g5v1-l05-c02-u633d-words-image:g5v1-l05-c02-u633d-words-image-0": {
         "src": "/illustrations/mnemonics/m17.webp",
@@ -114,15 +114,15 @@ export const characterMedia = {
     },
     "transcript": "惰，懒惰的惰。懒惰就是不愿劳动或行动，总想少做事情。惰是左右结构，左边是竖心旁，右边笔画较多，可以整体想成靠着石头不愿起身的人。别人忙着摆搭石，他却只想休息。赶路的乡亲发现搭石不稳，即使急着赶路也会停下找石头垫好，这样负责的行动恰好远离懒惰。",
     "practiceOptionVisuals": {
-      "g5v1-l05-c04-u60f0-words-image:g5v1-l05-c04-u60f0-words-image-1": {
-        "src": "/illustrations/mnemonics-v2/g5-u60f0.webp",
-        "label": "懒惰",
-        "alt": "懒惰是不肯勤快出力的心态；乡亲们走过搭石绝不懒惰停留，而是保持匀速，确保步伐轻稳 图中“忄”与“左”与“月”按左右结构自然长成“惰”。"
-      },
       "g5v1-l05-c04-u60f0-words-image:g5v1-l05-c04-u60f0-words-image-2": {
         "src": "/illustrations/meanings/m05.webp",
         "label": "朗声诵读",
         "alt": "孩子面向同伴清楚地朗读"
+      },
+      "g5v1-l05-c04-u60f0-words-image:g5v1-l05-c04-u60f0-words-image-1": {
+        "src": "/illustrations/mnemonics-v2/g5-u60f0.webp",
+        "label": "懒惰",
+        "alt": "懒惰是不肯勤快出力的心态；乡亲们走过搭石绝不懒惰停留，而是保持匀速，确保步伐轻稳 图中“忄”与“左”与“月”按左右结构自然长成“惰”。"
       },
       "g5v1-l05-c04-u60f0-words-image:g5v1-l05-c04-u60f0-words-image-0": {
         "src": "/illustrations/mnemonics/m103.webp",
@@ -148,11 +148,6 @@ export const characterMedia = {
     },
     "transcript": "衡，平衡的衡，读第二声。平衡是两边的力量或身体状态保持相称，不向一边倒。衡的笔画穿插较多，可以先看左右两条小路，再看中间站稳的人和秤盘。人把两边力量调匀，脚下便稳住。走搭石时，乡亲们要保持平衡，脚步既稳又连贯，才不会踩空，也不会打乱后面的人。",
     "practiceOptionVisuals": {
-      "g5v1-l05-c05-u8861-words-image:g5v1-l05-c05-u8861-words-image-1": {
-        "src": "/illustrations/mnemonics-v2/g5-u8861.webp",
-        "label": "平衡",
-        "alt": "平衡指身体保持稳当不偏斜；踏着搭石快步向前保持平衡，步调整齐宛如一首流动的乐章 图中“彳”与“田”与“大”与“亍”按穿插结构自然长成“衡”。"
-      },
       "g5v1-l05-c05-u8861-words-image:g5v1-l05-c05-u8861-words-image-2": {
         "src": "/illustrations/meanings/m07.webp",
         "label": "一代又一代",
@@ -162,6 +157,11 @@ export const characterMedia = {
         "src": "/illustrations/mnemonics/m109.webp",
         "label": "沟壑、洼处",
         "alt": "草地中明显下陷的浅沟和洼地"
+      },
+      "g5v1-l05-c05-u8861-words-image:g5v1-l05-c05-u8861-words-image-1": {
+        "src": "/illustrations/mnemonics-v2/g5-u8861.webp",
+        "label": "平衡",
+        "alt": "平衡指身体保持稳当不偏斜；踏着搭石快步向前保持平衡，步调整齐宛如一首流动的乐章 图中“彳”与“田”与“大”与“亍”按穿插结构自然长成“衡”。"
       }
     }
   },
@@ -180,11 +180,6 @@ export const characterMedia = {
     },
     "transcript": "协，协调的协。协调就是不同的人或部分互相配合，行动合得上。协是左右结构，左边像一处交会标记，右边可以想成几只手一起办事。大家看准前后脚步，一起把事情做好。一行人走搭石时，前面的抬起脚来，后面的紧跟上去，动作协调有序，清波和人影也跟着有了节奏。",
     "practiceOptionVisuals": {
-      "g5v1-l05-c06-u534f-words-image:g5v1-l05-c06-u534f-words-image-1": {
-        "src": "/illustrations/mnemonics-v2/g5-u534f.webp",
-        "label": "协调",
-        "alt": "协调指相互配合一致；一行人走搭石协调有序，前呼后应，充满了默契的人情美 图中“十”与“办”按左右结构自然长成“协”。"
-      },
       "g5v1-l05-c06-u534f-words-image:g5v1-l05-c06-u534f-words-image-2": {
         "src": "/illustrations/meanings/m07.webp",
         "label": "一代又一代",
@@ -194,6 +189,11 @@ export const characterMedia = {
         "src": "/illustrations/mnemonics/m55.webp",
         "label": "肉桂、桂花树",
         "alt": "金桂树下两个孩子闻桂花"
+      },
+      "g5v1-l05-c06-u534f-words-image:g5v1-l05-c06-u534f-words-image-1": {
+        "src": "/illustrations/mnemonics-v2/g5-u534f.webp",
+        "label": "协调",
+        "alt": "协调指相互配合一致；一行人走搭石协调有序，前呼后应，充满了默契的人情美 图中“十”与“办”按左右结构自然长成“协”。"
       }
     }
   },
@@ -217,12 +217,12 @@ export const characterMedia = {
         "label": "人影绰绰",
         "alt": "人影绰绰形容人影摇曳美好的姿态；清晨溪水上映出绰绰人影，构成了山村最动人的晨景 图中“纟”与“卓”按左右结构自然长成“绰”。"
       },
-      "g5v1-l05-c07-u7ef0-words-image:g5v1-l05-c07-u7ef0-words-image-2": {
+      "g5v1-l05-c07-u7ef0-words-image:g5v1-l05-c07-u7ef0-words-image-0": {
         "src": "/illustrations/meanings/m06.webp",
         "label": "背负、承载",
         "alt": "孩子把行囊稳稳背在背上"
       },
-      "g5v1-l05-c07-u7ef0-words-image:g5v1-l05-c07-u7ef0-words-image-0": {
+      "g5v1-l05-c07-u7ef0-words-image:g5v1-l05-c07-u7ef0-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u4efb.webp",
         "label": "任丘",
         "alt": "任丘是河北省的地名；任丘等地的平原上遍布着神奇的地道网络，连通着村村落落 图中“亻”与“壬”按左右结构自然长成“任”。"
@@ -244,12 +244,12 @@ export const characterMedia = {
     },
     "transcript": "洪，洪水的洪。洪水是水位猛涨后漫出河道的大水。洪是左右结构，左边三点水，右边可以想成许多水流一同汇来。溪水越聚越多，冲过原来的河岸。山洪暴发、溪水猛涨，原有搭石会被冲走，交代了乡亲为什么每年都要在水退后重新摆搭石。",
     "practiceOptionVisuals": {
-      "g5v1-l05-c08-u6d2a-words-image:g5v1-l05-c08-u6d2a-words-image-0": {
+      "g5v1-l05-c08-u6d2a-words-image:g5v1-l05-c08-u6d2a-words-image-2": {
         "src": "/illustrations/meanings/m08.webp",
         "label": "整齐有序",
         "alt": "竹简按照次序整齐排列"
       },
-      "g5v1-l05-c08-u6d2a-words-image:g5v1-l05-c08-u6d2a-words-image-2": {
+      "g5v1-l05-c08-u6d2a-words-image:g5v1-l05-c08-u6d2a-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u635f.webp",
         "label": "损失",
         "alt": "损失惨重令人扼腕叹息；无数孤本文物与稀世奇珍化为乌有，这是全人类文明的巨大损失 图中“扌”与“员”按左右结构自然长成“损”。"
@@ -281,15 +281,15 @@ export const characterMedia = {
         "label": "整齐有序",
         "alt": "竹简按照次序整齐排列"
       },
-      "g5v1-l05-c09-u8bbf-words-image:g5v1-l05-c09-u8bbf-words-image-2": {
-        "src": "/illustrations/mnemonics-v2/g5-u8df7.webp",
-        "label": "跷跷板",
-        "alt": "跷跷板荡起童年欢乐；在赶考途中的庙会上，父亲难得给孩子买了一只小玩具，装满了温情 图中“⻊”与“尧”按左右结构自然长成“跷”。"
-      },
       "g5v1-l05-c09-u8bbf-words-image:g5v1-l05-c09-u8bbf-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u8bbf.webp",
         "label": "访问",
         "alt": "访问指登门探望与往来；搭石不仅方便了走亲访友，更将乡亲们朴实互助的心紧紧相连 图中“讠”与“方”按左右结构自然长成“访”。"
+      },
+      "g5v1-l05-c09-u8bbf-words-image:g5v1-l05-c09-u8bbf-words-image-2": {
+        "src": "/illustrations/mnemonics-v2/g5-u8df7.webp",
+        "label": "跷跷板",
+        "alt": "跷跷板荡起童年欢乐；在赶考途中的庙会上，父亲难得给孩子买了一只小玩具，装满了温情 图中“⻊”与“尧”按左右结构自然长成“跷”。"
       }
     }
   },
@@ -308,11 +308,6 @@ export const characterMedia = {
     },
     "transcript": "鞋，鞋子的鞋。鞋子穿在脚上，可以保护脚，也帮助人行走。鞋是左右结构，左边可以想成做鞋的皮料，右边像上下两层稳稳的鞋底。把鞋底摆平，脚才站得稳。溪水上涨时，人们过河要脱鞋挽裤，搭石摆好以后，乡亲才能穿着鞋一步步从石上走过。",
     "practiceOptionVisuals": {
-      "g5v1-l05-c10-u978b-words-image:g5v1-l05-c10-u978b-words-image-1": {
-        "src": "/illustrations/mnemonics-v2/g5-u978b.webp",
-        "label": "鞋子",
-        "alt": "鞋子是行走时的脚部保护；有了平稳的搭石，乡亲们走过溪流不用脱鞋挽裤，出行方便从容 图中“革”与“圭”按左右结构自然长成“鞋”。"
-      },
       "g5v1-l05-c10-u978b-words-image:g5v1-l05-c10-u978b-words-image-2": {
         "src": "/illustrations/meanings/m08.webp",
         "label": "整齐有序",
@@ -322,6 +317,11 @@ export const characterMedia = {
         "src": "/illustrations/mnemonics-v2/g5-u6094.webp",
         "label": "后悔",
         "alt": "后悔指事后感到惋惜懊恼；海力布为了乡亲们的生命说出真相，虽然变成石头却无怨无悔 图中“忄”与“每”按左右结构自然长成“悔”。"
+      },
+      "g5v1-l05-c10-u978b-words-image:g5v1-l05-c10-u978b-words-image-1": {
+        "src": "/illustrations/mnemonics-v2/g5-u978b.webp",
+        "label": "鞋子",
+        "alt": "鞋子是行走时的脚部保护；有了平稳的搭石，乡亲们走过溪流不用脱鞋挽裤，出行方便从容 图中“革”与“圭”按左右结构自然长成“鞋”。"
       }
     }
   },
@@ -345,15 +345,15 @@ export const characterMedia = {
         "label": "朗声诵读",
         "alt": "孩子面向同伴清楚地朗读"
       },
-      "g5v1-l05-c11-u9694-words-image:g5v1-l05-c11-u9694-words-image-2": {
-        "src": "/illustrations/mnemonics-v2/g5-u778c.webp",
-        "label": "瞌睡",
-        "alt": "瞌睡指困倦想要入眠；牛郎在草棚旁打瞌睡时，老牛忽然开口说话，开启了奇妙故事 图中“目”与“盍”按左右结构自然长成“瞌”。"
-      },
       "g5v1-l05-c11-u9694-words-image:g5v1-l05-c11-u9694-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u9694.webp",
         "label": "间隔",
         "alt": "间隔指两地或两物的空间阻隔；搭石跨越了溪水的阻隔，默默传递着无私奉献的人间温情 图中“阝”与“鬲”按左右结构自然长成“隔”。"
+      },
+      "g5v1-l05-c11-u9694-words-image:g5v1-l05-c11-u9694-words-image-2": {
+        "src": "/illustrations/mnemonics-v2/g5-u778c.webp",
+        "label": "瞌睡",
+        "alt": "瞌睡指困倦想要入眠；牛郎在草棚旁打瞌睡时，老牛忽然开口说话，开启了奇妙故事 图中“目”与“盍”按左右结构自然长成“瞌”。"
       }
     }
   },
@@ -372,11 +372,6 @@ export const characterMedia = {
     },
     "transcript": "懒，懒惰的懒。懒惰是不愿动脑或动手做应该做的事。懒是左右结构，左边是竖心旁，右边可以整体想成把任务推给别人、自己赖着不动的人。事情堆在面前也不愿起身。课文中的老人发现搭石不稳，马上放下东西找石头垫好，还踏上几个来回检查，他的认真负责与懒惰正好相反。",
     "practiceOptionVisuals": {
-      "g5v1-l05-c12-u61d2-words-image:g5v1-l05-c12-u61d2-words-image-1": {
-        "src": "/illustrations/mnemonics-v2/g5-u61d2.webp",
-        "label": "懒惰",
-        "alt": "懒惰是遇事推诿不肯动手；若是搭石不稳，无论谁路过都会立刻找石头修垫，绝不偷懒推托 图中“忄”与“赖”按左右结构自然长成“懒”。"
-      },
       "g5v1-l05-c12-u61d2-words-image:g5v1-l05-c12-u61d2-words-image-0": {
         "src": "/illustrations/meanings/m03.webp",
         "label": "检查、验证",
@@ -386,6 +381,11 @@ export const characterMedia = {
         "src": "/illustrations/mnemonics-v2/g5-u67dc.webp",
         "label": "书柜",
         "alt": "书柜是摆放书籍的木柜；小鸟在书柜与书架间灵巧穿梭，把书房当作了温暖的游戏天地 图中“木”与“巨”按左右结构自然长成“柜”。"
+      },
+      "g5v1-l05-c12-u61d2-words-image:g5v1-l05-c12-u61d2-words-image-1": {
+        "src": "/illustrations/mnemonics-v2/g5-u61d2.webp",
+        "label": "懒惰",
+        "alt": "懒惰是遇事推诿不肯动手；若是搭石不稳，无论谁路过都会立刻找石头修垫，绝不偷懒推托 图中“忄”与“赖”按左右结构自然长成“懒”。"
       }
     }
   },
@@ -404,15 +404,15 @@ export const characterMedia = {
     },
     "transcript": "稳，安稳的稳。安稳就是平静、牢靠，不摇晃也不慌乱。稳是左右结构，左边像一株沉甸甸的禾苗，右边可以想成一颗原本着急、后来安定下来的心。禾苗站直，心也慢慢静下来。乡亲发现哪块搭石不平稳，就找来合适石头垫好并反复踏查，石头稳了，后来的人才能放心过溪。",
     "practiceOptionVisuals": {
-      "g5v1-l05-c13-u7a33-words-image:g5v1-l05-c13-u7a33-words-image-1": {
-        "src": "/illustrations/mnemonics-v2/g5-u7a33.webp",
-        "label": "安稳",
-        "alt": "安稳指牢靠平稳不摇晃；踏上一块块平稳的搭石，行人心中涌起的是踏实与邻里的信任 图中“禾”与“急”按左右结构自然长成“稳”。"
-      },
       "g5v1-l05-c13-u7a33-words-image:g5v1-l05-c13-u7a33-words-image-2": {
         "src": "/illustrations/meanings/m07.webp",
         "label": "一代又一代",
         "alt": "祖辈、父母和孩子三代人相聚"
+      },
+      "g5v1-l05-c13-u7a33-words-image:g5v1-l05-c13-u7a33-words-image-1": {
+        "src": "/illustrations/mnemonics-v2/g5-u7a33.webp",
+        "label": "安稳",
+        "alt": "安稳指牢靠平稳不摇晃；踏上一块块平稳的搭石，行人心中涌起的是踏实与邻里的信任 图中“禾”与“急”按左右结构自然长成“稳”。"
       },
       "g5v1-l05-c13-u7a33-words-image:g5v1-l05-c13-u7a33-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u64de.webp",
@@ -442,12 +442,12 @@ export const characterMedia = {
         "label": "免得",
         "alt": "免得表示预先防备避免麻烦；走搭石时彼此礼让止步，免得发生碰撞，处处洋溢着尊老爱幼的乡风 图中“⺈”与“口”与“儿”按上下结构自然长成“免”。"
       },
-      "g5v1-l05-c14-u514d-words-image:g5v1-l05-c14-u514d-words-image-0": {
+      "g5v1-l05-c14-u514d-words-image:g5v1-l05-c14-u514d-words-image-2": {
         "src": "/illustrations/meanings/m08.webp",
         "label": "整齐有序",
         "alt": "竹简按照次序整齐排列"
       },
-      "g5v1-l05-c14-u514d-words-image:g5v1-l05-c14-u514d-words-image-2": {
+      "g5v1-l05-c14-u514d-words-image:g5v1-l05-c14-u514d-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u7965.webp",
         "label": "慈祥",
         "alt": "慈祥温和充满深情；母亲慈祥热切的赞扬保护了孩子的创作幼苗，赋予他前进的勇气 图中“礻”与“羊”按左右结构自然长成“祥”。"

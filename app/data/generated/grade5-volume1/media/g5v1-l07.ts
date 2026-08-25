@@ -17,6 +17,11 @@ export const characterMedia = {
     },
     "transcript": "鸵，鸵鸟的鸵，读第二声。鸵鸟是不会飞、却很会奔跑的大型鸟。鸵是左右结构，左边是鸟，右边可以想成伸着长颈、迈开长腿的跑者。大鸟在跑道上快步向前。课文从人的奔跑速度往上比较，鸵鸟很快超过人，随后又被更快的猎豹追上，说明文就这样一层层推进。",
     "practiceOptionVisuals": {
+      "g5v1-l07-c01-u9e35-words-image:g5v1-l07-c01-u9e35-words-image-1": {
+        "src": "/illustrations/mnemonics-v2/g5-u9e35.webp",
+        "label": "鸵鸟",
+        "alt": "鸵鸟是善于奔跑的巨型鸟类；课文以鸵鸟为起点展开速度对比，引人入胜 图中“鸟”与“它”按左右结构自然长成“鸵”。"
+      },
       "g5v1-l07-c01-u9e35-words-image:g5v1-l07-c01-u9e35-words-image-0": {
         "src": "/illustrations/meanings/m08.webp",
         "label": "整齐有序",
@@ -26,11 +31,6 @@ export const characterMedia = {
         "src": "/illustrations/mnemonics/m122.webp",
         "label": "舞蹈",
         "alt": "两个孩子挥舞长绸快乐起舞"
-      },
-      "g5v1-l07-c01-u9e35-words-image:g5v1-l07-c01-u9e35-words-image-1": {
-        "src": "/illustrations/mnemonics-v2/g5-u9e35.webp",
-        "label": "鸵鸟",
-        "alt": "鸵鸟是善于奔跑的巨型鸟类；课文以鸵鸟为起点展开速度对比，引人入胜 图中“鸟”与“它”按左右结构自然长成“鸵”。"
       }
     }
   },
@@ -49,20 +49,20 @@ export const characterMedia = {
     },
     "transcript": "赢，赢家的赢，读第二声。赢家是在比赛或较量中取得胜利的人。赢是上下结构，笔画很多，可以先看成一座分层计分牌，最下方像装着奖品的小篮。分数一层层累积，奖品交给领先者。这场速度比赛不断更换赢家，人跑不过鸵鸟，鸵鸟又追不上猎豹，最后光把所有对手远远甩在后面。",
     "practiceOptionVisuals": {
-      "g5v1-l07-c02-u8d62-words-image:g5v1-l07-c02-u8d62-words-image-2": {
-        "src": "/illustrations/meanings/m05.webp",
-        "label": "朗声诵读",
-        "alt": "孩子面向同伴清楚地朗读"
-      },
-      "g5v1-l07-c02-u8d62-words-image:g5v1-l07-c02-u8d62-words-image-0": {
-        "src": "/illustrations/mnemonics-v2/g5-u60f0.webp",
-        "label": "懒惰",
-        "alt": "懒惰是不肯勤快出力的心态；乡亲们走过搭石绝不懒惰停留，而是保持匀速，确保步伐轻稳 图中“忄”与“左”与“月”按左右结构自然长成“惰”。"
-      },
       "g5v1-l07-c02-u8d62-words-image:g5v1-l07-c02-u8d62-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u8d62.webp",
         "label": "赢家",
         "alt": "赢家指在竞争中胜出的一方；在陆地奔跑的较量中，猎豹成了当之无愧的赢家 图中“𣎆”与“贝”按上下结构自然长成“赢”。"
+      },
+      "g5v1-l07-c02-u8d62-words-image:g5v1-l07-c02-u8d62-words-image-0": {
+        "src": "/illustrations/meanings/m05.webp",
+        "label": "朗声诵读",
+        "alt": "孩子面向同伴清楚地朗读"
+      },
+      "g5v1-l07-c02-u8d62-words-image:g5v1-l07-c02-u8d62-words-image-2": {
+        "src": "/illustrations/mnemonics-v2/g5-u60f0.webp",
+        "label": "懒惰",
+        "alt": "懒惰是不肯勤快出力的心态；乡亲们走过搭石绝不懒惰停留，而是保持匀速，确保步伐轻稳 图中“忄”与“左”与“月”按左右结构自然长成“惰”。"
       }
     }
   },
@@ -113,6 +113,11 @@ export const characterMedia = {
     },
     "transcript": "俯，俯冲的俯。俯冲就是从高处朝下方快速冲去。俯是左右结构，左边像一个向前弯身的人，右边可以想成高处的平台和向下的路线。身体压低，路线陡直落下。游隼从高空俯冲时速度很快，把方向和速度一起说清，也让它在比较中超过地面奔跑的动物。",
     "practiceOptionVisuals": {
+      "g5v1-l07-c04-u4fef-words-image:g5v1-l07-c04-u4fef-words-image-1": {
+        "src": "/illustrations/mnemonics-v2/g5-u4fef.webp",
+        "label": "俯冲",
+        "alt": "俯冲指从高空向下急速冲去；游隼在俯冲捕食时展现出的极速，令人叹为观止 图中“亻”与“府”按左右结构自然长成“俯”。"
+      },
       "g5v1-l07-c04-u4fef-words-image:g5v1-l07-c04-u4fef-words-image-0": {
         "src": "/illustrations/meanings/m06.webp",
         "label": "背负、承载",
@@ -122,11 +127,6 @@ export const characterMedia = {
         "src": "/illustrations/mnemonics-v2/g5-u537f.webp",
         "label": "上卿",
         "alt": "上卿是古代地位尊崇的高级官职；蔺相如因功被拜为上卿，由此引发了与廉颇的一场风波 图中“卯”按独体结构自然长成“卿”。"
-      },
-      "g5v1-l07-c04-u4fef-words-image:g5v1-l07-c04-u4fef-words-image-1": {
-        "src": "/illustrations/mnemonics-v2/g5-u4fef.webp",
-        "label": "俯冲",
-        "alt": "俯冲指从高空向下急速冲去；游隼在俯冲捕食时展现出的极速，令人叹为观止 图中“亻”与“府”按左右结构自然长成“俯”。"
       }
     }
   },
@@ -145,12 +145,12 @@ export const characterMedia = {
     },
     "transcript": "喷，喷气的喷，读第一声。喷气就是气体从小口中快速冲出来。喷是左右结构，左边像出气的小口，右边可以整体想成装着高压气体的机器。阀门一开，气流猛地向后冲出。课文把喷气式飞机放进速度比较，发动机喷出的气流推动飞机前进，让赛道从动物延伸到更快的交通工具。",
     "practiceOptionVisuals": {
-      "g5v1-l07-c05-u55b7-words-image:g5v1-l07-c05-u55b7-words-image-0": {
+      "g5v1-l07-c05-u55b7-words-image:g5v1-l07-c05-u55b7-words-image-2": {
         "src": "/illustrations/meanings/m05.webp",
         "label": "朗声诵读",
         "alt": "孩子面向同伴清楚地朗读"
       },
-      "g5v1-l07-c05-u55b7-words-image:g5v1-l07-c05-u55b7-words-image-2": {
+      "g5v1-l07-c05-u55b7-words-image:g5v1-l07-c05-u55b7-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u5fcd.webp",
         "label": "忍受",
         "alt": "忍受艰辛毫无怨言；母亲默默忍受着常人难以想象的辛苦，一心只盼望着孩子能多读好书 图中“刃”与“心”按上下结构自然长成“忍”。"
@@ -182,12 +182,12 @@ export const characterMedia = {
         "label": "一枚",
         "alt": "枚是用于计算细长物件的量词；一枚火箭携带着巨大的能量冲向太空，展现了科技的力量 图中“木”与“⺙”按左右结构自然长成“枚”。"
       },
-      "g5v1-l07-c06-u679a-words-image:g5v1-l07-c06-u679a-words-image-0": {
+      "g5v1-l07-c06-u679a-words-image:g5v1-l07-c06-u679a-words-image-2": {
         "src": "/illustrations/meanings/m06.webp",
         "label": "背负、承载",
         "alt": "孩子把行囊稳稳背在背上"
       },
-      "g5v1-l07-c06-u679a-words-image:g5v1-l07-c06-u679a-words-image-2": {
+      "g5v1-l07-c06-u679a-words-image:g5v1-l07-c06-u679a-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u54c7.webp",
         "label": "好哇",
         "alt": "哇地一声热泪盈眶；目睹母亲在工厂里的艰辛劳作，孩子心中涌起无尽的酸楚与感激 图中“口”与“圭”按左右结构自然长成“哇”。"
@@ -209,20 +209,20 @@ export const characterMedia = {
     },
     "transcript": "箭，火箭的箭，读第四声。它是上下结构，上面竹字头像两簇轻盈的箭羽，下面由前字指向正前方，箭羽与朝向相合即为箭。火箭是依靠推力高速飞行的航天器。课文用火箭每小时四万千米的高速与飞机对比，说明速度的层层递进，带领我们一步步追向浩瀚太空。",
     "practiceOptionVisuals": {
-      "g5v1-l07-c07-u7bad-words-image:g5v1-l07-c07-u7bad-words-image-2": {
-        "src": "/illustrations/meanings/m08.webp",
-        "label": "整齐有序",
-        "alt": "竹简按照次序整齐排列"
-      },
-      "g5v1-l07-c07-u7bad-words-image:g5v1-l07-c07-u7bad-words-image-0": {
-        "src": "/illustrations/mnemonics-v2/g5-u9274.webp",
-        "label": "鉴赏",
-        "alt": "鉴别品味日益成熟；从最初囫囵吞枣到后来懂得细细鉴赏，作者在阅读中练就了一双敏锐睿智的慧眼 图中“〢”与“丿”与“一”与“丶”与“金”按上下结构自然长成“鉴”。"
-      },
       "g5v1-l07-c07-u7bad-words-image:g5v1-l07-c07-u7bad-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u7bad.webp",
         "label": "火箭",
         "alt": "火箭是能飞出大气层的航天器；火箭的高速飞行为人类探索浩瀚宇宙打开了大门 图中“⺮”与“前”按上下结构自然长成“箭”。"
+      },
+      "g5v1-l07-c07-u7bad-words-image:g5v1-l07-c07-u7bad-words-image-0": {
+        "src": "/illustrations/meanings/m08.webp",
+        "label": "整齐有序",
+        "alt": "竹简按照次序整齐排列"
+      },
+      "g5v1-l07-c07-u7bad-words-image:g5v1-l07-c07-u7bad-words-image-2": {
+        "src": "/illustrations/mnemonics-v2/g5-u9274.webp",
+        "label": "鉴赏",
+        "alt": "鉴别品味日益成熟；从最初囫囵吞枣到后来懂得细细鉴赏，作者在阅读中练就了一双敏锐睿智的慧眼 图中“〢”与“丿”与“一”与“丶”与“金”按上下结构自然长成“鉴”。"
       }
     }
   },
@@ -241,6 +241,11 @@ export const characterMedia = {
     },
     "transcript": "火箭要摆脱地心引力，飞到浩瀚的太空中，速度必须比喷气式飞机快得多。浩瀚形容广大、辽阔，课文用它写一望无际的太空。浩是左右结构，左边三点水像宽阔水面，右边告诉的告可以想成传向远方的声音。水面铺开，声音也越传越远。一个浩瀚，把火箭将要进入的空间写得开阔又深远。",
     "practiceOptionVisuals": {
+      "g5v1-l07-c08-u6d69-words-image:g5v1-l07-c08-u6d69-words-image-1": {
+        "src": "/illustrations/mnemonics-v2/g5-u6d69.webp",
+        "label": "浩瀚",
+        "alt": "浩瀚形容广大辽阔无边无际；在浩瀚的宇宙星空中，光速成了传递信息的最快使者 图中“氵”与“告”按左右结构自然长成“浩”。"
+      },
       "g5v1-l07-c08-u6d69-words-image:g5v1-l07-c08-u6d69-words-image-0": {
         "src": "/illustrations/meanings/m06.webp",
         "label": "背负、承载",
@@ -250,11 +255,6 @@ export const characterMedia = {
         "src": "/illustrations/mnemonics-v2/g5-u85d3.webp",
         "label": "苔藓",
         "alt": "苔藓柔软保温干燥；松鼠采集柔软的苔藓铺在窝底，把小窝打理得格外暖和舒坦 图中“艹”与“鲜”按上下结构自然长成“藓”。"
-      },
-      "g5v1-l07-c08-u6d69-words-image:g5v1-l07-c08-u6d69-words-image-1": {
-        "src": "/illustrations/mnemonics-v2/g5-u6d69.webp",
-        "label": "浩瀚",
-        "alt": "浩瀚形容广大辽阔无边无际；在浩瀚的宇宙星空中，光速成了传递信息的最快使者 图中“氵”与“告”按左右结构自然长成“浩”。"
       }
     }
   },
@@ -305,17 +305,17 @@ export const characterMedia = {
     },
     "transcript": "束，一束的束。束可以说把许多细长东西捆在一起，也可以说聚拢的一束光。束的笔画穿插在一起，中间像绑带围住枝条，上下枝端仍然露在外面。把散开的光线收拢成一束。课文最后把速度比较到光，一束光在极短时间里就能走过很远距离，层层比赛也在这里找到最快者。",
     "practiceOptionVisuals": {
+      "g5v1-l07-c10-u675f-words-image:g5v1-l07-c10-u675f-words-image-0": {
+        "src": "/illustrations/meanings/m08.webp",
+        "label": "整齐有序",
+        "alt": "竹简按照次序整齐排列"
+      },
       "g5v1-l07-c10-u675f-words-image:g5v1-l07-c10-u675f-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u675f.webp",
         "label": "一束",
         "alt": "一束指聚拢在一起的一线光芒；一束光线以每秒三十万千米的速度前行，快得令人难以置信 图中“木”与“口”按穿插结构自然长成“束”。"
       },
       "g5v1-l07-c10-u675f-words-image:g5v1-l07-c10-u675f-words-image-2": {
-        "src": "/illustrations/meanings/m08.webp",
-        "label": "整齐有序",
-        "alt": "竹简按照次序整齐排列"
-      },
-      "g5v1-l07-c10-u675f-words-image:g5v1-l07-c10-u675f-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u8c28.webp",
         "label": "谨慎",
         "alt": "谨慎审视不断精进；在爱与警醒的双轨伴随下，作者学会了谨慎修改作品，走得更加稳健成熟 图中“讠”与“堇”按左右结构自然长成“谨”。"
@@ -336,6 +336,11 @@ export const characterMedia = {
     },
     "transcript": "赤，赤道的赤，读第四声。赤道是环绕地球中部、与南北两极距离相等的一条假想线。赤按独体结构整体记，可以想象地球模型中间绕着一条醒目的红色带子。红带围住地球一周。课文为了说明光有多快，让我们想象光沿地球赤道飞奔，极短时间就能绕地球好多圈，抽象速度一下有了尺度。",
     "practiceOptionVisuals": {
+      "g5v1-l07-c11-u8d64-words-image:g5v1-l07-c11-u8d64-words-image-1": {
+        "src": "/illustrations/mnemonics-v2/g5-u8d64.webp",
+        "label": "赤道",
+        "alt": "赤道是地球表面最长的纬线圈；光一秒钟能在地球赤道转七圈多，形象地说明了光速之快 图中“赤”按独体结构自然长成“赤”。"
+      },
       "g5v1-l07-c11-u8d64-words-image:g5v1-l07-c11-u8d64-words-image-2": {
         "src": "/illustrations/meanings/m03.webp",
         "label": "检查、验证",
@@ -345,11 +350,6 @@ export const characterMedia = {
         "src": "/illustrations/mnemonics-v2/g5-u53ec.webp",
         "label": "召集",
         "alt": "召集是通知众人聚集商量；赵王召集大臣商议对策，在危难关头相如挺身而出 图中“刀”与“口”按上下结构自然长成“召”。"
-      },
-      "g5v1-l07-c11-u8d64-words-image:g5v1-l07-c11-u8d64-words-image-1": {
-        "src": "/illustrations/mnemonics-v2/g5-u8d64.webp",
-        "label": "赤道",
-        "alt": "赤道是地球表面最长的纬线圈；光一秒钟能在地球赤道转七圈多，形象地说明了光速之快 图中“赤”按独体结构自然长成“赤”。"
       }
     }
   },
@@ -368,6 +368,11 @@ export const characterMedia = {
     },
     "transcript": "圈，圆圈的圈，在这里读第一声。圆圈是首尾相连、没有棱角的环形。圈是全包围结构，外面像一张方形地图框，里面可以想成卷起并首尾相接的绳子。绳子在框内绕成一圈。课文用光沿地球赤道转好多圈来说明速度，圆圈帮助我们看见光绕地球一周又一周的路线。",
     "practiceOptionVisuals": {
+      "g5v1-l07-c12-u5708-words-image:g5v1-l07-c12-u5708-words-image-1": {
+        "src": "/illustrations/mnemonics-v2/g5-u5708.webp",
+        "label": "圆圈",
+        "alt": "圆圈指环绕一周的轨迹；光芒环绕地球转圈的生动比喻，让抽象的天文数字变得可感可知 图中“囗”与“卷”按全包围结构自然长成“圈”。"
+      },
       "g5v1-l07-c12-u5708-words-image:g5v1-l07-c12-u5708-words-image-0": {
         "src": "/illustrations/meanings/m04.webp",
         "label": "倚靠、凭借",
@@ -377,11 +382,6 @@ export const characterMedia = {
         "src": "/illustrations/mnemonics/m101.webp",
         "label": "交给",
         "alt": "一个孩子把物品交到另一个孩子手中"
-      },
-      "g5v1-l07-c12-u5708-words-image:g5v1-l07-c12-u5708-words-image-1": {
-        "src": "/illustrations/mnemonics-v2/g5-u5708.webp",
-        "label": "圆圈",
-        "alt": "圆圈指环绕一周的轨迹；光芒环绕地球转圈的生动比喻，让抽象的天文数字变得可感可知 图中“囗”与“卷”按全包围结构自然长成“圈”。"
       }
     }
   },

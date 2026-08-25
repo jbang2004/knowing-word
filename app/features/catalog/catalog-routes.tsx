@@ -345,7 +345,7 @@ function WordBoard({
               >
                 <strong>{character.hanzi}</strong>
                 <b>{character.pinyin}</b>
-                {completed.has(character.id) ? <small aria-label="已学会">✓</small> : <em>{extension ? "拓" : character.polyphonic ? "多" : character.curriculumRole === "write" ? "写" : "认"}</em>}
+                {completed.has(character.id) ? <small aria-label="首次学习已完成">✓</small> : <em>{extension ? "拓" : character.polyphonic ? "多" : character.curriculumRole === "write" ? "写" : "认"}</em>}
               </Link>
             ))}</div>
           </article>

@@ -17,12 +17,17 @@ import {
 } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { grade5Lessons } from "../../data/generated/grade5-volume1/course";
-import { learningDayKey, totalReadSessions } from "../../domain/learning-day";
+import { totalReadSessions } from "../../domain/learning-day";
 import { isLessonLearningComplete } from "../../domain/learning-plan";
+import {
+  applyReadingAssessment,
+  canAssessReading,
+  minimumReadingDurationMs,
+} from "../../domain/reading-assessment";
 import { queueLearningEvent } from "../../infrastructure/browser/learning-event-outbox";
 import { playLearningSound } from "../../infrastructure/browser/learning-audio";
 import { speak } from "../../infrastructure/browser/speech";
-import { trackIds } from "../../lib/profile-model";
+import { trackIds, withPreferenceUpdate } from "../../lib/profile-model";
 import { useStudyProfile } from "../profile/use-study-profile";
 import { LearningPageShell, PageHeading } from "../shell/learning-page-shell";
 
@@ -51,9 +56,9 @@ export function AccountRoute() {
         <section className="profile-card">
           <div className="profile-avatar">{profile.name ? profile.name.slice(0, 1) : "学"}</div>
           <div>
-            <label>学习小名<input value={profile.name} onChange={(event) => setProfile((value) => ({ ...value, name: event.target.value }))} placeholder="给自己取一个名字" maxLength={18} /></label>
+            <label>学习小名<input value={profile.name} onChange={(event) => setProfile((value) => withPreferenceUpdate(value, "name", event.target.value))} placeholder="给自己取一个名字" maxLength={18} /></label>
             <label>孩子年级
-              <select value={profile.grade} onChange={(event) => setProfile((value) => ({ ...value, grade: Number(event.target.value) }))}>
+              <select value={profile.grade} onChange={(event) => setProfile((value) => withPreferenceUpdate(value, "grade", Number(event.target.value)))}>
                 {[1, 2, 3, 4, 5, 6].map((grade) => <option value={grade} key={grade}>{grade} 年级</option>)}
               </select>
             </label>
@@ -64,7 +69,7 @@ export function AccountRoute() {
           <Link className="account-records" href="/records">
             <ChartNoAxesColumnIncreasing aria-hidden="true" />学习记录与错题重练
           </Link>
-          <button onClick={() => setProfile((value) => ({ ...value, theme: value.theme === "light" ? "night" : "light" }))}>
+          <button onClick={() => setProfile((value) => withPreferenceUpdate(value, "theme", value.theme === "light" ? "night" : "light"))}>
             {profile.theme === "light" ? <MoonStar aria-hidden="true" /> : <SunMedium aria-hidden="true" />}
             {profile.theme === "light" ? "切换夜读模式" : "切换日间模式"}
           </button>
@@ -91,7 +96,11 @@ export function ReadAloudRoute({
   const [recording, setRecording] = useState(false);
   const [recordingUrl, setRecordingUrl] = useState<string | null>(null);
   const [recordingStatus, setRecordingStatus] = useState<"idle" | "saving" | "saved" | "local">("idle");
+  const [readingAssessment, setReadingAssessment] = useState<"accurate" | "needs-practice" | null>(null);
+  const [recordingListenedToEnd, setRecordingListenedToEnd] = useState(false);
+  const [recordingDurationMs, setRecordingDurationMs] = useState(0);
   const recorderRef = useRef<MediaRecorder | null>(null);
+  const recordingStartedAtRef = useRef(0);
   const streamRef = useRef<MediaStream | null>(null);
   const chunksRef = useRef<Blob[]>([]);
   const lesson = grade5Lessons.find((item) => item.id === lessonId) ?? grade5Lessons[0];
@@ -127,27 +136,27 @@ export function ReadAloudRoute({
     setSpeaking(false);
     setRecordingUrl(null);
     setRecordingStatus("idle");
+    setReadingAssessment(null);
+    setRecordingListenedToEnd(false);
+    setRecordingDurationMs(0);
     const query = new URLSearchParams({ lessonId: nextLessonId });
     if (returnTo) query.set("returnTo", returnTo);
     router.replace(`/read-aloud?${query}`, { scroll: false });
   }
 
-  function countReadSession() {
-    queueLearningEvent({ action: "read", lessonId });
-    if (!profile.readLessons.includes(lessonId) && isLessonLearningComplete(profile, lessonId)) {
+  function recordReadingAssessment(accuracy: "accurate" | "needs-practice") {
+    const now = new Date().toISOString();
+    queueLearningEvent({
+      action: "read",
+      lessonId,
+      readingAccuracy: accuracy,
+      latencyMs: recordingDurationMs,
+    });
+    if (accuracy === "accurate" && !profile.readLessons.includes(lessonId) && isLessonLearningComplete(profile, lessonId)) {
       playLearningSound("dailyComplete");
     }
-    setProfile((previous) => {
-      const date = learningDayKey();
-      const day = previous.daily[date] ?? { attempts: 0, correct: 0, skips: 0, readSessions: 0 };
-      return {
-        ...previous,
-        readLessons: previous.readLessons.includes(lessonId)
-          ? previous.readLessons
-          : [...previous.readLessons, lessonId],
-        daily: { ...previous.daily, [date]: { ...day, readSessions: day.readSessions + 1 } },
-      };
-    });
+    setProfile((previous) => applyReadingAssessment(previous, lessonId, accuracy, now));
+    setReadingAssessment(accuracy);
   }
 
   async function toggleRecording() {
@@ -159,11 +168,15 @@ export function ReadAloudRoute({
       const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
       streamRef.current = stream;
       chunksRef.current = [];
+      setReadingAssessment(null);
+      setRecordingListenedToEnd(false);
+      setRecordingDurationMs(0);
       const preferredType = ["audio/webm;codecs=opus", "audio/mp4"].find((type) => MediaRecorder.isTypeSupported(type));
       const recorder = new MediaRecorder(stream, preferredType ? { mimeType: preferredType } : undefined);
       recorderRef.current = recorder;
       recorder.ondataavailable = (event) => { if (event.data.size) chunksRef.current.push(event.data); };
       recorder.onstop = async () => {
+        setRecordingDurationMs(Math.max(0, Date.now() - recordingStartedAtRef.current));
         const contentType = recorder.mimeType || chunksRef.current[0]?.type || "audio/webm";
         const blob = new Blob(chunksRef.current, { type: contentType });
         const localUrl = URL.createObjectURL(blob);
@@ -171,7 +184,6 @@ export function ReadAloudRoute({
         setRecordingStatus("saving");
         setRecording(false);
         stream.getTracks().forEach((track) => track.stop());
-        countReadSession();
         try {
           const response = await fetch(`/api/recordings?lessonId=${encodeURIComponent(lesson.id)}`, {
             method: "POST",
@@ -187,6 +199,7 @@ export function ReadAloudRoute({
           setRecordingStatus("local");
         }
       };
+      recordingStartedAtRef.current = Date.now();
       recorder.start();
       setRecording(true);
     } catch {
@@ -225,8 +238,45 @@ export function ReadAloudRoute({
         {recordingUrl && (
           <section className="recording-result">
             <span><CheckCircle2 aria-hidden="true" /></span>
-            <div><strong>{recordingStatus === "saving" ? "正在保存录音…" : "这次朗读已经录好"}</strong><p>{recordingStatus === "saved" ? "录音已安全同步，可以稍后回来继续听。" : recordingStatus === "local" ? "当前网络不可用，录音暂存在本页。" : "你可以在这里回听。"}</p></div>
-            <audio controls src={recordingUrl} />
+            <div>
+              <strong>{recordingStatus === "saving" ? "正在保存录音…" : readingAssessment === "accurate" ? "朗读自查已记录" : readingAssessment === "needs-practice" ? "已经找到需要重读的地方" : "先回听，再判断是否读准"}</strong>
+              <p>{readingAssessment === "accurate"
+                ? "这是回听后的自评记录；先保持读准，再比较是否更流利。"
+                : readingAssessment === "needs-practice"
+                  ? "回到范读听清读错的字，再录一次，不追求速度。"
+                  : recordingStatus === "saved"
+                    ? "录音已安全同步。只有确认读准后，才会完成本课朗读。"
+                    : recordingStatus === "local"
+                      ? "当前网络不可用，录音暂存在本页；仍可以回听自查。"
+                      : "完整听一遍自己的录音。"}</p>
+            </div>
+            <audio
+              controls
+              src={recordingUrl}
+              onPlay={() => setRecordingListenedToEnd(false)}
+              onEnded={() => setRecordingListenedToEnd(true)}
+            />
+            {!readingAssessment && recordingStatus !== "saving" && !canAssessReading(
+              lesson.context,
+              recordingDurationMs,
+              recordingListenedToEnd,
+            ) && (
+              <p className="recording-check-gate" role="status">
+                {recordingDurationMs < minimumReadingDurationMs(lesson.context)
+                  ? "这段录音太短，可能没有读完整；请重新录完全文。"
+                  : "请先完整回听录音，再判断每个字是否读准。"}
+              </p>
+            )}
+            {!readingAssessment && recordingStatus !== "saving" && canAssessReading(
+              lesson.context,
+              recordingDurationMs,
+              recordingListenedToEnd,
+            ) && (
+              <div className="recording-assessment" aria-label="朗读准确性自查">
+                <button className="game-button primary" onClick={() => recordReadingAssessment("accurate")}>我回听后自评：每个字都读准了</button>
+                <button className="game-button ghost" onClick={() => recordReadingAssessment("needs-practice")}>有字读错，再练一次</button>
+              </div>
+            )}
           </section>
         )}
       </div>

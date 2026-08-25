@@ -3,6 +3,7 @@
 import { useRouter } from "next/navigation";
 import type { CharacterItem } from "../../data/catalog-types";
 import { withReturnTo } from "../../lib/navigation";
+import { withPreferenceUpdate } from "../../lib/profile-model";
 import { useStudyProfile } from "../profile/use-study-profile";
 import { CharacterStudy, type CharacterStudyMedia } from "./character-study";
 
@@ -43,12 +44,13 @@ export default function CharacterStudyRoute({
       favorite={profile.favorites.includes(character.id)}
       backLabel={backLabel}
       onBack={() => router.push(returnDestination)}
-      onFavorite={() => setProfile((previous) => ({
-        ...previous,
-        favorites: previous.favorites.includes(character.id)
+      onFavorite={() => setProfile((previous) => withPreferenceUpdate(
+        previous,
+        "favorites",
+        previous.favorites.includes(character.id)
           ? previous.favorites.filter((id) => id !== character.id)
           : [...previous.favorites, character.id],
-      }))}
+      ))}
       onStart={() => router.push(withReturnTo(`${characterPath}/quizzes`, returnDestination))}
       onReadAloud={() => router.push(withReturnTo(`/read-aloud?lessonId=${encodeURIComponent(character.lessonId)}`, returnPath))}
       onComponent={(glyph) => {

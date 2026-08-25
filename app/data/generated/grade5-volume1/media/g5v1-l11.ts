@@ -17,20 +17,20 @@ export const characterMedia = {
     },
     "transcript": "牛郎和织女靠劳动过日子，节俭能让一家人的生活安排得更稳。认“俭”时，先看左边的单人旁，再把右边想成合拢物品、逐件清点的动作。东西用完收好，需要多少就取多少，人和物都各在合适的位置。课文里的勤劳日子因此更具体，节俭就是有计划、不随意浪费。",
     "practiceOptionVisuals": {
-      "g5v1-l11-c01-u4fed-words-image:g5v1-l11-c01-u4fed-words-image-0": {
+      "g5v1-l11-c01-u4fed-words-image:g5v1-l11-c01-u4fed-words-image-2": {
         "src": "/illustrations/meanings/m04.webp",
         "label": "倚靠、凭借",
         "alt": "行路的人稳稳倚靠一根手杖"
-      },
-      "g5v1-l11-c01-u4fed-words-image:g5v1-l11-c01-u4fed-words-image-2": {
-        "src": "/illustrations/mnemonics-v2/g5-u51a4.webp",
-        "label": "冤枉",
-        "alt": "冤枉委屈历历在目；童年受到的无端冤枉，在父亲温暖宽厚的怀抱里得到了最大的安慰 图中“冖”与“兔”按上下结构自然长成“冤”。"
       },
       "g5v1-l11-c01-u4fed-words-image:g5v1-l11-c01-u4fed-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u4fed.webp",
         "label": "节俭",
         "alt": "节俭是生活俭朴不奢华；牛郎织女生活节俭踏实，小家庭洋溢着欢声笑语与温情 图中“亻”与“佥”按左右结构自然长成“俭”。"
+      },
+      "g5v1-l11-c01-u4fed-words-image:g5v1-l11-c01-u4fed-words-image-0": {
+        "src": "/illustrations/mnemonics-v2/g5-u51a4.webp",
+        "label": "冤枉",
+        "alt": "冤枉委屈历历在目；童年受到的无端冤枉，在父亲温暖宽厚的怀抱里得到了最大的安慰 图中“冖”与“兔”按上下结构自然长成“冤”。"
       }
     }
   },
@@ -49,20 +49,20 @@ export const characterMedia = {
     },
     "transcript": "课文写天上的宫殿富丽堂皇，织女却在这样的地方失去了自由。富丽堂皇形容建筑宏伟华丽，这四个字写出了天宫耀眼的外表。皇的上面是白，下面是王，可以想象一片亮光铺在宽大的高台上。外表越华美，织女成天织布、不能休息的处境就越让人感到压抑。",
     "practiceOptionVisuals": {
-      "g5v1-l11-c02-u7687-words-image:g5v1-l11-c02-u7687-words-image-0": {
-        "src": "/illustrations/meanings/m04.webp",
-        "label": "倚靠、凭借",
-        "alt": "行路的人稳稳倚靠一根手杖"
-      },
-      "g5v1-l11-c02-u7687-words-image:g5v1-l11-c02-u7687-words-image-2": {
-        "src": "/illustrations/mnemonics-v2/g5-u5f3a.webp",
-        "label": "强迫",
-        "alt": "强迫是用强力逼迫他人顺从；面对秦王的强硬态度，蔺相如据理力争，毫无惧色 图中“弓”与“虽”按左右结构自然长成“强”。"
-      },
       "g5v1-l11-c02-u7687-words-image:g5v1-l11-c02-u7687-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u7687.webp",
         "label": "富丽堂皇",
         "alt": "矞矞皇皇形容光彩夺目富丽灿烂；少年中国的壮丽前景如旭日初升，光芒万丈 图中“白”与“王”按上下结构自然长成“皇”。"
+      },
+      "g5v1-l11-c02-u7687-words-image:g5v1-l11-c02-u7687-words-image-2": {
+        "src": "/illustrations/meanings/m04.webp",
+        "label": "倚靠、凭借",
+        "alt": "行路的人稳稳倚靠一根手杖"
+      },
+      "g5v1-l11-c02-u7687-words-image:g5v1-l11-c02-u7687-words-image-0": {
+        "src": "/illustrations/mnemonics-v2/g5-u5f3a.webp",
+        "label": "强迫",
+        "alt": "强迫是用强力逼迫他人顺从；面对秦王的强硬态度，蔺相如据理力争，毫无惧色 图中“弓”与“虽”按左右结构自然长成“强”。"
       }
     }
   },
@@ -81,12 +81,12 @@ export const characterMedia = {
     },
     "transcript": "牛郎、织女和孩子原本相亲相爱，家人常会依偎在一起。左边单人旁先提示这里有人，右边可以想成另一位穿长衣的人，两个人靠得很近。肩膀轻轻挨着，既有动作，也有亲近和安心。把“依偎”放回一家人团聚的画面，就能体会这个词写出的温暖。",
     "practiceOptionVisuals": {
-      "g5v1-l11-c03-u504e-words-image:g5v1-l11-c03-u504e-words-image-2": {
+      "g5v1-l11-c03-u504e-words-image:g5v1-l11-c03-u504e-words-image-0": {
         "src": "/illustrations/meanings/m07.webp",
         "label": "一代又一代",
         "alt": "祖辈、父母和孩子三代人相聚"
       },
-      "g5v1-l11-c03-u504e-words-image:g5v1-l11-c03-u504e-words-image-0": {
+      "g5v1-l11-c03-u504e-words-image:g5v1-l11-c03-u504e-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u6258.webp",
         "label": "托着纱衣",
         "alt": "托举是用手掌向上托承；牛郎托着轻柔的纱衣，与织女相知相许，定下了终身之约 图中“扌”与“乇”按左右结构自然长成“托”。"
@@ -112,20 +112,20 @@ export const characterMedia = {
     },
     "transcript": "老牛陪伴牛郎多年，后来逐渐衰老。衰适合整体观察，长长的衣形笔画向下垂落，中间可以想成一片颜色变淡的叶子。衣摆垂下、叶色变淡，衰老带来的变化就看见了。衰老表示身体机能随着年岁增长逐渐减弱。老牛的变化也提醒我们，陪伴牛郎的岁月已经很久。",
     "practiceOptionVisuals": {
-      "g5v1-l11-c04-u8870-words-image:g5v1-l11-c04-u8870-words-image-1": {
-        "src": "/illustrations/mnemonics-v2/g5-u8870.webp",
-        "label": "衰老",
-        "alt": "衰老虽至童心永驻；读书让心灵永远保持年轻与充实，即使岁月流逝、容颜衰老，精神依然丰盈 图中“衰”按独体结构自然长成“衰”。"
-      },
-      "g5v1-l11-c04-u8870-words-image:g5v1-l11-c04-u8870-words-image-2": {
+      "g5v1-l11-c04-u8870-words-image:g5v1-l11-c04-u8870-words-image-0": {
         "src": "/illustrations/meanings/m07.webp",
         "label": "一代又一代",
         "alt": "祖辈、父母和孩子三代人相聚"
       },
-      "g5v1-l11-c04-u8870-words-image:g5v1-l11-c04-u8870-words-image-0": {
+      "g5v1-l11-c04-u8870-words-image:g5v1-l11-c04-u8870-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u708a.webp",
         "label": "炊事员",
         "alt": "炊事员细心烹饪；炊事员把仅有的一点新鲜蔬菜精心做成菜汤，表达对首长的由衷敬重 图中“火”与“欠”按左右结构自然长成“炊”。"
+      },
+      "g5v1-l11-c04-u8870-words-image:g5v1-l11-c04-u8870-words-image-1": {
+        "src": "/illustrations/mnemonics-v2/g5-u8870.webp",
+        "label": "衰老",
+        "alt": "衰老虽至童心永驻；读书让心灵永远保持年轻与充实，即使岁月流逝、容颜衰老，精神依然丰盈 图中“衰”按独体结构自然长成“衰”。"
       }
     }
   },
@@ -144,15 +144,15 @@ export const characterMedia = {
     },
     "transcript": "珊，珊瑚的珊，读第一声。珊常与瑚连用成词，它是左右结构，左边的王字旁表明玉石光泽，右边的“册”像两排并列舒展的珊瑚枝，左右组合成珊。珊瑚是生长在海洋中的绚丽骨骼。课文中王母恶狠狠地声称就算追到天涯海角的珊瑚礁也不放过织女，突出了追赶的决绝。",
     "practiceOptionVisuals": {
-      "g5v1-l11-c05-u73ca-words-image:g5v1-l11-c05-u73ca-words-image-1": {
-        "src": "/illustrations/mnemonics-v2/g5-u73ca.webp",
-        "label": "珊瑚",
-        "alt": "珊瑚是海洋中的奇珍异宝；王母恶狠狠地威胁要追至天涯海角珊瑚之岛，展现了专横残忍 图中“王”与“册”按左右结构自然长成“珊”。"
-      },
       "g5v1-l11-c05-u73ca-words-image:g5v1-l11-c05-u73ca-words-image-0": {
         "src": "/illustrations/meanings/m07.webp",
         "label": "一代又一代",
         "alt": "祖辈、父母和孩子三代人相聚"
+      },
+      "g5v1-l11-c05-u73ca-words-image:g5v1-l11-c05-u73ca-words-image-1": {
+        "src": "/illustrations/mnemonics-v2/g5-u73ca.webp",
+        "label": "珊瑚",
+        "alt": "珊瑚是海洋中的奇珍异宝；王母恶狠狠地威胁要追至天涯海角珊瑚之岛，展现了专横残忍 图中“王”与“册”按左右结构自然长成“珊”。"
       },
       "g5v1-l11-c05-u73ca-words-image:g5v1-l11-c05-u73ca-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u9675.webp",
@@ -208,20 +208,20 @@ export const characterMedia = {
     },
     "transcript": "王母娘娘说，织女即使藏到大海中心的珊瑚礁上，也逃不过她的追赶。礁的左边是石字旁，先让人想到海中的礁体，右边的焦可以想成远处醒目的标记。石块般的礁体立在海中，珊瑚礁这个地点就有了清楚轮廓。课文用极远的藏身处加强王母的威胁，也把故事的冲突推得更紧。",
     "practiceOptionVisuals": {
-      "g5v1-l11-c07-u7901-words-image:g5v1-l11-c07-u7901-words-image-1": {
-        "src": "/illustrations/mnemonics-v2/g5-u7901.webp",
-        "label": "珊瑚礁",
-        "alt": "礁石是海中突出的岩石；波涛汹涌的险峻暗礁，象征着追求幸福道路上的艰难险阻 图中“石”与“焦”按左右结构自然长成“礁”。"
-      },
-      "g5v1-l11-c07-u7901-words-image:g5v1-l11-c07-u7901-words-image-0": {
+      "g5v1-l11-c07-u7901-words-image:g5v1-l11-c07-u7901-words-image-2": {
         "src": "/illustrations/meanings/m08.webp",
         "label": "整齐有序",
         "alt": "竹简按照次序整齐排列"
       },
-      "g5v1-l11-c07-u7901-words-image:g5v1-l11-c07-u7901-words-image-2": {
+      "g5v1-l11-c07-u7901-words-image:g5v1-l11-c07-u7901-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u635f.webp",
         "label": "损失",
         "alt": "损失惨重令人扼腕叹息；无数孤本文物与稀世奇珍化为乌有，这是全人类文明的巨大损失 图中“扌”与“员”按左右结构自然长成“损”。"
+      },
+      "g5v1-l11-c07-u7901-words-image:g5v1-l11-c07-u7901-words-image-1": {
+        "src": "/illustrations/mnemonics-v2/g5-u7901.webp",
+        "label": "珊瑚礁",
+        "alt": "礁石是海中突出的岩石；波涛汹涌的险峻暗礁，象征着追求幸福道路上的艰难险阻 图中“石”与“焦”按左右结构自然长成“礁”。"
       }
     }
   },
@@ -240,12 +240,12 @@ export const characterMedia = {
     },
     "transcript": "牛郎听见织女被抓走，赶紧找出两个筐，一筐放一个孩子，挑起来追赶。筐的上面是竹字头，下面的匡像四面围起的筐沿。可以想象竹条一根根编紧，四周立稳，里面便能盛放东西。两个筐装着两个孩子，这个具体数量和动作把牛郎追赶时的匆忙一下带到了眼前。",
     "practiceOptionVisuals": {
-      "g5v1-l11-c08-u7b50-words-image:g5v1-l11-c08-u7b50-words-image-0": {
+      "g5v1-l11-c08-u7b50-words-image:g5v1-l11-c08-u7b50-words-image-2": {
         "src": "/illustrations/meanings/m06.webp",
         "label": "背负、承载",
         "alt": "孩子把行囊稳稳背在背上"
       },
-      "g5v1-l11-c08-u7b50-words-image:g5v1-l11-c08-u7b50-words-image-2": {
+      "g5v1-l11-c08-u7b50-words-image:g5v1-l11-c08-u7b50-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u9489.webp",
         "label": "钉子",
         "alt": "钉鞋补舟手艺精湛；父亲用粗糙的双手修补旧船、钉好鞋底，把每一件小事都做得扎扎实实 图中“钅”与“丁”按左右结构自然长成“钉”。"

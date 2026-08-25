@@ -17,20 +17,20 @@ export const characterMedia = {
     },
     "transcript": "课文说圆明园的毁灭是不可估量的损失，数量和价值都难以算清。认“估”时，先把一位推算的人放在左边，单人旁就有了位置，右边可以想成摆着算筹的小台。人站在台边反复核算，仍只能得到大概范围。估计就是根据已有情况作出推测，而“不可估量”说明这场损失大到难以计算。",
     "practiceOptionVisuals": {
-      "g5v1-l14-c01-u4f30-words-image:g5v1-l14-c01-u4f30-words-image-2": {
-        "src": "/illustrations/meanings/m07.webp",
-        "label": "一代又一代",
-        "alt": "祖辈、父母和孩子三代人相聚"
-      },
-      "g5v1-l14-c01-u4f30-words-image:g5v1-l14-c01-u4f30-words-image-0": {
-        "src": "/illustrations/mnemonics-v2/g5-u7f36.webp",
-        "label": "击缶",
-        "alt": "缶是古代用来盛酒与敲击伴奏的瓦器；渑池会上秦王被迫击缶，赵国的国格尊严得到了有力捍卫 图中“午”与“山”按上下结构自然长成“缶”。"
-      },
       "g5v1-l14-c01-u4f30-words-image:g5v1-l14-c01-u4f30-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u4f30.webp",
         "label": "估计",
         "alt": "不可估量形容损失极其巨大难以算计；圆明园的毁灭是人类文化史上无法弥补的惨痛损失 图中“亻”与“古”按左右结构自然长成“估”。"
+      },
+      "g5v1-l14-c01-u4f30-words-image:g5v1-l14-c01-u4f30-words-image-0": {
+        "src": "/illustrations/meanings/m07.webp",
+        "label": "一代又一代",
+        "alt": "祖辈、父母和孩子三代人相聚"
+      },
+      "g5v1-l14-c01-u4f30-words-image:g5v1-l14-c01-u4f30-words-image-2": {
+        "src": "/illustrations/mnemonics-v2/g5-u7f36.webp",
+        "label": "击缶",
+        "alt": "缶是古代用来盛酒与敲击伴奏的瓦器；渑池会上秦王被迫击缶，赵国的国格尊严得到了有力捍卫 图中“午”与“山”按上下结构自然长成“缶”。"
       }
     }
   },
@@ -49,20 +49,20 @@ export const characterMedia = {
     },
     "transcript": "圆明园里有金碧辉煌的殿堂，光彩照亮一层层建筑。煌是左右结构，左边是火字旁，右边是皇。火光映着高大的冠顶和座台。辉煌形容光彩耀眼，也能形容成就显著，课文先让我们看见园林昔日的盛景。",
     "practiceOptionVisuals": {
-      "g5v1-l14-c02-u714c-words-image:g5v1-l14-c02-u714c-words-image-1": {
-        "src": "/illustrations/mnemonics-v2/g5-u714c.webp",
-        "label": "辉煌",
-        "alt": "金碧辉煌形容宫殿宏丽夺目；昔日圆明园建筑金碧辉煌，汇聚了天下园林的艺术精华 图中“火”与“皇”按左右结构自然长成“煌”。"
-      },
-      "g5v1-l14-c02-u714c-words-image:g5v1-l14-c02-u714c-words-image-0": {
+      "g5v1-l14-c02-u714c-words-image:g5v1-l14-c02-u714c-words-image-2": {
         "src": "/illustrations/meanings/m04.webp",
         "label": "倚靠、凭借",
         "alt": "行路的人稳稳倚靠一根手杖"
       },
-      "g5v1-l14-c02-u714c-words-image:g5v1-l14-c02-u714c-words-image-2": {
+      "g5v1-l14-c02-u714c-words-image:g5v1-l14-c02-u714c-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u6073.webp",
         "label": "勤勤恳恳",
         "alt": "勤勤恳恳形容辛勤踏实；牛郎织女勤勤恳恳地耕织劳作，把日子过得有滋有味 图中“艮”与“心”按上下结构自然长成“恳”。"
+      },
+      "g5v1-l14-c02-u714c-words-image:g5v1-l14-c02-u714c-words-image-1": {
+        "src": "/illustrations/mnemonics-v2/g5-u714c.webp",
+        "label": "辉煌",
+        "alt": "金碧辉煌形容宫殿宏丽夺目；昔日圆明园建筑金碧辉煌，汇聚了天下园林的艺术精华 图中“火”与“皇”按左右结构自然长成“煌”。"
       }
     }
   },
@@ -81,15 +81,15 @@ export const characterMedia = {
     },
     "transcript": "玲珑剔透的亭台楼阁，写出了圆明园建筑精巧细致。珑是左右结构，左边像玉石架，右边可以想成收拢身体的小龙。玉光绕着细小轮廓流动。玲珑常形容物体精巧细致，课文用它描写园林建筑。",
     "practiceOptionVisuals": {
-      "g5v1-l14-c03-u73d1-words-image:g5v1-l14-c03-u73d1-words-image-1": {
-        "src": "/illustrations/mnemonics-v2/g5-u73d1.webp",
-        "label": "玲珑",
-        "alt": "小巧玲珑活泼动人；作者用生动传神的笔触勾勒出松鼠玲珑的面庞与蓬松漂亮的尾巴 图中“王”与“龙”按左右结构自然长成“珑”。"
-      },
       "g5v1-l14-c03-u73d1-words-image:g5v1-l14-c03-u73d1-words-image-2": {
         "src": "/illustrations/meanings/m03.webp",
         "label": "检查、验证",
         "alt": "孩子用放大镜仔细检查一件物品"
+      },
+      "g5v1-l14-c03-u73d1-words-image:g5v1-l14-c03-u73d1-words-image-1": {
+        "src": "/illustrations/mnemonics-v2/g5-u73d1.webp",
+        "label": "玲珑",
+        "alt": "小巧玲珑活泼动人；作者用生动传神的笔触勾勒出松鼠玲珑的面庞与蓬松漂亮的尾巴 图中“王”与“龙”按左右结构自然长成“珑”。"
       },
       "g5v1-l14-c03-u73d1-words-image:g5v1-l14-c03-u73d1-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u61c2.webp",
@@ -118,12 +118,12 @@ export const characterMedia = {
         "label": "剔透",
         "alt": "玲珑剔透形容工艺极其精湛通透；圆明园荟萃历代名园精粹，堪称园林艺术的巅峰之作 图中“易”与“刂”按左右结构自然长成“剔”。"
       },
-      "g5v1-l14-c04-u5254-words-image:g5v1-l14-c04-u5254-words-image-2": {
+      "g5v1-l14-c04-u5254-words-image:g5v1-l14-c04-u5254-words-image-0": {
         "src": "/illustrations/meanings/m07.webp",
         "label": "一代又一代",
         "alt": "祖辈、父母和孩子三代人相聚"
       },
-      "g5v1-l14-c04-u5254-words-image:g5v1-l14-c04-u5254-words-image-0": {
+      "g5v1-l14-c04-u5254-words-image:g5v1-l14-c04-u5254-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u7f55.webp",
         "label": "稀罕",
         "alt": "稀罕指稀奇少见；牛郎织女男耕女织、情深意重，过着令人羡慕的平静美好日子 图中“⺳”与“干”按上下结构自然长成“罕”。"
@@ -145,12 +145,12 @@ export const characterMedia = {
     },
     "transcript": "课文列举海宁的安澜园，说明圆明园中有仿照各地名胜建造的景物。安澜园是园名，澜的左边有三点水，右边是阑。可以想象门栏里层层铺开水纹，三点水从左边接过来，帮助看清字的左右位置。记住安澜园这个专名，也就接上了圆明园汇集各地园林精华的特点。",
     "practiceOptionVisuals": {
-      "g5v1-l14-c05-u6f9c-words-image:g5v1-l14-c05-u6f9c-words-image-0": {
+      "g5v1-l14-c05-u6f9c-words-image:g5v1-l14-c05-u6f9c-words-image-2": {
         "src": "/illustrations/meanings/m06.webp",
         "label": "背负、承载",
         "alt": "孩子把行囊稳稳背在背上"
       },
-      "g5v1-l14-c05-u6f9c-words-image:g5v1-l14-c05-u6f9c-words-image-2": {
+      "g5v1-l14-c05-u6f9c-words-image:g5v1-l14-c05-u6f9c-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u7eb1.webp",
         "label": "纱衣",
         "alt": "纱衣是用轻薄细纱制成的衣裳；织女织出绚丽如云锦的纱衣，将天宫点缀得格外美丽 图中“纟”与“少”按左右结构自然长成“纱”。"
@@ -178,17 +178,17 @@ export const characterMedia = {
     },
     "transcript": "课文写蓬岛瑶台等景物，名字本身就带着神话般的美。瑶是左右结构，左边像玉石架，右边可以想成双手捧着精美玉罐。玉饰和楼台一同发亮。瑶台指传说中以美玉建成的台，也常用来形容美丽楼台。",
     "practiceOptionVisuals": {
+      "g5v1-l14-c06-u7476-words-image:g5v1-l14-c06-u7476-words-image-2": {
+        "src": "/illustrations/meanings/m05.webp",
+        "label": "朗声诵读",
+        "alt": "孩子面向同伴清楚地朗读"
+      },
       "g5v1-l14-c06-u7476-words-image:g5v1-l14-c06-u7476-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u7476.webp",
         "label": "瑶台",
         "alt": "瑶台倒映湖光水色；宛如人间仙境的蓬莱瑶台，展现了古代匠人的奇思妙想与超凡技艺 图中“王”与“爫”与“缶”按左右结构自然长成“瑶”。"
       },
       "g5v1-l14-c06-u7476-words-image:g5v1-l14-c06-u7476-words-image-0": {
-        "src": "/illustrations/meanings/m05.webp",
-        "label": "朗声诵读",
-        "alt": "孩子面向同伴清楚地朗读"
-      },
-      "g5v1-l14-c06-u7476-words-image:g5v1-l14-c06-u7476-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u65a9.webp",
         "label": "斩断",
         "alt": "斩将过关引人入胜；关羽斩颜良诛文丑的精彩情节让年幼的作者如痴如醉，手不释卷 图中“车”与“斤”按左右结构自然长成“斩”。"
@@ -210,12 +210,12 @@ export const characterMedia = {
     },
     "transcript": "圆明园里有武陵春色，这个景名和蓬岛瑶台等景物一起，带人走进诗情画意的园林。陵的左边是双耳旁，右边可以想成沿坡地上升的台阶和脚步。脚步一层层登上高处，字的左右位置也随之清楚。把陵放回武陵春色来记，脑中留下的是圆明园中的一处景名和它带来的春日想象。",
     "practiceOptionVisuals": {
-      "g5v1-l14-c07-u9675-words-image:g5v1-l14-c07-u9675-words-image-0": {
+      "g5v1-l14-c07-u9675-words-image:g5v1-l14-c07-u9675-words-image-2": {
         "src": "/illustrations/meanings/m07.webp",
         "label": "一代又一代",
         "alt": "祖辈、父母和孩子三代人相聚"
       },
-      "g5v1-l14-c07-u9675-words-image:g5v1-l14-c07-u9675-words-image-2": {
+      "g5v1-l14-c07-u9675-words-image:g5v1-l14-c07-u9675-words-image-0": {
         "src": "/illustrations/mnemonics/m130.webp",
         "label": "正见、看得正直",
         "alt": "孩子沿笔直竹尺瞄准远处标记"
@@ -242,20 +242,20 @@ export const characterMedia = {
     },
     "transcript": "圆明园规模宏伟，许多景点和建筑分布在广阔园林中。宏是上下结构，上面是宝盖头，下面可以想成向两边撑开的大跨度屋梁。宽屋顶和拱梁稳稳搭起。宏伟形容建筑、计划或气势规模很大。课文列举殿堂、楼阁和景点，正是让“宏伟”有可见的分量。",
     "practiceOptionVisuals": {
-      "g5v1-l14-c08-u5b8f-words-image:g5v1-l14-c08-u5b8f-words-image-2": {
+      "g5v1-l14-c08-u5b8f-words-image:g5v1-l14-c08-u5b8f-words-image-0": {
         "src": "/illustrations/meanings/m04.webp",
         "label": "倚靠、凭借",
         "alt": "行路的人稳稳倚靠一根手杖"
-      },
-      "g5v1-l14-c08-u5b8f-words-image:g5v1-l14-c08-u5b8f-words-image-0": {
-        "src": "/illustrations/mnemonics-v2/g5-u6734.webp",
-        "label": "朴实",
-        "alt": "质朴名言字字珠玑；“读书好，多读书，读好书”，这九字真言质朴无华，成为指引一生的座右铭 图中“木”与“卜”按左右结构自然长成“朴”。"
       },
       "g5v1-l14-c08-u5b8f-words-image:g5v1-l14-c08-u5b8f-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u5b8f.webp",
         "label": "宏伟",
         "alt": "宏伟壮观展现盛世气象；圆明园不仅规模宏大，更是举世闻名的万园之园与文化宝库 图中“宀”与“厷”按上下结构自然长成“宏”。"
+      },
+      "g5v1-l14-c08-u5b8f-words-image:g5v1-l14-c08-u5b8f-words-image-2": {
+        "src": "/illustrations/mnemonics-v2/g5-u6734.webp",
+        "label": "朴实",
+        "alt": "质朴名言字字珠玑；“读书好，多读书，读好书”，这九字真言质朴无华，成为指引一生的座右铭 图中“木”与“卜”按左右结构自然长成“朴”。"
       }
     }
   },
@@ -278,15 +278,15 @@ export const characterMedia = {
         "label": "一代又一代",
         "alt": "祖辈、父母和孩子三代人相聚"
       },
-      "g5v1-l14-c09-u5949-words-image:g5v1-l14-c09-u5949-words-image-2": {
-        "src": "/illustrations/mnemonics-v2/g5-u5fcd.webp",
-        "label": "忍受",
-        "alt": "忍受艰辛毫无怨言；母亲默默忍受着常人难以想象的辛苦，一心只盼望着孩子能多读好书 图中“刃”与“心”按上下结构自然长成“忍”。"
-      },
       "g5v1-l14-c09-u5949-words-image:g5v1-l14-c09-u5949-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u5949.webp",
         "label": "奉命",
         "alt": "奉命侵略暴露强盗罪行；英法联军奉侵略头目之命肆意劫掠，犯下了不可饶恕的历史罪行 图中“𡗗”按独体结构自然长成“奉”。"
+      },
+      "g5v1-l14-c09-u5949-words-image:g5v1-l14-c09-u5949-words-image-2": {
+        "src": "/illustrations/mnemonics-v2/g5-u5fcd.webp",
+        "label": "忍受",
+        "alt": "忍受艰辛毫无怨言；母亲默默忍受着常人难以想象的辛苦，一心只盼望着孩子能多读好书 图中“刃”与“心”按上下结构自然长成“忍”。"
       }
     }
   },
@@ -305,15 +305,15 @@ export const characterMedia = {
     },
     "transcript": "大火过后，宏伟园林只留下废墟和灰烬。烬是左右结构，左边是火字旁，右边可以想成空器皿里落下最后几点余灰。火光渐小、灰点落下。灰烬是物体燃烧后留下的灰和少量未烧尽物。灰烬与先前的辉煌对照，毁灭带来的痛惜更强烈。",
     "practiceOptionVisuals": {
-      "g5v1-l14-c10-u70ec-words-image:g5v1-l14-c10-u70ec-words-image-1": {
-        "src": "/illustrations/mnemonics-v2/g5-u70ec.webp",
-        "label": "灰烬",
-        "alt": "化为灰烬令人痛心疾首；三天大火将万园之园化为一片灰烬，历史的伤痛催人警醒奋发 图中“火”与“尽”按左右结构自然长成“烬”。"
-      },
       "g5v1-l14-c10-u70ec-words-image:g5v1-l14-c10-u70ec-words-image-2": {
         "src": "/illustrations/meanings/m07.webp",
         "label": "一代又一代",
         "alt": "祖辈、父母和孩子三代人相聚"
+      },
+      "g5v1-l14-c10-u70ec-words-image:g5v1-l14-c10-u70ec-words-image-1": {
+        "src": "/illustrations/mnemonics-v2/g5-u70ec.webp",
+        "label": "灰烬",
+        "alt": "化为灰烬令人痛心疾首；三天大火将万园之园化为一片灰烬，历史的伤痛催人警醒奋发 图中“火”与“尽”按左右结构自然长成“烬”。"
       },
       "g5v1-l14-c10-u70ec-words-image:g5v1-l14-c10-u70ec-words-image-0": {
         "src": "/illustrations/mnemonics/m102.webp",
@@ -338,20 +338,20 @@ export const characterMedia = {
     },
     "transcript": "毁，毁灭的毁，读第三声。它是左右结构，左边是碎裂的旧墙与石臼，右边的殳像挥动手杖击打的动作，左右组合成毁。毁灭就是彻底破坏，使原有的美好事物不复存在。课文前半部分描绘圆明园昔日的辉煌与艺术瑰宝，后半部分讲述它惨遭焚毁，历史的伤痛更让我们懂得守护的责任。",
     "practiceOptionVisuals": {
-      "g5v1-l14-c11-u6bc1-words-image:g5v1-l14-c11-u6bc1-words-image-1": {
-        "src": "/illustrations/mnemonics-v2/g5-u6bc1.webp",
-        "label": "毁灭",
-        "alt": "毁灭是彻底破坏不复存在；圆明园惨遭毁灭的历史警示我们，落后就要挨打，唯有自强不息 图中“臼”与“工”与“殳”按左右结构自然长成“毁”。"
-      },
-      "g5v1-l14-c11-u6bc1-words-image:g5v1-l14-c11-u6bc1-words-image-2": {
+      "g5v1-l14-c11-u6bc1-words-image:g5v1-l14-c11-u6bc1-words-image-0": {
         "src": "/illustrations/meanings/m05.webp",
         "label": "朗声诵读",
         "alt": "孩子面向同伴清楚地朗读"
       },
-      "g5v1-l14-c11-u6bc1-words-image:g5v1-l14-c11-u6bc1-words-image-0": {
+      "g5v1-l14-c11-u6bc1-words-image:g5v1-l14-c11-u6bc1-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u68a2.webp",
         "label": "树梢",
         "alt": "树梢飞鸣百鸟欢腾；无数飞鸟站在高高的树梢上引吭高歌，展现了人与自然和谐共生的美好画卷 图中“木”与“肖”按左右结构自然长成“梢”。"
+      },
+      "g5v1-l14-c11-u6bc1-words-image:g5v1-l14-c11-u6bc1-words-image-1": {
+        "src": "/illustrations/mnemonics-v2/g5-u6bc1.webp",
+        "label": "毁灭",
+        "alt": "毁灭是彻底破坏不复存在；圆明园惨遭毁灭的历史警示我们，落后就要挨打，唯有自强不息 图中“臼”与“工”与“殳”按左右结构自然长成“毁”。"
       }
     }
   },
@@ -370,20 +370,20 @@ export const characterMedia = {
     },
     "transcript": "圆明园的毁灭带来了不可估量的损失，许多珍贵之物再也找不回来。认“损”时，可以先想箱子里少了一件宝物，再找左边提手旁和右边那个盛物的方框。手一伸，箱中变空，原有的数量和价值都减少了。课文用“损失”概括建筑、文物和历史文化的多重伤痛，这些都难以弥补。",
     "practiceOptionVisuals": {
-      "g5v1-l14-c12-u635f-words-image:g5v1-l14-c12-u635f-words-image-0": {
-        "src": "/illustrations/meanings/m04.webp",
-        "label": "倚靠、凭借",
-        "alt": "行路的人稳稳倚靠一根手杖"
-      },
-      "g5v1-l14-c12-u635f-words-image:g5v1-l14-c12-u635f-words-image-2": {
-        "src": "/illustrations/mnemonics/m10.webp",
-        "label": "茶树",
-        "alt": "山坡上的茶树和嫩绿茶芽"
-      },
       "g5v1-l14-c12-u635f-words-image:g5v1-l14-c12-u635f-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u635f.webp",
         "label": "损失",
         "alt": "损失惨重令人扼腕叹息；无数孤本文物与稀世奇珍化为乌有，这是全人类文明的巨大损失 图中“扌”与“员”按左右结构自然长成“损”。"
+      },
+      "g5v1-l14-c12-u635f-words-image:g5v1-l14-c12-u635f-words-image-2": {
+        "src": "/illustrations/meanings/m04.webp",
+        "label": "倚靠、凭借",
+        "alt": "行路的人稳稳倚靠一根手杖"
+      },
+      "g5v1-l14-c12-u635f-words-image:g5v1-l14-c12-u635f-words-image-0": {
+        "src": "/illustrations/mnemonics/m10.webp",
+        "label": "茶树",
+        "alt": "山坡上的茶树和嫩绿茶芽"
       }
     }
   },
@@ -439,15 +439,15 @@ export const characterMedia = {
         "label": "检查、验证",
         "alt": "孩子用放大镜仔细检查一件物品"
       },
-      "g5v1-l14-c14-u8f89-words-image:g5v1-l14-c14-u8f89-words-image-2": {
-        "src": "/illustrations/mnemonics-v2/g5-u9893.webp",
-        "label": "颓败",
-        "alt": "颓败破旧的劳作车间；在极其艰苦狭窄的车间里，母亲为了养家糊口日复一日辛苦劳作 图中“秃”与“页”按左右结构自然长成“颓”。"
-      },
       "g5v1-l14-c14-u8f89-words-image:g5v1-l14-c14-u8f89-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u8f89.webp",
         "label": "辉煌",
         "alt": "光辉灿烂彰显中华智慧；圆明园收藏着历代奇珍异宝，闪耀着五千年文明的璀璨光辉 图中“光”与“军”按左右结构自然长成“辉”。"
+      },
+      "g5v1-l14-c14-u8f89-words-image:g5v1-l14-c14-u8f89-words-image-2": {
+        "src": "/illustrations/mnemonics-v2/g5-u9893.webp",
+        "label": "颓败",
+        "alt": "颓败破旧的劳作车间；在极其艰苦狭窄的车间里，母亲为了养家糊口日复一日辛苦劳作 图中“秃”与“页”按左右结构自然长成“颓”。"
       }
     }
   },
@@ -501,15 +501,15 @@ export const characterMedia = {
     },
     "transcript": "游览圆明园时，人们可以沿着水岸和楼台从容观看景物。览是上下结构，上面几笔可以想成观景栏和视线，下面是看见的见。人在观景台上向远处望。游览就是从容地观看风景、建筑或展览。课文带我们一路观看，也是在为后文的毁灭蓄起痛惜。",
     "practiceOptionVisuals": {
-      "g5v1-l14-c16-u89c8-words-image:g5v1-l14-c16-u89c8-words-image-1": {
-        "src": "/illustrations/mnemonics-v2/g5-u89c8.webp",
-        "label": "游览",
-        "alt": "游览观赏令人心旷神怡；漫步在园中游览，不仅能饱览江南名胜，更能体验异国情调 图中“〢”与“丿”与“一”与“丶”与“见”按上下结构自然长成“览”。"
-      },
       "g5v1-l14-c16-u89c8-words-image:g5v1-l14-c16-u89c8-words-image-2": {
         "src": "/illustrations/meanings/m06.webp",
         "label": "背负、承载",
         "alt": "孩子把行囊稳稳背在背上"
+      },
+      "g5v1-l14-c16-u89c8-words-image:g5v1-l14-c16-u89c8-words-image-1": {
+        "src": "/illustrations/mnemonics-v2/g5-u89c8.webp",
+        "label": "游览",
+        "alt": "游览观赏令人心旷神怡；漫步在园中游览，不仅能饱览江南名胜，更能体验异国情调 图中“〢”与“丿”与“一”与“丶”与“见”按上下结构自然长成“览”。"
       },
       "g5v1-l14-c16-u89c8-words-image:g5v1-l14-c16-u89c8-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u7eb1.webp",
@@ -533,6 +533,11 @@ export const characterMedia = {
     },
     "transcript": "漫步园内，有如漫游在天南海北，饱览中外风景名胜，仿佛置身在幻想的境界里。境界在这里指眼前景物营造出的情景和感受，带着超出现实的想象。境的左边是提土旁，右边的竟可以想成日光照着观景台上的人。人站在园中四处观看，幻想般的景物便从周围展开。",
     "practiceOptionVisuals": {
+      "g5v1-l14-c17-u5883-words-image:g5v1-l14-c17-u5883-words-image-1": {
+        "src": "/illustrations/mnemonics-v2/g5-u5883.webp",
+        "label": "幻想的境界",
+        "alt": "如入仙境流连忘返；步入圆明园便仿佛置身于如梦如幻的诗情画意之中，神妙无穷 图中“土”与“竟”按左右结构自然长成“境”。"
+      },
       "g5v1-l14-c17-u5883-words-image:g5v1-l14-c17-u5883-words-image-0": {
         "src": "/illustrations/meanings/m03.webp",
         "label": "检查、验证",
@@ -542,11 +547,6 @@ export const characterMedia = {
         "src": "/illustrations/mnemonics/m126.webp",
         "label": "水流源头",
         "alt": "泉水从山石间涌出并汇成小溪"
-      },
-      "g5v1-l14-c17-u5883-words-image:g5v1-l14-c17-u5883-words-image-1": {
-        "src": "/illustrations/mnemonics-v2/g5-u5883.webp",
-        "label": "幻想的境界",
-        "alt": "如入仙境流连忘返；步入圆明园便仿佛置身于如梦如幻的诗情画意之中，神妙无穷 图中“土”与“竟”按左右结构自然长成“境”。"
       }
     }
   },
@@ -566,15 +566,15 @@ export const characterMedia = {
     },
     "transcript": "圆明园收藏着历代文物，唐代也在漫长的中国历史序列中。唐是左上包围结构，外面像宽大屋檐，里面可以想成交错宫梁和方形宫门。宫梁、屋檐和门合在一起，撑起一座宽大的宫室。唐代是中国历史上的一个朝代，读课文时要珍惜历代留下的文化遗产。",
     "practiceOptionVisuals": {
-      "g5v1-l14-c18-u5510-words-image:g5v1-l14-c18-u5510-words-image-1": {
-        "src": "/illustrations/mnemonics-v2/g5-u5510.webp",
-        "label": "唐代",
-        "alt": "唐代珍宝价值连城；园内收藏着自先秦到唐宋元明清的历代文物，是当时最大的皇家博物馆 图中“广”与“肀”与“口”按左上包围结构自然长成“唐”。"
-      },
       "g5v1-l14-c18-u5510-words-image:g5v1-l14-c18-u5510-words-image-2": {
         "src": "/illustrations/meanings/m05.webp",
         "label": "朗声诵读",
         "alt": "孩子面向同伴清楚地朗读"
+      },
+      "g5v1-l14-c18-u5510-words-image:g5v1-l14-c18-u5510-words-image-1": {
+        "src": "/illustrations/mnemonics-v2/g5-u5510.webp",
+        "label": "唐代",
+        "alt": "唐代珍宝价值连城；园内收藏着自先秦到唐宋元明清的历代文物，是当时最大的皇家博物馆 图中“广”与“肀”与“口”按左上包围结构自然长成“唐”。"
       },
       "g5v1-l14-c18-u5510-words-image:g5v1-l14-c18-u5510-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u5589.webp",
@@ -598,20 +598,20 @@ export const characterMedia = {
     },
     "transcript": "侵略者闯入圆明园，掠走珍宝，又纵火毁坏珍贵园林。闯是上三包围结构，外面是两扇大门，里面是一匹马。想象这匹马不顾阻拦冲进门内。闯入就是未经允许或不顾阻拦突然进入。闯入带着强行和无理，正好点出侵略者的野蛮。",
     "practiceOptionVisuals": {
-      "g5v1-l14-c19-u95ef-words-image:g5v1-l14-c19-u95ef-words-image-2": {
-        "src": "/illustrations/meanings/m04.webp",
-        "label": "倚靠、凭借",
-        "alt": "行路的人稳稳倚靠一根手杖"
-      },
-      "g5v1-l14-c19-u95ef-words-image:g5v1-l14-c19-u95ef-words-image-0": {
-        "src": "/illustrations/mnemonics/m43.webp",
-        "label": "脸",
-        "alt": "正面呈现的孩子面孔"
-      },
       "g5v1-l14-c19-u95ef-words-image:g5v1-l14-c19-u95ef-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u95ef.webp",
         "label": "闯入",
         "alt": "闯入掠夺罄竹难书；强盗野蛮闯入这处文明宝库疯狂洗劫，留下了人类文明史上极其黑暗的一页 图中“门”与“马”按上三包围结构自然长成“闯”。"
+      },
+      "g5v1-l14-c19-u95ef-words-image:g5v1-l14-c19-u95ef-words-image-0": {
+        "src": "/illustrations/meanings/m04.webp",
+        "label": "倚靠、凭借",
+        "alt": "行路的人稳稳倚靠一根手杖"
+      },
+      "g5v1-l14-c19-u95ef-words-image:g5v1-l14-c19-u95ef-words-image-2": {
+        "src": "/illustrations/mnemonics/m43.webp",
+        "label": "脸",
+        "alt": "正面呈现的孩子面孔"
       }
     }
   },
@@ -635,15 +635,15 @@ export const characterMedia = {
         "label": "朗声诵读",
         "alt": "孩子面向同伴清楚地朗读"
       },
-      "g5v1-l14-c20-u9500-words-image:g5v1-l14-c20-u9500-words-image-2": {
-        "src": "/illustrations/mnemonics-v2/g5-u81e3.webp",
-        "label": "大臣",
-        "alt": "大臣是辅佐君王治理国家的重臣；蔺相如作为赵国使臣临危受命，展现了非凡的智谋与胆识 图中“臣”按独体结构自然长成“臣”。"
-      },
       "g5v1-l14-c20-u9500-words-image:g5v1-l14-c20-u9500-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u9500.webp",
         "label": "销毁",
         "alt": "销毁罪证放火焚园；侵略者为掩盖罪行放火焚毁圆明园，残垣断壁永远铭刻着历史教训 图中“钅”与“肖”按左右结构自然长成“销”。"
+      },
+      "g5v1-l14-c20-u9500-words-image:g5v1-l14-c20-u9500-words-image-2": {
+        "src": "/illustrations/mnemonics-v2/g5-u81e3.webp",
+        "label": "大臣",
+        "alt": "大臣是辅佐君王治理国家的重臣；蔺相如作为赵国使臣临危受命，展现了非凡的智谋与胆识 图中“臣”按独体结构自然长成“臣”。"
       }
     }
   }

@@ -50,15 +50,15 @@ export const characterMedia = {
     },
     "transcript": "幽，幽深的幽。幽深形容地方安静、深远，光线也比较暗。幽是半包围结构，外侧像收拢的山壁，里面两束细藤盘绕在山谷中。山壁和藤蔓把光线轻轻遮住。课文说珍珠鸟躲在垂蔓蒙盖的鸟笼里，就像藏进幽深的丛林，安静隐蔽的环境让它慢慢有了安全感。",
     "practiceOptionVisuals": {
-      "g5v1-l04-c02-u5e7d-words-image:g5v1-l04-c02-u5e7d-words-image-1": {
-        "src": "/illustrations/mnemonics-v2/g5-u5e7d.webp",
-        "label": "幽深",
-        "alt": "幽深形容环境清幽宁静；幽深的绿林窗景渐渐消除了小鸟的戒备，为彼此靠近提供了可能 图中“幺”与“幺”与“山”按半包围结构自然长成“幽”。"
-      },
       "g5v1-l04-c02-u5e7d-words-image:g5v1-l04-c02-u5e7d-words-image-2": {
         "src": "/illustrations/meanings/m07.webp",
         "label": "一代又一代",
         "alt": "祖辈、父母和孩子三代人相聚"
+      },
+      "g5v1-l04-c02-u5e7d-words-image:g5v1-l04-c02-u5e7d-words-image-1": {
+        "src": "/illustrations/mnemonics-v2/g5-u5e7d.webp",
+        "label": "幽深",
+        "alt": "幽深形容环境清幽宁静；幽深的绿林窗景渐渐消除了小鸟的戒备，为彼此靠近提供了可能 图中“幺”与“幺”与“山”按半包围结构自然长成“幽”。"
       },
       "g5v1-l04-c02-u5e7d-words-image:g5v1-l04-c02-u5e7d-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u6bbf.webp",
@@ -82,15 +82,15 @@ export const characterMedia = {
     },
     "transcript": "悉，熟悉的悉。熟悉就是对人或事了解得很清楚，不再感到陌生。悉是上下结构，上方可以想成手把细小谷粒分清，下面是一颗心。眼前的事物分辨清楚，心里也有了把握。小鸟先在笼边试探，后来蹦到杯子和作者的稿纸旁，它一次次靠近，正说明它对周围和人渐渐熟悉。",
     "practiceOptionVisuals": {
-      "g5v1-l04-c03-u6089-words-image:g5v1-l04-c03-u6089-words-image-1": {
-        "src": "/illustrations/mnemonics-v2/g5-u6089.webp",
-        "label": "熟悉",
-        "alt": "熟悉是对周围环境不再感到陌生；随着日渐熟悉，小鸟渐渐敢飞出笼子在书房里自由活动 图中“釆”与“心”按上下结构自然长成“悉”。"
-      },
       "g5v1-l04-c03-u6089-words-image:g5v1-l04-c03-u6089-words-image-0": {
         "src": "/illustrations/meanings/m04.webp",
         "label": "倚靠、凭借",
         "alt": "行路的人稳稳倚靠一根手杖"
+      },
+      "g5v1-l04-c03-u6089-words-image:g5v1-l04-c03-u6089-words-image-1": {
+        "src": "/illustrations/mnemonics-v2/g5-u6089.webp",
+        "label": "熟悉",
+        "alt": "熟悉是对周围环境不再感到陌生；随着日渐熟悉，小鸟渐渐敢飞出笼子在书房里自由活动 图中“釆”与“心”按上下结构自然长成“悉”。"
       },
       "g5v1-l04-c03-u6089-words-image:g5v1-l04-c03-u6089-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u5254.webp",
@@ -114,6 +114,11 @@ export const characterMedia = {
     },
     "transcript": "雏鸟是刚孵出或还没有长大的小鸟。课文里的小雏儿从笼中钻出，先在笼子四周活动，后来飞到柜顶、书架和灯绳旁。雏是左右结构，左边可以想成柔软鸟巢，右边像一只羽毛还没长齐的小鸟。小脑袋从巢边探出来，字的两边便站稳了。雏鸟一点点靠近作者，也把信赖怎样建立写得格外具体。",
     "practiceOptionVisuals": {
+      "g5v1-l04-c04-u96cf-words-image:g5v1-l04-c04-u96cf-words-image-1": {
+        "src": "/illustrations/mnemonics-v2/g5-u96cf.webp",
+        "label": "雏鸟",
+        "alt": "雏鸟是刚出生不久的幼鸟；可爱的雏鸟毛茸茸地探出头来，显得格外娇小惹人怜爱 图中“刍”与“隹”按左右结构自然长成“雏”。"
+      },
       "g5v1-l04-c04-u96cf-words-image:g5v1-l04-c04-u96cf-words-image-0": {
         "src": "/illustrations/meanings/m04.webp",
         "label": "倚靠、凭借",
@@ -123,11 +128,6 @@ export const characterMedia = {
         "src": "/illustrations/mnemonics-v2/g5-u9c81.webp",
         "label": "鲁莽",
         "alt": "鲁莽好汉性格率真；鲁智深虽性格有些鲁莽却嫉恶如仇、重情重义，给作者留下了深刻印象 图中“鱼”与“日”按上下结构自然长成“鲁”。"
-      },
-      "g5v1-l04-c04-u96cf-words-image:g5v1-l04-c04-u96cf-words-image-1": {
-        "src": "/illustrations/mnemonics-v2/g5-u96cf.webp",
-        "label": "雏鸟",
-        "alt": "雏鸟是刚出生不久的幼鸟；可爱的雏鸟毛茸茸地探出头来，显得格外娇小惹人怜爱 图中“刍”与“隹”按左右结构自然长成“雏”。"
       }
     }
   },
@@ -146,11 +146,6 @@ export const characterMedia = {
     },
     "transcript": "先听“哟”，这里读第一声，是发现新情况时发出的短短一声。哟是左右结构，左边的口表示声音从嘴里出来，右边可以想成一根打着小结的细绳。看见新来的雏鸟，人张口轻轻惊叹，细绳也跟着晃动。课文发现小雏鸟时，这一声哟把惊喜直接送到耳边，也让叙述显得亲切、活泼。",
     "practiceOptionVisuals": {
-      "g5v1-l04-c05-u54df-words-image:g5v1-l04-c05-u54df-words-image-1": {
-        "src": "/illustrations/mnemonics-v2/g5-u54df.webp",
-        "label": "哟",
-        "alt": "哟是表达惊喜赞叹的语气词；看着小鸟亲昵地落在肩头，作者忍不住发出一声轻柔的赞叹 图中“口”与“约”按左右结构自然长成“哟”。"
-      },
       "g5v1-l04-c05-u54df-words-image:g5v1-l04-c05-u54df-words-image-0": {
         "src": "/illustrations/meanings/m04.webp",
         "label": "倚靠、凭借",
@@ -160,6 +155,11 @@ export const characterMedia = {
         "src": "/illustrations/mnemonics/m01.webp",
         "label": "弓强有力",
         "alt": "孩子用力拉开一张绷紧的弓"
+      },
+      "g5v1-l04-c05-u54df-words-image:g5v1-l04-c05-u54df-words-image-1": {
+        "src": "/illustrations/mnemonics-v2/g5-u54df.webp",
+        "label": "哟",
+        "alt": "哟是表达惊喜赞叹的语气词；看着小鸟亲昵地落在肩头，作者忍不住发出一声轻柔的赞叹 图中“口”与“约”按左右结构自然长成“哟”。"
       }
     }
   },
@@ -211,12 +211,12 @@ export const characterMedia = {
     },
     "transcript": "享，享受的享，读第三声。它是上中下结构，上面像小屋顶，中间是口，下面是子，三层要对齐。为了好记，可以想象孩子坐在屋里，安心吃着喜欢的食物；这是记字画面。享受，就是从生活或活动中感到满足和愉快。课文里的珍珠鸟从害怕到亲近，渐渐能安心享受人的陪伴，这份变化来自信赖。",
     "practiceOptionVisuals": {
-      "g5v1-l04-c07-u4eab-words-image:g5v1-l04-c07-u4eab-words-image-0": {
+      "g5v1-l04-c07-u4eab-words-image:g5v1-l04-c07-u4eab-words-image-2": {
         "src": "/illustrations/meanings/m07.webp",
         "label": "一代又一代",
         "alt": "祖辈、父母和孩子三代人相聚"
       },
-      "g5v1-l04-c07-u4eab-words-image:g5v1-l04-c07-u4eab-words-image-2": {
+      "g5v1-l04-c07-u4eab-words-image:g5v1-l04-c07-u4eab-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u9694.webp",
         "label": "间隔",
         "alt": "间隔指两地或两物的空间阻隔；搭石跨越了溪水的阻隔，默默传递着无私奉献的人间温情 图中“阝”与“鬲”按左右结构自然长成“隔”。"
@@ -243,17 +243,17 @@ export const characterMedia = {
     },
     "transcript": "陪，陪伴的陪。陪伴就是留在别人身边，一起度过一段时间。陪是左右结构，左边像一道竖墙和台阶，右边可以整体想成一人一鸟并肩停在平台上。两个身影没有催促，安静待在一起。作者始终不惊动珍珠鸟，只让它一次次靠近，安静的陪伴给小鸟留下选择，也让信赖慢慢建立。",
     "practiceOptionVisuals": {
+      "g5v1-l04-c08-u966a-words-image:g5v1-l04-c08-u966a-words-image-0": {
+        "src": "/illustrations/meanings/m06.webp",
+        "label": "背负、承载",
+        "alt": "孩子把行囊稳稳背在背上"
+      },
       "g5v1-l04-c08-u966a-words-image:g5v1-l04-c08-u966a-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u966a.webp",
         "label": "陪伴",
         "alt": "陪伴求学一路护航；从乡村到县城，那叶小舟始终陪伴着孩子，驶向广阔的人生天地 图中“阝”与“咅”按左右结构自然长成“陪”。"
       },
       "g5v1-l04-c08-u966a-words-image:g5v1-l04-c08-u966a-words-image-2": {
-        "src": "/illustrations/meanings/m06.webp",
-        "label": "背负、承载",
-        "alt": "孩子把行囊稳稳背在背上"
-      },
-      "g5v1-l04-c08-u966a-words-image:g5v1-l04-c08-u966a-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u7597.webp",
         "label": "治疗",
         "alt": "治疗疾病带来健康；阳光中的紫外线能够杀灭细菌，对预防和治疗多种疾病大有益处 图中“疒”与“了”按左上包围结构自然长成“疗”。"
@@ -275,11 +275,6 @@ export const characterMedia = {
     },
     "transcript": "趴，趴下的趴，读第一声。趴下就是身体朝下，贴近地面或桌面。趴是左右结构，左边是足字旁，右边的八可以想成向两侧分开的脚。想象小鸟收起翅膀，身体贴着桌面，两只小脚分开站稳。珍珠鸟玩累后趴在作者肩头睡着，身体放松的姿态说明它已经愿意放心靠近。",
     "practiceOptionVisuals": {
-      "g5v1-l04-c09-u8db4-words-image:g5v1-l04-c09-u8db4-words-image-1": {
-        "src": "/illustrations/mnemonics-v2/g5-u8db4.webp",
-        "label": "趴下",
-        "alt": "趴下是身体放松地贴近桌面；小鸟趴在作者手边安心打盹，展现了信赖带来的无拘无束 图中“⻊”与“八”按左右结构自然长成“趴”。"
-      },
       "g5v1-l04-c09-u8db4-words-image:g5v1-l04-c09-u8db4-words-image-2": {
         "src": "/illustrations/meanings/m07.webp",
         "label": "一代又一代",
@@ -289,6 +284,11 @@ export const characterMedia = {
         "src": "/illustrations/mnemonics/m109.webp",
         "label": "沟壑、洼处",
         "alt": "草地中明显下陷的浅沟和洼地"
+      },
+      "g5v1-l04-c09-u8db4-words-image:g5v1-l04-c09-u8db4-words-image-1": {
+        "src": "/illustrations/mnemonics-v2/g5-u8db4.webp",
+        "label": "趴下",
+        "alt": "趴下是身体放松地贴近桌面；小鸟趴在作者手边安心打盹，展现了信赖带来的无拘无束 图中“⻊”与“八”按左右结构自然长成“趴”。"
       }
     }
   },
@@ -312,15 +312,15 @@ export const characterMedia = {
         "label": "朗声诵读",
         "alt": "孩子面向同伴清楚地朗读"
       },
-      "g5v1-l04-c10-u7751-words-image:g5v1-l04-c10-u7751-words-image-0": {
-        "src": "/illustrations/mnemonics-v2/g5-u9b44.webp",
-        "label": "魂魄",
-        "alt": "失魂落魄形容心神极度慌乱；孩子因为急需买书而失魂落魄，脚步匆匆奔向母亲工作的工厂 图中“白”与“鬼”按左右结构自然长成“魄”。"
-      },
       "g5v1-l04-c10-u7751-words-image:g5v1-l04-c10-u7751-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u7751.webp",
         "label": "眼睑",
         "alt": "眼睑是保护眼球的眼皮；小鸟闭上浅红色的眼睑安心入睡，将信任的细节表现得细腻动人 图中“目”与“佥”按左右结构自然长成“睑”。"
+      },
+      "g5v1-l04-c10-u7751-words-image:g5v1-l04-c10-u7751-words-image-0": {
+        "src": "/illustrations/mnemonics-v2/g5-u9b44.webp",
+        "label": "魂魄",
+        "alt": "失魂落魄形容心神极度慌乱；孩子因为急需买书而失魂落魄，脚步匆匆奔向母亲工作的工厂 图中“白”与“鬼”按左右结构自然长成“魄”。"
       }
     }
   },
@@ -344,12 +344,12 @@ export const characterMedia = {
         "label": "眼眸",
         "alt": "眼眸指清澈灵动的目光；小鸟眸子里闪烁的警惕慢慢化为信赖，见证了爱与尊重的力量 图中“目”与“牟”按左右结构自然长成“眸”。"
       },
-      "g5v1-l04-c11-u7738-words-image:g5v1-l04-c11-u7738-words-image-2": {
+      "g5v1-l04-c11-u7738-words-image:g5v1-l04-c11-u7738-words-image-0": {
         "src": "/illustrations/meanings/m07.webp",
         "label": "一代又一代",
         "alt": "祖辈、父母和孩子三代人相聚"
       },
-      "g5v1-l04-c11-u7738-words-image:g5v1-l04-c11-u7738-words-image-0": {
+      "g5v1-l04-c11-u7738-words-image:g5v1-l04-c11-u7738-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u60eb.webp",
         "label": "疲惫",
         "alt": "疲惫不堪的身影令人心酸；母亲极其瘦弱疲惫的身躯，深深震撼了前来要钱买书的孩子 图中“备”与“心”按上下结构自然长成“惫”。"

@@ -17,15 +17,15 @@ export const characterMedia = {
     },
     "transcript": "课文用摄氏度说明太阳表面的温度，抽象的热一下有了数字。“摄”可以从温度计旁的一只手看起，左边提手旁接住调节动作，右边则想成几片叠放的感温片。手指对准刻度，读数才不会看错。摄氏是一种温度计量方法，认清这个词也能帮助我们读懂课文里的科学数据。",
     "practiceOptionVisuals": {
-      "g5v1-l16-c01-u6444-words-image:g5v1-l16-c01-u6444-words-image-1": {
-        "src": "/illustrations/mnemonics-v2/g5-u6444.webp",
-        "label": "摄氏",
-        "alt": "摄氏度是测量温度的单位；太阳表面温度高达五千多摄氏度，中心温度更是难以想象的高 图中“扌”与“聂”按左右结构自然长成“摄”。"
-      },
       "g5v1-l16-c01-u6444-words-image:g5v1-l16-c01-u6444-words-image-2": {
         "src": "/illustrations/meanings/m06.webp",
         "label": "背负、承载",
         "alt": "孩子把行囊稳稳背在背上"
+      },
+      "g5v1-l16-c01-u6444-words-image:g5v1-l16-c01-u6444-words-image-1": {
+        "src": "/illustrations/mnemonics-v2/g5-u6444.webp",
+        "label": "摄氏",
+        "alt": "摄氏度是测量温度的单位；太阳表面温度高达五千多摄氏度，中心温度更是难以想象的高 图中“扌”与“聂”按左右结构自然长成“摄”。"
       },
       "g5v1-l16-c01-u6444-words-image:g5v1-l16-c01-u6444-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u59d4.webp",
@@ -49,6 +49,11 @@ export const characterMedia = {
     },
     "transcript": "太阳给地球带来光和热，许多生物才能生长、繁殖。殖是左右结构，左边适合整体记住，右边是笔直的直。可以想象幼苗从观察盒里一代代长出。繁殖就是生物产生新个体，使种群延续。没有太阳带来的光和热，许多生物就难以繁殖。",
     "practiceOptionVisuals": {
+      "g5v1-l16-c02-u6b96-words-image:g5v1-l16-c02-u6b96-words-image-1": {
+        "src": "/illustrations/mnemonics-v2/g5-u6b96.webp",
+        "label": "繁殖",
+        "alt": "繁殖生长生生不息；没有太阳提供的光和热，地球上的植物和动物就无法生存和繁衍后代 图中“歹”与“直”按左右结构自然长成“殖”。"
+      },
       "g5v1-l16-c02-u6b96-words-image:g5v1-l16-c02-u6b96-words-image-0": {
         "src": "/illustrations/meanings/m08.webp",
         "label": "整齐有序",
@@ -58,11 +63,6 @@ export const characterMedia = {
         "src": "/illustrations/mnemonics-v2/g5-u675f.webp",
         "label": "一束",
         "alt": "一束指聚拢在一起的一线光芒；一束光线以每秒三十万千米的速度前行，快得令人难以置信 图中“木”与“口”按穿插结构自然长成“束”。"
-      },
-      "g5v1-l16-c02-u6b96-words-image:g5v1-l16-c02-u6b96-words-image-1": {
-        "src": "/illustrations/mnemonics-v2/g5-u6b96.webp",
-        "label": "繁殖",
-        "alt": "繁殖生长生生不息；没有太阳提供的光和热，地球上的植物和动物就无法生存和繁衍后代 图中“歹”与“直”按左右结构自然长成“殖”。"
       }
     }
   },
@@ -81,12 +81,12 @@ export const characterMedia = {
     },
     "transcript": "煤炭的形成和古代植物有关，植物生长也离不开太阳能量。炭是上下结构，上面是山，下面是灰。想象矿山下面有黑色煤块和少量灰迹。煤炭是古代植物遗体经过漫长地质变化形成的燃料。煤炭保存着远古植物获得的太阳能量，课文借此说明太阳的重要。",
     "practiceOptionVisuals": {
-      "g5v1-l16-c03-u70ad-words-image:g5v1-l16-c03-u70ad-words-image-2": {
+      "g5v1-l16-c03-u70ad-words-image:g5v1-l16-c03-u70ad-words-image-0": {
         "src": "/illustrations/meanings/m06.webp",
         "label": "背负、承载",
         "alt": "孩子把行囊稳稳背在背上"
       },
-      "g5v1-l16-c03-u70ad-words-image:g5v1-l16-c03-u70ad-words-image-0": {
+      "g5v1-l16-c03-u70ad-words-image:g5v1-l16-c03-u70ad-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u9c81.webp",
         "label": "鲁莽",
         "alt": "鲁莽好汉性格率真；鲁智深虽性格有些鲁莽却嫉恶如仇、重情重义，给作者留下了深刻印象 图中“鱼”与“日”按上下结构自然长成“鲁”。"
@@ -113,11 +113,6 @@ export const characterMedia = {
     },
     "transcript": "太阳光和热同人类健康有关，课文也提到阳光能预防和治疗一些疾病。疗是左上包围结构，外面是病字旁，里面是了。想象病房里的康复路线从弯处走向终点。治疗就是用合适的方法帮助疾病或伤痛好转。",
     "practiceOptionVisuals": {
-      "g5v1-l16-c04-u7597-words-image:g5v1-l16-c04-u7597-words-image-1": {
-        "src": "/illustrations/mnemonics-v2/g5-u7597.webp",
-        "label": "治疗",
-        "alt": "治疗疾病带来健康；阳光中的紫外线能够杀灭细菌，对预防和治疗多种疾病大有益处 图中“疒”与“了”按左上包围结构自然长成“疗”。"
-      },
       "g5v1-l16-c04-u7597-words-image:g5v1-l16-c04-u7597-words-image-0": {
         "src": "/illustrations/meanings/m05.webp",
         "label": "朗声诵读",
@@ -127,6 +122,11 @@ export const characterMedia = {
         "src": "/illustrations/mnemonics-v2/g5-u718f.webp",
         "label": "熏陶",
         "alt": "熏陶指长期沉浸受到感染；西湖的暖风熏得游人沉醉迷离，诗篇深刻讽刺了偏安享乐的醉生梦死 图中“熏”按独体结构自然长成“熏”。"
+      },
+      "g5v1-l16-c04-u7597-words-image:g5v1-l16-c04-u7597-words-image-1": {
+        "src": "/illustrations/mnemonics-v2/g5-u7597.webp",
+        "label": "治疗",
+        "alt": "治疗疾病带来健康；阳光中的紫外线能够杀灭细菌，对预防和治疗多种疾病大有益处 图中“疒”与“了”按左上包围结构自然长成“疗”。"
       }
     }
   },
@@ -144,15 +144,15 @@ export const characterMedia = {
     },
     "transcript": "摄氏度里的氏来自科学家摄尔修斯姓氏的译名。氏是独体字，可以把底座、斜刻度和弯曲温度线连成一个整体。沿着温度计轮廓观察。课文用摄氏度说明太阳很热，氏要和摄连在一起理解。“摄”和“氏”连起来，才是课文使用的温度单位名称。",
     "practiceOptionVisuals": {
-      "g5v1-l16-c05-u6c0f-words-image:g5v1-l16-c05-u6c0f-words-image-1": {
-        "src": "/illustrations/mnemonics-v2/g5-u6c0f.webp",
-        "label": "摄氏",
-        "alt": "摄氏温标科学精准；课文用摄氏度准确说明太阳的热度，展现了科普说明文的严谨科学性 图中“氏”按独体结构自然长成“氏”。"
-      },
       "g5v1-l16-c05-u6c0f-words-image:g5v1-l16-c05-u6c0f-words-image-0": {
         "src": "/illustrations/meanings/m05.webp",
         "label": "朗声诵读",
         "alt": "孩子面向同伴清楚地朗读"
+      },
+      "g5v1-l16-c05-u6c0f-words-image:g5v1-l16-c05-u6c0f-words-image-1": {
+        "src": "/illustrations/mnemonics-v2/g5-u6c0f.webp",
+        "label": "摄氏",
+        "alt": "摄氏温标科学精准；课文用摄氏度准确说明太阳的热度，展现了科普说明文的严谨科学性 图中“氏”按独体结构自然长成“氏”。"
       },
       "g5v1-l16-c05-u6c0f-words-image:g5v1-l16-c05-u6c0f-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u72ed.webp",
@@ -176,11 +176,6 @@ export const characterMedia = {
     },
     "transcript": "阳光让庄稼生长，成熟的谷物会成为人们需要的粮食。粮是左右结构，左边是米字旁，右边可以想成装着好谷物的粮袋。米粒从袋口流到米架上。粮食包括供人食用的谷物、豆类和薯类等食物原料。",
     "practiceOptionVisuals": {
-      "g5v1-l16-c06-u7cae-words-image:g5v1-l16-c06-u7cae-words-image-1": {
-        "src": "/illustrations/mnemonics-v2/g5-u7cae.webp",
-        "label": "粮食",
-        "alt": "粮食作物离不开阳光滋养；充足的日照使庄稼茁壮成长，为人类生活提供了丰富的粮食来源 图中“米”与“良”按左右结构自然长成“粮”。"
-      },
       "g5v1-l16-c06-u7cae-words-image:g5v1-l16-c06-u7cae-words-image-0": {
         "src": "/illustrations/meanings/m03.webp",
         "label": "检查、验证",
@@ -190,6 +185,11 @@ export const characterMedia = {
         "src": "/illustrations/mnemonics-v2/g5-u534f.webp",
         "label": "协调",
         "alt": "协调指相互配合一致；一行人走搭石协调有序，前呼后应，充满了默契的人情美 图中“十”与“办”按左右结构自然长成“协”。"
+      },
+      "g5v1-l16-c06-u7cae-words-image:g5v1-l16-c06-u7cae-words-image-1": {
+        "src": "/illustrations/mnemonics-v2/g5-u7cae.webp",
+        "label": "粮食",
+        "alt": "粮食作物离不开阳光滋养；充足的日照使庄稼茁壮成长，为人类生活提供了丰富的粮食来源 图中“米”与“良”按左右结构自然长成“粮”。"
       }
     }
   },
@@ -208,20 +208,20 @@ export const characterMedia = {
     },
     "transcript": "太阳的光和热到达地球上不同地区，也影响各地植物和人们的生活。区是左三包围结构，外面像三面边界，里面像两条交叉路线。边界把一片地方清楚圈出来，地区的范围也就看得见了。地区就是具有一定范围的地方。",
     "practiceOptionVisuals": {
-      "g5v1-l16-c07-u533a-words-image:g5v1-l16-c07-u533a-words-image-2": {
-        "src": "/illustrations/meanings/m04.webp",
-        "label": "倚靠、凭借",
-        "alt": "行路的人稳稳倚靠一根手杖"
-      },
-      "g5v1-l16-c07-u533a-words-image:g5v1-l16-c07-u533a-words-image-0": {
-        "src": "/illustrations/mnemonics-v2/g5-u6073.webp",
-        "label": "勤勤恳恳",
-        "alt": "勤勤恳恳形容辛勤踏实；牛郎织女勤勤恳恳地耕织劳作，把日子过得有滋有味 图中“艮”与“心”按上下结构自然长成“恳”。"
-      },
       "g5v1-l16-c07-u533a-words-image:g5v1-l16-c07-u533a-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u533a.webp",
         "label": "地区",
         "alt": "地区气候各具特色；太阳光照在地球不同地区分布不均，形成了温带、热带等丰富多样的气候区 图中“匸”与“乂”按左三包围结构自然长成“区”。"
+      },
+      "g5v1-l16-c07-u533a-words-image:g5v1-l16-c07-u533a-words-image-0": {
+        "src": "/illustrations/meanings/m04.webp",
+        "label": "倚靠、凭借",
+        "alt": "行路的人稳稳倚靠一根手杖"
+      },
+      "g5v1-l16-c07-u533a-words-image:g5v1-l16-c07-u533a-words-image-2": {
+        "src": "/illustrations/mnemonics-v2/g5-u6073.webp",
+        "label": "勤勤恳恳",
+        "alt": "勤勤恳恳形容辛勤踏实；牛郎织女勤勤恳恳地耕织劳作，把日子过得有滋有味 图中“艮”与“心”按上下结构自然长成“恳”。"
       }
     }
   },
@@ -240,20 +240,20 @@ export const characterMedia = {
     },
     "transcript": "阳光中的紫外线有杀菌作用，能消灭或减少一部分有害细菌。杀适合整体观察，上面的交叉笔画像消毒光，下面像承托设备的小架子。消毒光照过设备只是一幅记字画面。杀菌要采用安全合适的方法，不能随意接触危险物品。",
     "practiceOptionVisuals": {
-      "g5v1-l16-c08-u6740-words-image:g5v1-l16-c08-u6740-words-image-1": {
-        "src": "/illustrations/mnemonics-v2/g5-u6740.webp",
-        "label": "杀菌",
-        "alt": "杀菌消毒保障健康；多晒太阳可以杀菌防病，让人们在阳光的沐浴下健康快乐地生活 图中“乂”与“朩”按上下结构自然长成“杀”。"
-      },
-      "g5v1-l16-c08-u6740-words-image:g5v1-l16-c08-u6740-words-image-2": {
+      "g5v1-l16-c08-u6740-words-image:g5v1-l16-c08-u6740-words-image-0": {
         "src": "/illustrations/meanings/m08.webp",
         "label": "整齐有序",
         "alt": "竹简按照次序整齐排列"
       },
-      "g5v1-l16-c08-u6740-words-image:g5v1-l16-c08-u6740-words-image-0": {
+      "g5v1-l16-c08-u6740-words-image:g5v1-l16-c08-u6740-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u52c9.webp",
         "label": "勉强",
         "alt": "勉强通过安全巧妙；松鼠进窝时身子勉强擦过狭窄洞口，巧妙地守护着自己的小家 图中“免”与“力”按左下包围结构自然长成“勉”。"
+      },
+      "g5v1-l16-c08-u6740-words-image:g5v1-l16-c08-u6740-words-image-1": {
+        "src": "/illustrations/mnemonics-v2/g5-u6740.webp",
+        "label": "杀菌",
+        "alt": "杀菌消毒保障健康；多晒太阳可以杀菌防病，让人们在阳光的沐浴下健康快乐地生活 图中“乂”与“朩”按上下结构自然长成“杀”。"
       }
     }
   },
@@ -272,20 +272,20 @@ export const characterMedia = {
     },
     "transcript": "细菌非常微小，通常要借助显微镜才能看清。菌是上下结构，上面是草字头，下面可以想成方形培养箱围着许多谷粒状小点。培养箱里的小点密密排着，提醒我们细菌十分微小。课文说太阳光有杀菌作用，杀菌就是消灭或减少有害细菌。",
     "practiceOptionVisuals": {
-      "g5v1-l16-c09-u83cc-words-image:g5v1-l16-c09-u83cc-words-image-1": {
-        "src": "/illustrations/mnemonics-v2/g5-u83cc.webp",
-        "label": "杀菌",
-        "alt": "细菌微生物受光照抑制；阳光是大自然最好的杀菌剂，使地球始终保持着生机与活力 图中“艹”与“囷”按上下结构自然长成“菌”。"
-      },
-      "g5v1-l16-c09-u83cc-words-image:g5v1-l16-c09-u83cc-words-image-2": {
+      "g5v1-l16-c09-u83cc-words-image:g5v1-l16-c09-u83cc-words-image-0": {
         "src": "/illustrations/meanings/m07.webp",
         "label": "一代又一代",
         "alt": "祖辈、父母和孩子三代人相聚"
       },
-      "g5v1-l16-c09-u83cc-words-image:g5v1-l16-c09-u83cc-words-image-0": {
+      "g5v1-l16-c09-u83cc-words-image:g5v1-l16-c09-u83cc-words-image-2": {
         "src": "/illustrations/mnemonics/m02.webp",
         "label": "用嘴巴发出命令",
         "alt": "小队长向同伴清楚地发出指令"
+      },
+      "g5v1-l16-c09-u83cc-words-image:g5v1-l16-c09-u83cc-words-image-1": {
+        "src": "/illustrations/mnemonics-v2/g5-u83cc.webp",
+        "label": "杀菌",
+        "alt": "细菌微生物受光照抑制；阳光是大自然最好的杀菌剂，使地球始终保持着生机与活力 图中“艹”与“囷”按上下结构自然长成“菌”。"
       }
     }
   }

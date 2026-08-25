@@ -674,7 +674,7 @@ function MemoryStage({
         {stage === lastStage ? (
           <>
             <button className="memory-stage-next is-finish" onClick={onFinish}>
-              学会了，去练一练
+              记住线索，去练一练
               <ArrowRight aria-hidden="true" size={20} />
             </button>
             <button className="memory-stage-secondary" onClick={onClose}>回到这个字</button>

@@ -11,6 +11,7 @@ import {
   Flame,
   LockKeyhole,
   Mic2,
+  RotateCcw,
 } from "lucide-react";
 import { useEffect, useMemo, type CSSProperties } from "react";
 import {
@@ -19,6 +20,7 @@ import {
   type HomeCandidate,
 } from "./data/home-index.generated";
 import { nextTrackCandidate, trackProgress } from "./domain/catalog-progress";
+import { buildDailyLearningPlan } from "./domain/daily-plan";
 import {
   learningTrackProgress,
   recommendedLessonId,
@@ -44,13 +46,24 @@ function continuePath(track: TrackId, candidate: HomeCandidate | undefined) {
     : routeForTrack(track);
 }
 
+function dueReviewPath(candidate: HomeCandidate) {
+  return `${continuePath("words", candidate)}?review=due`;
+}
+
 export default function HomeLanding() {
   const router = useRouter();
   const { profile, hydrated, syncState } = useStudyProfile({ writable: false });
 
-  const likelyPath = useMemo(
-    () => continuePath("words", nextTrackCandidate("words", profile)),
+  const dailyPlan = useMemo(
+    () => buildDailyLearningPlan(profile, new Date()),
     [profile],
+  );
+  const dueReview = dailyPlan.reviews[0];
+  const likelyPath = useMemo(
+    () => dueReview
+      ? dueReviewPath(dueReview.candidate)
+      : continuePath("words", nextTrackCandidate("words", profile)),
+    [dueReview, profile],
   );
 
   useEffect(() => {
@@ -147,6 +160,19 @@ export default function HomeLanding() {
           </aside>
 
           <div className="path-main">
+            {dueReview && (
+              <section className="path-due-review" aria-label="今日到期复习">
+                <span className="path-due-review-glyph" aria-hidden="true">{dueReview.candidate.hanzi}</span>
+                <div>
+                  <small>今天先复习 · {dailyPlan.reviews.length} 个字已到期</small>
+                  <strong>先从“{dueReview.candidate.hanzi}”独立回想</strong>
+                  <p>旧字优先，完成到期提取后再学习今天的新字。</p>
+                </div>
+                <button onClick={() => navigate(dueReviewPath(dueReview.candidate))}>
+                  <RotateCcw aria-hidden="true" size={18} />开始复习
+                </button>
+              </section>
+            )}
             <ol className="path-track" aria-label={`《${currentLesson.title}》学习路线`}>
               {segments.map((segment, segmentIndex) => {
                 const phase = phaseMeta[Math.min(segmentIndex, phaseMeta.length - 1)];
@@ -161,14 +187,14 @@ export default function HomeLanding() {
                       <button
                         className="path-chapter-done"
                         onClick={() => navigate(segment.characters[0].href)}
-                        aria-label={`章${chapterNumeral(segmentIndex)} ${phase.title}，${segment.characters.length} 个字已掌握`}
+                        aria-label={`章${chapterNumeral(segmentIndex)} ${phase.title}，${segment.characters.length} 个字已完成首次学习`}
                       >
                         <span className="path-chapter-seals" aria-hidden="true">
                           {segment.characters.slice(0, 4).map((node) => <i key={node.key}>{node.hanzi}</i>)}
                         </span>
                         <span>
                           <strong>章{chapterNumeral(segmentIndex)} · {phase.title}</strong>
-                          <small>{segment.characters.length} 个字已掌握</small>
+                          <small>{segment.characters.length} 个字已完成首次学习</small>
                         </span>
                         <ChevronDown aria-hidden="true" size={19} />
                       </button>
@@ -187,7 +213,7 @@ export default function HomeLanding() {
                             onClick={() => navigate(node.href)}
                             disabled={node.state === "locked"}
                             style={{ "--path-offset": `${nodeOffset(nodeIndex)}px` } as CSSProperties}
-                            aria-label={`${node.hanzi}${node.state === "done" ? "，已学会" : node.state === "current" ? "，从这里继续" : "，完成前一步后解锁"}`}
+                            aria-label={`${node.hanzi}${node.state === "done" ? "，首次学习已完成" : node.state === "current" ? "，从这里继续" : "，完成前一步后解锁"}`}
                           >
                             {node.hanzi}
                             {node.state === "done" && (

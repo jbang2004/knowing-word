@@ -1,7 +1,16 @@
 import { characterLessons, lessonIds } from "../data/route-index.generated.ts";
 import { trackIds, type TrackId } from "../lib/profile-model.ts";
+import {
+  answerModes,
+  errorTags,
+  skillDimensions,
+  type AnswerMode,
+  type ErrorTag,
+  type SkillDimension,
+} from "./learning-state.ts";
 
 export type LearningEventAction = "answer" | "skip" | "read";
+export type ReadingAccuracy = "accurate" | "needs-practice";
 
 export type LearningEvent = {
   eventId: string;
@@ -12,6 +21,12 @@ export type LearningEvent = {
   questionId?: string;
   correct?: boolean;
   selected?: string[];
+  dimension?: SkillDimension;
+  cueLevel?: 0 | 1 | 2 | 3;
+  answerMode?: AnswerMode;
+  latencyMs?: number;
+  errorTags?: ErrorTag[];
+  readingAccuracy?: ReadingAccuracy;
 };
 
 export type LearningEventInput = Omit<LearningEvent, "eventId">;
@@ -37,13 +52,39 @@ export function parseLearningEvent(value: unknown): LearningEvent | null {
   const selected = Array.isArray(raw.selected)
     ? raw.selected.filter((item): item is string => typeof item === "string" && item.length <= 120).slice(0, 12)
     : undefined;
+  const dimension = skillDimensions.includes(raw.dimension as SkillDimension)
+    ? raw.dimension as SkillDimension
+    : undefined;
+  const cueLevel = raw.cueLevel === 0 || raw.cueLevel === 1 || raw.cueLevel === 2 || raw.cueLevel === 3
+    ? raw.cueLevel
+    : undefined;
+  const answerMode = answerModes.includes(raw.answerMode as AnswerMode)
+    ? raw.answerMode as AnswerMode
+    : undefined;
+  const latencyMs = typeof raw.latencyMs === "number" && Number.isFinite(raw.latencyMs) && raw.latencyMs >= 0
+    ? Math.min(Math.floor(raw.latencyMs), 3_600_000)
+    : undefined;
+  const parsedErrorTags = Array.isArray(raw.errorTags)
+    ? [...new Set(raw.errorTags.filter((item): item is ErrorTag => errorTags.includes(item as ErrorTag)))].slice(0, 8)
+    : [];
+  const readingAccuracy = raw.readingAccuracy === "accurate" || raw.readingAccuracy === "needs-practice"
+    ? raw.readingAccuracy
+    : undefined;
 
   if (!eventId || !eventIdPattern.test(eventId)) return null;
   if (action !== "answer" && action !== "skip" && action !== "read") return null;
   if (!lessonId || !lessonIdSet.has(lessonId)) return null;
   if (characterId && characterLessons[characterId] !== lessonId) return null;
 
-  if (action === "read") return { eventId, action, lessonId };
+  if (action === "read") {
+    return {
+      eventId,
+      action,
+      lessonId,
+      ...(readingAccuracy ? { readingAccuracy } : {}),
+      ...(latencyMs === undefined ? {} : { latencyMs }),
+    };
+  }
   if (!track || !characterId || !questionId) return null;
   if (action === "answer" && typeof raw.correct !== "boolean") return null;
 
@@ -54,6 +95,14 @@ export function parseLearningEvent(value: unknown): LearningEvent | null {
     lessonId,
     characterId,
     questionId,
-    ...(action === "answer" ? { correct: raw.correct as boolean, selected: selected ?? [] } : {}),
+    ...(action === "answer" ? {
+      correct: raw.correct as boolean,
+      selected: selected ?? [],
+      ...(dimension ? { dimension } : {}),
+      ...(cueLevel === undefined ? {} : { cueLevel }),
+      ...(answerMode ? { answerMode } : {}),
+      ...(latencyMs === undefined ? {} : { latencyMs }),
+      ...(parsedErrorTags.length ? { errorTags: parsedErrorTags } : {}),
+    } : {}),
   };
 }

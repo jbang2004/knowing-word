@@ -793,7 +793,7 @@ export const grade5CharacterVisuals = {
   "乃": {
     "src": "/illustrations/mnemonics-v2/g5-u4e43.webp",
     "label": "乃至",
-    "alt": "乃至于此表示甚至如此；陆游临终前至死不忘收复中原，爱国赤诚感人肺腑 图中“乃”按独体结构自然长成“乃”。"
+    "alt": "“乃至”表示甚至、以至于，用来说明范围或程度进一步扩大 图中“乃”按独体结构自然长成“乃”。"
   },
   "熏": {
     "src": "/illustrations/mnemonics-v2/g5-u718f.webp",
@@ -1662,8 +1662,8 @@ export const grade5CharacterVisuals = {
   },
   "煞": {
     "src": "/illustrations/mnemonics-v2/g5-u715e.webp",
-    "label": "煞气",
-    "alt": "煞有介事引人入胜；精彩的小说情节跌宕起伏，把各种人物描写得煞有介事、栩栩如生 图中“刍”与“攵”与“灬”按上下结构自然长成“煞”。"
+    "label": "煞有介事",
+    "alt": "煞有介事表示装作真有那么回事；有人讲起故事时一本正经，像亲眼看见一样，这副认真的样子就是煞有介事 图中“刍”与“攵”与“灬”按上下结构自然长成“煞”。"
   },
   "寇": {
     "src": "/illustrations/mnemonics-v2/g5-u5bc7.webp",

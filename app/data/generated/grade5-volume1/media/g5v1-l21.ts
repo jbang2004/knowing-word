@@ -17,17 +17,17 @@ export const characterMedia = {
     },
     "transcript": "榆树的榆，读第二声。榆的木字旁在左，右边是俞，写时左窄右宽，两个部分并排。可以想象一棵榆树站在古道旁，树冠像伞，枝头挂着一串串榆钱。榆树是常见的落叶树。读《长相思》时会遇到榆关这个地名，借熟悉的榆树认住榆字，再跟着词人走向风雪中的关外。",
     "practiceOptionVisuals": {
+      "g5v1-l21-c01-u6986-words-image:g5v1-l21-c01-u6986-words-image-2": {
+        "src": "/illustrations/meanings/m07.webp",
+        "label": "一代又一代",
+        "alt": "祖辈、父母和孩子三代人相聚"
+      },
       "g5v1-l21-c01-u6986-words-image:g5v1-l21-c01-u6986-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u6986.webp",
         "label": "榆树",
         "alt": "榆关塞外风雪交加；将士们行军至山海关榆关防线，塞外夜色更显苍凉雄浑 图中“木”与“俞”按左右结构自然长成“榆”。"
       },
       "g5v1-l21-c01-u6986-words-image:g5v1-l21-c01-u6986-words-image-0": {
-        "src": "/illustrations/meanings/m07.webp",
-        "label": "一代又一代",
-        "alt": "祖辈、父母和孩子三代人相聚"
-      },
-      "g5v1-l21-c01-u6986-words-image:g5v1-l21-c01-u6986-words-image-2": {
         "src": "/illustrations/mnemonics/m111.webp",
         "label": "鸟遭捕获",
         "alt": "孩子打开松软的网救出被困小鸟"
@@ -49,6 +49,11 @@ export const characterMedia = {
     },
     "transcript": "河畔就是河边，畔读第四声。畔是左右结构，左边田字旁，右边是半，写时两部分宽窄接近。不妨借一个小场景来记，一块田分在河流一旁，田边紧挨着水岸。畔表示边、旁边，河畔就是靠近河水的地方。《长相思》写“榆关那畔行”，那畔指那一边，脚步也由家乡越走越远。",
     "practiceOptionVisuals": {
+      "g5v1-l21-c02-u7554-words-image:g5v1-l21-c02-u7554-words-image-1": {
+        "src": "/illustrations/mnemonics-v2/g5-u7554.webp",
+        "label": "河畔",
+        "alt": "河畔扎营寒夜漫漫；风雪夜宿在冰冷的河畔营帐中，阵阵风声勾起了将士们深沉的思乡之情 图中“田”与“半”按左右结构自然长成“畔”。"
+      },
       "g5v1-l21-c02-u7554-words-image:g5v1-l21-c02-u7554-words-image-2": {
         "src": "/illustrations/meanings/m08.webp",
         "label": "整齐有序",
@@ -58,11 +63,6 @@ export const characterMedia = {
         "src": "/illustrations/mnemonics/m114.webp",
         "label": "石头碎裂、不完整",
         "alt": "孩子用放大镜观察裂成数块的石头"
-      },
-      "g5v1-l21-c02-u7554-words-image:g5v1-l21-c02-u7554-words-image-1": {
-        "src": "/illustrations/mnemonics-v2/g5-u7554.webp",
-        "label": "河畔",
-        "alt": "河畔扎营寒夜漫漫；风雪夜宿在冰冷的河畔营帐中，阵阵风声勾起了将士们深沉的思乡之情 图中“田”与“半”按左右结构自然长成“畔”。"
       }
     }
   },
@@ -85,12 +85,12 @@ export const characterMedia = {
         "label": "一更",
         "alt": "风一更雪一更更声悠长；更深夜静风雪呼啸，纳兰性德辗转难眠，满怀对故园的眷恋 图中“更”按独体结构自然长成“更”。"
       },
-      "g5v1-l21-c03-u66f4-words-image:g5v1-l21-c03-u66f4-words-image-2": {
+      "g5v1-l21-c03-u66f4-words-image:g5v1-l21-c03-u66f4-words-image-0": {
         "src": "/illustrations/meanings/m06.webp",
         "label": "背负、承载",
         "alt": "孩子把行囊稳稳背在背上"
       },
-      "g5v1-l21-c03-u66f4-words-image:g5v1-l21-c03-u66f4-words-image-0": {
+      "g5v1-l21-c03-u66f4-words-image:g5v1-l21-c03-u66f4-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u8bae.webp",
         "label": "商议",
         "alt": "商议是共同探讨谋划办法；君臣商议之后决定派相如入秦，由此开启了完璧归赵的壮举 图中“讠”与“义”按左右结构自然长成“议”。"
@@ -112,20 +112,20 @@ export const characterMedia = {
     },
     "transcript": "风雪声扰得人无法安睡，可以说聒噪，聒读第一声。聒是左右结构，左边是耳，右边是舌，左右写稳以后，可以想象耳边有人不停说话，声音一阵接一阵，先借这个画面记住字形。聒噪形容声音嘈杂，让人难以安静。《长相思》中的风雪聒碎乡心，外面的声响越急，词人思念故园的心情越深。",
     "practiceOptionVisuals": {
-      "g5v1-l21-c04-u8052-words-image:g5v1-l21-c04-u8052-words-image-0": {
-        "src": "/illustrations/meanings/m06.webp",
-        "label": "背负、承载",
-        "alt": "孩子把行囊稳稳背在背上"
-      },
-      "g5v1-l21-c04-u8052-words-image:g5v1-l21-c04-u8052-words-image-2": {
-        "src": "/illustrations/mnemonics-v2/g5-u6c0f.webp",
-        "label": "摄氏",
-        "alt": "摄氏温标科学精准；课文用摄氏度准确说明太阳的热度，展现了科普说明文的严谨科学性 图中“氏”按独体结构自然长成“氏”。"
-      },
       "g5v1-l21-c04-u8052-words-image:g5v1-l21-c04-u8052-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u8052.webp",
         "label": "聒噪",
         "alt": "聒碎乡心彻夜难眠；帐外风雪喧嚣之声打破了梦境，故园温暖的灯火成了心中唯一的牵挂 图中“耳”与“舌”按左右结构自然长成“聒”。"
+      },
+      "g5v1-l21-c04-u8052-words-image:g5v1-l21-c04-u8052-words-image-2": {
+        "src": "/illustrations/meanings/m06.webp",
+        "label": "背负、承载",
+        "alt": "孩子把行囊稳稳背在背上"
+      },
+      "g5v1-l21-c04-u8052-words-image:g5v1-l21-c04-u8052-words-image-0": {
+        "src": "/illustrations/mnemonics-v2/g5-u6c0f.webp",
+        "label": "摄氏",
+        "alt": "摄氏温标科学精准；课文用摄氏度准确说明太阳的热度，展现了科普说明文的严谨科学性 图中“氏”按独体结构自然长成“氏”。"
       }
     }
   },
@@ -144,6 +144,11 @@ export const characterMedia = {
     },
     "transcript": "“王孙自可留”里的孙，读第一声。孙是左右结构，左边是子，右边是小，写时两部分要靠紧。日常说子孙，指儿子、孙子等后代，诗里的王孙却是古代对人的称呼。《山居秋暝》写秋雨后的山林清新宁静，明月、清泉、竹林相映。诗人说王孙自可留，表达自己愿意留在这片山林中的心意。",
     "practiceOptionVisuals": {
+      "g5v1-l21-c05-u5b59-words-image:g5v1-l21-c05-u5b59-words-image-1": {
+        "src": "/illustrations/mnemonics-v2/g5-u5b59.webp",
+        "label": "子孙",
+        "alt": "竹喧归浣女莲动下渔舟；王维笔下的山居秋夜清新明净，洋溢着淳朴宁静的生活情趣 图中“子”与“小”按左右结构自然长成“孙”。"
+      },
       "g5v1-l21-c05-u5b59-words-image:g5v1-l21-c05-u5b59-words-image-2": {
         "src": "/illustrations/meanings/m03.webp",
         "label": "检查、验证",
@@ -153,11 +158,6 @@ export const characterMedia = {
         "src": "/illustrations/mnemonics-v2/g5-u6740.webp",
         "label": "杀菌",
         "alt": "杀菌消毒保障健康；多晒太阳可以杀菌防病，让人们在阳光的沐浴下健康快乐地生活 图中“乂”与“朩”按上下结构自然长成“杀”。"
-      },
-      "g5v1-l21-c05-u5b59-words-image:g5v1-l21-c05-u5b59-words-image-1": {
-        "src": "/illustrations/mnemonics-v2/g5-u5b59.webp",
-        "label": "子孙",
-        "alt": "竹喧归浣女莲动下渔舟；王维笔下的山居秋夜清新明净，洋溢着淳朴宁静的生活情趣 图中“子”与“小”按左右结构自然长成“孙”。"
       }
     }
   },
@@ -176,20 +176,20 @@ export const characterMedia = {
     },
     "transcript": "船靠岸停下叫停泊，泊读第二声，湖泊里的泊读第一声。泊是左右结构，左边三点水，右边是白，写时左窄右宽。可以想象一只小船靠着明亮水岸，收起桨静静停住。停泊表示船只靠岸停下。《枫桥夜泊》中，客船停在枫桥附近，诗人面对江上夜色和钟声，愁绪也慢慢铺开。",
     "practiceOptionVisuals": {
-      "g5v1-l21-c06-u6cca-words-image:g5v1-l21-c06-u6cca-words-image-2": {
-        "src": "/illustrations/meanings/m04.webp",
-        "label": "倚靠、凭借",
-        "alt": "行路的人稳稳倚靠一根手杖"
-      },
-      "g5v1-l21-c06-u6cca-words-image:g5v1-l21-c06-u6cca-words-image-0": {
-        "src": "/illustrations/mnemonics/m21.webp",
-        "label": "糕饼",
-        "alt": "竹盘中各式蒸糕和糕饼"
-      },
       "g5v1-l21-c06-u6cca-words-image:g5v1-l21-c06-u6cca-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u6cca.webp",
         "label": "停泊",
         "alt": "夜泊枫桥月落乌啼；客船夜泊在清冷的江边，旅人的愁绪在钟声与渔火中幽幽流淌 图中“氵”与“白”按左右结构自然长成“泊”。"
+      },
+      "g5v1-l21-c06-u6cca-words-image:g5v1-l21-c06-u6cca-words-image-0": {
+        "src": "/illustrations/meanings/m04.webp",
+        "label": "倚靠、凭借",
+        "alt": "行路的人稳稳倚靠一根手杖"
+      },
+      "g5v1-l21-c06-u6cca-words-image:g5v1-l21-c06-u6cca-words-image-2": {
+        "src": "/illustrations/mnemonics/m21.webp",
+        "label": "糕饼",
+        "alt": "竹盘中各式蒸糕和糕饼"
       }
     }
   },
@@ -208,17 +208,17 @@ export const characterMedia = {
     },
     "transcript": "心里有困难或担忧，安静不下来，就是发愁，愁读第二声。愁是上下结构，上面是秋，下面是心，写时心字底要托稳。认字时，给它配一幅生活小图，可以想象秋叶落在心头，让人久久不能入睡。发愁表示因担心而心里不安。《枫桥夜泊》中的诗人对着江枫、渔火难以成眠，一个愁字收住了整幅夜景的心情。",
     "practiceOptionVisuals": {
+      "g5v1-l21-c07-u6101-words-image:g5v1-l21-c07-u6101-words-image-0": {
+        "src": "/illustrations/meanings/m08.webp",
+        "label": "整齐有序",
+        "alt": "竹简按照次序整齐排列"
+      },
       "g5v1-l21-c07-u6101-words-image:g5v1-l21-c07-u6101-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u6101.webp",
         "label": "发愁",
         "alt": "江枫渔火对愁眠；张继借江桥渔火与寒山寺钟声，将千古孤寂的羁旅愁思渲染到了极致 图中“秋”与“心”按上下结构自然长成“愁”。"
       },
       "g5v1-l21-c07-u6101-words-image:g5v1-l21-c07-u6101-words-image-2": {
-        "src": "/illustrations/meanings/m08.webp",
-        "label": "整齐有序",
-        "alt": "竹简按照次序整齐排列"
-      },
-      "g5v1-l21-c07-u6101-words-image:g5v1-l21-c07-u6101-words-image-0": {
         "src": "/illustrations/mnemonics/m27.webp",
         "label": "河流",
         "alt": "从群山之间流过的清澈河流"
@@ -240,12 +240,12 @@ export const characterMedia = {
     },
     "transcript": "寺庙的寺，读第四声。寺是上下结构，上面是土，下面是寸，横画要排得平稳。记字时，可以想象山脚下一座安静院落，钟楼在夜色中传出悠远声响。寺庙是举行宗教活动的建筑。《枫桥夜泊》写到城外的寒山寺，夜半钟声越过江面传到客船，也让诗人的愁绪有了声音。",
     "practiceOptionVisuals": {
-      "g5v1-l21-c08-u5bfa-words-image:g5v1-l21-c08-u5bfa-words-image-2": {
+      "g5v1-l21-c08-u5bfa-words-image:g5v1-l21-c08-u5bfa-words-image-0": {
         "src": "/illustrations/meanings/m05.webp",
         "label": "朗声诵读",
         "alt": "孩子面向同伴清楚地朗读"
       },
-      "g5v1-l21-c08-u5bfa-words-image:g5v1-l21-c08-u5bfa-words-image-0": {
+      "g5v1-l21-c08-u5bfa-words-image:g5v1-l21-c08-u5bfa-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u60f0.webp",
         "label": "懒惰",
         "alt": "懒惰是不肯勤快出力的心态；乡亲们走过搭石绝不懒惰停留，而是保持匀速，确保步伐轻稳 图中“忄”与“左”与“月”按左右结构自然长成“惰”。"

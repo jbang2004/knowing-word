@@ -17,11 +17,6 @@ export const characterMedia = {
     },
     "transcript": "海力布救下小白蛇后，小白蛇说父亲一定会酬谢他。后来老龙王带海力布进宝库，让他挑选珍宝，感谢就落在了具体行动上。酬的左边像封口酒坛，右边的州可以想成整齐摆开的回礼台。双手把谢礼送上，再读酬谢，就能体会老龙王感谢救命恩人的心意。",
     "practiceOptionVisuals": {
-      "g5v1-l09-c01-u916c-words-image:g5v1-l09-c01-u916c-words-image-1": {
-        "src": "/illustrations/mnemonics-v2/g5-u916c.webp",
-        "label": "酬谢",
-        "alt": "酬谢是用财物或情意报答恩情；龙王拿出珍宝酬谢海力布救女之恩，开启了故事的序幕 图中“酉”与“州”按左右结构自然长成“酬”。"
-      },
       "g5v1-l09-c01-u916c-words-image:g5v1-l09-c01-u916c-words-image-2": {
         "src": "/illustrations/meanings/m05.webp",
         "label": "朗声诵读",
@@ -31,6 +26,11 @@ export const characterMedia = {
         "src": "/illustrations/mnemonics-v2/g5-u6b67.webp",
         "label": "歧途",
         "alt": "误入歧途需要警醒；父亲“糟糕透了”的严厉批评如同一剂良药，防止孩子在赞美中误入歧途 图中“止”与“支”按左右结构自然长成“歧”。"
+      },
+      "g5v1-l09-c01-u916c-words-image:g5v1-l09-c01-u916c-words-image-1": {
+        "src": "/illustrations/mnemonics-v2/g5-u916c.webp",
+        "label": "酬谢",
+        "alt": "酬谢是用财物或情意报答恩情；龙王拿出珍宝酬谢海力布救女之恩，开启了故事的序幕 图中“酉”与“州”按左右结构自然长成“酬”。"
       }
     }
   },
@@ -49,15 +49,15 @@ export const characterMedia = {
     },
     "transcript": "海力布为了让乡亲相信灾难将至，郑重说出自己的保证。誓是上下结构，上面像双手折下一件信物，下面是说话的言。把信物和郑重话语放在一起。发誓就是非常认真地说出决心或保证，也要愿意为这句话负责。",
     "practiceOptionVisuals": {
-      "g5v1-l09-c02-u8a93-words-image:g5v1-l09-c02-u8a93-words-image-1": {
-        "src": "/illustrations/mnemonics-v2/g5-u8a93.webp",
-        "label": "发誓",
-        "alt": "发誓指庄严立下誓言；海力布发誓绝不把动物的语言泄露给别人，默默遵守着约定 图中“折”与“言”按上下结构自然长成“誓”。"
-      },
       "g5v1-l09-c02-u8a93-words-image:g5v1-l09-c02-u8a93-words-image-0": {
         "src": "/illustrations/meanings/m08.webp",
         "label": "整齐有序",
         "alt": "竹简按照次序整齐排列"
+      },
+      "g5v1-l09-c02-u8a93-words-image:g5v1-l09-c02-u8a93-words-image-1": {
+        "src": "/illustrations/mnemonics-v2/g5-u8a93.webp",
+        "label": "发誓",
+        "alt": "发誓指庄严立下誓言；海力布发誓绝不把动物的语言泄露给别人，默默遵守着约定 图中“折”与“言”按上下结构自然长成“誓”。"
       },
       "g5v1-l09-c02-u8a93-words-image:g5v1-l09-c02-u8a93-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u80ce.webp",
@@ -81,17 +81,17 @@ export const characterMedia = {
     },
     "transcript": "海力布催乡亲们赶快搬走，老人却说大家知道他从来不说谎话，只是不明白原因。谎的左边是言字旁，右边的荒可以想成荒草遮住弯路。话语一旦走进看不清的荒路，就容易把人引错方向。谎话指故意说出的不真实内容，海力布一向诚实，正因如此乡亲们更想听到实情。",
     "practiceOptionVisuals": {
+      "g5v1-l09-c03-u8c0e-words-image:g5v1-l09-c03-u8c0e-words-image-2": {
+        "src": "/illustrations/meanings/m06.webp",
+        "label": "背负、承载",
+        "alt": "孩子把行囊稳稳背在背上"
+      },
       "g5v1-l09-c03-u8c0e-words-image:g5v1-l09-c03-u8c0e-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u8c0e.webp",
         "label": "谎话",
         "alt": "谎话是不符合事实的假话；海力布为人诚实正直，从不说谎骗人，深得乡亲们的敬重 图中“讠”与“荒”按左右结构自然长成“谎”。"
       },
       "g5v1-l09-c03-u8c0e-words-image:g5v1-l09-c03-u8c0e-words-image-0": {
-        "src": "/illustrations/meanings/m06.webp",
-        "label": "背负、承载",
-        "alt": "孩子把行囊稳稳背在背上"
-      },
-      "g5v1-l09-c03-u8c0e-words-image:g5v1-l09-c03-u8c0e-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u62d8.webp",
         "label": "拘束",
         "alt": "拘束指受到局限束缚；诗人呼唤破除陈腐规矩的拘束，展现了求新求变的开阔眼界 图中“扌”与“句”按左右结构自然长成“拘”。"
@@ -113,17 +113,17 @@ export const characterMedia = {
     },
     "transcript": "海力布明知说出秘密会失去生命，仍选择救乡亲。牺是左右结构，左边是牛，右边可以想成夕阳落在西边的窗格。守护家园的牛迎着夕阳站立。牺牲就是为了更重要的人或事情，舍弃自己的利益，甚至生命。",
     "practiceOptionVisuals": {
+      "g5v1-l09-c04-u727a-words-image:g5v1-l09-c04-u727a-words-image-0": {
+        "src": "/illustrations/meanings/m04.webp",
+        "label": "倚靠、凭借",
+        "alt": "行路的人稳稳倚靠一根手杖"
+      },
       "g5v1-l09-c04-u727a-words-image:g5v1-l09-c04-u727a-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u727a.webp",
         "label": "牺牲",
         "alt": "牺牲是为了正义与他人利益放弃生命；海力布为了拯救全村乡亲不惜牺牲自己，化作了坚硬的石头 图中“牛”与“西”按左右结构自然长成“牺”。"
       },
       "g5v1-l09-c04-u727a-words-image:g5v1-l09-c04-u727a-words-image-2": {
-        "src": "/illustrations/meanings/m04.webp",
-        "label": "倚靠、凭借",
-        "alt": "行路的人稳稳倚靠一根手杖"
-      },
-      "g5v1-l09-c04-u727a-words-image:g5v1-l09-c04-u727a-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u6b96.webp",
         "label": "繁殖",
         "alt": "繁殖生长生生不息；没有太阳提供的光和热，地球上的植物和动物就无法生存和繁衍后代 图中“歹”与“直”按左右结构自然长成“殖”。"
@@ -145,20 +145,20 @@ export const characterMedia = {
     },
     "transcript": "海力布得到能听懂动物说话的珍宝，也承担了守护秘密的责任。珍是左右结构，左边像三层玉架，右边可以想成双手捧着细密宝珠。宝珠被小心托住。珍宝就是珍贵、值得好好保存的物品。宝石带来神奇能力，也让海力布面对更重的选择。",
     "practiceOptionVisuals": {
-      "g5v1-l09-c05-u73cd-words-image:g5v1-l09-c05-u73cd-words-image-1": {
-        "src": "/illustrations/mnemonics-v2/g5-u73cd.webp",
-        "label": "珍宝",
-        "alt": "珍宝是极其贵重的宝物；龙王赠予海力布神奇的宝珠，让他能听懂飞禽走兽的语言 图中“王”与“㐱”按左右结构自然长成“珍”。"
-      },
-      "g5v1-l09-c05-u73cd-words-image:g5v1-l09-c05-u73cd-words-image-0": {
+      "g5v1-l09-c05-u73cd-words-image:g5v1-l09-c05-u73cd-words-image-2": {
         "src": "/illustrations/meanings/m05.webp",
         "label": "朗声诵读",
         "alt": "孩子面向同伴清楚地朗读"
       },
-      "g5v1-l09-c05-u73cd-words-image:g5v1-l09-c05-u73cd-words-image-2": {
+      "g5v1-l09-c05-u73cd-words-image:g5v1-l09-c05-u73cd-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u6d25.webp",
         "label": "天津",
         "alt": "津津有味沉醉书香；读书不仅能开阔眼界增长见识，更能带来津津有味的无穷乐趣与精神享受 图中“氵”与“聿”按左右结构自然长成“津”。"
+      },
+      "g5v1-l09-c05-u73cd-words-image:g5v1-l09-c05-u73cd-words-image-1": {
+        "src": "/illustrations/mnemonics-v2/g5-u73cd.webp",
+        "label": "珍宝",
+        "alt": "珍宝是极其贵重的宝物；龙王赠予海力布神奇的宝珠，让他能听懂飞禽走兽的语言 图中“王”与“㐱”按左右结构自然长成“珍”。"
       }
     }
   },
@@ -214,12 +214,12 @@ export const characterMedia = {
         "label": "叮嘱",
         "alt": "嘱咐指再三叮咛关照；海力布牢记龙女的嘱咐，运用听懂鸟语的本领打到更多猎物分给大家 图中“口”与“属”按左右结构自然长成“嘱”。"
       },
-      "g5v1-l09-c07-u5631-words-image:g5v1-l09-c07-u5631-words-image-0": {
+      "g5v1-l09-c07-u5631-words-image:g5v1-l09-c07-u5631-words-image-2": {
         "src": "/illustrations/meanings/m07.webp",
         "label": "一代又一代",
         "alt": "祖辈、父母和孩子三代人相聚"
       },
-      "g5v1-l09-c07-u5631-words-image:g5v1-l09-c07-u5631-words-image-2": {
+      "g5v1-l09-c07-u5631-words-image:g5v1-l09-c07-u5631-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u6986.webp",
         "label": "榆树",
         "alt": "榆关塞外风雪交加；将士们行军至山海关榆关防线，塞外夜色更显苍凉雄浑 图中“木”与“俞”按左右结构自然长成“榆”。"
@@ -241,15 +241,15 @@ export const characterMedia = {
     },
     "transcript": "鸟儿告诉海力布，大山将要倒塌，洪水会淹没村庄。塌是左右结构，左边是提土旁，右边可以想成失去支撑的屋顶和折叠支架。墙架向下坠落。倒塌就是建筑或堆放物失去支撑，向下落下。正因为大山会倒塌，乡亲们必须马上搬走，不能再等。",
     "practiceOptionVisuals": {
-      "g5v1-l09-c08-u584c-words-image:g5v1-l09-c08-u584c-words-image-1": {
-        "src": "/illustrations/mnemonics-v2/g5-u584c.webp",
-        "label": "倒塌",
-        "alt": "倒塌指山体崩塌滑落；听到大山即将倒塌的消息，海力布焦急地劝说乡亲们立刻搬家 图中“土”与“𦐇”按左右结构自然长成“塌”。"
-      },
       "g5v1-l09-c08-u584c-words-image:g5v1-l09-c08-u584c-words-image-0": {
         "src": "/illustrations/meanings/m05.webp",
         "label": "朗声诵读",
         "alt": "孩子面向同伴清楚地朗读"
+      },
+      "g5v1-l09-c08-u584c-words-image:g5v1-l09-c08-u584c-words-image-1": {
+        "src": "/illustrations/mnemonics-v2/g5-u584c.webp",
+        "label": "倒塌",
+        "alt": "倒塌指山体崩塌滑落；听到大山即将倒塌的消息，海力布焦急地劝说乡亲们立刻搬家 图中“土”与“𦐇”按左右结构自然长成“塌”。"
       },
       "g5v1-l09-c08-u584c-words-image:g5v1-l09-c08-u584c-words-image-2": {
         "src": "/illustrations/mnemonics/m44.webp",
@@ -306,6 +306,11 @@ export const characterMedia = {
     },
     "transcript": "海力布知道灾难马上到来，搬离村庄不能再延迟。延的笔画向外伸展，可以想成长廊绕了很远，脚步迟迟才到终点。这条绕远的路线也让“延迟”显得更具体。延迟就是比原定时间更晚发生或完成，故事里的迟延会带来危险。",
     "practiceOptionVisuals": {
+      "g5v1-l09-c10-u5ef6-words-image:g5v1-l09-c10-u5ef6-words-image-1": {
+        "src": "/illustrations/mnemonics-v2/g5-u5ef6.webp",
+        "label": "延迟",
+        "alt": "延迟指拖延耽误时间；灾难迫在眉睫容不得半点延迟，海力布果断作出了最后的抉择 图中“廴”与“丿”与“止”按上下结构自然长成“延”。"
+      },
       "g5v1-l09-c10-u5ef6-words-image:g5v1-l09-c10-u5ef6-words-image-0": {
         "src": "/illustrations/meanings/m04.webp",
         "label": "倚靠、凭借",
@@ -315,11 +320,6 @@ export const characterMedia = {
         "src": "/illustrations/mnemonics-v2/g5-u77e3.webp",
         "label": "矣",
         "alt": "学而不厌诲人不倦矣；朱熹与孔子的读书心法跨越千年，至今依然指引着求学者的方向 图中“厶”与“矢”按上下结构自然长成“矣”。"
-      },
-      "g5v1-l09-c10-u5ef6-words-image:g5v1-l09-c10-u5ef6-words-image-1": {
-        "src": "/illustrations/mnemonics-v2/g5-u5ef6.webp",
-        "label": "延迟",
-        "alt": "延迟指拖延耽误时间；灾难迫在眉睫容不得半点延迟，海力布果断作出了最后的抉择 图中“廴”与“丿”与“止”按上下结构自然长成“延”。"
       }
     }
   },
@@ -338,12 +338,12 @@ export const characterMedia = {
     },
     "transcript": "山崩和洪水将给村庄带来灾难，海力布赶紧劝大家离开。灾是上下结构，上面像屋顶，下面是火。屋下出现火情时，人们及时疏散灭火。灾难是给生命、生活或环境造成严重损害的事情。海力布一次次催促，正是怕山崩洪水伤到乡亲。",
     "practiceOptionVisuals": {
-      "g5v1-l09-c11-u707e-words-image:g5v1-l09-c11-u707e-words-image-2": {
+      "g5v1-l09-c11-u707e-words-image:g5v1-l09-c11-u707e-words-image-0": {
         "src": "/illustrations/meanings/m06.webp",
         "label": "背负、承载",
         "alt": "孩子把行囊稳稳背在背上"
       },
-      "g5v1-l09-c11-u707e-words-image:g5v1-l09-c11-u707e-words-image-0": {
+      "g5v1-l09-c11-u707e-words-image:g5v1-l09-c11-u707e-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u9e64.webp",
         "label": "白鹤",
         "alt": "白鹤是体型较大、羽色洁白的水鸟；课文用白鹤与白鹭对比，更显出白鹭身段的玲珑适度 图中“隺”与“鸟”按左右结构自然长成“鹤”。"
@@ -370,12 +370,12 @@ export const characterMedia = {
     },
     "transcript": "乡亲明白海力布说的是真话时，也看见了他为大家付出的代价。悔是左右结构，左边是竖心旁，右边可以想成每天翻看的改错日历。回头反思并准备改正。后悔就是事后觉得原来的做法不对，希望能够补救或改正。",
     "practiceOptionVisuals": {
-      "g5v1-l09-c12-u6094-words-image:g5v1-l09-c12-u6094-words-image-2": {
+      "g5v1-l09-c12-u6094-words-image:g5v1-l09-c12-u6094-words-image-0": {
         "src": "/illustrations/meanings/m07.webp",
         "label": "一代又一代",
         "alt": "祖辈、父母和孩子三代人相聚"
       },
-      "g5v1-l09-c12-u6094-words-image:g5v1-l09-c12-u6094-words-image-0": {
+      "g5v1-l09-c12-u6094-words-image:g5v1-l09-c12-u6094-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u96cf.webp",
         "label": "雏鸟",
         "alt": "雏鸟是刚出生不久的幼鸟；可爱的雏鸟毛茸茸地探出头来，显得格外娇小惹人怜爱 图中“刍”与“隹”按左右结构自然长成“雏”。"
@@ -402,12 +402,12 @@ export const characterMedia = {
     },
     "transcript": "乡亲们听完海力布的话，扶着老人，领着孩子，赶着牛羊往很远的地方走。这个扶字先从动作认，左边的提手旁像伸出一只手，右边的夫像努力站稳的人。手托住身旁的老人，走得再急也多一份照应。课文用扶着老人这个细节，让搬家的匆忙和乡亲间的互助都看得见。",
     "practiceOptionVisuals": {
-      "g5v1-l09-c13-u6276-words-image:g5v1-l09-c13-u6276-words-image-0": {
+      "g5v1-l09-c13-u6276-words-image:g5v1-l09-c13-u6276-words-image-2": {
         "src": "/illustrations/meanings/m04.webp",
         "label": "倚靠、凭借",
         "alt": "行路的人稳稳倚靠一根手杖"
       },
-      "g5v1-l09-c13-u6276-words-image:g5v1-l09-c13-u6276-words-image-2": {
+      "g5v1-l09-c13-u6276-words-image:g5v1-l09-c13-u6276-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u4ea9.webp",
         "label": "半亩",
         "alt": "亩是计算土地面积的单位；一家人在后园半亩空地上辛勤翻土播种，收获了饱满朴实的花生 图中“亠”与“田”按上下结构自然长成“亩”。"

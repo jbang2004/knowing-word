@@ -17,12 +17,12 @@ export const characterMedia = {
     },
     "transcript": "蚕吐出细丝，把自己包进椭圆形的小壳里，这就是蚕茧，茧读第三声。茧是上下结构，上面草字头，下面是虫。不妨借一个小场景来记，一条小虫躲在柔软草叶下，周围绕满白丝。蚕茧是蚕吐丝形成的外壳。作者回忆父亲卖茧子、筹措生活和求学费用，轻轻一笔就带出了家里的不容易。",
     "practiceOptionVisuals": {
-      "g5v1-l19-c01-u8327-words-image:g5v1-l19-c01-u8327-words-image-0": {
+      "g5v1-l19-c01-u8327-words-image:g5v1-l19-c01-u8327-words-image-2": {
         "src": "/illustrations/meanings/m05.webp",
         "label": "朗声诵读",
         "alt": "孩子面向同伴清楚地朗读"
       },
-      "g5v1-l19-c01-u8327-words-image:g5v1-l19-c01-u8327-words-image-2": {
+      "g5v1-l19-c01-u8327-words-image:g5v1-l19-c01-u8327-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u61d2.webp",
         "label": "懒惰",
         "alt": "懒惰是遇事推诿不肯动手；若是搭石不稳，无论谁路过都会立刻找石头修垫，绝不偷懒推托 图中“忄”与“赖”按左右结构自然长成“懒”。"
@@ -49,12 +49,12 @@ export const characterMedia = {
     },
     "transcript": "客栈的栈，读第四声。栈的木字旁在左，右边笔画斜着展开，要写得左窄右宽，两个部分并排。可以想象一排木板搭成小旅店，远行的人把行李放下歇脚。客栈是旧时供旅客住宿的地方。父亲送孩子去求学，住店总挑便宜的客栈，却又因孩子被虫咬而心疼，节省和疼爱都藏在这个细节里。",
     "practiceOptionVisuals": {
-      "g5v1-l19-c02-u6808-words-image:g5v1-l19-c02-u6808-words-image-0": {
+      "g5v1-l19-c02-u6808-words-image:g5v1-l19-c02-u6808-words-image-2": {
         "src": "/illustrations/meanings/m04.webp",
         "label": "倚靠、凭借",
         "alt": "行路的人稳稳倚靠一根手杖"
       },
-      "g5v1-l19-c02-u6808-words-image:g5v1-l19-c02-u6808-words-image-2": {
+      "g5v1-l19-c02-u6808-words-image:g5v1-l19-c02-u6808-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u9675.webp",
         "label": "武陵春色",
         "alt": "武陵春色宛若世外桃源；漫步园中如行画中，令人如痴如醉、流连忘返 图中“阝”与“夌”按左右结构自然长成“陵”。"
@@ -81,20 +81,20 @@ export const characterMedia = {
     },
     "transcript": "没有做错事却受到责怪，就会觉得冤枉，冤读第一声。冤是上下结构，上面宝盖头，下面是兔，字形要上盖下收。记字时，可以想象小兔躲在屋檐下，却被误认为踩坏了菜地，先借这个画面记住字形。冤枉表示缺少事实根据的责怪或不公平对待。课文说父亲连一分冤枉钱也舍不得花，让我们看见他挣钱艰难、生活节省。",
     "practiceOptionVisuals": {
-      "g5v1-l19-c03-u51a4-words-image:g5v1-l19-c03-u51a4-words-image-0": {
-        "src": "/illustrations/meanings/m08.webp",
-        "label": "整齐有序",
-        "alt": "竹简按照次序整齐排列"
-      },
-      "g5v1-l19-c03-u51a4-words-image:g5v1-l19-c03-u51a4-words-image-2": {
-        "src": "/illustrations/mnemonics-v2/g5-u6bc1.webp",
-        "label": "毁灭",
-        "alt": "毁灭是彻底破坏不复存在；圆明园惨遭毁灭的历史警示我们，落后就要挨打，唯有自强不息 图中“臼”与“工”与“殳”按左右结构自然长成“毁”。"
-      },
       "g5v1-l19-c03-u51a4-words-image:g5v1-l19-c03-u51a4-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u51a4.webp",
         "label": "冤枉",
         "alt": "冤枉委屈历历在目；童年受到的无端冤枉，在父亲温暖宽厚的怀抱里得到了最大的安慰 图中“冖”与“兔”按上下结构自然长成“冤”。"
+      },
+      "g5v1-l19-c03-u51a4-words-image:g5v1-l19-c03-u51a4-words-image-2": {
+        "src": "/illustrations/meanings/m08.webp",
+        "label": "整齐有序",
+        "alt": "竹简按照次序整齐排列"
+      },
+      "g5v1-l19-c03-u51a4-words-image:g5v1-l19-c03-u51a4-words-image-0": {
+        "src": "/illustrations/mnemonics-v2/g5-u6bc1.webp",
+        "label": "毁灭",
+        "alt": "毁灭是彻底破坏不复存在；圆明园惨遭毁灭的历史警示我们，落后就要挨打，唯有自强不息 图中“臼”与“工”与“殳”按左右结构自然长成“毁”。"
       }
     }
   },
@@ -113,20 +113,20 @@ export const characterMedia = {
     },
     "transcript": "枉，冤枉的枉，读第三声。它是左右结构，左边的木字旁是一根笔直的木料，右边的“王”提示读音，直木受压弯曲即为枉。冤枉指受到无端的指责或委屈。课文写童年受到的委屈在父亲温暖的宽慰下烟消云散；父亲平日一分冤枉钱也不乱花，却全力支持孩子求学深造。",
     "practiceOptionVisuals": {
-      "g5v1-l19-c04-u6789-words-image:g5v1-l19-c04-u6789-words-image-2": {
-        "src": "/illustrations/meanings/m04.webp",
-        "label": "倚靠、凭借",
-        "alt": "行路的人稳稳倚靠一根手杖"
-      },
-      "g5v1-l19-c04-u6789-words-image:g5v1-l19-c04-u6789-words-image-0": {
-        "src": "/illustrations/mnemonics/m127.webp",
-        "label": "古代持戈抵御野兽",
-        "alt": "古代守卫持长戈保护村庄免受野兽侵扰"
-      },
       "g5v1-l19-c04-u6789-words-image:g5v1-l19-c04-u6789-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u6789.webp",
         "label": "冤枉",
         "alt": "无端枉受责备令人委屈；父亲用温和坚定的信任驱散了孩子心中的阴霾，照亮了前路 图中“木”与“王”按左右结构自然长成“枉”。"
+      },
+      "g5v1-l19-c04-u6789-words-image:g5v1-l19-c04-u6789-words-image-0": {
+        "src": "/illustrations/meanings/m04.webp",
+        "label": "倚靠、凭借",
+        "alt": "行路的人稳稳倚靠一根手杖"
+      },
+      "g5v1-l19-c04-u6789-words-image:g5v1-l19-c04-u6789-words-image-2": {
+        "src": "/illustrations/mnemonics/m127.webp",
+        "label": "古代持戈抵御野兽",
+        "alt": "古代守卫持长戈保护村庄免受野兽侵扰"
       }
     }
   },
@@ -150,15 +150,15 @@ export const characterMedia = {
         "label": "朗声诵读",
         "alt": "孩子面向同伴清楚地朗读"
       },
-      "g5v1-l19-c05-u604d-words-image:g5v1-l19-c05-u604d-words-image-0": {
-        "src": "/illustrations/mnemonics-v2/g5-u85d3.webp",
-        "label": "苔藓",
-        "alt": "苔藓柔软保温干燥；松鼠采集柔软的苔藓铺在窝底，把小窝打理得格外暖和舒坦 图中“艹”与“鲜”按上下结构自然长成“藓”。"
-      },
       "g5v1-l19-c05-u604d-words-image:g5v1-l19-c05-u604d-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u604d.webp",
         "label": "恍惚",
         "alt": "恍恍惚惚如在梦境；多年后作者在梦中恍惚又见到了那条承载着深沉父爱的小渔船 图中“忄”与“光”按左右结构自然长成“恍”。"
+      },
+      "g5v1-l19-c05-u604d-words-image:g5v1-l19-c05-u604d-words-image-0": {
+        "src": "/illustrations/mnemonics-v2/g5-u85d3.webp",
+        "label": "苔藓",
+        "alt": "苔藓柔软保温干燥；松鼠采集柔软的苔藓铺在窝底，把小窝打理得格外暖和舒坦 图中“艹”与“鲜”按上下结构自然长成“藓”。"
       }
     }
   },
@@ -177,17 +177,17 @@ export const characterMedia = {
     },
     "transcript": "恍惚的惚，读第一声。惚是左右结构，左边竖心旁，右边是忽，右部上下要写紧凑。看清这些笔画后，可以想象许多念头忽然从心边飘过，让人一时抓不住。恍惚表示神志或感觉不够清楚。作者把现实、梦境和往事连在小船上，恍惚的感觉也让父亲的陪伴显得遥远又真切。",
     "practiceOptionVisuals": {
+      "g5v1-l19-c06-u60da-words-image:g5v1-l19-c06-u60da-words-image-2": {
+        "src": "/illustrations/meanings/m07.webp",
+        "label": "一代又一代",
+        "alt": "祖辈、父母和孩子三代人相聚"
+      },
       "g5v1-l19-c06-u60da-words-image:g5v1-l19-c06-u60da-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u60da.webp",
         "label": "恍惚",
         "alt": "恍惚入梦追忆往昔；梦中父亲摇橹的背影依然清晰，无声的父爱穿越岁月历久弥新 图中“忄”与“忽”按左右结构自然长成“惚”。"
       },
       "g5v1-l19-c06-u60da-words-image:g5v1-l19-c06-u60da-words-image-0": {
-        "src": "/illustrations/meanings/m07.webp",
-        "label": "一代又一代",
-        "alt": "祖辈、父母和孩子三代人相聚"
-      },
-      "g5v1-l19-c06-u60da-words-image:g5v1-l19-c06-u60da-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u6284.webp",
         "label": "抄写",
         "alt": "抄小路指绕过大路快速行进；随从化装成平民抄小路潜回赵国，确保了和氏璧的安全 图中“扌”与“少”按左右结构自然长成“抄”。"
@@ -209,6 +209,11 @@ export const characterMedia = {
     },
     "transcript": "跷跷板的跷，读第一声，两个人分坐木板两端，一头升起，另一头就落下。跷在左边写足字旁，右边笔画向上挑，左右要相让。庙会上，踩高跷的艺人把高跷绑在腿上，站得高高的表演。跷跷板和高跷都是带脚和抬高动作的物件，读词时要分清。父亲陪孩子看着满街热闹，手里不多的钱却得仔细盘算。",
     "practiceOptionVisuals": {
+      "g5v1-l19-c07-u8df7-words-image:g5v1-l19-c07-u8df7-words-image-1": {
+        "src": "/illustrations/mnemonics-v2/g5-u8df7.webp",
+        "label": "跷跷板",
+        "alt": "跷跷板荡起童年欢乐；在赶考途中的庙会上，父亲难得给孩子买了一只小玩具，装满了温情 图中“⻊”与“尧”按左右结构自然长成“跷”。"
+      },
       "g5v1-l19-c07-u8df7-words-image:g5v1-l19-c07-u8df7-words-image-0": {
         "src": "/illustrations/meanings/m08.webp",
         "label": "整齐有序",
@@ -218,11 +223,6 @@ export const characterMedia = {
         "src": "/illustrations/mnemonics-v2/g5-u60eb.webp",
         "label": "疲惫",
         "alt": "疲惫不堪的身影令人心酸；母亲极其瘦弱疲惫的身躯，深深震撼了前来要钱买书的孩子 图中“备”与“心”按上下结构自然长成“惫”。"
-      },
-      "g5v1-l19-c07-u8df7-words-image:g5v1-l19-c07-u8df7-words-image-1": {
-        "src": "/illustrations/mnemonics-v2/g5-u8df7.webp",
-        "label": "跷跷板",
-        "alt": "跷跷板荡起童年欢乐；在赶考途中的庙会上，父亲难得给孩子买了一只小玩具，装满了温情 图中“⻊”与“尧”按左右结构自然长成“跷”。"
       }
     }
   },
@@ -241,6 +241,11 @@ export const characterMedia = {
     },
     "transcript": "偏僻的僻，读第四声，形容地方远离热闹处，来往的人比较少。僻是左右结构，单人旁在左，右部笔画较多，写时要分清层次。庙会上到处是人和小吃，父亲却带孩子找了个偏僻地方坐下。父子吃着从家里带来的凉粽子，和周围的热闹形成鲜明对照。父亲后来又领孩子去吃热豆腐脑，节省里仍藏着疼爱。",
     "practiceOptionVisuals": {
+      "g5v1-l19-c08-u50fb-words-image:g5v1-l19-c08-u50fb-words-image-1": {
+        "src": "/illustrations/mnemonics-v2/g5-u50fb.webp",
+        "label": "偏僻",
+        "alt": "偏僻乡间求学不易；为了让孩子走出偏僻乡村开阔眼界，父亲倾尽全力支持孩子读书求学 图中“亻”与“辟”按左右结构自然长成“僻”。"
+      },
       "g5v1-l19-c08-u50fb-words-image:g5v1-l19-c08-u50fb-words-image-0": {
         "src": "/illustrations/meanings/m07.webp",
         "label": "一代又一代",
@@ -250,11 +255,6 @@ export const characterMedia = {
         "src": "/illustrations/mnemonics/m85.webp",
         "label": "语气平和舒顺",
         "alt": "两个孩子平静友好地交谈"
-      },
-      "g5v1-l19-c08-u50fb-words-image:g5v1-l19-c08-u50fb-words-image-1": {
-        "src": "/illustrations/mnemonics-v2/g5-u50fb.webp",
-        "label": "偏僻",
-        "alt": "偏僻乡间求学不易；为了让孩子走出偏僻乡村开阔眼界，父亲倾尽全力支持孩子读书求学 图中“亻”与“辟”按左右结构自然长成“僻”。"
       }
     }
   },
@@ -273,20 +273,20 @@ export const characterMedia = {
     },
     "transcript": "委屈的委，读第三声，委屈是受到不公平对待或心愿受压时的难过。委是上下结构，上面是禾，下面是女，写时上窄下稳。父子逛庙会，只坐在偏僻处吃从家里带来的凉粽子。父亲看着孩子，觉得这样太委屈了，便领他到小摊上吃热豆腐脑。孩子当时体会到的是豆腐脑的热，后来读懂的是父亲舍不得让他受委屈。",
     "practiceOptionVisuals": {
-      "g5v1-l19-c09-u59d4-words-image:g5v1-l19-c09-u59d4-words-image-2": {
-        "src": "/illustrations/meanings/m05.webp",
-        "label": "朗声诵读",
-        "alt": "孩子面向同伴清楚地朗读"
-      },
-      "g5v1-l19-c09-u59d4-words-image:g5v1-l19-c09-u59d4-words-image-0": {
-        "src": "/illustrations/mnemonics/m50.webp",
-        "label": "母亲或与母亲一辈的女子",
-        "alt": "年长女性温柔地为孩子系好围巾"
-      },
       "g5v1-l19-c09-u59d4-words-image:g5v1-l19-c09-u59d4-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u59d4.webp",
         "label": "委屈",
         "alt": "委屈难过烟消云散；父亲深沉的陪伴与理解，化解了求学路上的一切委屈与挫折 图中“禾”与“女”按上下结构自然长成“委”。"
+      },
+      "g5v1-l19-c09-u59d4-words-image:g5v1-l19-c09-u59d4-words-image-0": {
+        "src": "/illustrations/meanings/m05.webp",
+        "label": "朗声诵读",
+        "alt": "孩子面向同伴清楚地朗读"
+      },
+      "g5v1-l19-c09-u59d4-words-image:g5v1-l19-c09-u59d4-words-image-2": {
+        "src": "/illustrations/mnemonics/m50.webp",
+        "label": "母亲或与母亲一辈的女子",
+        "alt": "年长女性温柔地为孩子系好围巾"
       }
     }
   },
@@ -305,20 +305,20 @@ export const characterMedia = {
     },
     "transcript": "一句话、一个行动让人忽然明白了新的道理，这就叫启迪，迪读第二声。迪是左下包围结构，走之旁从下方托住里面的由。记字时，可以想象一条路引着人从门口走向明亮书桌，先借这个画面记住字形。启迪表示引导人获得新的认识。父亲一路送孩子求学，很少讲大道理，他省钱、摇船和缴费的行动却给了孩子长久启迪。",
     "practiceOptionVisuals": {
-      "g5v1-l19-c10-u8fea-words-image:g5v1-l19-c10-u8fea-words-image-2": {
-        "src": "/illustrations/meanings/m05.webp",
-        "label": "朗声诵读",
-        "alt": "孩子面向同伴清楚地朗读"
-      },
-      "g5v1-l19-c10-u8fea-words-image:g5v1-l19-c10-u8fea-words-image-0": {
-        "src": "/illustrations/mnemonics-v2/g5-u803d.webp",
-        "label": "耽误",
-        "alt": "耽误工时扣减收入；母亲唯恐耽误做工时间，手里的缝纫活一刻也不肯停歇 图中“耳”与“冘”按左右结构自然长成“耽”。"
-      },
       "g5v1-l19-c10-u8fea-words-image:g5v1-l19-c10-u8fea-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u8fea.webp",
         "label": "启迪",
         "alt": "启迪心智指引前程；父亲虽不多言，却用脚踏实地的行动启迪孩子要堂堂正正做人 图中“辶”与“由”按左下包围结构自然长成“迪”。"
+      },
+      "g5v1-l19-c10-u8fea-words-image:g5v1-l19-c10-u8fea-words-image-0": {
+        "src": "/illustrations/meanings/m05.webp",
+        "label": "朗声诵读",
+        "alt": "孩子面向同伴清楚地朗读"
+      },
+      "g5v1-l19-c10-u8fea-words-image:g5v1-l19-c10-u8fea-words-image-2": {
+        "src": "/illustrations/mnemonics-v2/g5-u803d.webp",
+        "label": "耽误",
+        "alt": "耽误工时扣减收入；母亲唯恐耽误做工时间，手里的缝纫活一刻也不肯停歇 图中“耳”与“冘”按左右结构自然长成“耽”。"
       }
     }
   },
@@ -369,20 +369,20 @@ export const characterMedia = {
     },
     "transcript": "按照规定把学费交上去，就叫缴费，缴读第三声。缴是左右结构，左边绞丝旁，右部笔画很多，写时要分层看清。可以想象一根细线系着钱袋，送到办理入学的窗口。缴费表示按规定交付费用。父亲送孩子报考和上学，四处筹钱缴费，沉默的付出一次次托住孩子的求学路。",
     "practiceOptionVisuals": {
-      "g5v1-l19-c12-u7f34-words-image:g5v1-l19-c12-u7f34-words-image-1": {
-        "src": "/illustrations/mnemonics-v2/g5-u7f34.webp",
-        "label": "缴费",
-        "alt": "缴纳学费东挪西凑；为了凑齐新学期缴费的银元，父亲卖掉心爱的物品，四处奔波借钱 图中“纟”与“敫”按左右结构自然长成“缴”。"
-      },
       "g5v1-l19-c12-u7f34-words-image:g5v1-l19-c12-u7f34-words-image-2": {
         "src": "/illustrations/meanings/m07.webp",
         "label": "一代又一代",
         "alt": "祖辈、父母和孩子三代人相聚"
       },
+      "g5v1-l19-c12-u7f34-words-image:g5v1-l19-c12-u7f34-words-image-1": {
+        "src": "/illustrations/mnemonics-v2/g5-u7f34.webp",
+        "label": "缴费",
+        "alt": "缴纳学费东挪西凑；为了凑齐新学期缴费的银元，父亲卖掉心爱的物品，四处奔波借钱 图中“纟”与“敫”按左右结构自然长成“缴”。"
+      },
       "g5v1-l19-c12-u7f34-words-image:g5v1-l19-c12-u7f34-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u715e.webp",
-        "label": "煞气",
-        "alt": "煞有介事引人入胜；精彩的小说情节跌宕起伏，把各种人物描写得煞有介事、栩栩如生 图中“刍”与“攵”与“灬”按上下结构自然长成“煞”。"
+        "label": "煞有介事",
+        "alt": "煞有介事表示装作真有那么回事；有人讲起故事时一本正经，像亲眼看见一样，这副认真的样子就是煞有介事 图中“刍”与“攵”与“灬”按上下结构自然长成“煞”。"
       }
     }
   },
@@ -401,20 +401,20 @@ export const characterMedia = {
     },
     "transcript": "榜样的榜，读第三声，榜样是值得学习的人或做法。榜还可以指张贴出来的名单，考试未被录取叫落榜。榜按左右排列，木字旁在左，旁在右，写时互相避让。孩子说自己唯一的法宝就是考试，而且从未落过榜。一次次榜单上的结果，推着他的求学路从初小、高小一直向前。",
     "practiceOptionVisuals": {
-      "g5v1-l19-c13-u699c-words-image:g5v1-l19-c13-u699c-words-image-0": {
+      "g5v1-l19-c13-u699c-words-image:g5v1-l19-c13-u699c-words-image-2": {
         "src": "/illustrations/meanings/m05.webp",
         "label": "朗声诵读",
         "alt": "孩子面向同伴清楚地朗读"
-      },
-      "g5v1-l19-c13-u699c-words-image:g5v1-l19-c13-u699c-words-image-2": {
-        "src": "/illustrations/mnemonics-v2/g5-u8bfa.webp",
-        "label": "承诺",
-        "alt": "承诺是许诺答应并且务必兑现；秦王虽然许下以城换璧的承诺，却并无诚意，被相如一眼识破 图中“讠”与“若”按左右结构自然长成“诺”。"
       },
       "g5v1-l19-c13-u699c-words-image:g5v1-l19-c13-u699c-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u699c.webp",
         "label": "榜样",
         "alt": "榜上有名欣慰宽怀；得知儿子考取师范榜上有名的喜讯，饱经沧桑的父亲露出了舒心的笑容 图中“木”与“旁”按左右结构自然长成“榜”。"
+      },
+      "g5v1-l19-c13-u699c-words-image:g5v1-l19-c13-u699c-words-image-0": {
+        "src": "/illustrations/mnemonics-v2/g5-u8bfa.webp",
+        "label": "承诺",
+        "alt": "承诺是许诺答应并且务必兑现；秦王虽然许下以城换璧的承诺，却并无诚意，被相如一眼识破 图中“讠”与“若”按左右结构自然长成“诺”。"
       }
     }
   },
@@ -432,15 +432,15 @@ export const characterMedia = {
     },
     "transcript": "兼职的兼，读第一声，兼职是在本职之外再承担一份工作。兼也可以表示同时具有几种用途。兼是独体字，中间竖画贯穿上下，两边笔画舒展开来。父子赶考时住在小渔船上，船里有泥灶可以做饭，夜里又能睡觉。小船兼作旅店和饭店，一个兼字写出了父亲怎样省下食宿费用。",
     "practiceOptionVisuals": {
-      "g5v1-l19-c14-u517c-words-image:g5v1-l19-c14-u517c-words-image-1": {
-        "src": "/illustrations/mnemonics-v2/g5-u517c.webp",
-        "label": "兼职",
-        "alt": "兼顾辛劳毫无保留；父亲既要在田间水上辛勤劳作，又要兼顾孩子的学业前程，默默付出 图中“兼”按独体结构自然长成“兼”。"
-      },
       "g5v1-l19-c14-u517c-words-image:g5v1-l19-c14-u517c-words-image-0": {
         "src": "/illustrations/meanings/m07.webp",
         "label": "一代又一代",
         "alt": "祖辈、父母和孩子三代人相聚"
+      },
+      "g5v1-l19-c14-u517c-words-image:g5v1-l19-c14-u517c-words-image-1": {
+        "src": "/illustrations/mnemonics-v2/g5-u517c.webp",
+        "label": "兼职",
+        "alt": "兼顾辛劳毫无保留；父亲既要在田间水上辛勤劳作，又要兼顾孩子的学业前程，默默付出 图中“兼”按独体结构自然长成“兼”。"
       },
       "g5v1-l19-c14-u517c-words-image:g5v1-l19-c14-u517c-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u768e.webp",
@@ -464,17 +464,17 @@ export const characterMedia = {
     },
     "transcript": "嘲笑的嘲，读第二声，指拿别人的处境或短处取笑，让人难堪。嘲按左右写，左边口字旁，右边是朝，写时左窄右宽。去无锡师范考试时，小船不敢停在学校附近。孩子担心别的考生和家长看见这条破旧小船后嘲笑自己，便把船停得远些。这个担心写出了家境清贫，也让我们摸到少年敏感而要强的自尊。",
     "practiceOptionVisuals": {
+      "g5v1-l19-c15-u5632-words-image:g5v1-l19-c15-u5632-words-image-0": {
+        "src": "/illustrations/meanings/m08.webp",
+        "label": "整齐有序",
+        "alt": "竹简按照次序整齐排列"
+      },
       "g5v1-l19-c15-u5632-words-image:g5v1-l19-c15-u5632-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u5632.webp",
         "label": "嘲笑",
         "alt": "嘲笑讥讽不足为惧；面对外人的冷眼与嘲笑，父子俩乘坐一叶扁舟坚定前行，矢志不渝 图中“口”与“朝”按左右结构自然长成“嘲”。"
       },
       "g5v1-l19-c15-u5632-words-image:g5v1-l19-c15-u5632-words-image-2": {
-        "src": "/illustrations/meanings/m08.webp",
-        "label": "整齐有序",
-        "alt": "竹简按照次序整齐排列"
-      },
-      "g5v1-l19-c15-u5632-words-image:g5v1-l19-c15-u5632-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u60eb.webp",
         "label": "疲惫",
         "alt": "疲惫不堪的身影令人心酸；母亲极其瘦弱疲惫的身躯，深深震撼了前来要钱买书的孩子 图中“备”与“心”按上下结构自然长成“惫”。"
@@ -528,20 +528,20 @@ export const characterMedia = {
     },
     "transcript": "蚕茧里的蚕，读第二声。蚕是上下结构，上面是天，下面是虫，上宽下窄。记字时，可以想象小虫在桑叶下慢慢长大，抬头看见一方晴天，先借这个画面记住字形。蚕会吃桑叶，也会吐丝结茧。作者写父亲靠劳动维持生活，卖蚕茧换来的钱也被仔细用在家庭开支和孩子求学上。",
     "practiceOptionVisuals": {
-      "g5v1-l19-c17-u8695-words-image:g5v1-l19-c17-u8695-words-image-2": {
-        "src": "/illustrations/meanings/m08.webp",
-        "label": "整齐有序",
-        "alt": "竹简按照次序整齐排列"
-      },
-      "g5v1-l19-c17-u8695-words-image:g5v1-l19-c17-u8695-words-image-0": {
-        "src": "/illustrations/mnemonics-v2/g5-u4fef.webp",
-        "label": "俯冲",
-        "alt": "俯冲指从高空向下急速冲去；游隼在俯冲捕食时展现出的极速，令人叹为观止 图中“亻”与“府”按左右结构自然长成“俯”。"
-      },
       "g5v1-l19-c17-u8695-words-image:g5v1-l19-c17-u8695-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u8695.webp",
         "label": "蚕茧",
         "alt": "养蚕缫丝维持生计；全家人日夜照料春蚕，辛勤劳动换来的每一分钱都倾注在孩子的学业上 图中“天”与“虫”按上下结构自然长成“蚕”。"
+      },
+      "g5v1-l19-c17-u8695-words-image:g5v1-l19-c17-u8695-words-image-0": {
+        "src": "/illustrations/meanings/m08.webp",
+        "label": "整齐有序",
+        "alt": "竹简按照次序整齐排列"
+      },
+      "g5v1-l19-c17-u8695-words-image:g5v1-l19-c17-u8695-words-image-2": {
+        "src": "/illustrations/mnemonics-v2/g5-u4fef.webp",
+        "label": "俯冲",
+        "alt": "俯冲指从高空向下急速冲去；游隼在俯冲捕食时展现出的极速，令人叹为观止 图中“亻”与“府”按左右结构自然长成“俯”。"
       }
     }
   },
@@ -560,20 +560,20 @@ export const characterMedia = {
     },
     "transcript": "考，报考的考，读第三声。考是左上包围结构，上方像长者手持教鞭审视，下方弯钩收紧宛如学子端坐答题，上下组合成考。报考指报名参加升学或就业测试。课文写父亲摇着那叶简朴的小渔船一路护送孩子进城赶考，小舟载着厚重的父爱与希望，乘风破浪驶向远方。",
     "practiceOptionVisuals": {
-      "g5v1-l19-c18-u8003-words-image:g5v1-l19-c18-u8003-words-image-0": {
-        "src": "/illustrations/meanings/m08.webp",
-        "label": "整齐有序",
-        "alt": "竹简按照次序整齐排列"
-      },
-      "g5v1-l19-c18-u8003-words-image:g5v1-l19-c18-u8003-words-image-2": {
-        "src": "/illustrations/mnemonics-v2/g5-u52b1.webp",
-        "label": "鼓励",
-        "alt": "鼓励赞美激发信心；母亲“精彩极了”的热情鼓励，像春风般吹拂起孩子对写作的无限热爱 图中“厉”与“力”按左右结构自然长成“励”。"
-      },
       "g5v1-l19-c18-u8003-words-image:g5v1-l19-c18-u8003-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u8003.webp",
         "label": "考试",
         "alt": "报考师范求索前途；父亲摇着小船一路护送孩子进城赶考，小舟载着希望破浪向前 图中“耂”与“丂”按左上包围结构自然长成“考”。"
+      },
+      "g5v1-l19-c18-u8003-words-image:g5v1-l19-c18-u8003-words-image-2": {
+        "src": "/illustrations/meanings/m08.webp",
+        "label": "整齐有序",
+        "alt": "竹简按照次序整齐排列"
+      },
+      "g5v1-l19-c18-u8003-words-image:g5v1-l19-c18-u8003-words-image-0": {
+        "src": "/illustrations/mnemonics-v2/g5-u52b1.webp",
+        "label": "鼓励",
+        "alt": "鼓励赞美激发信心；母亲“精彩极了”的热情鼓励，像春风般吹拂起孩子对写作的无限热爱 图中“厉”与“力”按左右结构自然长成“励”。"
       }
     }
   },
@@ -625,6 +625,11 @@ export const characterMedia = {
     },
     "transcript": "草席的席，读第二声，草席是用草茎等材料编成的铺垫用品。席是左上包围结构，外部像屋檐，里面笔画分层，下面一部分要托稳。课文中的席子铺在一家便宜客栈的床上。孩子被臭虫咬出许多疙瘩，父亲叫来茶房，掀开席子让他看满床臭虫。这个掀席子的动作里，有父亲的气愤，更有对孩子受苦的心疼。",
     "practiceOptionVisuals": {
+      "g5v1-l19-c20-u5e2d-words-image:g5v1-l19-c20-u5e2d-words-image-1": {
+        "src": "/illustrations/mnemonics-v2/g5-u5e2d.webp",
+        "label": "草席",
+        "alt": "草席一领简朴无华；父亲带着一领凉席在船头守夜，把狭小的船舱全部让给孩子安睡 图中“广”与“廿”与“巾”按左上包围结构自然长成“席”。"
+      },
       "g5v1-l19-c20-u5e2d-words-image:g5v1-l19-c20-u5e2d-words-image-0": {
         "src": "/illustrations/meanings/m08.webp",
         "label": "整齐有序",
@@ -634,11 +639,6 @@ export const characterMedia = {
         "src": "/illustrations/mnemonics-v2/g5-u62b5.webp",
         "label": "抵御",
         "alt": "抵御指挡住外来强敌的进攻；正是因为武有廉颇抵御强敌，文有相如机智善辩，赵国才得以安宁 图中“扌”与“氐”按左右结构自然长成“抵”。"
-      },
-      "g5v1-l19-c20-u5e2d-words-image:g5v1-l19-c20-u5e2d-words-image-1": {
-        "src": "/illustrations/mnemonics-v2/g5-u5e2d.webp",
-        "label": "草席",
-        "alt": "草席一领简朴无华；父亲带着一领凉席在船头守夜，把狭小的船舱全部让给孩子安睡 图中“广”与“廿”与“巾”按左上包围结构自然长成“席”。"
       }
     }
   },
@@ -721,20 +721,20 @@ export const characterMedia = {
     },
     "transcript": "钉子的钉，读第一声，一端尖、一端有帽，常用来固定物体。钉按左右写，左边金字旁，右边是丁，写时左窄右宽。雨雪天，父亲扎紧裤脚，穿上深筒钉鞋，背着孩子去上学。钉鞋鞋底带钉，踩在湿滑路面上更容易站稳。父亲一步步走过风雪，也把孩子一步步送上求学路。",
     "practiceOptionVisuals": {
-      "g5v1-l19-c23-u9489-words-image:g5v1-l19-c23-u9489-words-image-1": {
-        "src": "/illustrations/mnemonics-v2/g5-u9489.webp",
-        "label": "钉子",
-        "alt": "钉鞋补舟手艺精湛；父亲用粗糙的双手修补旧船、钉好鞋底，把每一件小事都做得扎扎实实 图中“钅”与“丁”按左右结构自然长成“钉”。"
-      },
-      "g5v1-l19-c23-u9489-words-image:g5v1-l19-c23-u9489-words-image-2": {
+      "g5v1-l19-c23-u9489-words-image:g5v1-l19-c23-u9489-words-image-0": {
         "src": "/illustrations/meanings/m05.webp",
         "label": "朗声诵读",
         "alt": "孩子面向同伴清楚地朗读"
       },
-      "g5v1-l19-c23-u9489-words-image:g5v1-l19-c23-u9489-words-image-0": {
+      "g5v1-l19-c23-u9489-words-image:g5v1-l19-c23-u9489-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u6155.webp",
         "label": "爱慕",
         "alt": "爱慕是因欣赏而真心向往；做人要做有花生那样的内在品格，而不只是追求外在令人爱慕 图中“莫”与“⺗”按上下结构自然长成“慕”。"
+      },
+      "g5v1-l19-c23-u9489-words-image:g5v1-l19-c23-u9489-words-image-1": {
+        "src": "/illustrations/mnemonics-v2/g5-u9489.webp",
+        "label": "钉子",
+        "alt": "钉鞋补舟手艺精湛；父亲用粗糙的双手修补旧船、钉好鞋底，把每一件小事都做得扎扎实实 图中“钅”与“丁”按左右结构自然长成“钉”。"
       }
     }
   },
@@ -753,15 +753,15 @@ export const characterMedia = {
     },
     "transcript": "陪伴的陪，读第二声。陪是左右结构，左边双耳旁，右部上下分明，左窄右宽才匀称。认这个字时，可以想象两个人沿着高低小路并肩走，一路都没有落下谁，先借这个画面记住字形。陪伴就是留在别人身边，共同经历一段时间。这篇文章里的父亲常坐船送孩子赶考和上学，水路很长，他沉默的陪伴一直都在。",
     "practiceOptionVisuals": {
-      "g5v1-l19-c24-u966a-words-image:g5v1-l19-c24-u966a-words-image-1": {
-        "src": "/illustrations/mnemonics-v2/g5-u966a.webp",
-        "label": "陪伴",
-        "alt": "陪伴求学一路护航；从乡村到县城，那叶小舟始终陪伴着孩子，驶向广阔的人生天地 图中“阝”与“咅”按左右结构自然长成“陪”。"
-      },
       "g5v1-l19-c24-u966a-words-image:g5v1-l19-c24-u966a-words-image-2": {
         "src": "/illustrations/meanings/m08.webp",
         "label": "整齐有序",
         "alt": "竹简按照次序整齐排列"
+      },
+      "g5v1-l19-c24-u966a-words-image:g5v1-l19-c24-u966a-words-image-1": {
+        "src": "/illustrations/mnemonics-v2/g5-u966a.webp",
+        "label": "陪伴",
+        "alt": "陪伴求学一路护航；从乡村到县城，那叶小舟始终陪伴着孩子，驶向广阔的人生天地 图中“阝”与“咅”按左右结构自然长成“陪”。"
       },
       "g5v1-l19-c24-u966a-words-image:g5v1-l19-c24-u966a-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u6043.webp",
@@ -790,15 +790,15 @@ export const characterMedia = {
         "label": "背负、承载",
         "alt": "孩子把行囊稳稳背在背上"
       },
-      "g5v1-l19-c25-u6bd5-words-image:g5v1-l19-c25-u6bd5-words-image-2": {
-        "src": "/illustrations/mnemonics-v2/g5-u8bc6.webp",
-        "label": "默而识之",
-        "alt": "默而识之记在心中；读书不仅要理解领会，更要默默积累记在心中，做到融会贯通 图中“讠”与“只”按左右结构自然长成“识”。"
-      },
       "g5v1-l19-c25-u6bd5-words-image:g5v1-l19-c25-u6bd5-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u6bd5.webp",
         "label": "毕业",
         "alt": "毕业成才不负厚望；孩子顺利毕业走上工作岗位，终于实现了父亲托举一生的宏愿 图中“比”与“十”按上下结构自然长成“毕”。"
+      },
+      "g5v1-l19-c25-u6bd5-words-image:g5v1-l19-c25-u6bd5-words-image-2": {
+        "src": "/illustrations/mnemonics-v2/g5-u8bc6.webp",
+        "label": "默而识之",
+        "alt": "默而识之记在心中；读书不仅要理解领会，更要默默积累记在心中，做到融会贯通 图中“讠”与“只”按左右结构自然长成“识”。"
       }
     }
   },
@@ -822,12 +822,12 @@ export const characterMedia = {
         "label": "煮饭",
         "alt": "煮饭热茶暖意融融；船舱里升起腾腾热气，父亲亲手煮好简单的饭菜，温暖着赶考的游子 图中“者”与“灬”按上下结构自然长成“煮”。"
       },
-      "g5v1-l19-c26-u716e-words-image:g5v1-l19-c26-u716e-words-image-2": {
+      "g5v1-l19-c26-u716e-words-image:g5v1-l19-c26-u716e-words-image-0": {
         "src": "/illustrations/meanings/m05.webp",
         "label": "朗声诵读",
         "alt": "孩子面向同伴清楚地朗读"
       },
-      "g5v1-l19-c26-u716e-words-image:g5v1-l19-c26-u716e-words-image-0": {
+      "g5v1-l19-c26-u716e-words-image:g5v1-l19-c26-u716e-words-image-2": {
         "src": "/illustrations/mnemonics/m77.webp",
         "label": "流动的空气",
         "alt": "风吹动风车、丝带、落叶和草丛"

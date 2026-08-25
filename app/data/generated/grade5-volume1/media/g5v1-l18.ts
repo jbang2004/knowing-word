@@ -17,12 +17,12 @@ export const characterMedia = {
     },
     "transcript": "魂魄的魄，读第四声，魂魄常指人的精神和心神。失魂落魄形容心神不定、精神恍惚。魄是左右结构，左边是白，右边是鬼，写时两边靠紧。孩子一心想买《青年近卫军》，想得整天失魂落魄。正因为这份渴望，他才走进母亲工作的厂房开口要钱，也由此看见母亲怎样辛苦劳作。",
     "practiceOptionVisuals": {
-      "g5v1-l18-c01-u9b44-words-image:g5v1-l18-c01-u9b44-words-image-0": {
+      "g5v1-l18-c01-u9b44-words-image:g5v1-l18-c01-u9b44-words-image-2": {
         "src": "/illustrations/meanings/m05.webp",
         "label": "朗声诵读",
         "alt": "孩子面向同伴清楚地朗读"
       },
-      "g5v1-l18-c01-u9b44-words-image:g5v1-l18-c01-u9b44-words-image-2": {
+      "g5v1-l18-c01-u9b44-words-image:g5v1-l18-c01-u9b44-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u6401.webp",
         "label": "搁东西",
         "alt": "搁置指放置摆放物资；地道深处开辟出专门搁放粮食与工具的储藏洞，保障了长期坚守 图中“扌”与“阁”按左右结构自然长成“搁”。"
@@ -49,6 +49,11 @@ export const characterMedia = {
     },
     "transcript": "压抑的抑，读第四声。抑是左右结构，左边提手旁，右部要写得紧凑。不妨借一个小场景来记，一只手把不断上升的气球轻轻按住，提醒自己抑有压住的意思。压抑形容心情受到压制，难以自然舒展。这篇文章里的低矮厂房、拥挤空间和刺耳声响压得人喘不过气，也让孩子更心疼母亲。",
     "practiceOptionVisuals": {
+      "g5v1-l18-c02-u6291-words-image:g5v1-l18-c02-u6291-words-image-1": {
+        "src": "/illustrations/mnemonics-v2/g5-u6291.webp",
+        "label": "压抑",
+        "alt": "压抑沉闷的工厂环境；低矮破旧的厂房里机器轰鸣、光线昏暗，压抑的气氛扑面而来 图中“扌”与“卬”按左右结构自然长成“抑”。"
+      },
       "g5v1-l18-c02-u6291-words-image:g5v1-l18-c02-u6291-words-image-0": {
         "src": "/illustrations/meanings/m03.webp",
         "label": "检查、验证",
@@ -58,11 +63,6 @@ export const characterMedia = {
         "src": "/illustrations/mnemonics/m61.webp",
         "label": "初生、柔弱",
         "alt": "孩子为刚长出的柔嫩小芽遮阳"
-      },
-      "g5v1-l18-c02-u6291-words-image:g5v1-l18-c02-u6291-words-image-1": {
-        "src": "/illustrations/mnemonics-v2/g5-u6291.webp",
-        "label": "压抑",
-        "alt": "压抑沉闷的工厂环境；低矮破旧的厂房里机器轰鸣、光线昏暗，压抑的气氛扑面而来 图中“扌”与“卬”按左右结构自然长成“抑”。"
       }
     }
   },
@@ -81,17 +81,17 @@ export const characterMedia = {
     },
     "transcript": "颓败的颓，读第二声。颓是左右结构，左边像失去精神的禾苗，右边是页，写时左窄右宽。可以想象旧厂房的墙面斑驳、屋顶低垂，整座建筑显得疲惫破旧。颓败形容衰落、破败，失去原来的精神和样子。文中用这样的环境衬出母亲工作条件艰苦，也让她坚持劳作的身影更有力量。",
     "practiceOptionVisuals": {
+      "g5v1-l18-c03-u9893-words-image:g5v1-l18-c03-u9893-words-image-2": {
+        "src": "/illustrations/meanings/m03.webp",
+        "label": "检查、验证",
+        "alt": "孩子用放大镜仔细检查一件物品"
+      },
       "g5v1-l18-c03-u9893-words-image:g5v1-l18-c03-u9893-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u9893.webp",
         "label": "颓败",
         "alt": "颓败破旧的劳作车间；在极其艰苦狭窄的车间里，母亲为了养家糊口日复一日辛苦劳作 图中“秃”与“页”按左右结构自然长成“颓”。"
       },
       "g5v1-l18-c03-u9893-words-image:g5v1-l18-c03-u9893-words-image-0": {
-        "src": "/illustrations/meanings/m03.webp",
-        "label": "检查、验证",
-        "alt": "孩子用放大镜仔细检查一件物品"
-      },
-      "g5v1-l18-c03-u9893-words-image:g5v1-l18-c03-u9893-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u7901.webp",
         "label": "珊瑚礁",
         "alt": "礁石是海中突出的岩石；波涛汹涌的险峻暗礁，象征着追求幸福道路上的艰难险阻 图中“石”与“焦”按左右结构自然长成“礁”。"
@@ -113,12 +113,12 @@ export const characterMedia = {
     },
     "transcript": "纫，缝纫的纫，读第四声。它是左右结构，左边的绞丝旁代表缝衣细线，右边的“刃”像裁切布料的小刀，丝线连着利刃即为纫。缝纫是用针线连接布料制作衣物。课文写母亲在昏暗嘈杂的工厂里忙着缝纫，双脚踏着缝纫机踏板不停劳作，真实展现了母亲无私奉献的辛劳。",
     "practiceOptionVisuals": {
-      "g5v1-l18-c04-u7eab-words-image:g5v1-l18-c04-u7eab-words-image-2": {
+      "g5v1-l18-c04-u7eab-words-image:g5v1-l18-c04-u7eab-words-image-0": {
         "src": "/illustrations/meanings/m08.webp",
         "label": "整齐有序",
         "alt": "竹简按照次序整齐排列"
       },
-      "g5v1-l18-c04-u7eab-words-image:g5v1-l18-c04-u7eab-words-image-0": {
+      "g5v1-l18-c04-u7eab-words-image:g5v1-l18-c04-u7eab-words-image-2": {
         "src": "/illustrations/mnemonics/m01.webp",
         "label": "弓强有力",
         "alt": "孩子用力拉开一张绷紧的弓"
@@ -145,12 +145,12 @@ export const characterMedia = {
     },
     "transcript": "噪，噪声的噪，读第四声。它是左右结构，左边的口字旁代表声响，右边由许多鸟儿在树上喧闹的“喿”提示读音，群口喧嚷即为噪。噪声指嘈杂刺耳、令人不适的声音。课文写母亲劳作的车间里缝纫机声音震耳欲聋，刺耳的噪声更加烘托出母亲日复一日辛勤劳作的艰辛与伟大。",
     "practiceOptionVisuals": {
-      "g5v1-l18-c05-u566a-words-image:g5v1-l18-c05-u566a-words-image-0": {
+      "g5v1-l18-c05-u566a-words-image:g5v1-l18-c05-u566a-words-image-2": {
         "src": "/illustrations/meanings/m08.webp",
         "label": "整齐有序",
         "alt": "竹简按照次序整齐排列"
       },
-      "g5v1-l18-c05-u566a-words-image:g5v1-l18-c05-u566a-words-image-2": {
+      "g5v1-l18-c05-u566a-words-image:g5v1-l18-c05-u566a-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u69a8.webp",
         "label": "榨油",
         "alt": "榨油就是用压力挤出果实里的油脂；花生虽矮小埋在地下，榨出的香油却实实在在地造福他人 图中“木”与“窄”按左右结构自然长成“榨”。"
@@ -182,12 +182,12 @@ export const characterMedia = {
         "label": "褐色",
         "alt": "褐色口罩沾满灰尘；母亲戴着被棉絮染成褐色的口罩，在粉尘弥漫中为孩子拼命挣钱 图中“衤”与“曷”按左右结构自然长成“褐”。"
       },
-      "g5v1-l18-c06-u8910-words-image:g5v1-l18-c06-u8910-words-image-0": {
+      "g5v1-l18-c06-u8910-words-image:g5v1-l18-c06-u8910-words-image-2": {
         "src": "/illustrations/meanings/m07.webp",
         "label": "一代又一代",
         "alt": "祖辈、父母和孩子三代人相聚"
       },
-      "g5v1-l18-c06-u8910-words-image:g5v1-l18-c06-u8910-words-image-2": {
+      "g5v1-l18-c06-u8910-words-image:g5v1-l18-c06-u8910-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u89c8.webp",
         "label": "游览",
         "alt": "游览观赏令人心旷神怡；漫步在园中游览，不仅能饱览江南名胜，更能体验异国情调 图中“〢”与“丿”与“一”与“丶”与“见”按上下结构自然长成“览”。"
@@ -241,6 +241,11 @@ export const characterMedia = {
     },
     "transcript": "耽误的耽，读第一声，表示事情被拖延，因而受到影响。耽按左右排列，左边是耳，右边一笔向下弯，写时两边站稳。母亲把钱塞给孩子后，立刻又坐了下去。她接着弯曲了背，把头俯在缝纫机板上，又陷入手脚并用的忙碌。接连不断的动作写出劳动节奏紧迫，时间一点也耽误不起。",
     "practiceOptionVisuals": {
+      "g5v1-l18-c08-u803d-words-image:g5v1-l18-c08-u803d-words-image-1": {
+        "src": "/illustrations/mnemonics-v2/g5-u803d.webp",
+        "label": "耽误",
+        "alt": "耽误工时扣减收入；母亲唯恐耽误做工时间，手里的缝纫活一刻也不肯停歇 图中“耳”与“冘”按左右结构自然长成“耽”。"
+      },
       "g5v1-l18-c08-u803d-words-image:g5v1-l18-c08-u803d-words-image-2": {
         "src": "/illustrations/meanings/m06.webp",
         "label": "背负、承载",
@@ -250,11 +255,6 @@ export const characterMedia = {
         "src": "/illustrations/mnemonics-v2/g5-u7a9d.webp",
         "label": "鸟窝",
         "alt": "精巧小窝温暖安全；松鼠挑选高大老树搭窝，用树枝和苔藓搭建起舒适温暖的家园 图中“穴”与“呙”按上下结构自然长成“窝”。"
-      },
-      "g5v1-l18-c08-u803d-words-image:g5v1-l18-c08-u803d-words-image-1": {
-        "src": "/illustrations/mnemonics-v2/g5-u803d.webp",
-        "label": "耽误",
-        "alt": "耽误工时扣减收入；母亲唯恐耽误做工时间，手里的缝纫活一刻也不肯停歇 图中“耳”与“冘”按左右结构自然长成“耽”。"
       }
     }
   },
@@ -272,11 +272,6 @@ export const characterMedia = {
     },
     "transcript": "母亲把钱从衣服的小口袋里掏出来，这个口袋就是衣兜，兜读第一声。兜是独体字，外面的弯折笔画围成口袋外缘，内部笔画宛如被稳稳装入的物品。衣兜是衣服上装小物的地方。课文中，那笔买书的钱被母亲从贴身衣兜中取出，短短的动作凝聚着深沉而坚定的母爱。",
     "practiceOptionVisuals": {
-      "g5v1-l18-c09-u515c-words-image:g5v1-l18-c09-u515c-words-image-1": {
-        "src": "/illustrations/mnemonics-v2/g5-u515c.webp",
-        "label": "衣兜",
-        "alt": "贴身衣兜掏出深沉母爱；母亲从破旧的衣兜里掏出一卷揉得皱巴巴的毛票，毫不犹豫递给孩子买书 图中“兜”按独体结构自然长成“兜”。"
-      },
       "g5v1-l18-c09-u515c-words-image:g5v1-l18-c09-u515c-words-image-0": {
         "src": "/illustrations/meanings/m08.webp",
         "label": "整齐有序",
@@ -286,6 +281,11 @@ export const characterMedia = {
         "src": "/illustrations/mnemonics-v2/g5-u9988.webp",
         "label": "反馈",
         "alt": "馈赠厚重丰润人生；书籍是大自然与人类文明最慷慨的馈赠，让作者的童年与少年时代绚丽多彩 图中“饣”与“贵”按左右结构自然长成“馈”。"
+      },
+      "g5v1-l18-c09-u515c-words-image:g5v1-l18-c09-u515c-words-image-1": {
+        "src": "/illustrations/mnemonics-v2/g5-u515c.webp",
+        "label": "衣兜",
+        "alt": "贴身衣兜掏出深沉母爱；母亲从破旧的衣兜里掏出一卷揉得皱巴巴的毛票，毫不犹豫递给孩子买书 图中“兜”按独体结构自然长成“兜”。"
       }
     }
   },
@@ -304,17 +304,17 @@ export const characterMedia = {
     },
     "transcript": "权利的权，读第二声。权按左右排列，木字旁站在左边，右边是又，两部分写得一高一低。可以想象一块木牌交到手中，表示这个人可以按规则做某件事。权利是依照法律或规则能够做某事、享有某种利益的资格。孩子拿到母亲辛苦挣来的钱后，想到自己没有权利随意花掉，心里生出珍惜和责任。",
     "practiceOptionVisuals": {
+      "g5v1-l18-c10-u6743-words-image:g5v1-l18-c10-u6743-words-image-2": {
+        "src": "/illustrations/meanings/m04.webp",
+        "label": "倚靠、凭借",
+        "alt": "行路的人稳稳倚靠一根手杖"
+      },
       "g5v1-l18-c10-u6743-words-image:g5v1-l18-c10-u6743-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u6743.webp",
         "label": "权利",
         "alt": "有权选择读书求知；母亲坚定地支持孩子读书，用辛勤的汗水为孩子撑起求知的大门 图中“木”与“又”按左右结构自然长成“权”。"
       },
       "g5v1-l18-c10-u6743-words-image:g5v1-l18-c10-u6743-words-image-0": {
-        "src": "/illustrations/meanings/m04.webp",
-        "label": "倚靠、凭借",
-        "alt": "行路的人稳稳倚靠一根手杖"
-      },
-      "g5v1-l18-c10-u6743-words-image:g5v1-l18-c10-u6743-words-image-2": {
         "src": "/illustrations/mnemonics/m96.webp",
         "label": "古代下身穿的裙子",
         "alt": "博物馆里展示的古代下裳"
@@ -368,17 +368,17 @@ export const characterMedia = {
     },
     "transcript": "碌，忙碌的碌，读第四声。它是左右结构，左边的石字旁像不断转动的石碾，右边的“录”提示读音，如石轮滚滚不停歇即为碌。忙碌形容事情繁多、手脚不停地操劳。课文写母亲给完孩子买书钱后立刻又俯身陷入机器与布料之间，那忙碌而瘦小的背影深深震撼了作者的心灵。",
     "practiceOptionVisuals": {
+      "g5v1-l18-c12-u788c-words-image:g5v1-l18-c12-u788c-words-image-2": {
+        "src": "/illustrations/meanings/m08.webp",
+        "label": "整齐有序",
+        "alt": "竹简按照次序整齐排列"
+      },
       "g5v1-l18-c12-u788c-words-image:g5v1-l18-c12-u788c-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u788c.webp",
         "label": "忙碌",
         "alt": "忙碌不休操劳一生；母亲在昏暗的车间里忙碌不停的身影，成为作者一生刻骨铭心的记忆 图中“石”与“录”按左右结构自然长成“碌”。"
       },
       "g5v1-l18-c12-u788c-words-image:g5v1-l18-c12-u788c-words-image-0": {
-        "src": "/illustrations/meanings/m08.webp",
-        "label": "整齐有序",
-        "alt": "竹简按照次序整齐排列"
-      },
-      "g5v1-l18-c12-u788c-words-image:g5v1-l18-c12-u788c-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u7cd6.webp",
         "label": "糖果",
         "alt": "糖果虽小甜透心田；庙会上父亲特意买给孩子的一块麦芽糖，成为童年最甜美的记忆 图中“米”与“唐”按左右结构自然长成“糖”。"
@@ -432,15 +432,15 @@ export const characterMedia = {
     },
     "transcript": "酷暑的酷，读第四声，酷暑就是炎热到了极点的天气。酷在左边写酉字旁，右边写告，两部分要靠紧。故事发生在酷暑炎夏，低矮厂房的窗却不能打开。七八十个女人和一只只灯泡都在散热，孩子觉得自己像进了蒸笼。母亲就在这样的闷热里俯身踩着缝纫机，辛苦一下有了可以触摸的温度。",
     "practiceOptionVisuals": {
-      "g5v1-l18-c14-u9177-words-image:g5v1-l18-c14-u9177-words-image-1": {
-        "src": "/illustrations/mnemonics-v2/g5-u9177.webp",
-        "label": "酷暑",
-        "alt": "酷暑难耐汗流浃背；在酷热难当的三伏天里，母亲依然坚持在闷热的车间里挥汗如雨 图中“酉”与“告”按左右结构自然长成“酷”。"
-      },
       "g5v1-l18-c14-u9177-words-image:g5v1-l18-c14-u9177-words-image-2": {
         "src": "/illustrations/meanings/m08.webp",
         "label": "整齐有序",
         "alt": "竹简按照次序整齐排列"
+      },
+      "g5v1-l18-c14-u9177-words-image:g5v1-l18-c14-u9177-words-image-1": {
+        "src": "/illustrations/mnemonics-v2/g5-u9177.webp",
+        "label": "酷暑",
+        "alt": "酷暑难耐汗流浃背；在酷热难当的三伏天里，母亲依然坚持在闷热的车间里挥汗如雨 图中“酉”与“告”按左右结构自然长成“酷”。"
       },
       "g5v1-l18-c14-u9177-words-image:g5v1-l18-c14-u9177-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u679a.webp",
@@ -464,17 +464,17 @@ export const characterMedia = {
     },
     "transcript": "暑，酷暑的暑，读第三声。暑表示炎热的季节或天气，酷暑就是热得格外厉害。这个字上面是日，下面是者，太阳要稳稳压在上方。那天正值酷暑炎夏，窗不能开，许多人和灯泡一起散出热量。孩子像待在蒸笼里，更能体会母亲每天劳动的难熬。",
     "practiceOptionVisuals": {
+      "g5v1-l18-c15-u6691-words-image:g5v1-l18-c15-u6691-words-image-0": {
+        "src": "/illustrations/meanings/m05.webp",
+        "label": "朗声诵读",
+        "alt": "孩子面向同伴清楚地朗读"
+      },
       "g5v1-l18-c15-u6691-words-image:g5v1-l18-c15-u6691-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u6691.webp",
         "label": "酷暑",
         "alt": "暑热蒸腾坚韧不屈；母亲在漫长暑热中默默忍受辛劳，用柔弱的肩膀挑起家庭的重担 图中“日”与“者”按上下结构自然长成“暑”。"
       },
       "g5v1-l18-c15-u6691-words-image:g5v1-l18-c15-u6691-words-image-2": {
-        "src": "/illustrations/meanings/m05.webp",
-        "label": "朗声诵读",
-        "alt": "孩子面向同伴清楚地朗读"
-      },
-      "g5v1-l18-c15-u6691-words-image:g5v1-l18-c15-u6691-words-image-0": {
         "src": "/illustrations/mnemonics/m107.webp",
         "label": "竹简",
         "alt": "整齐编连在一起的古代竹简"
@@ -495,12 +495,12 @@ export const characterMedia = {
     },
     "transcript": "脊背的脊，读第三声。脊是独体字，中间像一条竖直的背线，两旁笔画向左右展开，适合分层观察。不妨借一个小场景来记，一条脊柱从肩部一直撑到腰间，把身体稳稳托住。脊背是身体后面中央的区域。孩子在机器间寻找母亲，先看到她弯曲的脊背，再认出那是日夜操劳的母亲。",
     "practiceOptionVisuals": {
-      "g5v1-l18-c16-u810a-words-image:g5v1-l18-c16-u810a-words-image-2": {
+      "g5v1-l18-c16-u810a-words-image:g5v1-l18-c16-u810a-words-image-0": {
         "src": "/illustrations/meanings/m06.webp",
         "label": "背负、承载",
         "alt": "孩子把行囊稳稳背在背上"
       },
-      "g5v1-l18-c16-u810a-words-image:g5v1-l18-c16-u810a-words-image-0": {
+      "g5v1-l18-c16-u810a-words-image:g5v1-l18-c16-u810a-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u72ed.webp",
         "label": "狭窄",
         "alt": "狭窄洞口便于防御；松鼠窝的洞口狭窄朝上，不仅能阻挡雨水，还能有效防备天敌侵扰 图中“犭”与“夹”按左右结构自然长成“狭”。"
@@ -532,15 +532,15 @@ export const characterMedia = {
         "label": "检查、验证",
         "alt": "孩子用放大镜仔细检查一件物品"
       },
-      "g5v1-l18-c17-u7f69-words-image:g5v1-l18-c17-u7f69-words-image-2": {
-        "src": "/illustrations/mnemonics-v2/g5-u8910.webp",
-        "label": "褐色",
-        "alt": "褐色口罩沾满灰尘；母亲戴着被棉絮染成褐色的口罩，在粉尘弥漫中为孩子拼命挣钱 图中“衤”与“曷”按左右结构自然长成“褐”。"
-      },
       "g5v1-l18-c17-u7f69-words-image:g5v1-l18-c17-u7f69-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u7f69.webp",
         "label": "笼罩",
         "alt": "口罩遮掩难掩慈祥；母亲拉下口罩时那张满是汗水与疲倦的脸庞，深深烙印在孩子心头 图中“罒”与“卓”按上下结构自然长成“罩”。"
+      },
+      "g5v1-l18-c17-u7f69-words-image:g5v1-l18-c17-u7f69-words-image-2": {
+        "src": "/illustrations/mnemonics-v2/g5-u8910.webp",
+        "label": "褐色",
+        "alt": "褐色口罩沾满灰尘；母亲戴着被棉絮染成褐色的口罩，在粉尘弥漫中为孩子拼命挣钱 图中“衤”与“曷”按左右结构自然长成“褐”。"
       }
     }
   },
@@ -564,12 +564,12 @@ export const characterMedia = {
         "label": "竟然",
         "alt": "竟然支持孩子买书；在生活如此艰难的情况下，母亲竟然毫不犹豫支持孩子买书，深情动人 图中“音”与“儿”按上下结构自然长成“竟”。"
       },
-      "g5v1-l18-c18-u7adf-words-image:g5v1-l18-c18-u7adf-words-image-0": {
+      "g5v1-l18-c18-u7adf-words-image:g5v1-l18-c18-u7adf-words-image-2": {
         "src": "/illustrations/meanings/m06.webp",
         "label": "背负、承载",
         "alt": "孩子把行囊稳稳背在背上"
       },
-      "g5v1-l18-c18-u7adf-words-image:g5v1-l18-c18-u7adf-words-image-2": {
+      "g5v1-l18-c18-u7adf-words-image:g5v1-l18-c18-u7adf-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u8bc6.webp",
         "label": "默而识之",
         "alt": "默而识之记在心中；读书不仅要理解领会，更要默默积累记在心中，做到融会贯通 图中“讠”与“只”按左右结构自然长成“识”。"
@@ -591,20 +591,20 @@ export const characterMedia = {
     },
     "transcript": "好哇的哇，读第一声，常放在句末加强说话的语气。哇按左右写，左边口字旁，右边两层土要放稳。工友冲着孩子喊“你忍心朝你妈要钱买书哇”。这一声哇带着惊讶和责问，把嘈杂厂房里突然响起的话推得很重。孩子再看瘦弱而忙碌的母亲，手里的钱也有了沉甸甸的分量。",
     "practiceOptionVisuals": {
-      "g5v1-l18-c19-u54c7-words-image:g5v1-l18-c19-u54c7-words-image-0": {
+      "g5v1-l18-c19-u54c7-words-image:g5v1-l18-c19-u54c7-words-image-2": {
         "src": "/illustrations/meanings/m06.webp",
         "label": "背负、承载",
         "alt": "孩子把行囊稳稳背在背上"
-      },
-      "g5v1-l18-c19-u54c7-words-image:g5v1-l18-c19-u54c7-words-image-2": {
-        "src": "/illustrations/mnemonics-v2/g5-u7adf.webp",
-        "label": "竟然",
-        "alt": "竟然支持孩子买书；在生活如此艰难的情况下，母亲竟然毫不犹豫支持孩子买书，深情动人 图中“音”与“儿”按上下结构自然长成“竟”。"
       },
       "g5v1-l18-c19-u54c7-words-image:g5v1-l18-c19-u54c7-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u54c7.webp",
         "label": "好哇",
         "alt": "哇地一声热泪盈眶；目睹母亲在工厂里的艰辛劳作，孩子心中涌起无尽的酸楚与感激 图中“口”与“圭”按左右结构自然长成“哇”。"
+      },
+      "g5v1-l18-c19-u54c7-words-image:g5v1-l18-c19-u54c7-words-image-0": {
+        "src": "/illustrations/mnemonics-v2/g5-u7adf.webp",
+        "label": "竟然",
+        "alt": "竟然支持孩子买书；在生活如此艰难的情况下，母亲竟然毫不犹豫支持孩子买书，深情动人 图中“音”与“儿”按上下结构自然长成“竟”。"
       }
     }
   },
@@ -655,11 +655,6 @@ export const characterMedia = {
     },
     "transcript": "机械的械，读第四声。从左往右看，械先写木字旁，右边笔画交错，写时要注意横斜相让。把两边连起来，可以想象木架上装着许多互相带动的小零件，转起来就能帮人工作。机械是利用零件和动力完成工作的装置。文中的缝纫机械不断转动，巨大的声响和重复动作衬出母亲劳动的辛苦。",
     "practiceOptionVisuals": {
-      "g5v1-l18-c21-u68b0-words-image:g5v1-l18-c21-u68b0-words-image-1": {
-        "src": "/illustrations/mnemonics-v2/g5-u68b0.webp",
-        "label": "机械",
-        "alt": "机械轰鸣震动耳膜；在冰冷刺耳的机械声中，母亲温热的手和递过来的毛票点亮了孩子的精神世界 图中“木”与“戒”按左右结构自然长成“械”。"
-      },
       "g5v1-l18-c21-u68b0-words-image:g5v1-l18-c21-u68b0-words-image-0": {
         "src": "/illustrations/meanings/m08.webp",
         "label": "整齐有序",
@@ -669,6 +664,11 @@ export const characterMedia = {
         "src": "/illustrations/mnemonics-v2/g5-u5f3a.webp",
         "label": "强迫",
         "alt": "强迫是用强力逼迫他人顺从；面对秦王的强硬态度，蔺相如据理力争，毫无惧色 图中“弓”与“虽”按左右结构自然长成“强”。"
+      },
+      "g5v1-l18-c21-u68b0-words-image:g5v1-l18-c21-u68b0-words-image-1": {
+        "src": "/illustrations/mnemonics-v2/g5-u68b0.webp",
+        "label": "机械",
+        "alt": "机械轰鸣震动耳膜；在冰冷刺耳的机械声中，母亲温热的手和递过来的毛票点亮了孩子的精神世界 图中“木”与“戒”按左右结构自然长成“械”。"
       }
     }
   },

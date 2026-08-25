@@ -17,6 +17,11 @@ export const characterMedia = {
     },
     "transcript": "璧，和氏璧的璧，读第四声。和氏璧是故事中十分珍贵的一块美玉。璧是上下结构，上方笔画较密，可以整体看成保护美玉的高墙，下方是玉。想象美玉被稳稳护在墙下。完璧归赵的故事里，蔺相如既要保护和氏璧，也要维护赵国尊严，璧正是整场冲突围绕的珍宝。",
     "practiceOptionVisuals": {
+      "g5v1-l06-c01-u74a7-words-image:g5v1-l06-c01-u74a7-words-image-1": {
+        "src": "/illustrations/mnemonics-v2/g5-u74a7.webp",
+        "label": "和氏璧",
+        "alt": "和氏璧是天下闻名的绝世美玉；围绕和氏璧的归属，蔺相如在秦廷上机智周旋，完璧归赵 图中“辟”与“玉”按上下结构自然长成“璧”。"
+      },
       "g5v1-l06-c01-u74a7-words-image:g5v1-l06-c01-u74a7-words-image-0": {
         "src": "/illustrations/meanings/m08.webp",
         "label": "整齐有序",
@@ -26,11 +31,6 @@ export const characterMedia = {
         "src": "/illustrations/mnemonics-v2/g5-u6c5b.webp",
         "label": "汛期",
         "alt": "汛期是江河水位上涨的时期；每年汛期过后，乡亲们便齐心协力摆放搭石，方便两岸通行 图中“氵”与“卂”按左右结构自然长成“汛”。"
-      },
-      "g5v1-l06-c01-u74a7-words-image:g5v1-l06-c01-u74a7-words-image-1": {
-        "src": "/illustrations/mnemonics-v2/g5-u74a7.webp",
-        "label": "和氏璧",
-        "alt": "和氏璧是天下闻名的绝世美玉；围绕和氏璧的归属，蔺相如在秦廷上机智周旋，完璧归赵 图中“辟”与“玉”按上下结构自然长成“璧”。"
       }
     }
   },
@@ -48,15 +48,15 @@ export const characterMedia = {
     },
     "transcript": "臣，大臣的臣。大臣是在朝廷中担任重要职务、协助国君处理事务的人。臣在这里按独体结构整体记，可以把横竖弯折看成宫殿里的长廊和端正站立的人。人沿长廊走进朝堂。课文中蔺相如和廉颇都是赵国重要大臣，他们后来放下个人不快，共同考虑国家安危。",
     "practiceOptionVisuals": {
-      "g5v1-l06-c02-u81e3-words-image:g5v1-l06-c02-u81e3-words-image-1": {
-        "src": "/illustrations/mnemonics-v2/g5-u81e3.webp",
-        "label": "大臣",
-        "alt": "大臣是辅佐君王治理国家的重臣；蔺相如作为赵国使臣临危受命，展现了非凡的智谋与胆识 图中“臣”按独体结构自然长成“臣”。"
-      },
       "g5v1-l06-c02-u81e3-words-image:g5v1-l06-c02-u81e3-words-image-0": {
         "src": "/illustrations/meanings/m05.webp",
         "label": "朗声诵读",
         "alt": "孩子面向同伴清楚地朗读"
+      },
+      "g5v1-l06-c02-u81e3-words-image:g5v1-l06-c02-u81e3-words-image-1": {
+        "src": "/illustrations/mnemonics-v2/g5-u81e3.webp",
+        "label": "大臣",
+        "alt": "大臣是辅佐君王治理国家的重臣；蔺相如作为赵国使臣临危受命，展现了非凡的智谋与胆识 图中“臣”按独体结构自然长成“臣”。"
       },
       "g5v1-l06-c02-u81e3-words-image:g5v1-l06-c02-u81e3-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u803b.webp",
@@ -80,20 +80,20 @@ export const characterMedia = {
     },
     "transcript": "先读“强迫”，这里的强读第三声，不读强大的第二声。强迫就是用压力逼别人做不愿意做的事。强是左右结构，左边像拉紧的弓，右边可以整体看成不断加压的绳结。弓和绳都绷得很紧。完璧归赵时，强国想凭力量迫使弱国交出宝玉，人物怎样应对这种压力，是故事冲突的起点。",
     "practiceOptionVisuals": {
-      "g5v1-l06-c03-u5f3a-words-image:g5v1-l06-c03-u5f3a-words-image-0": {
-        "src": "/illustrations/meanings/m06.webp",
-        "label": "背负、承载",
-        "alt": "孩子把行囊稳稳背在背上"
-      },
-      "g5v1-l06-c03-u5f3a-words-image:g5v1-l06-c03-u5f3a-words-image-2": {
-        "src": "/illustrations/mnemonics-v2/g5-u75bc.webp",
-        "label": "疼爱",
-        "alt": "疼爱怜惜无微不至；在风雨飘摇的求学路上，父亲深沉的疼爱化作了遮风挡雨的港湾 图中“疒”与“冬”按左上包围结构自然长成“疼”。"
-      },
       "g5v1-l06-c03-u5f3a-words-image:g5v1-l06-c03-u5f3a-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u5f3a.webp",
         "label": "强迫",
         "alt": "强迫是用强力逼迫他人顺从；面对秦王的强硬态度，蔺相如据理力争，毫无惧色 图中“弓”与“虽”按左右结构自然长成“强”。"
+      },
+      "g5v1-l06-c03-u5f3a-words-image:g5v1-l06-c03-u5f3a-words-image-2": {
+        "src": "/illustrations/meanings/m06.webp",
+        "label": "背负、承载",
+        "alt": "孩子把行囊稳稳背在背上"
+      },
+      "g5v1-l06-c03-u5f3a-words-image:g5v1-l06-c03-u5f3a-words-image-0": {
+        "src": "/illustrations/mnemonics-v2/g5-u75bc.webp",
+        "label": "疼爱",
+        "alt": "疼爱怜惜无微不至；在风雨飘摇的求学路上，父亲深沉的疼爱化作了遮风挡雨的港湾 图中“疒”与“冬”按左上包围结构自然长成“疼”。"
       }
     }
   },
@@ -144,15 +144,15 @@ export const characterMedia = {
     },
     "transcript": "计划的划读第四声，和划船的第二声不同。计划是事先想好做什么、怎样做。划是左右结构，左边像在地图上标出路线，右边像一把直尺把步骤分清。路线和步骤一项项排好。蔺相如面对秦王时先观察局势，再想办法护住和氏璧并安全送回赵国，他的每一步行动都离不开周密计划。",
     "practiceOptionVisuals": {
-      "g5v1-l06-c05-u5212-words-image:g5v1-l06-c05-u5212-words-image-1": {
-        "src": "/illustrations/mnemonics-v2/g5-u5212.webp",
-        "label": "计划",
-        "alt": "计划指事先筹谋妥当的安排；蔺相如早已做好周密计划，派随从抄小路把和氏璧送回赵国 图中“戈”与“刂”按左右结构自然长成“划”。"
-      },
       "g5v1-l06-c05-u5212-words-image:g5v1-l06-c05-u5212-words-image-2": {
         "src": "/illustrations/meanings/m07.webp",
         "label": "一代又一代",
         "alt": "祖辈、父母和孩子三代人相聚"
+      },
+      "g5v1-l06-c05-u5212-words-image:g5v1-l06-c05-u5212-words-image-1": {
+        "src": "/illustrations/mnemonics-v2/g5-u5212.webp",
+        "label": "计划",
+        "alt": "计划指事先筹谋妥当的安排；蔺相如早已做好周密计划，派随从抄小路把和氏璧送回赵国 图中“戈”与“刂”按左右结构自然长成“划”。"
       },
       "g5v1-l06-c05-u5212-words-image:g5v1-l06-c05-u5212-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u62f1.webp",
@@ -176,6 +176,11 @@ export const characterMedia = {
     },
     "transcript": "蔺相如提出，和氏璧是无价之宝，要举行隆重的典礼才肯交出，秦王只好约定日期。典礼是按照一定礼仪举行的隆重仪式。典是上下结构，上面可以想成摊开的礼仪册，下面像两只手稳稳托住。人们捧着册子，一项项核对仪式安排。这个要求给蔺相如争取了时间，也推动了完璧归赵。",
     "practiceOptionVisuals": {
+      "g5v1-l06-c06-u5178-words-image:g5v1-l06-c06-u5178-words-image-1": {
+        "src": "/illustrations/mnemonics-v2/g5-u5178.webp",
+        "label": "典礼",
+        "alt": "典礼是隆重的礼仪仪式；相如要求秦王举行正式典礼才肯献璧，以此争取时间、维护国家尊严 图中“曲”与“八”按上下结构自然长成“典”。"
+      },
       "g5v1-l06-c06-u5178-words-image:g5v1-l06-c06-u5178-words-image-2": {
         "src": "/illustrations/meanings/m07.webp",
         "label": "一代又一代",
@@ -185,11 +190,6 @@ export const characterMedia = {
         "src": "/illustrations/mnemonics-v2/g5-u6444.webp",
         "label": "摄氏",
         "alt": "摄氏度是测量温度的单位；太阳表面温度高达五千多摄氏度，中心温度更是难以想象的高 图中“扌”与“聂”按左右结构自然长成“摄”。"
-      },
-      "g5v1-l06-c06-u5178-words-image:g5v1-l06-c06-u5178-words-image-1": {
-        "src": "/illustrations/mnemonics-v2/g5-u5178.webp",
-        "label": "典礼",
-        "alt": "典礼是隆重的礼仪仪式；相如要求秦王举行正式典礼才肯献璧，以此争取时间、维护国家尊严 图中“曲”与“八”按上下结构自然长成“典”。"
       }
     }
   },
@@ -208,15 +208,15 @@ export const characterMedia = {
     },
     "transcript": "赵王拿到秦王的来信后很为难，答应交换怕上当，不答应又怕得罪秦王。得罪就是言行使别人不高兴，或让人觉得受到冒犯。罪是上下结构，上面四字头像一张罩下的网，下面非字可以想成相反的标记。双方意见顶在一起，关系一下紧张起来。把这层两难读清，赵王为什么召集大臣商议也就明白了。",
     "practiceOptionVisuals": {
-      "g5v1-l06-c07-u7f6a-words-image:g5v1-l06-c07-u7f6a-words-image-1": {
-        "src": "/illustrations/mnemonics-v2/g5-u7f6a.webp",
-        "label": "得罪",
-        "alt": "得罪指言行冒犯他人；相如不惜得罪秦王也要保全美玉，将生死置之度外 图中“罒”与“非”按上下结构自然长成“罪”。"
-      },
       "g5v1-l06-c07-u7f6a-words-image:g5v1-l06-c07-u7f6a-words-image-2": {
         "src": "/illustrations/meanings/m07.webp",
         "label": "一代又一代",
         "alt": "祖辈、父母和孩子三代人相聚"
+      },
+      "g5v1-l06-c07-u7f6a-words-image:g5v1-l06-c07-u7f6a-words-image-1": {
+        "src": "/illustrations/mnemonics-v2/g5-u7f6a.webp",
+        "label": "得罪",
+        "alt": "得罪指言行冒犯他人；相如不惜得罪秦王也要保全美玉，将生死置之度外 图中“罒”与“非”按上下结构自然长成“罪”。"
       },
       "g5v1-l06-c07-u7f6a-words-image:g5v1-l06-c07-u7f6a-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u5883.webp",
@@ -240,17 +240,17 @@ export const characterMedia = {
     },
     "transcript": "廉，廉颇的廉，读第二声。廉颇是赵国名将，也是《将相和》中的重要人物。廉是左上包围结构，外面的广字头像宽阔的将府屋檐，里面的兼像将军同时调度兵马。起初廉颇不服蔺相如，后来明白蔺相如避让是为了国家大局，便背负荆条登门请罪，将相重新并肩保卫赵国。",
     "practiceOptionVisuals": {
+      "g5v1-l06-c08-u5ec9-words-image:g5v1-l06-c08-u5ec9-words-image-0": {
+        "src": "/illustrations/meanings/m08.webp",
+        "label": "整齐有序",
+        "alt": "竹简按照次序整齐排列"
+      },
       "g5v1-l06-c08-u5ec9-words-image:g5v1-l06-c08-u5ec9-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u5ec9.webp",
         "label": "廉颇",
         "alt": "廉颇是赵国勇冠三军的战将；他起初因争功而心生不服，最终在明晓大义后真心悔改 图中“广”与“兼”按左上包围结构自然长成“廉”。"
       },
       "g5v1-l06-c08-u5ec9-words-image:g5v1-l06-c08-u5ec9-words-image-2": {
-        "src": "/illustrations/meanings/m08.webp",
-        "label": "整齐有序",
-        "alt": "竹简按照次序整齐排列"
-      },
-      "g5v1-l06-c08-u5ec9-words-image:g5v1-l06-c08-u5ec9-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u727a.webp",
         "label": "牺牲",
         "alt": "牺牲是为了正义与他人利益放弃生命；海力布为了拯救全村乡亲不惜牺牲自己，化作了坚硬的石头 图中“牛”与“西”按左右结构自然长成“牺”。"
@@ -277,15 +277,15 @@ export const characterMedia = {
         "label": "背负、承载",
         "alt": "孩子把行囊稳稳背在背上"
       },
-      "g5v1-l06-c09-u62b5-words-image:g5v1-l06-c09-u62b5-words-image-2": {
-        "src": "/illustrations/mnemonics-v2/g5-u5bfa.webp",
-        "label": "寺庙",
-        "alt": "姑苏城外寒山寺；半夜传来的悠悠钟声穿越古今，让枫桥夜泊成为千古绝唱 图中“土”与“寸”按上下结构自然长成“寺”。"
-      },
       "g5v1-l06-c09-u62b5-words-image:g5v1-l06-c09-u62b5-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u62b5.webp",
         "label": "抵御",
         "alt": "抵御指挡住外来强敌的进攻；正是因为武有廉颇抵御强敌，文有相如机智善辩，赵国才得以安宁 图中“扌”与“氐”按左右结构自然长成“抵”。"
+      },
+      "g5v1-l06-c09-u62b5-words-image:g5v1-l06-c09-u62b5-words-image-2": {
+        "src": "/illustrations/mnemonics-v2/g5-u5bfa.webp",
+        "label": "寺庙",
+        "alt": "姑苏城外寒山寺；半夜传来的悠悠钟声穿越古今，让枫桥夜泊成为千古绝唱 图中“土”与“寸”按上下结构自然长成“寺”。"
       }
     }
   },
@@ -304,15 +304,15 @@ export const characterMedia = {
     },
     "transcript": "御，抵御的御。抵御还表示设法阻挡，不让危险继续前进。御是左右结构，左边像一条行进小路，右边可以整体看成在路口卸下并挡住来物的关卡。危险走到关卡前停住。将相和好的意义落在国家安危上，文臣武将互相配合，赵国才有力量抵御外来的威胁。",
     "practiceOptionVisuals": {
-      "g5v1-l06-c10-u5fa1-words-image:g5v1-l06-c10-u5fa1-words-image-1": {
-        "src": "/illustrations/mnemonics-v2/g5-u5fa1.webp",
-        "label": "抵御",
-        "alt": "御敌指防备与抗击外侮；将相同心御敌，使强大的秦国不敢对赵国轻举妄动 图中“彳”与“卸”按左右结构自然长成“御”。"
-      },
       "g5v1-l06-c10-u5fa1-words-image:g5v1-l06-c10-u5fa1-words-image-0": {
         "src": "/illustrations/meanings/m08.webp",
         "label": "整齐有序",
         "alt": "竹简按照次序整齐排列"
+      },
+      "g5v1-l06-c10-u5fa1-words-image:g5v1-l06-c10-u5fa1-words-image-1": {
+        "src": "/illustrations/mnemonics-v2/g5-u5fa1.webp",
+        "label": "抵御",
+        "alt": "御敌指防备与抗击外侮；将相同心御敌，使强大的秦国不敢对赵国轻举妄动 图中“彳”与“卸”按左右结构自然长成“御”。"
       },
       "g5v1-l06-c10-u5fa1-words-image:g5v1-l06-c10-u5fa1-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u54c9.webp",
@@ -336,20 +336,20 @@ export const characterMedia = {
     },
     "transcript": "辞，推辞的辞。推辞就是表示不接受某件事或某种安排。辞是左右结构，左边是舌，右边可以想成写着任务的硬纸牌。人开口说明理由，把任务牌轻轻推回去。渑池会上秦王让赵王鼓瑟，赵王不好推辞，随后蔺相如要求秦王击缶，双方的言语较量关系着国家尊严。",
     "practiceOptionVisuals": {
-      "g5v1-l06-c11-u8f9e-words-image:g5v1-l06-c11-u8f9e-words-image-0": {
-        "src": "/illustrations/meanings/m08.webp",
-        "label": "整齐有序",
-        "alt": "竹简按照次序整齐排列"
-      },
-      "g5v1-l06-c11-u8f9e-words-image:g5v1-l06-c11-u8f9e-words-image-2": {
-        "src": "/illustrations/mnemonics-v2/g5-u5ac2.webp",
-        "label": "嫂子",
-        "alt": "嫂子指兄长的妻子；面对兄嫂的刻薄对待，牛郎毫不计较，只牵着老牛自立生活 图中“女”与“叟”按左右结构自然长成“嫂”。"
-      },
       "g5v1-l06-c11-u8f9e-words-image:g5v1-l06-c11-u8f9e-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u8f9e.webp",
         "label": "推辞",
         "alt": "辞别母亲走出工厂；紧握着母亲给的买书钱，孩子眼中含着热泪走出车间，懂得了母爱的伟大 图中“舌”与“辛”按左右结构自然长成“辞”。"
+      },
+      "g5v1-l06-c11-u8f9e-words-image:g5v1-l06-c11-u8f9e-words-image-2": {
+        "src": "/illustrations/meanings/m08.webp",
+        "label": "整齐有序",
+        "alt": "竹简按照次序整齐排列"
+      },
+      "g5v1-l06-c11-u8f9e-words-image:g5v1-l06-c11-u8f9e-words-image-0": {
+        "src": "/illustrations/mnemonics-v2/g5-u5ac2.webp",
+        "label": "嫂子",
+        "alt": "嫂子指兄长的妻子；面对兄嫂的刻薄对待，牛郎毫不计较，只牵着老牛自立生活 图中“女”与“叟”按左右结构自然长成“嫂”。"
       }
     }
   },
@@ -432,20 +432,20 @@ export const characterMedia = {
     },
     "transcript": "缶，击缶的缶，读第三声。缶是古代盛水或酒的陶器，也可以敲击发声。缶可以按整体轮廓来记，上方像器口和提手，下方像鼓起的陶器腹部。手指轻敲陶器，发出清脆声音。渑池会上蔺相如要求秦王击缶，并把这件事记录下来，用对等行动维护了赵国尊严。",
     "practiceOptionVisuals": {
-      "g5v1-l06-c14-u7f36-words-image:g5v1-l06-c14-u7f36-words-image-1": {
-        "src": "/illustrations/mnemonics-v2/g5-u7f36.webp",
-        "label": "击缶",
-        "alt": "缶是古代用来盛酒与敲击伴奏的瓦器；渑池会上秦王被迫击缶，赵国的国格尊严得到了有力捍卫 图中“午”与“山”按上下结构自然长成“缶”。"
-      },
-      "g5v1-l06-c14-u7f36-words-image:g5v1-l06-c14-u7f36-words-image-0": {
+      "g5v1-l06-c14-u7f36-words-image:g5v1-l06-c14-u7f36-words-image-2": {
         "src": "/illustrations/meanings/m05.webp",
         "label": "朗声诵读",
         "alt": "孩子面向同伴清楚地朗读"
       },
-      "g5v1-l06-c14-u7f36-words-image:g5v1-l06-c14-u7f36-words-image-2": {
+      "g5v1-l06-c14-u7f36-words-image:g5v1-l06-c14-u7f36-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u966a.webp",
         "label": "陪伴",
         "alt": "陪伴求学一路护航；从乡村到县城，那叶小舟始终陪伴着孩子，驶向广阔的人生天地 图中“阝”与“咅”按左右结构自然长成“陪”。"
+      },
+      "g5v1-l06-c14-u7f36-words-image:g5v1-l06-c14-u7f36-words-image-1": {
+        "src": "/illustrations/mnemonics-v2/g5-u7f36.webp",
+        "label": "击缶",
+        "alt": "缶是古代用来盛酒与敲击伴奏的瓦器；渑池会上秦王被迫击缶，赵国的国格尊严得到了有力捍卫 图中“午”与“山”按上下结构自然长成“缶”。"
       }
     }
   },
@@ -495,20 +495,20 @@ export const characterMedia = {
     },
     "transcript": "先读“削弱”，削在这里读第一声。削弱就是让力量、能力或影响变小。削是左右结构，左边可以想成一块逐渐变薄的材料，右边像竖直的小刀。小刀削下一层，原来的厚度变少。蔺相如避让廉颇，是因为他明白将相争斗会削弱赵国力量，让外敌更容易找到机会。",
     "practiceOptionVisuals": {
-      "g5v1-l06-c16-u524a-words-image:g5v1-l06-c16-u524a-words-image-0": {
+      "g5v1-l06-c16-u524a-words-image:g5v1-l06-c16-u524a-words-image-2": {
         "src": "/illustrations/meanings/m07.webp",
         "label": "一代又一代",
         "alt": "祖辈、父母和孩子三代人相聚"
-      },
-      "g5v1-l06-c16-u524a-words-image:g5v1-l06-c16-u524a-words-image-2": {
-        "src": "/illustrations/mnemonics-v2/g5-u8bae.webp",
-        "label": "商议",
-        "alt": "商议是共同探讨谋划办法；君臣商议之后决定派相如入秦，由此开启了完璧归赵的壮举 图中“讠”与“义”按左右结构自然长成“议”。"
       },
       "g5v1-l06-c16-u524a-words-image:g5v1-l06-c16-u524a-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u524a.webp",
         "label": "削弱",
         "alt": "削弱指使力量或威望变小；秦国企图削弱赵国的威势，却屡屡在相如面前碰壁 图中“肖”与“刂”按左右结构自然长成“削”。"
+      },
+      "g5v1-l06-c16-u524a-words-image:g5v1-l06-c16-u524a-words-image-0": {
+        "src": "/illustrations/mnemonics-v2/g5-u8bae.webp",
+        "label": "商议",
+        "alt": "商议是共同探讨谋划办法；君臣商议之后决定派相如入秦，由此开启了完璧归赵的壮举 图中“讠”与“义”按左右结构自然长成“议”。"
       }
     }
   },
@@ -532,15 +532,15 @@ export const characterMedia = {
         "label": "倚靠、凭借",
         "alt": "行路的人稳稳倚靠一根手杖"
       },
-      "g5v1-l06-c17-u888d-words-image:g5v1-l06-c17-u888d-words-image-2": {
-        "src": "/illustrations/mnemonics/m10.webp",
-        "label": "茶树",
-        "alt": "山坡上的茶树和嫩绿茶芽"
-      },
       "g5v1-l06-c17-u888d-words-image:g5v1-l06-c17-u888d-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u888d.webp",
         "label": "战袍",
         "alt": "战袍是古代将士征战所穿的长袍；老将廉颇脱下战袍背负荆条，更显出其坦荡改过的胸怀 图中“衤”与“包”按左右结构自然长成“袍”。"
+      },
+      "g5v1-l06-c17-u888d-words-image:g5v1-l06-c17-u888d-words-image-2": {
+        "src": "/illustrations/mnemonics/m10.webp",
+        "label": "茶树",
+        "alt": "山坡上的茶树和嫩绿茶芽"
       }
     }
   },
@@ -559,12 +559,12 @@ export const characterMedia = {
     },
     "transcript": "召，召集的召。召集就是通知许多人到同一个地方集合。召是上下结构，上方可以想成发出通知的号令牌，下方是张口传话的人。号令一到，大家听见消息赶来。秦王提出用城换璧后，赵王召集大臣商议，人物聚到一起，完璧归赵的故事便从这场商议展开。",
     "practiceOptionVisuals": {
-      "g5v1-l06-c18-u53ec-words-image:g5v1-l06-c18-u53ec-words-image-0": {
+      "g5v1-l06-c18-u53ec-words-image:g5v1-l06-c18-u53ec-words-image-2": {
         "src": "/illustrations/meanings/m07.webp",
         "label": "一代又一代",
         "alt": "祖辈、父母和孩子三代人相聚"
       },
-      "g5v1-l06-c18-u53ec-words-image:g5v1-l06-c18-u53ec-words-image-2": {
+      "g5v1-l06-c18-u53ec-words-image:g5v1-l06-c18-u53ec-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u675f.webp",
         "label": "一束",
         "alt": "一束指聚拢在一起的一线光芒；一束光线以每秒三十万千米的速度前行，快得令人难以置信 图中“木”与“口”按穿插结构自然长成“束”。"
@@ -591,20 +591,20 @@ export const characterMedia = {
     },
     "transcript": "议，商议的议。商议就是几个人一起讨论，想出合适办法。议是左右结构，左边是言字旁，右边可以想成摆在桌上的共同方案。大家轮流说话，把方案一点点改好。赵王召集大臣商议怎样对待秦王的要求，众人面对难题交换意见，随后蔺相如提出带璧前往。",
     "practiceOptionVisuals": {
-      "g5v1-l06-c19-u8bae-words-image:g5v1-l06-c19-u8bae-words-image-2": {
+      "g5v1-l06-c19-u8bae-words-image:g5v1-l06-c19-u8bae-words-image-0": {
         "src": "/illustrations/meanings/m06.webp",
         "label": "背负、承载",
         "alt": "孩子把行囊稳稳背在背上"
-      },
-      "g5v1-l06-c19-u8bae-words-image:g5v1-l06-c19-u8bae-words-image-0": {
-        "src": "/illustrations/mnemonics-v2/g5-u8f86.webp",
-        "label": "车辆",
-        "alt": "一辆是计算车辆的量词；牛郎分家时只得到一辆破车和一头老牛，却踏实开创出新生活 图中“车”与“两”按左右结构自然长成“辆”。"
       },
       "g5v1-l06-c19-u8bae-words-image:g5v1-l06-c19-u8bae-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u8bae.webp",
         "label": "商议",
         "alt": "商议是共同探讨谋划办法；君臣商议之后决定派相如入秦，由此开启了完璧归赵的壮举 图中“讠”与“义”按左右结构自然长成“议”。"
+      },
+      "g5v1-l06-c19-u8bae-words-image:g5v1-l06-c19-u8bae-words-image-2": {
+        "src": "/illustrations/mnemonics-v2/g5-u8f86.webp",
+        "label": "车辆",
+        "alt": "一辆是计算车辆的量词；牛郎分家时只得到一辆破车和一头老牛，却踏实开创出新生活 图中“车”与“两”按左右结构自然长成“辆”。"
       }
     }
   },
@@ -628,15 +628,15 @@ export const characterMedia = {
         "label": "朗声诵读",
         "alt": "孩子面向同伴清楚地朗读"
       },
-      "g5v1-l06-c20-u7f3a-words-image:g5v1-l06-c20-u7f3a-words-image-0": {
-        "src": "/illustrations/mnemonics/m124.webp",
-        "label": "掉进、沉下",
-        "alt": "孩子的雨靴轻轻陷进泥地洼处"
-      },
       "g5v1-l06-c20-u7f3a-words-image:g5v1-l06-c20-u7f3a-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u7f3a.webp",
         "label": "缺少",
         "alt": "缺少是数量不足或出现缺口；相如假称和氏璧上微有瑕疵缺少完美，借机将宝玉重新拿回手中 图中“缶”与“夬”按左右结构自然长成“缺”。"
+      },
+      "g5v1-l06-c20-u7f3a-words-image:g5v1-l06-c20-u7f3a-words-image-0": {
+        "src": "/illustrations/mnemonics/m124.webp",
+        "label": "掉进、沉下",
+        "alt": "孩子的雨靴轻轻陷进泥地洼处"
       }
     }
   },
@@ -660,12 +660,12 @@ export const characterMedia = {
         "label": "王宫",
         "alt": "王宫是君王执政议事的宫殿；在秦国巍峨的王宫大殿上，蔺相如怒发冲冠，震慑群臣 图中“宀”与“吕”按上下结构自然长成“宫”。"
       },
-      "g5v1-l06-c21-u5bab-words-image:g5v1-l06-c21-u5bab-words-image-0": {
+      "g5v1-l06-c21-u5bab-words-image:g5v1-l06-c21-u5bab-words-image-2": {
         "src": "/illustrations/meanings/m07.webp",
         "label": "一代又一代",
         "alt": "祖辈、父母和孩子三代人相聚"
       },
-      "g5v1-l06-c21-u5bab-words-image:g5v1-l06-c21-u5bab-words-image-2": {
+      "g5v1-l06-c21-u5bab-words-image:g5v1-l06-c21-u5bab-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u4fef.webp",
         "label": "俯冲",
         "alt": "俯冲指从高空向下急速冲去；游隼在俯冲捕食时展现出的极速，令人叹为观止 图中“亻”与“府”按左右结构自然长成“俯”。"
@@ -719,17 +719,17 @@ export const characterMedia = {
     },
     "transcript": "蔺相如出发前对赵王说，秦王肯交城就交璧，不肯交城便把璧完好无缺地送回来。承诺的承，既有答应，也有接下责任、认真做到的意思。承的笔画彼此穿插，可以想成几只手从下方托住一块木板。重物落下来，双手稳稳承住。后来和氏璧真的回到赵国，蔺相如用行动完成了自己的承诺。",
     "practiceOptionVisuals": {
+      "g5v1-l06-c23-u627f-words-image:g5v1-l06-c23-u627f-words-image-0": {
+        "src": "/illustrations/meanings/m06.webp",
+        "label": "背负、承载",
+        "alt": "孩子把行囊稳稳背在背上"
+      },
       "g5v1-l06-c23-u627f-words-image:g5v1-l06-c23-u627f-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u627f.webp",
         "label": "承诺",
         "alt": "承担包含负起责任之意；相如勇于承担国家兴亡的重担，不辱使命，名垂青史 图中“氶”与“三”按穿插结构自然长成“承”。"
       },
       "g5v1-l06-c23-u627f-words-image:g5v1-l06-c23-u627f-words-image-2": {
-        "src": "/illustrations/meanings/m06.webp",
-        "label": "背负、承载",
-        "alt": "孩子把行囊稳稳背在背上"
-      },
-      "g5v1-l06-c23-u627f-words-image:g5v1-l06-c23-u627f-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u9e64.webp",
         "label": "白鹤",
         "alt": "白鹤是体型较大、羽色洁白的水鸟；课文用白鹤与白鹭对比，更显出白鹭身段的玲珑适度 图中“隺”与“鸟”按左右结构自然长成“鹤”。"
@@ -751,17 +751,17 @@ export const characterMedia = {
     },
     "transcript": "渑池会上，记录官把秦王为赵王击缶的事写进记录。记录是把当场发生的事写下来，抄写则是照着已有文字重新写一遍。抄是左右结构，左边提手旁可以想成握笔的手，右边几笔像一行行短文字。手握笔，目光对着原文，一行行写下去。把记录和抄写分清，两个写字动作就不会混用。",
     "practiceOptionVisuals": {
+      "g5v1-l06-c24-u6284-words-image:g5v1-l06-c24-u6284-words-image-0": {
+        "src": "/illustrations/meanings/m04.webp",
+        "label": "倚靠、凭借",
+        "alt": "行路的人稳稳倚靠一根手杖"
+      },
       "g5v1-l06-c24-u6284-words-image:g5v1-l06-c24-u6284-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u6284.webp",
         "label": "抄写",
         "alt": "抄小路指绕过大路快速行进；随从化装成平民抄小路潜回赵国，确保了和氏璧的安全 图中“扌”与“少”按左右结构自然长成“抄”。"
       },
       "g5v1-l06-c24-u6284-words-image:g5v1-l06-c24-u6284-words-image-2": {
-        "src": "/illustrations/meanings/m04.webp",
-        "label": "倚靠、凭借",
-        "alt": "行路的人稳稳倚靠一根手杖"
-      },
-      "g5v1-l06-c24-u6284-words-image:g5v1-l06-c24-u6284-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u9e6d.webp",
         "label": "白鹭",
         "alt": "白鹭羽色洁白、身段精巧，在清水田里漫步伫立，如同一首韵味悠长的小诗 图中“路”与“鸟”按上下结构自然长成“鹭”。"
@@ -783,20 +783,20 @@ export const characterMedia = {
     },
     "transcript": "怯，胆怯的怯，读第四声。胆怯就是心里害怕、缺少勇气。怯是左右结构，左边是竖心旁，右边可以想成正要离开的脚步。心一慌，脚便想往后退。蔺相如面对强大的秦王没有胆怯，他观察局势、据理应对，勇气来自保护宝玉和维护国家尊严的责任。",
     "practiceOptionVisuals": {
-      "g5v1-l06-c25-u602f-words-image:g5v1-l06-c25-u602f-words-image-2": {
-        "src": "/illustrations/meanings/m03.webp",
-        "label": "检查、验证",
-        "alt": "孩子用放大镜仔细检查一件物品"
-      },
-      "g5v1-l06-c25-u602f-words-image:g5v1-l06-c25-u602f-words-image-0": {
-        "src": "/illustrations/mnemonics-v2/g5-u97f5.webp",
-        "label": "韵味",
-        "alt": "韵味是耐人反复回味的深长意蕴；白鹭的从容身段与质朴神态，留下了令人心旷神怡的悠长韵味 图中“音”与“匀”按左右结构自然长成“韵”。"
-      },
       "g5v1-l06-c25-u602f-words-image:g5v1-l06-c25-u602f-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u602f.webp",
         "label": "胆怯",
         "alt": "胆怯是害怕恐惧失去勇气；相如在强秦面前绝无半点胆怯，以浩然正气化解了一次次危机 图中“忄”与“去”按左右结构自然长成“怯”。"
+      },
+      "g5v1-l06-c25-u602f-words-image:g5v1-l06-c25-u602f-words-image-0": {
+        "src": "/illustrations/meanings/m03.webp",
+        "label": "检查、验证",
+        "alt": "孩子用放大镜仔细检查一件物品"
+      },
+      "g5v1-l06-c25-u602f-words-image:g5v1-l06-c25-u602f-words-image-2": {
+        "src": "/illustrations/mnemonics-v2/g5-u97f5.webp",
+        "label": "韵味",
+        "alt": "韵味是耐人反复回味的深长意蕴；白鹭的从容身段与质朴神态，留下了令人心旷神怡的悠长韵味 图中“音”与“匀”按左右结构自然长成“韵”。"
       }
     }
   },
@@ -820,15 +820,15 @@ export const characterMedia = {
         "label": "整齐有序",
         "alt": "竹简按照次序整齐排列"
       },
-      "g5v1-l06-c26-u62d2-words-image:g5v1-l06-c26-u62d2-words-image-0": {
-        "src": "/illustrations/mnemonics-v2/g5-u7738.webp",
-        "label": "眼眸",
-        "alt": "眼眸指清澈灵动的目光；小鸟眸子里闪烁的警惕慢慢化为信赖，见证了爱与尊重的力量 图中“目”与“牟”按左右结构自然长成“眸”。"
-      },
       "g5v1-l06-c26-u62d2-words-image:g5v1-l06-c26-u62d2-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u62d2.webp",
         "label": "拒绝",
         "alt": "拒绝是明确表示不接受；赵国果断拒绝屈辱妥协，展现了捍卫国土与尊严的骨气 图中“扌”与“巨”按左右结构自然长成“拒”。"
+      },
+      "g5v1-l06-c26-u62d2-words-image:g5v1-l06-c26-u62d2-words-image-0": {
+        "src": "/illustrations/mnemonics-v2/g5-u7738.webp",
+        "label": "眼眸",
+        "alt": "眼眸指清澈灵动的目光；小鸟眸子里闪烁的警惕慢慢化为信赖，见证了爱与尊重的力量 图中“目”与“牟”按左右结构自然长成“眸”。"
       }
     }
   },
@@ -847,20 +847,20 @@ export const characterMedia = {
     },
     "transcript": "荆，荆条的荆，读第一声。荆条是荆灌木细长而有韧性的枝条。荆是左右结构，左上能看到草叶，右边可以想成修整枝条的园艺剪。细长枝条被整齐收拢。廉颇明白自己误会蔺相如后，背着荆条上门请罪，负荆请罪的行动说明他愿意承认错误，也推动将相和好。",
     "practiceOptionVisuals": {
-      "g5v1-l06-c27-u8346-words-image:g5v1-l06-c27-u8346-words-image-1": {
-        "src": "/illustrations/mnemonics-v2/g5-u8346.webp",
-        "label": "荆条",
-        "alt": "荆条是质地坚韧带刺的灌木枝；廉颇负荆请罪，成为千古流传的将相和好美谈 图中“艹”与“刑”按左右结构自然长成“荆”。"
-      },
-      "g5v1-l06-c27-u8346-words-image:g5v1-l06-c27-u8346-words-image-2": {
+      "g5v1-l06-c27-u8346-words-image:g5v1-l06-c27-u8346-words-image-0": {
         "src": "/illustrations/meanings/m04.webp",
         "label": "倚靠、凭借",
         "alt": "行路的人稳稳倚靠一根手杖"
       },
-      "g5v1-l06-c27-u8346-words-image:g5v1-l06-c27-u8346-words-image-0": {
+      "g5v1-l06-c27-u8346-words-image:g5v1-l06-c27-u8346-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u69a8.webp",
         "label": "榨油",
         "alt": "榨油就是用压力挤出果实里的油脂；花生虽矮小埋在地下，榨出的香油却实实在在地造福他人 图中“木”与“窄”按左右结构自然长成“榨”。"
+      },
+      "g5v1-l06-c27-u8346-words-image:g5v1-l06-c27-u8346-words-image-1": {
+        "src": "/illustrations/mnemonics-v2/g5-u8346.webp",
+        "label": "荆条",
+        "alt": "荆条是质地坚韧带刺的灌木枝；廉颇负荆请罪，成为千古流传的将相和好美谈 图中“艹”与“刑”按左右结构自然长成“荆”。"
       }
     }
   }

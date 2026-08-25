@@ -23,12 +23,12 @@ export const characterMedia = {
         "label": "船桨",
         "alt": "摇桨泛舟穿行水乡；巴金与友人摇动双桨荡舟河上，在夕阳余晖中探访神奇的榕树 图中“丬”与“夕”与“木”按上下结构自然长成“桨”。"
       },
-      "g5v1-l22-c01-u6868-words-image:g5v1-l22-c01-u6868-words-image-0": {
+      "g5v1-l22-c01-u6868-words-image:g5v1-l22-c01-u6868-words-image-2": {
         "src": "/illustrations/meanings/m03.webp",
         "label": "检查、验证",
         "alt": "孩子用放大镜仔细检查一件物品"
       },
-      "g5v1-l22-c01-u6868-words-image:g5v1-l22-c01-u6868-words-image-2": {
+      "g5v1-l22-c01-u6868-words-image:g5v1-l22-c01-u6868-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u68b3.webp",
         "label": "梳理",
         "alt": "梳理毛发整洁漂亮；松鼠常常坐着用前爪梳理面部与尾巴上的毛发，显得十分爱干净 图中“木”与“㐬”按左右结构自然长成“梳”。"
@@ -50,6 +50,11 @@ export const characterMedia = {
     },
     "transcript": "木桩的桩，读第一声，木桩是固定在地上的粗木柱。桩按左右写，木字旁在左，庄在右，写时左窄右宽。大榕树有许多根垂到地上，伸进泥土里。作者看见无数树根立在地上，远看就像许多根木桩。这个比喻让我们看清榕树根多而粗壮，也把木桩的样子留在眼前。",
     "practiceOptionVisuals": {
+      "g5v1-l22-c02-u6869-words-image:g5v1-l22-c02-u6869-words-image-1": {
+        "src": "/illustrations/mnemonics-v2/g5-u6869.webp",
+        "label": "木桩",
+        "alt": "木桩系缆泊船树下；小船轻轻系在河边的木桩旁，作者得以近距离领略大榕树的壮观 图中“木”与“庄”按左右结构自然长成“桩”。"
+      },
       "g5v1-l22-c02-u6869-words-image:g5v1-l22-c02-u6869-words-image-2": {
         "src": "/illustrations/meanings/m05.webp",
         "label": "朗声诵读",
@@ -59,11 +64,6 @@ export const characterMedia = {
         "src": "/illustrations/mnemonics-v2/g5-u9cde.webp",
         "label": "鱼鳞",
         "alt": "潜龙腾渊鳞爪飞扬；飞腾的巨龙展现出冲破羁绊、翱翔九天的威猛神采 图中“鱼”与“粦”按左右结构自然长成“鳞”。"
-      },
-      "g5v1-l22-c02-u6869-words-image:g5v1-l22-c02-u6869-words-image-1": {
-        "src": "/illustrations/mnemonics-v2/g5-u6869.webp",
-        "label": "木桩",
-        "alt": "木桩系缆泊船树下；小船轻轻系在河边的木桩旁，作者得以近距离领略大榕树的壮观 图中“木”与“庄”按左右结构自然长成“桩”。"
       }
     }
   },
@@ -82,6 +82,11 @@ export const characterMedia = {
     },
     "transcript": "眼前的鸟太多，来不及一一看清，这就是应接不暇，暇读第二声。暇是左右结构，左边是日，右部笔画较多，要分层写稳。记字时，可以想象空闲日子里摊开一本书，慢慢读完每一页，先借这个画面记住字形。闲暇指可以自由安排的空余时间，不暇则表示来不及。第二次来到榕树旁，群鸟纷纷飞起，让人的眼睛应接不暇。",
     "practiceOptionVisuals": {
+      "g5v1-l22-c03-u6687-words-image:g5v1-l22-c03-u6687-words-image-1": {
+        "src": "/illustrations/mnemonics-v2/g5-u6687.webp",
+        "label": "闲暇",
+        "alt": "应接不暇群鸟飞鸣；清晨群鸟齐飞欢唱，到处都是鸟声鸟影，令人眼睛应接不暇、流连忘返 图中“日”与“叚”按左右结构自然长成“暇”。"
+      },
       "g5v1-l22-c03-u6687-words-image:g5v1-l22-c03-u6687-words-image-2": {
         "src": "/illustrations/meanings/m08.webp",
         "label": "整齐有序",
@@ -91,11 +96,6 @@ export const characterMedia = {
         "src": "/illustrations/mnemonics-v2/g5-u9675.webp",
         "label": "武陵春色",
         "alt": "武陵春色宛若世外桃源；漫步园中如行画中，令人如痴如醉、流连忘返 图中“阝”与“夌”按左右结构自然长成“陵”。"
-      },
-      "g5v1-l22-c03-u6687-words-image:g5v1-l22-c03-u6687-words-image-1": {
-        "src": "/illustrations/mnemonics-v2/g5-u6687.webp",
-        "label": "闲暇",
-        "alt": "应接不暇群鸟飞鸣；清晨群鸟齐飞欢唱，到处都是鸟声鸟影，令人眼睛应接不暇、流连忘返 图中“日”与“叚”按左右结构自然长成“暇”。"
       }
     }
   },
@@ -119,15 +119,15 @@ export const characterMedia = {
         "label": "一代又一代",
         "alt": "祖辈、父母和孩子三代人相聚"
       },
-      "g5v1-l22-c04-u6995-words-image:g5v1-l22-c04-u6995-words-image-2": {
-        "src": "/illustrations/mnemonics-v2/g5-u65a9.webp",
-        "label": "斩断",
-        "alt": "斩将过关引人入胜；关羽斩颜良诛文丑的精彩情节让年幼的作者如痴如醉，手不释卷 图中“车”与“斤”按左右结构自然长成“斩”。"
-      },
       "g5v1-l22-c04-u6995-words-image:g5v1-l22-c04-u6995-words-image-1": {
         "src": "/illustrations/mnemonics-v2/g5-u6995.webp",
         "label": "榕树",
         "alt": "独木成林郁郁葱葱；巨大的榕树枝干垂下无数气根扎入泥土，展现出大自然顽强勃发的生命力 图中“木”与“容”按左右结构自然长成“榕”。"
+      },
+      "g5v1-l22-c04-u6995-words-image:g5v1-l22-c04-u6995-words-image-2": {
+        "src": "/illustrations/mnemonics-v2/g5-u65a9.webp",
+        "label": "斩断",
+        "alt": "斩将过关引人入胜；关羽斩颜良诛文丑的精彩情节让年幼的作者如痴如醉，手不释卷 图中“车”与“斤”按左右结构自然长成“斩”。"
       }
     }
   },
@@ -146,11 +146,6 @@ export const characterMedia = {
     },
     "transcript": "纠正的纠，读第一声，发现错误后把它改对，就叫纠正。纠是左右结构，左边绞丝旁，右边笔画短小，写时左窄右舒。作者起初以为眼前有许多株榕树。朋友们马上纠正他的错误，告诉他那是一株大树，枝干的数目多得不可计数。一个判断被改对，榕树独木成林的奇特也显出来了。",
     "practiceOptionVisuals": {
-      "g5v1-l22-c05-u7ea0-words-image:g5v1-l22-c05-u7ea0-words-image-1": {
-        "src": "/illustrations/mnemonics-v2/g5-u7ea0.webp",
-        "label": "纠正",
-        "alt": "纠正误解恍然大悟；友人纠正了作者的判断，告诉他眼前这片巨大的绿色树林其实只是一株榕树 图中“纟”与“丩”按左右结构自然长成“纠”。"
-      },
       "g5v1-l22-c05-u7ea0-words-image:g5v1-l22-c05-u7ea0-words-image-2": {
         "src": "/illustrations/meanings/m08.webp",
         "label": "整齐有序",
@@ -160,6 +155,11 @@ export const characterMedia = {
         "src": "/illustrations/mnemonics-v2/g5-u77ee.webp",
         "label": "矮小",
         "alt": "矮小表示高度较低；花生的果实矮矮地埋在地底，虽不张扬，却有默默奉献的真价值 图中“矢”与“委”按左右结构自然长成“矮”。"
+      },
+      "g5v1-l22-c05-u7ea0-words-image:g5v1-l22-c05-u7ea0-words-image-1": {
+        "src": "/illustrations/mnemonics-v2/g5-u7ea0.webp",
+        "label": "纠正",
+        "alt": "纠正误解恍然大悟；友人纠正了作者的判断，告诉他眼前这片巨大的绿色树林其实只是一株榕树 图中“纟”与“丩”按左右结构自然长成“纠”。"
       }
     }
   },
@@ -178,20 +178,20 @@ export const characterMedia = {
     },
     "transcript": "阳光落在翠绿叶片上，亮点不断跳动，这就叫闪耀，耀读第四声。耀是左右结构，左边是光，右部笔画较密，写时要留出空隙。把两边连起来，可以想象一束光穿过展开的羽毛，亮芒向四周散开。闪耀表示明亮的光不断显现。文章写榕叶的绿色明亮地照着眼睛，整棵树仿佛带着旺盛的生命力。",
     "practiceOptionVisuals": {
-      "g5v1-l22-c06-u8000-words-image:g5v1-l22-c06-u8000-words-image-1": {
-        "src": "/illustrations/mnemonics-v2/g5-u8000.webp",
-        "label": "闪耀",
-        "alt": "翠绿明耀照亮水面；阳光洒在榕树的新叶上闪闪发亮，每一片绿叶都仿佛在颤动着蓬勃生机 图中“光”与“翟”按左右结构自然长成“耀”。"
-      },
-      "g5v1-l22-c06-u8000-words-image:g5v1-l22-c06-u8000-words-image-2": {
+      "g5v1-l22-c06-u8000-words-image:g5v1-l22-c06-u8000-words-image-0": {
         "src": "/illustrations/meanings/m06.webp",
         "label": "背负、承载",
         "alt": "孩子把行囊稳稳背在背上"
       },
-      "g5v1-l22-c06-u8000-words-image:g5v1-l22-c06-u8000-words-image-0": {
+      "g5v1-l22-c06-u8000-words-image:g5v1-l22-c06-u8000-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u778c.webp",
         "label": "瞌睡",
         "alt": "瞌睡指困倦想要入眠；牛郎在草棚旁打瞌睡时，老牛忽然开口说话，开启了奇妙故事 图中“目”与“盍”按左右结构自然长成“瞌”。"
+      },
+      "g5v1-l22-c06-u8000-words-image:g5v1-l22-c06-u8000-words-image-1": {
+        "src": "/illustrations/mnemonics-v2/g5-u8000.webp",
+        "label": "闪耀",
+        "alt": "翠绿明耀照亮水面；阳光洒在榕树的新叶上闪闪发亮，每一片绿叶都仿佛在颤动着蓬勃生机 图中“光”与“翟”按左右结构自然长成“耀”。"
       }
     }
   },
@@ -210,15 +210,15 @@ export const characterMedia = {
     },
     "transcript": "涨潮的涨，读第三声，水面在一段时间里升高，就叫涨潮。涨是左右结构，三点水在左，张在右，写时左窄右宽。大榕树有许多根垂下来，伸进潮湿的泥土。作者看见土地湿漉漉的，推想涨潮的时候河水会冲上岸来。潮湿的土地、上涨的河水和密密树根，在一句推测里连成了完整画面。",
     "practiceOptionVisuals": {
-      "g5v1-l22-c07-u6da8-words-image:g5v1-l22-c07-u6da8-words-image-1": {
-        "src": "/illustrations/mnemonics-v2/g5-u6da8.webp",
-        "label": "涨潮",
-        "alt": "潮水涨落滋润古树；河水涨潮退潮滋养着广阔的水网，为鸟类繁衍生息提供了天堂般的乐土 图中“氵”与“张”按左右结构自然长成“涨”。"
-      },
       "g5v1-l22-c07-u6da8-words-image:g5v1-l22-c07-u6da8-words-image-2": {
         "src": "/illustrations/meanings/m08.webp",
         "label": "整齐有序",
         "alt": "竹简按照次序整齐排列"
+      },
+      "g5v1-l22-c07-u6da8-words-image:g5v1-l22-c07-u6da8-words-image-1": {
+        "src": "/illustrations/mnemonics-v2/g5-u6da8.webp",
+        "label": "涨潮",
+        "alt": "潮水涨落滋润古树；河水涨潮退潮滋养着广阔的水网，为鸟类繁衍生息提供了天堂般的乐土 图中“氵”与“张”按左右结构自然长成“涨”。"
       },
       "g5v1-l22-c07-u6da8-words-image:g5v1-l22-c07-u6da8-words-image-0": {
         "src": "/illustrations/mnemonics-v2/g5-u5c94.webp",
@@ -242,11 +242,6 @@ export const characterMedia = {
     },
     "transcript": "宝塔的塔，读第三声，宝塔常是层层向上、顶端收尖的高大建筑。塔在左边写提土旁，右边分成几层，落笔时要排稳。朋友的家乡有山有塔，大家乘船正朝那里去。小船在河面缓缓移动，后来向着高塔下面的乡村划去。高塔是行船时看得见的方向标，也把远处乡村的位置说清了。",
     "practiceOptionVisuals": {
-      "g5v1-l22-c08-u5854-words-image:g5v1-l22-c08-u5854-words-image-1": {
-        "src": "/illustrations/mnemonics-v2/g5-u5854.webp",
-        "label": "宝塔",
-        "alt": "宝塔倒影相映成趣；远处古朴的石塔倒映在清澈的河面上，为鸟的天堂增添了典雅的诗意 图中“土”与“荅”按左右结构自然长成“塔”。"
-      },
       "g5v1-l22-c08-u5854-words-image:g5v1-l22-c08-u5854-words-image-0": {
         "src": "/illustrations/meanings/m06.webp",
         "label": "背负、承载",
@@ -256,6 +251,11 @@ export const characterMedia = {
         "src": "/illustrations/mnemonics-v2/g5-u5a5a.webp",
         "label": "结婚",
         "alt": "结婚是男女结为夫妻；牛郎与织女喜结良缘，用勤劳的双手把小家庭经营得温暖充实 图中“女”与“昏”按左右结构自然长成“婚”。"
+      },
+      "g5v1-l22-c08-u5854-words-image:g5v1-l22-c08-u5854-words-image-1": {
+        "src": "/illustrations/mnemonics-v2/g5-u5854.webp",
+        "label": "宝塔",
+        "alt": "宝塔倒影相映成趣；远处古朴的石塔倒映在清澈的河面上，为鸟的天堂增添了典雅的诗意 图中“土”与“荅”按左右结构自然长成“塔”。"
       }
     }
   },
@@ -274,6 +274,11 @@ export const characterMedia = {
     },
     "transcript": "树木最高或枝条最末端的地方叫树梢，梢读第一声。梢的木字旁在左，右边是肖，写时左窄右宽，两个部分并排。认字时，可以想象细细枝条从树冠伸出，小鸟停在最末端轻轻摇晃。树梢就是树枝的顶端或末端。文中的鸟从榕树各处飞起，树梢上的动静把清晨的热闹送到我们眼前。",
     "practiceOptionVisuals": {
+      "g5v1-l22-c09-u68a2-words-image:g5v1-l22-c09-u68a2-words-image-1": {
+        "src": "/illustrations/mnemonics-v2/g5-u68a2.webp",
+        "label": "树梢",
+        "alt": "树梢飞鸣百鸟欢腾；无数飞鸟站在高高的树梢上引吭高歌，展现了人与自然和谐共生的美好画卷 图中“木”与“肖”按左右结构自然长成“梢”。"
+      },
       "g5v1-l22-c09-u68a2-words-image:g5v1-l22-c09-u68a2-words-image-2": {
         "src": "/illustrations/meanings/m04.webp",
         "label": "倚靠、凭借",
@@ -283,11 +288,6 @@ export const characterMedia = {
         "src": "/illustrations/mnemonics-v2/g5-u6cfb.webp",
         "label": "倾泻",
         "alt": "倾泻指江河水势奔腾而下；黄河奔流直泻汪洋，象征着少年中国不可阻挡的磅礴伟力 图中“氵”与“写”按左右结构自然长成“泻”。"
-      },
-      "g5v1-l22-c09-u68a2-words-image:g5v1-l22-c09-u68a2-words-image-1": {
-        "src": "/illustrations/mnemonics-v2/g5-u68a2.webp",
-        "label": "树梢",
-        "alt": "树梢飞鸣百鸟欢腾；无数飞鸟站在高高的树梢上引吭高歌，展现了人与自然和谐共生的美好画卷 图中“木”与“肖”按左右结构自然长成“梢”。"
       }
     }
   },
@@ -311,12 +311,12 @@ export const characterMedia = {
         "label": "眉毛",
         "alt": "舒展眉头赞叹天地；目睹这片充满生机的绿色胜境，游人舒展眉头，心旷神怡 图中“𠃜”与“目”按左上包围结构自然长成“眉”。"
       },
-      "g5v1-l22-c10-u7709-words-image:g5v1-l22-c10-u7709-words-image-2": {
+      "g5v1-l22-c10-u7709-words-image:g5v1-l22-c10-u7709-words-image-0": {
         "src": "/illustrations/meanings/m08.webp",
         "label": "整齐有序",
         "alt": "竹简按照次序整齐排列"
       },
-      "g5v1-l22-c10-u7709-words-image:g5v1-l22-c10-u7709-words-image-0": {
+      "g5v1-l22-c10-u7709-words-image:g5v1-l22-c10-u7709-words-image-2": {
         "src": "/illustrations/mnemonics-v2/g5-u51ef.webp",
         "label": "凯旋",
         "alt": "凯旋而归豪情满怀；小说中英雄人物凯旋的壮烈故事，点燃了作者心中对于正义与勇气的向往 图中“岂”与“几”按左右结构自然长成“凯”。"

@@ -40,11 +40,14 @@ export default async function PracticeRoutePage({
     : undefined;
   const rawReturnTo = Array.isArray(query.returnTo) ? query.returnTo[0] : query.returnTo;
   const returnTo = safeInternalReturnPath(rawReturnTo);
+  const rawReview = Array.isArray(query.review) ? query.review[0] : query.review;
+  const review = rawReview === "due" ? "due" : undefined;
   return (
     <PracticeSessionRoute
       character={character}
       track={track}
       mode={mode}
+      review={review}
       candidateIds={candidateIds}
       initialQuestionIndex={initialQuestionIndex}
       media={{

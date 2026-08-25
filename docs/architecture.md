@@ -44,14 +44,44 @@ characters and extension components also live in separate modules so the
 component studio cannot pull the full extension curriculum into its client
 chunk.
 
+The generator also emits the extension learning overlay. The strict content
+validator and runtime tests both require every one of the 430 records to expose
+all six skill dimensions; metadata that cannot be reached through
+`getPracticeSteps` fails verification.
+
 Generated modules carry a “do not edit” header. Change the source or generator,
 regenerate, then run the full verification suite.
 
 ## Learning state and delivery
 
-The server's D1 profile is authoritative. `useStudyProfile` uses localStorage as
-an immediate offline cache, then replaces it with the server value. Writes are
-debounced and retried when connectivity returns.
+Profile v5 keeps permanent route achievements separate from sparse per-character
+memory. Each touched dimension stores status, due time, interval, lapse count,
+correct streak, independent streak, and the latest independent evidence. The
+server's D1 profile is authoritative. `useStudyProfile` uses localStorage as an
+immediate offline cache, reconciles disjoint achievements and latest evidence
+with the server response, serializes writes through one queue, and retries when
+connectivity returns. The API returns the stored merged profile so the client
+does not claim synchronization while still displaying an older snapshot.
+Mutable preferences use per-field timestamps, while D1 profile writes use a
+revision compare-and-swap loop; two devices racing from the same base are
+re-read and merged instead of silently overwriting disjoint evidence. Each
+browser page realm has an in-memory answer-counter actor, so even a duplicated
+tab cannot inherit and increment the same CRDT counter. Answer history is deterministically split
+across eight `profile_answer_shards` rows; `study_profiles` stores the v5 base
+with `answers: {}`. GET reconstructs both and PUT also absorbs legacy answers
+still present in the base row. Every base or shard row is held below 1.8 MB,
+leaving headroom under D1's 2,000,000-byte row limit, while the reconstructed
+request may be at most 8 MB. The capacity fixture covers all current 430
+characters, 5,537 generated answers, six memory dimensions, and four actors.
+
+The review scheduler is deterministic and receives the attempt timestamp as an
+injected clock. A confirmed error is due in five minutes; independent successes
+advance through 1, 3, 7, 14, and 30 days. Slow correct responses are capped at
+one day, and diagnosed errors schedule both the observed and target dimensions
+before switching to a different corrective activity. Prompted answers and
+unverified handwriting self-checks cannot create stable mastery. Daily planning persists
+introduced/reviewed ids so its 10-old/5-new allowance cannot refill while a
+session is in progress.
 
 Answer, skip, and read events use client-generated UUIDs. The browser outbox
 persists events before delivery, removes only the acknowledged UUID, and is safe
@@ -69,7 +99,10 @@ Built-in narration is not uploaded through the user-recording API. The release
 script reads approved files from `release/narration`, writes them directly to
 the versioned R2 namespace, and never copies them into the application static
 directory. The Worker serves that namespace with immutable caching and byte
-range support; a missing formal v3 object fails closed.
+range support; a missing formal v3 object fails closed. If a curriculum word is
+corrected after an audio release, that record's old audio is withheld and the
+current reviewed text uses browser speech until replacement audio passes the
+normal human-listening release gate.
 
 ## Production invariants
 
@@ -87,5 +120,6 @@ semantics, request isolation, and routing behavior.
 
 Publishing must use the Sites project described by `.openai/hosting.json`, with
 the `DB` D1 binding and `MEDIA` R2 binding. Database migrations live under
-`drizzle/`; approved narration is uploaded with `npm run preseed:narration` and
+`drizzle/`, including learning-event evidence columns and profile revisions;
+approved narration is uploaded with `npm run preseed:narration` and
 verified after deployment with `npm run warm:narration -- <site-url>`.
