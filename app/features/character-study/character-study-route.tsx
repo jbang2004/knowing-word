@@ -52,6 +52,9 @@ export default function CharacterStudyRoute({
           : [...previous.favorites, character.id],
       ))}
       onStart={() => router.push(withReturnTo(`${characterPath}/quizzes`, returnDestination))}
+      onAdventure={character.id === "g5v1-l01-c02-u5acc"
+        ? () => router.push("/adventure/xian")
+        : undefined}
       onReadAloud={() => router.push(withReturnTo(`/read-aloud?lessonId=${encodeURIComponent(character.lessonId)}`, returnPath))}
       onComponent={(glyph) => {
         const componentId = componentIds[glyph];

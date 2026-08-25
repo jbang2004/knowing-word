@@ -31,7 +31,7 @@ export async function POST(request: Request) {
         payload.characterId || null,
         payload.questionId || null,
         payload.action === "answer"
-          ? (payload.correct ? 1 : 0)
+          ? (payload.correct === null ? null : payload.correct ? 1 : 0)
           : payload.action === "read" && payload.readingAccuracy
             ? (payload.readingAccuracy === "accurate" ? 1 : 0)
             : null,

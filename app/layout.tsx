@@ -9,6 +9,7 @@ import "./home-path.css";
 import "./utility-pages.css";
 import "./lesson-reader.css";
 import "./solid-blocks.css";
+import "./adventure.css";
 
 export function generateMetadata(): Metadata {
   const origin = new URL("https://knowing-word.jbang2004.chatgpt.site");
