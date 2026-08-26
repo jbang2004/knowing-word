@@ -320,6 +320,30 @@ export function expectedAnswerIds(
   return question.options.filter((option) => option.correct).map((option) => option.id);
 }
 
+export function updatePracticeSelection(
+  question: Exercise,
+  character: CharacterItem,
+  track: TrackId,
+  previous: string[],
+  optionId: string,
+) {
+  const expected = expectedAnswerIds(question, character, track);
+  if (expected.length <= 1) return [optionId];
+
+  if (track === "split" && question.kind === "components") {
+    // A component may appear more than once in the written form (for example,
+    // 幽 = 幺 + 幺 + 山). The option tray contains one reusable component,
+    // so its selection capacity must match its multiplicity in the answer.
+    const allowedCopies = Math.max(1, expected.filter((id) => id === optionId).length);
+    const selectedCopies = previous.filter((id) => id === optionId).length;
+    return selectedCopies < allowedCopies ? [...previous, optionId] : previous;
+  }
+
+  return previous.includes(optionId)
+    ? previous.filter((id) => id !== optionId)
+    : [...previous, optionId];
+}
+
 export function isPracticeAnswerCorrect(
   question: Exercise,
   character: CharacterItem,

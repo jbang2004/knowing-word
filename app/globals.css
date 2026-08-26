@@ -1396,7 +1396,7 @@ canvas:focus-visible {
   box-shadow: 0 4px 0 var(--action-deep);
 }
 
-.challenge-locked h2,
+.challenge-locked h1,
 .challenge-locked p { margin: 0; }
 .challenge-locked p { max-width: 440px; color: var(--ink-soft); line-height: 1.7; }
 
@@ -1408,7 +1408,7 @@ canvas:focus-visible {
   display: inline-flex;
 }
 
-.challenge-question h2 {
+.challenge-question h1 {
   margin: 11px 0 0;
   color: var(--navy);
 }

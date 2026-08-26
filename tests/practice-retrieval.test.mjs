@@ -5,6 +5,7 @@ import {
   isPracticeAnswerCorrect,
   practiceCueLevel,
   stableOptionOrder,
+  updatePracticeSelection,
   writingAssessmentErrorTags,
   writingRetrievalText,
 } from "../app/domain/practice.ts";
@@ -75,6 +76,32 @@ test("guided copying and concealed recall remain two different writing tasks", (
   assert.equal(guided.concealTarget, false);
   assert.equal(recall.concealTarget, true);
   assert.ok(guided.cueLevel > recall.cueLevel);
+});
+
+test("split assembly can reuse a component when the written form repeats it", () => {
+  const repeatedCharacter = {
+    ...character,
+    hanzi: "幽",
+    parts: [
+      { char: "幺", radical: true },
+      { char: "幺", radical: true },
+      { char: "山", radical: false },
+    ],
+  };
+  const repeatedQuestion = {
+    ...writeQuestion,
+    kind: "components",
+    options: [
+      { id: "silk", text: "幺", correct: true, radical: true, idcCode: "" },
+      { id: "mountain", text: "山", correct: true, radical: false, idcCode: "" },
+      { id: "wood", text: "木", correct: false, radical: false, idcCode: "" },
+    ],
+  };
+  let selected = updatePracticeSelection(repeatedQuestion, repeatedCharacter, "split", [], "silk");
+  selected = updatePracticeSelection(repeatedQuestion, repeatedCharacter, "split", selected, "silk");
+  selected = updatePracticeSelection(repeatedQuestion, repeatedCharacter, "split", selected, "mountain");
+  assert.deepEqual(selected, ["silk", "silk", "mountain"]);
+  assert.equal(isPracticeAnswerCorrect(repeatedQuestion, repeatedCharacter, "split", selected, false), true);
 });
 
 test("ink is never treated as a correct handwriting answer without explicit self-assessment", () => {

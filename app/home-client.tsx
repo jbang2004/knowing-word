@@ -113,6 +113,7 @@ export default function HomeLanding() {
   return (
     <LearningPageShell active="home" name={profile.name}>
       <div className="path-home">
+        <h1 className="sr-only">五年级上册汉字学习地图</h1>
         <div className="path-workspace">
           <aside className="path-rail">
             <header className="path-status">

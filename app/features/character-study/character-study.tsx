@@ -803,7 +803,7 @@ export function CharacterStudy({
 
         <div>
           <div className="study-identity">
-            <span className="study-glyph">{character.hanzi}</span>
+            <h1 className="study-glyph">{character.hanzi}</h1>
             <div>
               <span className="study-reading">
                 <b>{character.pinyin}</b>

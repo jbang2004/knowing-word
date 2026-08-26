@@ -5,7 +5,6 @@ import { useRouter } from "next/navigation";
 import { useEffect, useMemo, useRef, useState, type Dispatch, type SetStateAction } from "react";
 import type { CharacterItem } from "../../data/catalog-types";
 import {
-  expectedAnswerIds,
   getPracticeCandidates,
   getPracticeSteps,
   getTrackExercises,
@@ -17,6 +16,7 @@ import {
   selectDueReviewSteps,
   selectRemediationStep,
   stableOptionOrder,
+  updatePracticeSelection,
   writingAssessmentErrorTags,
   type PracticeMode,
   type PracticeStep,
@@ -77,14 +77,14 @@ export default function PracticeSessionRoute({
 }) {
   const { profile, setProfile, hydrated } = useStudyProfile();
   if (!hydrated) {
-    return <main className="challenge-page challenge-centered" aria-busy="true"><section className="challenge-board"><h2>正在恢复学习进度…</h2></section></main>;
+    return <main className="challenge-page challenge-centered" aria-busy="true"><section className="challenge-board"><h1>正在恢复学习进度…</h1></section></main>;
   }
   if (track !== "words" && !profile.completed.words.includes(character.id)) {
     return (
       <main className="challenge-page challenge-centered">
         <section className="challenge-board challenge-locked">
           <span aria-hidden="true">字</span>
-          <h2>先认识“{character.hanzi}”</h2>
+          <h1>先认识“{character.hanzi}”</h1>
           <p>完成这个字的单字过关后，结构、拆字和红蓝专项才会开放。</p>
           <Link
             className="game-button primary"
@@ -227,14 +227,13 @@ function HydratedPracticeSession({
 
   function chooseOption(optionId: string) {
     if (!currentQuestion || result !== null) return;
-    const multiple = expectedAnswerIds(currentQuestion, character, currentTrack).length > 1;
-    if (!multiple) {
-      setSelectedOptions([optionId]);
-      return;
-    }
-    setSelectedOptions((previous) => previous.includes(optionId)
-      ? previous.filter((id) => id !== optionId)
-      : [...previous, optionId]);
+    setSelectedOptions((previous) => updatePracticeSelection(
+      currentQuestion,
+      character,
+      currentTrack,
+      previous,
+      optionId,
+    ));
   }
 
   function nextStep() {
@@ -624,7 +623,7 @@ function HydratedPracticeSession({
       <main className="challenge-page challenge-centered">
         <section className="challenge-board challenge-locked">
           <span aria-hidden="true">✓</span>
-          <h2>今天的到期复习完成了</h2>
+          <h1>今天的到期复习完成了</h1>
           <p>旧字已经按计划独立回想，可以安心开始今天的新字。</p>
           <Link className="game-button primary" href="/">返回学习首页</Link>
         </section>
@@ -639,9 +638,9 @@ function HydratedPracticeSession({
         <main className="challenge-page challenge-centered">
           <section className="challenge-board challenge-locked">
             <span aria-hidden="true">{nextDueReview ? "复" : "✓"}</span>
-            <h2>{unmatched
+            <h1>{unmatched
               ? "这个字暂无可用的到期复习题"
-              : "这个字今天不需要再复习"}</h2>
+              : "这个字今天不需要再复习"}</h1>
             <p>{nextDueReview
               ? "复习队列已经更新，继续下一个到期的旧字。"
               : unmatched
@@ -666,7 +665,7 @@ function HydratedPracticeSession({
     }
     return (
       <main className="challenge-page challenge-centered">
-        <section className="challenge-board"><h2>这个字暂时没有可用练习</h2></section>
+        <section className="challenge-board"><h1>这个字暂时没有可用练习</h1></section>
       </main>
     );
   }
@@ -716,7 +715,9 @@ function HydratedPracticeSession({
             : returnTo ?? routeForTrack(track, character.lessonId),
         )}
         onChoose={chooseOption}
-        onRemove={(id) => result === null && setSelectedOptions((items) => items.filter((item) => item !== id))}
+        onRemove={(_id, index) => result === null && setSelectedOptions((items) =>
+          items.filter((_, itemIndex) => itemIndex !== index)
+        )}
         onWrite={() => setWrote(true)}
         onClearWrite={() => setWrote(false)}
         onAssessWriting={assessWriting}

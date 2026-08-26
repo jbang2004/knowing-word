@@ -472,8 +472,8 @@ html[data-theme="night"] .reader-genre-reflection {
 
 .reader-focus-glyph {
   display: inline-grid;
-  min-width: 1.38em;
-  min-height: 1.38em;
+  min-width: 24px;
+  min-height: 24px;
   place-items: center;
   margin-inline: .04em;
   border-radius: 7px 7px 7px 3px;
@@ -529,7 +529,10 @@ html[data-theme="night"] .reader-genre-reflection {
 
 .reader-target {
   position: relative;
-  display: inline;
+  display: inline-grid;
+  min-width: 24px;
+  min-height: 28px;
+  place-items: center;
   margin-inline: .02em;
   border-bottom: 1.5px solid var(--coral);
   border-radius: 4px 4px 2px 2px;

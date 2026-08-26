@@ -166,7 +166,7 @@ export function ChallengeRoom({
   orderedOptions: Exercise["options"];
   onBack: () => void;
   onChoose: (id: string) => void;
-  onRemove: (id: string) => void;
+  onRemove: (id: string, index: number) => void;
   onWrite: () => void;
   onClearWrite: () => void;
   onAssessWriting: (assessment: WritingSelfAssessment) => void;
@@ -198,7 +198,7 @@ export function ChallengeRoom({
   const writingText = writingRetrievalText(question, character, !concealWritingTarget);
 
   return (
-    <div className={"challenge-page challenge-centered track-" + meta.tone}>
+    <main className={"challenge-page challenge-centered track-" + meta.tone}>
       <header className="challenge-bar">
         <button className="challenge-close" onClick={onBack} aria-label="退出练习">
           <ArrowLeft aria-hidden="true" size={21} />
@@ -232,7 +232,7 @@ export function ChallengeRoom({
       <section className="challenge-board">
         <div className="challenge-question">
           <span className="question-tag">{questionTypeLabel(question, track)}</span>
-          <h2>{writingText.prompt}</h2>
+          <h1>{writingText.prompt}</h1>
           {concealWritingTarget && (
             <p className="multi-hint">
               读音：<b>{character.pinyin}</b> · 词语线索：<b>{writingText.wordCue}</b>
@@ -358,7 +358,7 @@ export function ChallengeRoom({
           </button>
         </div>
       )}
-    </div>
+    </main>
   );
 }
 
@@ -440,6 +440,7 @@ function ChoiceExercise({
             className={"choice-card " + state}
             key={option.id}
             onClick={() => onChoose(option.id)}
+            aria-label={`选项 ${keyLabels[index] || index + 1}：${visual ? illustration!.alt : optionText(option, character)}`}
             aria-pressed={isSelected}
           >
             <span className="choice-key" aria-hidden="true">{keyLabels[index] || index + 1}</span>
@@ -447,7 +448,8 @@ function ChoiceExercise({
               <span className="meaning-illustration">
                 <Image
                   src={illustration!.src}
-                  alt={showVisualCaption ? illustration!.alt : "选项图片"}
+                  alt=""
+                  aria-hidden="true"
                   fill
                   sizes="(max-width: 760px) 82vw, 220px"
                   style={{ objectFit: "contain", objectPosition: "center" }}
@@ -503,7 +505,7 @@ function AssemblyExercise({
   selected: string[];
   result: boolean | null;
   onChoose: (id: string) => void;
-  onRemove: (id: string) => void;
+  onRemove: (id: string, index: number) => void;
 }) {
   const expected = getExpectedIds(question, character, "split");
   const slots = Math.max(expected.length, character.parts.length, 1);
@@ -528,7 +530,7 @@ function AssemblyExercise({
                 className={"assembly-slot " + state}
                 key={index}
                 disabled={!option || result !== null}
-                onClick={() => option && onRemove(option.id)}
+                onClick={() => option && onRemove(option.id, index)}
               >
                 {option ? optionText(option, character) : "？"}
               </button>

@@ -206,12 +206,21 @@ test("dense pages keep progressive and shareable responsive contracts", async ()
     "utf8",
   );
   assert.match(practiceSource, /aria-modal="true"/);
+  assert.match(practiceSource, /<main className=\{"challenge-page challenge-centered track-"/);
+  assert.match(practiceSource, /<h1>\{writingText\.prompt\}<\/h1>/);
+  assert.match(practiceSource, /aria-label=\{`选项 \$\{keyLabels\[index\]/);
+  assert.match(practiceSource, /alt=""\s+aria-hidden="true"/);
   assert.match(practiceSource, /character\.charType\.includes\("形声"\)/);
   assert.match(practiceSource, /补充字形线索/);
   // Dynamic character routes must never inherit the previous character's
   // question index, round results, celebration, drawer or memory state.
   assert.match(practiceRouteSource, /key=\{`\$\{mode\}:\$\{track\}:\$\{review \?\? "regular"\}:\$\{character\.id\}/);
   assert.match(characterRouteSource, /key=\{character\.id\}/);
+  const characterPageSource = await readFile(
+    new URL("../app/features/character-study/character-study.tsx", import.meta.url),
+    "utf8",
+  );
+  assert.match(characterPageSource, /<h1 className="study-glyph">\{character\.hanzi\}<\/h1>/);
   assert.match(practiceRouteSource, /passedQuestionIds/);
   assert.doesNotMatch(practiceRouteSource, /firstIncompleteQuestionIndex/);
 });
