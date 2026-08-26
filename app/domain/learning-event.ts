@@ -19,7 +19,7 @@ export type LearningEvent = {
   lessonId?: string;
   characterId?: string;
   questionId?: string;
-  correct?: boolean | null;
+  correct?: boolean;
   selected?: string[];
   dimension?: SkillDimension;
   cueLevel?: 0 | 1 | 2 | 3;
@@ -86,9 +86,7 @@ export function parseLearningEvent(value: unknown): LearningEvent | null {
     };
   }
   if (!track || !characterId || !questionId) return null;
-  const isUnverifiedSelfCheck = action === "answer" &&
-    raw.correct === null && answerMode === "self-check";
-  if (action === "answer" && typeof raw.correct !== "boolean" && !isUnverifiedSelfCheck) return null;
+  if (action === "answer" && typeof raw.correct !== "boolean") return null;
 
   return {
     eventId,
@@ -98,7 +96,7 @@ export function parseLearningEvent(value: unknown): LearningEvent | null {
     characterId,
     questionId,
     ...(action === "answer" ? {
-      correct: raw.correct as boolean | null,
+      correct: raw.correct as boolean,
       selected: selected ?? [],
       ...(dimension ? { dimension } : {}),
       ...(cueLevel === undefined ? {} : { cueLevel }),

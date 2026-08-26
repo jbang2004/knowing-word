@@ -705,7 +705,6 @@ export function CharacterStudy({
   onStart,
   onComponent,
   onReadAloud,
-  onAdventure,
 }: {
   character: CharacterItem;
   media: CharacterStudyMedia;
@@ -717,7 +716,6 @@ export function CharacterStudy({
   onStart: () => void;
   onComponent: (glyph: string) => void;
   onReadAloud: () => void;
-  onAdventure?: () => void;
 }) {
   // One screen, one thing: the picture and a single primary action. Reference
   // material — component origins, script history, the textbook sentence — lives
@@ -943,15 +941,6 @@ export function CharacterStudy({
 
           <h2>接着可以做</h2>
           <div className="study-drawer-actions">
-            {onAdventure && (
-              <button onClick={onAdventure}>
-                <Sparkles aria-hidden="true" size={21} color="var(--n-correct)" />
-                <span>
-                  <strong>白鹭 · 汉字侦探案</strong>
-                  <small>五幕连续游戏 · 约 6–9 分钟</small>
-                </span>
-              </button>
-            )}
             <button onClick={onStart} disabled={!hasExercises}>
               <MapIcon aria-hidden="true" size={21} color="var(--n-action)" />
               <span>

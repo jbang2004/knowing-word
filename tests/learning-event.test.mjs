@@ -75,23 +75,3 @@ test("workspace identity uses the stable platform user id instead of mutable ema
   assert.equal(identity.email, "learner@example.com");
   assert.equal(identity.cookie, undefined);
 });
-
-test("an unverified self-check is accepted without becoming a correct answer", () => {
-  const event = parseLearningEvent({
-    eventId,
-    action: "answer",
-    track: "words",
-    lessonId: "g5v1-l01",
-    characterId: "g5v1-l01-c02-u5acc",
-    questionId: "g5v1-l01-c02-u5acc-game-v1-writing",
-    correct: null,
-    selected: ["unsure"],
-    dimension: "generation",
-    cueLevel: 3,
-    answerMode: "self-check",
-    latencyMs: 12_000,
-    errorTags: ["writing-unverified"],
-  });
-  assert.equal(event?.correct, null);
-  assert.equal(parseLearningEvent({ ...event, answerMode: "choice" }), null);
-});
