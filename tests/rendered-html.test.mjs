@@ -277,15 +277,18 @@ test("character pages render the complete picture-to-character memory flow", asy
   assert.match(globalCss, /body \{[^}]*min-width: 0;[^}]*overflow-x: clip;/s);
   assert.match(studyCss, /\.study-shell \{[^}]*max-width: 100%;[^}]*overflow-x: clip;/s);
   assert.match(studyCss, /scroll-margin-block:[^;]*safe-area-inset-bottom/);
-  assert.match(studyCss, /@media \(max-width: 899px\) and \(max-height: 820px\)/);
   assert.match(studyCss, /@media \(max-width: 899px\) and \(max-height: 760px\)/);
   assert.match(studyCss, /@media \(max-width: 899px\) and \(max-height: 620px\)/);
-  // The picture is the page's one elastic band: it absorbs the difference so
-  // that 单字过关 stays on the first screen, and it shrinks again while the
-  // narration player is expanded.
-  assert.match(studyCss, /--scene-height: clamp\(/);
-  assert.match(studyCss, /\.study-shell\.is-listening \{[^}]*--scene-height:/s);
-  // Full-bleed with a faded lower edge: no frame, no mat, no side seam.
+  // The column has exactly one elastic member — the picture — so no rule has
+  // to predict how tall the furniture below it is. Guessing a budget is what
+  // previously left a gap under the actions when collapsed and pushed them off
+  // the screen when the narration player opened.
+  assert.match(studyCss, /\.study-body \{[^}]*flex: 1 1 auto;[^}]*flex-direction: column;/s);
+  assert.match(studyCss, /\.study-scene \{[^}]*flex: 1 1 auto;[^}]*aspect-ratio: 1;/s);
+  assert.doesNotMatch(studyCss, /--scene-height/);
+  // Listening lowers the picture's floor rather than assigning it a height.
+  assert.match(studyCss, /\.study-shell\.is-listening \.study-scene \{\s*min-height:/);
+  // No frame, no mat: the box hugs the artwork and its edges fade to paper.
   assert.doesNotMatch(studyCss, /\.study-scene \{[^}]*border-radius:/s);
   assert.match(studyCss, /\.study-transcript-text \{[^}]*min-height: 0;/s);
 });

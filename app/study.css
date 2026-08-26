@@ -17,10 +17,6 @@
 }
 
 .study-shell {
-  /* The only elastic band on the page. Everything below it — the character,
-     the sentence and the four actions — adds up to about 562px, so the picture
-     takes what is left. It never pushes 单字过关 off the first screen. */
-  --scene-height: clamp(180px, min(100vw, 100svh - 562px), 420px);
   position: relative;
   display: flex;
   width: 100%;
@@ -42,10 +38,20 @@
   min-width: 0;
 }
 
+/* The page is a column with exactly one elastic member: the picture.
+ *
+ * Everything else — the character, the sentence, the buttons, the narration
+ * player when it opens — sizes itself, and the picture takes whatever is
+ * left. Nothing has to predict how tall the furniture is, so the actions can
+ * never be pushed off the screen and no gap can open up underneath them. */
 .study-body {
-  width: 100%;
+  display: flex;
   min-width: 0;
+  width: 100%;
   max-width: 100%;
+  min-height: 0;
+  flex: 1 1 auto;
+  flex-direction: column;
 }
 
 .study-body > * {
@@ -117,15 +123,23 @@
  */
 .study-scene {
   position: relative;
+  align-self: center;
+  width: auto;
+  max-width: 100%;
+  min-height: 128px;
+  max-height: min(100vw, 520px);
   margin: 0;
-  transition: height 200ms var(--ease-out);
+  flex: 1 1 auto;
+  /* The artwork is square, so the box follows its height and never leaves a
+     band of empty paper down either side. */
+  aspect-ratio: 1;
 }
 
 .study-scene > .study-scene-art {
   position: relative;
   display: block;
   width: 100%;
-  height: var(--scene-height);
+  height: 100%;
   overflow: hidden;
   /* The illustration's own paper stock. Literal on purpose: it has to match
      the artwork rather than follow the page. */
@@ -144,10 +158,10 @@
   z-index: 2;
   inset: 0;
   background:
-    linear-gradient(180deg, var(--sky), transparent 22px),
-    linear-gradient(0deg, var(--sky), transparent 56px),
-    linear-gradient(90deg, var(--sky), transparent calc((100% - var(--scene-height)) / 2)),
-    linear-gradient(270deg, var(--sky), transparent calc((100% - var(--scene-height)) / 2));
+    linear-gradient(180deg, var(--sky), transparent 18px),
+    linear-gradient(0deg, var(--sky), transparent 26px),
+    linear-gradient(90deg, var(--sky), transparent 18px),
+    linear-gradient(270deg, var(--sky), transparent 18px);
   content: "";
   pointer-events: none;
 }
@@ -183,7 +197,6 @@
    itself as the hero rather than an empty frame. */
 .study-scene.is-glyph {
   display: grid;
-  height: var(--scene-height);
   place-items: center;
   background: var(--paper-soft);
 }
@@ -275,8 +288,8 @@
 /* Launch pad ---------------------------------------------------------- */
 
 .study-spacer {
-  flex-grow: 1;
-  min-height: 8px;
+  flex: 0 0 auto;
+  min-height: 10px;
 }
 
 .study-launch {
@@ -717,8 +730,14 @@
 }
 
 .study-narration-phrase {
+  /* One phrase at a time once audio is playing. Before it starts the whole
+     transcript stands in, so cap it at five whole lines rather than letting
+     it push the controls off the screen. */
   min-height: 3.2em;
+  max-height: calc(1.6em * 5);
   margin: 14px 0 13px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
   color: var(--ink);
   font-family: var(--kai);
   font-size: clamp(1.15rem, 3vw, 1.45rem);
@@ -939,7 +958,11 @@
 /* Listening is a layout state, not a magnified overlay. On a short phone the
    artwork yields height, secondary metadata condenses, and the player keeps a
    real row in normal flow. Text and touch targets retain their readable size. */
-@media (max-width: 899px) and (max-height: 820px) {
+/* While the narration is open the page's job is the player, so the header
+ * compresses on every phone rather than only on short ones — an 820px cutoff
+ * meant a device one pixel taller kept the full header and pushed the actions
+ * off the screen. */
+@media (max-width: 899px) {
   .study-shell.is-listening {
     min-height: 100dvh;
   }
@@ -949,8 +972,8 @@
     padding-bottom: 2px;
   }
 
-  .study-shell.is-listening {
-    --scene-height: clamp(150px, calc(100dvh - 430px), 300px);
+  .study-shell.is-listening .study-scene {
+    min-height: 104px;
   }
 
   .study-shell.is-listening .study-scene-caption {
@@ -1086,6 +1109,7 @@
 
   .study-narration-phrase {
     min-height: 2.8em;
+    max-height: calc(1.4em * 4);
     margin: 8px 0;
     font-size: 1.08rem;
     line-height: 1.4;
@@ -1129,8 +1153,8 @@
     padding-bottom: 0;
   }
 
-  .study-shell.is-listening {
-    --scene-height: clamp(112px, calc(100dvh - 340px), 200px);
+  .study-shell.is-listening .study-scene {
+    min-height: 84px;
   }
 
   .study-shell.is-listening .study-scene-caption {
@@ -1164,8 +1188,9 @@
 
   .study-shell.is-listening .study-narration-phrase {
     min-height: 0;
-    overflow: hidden;
+    max-height: none;
     margin: 6px 0;
+    overflow: hidden;
     font-size: 1rem;
     line-height: 1.35;
     text-overflow: ellipsis;
@@ -1180,7 +1205,6 @@
 /* Four-step memory stage ---------------------------------------------- */
 
 .memory-stage {
-  --scene-height: min(100vw, 40svh, 400px);
   position: relative;
   display: flex;
   min-height: 100vh;
@@ -1258,7 +1282,14 @@
 
 .memory-stage-scene {
   position: relative;
+  align-self: center;
+  width: auto;
+  max-width: 100%;
+  min-height: 150px;
+  max-height: min(100vw, 520px);
   margin: 0;
+  flex: 1 1 auto;
+  aspect-ratio: 1;
 }
 
 /* The spotlight and its vignette are absolutely positioned against this box,
@@ -1266,10 +1297,8 @@
 .memory-stage-art {
   position: relative;
   display: block;
-  width: var(--scene-height);
-  max-width: 100%;
-  height: var(--scene-height);
-  margin: 0 auto;
+  width: 100%;
+  height: 100%;
   overflow: hidden;
   border-radius: 22px;
   background: #f7f1e4;
@@ -1581,7 +1610,17 @@
     gap: 40px;
   }
 
-  .study-scene { margin: 0; }
+  .study-scene {
+    align-self: start;
+    width: 100%;
+    max-height: none;
+    margin: 0;
+  }
+
+  .memory-stage-scene {
+    align-self: center;
+    width: min(760px, calc(100% - 64px));
+  }
 
   .study-identity { padding: 0; }
   .study-meaning { margin: 14px 0 0; }
