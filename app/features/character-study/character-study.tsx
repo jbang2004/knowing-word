@@ -6,6 +6,7 @@ import {
   ArrowRight,
   BookOpenText,
   CheckCircle2,
+  ChevronRight,
   CircleStop,
   Map as MapIcon,
   Mic2,
@@ -839,21 +840,16 @@ export function CharacterStudy({
             />
 
             {visual && (
-              <button className="study-next-steps" onClick={() => {
+              <button className="study-action is-wide" onClick={() => {
                 setNarrationActive(false);
                 setView("memory");
               }}>
-                <small>接着是</small>
-                <div>
-                  {mnemonicStageLabels.map((label, index) => (
-                    <span
-                      className={index === 1 ? "is-radical" : index === 2 ? "is-part" : ""}
-                      key={label}
-                    >
-                      {label}
-                    </span>
-                  ))}
-                </div>
+                <Sparkles aria-hidden="true" size={20} />
+                <span>
+                  <strong>物象四步</strong>
+                  <small>{mnemonicStageLabels.join(" · ")}</small>
+                </span>
+                <ChevronRight aria-hidden="true" size={19} />
               </button>
             )}
 
@@ -875,8 +871,8 @@ export function CharacterStudy({
             </div>
 
             <button className="study-drawer-handle" onClick={() => setDrawerOpen(true)}>
-              <ArrowLeft aria-hidden="true" size={18} style={{ transform: "rotate(90deg)" }} />
               部件来历、字形演变与语境
+              <ChevronRight aria-hidden="true" size={17} />
             </button>
           </div>
         </div>

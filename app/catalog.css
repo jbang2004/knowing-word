@@ -185,10 +185,8 @@
   grid-template-columns: auto minmax(0, 1fr) auto auto;
   align-items: center;
   gap: 19px;
-  margin-top: 30px;
-  padding: 24px 28px;
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
+  margin-top: 16px;
+  padding: 18px;
 }
 
 .practice-read-aloud {
@@ -210,12 +208,13 @@
 
 .practice-sequence-note > span {
   display: grid;
-  width: 47px;
-  height: 47px;
+  width: 44px;
+  height: 44px;
   place-items: center;
-  border-radius: 50%;
-  color: var(--wrong-text);
-  background: var(--navy);
+  border-radius: 14px 14px 14px 5px;
+  color: var(--wrong-ink);
+  background: var(--wrong);
+  box-shadow: 0 3px 0 var(--wrong-deep);
 }
 
 .practice-sequence-note > span svg {
@@ -232,8 +231,9 @@
 
 .practice-sequence-note ol {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 6px;
+  gap: 4px 6px;
   margin: 0;
   padding: 0;
   color: var(--ink-soft);
@@ -242,9 +242,15 @@
   list-style: none;
 }
 
+.practice-sequence-note li {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+
 .practice-sequence-note li:not(:last-child)::after {
-  margin-left: 6px;
-  color: var(--radical-text);
+  color: var(--ink-faint);
   content: "→";
 }
 
@@ -466,7 +472,7 @@
 
   .practice-sequence-note {
     grid-template-columns: auto minmax(0, 1fr);
-    padding: 21px 0;
+    padding: 23px;
   }
 
   .practice-sequence-note ol {

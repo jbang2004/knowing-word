@@ -5,29 +5,22 @@
  *
  * This page used to run its own near-black palette under private names, which
  * meant the night theme could not reach it and the four role colours could not
- * either. It now uses the shared tokens like every other page — with one
- * exception. The artwork is a light ink painting on cream paper: put it on
- * cream and it dissolves into the page. So the *picture* keeps a dark ground
- * and the *page* keeps the app's paper — the illustration is matted, the way a
- * print is matted, instead of the whole room being painted black.
+ * either. It now uses the shared tokens like every other page, and the artwork
+ * runs full-bleed with its lower edge faded into the paper — no frame, no mat,
+ * nothing between the picture and the page.
  */
 
 .study-shell,
 .memory-stage {
-  --mat: #16211e;
-  --mat-2: #22302c;
-  --mat-edge: #0b120f;
-  --mat-ink: #f4f0e6;
-}
-
-html[data-theme="night"] .study-shell,
-html[data-theme="night"] .memory-stage {
-  --mat: #0d1412;
-  --mat-2: #18211e;
-  --mat-edge: #050908;
+  /* Only the caption chip still sits on the picture rather than the page. */
+  --on-art: #f4f0e6;
 }
 
 .study-shell {
+  /* The only elastic band on the page. Everything below it — the character,
+     the sentence and the four actions — adds up to about 562px, so the picture
+     takes what is left. It never pushes 单字过关 off the first screen. */
+  --scene-height: clamp(180px, min(100vw, 100svh - 562px), 420px);
   position: relative;
   display: flex;
   width: 100%;
@@ -115,44 +108,66 @@ html[data-theme="night"] .memory-stage {
 
 /* The scene ----------------------------------------------------------- */
 
+/* The picture is not an object on the page; it is the top of the page.
+ *
+ * It runs edge to edge so there is no frame and no side seam, and its lower
+ * edge dissolves into the paper — the illustration's own cream ground is
+ * within a few points of the app's, so once the rectangle is gone there is
+ * nothing left to read as a border.
+ */
 .study-scene {
   position: relative;
-  margin-block: 0;
-  margin: 6px 20px 0;
-  padding: 13px;
-  border-radius: 28px;
-  background: var(--mat);
-  box-shadow: 0 5px 0 var(--mat-edge);
-  transition: width 200ms var(--ease-out), margin 200ms var(--ease-out), border-radius 200ms var(--ease-out);
+  margin: 0;
+  transition: height 200ms var(--ease-out);
 }
 
 .study-scene > .study-scene-art {
   position: relative;
   display: block;
   width: 100%;
-  aspect-ratio: 1;
+  height: var(--scene-height);
   overflow: hidden;
-  border-radius: 17px;
   /* The illustration's own paper stock. Literal on purpose: it has to match
-     the artwork in both themes, so it does not follow the page. */
+     the artwork rather than follow the page. */
   background: #f7f1e4;
+}
+
+/* Every edge of the band dissolves into the page.
+ *
+ * The side fades run exactly across the empty margin either side of the
+ * picture — (band width − picture width) / 2 — so they vanish to nothing when
+ * the picture fills the width, and never eat into the artwork. In daylight
+ * this is invisible (cream fading into cream); at night it is what keeps a
+ * cream picture from sitting on the dark page as a lit rectangle. */
+.study-scene::after {
+  position: absolute;
+  z-index: 2;
+  inset: 0;
+  background:
+    linear-gradient(180deg, var(--sky), transparent 22px),
+    linear-gradient(0deg, var(--sky), transparent 56px),
+    linear-gradient(90deg, var(--sky), transparent calc((100% - var(--scene-height)) / 2)),
+    linear-gradient(270deg, var(--sky), transparent calc((100% - var(--scene-height)) / 2));
+  content: "";
+  pointer-events: none;
 }
 
 .study-scene img {
   object-fit: contain;
-  object-position: center;
+  object-position: center 46%;
 }
 
 .study-scene-caption {
   position: absolute;
-  right: 12px;
-  bottom: 12px;
+  z-index: 3;
+  right: 16px;
+  bottom: 14px;
   display: flex;
   align-items: center;
   gap: 6px;
   padding: 6px 11px;
   border-radius: 999px;
-  color: var(--mat-ink);
+  color: var(--on-art);
   font-size: 0.72rem;
   font-weight: 700;
   background: rgba(15, 22, 20, 0.66);
@@ -168,16 +183,15 @@ html[data-theme="night"] .memory-stage {
    itself as the hero rather than an empty frame. */
 .study-scene.is-glyph {
   display: grid;
-  aspect-ratio: 1;
+  height: var(--scene-height);
   place-items: center;
-  background: var(--mat-2);
-  box-shadow: 0 5px 0 var(--mat-edge);
+  background: var(--paper-soft);
 }
 
 .study-scene.is-glyph strong {
-  color: var(--mat-ink);
+  color: var(--navy);
   font-family: var(--kai);
-  font-size: clamp(8rem, 42vw, 11rem);
+  font-size: clamp(7rem, 34vw, 9rem);
   font-weight: 500;
   line-height: 1;
 }
@@ -188,7 +202,7 @@ html[data-theme="night"] .memory-stage {
   display: flex;
   align-items: flex-end;
   gap: 16px;
-  padding: 22px 20px 0;
+  padding: 10px 20px 0;
 }
 
 .study-glyph {
@@ -262,7 +276,7 @@ html[data-theme="night"] .memory-stage {
 
 .study-spacer {
   flex-grow: 1;
-  min-height: 20px;
+  min-height: 8px;
 }
 
 .study-launch {
@@ -325,70 +339,26 @@ html[data-theme="night"] .memory-stage {
 .study-equalizer b:nth-child(4) { height: 20px; }
 .study-equalizer b:nth-child(5) { height: 7px; }
 
-.study-next-steps {
-  display: flex;
-  width: 100%;
-  align-items: center;
-  gap: 8px;
-  margin-top: 16px;
-  min-height: 44px;
-  padding: 7px 0;
-  color: inherit;
-  text-align: left;
-  background: transparent;
-}
-
-.study-next-steps > small {
-  color: var(--ink-faint);
-  font-size: 0.72rem;
-  white-space: nowrap;
-}
-
-.study-next-steps div {
-  display: flex;
-  min-width: 0;
-  max-width: 100%;
-  gap: 6px;
-  flex-grow: 1;
-  overflow-x: auto;
-  overscroll-behavior-inline: contain;
-  scrollbar-width: none;
-}
-
-.study-next-steps div::-webkit-scrollbar { display: none; }
-
-.study-next-steps span {
-  padding: 4px 8px;
-  border-radius: 7px;
-  color: var(--ink-faint);
-  font-size: 0.72rem;
-  white-space: nowrap;
-  background: var(--paper-soft);
-}
-
-.study-next-steps span.is-radical {
-  color: var(--radical-text);
-  background: var(--radical-soft);
-}
-
-.study-next-steps span.is-part {
-  color: var(--part-text);
-  background: var(--part-soft);
-}
-
+/* Reference material, not an action: a quiet line under the buttons. */
 .study-drawer-handle {
   display: flex;
   width: 100%;
-  flex-direction: column;
   align-items: center;
-  gap: 5px;
-  margin-top: 16px;
-  min-height: 48px;
+  justify-content: center;
+  gap: 4px;
+  min-height: 40px;
+  margin-top: 2px;
   padding: 4px 0;
-  color: var(--ink-faint);
-  font-size: 0.72rem;
+  border: 0;
+  border-radius: 12px;
+  color: var(--ink-soft);
+  font-size: 0.78rem;
+  font-weight: 700;
   background: transparent;
 }
+
+.study-drawer-handle svg { color: var(--ink-faint); }
+.study-drawer-handle:hover { color: var(--navy); }
 
 /* Drawer -------------------------------------------------------------- */
 
@@ -616,17 +586,33 @@ html[data-theme="night"] .memory-stage {
   font-size: 0.72rem;
 }
 
-/* What this page is FOR sits on the page, not at the bottom of a drawer. */
+/* What this page is FOR sits on the page, not at the bottom of a drawer.
+ *
+ * Reading order is the learning order: hear it explained, look at how the
+ * picture is built, then practise. The quiz is the only filled button. */
 .study-actions {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 10px;
-  margin-top: 14px;
+  margin-top: 10px;
 }
+
+.study-action.is-wide {
+  flex-direction: row;
+  align-items: center;
+  gap: 13px;
+  width: 100%;
+  min-height: 62px;
+  margin-top: 10px;
+}
+
+.study-action.is-wide > span { flex-grow: 1; }
+.study-action.is-wide > svg:first-child { flex: 0 0 auto; color: var(--radical-text); }
+.study-action.is-wide > svg:last-child { flex: 0 0 auto; color: var(--ink-faint); }
 
 .study-action {
   display: flex;
-  min-height: 68px;
+  min-height: 64px;
   flex-direction: column;
   align-items: flex-start;
   gap: 7px;
@@ -647,10 +633,12 @@ html[data-theme="night"] .memory-stage {
 
 .study-action.is-primary {
   border-color: var(--action);
-  color: var(--action-ink);
-  background: var(--action);
-  box-shadow: 0 var(--press) 0 var(--action-deep);
+  color: var(--action-text);
+  background: var(--action-soft);
+  box-shadow: 0 var(--press) 0 var(--action-edge);
 }
+
+.study-action.is-primary svg { color: var(--action-text); }
 
 .study-action:disabled {
   border-color: var(--line);
@@ -669,7 +657,7 @@ html[data-theme="night"] .memory-stage {
 
 .study-action strong { font-size: 0.9375rem; font-weight: 800; }
 .study-action small { color: var(--ink-soft); font-size: 0.73rem; }
-.study-action.is-primary small { color: inherit; opacity: 0.76; }
+.study-action.is-primary small { color: var(--action-text); opacity: 0.82; }
 .study-action:disabled small { color: inherit; }
 
 /* In-place narration ------------------------------------------------- */
@@ -961,10 +949,8 @@ html[data-theme="night"] .memory-stage {
     padding-bottom: 2px;
   }
 
-  .study-shell.is-listening .study-scene {
-    width: min(calc(100vw - 40px), clamp(248px, calc(100dvh - 390px), 400px));
-    margin: 0 auto;
-    border-radius: 22px;
+  .study-shell.is-listening {
+    --scene-height: clamp(150px, calc(100dvh - 430px), 300px);
   }
 
   .study-shell.is-listening .study-scene-caption {
@@ -1033,18 +1019,13 @@ html[data-theme="night"] .memory-stage {
     padding: 8px 20px calc(10px + env(safe-area-inset-bottom));
   }
 
-  .study-shell.is-listening .study-next-steps,
+  .study-shell.is-listening .study-action.is-wide,
   .study-shell.is-listening .study-drawer-handle {
     display: none;
   }
 }
 
 @media (max-width: 899px) {
-  .study-scene {
-    width: calc(100% - 40px);
-    max-width: calc(100% - 40px);
-  }
-
   .study-identity,
   .study-meaning,
   .study-launch {
@@ -1063,6 +1044,41 @@ html[data-theme="night"] .memory-stage {
    whitespace. The viewport-following logic still handles any remaining
    overflow, so this is an enhancement rather than a second layout mode. */
 @media (max-width: 899px) and (max-height: 760px) {
+  /* On a short phone the picture has already hit its floor, so the remaining
+     room comes out of the furniture around it — never out of the sentence. */
+  .study-glyph {
+    font-size: 3.6rem;
+  }
+
+  .study-identity {
+    gap: 12px;
+    padding-top: 4px;
+  }
+
+  .study-meaning {
+    margin-top: 10px;
+    font-size: 0.92rem;
+    line-height: 1.7;
+  }
+
+  .study-action {
+    min-height: 58px;
+    padding: 10px 14px;
+  }
+
+  .study-action.is-wide {
+    min-height: 56px;
+    margin-top: 8px;
+  }
+
+  .study-actions {
+    margin-top: 8px;
+  }
+
+  .study-listen-button {
+    min-height: 54px;
+  }
+
   .study-narration-player {
     padding: 12px 14px;
     border-radius: 20px;
@@ -1113,9 +1129,8 @@ html[data-theme="night"] .memory-stage {
     padding-bottom: 0;
   }
 
-  .study-shell.is-listening .study-scene {
-    width: min(calc(100vw - 40px), clamp(180px, calc(100dvh - 300px), 248px));
-    border-radius: 18px;
+  .study-shell.is-listening {
+    --scene-height: clamp(112px, calc(100dvh - 340px), 200px);
   }
 
   .study-shell.is-listening .study-scene-caption {
@@ -1165,6 +1180,7 @@ html[data-theme="night"] .memory-stage {
 /* Four-step memory stage ---------------------------------------------- */
 
 .memory-stage {
+  --scene-height: min(100vw, 40svh, 400px);
   position: relative;
   display: flex;
   min-height: 100vh;
@@ -1242,12 +1258,7 @@ html[data-theme="night"] .memory-stage {
 
 .memory-stage-scene {
   position: relative;
-  margin-block: 0;
-  margin: 8px 20px 0;
-  padding: 13px;
-  border-radius: 28px;
-  background: var(--mat);
-  box-shadow: 0 5px 0 var(--mat-edge);
+  margin: 0;
 }
 
 /* The spotlight and its vignette are absolutely positioned against this box,
@@ -1255,12 +1266,12 @@ html[data-theme="night"] .memory-stage {
 .memory-stage-art {
   position: relative;
   display: block;
-  width: 100%;
-  aspect-ratio: 1;
+  width: var(--scene-height);
+  max-width: 100%;
+  height: var(--scene-height);
+  margin: 0 auto;
   overflow: hidden;
-  border-radius: 17px;
-  /* The illustration's own paper stock. Literal on purpose: it has to match
-     the artwork in both themes, so it does not follow the page. */
+  border-radius: 22px;
   background: #f7f1e4;
 }
 

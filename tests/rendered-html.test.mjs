@@ -232,10 +232,11 @@ test("character pages render the complete picture-to-character memory flow", asy
   assert.match(html, /画面本身就是字形/);
   assert.match(html, /听字义讲解/);
   assert.match(html, /留在画面边看边听/);
-  assert.match(html, /看意象/);
-  assert.match(html, /找部首/);
-  assert.match(html, /找部件/);
-  assert.match(html, /合成字/);
+  assert.match(html, /物象四步/);
+  assert.match(html, /看意象 · 找部首 · 找部件 · 合成字/);
+  // The quiz is the point of the page, so it renders on the page itself
+  // rather than at the bottom of a drawer.
+  assert.match(html, /class="study-actions"/);
   // Reference material sits in the drawer but still server-renders, so every
   // learning URL stays a complete, shareable page.
   assert.match(html, /部件来历/);
@@ -275,12 +276,17 @@ test("character pages render the complete picture-to-character memory flow", asy
   assert.match(globalCss, /html \{[^}]*overflow-x: clip;/s);
   assert.match(globalCss, /body \{[^}]*min-width: 0;[^}]*overflow-x: clip;/s);
   assert.match(studyCss, /\.study-shell \{[^}]*max-width: 100%;[^}]*overflow-x: clip;/s);
-  assert.match(studyCss, /\.study-next-steps div \{[^}]*overscroll-behavior-inline: contain;/s);
   assert.match(studyCss, /scroll-margin-block:[^;]*safe-area-inset-bottom/);
   assert.match(studyCss, /@media \(max-width: 899px\) and \(max-height: 820px\)/);
   assert.match(studyCss, /@media \(max-width: 899px\) and \(max-height: 760px\)/);
   assert.match(studyCss, /@media \(max-width: 899px\) and \(max-height: 620px\)/);
-  assert.match(studyCss, /\.study-shell\.is-listening \.study-scene/);
+  // The picture is the page's one elastic band: it absorbs the difference so
+  // that 单字过关 stays on the first screen, and it shrinks again while the
+  // narration player is expanded.
+  assert.match(studyCss, /--scene-height: clamp\(/);
+  assert.match(studyCss, /\.study-shell\.is-listening \{[^}]*--scene-height:/s);
+  // Full-bleed with a faded lower edge: no frame, no mat, no side seam.
+  assert.doesNotMatch(studyCss, /\.study-scene \{[^}]*border-radius:/s);
   assert.match(studyCss, /\.study-transcript-text \{[^}]*min-height: 0;/s);
 });
 
