@@ -22,11 +22,12 @@
   width: min(760px, 100%);
   margin: -7px auto 28px;
   padding: 7px;
-  border: 1px solid color-mix(in srgb, var(--line) 82%, transparent);
+  border: 2px solid var(--line);
   border-radius: 20px;
-  background: color-mix(in srgb, var(--paper) 92%, transparent);
-  box-shadow: 0 12px 32px rgba(25, 42, 36, .08);
-  backdrop-filter: blur(20px) saturate(1.2);
+  /* Opaque: at 92% the article scrolled visibly through the strip, and section
+     headings passed behind it half-legible. */
+  background: var(--paper);
+  box-shadow: 0 var(--press) 0 var(--line);
 }
 
 .lesson-view-tabs a {
@@ -528,7 +529,7 @@ html[data-theme="night"] .reader-genre-reflection {
 
 .reader-target {
   position: relative;
-  display: inline-block;
+  display: inline;
   margin-inline: .02em;
   border-bottom: 1.5px solid var(--coral);
   border-radius: 4px 4px 2px 2px;
@@ -923,6 +924,12 @@ html[data-theme="night"] .reader-genre-reflection {
     width: min(310px, calc(100% - 32px));
   }
 
+  /* The index floats over the article at every scroll position, so the last
+     screenful of every guide has to end above it rather than under it. */
+  .lesson-reader-body {
+    padding-bottom: calc(152px + env(safe-area-inset-bottom));
+  }
+
   .reader-mobile-index summary {
     display: flex;
     width: fit-content;
@@ -1104,7 +1111,9 @@ html[data-theme="night"] .reader-genre-reflection {
   }
 
   .lesson-reader-body {
-    padding: 31px 28px 9px;
+    /* The floating index and the tab bar both sit over the article, so the
+       last screenful has to end above them rather than under them. */
+    padding: 31px 28px calc(152px + env(safe-area-inset-bottom));
   }
 
   .lesson-guide-intro {
@@ -1258,4 +1267,11 @@ html[data-theme="night"] .reader-genre-reflection {
     border: 0;
     box-shadow: none;
   }
+}
+
+/* Anything the sticky tab strip can cover keeps its own landing room. */
+.reader-section,
+.reader-section > h2,
+.lesson-guide-intro {
+  scroll-margin-top: 84px;
 }

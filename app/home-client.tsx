@@ -181,6 +181,28 @@ export default function HomeLanding() {
 
                 // A finished chapter collapses to one row of small seals: the
                 // route stays scannable instead of replaying every learned字.
+                // A chapter that is still locked says nothing that ten identical
+                // grey seals say better in one row.
+                if (segmentIndex > currentSegmentIndex) {
+                  return (
+                    <li className="path-segment is-collapsed" key={segment.key}>
+                      <div
+                        className="path-chapter-done is-locked"
+                        aria-label={`章${chapterNumeral(segmentIndex)} ${phase.title}，${segment.characters.length} 个字尚未解锁`}
+                      >
+                        <span className="path-chapter-seals" aria-hidden="true">
+                          {segment.characters.slice(0, 4).map((node) => <i key={node.key}>{node.hanzi}</i>)}
+                        </span>
+                        <span>
+                          <strong>章{chapterNumeral(segmentIndex)} · {phase.title}</strong>
+                          <small>{segment.characters.length} 个字 · {phase.copy}</small>
+                        </span>
+                        <LockKeyhole aria-hidden="true" size={17} />
+                      </div>
+                    </li>
+                  );
+                }
+
                 if (chapterDone && isPast) {
                   return (
                     <li className="path-segment is-collapsed" key={segment.key}>
@@ -207,12 +229,18 @@ export default function HomeLanding() {
                     <p className="path-chapter-rule"><span>章{chapterNumeral(segmentIndex)} · {phase.title}</span></p>
                     <ol className="path-segment-steps">
                       {segment.characters.map((node, nodeIndex) => (
-                        <li className={`path-node is-${node.state}`} key={node.key}>
+                        <li
+                          className={`path-node is-${node.state}`}
+                          key={node.key}
+                          style={{
+                            "--path-offset": `${nodeOffset(nodeIndex)}px`,
+                            ...nodeLink(nodeIndex),
+                          } as unknown as CSSProperties}
+                        >
                           <button
                             className="path-seal"
                             onClick={() => navigate(node.href)}
                             disabled={node.state === "locked"}
-                            style={{ "--path-offset": `${nodeOffset(nodeIndex)}px` } as CSSProperties}
                             aria-label={`${node.hanzi}${node.state === "done" ? "，首次学习已完成" : node.state === "current" ? "，从这里继续" : "，完成前一步后解锁"}`}
                           >
                             {node.hanzi}
@@ -288,7 +316,7 @@ function GateNode({
   const meta = trackMeta[gate.track];
   const complete = gate.total > 0 && gate.completed >= gate.total;
   return (
-    <div className={`path-gate${complete ? " is-complete" : ""}`}>
+    <div className={`path-gate tone-${meta.tone}${complete ? " is-complete" : ""}`}>
       <button disabled={!available} onClick={() => navigate(href)}>
         <span className="path-gate-glyph" aria-hidden="true">{meta.glyph}</span>
         <span>
@@ -308,6 +336,20 @@ const PATH_OFFSETS = [0, 52, 72, 52, 0, -52, -72, -52];
 
 function nodeOffset(index: number) {
   return PATH_OFFSETS[index % PATH_OFFSETS.length];
+}
+
+/* A route needs a route. Seals are 74px on a 20px gap, so consecutive centres
+   sit 94px apart vertically and up to 52px apart horizontally; the connector
+   is that hypotenuse, drawn behind the seals so it reads as one path. */
+const NODE_PITCH = 94;
+
+function nodeLink(index: number): Record<string, string> {
+  if (index === 0) return {};
+  const dx = nodeOffset(index) - nodeOffset(index - 1);
+  return {
+    "--link-len": `${Math.round(Math.hypot(dx, NODE_PITCH))}px`,
+    "--link-tilt": `${(Math.atan2(-dx, NODE_PITCH) * 180 / Math.PI).toFixed(2)}deg`,
+  };
 }
 
 function currentStreak(daily: StudyProfile["daily"]) {

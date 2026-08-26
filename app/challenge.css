@@ -487,3 +487,38 @@
   font-weight: 900;
   background: var(--part-soft);
 }
+
+/* Structure questions ---------------------------------------------------
+ *
+ * The question is "how do the parts stand", so the diagram is the answer and
+ * the words are only its name. It was 43px next to 19px type; now it leads.
+ */
+.choice-grid.is-structure {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.choice-grid.is-structure .choice-card {
+  min-height: 112px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 12px;
+}
+
+.choice-grid.is-structure .structure-shape {
+  width: 54px;
+  height: 54px;
+  gap: 4px;
+  padding: 5px;
+  border-radius: 13px;
+}
+
+.choice-grid.is-structure .choice-card strong {
+  font-size: 0.9375rem;
+  font-weight: 800;
+}
+
+.choice-grid.is-structure .choice-card small {
+  display: none;
+}

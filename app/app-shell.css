@@ -237,15 +237,13 @@
 
 .page-heading h1 {
   margin: 0;
-  overflow: hidden;
   color: var(--navy);
   font-family: var(--sans);
   font-size: 1.5rem;
   font-weight: 900;
   letter-spacing: 0;
-  line-height: 1.2;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  line-height: 1.25;
+  text-wrap: balance;
 }
 
 .page-heading .kicker {
@@ -345,8 +343,6 @@
 
   .page-heading h1 {
     font-size: 2rem;
-    overflow: visible;
-    white-space: normal;
   }
 
   .page-heading > div > p:last-child {

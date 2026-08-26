@@ -49,13 +49,23 @@ export function AccountRoute() {
           title="这是属于你的学习空间"
           copy={syncState === "synced" ? "学习进度已经安全同步，换设备后也能从上次的位置继续。" : "当前处于离线模式，恢复网络后会自动同步。"}
         />
-        <section className="account-identity-card">
-          <div><span>{identity?.mode === "workspace" ? "已登录账户" : "本设备学习身份"}</span><strong>{identity?.email ?? identity?.displayName ?? "小探险家"}</strong></div>
-          <i className={syncState === "synced" ? "is-synced" : ""}>{syncState === "synced" ? "● 已同步" : "○ 离线"}</i>
-        </section>
+        {/* An anonymous device has no account to show, and repeating the same
+            name above the field that sets it made the page look like it asked
+            twice. The signed-in case still needs its own row. */}
+        {identity?.mode === "workspace" && (
+          <section className="account-identity-card">
+            <div><span>已登录账户</span><strong>{identity.email ?? identity.displayName}</strong></div>
+            <i className={syncState === "synced" ? "is-synced" : ""}>{syncState === "synced" ? "● 已同步" : "○ 离线"}</i>
+          </section>
+        )}
         <section className="profile-card">
           <div className="profile-avatar">{profile.name ? profile.name.slice(0, 1) : "学"}</div>
           <div>
+            {identity?.mode !== "workspace" && (
+              <i className={`profile-sync${syncState === "synced" ? " is-synced" : ""}`}>
+                {syncState === "synced" ? "● 学习记录已同步" : "○ 离线，联网后自动同步"}
+              </i>
+            )}
             <label>学习小名<input value={profile.name} onChange={(event) => setProfile((value) => withPreferenceUpdate(value, "name", event.target.value))} placeholder="给自己取一个名字" maxLength={18} /></label>
             <label>孩子年级
               <select value={profile.grade} onChange={(event) => setProfile((value) => withPreferenceUpdate(value, "grade", Number(event.target.value)))}>
@@ -208,7 +218,7 @@ export function ReadAloudRoute({
   }
 
   return (
-    <LearningPageShell active="course" name={profile.name}>
+    <LearningPageShell active="practice" name={profile.name}>
       <div className="page read-page">
         <PageHeading density="utility" kicker="日日朗读" title="先听一遍，再把句子读出来" copy={`已完成 ${totalReadSessions(profile.daily)} 次朗读练习。登录状态下，录音可跨设备回听。`} backHref={returnTo} />
         <div className="read-lesson-picker">

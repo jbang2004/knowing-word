@@ -150,7 +150,9 @@ export default function ComponentRoute({
                       key={component.id}
                       onClick={() => selectComponent(component)}
                     >
-                      <strong>{component.glyph}</strong><span>{component.title}</span><small>课内 {component.characterSet.length || component.examples.length} 次</small>
+                      <strong>{component.glyph}</strong>
+                      {component.title !== component.glyph && <span>{component.title}</span>}
+                      <small>课内 {component.characterSet.length || component.examples.length} 次</small>
                     </button>
                   ))}
                 </div>

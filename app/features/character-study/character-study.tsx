@@ -507,13 +507,10 @@ function MemoryStage({
     [activePartIndices, lastStage, regions, stage],
   );
 
-  const accent = stage === 1 ? "var(--n-radical)" : stage === 2 ? "var(--n-part)" : "var(--n-action)";
-  const glow =
-    stage === 1
-      ? "rgba(255, 122, 82, 0.13)"
-      : stage === 2
-        ? "rgba(95, 180, 220, 0.13)"
-        : "rgba(53, 194, 149, 0.11)";
+  const accent = stage === 1 ? "var(--radical)" : stage === 2 ? "var(--part)" : "var(--action)";
+  const accentText = stage === 1
+    ? "var(--radical-text)"
+    : stage === 2 ? "var(--part-text)" : "var(--action-text)";
 
   function go(next: number) {
     setStage(Math.min(lastStage, Math.max(0, next)) as MnemonicStage);
@@ -536,7 +533,7 @@ function MemoryStage({
   return (
     <div
       className="memory-stage"
-      style={{ ["--stage-accent" as string]: accent, ["--stage-glow" as string]: glow }}
+      style={{ ["--stage-accent" as string]: accent, ["--stage-accent-text" as string]: accentText }}
       onPointerDown={onPointerDown}
       onPointerUp={onPointerUp}
       onKeyDown={(event) => {
@@ -587,8 +584,8 @@ function MemoryStage({
           </div>
 
           <div className="memory-stage-legend" aria-hidden="true">
-            <span><i style={{ background: "var(--n-radical)" }} />表意部首</span>
-            <span><i style={{ background: "var(--n-part)" }} />形音部件</span>
+            <span><i style={{ background: "var(--radical)" }} />表意部首</span>
+            <span><i style={{ background: "var(--part)" }} />形音部件</span>
             <span>{character.decomposition}</span>
           </div>
 
@@ -608,8 +605,7 @@ function MemoryStage({
                   style={{ objectFit: "contain", objectPosition: "center" }}
                 />
               )}
-            </span>
-            {focus && (
+              {focus && (
               <>
                 <span
                   className="memory-stage-spot"
@@ -636,7 +632,8 @@ function MemoryStage({
                   }}
                 />
               </>
-            )}
+              )}
+            </span>
           </figure>
 
           <div className="memory-stage-copy">
@@ -860,9 +857,26 @@ export function CharacterStudy({
               </button>
             )}
 
+            <div className="study-actions">
+              <button className="study-action is-primary" onClick={onStart} disabled={!hasExercises}>
+                <MapIcon aria-hidden="true" size={20} />
+                <span>
+                  <strong>{hasExercises ? (isComplete ? "再练一轮" : "单字过关") : "练习暂未开放"}</strong>
+                  <small>{hasExercises ? `${completedQuestions} / ${exercises.length} 题` : "拓展字稍后开放"}</small>
+                </span>
+              </button>
+              <button className="study-action" onClick={onReadAloud}>
+                <Mic2 aria-hidden="true" size={20} />
+                <span>
+                  <strong>朗读录音</strong>
+                  <small>读一遍本课词语</small>
+                </span>
+              </button>
+            </div>
+
             <button className="study-drawer-handle" onClick={() => setDrawerOpen(true)}>
               <ArrowLeft aria-hidden="true" size={18} style={{ transform: "rotate(90deg)" }} />
-              上滑查看部件、语境与书写
+              部件来历、字形演变与语境
             </button>
           </div>
         </div>
@@ -939,23 +953,6 @@ export function CharacterStudy({
             <small>原创学习摘要 · 本课词语「{character.word}」</small>
           </div>
 
-          <h2>接着可以做</h2>
-          <div className="study-drawer-actions">
-            <button onClick={onStart} disabled={!hasExercises}>
-              <MapIcon aria-hidden="true" size={21} color="var(--n-action)" />
-              <span>
-                <strong>{hasExercises ? (isComplete ? "再练一轮" : "单字过关") : "练习暂未开放"}</strong>
-                <small>{hasExercises ? `${completedQuestions} / ${exercises.length} 题` : "拓展字稍后开放"}</small>
-              </span>
-            </button>
-            <button onClick={onReadAloud}>
-              <Mic2 aria-hidden="true" size={21} color="var(--n-warn)" />
-              <span>
-                <strong>朗读录音</strong>
-                <small>读一遍本课词语</small>
-              </span>
-            </button>
-          </div>
         </section>
     </main>
   );

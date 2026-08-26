@@ -17,7 +17,7 @@
 import { createHash } from "node:crypto";
 import { mkdir, readFile, readdir, stat, writeFile } from "node:fs/promises";
 import { join, resolve } from "node:path";
-import { spawn } from "node:child_process";
+import { execFile, spawn } from "node:child_process";
 
 const projectRoot = resolve(import.meta.dirname, "..");
 const dataDir = join(projectRoot, "app/data");
@@ -39,7 +39,11 @@ const EXTRA_CHARS = [
 function isTeachingGlyph(codePoint) {
   return (
     (codePoint >= 0x3400 && codePoint <= 0x9fff) ||
-    (codePoint >= 0xf900 && codePoint <= 0xfaff)
+    (codePoint >= 0xf900 && codePoint <= 0xfaff) ||
+    // Plane 2. Ten teaching components in the course live in extension B and
+    // above (𠃜 𡗗 𡱒 𢀖 𢦏 𣎆 𥫗 𦐇 𧴪 …); without this they subset out and
+    // every component card, 红蓝 option and etymology line renders them blank.
+    (codePoint >= 0x20000 && codePoint <= 0x2ebef)
   );
 }
 
@@ -55,6 +59,26 @@ async function collectCharacters() {
     }
   }
   return [...glyphs].sort().join("");
+}
+
+/** Characters we asked for that the source font cannot actually draw. */
+async function uncoveredCharacters(characters) {
+  const probe = join(cacheDir, "coverage.txt");
+  await writeFile(probe, characters);
+  const script = [
+    "import sys",
+    "from fontTools.ttLib import TTFont",
+    "cmap = TTFont(sys.argv[1], fontNumber=0, lazy=True).getBestCmap()",
+    "text = open(sys.argv[2], encoding='utf8').read()",
+    "print(''.join(sorted({c for c in text if ord(c) not in cmap})))",
+  ].join("\n");
+  const found = await new Promise((resolvePromise) => {
+    execFile("python3", ["-c", script, sourceFont, probe], (error, stdout) => {
+      // fontTools is only needed for this report; pyftsubset already ran.
+      resolvePromise(error ? "" : stdout.trim());
+    });
+  });
+  return [...found];
 }
 
 async function download(url, destination) {
@@ -113,6 +137,17 @@ async function main() {
     await stat(license);
   } catch {
     await download(licenseUrl, license);
+  }
+
+  // A character the upstream face does not carry subsets out silently and then
+  // renders as nothing at all — an empty component title, an empty pair of
+  // quotation marks mid-sentence. Name them here rather than in the UI.
+  const missing = await uncoveredCharacters(characters);
+  if (missing.length) {
+    console.warn(
+      `warning: ${missing.length} teaching character(s) have no glyph in LXGW WenKai and will render blank: ` +
+        missing.map((char) => `${char} (U+${char.codePointAt(0).toString(16).toUpperCase()})`).join(", "),
+    );
   }
 
   const bytes = await readFile(output);

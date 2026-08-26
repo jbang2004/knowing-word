@@ -459,10 +459,18 @@ canvas:focus-visible {
 }
 
 .route-copy p {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px 12px;
   margin: 6px 0 0;
   color: var(--ink-soft);
   font-size: 0.8125rem;
   line-height: 1.5;
+}
+
+/* Each count wraps as a whole, so a line never ends on a lone 「字」. */
+.route-copy p > span {
+  white-space: nowrap;
 }
 
 .route-arrow {
@@ -521,7 +529,9 @@ canvas:focus-visible {
 .lesson-scene-banner::after {
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, rgba(17, 38, 73, 0.76), rgba(17, 38, 73, 0.08) 65%, transparent);
+  background:
+    linear-gradient(0deg, rgba(17, 38, 73, 0.86) 4%, rgba(17, 38, 73, 0.34) 42%, transparent 68%),
+    linear-gradient(90deg, rgba(17, 38, 73, 0.5), transparent 62%);
   content: "";
 }
 
@@ -566,7 +576,7 @@ canvas:focus-visible {
   padding: 22px 24px;
   border: 1px solid var(--line);
   border-radius: 22px;
-  background: linear-gradient(135deg, color-mix(in srgb, var(--paper) 91%, #dcecff), var(--paper));
+  background: var(--paper);
   box-shadow: var(--shadow-xs);
 }
 
@@ -646,25 +656,34 @@ canvas:focus-visible {
   padding: 27px;
   border: 1px solid var(--line);
   border-radius: 25px;
-  background:
-    radial-gradient(circle at 94% 5%, rgba(129, 91, 232, 0.09), transparent 16rem),
-    var(--paper);
+  background: var(--paper);
   box-shadow: var(--shadow-xs);
 }
 
 .word-map-board.extension-board {
   margin-top: 17px;
   border-style: dashed;
-  background:
-    radial-gradient(circle at 94% 5%, rgba(45, 154, 120, 0.11), transparent 16rem),
-    var(--paper);
+  background: var(--paper);
 }
 
 .board-title {
   display: flex;
+  flex-wrap: wrap;
   align-items: baseline;
-  gap: 14px;
+  gap: 4px 14px;
   margin-bottom: 24px;
+}
+
+/* On a phone the two-column split gave the serif title about 140px and broke
+   it 4+4. Let the description drop to its own line instead. */
+.board-title span {
+  flex: 1 1 100%;
+}
+
+@media (min-width: 620px) {
+  .board-title span {
+    flex: 0 0 auto;
+  }
 }
 
 .board-title span {
@@ -795,20 +814,19 @@ canvas:focus-visible {
   margin-top: 17px;
   padding: 23px 25px;
   border-radius: 22px;
-  color: #fff;
-  background:
-    radial-gradient(circle at 91% 5%, rgba(242, 181, 63, 0.6), transparent 12rem),
-    linear-gradient(125deg, #1a3566, #315999);
-  box-shadow: var(--shadow);
+  color: var(--part-ink);
+  background: var(--part);
+  box-shadow: 0 5px 0 var(--part-deep);
 }
 
 .lesson-practice-strip .kicker {
-  color: #b8d3ff;
+  color: inherit;
+  opacity: 0.78;
 }
 
 .lesson-practice-strip h2 {
   margin: 0;
-  color: #fff;
+  color: inherit;
   font-family: var(--serif);
   font-size: 1.38rem;
   letter-spacing: -0.04em;
@@ -1059,15 +1077,13 @@ canvas:focus-visible {
   display: grid;
   grid-template-columns: 105px minmax(0, 1fr) auto;
   align-items: center;
-  gap: 22px;
-  padding: 24px 27px;
+  gap: 18px;
+  padding: 18px 20px;
   overflow: hidden;
   border-radius: 25px;
   color: var(--track-ink);
-  background:
-    radial-gradient(circle at 94% 0%, rgba(255, 255, 255, 0.21), transparent 14rem),
-    linear-gradient(125deg, var(--track), color-mix(in srgb, var(--track) 66%, var(--navy)));
-  box-shadow: var(--shadow);
+  background: var(--track);
+  box-shadow: 0 5px 0 var(--track-deep, var(--radical-deep));
 }
 
 /* A track's colour now names its role rather than a decorative hue, and each
@@ -1131,14 +1147,14 @@ canvas:focus-visible {
 
 .track-symbol {
   display: grid;
-  width: 86px;
-  height: 86px;
+  width: 62px;
+  height: 62px;
   place-items: center;
   border: 1px solid rgba(255, 255, 255, 0.38);
-  border-radius: 25px;
+  border-radius: 20px;
   color: var(--track-ink, var(--radical-ink));
   font-family: var(--kai);
-  font-size: 3.25rem;
+  font-size: 2.25rem;
   font-weight: 900;
   background: rgba(255, 255, 255, 0.15);
 }
@@ -1153,7 +1169,7 @@ canvas:focus-visible {
 .track-hero h2 {
   margin: 0;
   font-family: var(--serif);
-  font-size: 2rem;
+  font-size: 1.6rem;
   letter-spacing: -0.05em;
 }
 
@@ -1899,7 +1915,6 @@ canvas:focus-visible {
   font-family: var(--kai);
   font-size: 3.4rem;
   background: linear-gradient(135deg, var(--violet), var(--lapis));
-  box-shadow: 0 12px 20px rgba(79, 90, 190, 0.22);
 }
 
 .component-story h2 {
@@ -1997,6 +2012,8 @@ canvas:focus-visible {
   max-width: 840px;
 }
 
+/* Three numbers, but only one of them is an achievement. 已完成 is a thing the
+   learner did; 累计作答 and 答对次数 are counters. They should not look alike. */
 .record-stat-row > div {
   display: flex;
   flex-direction: column;
@@ -2004,20 +2021,26 @@ canvas:focus-visible {
   gap: 4px;
   flex-grow: 1;
   padding: 14px 8px;
-  border: 2px solid var(--action-edge);
+  border: 2px solid var(--line);
   border-radius: 20px;
+  background: var(--paper);
+  box-shadow: 0 var(--press) 0 var(--line);
+}
+
+.record-stat-row > div:first-child {
+  border-color: var(--action-edge);
   background: var(--action-soft);
   box-shadow: 0 var(--press) 0 var(--action-edge);
 }
 
 .record-stat-row strong {
-  color: var(--action-text);
+  color: var(--ink-soft);
   font-family: var(--round);
   font-weight: 900;
   font-variant-numeric: tabular-nums;
 }
 
-.record-stat-row > div:nth-child(1) strong {
+.record-stat-row > div:first-child strong {
   color: var(--action-text);
 }
 
@@ -2032,10 +2055,13 @@ canvas:focus-visible {
 .record-stat-row strong {
   display: block;
   margin: 7px 0 2px;
-  color: var(--navy);
   font-family: var(--serif);
-  font-size: 2.5rem;
+  font-size: 1.75rem;
   line-height: 1;
+}
+
+.record-stat-row > div:first-child strong {
+  font-size: 2.5rem;
 }
 
 .record-tabs {
@@ -2231,7 +2257,6 @@ canvas:focus-visible {
   font-size: 3.2rem;
   font-weight: 900;
   background: var(--track);
-  box-shadow: 0 11px 20px color-mix(in srgb, var(--track) 24%, transparent);
 }
 
 .record-detail-summary p {
@@ -2384,8 +2409,8 @@ canvas:focus-visible {
 }
 
 .sentence-list article.is-speaking {
-  border-color: var(--violet);
-  background: var(--violet-soft);
+  border-color: var(--action);
+  background: var(--action-soft);
 }
 
 .sentence-list p {
@@ -2401,12 +2426,28 @@ canvas:focus-visible {
   align-items: center;
   gap: 6px;
   flex: 0 0 auto;
-  padding: 7px 10px;
-  border-radius: 9px;
-  color: var(--part-text);
+  min-height: 44px;
+  padding: 9px 15px;
+  border: 2px solid var(--line);
+  border-radius: 14px;
+  color: var(--navy);
   font-size: 0.8125rem;
   font-weight: 820;
-  background: var(--violet-soft);
+  background: var(--paper);
+  box-shadow: 0 3px 0 var(--line);
+  transition: transform 90ms ease, box-shadow 90ms ease;
+}
+
+.sentence-list button:active {
+  transform: translateY(3px);
+  box-shadow: none;
+}
+
+.sentence-list article.is-speaking button {
+  border-color: var(--action-edge);
+  color: var(--action-text);
+  background: var(--action-soft);
+  box-shadow: 0 3px 0 var(--action-edge);
 }
 
 .sentence-list button svg {
@@ -2511,16 +2552,14 @@ canvas:focus-visible {
 
 .profile-avatar {
   display: grid;
-  width: 85px;
-  height: 85px;
+  width: 72px;
+  height: 72px;
   place-items: center;
-  border-radius: 27px;
-  color: #fff;
+  color: var(--radical-ink);
   font-family: var(--kai);
-  font-size: 3.4rem;
-  font-weight: 900;
-  background: linear-gradient(135deg, var(--lapis), var(--violet));
-  box-shadow: 0 13px 22px rgba(67, 117, 232, 0.23);
+  font-size: 2.75rem;
+  font-weight: 500;
+  background: var(--radical);
 }
 
 .profile-card label {
@@ -3051,10 +3090,6 @@ canvas:focus-visible {
     width: min(100% - 22px, 600px);
   }
 
-  .word-groups {
-    grid-template-columns: 1fr;
-  }
-
   .lesson-scene-banner {
     height: 220px;
   }
@@ -3193,12 +3228,12 @@ canvas:focus-visible {
 
 .game-button.primary {
   background: var(--action);
-  box-shadow: 0 11px 24px color-mix(in srgb, var(--action) 26%, transparent);
+  box-shadow: 0 var(--press) 0 var(--action-deep);
 }
 
 .game-button.ghost {
   border-color: color-mix(in srgb, var(--line) 90%, var(--ink-soft));
-  background: color-mix(in srgb, var(--paper) 87%, transparent);
+  background: var(--paper);
 }
 
 .text-button,
@@ -3364,16 +3399,8 @@ canvas:focus-visible {
   .lesson-route-card{ transition: none; }
 }
 
-html[data-theme="night"] .profile-avatar {
-  background: linear-gradient(145deg, var(--jade), color-mix(in srgb, var(--saffron) 72%, var(--jade)));
-  box-shadow: 0 13px 28px color-mix(in srgb, var(--jade) 26%, transparent);
-}
-
 html[data-theme="night"] .profile-card {
-  border-color: color-mix(in srgb, var(--jade) 28%, var(--line));
-  background:
-    radial-gradient(circle at 93% 6%, color-mix(in srgb, var(--jade) 14%, transparent), transparent 12rem),
-    var(--paper);
+  border-color: color-mix(in srgb, var(--action) 28%, var(--line));
 }
 
 @media (max-width: 760px) {
@@ -3436,6 +3463,21 @@ html[data-theme="night"] .profile-card {
 .multi-hint b {
   color: var(--track-text, var(--radical-text));
   font-weight: 850;
+}
+
+/* It counts up while the learner taps, so it should look like a readout
+   sitting on the option grid rather than a footnote to the question. */
+.challenge-question .multi-hint {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 12px;
+  padding: 5px 12px;
+  border-radius: 999px;
+  color: var(--ink-soft);
+  font-size: 0.8125rem;
+  font-weight: 800;
+  background: var(--sky-deep);
 }
 
 @media (max-width: 900px) {

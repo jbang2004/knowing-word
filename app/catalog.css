@@ -25,6 +25,16 @@
   color: var(--navy);
   font-family: var(--serif);
   font-size: clamp(1.35rem, 2.5vw, 1.9rem);
+  text-wrap: pretty;
+}
+
+/* 《白鹭》 is one word; it must not break after the opening bracket. */
+.practice-context-band h2 > span {
+  color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  letter-spacing: inherit;
+  white-space: nowrap;
 }
 
 .practice-context-band p {
@@ -426,10 +436,6 @@
     grid-template-columns: 1fr;
   }
 
-  .practice-route-card {
-    min-height: 310px;
-  }
-
   .track-map-layout {
     grid-template-columns: 1fr;
   }
@@ -455,12 +461,7 @@
   }
 
   .practice-route-card {
-    min-height: 295px;
     padding: 23px;
-  }
-
-  .practice-route-card > p {
-    margin-top: 28px;
   }
 
   .practice-sequence-note {
@@ -493,4 +494,20 @@
   .track-map-aside {
     grid-template-columns: 1fr;
   }
+}
+
+/* One primary per page. The band at the top carries the recommendation; the
+   route cards below are a menu the learner browses. */
+.practice-route-card .game-button.primary {
+  border: 2px solid var(--line);
+  color: var(--navy);
+  background: var(--paper);
+  box-shadow: 0 var(--press) 0 var(--line);
+}
+
+.practice-route-card.action .game-button.primary {
+  border-color: var(--action-edge);
+  color: var(--action-text);
+  background: var(--action-soft);
+  box-shadow: 0 var(--press) 0 var(--action-edge);
 }

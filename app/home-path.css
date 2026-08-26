@@ -326,6 +326,19 @@
 
 .path-chapter-done:active { transform: translateY(3px); box-shadow: none; }
 
+.path-chapter-done.is-locked {
+  background: var(--sky-deep);
+  box-shadow: 0 var(--press) 0 var(--line-deep);
+  cursor: default;
+}
+
+.path-chapter-done.is-locked:active { transform: none; box-shadow: 0 var(--press) 0 var(--line-deep); }
+.path-chapter-done.is-locked strong { color: var(--ink-soft); }
+.path-chapter-done.is-locked .path-chapter-seals i {
+  color: var(--disabled-ink);
+  background: var(--line);
+}
+
 .path-chapter-seals { display: flex; flex: 0 0 auto; gap: 4px; }
 
 .path-chapter-seals i {
@@ -356,14 +369,42 @@
 /* Seal nodes --------------------------------------------------------- */
 
 .path-node {
+  position: relative;
   display: flex;
   align-items: flex-end;
   justify-content: center;
   gap: 6px;
 }
 
+/* The trail. It runs centre to centre and passes behind the seals, so the
+   route reads as one continuous path rather than a column of tilted blocks. */
+.path-node::before {
+  position: absolute;
+  z-index: 0;
+  bottom: 50%;
+  left: calc(50% + var(--path-offset, 0px));
+  width: 7px;
+  height: var(--link-len, 0px);
+  border-radius: 999px;
+  background: var(--line);
+  transform: translateX(-50%) rotate(var(--link-tilt, 0deg));
+  transform-origin: bottom center;
+  content: "";
+}
+
+/* The stretch already walked is the accent; the rest is unmade road. */
+.path-node.is-done::before,
+.path-node.is-current::before {
+  background: var(--action-edge);
+}
+
+.path-seal {
+  z-index: 1;
+}
+
 .path-seal {
   position: relative;
+  z-index: 1;
   display: grid;
   width: 74px;
   height: 74px;
@@ -519,6 +560,18 @@
   font-size: 1.375rem;
   background: var(--part);
   box-shadow: 0 3px 0 var(--part-deep);
+}
+
+.path-gate.tone-radical .path-gate-glyph {
+  color: var(--radical-ink);
+  background: var(--radical);
+  box-shadow: 0 3px 0 var(--radical-deep);
+}
+
+.path-gate.tone-wrong .path-gate-glyph {
+  color: var(--wrong-ink);
+  background: var(--wrong);
+  box-shadow: 0 3px 0 var(--wrong-deep);
 }
 
 .path-gate.is-complete .path-gate-glyph {

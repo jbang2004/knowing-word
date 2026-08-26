@@ -1,28 +1,30 @@
-/* Single-character study — the immersive layer.
+/* Single-character study.
  *
- * The old page stacked seven equal-weight cards and pushed the 物象图 about
- * 1200px below the fold, behind a duplicated glyph, four meta chips and the
- * narration block. Here the picture is the screen, one primary action starts
- * the narration, and every reference module moves into a pull-up drawer.
+ * The picture is the screen, one primary action starts the narration, and the
+ * reference modules live in a pull-up drawer.
  *
- * The ground is near-black on purpose: the artwork is a light ink painting on
- * cream paper, so a dark page makes it read as a lit scroll rather than a
- * thumbnail on a beige wall.
+ * This page used to run its own near-black palette under private names, which
+ * meant the night theme could not reach it and the four role colours could not
+ * either. It now uses the shared tokens like every other page — with one
+ * exception. The artwork is a light ink painting on cream paper: put it on
+ * cream and it dissolves into the page. So the *picture* keeps a dark ground
+ * and the *page* keeps the app's paper — the illustration is matted, the way a
+ * print is matted, instead of the whole room being painted black.
  */
 
 .study-shell,
 .memory-stage {
-  --night: #0f1614;
-  --night-2: #16211e;
-  --night-3: #1d2b27;
-  --night-line: rgba(242, 238, 228, 0.12);
-  --n-ink: #f4f0e6;
-  --n-ink-2: rgba(244, 240, 230, 0.72);
-  --n-ink-3: rgba(244, 240, 230, 0.55);
-  --n-action: #35c295;
-  --n-radical: #ff7a52;
-  --n-part: #5fb4dc;
-  --n-warn: #e9b04a;
+  --mat: #16211e;
+  --mat-2: #22302c;
+  --mat-edge: #0b120f;
+  --mat-ink: #f4f0e6;
+}
+
+html[data-theme="night"] .study-shell,
+html[data-theme="night"] .memory-stage {
+  --mat: #0d1412;
+  --mat-2: #18211e;
+  --mat-edge: #050908;
 }
 
 .study-shell {
@@ -36,23 +38,9 @@
   flex-direction: column;
   overflow-x: hidden;
   overflow-x: clip;
-  color: var(--n-ink);
-  background: var(--night);
+  color: var(--ink);
+  background: var(--sky);
   font-family: var(--sans);
-}
-
-.study-shell::before {
-  position: absolute;
-  z-index: 0;
-  top: -120px;
-  left: 50%;
-  width: 560px;
-  height: 560px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(255, 238, 205, 0.12), transparent 68%);
-  transform: translateX(-50%);
-  content: "";
-  pointer-events: none;
 }
 
 .study-shell > * {
@@ -90,12 +78,12 @@
   justify-content: center;
   padding: 0;
   border-radius: 999px;
-  color: var(--n-ink);
+  color: var(--ink);
   background: transparent;
 }
 
 .study-topbar button:hover {
-  background: rgba(244, 240, 230, 0.08);
+  background: var(--paper-soft);
 }
 
 .study-topbar .study-breadcrumb {
@@ -103,7 +91,7 @@
   align-items: center;
   gap: 7px;
   min-width: 0;
-  color: var(--n-ink-2);
+  color: var(--ink-soft);
   font-size: 0.81rem;
 }
 
@@ -118,11 +106,11 @@
   height: 3px;
   flex: 0 0 auto;
   border-radius: 50%;
-  background: var(--n-ink-3);
+  background: var(--ink-faint);
 }
 
 .study-topbar .favorite-star.is-active {
-  color: var(--n-warn);
+  color: var(--wrong);
 }
 
 /* The scene ----------------------------------------------------------- */
@@ -130,11 +118,11 @@
 .study-scene {
   position: relative;
   margin-block: 0;
-  overflow: hidden;
-  margin: 4px 20px 0;
-  border-radius: 26px;
-  background: #f7f1e4;
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(244, 240, 230, 0.08);
+  margin: 6px 20px 0;
+  padding: 13px;
+  border-radius: 28px;
+  background: var(--mat);
+  box-shadow: 0 5px 0 var(--mat-edge);
   transition: width 200ms var(--ease-out), margin 200ms var(--ease-out), border-radius 200ms var(--ease-out);
 }
 
@@ -143,6 +131,11 @@
   display: block;
   width: 100%;
   aspect-ratio: 1;
+  overflow: hidden;
+  border-radius: 17px;
+  /* The illustration's own paper stock. Literal on purpose: it has to match
+     the artwork in both themes, so it does not follow the page. */
+  background: #f7f1e4;
 }
 
 .study-scene img {
@@ -159,10 +152,10 @@
   gap: 6px;
   padding: 6px 11px;
   border-radius: 999px;
-  color: rgba(244, 240, 230, 0.92);
+  color: var(--mat-ink);
   font-size: 0.72rem;
   font-weight: 700;
-  background: rgba(15, 22, 20, 0.62);
+  background: rgba(15, 22, 20, 0.66);
   backdrop-filter: blur(10px);
 }
 
@@ -177,12 +170,12 @@
   display: grid;
   aspect-ratio: 1;
   place-items: center;
-  background: linear-gradient(160deg, #1d2b27, #16211e);
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.4), inset 0 0 0 1px rgba(244, 240, 230, 0.1);
+  background: var(--mat-2);
+  box-shadow: 0 5px 0 var(--mat-edge);
 }
 
 .study-scene.is-glyph strong {
-  color: var(--n-ink);
+  color: var(--mat-ink);
   font-family: var(--kai);
   font-size: clamp(8rem, 42vw, 11rem);
   font-weight: 500;
@@ -199,7 +192,7 @@
 }
 
 .study-glyph {
-  color: var(--n-ink);
+  color: var(--navy);
   font-family: var(--kai);
   font-size: 4.75rem;
   font-weight: 500;
@@ -220,7 +213,7 @@
 }
 
 .study-reading b {
-  color: var(--n-action);
+  color: var(--action-text);
   font-size: 1.38rem;
   font-weight: 600;
 }
@@ -233,8 +226,8 @@
   justify-content: center;
   padding: 0;
   border-radius: 999px;
-  color: var(--n-action);
-  background: rgba(53, 194, 149, 0.14);
+  color: var(--action-text);
+  background: var(--action-soft);
 }
 
 .study-tags {
@@ -246,20 +239,20 @@
 .study-tags span {
   padding: 4px 9px;
   border-radius: 8px;
-  color: var(--n-ink-2);
+  color: var(--ink-soft);
   font-size: 0.72rem;
   font-weight: 600;
-  background: rgba(244, 240, 230, 0.08);
+  background: var(--paper-soft);
 }
 
 .study-tags span.is-role {
-  color: var(--n-action);
-  background: rgba(53, 194, 149, 0.14);
+  color: var(--action-text);
+  background: var(--action-soft);
 }
 
 .study-meaning {
   margin: 14px 20px 0;
-  color: var(--n-ink-2);
+  color: var(--ink-soft);
   font-size: 0.94rem;
   line-height: 1.72;
   text-wrap: pretty;
@@ -284,10 +277,10 @@
   gap: 14px;
   padding: 0 18px;
   border-radius: 20px;
-  color: var(--night);
+  color: var(--action-ink);
   text-align: left;
-  background: var(--n-action);
-  box-shadow: 0 10px 28px rgba(53, 194, 149, 0.34);
+  background: var(--action);
+  box-shadow: 0 var(--press) 0 var(--action-deep);
   transition: transform 160ms var(--ease-out);
 }
 
@@ -346,7 +339,7 @@
 }
 
 .study-next-steps > small {
-  color: var(--n-ink-3);
+  color: var(--ink-faint);
   font-size: 0.72rem;
   white-space: nowrap;
 }
@@ -367,20 +360,20 @@
 .study-next-steps span {
   padding: 4px 8px;
   border-radius: 7px;
-  color: var(--n-ink-3);
+  color: var(--ink-faint);
   font-size: 0.72rem;
   white-space: nowrap;
-  background: rgba(244, 240, 230, 0.07);
+  background: var(--paper-soft);
 }
 
 .study-next-steps span.is-radical {
-  color: var(--n-radical);
-  background: rgba(255, 122, 82, 0.13);
+  color: var(--radical-text);
+  background: var(--radical-soft);
 }
 
 .study-next-steps span.is-part {
-  color: var(--n-part);
-  background: rgba(95, 180, 220, 0.13);
+  color: var(--part-text);
+  background: var(--part-soft);
 }
 
 .study-drawer-handle {
@@ -392,7 +385,7 @@
   margin-top: 16px;
   min-height: 48px;
   padding: 4px 0;
-  color: var(--n-ink-3);
+  color: var(--ink-faint);
   font-size: 0.72rem;
   background: transparent;
 }
@@ -421,9 +414,9 @@
   overflow-y: auto;
   padding: 10px 20px calc(28px + env(safe-area-inset-bottom));
   border-radius: 28px 28px 0 0;
-  color: var(--n-ink);
-  background: var(--night-2);
-  box-shadow: 0 -20px 50px rgba(0, 0, 0, 0.5);
+  color: var(--ink);
+  background: var(--paper);
+  box-shadow: var(--shadow-sheet);
   overscroll-behavior: contain;
 }
 
@@ -437,12 +430,12 @@
   height: 4px;
   margin: 0 auto 6px;
   border-radius: 2px;
-  background: rgba(244, 240, 230, 0.2);
+  background: var(--sky-deep);
 }
 
 .study-drawer h2 {
   margin: 22px 0 12px;
-  color: var(--n-ink-3);
+  color: var(--ink-faint);
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.09em;
@@ -464,20 +457,20 @@
   align-items: center;
   gap: 13px;
   padding: 13px 14px;
-  border: 1px solid rgba(244, 240, 230, 0.1);
+  border: 1px solid var(--line);
   border-radius: 18px;
   color: inherit;
   text-align: left;
-  background: rgba(244, 240, 230, 0.04);
+  background: var(--paper-soft);
 }
 
 .study-part-list button.is-radical {
-  border-color: rgba(255, 122, 82, 0.28);
+  border-color: var(--radical-edge);
   background: rgba(217, 84, 47, 0.1);
 }
 
 .study-part-list button.is-component {
-  border-color: rgba(95, 180, 220, 0.26);
+  border-color: var(--part-edge);
   background: rgba(46, 108, 138, 0.12);
 }
 
@@ -491,16 +484,16 @@
   border-radius: 14px;
   font-family: var(--kai);
   font-size: 1.62rem;
-  background: rgba(244, 240, 230, 0.08);
+  background: var(--paper-soft);
 }
 
 .is-radical .study-part-glyph {
-  color: var(--n-radical);
+  color: var(--radical-text);
   background: rgba(217, 84, 47, 0.22);
 }
 
 .is-component .study-part-glyph {
-  color: var(--n-part);
+  color: var(--part-text);
   background: rgba(46, 108, 138, 0.26);
 }
 
@@ -518,7 +511,7 @@
 }
 
 .study-part-list small {
-  color: var(--n-ink-2);
+  color: var(--ink-soft);
   font-size: 0.75rem;
   line-height: 1.5;
 }
@@ -528,15 +521,15 @@
   align-items: flex-start;
   gap: 12px;
   padding: 15px;
-  border: 1px solid rgba(244, 240, 230, 0.09);
+  border: 1px solid var(--line);
   border-radius: 18px;
-  background: rgba(244, 240, 230, 0.035);
+  background: var(--paper-soft);
 }
 
 .study-note svg {
   flex: 0 0 auto;
   margin-top: 1px;
-  color: var(--n-warn);
+  color: var(--wrong-text);
 }
 
 .study-note div {
@@ -546,13 +539,13 @@
 }
 
 .study-note strong {
-  color: rgba(244, 240, 230, 0.84);
+  color: var(--ink);
   font-size: 0.84rem;
   font-weight: 600;
 }
 
 .study-note small {
-  color: var(--n-ink-2);
+  color: var(--ink-soft);
   font-size: 0.75rem;
   line-height: 1.6;
 }
@@ -583,9 +576,9 @@
   display: block;
   width: 78px;
   height: 78px;
-  border: 1px solid rgba(244, 240, 230, 0.12);
+  border: 1px solid var(--line);
   border-radius: 20px;
-  background: rgba(244, 240, 230, 0.045);
+  background: var(--paper-soft);
 }
 
 .study-script-image img {
@@ -595,21 +588,21 @@
 }
 
 .study-script-line small {
-  color: var(--n-ink-2);
+  color: var(--ink-soft);
   font-size: 0.72rem;
   text-align: center;
 }
 
 .study-quote {
   padding: 16px 16px 16px 18px;
-  border-left: 3px solid rgba(53, 194, 149, 0.5);
+  border-left: 3px solid var(--action);
   border-radius: 4px 18px 18px 4px;
-  background: rgba(53, 194, 149, 0.07);
+  background: var(--action-soft);
 }
 
 .study-quote p {
   margin: 0;
-  color: rgba(244, 240, 230, 0.88);
+  color: var(--ink);
   font-family: var(--kai);
   font-size: 1.06rem;
   line-height: 1.72;
@@ -619,59 +612,79 @@
 .study-quote small {
   display: block;
   margin-top: 9px;
-  color: var(--n-ink-3);
+  color: var(--ink-faint);
   font-size: 0.72rem;
 }
 
-.study-drawer-actions {
+/* What this page is FOR sits on the page, not at the bottom of a drawer. */
+.study-actions {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 10px;
+  margin-top: 14px;
 }
 
-.study-drawer-actions button {
+.study-action {
   display: flex;
+  min-height: 68px;
   flex-direction: column;
   align-items: flex-start;
-  gap: 9px;
-  padding: 15px 14px;
-  border: 1px solid rgba(244, 240, 230, 0.1);
+  gap: 7px;
+  padding: 13px 15px;
+  border: 2px solid var(--line);
   border-radius: 18px;
-  color: inherit;
+  color: var(--ink);
   text-align: left;
-  background: rgba(244, 240, 230, 0.04);
+  background: var(--paper);
+  box-shadow: 0 var(--press) 0 var(--line);
+  transition: transform 90ms ease, box-shadow 90ms ease;
 }
 
-.study-drawer-actions button > span {
+.study-action:not(:disabled):active {
+  transform: translateY(var(--press));
+  box-shadow: none;
+}
+
+.study-action.is-primary {
+  border-color: var(--action);
+  color: var(--action-ink);
+  background: var(--action);
+  box-shadow: 0 var(--press) 0 var(--action-deep);
+}
+
+.study-action:disabled {
+  border-color: var(--line);
+  color: var(--disabled-ink);
+  background: var(--sky-deep);
+  box-shadow: 0 var(--press) 0 var(--line-deep);
+  opacity: 1;
+}
+
+.study-action > span {
   display: flex;
   min-width: 0;
   flex-direction: column;
-  gap: 2px;
+  gap: 1px;
 }
 
-.study-drawer-actions strong {
-  font-size: 0.88rem;
-  font-weight: 700;
-}
-
-.study-drawer-actions small {
-  color: var(--n-ink-2);
-  font-size: 0.73rem;
-}
+.study-action strong { font-size: 0.9375rem; font-weight: 800; }
+.study-action small { color: var(--ink-soft); font-size: 0.73rem; }
+.study-action.is-primary small { color: inherit; opacity: 0.76; }
+.study-action:disabled small { color: inherit; }
 
 /* In-place narration ------------------------------------------------- */
 
 .study-narration-player {
   padding: 16px;
-  border: 1px solid rgba(53, 194, 149, 0.26);
+  border: 2px solid var(--action-edge);
   border-radius: 22px;
-  background: linear-gradient(145deg, rgba(53, 194, 149, 0.12), rgba(244, 240, 230, 0.055));
-  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.22);
+  background: var(--action-soft);
+  box-shadow: 0 var(--press) 0 var(--action-edge);
   scroll-margin-block: 12px calc(16px + env(safe-area-inset-bottom));
 }
 
 .study-narration-player:focus-visible {
-  outline: 2px solid rgba(53, 194, 149, 0.72);
+  outline: 2px solid var(--action);
   outline-offset: 4px;
 }
 
@@ -696,7 +709,7 @@
 
 .study-narration-head small {
   overflow: hidden;
-  color: var(--n-ink-2);
+  color: var(--ink-soft);
   font-size: 0.72rem;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -711,14 +724,14 @@
   justify-content: center;
   padding: 0;
   border-radius: 999px;
-  color: var(--n-ink-2);
-  background: rgba(244, 240, 230, 0.07);
+  color: var(--ink-soft);
+  background: var(--paper-soft);
 }
 
 .study-narration-phrase {
   min-height: 3.2em;
   margin: 14px 0 13px;
-  color: var(--n-ink);
+  color: var(--ink);
   font-family: var(--kai);
   font-size: clamp(1.15rem, 3vw, 1.45rem);
   font-weight: 500;
@@ -730,14 +743,14 @@
   height: 4px;
   overflow: hidden;
   border-radius: 999px;
-  background: rgba(244, 240, 230, 0.13);
+  background: var(--sky-deep);
 }
 
 .study-narration-progress i {
   display: block;
   height: 100%;
   border-radius: inherit;
-  background: var(--n-action);
+  background: var(--action);
   transition: width 120ms linear;
 }
 
@@ -745,7 +758,7 @@
   display: flex;
   justify-content: space-between;
   margin-top: 6px;
-  color: var(--n-ink-3);
+  color: var(--ink-faint);
   font-size: 0.68rem;
   font-variant-numeric: tabular-nums;
 }
@@ -767,8 +780,8 @@
   gap: 4px;
   padding: 6px 3px;
   border-radius: 15px;
-  color: var(--n-ink-2);
-  background: rgba(244, 240, 230, 0.06);
+  color: var(--ink-soft);
+  background: var(--paper-soft);
 }
 
 .study-narration-actions button:disabled {
@@ -784,13 +797,13 @@
 }
 
 .study-narration-actions .is-primary {
-  color: var(--night);
-  background: var(--n-action);
-  box-shadow: 0 7px 20px rgba(53, 194, 149, 0.25);
+  color: var(--action-ink);
+  background: var(--action);
+  box-shadow: 0 3px 0 var(--action-deep);
 }
 
 .study-narration-actions .is-record {
-  color: var(--n-warn);
+  color: var(--wrong-text);
   background: rgba(233, 176, 74, 0.1);
 }
 
@@ -803,10 +816,10 @@
   gap: 7px;
   margin-top: 12px;
   border-radius: 15px;
-  color: var(--night);
+  color: var(--sky);
   font-size: 0.88rem;
   font-weight: 700;
-  background: var(--n-ink);
+  background: var(--navy);
 }
 
 .study-transcript-backdrop {
@@ -833,9 +846,9 @@
   padding: 18px 20px calc(20px + env(safe-area-inset-bottom));
   overflow: hidden;
   border-radius: 26px 26px 0 0;
-  color: #17211e;
-  background: #f7f1e4;
-  box-shadow: 0 -22px 70px rgba(0, 0, 0, 0.42);
+  color: var(--ink);
+  background: var(--paper);
+  box-shadow: var(--shadow-sheet);
   animation: study-transcript-in 220ms var(--ease-out) both;
 }
 
@@ -877,7 +890,7 @@
   justify-content: center;
   padding: 0;
   border-radius: 999px;
-  color: #17211e;
+  color: var(--ink);
   background: rgba(23, 33, 30, 0.07);
 }
 
@@ -914,25 +927,25 @@
 }
 
 .study-transcript-sheet .narration-unit.is-current-phrase .narration-token {
-  color: #17211e;
-  background: rgba(53, 194, 149, 0.11);
+  color: var(--ink);
+  background: var(--action-soft);
 }
 
 .study-transcript-sheet .narration-token.is-active {
   padding: 1px 3px;
-  color: #f7f1e4;
+  color: var(--action-ink);
   font-weight: 700;
-  background: #198466;
-  box-shadow: 0 0 0 3px rgba(25, 132, 102, 0.12);
+  background: var(--action);
+  box-shadow: 0 0 0 3px var(--action-edge);
 }
 
 .study-transcript-close {
   min-height: 48px;
   border-radius: 16px;
-  color: #f7f1e4;
+  color: var(--sky);
   font-size: 0.9rem;
   font-weight: 700;
-  background: #17211e;
+  background: var(--navy);
 }
 
 /* Listening is a layout state, not a magnified overlay. On a short phone the
@@ -1158,8 +1171,8 @@
   min-height: 100dvh;
   flex-direction: column;
   overflow: hidden;
-  color: var(--n-ink);
-  background: var(--night);
+  color: var(--ink);
+  background: var(--sky);
   font-family: var(--sans);
   touch-action: pan-y;
 }
@@ -1172,7 +1185,7 @@
   width: 460px;
   height: 460px;
   border-radius: 50%;
-  background: radial-gradient(circle, var(--stage-glow, rgba(244, 240, 230, 0.08)), transparent 66%);
+  background: radial-gradient(circle, color-mix(in srgb, var(--stage-accent, var(--action)) 12%, transparent), transparent 66%);
   transform: translateX(-50%);
   content: "";
   pointer-events: none;
@@ -1194,12 +1207,12 @@
   height: 3px;
   flex-grow: 1;
   border-radius: 2px;
-  background: rgba(244, 240, 230, 0.16);
+  background: var(--sky-deep);
   transition: background 240ms ease;
 }
 
-.memory-stage-progress i.is-past { background: rgba(244, 240, 230, 0.75); }
-.memory-stage-progress i.is-current { background: var(--stage-accent, var(--n-action)); }
+.memory-stage-progress i.is-past { background: var(--ink-soft); }
+.memory-stage-progress i.is-current { background: var(--stage-accent, var(--action)); }
 
 .memory-stage-bar {
   display: flex;
@@ -1210,7 +1223,7 @@
 }
 
 .memory-stage-bar > span {
-  color: var(--n-ink-2);
+  color: var(--ink-soft);
   font-size: 0.81rem;
   font-weight: 600;
 }
@@ -1223,25 +1236,32 @@
   justify-content: center;
   padding: 0;
   border-radius: 999px;
-  color: var(--n-ink);
+  color: var(--ink);
   background: transparent;
 }
 
 .memory-stage-scene {
   position: relative;
   margin-block: 0;
-  overflow: hidden;
   margin: 8px 20px 0;
-  border-radius: 26px;
-  background: #f7f1e4;
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
+  padding: 13px;
+  border-radius: 28px;
+  background: var(--mat);
+  box-shadow: 0 5px 0 var(--mat-edge);
 }
 
+/* The spotlight and its vignette are absolutely positioned against this box,
+   so the mat's padding must not be inside their coordinate space. */
 .memory-stage-art {
   position: relative;
   display: block;
   width: 100%;
   aspect-ratio: 1;
+  overflow: hidden;
+  border-radius: 17px;
+  /* The illustration's own paper stock. Literal on purpose: it has to match
+     the artwork in both themes, so it does not follow the page. */
+  background: #f7f1e4;
 }
 
 .memory-stage-scene img { object-fit: contain; }
@@ -1258,7 +1278,7 @@
 
 .memory-stage-ring {
   position: absolute;
-  border: 2px solid var(--stage-accent, var(--n-action));
+  border: 2px solid var(--stage-accent, var(--action));
   border-radius: 50%;
   box-shadow: 0 0 26px color-mix(in srgb, var(--stage-accent, #35c295) 40%, transparent);
   transform: translate(-50%, -50%);
@@ -1274,7 +1294,7 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  color: var(--stage-accent, var(--n-action));
+  color: var(--stage-accent-text, var(--action-text));
   font-size: 0.78rem;
   font-weight: 700;
   letter-spacing: 0.05em;
@@ -1287,14 +1307,14 @@
   align-items: center;
   justify-content: center;
   border-radius: 6px;
-  color: var(--night);
+  color: var(--action-ink);
   font-size: 0.69rem;
-  background: var(--stage-accent, var(--n-action));
+  background: var(--stage-accent, var(--action));
 }
 
 .memory-stage-copy h2 {
   margin: 12px 0 0;
-  color: var(--n-ink);
+  color: var(--ink);
   font-family: var(--kai);
   font-size: 1.68rem;
   font-weight: 500;
@@ -1304,7 +1324,7 @@
 
 .memory-stage-copy > p {
   margin: 10px 0 0;
-  color: var(--n-ink-2);
+  color: var(--ink-soft);
   font-size: 0.94rem;
   line-height: 1.72;
   text-wrap: pretty;
@@ -1323,7 +1343,7 @@
   width: 124px;
   flex-direction: column;
   overflow: hidden;
-  border: 1px solid rgba(244, 240, 230, 0.14);
+  border: 1px solid var(--line);
   border-radius: 20px;
 }
 
@@ -1344,31 +1364,30 @@
 }
 
 .memory-stage-parts > span + span {
-  border-top: 1px dashed rgba(244, 240, 230, 0.18);
+  border-top: 1px dashed var(--line);
 }
 
 .memory-stage-parts.is-beside > span + span {
   border-top: 0;
-  border-left: 1px dashed rgba(244, 240, 230, 0.18);
+  border-left: 1px dashed var(--line);
 }
 
 .memory-stage-parts > span.is-radical {
-  color: var(--n-radical);
+  color: var(--radical-text);
   background: rgba(217, 84, 47, 0.2);
 }
 
 .memory-stage-parts > span.is-component {
-  color: var(--n-part);
+  color: var(--part-text);
   background: rgba(46, 108, 138, 0.2);
 }
 
 .memory-stage-result {
-  color: var(--n-ink);
+  color: var(--ink);
   font-family: var(--kai);
   font-size: 7.25rem;
   font-weight: 500;
   line-height: 1;
-  text-shadow: 0 0 40px rgba(53, 194, 149, 0.28);
 }
 
 .memory-stage-legend {
@@ -1376,7 +1395,7 @@
   justify-content: center;
   gap: 18px;
   margin-top: 22px;
-  color: var(--n-ink-3);
+  color: var(--ink-faint);
   font-size: 0.75rem;
 }
 
@@ -1398,7 +1417,7 @@
   gap: 11px;
   margin: 14px 20px 0;
   padding: 9px 12px 9px 9px;
-  border: 1px dashed rgba(244, 240, 230, 0.16);
+  border: 1px dashed var(--line);
   border-radius: 18px;
 }
 
@@ -1418,16 +1437,16 @@
   flex-grow: 1;
 }
 
-.memory-stage-recall strong { color: var(--n-ink-2); font-size: 0.81rem; font-weight: 600; }
-.memory-stage-recall small { color: var(--n-ink-3); font-size: 0.72rem; }
+.memory-stage-recall strong { color: var(--ink-soft); font-size: 0.81rem; font-weight: 600; }
+.memory-stage-recall small { color: var(--ink-faint); font-size: 0.72rem; }
 
 .memory-stage-recall button {
   padding: 7px 12px;
   border-radius: 999px;
-  color: var(--n-ink-2);
+  color: var(--ink-soft);
   font-size: 0.75rem;
   font-weight: 600;
-  background: rgba(244, 240, 230, 0.08);
+  background: var(--paper-soft);
 }
 
 .memory-stage-chips {
@@ -1443,11 +1462,11 @@
   align-items: center;
   gap: 10px;
   padding: 11px 13px;
-  border: 1px solid rgba(244, 240, 230, 0.1);
+  border: 1px solid var(--line);
   border-radius: 16px;
   color: inherit;
   text-align: left;
-  background: rgba(244, 240, 230, 0.04);
+  background: var(--paper-soft);
   transition: border-color 200ms ease, background 200ms ease;
 }
 
@@ -1455,7 +1474,7 @@
   font-family: var(--kai);
   font-size: 1.62rem;
   line-height: 1;
-  color: var(--n-ink-3);
+  color: var(--ink-faint);
 }
 
 .memory-stage-chips button > span:last-child {
@@ -1465,24 +1484,24 @@
   gap: 2px;
 }
 
-.memory-stage-chips strong { font-size: 0.78rem; font-weight: 650; color: var(--n-ink-3); }
-.memory-stage-chips small { color: var(--n-ink-3); font-size: 0.69rem; }
+.memory-stage-chips strong { font-size: 0.78rem; font-weight: 650; color: var(--ink-faint); }
+.memory-stage-chips small { color: var(--ink-faint); font-size: 0.69rem; }
 
 .memory-stage-chips button.is-active.is-radical {
-  border-color: rgba(255, 122, 82, 0.45);
+  border-color: var(--radical);
   background: rgba(217, 84, 47, 0.13);
 }
 
 .memory-stage-chips button.is-active.is-radical > span:first-child,
-.memory-stage-chips button.is-active.is-radical strong { color: var(--n-radical); }
+.memory-stage-chips button.is-active.is-radical strong { color: var(--radical-text); }
 
 .memory-stage-chips button.is-active.is-component {
-  border-color: rgba(95, 180, 220, 0.45);
+  border-color: var(--part);
   background: rgba(46, 108, 138, 0.15);
 }
 
 .memory-stage-chips button.is-active.is-component > span:first-child,
-.memory-stage-chips button.is-active.is-component strong { color: var(--n-part); }
+.memory-stage-chips button.is-active.is-component strong { color: var(--part-text); }
 
 .memory-stage-foot {
   padding: 0 20px calc(22px + env(safe-area-inset-bottom));
@@ -1497,17 +1516,17 @@
   gap: 8px;
   padding: 0 18px;
   border-radius: 20px;
-  color: var(--night);
+  color: var(--sky);
   font-size: 1.03rem;
   font-weight: 700;
-  background: var(--n-ink);
+  background: var(--navy);
 }
 
 .memory-stage-next.is-finish {
   min-height: 60px;
-  color: var(--night);
-  background: var(--n-action);
-  box-shadow: 0 10px 28px rgba(53, 194, 149, 0.34);
+  color: var(--action-ink);
+  background: var(--action);
+  box-shadow: 0 var(--press) 0 var(--action-deep);
 }
 
 .memory-stage-secondary {
@@ -1516,14 +1535,14 @@
   min-height: 48px;
   margin-top: 6px;
   padding: 0;
-  color: var(--n-ink-3);
+  color: var(--ink-faint);
   font-size: 0.88rem;
   background: transparent;
 }
 
 .memory-stage-hint {
   margin: 12px 0 0;
-  color: var(--n-ink-3);
+  color: var(--ink-faint);
   font-size: 0.72rem;
   text-align: center;
 }

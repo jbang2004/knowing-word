@@ -418,6 +418,7 @@ function ChoiceExercise({
     <div className={"choice-grid "
       + (visual ? "is-visual " : "")
       + (glyphOnly ? "is-glyph " : "")
+      + (question.kind === "structure" ? "is-structure " : "")
       + (visual && !showVisualCaption ? "no-visual-captions" : "")}>
       {displayedOptions.map((option, index) => {
         const isSelected = selected.includes(option.id);

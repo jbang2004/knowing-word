@@ -76,7 +76,7 @@ export function PracticeHubRoute() {
         <section className="practice-context-band" aria-label="当前课程">
           <div>
             <span>当前建议</span>
-            <h2>练习第 {currentLesson.position} 课《{currentLesson.title}》</h2>
+            <h2>练习第 {currentLesson.position} 课<span>《{currentLesson.title}》</span></h2>
             <p>本课识字已完成 {wordProgress.completed}/{wordProgress.total} 个；专项只会出现已经学过的字。</p>
             <Link className="game-button primary practice-continue" href={recommendationHref}>
               {recommendationLabel} <ArrowRight aria-hidden="true" />
@@ -180,7 +180,10 @@ export function CourseMapRoute() {
                         </div>
                         <div className="route-copy">
                           <h2>{lesson.title}</h2>
-                          <p>{lesson.officialCount} 个课内字 · 已完成 {itemProgress.completed} 个</p>
+                          <p>
+                            <span>课内 {lesson.officialCount} 字</span>
+                            <span>已完成 {itemProgress.completed}</span>
+                          </p>
                         </div>
                         <span className="route-arrow">→</span>
                       </Link>
@@ -385,7 +388,7 @@ export function TrackMapRoute({ track }: { track: Exclude<TrackId, "words"> }) {
           <aside className="track-map-aside">
             <section className={`track-hero ${meta.tone}`}>
               <div className="track-symbol">{meta.glyph}</div>
-              <div><p>上次学到</p><h2>{next ? `${next.hanzi} 字` : "尚未解锁"}</h2><span>{nextLesson ? `来自第 ${nextLesson.position} 课 · ${nextLesson.title}` : "先完成单字过关，再开始专项巩固"}</span></div>
+              <div><p>上次学到</p><h2>{next ? `「${next.hanzi}」` : "尚未解锁"}</h2><span>{nextLesson ? `来自第 ${nextLesson.position} 课 · ${nextLesson.title}` : "先完成单字过关，再开始专项巩固"}</span></div>
               <Link className="game-button white" href={continueHref}>{next ? meta.action : "先学本课生字"} <ArrowRight aria-hidden="true" /></Link>
             </section>
             <section className="track-method-card"><p className="kicker">这项练习在训练什么</p><h2>{meta.eyebrow}</h2><p>{meta.copy}</p></section>
