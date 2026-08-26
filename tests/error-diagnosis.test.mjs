@@ -49,9 +49,15 @@ test("a diagnosis produces a concrete corrective action rather than a generic re
   assert.deepEqual(remediationGuidanceFor(["phonetic-component"]), {
     activity: "phonetic-component-review",
     targetDimension: "phonology",
+    cue: "声旁只提示大概读音",
     title: "核实声旁线索",
     instruction: "用声旁猜一个大致读音，再回到词语核实；声旁只是概率线索，不保证同音同调。",
   });
   assert.match(remediationGuidanceFor(["stroke-missing"]).instruction, /空书一次/);
+  // Every activity also carries a short line the learner can read mid-question.
+  for (const tag of errorTags) {
+    const cue = remediationGuidanceFor([tag]).cue;
+    assert.ok(cue.length > 0 && cue.length <= 12, `${tag} cue is not a short line: ${cue}`);
+  }
   assert.equal(remediationGuidanceFor([]), null);
 });

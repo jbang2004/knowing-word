@@ -1386,26 +1386,15 @@ canvas:focus-visible {
 
 .challenge-question {
   max-width: 700px;
-  margin-bottom: 27px;
 }
 
 .question-tag {
   display: inline-flex;
-  padding: 5px 9px;
-  border-radius: 999px;
-  color: var(--track-text, var(--radical-text));
-  font-size: 0.8125rem;
-  font-weight: 850;
-  background: color-mix(in srgb, var(--track) 10%, var(--paper));
 }
 
 .challenge-question h2 {
   margin: 11px 0 0;
   color: var(--navy);
-  font-family: var(--serif);
-  font-size: clamp(1.55rem, 3.4vw, 2.15rem);
-  line-height: 1.25;
-  letter-spacing: -0.045em;
 }
 
 .challenge-question p {
@@ -1429,14 +1418,9 @@ canvas:focus-visible {
   display: flex;
   align-items: center;
   gap: 13px;
-  min-height: 72px;
   padding: 12px 15px;
-  border: 1px solid var(--line);
-  border-radius: 17px;
   color: var(--ink);
   text-align: left;
-  background: var(--paper-soft);
-  transition: transform 150ms ease, border-color 150ms ease, background 150ms ease;
 }
 
 .choice-card:hover:not(:disabled) {
@@ -1444,26 +1428,9 @@ canvas:focus-visible {
   transform: translateY(-3px);
 }
 
-.choice-card.is-selected {
-  border-color: var(--action);
-  background: color-mix(in srgb, var(--action) 10%, var(--paper));
-  box-shadow: inset 0 0 0 1px var(--action);
-}
-
-.choice-card.is-correct {
-  border-color: var(--action);
-  background: var(--action-soft);
-}
-
-.choice-card.is-wrong {
-  border-color: var(--wrong);
-  background: var(--wrong-soft);
-}
-
 .choice-card strong {
   color: var(--navy);
   font-family: var(--kai);
-  font-size: 0.86rem;
   line-height: 1.45;
 }
 
@@ -3788,52 +3755,144 @@ html[data-theme="night"] .profile-card {
   text-wrap: pretty;
 }
 
-.celebration-equation {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 8px;
-}
-
-.celebration-equation span {
-  display: grid;
-  width: 46px;
-  height: 46px;
-  place-items: center;
-  border-radius: 15px 15px 15px 5px;
-  color: var(--ink);
-  font-family: var(--kai);
-  font-size: 1.5rem;
-  font-weight: 500;
-}
-
-.celebration-equation .is-radical {
-  color: var(--radical-ink);
-  background: var(--radical);
-  box-shadow: 0 3px 0 var(--radical-deep);
-}
-
-.celebration-equation .is-part {
-  color: var(--part-ink);
-  background: var(--part);
-  box-shadow: 0 3px 0 var(--part-deep);
-}
-
-.celebration-equation .is-result {
-  color: var(--navy);
-  background: var(--sky-deep);
-}
-
-.celebration-equation i {
-  color: var(--ink-faint);
-  font-family: var(--round);
-  font-size: 1.25rem;
-  font-style: normal;
-  font-weight: 900;
-}
-
 .celebration-lesson b.is-radical { color: var(--radical-ink); font-family: var(--kai); }
 .celebration-lesson b.is-part { color: var(--part-ink); font-family: var(--kai); }
+
+/* The character assembles itself ---------------------------------------
+ *
+ * The equation used to sit under the numbers as a static row. It is the best
+ * thing on this screen, so it becomes the screen: the two components fly in,
+ * merge, and the finished character lands as a seal.
+ */
+.celebration-assembly {
+  position: relative;
+  display: grid;
+  width: 100%;
+  height: 150px;
+  place-items: center;
+}
+
+.celebration-assembly .celebration-glyph {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -69px 0 0 -69px;
+}
+
+.celebration-fly {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: grid;
+  width: 62px;
+  height: 62px;
+  margin: -31px 0 0 -31px;
+  place-items: center;
+  border-radius: 20px 20px 20px 6px;
+  font-family: var(--kai);
+  font-size: 2rem;
+  font-weight: 500;
+  opacity: 0;
+}
+
+.celebration-fly.is-radical {
+  color: var(--radical-ink);
+  background: var(--radical);
+  box-shadow: 0 var(--press) 0 var(--radical-deep);
+}
+
+.celebration-fly.is-part {
+  color: var(--part-ink);
+  background: var(--part);
+  box-shadow: 0 var(--press) 0 var(--part-deep);
+}
+
+.celebration-ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 138px;
+  height: 138px;
+  margin: -69px 0 0 -69px;
+  border: 3px solid rgba(255, 255, 255, 0.9);
+  border-radius: 44px;
+  opacity: 0;
+}
+
+.celebration-fly.from-left { --from: -1; }
+.celebration-fly.from-right { --from: 1; }
+
+.celebration-assembly.is-assembling .celebration-fly {
+  animation: celebration-fly 1600ms var(--ease-out) both;
+}
+
+.celebration-assembly.is-assembling .celebration-glyph {
+  animation: celebration-seal 1600ms var(--ease-out) both;
+}
+
+.celebration-assembly.is-assembling .celebration-ring {
+  animation: celebration-ring 1600ms ease-out both;
+}
+
+@keyframes celebration-fly {
+  0% { opacity: 0; transform: translateX(calc(118px * var(--from))) scale(0.8); }
+  18%, 44% { opacity: 1; transform: translateX(calc(74px * var(--from))) scale(1); }
+  64%, 100% { opacity: 0; transform: translateX(0) scale(0.42); }
+}
+
+@keyframes celebration-seal {
+  0%, 52% { opacity: 0; transform: scale(0.4) rotate(-13deg); }
+  74% { opacity: 1; transform: scale(1.09) rotate(3deg); }
+  100% { opacity: 1; transform: none; }
+}
+
+@keyframes celebration-ring {
+  0%, 58% { opacity: 0; transform: scale(0.62); }
+  70% { opacity: 0.55; }
+  92%, 100% { opacity: 0; transform: scale(1.55); }
+}
+
+/* The tally is a record of the round, not its reward: one quiet line under
+   the teaching card instead of three number tiles above it. */
+.celebration-stats {
+  width: auto;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px 16px;
+  opacity: 0.82;
+}
+
+.celebration-stats > div {
+  flex-direction: row;
+  flex-grow: 0;
+  align-items: baseline;
+  gap: 5px;
+  padding: 0;
+  border-radius: 0;
+  background: none;
+}
+
+.celebration-stats dd {
+  font-size: 0.9375rem;
+}
+
+.celebration-stats dt {
+  font-size: 0.8125rem;
+  opacity: 0.9;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .celebration-card,
+  .celebration-assembly.is-assembling .celebration-glyph {
+    animation: none;
+  }
+
+  .celebration-assembly.is-assembling .celebration-fly,
+  .celebration-assembly.is-assembling .celebration-ring {
+    animation: none;
+    opacity: 0;
+  }
+}
 
 @media (max-width: 620px) {
   .celebration-actions .game-button { flex: 1 1 auto; }

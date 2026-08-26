@@ -24,8 +24,12 @@ export type ErrorDiagnosis = {
 export type RemediationGuidance = {
   activity: RemediationActivity;
   targetDimension: SkillDimension;
+  /** The activity's formal name, for records and adult-facing surfaces. */
   title: string;
+  /** What the learner should do about it. Written for a teacher to read out. */
   instruction: string;
+  /** The same cause said to the child, short enough to read mid-question. */
+  cue: string;
 };
 
 export const errorDiagnosisByTag = {
@@ -104,45 +108,55 @@ export function diagnoseErrors(tags: readonly ErrorTag[]) {
 
 const remediationCopy: Record<
   RemediationActivity,
-  Pick<RemediationGuidance, "title" | "instruction">
+  Pick<RemediationGuidance, "title" | "instruction" | "cue">
 > = {
   "pronunciation-contrast": {
+    cue: "读音差了一点",
     title: "先把字音分清",
     instruction: "对照声母、韵母和声调，跟读一次常用词，再遮住拼音独立读。",
   },
   "meaning-retrieval": {
+    cue: "先想想它是什么意思",
     title: "回到词义线索",
     instruction: "先说出熟悉词语的大意，再遮住答案，用这个字重新组一个词。",
   },
   "semantic-component-review": {
+    cue: "看管意思的那个部件",
     title: "看清表义部件",
     instruction: "找出提示意义类别的部件，说出它为什么适合这个词义，再重新选择。",
   },
   "phonetic-component-review": {
+    cue: "声旁只提示大概读音",
     title: "核实声旁线索",
     instruction: "用声旁猜一个大致读音，再回到词语核实；声旁只是概率线索，不保证同音同调。",
   },
   "component-rebuild": {
+    cue: "部件没有排对",
     title: "重新搭一次字形",
     instruction: "看清缺少、多出或放错位置的部件，说出结构后，收起答案重新组合。",
   },
   "guided-rewrite": {
+    cue: "笔画差了一点",
     title: "只改错的笔画",
     instruction: "圈出漏笔或多笔，沿正确字形空书一次，然后遮住范字重新写。",
   },
   "homophone-contrast": {
+    cue: "读音一样，意思不一样",
     title: "用词义分开同音字",
     instruction: "比较两个字的表义部件和代表词，把它们分别放进一句话后再选。",
   },
   "lookalike-contrast": {
+    cue: "两个字差在一个部件",
     title: "找到形近字的不同处",
     instruction: "只比较不同的部件或位置，说出差别，再遮住答案重新辨认。",
   },
   "context-transfer": {
+    cue: "放回句子里再看看",
     title: "放回新句子判断",
     instruction: "先读完整句意，再用字义和搭配排除不合适的字，不靠字卡位置猜。",
   },
   "writing-self-check": {
+    cue: "按部件再核对一遍",
     title: "按部件逐项自查",
     instruction: "依次检查部件、位置和笔画；不能确认时不记为答对，先对照再重写。",
   },

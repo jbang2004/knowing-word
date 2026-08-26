@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { ArrowLeft, CheckCircle2, RotateCcw } from "lucide-react";
+import { ArrowLeft, CheckCircle2, Flame, RotateCcw } from "lucide-react";
 import {
   type PointerEvent as ReactPointerEvent,
   useEffect,
@@ -71,28 +71,29 @@ export function CelebrationOverlay({
   return (
     <div className="celebration-overlay" role="dialog" aria-modal="true" aria-label="本关完成">
       <div className={"celebration-card track-" + trackMeta[track].tone}>
-        <div className="celebration-glyph" aria-hidden="true">{character.hanzi}</div>
+        <div
+          className={"celebration-assembly" + (parts.length > 1 ? " is-assembling" : "")}
+          aria-hidden="true"
+        >
+          {parts.length > 1 && parts.slice(0, 2).map((part, index) => (
+            <span
+              className={"celebration-fly "
+                + (part.radical ? "is-radical" : "is-part")
+                + (index === 0 ? " from-left" : " from-right")}
+              key={`${part.char}-${index}`}
+            >
+              {part.char}
+            </span>
+          ))}
+          <span className="celebration-ring" />
+          <span className="celebration-glyph">{character.hanzi}</span>
+        </div>
         <h2>{mistakes === 0 ? "完美通关" : "本关完成"}</h2>
         <p className="celebration-kicker">{sessionLabel ?? trackMeta[track].menu} · {character.lessonTitle}</p>
-
-        <dl className="celebration-stats">
-          <div><dt>题目</dt><dd>{total}</dd></div>
-          <div><dt>尝试</dt><dd>{attempts}</dd></div>
-          <div><dt>首次答对</dt><dd>{firstTryRate}%</dd></div>
-        </dl>
 
         {parts.length > 1 && (
           <div className="celebration-lesson">
             <small>这一关记住了</small>
-            <div className="celebration-equation" aria-hidden="true">
-              {parts.map((part, index) => (
-                <span className={part.radical ? "is-radical" : "is-part"} key={`${part.char}-${index}`}>
-                  {part.char}
-                </span>
-              ))}
-              <i>=</i>
-              <span className="is-result">{character.hanzi}</span>
-            </div>
             <p>
               {radical && <><b className="is-radical">{radical.char}</b>是表意部首</>}
               {radical && shapePart && "；"}
@@ -106,6 +107,12 @@ export function CelebrationOverlay({
             </p>
           </div>
         )}
+
+        <dl className="celebration-stats">
+          <div><dt>题目</dt><dd>{total}</dd></div>
+          <div><dt>尝试</dt><dd>{attempts}</dd></div>
+          <div><dt>首次答对</dt><dd>{firstTryRate}%</dd></div>
+        </dl>
 
         <div className="celebration-actions">
           <button className="game-button primary" onClick={onNextCharacter}>{nextLabel}</button>
@@ -124,6 +131,7 @@ export function ChallengeRoom({
   question,
   questionIndex,
   total,
+  streak,
   selected,
   wrote,
   result,
@@ -148,6 +156,7 @@ export function ChallengeRoom({
   question: Exercise;
   questionIndex: number;
   total: number;
+  streak: number;
   selected: string[];
   wrote: boolean;
   result: boolean | null;
@@ -178,6 +187,9 @@ export function ChallengeRoom({
         .map((option) => optionText(option as Exercise["options"][number], character))
         .join("、");
   const finalStep = questionIndex === total - 1;
+  const answerLabel = question.kind === "write"
+    ? "在方格里写完整的「" + character.hanzi + "」"
+    : answerText || "仔细看字形。";
   const record = profile.answers[question.id];
   const remediation = remediationGuidanceFor(record?.lastErrorTags ?? []);
   const independentWriting = question.kind === "write" && question.concealTarget === true;
@@ -199,10 +211,23 @@ export function ChallengeRoom({
           aria-valuenow={questionIndex + (result === null ? 0 : 1)}
           aria-label={`${meta.menu} · ${writingText.progressTarget}`}
         >
-          <i style={{ width: ((result === null ? questionIndex : questionIndex + 1) / total) * 100 + "%" }} />
+          <i
+            className={streak >= 3 ? "is-hot" : undefined}
+            style={{ width: ((result === null ? questionIndex : questionIndex + 1) / total) * 100 + "%" }}
+          />
         </div>
         <span className="challenge-count">{questionIndex + 1}/{total}</span>
       </header>
+
+      {streak >= 2 && (
+        <div className="challenge-streak-row" role="status">
+          {/* Keyed on the count so each new correct answer replays the pop. */}
+          <span className="challenge-streak" key={streak}>
+            <Flame aria-hidden="true" size={14} strokeWidth={2.4} />
+            连对 {streak}
+          </span>
+        </div>
+      )}
 
       <section className="challenge-board">
         <div className="challenge-question">
@@ -312,7 +337,7 @@ export function ChallengeRoom({
                 ? "自查通过"
                 : result
                 ? "答对了"
-                : remediation?.title ?? "再看一眼"}
+                : remediation?.cue ?? "再看一眼"}
             </strong>
             {record && <small>已尝试 {record.attempts} 次</small>}
           </div>
@@ -321,10 +346,13 @@ export function ChallengeRoom({
               ? "已按你的对照自查记录为正确（未经过客观识别）；范字会保留到下一题。"
               : result
               ? question.explanation || (finalStep ? "这一关完成了，回到地图看看下一站。" : "记住这个线索，再去下一题。")
-              : remediation
-                ? `${remediation.instruction} 正确答案是：${question.kind === "write" ? "在方格里写完整的「" + character.hanzi + "」" : answerText || "仔细看字形。"}`
-                : "正确答案是：" + (question.kind === "write" ? "在方格里写完整的「" + character.hanzi + "」" : answerText || "仔细看字形。")}
+              : <>正确答案是：<b
+                  className={"answer-sheet-answer" + ([...answerLabel].length <= 6 ? " is-glyph" : "")}
+                >{answerLabel}</b></>}
           </p>
+          {result === false && remediation && (
+            <small className="answer-sheet-note">{remediation.instruction}</small>
+          )}
           <button className="game-button primary" onClick={onNext}>
             {result ? (finalStep ? "查看成绩" : "继续") : "知道了"}
           </button>
@@ -378,9 +406,19 @@ function ChoiceExercise({
   // the question has been graded.
   const showVisualCaption = result !== null && question.options.some((item) => Boolean(item.text));
   const displayedOptions = orderedOptions.length ? orderedOptions : stableOptionOrder(question.options, question.id);
+  // When every option is a single character the shapes ARE the question:
+  // 鹭 / 露 / 路 / 陆 cannot be told apart at body-copy size, so they get a
+  // grid of glyphs rather than a list of labels.
+  const glyphOnly = !visual
+    && question.kind !== "structure"
+    && displayedOptions.every((option) => [...optionText(option, character)].length === 1);
+  const revealParts = character.parts.length > 1;
   const keyLabels = "ABCDEFGH";
   return (
-    <div className={"choice-grid " + (visual ? "is-visual " : "") + (visual && !showVisualCaption ? "no-visual-captions" : "")}>
+    <div className={"choice-grid "
+      + (visual ? "is-visual " : "")
+      + (glyphOnly ? "is-glyph " : "")
+      + (visual && !showVisualCaption ? "no-visual-captions" : "")}>
       {displayedOptions.map((option, index) => {
         const isSelected = selected.includes(option.id);
         const illustration = visual
@@ -426,6 +464,22 @@ function ChoiceExercise({
               <strong>{optionText(option, character)}</strong>
             )}
             {question.kind === "structure" && <small aria-hidden="true">{option.idcCode}</small>}
+            {/* Once the question is graded the right answer shows its own
+                build, so the reason is on the card the learner is looking at
+                rather than only in the sheet below. */}
+            {glyphOnly && revealParts && result !== null && option.correct
+              && optionText(option, character) === character.hanzi && (
+              <span className="choice-parts" aria-hidden="true">
+                {character.parts.map((part, index) => (
+                  <i
+                    className={part.radical ? "is-radical" : "is-part"}
+                    key={`${part.char}-${index}`}
+                  >
+                    {part.char}
+                  </i>
+                ))}
+              </span>
+            )}
           </button>
         );
       })}

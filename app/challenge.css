@@ -58,6 +58,13 @@
   height: 100%;
   border-radius: 999px;
   background: var(--action);
+  transition: width 460ms var(--ease-out), background 300ms ease;
+}
+
+/* Three in a row and the bar runs warm. The tint is additive: the chip below
+   carries the same information as a figure and a number. */
+.challenge-bar .challenge-progress i.is-hot {
+  background: linear-gradient(90deg, var(--action) 42%, var(--radical));
 }
 
 /* Duolingo's bar has a highlight along the top of the fill; it is what makes
@@ -305,9 +312,168 @@
   }
 }
 
+
+/* Streak -------------------------------------------------------------- */
+
+/* The run of correct answers was already being counted to choose a sound;
+   this is that same number, where the learner can see it. */
+.challenge-streak-row {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 8px;
+}
+
+.challenge-streak {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 11px 4px 8px;
+  border-radius: 999px;
+  color: var(--radical-text);
+  font-family: var(--round);
+  font-size: 0.8125rem;
+  font-weight: 900;
+  font-variant-numeric: tabular-nums;
+  background: var(--radical-soft);
+  animation: streak-pop 360ms var(--ease-out) both;
+}
+
+@keyframes streak-pop {
+  0% { opacity: 0; transform: translateY(-7px) scale(0.68); }
+  58% { transform: translateY(0) scale(1.14); }
+  100% { opacity: 1; transform: none; }
+}
+
+/* Single-character options --------------------------------------------- */
+
+/* 鹭 / 露 / 路 / 陆 at label size are four identical grey smudges. When every
+   option is one character, the glyph gets the card. */
+/* Phones collapse the option grid to one column, which is right for options
+   that are phrases and wrong for options that are one character: four glyphs
+   want a 2x2 block, and four full-width cards no longer fit above the button. */
+.choice-grid.is-glyph {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.choice-grid.is-glyph .choice-card {
+  min-height: 104px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 10px;
+}
+
+.choice-grid.is-glyph .choice-card strong {
+  font-family: var(--kai);
+  font-size: 2.5rem;
+  font-weight: 500;
+  line-height: 1;
+}
+
+/* After grading, the right answer shows how it is built, on the card the
+   learner is already looking at. */
+.choice-parts {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  animation: choice-parts-in 220ms var(--ease-out) 170ms both;
+}
+
+.choice-parts i {
+  padding: 1px 6px;
+  border-radius: 7px;
+  font-family: var(--kai);
+  font-size: 0.875rem;
+  font-style: normal;
+  line-height: 1.5;
+}
+
+.choice-parts i.is-radical {
+  color: var(--radical-text);
+  background: var(--radical-soft);
+}
+
+.choice-parts i.is-part {
+  color: var(--part-text);
+  background: var(--part-soft);
+}
+
+@keyframes choice-parts-in {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: none; }
+}
+
+/* The judgement lands on the card before any of it has to be read. */
+.choice-card.is-correct {
+  animation: choice-land 320ms var(--ease-out);
+}
+
+.choice-card.is-wrong {
+  animation: choice-nudge 340ms ease;
+}
+
+@keyframes choice-land {
+  0% { transform: scale(1); }
+  36% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+@keyframes choice-nudge {
+  0%, 100% { transform: translateX(0); }
+  16% { transform: translateX(-7px); }
+  40% { transform: translateX(6px); }
+  66% { transform: translateX(-3px); }
+}
+
+/* Feedback sheet, second pass ------------------------------------------ */
+
+.answer-sheet-mark {
+  animation: answer-mark-stamp 420ms var(--ease-out) both;
+}
+
+@keyframes answer-mark-stamp {
+  0% { opacity: 0; transform: scale(0.5) rotate(-14deg); }
+  52% { transform: scale(1.12) rotate(3deg); }
+  100% { opacity: 1; transform: none; }
+}
+
+/* The answer is what is needed now; the corrective activity is the quieter
+   second line under it rather than the paragraph in front of it. */
+.answer-sheet-answer {
+  font-weight: 800;
+}
+
+/* A one-character answer is a shape to memorise, so it gets the model face at
+   a readable size. A phrase is a sentence and stays at body size. */
+.answer-sheet-answer.is-glyph {
+  font-family: var(--kai);
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.answer-sheet-note {
+  margin-top: -4px;
+  color: inherit;
+  opacity: 0.82;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  line-height: 1.65;
+  text-wrap: pretty;
+}
+
 @media (prefers-reduced-motion: reduce) {
-  .answer-sheet {
+  .answer-sheet,
+  .answer-sheet-mark,
+  .challenge-streak,
+  .choice-parts,
+  .choice-card.is-correct,
+  .choice-card.is-wrong {
     animation: none;
+  }
+
+  .challenge-bar .challenge-progress i {
+    transition: none;
   }
 }
 

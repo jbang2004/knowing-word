@@ -43,6 +43,7 @@ import {
   type StudyProfile,
   type TrackId,
 } from "../../lib/profile-model";
+import { pulseHaptic } from "../../infrastructure/browser/haptics";
 import { playLearningSound } from "../../infrastructure/browser/learning-audio";
 import { queueLearningEvent } from "../../infrastructure/browser/learning-event-outbox";
 import { getProfileActorId } from "../../infrastructure/browser/profile-actor";
@@ -191,6 +192,10 @@ function HydratedPracticeSession({
   const [sessionResults, setSessionResults] = useState<boolean[]>(() =>
     Array(initialPassedQuestionIds.length).fill(true),
   );
+  // A run of correct answers inside this sitting. Seeded at zero rather than
+  // from resumed results, so reopening a half-done round never opens on a
+  // streak the learner did not just earn.
+  const [streak, setStreak] = useState(0);
   const [celebration, setCelebration] = useState(false);
   const [reviewFinished, setReviewFinished] = useState(false);
   const [activeRemediation, setActiveRemediation] = useState<PracticeStep | null>(null);
@@ -328,13 +333,14 @@ function HydratedPracticeSession({
   }) {
     if (!currentQuestion) return;
     const resolvedAnswerMode = answerMode ?? practiceAnswerMode(currentQuestion);
-    const trailingCorrect = sessionResults.reduceRight(
-      (count, passed) => passed ? count + 1 : count,
-      0,
-    );
+    const nextStreak = correct ? streak + 1 : 0;
+    setStreak(nextStreak);
+    // `>= 3` rather than the old `=== 2`, which fired the streak sound on the
+    // third correct answer and then never again for the rest of the run.
     playLearningSound(correct
-      ? trailingCorrect === 2 ? "streak" : "correct"
+      ? nextStreak >= 3 ? "streak" : "correct"
       : "retry");
+    pulseHaptic(correct ? "success" : "light");
     const now = new Date().toISOString();
     const attempt: LearningAttempt = {
       characterId: character.id,
@@ -691,6 +697,7 @@ function HydratedPracticeSession({
         question={currentQuestion}
         questionIndex={questionIndex}
         total={steps.length}
+        streak={streak}
         selected={selectedOptions}
         wrote={wrote}
         result={result}
@@ -731,6 +738,7 @@ function HydratedPracticeSession({
             playLearningSound("start");
             setPassedQuestionIds([]);
             setSessionResults([]);
+            setStreak(0);
             setSessionSalt(globalThis.crypto?.randomUUID?.() ?? `${Date.now()}-${Math.random()}`);
             setCelebration(false);
             setStep(0);
