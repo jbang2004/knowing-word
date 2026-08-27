@@ -64,9 +64,9 @@
         <view class="practice-arrow {{item.state === 'complete' ? 'practice-check' : ''}}"><view wx:if="{{item.state === 'complete'}}" class="home-check"></view><view wx:else class="home-chevron"></view></view>
       </view>
     </view>
-    <view class="practice-row read-row press-card {{allWordsComplete ? '' : 'disabled'}}" bindtap="openReader" role="button" hover-class="{{allWordsComplete ? 'is-pressed' : 'none'}}">
-      <view class="practice-icon track-read">读</view>
-      <view><strong>朗读收尾</strong><text>{{readCompleted ? '本课已朗读' : allWordsComplete ? '听范读，再完整读一遍' : '学完本课生字后解锁'}}</text></view>
+    <view class="read-row press-card {{allWordsComplete ? '' : 'disabled'}}" bindtap="openReader" role="button" hover-class="{{allWordsComplete ? 'is-pressed' : 'none'}}">
+      <view class="read-mic" aria-hidden="true"></view>
+      <view class="read-copy"><strong>朗读收尾</strong><text>{{readCompleted ? '本课已朗读' : allWordsComplete ? '听范读，再完整读一遍' : '学完本课生字后解锁'}}</text></view>
       <view class="practice-arrow"><view class="home-chevron"></view></view>
     </view>
     <view wx:if="{{allReviewsComplete}}" class="practice-complete">三项选做复习均已完成</view>

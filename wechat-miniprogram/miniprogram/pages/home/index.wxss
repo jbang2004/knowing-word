@@ -6,7 +6,7 @@
 .path-rail .focus-card { margin-bottom:0; }
 .status-row { display: flex; align-items: center; gap: 9px; width: 100%; min-height: 52px; }
 .status-spacer { flex: 1; }
-.avatar { display: flex; width: 40px; height: 40px; flex: none; align-items: center; justify-content: center; border-radius: 14px 14px 14px 4px; color: var(--radical-ink); background: var(--radical); box-shadow: 0 3px 0 var(--radical-deep); font-family: var(--font-kai); font-size: 18px; }
+.avatar { display: flex; width: 40px; height: 40px; flex: none; align-items: center; justify-content: center; border-radius: 14px 14px 14px 4px; color: var(--radical-ink); background: var(--radical); box-shadow: 0 3px 0 var(--radical-deep); font-family: var(--font-kai); font-size: 18px; font-weight:500; }
 .metric { display: flex; min-height: 36px; flex: none; align-items: center; gap: 6px; padding: 6px 13px; border-radius: 999px; font-size: 15px; }
 .metric strong { font-family: var(--font-round); font-weight: 900; font-variant-numeric: tabular-nums; }
 .metric-icon { position:relative; display:block; width:17px; height:17px; flex:none; }
@@ -23,10 +23,11 @@
 .lesson-progress { display: flex; align-items: center; gap: 10px; }
 .lesson-progress .progress-track { width: min(112px,52%); height: 14px; }
 .lesson-progress>text { font-size: 14px; font-weight: 900; }
-.lesson-button { display: flex; width: 56px; height: 56px; flex: none; flex-direction: column; align-items: center; justify-content: center; gap: 3px; border-radius: 18px; color: var(--action-text); background: var(--paper); box-shadow: 0 4px 0 rgba(0,0,0,.16); font-weight: 900; }
+.lesson-button { display: flex; width: 56px; height: 56px; flex: none; flex-direction: column; align-items: center; justify-content: center; gap: 3px; border-radius: 18px; color: var(--action-on-white); background:#fff; box-shadow: 0 4px 0 rgba(0,0,0,.16); font-weight: 900; }
 .lesson-button text { font-size: 13px; }
 .book-mark { position:relative; width:21px; height:19px; }.book-mark::before,.book-mark::after { position:absolute; top:1px; width:9px; height:15px; border:1.8px solid currentColor; content:""; }.book-mark::before { left:1px; border-radius:3px 0 0 3px; }.book-mark::after { right:1px; border-radius:0 3px 3px 0; }
-.focus-card { display: grid; grid-template-columns: auto minmax(0,1fr); align-items: center; gap: 14px; margin-top: 18px; margin-bottom: 22px; padding: 16px; border: 2px solid var(--wrong-edge); border-radius: 22px; background: var(--wrong-soft); box-shadow: 0 3px 0 var(--line); }
+.focus-card { display: grid; grid-template-columns: auto minmax(0,1fr); align-items: center; gap: 14px; margin-top: 18px; margin-bottom: 22px; padding: 16px; border: 2px solid #b3a78f; border-radius: 22px; background:#fff9ea; box-shadow: 0 3px 0 var(--line); }
+.theme-night .focus-card { border-color:#726e4d; background:#2a2b20; }
 .focus-glyph { display: flex; width: 58px; height: 58px; align-items: center; justify-content: center; border-radius: 19px 19px 19px 7px; color: var(--wrong-text); background: var(--paper); font-family: var(--font-kai); font-size: 32px; }
 .focus-copy { display: flex; min-width: 0; flex-direction: column; gap: 2px; }
 .focus-copy text { color: var(--wrong-text); font-size: 13px; font-weight: 900; }
@@ -82,17 +83,26 @@
 .practice-row>view:nth-child(2)>text { color:var(--ink-soft); font-family:var(--font-round); font-size:14px; font-weight:900; font-variant-numeric:tabular-nums; }
 .practice-arrow { display:flex; width:28px; height:28px; flex:none; align-items:center; justify-content:center; color:var(--ink-faint); }.home-chevron { width:9px; height:9px; border-top:2px solid currentColor; border-right:2px solid currentColor; transform:rotate(45deg); }
 .practice-check { display:flex; width:28px; height:28px; align-items:center; justify-content:center; border-radius:50%; color:var(--action-ink); background:var(--action); font-size:17px; font-weight:900; }
-.read-row { border-color:var(--wrong-edge); background:var(--wrong-soft); }
-.read-row.disabled { box-shadow:none; }
+.read-row { display:flex; width:100%; min-height:58px; align-items:center; gap:12px; margin:0; padding:11px 15px; border:2px solid var(--wrong-edge); border-radius:19px; color:var(--ink); text-align:left; background:var(--wrong-soft); box-shadow:0 3px 0 var(--wrong-edge); }
+.read-row.disabled { opacity:.62; box-shadow:none; }
+.read-copy { display:grid; min-width:0; flex:1; gap:2px; }
+.read-copy strong { color:var(--navy); font-size:15px; font-weight:900; }
+.read-copy text { color:var(--ink-soft); font-size:12px; font-weight:750; }
+.read-mic { position:relative; width:18px; height:19px; flex:none; color:var(--wrong-text); }
+.read-mic::before { position:absolute; top:0; left:5px; width:7px; height:11px; border:2px solid currentColor; border-radius:7px; content:""; }
+.read-mic::after { position:absolute; top:7px; left:3px; width:11px; height:8px; border-right:2px solid currentColor; border-bottom:2px solid currentColor; border-left:2px solid currentColor; border-radius:0 0 8px 8px; box-shadow:0 4px 0 -2px currentColor; content:""; }
 .practice-complete { color:var(--action-text); text-align:center; font-size:13px; font-weight:900; }
 @media (prefers-reduced-motion:reduce) { .path-seal { transition:none; } }
 @media (min-width:900px) {
-  .path-workspace { grid-template-columns:minmax(0,1fr) 328px; align-items:start; gap:40px; padding-top:26px; padding-bottom:64px; }
+  page .home-page { padding-bottom:0; }
+  .path-workspace { grid-template-columns:minmax(0,1fr) 328px; align-items:start; width:min(1000px,100%); gap:40px; margin:0 auto; padding-top:26px; padding-bottom:64px; }
   .path-main { grid-column:1; grid-row:1; }
   .path-rail { position:sticky; top:26px; grid-column:2; grid-row:1; }
   .status-row { height:auto !important; min-height:0; justify-content:flex-end; padding-top:0 !important; padding-right:0 !important; }
   .avatar { display:none; }
   .path-map,.path-steps { gap:24px; }
+  .practice-list { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); }
+  .practice-row { width:100%; }
   .path-node { min-height:84px; }
   .path-seal { width:84px; height:84px; border-radius:27px 27px 27px 9px; font-size:42px; }
 }

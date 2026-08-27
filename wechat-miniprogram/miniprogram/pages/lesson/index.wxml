@@ -24,7 +24,7 @@
 
       <view class="guide-body">
         <view wx:if="{{document.intro}}" class="guide-intro"><text>先带着问题读</text><view>{{document.intro}}</view><small><i class="inline-book-icon"></i>请打开纸质课本第 {{lesson.position}} 课</small></view>
-        <view wx:for="{{guideSections}}" wx:key="id" class="guide-section">
+        <view wx:for="{{guideSections}}" wx:key="id" id="guide-section-{{item.id}}" class="guide-section {{highlightedSectionId === item.id ? 'is-highlighted' : ''}}">
           <view class="section-head"><i>{{item.number || index + 1}}</i><strong>{{item.title}}</strong></view>
           <view wx:for="{{item.paragraphs}}" wx:for-item="paragraph" wx:key="id" class="guide-paragraph">{{paragraph.text}}</view>
           <view wx:if="{{item.question}}" class="guide-question"><text>想一想</text><view>{{item.question}}</view></view>
@@ -37,6 +37,24 @@
         </view>
       </view>
       <view class="guide-finish"><view>读</view><view><text>本课识字进度</text><strong>已经认识 {{completed}} / {{total}} 个字</strong><small>完成导读后，请回到纸质课本阅读全文，再用字卡和练习巩固。</small></view><button class="press-card" data-view="words" bindtap="switchView" hover-class="is-pressed">查看生字表</button><button class="primary press-card" data-view="practice" bindtap="switchView" hover-class="is-pressed"><text>按需复习</text><view class="ui-icon ui-icon-arrow-right" aria-hidden="true"></view></button></view>
+    </view>
+    <view class="lesson-reader-aside" aria-label="课文导读辅助">
+      <view class="reader-scene-card">
+        <image src="{{lessonSceneSrc}}" mode="aspectFill" />
+        <view class="reader-scene-shade"></view>
+        <view class="reader-scene-caption"><small>第 {{lesson.position}} 课 · 导读场景</small><strong>{{lesson.title}}</strong></view>
+      </view>
+      <view class="reader-progress-card">
+        <view class="reader-progress-head"><view><small>本课生字</small><strong>{{completed}} / {{total}}</strong></view><i>{{percent}}%</i></view>
+        <view class="reader-progress-track"><i style="width: {{percent}}%;"></i></view>
+        <text>每条线索下列出本段重点词。点击彩色生字进入字卡，首次学习完成后会显示标记。</text>
+      </view>
+      <view class="reader-word-index">
+        <view wx:for="{{characters}}" wx:key="id" class="reader-word-item press-card {{item.done ? 'is-complete' : ''}}" data-id="{{item.id}}" data-section-id="{{item.guideSectionId}}" bindtap="openIndexedCharacter" role="button" hover-class="is-pressed">
+          <strong>{{item.hanzi}}</strong><view><text>{{item.pinyin}}</text><small>{{item.word}}</small></view><i class="ui-icon {{item.done ? 'ui-icon-check' : 'ui-icon-arrow-right'}}" aria-hidden="true"></i>
+        </view>
+      </view>
+      <view class="reader-route-card"><small>学习线索</small><view><view wx:for="{{guideSections}}" wx:key="id"><i>{{index + 1}}</i><text>{{item.title}}</text></view></view></view>
     </view>
   </view>
 
@@ -87,6 +105,16 @@
     </view>
   </view>
 
-  <view wx:if="{{activeView === 'guide'}}" class="lesson-progress-pill"><view><text>本课重点字</text><strong>{{completed}}/{{total}} 已完成</strong></view><view class="lesson-chevron-down" aria-hidden="true"></view></view>
+  <view wx:if="{{activeView === 'guide'}}" class="reader-mobile-index {{mobileIndexOpen ? 'open' : ''}}">
+    <view wx:if="{{mobileIndexOpen}}" class="reader-mobile-index-panel">
+      <view class="reader-mobile-index-head"><strong>按线索认识字</strong><small>点击直接进入字卡</small></view>
+      <view class="reader-word-index is-compact">
+        <view wx:for="{{characters}}" wx:key="id" class="reader-word-item press-card {{item.done ? 'is-complete' : ''}}" data-id="{{item.id}}" data-section-id="{{item.guideSectionId}}" bindtap="openIndexedCharacter" role="button" hover-class="is-pressed">
+          <strong>{{item.hanzi}}</strong><view><text>{{item.pinyin}}</text><small>{{item.word}}</small></view><i class="ui-icon {{item.done ? 'ui-icon-check' : 'ui-icon-arrow-right'}}" aria-hidden="true"></i>
+        </view>
+      </view>
+    </view>
+    <button class="lesson-progress-pill" bindtap="toggleMobileIndex" aria-expanded="{{mobileIndexOpen}}" hover-class="none"><view><text>本课重点字</text><strong>{{completed}}/{{total}} 已完成</strong></view><view class="lesson-chevron-down" aria-hidden="true"></view></button>
+  </view>
   <bottom-navigation active="course" theme="{{theme}}" />
 </view>

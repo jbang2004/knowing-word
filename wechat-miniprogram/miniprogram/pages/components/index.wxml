@@ -1,5 +1,5 @@
 <view class="components-page theme-{{theme}}" style="padding-top: {{navHeight + 18}}px;">
-  <view class="utility-heading"><button class="nav-back" bindtap="goBack" aria-label="返回"><view class="nav-back-icon"></view></button><strong>从常见部件入手，识字更轻松</strong></view>
+  <view class="utility-heading"><button class="nav-back" bindtap="goBack" aria-label="返回"><view class="nav-back-icon"></view></button><view class="utility-heading-content"><strong>从常见部件入手，识字更轻松</strong><text>先按课内出现次数排序，再把一个部件放回真实的词语中理解。</text></view></view>
 
   <view wx:if="{{recent}}" class="component-resume"><text>上次学到</text><strong class="kai">{{recent.glyph}}</strong><view>{{recent.title}}</view><button class="press-card" data-id="{{recent.id}}" bindtap="selectComponent" hover-class="is-pressed"><text>继续</text><view class="ui-icon ui-icon-arrow-right" aria-hidden="true"></view></button></view>
 

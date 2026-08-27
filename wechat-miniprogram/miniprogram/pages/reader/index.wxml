@@ -1,5 +1,5 @@
 <view class="read-page theme-{{theme}}" style="padding-top: {{navHeight + 18}}px;">
-  <view class="utility-heading"><button class="nav-back" bindtap="goBack" aria-label="返回"><view class="nav-back-icon"></view></button><strong>先听一遍，再把句子读出来</strong></view>
+  <view class="utility-heading"><button class="nav-back" bindtap="goBack" aria-label="返回"><view class="nav-back-icon"></view></button><view class="utility-heading-content"><strong>先听一遍，再把句子读出来</strong><text>已完成 {{readingSessions}} 次朗读练习。登录状态下，录音可跨设备回听。</text></view></view>
 
   <view wx:if="{{loading}}" class="read-loading"><view class="skeleton"></view></view>
   <view wx:elif="{{error}}" class="read-empty">{{error}}</view>
@@ -20,7 +20,7 @@
     </view>
 
     <view class="sentence-list">
-      <view class="sentence-card {{speaking ? 'speaking' : ''}}">
+      <view class="sentence-card {{speaking ? 'speaking' : ''}}" hover-class="is-pressed">
         <text>“{{lesson.context}}”</text>
         <view class="sentence-action press-card" bindtap="previewSentence" role="button" hover-class="is-pressed"><view class="audio-icon"></view>{{speaking ? '正在范读…' : '范读'}}</view>
       </view>

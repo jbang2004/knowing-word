@@ -33,3 +33,25 @@
 .track-hero button { display:flex; align-items:center; justify-content:center; gap:5px; }
 .track-character .track-done-icon { justify-self:center; color:var(--action-text); }
 @media (prefers-reduced-motion:reduce) { .track-page { animation:none; } }
+
+/* Match the final Web app-shell and solid-block cascade. */
+.track-heading { display:flex; min-height:54px; align-items:center; gap:8px; margin-bottom:14px; }
+.track-heading>view { flex:1; gap:2px; }
+.track-heading text { display:none; }
+.track-heading strong { font-family:var(--font-sans); font-size:24px; font-weight:900; letter-spacing:0; line-height:1.25; }
+.track-heading small { display:none; max-width:720px; font-size:15px; font-weight:500; line-height:1.75; }
+.track-symbol { color:var(--track-ink); background:var(--track); box-shadow:0 var(--press) 0 var(--track-deep); }
+.track-method-card { border:2px solid var(--line); border-radius:22px; background:var(--paper); box-shadow:0 var(--press) 0 var(--line); }
+.track-character { min-height:86px; }
+.track-lesson-empty { display:grid; min-height:0; justify-items:start; align-content:start; gap:10px; padding:28px; border:2px dashed var(--line-deep); border-radius:20px; text-align:left; background:var(--sky-deep); }
+.track-lesson-empty text { max-width:560px; }
+
+@media (min-width:761px) {
+  .track-character { min-height:104px; }
+}
+
+@media (min-width:900px) {
+  .track-heading { min-height:0; align-items:flex-start; margin-bottom:22px; padding-top:6px; }
+  .track-heading strong { font-size:32px; }
+  .track-heading small { display:block; margin-top:6px; }
+}

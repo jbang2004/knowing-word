@@ -1,6 +1,9 @@
 <view class="page practice-hub-page theme-{{theme}} {{pageMotion}}" style="padding-top: {{contentTop}}px;">
   <view class="page-heading">
-    <view class="heading-title">先逐字过关，再按需要复习</view>
+    <view class="heading-content">
+      <view class="heading-title">先逐字过关，再按需要复习</view>
+      <view class="heading-copy">单字完整过关后，可以按需要复习空间结构、拆字重组与部件功能，再回到课文朗读。</view>
+    </view>
   </view>
 
   <view class="context-band">

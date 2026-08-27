@@ -3,8 +3,8 @@ import { navigationLayout } from "../../services/layout";
 import { loadProfile } from "../../services/profile";
 import type { CatalogCharacter, CatalogLesson, LessonContent, TrackId } from "../../types/models";
 
-type ViewCharacter = CatalogCharacter & { done: boolean; roleLabel: string };
-type GuideSection = NonNullable<LessonContent["document"]>["sections"][number] & { focusCharacters: ViewCharacter[] };
+type ViewCharacter = CatalogCharacter & { done: boolean; roleLabel: string; guideSectionId?: string };
+type GuideSection = Omit<NonNullable<LessonContent["document"]>["sections"][number], "id"> & { id: string; focusCharacters: ViewCharacter[] };
 type ViewWordGroup = { key: string; word: string; characters: ViewCharacter[] };
 type PracticeItem = { track: TrackId; glyph: string; menu: string; completed: number; total: number };
 
@@ -14,6 +14,9 @@ const practiceMeta: Array<Pick<PracticeItem, "track" | "glyph" | "menu">> = [
   { track: "split", glyph: "拆", menu: "拆字复习" },
   { track: "honglan", glyph: "红蓝", menu: "红蓝复习" },
 ];
+
+let pendingGuideSectionId = "";
+let guideHighlightTimer: number | null = null;
 
 function groupCharactersByWord(characters: ViewCharacter[]) {
   const groups = new Map<string, ViewCharacter[]>();
@@ -73,6 +76,8 @@ Page({
     completed: 0,
     total: 0,
     percent: 0,
+    mobileIndexOpen: false,
+    highlightedSectionId: "",
     navTop: 0,
     navHeight: 52,
     capsuleInset: 0,
@@ -92,6 +97,12 @@ Page({
   onShow() {
     this.setData({ theme: loadProfile().theme });
     if (!this.data.loading && this.data.characters.length) this.applyProgress();
+    this.showPendingGuideAnchor();
+  },
+  onUnload() {
+    if (guideHighlightTimer !== null) clearTimeout(guideHighlightTimer);
+    guideHighlightTimer = null;
+    pendingGuideSectionId = "";
   },
   async onPullDownRefresh() {
     await this.loadLesson(true);
@@ -104,9 +115,8 @@ Page({
       const viewCharacters = content.characters
         .filter((character) => character.ready && character.primary)
         .map(decorateCharacter);
-      const characters = viewCharacters.filter(isCoreCharacter);
       const extensionCharacters = viewCharacters.filter((character) => character.official === false || character.tier === "extension");
-      const guideSections = (content.document?.sections ?? []).map((section) => {
+      const guideSections = (content.document?.sections ?? []).map((section, sectionIndex) => {
         const seen = new Set<string>();
         const focusCharacters = (section.focusWords ?? []).flatMap((word) => viewCharacters.filter((character) =>
           word.includes(character.hanzi) || character.word === word
@@ -115,8 +125,21 @@ Page({
           seen.add(character.id);
           return true;
         });
-        return { ...section, focusCharacters };
+        return { ...section, id: section.id ?? `lesson-section-${sectionIndex + 1}`, focusCharacters };
       });
+      const sectionByCharacterId = new Map<string, string>();
+      for (const section of guideSections) {
+        for (const character of section.focusCharacters) {
+          if (!sectionByCharacterId.has(character.id)) sectionByCharacterId.set(character.id, section.id);
+        }
+      }
+      const fallbackSectionId = guideSections[0]?.id ?? "";
+      const characters = viewCharacters
+        .filter(isCoreCharacter)
+        .map((character) => ({
+          ...character,
+          guideSectionId: sectionByCharacterId.get(character.id) ?? fallbackSectionId,
+        }));
       this.setData({
         lesson: content.lesson,
         document: content.document,
@@ -161,11 +184,42 @@ Page({
   retry() { void this.loadLesson(true); },
   goBack() { wx.navigateBack({ fail: () => wx.switchTab({ url: "/pages/lessons/index" }) }); },
   switchView(event: WechatMiniprogram.BaseEvent) {
-    this.setData({ activeView: event.currentTarget.dataset.view as "guide" | "words" | "practice" });
+    this.setData({
+      activeView: event.currentTarget.dataset.view as "guide" | "words" | "practice",
+      mobileIndexOpen: false,
+      highlightedSectionId: "",
+    });
     wx.pageScrollTo({ scrollTop: 0, duration: 180 });
   },
   openCharacter(event: WechatMiniprogram.BaseEvent) {
     wx.navigateTo({ url: `/pages/character/index?lessonId=${this.data.lessonId}&characterId=${event.currentTarget.dataset.id}` });
+  },
+  toggleMobileIndex() {
+    this.setData({ mobileIndexOpen: !this.data.mobileIndexOpen });
+  },
+  openIndexedCharacter(event: WechatMiniprogram.BaseEvent) {
+    pendingGuideSectionId = String(event.currentTarget.dataset.sectionId ?? "");
+    this.setData({ mobileIndexOpen: false });
+    this.openCharacter(event);
+  },
+  showPendingGuideAnchor() {
+    if (!pendingGuideSectionId || this.data.activeView !== "guide") return;
+    const sectionId = pendingGuideSectionId;
+    pendingGuideSectionId = "";
+    if (guideHighlightTimer !== null) clearTimeout(guideHighlightTimer);
+    this.setData({ highlightedSectionId: "" });
+    wx.nextTick(() => {
+      this.setData({ highlightedSectionId: sectionId });
+      wx.pageScrollTo({
+        selector: `#guide-section-${sectionId}`,
+        offsetTop: -118,
+        duration: 220,
+      });
+      guideHighlightTimer = setTimeout(() => {
+        guideHighlightTimer = null;
+        this.setData({ highlightedSectionId: "" });
+      }, 1_200);
+    });
   },
   startPractice(event?: WechatMiniprogram.BaseEvent) {
     const track = (event?.currentTarget.dataset.track ?? "words") as TrackId;

@@ -1,5 +1,5 @@
 <view class="records-page theme-{{theme}}" style="padding-top: {{contentTop}}px;">
-  <view class="records-heading"><button class="nav-back" bindtap="goBack" aria-label="返回"><view class="nav-back-icon"></view></button><view>看见自己一步一步学会的过程</view></view>
+  <view class="records-heading"><button class="nav-back" bindtap="goBack" aria-label="返回"><view class="nav-back-icon"></view></button><view class="records-heading-content"><strong>看见自己一步一步学会的过程</strong><text>优先呈现最近练习和已有记录，需要时再展开全部课次。</text></view></view>
 
   <view class="record-stat-row">
     <view class="achievement"><text>已完成</text><strong>{{completed}}</strong><small>个本关字</small></view>

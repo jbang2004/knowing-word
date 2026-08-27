@@ -236,3 +236,69 @@ test("native mini-program replays navigation, question, and completion motion wi
   assert.match(readerStyles, /\.sentence-card \{ transition:transform 90ms ease,box-shadow 90ms ease,border-color 140ms ease,background-color 140ms ease/u);
   assert.match(learningSounds, /audio\.volume = 0\.78/u);
 });
+
+test("native mini-program keeps the final Web cascade across page families", async () => {
+  const [
+    globalStyles,
+    homeTemplate,
+    homeStyles,
+    trackStyles,
+    accountStyles,
+    lessonScript,
+    lessonTemplate,
+    lessonStyles,
+    lessonsStyles,
+    practiceTemplate,
+    practiceStyles,
+    characterStyles,
+    readerStyles,
+    componentStyles,
+    recordStyles,
+  ] = await Promise.all([
+    readFile(new URL("miniprogram/app.wxss", root), "utf8"),
+    readFile(new URL("miniprogram/pages/home/index.wxml", root), "utf8"),
+    readFile(new URL("miniprogram/pages/home/index.wxss", root), "utf8"),
+    readFile(new URL("miniprogram/pages/track/index.wxss", root), "utf8"),
+    readFile(new URL("miniprogram/pages/account/index.wxss", root), "utf8"),
+    readFile(new URL("miniprogram/pages/lesson/index.ts", root), "utf8"),
+    readFile(new URL("miniprogram/pages/lesson/index.wxml", root), "utf8"),
+    readFile(new URL("miniprogram/pages/lesson/index.wxss", root), "utf8"),
+    readFile(new URL("miniprogram/pages/lessons/index.wxss", root), "utf8"),
+    readFile(new URL("miniprogram/pages/practice/index.wxml", root), "utf8"),
+    readFile(new URL("miniprogram/pages/practice/index.wxss", root), "utf8"),
+    readFile(new URL("miniprogram/pages/character/index.wxss", root), "utf8"),
+    readFile(new URL("miniprogram/pages/reader/index.wxss", root), "utf8"),
+    readFile(new URL("miniprogram/pages/components/index.wxss", root), "utf8"),
+    readFile(new URL("miniprogram/pages/records/index.wxss", root), "utf8"),
+  ]);
+
+  assert.match(globalStyles, /\.theme-night \{[\s\S]*--shadow-sheet:0 -16px 44px rgba\(0,0,0,\.5\);/u);
+  assert.match(globalStyles, /button:active \{ transform:translateY\(var\(--press\)\); box-shadow:none; \}/u);
+  assert.match(globalStyles, /button\[disabled\]:active \{ transform:none; \}/u);
+  assert.match(globalStyles, /max-width:1244px;[\s\S]*@media \(min-width:1481px\)[\s\S]*margin-left:calc\(\(100% - 1008px\) \/ 2\)/u);
+
+  assert.match(homeTemplate, /class="read-mic"/u);
+  assert.match(homeStyles, /\.read-row \{[^}]*min-height:58px;[^}]*gap:12px;[^}]*border-radius:19px;[^}]*box-shadow:0 3px 0 var\(--wrong-edge\)/u);
+  assert.match(homeStyles, /\.read-row\.disabled \{ opacity:\.62; box-shadow:none; \}/u);
+  assert.match(trackStyles, /\.track-method-card \{ border:2px solid var\(--line\); border-radius:22px;/u);
+  assert.match(trackStyles, /\.track-lesson-empty \{[^}]*border:2px dashed var\(--line-deep\);[^}]*border-radius:20px;[^}]*text-align:left;/u);
+  assert.match(accountStyles, /\.danger-row i \{ color:var\(--radical-text\); \}\.danger-row strong \{ color:var\(--ink\); \}/u);
+
+  assert.match(lessonTemplate, /class="reader-mobile-index \{\{mobileIndexOpen/u);
+  assert.match(lessonTemplate, /id="guide-section-\{\{item\.id\}\}"/u);
+  assert.match(lessonScript, /showPendingGuideAnchor\(\)/u);
+  assert.match(lessonScript, /duration: 220/u);
+  assert.match(lessonStyles, /\.guide-section\.is-highlighted/u);
+  assert.match(lessonStyles, /grid-template-columns:minmax\(0,744px\) minmax\(250px,304px\)/u);
+  assert.match(lessonsStyles, /@media \(min-width:981px\) \{ \.lesson-route \{ grid-template-columns:repeat\(2,minmax\(0,1fr\)\); \} \}/u);
+
+  assert.match(practiceTemplate, /disabled="\{\{questionIndex === 0 \|\| writingRewrite\}\}"/u);
+  assert.match(practiceTemplate, /disabled="\{\{writingRewrite\}\}"/u);
+  assert.match(practiceStyles, /\.challenge-streak\.streak-a,\.challenge-streak\.streak-b/u);
+  assert.match(characterStyles, /\.narration-token,\.narration-token\.is-active \{ animation:none; transition:none; \}/u);
+  assert.match(readerStyles, /\.sentence-card\.is-pressed \{ transform:translateY\(var\(--press\)\); box-shadow:none; \}/u);
+  assert.match(componentStyles, /\.component-sheet,\.component-sheet\.open \{[^}]*border-width:2px;[^}]*border-radius:22px;[^}]*box-shadow:0 var\(--press\) 0 var\(--line\)/u);
+  assert.match(recordStyles, /\.recent-list \{ display:grid; gap:8px; \}/u);
+  assert.match(recordStyles, /\.record-lessons \{ display:grid; gap:13px; \}/u);
+  assert.match(recordStyles, /\.lesson-characters \{ display:grid; gap:0; \}/u);
+});

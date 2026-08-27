@@ -1,7 +1,9 @@
 .records-page { min-height:100vh; padding-right:16px; padding-bottom:calc(96px + env(safe-area-inset-bottom)); padding-left:16px; background:var(--sky); }
-.records-heading { display:flex; min-height:54px; align-items:center; gap:8px; margin-bottom:20px; padding-bottom:16px; border-bottom:1px solid var(--line); color:var(--navy); }
+.records-heading { display:flex; min-height:54px; align-items:center; gap:10px; margin-bottom:20px; padding-bottom:16px; border-bottom:1px solid var(--line); color:var(--navy); }
 .records-heading button { width:44px; height:44px; min-height:0; margin:0 0 0 -10px; padding:0; color:var(--ink-soft); background:transparent; }
-.records-heading>view { min-width:0; font-size:24px; font-weight:900; line-height:1.25; }
+.records-heading-content { display:flex; min-width:0; flex:1; flex-direction:column; gap:2px; }
+.records-heading-content>strong { min-width:0; color:var(--navy); font-family:var(--font-sans); font-size:clamp(24px,6vw,30.4px); font-weight:900; line-height:1.25; }
+.records-heading-content>text { display:none; max-width:720px; margin:0; color:var(--ink-soft); font-size:15px; font-weight:500; line-height:1.75; }
 .record-stat-row { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:8px; }
 .record-stat-row>view { display:flex; min-height:0; flex-direction:column; align-items:center; justify-content:center; gap:4px; padding:13px 8px; border:2px solid var(--line); border-radius:20px; background:var(--paper); box-shadow:0 var(--press) 0 var(--line); }
 .record-stat-row>view.achievement { border-color:var(--action-edge); background:var(--action-soft); box-shadow:0 var(--press) 0 var(--action-edge); }
@@ -17,7 +19,7 @@
 .recent-head>view>text { color:var(--radical-text); font-size:12px; font-weight:800; letter-spacing:1px; }
 .recent-head strong { margin-top:2px; color:var(--navy); font-family:var(--font-serif); font-size:19px; }
 .recent-head>text { color:var(--ink-soft); font-size:12px; }
-.recent-list { display:grid; gap:var(--card-stack-gap); }
+.recent-list { display:grid; gap:8px; }
 .recent-list button { display:grid; min-height:70px; grid-template-columns:42px minmax(0,1fr); align-items:center; margin:0; padding:10px; border:1px solid var(--line); border-radius:14px; color:var(--ink); text-align:left; background:var(--paper-soft); }
 .recent-list button>strong { grid-row:1/3; color:var(--navy); font-family:"Knowing Kai","Kaiti SC",serif; font-size:28px; }
 .recent-list button>view { display:flex; min-width:0; flex-direction:column; }
@@ -28,14 +30,14 @@
 .record-scope-bar strong { color:var(--navy); font-size:13px; }
 .record-scope-bar text { color:var(--ink-soft); font-size:12px; }
 .record-scope-bar button { width:100%; min-height:44px; margin:0; padding:8px 15px; border:2px solid var(--line); border-radius:999px; color:var(--navy); background:var(--paper); box-shadow:0 3px 0 var(--line); font-size:12px; font-weight:800; }
-.record-lessons { display:grid; gap:var(--card-stack-gap); }
+.record-lessons { display:grid; gap:13px; }
 .record-lesson { display:flex; flex-direction:column; gap:12px; }
 .lesson-head { display:flex; align-items:center; justify-content:space-between; gap:15px; padding:17px 20px; border-bottom:1px solid var(--line); }
 .lesson-head>view { display:flex; flex-direction:column; }
 .lesson-head>view>text { color:var(--part-text); font-size:13px; font-weight:800; }
 .lesson-head strong { margin-top:3px; color:var(--navy); font-family:"Songti SC",serif; font-size:20px; }
 .lesson-head>text { color:var(--ink-soft); font-size:13px; }
-.lesson-characters { display:grid; gap:var(--card-stack-gap); }
+.lesson-characters { display:grid; gap:0; }
 .lesson-characters button { display:flex; min-height:62px; align-items:center; gap:12px; margin:0; padding:12px 14px; border:2px solid var(--line); border-radius:18px; color:var(--ink); text-align:left; background:var(--paper); box-shadow:0 4px 0 var(--line); }
 .lesson-characters button>strong { width:34px; color:var(--navy); font-family:"Knowing Kai","Kaiti SC",serif; font-size:26px; }
 .lesson-characters button>view { display:flex; flex:1; flex-direction:column; }
@@ -58,6 +60,11 @@
   .record-recent { padding:20px; }
   .recent-list { grid-template-columns:repeat(3,minmax(0,1fr)); gap:8px; }
   .lesson-characters { grid-template-columns:repeat(2,minmax(0,1fr)); }
+}
+@media (min-width:900px) {
+  .records-heading { min-height:0; align-items:flex-start; gap:8px; margin-bottom:22px; padding-top:6px; padding-bottom:0; }
+  .records-heading-content>strong { font-size:32px; }
+  .records-heading-content>text { display:block; margin-top:6px; }
 }
 
 /* Solid-surface and typography parity with the Web records view. */

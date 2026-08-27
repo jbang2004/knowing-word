@@ -25,6 +25,10 @@ function lessonLearningComplete(lessonId: string) {
   return wordIds.length > 0 && wordIds.every((id) => profile.completed.words.includes(id));
 }
 
+function totalReadingSessions() {
+  return Object.values(loadProfile().daily).reduce((total, day) => total + day.readSessions, 0);
+}
+
 Page({
   data: {
     theme: loadProfile().theme,
@@ -45,6 +49,7 @@ Page({
     readingAssessment: "",
     playing: false,
     speaking: false,
+    readingSessions: totalReadingSessions(),
     cloudStatus: "",
     cloudSaving: false,
     navHeight: 52,
@@ -205,7 +210,7 @@ Page({
     recordReading(this.data.lessonId, accurate);
     sendReadingEvent(this.data.lessonId, accurate);
     if (firstAccurateCompletion) playLearningSound("dailyComplete");
-    this.setData({ readingAssessment: accurate ? "accurate" : "needs-practice", canAssess: false, showRecordingGate: false, showRecordingAssessment: false });
+    this.setData({ readingAssessment: accurate ? "accurate" : "needs-practice", readingSessions: totalReadingSessions(), canAssess: false, showRecordingGate: false, showRecordingAssessment: false });
     wx.showToast({ title: accurate ? "已完成本课朗读" : "已加入复习计划", icon: accurate ? "success" : "none" });
   },
   goBack() { wx.navigateBack({ fail: () => wx.switchTab({ url: "/pages/practice-hub/index" }) }); },

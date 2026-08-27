@@ -107,6 +107,7 @@ page {
   --wrong-edge:#b3822a;
   --wrong-ink:#0f1614;
   --wrong-text:#f5c86d;
+  --shadow-sheet:0 -16px 44px rgba(0,0,0,.5);
   background:var(--sky);
   color:var(--ink);
 }
@@ -114,12 +115,13 @@ page {
 .kai { font-family: var(--font-kai); }
 
 view, text, image, button, input, canvas, scroll-view { box-sizing: border-box; }
-button { min-width: 0; font: inherit; transition:opacity 90ms ease,transform 90ms ease; }
+button { min-width: 0; font: inherit; transition:transform 90ms ease,box-shadow 90ms ease; }
 button::after { border: 0; }
-button:active { opacity:.82; }
+button:active { transform:translateY(var(--press)); box-shadow:none; }
+button[disabled]:active { transform:none; }
 .press-card { transition:transform 90ms ease,box-shadow 90ms ease,border-color 140ms ease,background-color 140ms ease; }
 .press-card.is-pressed { transform: translateY(var(--press)); box-shadow: none; }
-.page { min-height: 100vh; padding: 26rpx 32rpx calc(54rpx + env(safe-area-inset-bottom)); }
+.page { width:100%; max-width:1180px; min-height:100vh; margin-right:auto; margin-left:auto; padding:26rpx 32rpx calc(54rpx + env(safe-area-inset-bottom)); }
 .home-page,.course-page,.practice-hub-page,.track-page,.account-page,.components-page,.read-page,.records-page { animation:page-arrive 620ms var(--ease-out) both; }
 .page-arrive-a { animation:page-arrive-a 620ms var(--ease-out) both; }
 .page-arrive-b { animation:page-arrive-b 620ms var(--ease-out) both; }
@@ -136,7 +138,7 @@ button:active { opacity:.82; }
 .secondary-button { color: var(--wrong-text); background: var(--wrong-soft); box-shadow: 0 7rpx 0 var(--wrong-edge); }
 .ghost-button { color: var(--navy); border: 2rpx solid var(--line); background: var(--paper); box-shadow: 0 7rpx 0 var(--line-deep); }
 .primary-button,.secondary-button,.ghost-button,.game-button { transition:transform 220ms var(--ease-out),box-shadow 220ms ease,background-color 220ms ease,border-color 220ms ease; }
-.primary-button:active, .secondary-button:active, .ghost-button:active,.game-button:active { transform:scale(.98); }
+.primary-button:active, .secondary-button:active, .ghost-button:active,.game-button:active { transform:translateY(var(--press)); box-shadow:none; }
 .button-row { display: flex; gap: 16rpx; margin-top: 24rpx; }
 .button-row button { flex: 1; }
 .pill { display: inline-flex; align-items: center; min-height: 46rpx; padding: 0 18rpx; border-radius: 999rpx; color: var(--radical-text); background: var(--radical-soft); font-size: 21rpx; font-weight: 800; }
@@ -167,11 +169,32 @@ button:active { opacity:.82; }
   page .components-page,
   page .account-page {
     width:calc(100% - 236px);
-    max-width:none;
-    margin-right:0;
+    max-width:1244px;
+    margin-right:auto;
     margin-left:236px;
     padding-right:32px;
     padding-left:32px;
+  }
+  page .heading-title,
+  page .account-title,
+  page .records-heading>view,
+  page .utility-heading>strong,
+  page .track-heading strong {
+    font-size:32px;
+    line-height:1.2;
+  }
+}
+@media (min-width:1481px) {
+  page .home-page,
+  page .course-page,
+  page .practice-hub-page,
+  page .lesson-page,
+  page .track-page,
+  page .read-page,
+  page .records-page,
+  page .components-page,
+  page .account-page {
+    margin-left:calc((100% - 1008px) / 2);
   }
 }
 @keyframes shimmer { from { background-position: 100% 0; } to { background-position: -100% 0; } }
@@ -181,5 +204,5 @@ button:active { opacity:.82; }
 @media (prefers-reduced-motion:reduce) {
   .home-page,.course-page,.practice-hub-page,.track-page,.account-page,.components-page,.read-page,.records-page,.page-arrive-a,.page-arrive-b,.skeleton { animation:none; }
   button,.press-card,.primary-button,.secondary-button,.ghost-button,.game-button,.progress-value { transition:none; }
-  button:active { opacity:1; }
+  button:active,.press-card.is-pressed,.primary-button:active,.secondary-button:active,.ghost-button:active,.game-button:active { transform:none; }
 }

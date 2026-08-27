@@ -144,7 +144,7 @@
   .challenge-page { width:min(1000px,calc(100% - 40px)); margin-right:auto; margin-left:auto; }
 }
 @media (prefers-reduced-motion:reduce) {
-  .challenge-board.question-enter-a,.challenge-board.question-enter-b,.answer-sheet,.answer-sheet-mark,.challenge-streak,.choice-parts,.choice-card.correct,.choice-card.wrong,.meaning-match-badge,.celebration-overlay,.celebration-card,.celebration-assembly.is-assembling .celebration-glyph { animation:none; }
+  .challenge-board.question-enter-a,.challenge-board.question-enter-b,.answer-sheet,.answer-sheet-mark,.challenge-streak.streak-a,.challenge-streak.streak-b,.choice-parts,.choice-card.correct,.choice-card.wrong,.meaning-match-badge,.celebration-overlay,.celebration-card,.celebration-assembly.is-assembling .celebration-glyph { animation:none; }
   .challenge-progress i { transition:none; }
   .celebration-assembly.is-assembling .celebration-fly.from-left,.celebration-assembly.is-assembling .celebration-fly.from-right,.celebration-assembly.is-assembling .celebration-ring { animation:none; opacity:0; }
 }

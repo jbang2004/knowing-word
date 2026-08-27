@@ -1,6 +1,9 @@
 <view class="page course-page theme-{{theme}} {{pageMotion}}" style="padding-top: {{contentTop}}px;">
   <view class="page-heading">
-    <view class="heading-title">语文 · 五年级上册</view>
+    <view class="heading-content">
+      <view class="heading-title">语文 · 五年级上册</view>
+      <view class="heading-copy">新版五年级上册共 26 课：按官方会认、会写和多音字清单学习，再用专项关卡反复巩固。</view>
+    </view>
   </view>
   <scroll-view class="unit-nav" scroll-x enhanced show-scrollbar="false">
     <view class="unit-nav-inner"><view wx:for="{{units}}" wx:key="id" class="press-card" data-id="{{item.id}}" bindtap="jumpUnit" hover-class="is-pressed">{{item.label}}</view></view>

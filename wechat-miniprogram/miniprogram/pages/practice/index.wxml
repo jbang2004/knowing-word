@@ -63,7 +63,7 @@
 
     <view wx:if="{{showPendingActions}}" class="challenge-actions">
       <view class="game-button primary press-card {{ready ? '' : 'disabled'}}" bindtap="checkAnswer" role="button" hover-class="{{ready ? 'is-pressed' : 'none'}}">{{isWriting ? '显示范字并对照' : '核对答案'}}</view>
-      <view class="challenge-actions-row"><button class="text-button {{questionIndex === 0 ? 'disabled' : ''}}" bindtap="previousQuestion"><view class="ui-icon ui-icon-arrow-right ui-icon-arrow-left" aria-hidden="true"></view><text>上一题</text></button><button class="text-button" bindtap="skipQuestion"><text>跳过这一题</text><view class="ui-icon ui-icon-arrow-right" aria-hidden="true"></view></button></view>
+      <view class="challenge-actions-row"><button class="text-button {{questionIndex === 0 || writingRewrite ? 'disabled' : ''}}" disabled="{{questionIndex === 0 || writingRewrite}}" bindtap="previousQuestion"><view class="ui-icon ui-icon-arrow-right ui-icon-arrow-left" aria-hidden="true"></view><text>上一题</text></button><button class="text-button {{writingRewrite ? 'disabled' : ''}}" disabled="{{writingRewrite}}" bindtap="skipQuestion"><text>跳过这一题</text><view class="ui-icon ui-icon-arrow-right" aria-hidden="true"></view></button></view>
     </view>
 
     <view wx:if="{{writingReview}}" class="answer-sheet writing-assessment">
