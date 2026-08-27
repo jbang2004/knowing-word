@@ -47,7 +47,11 @@ test("native mini-program shares the Web visual language instead of the retired 
   const homeStyles = await readFile(new URL("miniprogram/pages/home/index.wxss", root), "utf8");
   const lessonTemplate = await readFile(new URL("miniprogram/pages/lesson/index.wxml", root), "utf8");
   const characterTemplate = await readFile(new URL("miniprogram/pages/character/index.wxml", root), "utf8");
+  const characterStyles = await readFile(new URL("miniprogram/pages/character/index.wxss", root), "utf8");
   const practiceHubTemplate = await readFile(new URL("miniprogram/pages/practice-hub/index.wxml", root), "utf8");
+  const practiceTemplate = await readFile(new URL("miniprogram/pages/practice/index.wxml", root), "utf8");
+  const practiceStyles = await readFile(new URL("miniprogram/pages/practice/index.wxss", root), "utf8");
+  const practiceScript = await readFile(new URL("miniprogram/pages/practice/index.ts", root), "utf8");
   const tabTemplate = await readFile(new URL("miniprogram/custom-tab-bar/index.wxml", root), "utf8");
 
   assert.equal(app.tabBar.custom, true);
@@ -64,6 +68,17 @@ test("native mini-program shares the Web visual language instead of the retired 
   assert.match(lessonTemplate, /复习巩固/u);
   assert.match(characterTemplate, /class="details/u);
   assert.match(characterTemplate, /\{\{masteryCount\}\}/u);
+  assert.match(characterTemplate, /equalizer \{\{playing/u);
+  assert.match(characterStyles, /@keyframes narration-equalizer/u);
   assert.match(practiceHubTemplate, /class="route-card/u);
+  assert.match(practiceTemplate, /class="celebration-overlay"/u);
+  assert.match(practiceTemplate, /class="celebration-assembly/u);
+  assert.match(practiceTemplate, /这一关记住了/u);
+  assert.match(practiceStyles, /@keyframes celebration-fly-left/u);
+  assert.match(practiceStyles, /@keyframes celebration-seal/u);
+  assert.match(practiceStyles, /@keyframes answer-sheet-rise/u);
+  assert.match(practiceStyles, /@keyframes choice-nudge/u);
+  assert.match(practiceScript, /currentAttempts: this\.data\.currentAttempts \+ 1/u);
+  assert.match(practiceScript, /this\.prepareQuestion\(true\)/u);
   assert.match(tabTemplate, /icon-\{\{item\.icon\}\}/u);
 });

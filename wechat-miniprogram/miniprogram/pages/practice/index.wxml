@@ -5,19 +5,13 @@
     <text class="challenge-count">{{questionIndex + 1}}/{{questions.length}}</text>
   </view>
 
+  <view wx:if="{{streak >= 2}}" class="challenge-streak-row"><view class="challenge-streak">◇　连对 {{streak}}</view></view>
+
   <view wx:if="{{loading}}" class="challenge-loading"><view class="skeleton"></view></view>
   <view wx:elif="{{error}}" class="challenge-empty"><view>{{error}}</view><button bindtap="retry">重新加载</button></view>
 
-  <view wx:elif="{{finished}}" class="finish-card">
-    <view class="finish-seal kai">{{character.hanzi}}</view>
-    <strong>这一轮完成了</strong>
-    <text>你已经完成“{{character.hanzi}}”的这一组练习。间隔一段时间再回来，记忆会更牢。</text>
-    <button class="game-button primary" bindtap="nextCharacter">学习下一个字</button>
-    <button class="game-button ghost" bindtap="viewCard">回看识字卡</button>
-  </view>
-
   <block wx:elif="{{character}}">
-    <view class="challenge-board">
+    <view class="challenge-board {{questionMotion}}">
       <view class="challenge-question">
         <text class="question-tag">{{questionLabel}}</text>
         <view class="question-prompt">{{question.prompt}}</view>
@@ -27,7 +21,7 @@
 
       <view wx:if="{{showWritingBoard}}" class="writing-board">
         <view class="writing-glyph kai">{{character.hanzi}}</view>
-        <text>先在纸上或心里写一遍，再对照范字判断。</text>
+        <text class="writing-help">先在纸上或心里写一遍，再对照范字判断。</text>
         <view class="writing-actions"><view class="writing-choice press-card" data-correct="{{false}}" bindtap="selfAssess" role="button" hover-class="is-pressed">还需要练</view><view class="writing-choice primary press-card" data-correct="{{true}}" bindtap="selfAssess" role="button" hover-class="is-pressed">我写对了</view></view>
       </view>
 
@@ -37,6 +31,7 @@
           <text class="choice-key">{{item.label}}</text>
           <view wx:if="{{structureChoices}}" class="structure-shape {{item.structureClass}}"><i></i><i></i><i></i></view>
           <strong>{{item.text}}</strong>
+          <view wx:if="{{item.showParts}}" class="choice-parts"><i wx:for="{{character.parts}}" wx:key="char" class="{{item.radical ? 'is-radical' : 'is-part'}}">{{item.char}}</i></view>
         </view>
       </view>
     </view>
@@ -47,9 +42,35 @@
     </view>
 
     <view wx:if="{{answered}}" class="answer-sheet {{correct ? 'is-correct' : 'is-wrong'}}">
-      <view class="answer-sheet-head"><text>{{correct ? '✓' : '↻'}}</text><strong>{{correct ? '答对了' : '再看一眼'}}</strong></view>
+      <view class="answer-sheet-head"><text class="answer-sheet-mark {{correct ? '' : 'wrong'}}">{{correct ? '✓' : '↻'}}</text><strong class="answer-sheet-title">{{correct ? '答对了' : '再看一眼'}}</strong><small class="answer-sheet-attempts">已尝试 {{currentAttempts}} 次</small></view>
       <view class="answer-copy">{{resultCopy}}</view>
-      <view class="game-button primary" bindtap="nextQuestion" role="button">{{questionIndex === questions.length - 1 ? '查看成绩' : '继续'}}</view>
+      <view class="game-button primary answer-next {{correct ? '' : 'wrong'}}" bindtap="nextQuestion" role="button">{{correct ? (passedQuestionIds.length === questions.length ? '查看成绩' : '继续') : '知道了'}}</view>
     </view>
   </block>
+
+  <view wx:if="{{finished}}" class="celebration-overlay" role="dialog" aria-label="本关完成">
+    <view class="celebration-card track-{{track}}">
+      <view class="celebration-assembly {{hasCelebrationParts ? 'is-assembling' : ''}}">
+        <view wx:for="{{celebrationParts}}" wx:key="char" class="celebration-fly is-{{item.tone}} {{item.side}}">{{item.char}}</view>
+        <view class="celebration-ring"></view>
+        <view class="celebration-glyph kai">{{character.hanzi}}</view>
+      </view>
+      <strong class="celebration-title">{{perfect ? '完美通关' : '本关完成'}}</strong>
+      <text class="celebration-kicker">{{celebrationLabel}} · {{character.lessonTitle}}</text>
+      <view wx:if="{{hasCelebrationParts}}" class="celebration-lesson">
+        <small class="celebration-lesson-label">这一关记住了</small>
+        <view class="celebration-lesson-copy"><text wx:if="{{radicalChar}}" class="celebration-radical kai">{{radicalChar}}</text><text wx:if="{{radicalChar}}">是表意部首</text><text wx:if="{{hasBothParts}}">；</text><text wx:if="{{shapeChar}}" class="celebration-part kai">{{shapeChar}}</text><text wx:if="{{shapeChar}}">{{shapeRole}}</text><text>。{{character.decomposition}}</text></view>
+      </view>
+      <view class="celebration-stats">
+        <view class="celebration-stat"><text class="celebration-stat-value">{{questions.length}}</text><small class="celebration-stat-label">题目</small></view>
+        <view class="celebration-stat"><text class="celebration-stat-value">{{sessionResults.length}}</text><small class="celebration-stat-label">尝试</small></view>
+        <view class="celebration-stat"><text class="celebration-stat-value">{{firstTryRate}}%</text><small class="celebration-stat-label">首次答对</small></view>
+      </view>
+      <view class="celebration-actions">
+        <button class="game-button primary celebration-primary" bindtap="nextCharacter">{{nextActionLabel}}</button>
+        <button class="game-button ghost celebration-ghost" bindtap="replayCharacter"><text class="replay-icon">↶</text>　再练一轮</button>
+        <button class="text-button celebration-return" bindtap="finishSession">返回上一页</button>
+      </view>
+    </view>
+  </view>
 </view>

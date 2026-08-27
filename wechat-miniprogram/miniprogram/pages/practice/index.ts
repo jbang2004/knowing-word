@@ -12,7 +12,19 @@ const trackMeta: Record<TrackId, { title: string; eyebrow: string; copy: string 
   structure: { title: "结构复习", eyebrow: "像搭积木一样看汉字", copy: "先判断空间结构，再选择正确组合。" },
 };
 
-type ViewOption = Exercise["options"][number] & { state: string; image: string; label: string; structureClass: string };
+type ViewOption = Exercise["options"][number] & {
+  state: string;
+  image: string;
+  label: string;
+  structureClass: string;
+  showParts: boolean;
+};
+
+type CelebrationPart = {
+  char: string;
+  tone: "radical" | "part";
+  side: "from-left" | "from-right";
+};
 
 function structureClass(code = "") {
   if (code === "⿰") return "ss-side";
@@ -66,6 +78,21 @@ Page({
     correct: false,
     resultCopy: "",
     finished: false,
+    sessionResults: [] as boolean[],
+    passedQuestionIds: [] as string[],
+    streak: 0,
+    currentAttempts: 0,
+    questionMotion: "question-enter-a",
+    celebrationParts: [] as CelebrationPart[],
+    hasCelebrationParts: false,
+    hasBothParts: false,
+    radicalChar: "",
+    shapeChar: "",
+    shapeRole: "补充字形线索",
+    celebrationLabel: "单字过关",
+    firstTryRate: 100,
+    perfect: true,
+    nextActionLabel: "继续 · 下一个字",
     loading: true,
     error: "",
     progress: 0,
@@ -108,10 +135,43 @@ Page({
       return;
     }
     const questions = questionsFor(character, this.data.track);
-    this.setData({ character, questions, questionIndex: 0, finished: false });
+    const parts = character.parts?.length
+      ? character.parts
+      : [{ char: character.hanzi, radical: true }];
+    const radical = parts.find((part) => part.radical);
+    const shape = parts.find((part) => !part.radical);
+    const celebrationLabel = this.data.track === "words"
+      ? "单字过关"
+      : this.data.trackInfo.title;
+    this.setData({
+      character,
+      questions,
+      questionIndex: 0,
+      finished: false,
+      sessionResults: [],
+      passedQuestionIds: [],
+      streak: 0,
+      currentAttempts: 0,
+      celebrationParts: parts.slice(0, 2).map((part, index) => ({
+        char: part.char,
+        tone: part.radical ? "radical" : "part",
+        side: index === 0 ? "from-left" : "from-right",
+      })),
+      hasCelebrationParts: parts.length > 1,
+      hasBothParts: Boolean(radical && shape),
+      radicalChar: radical?.char ?? "",
+      shapeChar: shape?.char ?? "",
+      shapeRole: character.charType.includes("形声") ? "提供读音线索" : "补充字形线索",
+      celebrationLabel,
+      firstTryRate: 100,
+      perfect: true,
+      nextActionLabel: this.data.characterIndex < this.data.characters.length - 1
+        ? "继续 · 下一个字"
+        : "完成本课",
+    });
     this.prepareQuestion();
   },
-  prepareQuestion() {
+  prepareQuestion(preserveAttempts = false) {
     const question = this.data.questions[this.data.questionIndex];
     if (!question) {
       this.setData({ finished: true });
@@ -119,30 +179,34 @@ Page({
     }
     const correctCount = question.options.filter((option) => option.correct).length;
     const visuals = this.data.character?.media?.practiceOptionVisuals ?? {};
+    const glyphChoices = question.kind !== "structure"
+      && question.questionType !== "image_single_select"
+      && question.options.length > 0
+      && question.options.every((option) => Array.from(option.text ?? "").length === 1);
     this.setData({
       question,
       selectedIds: [],
       answered: false,
       correct: false,
+      currentAttempts: preserveAttempts ? this.data.currentAttempts : 0,
       resultCopy: "",
       questionLabel: question.kind === "write" ? "书写自查" : question.kind === "structure" ? "结构题" : question.kind === "components" ? "部件题" : "选择题",
       multiChoice: correctCount > 1,
-      glyphChoices: question.kind !== "structure"
-        && question.questionType !== "image_single_select"
-        && question.options.length > 0
-        && question.options.every((option) => Array.from(option.text ?? "").length === 1),
+      glyphChoices,
       structureChoices: question.kind === "structure",
       isWriting: question.kind === "write",
       showWritingBoard: question.kind === "write" || question.options.length === 0,
       showPendingActions: question.kind !== "write",
       ready: false,
       progress: Math.round(this.data.questionIndex / this.data.questions.length * 100),
+      questionMotion: this.data.questionMotion === "question-enter-a" ? "question-enter-b" : "question-enter-a",
       viewOptions: question.options.map((option, index) => ({
         ...option,
         label: String.fromCharCode(65 + index),
         state: "",
         image: visuals[`${question.id}:${option.id}`]?.src ?? "",
         structureClass: structureClass(option.idcCode),
+        showParts: false,
       })),
     });
     (this as unknown as { questionStartedAt: number }).questionStartedAt = Date.now();
@@ -185,8 +249,10 @@ Page({
     const correct = typeof selfCorrect === "boolean"
       ? selfCorrect
       : JSON.stringify([...selectedIds].sort()) === JSON.stringify(correctIds);
-    const isFinal = this.data.questionIndex === this.data.questions.length - 1;
     const latencyMs = Date.now() - (this as unknown as { questionStartedAt: number }).questionStartedAt;
+    const nextPassedQuestionIds = correct && !this.data.passedQuestionIds.includes(question.id)
+      ? [...this.data.passedQuestionIds, question.id]
+      : this.data.passedQuestionIds;
     recordAnswer({
       profile: loadProfile(),
       track: this.data.track,
@@ -195,7 +261,7 @@ Page({
       questionId: question.id,
       correct,
       questionIndex: this.data.questionIndex,
-      completed: isFinal,
+      completed: correct && nextPassedQuestionIds.length === this.data.questions.length,
     });
     sendAnswerEvent({
       track: this.data.track,
@@ -209,25 +275,46 @@ Page({
       cueLevel: question.cueLevel ?? 0,
       latencyMs,
     });
+    const sessionResults = [...this.data.sessionResults, correct];
+    const streak = correct ? this.data.streak + 1 : 0;
+    wx.vibrateShort({ type: correct ? "medium" : "light", fail: () => undefined });
     this.setData({
       answered: true,
       ready: false,
       showPendingActions: false,
       correct,
-      progress: Math.round((this.data.questionIndex + 1) / this.data.questions.length * 100),
+      progress: Math.round((correct ? this.data.questionIndex + 1 : this.data.questionIndex) / this.data.questions.length * 100),
+      sessionResults,
+      passedQuestionIds: nextPassedQuestionIds,
+      streak,
+      currentAttempts: this.data.currentAttempts + 1,
+      firstTryRate: Math.min(100, Math.round(this.data.questions.length * 100 / Math.max(sessionResults.length, this.data.questions.length))),
+      perfect: sessionResults.length === this.data.questions.length,
       resultCopy: correct ? (question.explanation || "记住这个线索，再去下一题。") : question.explanation || "再看一眼字形线索，然后继续。",
       viewOptions: this.data.viewOptions.map((option) => ({
         ...option,
         state: option.correct ? "correct" : selectedIds.includes(option.id) ? "wrong" : "",
+        showParts: this.data.glyphChoices
+          && option.correct
+          && option.text === character.hanzi
+          && (character.parts?.length ?? 0) > 1,
       })),
     });
   },
   nextQuestion() {
-    if (this.data.questionIndex >= this.data.questions.length - 1) {
+    if (!this.data.correct) {
+      this.prepareQuestion(true);
+      return;
+    }
+    if (this.data.passedQuestionIds.length >= this.data.questions.length) {
       this.setData({ finished: true });
       return;
     }
-    this.setData({ questionIndex: this.data.questionIndex + 1 });
+    const nextIndex = this.data.questions.findIndex((question, index) =>
+      index > this.data.questionIndex && !this.data.passedQuestionIds.includes(question.id));
+    const wrappedIndex = this.data.questions.findIndex((question) =>
+      !this.data.passedQuestionIds.includes(question.id));
+    this.setData({ questionIndex: nextIndex >= 0 ? nextIndex : wrappedIndex });
     this.prepareQuestion();
   },
   previousQuestion() {
@@ -237,11 +324,28 @@ Page({
   },
   skipQuestion() {
     if (this.data.answered) return;
-    if (this.data.questionIndex >= this.data.questions.length - 1) {
-      this.setData({ finished: true, progress: 100 });
+    const nextIndex = this.data.questions.findIndex((question, index) =>
+      index > this.data.questionIndex && !this.data.passedQuestionIds.includes(question.id));
+    const wrappedIndex = this.data.questions.findIndex((question, index) =>
+      index !== this.data.questionIndex && !this.data.passedQuestionIds.includes(question.id));
+    if (nextIndex < 0 && wrappedIndex < 0) {
+      wx.showToast({ title: "这是最后一道待完成题", icon: "none" });
       return;
     }
-    this.setData({ questionIndex: this.data.questionIndex + 1 });
+    this.setData({ questionIndex: nextIndex >= 0 ? nextIndex : wrappedIndex });
+    this.prepareQuestion();
+  },
+  replayCharacter() {
+    this.setData({
+      finished: false,
+      questionIndex: 0,
+      sessionResults: [],
+      passedQuestionIds: [],
+      streak: 0,
+      currentAttempts: 0,
+      firstTryRate: 100,
+      perfect: true,
+    });
     this.prepareQuestion();
   },
   nextCharacter() {
@@ -253,11 +357,7 @@ Page({
     this.setData({ characterIndex: this.data.characterIndex + 1 });
     this.prepareCharacter();
   },
-  viewCard() {
-    const character = this.data.character;
-    if (!character) return;
-    wx.navigateTo({ url: `/pages/character/index?lessonId=${this.data.lessonId}&characterId=${character.id}` });
-  },
+  finishSession() { this.goBack(); },
   goBack() { wx.navigateBack({ fail: () => wx.switchTab({ url: "/pages/practice-hub/index" }) }); },
   retry() { this.setData({ error: "", loading: true }); void this.loadSession(); },
 });

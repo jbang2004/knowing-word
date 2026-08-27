@@ -26,7 +26,7 @@
       <view class="study-meaning">本课词语「{{character.word}}」：{{character.originalMeaning}}</view>
 
       <view class="study-launch">
-        <view class="listen-button press-card" bindtap="playNarration" role="button" hover-class="is-pressed"><view class="equalizer"><i></i><i></i><i></i><i></i><i></i></view><view><strong>{{playing ? '暂停字义讲解' : '听字义讲解'}}</strong><text>{{character.media.narration.transcript.length}} 字 · 留在画面边看边听</text></view><text>→</text></view>
+        <view class="listen-button press-card" bindtap="playNarration" role="button" hover-class="is-pressed"><view class="equalizer {{playing ? 'playing' : ''}}"><i></i><i></i><i></i><i></i><i></i></view><view><strong>{{playing ? '暂停字义讲解' : '听字义讲解'}}</strong><text>{{character.media.narration.transcript.length}} 字 · 留在画面边看边听</text></view><text>→</text></view>
         <view class="action-wide press-card" bindtap="openDrawer" role="button" hover-class="is-pressed"><text>✣</text><view><strong>物象四步</strong><text>看意象 · 找部首 · 找部件 · 合成字</text></view><text>›</text></view>
         <view class="action-grid">
           <view class="action primary press-card" bindtap="startPractice" role="button" hover-class="is-pressed"><view class="study-action-icon icon-check-card"></view><view><strong>单字过关</strong><text>0 / {{masteryCount}} 题</text></view></view>
