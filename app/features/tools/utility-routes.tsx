@@ -28,6 +28,9 @@ import { queueLearningEvent } from "../../infrastructure/browser/learning-event-
 import { playLearningSound } from "../../infrastructure/browser/learning-audio";
 import { speak } from "../../infrastructure/browser/speech";
 import { trackIds, withPreferenceUpdate } from "../../lib/profile-model";
+import type { CapturedAudio, VoiceRecorder } from "../../platform/contracts";
+import { createBrowserVoiceRecorder } from "../../platform/web/browser-recorder";
+import { webRecordingsClient } from "../../platform/web";
 import { useStudyProfile } from "../profile/use-study-profile";
 import { LearningPageShell, PageHeading } from "../shell/learning-page-shell";
 
@@ -109,25 +112,23 @@ export function ReadAloudRoute({
   const [readingAssessment, setReadingAssessment] = useState<"accurate" | "needs-practice" | null>(null);
   const [recordingListenedToEnd, setRecordingListenedToEnd] = useState(false);
   const [recordingDurationMs, setRecordingDurationMs] = useState(0);
-  const recorderRef = useRef<MediaRecorder | null>(null);
-  const recordingStartedAtRef = useRef(0);
-  const streamRef = useRef<MediaStream | null>(null);
-  const chunksRef = useRef<Blob[]>([]);
+  const recorderRef = useRef<VoiceRecorder | null>(null);
+  const localCaptureRef = useRef<CapturedAudio | null>(null);
   const lesson = grade5Lessons.find((item) => item.id === lessonId) ?? grade5Lessons[0];
   const lessonIndex = grade5Lessons.findIndex((item) => item.id === lesson.id);
 
   useEffect(() => () => {
-    streamRef.current?.getTracks().forEach((track) => track.stop());
+    recorderRef.current?.dispose();
+    localCaptureRef.current?.release();
   }, []);
 
   useEffect(() => {
     let active = true;
-    void fetch(`/api/recordings?lessonId=${encodeURIComponent(lessonId)}`, { cache: "no-store" })
-      .then((response) => response.ok ? response.json() as Promise<{ recordings?: { url: string }[] }> : Promise.reject(new Error("recordings unavailable")))
-      .then((payload) => {
+    void webRecordingsClient.latestForLesson(lessonId)
+      .then((latest) => {
         if (!active) return;
-        setRecordingUrl(payload.recordings?.[0]?.url ?? null);
-        setRecordingStatus(payload.recordings?.[0] ? "saved" : "idle");
+        setRecordingUrl(latest?.url ?? null);
+        setRecordingStatus(latest ? "saved" : "idle");
       })
       .catch(() => undefined);
     return () => { active = false; };
@@ -144,6 +145,8 @@ export function ReadAloudRoute({
     setLessonId(nextLessonId);
     setActiveText("");
     setSpeaking(false);
+    localCaptureRef.current?.release();
+    localCaptureRef.current = null;
     setRecordingUrl(null);
     setRecordingStatus("idle");
     setReadingAssessment(null);
@@ -175,42 +178,32 @@ export function ReadAloudRoute({
       return;
     }
     try {
-      const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
-      streamRef.current = stream;
-      chunksRef.current = [];
       setReadingAssessment(null);
       setRecordingListenedToEnd(false);
       setRecordingDurationMs(0);
-      const preferredType = ["audio/webm;codecs=opus", "audio/mp4"].find((type) => MediaRecorder.isTypeSupported(type));
-      const recorder = new MediaRecorder(stream, preferredType ? { mimeType: preferredType } : undefined);
+      const recorder = recorderRef.current ?? createBrowserVoiceRecorder();
       recorderRef.current = recorder;
-      recorder.ondataavailable = (event) => { if (event.data.size) chunksRef.current.push(event.data); };
-      recorder.onstop = async () => {
-        setRecordingDurationMs(Math.max(0, Date.now() - recordingStartedAtRef.current));
-        const contentType = recorder.mimeType || chunksRef.current[0]?.type || "audio/webm";
-        const blob = new Blob(chunksRef.current, { type: contentType });
-        const localUrl = URL.createObjectURL(blob);
-        setRecordingUrl(localUrl);
+      await recorder.start(async (capture) => {
+        localCaptureRef.current?.release();
+        localCaptureRef.current = capture;
+        setRecordingDurationMs(capture.durationMs);
+        setRecordingUrl(capture.localUrl);
         setRecordingStatus("saving");
         setRecording(false);
-        stream.getTracks().forEach((track) => track.stop());
         try {
-          const response = await fetch(`/api/recordings?lessonId=${encodeURIComponent(lesson.id)}`, {
-            method: "POST",
-            headers: { "content-type": blob.type || "audio/webm" },
-            body: blob,
-          });
-          if (!response.ok) throw new Error("recording save failed");
-          const payload = await response.json() as { recording: { url: string } };
-          URL.revokeObjectURL(localUrl);
-          setRecordingUrl(payload.recording.url);
+          const saved = await webRecordingsClient.upload(
+            lesson.id,
+            capture.body,
+            capture.contentType,
+          );
+          capture.release();
+          if (localCaptureRef.current === capture) localCaptureRef.current = null;
+          setRecordingUrl(saved.url);
           setRecordingStatus("saved");
         } catch {
           setRecordingStatus("local");
         }
-      };
-      recordingStartedAtRef.current = Date.now();
-      recorder.start();
+      });
       setRecording(true);
     } catch {
       window.alert("麦克风没有开启。你也可以先使用“范读”跟读。");

@@ -42,6 +42,7 @@ import type { StudyProfile } from "../../lib/profile-model";
 import { getPracticeSteps } from "../../domain/practice";
 import type { NarrationMedia } from "../../domain/narration-media";
 import { speak } from "../../infrastructure/browser/speech";
+import { browserTransport } from "../../platform/web";
 
 export type CharacterStudyMedia = {
   visual?: LearningVisual;
@@ -102,10 +103,10 @@ function InlineNarrationPlayer({
     if (!audioMarksSource) return;
     const controller = new AbortController();
     const audio = audioRef.current;
-    void fetch(audioMarksSource, { signal: controller.signal })
-      .then((response) => response.ok
-        ? response.json() as Promise<{ marks?: AudioMark[]; transcript?: string }>
-        : Promise.reject(new Error("marks unavailable")))
+    void browserTransport
+      .request<{ marks?: AudioMark[]; transcript?: string }>(audioMarksSource, {
+        signal: controller.signal,
+      })
       .then((payload: { marks?: AudioMark[]; transcript?: string }) => {
         setMarks((payload.marks || []).filter((mark) => Number.isFinite(mark.start) && Number.isFinite(mark.end)));
         setTranscriptText(payload.transcript || narration.transcript);
