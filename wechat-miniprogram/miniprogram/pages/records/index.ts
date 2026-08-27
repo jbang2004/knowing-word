@@ -30,6 +30,7 @@ Page({
     playingId: "",
   },
   onShow() {
+    this.getTabBar?.()?.setData({ selected: 2 });
     this.setData({ ...summary(loadProfile()), cloudConnected: getSessionStatus().connected });
     void this.loadRecordings();
   },

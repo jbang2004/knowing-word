@@ -1,9 +1,28 @@
-.lesson-hero { position: relative; min-height: 420rpx; overflow: hidden; background: #3f4e46; }
-.hero-image,.hero-overlay { position: absolute; inset: 0; width: 100%; height: 100%; }.hero-overlay { background: linear-gradient(0deg,rgba(28,30,26,.9),rgba(28,30,26,.08)); }
-.hero-copy { position: relative; display: flex; flex-direction: column; justify-content: flex-end; min-height: 420rpx; padding: 34rpx; color: white; }.hero-copy .pill { align-self: flex-start; color: #4b3527; background: rgba(255,247,228,.92); }
-.hero-title { margin-top: 18rpx; font-family: "Songti SC",serif; font-size: 60rpx; font-weight: 700; }.hero-context { margin-top: 10rpx; line-height: 1.65; color: rgba(255,255,255,.86); }
-.path-list { display: flex; flex-direction: column; gap: 18rpx; margin-top: 22rpx; }.path-item { display: flex; align-items: flex-start; gap: 18rpx; line-height: 1.6; }.path-item text { flex: none; display: flex; align-items: center; justify-content: center; width: 42rpx; height: 42rpx; border-radius: 50%; color: white; background: #a6472b; font-size: 21rpx; }
-.progress-card { margin-top: 20rpx; padding: 24rpx 28rpx; }.progress-card>view:first-child { display: flex; justify-content: space-between; margin-bottom: 16rpx; }.progress-card strong { font-family: Georgia,serif; }
-.character-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 14rpx; margin-top: 24rpx; padding-bottom: 124rpx; }.character-card { position: relative; min-height: 230rpx; padding: 20rpx 12rpx; text-align: center; }.character-card.is-done { border-color: rgba(85,115,92,.38); background: #f2f7ef; }
-.role { display: inline-block; padding: 5rpx 12rpx; border-radius: 99rpx; color: #806a3c; background: #f2ead7; font-size: 18rpx; }.hanzi { margin-top: 10rpx; font-family: "Songti SC",serif; font-size: 62rpx; }.pinyin { color: #a6472b; font-size: 20rpx; }.word { margin-top: 7rpx; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-size: 22rpx; }.done { position: absolute; top: 12rpx; right: 12rpx; color: #55735c; font-weight: 700; }
-.retry { margin-top: 22rpx; }.sticky-actions { position: fixed; z-index: 5; left: 0; right: 0; bottom: 0; display: flex; gap: 16rpx; padding: 18rpx 28rpx calc(18rpx + env(safe-area-inset-bottom)); border-top: 1rpx solid rgba(77,67,47,.12); background: rgba(255,253,247,.96); }.sticky-actions button { flex: 1; }
+.page { padding-bottom: calc(150rpx + env(safe-area-inset-bottom)); }
+.lesson-hero { position: relative; min-height: 390rpx; overflow: hidden; border-color: var(--line); background: var(--navy); }
+.hero-image,.hero-overlay { position: absolute; inset: 0; width: 100%; height: 100%; }
+.hero-overlay { background: linear-gradient(0deg,rgba(15,22,20,.91),rgba(15,22,20,.06) 78%); }
+.hero-copy { position: relative; display: flex; flex-direction: column; justify-content: flex-end; min-height: 390rpx; padding: 32rpx; color: white; }
+.hero-copy .pill { align-self: flex-start; color: #30150e; background: var(--radical); box-shadow: 0 5rpx 0 var(--radical-deep); }
+.hero-title { margin-top: 18rpx; font-size: 52rpx; font-weight: 900; line-height: 1.12; }
+.hero-context { margin-top: 10rpx; color: rgba(255,255,255,.88); font-size: 23rpx; font-weight: 650; line-height: 1.58; }
+.path-list { display: flex; flex-direction: column; gap: 20rpx; margin-top: 24rpx; }
+.path-item { display: flex; align-items: flex-start; gap: 18rpx; color: var(--ink); font-weight: 650; line-height: 1.55; }
+.path-item text { flex: none; display: flex; align-items: center; justify-content: center; width: 44rpx; height: 44rpx; border-radius: 15rpx 15rpx 15rpx 5rpx; color: #30150e; background: var(--radical); box-shadow: 0 4rpx 0 var(--radical-deep); font-size: 20rpx; font-weight: 900; }
+.progress-card { margin-top: 24rpx; padding: 26rpx 28rpx; }
+.progress-card>view:first-child { display: flex; justify-content: space-between; margin-bottom: 18rpx; color: var(--ink-soft); font-weight: 800; }
+.progress-card strong { color: var(--action-text); font-size: 27rpx; font-weight: 900; }
+.progress-card .progress-track { background: var(--action-soft); }
+.progress-card .progress-value { background: var(--action); }
+.character-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 16rpx; margin-top: 28rpx; }
+.character-card { position: relative; min-height: 224rpx; padding: 18rpx 10rpx; text-align: center; border-radius: 30rpx; }
+.character-card:active { transform: translateY(7rpx); box-shadow: none; }
+.character-card.is-done { border-color: var(--action-edge); background: var(--action-soft); box-shadow: 0 7rpx 0 var(--action-edge); }
+.role { display: inline-block; padding: 5rpx 12rpx; border-radius: 99rpx; color: var(--wrong-text); background: var(--wrong-soft); font-size: 18rpx; font-weight: 800; }
+.hanzi { margin-top: 11rpx; color: var(--navy); font-family: "Kaiti SC",STKaiti,serif; font-size: 64rpx; line-height: 1.08; }
+.pinyin { color: var(--radical-text); font-size: 20rpx; font-weight: 800; }
+.word { margin-top: 7rpx; overflow: hidden; color: var(--ink); white-space: nowrap; text-overflow: ellipsis; font-size: 22rpx; font-weight: 750; }
+.done { position: absolute; top: 11rpx; right: 11rpx; display: flex; align-items: center; justify-content: center; width: 34rpx; height: 34rpx; border-radius: 50%; color: white; background: var(--action-deep); font-size: 19rpx; font-weight: 900; }
+.retry { margin-top: 22rpx; }
+.sticky-actions { position: fixed; z-index: 5; left: 0; right: 0; bottom: 0; display: flex; gap: 16rpx; padding: 18rpx 28rpx calc(18rpx + env(safe-area-inset-bottom)); border-top: 2rpx solid var(--line); background: rgba(255,252,246,.97); }
+.sticky-actions button { flex: 1; }

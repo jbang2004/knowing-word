@@ -19,7 +19,10 @@ function accountView() {
 
 Page({
   data: accountView(),
-  onShow() { this.setData(accountView()); },
+  onShow() {
+    this.getTabBar?.()?.setData({ selected: 3 });
+    this.setData(accountView());
+  },
   onNameInput(event: WechatMiniprogram.Input) { this.setData({ name: event.detail.value.slice(0, 18) }); },
   saveName() {
     const profile = loadProfile();
@@ -43,7 +46,7 @@ Page({
       title: "清除全部学习记录？",
       content: this.data.connected ? "本机进度、云端档案和已上传录音都会清除，无法撤销。" : "本机进度会被清除，无法撤销。",
       confirmText: "确认清除",
-      confirmColor: "#A6472B",
+      confirmColor: "#FF5B34",
       success: async (result) => {
         if (!result.confirm) return;
         wx.showLoading({ title: "正在清除" });

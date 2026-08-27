@@ -11,16 +11,17 @@
     "pages/account/index"
   ],
   "window": {
-    "backgroundColor": "#F5EEDD",
+    "backgroundColor": "#FFFCF6",
     "backgroundTextStyle": "dark",
-    "navigationBarBackgroundColor": "#F5EEDD",
+    "navigationBarBackgroundColor": "#FFFCF6",
     "navigationBarTextStyle": "black",
     "navigationBarTitleText": "知字"
   },
   "tabBar": {
-    "color": "#6F6A5D",
-    "selectedColor": "#A6472B",
-    "backgroundColor": "#FFFDF7",
+    "custom": true,
+    "color": "#5E6E68",
+    "selectedColor": "#0B7654",
+    "backgroundColor": "#FFFFFF",
     "borderStyle": "white",
     "list": [
       { "pagePath": "pages/home/index", "text": "今日" },

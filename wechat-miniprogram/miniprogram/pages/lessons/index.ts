@@ -21,7 +21,10 @@ function lessonRows(profile: StudyProfile) {
 
 Page({
   data: { lessons: lessonRows(loadProfile()) },
-  onShow() { this.setData({ lessons: lessonRows(loadProfile()) }); },
+  onShow() {
+    this.getTabBar?.()?.setData({ selected: 1 });
+    this.setData({ lessons: lessonRows(loadProfile()) });
+  },
   async onPullDownRefresh() {
     this.setData({ lessons: lessonRows(await syncProfile()) });
     wx.stopPullDownRefresh();

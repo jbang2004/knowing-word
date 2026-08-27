@@ -9,6 +9,41 @@ const trackDetails: Array<{ id: TrackId; glyph: string; title: string; copy: str
   { id: "structure", glyph: "构", title: "结构复习", copy: "看清左右、上下与包围关系" },
 ];
 
+const segmentMeta = [
+  { numeral: "一", title: "从词语认字", copy: "先听懂字义，再辨认完整字形" },
+  { numeral: "二", title: "看清字形", copy: "观察结构和部件，建立记忆线索" },
+  { numeral: "三", title: "独立回想", copy: "离开提示，再把这个字想起来" },
+];
+
+function makePathSegments(
+  lessonCharacters: typeof characterIndex,
+  completedWords: Set<string>,
+  nextCharacterId?: string,
+) {
+  const segmentSize = Math.max(1, Math.ceil(lessonCharacters.length / segmentMeta.length));
+  return segmentMeta.map((meta, segmentIndex) => {
+    const characters = lessonCharacters
+      .slice(segmentIndex * segmentSize, (segmentIndex + 1) * segmentSize)
+      .map((character, index) => ({
+        ...character,
+        state: completedWords.has(character.id)
+          ? "done"
+          : character.id === nextCharacterId
+            ? "current"
+            : "locked",
+        offsetClass: ["is-left", "is-right", "is-center", "is-left-soft"][index % 4],
+      }));
+    const hasCurrent = characters.some((character) => character.state === "current");
+    const allDone = characters.length > 0 && characters.every((character) => character.state === "done");
+    return {
+      ...meta,
+      characters,
+      preview: characters.slice(0, 4).map((character) => character.hanzi),
+      state: hasCurrent ? "current" : allDone ? "done" : "locked",
+    };
+  }).filter((segment) => segment.characters.length > 0);
+}
+
 function makeView(profile: StudyProfile) {
   const readyCharacters = characterIndex.filter((character) => character.ready);
   const completedWords = new Set(profile.completed.words);
@@ -19,12 +54,15 @@ function makeView(profile: StudyProfile) {
   const today = profile.daily[learningDayKey()] ?? { attempts: 0, correct: 0, skips: 0, readSessions: 0 };
   return {
     name: profile.name || "小探险家",
+    initial: (profile.name || "小").slice(0, 1),
     today,
     nextCharacter,
     nextLesson: { ...nextLesson, cover: lessonCover(nextLesson) },
     lessonCompleted,
     lessonTotal: lessonCharacters.length,
     lessonProgress: lessonCharacters.length ? Math.round(lessonCompleted / lessonCharacters.length * 100) : 0,
+    streak: Object.keys(profile.daily).length,
+    pathSegments: makePathSegments(lessonCharacters, completedWords, nextCharacter?.id),
     tracks: trackDetails.map((track) => ({
       ...track,
       completed: profile.completed[track.id].length,
@@ -33,21 +71,27 @@ function makeView(profile: StudyProfile) {
         ? Math.round(profile.completed[track.id].length / readyCharacters.length * 100)
         : 0,
     })),
+    reviewTracks: trackDetails.slice(1),
   };
 }
 
 Page({
   data: {
     name: "小探险家",
+    initial: "小",
     today: { attempts: 0, correct: 0, skips: 0, readSessions: 0 },
     nextCharacter: null as typeof characterIndex[number] | null,
     nextLesson: { ...lessonIndex[0], cover: lessonCover(lessonIndex[0]) },
     lessonCompleted: 0,
     lessonTotal: 0,
     lessonProgress: 0,
+    streak: 0,
+    pathSegments: [] as ReturnType<typeof makeView>["pathSegments"],
     tracks: [] as ReturnType<typeof makeView>["tracks"],
+    reviewTracks: trackDetails.slice(1),
   },
   onShow() {
+    this.getTabBar?.()?.setData({ selected: 0 });
     this.setData(makeView(loadProfile()));
   },
   async onPullDownRefresh() {
@@ -57,6 +101,20 @@ Page({
   },
   openLesson() {
     wx.navigateTo({ url: `/pages/lesson/index?lessonId=${this.data.nextLesson.id}` });
+  },
+  openAccount() {
+    wx.switchTab({ url: "/pages/account/index" });
+  },
+  openPathCharacter(event: WechatMiniprogram.BaseEvent) {
+    const state = event.currentTarget.dataset.state as string;
+    if (state === "locked") {
+      wx.showToast({ title: "先完成前一个字", icon: "none" });
+      return;
+    }
+    const characterId = event.currentTarget.dataset.id as string;
+    wx.navigateTo({
+      url: `/pages/practice/index?track=words&lessonId=${this.data.nextLesson.id}&characterId=${characterId}`,
+    });
   },
   continueLearning() {
     const characterId = this.data.nextCharacter?.id;

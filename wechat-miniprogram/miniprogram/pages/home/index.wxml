@@ -1,48 +1,64 @@
-<view class="page paper-texture">
-  <view class="hero">
-    <view>
-      <text class="eyebrow">今日知字</text>
-      <view class="title">{{name}}，从一个字开始</view>
-      <view class="subtitle">不赶进度。看懂、读准、拆开，再亲手写一遍。</view>
-    </view>
-    <view class="seal">知</view>
+<view class="page home-page">
+  <view class="status-row">
+    <view class="avatar" bindtap="openAccount">{{initial}}</view>
+    <view class="status-spacer"></view>
+    <view class="metric streak"><text class="metric-icon">火</text><strong>{{streak}}</strong></view>
+    <view class="metric today"><text class="metric-icon">✓</text><strong>{{today.attempts}}</strong></view>
   </view>
 
-  <view class="today-grid">
-    <view class="today-stat card"><text>{{today.attempts}}</text><view>今日练习</view></view>
-    <view class="today-stat card"><text>{{today.correct}}</text><view>答对</view></view>
-    <view class="today-stat card"><text>{{today.readSessions}}</text><view>朗读</view></view>
-  </view>
-
-  <view class="lesson-card card" bindtap="openLesson">
-    <image wx:if="{{nextLesson.cover}}" class="lesson-cover" src="{{nextLesson.cover}}" mode="aspectFill" />
-    <view class="lesson-shade"></view>
-    <view class="lesson-content">
-      <text class="pill">第 {{nextLesson.position}} 课 · {{nextLesson.mode}}</text>
-      <view class="lesson-title">{{nextLesson.title}}</view>
-      <view class="lesson-context">{{nextLesson.context}}</view>
-      <view class="lesson-progress-row">
+  <view class="lesson-banner" bindtap="openLesson">
+    <view class="lesson-main">
+      <text>第 {{nextLesson.position}} 课</text>
+      <strong>{{nextLesson.title}}</strong>
+      <view class="lesson-progress">
         <view class="progress-track"><view class="progress-value" style="width: {{lessonProgress}}%"></view></view>
-        <text>{{lessonCompleted}} / {{lessonTotal}}</text>
+        <text>{{lessonCompleted}} / {{lessonTotal}} 字</text>
       </view>
     </view>
+    <view class="lesson-button"><view class="book-mark">册</view><text>课文</text></view>
   </view>
 
-  <button class="primary-button continue" bindtap="continueLearning">
-    <text wx:if="{{nextCharacter}}">继续学习“{{nextCharacter.hanzi}}”</text>
-    <text wx:else>开始第一课</text>
-  </button>
-
-  <view class="section-heading">
-    <view><text class="eyebrow">四条学习路径</text><view class="section-title">按需要选择练习</view></view>
-    <navigator url="/pages/components/index" class="component-link">部件馆 →</navigator>
+  <view class="focus-card card" wx:if="{{nextCharacter}}">
+    <view class="focus-glyph">{{nextCharacter.hanzi}}</view>
+    <view class="focus-copy">
+      <text>今天接着学 · 当前任务</text>
+      <strong>从“{{nextCharacter.hanzi}}”继续学习</strong>
+      <view>看懂字义、认清字形，再亲手写一遍。</view>
+    </view>
+    <button bindtap="continueLearning">开始学习</button>
   </view>
-  <view class="track-grid">
-    <view wx:for="{{tracks}}" wx:key="id" class="track-card card" data-track="{{item.id}}" bindtap="openTrack">
-      <view class="track-glyph track-{{item.id}}">{{item.glyph}}</view>
-      <view class="track-title">{{item.title}}</view>
-      <view class="track-copy">{{item.copy}}</view>
-      <view class="track-progress"><view class="progress-track"><view class="progress-value" style="width: {{item.percent}}%"></view></view><text>{{item.completed}}</text></view>
+
+  <view class="path-map">
+    <block wx:for="{{pathSegments}}" wx:key="numeral" wx:for-item="segment">
+      <block wx:if="{{segment.state === 'current'}}">
+        <view class="chapter-rule"><view></view><text>章{{segment.numeral}} · {{segment.title}}</text><view></view></view>
+        <view class="path-steps">
+          <view wx:for="{{segment.characters}}" wx:key="id" wx:for-item="node" class="path-node {{node.state}} {{node.offsetClass}}">
+            <view class="path-line"></view>
+            <button class="path-seal" data-id="{{node.id}}" data-state="{{node.state}}" bindtap="openPathCharacter">
+              {{node.hanzi}}
+              <text wx:if="{{node.state === 'done'}}" class="node-badge done">✓</text>
+              <text wx:elif="{{node.state === 'locked'}}" class="node-badge lock">锁</text>
+            </button>
+          </view>
+        </view>
+      </block>
+      <view wx:else class="chapter-fold {{segment.state}}">
+        <view class="mini-seals"><text wx:for="{{segment.preview}}" wx:key="*this" wx:for-item="glyph">{{glyph}}</text></view>
+        <view class="chapter-copy"><strong>章{{segment.numeral}} · {{segment.title}}</strong><text>{{segment.characters.length}} 个字 · {{segment.copy}}</text></view>
+        <text class="fold-state">{{segment.state === 'done' ? '✓' : '锁'}}</text>
+      </view>
+    </block>
+  </view>
+
+  <view class="practice-plan card">
+    <view class="practice-head"><text>完成 {{lessonCompleted}}/{{lessonTotal}} 个识字小测后解锁</text><strong>整课巩固 · 选做</strong><view>哪里还不牢，就选择结构、拆字或红蓝再练一次。</view></view>
+    <view class="practice-list">
+      <view wx:for="{{reviewTracks}}" wx:key="id" class="practice-row" data-track="{{item.id}}" bindtap="openTrack">
+        <view class="practice-icon track-{{item.id}}">{{item.glyph}}</view>
+        <view><strong>{{item.title}}</strong><text>{{lessonCompleted === lessonTotal ? item.copy : '学完本课生字后解锁'}}</text></view>
+        <text class="practice-arrow">›</text>
+      </view>
     </view>
   </view>
 </view>

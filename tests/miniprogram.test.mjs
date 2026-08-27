@@ -38,3 +38,22 @@ test("mini-program ships a compact index and keeps full lesson content behind th
   assert.match(catalogService, /lesson-cache:v3/u);
   assert.ok(catalogService.includes(`includes('"http://')`));
 });
+
+test("native mini-program shares the Web visual language instead of the retired paper theme", async () => {
+  const app = JSON.parse(await readFile(new URL("miniprogram/app.json", root), "utf8"));
+  const globalStyles = await readFile(new URL("miniprogram/app.wxss", root), "utf8");
+  const homeTemplate = await readFile(new URL("miniprogram/pages/home/index.wxml", root), "utf8");
+  const homeStyles = await readFile(new URL("miniprogram/pages/home/index.wxss", root), "utf8");
+  const tabTemplate = await readFile(new URL("miniprogram/custom-tab-bar/index.wxml", root), "utf8");
+
+  assert.equal(app.tabBar.custom, true);
+  assert.match(globalStyles, /--action:\s*#17b686/u);
+  assert.match(globalStyles, /--radical:\s*#ff5b34/u);
+  assert.match(globalStyles, /--part:\s*#2fa8e0/u);
+  assert.match(globalStyles, /--wrong:\s*#ffb020/u);
+  assert.doesNotMatch(globalStyles, /#f5eedd|#a6472b/iu);
+  assert.match(homeTemplate, /class="lesson-banner"/u);
+  assert.match(homeTemplate, /class="path-map"/u);
+  assert.match(homeStyles, /box-shadow:\s*0 10rpx 0 var\(--action-deep\)/u);
+  assert.match(tabTemplate, /icon-\{\{item\.icon\}\}/u);
+});
