@@ -862,6 +862,8 @@ test("versioned assets run through the cache-header worker path", async () => {
     "/sfx/*",
     "/og-cover.jpg",
   ]);
+  const assetHeaders = await readFile(new URL("../dist/client/_headers", import.meta.url), "utf8");
+  assert.match(assetHeaders, /\/fonts\/\*[\s\S]*Access-Control-Allow-Origin: \*/u);
 });
 
 test("mini-program font assets expose immutable CORS-safe responses", async () => {

@@ -4,6 +4,7 @@ import { join, resolve } from "node:path";
 const projectRoot = resolve(import.meta.dirname, "..");
 const clientRoot = join(projectRoot, "dist/client");
 const wranglerConfigPath = join(projectRoot, "dist/server/wrangler.json");
+const assetHeadersPath = join(clientRoot, "_headers");
 const legacyNarrationFiles = new Set(["audio.mp3", "audio-marks.json"]);
 
 async function exists(path) {
@@ -81,6 +82,17 @@ wranglerConfig.assets = {
   ],
 };
 await writeFile(wranglerConfigPath, `${JSON.stringify(wranglerConfig)}\n`);
+
+const assetHeaders = await readFile(assetHeadersPath, "utf8").catch(() => "");
+const fontHeaders = [
+  "/fonts/*",
+  "  Access-Control-Allow-Origin: *",
+  "  Cache-Control: public, max-age=31536000, immutable",
+  "  X-Content-Type-Options: nosniff",
+].join("\n");
+if (!assetHeaders.includes("/fonts/*")) {
+  await writeFile(assetHeadersPath, `${assetHeaders.trimEnd()}\n\n${fontHeaders}\n`);
+}
 
 process.stdout.write(
   `Deployment assets pruned: ${counts.heritage} legacy heritage files, ` +
