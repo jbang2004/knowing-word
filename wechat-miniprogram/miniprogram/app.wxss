@@ -37,6 +37,8 @@ page {
   --wrong-soft: #fff3d9;
   --wrong-edge: #f2dfb0;
   --wrong-text: #4a3000;
+  --card-inline-gap: 12px;
+  --card-stack-gap: 16px;
   min-height: 100%;
   background: var(--sky);
   color: var(--ink);
@@ -47,8 +49,10 @@ page {
 .kai { font-family: "Knowing Kai", "Kaiti SC", STKaiti, KaiTi, "Songti SC", STSong, serif; }
 
 view, text, image, button, input, canvas, scroll-view { box-sizing: border-box; }
-button { font: inherit; }
+button { min-width: 0; font: inherit; }
 button::after { border: 0; }
+.press-card { transition: transform .12s ease, box-shadow .12s ease; }
+.press-card.is-pressed { transform: translateY(7rpx); box-shadow: none; }
 .page { min-height: 100vh; padding: 26rpx 28rpx calc(54rpx + env(safe-area-inset-bottom)); }
 .paper-texture { background: var(--sky); }
 .eyebrow { display: block; margin-bottom: 10rpx; color: var(--radical-text); font-size: 22rpx; font-weight: 800; letter-spacing: 3rpx; }

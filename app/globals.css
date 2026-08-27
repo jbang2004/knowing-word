@@ -85,6 +85,8 @@
   --shadow-lift: 0 5px 0 var(--line-deep);
   --shadow-sheet: 0 -16px 44px rgba(34, 48, 44, 0.26);
   --press: 4px;
+  --card-inline-gap: 12px;
+  --card-stack-gap: 16px;
 
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
   --kai: "Knowing Kai", "Kaiti SC", "STKaiti", KaiTi, "Songti SC", STSong, serif;
@@ -1278,7 +1280,8 @@ canvas:focus-visible {
 .track-character-grid {
   display: grid;
   grid-template-columns: repeat(8, minmax(0, 1fr));
-  gap: 10px;
+  column-gap: var(--card-inline-gap);
+  row-gap: var(--card-stack-gap);
 }
 
 .track-character-grid :is(button, a) {
@@ -1422,7 +1425,8 @@ canvas:focus-visible {
 .choice-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 12px;
+  column-gap: var(--card-inline-gap);
+  row-gap: var(--card-stack-gap);
   max-width: 760px;
 }
 
@@ -1835,7 +1839,8 @@ canvas:focus-visible {
 .component-card-grid {
   display: grid;
   grid-template-columns: repeat(6, minmax(0, 1fr));
-  gap: 8px;
+  column-gap: 10px;
+  row-gap: var(--card-stack-gap);
 }
 
 .component-card-grid button {

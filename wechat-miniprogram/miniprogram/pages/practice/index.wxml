@@ -28,15 +28,15 @@
       <view wx:if="{{showWritingBoard}}" class="writing-board">
         <view class="writing-glyph kai">{{character.hanzi}}</view>
         <text>先在纸上或心里写一遍，再对照范字判断。</text>
-        <view class="writing-actions"><button data-correct="{{false}}" bindtap="selfAssess">还需要练</button><button class="primary" data-correct="{{true}}" bindtap="selfAssess">我写对了</button></view>
+        <view class="writing-actions"><view class="writing-choice press-card" data-correct="{{false}}" bindtap="selfAssess" role="button" hover-class="is-pressed">还需要练</view><view class="writing-choice primary press-card" data-correct="{{true}}" bindtap="selfAssess" role="button" hover-class="is-pressed">我写对了</view></view>
       </view>
 
       <view wx:else class="choice-grid">
-        <button wx:for="{{viewOptions}}" wx:key="id" class="choice-card {{item.state}}" data-id="{{item.id}}" bindtap="chooseOption">
+        <view wx:for="{{viewOptions}}" wx:key="id" class="choice-card press-card {{item.state}}" data-id="{{item.id}}" bindtap="chooseOption" role="button" hover-class="is-pressed">
           <image wx:if="{{item.image}}" src="{{item.image}}" mode="aspectFill" class="choice-image" />
           <text class="choice-key">{{item.label}}</text>
           <strong>{{item.text}}</strong>
-        </button>
+        </view>
       </view>
     </view>
 

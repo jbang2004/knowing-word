@@ -11,7 +11,7 @@
 .question-tag { display:inline-flex; min-height:32px; align-items:center; padding:6px 13px; border-radius:999px; color:var(--action-text); background:var(--action-soft); font-size:14px; font-weight:850; }
 .question-prompt { margin-top:11px; color:var(--navy); font-size:24px; font-weight:900; line-height:1.45; }
 .multi-hint { display:inline-flex; margin-top:12px; padding:5px 12px; border-radius:999px; color:var(--ink-soft); background:var(--sky-deep); font-size:13px; font-weight:800; }
-.choice-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; }
+.choice-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); column-gap:var(--card-inline-gap); row-gap:var(--card-stack-gap); }
 .choice-card { position:relative; display:flex; min-width:0; min-height:104px; align-items:center; gap:12px; margin:0; padding:10px; border:2px solid var(--line); border-radius:18px; color:var(--ink); text-align:left; background:white; box-shadow:0 4px 0 var(--line); }
 .choice-card.selected { border-color:var(--part); color:var(--part-text); background:var(--part-soft); box-shadow:0 4px 0 var(--part-edge); }
 .choice-card.correct { border-color:var(--action); color:var(--action-text); background:var(--action-soft); box-shadow:0 4px 0 var(--action-edge); }
@@ -20,7 +20,7 @@
 .choice-card strong { min-width:0; font-size:19px; font-weight:800; }.choice-image { position:absolute; right:8px; bottom:8px; width:64px; height:48px; border-radius:10px; opacity:.82; }
 .writing-board { padding:20px; border:2px solid var(--line); border-radius:22px; text-align:center; background:white; box-shadow:0 4px 0 var(--line); }
 .writing-glyph { display:flex; width:220px; height:220px; align-items:center; justify-content:center; margin:0 auto; border:2px dashed var(--action-edge); border-radius:28px; color:rgba(11,118,84,.18); background:var(--action-soft); font-size:150px; }
-.writing-board>text { display:block; margin-top:16px; color:var(--ink-soft); }.writing-actions { display:grid; grid-template-columns:repeat(2,1fr); gap:10px; margin-top:16px; }.writing-actions button { min-height:48px; margin:0; border:2px solid var(--line); border-radius:16px; color:var(--wrong-text); background:var(--wrong-soft); box-shadow:0 4px 0 var(--wrong-edge); font-weight:900; }.writing-actions button.primary { color:#0f1614; background:var(--action); box-shadow:0 4px 0 var(--action-deep); }
+.writing-board>text { display:block; margin-top:16px; color:var(--ink-soft); }.writing-actions { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:var(--card-inline-gap); margin-top:16px; }.writing-choice { display:flex; width:100%; min-width:0; min-height:48px; align-items:center; justify-content:center; border:2px solid var(--line); border-radius:16px; color:var(--wrong-text); background:var(--wrong-soft); box-shadow:0 4px 0 var(--wrong-edge); font-weight:900; }.writing-choice.primary { color:#0f1614; background:var(--action); box-shadow:0 4px 0 var(--action-deep); }
 .challenge-actions,.answer-sheet { position:fixed; z-index:10; right:14px; bottom:0; left:14px; padding:16px 0 calc(18px + env(safe-area-inset-bottom)); }
 .challenge-actions { display:flex; flex-direction:column; gap:8px; border-top:1px solid var(--line); background:var(--sky); }
 .game-button { display:flex; width:100% !important; min-height:48px; align-items:center; justify-content:center; margin:0 !important; padding:11px 18px; border:2px solid var(--line); border-radius:16px; color:var(--navy); background:white; box-shadow:0 4px 0 var(--line); font-weight:900; }

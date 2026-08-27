@@ -11,11 +11,11 @@
     <view class="component-browser-summary"><strong>{{summaryTitle}}</strong><text>{{summaryCount}}</text></view>
 
     <view wx:if="{{visiblePage.length}}" class="component-card-grid">
-      <button wx:for="{{visiblePage}}" wx:key="id" class="{{item.selected ? 'selected' : ''}} {{item.learned ? 'learned' : ''}}" data-id="{{item.id}}" bindtap="selectComponent">
+      <view wx:for="{{visiblePage}}" wx:key="id" class="component-card press-card {{item.selected ? 'selected' : ''}} {{item.learned ? 'learned' : ''}}" data-id="{{item.id}}" bindtap="selectComponent" role="button" hover-class="is-pressed">
         <strong class="kai">{{item.glyph}}</strong>
         <text wx:if="{{item.title !== item.glyph}}">{{item.title}}</text>
         <small>课内 {{item.count}} 次</small>
-      </button>
+      </view>
     </view>
     <view wx:else class="component-empty"><strong>{{sortMode === 'recent' ? '还没有最近学习的部件' : '没有找到匹配的部件'}}</strong><text>{{sortMode === 'recent' ? '打开一个常用部件后，它会出现在这里。' : '可以换一个部件名称或例字再试。'}}</text><button wx:if="{{sortMode === 'recent'}}" data-mode="frequency" bindtap="chooseSortMode">查看常用部件</button></view>
     <view wx:if="{{hasMore}}" class="component-load-more" bindtap="loadMore" role="button">再显示 {{nextCount}} 个</view>

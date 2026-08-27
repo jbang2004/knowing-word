@@ -440,7 +440,8 @@ html[data-theme="night"] .reader-genre-reflection {
 .reader-focus-words {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(104px, 1fr));
-  gap: 8px;
+  column-gap: var(--card-inline-gap);
+  row-gap: var(--card-stack-gap);
 }
 
 .reader-focus-word {
