@@ -3,7 +3,7 @@ import { dirname, join, resolve } from "node:path";
 import { narrationAssets } from "../app/data/narration-assets.ts";
 
 const projectRoot = resolve(import.meta.dirname, "..");
-const sourceRoot = resolve(projectRoot, ".cache/miniprogram-narration-aac32");
+const sourceRoot = resolve(projectRoot, "release/miniprogram-narration-aac32");
 const outputRoot = resolve(projectRoot, "dist/client/media/narration/v5");
 const relativePaths = [...new Set(
   Object.values(narrationAssets).map((asset) => asset.audio

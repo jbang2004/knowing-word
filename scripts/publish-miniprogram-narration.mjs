@@ -6,7 +6,7 @@ import { narrationAssets } from "../app/data/narration-assets.ts";
 
 const run = promisify(execFile);
 const projectRoot = resolve(import.meta.dirname, "..");
-const sourceRoot = resolve(projectRoot, ".cache/miniprogram-narration-aac32");
+const sourceRoot = resolve(projectRoot, "release/miniprogram-narration-aac32");
 const wranglerConfig = resolve(process.env.WRANGLER_CONFIG || join(projectRoot, "dist/server/wrangler.json"));
 const wrangler = join(projectRoot, "node_modules/.bin/wrangler");
 const config = JSON.parse(await readFile(wranglerConfig, "utf8"));

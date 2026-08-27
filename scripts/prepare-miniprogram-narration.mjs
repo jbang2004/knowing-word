@@ -7,7 +7,7 @@ import { narrationAssets } from "../app/data/narration-assets.ts";
 const run = promisify(execFile);
 const projectRoot = resolve(import.meta.dirname, "..");
 const sourceRoot = resolve(projectRoot, "release/narration");
-const outputRoot = resolve(projectRoot, ".cache/miniprogram-narration-aac32");
+const outputRoot = resolve(projectRoot, "release/miniprogram-narration-aac32");
 const ffmpeg = process.env.FFMPEG || "ffmpeg";
 const relativeInputs = [...new Set(
   Object.values(narrationAssets).map((asset) => asset.audio.replace(/^\/narration\//, "")),
