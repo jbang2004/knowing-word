@@ -19,6 +19,9 @@
     "navigationBarTextStyle": "black",
     "navigationBarTitleText": "知字"
   },
+  "usingComponents": {
+    "ki-icon": "/components/knowing-icon/index"
+  },
   "tabBar": {
     "custom": true,
     "color": "#5E6E68",

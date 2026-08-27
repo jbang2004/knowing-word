@@ -1,6 +1,6 @@
 <view class="tab-shell theme-{{theme}}">
   <view wx:for="{{list}}" wx:key="pagePath" class="tab-item {{selected === index ? 'active' : ''}}" data-index="{{index}}" bindtap="switchTab" hover-class="is-pressed">
-    <view class="tab-icon icon-{{item.icon}}"><view></view></view>
+    <ki-icon name="{{item.icon}}" size="26" />
     <text>{{item.text}}</text>
   </view>
 </view>

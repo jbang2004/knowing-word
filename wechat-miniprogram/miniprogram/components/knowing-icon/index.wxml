@@ -1,0 +1,18 @@
+<view
+  class="knowing-icon-host"
+  style="width:{{size}}px;height:{{size}}px;"
+  aria-hidden="{{!label}}"
+  aria-label="{{label}}"
+>
+  <image
+    wx:if="{{name === 'flame'}}"
+    class="knowing-icon-image"
+    src="/assets/icons/flame-{{tone === 'night' ? 'night' : 'light'}}.svg"
+    mode="aspectFit"
+  />
+  <text
+    wx:else
+    class="knowing-icon-glyph knowing-icon-{{name}}"
+    style="font-size:{{size}}px;line-height:{{size}}px;"
+  ></text>
+</view>

@@ -61,6 +61,8 @@ test("native mini-program shares the Web visual language instead of the retired 
   const practiceStyles = await readFile(new URL("miniprogram/pages/practice/index.wxss", root), "utf8");
   const practiceScript = await readFile(new URL("miniprogram/pages/practice/index.ts", root), "utf8");
   const tabTemplate = await readFile(new URL("miniprogram/custom-tab-bar/index.wxml", root), "utf8");
+  const iconTemplate = await readFile(new URL("miniprogram/components/knowing-icon/index.wxml", root), "utf8");
+  const iconStyles = await readFile(new URL("miniprogram/components/knowing-icon/index.wxss", root), "utf8");
 
   assert.equal(app.tabBar.custom, true);
   assert.match(globalStyles, /--action:\s*#17b686/u);
@@ -91,7 +93,15 @@ test("native mini-program shares the Web visual language instead of the retired 
   assert.match(practiceScript, /key: `\$\{part\.char\}-\$\{index\}-\$\{sessionSalt\}`/u);
   assert.match(practiceScript, /celebrationParts: this\.data\.celebrationParts\.map/u);
   assert.match(practiceScript, /this\.prepareQuestion\(true\)/u);
-  assert.match(tabTemplate, /icon-\{\{item\.icon\}\}/u);
+  assert.equal(app.usingComponents["ki-icon"], "/components/knowing-icon/index");
+  assert.match(tabTemplate, /<ki-icon name="\{\{item\.icon\}\}" size="26"/u);
+  assert.match(iconTemplate, /knowing-icon-\{\{name\}\}/u);
+  assert.match(iconStyles, /data:font\/woff2;base64,/u);
+  assert.doesNotMatch(iconStyles, /https?:\/\//u);
+  assert.match(homeTemplate, /class="path-seal-wrap"/u);
+  assert.doesNotMatch(homeTemplate, /<button class="path-seal"/u);
+  assert.match(homeStyles, /\.path-seal-wrap \{[^}]*width:74px;[^}]*height:74px;[^}]*transform:translateX\(var\(--node-offset\)\)/u);
+  assert.match(homeStyles, /\.node-badge \{[^}]*overflow:visible;/u);
 });
 
 test("native practice keeps the Web mobile answer and completion geometry", async () => {
