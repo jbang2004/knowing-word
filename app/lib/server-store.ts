@@ -1,10 +1,11 @@
 import { getRuntimeEnv } from "./runtime-env.ts";
+import { findWechatSession } from "../server/services/wechat-auth-service.ts";
 
 export type RequestIdentity = {
   userId: string;
   displayName: string;
   email: string | null;
-  mode: "workspace" | "device";
+  mode: "workspace" | "device" | "wechat";
   cookie?: string;
 };
 
@@ -61,6 +62,62 @@ export function resolveIdentity(request: Request): RequestIdentity {
       ? undefined
       : `${DEVICE_COOKIE}=${deviceId}; Path=/; Max-Age=31536000; SameSite=Lax${secure}; HttpOnly`,
   };
+}
+
+function bearerToken(request: Request) {
+  const authorization = request.headers.get("authorization")?.trim() ?? "";
+  const match = /^Bearer\s+([^\s]+)$/iu.exec(authorization);
+  return match?.[1] ?? null;
+}
+
+export async function resolveRequestIdentity(request: Request): Promise<RequestIdentity | null> {
+  const token = bearerToken(request);
+  if (!token) return resolveIdentity(request);
+  const session = await findWechatSession(getDb(), token);
+  if (!session) return null;
+  return {
+    userId: session.userId,
+    displayName: "微信学习者",
+    email: null,
+    mode: "wechat",
+  };
+}
+
+export function jsonUnauthorized(request: Request) {
+  const requestId = request.headers.get("cf-ray")?.slice(0, 80) || crypto.randomUUID();
+  return new Response(JSON.stringify({ error: "登录状态已失效，请重新进入小程序", requestId }), {
+    status: 401,
+    headers: {
+      "content-type": "application/json; charset=utf-8",
+      "cache-control": "no-store",
+    },
+  });
+}
+
+export function jsonIdentityError(request: Request, error: unknown) {
+  const requestId = request.headers.get("cf-ray")?.slice(0, 80) || crypto.randomUUID();
+  console.error(JSON.stringify({
+    level: "error",
+    requestId,
+    method: request.method,
+    pathname: new URL(request.url).pathname,
+    message: error instanceof Error ? error.message : String(error),
+  }));
+  return new Response(JSON.stringify({ error: "暂时无法验证登录状态", requestId }), {
+    status: 503,
+    headers: {
+      "content-type": "application/json; charset=utf-8",
+      "cache-control": "no-store",
+    },
+  });
+}
+
+export async function resolveApiIdentity(request: Request): Promise<RequestIdentity | Response> {
+  try {
+    return await resolveRequestIdentity(request) ?? jsonUnauthorized(request);
+  } catch (error) {
+    return jsonIdentityError(request, error);
+  }
 }
 
 export function jsonWithIdentity(identity: RequestIdentity, body: unknown, init?: ResponseInit) {

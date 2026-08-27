@@ -1,0 +1,9 @@
+.lesson-list { display: flex; flex-direction: column; gap: 18rpx; margin-top: 32rpx; }
+.lesson-row { display: flex; min-height: 230rpx; overflow: hidden; }
+.cover { flex: none; width: 210rpx; height: 230rpx; background: #ded4bd; }
+.lesson-info { flex: 1; min-width: 0; padding: 24rpx; }
+.meta { display: flex; align-items: center; justify-content: space-between; color: #a6472b; font-size: 21rpx; }
+.status { color: #706b5f; }.status-100 { color: #55735c; }
+.name { margin-top: 10rpx; font-family: "Songti SC", serif; font-size: 38rpx; font-weight: 700; }
+.context { display: -webkit-box; margin-top: 8rpx; overflow: hidden; color: #706b5f; font-size: 23rpx; line-height: 1.5; -webkit-box-orient: vertical; -webkit-line-clamp: 2; }
+.progress-row { display: flex; align-items: center; gap: 12rpx; margin-top: 16rpx; color: #706b5f; font-size: 20rpx; }.progress-row .progress-track { flex: 1; }

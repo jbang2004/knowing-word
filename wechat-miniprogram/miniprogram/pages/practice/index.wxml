@@ -1,0 +1,48 @@
+<view class="page paper-texture">
+  <view wx:if="{{loading}}" class="skeleton"></view>
+  <view wx:elif="{{error}}" class="card empty"><view>{{error}}</view><button class="secondary-button retry" bindtap="retry">重新加载</button></view>
+  <block wx:elif="{{character}}">
+    <view class="practice-head">
+      <view><text class="eyebrow">{{trackInfo.eyebrow}}</text><view class="section-title">{{trackInfo.title}}</view></view>
+      <view class="counter">{{questionIndex + 1}} / {{questions.length}}</view>
+    </view>
+    <view class="progress-track"><view class="progress-value" style="width: {{progress}}%"></view></view>
+
+    <view wx:if="{{finished}}" class="finish-card card">
+      <view class="finish-seal">{{character.hanzi}}</view>
+      <view class="finish-title">这一轮完成了</view>
+      <view class="section-copy">你已经看过“{{character.hanzi}}”的字义、字形和关键部件。间隔一段时间再回来，记忆会更牢。</view>
+      <button class="primary-button" bindtap="nextCharacter">学习下一个字</button>
+      <button class="ghost-button" bindtap="viewCard">回看识字卡</button>
+    </view>
+
+    <block wx:else>
+      <view class="question-card card">
+        <view class="question-glyph">{{character.hanzi}}</view>
+        <text class="pill">{{question.origin}}</text>
+        <view class="prompt">{{question.prompt}}</view>
+        <view class="word-hint">{{character.word}} · {{character.pinyin}}</view>
+      </view>
+
+      <view wx:if="{{question.kind === 'write' || !viewOptions.length}}" class="write-assess card">
+        <view class="write-glyph">{{character.hanzi}}</view>
+        <view class="section-copy">先在纸上或心里写一遍，再如实判断。</view>
+        <view class="button-row"><button class="secondary-button" data-correct="{{false}}" bindtap="selfAssess">还需要练</button><button class="primary-button" data-correct="{{true}}" bindtap="selfAssess">我写对了</button></view>
+      </view>
+      <view wx:else class="option-list">
+        <button wx:for="{{viewOptions}}" wx:key="id" class="option card {{item.state}}" data-id="{{item.id}}" bindtap="chooseOption">
+          <image wx:if="{{item.image}}" src="{{item.image}}" mode="aspectFill" class="option-image" />
+          <view class="option-mark">{{item.label}}</view>
+          <view class="option-text">{{item.text}}</view>
+        </button>
+        <button wx:if="{{showMultiSubmit}}" class="primary-button submit" bindtap="submitMulti">提交选择</button>
+      </view>
+
+      <view wx:if="{{answered}}" class="feedback {{correct ? 'right' : 'needs-work'}} card">
+        <view class="feedback-title">{{correct ? '答对了' : '再看一次'}}</view>
+        <view>{{resultCopy}}</view>
+        <button class="primary-button" bindtap="nextQuestion">{{questionIndex === questions.length - 1 ? '完成这一轮' : '下一题'}}</button>
+      </view>
+    </block>
+  </block>
+</view>

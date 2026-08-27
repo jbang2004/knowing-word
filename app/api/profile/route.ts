@@ -1,4 +1,4 @@
-import { getDb, getMedia, jsonError, jsonWithIdentity, resolveIdentity } from "../../lib/server-store.ts";
+import { getDb, getMedia, jsonError, jsonWithIdentity, resolveApiIdentity } from "../../lib/server-store.ts";
 import {
   answerBucket,
   deleteProfile,
@@ -24,7 +24,8 @@ export {
 };
 
 export async function GET(request: Request) {
-  const identity = resolveIdentity(request);
+  const identity = await resolveApiIdentity(request);
+  if (identity instanceof Response) return identity;
   try {
     const snapshot = await getProfileSnapshot(getDb(), identity.userId);
     return jsonWithIdentity(identity, {
@@ -41,7 +42,8 @@ export async function GET(request: Request) {
 }
 
 export async function PUT(request: Request) {
-  const identity = resolveIdentity(request);
+  const identity = await resolveApiIdentity(request);
+  if (identity instanceof Response) return identity;
   let payload: unknown;
   try {
     const raw = await request.text();
@@ -75,7 +77,8 @@ export async function PUT(request: Request) {
 }
 
 export async function DELETE(request: Request) {
-  const identity = resolveIdentity(request);
+  const identity = await resolveApiIdentity(request);
+  if (identity instanceof Response) return identity;
   try {
     await deleteProfile(getDb(), getMedia(), identity.userId);
     return jsonWithIdentity(identity, { ok: true });

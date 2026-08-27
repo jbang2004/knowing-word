@@ -1,5 +1,5 @@
 import { isGrade5LessonId } from "../../data/lesson-content.ts";
-import { getDb, getMedia, jsonError, jsonWithIdentity, resolveIdentity } from "../../lib/server-store.ts";
+import { getDb, getMedia, jsonError, jsonWithIdentity, resolveApiIdentity } from "../../lib/server-store.ts";
 import {
   baseContentType,
   listRecordings,
@@ -14,7 +14,8 @@ export const dynamic = "force-dynamic";
 const recordingIdPattern = /^[a-f0-9]{8}-[a-f0-9]{4}-4[a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}$/iu;
 
 export async function GET(request: Request) {
-  const identity = resolveIdentity(request);
+  const identity = await resolveApiIdentity(request);
+  if (identity instanceof Response) return identity;
   const url = new URL(request.url);
   const id = url.searchParams.get("id");
   const lessonId = url.searchParams.get("lessonId");
@@ -45,7 +46,8 @@ export async function GET(request: Request) {
 }
 
 export async function POST(request: Request) {
-  const identity = resolveIdentity(request);
+  const identity = await resolveApiIdentity(request);
+  if (identity instanceof Response) return identity;
   const lessonId = new URL(request.url).searchParams.get("lessonId");
   if (!lessonId || !isGrade5LessonId(lessonId)) {
     return jsonWithIdentity(identity, { error: "课次编号无效" }, { status: 400 });

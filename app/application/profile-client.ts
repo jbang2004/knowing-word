@@ -13,7 +13,7 @@ import type { Connectivity, JsonTransport, KeyValueStorage } from "../platform/c
 export type AccountIdentity = {
   displayName: string;
   email: string | null;
-  mode: "workspace" | "device";
+  mode: "workspace" | "device" | "wechat";
 };
 
 export type ProfileResponse = {

@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "target": "ES2017",
+    "module": "CommonJS",
+    "moduleResolution": "Node",
+    "lib": ["ES2020", "DOM"],
+    "types": ["miniprogram-api-typings"],
+    "skipLibCheck": true,
+    "noEmit": true,
+    "resolveJsonModule": true
+  },
+  "include": ["miniprogram/**/*.ts"]
+}

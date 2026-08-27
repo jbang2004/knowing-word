@@ -1,0 +1,28 @@
+<view class="page paper-texture">
+  <view wx:if="{{loading}}" class="skeleton"></view>
+  <view wx:elif="{{error}}" class="card empty">{{error}}</view>
+  <block wx:else>
+    <text class="eyebrow">日日朗读</text>
+    <view class="title">{{lesson.title}}</view>
+    <view class="subtitle">{{document.intro || lesson.context}}</view>
+    <view wx:if="{{document}}" class="reading card">
+      <view wx:for="{{document.sections}}" wx:key="title" class="reading-section">
+        <view class="reading-title">{{item.title}}</view>
+        <view wx:for="{{item.paragraphs}}" wx:for-item="paragraph" wx:key="text" class="paragraph">{{paragraph.text}}</view>
+      </view>
+    </view>
+    <view wx:else class="card empty">本课提供的是情境导读。请打开课本，按页面顺序完整朗读一次。</view>
+    <view class="recorder card">
+      <view class="record-orbit {{recording ? 'active' : ''}}"><button class="record-button" bindtap="toggleRecording">{{recording ? '停' : '录'}}</button></view>
+      <view class="record-title">{{recording ? '正在聆听你的朗读' : (tempFilePath ? '这次朗读已录好' : '准备好后开始录音')}}</view>
+      <view class="record-copy">{{recording ? '自然地读，不必追求速度。' : (durationText || '最长可录 2 分钟。')}}</view>
+      <button wx:if="{{tempFilePath}}" class="secondary-button play" bindtap="playRecording">{{playing ? '停止回听' : '回听录音'}}</button>
+      <view wx:if="{{cloudStatus}}" class="cloud-status">{{cloudStatus}}</view>
+    </view>
+    <view class="section card assessment">
+      <view class="section-title">读完后，如实判断</view>
+      <view class="section-copy">这是自我评估，不会把“感觉不错”当成机器识别的正确率。</view>
+      <view class="button-row"><button class="secondary-button" data-accurate="{{false}}" bindtap="assess">还需练习</button><button class="primary-button" data-accurate="{{true}}" bindtap="assess">准确流畅</button></view>
+    </view>
+  </block>
+</view>

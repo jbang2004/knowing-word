@@ -1,11 +1,12 @@
 import { parseLearningEvent } from "../../domain/learning-event.ts";
-import { getDb, jsonError, jsonWithIdentity, resolveIdentity } from "../../lib/server-store.ts";
+import { getDb, jsonError, jsonWithIdentity, resolveApiIdentity } from "../../lib/server-store.ts";
 import { saveLearningEvent } from "../../server/services/learning-event-service.ts";
 
 export const dynamic = "force-dynamic";
 
 export async function POST(request: Request) {
-  const identity = resolveIdentity(request);
+  const identity = await resolveApiIdentity(request);
+  if (identity instanceof Response) return identity;
   let input: unknown;
   try {
     input = await request.json();

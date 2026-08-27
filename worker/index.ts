@@ -8,15 +8,15 @@ type RuntimeEnv = Partial<Env> & { IMAGES?: ImagesBinding };
 const IMMUTABLE_CACHE = "public, max-age=31536000, immutable";
 
 function narrationRequestPath(pathname: string) {
-  const match = /^\/media\/narration\/(v\d+)\/([a-z0-9-]+\/(?:audio\.webm|audio-marks\.json))$/.exec(pathname);
+  const match = /^\/media\/narration\/(v\d+)\/([a-z0-9-]+\/(?:audio\.(?:webm|m4a)|audio-marks\.json))$/.exec(pathname);
   if (!match || !new Set(["v5"]).has(match[1])) return null;
   return { version: match[1], relative: match[2] };
 }
 
 function narrationContentType(relative: string) {
-  return relative.endsWith(".webm")
-    ? "audio/webm; codecs=opus"
-    : "application/json; charset=utf-8";
+  if (relative.endsWith(".webm")) return "audio/webm; codecs=opus";
+  if (relative.endsWith(".m4a")) return "audio/mp4";
+  return "application/json; charset=utf-8";
 }
 
 function parseByteRange(value: string | null, size: number) {
@@ -93,6 +93,23 @@ async function serveNarration(
     );
     if (!object?.body) return new Response("Media unavailable", { status: 503 });
     return new Response(object.body, { status: range ? 206 : 200, headers });
+  }
+
+  if (relative.endsWith(".m4a") && env.ASSETS) {
+    const asset = await env.ASSETS.fetch(request);
+    if (asset.ok) {
+      const headers = new Headers(asset.headers);
+      headers.set("accept-ranges", "bytes");
+      headers.set("cache-control", IMMUTABLE_CACHE);
+      headers.set("content-type", "audio/mp4");
+      headers.set("x-content-type-options", "nosniff");
+      headers.set("x-knowing-word-media", "assets");
+      return new Response(request.method === "HEAD" ? null : asset.body, {
+        status: asset.status,
+        statusText: asset.statusText,
+        headers,
+      });
+    }
   }
 
   return new Response("Media not found", { status: 404 });

@@ -1,0 +1,48 @@
+<view class="page paper-texture">
+  <view class="hero">
+    <view>
+      <text class="eyebrow">今日知字</text>
+      <view class="title">{{name}}，从一个字开始</view>
+      <view class="subtitle">不赶进度。看懂、读准、拆开，再亲手写一遍。</view>
+    </view>
+    <view class="seal">知</view>
+  </view>
+
+  <view class="today-grid">
+    <view class="today-stat card"><text>{{today.attempts}}</text><view>今日练习</view></view>
+    <view class="today-stat card"><text>{{today.correct}}</text><view>答对</view></view>
+    <view class="today-stat card"><text>{{today.readSessions}}</text><view>朗读</view></view>
+  </view>
+
+  <view class="lesson-card card" bindtap="openLesson">
+    <image wx:if="{{nextLesson.cover}}" class="lesson-cover" src="{{nextLesson.cover}}" mode="aspectFill" />
+    <view class="lesson-shade"></view>
+    <view class="lesson-content">
+      <text class="pill">第 {{nextLesson.position}} 课 · {{nextLesson.mode}}</text>
+      <view class="lesson-title">{{nextLesson.title}}</view>
+      <view class="lesson-context">{{nextLesson.context}}</view>
+      <view class="lesson-progress-row">
+        <view class="progress-track"><view class="progress-value" style="width: {{lessonProgress}}%"></view></view>
+        <text>{{lessonCompleted}} / {{lessonTotal}}</text>
+      </view>
+    </view>
+  </view>
+
+  <button class="primary-button continue" bindtap="continueLearning">
+    <text wx:if="{{nextCharacter}}">继续学习“{{nextCharacter.hanzi}}”</text>
+    <text wx:else>开始第一课</text>
+  </button>
+
+  <view class="section-heading">
+    <view><text class="eyebrow">四条学习路径</text><view class="section-title">按需要选择练习</view></view>
+    <navigator url="/pages/components/index" class="component-link">部件馆 →</navigator>
+  </view>
+  <view class="track-grid">
+    <view wx:for="{{tracks}}" wx:key="id" class="track-card card" data-track="{{item.id}}" bindtap="openTrack">
+      <view class="track-glyph track-{{item.id}}">{{item.glyph}}</view>
+      <view class="track-title">{{item.title}}</view>
+      <view class="track-copy">{{item.copy}}</view>
+      <view class="track-progress"><view class="progress-track"><view class="progress-value" style="width: {{item.percent}}%"></view></view><text>{{item.completed}}</text></view>
+    </view>
+  </view>
+</view>

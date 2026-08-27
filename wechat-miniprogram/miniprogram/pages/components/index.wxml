@@ -1,0 +1,13 @@
+<view class="page paper-texture">
+  <text class="eyebrow">四百个常用部件</text>
+  <view class="title">先认识零件，再看懂汉字</view>
+  <view class="search card"><text>⌕</text><input value="{{query}}" bindinput="onSearch" placeholder="搜索部件、例字或功能" /></view>
+  <scroll-view scroll-x="true" class="component-strip" enable-flex="true"><view class="strip-inner"><button wx:for="{{filtered}}" wx:key="id" class="component-chip {{selected.id === item.id ? 'active' : ''}}" data-id="{{item.id}}" bindtap="selectComponent"><text>{{item.glyph}}</text><view>{{item.title}}</view></button></view></scroll-view>
+  <view class="component-detail card">
+    <view class="detail-head"><view class="big-glyph">{{selected.glyph}}</view><view><text class="pill">第 {{selected.group}} 组</text><view class="detail-title">{{selected.title}}</view></view></view>
+    <view class="section-copy">{{selected.description}}</view>
+    <view class="example-title">课内例字</view>
+    <view class="examples"><button wx:for="{{selected.examples}}" wx:key="*this" data-glyph="{{item}}" bindtap="openExample">{{item}}</button></view>
+    <button class="{{learned ? 'secondary-button' : 'primary-button'}} learned-button" bindtap="toggleLearned">{{learned ? '已认识这个部件' : '标记为已认识'}}</button>
+  </view>
+</view>

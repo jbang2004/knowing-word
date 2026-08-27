@@ -1,0 +1,8 @@
+<view class="page paper-texture">
+  <view class="profile-card card"><view class="avatar">{{initial}}</view><view class="profile-copy"><view class="profile-name">{{displayName}}</view><view class="sync {{connected ? 'online' : ''}}"><text></text>{{connected ? '微信同步已连接' : '本机学习模式'}}</view></view></view>
+  <view class="summary-grid"><view class="card stat"><strong>{{completed}}</strong><text>已学汉字</text></view><view class="card stat"><strong>{{components}}</strong><text>已识部件</text></view><view class="card stat"><strong>{{favorites}}</strong><text>收藏识字卡</text></view></view>
+  <view class="section card"><view class="section-title">学习小名</view><view class="name-row"><input value="{{name}}" maxlength="18" bindinput="onNameInput" placeholder="给自己取一个名字" /><button bindtap="saveName">保存</button></view></view>
+  <view class="section card"><view class="section-title">数据与同步</view><view class="section-copy" wx:if="{{connected}}">学习档案写入现有 Sites D1，朗读录音写入 R2；Web 与小程序使用同一份业务数据。</view><view class="section-copy" wx:else>课程与学习功能现在可用，进度先保存在本机。绑定正式 AppID 并配置后端密钥后即可跨设备同步。</view><button wx:if="{{!connected}}" class="primary-button reconnect" bindtap="reconnect">重新连接微信同步</button></view>
+  <view class="menu card"><view bindtap="openComponents"><text>部件馆</text><view>{{components}} 个已认识 <b>›</b></view></view><navigator url="/pages/records/index" open-type="switchTab"><text>学习记录</text><view>{{completed}} / {{total}} 个字 <b>›</b></view></navigator></view>
+  <button class="danger" bindtap="resetProgress">清除学习记录</button>
+</view>

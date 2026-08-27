@@ -1,0 +1,24 @@
+{
+  "appid": "touristappid",
+  "compileType": "miniprogram",
+  "libVersion": "trial",
+  "miniprogramRoot": "miniprogram/",
+  "projectname": "知字-微信原生版",
+  "setting": {
+    "checkInvalidKey": true,
+    "checkSiteMap": true,
+    "coverView": true,
+    "es6": true,
+    "enhance": true,
+    "lazyloadPlaceholderEnable": true,
+    "minified": true,
+    "postcss": true,
+    "showShadowRootInWxmlPanel": true,
+    "useApiHook": true,
+    "useCompilerModule": true,
+    "useCompilerPlugins": ["typescript"],
+    "urlCheck": false
+  },
+  "simulatorType": "wechat",
+  "srcMiniprogramRoot": "miniprogram/"
+}

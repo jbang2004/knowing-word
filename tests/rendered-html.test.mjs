@@ -894,3 +894,28 @@ test("R2 narration delivery supports immutable byte ranges", async () => {
   assert.equal(response.headers.get("x-knowing-word-media"), "r2");
   assert.equal((await response.arrayBuffer()).byteLength, 7);
 });
+
+test("mini-program M4A narration falls back to immutable Site assets", async () => {
+  const workerUrl = new URL("../dist/server/index.js", import.meta.url);
+  workerUrl.searchParams.set("test", "media-suite");
+  workerPromise ||= import(workerUrl.href).then((module) => module.default);
+  const worker = await workerPromise;
+  const response = await worker.fetch(
+    new Request("http://localhost/media/narration/v5/g5v1-l01-c01-u9e6d/audio.m4a"),
+    {
+      MEDIA: { async head() { return null; } },
+      ASSETS: {
+        async fetch(request) {
+          assert.equal(new URL(request.url).pathname, "/media/narration/v5/g5v1-l01-c01-u9e6d/audio.m4a");
+          return new Response("m4a-bytes", { headers: { "content-type": "application/octet-stream" } });
+        },
+      },
+    },
+    { waitUntil() {}, passThroughOnException() {} },
+  );
+  assert.equal(response.status, 200);
+  assert.equal(response.headers.get("content-type"), "audio/mp4");
+  assert.equal(response.headers.get("cache-control"), "public, max-age=31536000, immutable");
+  assert.equal(response.headers.get("x-knowing-word-media"), "assets");
+  assert.equal(await response.text(), "m4a-bytes");
+});

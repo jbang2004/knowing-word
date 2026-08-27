@@ -1,0 +1,26 @@
+.hero { display: flex; align-items: flex-start; justify-content: space-between; gap: 20rpx; padding: 14rpx 6rpx 24rpx; }
+.hero .title { max-width: 530rpx; }
+.seal { flex: none; display: flex; align-items: center; justify-content: center; width: 92rpx; height: 92rpx; border: 5rpx double #a6472b; color: #a6472b; border-radius: 18rpx; font-family: "Songti SC", serif; font-size: 50rpx; transform: rotate(4deg); }
+.today-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14rpx; margin-top: 12rpx; }
+.today-stat { padding: 22rpx 10rpx; text-align: center; }
+.today-stat text { display: block; font-family: Georgia, serif; font-size: 38rpx; font-weight: 700; }
+.today-stat view { margin-top: 4rpx; color: #706b5f; font-size: 21rpx; }
+.lesson-card { position: relative; min-height: 390rpx; margin-top: 26rpx; overflow: hidden; background: #3c4b42; }
+.lesson-cover, .lesson-shade { position: absolute; inset: 0; width: 100%; height: 100%; }
+.lesson-shade { background: linear-gradient(90deg, rgba(31,32,28,.9), rgba(31,32,28,.58) 62%, rgba(31,32,28,.18)); }
+.lesson-content { position: relative; z-index: 1; display: flex; flex-direction: column; justify-content: flex-end; min-height: 390rpx; padding: 34rpx; color: white; }
+.lesson-content .pill { align-self: flex-start; color: #573623; background: rgba(255,244,223,.92); }
+.lesson-title { margin-top: 20rpx; font-family: "Songti SC", serif; font-size: 56rpx; font-weight: 700; }
+.lesson-context { max-width: 540rpx; margin-top: 12rpx; color: rgba(255,255,255,.86); line-height: 1.6; }
+.lesson-progress-row { display: flex; align-items: center; gap: 18rpx; margin-top: 26rpx; }
+.lesson-progress-row .progress-track { flex: 1; background: rgba(255,255,255,.28); }
+.continue { margin-top: 22rpx; }
+.section-heading { display: flex; align-items: flex-end; justify-content: space-between; gap: 20rpx; margin: 42rpx 4rpx 20rpx; }
+.component-link { color: #a6472b; font-size: 24rpx; }
+.track-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16rpx; }
+.track-card { min-height: 300rpx; padding: 24rpx; }
+.track-glyph { display: flex; align-items: center; justify-content: center; width: 70rpx; height: 70rpx; border-radius: 20rpx; color: white; background: #a6472b; font-family: "Songti SC", serif; font-size: 28rpx; }
+.track-split { background: #55735c; }.track-honglan { background: linear-gradient(135deg,#9b4030 50%,#466779 50%); font-size: 20rpx; }.track-structure { background: #806a3c; }
+.track-title { margin-top: 20rpx; font-weight: 700; font-size: 29rpx; }
+.track-copy { min-height: 72rpx; margin-top: 8rpx; color: #706b5f; font-size: 23rpx; line-height: 1.55; }
+.track-progress { display: flex; align-items: center; gap: 12rpx; margin-top: 18rpx; color: #706b5f; font-size: 21rpx; }.track-progress .progress-track { flex: 1; }

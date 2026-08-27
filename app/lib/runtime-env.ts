@@ -1,6 +1,9 @@
 import { AsyncLocalStorage } from "node:async_hooks";
 
-export type RuntimeEnv = Partial<Pick<Env, "DB" | "MEDIA">>;
+export type RuntimeEnv = Partial<Pick<Env, "DB" | "MEDIA">> & {
+  WECHAT_APP_ID?: string;
+  WECHAT_APP_SECRET?: string;
+};
 
 const storageKey = Symbol.for("knowing-word.runtime-env.als");
 const runtimeGlobal = globalThis as typeof globalThis & {

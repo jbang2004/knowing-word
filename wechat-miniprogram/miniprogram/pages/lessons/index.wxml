@@ -1,0 +1,16 @@
+<view class="page paper-texture">
+  <text class="eyebrow">统编版 · 五年级上册</text>
+  <view class="title">二十六课，一条学习路</view>
+  <view class="subtitle">每课只用一套原生模板，课文情境、生字与练习由课程数据自动填充。</view>
+  <view class="lesson-list">
+    <view wx:for="{{lessons}}" wx:key="id" class="lesson-row card" data-id="{{item.id}}" bindtap="openLesson">
+      <image wx:if="{{item.cover}}" class="cover" src="{{item.cover}}" mode="aspectFill" lazy-load="true" />
+      <view class="lesson-info">
+        <view class="meta"><text>第 {{item.position}} 课</text><text class="status status-{{item.percent}}">{{item.status}}</text></view>
+        <view class="name">{{item.title}}</view>
+        <view class="context">{{item.context}}</view>
+        <view class="progress-row"><view class="progress-track"><view class="progress-value" style="width: {{item.percent}}%"></view></view><text>{{item.count}} / {{item.total}}</text></view>
+      </view>
+    </view>
+  </view>
+</view>
