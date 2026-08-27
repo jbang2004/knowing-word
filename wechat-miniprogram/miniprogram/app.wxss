@@ -147,17 +147,6 @@ button[disabled]:active { transform:none; }
 .empty { padding: 70rpx 32rpx; text-align: center; color: var(--ink-soft); line-height: 1.8; }
 .skeleton { min-height: 180rpx; border-radius: 28rpx; background: linear-gradient(90deg, var(--sky-deep) 25%, var(--paper) 50%, var(--sky-deep) 75%); background-size: 200% 100%; animation: shimmer 1.2s infinite; }
 .nav-back { display:flex; width:var(--tap-size); height:var(--tap-size); min-height:0; flex:none; align-items:center; justify-content:center; margin:0 0 0 -10px; padding:0; border-radius:999px; color:var(--ink-soft); background:transparent; }
-.nav-back-icon { position:relative; display:block; width:22px; height:18px; color:currentColor; }
-.nav-back-icon::before { position:absolute; top:4px; left:1px; width:9px; height:9px; border-bottom:2.4px solid currentColor; border-left:2.4px solid currentColor; content:""; transform:rotate(45deg); }
-.nav-back-icon::after { position:absolute; top:8px; left:3px; width:18px; border-top:2.4px solid currentColor; content:""; }
-.ui-icon { position:relative; display:inline-block; width:16px; height:16px; flex:none; color:currentColor; }
-.ui-icon-arrow-right::before { position:absolute; top:7px; left:2px; width:11px; border-top:2px solid currentColor; content:""; }
-.ui-icon-arrow-right::after { position:absolute; top:4px; right:2px; width:6px; height:6px; border-top:2px solid currentColor; border-right:2px solid currentColor; content:""; transform:rotate(45deg); }
-.ui-icon-arrow-left { transform:rotate(180deg); }
-.ui-icon-chevron-right::before { position:absolute; top:4px; left:4px; width:7px; height:7px; border-top:2px solid currentColor; border-right:2px solid currentColor; content:""; transform:rotate(45deg); }
-.ui-icon-check::before { position:absolute; top:4px; left:3px; width:9px; height:5px; border-bottom:2px solid currentColor; border-left:2px solid currentColor; content:""; transform:rotate(-45deg); }
-.ui-icon-star { width:19px; height:19px; background:currentColor; clip-path:polygon(50% 2%,61% 35%,96% 35%,68% 55%,79% 90%,50% 69%,21% 90%,32% 55%,4% 35%,39% 35%); }
-.ui-icon-star::after { position:absolute; inset:4px; background:var(--sky); clip-path:inherit; content:""; }
 @media (min-width:900px) {
   page .home-page,
   page .course-page,

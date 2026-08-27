@@ -27,6 +27,29 @@ test("native mini-program uses a bounded set of page templates for the complete 
   }
 });
 
+test("native mini-program routes functional icons through local WeChat-compatible assets", async () => {
+  const app = JSON.parse(await readFile(new URL("miniprogram/app.json", root), "utf8"));
+  const iconTemplate = await readFile(new URL("miniprogram/components/knowing-icon/index.wxml", root), "utf8");
+  const iconScript = await readFile(new URL("miniprogram/components/knowing-icon/index.ts", root), "utf8");
+  const iconStyles = await readFile(new URL("miniprogram/components/knowing-icon/index.wxss", root), "utf8");
+  const flameAsset = await readFile(new URL("miniprogram/assets/icons/flame-light.svg", root), "utf8");
+  const retiredManualIcons = /(?:nav-back-icon|ui-icon|streak-flame|search-icon|reader-chevron|record-mark|audio-icon|record-spark|hub-spark-icon|sparkles-icon|icon-(?:collapse|replay-small|stop|volume|book|check-card|microphone)|history-icon|memory-close-icon)/u;
+
+  assert.match(iconTemplate, /<image[\s\S]*name === 'flame'[\s\S]*flame-\{\{tone/u);
+  assert.match(iconTemplate, /\{\{glyph\}\}/u);
+  assert.match(iconScript, /const ICON_GLYPHS: Record<string, string>/u);
+  assert.match(iconScript, /"assignment-check": "\\uE08A"/u);
+  assert.doesNotMatch(iconStyles, /::(?:before|after)/u);
+  assert.match(flameAsset, /<svg[\s\S]*<path/u);
+
+  for (const page of app.pages) {
+    const template = await readFile(new URL(`miniprogram/${page}.wxml`, root), "utf8");
+    const styles = await readFile(new URL(`miniprogram/${page}.wxss`, root), "utf8");
+    assert.doesNotMatch(template, retiredManualIcons, `${page}.wxml must use knowing-icon for functional icons`);
+    assert.doesNotMatch(styles, retiredManualIcons, `${page}.wxss must not redraw retired functional icons`);
+  }
+});
+
 test("mini-program ships a compact index and keeps full lesson content behind the Sites API", async () => {
   const catalogStat = await stat(new URL("miniprogram/data/catalog.ts", root));
   const config = await readFile(new URL("miniprogram/config.ts", root), "utf8");
@@ -292,7 +315,7 @@ test("native mini-program keeps the final Web cascade across page families", asy
   assert.match(homeStyles, /\.read-row\.disabled \{ opacity:\.62; box-shadow:none; \}/u);
   assert.match(trackStyles, /\.track-method-card \{ border:2px solid var\(--line\); border-radius:22px;/u);
   assert.match(trackStyles, /\.track-lesson-empty \{[^}]*border:2px dashed var\(--line-deep\);[^}]*border-radius:20px;[^}]*text-align:left;/u);
-  assert.match(accountStyles, /\.danger-row i \{ color:var\(--radical-text\); \}\.danger-row strong \{ color:var\(--ink\); \}/u);
+  assert.match(accountStyles, /\.danger-row>ki-icon \{ color:var\(--radical-text\); \}\.danger-row strong \{ color:var\(--ink\); \}/u);
 
   assert.match(lessonTemplate, /class="reader-mobile-index \{\{mobileIndexOpen/u);
   assert.match(lessonTemplate, /id="guide-section-\{\{item\.id\}\}"/u);

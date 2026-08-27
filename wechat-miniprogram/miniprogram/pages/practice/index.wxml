@@ -1,11 +1,11 @@
 <view class="challenge-page track-{{questionTrack}} theme-{{theme}}">
   <view class="challenge-bar" style="height: {{navHeight}}px; padding-top: {{navTop}}px;">
-    <button class="challenge-close nav-back" bindtap="goBack" aria-label="退出练习"><view class="nav-back-icon"></view></button>
+    <button class="challenge-close nav-back" bindtap="goBack" aria-label="退出练习"><ki-icon name="arrow-left" size="22" /></button>
     <view class="challenge-progress"><i class="{{streak >= 3 ? 'is-hot' : ''}}" style="width: {{progress}}%"></i></view>
     <text class="challenge-count">{{questionIndex + 1}}/{{questions.length}}</text>
   </view>
 
-  <view wx:if="{{streak >= 2}}" class="challenge-streak-row"><view class="challenge-streak {{streakMotion}}"><view class="streak-flame" aria-hidden="true"><i></i></view><text>连对 {{streak}}</text></view></view>
+  <view wx:if="{{streak >= 2}}" class="challenge-streak-row"><view class="challenge-streak {{streakMotion}}"><ki-icon name="flame" size="17" tone="{{theme}}" /><text>连对 {{streak}}</text></view></view>
 
   <view wx:if="{{loading}}" class="challenge-loading"><view class="skeleton"></view></view>
   <view wx:elif="{{error}}" class="challenge-empty"><view>{{error}}</view><button bindtap="retry">重新加载</button></view>
@@ -51,7 +51,7 @@
           <text class="choice-key">{{item.label}}</text>
           <view wx:if="{{item.image}}" class="meaning-illustration">
             <image src="{{item.image}}" mode="aspectFit" />
-            <view wx:if="{{item.showMnemonicFocus}}" class="meaning-match-badge">图形即字形 <view class="ui-icon ui-icon-check" aria-hidden="true"></view></view>
+            <view wx:if="{{item.showMnemonicFocus}}" class="meaning-match-badge">图形即字形 <ki-icon name="check" size="15" /></view>
           </view>
           <view wx:if="{{structureChoices}}" class="structure-shape {{item.structureClass}}"><i></i><i></i><i></i></view>
           <strong wx:if="{{!item.image || answered}}">{{item.image ? item.visualLabel : item.text}}</strong>
@@ -63,17 +63,17 @@
 
     <view wx:if="{{showPendingActions}}" class="challenge-actions">
       <view class="game-button primary press-card {{ready ? '' : 'disabled'}}" bindtap="checkAnswer" role="button" hover-class="{{ready ? 'is-pressed' : 'none'}}">{{isWriting ? '显示范字并对照' : '核对答案'}}</view>
-      <view class="challenge-actions-row"><button class="text-button {{questionIndex === 0 || writingRewrite ? 'disabled' : ''}}" disabled="{{questionIndex === 0 || writingRewrite}}" bindtap="previousQuestion"><view class="ui-icon ui-icon-arrow-right ui-icon-arrow-left" aria-hidden="true"></view><text>上一题</text></button><button class="text-button {{writingRewrite ? 'disabled' : ''}}" disabled="{{writingRewrite}}" bindtap="skipQuestion"><text>跳过这一题</text><view class="ui-icon ui-icon-arrow-right" aria-hidden="true"></view></button></view>
+      <view class="challenge-actions-row"><button class="text-button {{questionIndex === 0 || writingRewrite ? 'disabled' : ''}}" disabled="{{questionIndex === 0 || writingRewrite}}" bindtap="previousQuestion"><ki-icon name="arrow-left" size="16" /><text>上一题</text></button><button class="text-button {{writingRewrite ? 'disabled' : ''}}" disabled="{{writingRewrite}}" bindtap="skipQuestion"><text>跳过这一题</text><ki-icon name="arrow-right" size="16" /></button></view>
     </view>
 
     <view wx:if="{{writingReview}}" class="answer-sheet writing-assessment">
-      <view class="answer-sheet-head"><view class="answer-sheet-mark is-check" aria-hidden="true"><i></i></view><strong class="answer-sheet-title">逐部件对照后，选择最符合的一项</strong></view>
+      <view class="answer-sheet-head"><view class="answer-sheet-mark is-check" aria-hidden="true"><ki-icon name="check-circle" size="23" /></view><strong class="answer-sheet-title">逐部件对照后，选择最符合的一项</strong></view>
       <view class="answer-copy">先看部件、位置和笔画；这是你的对照自查，不等于系统客观识别。</view>
       <view class="challenge-actions-row"><view class="game-button primary press-card" data-assessment="correct" bindtap="selfAssess" hover-class="is-pressed">我对照后认为一致</view><view class="game-button ghost press-card" data-assessment="component-error" bindtap="selfAssess" hover-class="is-pressed">部件错</view><view class="game-button ghost press-card" data-assessment="position-error" bindtap="selfAssess" hover-class="is-pressed">位置错</view><view class="game-button ghost press-card" data-assessment="stroke-error" bindtap="selfAssess" hover-class="is-pressed">漏多笔</view></view>
     </view>
 
     <view wx:elif="{{answered}}" class="answer-sheet {{correct ? 'is-correct' : 'is-wrong'}}">
-      <view class="answer-sheet-head"><view class="answer-sheet-mark {{correct ? 'is-check' : 'is-retry'}}" aria-hidden="true"><i></i></view><strong class="answer-sheet-title">{{resultTitle}}</strong><small class="answer-sheet-attempts">已尝试 {{currentAttempts}} 次</small></view>
+      <view class="answer-sheet-head"><view class="answer-sheet-mark {{correct ? 'is-check' : 'is-retry'}}" aria-hidden="true"><ki-icon name="{{correct ? 'check-circle' : 'replay'}}" size="23" /></view><strong class="answer-sheet-title">{{resultTitle}}</strong><small class="answer-sheet-attempts">已尝试 {{currentAttempts}} 次</small></view>
       <view class="answer-copy"><text wx:if="{{resultAnswer}}">正确答案是：</text><text wx:if="{{resultAnswer}}" class="answer-sheet-answer {{resultAnswerIsGlyph ? 'is-glyph' : ''}}">{{resultAnswer}}</text><text wx:else>{{resultCopy}}</text></view>
       <small wx:if="{{resultNote}}" class="answer-sheet-note">{{resultNote}}</small>
       <view class="game-button primary answer-next press-card {{correct ? '' : 'wrong'}}" bindtap="nextQuestion" role="button" hover-class="is-pressed">{{correct ? (passedQuestionIds.length === questions.length ? '查看成绩' : '继续') : '知道了'}}</view>
@@ -100,7 +100,7 @@
       </view>
       <view class="celebration-actions">
         <button class="game-button primary celebration-primary press-card" bindtap="nextCharacter" hover-class="is-pressed">{{nextActionLabel}}</button>
-        <button class="game-button ghost celebration-ghost press-card" bindtap="replayCharacter" hover-class="is-pressed"><view class="replay-icon" aria-hidden="true"><i></i></view><text>再练一轮</text></button>
+        <button class="game-button ghost celebration-ghost press-card" bindtap="replayCharacter" hover-class="is-pressed"><ki-icon name="replay" size="19" /><text>再练一轮</text></button>
         <button class="text-button celebration-return" bindtap="finishSession">返回上一页</button>
       </view>
     </view>

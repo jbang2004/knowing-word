@@ -45,7 +45,7 @@
 .lesson-characters small,.lesson-characters button>text { color:var(--ink-soft); font-size:11px; }
 .lesson-empty { padding:8px 20px; color:var(--ink-soft); font-size:13px; }
 .record-zero-state { display:flex; min-height:290px; flex-direction:column; align-items:center; justify-content:center; padding:40px 24px; border:1px dashed var(--line); border-radius:22px; text-align:center; background:var(--paper); }
-.record-spark { position:relative; width:32px; height:32px; color:var(--action-text); }.record-spark::before { position:absolute; top:3px; left:8px; width:12px; height:12px; border:2.5px solid currentColor; content:""; transform:rotate(45deg); }.record-spark::after { position:absolute; right:1px; bottom:2px; width:7px; height:7px; border:2px solid currentColor; content:""; transform:rotate(45deg); }
+.record-zero-state>ki-icon { color:var(--action-text); }
 .record-zero-state>strong { margin-top:6px; color:var(--navy); font-size:19px; }
 .record-zero-state>.record-zero-copy { margin-top:8px; color:var(--ink-soft); font-size:13px; line-height:1.6; }
 .record-zero-state button { min-height:46px; margin-top:18px; padding:0 24px; border-radius:999px; color:#0f1614; background:var(--action); box-shadow:0 4px 0 var(--action-deep); font-size:13px; font-weight:900; }

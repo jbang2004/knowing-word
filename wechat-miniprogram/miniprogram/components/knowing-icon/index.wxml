@@ -14,5 +14,5 @@
     wx:else
     class="knowing-icon-glyph knowing-icon-{{name}}"
     style="font-size:{{size}}px;line-height:{{size}}px;"
-  ></text>
+  >{{glyph}}</text>
 </view>

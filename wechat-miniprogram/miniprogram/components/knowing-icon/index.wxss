@@ -40,32 +40,4 @@
   -webkit-font-smoothing: antialiased;
 }
 
-.knowing-icon-home::before { content: "\E470"; }
-.knowing-icon-book::before,
-.knowing-icon-book-open::before { content: "\E0C8"; }
-.knowing-icon-grid::before,
-.knowing-icon-view-module::before { content: "\E8FB"; }
-.knowing-icon-person::before,
-.knowing-icon-user::before { content: "\E8C9"; }
-.knowing-icon-check-circle::before { content: "\E1B8"; }
-.knowing-icon-check::before { content: "\E1BC"; }
-.knowing-icon-lock::before { content: "\E512"; }
-.knowing-icon-chevron-right::before { content: "\E1D8"; }
-.knowing-icon-arrow-right::before { content: "\E079"; }
-.knowing-icon-arrow-left::before { content: "\E070"; }
-.knowing-icon-refresh::before { content: "\E6D6"; }
-.knowing-icon-microphone::before { content: "\E5C7"; }
-.knowing-icon-search::before { content: "\E71D"; }
-.knowing-icon-star::before { content: "\E783"; }
-.knowing-icon-star-filled::before { content: "\E782"; }
-.knowing-icon-replay::before { content: "\E6E0"; }
-.knowing-icon-close::before { content: "\E224"; }
-.knowing-icon-chart::before { content: "\E190"; }
-.knowing-icon-moon::before { content: "\E5F4"; }
-.knowing-icon-delete::before { content: "\E2BF"; }
-.knowing-icon-sound::before { content: "\E77A"; }
-.knowing-icon-stop-circle::before { content: "\E78B"; }
-.knowing-icon-play-circle::before { content: "\E6A5"; }
-.knowing-icon-history::before { content: "\E46E"; }
-.knowing-icon-list::before { content: "\E8F9"; }
-.knowing-icon-assignment-check::before { content: "\E08A"; }
+.knowing-icon-chevron-down { transform: rotate(90deg); }

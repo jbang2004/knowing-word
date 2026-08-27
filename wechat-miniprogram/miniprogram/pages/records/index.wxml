@@ -1,5 +1,5 @@
 <view class="records-page theme-{{theme}}" style="padding-top: {{contentTop}}px;">
-  <view class="records-heading"><button class="nav-back" bindtap="goBack" aria-label="返回"><view class="nav-back-icon"></view></button><view class="records-heading-content"><strong>看见自己一步一步学会的过程</strong><text>优先呈现最近练习和已有记录，需要时再展开全部课次。</text></view></view>
+  <view class="records-heading"><button class="nav-back" bindtap="goBack" aria-label="返回"><ki-icon name="arrow-left" size="22" /></button><view class="records-heading-content"><strong>看见自己一步一步学会的过程</strong><text>优先呈现最近练习和已有记录，需要时再展开全部课次。</text></view></view>
 
   <view class="record-stat-row">
     <view class="achievement"><text>已完成</text><strong>{{completed}}</strong><small>个本关字</small></view>
@@ -28,12 +28,12 @@
       <view wx:for="{{visibleLessons}}" wx:key="id" class="record-lesson {{item.active ? '' : 'empty-lesson'}}">
         <view class="lesson-head"><view><text>第 {{item.position}} 课</text><strong>{{item.title}}</strong></view><text>{{item.completed}}/{{item.total}} 已完成</text></view>
         <view wx:if="{{item.recorded.length}}" class="lesson-characters">
-          <button wx:for="{{item.recorded}}" wx:for-item="character" wx:key="id" class="press-card" data-id="{{character.id}}" data-lesson-id="{{character.lessonId}}" bindtap="openCharacter" hover-class="is-pressed"><strong>{{character.hanzi}}</strong><view><text>{{character.status}}</text><small>{{character.attempts}} 次作答</small></view><view class="record-view-action"><text>查看</text><view class="ui-icon ui-icon-arrow-right" aria-hidden="true"></view></view></button>
+          <button wx:for="{{item.recorded}}" wx:for-item="character" wx:key="id" class="press-card" data-id="{{character.id}}" data-lesson-id="{{character.lessonId}}" bindtap="openCharacter" hover-class="is-pressed"><strong>{{character.hanzi}}</strong><view><text>{{character.status}}</text><small>{{character.attempts}} 次作答</small></view><view class="record-view-action"><text>查看</text><ki-icon name="arrow-right" size="15" /></view></button>
         </view>
         <view wx:else class="lesson-empty">尚未开始本路线</view>
       </view>
     </block>
-    <view wx:else class="record-zero-state"><view class="record-spark" aria-hidden="true"></view><strong>还没有{{activeTrackLabel}}记录</strong><view class="record-zero-copy">完成第一次闯关后，最近练习与课次记录会自动整理在这里。</view><button class="press-card" bindtap="startPractice" hover-class="is-pressed">开始第一次练习</button></view>
+    <view wx:else class="record-zero-state"><ki-icon name="chart" size="32" /><strong>还没有{{activeTrackLabel}}记录</strong><view class="record-zero-copy">完成第一次闯关后，最近练习与课次记录会自动整理在这里。</view><button class="press-card" bindtap="startPractice" hover-class="is-pressed">开始第一次练习</button></view>
   </view>
 
   <bottom-navigation active="profile" theme="{{theme}}" />

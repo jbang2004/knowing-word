@@ -11,7 +11,7 @@
       <text>当前建议</text>
       <view class="context-title">练习第 {{lesson.position}} 课《{{lesson.title}}》</view>
       <view class="context-copy">本课识字已完成 {{lessonCompleted}}/{{lessonTotal}} 个；专项只会出现已经学过的字。</view>
-      <button class="press-card" bindtap="continueRecommended" hover-class="is-pressed"><text>继续识字 · {{nextCharacter.hanzi}}</text><view class="ui-icon ui-icon-arrow-right" aria-hidden="true"></view></button>
+      <button class="press-card" bindtap="continueRecommended" hover-class="is-pressed"><text>继续识字 · {{nextCharacter.hanzi}}</text><ki-icon name="arrow-right" size="16" /></button>
     </view>
     <view class="context-glyph">{{nextCharacter.hanzi}}</view>
   </view>
@@ -20,13 +20,13 @@
     <view wx:for="{{routes}}" wx:key="id" class="route-card {{item.tone}}">
       <view class="route-top"><view class="route-glyph">{{item.glyph}}</view><view><text>{{item.eyebrow}}</text><strong>{{item.label}}</strong></view><text>{{item.number}}</text></view>
       <view class="route-progress"><text>本课 {{item.lessonCompleted}}/{{item.lessonTotal}}</text><text>全册 {{item.totalCompleted}}/{{item.total}}</text></view>
-      <view class="route-actions"><button class="press-card" data-track="{{item.id}}" bindtap="openRoute" hover-class="is-pressed"><text>{{item.action}}</text><view class="ui-icon ui-icon-arrow-right" aria-hidden="true"></view></button><text bindtap="openLessons">全部课程</text></view>
+      <view class="route-actions"><button class="press-card" data-track="{{item.id}}" bindtap="openRoute" hover-class="is-pressed"><text>{{item.action}}</text><ki-icon name="arrow-right" size="16" /></button><text bindtap="openLessons">全部课程</text></view>
     </view>
   </view>
 
   <view class="sequence-note">
-    <view class="spark"><view class="hub-spark-icon"></view></view><view><text>可选复习</text><strong>哪里还不牢，就从哪里再练一次。</strong></view>
-    <view class="sequence"><text>完整过关</text><view class="ui-icon ui-icon-arrow-right" aria-hidden="true"></view><text>结构复习</text><view class="ui-icon ui-icon-arrow-right" aria-hidden="true"></view><text>拆字复习</text><view class="ui-icon ui-icon-arrow-right" aria-hidden="true"></view><text>红蓝复习</text><view class="ui-icon ui-icon-arrow-right" aria-hidden="true"></view><text>自由朗读</text></view>
+    <view class="spark"><ki-icon name="star" size="21" /></view><view><text>可选复习</text><strong>哪里还不牢，就从哪里再练一次。</strong></view>
+    <view class="sequence"><text>完整过关</text><ki-icon name="arrow-right" size="15" /><text>结构复习</text><ki-icon name="arrow-right" size="15" /><text>拆字复习</text><ki-icon name="arrow-right" size="15" /><text>红蓝复习</text><ki-icon name="arrow-right" size="15" /><text>自由朗读</text></view>
     <button bindtap="openReader">读　自由朗读</button>
   </view>
 </view>
