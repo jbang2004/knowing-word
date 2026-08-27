@@ -1,4 +1,5 @@
-import { characterIndex, lessonIndex } from "../../services/catalog";
+import { characterIndex, isCoreCharacter, lessonIndex } from "../../services/catalog";
+import { navigationLayout } from "../../services/layout";
 import { loadProfile, syncProfile } from "../../services/profile";
 import type { StudyProfile, TrackId } from "../../types/models";
 
@@ -10,7 +11,7 @@ const trackMeta: Array<{ id: TrackId; glyph: string; eyebrow: string; label: str
 ];
 
 function makeView(profile: StudyProfile) {
-  const ready = characterIndex.filter((character) => character.ready && character.primary);
+  const ready = characterIndex.filter(isCoreCharacter);
   const completedWords = new Set(profile.completed.words);
   const nextCharacter = ready.find((character) => !completedWords.has(character.id)) ?? ready[0];
   const lesson = lessonIndex.find((item) => item.id === nextCharacter?.lessonId) ?? lessonIndex[0];
@@ -46,10 +47,7 @@ Page({
     contentTop: 70,
   },
   onLoad() {
-    const menu = wx.getMenuButtonBoundingClientRect();
-    const info = wx.getWindowInfo();
-    const top = Math.max(info.statusBarHeight ?? 0, menu.top || 0);
-    this.setData({ contentTop: top + Math.max(44, menu.height || 0) + 18 });
+    this.setData(navigationLayout());
   },
   onShow() {
     this.getTabBar?.()?.setData({ selected: 2 });

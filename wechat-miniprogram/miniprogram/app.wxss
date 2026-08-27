@@ -1,3 +1,10 @@
+@font-face {
+  font-family: "Knowing Kai";
+  src: url("https://knowing-word.jbang2004.chatgpt.site/fonts/lxgw-wenkai-subset.woff2") format("woff2");
+  font-weight: 400 500;
+  font-style: normal;
+}
+
 page {
   --sky: #fffcf6;
   --sky-deep: #f2ece0;
@@ -5,7 +12,8 @@ page {
   --paper-soft: #faf6ee;
   --ink: #22302c;
   --ink-soft: #5e6e68;
-  --ink-faint: #70695d;
+  --ink-faint: #5e6e68;
+  --disabled-ink: #70695d;
   --line: #e5dfd2;
   --line-deep: #d5cdba;
   --navy: #123c33;
@@ -32,9 +40,11 @@ page {
   min-height: 100%;
   background: var(--sky);
   color: var(--ink);
-  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Noto Sans CJK SC", sans-serif;
+  font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", system-ui, sans-serif;
   font-size: 28rpx;
 }
+
+.kai { font-family: "Knowing Kai", "Kaiti SC", STKaiti, KaiTi, "Songti SC", STSong, serif; }
 
 view, text, image, button, input, canvas, scroll-view { box-sizing: border-box; }
 button { font: inherit; }

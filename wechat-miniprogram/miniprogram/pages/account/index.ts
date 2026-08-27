@@ -1,4 +1,5 @@
-import { characterIndex } from "../../services/catalog";
+import { characterIndex, isCoreCharacter } from "../../services/catalog";
+import { navigationLayout } from "../../services/layout";
 import { ensureWechatSession, getSessionStatus } from "../../services/session";
 import { loadProfile, resetEverywhere, saveProfile, syncProfile } from "../../services/profile";
 
@@ -11,7 +12,7 @@ function accountView() {
     initial: (profile.name || "学").slice(0, 1),
     connected: session.connected,
     completed: profile.completed.words.length,
-    total: characterIndex.filter((character) => character.ready && character.primary).length,
+    total: characterIndex.filter(isCoreCharacter).length,
     components: profile.learnedComponents.length,
     favorites: profile.favorites.length,
     grade: profile.grade,
@@ -22,10 +23,7 @@ function accountView() {
 Page({
   data: { ...accountView(), contentTop: 70 },
   onLoad() {
-    const menu = wx.getMenuButtonBoundingClientRect();
-    const info = wx.getWindowInfo();
-    const top = Math.max(info.statusBarHeight ?? 0, menu.top || 0);
-    this.setData({ contentTop: top + Math.max(44, menu.height || 0) + 18 });
+    this.setData(navigationLayout());
   },
   onShow() {
     this.getTabBar?.()?.setData({ selected: 3 });

@@ -1,13 +1,34 @@
-<view class="page paper-texture">
-  <text class="eyebrow">四百个常用部件</text>
-  <view class="title">先认识零件，再看懂汉字</view>
-  <view class="search card"><text>⌕</text><input value="{{query}}" bindinput="onSearch" placeholder="搜索部件、例字或功能" /></view>
-  <scroll-view scroll-x="true" class="component-strip" enable-flex="true"><view class="strip-inner"><button wx:for="{{filtered}}" wx:key="id" class="component-chip {{selected.id === item.id ? 'active' : ''}}" data-id="{{item.id}}" bindtap="selectComponent"><text>{{item.glyph}}</text><view>{{item.title}}</view></button></view></scroll-view>
-  <view class="component-detail card">
-    <view class="detail-head"><view class="big-glyph">{{selected.glyph}}</view><view><text class="pill">第 {{selected.group}} 组</text><view class="detail-title">{{selected.title}}</view></view></view>
-    <view class="section-copy">{{selected.description}}</view>
-    <view class="example-title">课内例字</view>
-    <view class="examples"><button wx:for="{{selected.examples}}" wx:key="*this" data-glyph="{{item}}" bindtap="openExample">{{item}}</button></view>
-    <button class="{{learned ? 'secondary-button' : 'primary-button'}} learned-button" bindtap="toggleLearned">{{learned ? '已认识这个部件' : '标记为已认识'}}</button>
+<view class="components-page" style="padding-top: {{navHeight + 18}}px;">
+  <view class="utility-heading"><button bindtap="goBack">‹</button><strong>从常见部件入手，识字更轻松</strong></view>
+
+  <view wx:if="{{recent}}" class="component-resume"><text>上次学到</text><strong class="kai">{{recent.glyph}}</strong><view>{{recent.title}}</view><button data-id="{{recent.id}}" bindtap="selectComponent">继续 →</button></view>
+
+  <view class="component-browser">
+    <view class="component-browser-toolbar">
+      <view class="component-sort-tabs"><button class="{{sortMode === 'frequency' ? 'active' : ''}}" data-mode="frequency" bindtap="chooseSortMode">常用部件</button><button class="{{sortMode === 'recent' ? 'active' : ''}}" data-mode="recent" bindtap="chooseSortMode">最近学习</button></view>
+      <view class="component-search"><text>⌕</text><input value="{{query}}" bindinput="onSearch" placeholder="搜部件或例字" /></view>
+    </view>
+    <view class="component-browser-summary"><strong>{{summaryTitle}}</strong><text>{{summaryCount}}</text></view>
+
+    <view wx:if="{{visiblePage.length}}" class="component-card-grid">
+      <button wx:for="{{visiblePage}}" wx:key="id" class="{{item.selected ? 'selected' : ''}} {{item.learned ? 'learned' : ''}}" data-id="{{item.id}}" bindtap="selectComponent">
+        <strong class="kai">{{item.glyph}}</strong>
+        <text wx:if="{{item.title !== item.glyph}}">{{item.title}}</text>
+        <small>课内 {{item.count}} 次</small>
+      </button>
+    </view>
+    <view wx:else class="component-empty"><strong>{{sortMode === 'recent' ? '还没有最近学习的部件' : '没有找到匹配的部件'}}</strong><text>{{sortMode === 'recent' ? '打开一个常用部件后，它会出现在这里。' : '可以换一个部件名称或例字再试。'}}</text><button wx:if="{{sortMode === 'recent'}}" data-mode="frequency" bindtap="chooseSortMode">查看常用部件</button></view>
+    <view wx:if="{{hasMore}}" class="component-load-more" bindtap="loadMore" role="button">再显示 {{nextCount}} 个</view>
+  </view>
+
+  <view wx:if="{{detailsOpen}}" class="sheet-backdrop" bindtap="closeDetails" catchtouchmove="closeDetails"></view>
+  <view class="component-sheet {{detailsOpen ? 'open' : ''}}">
+    <view class="sheet-close" bindtap="closeDetails" role="button">关闭</view>
+    <view class="story-glyph"><text>{{selected.glyph}}</text></view>
+    <text class="story-kicker">部件精讲</text>
+    <strong class="story-title">{{selected.title}}</strong>
+    <view class="story-copy">{{selected.description}}</view>
+    <view class="story-section"><text>常见例字</text><view class="example-list"><view wx:for="{{selected.examples}}" wx:key="*this" data-glyph="{{item}}" bindtap="openExample">{{item}}</view></view></view>
+    <view class="story-section"><text>本册里遇见它</text><view class="linked-list"><button wx:for="{{connected}}" wx:key="id" data-glyph="{{item.hanzi}}" bindtap="openExample"><strong class="kai">{{item.hanzi}}</strong><text>第 {{item.lessonPosition}} 课</text></button><view wx:if="{{!connected.length}}">这个部件会在后续词语里出现。</view></view></view>
   </view>
 </view>

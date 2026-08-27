@@ -26,8 +26,8 @@
       <view class="study-meaning">本课词语「{{character.word}}」：{{character.originalMeaning}}</view>
 
       <view class="study-launch">
-        <button class="listen-button" bindtap="playNarration"><view class="equalizer"><i></i><i></i><i></i><i></i><i></i></view><view><strong>{{playing ? '暂停字义讲解' : '听字义讲解'}}</strong><text>{{character.media.narration.transcript.length}} 字 · 留在画面边看边听</text></view><text>→</text></button>
-        <button class="action-wide" bindtap="openDrawer"><text>✣</text><view><strong>物象四步</strong><text>看意象 · 找部首 · 找部件 · 合成字</text></view><text>›</text></button>
+        <view class="listen-button" bindtap="playNarration" role="button"><view class="equalizer"><i></i><i></i><i></i><i></i><i></i></view><view><strong>{{playing ? '暂停字义讲解' : '听字义讲解'}}</strong><text>{{character.media.narration.transcript.length}} 字 · 留在画面边看边听</text></view><text>→</text></view>
+        <view class="action-wide" bindtap="openDrawer" role="button"><text>✣</text><view><strong>物象四步</strong><text>看意象 · 找部首 · 找部件 · 合成字</text></view><text>›</text></view>
         <view class="action-grid">
           <button class="action primary" bindtap="startPractice"><text>▱</text><view><strong>单字过关</strong><text>0 / {{masteryCount}} 题</text></view></button>
           <button class="action" bindtap="openReader"><text>♩</text><view><strong>朗读录音</strong><text>读一遍本课词语</text></view></button>

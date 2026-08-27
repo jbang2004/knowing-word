@@ -1,4 +1,5 @@
-import { getLessonContent, lessonCover, lessonIndex } from "../../services/catalog";
+import { getLessonContent, isCoreCharacter, lessonCover, lessonIndex } from "../../services/catalog";
+import { navigationLayout } from "../../services/layout";
 import { loadProfile } from "../../services/profile";
 import type { CatalogCharacter, CatalogLesson, LessonContent, TrackId } from "../../types/models";
 
@@ -26,16 +27,11 @@ Page({
     const lessonId = options.lessonId || lessonIndex[0].id;
     const summary = lessonIndex.find((lesson) => lesson.id === lessonId) ?? lessonIndex[0];
     const activeView = options.view === "words" || options.view === "practice" ? options.view : "guide";
-    const menu = wx.getMenuButtonBoundingClientRect();
-    const info = wx.getWindowInfo();
-    const navTop = Math.max(info.statusBarHeight ?? 0, menu.top || 0);
     this.setData({
       lessonId: summary.id,
       lesson: { ...summary, visual: { src: lessonCover(summary), label: summary.title, alt: summary.title } },
       activeView,
-      navTop,
-      navHeight: navTop + 52,
-      capsuleInset: Math.max(0, info.windowWidth - menu.left + 8),
+      ...navigationLayout(),
     });
     void this.loadLesson();
   },
@@ -51,7 +47,7 @@ Page({
     try {
       const content = await getLessonContent(this.data.lessonId, refresh);
       const characters = content.characters
-        .filter((character) => character.ready && character.primary)
+        .filter(isCoreCharacter)
         .map((character) => ({
           ...character,
           done: false,

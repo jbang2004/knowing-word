@@ -855,12 +855,36 @@ test("versioned assets run through the cache-header worker path", async () => {
   assert.equal(config.assets.binding, "ASSETS");
   assert.deepEqual(config.assets.run_worker_first, [
     "/assets/*",
+    "/fonts/*",
     "/illustrations/*",
     "/heritage/*",
     "/media/narration/*",
     "/sfx/*",
     "/og-cover.jpg",
   ]);
+});
+
+test("mini-program font assets expose immutable CORS-safe responses", async () => {
+  const workerUrl = new URL("../dist/server/index.js", import.meta.url);
+  workerUrl.searchParams.set("test", "font-suite");
+  workerPromise ||= import(workerUrl.href).then((module) => module.default);
+  const worker = await workerPromise;
+  const response = await worker.fetch(
+    new Request("http://localhost/fonts/lxgw-wenkai-subset.woff2"),
+    {
+      ASSETS: {
+        fetch() {
+          return Promise.resolve(new Response("font", {
+            headers: { "content-type": "application/octet-stream" },
+          }));
+        },
+      },
+    },
+    { waitUntil() {}, passThroughOnException() {} },
+  );
+  assert.equal(response.headers.get("access-control-allow-origin"), "*");
+  assert.equal(response.headers.get("content-type"), "font/woff2");
+  assert.equal(response.headers.get("cache-control"), "public, max-age=31536000, immutable");
 });
 
 test("R2 narration delivery supports immutable byte ranges", async () => {

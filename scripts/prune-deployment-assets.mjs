@@ -72,6 +72,7 @@ wranglerConfig.assets = {
   binding: "ASSETS",
   run_worker_first: [
     "/assets/*",
+    "/fonts/*",
     "/illustrations/*",
     "/heritage/*",
     "/media/narration/*",

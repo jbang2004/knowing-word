@@ -18,7 +18,7 @@
 .recent-head>text { color:var(--ink-soft); font-size:12px; }
 .recent-list { display:grid; gap:8px; }
 .recent-list button { display:grid; min-height:70px; grid-template-columns:42px minmax(0,1fr); align-items:center; margin:0; padding:10px; border:1px solid var(--line); border-radius:14px; color:var(--ink); text-align:left; background:var(--paper-soft); }
-.recent-list button>strong { grid-row:1/3; color:var(--navy); font-family:"Kaiti SC",serif; font-size:28px; }
+.recent-list button>strong { grid-row:1/3; color:var(--navy); font-family:"Knowing Kai","Kaiti SC",serif; font-size:28px; }
 .recent-list button>view { display:flex; min-width:0; flex-direction:column; }
 .recent-list button text { font-size:12px; font-weight:800; }
 .recent-list button small { overflow:hidden; margin-top:3px; color:var(--ink-soft); font-size:11px; text-overflow:ellipsis; white-space:nowrap; }
@@ -36,7 +36,7 @@
 .lesson-head>text { color:var(--ink-soft); font-size:13px; }
 .lesson-characters { display:grid; gap:8px; }
 .lesson-characters button { display:flex; min-height:62px; align-items:center; gap:12px; margin:0; padding:12px 14px; border:2px solid var(--line); border-radius:18px; color:var(--ink); text-align:left; background:white; box-shadow:0 4px 0 var(--line); }
-.lesson-characters button>strong { width:34px; color:var(--navy); font-family:"Kaiti SC",serif; font-size:26px; }
+.lesson-characters button>strong { width:34px; color:var(--navy); font-family:"Knowing Kai","Kaiti SC",serif; font-size:26px; }
 .lesson-characters button>view { display:flex; flex:1; flex-direction:column; }
 .lesson-characters button>view text { font-size:12px; font-weight:800; }
 .lesson-characters small,.lesson-characters button>text { color:var(--ink-soft); font-size:11px; }

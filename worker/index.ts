@@ -182,7 +182,7 @@ async function serveNarration(
 function withDeliveryCache(response: Response, pathname: string) {
   if (!response.ok) return response;
   const headers = new Headers(response.headers);
-  if (pathname.startsWith("/assets/")) {
+  if (pathname.startsWith("/assets/") || pathname.startsWith("/fonts/")) {
     headers.set("cache-control", IMMUTABLE_CACHE);
   } else if (
     pathname.startsWith("/illustrations/") ||
@@ -194,6 +194,11 @@ function withDeliveryCache(response: Response, pathname: string) {
   } else {
     return response;
   }
+  if (pathname.startsWith("/fonts/")) {
+    headers.set("access-control-allow-origin", "*");
+    headers.set("x-content-type-options", "nosniff");
+    if (pathname.endsWith(".woff2")) headers.set("content-type", "font/woff2");
+  }
   return new Response(response.body, {
     status: response.status,
     statusText: response.statusText,
@@ -203,6 +208,7 @@ function withDeliveryCache(response: Response, pathname: string) {
 
 function isDeliveryAsset(pathname: string) {
   return pathname.startsWith("/assets/") ||
+    pathname.startsWith("/fonts/") ||
     pathname.startsWith("/illustrations/") ||
     pathname.startsWith("/heritage/") ||
     pathname.startsWith("/sfx/") ||

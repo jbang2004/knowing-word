@@ -1,4 +1,5 @@
-import { charactersForLesson, lessonCover, lessonIndex } from "../../services/catalog";
+import { charactersForLesson, isCoreCharacter, lessonCover, lessonIndex } from "../../services/catalog";
+import { navigationLayout } from "../../services/layout";
 import { loadProfile, syncProfile } from "../../services/profile";
 import type { StudyProfile } from "../../types/models";
 
@@ -16,7 +17,7 @@ const unitMeta = [
 function lessonRows(profile: StudyProfile) {
   const completed = new Set(profile.completed.words);
   return lessonIndex.map((lesson) => {
-    const lessonCharacters = charactersForLesson(lesson.id).filter((character) => character.ready && character.primary);
+    const lessonCharacters = charactersForLesson(lesson.id).filter(isCoreCharacter);
     const count = lessonCharacters.filter((character) => completed.has(character.id)).length;
     const percent = lessonCharacters.length ? Math.round(count / lessonCharacters.length * 100) : 0;
     return {
@@ -51,10 +52,7 @@ function courseView(profile: StudyProfile) {
 Page({
   data: { ...courseView(loadProfile()), contentTop: 70 },
   onLoad() {
-    const menu = wx.getMenuButtonBoundingClientRect();
-    const info = wx.getWindowInfo();
-    const top = Math.max(info.statusBarHeight ?? 0, menu.top || 0);
-    this.setData({ contentTop: top + Math.max(44, menu.height || 0) + 18 });
+    this.setData(navigationLayout());
   },
   onShow() {
     this.getTabBar?.()?.setData({ selected: 1 });

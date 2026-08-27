@@ -1,4 +1,5 @@
-import { characterIndex, lessonIndex } from "../../services/catalog";
+import { characterIndex, isCoreCharacter, lessonIndex } from "../../services/catalog";
+import { navigationLayout } from "../../services/layout";
 import { loadProfile, syncProfile } from "../../services/profile";
 import type { StudyProfile, TrackId } from "../../types/models";
 
@@ -16,7 +17,7 @@ function formatDate(value: string) {
 }
 
 function recordView(profile: StudyProfile, track: TrackId, showAllLessons = false) {
-  const candidates = characterIndex.filter((character) => character.ready && character.primary);
+  const candidates = characterIndex.filter(isCoreCharacter);
   const candidateIds = new Set(candidates.map((character) => character.id));
   const answersByCharacter = new Map<string, Array<StudyProfile["answers"][string]>>();
   const marker = `-${track}-`;
@@ -86,10 +87,7 @@ function recordView(profile: StudyProfile, track: TrackId, showAllLessons = fals
 Page({
   data: { contentTop: 70, ...recordView(loadProfile(), "words") },
   onLoad() {
-    const menu = wx.getMenuButtonBoundingClientRect();
-    const info = wx.getWindowInfo();
-    const top = Math.max(info.statusBarHeight ?? 0, menu.top || 0);
-    this.setData({ contentTop: top + Math.max(44, menu.height || 0) + 10 });
+    this.setData(navigationLayout(10));
   },
   onShow() {
     this.setData(recordView(loadProfile(), this.data.activeTrack, this.data.showAllLessons));

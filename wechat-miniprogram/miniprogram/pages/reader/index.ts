@@ -1,5 +1,6 @@
 import { getLessonContent, lessonIndex } from "../../services/catalog";
 import { sendReadingEvent } from "../../services/events";
+import { navigationLayout } from "../../services/layout";
 import { recordReading } from "../../services/profile";
 import { uploadRecording } from "../../services/api";
 import { getSessionStatus } from "../../services/session";
@@ -18,10 +19,15 @@ Page({
     tempFilePath: "",
     durationText: "",
     playing: false,
+    speaking: false,
     cloudStatus: "",
+    navHeight: 52,
+    lessonIndexValue: 0,
+    lessonOptions: lessonIndex.map((lesson) => ({ id: lesson.id, label: `第 ${lesson.position} 课 · ${lesson.title}` })),
   },
   onLoad(options: Record<string, string | undefined>) {
-    this.setData({ lessonId: options.lessonId || lessonIndex[0].id });
+    const lessonId = options.lessonId || lessonIndex[0].id;
+    this.setData({ lessonId, lessonIndexValue: Math.max(0, lessonIndex.findIndex((lesson) => lesson.id === lessonId)), ...navigationLayout(0) });
     recorder = wx.getRecorderManager();
     recorder.onStart(() => this.setData({ recording: true, tempFilePath: "", durationText: "", cloudStatus: "" }));
     recorder.onStop((result) => {
@@ -42,11 +48,39 @@ Page({
   async loadDocument() {
     try {
       const content = await getLessonContent(this.data.lessonId);
-      wx.setNavigationBarTitle({ title: `${content.lesson.title} · 朗读` });
-      this.setData({ lesson: content.lesson, document: content.document, loading: false });
+      this.setData({
+        lesson: content.lesson,
+        document: content.document,
+        lessonIndexValue: Math.max(0, lessonIndex.findIndex((lesson) => lesson.id === content.lesson.id)),
+        loading: false,
+      });
     } catch (error) {
       this.setData({ loading: false, error: error instanceof Error ? error.message : "朗读内容加载失败" });
     }
+  },
+  chooseLesson(event: WechatMiniprogram.CustomEvent<{ value: string }>) {
+    const index = Number(event.detail.value);
+    const lesson = lessonIndex[index];
+    if (lesson) this.selectLesson(lesson.id);
+  },
+  stepLesson(event: WechatMiniprogram.BaseEvent) {
+    const offset = Number(event.currentTarget.dataset.offset);
+    const index = this.data.lessonIndexValue + offset;
+    const lesson = lessonIndex[index];
+    if (lesson) this.selectLesson(lesson.id);
+  },
+  selectLesson(lessonId: string) {
+    if (lessonId === this.data.lessonId) return;
+    if (this.data.recording) recorder?.stop();
+    player?.stop();
+    this.setData({ lessonId, loading: true, error: "", tempFilePath: "", durationText: "", playing: false, cloudStatus: "" });
+    void this.loadDocument();
+  },
+  previewSentence() {
+    if (this.data.speaking) return;
+    this.setData({ speaking: true });
+    wx.showToast({ title: "按标点停顿，慢慢读一遍", icon: "none", duration: 1200 });
+    setTimeout(() => this.setData({ speaking: false }), 1200);
   },
   toggleRecording() {
     if (this.data.recording) {
@@ -92,4 +126,5 @@ Page({
     sendReadingEvent(this.data.lessonId, accurate);
     wx.showToast({ title: accurate ? "已完成本课朗读" : "已加入复习计划", icon: accurate ? "success" : "none" });
   },
+  goBack() { wx.navigateBack({ fail: () => wx.switchTab({ url: "/pages/practice-hub/index" }) }); },
 });

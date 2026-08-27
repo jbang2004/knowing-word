@@ -1,5 +1,6 @@
-import { getLessonContent } from "../../services/catalog";
+import { getLessonContent, isCoreCharacter } from "../../services/catalog";
 import { sendAnswerEvent } from "../../services/events";
+import { navigationLayout } from "../../services/layout";
 import { loadProfile, recordAnswer } from "../../services/profile";
 import { masteryQuestionsFor } from "../../services/practice";
 import type { CatalogCharacter, Exercise, TrackId } from "../../types/models";
@@ -40,7 +41,9 @@ Page({
     viewOptions: [] as ViewOption[],
     selectedIds: [] as string[],
     multiChoice: false,
-    showMultiSubmit: false,
+    isWriting: false,
+    showWritingBoard: false,
+    showPendingActions: false,
     answered: false,
     correct: false,
     resultCopy: "",
@@ -48,6 +51,9 @@ Page({
     loading: true,
     error: "",
     progress: 0,
+    questionLabel: "选择题",
+    ready: false,
+    navHeight: 52,
   },
   onLoad(options: Record<string, string | undefined>) {
     const track = ["words", "split", "honglan", "structure"].includes(options.track ?? "")
@@ -58,15 +64,15 @@ Page({
       trackInfo: trackMeta[track],
       lessonId: options.lessonId ?? "g5v1-l01",
       requestedCharacterId: options.characterId ?? "",
+      ...navigationLayout(0),
     });
-    wx.setNavigationBarTitle({ title: trackMeta[track].title });
     void this.loadSession();
   },
   async loadSession() {
     try {
       const content = await getLessonContent(this.data.lessonId);
       const profile = loadProfile();
-      const characters = content.characters.filter((character) => character.ready && character.primary && (character.exercises?.length ?? 0) > 0);
+      const characters = content.characters.filter((character) => isCoreCharacter(character) && (character.exercises?.length ?? 0) > 0);
       let characterIndex = this.data.requestedCharacterId
         ? characters.findIndex((character) => character.id === this.data.requestedCharacterId)
         : characters.findIndex((character) => !profile.completed[this.data.track].includes(character.id));
@@ -101,9 +107,13 @@ Page({
       answered: false,
       correct: false,
       resultCopy: "",
+      questionLabel: question.kind === "write" ? "书写自查" : question.kind === "structure" ? "结构题" : question.kind === "components" ? "部件题" : "选择题",
       multiChoice: correctCount > 1,
-      showMultiSubmit: correctCount > 1,
-      progress: Math.round((this.data.questionIndex + 1) / this.data.questions.length * 100),
+      isWriting: question.kind === "write",
+      showWritingBoard: question.kind === "write" || question.options.length === 0,
+      showPendingActions: question.kind !== "write",
+      ready: false,
+      progress: Math.round(this.data.questionIndex / this.data.questions.length * 100),
       viewOptions: question.options.map((option, index) => ({
         ...option,
         label: String.fromCharCode(65 + index),
@@ -120,10 +130,18 @@ Page({
       const selectedIds = this.data.selectedIds.includes(id)
         ? this.data.selectedIds.filter((item) => item !== id)
         : [...this.data.selectedIds, id];
-      this.setData({ selectedIds, viewOptions: this.data.viewOptions.map((option) => ({ ...option, state: selectedIds.includes(option.id) ? "selected" : "" })) });
+      this.setData({ selectedIds, ready: selectedIds.length > 0, viewOptions: this.data.viewOptions.map((option) => ({ ...option, state: selectedIds.includes(option.id) ? "selected" : "" })) });
       return;
     }
-    this.evaluate([id]);
+    this.setData({
+      selectedIds: [id],
+      ready: true,
+      viewOptions: this.data.viewOptions.map((option) => ({ ...option, state: option.id === id ? "selected" : "" })),
+    });
+  },
+  checkAnswer() {
+    if (!this.data.ready || !this.data.selectedIds.length) return;
+    this.evaluate(this.data.selectedIds);
   },
   submitMulti() {
     if (!this.data.selectedIds.length) {
@@ -169,9 +187,11 @@ Page({
     });
     this.setData({
       answered: true,
-      showMultiSubmit: false,
+      ready: false,
+      showPendingActions: false,
       correct,
-      resultCopy: correct ? "判断准确。把这条线索收进记忆里。" : question.explanation || "再看一眼字形线索，然后继续。",
+      progress: Math.round((this.data.questionIndex + 1) / this.data.questions.length * 100),
+      resultCopy: correct ? (question.explanation || "记住这个线索，再去下一题。") : question.explanation || "再看一眼字形线索，然后继续。",
       viewOptions: this.data.viewOptions.map((option) => ({
         ...option,
         state: option.correct ? "correct" : selectedIds.includes(option.id) ? "wrong" : "",
@@ -181,6 +201,20 @@ Page({
   nextQuestion() {
     if (this.data.questionIndex >= this.data.questions.length - 1) {
       this.setData({ finished: true });
+      return;
+    }
+    this.setData({ questionIndex: this.data.questionIndex + 1 });
+    this.prepareQuestion();
+  },
+  previousQuestion() {
+    if (this.data.questionIndex === 0 || this.data.answered) return;
+    this.setData({ questionIndex: this.data.questionIndex - 1 });
+    this.prepareQuestion();
+  },
+  skipQuestion() {
+    if (this.data.answered) return;
+    if (this.data.questionIndex >= this.data.questions.length - 1) {
+      this.setData({ finished: true, progress: 100 });
       return;
     }
     this.setData({ questionIndex: this.data.questionIndex + 1 });
@@ -200,5 +234,6 @@ Page({
     if (!character) return;
     wx.navigateTo({ url: `/pages/character/index?lessonId=${this.data.lessonId}&characterId=${character.id}` });
   },
+  goBack() { wx.navigateBack({ fail: () => wx.switchTab({ url: "/pages/practice-hub/index" }) }); },
   retry() { this.setData({ error: "", loading: true }); void this.loadSession(); },
 });

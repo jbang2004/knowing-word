@@ -1,4 +1,5 @@
-import { characterIndex, lessonCover, lessonIndex } from "../../services/catalog";
+import { characterIndex, isCoreCharacter, lessonCover, lessonIndex } from "../../services/catalog";
+import { navigationLayout } from "../../services/layout";
 import { learningDayKey, loadProfile, syncProfile } from "../../services/profile";
 import type { StudyProfile, TrackId } from "../../types/models";
 
@@ -71,7 +72,7 @@ function dueTimestamp(value: unknown) {
 }
 
 function makeView(profile: StudyProfile) {
-  const readyCharacters = characterIndex.filter((character) => character.ready && character.primary);
+  const readyCharacters = characterIndex.filter(isCoreCharacter);
   const completedWords = new Set(profile.completed.words);
   const nextCharacter = readyCharacters.find((character) => !completedWords.has(character.id)) ?? readyCharacters[0];
   const nextLesson = lessonIndex.find((lesson) => lesson.id === nextCharacter?.lessonId) ?? lessonIndex[0];
@@ -130,14 +131,7 @@ Page({
     reviewTracks: trackDetails.slice(1),
   },
   onLoad() {
-    const menu = wx.getMenuButtonBoundingClientRect();
-    const info = wx.getWindowInfo();
-    const navTop = Math.max(info.statusBarHeight ?? 0, menu.top || 0);
-    this.setData({
-      navTop,
-      navHeight: navTop + 52,
-      capsuleInset: Math.max(0, info.windowWidth - menu.left + 8),
-    });
+    this.setData(navigationLayout());
   },
   onShow() {
     this.getTabBar?.()?.setData({ selected: 0 });

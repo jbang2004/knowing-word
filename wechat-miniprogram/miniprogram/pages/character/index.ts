@@ -1,4 +1,5 @@
 import { componentIndex, getLessonContent } from "../../services/catalog";
+import { navigationLayout } from "../../services/layout";
 import { loadProfile, saveProfile } from "../../services/profile";
 import { masteryQuestionsFor } from "../../services/practice";
 import type { CatalogCharacter, LessonContent } from "../../types/models";
@@ -26,16 +27,12 @@ Page({
     sceneSize: 225,
   },
   onLoad(options: Record<string, string | undefined>) {
-    const menu = wx.getMenuButtonBoundingClientRect();
     const info = wx.getWindowInfo();
-    const navTop = Math.max(info.statusBarHeight ?? 0, menu.top || 0);
     this.setData({
       lessonId: options.lessonId ?? "",
       characterId: options.characterId ?? "",
-      navTop,
-      navHeight: navTop + 52,
-      capsuleInset: Math.max(0, info.windowWidth - menu.left + 8),
-      sceneSize: Math.max(128, Math.min(info.windowWidth, info.windowHeight - (navTop + 52) - 553)),
+      ...navigationLayout(),
+      sceneSize: Math.min(225, info.windowWidth - 40),
     });
     void this.loadCharacter();
   },

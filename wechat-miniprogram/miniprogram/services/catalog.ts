@@ -12,6 +12,11 @@ export const lessonIndex = lessons as CatalogLesson[];
 export const characterIndex = characters as CatalogCharacter[];
 export const componentIndex = components;
 
+/** Keep the native app on the same 365-character core course as the Web app. */
+export function isCoreCharacter(character: CatalogCharacter) {
+  return character.ready && character.primary && character.tier !== "extension";
+}
+
 export function lessonCover(lesson: CatalogLesson) {
   return assetUrl(lesson.visualPath ?? lesson.visual?.src ?? "");
 }
