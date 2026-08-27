@@ -1,10 +1,27 @@
 import { componentIndex, getLessonContent } from "../../services/catalog";
 import { navigationLayout } from "../../services/layout";
+import { narrationView, previousPhraseStart, type NarrationMark, type NarrationTokenView } from "../../services/narration";
 import { loadProfile, saveProfile } from "../../services/profile";
 import { masteryQuestionsFor } from "../../services/practice";
 import type { CatalogCharacter, LessonContent } from "../../types/models";
 
 let audio: WechatMiniprogram.InnerAudioContext | null = null;
+let glyphAudio: WechatMiniprogram.InnerAudioContext | null = null;
+let glyphStopTimer: number | null = null;
+let narrationSamplingTimer: number | null = null;
+let narrationRequestVersion = 0;
+
+function clearNarrationSampling() {
+  if (narrationSamplingTimer !== null) clearInterval(narrationSamplingTimer);
+  narrationSamplingTimer = null;
+}
+
+function destroyGlyphAudio() {
+  if (glyphStopTimer !== null) clearTimeout(glyphStopTimer);
+  glyphStopTimer = null;
+  glyphAudio?.destroy();
+  glyphAudio = null;
+}
 
 function formatClock(seconds: number) {
   if (!Number.isFinite(seconds) || seconds <= 0) return "0:00";
@@ -38,12 +55,18 @@ Page({
     error: "",
     favorite: false,
     playing: false,
+    pronouncing: false,
     narrationOpen: false,
     narrationFinished: false,
     narrationElapsed: "0:00",
     narrationDuration: "0:00",
     narrationProgress: 0,
     narrationLaunchLabel: "听字义讲解",
+    narrationStatus: "逐字跟读已就绪",
+    narrationPhrase: "",
+    narrationTranscript: "",
+    narrationMarks: [] as NarrationMark[],
+    narrationTokens: [] as NarrationTokenView[],
     transcriptOpen: false,
     siblingIndex: 0,
     hasPrevious: false,
@@ -82,6 +105,9 @@ Page({
     void this.loadCharacter();
   },
   onUnload() {
+    narrationRequestVersion += 1;
+    clearNarrationSampling();
+    destroyGlyphAudio();
     audio?.destroy();
     audio = null;
   },
@@ -107,6 +133,7 @@ Page({
         masteryActionLabel: profile.completed.words.includes(character.id) ? "再练一轮" : "单字过关",
         loading: false,
       });
+      void this.loadNarrationTimeline(character);
     } catch (error) {
       this.setData({ loading: false, error: error instanceof Error ? error.message : "识字卡加载失败" });
     }
@@ -123,6 +150,59 @@ Page({
     profile.preferenceUpdatedAt = { ...profile.preferenceUpdatedAt, favorites: new Date().toISOString() };
     saveProfile(profile);
     this.setData({ favorite });
+  },
+  loadNarrationTimeline(character: CatalogCharacter) {
+    const requestVersion = ++narrationRequestVersion;
+    const characterId = character.id;
+    const transcript = character.media?.narration.transcript ?? character.description ?? "";
+    const source = character.media?.narration.marks;
+    this.setData({ narrationTranscript: transcript, narrationPhrase: transcript, narrationMarks: [], narrationTokens: [] });
+    if (!source) return Promise.resolve();
+    return new Promise<void>((resolve) => {
+      wx.request<{ marks?: NarrationMark[]; transcript?: string }>({
+        url: source,
+        timeout: 15_000,
+        success: (response) => {
+          if (requestVersion !== narrationRequestVersion || this.data.characterId !== characterId) {
+            resolve();
+            return;
+          }
+          const marks = (response.data.marks ?? []).filter((mark) => Number.isFinite(mark.start) && Number.isFinite(mark.end));
+          const releasedTranscript = response.data.transcript || transcript;
+          const view = narrationView(marks, releasedTranscript, audio?.currentTime ?? 0);
+          this.setData({ narrationMarks: marks, narrationTranscript: releasedTranscript, narrationTokens: view.tokens, narrationPhrase: view.phrase });
+          resolve();
+        },
+        fail: () => resolve(),
+      });
+    });
+  },
+  syncNarrationPlayback() {
+    if (!audio) return;
+    const elapsed = audio.currentTime ?? 0;
+    const duration = audio.duration ?? 0;
+    this.setData({
+      narrationElapsed: formatClock(elapsed),
+      narrationDuration: formatClock(duration),
+      narrationProgress: duration > 0 ? Math.min(100, elapsed / duration * 100) : 0,
+      narrationLaunchLabel: elapsed > 0 ? "继续字义讲解" : "听字义讲解",
+    });
+    this.updateNarrationView(elapsed, duration);
+  },
+  updateNarrationView(elapsed: number, duration: number) {
+    const view = narrationView(this.data.narrationMarks, this.data.narrationTranscript, elapsed);
+    const finished = duration > 0 && elapsed >= duration - .08 && !this.data.playing;
+    this.setData({
+      narrationTokens: view.tokens,
+      narrationPhrase: view.phrase,
+      narrationStatus: finished
+        ? "讲解完成 · 点击可重听"
+        : this.data.playing && this.data.narrationMarks.length
+          ? `正在跟读 · ${view.completed} / ${this.data.narrationMarks.length} 字`
+          : elapsed > 0 && this.data.narrationMarks.length
+            ? `已读 ${view.completed} / ${this.data.narrationMarks.length} 字 · 点击继续`
+            : this.data.narrationMarks.length ? "逐字跟读已就绪" : "标准普通话讲解",
+    });
   },
   playNarration() {
     const source = this.data.character?.media?.narration.audio;
@@ -145,33 +225,90 @@ Page({
       const duration = audio?.duration ?? 0;
       this.setData({ narrationDuration: formatClock(duration) });
     });
-    audio.onTimeUpdate(() => {
-      const elapsed = audio?.currentTime ?? 0;
-      const duration = audio?.duration ?? 0;
-      this.setData({
-        narrationElapsed: formatClock(elapsed),
-        narrationDuration: formatClock(duration),
-        narrationProgress: duration > 0 ? Math.min(100, elapsed / duration * 100) : 0,
-        narrationLaunchLabel: elapsed > 0 ? "继续字义讲解" : "听字义讲解",
-      });
+    audio.onTimeUpdate(() => this.syncNarrationPlayback());
+    audio.onPlay(() => {
+      this.setData({ playing: true, narrationFinished: false });
+      this.syncNarrationPlayback();
+      clearNarrationSampling();
+      narrationSamplingTimer = setInterval(() => this.syncNarrationPlayback(), 40);
     });
-    audio.onPlay(() => this.setData({ playing: true, narrationFinished: false }));
-    audio.onPause(() => this.setData({ playing: false }));
-    audio.onEnded(() => this.setData({ playing: false, narrationFinished: true, narrationProgress: 100 }));
-    audio.onStop(() => this.setData({ playing: false }));
+    audio.onPause(() => {
+      clearNarrationSampling();
+      this.setData({ playing: false });
+      this.updateNarrationView(audio?.currentTime ?? 0, audio?.duration ?? 0);
+    });
+    audio.onEnded(() => {
+      clearNarrationSampling();
+      const duration = audio?.duration ?? 0;
+      this.setData({ playing: false, narrationFinished: true, narrationProgress: 100 });
+      this.updateNarrationView(duration, duration);
+    });
+    audio.onStop(() => {
+      clearNarrationSampling();
+      this.setData({ playing: false });
+    });
     audio.onError(() => {
+      clearNarrationSampling();
       this.setData({ playing: false });
       wx.showToast({ title: "范读暂时无法播放", icon: "none" });
     });
     audio.play();
   },
+  playCharacterPronunciation() {
+    if (this.data.pronouncing) {
+      destroyGlyphAudio();
+      this.setData({ pronouncing: false });
+      return;
+    }
+    const source = this.data.character?.media?.narration.audio;
+    if (!source) {
+      wx.showToast({ title: "这张卡暂无范读", icon: "none" });
+      return;
+    }
+    audio?.pause();
+    destroyGlyphAudio();
+    const preview = wx.createInnerAudioContext({ useWebAudioImplement: false });
+    glyphAudio = preview;
+    const firstMark = this.data.narrationMarks[0];
+    const start = Math.max(0, firstMark?.start ?? 0);
+    const end = firstMark
+      ? Math.max(start + .28, firstMark.end + .04)
+      : start + .9;
+    const finish = () => {
+      if (glyphAudio !== preview) return;
+      if (glyphStopTimer !== null) clearTimeout(glyphStopTimer);
+      glyphStopTimer = null;
+      glyphAudio = null;
+      preview.destroy();
+      this.setData({ pronouncing: false });
+    };
+    preview.startTime = start;
+    preview.onPlay(() => {
+      if (glyphAudio !== preview) return;
+      this.setData({ pronouncing: true });
+      glyphStopTimer = setTimeout(finish, Math.ceil((end - start) * 1000) + 120);
+    });
+    preview.onTimeUpdate(() => {
+      if (preview.currentTime >= end - .02) finish();
+    });
+    preview.onEnded(finish);
+    preview.onStop(finish);
+    preview.onError(() => {
+      if (glyphAudio !== preview) return;
+      finish();
+      wx.showToast({ title: "单字范读暂时无法播放", icon: "none" });
+    });
+    preview.src = source;
+    preview.play();
+  },
   collapseNarration() {
     audio?.pause();
+    clearNarrationSampling();
     this.setData({ playing: false, narrationOpen: false, transcriptOpen: false });
   },
   previousNarrationPhrase() {
     if (!audio) return;
-    audio.seek(Math.max(0, audio.currentTime - 10));
+    audio.seek(previousPhraseStart(this.data.narrationMarks, this.data.narrationTranscript, audio.currentTime));
   },
   openTranscript() { this.setData({ transcriptOpen: true }); },
   closeTranscript() { this.setData({ transcriptOpen: false }); },
@@ -253,17 +390,26 @@ Page({
     const offset = Number(event.currentTarget.dataset.offset);
     const character = this.data.characters[this.data.siblingIndex + offset];
     if (!character) return;
+    narrationRequestVersion += 1;
+    clearNarrationSampling();
+    destroyGlyphAudio();
     audio?.destroy();
     audio = null;
     this.setData({
       characterId: character.id,
       playing: false,
+      pronouncing: false,
       narrationOpen: false,
       narrationFinished: false,
       narrationElapsed: "0:00",
       narrationDuration: "0:00",
       narrationProgress: 0,
       narrationLaunchLabel: "听字义讲解",
+      narrationStatus: "逐字跟读已就绪",
+      narrationPhrase: "",
+      narrationTranscript: "",
+      narrationMarks: [],
+      narrationTokens: [],
       transcriptOpen: false,
       memoryOpen: false,
     });

@@ -27,9 +27,11 @@
 
     <view wx:if="{{tempFilePath}}" class="recording-result">
       <text class="result-mark">✓</text>
-      <view><strong>{{cloudStatus || '先回听，再判断是否读准'}}</strong><text>完整听一遍自己的录音，再如实做自我评估。</text></view>
+      <view><strong>{{readingAssessment === 'accurate' ? '朗读自查已记录' : (readingAssessment === 'needs-practice' ? '已经找到需要重读的地方' : (cloudStatus || '先回听，再判断是否读准'))}}</strong><text>{{readingAssessment === 'accurate' ? '这是回听后的自评记录；先保持读准，再比较是否更流利。' : (readingAssessment === 'needs-practice' ? '回到范读听清读错的字，再录一次，不追求速度。' : '完整听一遍自己的录音，再如实做自我评估。')}}</text></view>
       <button class="play-recording" bindtap="playRecording">{{playing ? '停止回听' : '回听录音'}} · {{durationText}}</button>
-      <view class="recording-assessment"><button data-accurate="{{true}}" bindtap="assess">我回听后自评：每个字都读准了</button><button class="ghost" data-accurate="{{false}}" bindtap="assess">有字读错，再练一次</button></view>
+      <view wx:if="{{showRecordingGate}}" class="recording-check-gate" role="status">{{recordingGateMessage}}</view>
+      <view wx:if="{{showRecordingAssessment}}" class="recording-assessment"><button data-accurate="{{true}}" bindtap="assess">我回听后自评：每个字都读准了</button><button class="ghost" data-accurate="{{false}}" bindtap="assess">有字读错，再练一次</button></view>
     </view>
   </block>
+  <bottom-navigation active="practice" theme="{{theme}}" />
 </view>

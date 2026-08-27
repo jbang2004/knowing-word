@@ -49,11 +49,24 @@
     <view class="word-map-board">
       <view class="board-title"><strong>课内识字写字表</strong><text>把官方字表放回词语，区分会认、会写与多音字</text></view>
       <view class="word-groups">
-        <view wx:for="{{wordGroups}}" wx:key="word" class="word-group" wx:for-item="group">
+        <view wx:for="{{wordGroups}}" wx:key="key" class="word-group" wx:for-item="group">
           <text class="word-label">{{group.word}}</text>
           <view class="word-chip-row">
             <view wx:for="{{group.characters}}" wx:key="id" wx:for-item="character" class="word-chip press-card {{character.done ? 'done' : ''}}" data-id="{{character.id}}" bindtap="openCharacter" role="button" hover-class="is-pressed">
               <strong class="kai">{{character.hanzi}}</strong><text>{{character.pinyin}}</text><i>{{character.done ? '✓' : (character.curriculumRole === 'write' ? '写' : character.curriculumRole === 'polyphonic' ? '多' : '认')}}</i>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view wx:if="{{extensionWordGroups.length}}" class="word-map-board extension-board">
+      <view class="board-title"><strong>课文语境拓展</strong><text>保留深度字卡，不计入官方字表进度</text></view>
+      <view class="word-groups">
+        <view wx:for="{{extensionWordGroups}}" wx:key="key" class="word-group" wx:for-item="group">
+          <text class="word-label">{{group.word}}</text>
+          <view class="word-chip-row">
+            <view wx:for="{{group.characters}}" wx:key="id" wx:for-item="character" class="word-chip is-extension press-card {{character.done ? 'done' : ''}}" data-id="{{character.id}}" bindtap="openCharacter" role="button" hover-class="is-pressed">
+              <strong class="kai">{{character.hanzi}}</strong><text>{{character.pinyin}}</text><i>{{character.done ? '✓' : '拓'}}</i>
             </view>
           </view>
         </view>
@@ -67,21 +80,13 @@
       <view class="learning-step-list"><view wx:for="{{guideSections}}" wx:key="id" class="learning-step"><i>{{index + 1}}</i><text>{{item.title}}</text></view></view>
     </view>
     <view class="lesson-practice-strip">
-      <text class="practice-strip-kicker">本课复习方式</text><view class="practice-strip-title">完成单字过关后，按需要选择专项复习</view>
+      <view class="practice-strip-copy"><text class="practice-strip-kicker">本课复习方式</text><view class="practice-strip-title">完成单字过关后，按需要选择专项复习</view></view>
       <view class="practice-strip-items">
-        <view class="practice-strip-item press-card" data-track="words" bindtap="startPractice" role="button" hover-class="is-pressed"><strong>字</strong><text>识字</text></view>
-        <view class="practice-strip-item press-card" data-track="structure" bindtap="startPractice" role="button" hover-class="is-pressed"><strong>构</strong><text>结构复习</text></view>
-        <view class="practice-strip-item press-card" data-track="split" bindtap="startPractice" role="button" hover-class="is-pressed"><strong>拆</strong><text>拆字复习</text></view>
-        <view class="practice-strip-item press-card" data-track="honglan" bindtap="startPractice" role="button" hover-class="is-pressed"><strong>红蓝</strong><text>部首辨认</text></view>
+        <view wx:for="{{practiceItems}}" wx:key="track" class="practice-strip-item press-card" data-track="{{item.track}}" bindtap="startPractice" role="button" hover-class="is-pressed"><strong>{{item.glyph}}</strong><text>{{item.menu}}</text><small>{{item.completed}}/{{item.total}}</small></view>
       </view>
     </view>
   </view>
 
   <view wx:if="{{activeView === 'guide'}}" class="lesson-progress-pill"><view><text>本课重点字</text><strong>{{completed}}/{{total}} 已完成</strong></view><text>⌄</text></view>
-  <view class="lesson-bottom-nav">
-    <navigator open-type="switchTab" url="/pages/home/index" class="nav-item"><view class="nav-icon icon-home"></view><text>学习</text></navigator>
-    <navigator open-type="switchTab" url="/pages/lessons/index" class="nav-item active"><view class="nav-icon icon-book"></view><text>课本</text></navigator>
-    <navigator open-type="switchTab" url="/pages/practice-hub/index" class="nav-item"><view class="nav-icon icon-grid"></view><text>练习</text></navigator>
-    <navigator open-type="switchTab" url="/pages/account/index" class="nav-item"><view class="nav-icon icon-person"></view><text>我的</text></navigator>
-  </view>
+  <bottom-navigation active="course" theme="{{theme}}" />
 </view>

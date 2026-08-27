@@ -36,10 +36,5 @@
     <view wx:else class="record-zero-state"><text>✦</text><strong>还没有{{activeTrackLabel}}记录</strong><view>完成第一次闯关后，最近练习与课次记录会自动整理在这里。</view><button bindtap="startPractice">开始第一次练习</button></view>
   </view>
 
-  <view class="records-bottom-nav">
-    <navigator class="nav-item" open-type="switchTab" url="/pages/home/index"><view class="nav-icon icon-home"></view><text>学习</text></navigator>
-    <navigator class="nav-item" open-type="switchTab" url="/pages/lessons/index"><view class="nav-icon icon-book"></view><text>课本</text></navigator>
-    <navigator class="nav-item" open-type="switchTab" url="/pages/practice-hub/index"><view class="nav-icon icon-grid"></view><text>练习</text></navigator>
-    <navigator class="nav-item active" open-type="switchTab" url="/pages/account/index"><view class="nav-icon icon-person"></view><text>我的</text></navigator>
-  </view>
+  <bottom-navigation active="profile" theme="{{theme}}" />
 </view>

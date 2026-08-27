@@ -1,0 +1,6 @@
+<view class="bottom-navigation theme-{{theme}}" role="navigation" aria-label="主菜单">
+  <navigator wx:for="{{items}}" wx:key="id" open-type="switchTab" url="{{item.pagePath}}" class="nav-item {{active === item.id ? 'active' : ''}}">
+    <view class="nav-icon icon-{{item.icon}}"></view>
+    <text>{{item.text}}</text>
+  </navigator>
+</view>

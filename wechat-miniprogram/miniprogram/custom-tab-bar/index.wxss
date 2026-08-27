@@ -14,3 +14,40 @@
 .theme-night .icon-grid::before { box-shadow:13px 0 0 -2.2px #192521,13px 0 0 0 currentColor,0 13px 0 -2.2px #192521,0 13px 0 0 currentColor,13px 13px 0 -2.2px #192521,13px 13px 0 0 currentColor; }
 .icon-person::before { position: absolute; left: 8px; top: 2px; width: 9px; height: 9px; border: 2.2px solid currentColor; border-radius: 50%; content: ""; }
 .icon-person::after { position: absolute; left: 4px; bottom: 1px; width: 17px; height: 12px; border: 2.2px solid currentColor; border-bottom: 0; border-radius: 12px 12px 0 0; content: ""; }
+
+@media (min-width:900px) {
+  .tab-shell {
+    top:0;
+    right:auto;
+    bottom:0;
+    width:236px;
+    height:auto;
+    grid-template-columns:1fr;
+    grid-template-rows:repeat(4,52px);
+    align-content:start;
+    gap:5px;
+    padding:92px 18px 26px;
+    border-top:0;
+    border-right:2px solid #e5dfd2;
+  }
+  .tab-shell.theme-night { border-right-color:#34443e; }
+  .tab-item {
+    min-height:52px;
+    flex-direction:row;
+    justify-content:flex-start;
+    gap:13px;
+    padding:0 15px;
+    border-radius:16px;
+    font-size:17px;
+  }
+  .tab-item.active {
+    color:#0f1614;
+    background:#17b686;
+    box-shadow:0 4px 0 #0f8c64;
+  }
+  .theme-night .tab-item.active {
+    color:#0f1614;
+    background:#35c295;
+    box-shadow:0 4px 0 #1d8f6b;
+  }
+}

@@ -1,1 +1,7 @@
-{ "navigationStyle": "custom", "enablePullDownRefresh": true }
+{
+  "navigationStyle": "custom",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "bottom-navigation": "/components/bottom-navigation/index"
+  }
+}

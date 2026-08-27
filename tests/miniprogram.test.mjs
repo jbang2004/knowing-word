@@ -7,13 +7,14 @@ const root = new URL("../wechat-miniprogram/", import.meta.url);
 
 test("native mini-program uses a bounded set of page templates for the complete catalog", async () => {
   const app = JSON.parse(await readFile(new URL("miniprogram/app.json", root), "utf8"));
-  assert.equal(app.pages.length, 10);
+  assert.equal(app.pages.length, 11);
   assert.equal(lessons.length, 26);
   assert.equal(characters.length, 430);
   assert.equal(components.length, 401);
   assert.ok(app.pages.includes("pages/character/index"));
   assert.ok(app.pages.includes("pages/practice/index"));
   assert.ok(app.pages.includes("pages/practice-hub/index"));
+  assert.ok(app.pages.includes("pages/track/index"));
 
   for (const page of app.pages) {
     const template = await readFile(new URL(`miniprogram/${page}.wxml`, root), "utf8");
@@ -38,6 +39,13 @@ test("mini-program ships a compact index and keeps full lesson content behind th
   assert.match(catalogService, /MAX_CACHED_LESSONS = 10/u);
   assert.match(catalogService, /lesson-cache:v3/u);
   assert.ok(catalogService.includes(`includes('"http://')`));
+});
+
+test("mini-program ships one real reading model for every lesson", async () => {
+  for (const lesson of lessons) {
+    const audio = await stat(new URL(`../public/audio/reading/${lesson.id}.m4a`, import.meta.url));
+    assert.ok(audio.size > 1_000, `${lesson.id} reading model should contain audio bytes`);
+  }
 });
 
 test("native mini-program shares the Web visual language instead of the retired paper theme", async () => {

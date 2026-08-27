@@ -5,14 +5,53 @@ import type { CatalogCharacter, CatalogLesson, LessonContent, TrackId } from "..
 
 type ViewCharacter = CatalogCharacter & { done: boolean; roleLabel: string };
 type GuideSection = NonNullable<LessonContent["document"]>["sections"][number] & { focusCharacters: ViewCharacter[] };
-type ViewWordGroup = { word: string; characters: ViewCharacter[] };
+type ViewWordGroup = { key: string; word: string; characters: ViewCharacter[] };
+type PracticeItem = { track: TrackId; glyph: string; menu: string; completed: number; total: number };
+
+const practiceMeta: Array<Pick<PracticeItem, "track" | "glyph" | "menu">> = [
+  { track: "words", glyph: "字", menu: "识字" },
+  { track: "structure", glyph: "构", menu: "结构复习" },
+  { track: "split", glyph: "拆", menu: "拆字复习" },
+  { track: "honglan", glyph: "红蓝", menu: "红蓝复习" },
+];
 
 function groupCharactersByWord(characters: ViewCharacter[]) {
   const groups = new Map<string, ViewCharacter[]>();
   for (const character of characters) {
-    groups.set(character.word, [...(groups.get(character.word) ?? []), character]);
+    const key = `${character.wordPosition ?? character.word}-${character.word}`;
+    groups.set(key, [...(groups.get(key) ?? []), character]);
   }
-  return [...groups].map(([word, items]) => ({ word, characters: items }));
+  return [...groups].map(([key, items]) => ({ key, word: items[0].word, characters: items }));
+}
+
+function decorateCharacter(character: CatalogCharacter): ViewCharacter {
+  return {
+    ...character,
+    done: false,
+    roleLabel: character.official === false || character.tier === "extension"
+      ? "拓展"
+      : character.curriculumRole === "write"
+        ? "会写"
+        : character.polyphonic || character.curriculumRole === "polyphonic"
+          ? "多音字"
+          : "会认",
+  };
+}
+
+function progressItems(characters: ViewCharacter[]) {
+  const profile = loadProfile();
+  const learned = new Set(profile.completed.words);
+  return practiceMeta.map((meta) => {
+    const candidates = meta.track === "words"
+      ? characters
+      : characters.filter((character) => learned.has(character.id));
+    const completed = new Set(profile.completed[meta.track]);
+    return {
+      ...meta,
+      completed: candidates.filter((character) => completed.has(character.id)).length,
+      total: candidates.length,
+    };
+  });
 }
 
 Page({
@@ -24,6 +63,9 @@ Page({
     guideSections: [] as GuideSection[],
     characters: [] as ViewCharacter[],
     wordGroups: [] as ViewWordGroup[],
+    extensionCharacters: [] as ViewCharacter[],
+    extensionWordGroups: [] as ViewWordGroup[],
+    practiceItems: [] as PracticeItem[],
     lessonSceneSrc: lessonCover(lessonIndex[0]),
     activeView: "guide" as "guide" | "words" | "practice",
     loading: true,
@@ -59,16 +101,14 @@ Page({
     this.setData({ loading: true, error: "" });
     try {
       const content = await getLessonContent(this.data.lessonId, refresh);
-      const characters = content.characters
-        .filter(isCoreCharacter)
-        .map((character) => ({
-          ...character,
-          done: false,
-          roleLabel: character.curriculumRole === "write" ? "会写" : character.curriculumRole === "recognize" ? "会认" : character.curriculumRole === "polyphonic" ? "多音字" : "拓展",
-        }));
+      const viewCharacters = content.characters
+        .filter((character) => character.ready && character.primary)
+        .map(decorateCharacter);
+      const characters = viewCharacters.filter(isCoreCharacter);
+      const extensionCharacters = viewCharacters.filter((character) => character.official === false || character.tier === "extension");
       const guideSections = (content.document?.sections ?? []).map((section) => {
         const seen = new Set<string>();
-        const focusCharacters = (section.focusWords ?? []).flatMap((word) => characters.filter((character) =>
+        const focusCharacters = (section.focusWords ?? []).flatMap((word) => viewCharacters.filter((character) =>
           word.includes(character.hanzi) || character.word === word
         )).filter((character) => {
           if (seen.has(character.id)) return false;
@@ -83,6 +123,9 @@ Page({
         guideSections,
         characters,
         wordGroups: groupCharactersByWord(characters),
+        extensionCharacters,
+        extensionWordGroups: groupCharactersByWord(extensionCharacters),
+        practiceItems: progressItems(characters),
         lessonSceneSrc: lessonCover(content.lesson),
         loading: false,
       });
@@ -92,15 +135,28 @@ Page({
     }
   },
   applyProgress() {
-    const completedIds = new Set(loadProfile().completed.words);
+    const profile = loadProfile();
+    const completedIds = new Set(profile.completed.words);
     const characters = this.data.characters.map((character) => ({ ...character, done: completedIds.has(character.id) }));
+    const extensionCharacters = this.data.extensionCharacters.map((character) => ({ ...character, done: completedIds.has(character.id) }));
     const guideSections = this.data.guideSections.map((section) => ({
       ...section,
       focusCharacters: section.focusCharacters.map((character) => ({ ...character, done: completedIds.has(character.id) })),
     }));
     const wordGroups = groupCharactersByWord(characters);
+    const extensionWordGroups = groupCharactersByWord(extensionCharacters);
     const completed = characters.filter((character) => character.done).length;
-    this.setData({ characters, guideSections, wordGroups, completed, total: characters.length, percent: characters.length ? Math.round(completed / characters.length * 100) : 0 });
+    this.setData({
+      characters,
+      extensionCharacters,
+      guideSections,
+      wordGroups,
+      extensionWordGroups,
+      practiceItems: progressItems(characters),
+      completed,
+      total: characters.length,
+      percent: characters.length ? Math.round(completed / characters.length * 100) : 0,
+    });
   },
   retry() { void this.loadLesson(true); },
   goBack() { wx.navigateBack({ fail: () => wx.switchTab({ url: "/pages/lessons/index" }) }); },
@@ -113,7 +169,22 @@ Page({
   },
   startPractice(event?: WechatMiniprogram.BaseEvent) {
     const track = (event?.currentTarget.dataset.track ?? "words") as TrackId;
-    const first = this.data.characters.find((character) => !character.done) ?? this.data.characters[0];
+    const profile = loadProfile();
+    if (track !== "words") {
+      wx.navigateTo({ url: `/pages/track/index?track=${track}&lessonId=${this.data.lessonId}` });
+      return;
+    }
+    if (track === "words" && this.data.characters.length > 0 && this.data.characters.every((character) => profile.completed.words.includes(character.id))) {
+      this.setData({ activeView: "words" });
+      wx.pageScrollTo({ scrollTop: 0, duration: 180 });
+      return;
+    }
+    const candidates = this.data.characters;
+    if (!candidates.length) {
+      wx.showToast({ title: "请先完成本课单字过关", icon: "none" });
+      return;
+    }
+    const first = candidates.find((character) => !profile.completed[track].includes(character.id)) ?? candidates[0];
     wx.navigateTo({ url: `/pages/practice/index?track=${track}&lessonId=${this.data.lessonId}${first ? `&characterId=${first.id}` : ""}` });
   },
 });

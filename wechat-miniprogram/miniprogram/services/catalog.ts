@@ -12,9 +12,9 @@ export const lessonIndex = lessons as CatalogLesson[];
 export const characterIndex = characters as CatalogCharacter[];
 export const componentIndex = components;
 
-/** Keep the native app on the same 365-character core course as the Web app. */
+/** Keep the native app on the same official core course as the Web app. */
 export function isCoreCharacter(character: CatalogCharacter) {
-  return character.ready && character.primary && character.tier !== "extension";
+  return character.ready && character.primary && character.official !== false && character.tier !== "extension";
 }
 
 export function lessonCover(lesson: CatalogLesson) {
@@ -32,6 +32,7 @@ export function findCharacter(characterId: string) {
 function readCachedLesson(lessonId: string): LessonContent | null {
   const cached = wx.getStorageSync<LessonContent>(`${CACHE_PREFIX}${lessonId}`);
   if (cached?.schemaVersion !== CATALOG_SCHEMA_VERSION) return null;
+  if (cached.characters.some((character) => character.media?.narration.audio && character.media.narration.marks === undefined)) return null;
   return JSON.stringify(cached).includes('"http://') ? null : cached;
 }
 

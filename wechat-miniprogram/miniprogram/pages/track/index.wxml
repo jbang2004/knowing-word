@@ -1,0 +1,33 @@
+<view class="track-page theme-{{theme}} tone-{{trackInfo.tone}}" style="padding-top: {{navHeight + 14}}px;">
+  <view class="track-heading">
+    <button class="nav-back" bindtap="goBack" aria-label="返回"><view class="nav-back-icon"></view></button>
+    <view><text>{{mode === 'map' ? '专项关卡' : trackInfo.label}}</text><strong>{{mode === 'map' ? trackInfo.label : lesson.title}}</strong><small>{{mode === 'map' ? trackInfo.copy : ('选择一个字开始本关练习 · 已完成 ' + lessonCompleted + ' / ' + lessonTotal)}}</small></view>
+  </view>
+
+  <block wx:if="{{mode === 'map'}}">
+    <view class="track-hero">
+      <view class="track-symbol kai">{{trackInfo.glyph}}</view>
+      <view class="hero-copy"><text>上次学到</text><strong>{{hasNext ? ('「' + next.hanzi + '」') : '尚未解锁'}}</strong><small>{{hasNext ? ('来自第 ' + nextLesson.position + ' 课 · ' + nextLesson.title) : '先完成单字过关，再开始专项巩固'}}</small></view>
+      <button bindtap="continueTrack">{{hasNext ? trackInfo.action : '先学本课生字'}}　→</button>
+    </view>
+    <view class="track-method-card"><text>这项练习在训练什么</text><strong>{{trackInfo.eyebrow}}</strong><view>{{trackInfo.copy}}</view></view>
+    <view class="level-map">
+      <view class="level-map-title"><strong>选择课次</strong><text>共 {{lessons.length}} 课 · 完成 {{completed}} / {{total}}</text></view>
+      <view class="level-list">
+        <view wx:for="{{lessons}}" wx:key="id" class="level-row press-card" data-id="{{item.id}}" bindtap="openLesson" hover-class="is-pressed"><text>第 {{item.position}} 课</text><strong>{{item.title}}</strong><i>{{item.completed}}/{{item.total}}</i><b>→</b></view>
+      </view>
+    </view>
+  </block>
+
+  <block wx:else>
+    <view class="track-lesson-board">
+      <view class="track-lesson-note">{{trackInfo.copy}}</view>
+      <view wx:if="{{hasEligible}}" class="track-character-grid">
+        <view wx:for="{{eligible}}" wx:key="id" class="track-character press-card {{item.done ? 'is-complete' : ''}}" data-id="{{item.id}}" bindtap="openCharacter" hover-class="is-pressed"><small>{{item.sequence}}</small><strong class="kai">{{item.hanzi}}</strong><i>{{item.done ? '✓' : '开始'}}</i></view>
+      </view>
+      <view wx:else class="track-lesson-empty"><strong>先认识本课生字</strong><text>专项练习只会使用已经完成单字过关的字，避免提前遇到陌生内容。</text><button bindtap="openWordLesson">打开本课字表</button></view>
+    </view>
+  </block>
+
+  <bottom-navigation active="practice" theme="{{theme}}" />
+</view>

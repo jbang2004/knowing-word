@@ -19,7 +19,7 @@
       <view class="study-identity">
         <view class="study-glyph">{{character.hanzi}}</view>
         <view class="identity-copy">
-          <view class="reading"><strong>{{character.pinyin}}</strong><button bindtap="playNarration" aria-label="朗读{{character.hanzi}}"><view class="{{playing ? 'icon-stop' : 'icon-volume'}}"></view></button></view>
+          <view class="reading"><strong>{{character.pinyin}}</strong><button bindtap="playCharacterPronunciation" aria-label="朗读{{character.hanzi}}"><view class="{{pronouncing ? 'icon-stop' : 'icon-volume'}}"></view></button></view>
           <view class="tags"><text class="role">{{character.curriculumRole === 'write' ? '课内会写' : character.curriculumRole === 'recognize' ? '课内会认' : '拓展学习'}}</text><text>{{character.charType}}</text><text>{{character.decomposition}}</text></view>
         </view>
       </view>
@@ -28,8 +28,8 @@
       <view class="study-launch">
         <view wx:if="{{!narrationOpen}}" class="listen-button press-card" bindtap="playNarration" role="button" hover-class="is-pressed"><view class="equalizer {{playing ? 'playing' : ''}}"><i></i><i></i><i></i><i></i><i></i></view><view><strong>{{narrationLaunchLabel}}</strong><text>{{character.media.narration.transcript.length}} 字 · 留在画面边看边听</text></view><text>→</text></view>
         <view wx:else class="narration-player {{playing ? 'is-playing' : ''}} {{narrationFinished ? 'is-finished' : ''}}">
-          <view class="narration-head"><view><strong>{{character.hanzi}} · {{character.pinyin}}</strong><text>{{playing ? '正在讲解' : narrationFinished ? '讲解已完成' : '已暂停'}}</text></view><button bindtap="collapseNarration" aria-label="收起字义讲解"><view class="icon-collapse"></view></button></view>
-          <view class="narration-phrase">{{character.media.narration.transcript}}</view>
+          <view class="narration-head"><view><strong>{{character.hanzi}} · {{character.pinyin}}</strong><text>{{narrationStatus}}</text></view><button bindtap="collapseNarration" aria-label="收起字义讲解"><view class="icon-collapse"></view></button></view>
+          <view class="narration-phrase">{{narrationPhrase || character.media.narration.transcript}}</view>
           <view class="narration-progress"><i style="width: {{narrationProgress}}%"></i></view>
           <view class="narration-time"><text>{{narrationElapsed}}</text><text>{{narrationDuration}}</text></view>
           <view class="narration-actions">
@@ -54,7 +54,10 @@
     <view wx:if="{{transcriptOpen}}" class="transcript-backdrop" bindtap="closeTranscript"></view>
     <view wx:if="{{transcriptOpen}}" class="transcript-sheet" role="dialog">
       <view class="transcript-head"><view><text>可选辅助 · 不影响字画页</text><strong>{{character.hanzi}}的逐字稿</strong></view><button bindtap="closeTranscript"><view class="icon-collapse"></view></button></view>
-      <scroll-view scroll-y class="transcript-text">{{character.media.narration.transcript}}</scroll-view>
+      <scroll-view scroll-y class="transcript-text">
+        <block wx:if="{{narrationTokens.length}}"><view class="transcript-token-flow"><view wx:for="{{narrationTokens}}" wx:key="key" class="narration-unit {{item.phraseClass}}"><text class="narration-token {{item.state}} {{item.phraseClass}}">{{item.text}}</text><text wx:if="{{item.punctuation}}" class="narration-token is-punctuation {{item.punctuationState}} {{item.phraseClass}}">{{item.punctuation}}</text></view></view></block>
+        <block wx:else>{{character.media.narration.transcript}}</block>
+      </scroll-view>
       <button class="transcript-close" bindtap="closeTranscript">收起逐字稿</button>
     </view>
 

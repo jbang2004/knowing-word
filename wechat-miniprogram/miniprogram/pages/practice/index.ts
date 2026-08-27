@@ -224,7 +224,12 @@ Page({
     try {
       const content = await getLessonContent(this.data.lessonId);
       const profile = loadProfile();
-      const characters = content.characters.filter((character) => isCoreCharacter(character) && (character.exercises?.length ?? 0) > 0);
+      const learned = new Set(profile.completed.words);
+      const characters = content.characters.filter((character) =>
+        isCoreCharacter(character)
+        && (character.exercises?.length ?? 0) > 0
+        && (this.data.track === "words" || learned.has(character.id))
+      );
       let characterIndex = this.data.requestedCharacterId
         ? characters.findIndex((character) => character.id === this.data.requestedCharacterId)
         : characters.findIndex((character) => !profile.completed[this.data.track].includes(character.id));

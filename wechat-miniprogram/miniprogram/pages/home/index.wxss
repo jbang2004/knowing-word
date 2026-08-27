@@ -1,13 +1,13 @@
 .home-page { width:min(560px,100%); min-height:100vh; margin:0 auto; padding:0 16px calc(96px + env(safe-area-inset-bottom)); background:var(--sky); }
 .status-row { display: flex; align-items: center; gap: 9px; width: 100%; min-height: 52px; }
 .status-spacer { flex: 1; }
-.avatar { display: flex; width: 40px; height: 40px; flex: none; align-items: center; justify-content: center; border-radius: 14px 14px 14px 4px; color: #30150e; background: var(--radical); box-shadow: 0 3px 0 var(--radical-deep); font-family: "Kaiti SC",STKaiti,serif; font-size: 18px; }
+.avatar { display: flex; width: 40px; height: 40px; flex: none; align-items: center; justify-content: center; border-radius: 14px 14px 14px 4px; color: var(--radical-ink); background: var(--radical); box-shadow: 0 3px 0 var(--radical-deep); font-family: var(--font-kai); font-size: 18px; }
 .metric { display: flex; min-height: 36px; flex: none; align-items: center; gap: 6px; padding: 6px 13px; border-radius: 999px; font-size: 15px; }
-.metric strong { font-weight: 900; }
+.metric strong { font-family: var(--font-round); font-weight: 900; font-variant-numeric: tabular-nums; }
 .metric-icon { font-size: 13px; }
 .metric.streak { color: var(--wrong-text); background: var(--wrong-soft); box-shadow: 0 3px 0 var(--wrong-edge); }
 .metric.today { color: var(--action-text); background: var(--action-soft); box-shadow: 0 3px 0 var(--action-edge); }
-.lesson-banner { display: flex; align-items: center; gap: 14px; margin-top: 14px; padding: 16px; border-radius: 24px; color: #0f1614; background: var(--action); box-shadow: 0 5px 0 var(--action-deep); }
+.lesson-banner { display: flex; align-items: center; gap: 14px; margin-top: 14px; padding: 16px; border-radius: 24px; color: var(--action-ink); background: var(--action); box-shadow: 0 5px 0 var(--action-deep); }
 .lesson-main { display: flex; min-width: 0; flex: 1; flex-direction: column; gap: 8px; }
 .lesson-main>text { font-size: 14px; font-weight: 700; opacity: .76; }
 .lesson-main>strong { font-size: 24px; font-weight: 900; line-height: 1.1; }
@@ -36,17 +36,19 @@
 .path-node.offset-1 { --node-offset:52px; --link-length:107px; --link-tilt:-28.95deg; }
 .path-node.offset-2 { --node-offset:72px; --link-length:96px; --link-tilt:-12.01deg; }
 .path-node.offset-3 { --node-offset:52px; --link-length:96px; --link-tilt:12.01deg; }
-.path-seal { position: relative; z-index: 1; display: flex; width: 74px; height: 74px; min-height: 0; margin: 0; padding: 0; align-items: center; justify-content: center; border: 0; border-radius: 24px 24px 24px 8px; font-family: "Kaiti SC",STKaiti,serif; font-size: 36px; font-weight: 500; line-height: normal; transform: translateX(var(--node-offset)); }
-.path-node.done .path-seal { color: #0f1614; background: var(--action); box-shadow: 0 5px 0 var(--action-deep); }
+.path-seal { position: relative; z-index: 1; display: flex; width: 74px; height: 74px; min-height: 0; margin: 0; padding: 0; align-items: center; justify-content: center; border: 0; border-radius: 24px 24px 24px 8px; font-family: var(--font-kai); font-size: 36px; font-weight: 500; line-height: normal; transform: translateX(var(--node-offset)); }
+.path-node.done .path-seal { color: var(--action-ink); background: var(--action); box-shadow: 0 5px 0 var(--action-deep); }
 .path-node.current .path-seal { border: 3px solid var(--action); color: var(--action-text); background: var(--paper); box-shadow: 0 5px 0 var(--action-edge); }
 .path-node.locked .path-seal { color: var(--ink-faint); background: var(--sky-deep); box-shadow: 0 5px 0 var(--line-deep); }
 .node-badge { position: absolute; top: -7px; right: -6px; display: flex; width: 24px; height: 24px; align-items: center; justify-content: center; border-radius: 50%; font-family: sans-serif; font-size: 11px; font-weight: 900; }
-.node-badge.done { color: #0f1614; background: var(--action-deep); }
+.node-badge.done { color: var(--action-ink); background: var(--action-deep); }
 .node-badge.lock { color: var(--ink-faint); background: var(--sky-deep); box-shadow: 0 0 0 2px var(--sky); }
 .chapter-fold { display: flex; align-items: center; gap: 11px; padding: 11px 14px; border: 2px solid var(--line); border-radius: 20px; background: var(--sky-deep); box-shadow: 0 4px 0 var(--line-deep); }
 .mini-seals { display: flex; gap: 4px; flex: none; }
-.mini-seals text { display: flex; width: 25px; height: 25px; align-items: center; justify-content: center; border-radius: 8px 8px 8px 3px; color: var(--ink-faint); background: var(--line); font-family: "Kaiti SC",serif; font-size: 13px; }
-.chapter-fold.done .mini-seals text { color: #0f1614; background: var(--action); }
+.mini-seals text { display: flex; width: 25px; height: 25px; align-items: center; justify-content: center; border-radius: 8px 8px 8px 3px; color: var(--ink-faint); background: var(--line); font-family: var(--font-kai); font-size: 13px; }
+.chapter-fold.done { background: var(--paper); box-shadow: var(--shadow); }
+.chapter-fold.done .mini-seals text { color: var(--action-ink); background: var(--action); }
+.chapter-fold.done .chapter-copy strong { color: var(--navy); }
 .chapter-copy { display: flex; min-width: 0; flex: 1; flex-direction: column; gap: 1px; }
 .chapter-copy strong { color: var(--ink-soft); font-size: 14px; }
 .chapter-copy text { color: var(--ink-faint); font-size: 14px; font-weight: 600; line-height: 1.4; }
@@ -58,13 +60,18 @@
 .practice-head view { margin-top: 2px; color: var(--ink-soft); font-size: 13px; line-height: 1.6; }
 .practice-list { display: flex; flex-direction: column; gap: 11px; }
 .practice-row { display: flex; width: min(292px,100%); min-height: 72px; align-items: center; justify-self: center; gap: 12px; margin: 0 auto; padding: 12px 15px; border: 2px solid var(--line); border-radius: 22px 22px 22px 7px; background: var(--paper); box-shadow:0 4px 0 var(--line); }
-.practice-row.disabled { opacity:.64; }
-.practice-icon { display: flex; width: 44px; height: 44px; flex: none; align-items: center; justify-content: center; border-radius: 14px 14px 14px 5px; color: var(--part-text); background: var(--part); box-shadow: 0 3px 0 var(--part-deep); font-family: "Kaiti SC",serif; font-size: 22px; }
-.track-honglan { color:#30150e; background:var(--radical); box-shadow:0 3px 0 var(--radical-deep); font-size:13px; }
-.track-structure { color:#301f00; background:var(--wrong); box-shadow:0 3px 0 var(--wrong-deep); }
-.track-read { color:#301f00; background:var(--wrong); box-shadow:0 3px 0 var(--wrong-deep); }
+.practice-row.disabled,.practice-row.locked { opacity:.64; box-shadow:none; }
+.practice-row.complete { border-color:var(--action); background:var(--action-soft); box-shadow:0 var(--press) 0 var(--action-edge); }
+.practice-icon { display: flex; width: 44px; height: 44px; flex: none; align-items: center; justify-content: center; border-radius: 14px 14px 14px 5px; color: var(--part-ink); background: var(--part); box-shadow: 0 3px 0 var(--part-deep); font-family: var(--font-kai); font-size: 22px; }
+.track-honglan { color:var(--radical-ink); background:var(--radical); box-shadow:0 3px 0 var(--radical-deep); font-size:13px; }
+.track-structure { color:var(--wrong-ink); background:var(--wrong); box-shadow:0 3px 0 var(--wrong-deep); }
+.track-read { color:var(--wrong-ink); background:var(--wrong); box-shadow:0 3px 0 var(--wrong-deep); }
+.practice-row.complete .practice-icon { color:var(--action-ink); background:var(--action); box-shadow:0 3px 0 var(--action-deep); }
 .practice-row>view:nth-child(2) { display:flex; min-width:0; flex:1; flex-direction:column; gap:2px; }
 .practice-row strong { color:var(--navy); font-size:15px; font-weight:900; }
 .practice-row text { color:var(--ink-soft); font-size:14px; font-weight:700; }
 .practice-arrow { color:var(--ink-faint); font-size:19px; }
+.practice-check { display:flex; width:28px; height:28px; align-items:center; justify-content:center; border-radius:50%; color:var(--action-ink); background:var(--action); font-size:17px; font-weight:900; }
 .read-row { border-color:var(--wrong-edge); background:var(--wrong-soft); }
+.read-row.disabled { box-shadow:none; }
+.practice-complete { color:var(--action-text); text-align:center; font-size:13px; font-weight:900; }

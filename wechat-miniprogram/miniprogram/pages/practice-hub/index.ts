@@ -71,7 +71,9 @@ Page({
       wx.navigateTo({ url: `/pages/lesson/index?lessonId=${this.data.lesson.id}` });
       return;
     }
-    wx.navigateTo({ url: `/pages/practice/index?track=${track}&lessonId=${this.data.lesson.id}` });
+    wx.navigateTo({ url: track === "words"
+      ? `/pages/practice/index?track=words&lessonId=${this.data.lesson.id}`
+      : `/pages/track/index?track=${track}` });
   },
   openLessons() {
     wx.switchTab({ url: "/pages/lessons/index" });

@@ -47,17 +47,4 @@
 .record-zero-state>strong { margin-top:6px; color:var(--navy); font-size:19px; }
 .record-zero-state>view { margin-top:8px; color:var(--ink-soft); font-size:13px; line-height:1.6; }
 .record-zero-state button { min-height:46px; margin-top:18px; padding:0 24px; border-radius:999px; color:#0f1614; background:var(--action); box-shadow:0 4px 0 var(--action-deep); font-size:13px; font-weight:900; }
-.records-bottom-nav { position:fixed; z-index:40; right:0; bottom:0; left:0; display:grid; height:calc(var(--tabbar-height) + env(safe-area-inset-bottom)); grid-template-columns:repeat(4,1fr); padding-bottom:env(safe-area-inset-bottom); border-top:2px solid var(--line); background:var(--paper); }
-.records-bottom-nav .nav-item { display:flex; align-items:center; justify-content:center; flex-direction:column; gap:4px; color:var(--ink-faint); font-size:13px; font-weight:800; }
-.records-bottom-nav .nav-item.active { color:var(--action-text); font-weight:900; }
-.nav-icon { position:relative; width:26px; height:26px; }
-.icon-home::before { position:absolute; left:5px; top:3px; width:15px; height:15px; border-top:2.2px solid currentColor; border-left:2.2px solid currentColor; transform:rotate(45deg); content:""; }
-.icon-home::after { position:absolute; left:6px; bottom:2px; width:14px; height:14px; border:2.2px solid currentColor; border-top:0; border-radius:1px; content:""; }
-.icon-book::before,.icon-book::after { position:absolute; top:4px; width:10px; height:18px; border:2.2px solid currentColor; content:""; }
-.icon-book::before { left:2px; border-radius:4px 1px 1px 4px; }
-.icon-book::after { right:2px; border-radius:1px 4px 4px 1px; }
-.icon-grid::before { position:absolute; left:3px; top:3px; width:7px; height:7px; border:2.2px solid currentColor; border-radius:2.5px; box-shadow:13px 0 0 -2.2px white,13px 0 0 0 currentColor,0 13px 0 -2.2px white,0 13px 0 0 currentColor,13px 13px 0 -2.2px white,13px 13px 0 0 currentColor; content:""; }
-.icon-person::before { position:absolute; left:8px; top:2px; width:9px; height:9px; border:2.2px solid currentColor; border-radius:50%; content:""; }
-.icon-person::after { position:absolute; left:4px; bottom:1px; width:17px; height:12px; border:2.2px solid currentColor; border-bottom:0; border-radius:12px 12px 0 0; content:""; }
-.icon-grid::before { box-shadow:13px 0 0 -2.2px var(--paper),13px 0 0 0 currentColor,0 13px 0 -2.2px var(--paper),0 13px 0 0 currentColor,13px 13px 0 -2.2px var(--paper),13px 13px 0 0 currentColor; }
 @media (min-width:761px) { .lesson-characters { grid-template-columns:repeat(2,minmax(0,1fr)); } }

@@ -1,5 +1,9 @@
 <view class="account-page theme-{{theme}}" style="padding-top: {{contentTop}}px;">
-  <view class="account-heading">这是属于你的学习空间</view>
+  <view class="account-heading">
+    <text class="account-kicker">我的账户</text>
+    <text class="account-title">这是属于你的学习空间</text>
+    <text class="account-copy">{{headingCopy}}</text>
+  </view>
 
   <view class="account-card">
     <view class="avatar">{{initial}}</view>
@@ -7,11 +11,13 @@
     <label class="field-label">学习小名</label>
     <input class="profile-input" value="{{name}}" maxlength="18" bindinput="onNameInput" bindblur="saveName" placeholder="给自己取一个名字" />
     <label class="field-label grade-label">孩子年级</label>
-    <view class="grade-field"><text>{{grade}} 年级</text><text>⌄</text></view>
+    <picker mode="selector" range="{{gradeOptions}}" range-key="label" value="{{gradeIndex}}" bindchange="changeGrade">
+      <view class="grade-field press-card" role="button" hover-class="is-pressed"><text>{{grade}} 年级</text><text class="grade-chevron">⌄</text></view>
+    </picker>
     <view class="account-summary">已完成 {{completed}} 个学习关卡 · 认识 {{components}} 个部件</view>
   </view>
 
-  <navigator class="setting-row" url="/pages/records/index"><i class="setting-icon record-icon"></i><strong>学习记录与错题重练</strong></navigator>
-  <view class="setting-row" bindtap="toggleTheme"><i class="setting-icon theme-icon"></i><strong>{{theme === 'night' ? '切换日间模式' : '切换夜读模式'}}</strong></view>
-  <view class="setting-row danger-row" bindtap="resetProgress"><i class="setting-icon reset-icon"></i><strong>清除学习记录</strong></view>
+  <navigator class="setting-row press-card" url="/pages/records/index" hover-class="is-pressed"><i class="setting-icon record-icon"></i><strong>学习记录与错题重练</strong></navigator>
+  <view class="setting-row press-card" bindtap="toggleTheme" role="button" hover-class="is-pressed"><i class="setting-icon theme-icon"></i><strong>{{theme === 'night' ? '切换日间模式' : '切换夜读模式'}}</strong></view>
+  <view class="setting-row danger-row press-card" bindtap="resetProgress" role="button" hover-class="is-pressed"><i class="setting-icon reset-icon"></i><strong>清除学习记录</strong></view>
 </view>

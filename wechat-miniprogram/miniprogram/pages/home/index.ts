@@ -85,6 +85,23 @@ function makeView(profile: StudyProfile) {
     .map((character) => ({ character, dueAt: dueTimestamp(profile.memory[character.id]) }))
     .filter((item) => item.dueAt <= Date.now())
     .sort((left, right) => left.dueAt - right.dueAt);
+  const allWordsComplete = lessonCharacters.length > 0 && lessonCompleted === lessonCharacters.length;
+  const reviewTracks = trackDetails.slice(1).map((track) => {
+    const completed = new Set(profile.completed[track.id]);
+    const completedCount = lessonCharacters.filter((character) => completed.has(character.id)).length;
+    const total = lessonCharacters.length;
+    const complete = total > 0 && completedCount >= total;
+    return {
+      ...track,
+      completed: completedCount,
+      total,
+      state: !allWordsComplete ? "locked" : complete ? "complete" : "available",
+      progressLabel: allWordsComplete
+        ? `${completedCount} / ${total} 已通关`
+        : "学完本课生字后解锁",
+      trailingLabel: complete ? "✓" : "›",
+    };
+  });
   return {
     name: profile.name || "小探险家",
     initial: (profile.name || "小").slice(0, 1),
@@ -94,6 +111,12 @@ function makeView(profile: StudyProfile) {
     lessonCompleted,
     lessonTotal: lessonCharacters.length,
     lessonProgress: lessonCharacters.length ? Math.round(lessonCompleted / lessonCharacters.length * 100) : 0,
+    allWordsComplete,
+    allReviewsComplete: allWordsComplete && reviewTracks.every((track) => track.state === "complete"),
+    readCompleted: profile.readLessons.includes(nextLesson.id),
+    practiceStatus: allWordsComplete
+      ? "本课生字已经学完"
+      : `完成 ${lessonCompleted}/${lessonCharacters.length} 个识字小测后解锁`,
     streak: currentStreak(profile.daily),
     dueReview: dueCharacters[0]?.character ?? null,
     dueReviewCount: dueCharacters.length,
@@ -106,7 +129,7 @@ function makeView(profile: StudyProfile) {
         ? Math.round(profile.completed[track.id].length / readyCharacters.length * 100)
         : 0,
     })),
-    reviewTracks: trackDetails.slice(1),
+    reviewTracks,
   };
 }
 
@@ -121,6 +144,10 @@ Page({
     lessonCompleted: 0,
     lessonTotal: 0,
     lessonProgress: 0,
+    allWordsComplete: false,
+    allReviewsComplete: false,
+    readCompleted: false,
+    practiceStatus: "完成识字小测后解锁",
     streak: 0,
     dueReview: null as typeof characterIndex[number] | null,
     dueReviewCount: 0,
@@ -176,10 +203,15 @@ Page({
   },
   openTrack(event: WechatMiniprogram.BaseEvent) {
     const track = event.currentTarget.dataset.track as TrackId;
-    wx.navigateTo({ url: `/pages/practice/index?track=${track}&lessonId=${this.data.nextLesson.id}` });
+    const state = event.currentTarget.dataset.state as string;
+    if (!this.data.allWordsComplete || state === "locked") {
+      wx.showToast({ title: "学完本课生字后解锁", icon: "none" });
+      return;
+    }
+    wx.navigateTo({ url: `/pages/track/index?track=${track}&lessonId=${this.data.nextLesson.id}` });
   },
   openReader() {
-    if (this.data.lessonCompleted !== this.data.lessonTotal) {
+    if (!this.data.allWordsComplete) {
       wx.showToast({ title: "学完本课生字后解锁", icon: "none" });
       return;
     }

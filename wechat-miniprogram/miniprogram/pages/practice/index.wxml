@@ -20,9 +20,9 @@
       </view>
 
       <view wx:if="{{showWritingBoard}}" class="writing-board">
-        <view wx:if="{{!independentWriting || writingReview}}" class="writing-glyph kai">{{character.hanzi}}</view>
+        <view wx:if="{{!independentWriting || writingReview || answered}}" class="writing-glyph kai">{{character.hanzi}}</view>
         <canvas canvas-id="writingCanvas" id="writingCanvas" class="writing-canvas" disable-scroll="{{true}}" bindtouchstart="startWriting" bindtouchmove="moveWriting" bindtouchend="endWriting" bindtouchcancel="endWriting" aria-label="书写{{character.hanzi}}"></canvas>
-        <view class="writing-footer"><text class="{{strokeCount ? 'has-ink' : ''}}">{{writingReview ? '规范字已显示：请逐部件对照是否漏笔、错位' : (strokeCount ? '已记录 ' + strokeCount + ' 笔，继续把字写完整' : '沿着浅色字形认真描写，轻点一下不会算作完成')}}</text><button wx:if="{{!writingReview}}" bindtap="clearWriting">重新写</button></view>
+        <view class="writing-footer"><text class="{{strokeCount ? 'has-ink' : ''}}">{{writingReview || answered ? '规范字已显示：请逐部件对照是否漏笔、错位' : (strokeCount ? '已记录 ' + strokeCount + ' 笔，继续把字写完整' : (writingRewrite ? '范字已隐藏并清空：根据刚才发现的问题重新写完整' : (independentWriting ? '空白书写：写完后再显示范字对照' : '沿着浅色字形认真描写，轻点一下不会算作完成')))}}</text><button wx:if="{{answered ? false : !writingReview}}" bindtap="clearWriting">重新写</button></view>
       </view>
 
       <view wx:elif="{{splitAssembly}}" class="assembly-exercise">
@@ -62,21 +62,21 @@
     </view>
 
     <view wx:if="{{showPendingActions}}" class="challenge-actions">
-      <view class="game-button primary {{ready ? '' : 'disabled'}}" bindtap="checkAnswer" role="button">{{isWriting ? '显示范字并对照' : '核对答案'}}</view>
+      <view class="game-button primary press-card {{ready ? '' : 'disabled'}}" bindtap="checkAnswer" role="button" hover-class="{{ready ? 'is-pressed' : 'none'}}">{{isWriting ? '显示范字并对照' : '核对答案'}}</view>
       <view class="challenge-actions-row"><button class="text-button {{questionIndex === 0 ? 'disabled' : ''}}" bindtap="previousQuestion">← 上一题</button><button class="text-button" bindtap="skipQuestion">跳过这一题 →</button></view>
     </view>
 
     <view wx:if="{{writingReview}}" class="answer-sheet writing-assessment">
       <view class="answer-sheet-head"><view class="answer-sheet-mark is-check" aria-hidden="true"><i></i></view><strong class="answer-sheet-title">逐部件对照后，选择最符合的一项</strong></view>
       <view class="answer-copy">先看部件、位置和笔画；这是你的对照自查，不等于系统客观识别。</view>
-      <view class="writing-assessment-grid"><view class="game-button primary" data-assessment="correct" bindtap="selfAssess">我对照后认为一致</view><view class="game-button ghost" data-assessment="component-error" bindtap="selfAssess">部件错</view><view class="game-button ghost" data-assessment="position-error" bindtap="selfAssess">位置错</view><view class="game-button ghost" data-assessment="stroke-error" bindtap="selfAssess">漏多笔</view></view>
+      <view class="writing-assessment-grid"><view class="game-button primary press-card" data-assessment="correct" bindtap="selfAssess" hover-class="is-pressed">我对照后认为一致</view><view class="game-button ghost press-card" data-assessment="component-error" bindtap="selfAssess" hover-class="is-pressed">部件错</view><view class="game-button ghost press-card" data-assessment="position-error" bindtap="selfAssess" hover-class="is-pressed">位置错</view><view class="game-button ghost press-card" data-assessment="stroke-error" bindtap="selfAssess" hover-class="is-pressed">漏多笔</view></view>
     </view>
 
     <view wx:elif="{{answered}}" class="answer-sheet {{correct ? 'is-correct' : 'is-wrong'}}">
       <view class="answer-sheet-head"><view class="answer-sheet-mark {{correct ? 'is-check' : 'is-retry'}}" aria-hidden="true"><i></i></view><strong class="answer-sheet-title">{{resultTitle}}</strong><small class="answer-sheet-attempts">已尝试 {{currentAttempts}} 次</small></view>
       <view class="answer-copy">{{resultCopy}}</view>
       <small wx:if="{{resultNote}}" class="answer-sheet-note">{{resultNote}}</small>
-      <view class="game-button primary answer-next {{correct ? '' : 'wrong'}}" bindtap="nextQuestion" role="button">{{correct ? (passedQuestionIds.length === questions.length ? '查看成绩' : '继续') : '知道了'}}</view>
+      <view class="game-button primary answer-next press-card {{correct ? '' : 'wrong'}}" bindtap="nextQuestion" role="button" hover-class="is-pressed">{{correct ? (passedQuestionIds.length === questions.length ? '查看成绩' : '继续') : '知道了'}}</view>
     </view>
   </block>
 
@@ -99,8 +99,8 @@
         <view class="celebration-stat"><text class="celebration-stat-value">{{firstTryRate}}%</text><small class="celebration-stat-label">首次答对</small></view>
       </view>
       <view class="celebration-actions">
-        <button class="game-button primary celebration-primary" bindtap="nextCharacter">{{nextActionLabel}}</button>
-        <button class="game-button ghost celebration-ghost" bindtap="replayCharacter"><view class="replay-icon" aria-hidden="true"><i></i></view><text>再练一轮</text></button>
+        <button class="game-button primary celebration-primary press-card" bindtap="nextCharacter" hover-class="is-pressed">{{nextActionLabel}}</button>
+        <button class="game-button ghost celebration-ghost press-card" bindtap="replayCharacter" hover-class="is-pressed"><view class="replay-icon" aria-hidden="true"><i></i></view><text>再练一轮</text></button>
         <button class="text-button celebration-return" bindtap="finishSession">返回上一页</button>
       </view>
     </view>

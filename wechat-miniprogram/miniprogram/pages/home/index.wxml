@@ -51,19 +51,20 @@
     </block>
   </view>
 
-  <view class="practice-plan card">
-    <view class="practice-head"><text>完成 {{lessonCompleted}}/{{lessonTotal}} 个识字小测后解锁</text><strong>整课巩固 · 选做</strong><view>哪里还不牢，就选择结构、拆字或红蓝再练一次；不影响本课完成。</view></view>
+  <view class="practice-plan card {{allWordsComplete ? 'is-ready' : 'is-locked'}}">
+    <view class="practice-head"><text>{{practiceStatus}}</text><strong>整课巩固 · 选做</strong><view>哪里还不牢，就选择结构、拆字或红蓝再练一次；不影响本课完成。</view></view>
     <view class="practice-list">
-      <view wx:for="{{reviewTracks}}" wx:key="id" class="practice-row" data-track="{{item.id}}" bindtap="openTrack">
+      <view wx:for="{{reviewTracks}}" wx:key="id" class="practice-row press-card {{item.state}}" data-track="{{item.id}}" data-state="{{item.state}}" bindtap="openTrack" role="button" hover-class="{{item.state === 'locked' ? 'none' : 'is-pressed'}}">
         <view class="practice-icon track-{{item.id}}">{{item.glyph}}</view>
-        <view><strong>{{item.title}}</strong><text>{{lessonCompleted === lessonTotal ? item.copy : '学完本课生字后解锁'}}</text></view>
-        <text class="practice-arrow">›</text>
+        <view><strong>{{item.title}}</strong><text>{{item.progressLabel}}</text></view>
+        <text class="practice-arrow {{item.state === 'complete' ? 'practice-check' : ''}}">{{item.trailingLabel}}</text>
       </view>
     </view>
-    <view class="practice-row read-row {{lessonCompleted === lessonTotal ? '' : 'disabled'}}" bindtap="openReader">
+    <view class="practice-row read-row press-card {{allWordsComplete ? '' : 'disabled'}}" bindtap="openReader" role="button" hover-class="{{allWordsComplete ? 'is-pressed' : 'none'}}">
       <view class="practice-icon track-read">读</view>
-      <view><strong>朗读收尾</strong><text>{{lessonCompleted === lessonTotal ? '听范读，再完整读一遍' : '学完本课生字后解锁'}}</text></view>
+      <view><strong>朗读收尾</strong><text>{{readCompleted ? '本课已朗读' : allWordsComplete ? '听范读，再完整读一遍' : '学完本课生字后解锁'}}</text></view>
       <text class="practice-arrow">›</text>
     </view>
+    <view wx:if="{{allReviewsComplete}}" class="practice-complete">三项选做复习均已完成</view>
   </view>
 </view>

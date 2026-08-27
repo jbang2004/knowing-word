@@ -31,4 +31,5 @@
     <view class="story-section"><text>常见例字</text><view class="example-list"><view wx:for="{{selected.examples}}" wx:key="*this" data-glyph="{{item}}" bindtap="openExample">{{item}}</view></view></view>
     <view class="story-section"><text>本册里遇见它</text><view class="linked-list"><button wx:for="{{connected}}" wx:key="id" data-glyph="{{item.hanzi}}" bindtap="openExample"><strong class="kai">{{item.hanzi}}</strong><text>第 {{item.lessonPosition}} 课</text></button><view wx:if="{{!connected.length}}">这个部件会在后续词语里出现。</view></view></view>
   </view>
+  <bottom-navigation active="practice" theme="{{theme}}" />
 </view>

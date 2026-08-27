@@ -93,6 +93,7 @@ export async function GET(request: Request) {
                 audio: narration.audio
                   ? absoluteAsset(request, narration.audio.replace("/audio.webm", "/audio.m4a"))
                   : "",
+                marks: narration.marks ? absoluteAsset(request, narration.marks) : "",
               },
               practiceOptionVisuals: Object.fromEntries(
                 Object.entries(characterMedia.practiceOptionVisuals).map(([key, option]) => [

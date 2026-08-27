@@ -87,7 +87,7 @@ function recordView(profile: StudyProfile, track: TrackId, showAllLessons = fals
 Page({
   data: { contentTop: 70, theme: loadProfile().theme, ...recordView(loadProfile(), "words") },
   onLoad() {
-    this.setData(navigationLayout(10));
+    this.setData(navigationLayout());
   },
   onShow() {
     const profile = loadProfile();

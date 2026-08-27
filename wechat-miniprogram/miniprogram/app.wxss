@@ -92,7 +92,7 @@ page {
   --radical-deep:#c9502c;
   --radical-soft:#3c2924;
   --radical-edge:#c9502c;
-  --radical-ink:#30150e;
+  --radical-ink:#0f1614;
   --radical-text:#ff9a7d;
   --part:#5fb4dc;
   --part-deep:#3c7fa3;
@@ -118,7 +118,7 @@ button::after { border: 0; }
 .press-card { transition:transform 90ms ease,box-shadow 90ms ease,border-color 140ms ease,background-color 140ms ease; }
 .press-card.is-pressed { transform: translateY(var(--press)); box-shadow: none; }
 .page { min-height: 100vh; padding: 26rpx 32rpx calc(54rpx + env(safe-area-inset-bottom)); }
-.course-page,.practice-hub-page,.account-page,.components-page,.read-page,.records-page { animation:page-arrive 620ms var(--ease-out) both; }
+.home-page,.course-page,.practice-hub-page,.lesson-page,.track-page,.account-page,.components-page,.read-page,.records-page { animation:page-arrive 620ms var(--ease-out) both; }
 .paper-texture { background: var(--sky); }
 .eyebrow { display: block; margin-bottom: 10rpx; color: var(--radical-text); font-size: 22rpx; font-weight: 800; letter-spacing: 3rpx; }
 .title { color: var(--navy); font-size: 50rpx; font-weight: 900; line-height: 1.16; }
@@ -144,5 +144,23 @@ button::after { border: 0; }
 .nav-back-icon { position:relative; display:block; width:22px; height:18px; color:currentColor; }
 .nav-back-icon::before { position:absolute; top:4px; left:1px; width:9px; height:9px; border-bottom:2.4px solid currentColor; border-left:2.4px solid currentColor; content:""; transform:rotate(45deg); }
 .nav-back-icon::after { position:absolute; top:8px; left:3px; width:18px; border-top:2.4px solid currentColor; content:""; }
+@media (min-width:900px) {
+  page .home-page,
+  page .course-page,
+  page .practice-hub-page,
+  page .lesson-page,
+  page .track-page,
+  page .read-page,
+  page .records-page,
+  page .components-page,
+  page .account-page {
+    width:calc(100% - 236px);
+    max-width:none;
+    margin-right:0;
+    margin-left:236px;
+    padding-right:32px;
+    padding-left:32px;
+  }
+}
 @keyframes shimmer { from { background-position: 100% 0; } to { background-position: -100% 0; } }
 @keyframes page-arrive { from { opacity:0; transform:translateY(10px); } to { opacity:1; transform:none; } }

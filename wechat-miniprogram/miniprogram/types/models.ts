@@ -43,6 +43,7 @@ export type CatalogCharacter = {
   lessonTitle: string;
   lessonPosition: number;
   word: string;
+  wordPosition?: number;
   hanzi: string;
   pinyin: string;
   charType: string;
@@ -51,6 +52,8 @@ export type CatalogCharacter = {
   description?: string;
   originalText?: string;
   curriculumRole?: string;
+  polyphonic?: boolean;
+  official?: boolean;
   primary: boolean;
   ready: boolean;
   tier?: string;
@@ -60,7 +63,7 @@ export type CatalogCharacter = {
   media?: {
     visual: { src: string; label: string; alt: string } | null;
     scene: { scene: string; cues: readonly string[] };
-    narration: { transcript: string; audio: string };
+    narration: { transcript: string; audio: string; marks?: string };
     practiceOptionVisuals: Record<string, { src: string; label: string; alt: string }>;
   } | null;
 };
