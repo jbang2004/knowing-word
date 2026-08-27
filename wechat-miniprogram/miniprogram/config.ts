@@ -12,10 +12,13 @@ function resolveApiBaseUrl() {
 }
 
 export const API_BASE_URL = resolveApiBaseUrl();
-export const CATALOG_SCHEMA_VERSION = 1;
+export const CATALOG_SCHEMA_VERSION = 2;
 
 export function assetUrl(path: string) {
   if (!path) return "";
   if (/^https:\/\//u.test(path)) return path;
+  if (path.startsWith("/illustrations/")) {
+    return `${PRODUCTION_ASSET_BASE_URL}/api/mini-asset/v1${path}`;
+  }
   return `${PRODUCTION_ASSET_BASE_URL}${path.startsWith("/") ? path : `/${path}`}`;
 }

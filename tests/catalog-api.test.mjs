@@ -6,7 +6,7 @@ test("mini-program catalog endpoint exposes all lesson templates and one bounded
   const indexResponse = await GET(new Request("https://knowing.example/api/catalog"));
   const index = await indexResponse.json();
   assert.equal(indexResponse.status, 200);
-  assert.equal(index.schemaVersion, 1);
+  assert.equal(index.schemaVersion, 2);
   assert.equal(index.lessons.length, 26);
   assert.match(indexResponse.headers.get("cache-control"), /public/u);
 
@@ -15,13 +15,13 @@ test("mini-program catalog endpoint exposes all lesson templates and one bounded
   assert.equal(lesson.lesson.id, "g5v1-l01");
   assert.ok(lesson.characters.length >= 12);
   assert.ok(lesson.characters.every((character) => character.exercises.length > 0));
-  assert.match(lesson.characters[0].media.visual.src, /^https:\/\/knowing\.example\/illustrations\//u);
+  assert.match(lesson.characters[0].media.visual.src, /^https:\/\/knowing\.example\/api\/mini-asset\/v1\/illustrations\//u);
   assert.match(lesson.characters[0].media.narration.audio, /\/audio\.m4a\?v=/u);
   assert.ok(Buffer.byteLength(JSON.stringify(lesson)) < 1_000_000);
 
   const localResponse = await GET(new Request("http://localhost:3000/api/catalog?lessonId=g5v1-l01"));
   const localLesson = await localResponse.json();
-  assert.match(localLesson.characters[0].media.visual.src, /^https:\/\/knowing-word\.jbang2004\.chatgpt\.site\/illustrations\//u);
+  assert.match(localLesson.characters[0].media.visual.src, /^https:\/\/knowing-word\.jbang2004\.chatgpt\.site\/api\/mini-asset\/v1\/illustrations\//u);
 });
 
 test("catalog endpoint rejects unknown lessons without setting an identity cookie", async () => {

@@ -911,6 +911,30 @@ test("mini-program illustration assets expose a decodable image content type", a
   assert.equal(response.headers.get("cache-control"), "public, max-age=86400, stale-while-revalidate=604800");
 });
 
+test("mini-program illustration endpoint bypasses static-host MIME ambiguity", async () => {
+  const workerUrl = new URL("../dist/server/index.js", import.meta.url);
+  workerUrl.searchParams.set("test", "mini-illustration-endpoint-suite");
+  workerPromise ||= import(workerUrl.href).then((module) => module.default);
+  const worker = await workerPromise;
+  let assetPath = "";
+  const response = await worker.fetch(
+    new Request("http://localhost/api/mini-asset/v1/illustrations/lessons/g5-01.webp"),
+    {
+      ASSETS: {
+        fetch(request) {
+          assetPath = new URL(request.url).pathname;
+          return Promise.resolve(new Response("webp", {
+            headers: { "content-type": "application/octet-stream" },
+          }));
+        },
+      },
+    },
+    { waitUntil() {}, passThroughOnException() {} },
+  );
+  assert.equal(assetPath, "/illustrations/lessons/g5-01.webp");
+  assert.equal(response.headers.get("content-type"), "image/webp");
+});
+
 test("mini-program font endpoint returns the font through the Worker", async () => {
   const workerUrl = new URL("../dist/server/index.js", import.meta.url);
   workerUrl.searchParams.set("test", "mini-font-endpoint-suite");

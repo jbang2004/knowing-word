@@ -14,6 +14,15 @@ const NARRATION_SOURCE_ORIGIN = "https://raw.githubusercontent.com/jbang2004/kno
 const MAX_NARRATION_BYTES = 2 * 1024 * 1024;
 const MINI_FONT_PATH = "/api/mini-font/v1/lxgw-wenkai.woff2";
 const MINI_FONT_ASSET_PATH = "/fonts/lxgw-wenkai-subset.woff2";
+const MINI_ASSET_PREFIX = "/api/mini-asset/v1/";
+
+function miniImageAssetPath(pathname: string) {
+  if (!pathname.startsWith(MINI_ASSET_PREFIX)) return null;
+  const assetPath = `/${pathname.slice(MINI_ASSET_PREFIX.length)}`;
+  return /^\/illustrations\/[a-z0-9/_-]+\.(?:webp|png|jpe?g|svg)$/iu.test(assetPath)
+    ? assetPath
+    : null;
+}
 
 function narrationRequestPath(pathname: string) {
   const match = /^\/media\/narration\/(v\d+)\/([a-z0-9-]+\/(?:audio\.(?:webm|m4a)|audio-marks\.json))$/.exec(pathname);
@@ -239,6 +248,18 @@ const worker = {
       const asset = await env.ASSETS.fetch(new Request(assetUrl, { method: request.method }));
       if (!asset.ok) return new Response("Font unavailable", { status: asset.status });
       return withDeliveryCache(asset, MINI_FONT_ASSET_PATH);
+    }
+
+    const miniAssetPath = miniImageAssetPath(url.pathname);
+    if (miniAssetPath) {
+      if (request.method !== "GET" && request.method !== "HEAD") {
+        return new Response("Method not allowed", { status: 405, headers: { allow: "GET, HEAD" } });
+      }
+      if (!env.ASSETS) return new Response("Image unavailable", { status: 503 });
+      const assetUrl = new URL(miniAssetPath, request.url);
+      const asset = await env.ASSETS.fetch(new Request(assetUrl, { method: request.method }));
+      if (!asset.ok) return new Response("Image unavailable", { status: asset.status });
+      return withDeliveryCache(asset, miniAssetPath);
     }
 
     const narrationPath = narrationRequestPath(url.pathname);

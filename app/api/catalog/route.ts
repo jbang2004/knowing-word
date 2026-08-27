@@ -6,7 +6,7 @@ import { narrationMedia } from "../../domain/narration-media.ts";
 
 export const dynamic = "force-dynamic";
 
-const CATALOG_SCHEMA_VERSION = 1;
+const CATALOG_SCHEMA_VERSION = 2;
 const PRODUCTION_ASSET_ORIGIN = "https://knowing-word.jbang2004.chatgpt.site";
 
 function absoluteAsset(request: Request, source?: string) {
@@ -15,7 +15,11 @@ function absoluteAsset(request: Request, source?: string) {
   const base = requestUrl.protocol === "https:"
     ? requestUrl.origin
     : PRODUCTION_ASSET_ORIGIN;
-  return new URL(source, base).toString();
+  const asset = new URL(source, base);
+  if (asset.origin === base && asset.pathname.startsWith("/illustrations/")) {
+    return new URL(`/api/mini-asset/v1${asset.pathname}`, base).toString();
+  }
+  return asset.toString();
 }
 
 function jsonCatalog(body: unknown, status = 200) {
