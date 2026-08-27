@@ -44,14 +44,16 @@ function makeView(profile: StudyProfile) {
 Page({
   data: {
     ...makeView(loadProfile()),
+    theme: loadProfile().theme,
     contentTop: 70,
   },
   onLoad() {
     this.setData(navigationLayout());
   },
   onShow() {
-    this.getTabBar?.()?.setData({ selected: 2 });
-    this.setData(makeView(loadProfile()));
+    const profile = loadProfile();
+    this.getTabBar?.()?.setData({ selected: 2, theme: profile.theme });
+    this.setData({ ...makeView(profile), theme: profile.theme });
   },
   async onPullDownRefresh() {
     this.setData(makeView(await syncProfile()));

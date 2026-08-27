@@ -50,13 +50,14 @@ function courseView(profile: StudyProfile) {
 }
 
 Page({
-  data: { ...courseView(loadProfile()), contentTop: 70 },
+  data: { ...courseView(loadProfile()), theme: loadProfile().theme, contentTop: 70 },
   onLoad() {
     this.setData(navigationLayout());
   },
   onShow() {
-    this.getTabBar?.()?.setData({ selected: 1 });
-    this.setData(courseView(loadProfile()));
+    const profile = loadProfile();
+    this.getTabBar?.()?.setData({ selected: 1, theme: profile.theme });
+    this.setData({ ...courseView(profile), theme: profile.theme });
   },
   async onPullDownRefresh() {
     this.setData(courseView(await syncProfile()));

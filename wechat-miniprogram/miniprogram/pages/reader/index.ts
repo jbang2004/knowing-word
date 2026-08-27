@@ -1,7 +1,7 @@
 import { getLessonContent, lessonIndex } from "../../services/catalog";
 import { sendReadingEvent } from "../../services/events";
 import { navigationLayout } from "../../services/layout";
-import { recordReading } from "../../services/profile";
+import { loadProfile, recordReading } from "../../services/profile";
 import { uploadRecording } from "../../services/api";
 import { getSessionStatus } from "../../services/session";
 
@@ -10,6 +10,7 @@ let player: WechatMiniprogram.InnerAudioContext | null = null;
 
 Page({
   data: {
+    theme: loadProfile().theme,
     lessonId: lessonIndex[0].id,
     lesson: lessonIndex[0],
     document: null as Awaited<ReturnType<typeof getLessonContent>>["document"],

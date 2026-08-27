@@ -1,4 +1,4 @@
-<view class="read-page" style="padding-top: {{navHeight + 18}}px;">
+<view class="read-page theme-{{theme}}" style="padding-top: {{navHeight + 18}}px;">
   <view class="utility-heading"><button class="nav-back" bindtap="goBack" aria-label="返回"><view class="nav-back-icon"></view></button><strong>先听一遍，再把句子读出来</strong></view>
 
   <view wx:if="{{loading}}" class="read-loading"><view class="skeleton"></view></view>

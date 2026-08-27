@@ -55,7 +55,6 @@ export function CelebrationOverlay({
   // Reaching this overlay means every question ended up correct; results holds
   // one entry per ATTEMPT, so extra tries are the mistakes.
   const attempts = results.length;
-  const mistakes = Math.max(0, attempts - total);
   const firstTryRate = Math.min(100, Math.round((total * 100) / Math.max(attempts, total)));
   // The screen with the most attention gets to teach one more time: how this
   // character is actually built.
@@ -64,7 +63,7 @@ export function CelebrationOverlay({
   const shapePart = parts.find((part) => !part.radical);
   const hasPhoneticRole = character.charType.includes("形声");
   return (
-    <div className="celebration-overlay" role="dialog" aria-modal="true" aria-label="本关完成">
+    <div className="celebration-overlay" role="dialog" aria-modal="true" aria-label="完整通关">
       <div className={"celebration-card track-" + trackMeta[track].tone}>
         <div
           className={"celebration-assembly" + (parts.length > 1 ? " is-assembling" : "")}
@@ -83,7 +82,7 @@ export function CelebrationOverlay({
           <span className="celebration-ring" />
           <span className="celebration-glyph">{character.hanzi}</span>
         </div>
-        <h2>{mistakes === 0 ? "完美通关" : "本关完成"}</h2>
+        <h2>完整通关</h2>
         <p className="celebration-kicker">{sessionLabel ?? trackMeta[track].menu} · {character.lessonTitle}</p>
 
         {parts.length > 1 && (

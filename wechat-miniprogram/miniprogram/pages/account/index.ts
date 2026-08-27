@@ -26,8 +26,9 @@ Page({
     this.setData(navigationLayout());
   },
   onShow() {
-    this.getTabBar?.()?.setData({ selected: 3 });
-    this.setData(accountView());
+    const view = accountView();
+    this.getTabBar?.()?.setData({ selected: 3, theme: view.theme });
+    this.setData(view);
   },
   onNameInput(event: WechatMiniprogram.Input) { this.setData({ name: event.detail.value.slice(0, 18) }); },
   saveName() {
@@ -36,6 +37,12 @@ Page({
     profile.preferenceUpdatedAt = { ...profile.preferenceUpdatedAt, name: new Date().toISOString() };
     saveProfile(profile, true);
     this.setData(accountView());
+    this.getTabBar?.()?.setData({ theme: profile.theme });
+    wx.setBackgroundColor({
+      backgroundColor: profile.theme === "night" ? "#111b19" : "#fffcf6",
+      backgroundColorTop: profile.theme === "night" ? "#111b19" : "#fffcf6",
+      backgroundColorBottom: profile.theme === "night" ? "#111b19" : "#fffcf6",
+    });
     wx.showToast({ title: "昵称已保存", icon: "success" });
   },
   toggleTheme() {

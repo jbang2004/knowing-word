@@ -1,7 +1,7 @@
-<view class="study-shell">
+<view class="study-shell theme-{{theme}} {{narrationOpen ? 'is-listening' : ''}}">
   <view class="study-topbar" style="height: {{navHeight}}px; padding-top: {{navTop}}px; padding-right: {{capsuleInset}}px;">
     <button class="nav-back" bindtap="goBack" aria-label="返回"><view class="nav-back-icon"></view></button>
-    <view class="breadcrumb"><text>{{character.word}}</text><i></i><text>{{character.word}}</text></view>
+    <view class="breadcrumb"><text>{{character.lessonTitle}}</text><i></i><text>{{character.word}}</text></view>
     <button class="favorite {{favorite ? 'active' : ''}}" bindtap="toggleFavorite">{{favorite ? '★' : '☆'}}</button>
   </view>
 
@@ -19,17 +19,30 @@
       <view class="study-identity">
         <view class="study-glyph">{{character.hanzi}}</view>
         <view class="identity-copy">
-          <view class="reading"><strong>{{character.pinyin}}</strong><button bindtap="playNarration">{{playing ? 'Ⅱ' : '♪'}}</button></view>
+          <view class="reading"><strong>{{character.pinyin}}</strong><button bindtap="playNarration" aria-label="朗读{{character.hanzi}}"><view class="{{playing ? 'icon-stop' : 'icon-volume'}}"></view></button></view>
           <view class="tags"><text class="role">{{character.curriculumRole === 'write' ? '课内会写' : character.curriculumRole === 'recognize' ? '课内会认' : '拓展学习'}}</text><text>{{character.charType}}</text><text>{{character.decomposition}}</text></view>
         </view>
       </view>
       <view class="study-meaning">本课词语「{{character.word}}」：{{character.originalMeaning}}</view>
 
       <view class="study-launch">
-        <view class="listen-button press-card" bindtap="playNarration" role="button" hover-class="is-pressed"><view class="equalizer {{playing ? 'playing' : ''}}"><i></i><i></i><i></i><i></i><i></i></view><view><strong>{{playing ? '暂停字义讲解' : '听字义讲解'}}</strong><text>{{character.media.narration.transcript.length}} 字 · 留在画面边看边听</text></view><text>→</text></view>
-        <view class="action-wide press-card" bindtap="openDrawer" role="button" hover-class="is-pressed"><text>✣</text><view><strong>物象四步</strong><text>看意象 · 找部首 · 找部件 · 合成字</text></view><text>›</text></view>
+        <view wx:if="{{!narrationOpen}}" class="listen-button press-card" bindtap="playNarration" role="button" hover-class="is-pressed"><view class="equalizer {{playing ? 'playing' : ''}}"><i></i><i></i><i></i><i></i><i></i></view><view><strong>{{narrationLaunchLabel}}</strong><text>{{character.media.narration.transcript.length}} 字 · 留在画面边看边听</text></view><text>→</text></view>
+        <view wx:else class="narration-player {{playing ? 'is-playing' : ''}} {{narrationFinished ? 'is-finished' : ''}}">
+          <view class="narration-head"><view><strong>{{character.hanzi}} · {{character.pinyin}}</strong><text>{{playing ? '正在讲解' : narrationFinished ? '讲解已完成' : '已暂停'}}</text></view><button bindtap="collapseNarration" aria-label="收起字义讲解"><view class="icon-collapse"></view></button></view>
+          <view class="narration-phrase">{{character.media.narration.transcript}}</view>
+          <view class="narration-progress"><i style="width: {{narrationProgress}}%"></i></view>
+          <view class="narration-time"><text>{{narrationElapsed}}</text><text>{{narrationDuration}}</text></view>
+          <view class="narration-actions">
+            <button bindtap="previousNarrationPhrase"><view class="icon-replay-small"></view><text>上一句</text></button>
+            <button class="is-primary" bindtap="playNarration"><view class="{{playing ? 'icon-stop' : 'icon-volume'}}"></view><text>{{playing ? '暂停' : narrationFinished ? '重听' : '继续'}}</text></button>
+            <button bindtap="openTranscript"><view class="icon-book"></view><text>逐字稿</text></button>
+            <button class="is-record" bindtap="openReader"><view class="study-action-icon icon-microphone"></view><text>我来读</text></button>
+          </view>
+          <button wx:if="{{narrationFinished}}" class="narration-next" bindtap="openMemory">跟着画面找部件　→</button>
+        </view>
+        <view class="action-wide press-card" bindtap="openMemory" role="button" hover-class="is-pressed"><text>✣</text><view><strong>物象四步</strong><text>看意象 · 找部首 · 找部件 · 合成字</text></view><text>›</text></view>
         <view class="action-grid">
-          <view class="action primary press-card" bindtap="startPractice" role="button" hover-class="is-pressed"><view class="study-action-icon icon-check-card"></view><view><strong>单字过关</strong><text>0 / {{masteryCount}} 题</text></view></view>
+          <view class="action primary press-card" bindtap="startPractice" role="button" hover-class="is-pressed"><view class="study-action-icon icon-check-card"></view><view><strong>{{masteryActionLabel}}</strong><text>{{masteryCompleted}} / {{masteryCount}} 题</text></view></view>
           <view class="action press-card" bindtap="openReader" role="button" hover-class="is-pressed"><view class="study-action-icon icon-microphone"></view><view><strong>朗读录音</strong><text>读一遍本课词语</text></view></view>
         </view>
         <button class="detail-handle" bindtap="openDrawer">部件来历、字形演变与语境　›</button>
@@ -38,7 +51,39 @@
   </view>
 
   <block wx:if="{{character}}">
-    <view wx:if="{{drawerOpen}}" class="drawer-backdrop" bindtap="closeDrawer" catchtouchmove="closeDrawer"></view>
+    <view wx:if="{{transcriptOpen}}" class="transcript-backdrop" bindtap="closeTranscript"></view>
+    <view wx:if="{{transcriptOpen}}" class="transcript-sheet" role="dialog">
+      <view class="transcript-head"><view><text>可选辅助 · 不影响字画页</text><strong>{{character.hanzi}}的逐字稿</strong></view><button bindtap="closeTranscript"><view class="icon-collapse"></view></button></view>
+      <scroll-view scroll-y class="transcript-text">{{character.media.narration.transcript}}</scroll-view>
+      <button class="transcript-close" bindtap="closeTranscript">收起逐字稿</button>
+    </view>
+
+    <view wx:if="{{memoryOpen}}" class="memory-stage stage-{{memoryStage}} {{memoryLayout}} {{memoryFocusOrder}}" bindtouchstart="startMemorySwipe" bindtouchend="endMemorySwipe">
+      <view class="memory-stage-progress"><i wx:for="{{memoryLabels}}" wx:key="*this" class="{{index < memoryStage ? 'is-past' : index === memoryStage ? 'is-current' : ''}}"></i></view>
+      <view class="memory-stage-bar"><button bindtap="previousMemoryStage"><view class="nav-back-icon"></view></button><text>物象四步 · {{character.hanzi}}</text><button bindtap="closeMemory"><view class="memory-close-icon"></view></button></view>
+      <view class="memory-stage-content {{memoryMotion}}">
+        <block wx:if="{{memoryStage < 3}}">
+          <view class="memory-stage-scene" style="width: {{memorySceneSize}}px; height: {{memorySceneSize}}px;"><image src="{{character.media.visual.src}}" mode="aspectFit" /><view wx:if="{{memoryStage > 0}}" class="memory-focus"></view><view wx:if="{{memoryStage > 0}}" class="memory-focus-ring"></view></view>
+          <view class="memory-stage-copy"><view class="memory-stage-eyebrow"><b>{{memoryStage + 1}}</b><text>{{memoryEyebrow}}</text></view><strong>{{memoryTitle}}</strong><text>{{memoryBody}}</text></view>
+        </block>
+        <block wx:else>
+          <view class="memory-stage-recall"><image src="{{character.media.visual.src}}" mode="aspectFit" /><view><strong>图片先收起来了</strong><text>能离开画面想起字形，才算记住</text></view><button bindtap="replayMemoryImage">再看图</button></view>
+          <view class="memory-stage-equation"><view class="memory-stage-parts {{memoryPartsBeside ? 'is-beside' : ''}}"><text wx:for="{{character.parts}}" wx:key="index" class="{{item.radical ? 'is-radical' : 'is-component'}}">{{item.char}}</text></view><text class="memory-arrow">→</text><strong class="memory-stage-result">{{character.hanzi}}</strong></view>
+          <view class="memory-stage-legend"><text><i class="radical-dot"></i>表意部首</text><text><i class="part-dot"></i>形音部件</text><text>{{character.decomposition}}</text></view>
+          <view class="memory-stage-copy final-copy"><text>{{memoryBody}}</text></view>
+        </block>
+      </view>
+      <view class="memory-stage-spacer"></view>
+      <view class="memory-stage-foot">
+        <view wx:if="{{memoryStage < 3}}" class="memory-stage-chips"><button wx:for="{{memoryParts}}" wx:key="index" class="{{item.radical ? 'is-radical' : 'is-component'}} {{item.activeClass}}" data-glyph="{{item.char}}" bindtap="openComponent"><text>{{item.char}}</text><view><strong>{{item.radical ? '表意部首' : '形音部件'}}</strong><small>{{item.status}}</small></view></button></view>
+        <button wx:if="{{memoryStage < 3}}" class="memory-stage-next" bindtap="nextMemoryStage">看下一步　→</button>
+        <text wx:if="{{memoryStage < 3}}" class="memory-stage-hint">左右滑动也可以切换四步</text>
+        <button wx:else class="memory-stage-next is-finish" bindtap="finishMemory">记住线索，去练一练　→</button>
+        <button wx:if="{{memoryStage === 3}}" class="memory-stage-secondary" bindtap="closeMemory">回到这个字</button>
+      </view>
+    </view>
+
+    <view wx:if="{{drawerOpen}}" class="drawer-backdrop" bindtap="closeDrawer" catchtouchmove></view>
     <view class="details {{drawerOpen ? 'open' : ''}}">
       <view class="drawer-grip" bindtap="closeDrawer"></view>
       <view class="drawer-title">部件来历</view>

@@ -1,4 +1,4 @@
-<view class="account-page" style="padding-top: {{contentTop}}px;">
+<view class="account-page theme-{{theme}}" style="padding-top: {{contentTop}}px;">
   <view class="account-heading">这是属于你的学习空间</view>
 
   <view class="account-card">

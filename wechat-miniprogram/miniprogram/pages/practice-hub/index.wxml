@@ -1,4 +1,4 @@
-<view class="page practice-hub-page" style="padding-top: {{contentTop}}px;">
+<view class="page practice-hub-page theme-{{theme}}" style="padding-top: {{contentTop}}px;">
   <view class="page-heading">
     <view class="heading-title">先逐字过关，再按需要复习</view>
   </view>

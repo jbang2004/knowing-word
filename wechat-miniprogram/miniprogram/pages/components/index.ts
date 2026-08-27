@@ -13,6 +13,7 @@ function componentCount(component: ComponentItem) {
 
 Page({
   data: {
+    theme: loadProfile().theme,
     query: "",
     sortMode: "frequency" as "frequency" | "recent",
     selected: componentIndex[0] as ComponentItem,
@@ -34,7 +35,7 @@ Page({
     this.setData({ selected, query, detailsOpen: Boolean(options.componentId), ...navigationLayout(0) });
     this.refresh();
   },
-  onShow() { this.refresh(); },
+  onShow() { this.setData({ theme: loadProfile().theme }); this.refresh(); },
   onSearch(event: WechatMiniprogram.Input) {
     this.setData({ query: event.detail.value, visibleLimit: PAGE_SIZE });
     this.refresh();

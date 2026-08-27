@@ -5,14 +5,26 @@ import type { CatalogCharacter, CatalogLesson, LessonContent, TrackId } from "..
 
 type ViewCharacter = CatalogCharacter & { done: boolean; roleLabel: string };
 type GuideSection = NonNullable<LessonContent["document"]>["sections"][number] & { focusCharacters: ViewCharacter[] };
+type ViewWordGroup = { word: string; characters: ViewCharacter[] };
+
+function groupCharactersByWord(characters: ViewCharacter[]) {
+  const groups = new Map<string, ViewCharacter[]>();
+  for (const character of characters) {
+    groups.set(character.word, [...(groups.get(character.word) ?? []), character]);
+  }
+  return [...groups].map(([word, items]) => ({ word, characters: items }));
+}
 
 Page({
   data: {
+    theme: loadProfile().theme,
     lessonId: lessonIndex[0].id,
     lesson: { ...lessonIndex[0], visual: { src: lessonCover(lessonIndex[0]), label: "", alt: "" } } as CatalogLesson,
     document: null as LessonContent["document"],
     guideSections: [] as GuideSection[],
     characters: [] as ViewCharacter[],
+    wordGroups: [] as ViewWordGroup[],
+    lessonSceneSrc: lessonCover(lessonIndex[0]),
     activeView: "guide" as "guide" | "words" | "practice",
     loading: true,
     error: "",
@@ -36,6 +48,7 @@ Page({
     void this.loadLesson();
   },
   onShow() {
+    this.setData({ theme: loadProfile().theme });
     if (!this.data.loading && this.data.characters.length) this.applyProgress();
   },
   async onPullDownRefresh() {
@@ -64,7 +77,15 @@ Page({
         });
         return { ...section, focusCharacters };
       });
-      this.setData({ lesson: content.lesson, document: content.document, guideSections, characters, loading: false });
+      this.setData({
+        lesson: content.lesson,
+        document: content.document,
+        guideSections,
+        characters,
+        wordGroups: groupCharactersByWord(characters),
+        lessonSceneSrc: lessonCover(content.lesson),
+        loading: false,
+      });
       this.applyProgress();
     } catch (error) {
       this.setData({ loading: false, error: error instanceof Error ? error.message : "课程加载失败" });
@@ -77,8 +98,9 @@ Page({
       ...section,
       focusCharacters: section.focusCharacters.map((character) => ({ ...character, done: completedIds.has(character.id) })),
     }));
+    const wordGroups = groupCharactersByWord(characters);
     const completed = characters.filter((character) => character.done).length;
-    this.setData({ characters, guideSections, completed, total: characters.length, percent: characters.length ? Math.round(completed / characters.length * 100) : 0 });
+    this.setData({ characters, guideSections, wordGroups, completed, total: characters.length, percent: characters.length ? Math.round(completed / characters.length * 100) : 0 });
   },
   retry() { void this.loadLesson(true); },
   goBack() { wx.navigateBack({ fail: () => wx.switchTab({ url: "/pages/lessons/index" }) }); },

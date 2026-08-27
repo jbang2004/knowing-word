@@ -1,4 +1,4 @@
-<view class="page course-page" style="padding-top: {{contentTop}}px;">
+<view class="page course-page theme-{{theme}}" style="padding-top: {{contentTop}}px;">
   <view class="page-heading">
     <view class="heading-title">语文 · 五年级上册</view>
   </view>

@@ -85,12 +85,13 @@ function recordView(profile: StudyProfile, track: TrackId, showAllLessons = fals
 }
 
 Page({
-  data: { contentTop: 70, ...recordView(loadProfile(), "words") },
+  data: { contentTop: 70, theme: loadProfile().theme, ...recordView(loadProfile(), "words") },
   onLoad() {
     this.setData(navigationLayout(10));
   },
   onShow() {
-    this.setData(recordView(loadProfile(), this.data.activeTrack, this.data.showAllLessons));
+    const profile = loadProfile();
+    this.setData({ ...recordView(profile, this.data.activeTrack, this.data.showAllLessons), theme: profile.theme });
   },
   async onPullDownRefresh() {
     const profile = await syncProfile();

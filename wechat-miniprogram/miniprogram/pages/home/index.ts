@@ -112,6 +112,7 @@ function makeView(profile: StudyProfile) {
 
 Page({
   data: {
+    theme: loadProfile().theme,
     name: "小探险家",
     initial: "小",
     today: { attempts: 0, correct: 0, skips: 0, readSessions: 0 },
@@ -134,8 +135,9 @@ Page({
     this.setData(navigationLayout());
   },
   onShow() {
-    this.getTabBar?.()?.setData({ selected: 0 });
-    this.setData(makeView(loadProfile()));
+    const profile = loadProfile();
+    this.getTabBar?.()?.setData({ selected: 0, theme: profile.theme });
+    this.setData({ ...makeView(profile), theme: profile.theme });
   },
   async onPullDownRefresh() {
     const profile = await syncProfile();

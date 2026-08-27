@@ -1,11 +1,11 @@
-<view class="challenge-page track-{{track}}">
-  <view class="challenge-bar" style="padding-top: {{navHeight}}px;">
+<view class="challenge-page track-{{questionTrack}} theme-{{theme}}">
+  <view class="challenge-bar" style="height: {{navHeight}}px; padding-top: {{navTop}}px;">
     <button class="challenge-close nav-back" bindtap="goBack" aria-label="退出练习"><view class="nav-back-icon"></view></button>
-    <view class="challenge-progress"><i style="width: {{progress}}%"></i></view>
+    <view class="challenge-progress"><i class="{{streak >= 3 ? 'is-hot' : ''}}" style="width: {{progress}}%"></i></view>
     <text class="challenge-count">{{questionIndex + 1}}/{{questions.length}}</text>
   </view>
 
-  <view wx:if="{{streak >= 2}}" class="challenge-streak-row"><view class="challenge-streak">◇　连对 {{streak}}</view></view>
+  <view wx:if="{{streak >= 2}}" class="challenge-streak-row"><view class="challenge-streak {{streakMotion}}"><view class="streak-flame" aria-hidden="true"><i></i></view><text>连对 {{streak}}</text></view></view>
 
   <view wx:if="{{loading}}" class="challenge-loading"><view class="skeleton"></view></view>
   <view wx:elif="{{error}}" class="challenge-empty"><view>{{error}}</view><button bindtap="retry">重新加载</button></view>
@@ -16,46 +16,78 @@
         <text class="question-tag">{{questionLabel}}</text>
         <view class="question-prompt">{{question.prompt}}</view>
         <view wx:if="{{isWriting}}" class="multi-hint">读音：{{character.pinyin}}　·　词语：{{character.word}}</view>
-        <view wx:if="{{multiChoice}}" class="multi-hint">需要选择多个部件 · 已选 {{selectedIds.length}} 个</view>
+        <view wx:if="{{multiChoice}}" class="multi-hint">这题需要选择多个部件 · 已选 {{selectedIds.length}} / 需要 {{expectedCount}} 个</view>
       </view>
 
       <view wx:if="{{showWritingBoard}}" class="writing-board">
-        <view class="writing-glyph kai">{{character.hanzi}}</view>
-        <text class="writing-help">先在纸上或心里写一遍，再对照范字判断。</text>
-        <view class="writing-actions"><view class="writing-choice press-card" data-correct="{{false}}" bindtap="selfAssess" role="button" hover-class="is-pressed">还需要练</view><view class="writing-choice primary press-card" data-correct="{{true}}" bindtap="selfAssess" role="button" hover-class="is-pressed">我写对了</view></view>
+        <view wx:if="{{!independentWriting || writingReview}}" class="writing-glyph kai">{{character.hanzi}}</view>
+        <canvas canvas-id="writingCanvas" id="writingCanvas" class="writing-canvas" disable-scroll="{{true}}" bindtouchstart="startWriting" bindtouchmove="moveWriting" bindtouchend="endWriting" bindtouchcancel="endWriting" aria-label="书写{{character.hanzi}}"></canvas>
+        <view class="writing-footer"><text class="{{strokeCount ? 'has-ink' : ''}}">{{writingReview ? '规范字已显示：请逐部件对照是否漏笔、错位' : (strokeCount ? '已记录 ' + strokeCount + ' 笔，继续把字写完整' : '沿着浅色字形认真描写，轻点一下不会算作完成')}}</text><button wx:if="{{!writingReview}}" bindtap="clearWriting">重新写</button></view>
       </view>
 
-      <view wx:else class="choice-grid {{glyphChoices ? 'is-glyph' : ''}} {{structureChoices ? 'is-structure' : ''}}">
-        <view wx:for="{{viewOptions}}" wx:key="id" class="choice-card press-card {{item.state}}" data-id="{{item.id}}" bindtap="chooseOption" role="button" hover-class="is-pressed">
-          <image wx:if="{{item.image}}" src="{{item.image}}" mode="aspectFill" class="choice-image" />
+      <view wx:elif="{{splitAssembly}}" class="assembly-exercise">
+        <view class="assembly-target">
+          <text>把「{{character.hanzi}}」搭出来</text>
+          <view class="assembly-slots">
+            <view wx:for="{{assemblySlots}}" wx:key="key" class="assembly-slot {{item.pressClass}} {{item.state}}" data-index="{{index}}" bindtap="removeAssemblyPart" role="button" hover-class="{{item.hoverClass}}">{{item.text}}</view>
+          </view>
+          <small wx:if="{{!answered}}" class="assembly-hint">按顺序点选部件；点错了就点上面的格子撤销。</small>
+        </view>
+        <view class="assembly-choices">
+          <view wx:for="{{viewOptions}}" wx:key="id" class="{{!answered ? 'press-card' : ''}} {{item.state}}" data-id="{{item.id}}" bindtap="chooseOption" role="button" hover-class="{{!answered ? 'is-pressed' : 'none'}}">{{item.text}}</view>
+        </view>
+      </view>
+
+      <view wx:elif="{{redBlueExercise}}" class="redblue-exercise">
+        <view class="redblue-word"><text wx:for="{{character.parts}}" wx:key="index" class="{{item.radical ? 'is-red' : 'is-blue'}} kai">{{item.char}}</text></view>
+        <view class="redblue-key"><i class="red-key"></i><text>表意部首</text><i class="blue-key"></i><text>其他部件</text></view>
+        <view class="redblue-options">
+          <view wx:for="{{viewOptions}}" wx:key="id" class="{{!answered ? 'press-card' : ''}} {{item.state}} {{answered ? (item.radical ? 'is-red' : 'is-blue') : ''}}" data-id="{{item.id}}" bindtap="chooseOption" role="button" hover-class="{{!answered ? 'is-pressed' : 'none'}}"><text class="kai">{{item.text}}</text></view>
+        </view>
+      </view>
+
+      <view wx:else class="choice-grid {{visualChoices ? 'is-visual' : ''}} {{hideVisualCaptions ? 'no-visual-captions' : ''}} {{glyphChoices ? 'is-glyph' : ''}} {{structureChoices ? 'is-structure' : ''}}">
+        <view wx:for="{{viewOptions}}" wx:key="id" class="choice-card {{!answered ? 'press-card' : ''}} {{item.state}}" data-id="{{item.id}}" bindtap="chooseOption" role="button" hover-class="{{!answered ? 'is-pressed' : 'none'}}">
           <text class="choice-key">{{item.label}}</text>
+          <view wx:if="{{item.image}}" class="meaning-illustration">
+            <image src="{{item.image}}" mode="aspectFit" />
+            <view wx:if="{{item.showMnemonicFocus}}" class="meaning-match-badge">图形即字形 <text>✓</text></view>
+          </view>
           <view wx:if="{{structureChoices}}" class="structure-shape {{item.structureClass}}"><i></i><i></i><i></i></view>
-          <strong>{{item.text}}</strong>
+          <strong wx:if="{{!item.image || answered}}">{{item.image ? item.visualLabel : item.text}}</strong>
           <view wx:if="{{item.showParts}}" class="choice-parts"><i wx:for="{{character.parts}}" wx:key="char" class="{{item.radical ? 'is-radical' : 'is-part'}}">{{item.char}}</i></view>
         </view>
       </view>
+      <view wx:if="{{showWritingRemediation}}" class="targeted-remediation" role="status"><strong>{{remediationTitle}}</strong><text>{{remediationNote}}</text></view>
     </view>
 
     <view wx:if="{{showPendingActions}}" class="challenge-actions">
-      <view class="game-button primary {{ready ? '' : 'disabled'}}" bindtap="checkAnswer" role="button">核对答案</view>
+      <view class="game-button primary {{ready ? '' : 'disabled'}}" bindtap="checkAnswer" role="button">{{isWriting ? '显示范字并对照' : '核对答案'}}</view>
       <view class="challenge-actions-row"><button class="text-button {{questionIndex === 0 ? 'disabled' : ''}}" bindtap="previousQuestion">← 上一题</button><button class="text-button" bindtap="skipQuestion">跳过这一题 →</button></view>
     </view>
 
-    <view wx:if="{{answered}}" class="answer-sheet {{correct ? 'is-correct' : 'is-wrong'}}">
-      <view class="answer-sheet-head"><text class="answer-sheet-mark {{correct ? '' : 'wrong'}}">{{correct ? '✓' : '↻'}}</text><strong class="answer-sheet-title">{{correct ? '答对了' : '再看一眼'}}</strong><small class="answer-sheet-attempts">已尝试 {{currentAttempts}} 次</small></view>
+    <view wx:if="{{writingReview}}" class="answer-sheet writing-assessment">
+      <view class="answer-sheet-head"><view class="answer-sheet-mark is-check" aria-hidden="true"><i></i></view><strong class="answer-sheet-title">逐部件对照后，选择最符合的一项</strong></view>
+      <view class="answer-copy">先看部件、位置和笔画；这是你的对照自查，不等于系统客观识别。</view>
+      <view class="writing-assessment-grid"><view class="game-button primary" data-assessment="correct" bindtap="selfAssess">我对照后认为一致</view><view class="game-button ghost" data-assessment="component-error" bindtap="selfAssess">部件错</view><view class="game-button ghost" data-assessment="position-error" bindtap="selfAssess">位置错</view><view class="game-button ghost" data-assessment="stroke-error" bindtap="selfAssess">漏多笔</view></view>
+    </view>
+
+    <view wx:elif="{{answered}}" class="answer-sheet {{correct ? 'is-correct' : 'is-wrong'}}">
+      <view class="answer-sheet-head"><view class="answer-sheet-mark {{correct ? 'is-check' : 'is-retry'}}" aria-hidden="true"><i></i></view><strong class="answer-sheet-title">{{resultTitle}}</strong><small class="answer-sheet-attempts">已尝试 {{currentAttempts}} 次</small></view>
       <view class="answer-copy">{{resultCopy}}</view>
+      <small wx:if="{{resultNote}}" class="answer-sheet-note">{{resultNote}}</small>
       <view class="game-button primary answer-next {{correct ? '' : 'wrong'}}" bindtap="nextQuestion" role="button">{{correct ? (passedQuestionIds.length === questions.length ? '查看成绩' : '继续') : '知道了'}}</view>
     </view>
   </block>
 
-  <view wx:if="{{finished}}" class="celebration-overlay" role="dialog" aria-label="本关完成">
+  <view wx:if="{{finished}}" class="celebration-overlay" role="dialog" aria-label="完整通关">
     <view class="celebration-card track-{{track}}">
       <view class="celebration-assembly {{hasCelebrationParts ? 'is-assembling' : ''}}">
         <view wx:for="{{celebrationParts}}" wx:key="char" class="celebration-fly is-{{item.tone}} {{item.side}}">{{item.char}}</view>
         <view class="celebration-ring"></view>
         <view class="celebration-glyph kai">{{character.hanzi}}</view>
       </view>
-      <strong class="celebration-title">{{perfect ? '完美通关' : '本关完成'}}</strong>
+      <strong class="celebration-title">完整通关</strong>
       <text class="celebration-kicker">{{celebrationLabel}} · {{character.lessonTitle}}</text>
       <view wx:if="{{hasCelebrationParts}}" class="celebration-lesson">
         <small class="celebration-lesson-label">这一关记住了</small>
@@ -68,7 +100,7 @@
       </view>
       <view class="celebration-actions">
         <button class="game-button primary celebration-primary" bindtap="nextCharacter">{{nextActionLabel}}</button>
-        <button class="game-button ghost celebration-ghost" bindtap="replayCharacter"><text class="replay-icon">↶</text>　再练一轮</button>
+        <button class="game-button ghost celebration-ghost" bindtap="replayCharacter"><view class="replay-icon" aria-hidden="true"><i></i></view><text>再练一轮</text></button>
         <button class="text-button celebration-return" bindtap="finishSession">返回上一页</button>
       </view>
     </view>

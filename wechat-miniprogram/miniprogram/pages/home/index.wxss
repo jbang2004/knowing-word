@@ -1,4 +1,4 @@
-.home-page { min-height: 100vh; padding: 0 16px calc(104px + env(safe-area-inset-bottom)); background: var(--sky); }
+.home-page { width:min(560px,100%); min-height:100vh; margin:0 auto; padding:0 16px calc(96px + env(safe-area-inset-bottom)); background:var(--sky); }
 .status-row { display: flex; align-items: center; gap: 9px; width: 100%; min-height: 52px; }
 .status-spacer { flex: 1; }
 .avatar { display: flex; width: 40px; height: 40px; flex: none; align-items: center; justify-content: center; border-radius: 14px 14px 14px 4px; color: #30150e; background: var(--radical); box-shadow: 0 3px 0 var(--radical-deep); font-family: "Kaiti SC",STKaiti,serif; font-size: 18px; }
@@ -14,11 +14,11 @@
 .lesson-progress { display: flex; align-items: center; gap: 10px; }
 .lesson-progress .progress-track { width: min(112px,52%); height: 14px; }
 .lesson-progress>text { font-size: 14px; font-weight: 900; }
-.lesson-button { display: flex; width: 56px; height: 56px; flex: none; flex-direction: column; align-items: center; justify-content: center; gap: 3px; border-radius: 18px; color: var(--action-text); background: white; box-shadow: 0 4px 0 rgba(0,0,0,.16); font-weight: 900; }
+.lesson-button { display: flex; width: 56px; height: 56px; flex: none; flex-direction: column; align-items: center; justify-content: center; gap: 3px; border-radius: 18px; color: var(--action-text); background: var(--paper); box-shadow: 0 4px 0 rgba(0,0,0,.16); font-weight: 900; }
 .lesson-button text { font-size: 13px; }
 .book-mark { font-size: 17px; }
-.focus-card { display: grid; grid-template-columns: auto minmax(0,1fr); align-items: center; gap: 14px; margin-top: 18px; margin-bottom: 22px; padding: 16px; border: 2px solid var(--wrong-edge); border-radius: 22px; background: #fffaf0; box-shadow: 0 3px 0 var(--line); }
-.focus-glyph { display: flex; width: 58px; height: 58px; align-items: center; justify-content: center; border-radius: 19px 19px 19px 7px; color: var(--wrong-text); background: white; font-family: "Kaiti SC",STKaiti,serif; font-size: 32px; }
+.focus-card { display: grid; grid-template-columns: auto minmax(0,1fr); align-items: center; gap: 14px; margin-top: 18px; margin-bottom: 22px; padding: 16px; border: 2px solid var(--wrong-edge); border-radius: 22px; background: var(--wrong-soft); box-shadow: 0 3px 0 var(--line); }
+.focus-glyph { display: flex; width: 58px; height: 58px; align-items: center; justify-content: center; border-radius: 19px 19px 19px 7px; color: var(--wrong-text); background: var(--paper); font-family: var(--font-kai); font-size: 32px; }
 .focus-copy { display: flex; min-width: 0; flex-direction: column; gap: 2px; }
 .focus-copy text { color: var(--wrong-text); font-size: 13px; font-weight: 900; }
 .focus-copy strong { color: var(--navy); font-size: 16px; font-weight: 900; }
@@ -38,7 +38,7 @@
 .path-node.offset-3 { --node-offset:52px; --link-length:96px; --link-tilt:12.01deg; }
 .path-seal { position: relative; z-index: 1; display: flex; width: 74px; height: 74px; min-height: 0; margin: 0; padding: 0; align-items: center; justify-content: center; border: 0; border-radius: 24px 24px 24px 8px; font-family: "Kaiti SC",STKaiti,serif; font-size: 36px; font-weight: 500; line-height: normal; transform: translateX(var(--node-offset)); }
 .path-node.done .path-seal { color: #0f1614; background: var(--action); box-shadow: 0 5px 0 var(--action-deep); }
-.path-node.current .path-seal { border: 3px solid var(--action); color: var(--action-text); background: white; box-shadow: 0 5px 0 var(--action-edge); }
+.path-node.current .path-seal { border: 3px solid var(--action); color: var(--action-text); background: var(--paper); box-shadow: 0 5px 0 var(--action-edge); }
 .path-node.locked .path-seal { color: var(--ink-faint); background: var(--sky-deep); box-shadow: 0 5px 0 var(--line-deep); }
 .node-badge { position: absolute; top: -7px; right: -6px; display: flex; width: 24px; height: 24px; align-items: center; justify-content: center; border-radius: 50%; font-family: sans-serif; font-size: 11px; font-weight: 900; }
 .node-badge.done { color: #0f1614; background: var(--action-deep); }
@@ -51,13 +51,13 @@
 .chapter-copy strong { color: var(--ink-soft); font-size: 14px; }
 .chapter-copy text { color: var(--ink-faint); font-size: 14px; font-weight: 600; line-height: 1.4; }
 .fold-state { color: var(--ink-faint); }
-.practice-plan { display: grid; gap: 16px; margin-top: 12px; padding: 20px; border: 2px solid var(--line); border-radius: 24px; background: white; box-shadow: 0 4px 0 var(--line); }
+.practice-plan { display: grid; gap: 16px; margin-top: 12px; padding: 20px; border: 2px solid var(--line); border-radius: 24px; background: var(--paper); box-shadow: 0 4px 0 var(--line); }
 .practice-head { display: flex; flex-direction: column; gap: 4px; text-align: center; }
 .practice-head text { color: var(--action-text); font-size: 13px; font-weight: 900; }
 .practice-head strong { color: var(--navy); font-size: 22px; }
 .practice-head view { margin-top: 2px; color: var(--ink-soft); font-size: 13px; line-height: 1.6; }
 .practice-list { display: flex; flex-direction: column; gap: 11px; }
-.practice-row { display: flex; width: min(292px,100%); min-height: 72px; align-items: center; justify-self: center; gap: 12px; margin: 0 auto; padding: 12px 15px; border: 2px solid var(--line); border-radius: 22px 22px 22px 7px; background: white; }
+.practice-row { display: flex; width: min(292px,100%); min-height: 72px; align-items: center; justify-self: center; gap: 12px; margin: 0 auto; padding: 12px 15px; border: 2px solid var(--line); border-radius: 22px 22px 22px 7px; background: var(--paper); box-shadow:0 4px 0 var(--line); }
 .practice-row.disabled { opacity:.64; }
 .practice-icon { display: flex; width: 44px; height: 44px; flex: none; align-items: center; justify-content: center; border-radius: 14px 14px 14px 5px; color: var(--part-text); background: var(--part); box-shadow: 0 3px 0 var(--part-deep); font-family: "Kaiti SC",serif; font-size: 22px; }
 .track-honglan { color:#30150e; background:var(--radical); box-shadow:0 3px 0 var(--radical-deep); font-size:13px; }

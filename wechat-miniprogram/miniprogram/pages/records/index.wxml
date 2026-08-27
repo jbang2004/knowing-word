@@ -1,4 +1,4 @@
-<view class="records-page" style="padding-top: {{contentTop}}px;">
+<view class="records-page theme-{{theme}}" style="padding-top: {{contentTop}}px;">
   <view class="records-heading"><button class="nav-back" bindtap="goBack" aria-label="返回"><view class="nav-back-icon"></view></button><view>看见自己一步一步学会的过程</view></view>
 
   <view class="record-stat-row">

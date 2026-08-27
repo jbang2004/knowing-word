@@ -1,4 +1,4 @@
-<view class="lesson-page">
+<view class="lesson-page theme-{{theme}}">
   <view class="lesson-topbar" style="height: {{navHeight}}px; padding-top: {{navTop}}px; padding-right: {{capsuleInset}}px;">
     <button class="nav-back" bindtap="goBack" aria-label="返回"><view class="nav-back-icon"></view></button><view>{{lesson.title}}</view>
   </view>
@@ -41,19 +41,43 @@
   </view>
 
   <view wx:elif="{{activeView === 'words'}}" class="words-panel">
-    <text class="panel-kicker">第 {{lesson.position}} 课 · 生字表</text><view class="panel-title">{{lesson.title}}</view><view class="panel-copy">{{lesson.skimming ? '会认字' : '识字写字表'}} · {{completed}} / {{total}} 个课内字已完成单字过关</view>
-    <view class="character-grid"><view wx:for="{{characters}}" wx:key="id" class="character-card press-card {{item.done ? 'done' : ''}}" data-id="{{item.id}}" bindtap="openCharacter" role="button" hover-class="is-pressed"><text>{{item.roleLabel}}</text><strong>{{item.hanzi}}</strong><small>{{item.pinyin}} · {{item.word}}</small><i>{{item.done ? '✓' : '›'}}</i></view></view>
+    <view class="lesson-scene-banner">
+      <image class="lesson-scene-image" src="{{lessonSceneSrc}}" mode="aspectFill" />
+      <view class="lesson-scene-shade"></view>
+      <view class="lesson-scene-copy"><text>主题场景</text><strong>{{lesson.title}}</strong><small>{{lesson.context || '先进入画面，再从词语认识汉字'}}</small></view>
+    </view>
+    <view class="word-map-board">
+      <view class="board-title"><strong>课内识字写字表</strong><text>把官方字表放回词语，区分会认、会写与多音字</text></view>
+      <view class="word-groups">
+        <view wx:for="{{wordGroups}}" wx:key="word" class="word-group" wx:for-item="group">
+          <text class="word-label">{{group.word}}</text>
+          <view class="word-chip-row">
+            <view wx:for="{{group.characters}}" wx:key="id" wx:for-item="character" class="word-chip press-card {{character.done ? 'done' : ''}}" data-id="{{character.id}}" bindtap="openCharacter" role="button" hover-class="is-pressed">
+              <strong class="kai">{{character.hanzi}}</strong><text>{{character.pinyin}}</text><i>{{character.done ? '✓' : (character.curriculumRole === 'write' ? '写' : character.curriculumRole === 'polyphonic' ? '多' : '认')}}</i>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
   </view>
 
   <view wx:else class="practice-panel">
-    <text class="panel-kicker">本课复习方式</text><view class="panel-title">完成单字过关后，按需要选择专项复习</view><view class="panel-copy">四条路线共用同一套学习记录，可以随时切换。</view>
-    <view class="practice-route action press-card" data-track="words" bindtap="startPractice" role="button" hover-class="is-pressed"><i>字</i><view><strong>单字过关</strong><text>字义、读音、语境与独立提取</text></view><text>›</text></view>
-    <view class="practice-route part press-card" data-track="split" bindtap="startPractice" role="button" hover-class="is-pressed"><i>拆</i><view><strong>拆字复习</strong><text>把部件拆开，再按位置搭回来</text></view><text>›</text></view>
-    <view class="practice-route radical press-card" data-track="honglan" bindtap="startPractice" role="button" hover-class="is-pressed"><i>部</i><view><strong>部首辨认</strong><text>分清表意部首与其他部件</text></view><text>›</text></view>
-    <view class="practice-route wrong press-card" data-track="structure" bindtap="startPractice" role="button" hover-class="is-pressed"><i>格</i><view><strong>结构复习</strong><text>判断汉字的空间结构</text></view><text>›</text></view>
+    <view class="lesson-learning-path">
+      <view class="learning-path-heading"><text>课文导读线索</text><view><strong>沿着三个问题，再把字放回重点词里</strong><small>回到纸质课本阅读全文，再用导读中的词语巩固本课生字</small></view></view>
+      <view class="learning-step-list"><view wx:for="{{guideSections}}" wx:key="id" class="learning-step"><i>{{index + 1}}</i><text>{{item.title}}</text></view></view>
+    </view>
+    <view class="lesson-practice-strip">
+      <text class="practice-strip-kicker">本课复习方式</text><view class="practice-strip-title">完成单字过关后，按需要选择专项复习</view>
+      <view class="practice-strip-items">
+        <view class="practice-strip-item press-card" data-track="words" bindtap="startPractice" role="button" hover-class="is-pressed"><strong>字</strong><text>识字</text></view>
+        <view class="practice-strip-item press-card" data-track="structure" bindtap="startPractice" role="button" hover-class="is-pressed"><strong>构</strong><text>结构复习</text></view>
+        <view class="practice-strip-item press-card" data-track="split" bindtap="startPractice" role="button" hover-class="is-pressed"><strong>拆</strong><text>拆字复习</text></view>
+        <view class="practice-strip-item press-card" data-track="honglan" bindtap="startPractice" role="button" hover-class="is-pressed"><strong>红蓝</strong><text>部首辨认</text></view>
+      </view>
+    </view>
   </view>
 
-  <view class="lesson-progress-pill"><view><text>本课重点字</text><strong>{{completed}}/{{total}} 已完成</strong></view><text>⌄</text></view>
+  <view wx:if="{{activeView === 'guide'}}" class="lesson-progress-pill"><view><text>本课重点字</text><strong>{{completed}}/{{total}} 已完成</strong></view><text>⌄</text></view>
   <view class="lesson-bottom-nav">
     <navigator open-type="switchTab" url="/pages/home/index" class="nav-item"><view class="nav-icon icon-home"></view><text>学习</text></navigator>
     <navigator open-type="switchTab" url="/pages/lessons/index" class="nav-item active"><view class="nav-icon icon-book"></view><text>课本</text></navigator>
