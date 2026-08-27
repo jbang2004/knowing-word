@@ -12,19 +12,14 @@ import {
   type SetStateAction,
 } from "react";
 import {
-  emptyProfile,
-  LEGACY_PROFILE_STORAGE_KEYS,
   mergeStudyProfiles,
   normalizeProfile,
-  PROFILE_STORAGE_KEY,
   type StudyProfile,
 } from "../../lib/profile-model";
+import { webProfileClient } from "../../platform/web";
+import type { AccountIdentity } from "../../application/profile-client";
 
-export type AccountIdentity = {
-  displayName: string;
-  email: string | null;
-  mode: "workspace" | "device";
-};
+export type { AccountIdentity } from "../../application/profile-client";
 
 export type ProfileSyncState = "loading" | "synced" | "local";
 
@@ -37,38 +32,14 @@ type StudyProfileContextValue = {
   resetProfile: () => Promise<void>;
 };
 
-type ProfileResponse = {
-  identity?: AccountIdentity;
-  profile?: unknown;
-};
-
-function readCachedProfile() {
-  try {
-    const stored = window.localStorage.getItem(PROFILE_STORAGE_KEY)
-      ?? LEGACY_PROFILE_STORAGE_KEYS
-        .map((key) => window.localStorage.getItem(key))
-        .find((value) => value !== null);
-    return stored ? normalizeProfile(JSON.parse(stored)) : null;
-  } catch {
-    window.localStorage.removeItem(PROFILE_STORAGE_KEY);
-    LEGACY_PROFILE_STORAGE_KEYS.forEach((key) => window.localStorage.removeItem(key));
-    return null;
-  }
-}
-
-function cacheProfile(profile: StudyProfile) {
-  window.localStorage.setItem(PROFILE_STORAGE_KEY, JSON.stringify(profile));
-  LEGACY_PROFILE_STORAGE_KEYS.forEach((key) => window.localStorage.removeItem(key));
-}
-
 const StudyProfileContext = createContext<StudyProfileContextValue | null>(null);
 
 export function StudyProfileProvider({ children }: { children: ReactNode }) {
-  const [profile, setProfile] = useState<StudyProfile>(emptyProfile);
+  const [profile, setProfile] = useState<StudyProfile>(webProfileClient.empty);
   const [identity, setIdentity] = useState<AccountIdentity | null>(null);
   const [hydrated, setHydrated] = useState(false);
   const [syncState, setSyncState] = useState<ProfileSyncState>("loading");
-  const lastSaved = useRef(JSON.stringify(emptyProfile()));
+  const lastSaved = useRef(JSON.stringify(webProfileClient.empty()));
   const queuedSave = useRef<string | null>(null);
   const saveTask = useRef<Promise<void> | null>(null);
   const active = useRef(true);
@@ -80,16 +51,7 @@ export function StudyProfileProvider({ children }: { children: ReactNode }) {
         const serialized = queuedSave.current;
         queuedSave.current = null;
         try {
-          const response = await fetch("/api/profile", {
-            method: "PUT",
-            headers: { "content-type": "application/json" },
-            body: serialized,
-          });
-          if (!response.ok) throw new Error("profile save rejected");
-          const payload = await response.json() as { profile?: unknown };
-          const authoritative = payload.profile
-            ? normalizeProfile(payload.profile)
-            : normalizeProfile(JSON.parse(serialized));
+          const authoritative = await webProfileClient.save(serialized);
           const authoritativeSerialized = JSON.stringify(authoritative);
           lastSaved.current = authoritativeSerialized;
           if (queuedSave.current) {
@@ -104,7 +66,7 @@ export function StudyProfileProvider({ children }: { children: ReactNode }) {
             if (active.current) setProfile(reconciled);
           } else if (authoritativeSerialized !== serialized && active.current) {
             setProfile(authoritative);
-            cacheProfile(authoritative);
+            webProfileClient.writeCache(authoritative);
           }
           if (active.current) setSyncState("synced");
         } catch {
@@ -125,27 +87,22 @@ export function StudyProfileProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     active.current = true;
     const controller = new AbortController();
-    const cached = readCachedProfile();
+    const cached = webProfileClient.readCache();
 
     void (async () => {
       try {
-        const response = await fetch("/api/profile", {
-          cache: "no-store",
-          signal: controller.signal,
-        });
-        if (!response.ok) throw new Error("profile unavailable");
-        const payload = await response.json() as ProfileResponse;
+        const payload = await webProfileClient.load(controller.signal);
         if (!active.current) return;
         if (payload.identity) setIdentity(payload.identity);
         const remote = payload.profile ? normalizeProfile(payload.profile) : null;
         const authoritative = remote && cached
           ? mergeStudyProfiles(remote, cached)
-          : remote ?? cached ?? emptyProfile();
+          : remote ?? cached ?? webProfileClient.empty();
         // Keep the actual remote snapshot here. If merging recovered newer
         // local evidence, the normal save effect will upload the merged result.
-        lastSaved.current = JSON.stringify(remote ?? emptyProfile());
+        lastSaved.current = JSON.stringify(remote ?? webProfileClient.empty());
         setProfile(authoritative);
-        cacheProfile(authoritative);
+        webProfileClient.writeCache(authoritative);
         setSyncState("synced");
       } catch {
         if (active.current) {
@@ -166,7 +123,7 @@ export function StudyProfileProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     document.documentElement.dataset.theme = profile.theme;
     if (!hydrated) return;
-    cacheProfile(profile);
+    webProfileClient.writeCache(profile);
     const serialized = JSON.stringify(profile);
     if (serialized === lastSaved.current) return;
     queuedSave.current = serialized;
@@ -174,27 +131,23 @@ export function StudyProfileProvider({ children }: { children: ReactNode }) {
   }, [flushQueuedSave, hydrated, profile]);
 
   useEffect(() => {
-    const retryWhenOnline = () => void flushQueuedSave();
-    window.addEventListener("online", retryWhenOnline);
-    return () => window.removeEventListener("online", retryWhenOnline);
+    return webProfileClient.onOnline(() => void flushQueuedSave());
   }, [flushQueuedSave]);
 
   const resetProfile = useCallback(async () => {
-    const next = { ...emptyProfile(), theme: profile.theme };
+    const next = { ...webProfileClient.empty(), theme: profile.theme };
     queuedSave.current = null;
     setSyncState("loading");
     try {
       await saveTask.current;
       queuedSave.current = null;
-      const response = await fetch("/api/profile", { method: "DELETE" });
-      if (!response.ok) throw new Error("profile reset rejected");
+      await webProfileClient.reset();
       lastSaved.current = JSON.stringify(next);
       setSyncState("synced");
     } catch {
       setSyncState("local");
     } finally {
-      window.localStorage.removeItem(PROFILE_STORAGE_KEY);
-      LEGACY_PROFILE_STORAGE_KEYS.forEach((key) => window.localStorage.removeItem(key));
+      webProfileClient.clearCache();
       setProfile(next);
     }
   }, [profile.theme]);

@@ -14,10 +14,17 @@ switchboard.
   catalog maps, records, components, account/tools, and the shared shell are
   independent client entries.
 - `app/domain/*` contains framework-independent learning rules and validation.
+- `app/application/*` coordinates platform-neutral profile, recording, and
+  event-delivery workflows through explicit interfaces.
+- `app/platform/contracts.ts` defines those interfaces; `app/platform/web/*`
+  is the browser implementation. A future client supplies its own storage,
+  network, connectivity, and recording adapters without changing learning rules.
 - `app/infrastructure/browser/*` contains browser delivery concerns such as the
-  idempotent event outbox and speech support.
+  browser singleton wiring, feedback sounds, haptics, and speech support.
 - `app/lib/*` contains small shared models, routing, identity, and request-scoped
   runtime binding access.
+- `app/server/services/*` owns persistence operations and media transactions;
+  API route files validate HTTP input and translate service results to responses.
 - `worker/index.ts` owns Cloudflare delivery concerns: immutable assets, image
   optimization, narration byte ranges, and the request boundary around Vinext.
 
