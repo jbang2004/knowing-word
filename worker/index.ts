@@ -3,9 +3,15 @@ import { handleImageOptimization, DEFAULT_DEVICE_SIZES, DEFAULT_IMAGE_SIZES } fr
 import handler from "vinext/server/app-router-entry";
 import { runWithRuntimeEnv } from "../app/lib/runtime-env.ts";
 
-type RuntimeEnv = Partial<Env> & { IMAGES?: ImagesBinding };
+type RuntimeEnv = Partial<Env> & {
+  IMAGES?: ImagesBinding;
+  NARRATION_SOURCE?: { fetch(request: Request): Promise<Response> };
+};
 
 const IMMUTABLE_CACHE = "public, max-age=31536000, immutable";
+const NARRATION_SOURCE_COMMIT = "0e30da7f66f68b92bc06dcfed857cfc31a64b89d";
+const NARRATION_SOURCE_ORIGIN = "https://raw.githubusercontent.com/jbang2004/knowing-word";
+const MAX_NARRATION_BYTES = 2 * 1024 * 1024;
 
 function narrationRequestPath(pathname: string) {
   const match = /^\/media\/narration\/(v\d+)\/([a-z0-9-]+\/(?:audio\.(?:webm|m4a)|audio-marks\.json))$/.exec(pathname);
@@ -53,6 +59,61 @@ function narrationHeaders(relative: string, size?: number, etag?: string) {
   if (typeof size === "number") headers.set("content-length", String(size));
   if (etag) headers.set("etag", etag);
   return headers;
+}
+
+function narrationSourceUrl(relative: string) {
+  const sourceRoot = relative.endsWith(".m4a")
+    ? "release/miniprogram-narration-aac32"
+    : "release/narration";
+  return `${NARRATION_SOURCE_ORIGIN}/${NARRATION_SOURCE_COMMIT}/${sourceRoot}/${relative}`;
+}
+
+async function mirrorNarrationToR2(
+  request: Request,
+  env: RuntimeEnv,
+  objectKey: string,
+  relative: string,
+) {
+  if (!env.MEDIA) return null;
+  const sourceRequest = new Request(narrationSourceUrl(relative), {
+    headers: { accept: narrationContentType(relative) },
+  });
+  const upstream = env.NARRATION_SOURCE
+    ? await env.NARRATION_SOURCE.fetch(sourceRequest)
+    : await fetch(sourceRequest);
+  if (!upstream.ok) return null;
+
+  const announcedSize = Number(upstream.headers.get("content-length"));
+  if (Number.isFinite(announcedSize) && announcedSize > MAX_NARRATION_BYTES) return null;
+  const bytes = await upstream.arrayBuffer();
+  if (!bytes.byteLength || bytes.byteLength > MAX_NARRATION_BYTES) return null;
+
+  const stored = await env.MEDIA.put(objectKey, bytes, {
+    httpMetadata: {
+      contentType: narrationContentType(relative),
+      cacheControl: IMMUTABLE_CACHE,
+    },
+    customMetadata: {
+      sourceCommit: NARRATION_SOURCE_COMMIT,
+    },
+  });
+  const headers = narrationHeaders(relative, bytes.byteLength, stored.httpEtag);
+  headers.set("x-knowing-word-media", "r2");
+
+  const range = parseByteRange(request.headers.get("range"), bytes.byteLength);
+  if (range && "invalid" in range) {
+    headers.set("content-range", `bytes */${bytes.byteLength}`);
+    headers.delete("content-length");
+    return new Response(null, { status: 416, headers });
+  }
+  if (range) {
+    headers.set("content-range", `bytes ${range.start}-${range.end}/${bytes.byteLength}`);
+    headers.set("content-length", String(range.length));
+  }
+  if (request.method === "HEAD") return new Response(null, { status: 200, headers });
+
+  const body = range ? bytes.slice(range.start, range.end + 1) : bytes;
+  return new Response(body, { status: range ? 206 : 200, headers });
 }
 
 async function serveNarration(
@@ -111,6 +172,9 @@ async function serveNarration(
       });
     }
   }
+
+  const mirrored = await mirrorNarrationToR2(request, env, objectKey, relative);
+  if (mirrored) return mirrored;
 
   return new Response("Media not found", { status: 404 });
 }

@@ -9,7 +9,11 @@ if (!/^https?:\/\//.test(siteUrl)) {
 
 const mediaPaths = [...new Set(
   Object.values(narrationAssets)
-    .flatMap((asset) => [asset.audio, asset.audioMarks])
+    .flatMap((asset) => [
+      asset.audio,
+      asset.audio.replace(/audio\.webm$/u, "audio.m4a"),
+      asset.audioMarks,
+    ])
     .map((source) => source.replace(/^\/narration\//, `/media/narration/${narrationVersion}/`)),
 )];
 

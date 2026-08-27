@@ -857,6 +857,7 @@ test("versioned assets run through the cache-header worker path", async () => {
     "/assets/*",
     "/illustrations/*",
     "/heritage/*",
+    "/media/narration/*",
     "/sfx/*",
     "/og-cover.jpg",
   ]);
@@ -918,4 +919,46 @@ test("mini-program M4A narration falls back to immutable Site assets", async () 
   assert.equal(response.headers.get("cache-control"), "public, max-age=31536000, immutable");
   assert.equal(response.headers.get("x-knowing-word-media"), "assets");
   assert.equal(await response.text(), "m4a-bytes");
+});
+
+test("missing mini-program narration is mirrored into Sites R2 with byte ranges", async () => {
+  const workerUrl = new URL("../dist/server/index.js", import.meta.url);
+  workerUrl.searchParams.set("test", "media-suite");
+  workerPromise ||= import(workerUrl.href).then((module) => module.default);
+  const worker = await workerPromise;
+  const bytes = new TextEncoder().encode("mirrored-m4a-bytes");
+  let storedKey = "";
+  let sourceUrl = "";
+  const response = await worker.fetch(
+    new Request("http://localhost/media/narration/v5/g5v1-l01-c01-u9e6d/audio.m4a", {
+      headers: { range: "bytes=2-5" },
+    }),
+    {
+      MEDIA: {
+        async head() { return null; },
+        async put(key, value, options) {
+          storedKey = key;
+          assert.equal(value.byteLength, bytes.byteLength);
+          assert.equal(options.httpMetadata.contentType, "audio/mp4");
+          return { httpEtag: '"mirrored-etag"' };
+        },
+      },
+      ASSETS: { async fetch() { return new Response("missing", { status: 404 }); } },
+      NARRATION_SOURCE: {
+        async fetch(request) {
+          sourceUrl = request.url;
+          return new Response(bytes, {
+            headers: { "content-length": String(bytes.byteLength) },
+          });
+        },
+      },
+    },
+    { waitUntil() {}, passThroughOnException() {} },
+  );
+  assert.equal(response.status, 206);
+  assert.equal(response.headers.get("content-range"), `bytes 2-5/${bytes.byteLength}`);
+  assert.equal(response.headers.get("x-knowing-word-media"), "r2");
+  assert.equal(await response.text(), "rror");
+  assert.equal(storedKey, "built-in/narration/v5/g5v1-l01-c01-u9e6d/audio.m4a");
+  assert.match(sourceUrl, /\/0e30da7f66f68b92bc06dcfed857cfc31a64b89d\/release\/miniprogram-narration-aac32\//u);
 });

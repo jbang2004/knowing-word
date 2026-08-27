@@ -49,7 +49,14 @@ const counts = {
     (_path, name) => /^g5-.*\.svg$/.test(name),
   ),
   starter: 0,
+  stagedNarration: 0,
 };
+
+const stagedNarration = join(clientRoot, "media/narration");
+if (await exists(stagedNarration)) {
+  await rm(stagedNarration, { recursive: true });
+  counts.stagedNarration = 1;
+}
 
 for (const name of ["file.svg", "globe.svg", "window.svg"]) {
   const path = join(clientRoot, name);
@@ -67,6 +74,7 @@ wranglerConfig.assets = {
     "/assets/*",
     "/illustrations/*",
     "/heritage/*",
+    "/media/narration/*",
     "/sfx/*",
     "/og-cover.jpg",
   ],
@@ -76,5 +84,6 @@ await writeFile(wranglerConfigPath, `${JSON.stringify(wranglerConfig)}\n`);
 process.stdout.write(
   `Deployment assets pruned: ${counts.heritage} legacy heritage files, ` +
   `${counts.mnemonicSvg} unused mnemonic SVGs, ` +
-  `${counts.starter} starter icons; enabled cache-header routing.\n`,
+  `${counts.starter} starter icons, ` +
+  `${counts.stagedNarration} staged narration tree; enabled cache-header routing.\n`,
 );

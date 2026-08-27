@@ -129,4 +129,7 @@ Publishing must use the Sites project described by `.openai/hosting.json`, with
 the `DB` D1 binding and `MEDIA` R2 binding. Database migrations live under
 `drizzle/`, including learning-event evidence columns and profile revisions;
 approved narration is uploaded with `npm run preseed:narration` and
-verified after deployment with `npm run warm:narration -- <site-url>`.
+verified after deployment with `npm run warm:narration -- <site-url>`. Missing
+immutable narration objects are mirrored from the pinned public release commit
+into the Site's `MEDIA` R2 binding on first access, so deployment archives stay
+small while both WebM and mini-program M4A playback remain Site-hosted.
