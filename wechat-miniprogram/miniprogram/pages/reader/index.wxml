@@ -1,5 +1,5 @@
 <view class="read-page" style="padding-top: {{navHeight + 18}}px;">
-  <view class="utility-heading"><button bindtap="goBack">‹</button><strong>先听一遍，再把句子读出来</strong></view>
+  <view class="utility-heading"><button class="nav-back" bindtap="goBack" aria-label="返回"><view class="nav-back-icon"></view></button><strong>先听一遍，再把句子读出来</strong></view>
 
   <view wx:if="{{loading}}" class="read-loading"><view class="skeleton"></view></view>
   <view wx:elif="{{error}}" class="read-empty">{{error}}</view>
@@ -15,13 +15,13 @@
     <view class="read-studio">
       <view class="read-mascot"><text>读</text></view>
       <view class="studio-copy"><text>跟读小任务</text><strong>{{lesson.title}}</strong><view>先听范读，再按下录音键读一遍。</view></view>
-      <view class="record-launch {{recording ? 'recording' : ''}}" bindtap="toggleRecording" role="button"><text>{{recording ? '■' : '●'}}</text>{{recording ? '结束录音' : '开始录音'}}</view>
+      <view class="record-launch {{recording ? 'recording' : ''}}" bindtap="toggleRecording" role="button"><view class="record-mark {{recording ? 'stop' : ''}}"></view>{{recording ? '结束录音' : '开始录音'}}</view>
     </view>
 
     <view class="sentence-list">
       <view class="sentence-card {{speaking ? 'speaking' : ''}}">
         <text>“{{lesson.context}}”</text>
-        <view class="sentence-action" bindtap="previewSentence" role="button"><text>♪</text>{{speaking ? '正在范读…' : '范读'}}</view>
+        <view class="sentence-action" bindtap="previewSentence" role="button"><view class="audio-icon"></view>{{speaking ? '正在范读…' : '范读'}}</view>
       </view>
     </view>
 

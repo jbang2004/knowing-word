@@ -1,6 +1,6 @@
 <view class="challenge-page track-{{track}}">
-  <view class="challenge-bar" style="padding-top: {{navHeight + 16}}px;">
-    <button class="challenge-close" bindtap="goBack" aria-label="退出练习">‹</button>
+  <view class="challenge-bar" style="padding-top: {{navHeight}}px;">
+    <button class="challenge-close nav-back" bindtap="goBack" aria-label="退出练习"><view class="nav-back-icon"></view></button>
     <view class="challenge-progress"><i style="width: {{progress}}%"></i></view>
     <text class="challenge-count">{{questionIndex + 1}}/{{questions.length}}</text>
   </view>
@@ -31,10 +31,11 @@
         <view class="writing-actions"><view class="writing-choice press-card" data-correct="{{false}}" bindtap="selfAssess" role="button" hover-class="is-pressed">还需要练</view><view class="writing-choice primary press-card" data-correct="{{true}}" bindtap="selfAssess" role="button" hover-class="is-pressed">我写对了</view></view>
       </view>
 
-      <view wx:else class="choice-grid">
+      <view wx:else class="choice-grid {{glyphChoices ? 'is-glyph' : ''}} {{structureChoices ? 'is-structure' : ''}}">
         <view wx:for="{{viewOptions}}" wx:key="id" class="choice-card press-card {{item.state}}" data-id="{{item.id}}" bindtap="chooseOption" role="button" hover-class="is-pressed">
           <image wx:if="{{item.image}}" src="{{item.image}}" mode="aspectFill" class="choice-image" />
           <text class="choice-key">{{item.label}}</text>
+          <view wx:if="{{structureChoices}}" class="structure-shape {{item.structureClass}}"><i></i><i></i><i></i></view>
           <strong>{{item.text}}</strong>
         </view>
       </view>

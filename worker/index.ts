@@ -196,10 +196,19 @@ function withDeliveryCache(response: Response, pathname: string) {
   } else {
     return response;
   }
+  const contentType = pathname.endsWith(".webp") ? "image/webp"
+    : pathname.endsWith(".png") ? "image/png"
+    : /\.jpe?g$/u.test(pathname) ? "image/jpeg"
+    : pathname.endsWith(".svg") ? "image/svg+xml; charset=utf-8"
+    : pathname.endsWith(".woff2") ? "font/woff2"
+    : pathname.endsWith(".m4a") ? "audio/mp4"
+    : pathname.endsWith(".mp3") ? "audio/mpeg"
+    : pathname.endsWith(".wav") ? "audio/wav"
+    : null;
+  if (contentType) headers.set("content-type", contentType);
   if (pathname.startsWith("/fonts/")) {
     headers.set("access-control-allow-origin", "*");
     headers.set("x-content-type-options", "nosniff");
-    if (pathname.endsWith(".woff2")) headers.set("content-type", "font/woff2");
   }
   return new Response(response.body, {
     status: response.status,

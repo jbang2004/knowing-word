@@ -12,7 +12,23 @@ const trackMeta: Record<TrackId, { title: string; eyebrow: string; copy: string 
   structure: { title: "结构复习", eyebrow: "像搭积木一样看汉字", copy: "先判断空间结构，再选择正确组合。" },
 };
 
-type ViewOption = Exercise["options"][number] & { state: string; image: string; label: string };
+type ViewOption = Exercise["options"][number] & { state: string; image: string; label: string; structureClass: string };
+
+function structureClass(code = "") {
+  if (code === "⿰") return "ss-side";
+  if (code === "⿲") return "ss-triside";
+  if (code === "⿱") return "ss-stack";
+  if (code === "⿳") return "ss-tristack";
+  if (code === "⿴") return "ss-enclose";
+  if (code === "⿵") return "ss-open-top";
+  if (code === "⿶") return "ss-open-bottom";
+  if (code === "⿷") return "ss-open-right";
+  if (code === "⿸") return "ss-corner-tl";
+  if (code === "⿹") return "ss-corner-tr";
+  if (code === "⿺") return "ss-corner-bl";
+  if (code === "⿻") return "ss-cross";
+  return "ss-single";
+}
 
 function questionsFor(character: CatalogCharacter, track: TrackId) {
   const exercises = character.exercises ?? [];
@@ -41,6 +57,8 @@ Page({
     viewOptions: [] as ViewOption[],
     selectedIds: [] as string[],
     multiChoice: false,
+    glyphChoices: false,
+    structureChoices: false,
     isWriting: false,
     showWritingBoard: false,
     showPendingActions: false,
@@ -109,6 +127,11 @@ Page({
       resultCopy: "",
       questionLabel: question.kind === "write" ? "书写自查" : question.kind === "structure" ? "结构题" : question.kind === "components" ? "部件题" : "选择题",
       multiChoice: correctCount > 1,
+      glyphChoices: question.kind !== "structure"
+        && question.questionType !== "image_single_select"
+        && question.options.length > 0
+        && question.options.every((option) => Array.from(option.text ?? "").length === 1),
+      structureChoices: question.kind === "structure",
       isWriting: question.kind === "write",
       showWritingBoard: question.kind === "write" || question.options.length === 0,
       showPendingActions: question.kind !== "write",
@@ -119,6 +142,7 @@ Page({
         label: String.fromCharCode(65 + index),
         state: "",
         image: visuals[`${question.id}:${option.id}`]?.src ?? "",
+        structureClass: structureClass(option.idcCode),
       })),
     });
     (this as unknown as { questionStartedAt: number }).questionStartedAt = Date.now();

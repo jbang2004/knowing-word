@@ -889,6 +889,28 @@ test("mini-program font assets expose immutable CORS-safe responses", async () =
   assert.equal(response.headers.get("cache-control"), "public, max-age=31536000, immutable");
 });
 
+test("mini-program illustration assets expose a decodable image content type", async () => {
+  const workerUrl = new URL("../dist/server/index.js", import.meta.url);
+  workerUrl.searchParams.set("test", "illustration-content-type-suite");
+  workerPromise ||= import(workerUrl.href).then((module) => module.default);
+  const worker = await workerPromise;
+  const response = await worker.fetch(
+    new Request("http://localhost/illustrations/lessons/g5-01.webp"),
+    {
+      ASSETS: {
+        fetch() {
+          return Promise.resolve(new Response("webp", {
+            headers: { "content-type": "application/octet-stream" },
+          }));
+        },
+      },
+    },
+    { waitUntil() {}, passThroughOnException() {} },
+  );
+  assert.equal(response.headers.get("content-type"), "image/webp");
+  assert.equal(response.headers.get("cache-control"), "public, max-age=86400, stale-while-revalidate=604800");
+});
+
 test("mini-program font endpoint returns the font through the Worker", async () => {
   const workerUrl = new URL("../dist/server/index.js", import.meta.url);
   workerUrl.searchParams.set("test", "mini-font-endpoint-suite");

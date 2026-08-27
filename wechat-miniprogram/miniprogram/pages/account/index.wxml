@@ -11,7 +11,7 @@
     <view class="account-summary">已完成 {{completed}} 个学习关卡 · 认识 {{components}} 个部件</view>
   </view>
 
-  <navigator class="setting-row" url="/pages/records/index"><i class="record-icon">⌁</i><strong>学习记录与错题重练</strong></navigator>
-  <view class="setting-row" bindtap="toggleTheme"><i class="theme-icon">◔</i><strong>{{theme === 'night' ? '切换日间模式' : '切换夜读模式'}}</strong></view>
-  <view class="setting-row danger-row" bindtap="resetProgress"><i>ↄ</i><strong>清除学习记录</strong></view>
+  <navigator class="setting-row" url="/pages/records/index"><i class="setting-icon record-icon"></i><strong>学习记录与错题重练</strong></navigator>
+  <view class="setting-row" bindtap="toggleTheme"><i class="setting-icon theme-icon"></i><strong>{{theme === 'night' ? '切换日间模式' : '切换夜读模式'}}</strong></view>
+  <view class="setting-row danger-row" bindtap="resetProgress"><i class="setting-icon reset-icon"></i><strong>清除学习记录</strong></view>
 </view>

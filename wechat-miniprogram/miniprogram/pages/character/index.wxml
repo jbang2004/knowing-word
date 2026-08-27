@@ -1,6 +1,6 @@
 <view class="study-shell">
   <view class="study-topbar" style="height: {{navHeight}}px; padding-top: {{navTop}}px; padding-right: {{capsuleInset}}px;">
-    <button bindtap="goBack">‹</button>
+    <button class="nav-back" bindtap="goBack" aria-label="返回"><view class="nav-back-icon"></view></button>
     <view class="breadcrumb"><text>{{character.word}}</text><i></i><text>{{character.word}}</text></view>
     <button class="favorite {{favorite ? 'active' : ''}}" bindtap="toggleFavorite">{{favorite ? '★' : '☆'}}</button>
   </view>
@@ -29,8 +29,8 @@
         <view class="listen-button press-card" bindtap="playNarration" role="button" hover-class="is-pressed"><view class="equalizer"><i></i><i></i><i></i><i></i><i></i></view><view><strong>{{playing ? '暂停字义讲解' : '听字义讲解'}}</strong><text>{{character.media.narration.transcript.length}} 字 · 留在画面边看边听</text></view><text>→</text></view>
         <view class="action-wide press-card" bindtap="openDrawer" role="button" hover-class="is-pressed"><text>✣</text><view><strong>物象四步</strong><text>看意象 · 找部首 · 找部件 · 合成字</text></view><text>›</text></view>
         <view class="action-grid">
-          <view class="action primary press-card" bindtap="startPractice" role="button" hover-class="is-pressed"><text>▱</text><view><strong>单字过关</strong><text>0 / {{masteryCount}} 题</text></view></view>
-          <view class="action press-card" bindtap="openReader" role="button" hover-class="is-pressed"><text>♩</text><view><strong>朗读录音</strong><text>读一遍本课词语</text></view></view>
+          <view class="action primary press-card" bindtap="startPractice" role="button" hover-class="is-pressed"><view class="study-action-icon icon-check-card"></view><view><strong>单字过关</strong><text>0 / {{masteryCount}} 题</text></view></view>
+          <view class="action press-card" bindtap="openReader" role="button" hover-class="is-pressed"><view class="study-action-icon icon-microphone"></view><view><strong>朗读录音</strong><text>读一遍本课词语</text></view></view>
         </view>
         <button class="detail-handle" bindtap="openDrawer">部件来历、字形演变与语境　›</button>
       </view>
@@ -49,7 +49,7 @@
         </view>
       </view>
       <view class="drawer-title">字形演变</view>
-      <view class="drawer-note"><text>⌁</text><view><strong>本字暂无可靠的古文字图版</strong><text>保留现代楷书，不虚构演变形态。</text></view></view>
+      <view class="drawer-note"><view class="history-icon"></view><view><strong>本字暂无可靠的古文字图版</strong><text>保留现代楷书，不虚构演变形态。</text></view></view>
       <view class="drawer-title">本课主题语境</view>
       <view class="drawer-theme">{{character.originalText || character.originalMeaning}}</view>
     </view>

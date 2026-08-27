@@ -21,39 +21,55 @@ page {
   --action-deep: #0f8c64;
   --action-soft: #e2f7ef;
   --action-edge: #bfe8d9;
+  --action-ink: #0f1614;
   --action-text: #0b7654;
   --radical: #ff5b34;
   --radical-deep: #d93c18;
   --radical-soft: #ffeae3;
   --radical-edge: #ffc9b8;
+  --radical-ink: #30150e;
   --radical-text: #bd3214;
   --part: #2fa8e0;
   --part-deep: #1e82b4;
   --part-soft: #e3f4fd;
   --part-edge: #b9e2f7;
+  --part-ink: #0f1614;
   --part-text: #176d99;
   --wrong: #ffb020;
   --wrong-deep: #d98c00;
   --wrong-soft: #fff3d9;
   --wrong-edge: #f2dfb0;
+  --wrong-ink: #4a3000;
   --wrong-text: #4a3000;
+  --shadow-xs: 0 2px 0 var(--line);
+  --shadow: 0 3px 0 var(--line);
+  --shadow-lift: 0 5px 0 var(--line-deep);
+  --shadow-sheet: 0 -16px 44px rgba(34,48,44,.26);
+  --press: 4px;
+  --page-gutter: 16px;
+  --tap-size: 44px;
+  --tabbar-height: 72px;
   --card-inline-gap: 12px;
   --card-stack-gap: 16px;
+  --font-kai: "Knowing Kai", "Kaiti SC", STKaiti, KaiTi, "Songti SC", STSong, serif;
+  --font-serif: "Iowan Old Style", "Source Han Serif SC", "Noto Serif CJK SC", "Songti SC", STSong, Georgia, serif;
+  --font-sans: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", system-ui, sans-serif;
+  --font-round: ui-rounded, "SF Pro Rounded", "Hiragino Maru Gothic ProN", "PingFang SC", sans-serif;
   min-height: 100%;
   background: var(--sky);
   color: var(--ink);
-  font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", system-ui, sans-serif;
+  font-family: var(--font-sans);
   font-size: 28rpx;
 }
 
-.kai { font-family: "Knowing Kai", "Kaiti SC", STKaiti, KaiTi, "Songti SC", STSong, serif; }
+.kai { font-family: var(--font-kai); }
 
 view, text, image, button, input, canvas, scroll-view { box-sizing: border-box; }
 button { min-width: 0; font: inherit; }
 button::after { border: 0; }
 .press-card { transition: transform .12s ease, box-shadow .12s ease; }
-.press-card.is-pressed { transform: translateY(7rpx); box-shadow: none; }
-.page { min-height: 100vh; padding: 26rpx 28rpx calc(54rpx + env(safe-area-inset-bottom)); }
+.press-card.is-pressed { transform: translateY(var(--press)); box-shadow: none; }
+.page { min-height: 100vh; padding: 26rpx 32rpx calc(54rpx + env(safe-area-inset-bottom)); }
 .paper-texture { background: var(--sky); }
 .eyebrow { display: block; margin-bottom: 10rpx; color: var(--radical-text); font-size: 22rpx; font-weight: 800; letter-spacing: 3rpx; }
 .title { color: var(--navy); font-size: 50rpx; font-weight: 900; line-height: 1.16; }
@@ -74,4 +90,8 @@ button::after { border: 0; }
 .progress-value { height: 100%; border-radius: inherit; background: #b6f2dc; }
 .empty { padding: 70rpx 32rpx; text-align: center; color: var(--ink-soft); line-height: 1.8; }
 .skeleton { min-height: 180rpx; border-radius: 28rpx; background: linear-gradient(90deg, var(--sky-deep) 25%, var(--paper) 50%, var(--sky-deep) 75%); background-size: 200% 100%; animation: shimmer 1.2s infinite; }
+.nav-back { display:flex; width:var(--tap-size); height:var(--tap-size); min-height:0; flex:none; align-items:center; justify-content:center; margin:0 0 0 -10px; padding:0; border-radius:999px; color:var(--ink-soft); background:transparent; }
+.nav-back-icon { position:relative; display:block; width:22px; height:18px; color:currentColor; }
+.nav-back-icon::before { position:absolute; top:4px; left:1px; width:9px; height:9px; border-bottom:2.4px solid currentColor; border-left:2.4px solid currentColor; content:""; transform:rotate(45deg); }
+.nav-back-icon::after { position:absolute; top:8px; left:3px; width:18px; border-top:2.4px solid currentColor; content:""; }
 @keyframes shimmer { from { background-position: 100% 0; } to { background-position: -100% 0; } }

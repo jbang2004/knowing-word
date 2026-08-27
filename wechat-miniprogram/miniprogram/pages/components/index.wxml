@@ -1,12 +1,12 @@
 <view class="components-page" style="padding-top: {{navHeight + 18}}px;">
-  <view class="utility-heading"><button bindtap="goBack">‹</button><strong>从常见部件入手，识字更轻松</strong></view>
+  <view class="utility-heading"><button class="nav-back" bindtap="goBack" aria-label="返回"><view class="nav-back-icon"></view></button><strong>从常见部件入手，识字更轻松</strong></view>
 
   <view wx:if="{{recent}}" class="component-resume"><text>上次学到</text><strong class="kai">{{recent.glyph}}</strong><view>{{recent.title}}</view><button data-id="{{recent.id}}" bindtap="selectComponent">继续 →</button></view>
 
   <view class="component-browser">
     <view class="component-browser-toolbar">
       <view class="component-sort-tabs"><button class="{{sortMode === 'frequency' ? 'active' : ''}}" data-mode="frequency" bindtap="chooseSortMode">常用部件</button><button class="{{sortMode === 'recent' ? 'active' : ''}}" data-mode="recent" bindtap="chooseSortMode">最近学习</button></view>
-      <view class="component-search"><text>⌕</text><input value="{{query}}" bindinput="onSearch" placeholder="搜部件或例字" /></view>
+      <view class="component-search"><view class="search-icon"></view><input value="{{query}}" bindinput="onSearch" placeholder="搜部件或例字" /></view>
     </view>
     <view class="component-browser-summary"><strong>{{summaryTitle}}</strong><text>{{summaryCount}}</text></view>
 
