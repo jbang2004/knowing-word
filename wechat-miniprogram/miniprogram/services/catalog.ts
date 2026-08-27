@@ -3,8 +3,8 @@ import { CATALOG_SCHEMA_VERSION, assetUrl } from "../config";
 import type { CatalogCharacter, CatalogLesson, LessonContent } from "../types/models";
 import { publicRequest } from "./api";
 
-const CACHE_PREFIX = "knowing-word:lesson-cache:v1:";
-const CACHE_INDEX_KEY = "knowing-word:lesson-cache-index:v1";
+const CACHE_PREFIX = "knowing-word:lesson-cache:v3:";
+const CACHE_INDEX_KEY = "knowing-word:lesson-cache-index:v3";
 const MAX_CACHED_LESSONS = 10;
 
 export const courseIndex = course;
@@ -26,7 +26,8 @@ export function findCharacter(characterId: string) {
 
 function readCachedLesson(lessonId: string): LessonContent | null {
   const cached = wx.getStorageSync<LessonContent>(`${CACHE_PREFIX}${lessonId}`);
-  return cached?.schemaVersion === CATALOG_SCHEMA_VERSION ? cached : null;
+  if (cached?.schemaVersion !== CATALOG_SCHEMA_VERSION) return null;
+  return JSON.stringify(cached).includes('"http://') ? null : cached;
 }
 
 function rememberLesson(lessonId: string, content: LessonContent) {

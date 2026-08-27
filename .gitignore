@@ -49,5 +49,8 @@ next-env.d.ts
 __pycache__/
 *.py[cod]
 
+# WeChat Developer Tools local credentials and compile modes
+/wechat-miniprogram/project.private.config.json
+
 # generated font sources
 /.cache/

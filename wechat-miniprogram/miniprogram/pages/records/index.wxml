@@ -9,14 +9,18 @@
   <view class="section card"><view class="section-title">四条路径</view><view class="track-record" wx:for="{{tracks}}" wx:key="id"><text>{{item.label}}</text><strong>{{item.completed}} 个字</strong></view></view>
   <view class="section card">
     <view class="section-title">课次进度</view>
-    <view wx:if="{{lessons.length}}" class="lesson-record" wx:for="{{lessons}}" wx:key="id" data-id="{{item.id}}" bindtap="openLesson"><view><text>第 {{item.position}} 课 · {{item.title}}</text><strong>{{item.completed}} / {{item.total}}</strong></view><view class="progress-track"><view class="progress-value" style="width: {{item.percent}}%"></view></view></view>
+    <block wx:if="{{lessons.length}}">
+      <view class="lesson-record" wx:for="{{lessons}}" wx:key="id" data-id="{{item.id}}" bindtap="openLesson"><view><text>第 {{item.position}} 课 · {{item.title}}</text><strong>{{item.completed}} / {{item.total}}</strong></view><view class="progress-track"><view class="progress-value" style="width: {{item.percent}}%"></view></view></view>
+    </block>
     <view wx:else class="empty">完成第一个字后，这里会出现你的课次进度。</view>
   </view>
   <view class="section card">
     <view class="section-title">朗读录音</view>
     <view wx:if="{{!cloudConnected}}" class="empty">正式微信登录连接后，云端录音会显示在这里。本机学习不受影响。</view>
     <view wx:elif="{{cloudLoading}}" class="skeleton mini"></view>
-    <view wx:elif="{{recordings.length}}" class="recording-row" wx:for="{{recordings}}" wx:key="id"><view><strong>{{item.lessonTitle}}</strong><text>{{item.dateText}} · {{item.byteSizeText}}</text></view><button data-id="{{item.id}}" bindtap="playRecording">{{playingId === item.id ? '停止' : '回听'}}</button></view>
+    <block wx:elif="{{recordings.length}}">
+      <view class="recording-row" wx:for="{{recordings}}" wx:key="id"><view><strong>{{item.lessonTitle}}</strong><text>{{item.dateText}} · {{item.byteSizeText}}</text></view><button data-id="{{item.id}}" bindtap="playRecording">{{playingId === item.id ? '停止' : '回听'}}</button></view>
+    </block>
     <view wx:else class="empty">完成一次朗读录音后，这里会保留最近 12 条。</view>
   </view>
 </view>

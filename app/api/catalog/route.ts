@@ -7,10 +7,15 @@ import { narrationMedia } from "../../domain/narration-media.ts";
 export const dynamic = "force-dynamic";
 
 const CATALOG_SCHEMA_VERSION = 1;
+const PRODUCTION_ASSET_ORIGIN = "https://knowing-word.jbang2004.chatgpt.site";
 
 function absoluteAsset(request: Request, source?: string) {
   if (!source) return "";
-  return new URL(source, request.url).toString();
+  const requestUrl = new URL(request.url);
+  const base = requestUrl.protocol === "https:"
+    ? requestUrl.origin
+    : PRODUCTION_ASSET_ORIGIN;
+  return new URL(source, base).toString();
 }
 
 function jsonCatalog(body: unknown, status = 200) {

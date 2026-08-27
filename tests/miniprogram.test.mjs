@@ -17,6 +17,11 @@ test("native mini-program uses a bounded set of page templates for the complete 
   for (const page of app.pages) {
     const template = await readFile(new URL(`miniprogram/${page}.wxml`, root), "utf8");
     assert.doesNotMatch(template, /&&/u, `${page}.wxml should keep compound conditions in page data`);
+    assert.doesNotMatch(
+      template,
+      /<(?:view|block)\b(?=[^>]*wx:(?:if|elif))(?=[^>]*wx:for)[^>]*>/u,
+      `${page}.wxml should not mix conditional branches and loops on one node`,
+    );
   }
 });
 
@@ -26,6 +31,10 @@ test("mini-program ships a compact index and keeps full lesson content behind th
   const catalogService = await readFile(new URL("miniprogram/services/catalog.ts", root), "utf8");
   assert.ok(catalogStat.size < 500_000);
   assert.match(config, /https:\/\/knowing-word\.jbang2004\.chatgpt\.site/u);
+  assert.match(config, /platform === "devtools"[\s\S]*http:\/\/localhost:3000/u);
+  assert.match(config, /return `\$\{PRODUCTION_ASSET_BASE_URL\}/u);
   assert.match(catalogService, /\/api\/catalog\?lessonId=/u);
   assert.match(catalogService, /MAX_CACHED_LESSONS = 10/u);
+  assert.match(catalogService, /lesson-cache:v3/u);
+  assert.ok(catalogService.includes(`includes('"http://')`));
 });
