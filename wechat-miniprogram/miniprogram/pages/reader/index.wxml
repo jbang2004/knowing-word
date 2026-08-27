@@ -5,28 +5,29 @@
   <view wx:elif="{{error}}" class="read-empty">{{error}}</view>
   <block wx:else>
     <view class="read-lesson-picker">
-      <button class="{{lessonIndexValue === 0 ? 'disabled' : ''}}" data-offset="-1" bindtap="stepLesson">‹</button>
+      <button class="{{lessonIndexValue === 0 ? 'disabled' : ''}}" data-offset="-1" bindtap="stepLesson" aria-label="上一课"><view class="reader-chevron is-left"></view></button>
       <picker mode="selector" range="{{lessonOptions}}" range-key="label" value="{{lessonIndexValue}}" bindchange="chooseLesson">
         <view class="lesson-select"><text>选择朗读课次</text><strong>第 {{lesson.position}} 课 · {{lesson.title}}</strong></view>
       </picker>
-      <button class="{{lessonIndexValue === lessonOptions.length - 1 ? 'disabled' : ''}}" data-offset="1" bindtap="stepLesson">›</button>
+      <text class="read-lesson-position">第 {{lesson.position}} 课</text>
+      <button class="{{lessonIndexValue === lessonOptions.length - 1 ? 'disabled' : ''}}" data-offset="1" bindtap="stepLesson" aria-label="下一课"><view class="reader-chevron is-right"></view></button>
     </view>
 
     <view class="read-studio">
       <view class="read-mascot"><text>读</text></view>
       <view class="studio-copy"><text>跟读小任务</text><strong>{{lesson.title}}</strong><view>先听范读，再按下录音键读一遍。</view></view>
-      <view class="record-launch {{recording ? 'recording' : ''}}" bindtap="toggleRecording" role="button"><view class="record-mark {{recording ? 'stop' : ''}}"></view>{{recording ? '结束录音' : '开始录音'}}</view>
+      <view class="record-launch press-card {{recording ? 'recording' : ''}}" bindtap="toggleRecording" role="button" hover-class="is-pressed"><view class="record-mark {{recording ? 'stop' : 'microphone'}}"></view>{{recording ? '结束录音' : '开始录音'}}</view>
     </view>
 
     <view class="sentence-list">
       <view class="sentence-card {{speaking ? 'speaking' : ''}}">
         <text>“{{lesson.context}}”</text>
-        <view class="sentence-action" bindtap="previewSentence" role="button"><view class="audio-icon"></view>{{speaking ? '正在范读…' : '范读'}}</view>
+        <view class="sentence-action press-card" bindtap="previewSentence" role="button" hover-class="is-pressed"><view class="audio-icon"></view>{{speaking ? '正在范读…' : '范读'}}</view>
       </view>
     </view>
 
     <view wx:if="{{tempFilePath}}" class="recording-result">
-      <text class="result-mark">✓</text>
+      <view class="result-mark" aria-label="录音完成"><view class="result-check"></view></view>
       <view><strong>{{readingAssessment === 'accurate' ? '朗读自查已记录' : (readingAssessment === 'needs-practice' ? '已经找到需要重读的地方' : (cloudStatus || '先回听，再判断是否读准'))}}</strong><text>{{readingAssessment === 'accurate' ? '这是回听后的自评记录；先保持读准，再比较是否更流利。' : (readingAssessment === 'needs-practice' ? '回到范读听清读错的字，再录一次，不追求速度。' : '完整听一遍自己的录音，再如实做自我评估。')}}</text></view>
       <button class="play-recording" bindtap="playRecording">{{playing ? '停止回听' : '回听录音'}} · {{durationText}}</button>
       <view wx:if="{{showRecordingGate}}" class="recording-check-gate" role="status">{{recordingGateMessage}}</view>

@@ -3,16 +3,17 @@
     <view class="heading-title">语文 · 五年级上册</view>
   </view>
   <scroll-view class="unit-nav" scroll-x enhanced show-scrollbar="false">
-    <view class="unit-nav-inner"><view wx:for="{{units}}" wx:key="id" data-id="{{item.id}}" bindtap="jumpUnit">{{item.label}}</view></view>
+    <view class="unit-nav-inner"><view wx:for="{{units}}" wx:key="id" class="press-card" data-id="{{item.id}}" bindtap="jumpUnit" hover-class="is-pressed">{{item.label}}</view></view>
   </scroll-view>
   <view class="course-units">
     <view wx:for="{{units}}" wx:key="id" wx:for-item="unit" id="{{unit.id}}" class="course-unit">
       <view class="unit-head"><view><text>{{unit.label}}</text><strong>第 {{unit.start}}—{{unit.end}} 课</strong></view><text>已认识 {{unit.completed}}/{{unit.total}} 个字</text></view>
       <view class="lesson-route">
-        <view wx:for="{{unit.lessons}}" wx:key="id" wx:for-item="lesson" class="lesson-card {{lesson.skimming ? 'skimming' : ''}}" data-id="{{lesson.id}}" bindtap="openLesson">
+        <view wx:for="{{unit.lessons}}" wx:key="id" wx:for-item="lesson" class="lesson-card press-card {{lesson.skimming ? 'skimming' : ''}}" data-id="{{lesson.id}}" bindtap="openLesson" hover-class="is-pressed">
+          <text class="route-index">第 {{lesson.position}} 课{{lesson.skimming ? ' · 略读' : ''}}</text>
           <view class="route-scene"><image src="{{lesson.cover}}" mode="aspectFill" lazy-load="true" /><view class="glyph-cloud"><text wx:for="{{lesson.glyphs}}" wx:key="*this" wx:for-item="glyph">{{glyph}}</text></view></view>
           <view class="route-copy"><strong>{{lesson.title}}</strong><view><text>课内 {{lesson.total}} 字</text><text>已完成 {{lesson.count}}</text></view></view>
-          <view class="route-arrow">→</view>
+          <view class="route-arrow"><view class="ui-icon ui-icon-arrow-right" aria-hidden="true"></view></view>
         </view>
       </view>
     </view>

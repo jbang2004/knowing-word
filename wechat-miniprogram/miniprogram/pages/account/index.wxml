@@ -12,7 +12,7 @@
     <input class="profile-input" value="{{name}}" maxlength="18" bindinput="onNameInput" bindblur="saveName" placeholder="给自己取一个名字" />
     <label class="field-label grade-label">孩子年级</label>
     <picker mode="selector" range="{{gradeOptions}}" range-key="label" value="{{gradeIndex}}" bindchange="changeGrade">
-      <view class="grade-field press-card" role="button" hover-class="is-pressed"><text>{{grade}} 年级</text><text class="grade-chevron">⌄</text></view>
+      <view class="grade-field press-card" role="button" hover-class="is-pressed"><text>{{grade}} 年级</text><view class="grade-chevron"></view></view>
     </picker>
     <view class="account-summary">已完成 {{completed}} 个学习关卡 · 认识 {{components}} 个部件</view>
   </view>

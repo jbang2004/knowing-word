@@ -5,7 +5,7 @@
 .heading-copy { margin-top:10px; color:var(--ink-soft); font-size:14px; line-height:1.7; }
 .unit-nav { position:sticky; z-index:12; top:0; width:100%; margin:-5px 0 26px; padding:9px; border:1px solid var(--line); border-radius:17px; background:var(--paper); box-shadow:var(--shadow-xs); white-space:nowrap; }
 .unit-nav-inner { display:flex; gap:7px; }
-.unit-nav-inner>view { display:inline-flex; min-height:44px; flex:none; align-items:center; justify-content:center; padding:8px 14px; border-radius:12px; color:var(--ink-soft); background:var(--paper-soft); font-size:12px; font-weight:800; }
+.unit-nav-inner>view { display:inline-flex; min-height:44px; flex:none; align-items:center; justify-content:center; padding:8px 14px; border:2px solid var(--line); border-radius:999px; color:var(--ink-soft); background:var(--paper); box-shadow:0 3px 0 var(--line); font-size:12px; font-weight:800; }
 .course-units { display:grid; gap:42px; }
 .course-unit { padding-top:19px; border-top:1px solid var(--line); }
 .unit-head { display:flex; align-items:flex-start; justify-content:space-between; gap:18px; margin-bottom:17px; }
@@ -19,12 +19,21 @@
 .route-scene { position:relative; width:112px; height:64px; overflow:hidden; border-radius:12px; background:var(--paper-soft); }
 .route-scene image { width:100%; height:100%; }
 .glyph-cloud { position:absolute; z-index:2; right:7px; bottom:7px; display:flex; align-items:center; justify-content:center; gap:2px; }
-.glyph-cloud text { display:flex; width:21px; height:24px; align-items:center; justify-content:center; border-radius:8px 8px 8px 3px; color:#0f1614; background:rgba(23,182,134,.92); font-family:"Knowing Kai","Kaiti SC",serif; font-size:13px; font-weight:800; }
+.glyph-cloud text { display:flex; width:21px; height:24px; align-items:center; justify-content:center; border-radius:8px 8px 8px 3px; color:var(--action-ink); background:var(--action); font-family:var(--font-kai); font-size:13px; font-weight:800; }
 .glyph-cloud text:nth-child(even) { transform:translateY(-4px); }
 .route-copy { min-width:0; }
 .route-copy>strong { display:block; overflow:hidden; color:var(--navy); font-family:var(--font-serif); font-size:21px; font-weight:900; white-space:nowrap; text-overflow:ellipsis; }
 .route-copy>view { display:flex; flex-wrap:wrap; gap:2px 12px; margin-top:6px; color:var(--ink-soft); font-size:13px; line-height:1.5; }
 .route-arrow { display:flex; width:32px; height:32px; align-items:center; justify-content:center; border-radius:50%; color:var(--ink-faint); background:var(--paper-soft); }
 .method-card { display:flex; align-items:center; gap:17px; margin-top:42px; padding:18px 23px; border:2px solid var(--line); border-radius:22px; background:var(--paper); box-shadow:0 4px 0 var(--line); }
-.method-card strong { color:var(--part-text); font-size:30px; }
+.method-card strong { color:var(--part-text); font-family:var(--font-serif); font-size:30px; }
 .method-card text { color:var(--ink-soft); font-size:14px; line-height:1.7; }
+.route-index { display:none; color:var(--action-text); font-size:13px; font-weight:850; }
+@media (min-width:761px) {
+  .course-units { gap:52px; }
+  .lesson-card { grid-template-columns:68px 132px minmax(0,1fr) 34px; min-height:128px; gap:23px; padding:16px 18px; }
+  .route-index { display:block; }
+  .route-scene { width:132px; height:92px; }
+  .glyph-cloud text { width:27px; height:30px; font-size:15px; }
+}
+@media (min-width:1280px) { .lesson-route { grid-template-columns:repeat(2,minmax(0,1fr)); } }

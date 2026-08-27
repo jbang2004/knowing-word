@@ -113,12 +113,13 @@ page {
 .kai { font-family: var(--font-kai); }
 
 view, text, image, button, input, canvas, scroll-view { box-sizing: border-box; }
-button { min-width: 0; font: inherit; }
+button { min-width: 0; font: inherit; transition:opacity 90ms ease,transform 90ms ease; }
 button::after { border: 0; }
+button:active { opacity:.82; }
 .press-card { transition:transform 90ms ease,box-shadow 90ms ease,border-color 140ms ease,background-color 140ms ease; }
 .press-card.is-pressed { transform: translateY(var(--press)); box-shadow: none; }
 .page { min-height: 100vh; padding: 26rpx 32rpx calc(54rpx + env(safe-area-inset-bottom)); }
-.home-page,.course-page,.practice-hub-page,.lesson-page,.track-page,.account-page,.components-page,.read-page,.records-page { animation:page-arrive 620ms var(--ease-out) both; }
+.home-page,.course-page,.practice-hub-page,.track-page,.account-page,.components-page,.read-page,.records-page { animation:page-arrive 620ms var(--ease-out) both; }
 .paper-texture { background: var(--sky); }
 .eyebrow { display: block; margin-bottom: 10rpx; color: var(--radical-text); font-size: 22rpx; font-weight: 800; letter-spacing: 3rpx; }
 .title { color: var(--navy); font-size: 50rpx; font-weight: 900; line-height: 1.16; }
@@ -128,7 +129,7 @@ button::after { border: 0; }
 .section-title { color: var(--navy); font-size: 34rpx; font-weight: 900; }
 .section-copy { margin-top: 10rpx; color: var(--ink-soft); line-height: 1.65; }
 .primary-button, .secondary-button, .ghost-button { display: flex; align-items: center; justify-content: center; min-height: 88rpx; border-radius: 28rpx; font-weight: 900; }
-.primary-button { color: #0f1614; background: var(--action); box-shadow: 0 8rpx 0 var(--action-deep); }
+.primary-button { color: var(--action-ink); background: var(--action); box-shadow: 0 8rpx 0 var(--action-deep); }
 .secondary-button { color: var(--wrong-text); background: var(--wrong-soft); box-shadow: 0 7rpx 0 var(--wrong-edge); }
 .ghost-button { color: var(--navy); border: 2rpx solid var(--line); background: var(--paper); box-shadow: 0 7rpx 0 var(--line-deep); }
 .primary-button,.secondary-button,.ghost-button,.game-button { transition:transform 220ms var(--ease-out),box-shadow 220ms var(--ease-out); }
@@ -144,6 +145,14 @@ button::after { border: 0; }
 .nav-back-icon { position:relative; display:block; width:22px; height:18px; color:currentColor; }
 .nav-back-icon::before { position:absolute; top:4px; left:1px; width:9px; height:9px; border-bottom:2.4px solid currentColor; border-left:2.4px solid currentColor; content:""; transform:rotate(45deg); }
 .nav-back-icon::after { position:absolute; top:8px; left:3px; width:18px; border-top:2.4px solid currentColor; content:""; }
+.ui-icon { position:relative; display:inline-block; width:16px; height:16px; flex:none; color:currentColor; }
+.ui-icon-arrow-right::before { position:absolute; top:7px; left:2px; width:11px; border-top:2px solid currentColor; content:""; }
+.ui-icon-arrow-right::after { position:absolute; top:4px; right:2px; width:6px; height:6px; border-top:2px solid currentColor; border-right:2px solid currentColor; content:""; transform:rotate(45deg); }
+.ui-icon-arrow-left { transform:rotate(180deg); }
+.ui-icon-chevron-right::before { position:absolute; top:4px; left:4px; width:7px; height:7px; border-top:2px solid currentColor; border-right:2px solid currentColor; content:""; transform:rotate(45deg); }
+.ui-icon-check::before { position:absolute; top:4px; left:3px; width:9px; height:5px; border-bottom:2px solid currentColor; border-left:2px solid currentColor; content:""; transform:rotate(-45deg); }
+.ui-icon-star { width:19px; height:19px; background:currentColor; clip-path:polygon(50% 2%,61% 35%,96% 35%,68% 55%,79% 90%,50% 69%,21% 90%,32% 55%,4% 35%,39% 35%); }
+.ui-icon-star::after { position:absolute; inset:4px; background:var(--sky); clip-path:inherit; content:""; }
 @media (min-width:900px) {
   page .home-page,
   page .course-page,
@@ -164,3 +173,8 @@ button::after { border: 0; }
 }
 @keyframes shimmer { from { background-position: 100% 0; } to { background-position: -100% 0; } }
 @keyframes page-arrive { from { opacity:0; transform:translateY(10px); } to { opacity:1; transform:none; } }
+@media (prefers-reduced-motion:reduce) {
+  .home-page,.course-page,.practice-hub-page,.track-page,.account-page,.components-page,.read-page,.records-page,.skeleton { animation:none; }
+  button,.press-card,.primary-button,.secondary-button,.ghost-button,.game-button,.progress-value { transition:none; }
+  button:active { opacity:1; }
+}

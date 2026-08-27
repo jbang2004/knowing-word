@@ -6,7 +6,7 @@
 .account-card { margin-top:0; padding:21px; border:2px solid var(--line); border-radius:22px; background:var(--paper); box-shadow:0 4px 0 var(--line); }
 .avatar { display:flex; width:72px; height:72px; align-items:center; justify-content:center; border-radius:22px 22px 22px 7px; color:var(--radical-ink); background:var(--radical); box-shadow:0 3px 0 var(--radical-deep); font-family:var(--font-kai); font-size:44px; font-weight:500; }
 .sync-status { display:flex; height:25px; align-items:center; gap:8px; margin-top:14px; padding:0 13px; border-radius:999px; color:var(--wrong-text); background:var(--wrong-soft); font-size:12px; }.sync-status i { width:9px; height:9px; border:1px solid var(--wrong-text); border-radius:50%; }.sync-status.online { color:var(--action-text); background:var(--action-soft); }.sync-status.online i { border-color:var(--action); background:var(--action); }
-.field-label { display:block; margin-top:15px; color:var(--ink-soft); font-size:13px; font-weight:750; }.profile-input,.grade-field { width:100%; height:42px; margin-top:7px; padding:0 12px; border:1px solid var(--line); border-radius:11px; color:var(--ink); background:var(--paper-soft); font-size:14.56px; }.profile-input { box-sizing:border-box; }.grade-label { margin-top:13px; }.grade-field { display:flex; align-items:center; justify-content:space-between; font-weight:700; }.grade-chevron { color:var(--ink-faint); font-size:15px; }.account-summary { margin-top:24px; color:var(--ink-soft); font-size:13px; }
+.field-label { display:block; margin-top:15px; color:var(--ink-soft); font-size:13px; font-weight:750; }.profile-input,.grade-field { width:100%; height:42px; margin-top:7px; padding:0 12px; border:1px solid var(--line); border-radius:11px; color:var(--ink); background:var(--paper-soft); font-size:14.56px; }.profile-input { box-sizing:border-box; }.grade-label { margin-top:13px; }.grade-field { display:flex; align-items:center; justify-content:space-between; font-weight:700; }.grade-chevron { width:9px; height:9px; border-right:2px solid var(--ink-faint); border-bottom:2px solid var(--ink-faint); transform:translateY(-2px) rotate(45deg); }.account-summary { margin-top:24px; color:var(--ink-soft); font-size:13px; }
 .setting-row { display:flex; min-height:51px; align-items:center; gap:11px; margin-top:15px; padding:14px 17px; border:2px solid var(--line); border-radius:18px; color:var(--ink); background:var(--paper); box-shadow:0 var(--press) 0 var(--line); }.setting-row+.setting-row { margin-top:10px; }.setting-row i { width:18px; height:20px; flex:none; color:var(--part-text); font-style:normal; }.setting-row strong { font-size:13px; font-weight:760; }.setting-row .theme-icon { color:var(--part-text); }.danger-row i,.danger-row strong { color:var(--radical-text); }
 .setting-icon { position:relative; display:block; }
 .record-icon::before { position:absolute; bottom:2px; left:1px; width:3px; height:8px; border-radius:2px 2px 0 0; background:currentColor; box-shadow:6px -5px 0 currentColor,12px -10px 0 currentColor; content:""; }
@@ -14,3 +14,11 @@
 .theme-icon::before { position:absolute; top:1px; left:1px; width:14px; height:14px; border:2px solid currentColor; border-top-color:transparent; border-radius:50%; content:""; transform:rotate(-24deg); }
 .reset-icon::before { position:absolute; top:2px; left:1px; width:14px; height:14px; border:2px solid currentColor; border-left-color:transparent; border-radius:50%; content:""; }
 .reset-icon::after { position:absolute; top:1px; left:0; width:0; height:0; border-top:4px solid transparent; border-right:6px solid currentColor; border-bottom:4px solid transparent; content:""; transform:rotate(22deg); }
+
+@media (min-width:761px) {
+  .account-card { display:grid; max-width:700px; grid-template-columns:97px minmax(0,1fr); align-items:center; gap:18px; padding:26px; }
+  .account-card>.avatar { grid-row:1/7; align-self:center; }
+  .account-card>.sync-status { width:max-content; margin-top:0; }
+  .account-card>.field-label,.account-card>.profile-input,.account-card>picker,.account-card>.account-summary { grid-column:2; }
+  .setting-row { max-width:700px; }
+}

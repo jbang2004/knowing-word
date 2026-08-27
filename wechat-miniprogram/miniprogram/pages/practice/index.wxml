@@ -51,7 +51,7 @@
           <text class="choice-key">{{item.label}}</text>
           <view wx:if="{{item.image}}" class="meaning-illustration">
             <image src="{{item.image}}" mode="aspectFit" />
-            <view wx:if="{{item.showMnemonicFocus}}" class="meaning-match-badge">图形即字形 <text>✓</text></view>
+            <view wx:if="{{item.showMnemonicFocus}}" class="meaning-match-badge">图形即字形 <view class="ui-icon ui-icon-check" aria-hidden="true"></view></view>
           </view>
           <view wx:if="{{structureChoices}}" class="structure-shape {{item.structureClass}}"><i></i><i></i><i></i></view>
           <strong wx:if="{{!item.image || answered}}">{{item.image ? item.visualLabel : item.text}}</strong>
@@ -63,7 +63,7 @@
 
     <view wx:if="{{showPendingActions}}" class="challenge-actions">
       <view class="game-button primary press-card {{ready ? '' : 'disabled'}}" bindtap="checkAnswer" role="button" hover-class="{{ready ? 'is-pressed' : 'none'}}">{{isWriting ? '显示范字并对照' : '核对答案'}}</view>
-      <view class="challenge-actions-row"><button class="text-button {{questionIndex === 0 ? 'disabled' : ''}}" bindtap="previousQuestion">← 上一题</button><button class="text-button" bindtap="skipQuestion">跳过这一题 →</button></view>
+      <view class="challenge-actions-row"><button class="text-button {{questionIndex === 0 ? 'disabled' : ''}}" bindtap="previousQuestion"><view class="ui-icon ui-icon-arrow-right ui-icon-arrow-left" aria-hidden="true"></view><text>上一题</text></button><button class="text-button" bindtap="skipQuestion"><text>跳过这一题</text><view class="ui-icon ui-icon-arrow-right" aria-hidden="true"></view></button></view>
     </view>
 
     <view wx:if="{{writingReview}}" class="answer-sheet writing-assessment">

@@ -1,12 +1,14 @@
 <view class="page home-page theme-{{theme}}">
+  <view class="path-workspace">
+  <view class="path-rail">
   <view class="status-row" style="height: {{navHeight}}px; padding-top: {{navTop}}px; padding-right: {{capsuleInset}}px;">
-    <view class="avatar" bindtap="openAccount">{{initial}}</view>
+    <view class="avatar press-card" bindtap="openAccount" role="button" hover-class="is-pressed">{{initial}}</view>
     <view class="status-spacer"></view>
-    <view class="metric streak"><text class="metric-icon">火</text><strong>{{streak}}</strong></view>
-    <view class="metric today"><text class="metric-icon">✓</text><strong>{{today.attempts}}</strong></view>
+    <view class="metric streak"><view class="metric-icon home-flame"><i></i></view><strong>{{streak}}</strong></view>
+    <view class="metric today"><view class="metric-icon home-check-circle"></view><strong>{{today.attempts}}</strong></view>
   </view>
 
-  <view class="lesson-banner" bindtap="openLesson">
+  <view class="lesson-banner" bindtap="openLesson" role="button" hover-class="lesson-pressed">
     <view class="lesson-main">
       <text>第 {{nextLesson.position}} 课</text>
       <strong>{{nextLesson.title}}</strong>
@@ -15,7 +17,7 @@
         <text>{{lessonCompleted}} / {{lessonTotal}} 字</text>
       </view>
     </view>
-    <view class="lesson-button"><view class="book-mark">册</view><text>课文</text></view>
+    <view class="lesson-button"><view class="book-mark"></view><text>课文</text></view>
   </view>
 
   <view class="focus-card" wx:if="{{dueReview}}">
@@ -25,9 +27,11 @@
       <strong>先从“{{dueReview.hanzi}}”独立回想</strong>
       <view>旧字优先，完成到期提取后再学习今天的新字。</view>
     </view>
-    <button bindtap="reviewDue">↻　开始复习</button>
+    <button bindtap="reviewDue"><view class="review-icon"></view><text>开始复习</text></button>
+  </view>
   </view>
 
+  <view class="path-main">
   <view class="path-map">
     <block wx:for="{{pathSegments}}" wx:key="numeral" wx:for-item="segment">
       <block wx:if="{{segment.state === 'current'}}">
@@ -35,10 +39,10 @@
         <view class="path-steps">
           <view wx:for="{{segment.characters}}" wx:key="id" wx:for-item="node" class="path-node {{node.state}} {{node.offsetClass}}">
             <view class="path-line"></view>
-            <button class="path-seal" data-id="{{node.id}}" data-state="{{node.state}}" bindtap="openPathCharacter">
+            <button class="path-seal" data-id="{{node.id}}" data-state="{{node.state}}" bindtap="openPathCharacter" hover-class="path-pressed">
               {{node.hanzi}}
-              <text wx:if="{{node.state === 'done'}}" class="node-badge done">✓</text>
-              <text wx:elif="{{node.state === 'locked'}}" class="node-badge lock">锁</text>
+              <view wx:if="{{node.state === 'done'}}" class="node-badge done"><view class="home-check"></view></view>
+              <view wx:elif="{{node.state === 'locked'}}" class="node-badge lock"><view class="home-lock"></view></view>
             </button>
           </view>
         </view>
@@ -46,7 +50,7 @@
       <view wx:else class="chapter-fold {{segment.state}}">
         <view class="mini-seals"><text wx:for="{{segment.preview}}" wx:key="*this" wx:for-item="glyph">{{glyph}}</text></view>
         <view class="chapter-copy"><strong>章{{segment.numeral}} · {{segment.title}}</strong><text>{{segment.characters.length}} 个字 · {{segment.copy}}</text></view>
-        <text class="fold-state">{{segment.state === 'done' ? '✓' : '锁'}}</text>
+        <view class="fold-state"><view wx:if="{{segment.state === 'done'}}" class="home-check-circle"></view><view wx:else class="home-lock"></view></view>
       </view>
     </block>
   </view>
@@ -57,14 +61,16 @@
       <view wx:for="{{reviewTracks}}" wx:key="id" class="practice-row press-card {{item.state}}" data-track="{{item.id}}" data-state="{{item.state}}" bindtap="openTrack" role="button" hover-class="{{item.state === 'locked' ? 'none' : 'is-pressed'}}">
         <view class="practice-icon track-{{item.id}}">{{item.glyph}}</view>
         <view><strong>{{item.title}}</strong><text>{{item.progressLabel}}</text></view>
-        <text class="practice-arrow {{item.state === 'complete' ? 'practice-check' : ''}}">{{item.trailingLabel}}</text>
+        <view class="practice-arrow {{item.state === 'complete' ? 'practice-check' : ''}}"><view wx:if="{{item.state === 'complete'}}" class="home-check"></view><view wx:else class="home-chevron"></view></view>
       </view>
     </view>
     <view class="practice-row read-row press-card {{allWordsComplete ? '' : 'disabled'}}" bindtap="openReader" role="button" hover-class="{{allWordsComplete ? 'is-pressed' : 'none'}}">
       <view class="practice-icon track-read">读</view>
       <view><strong>朗读收尾</strong><text>{{readCompleted ? '本课已朗读' : allWordsComplete ? '听范读，再完整读一遍' : '学完本课生字后解锁'}}</text></view>
-      <text class="practice-arrow">›</text>
+      <view class="practice-arrow"><view class="home-chevron"></view></view>
     </view>
     <view wx:if="{{allReviewsComplete}}" class="practice-complete">三项选做复习均已完成</view>
+  </view>
+  </view>
   </view>
 </view>

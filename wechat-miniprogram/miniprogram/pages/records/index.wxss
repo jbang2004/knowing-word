@@ -1,4 +1,4 @@
-.records-page { min-height:100vh; padding-right:16px; padding-bottom:96px; padding-left:16px; background:var(--sky); }
+.records-page { min-height:100vh; padding-right:16px; padding-bottom:calc(96px + env(safe-area-inset-bottom)); padding-left:16px; background:var(--sky); }
 .records-heading { display:flex; min-height:54px; align-items:center; gap:8px; margin-bottom:20px; padding-bottom:16px; border-bottom:1px solid var(--line); color:var(--navy); }
 .records-heading button { width:44px; height:44px; min-height:0; margin:0 0 0 -10px; padding:0; color:var(--ink-soft); background:transparent; }
 .records-heading>view { min-width:0; font-size:24px; font-weight:900; line-height:1.25; }
@@ -43,8 +43,33 @@
 .lesson-characters small,.lesson-characters button>text { color:var(--ink-soft); font-size:11px; }
 .lesson-empty { padding:8px 20px; color:var(--ink-soft); font-size:13px; }
 .record-zero-state { display:flex; min-height:290px; flex-direction:column; align-items:center; justify-content:center; padding:40px 24px; border:1px dashed var(--line); border-radius:22px; text-align:center; background:var(--paper); }
-.record-zero-state>text { color:var(--action-text); font-size:32px; }
+.record-spark { position:relative; width:32px; height:32px; color:var(--action-text); }.record-spark::before { position:absolute; top:3px; left:8px; width:12px; height:12px; border:2.5px solid currentColor; content:""; transform:rotate(45deg); }.record-spark::after { position:absolute; right:1px; bottom:2px; width:7px; height:7px; border:2px solid currentColor; content:""; transform:rotate(45deg); }
 .record-zero-state>strong { margin-top:6px; color:var(--navy); font-size:19px; }
-.record-zero-state>view { margin-top:8px; color:var(--ink-soft); font-size:13px; line-height:1.6; }
+.record-zero-state>.record-zero-copy { margin-top:8px; color:var(--ink-soft); font-size:13px; line-height:1.6; }
 .record-zero-state button { min-height:46px; margin-top:18px; padding:0 24px; border-radius:999px; color:#0f1614; background:var(--action); box-shadow:0 4px 0 var(--action-deep); font-size:13px; font-weight:900; }
-@media (min-width:761px) { .lesson-characters { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media (min-width:431px) {
+  .record-tabs { display:flex; }
+  .recent-list { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .record-scope-bar { display:flex; align-items:flex-start; justify-content:space-between; }
+  .record-scope-bar button { width:auto; flex:none; }
+}
+@media (min-width:761px) {
+  .record-stat-row { gap:12px; }
+  .record-recent { padding:20px; }
+  .recent-list { grid-template-columns:repeat(3,minmax(0,1fr)); gap:8px; }
+  .lesson-characters { grid-template-columns:repeat(2,minmax(0,1fr)); }
+}
+
+/* Solid-surface and typography parity with the Web records view. */
+.record-stat-row>view { border-radius:24px; }
+.record-stat-row strong { font-family:var(--font-serif); }
+.record-tabs button { border:2px solid var(--line); box-shadow:0 3px 0 var(--line); }
+.record-recent { border-radius:22px; }
+.recent-list button>strong,.lesson-characters button>strong { font-family:var(--font-kai); }
+.lesson-head strong { font-family:var(--font-serif); }
+.lesson-characters button>strong { display:flex; width:34px; height:34px; align-items:center; justify-content:center; border-radius:10px; color:var(--part-text); background:var(--part-soft); font-size:22px; font-weight:500; }
+.lesson-empty { padding:22px 20px; border:2px solid var(--line); border-radius:22px; background:var(--paper); box-shadow:0 var(--press) 0 var(--line); }
+.record-zero-state { border:2px solid var(--line); background:var(--paper); box-shadow:0 var(--press) 0 var(--line); }
+.record-zero-state>strong { font-family:var(--font-serif); }
+.record-zero-state button { color:var(--action-ink); }
+.lesson-characters button>.record-view-action { flex:none; flex-direction:row; align-items:center; gap:3px; color:var(--ink-soft); font-size:11px; }

@@ -6,7 +6,7 @@
 .breadcrumb { display:flex; min-width:0; flex:1; align-items:center; justify-content:center; gap:7px; color:var(--ink-soft); font-size:13px; }.breadcrumb text { overflow:hidden; white-space:nowrap; text-overflow:ellipsis; }.breadcrumb i { width:3px; height:3px; flex:none; border-radius:50%; background:var(--ink-faint); }
 .loading-wrap,.error-wrap { padding:20px; }.error-wrap { color:var(--ink-soft); text-align:center; }.error-wrap button { margin-top:16px; color:var(--action-text); }
 .study-body { display:flex; width:100%; min-height:0; flex:1 1 auto; flex-direction:column; }
-.study-scene { position:relative; max-width:min(100vw,520px); min-height:128px; flex:1 1 auto; aspect-ratio:1; align-self:center; overflow:hidden; background:#f7f1e4; }.study-scene image { width:100%; height:100%; }.scene-fallback { display:flex; width:100%; height:100%; align-items:center; justify-content:center; color:var(--navy); font-family:"Knowing Kai","Kaiti SC",serif; font-size:128px; }.scene-fade { position:absolute; z-index:2; inset:0; background:linear-gradient(180deg,var(--sky),transparent 18px),linear-gradient(0deg,var(--sky),transparent 26px),linear-gradient(90deg,var(--sky),transparent 18px),linear-gradient(270deg,var(--sky),transparent 18px); }.scene-caption { position:absolute; z-index:3; right:16px; bottom:14px; padding:6px 11px; border-radius:999px; color:#f4f0e6; background:rgba(15,22,20,.66); font-size:12px; font-weight:700; }
+.study-scene { position:relative; max-width:min(100vw,520px); min-height:128px; flex:1 1 auto; aspect-ratio:1; align-self:center; overflow:hidden; background:#f7f1e4; }.study-scene image { width:100%; height:100%; }.scene-fallback { display:flex; width:100%; height:100%; align-items:center; justify-content:center; color:var(--navy); font-family:"Knowing Kai","Kaiti SC",serif; font-size:128px; }.scene-fade { position:absolute; z-index:2; inset:0; background:linear-gradient(180deg,var(--sky),transparent 18px),linear-gradient(0deg,var(--sky),transparent 26px),linear-gradient(90deg,var(--sky),transparent 18px),linear-gradient(270deg,var(--sky),transparent 18px); }.scene-caption { position:absolute; z-index:3; right:16px; bottom:14px; display:flex; align-items:center; gap:7px; padding:6px 11px; border-radius:999px; color:#f4f0e6; background:rgba(15,22,20,.66); font-size:12px; font-weight:700; }.sparkles-icon { position:relative; width:18px; height:18px; flex:none; color:currentColor; }.sparkles-icon::before { position:absolute; top:2px; left:4px; width:7px; height:7px; border:1.8px solid currentColor; content:""; transform:rotate(45deg); }.sparkles-icon::after { position:absolute; right:0; bottom:1px; width:4px; height:4px; border:1.4px solid currentColor; content:""; transform:rotate(45deg); }
 .study-furniture { width:100%; flex:none; }.study-identity { display:flex; min-height:180px; align-items:center; gap:16px; padding:10px 20px 0; }.study-glyph { color:var(--navy); font-family:"Knowing Kai","Kaiti SC",STKaiti,serif; font-size:76px; font-weight:500; line-height:.9; }.identity-copy { display:flex; flex-direction:column; gap:7px; padding-bottom:5px; }.reading { display:flex; align-items:center; gap:9px; }.reading strong { color:var(--action-text); font-size:22px; font-weight:600; }.reading button { display:flex; width:44px; height:44px; min-height:0; align-items:center; justify-content:center; margin:0; padding:0; border-radius:50%; color:var(--action-text); background:var(--action-soft); }.tags { display:flex; flex-wrap:wrap; gap:6px; }.tags text { padding:4px 9px; border-radius:8px; color:var(--ink-soft); background:var(--paper-soft); font-size:12px; font-weight:600; }.tags text.role { color:var(--action-text); background:var(--action-soft); }
 .study-meaning { margin:14px 20px 0; color:var(--ink-soft); font-size:15px; line-height:1.72; }
 .study-launch { width:100%; padding:0 20px 22px; }.listen-button { display:flex; width:100% !important; max-width:none; min-height:60px; align-items:center; gap:14px; margin:0 !important; padding:0 18px; border-radius:20px; color:#0f1614; text-align:left; background:var(--action); box-shadow:0 4px 0 var(--action-deep); }.listen-button>view:nth-child(2) { display:flex; min-width:0; flex:1; flex-direction:column; gap:2px; }.listen-button strong { font-size:17px; }.listen-button text { color:rgba(15,22,20,.66); font-size:12px; }.listen-button>text:last-child { color:#0f1614; font-size:20px; }.equalizer { display:flex; height:20px; align-items:flex-end; gap:3px; }.equalizer i { width:3px; border-radius:2px; background:rgba(15,22,20,.78); transform-origin:center bottom; }.equalizer i:nth-child(1){height:9px}.equalizer i:nth-child(2){height:17px}.equalizer i:nth-child(3){height:12px}.equalizer i:nth-child(4){height:20px}.equalizer i:nth-child(5){height:7px}
@@ -56,4 +56,46 @@
 @keyframes memory-content-a { from { opacity:0; transform:translateX(18px); } to { opacity:1; transform:none; } }
 @keyframes memory-content-b { from { opacity:0; transform:translateX(-18px); } to { opacity:1; transform:none; } }
 @keyframes memory-ring-in { from { opacity:0; transform:scale(.72); } to { opacity:1; transform:none; } }
-@media (prefers-reduced-motion:reduce) { .narration-player,.transcript-sheet,.memory-stage-content,.memory-focus,.memory-focus-ring,.narration-token { animation:none; transition:none; } }
+@media (prefers-reduced-motion:reduce) { .equalizer.playing i,.narration-player,.transcript-backdrop,.transcript-sheet,.drawer-backdrop,.memory-stage-content,.memory-focus,.memory-focus-ring,.narration-token { animation:none; transition:none; }.details,.memory-stage::before,.memory-stage-progress i,.narration-progress i { transition:none; } }
+@media (max-width:899px) and (max-height:760px) {
+  .study-identity { min-height:auto; gap:12px; padding-top:4px; }
+  .study-glyph { font-size:58px; }
+  .study-meaning { margin-top:10px; font-size:14.72px; line-height:1.7; }
+  .listen-button { min-height:54px; }
+  .action-wide { min-height:56px; margin-top:8px !important; padding:10px 14px; }
+  .action-grid { margin-top:8px; }
+  .action { min-height:58px; padding:10px 14px; }
+  .narration-player { padding:12px 14px; border-radius:20px; }
+  .narration-phrase { min-height:2.8em; max-height:5.6em; margin:8px 0; font-size:17px; line-height:1.4; }
+  .narration-actions { margin-top:8px; }
+  .narration-actions button { min-height:46px; border-radius:13px; }
+  .narration-next { min-height:42px; margin-top:8px; }
+  .transcript-sheet { height:90vh; padding:14px 18px calc(16px + env(safe-area-inset-bottom)); }
+  .transcript-text { padding:14px 2px; }
+}
+@media (min-width:900px) {
+  .study-shell { justify-content:center; }
+  .study-topbar { width:min(1080px,calc(100% - 64px)); height:auto !important; margin:0 auto; padding:20px 0 18px !important; }
+  .study-body { display:grid; width:min(1080px,calc(100% - 64px)); margin:0 auto; grid-template-columns:minmax(0,1fr) minmax(0,1fr); align-items:start; gap:40px; }
+  .study-scene { width:100% !important; height:auto !important; max-width:none; align-self:start; }
+  .study-furniture { min-width:0; }
+  .study-identity { min-height:auto; padding:0; }
+  .study-meaning { margin:14px 0 0; }
+  .study-launch { padding:26px 0 40px; }
+}
+
+/* Semantic colour and type tokens shared with the Web study view. */
+.scene-fallback,.study-glyph,.part-glyph,.writing-guide { font-family:var(--font-kai); }
+.listen-button,.listen-button>text:last-child,.narration-actions .is-primary,.transcript-close,.practice-button,.memory-stage-eyebrow b,.memory-stage-next.is-finish { color:var(--action-ink); }
+.part { background:rgba(46,108,138,.12); }
+.part.radical { background:rgba(217,84,47,.1); }
+.part-glyph { background:rgba(46,108,138,.26); }
+.part-glyph.radical { background:rgba(217,84,47,.22); }
+.part strong { color:var(--ink); }
+.study-topbar .favorite .ui-icon-star::after { background:var(--sky); }
+.study-topbar .favorite.active .ui-icon-star::after { display:none; }
+.listen-button>.listen-arrow { color:var(--action-ink); }
+.narration-next,.detail-handle,.memory-stage-next { display:flex; align-items:center; justify-content:center; gap:6px; }
+.action-wide>.sparkles-icon { width:18px; min-width:18px; flex:none; }
+.action-wide>.ui-icon { display:inline-block; width:16px; min-width:16px; height:16px; flex:none; color:var(--ink-faint); }
+.memory-arrow { display:flex; width:30px; height:30px; align-items:center; justify-content:center; }

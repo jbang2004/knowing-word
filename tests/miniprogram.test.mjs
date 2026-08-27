@@ -90,3 +90,60 @@ test("native mini-program shares the Web visual language instead of the retired 
   assert.match(practiceScript, /this\.prepareQuestion\(true\)/u);
   assert.match(tabTemplate, /icon-\{\{item\.icon\}\}/u);
 });
+
+test("native mini-program pins the Web design tokens, rhythm, and motion timings", async () => {
+  const [webGlobal, webChallenge, miniGlobal, miniPractice, miniCharacter, miniReader, miniComponents] = await Promise.all([
+    readFile(new URL("../app/globals.css", import.meta.url), "utf8"),
+    readFile(new URL("../app/challenge.css", import.meta.url), "utf8"),
+    readFile(new URL("miniprogram/app.wxss", root), "utf8"),
+    readFile(new URL("miniprogram/pages/practice/index.wxss", root), "utf8"),
+    readFile(new URL("miniprogram/pages/character/index.wxss", root), "utf8"),
+    readFile(new URL("miniprogram/pages/reader/index.wxss", root), "utf8"),
+    readFile(new URL("miniprogram/pages/components/index.wxss", root), "utf8"),
+  ]);
+
+  const normalizeCssValue = (value) => value.replaceAll(/\s+/gu, "").toLowerCase();
+  for (const token of [
+    "action", "action-deep", "action-soft", "action-edge", "action-ink", "action-text",
+    "radical", "radical-deep", "radical-soft", "radical-edge", "radical-ink", "radical-text",
+    "part", "part-deep", "part-soft", "part-edge", "part-ink", "part-text",
+    "wrong", "wrong-deep", "wrong-soft", "wrong-edge", "wrong-ink", "wrong-text",
+    "sky", "sky-deep", "paper", "paper-soft", "ink", "ink-soft", "line", "line-deep", "navy",
+  ]) {
+    const pattern = new RegExp(`--${token}:\\s*([^;]+);`, "u");
+    const webValue = webGlobal.match(pattern)?.[1];
+    const miniValue = miniGlobal.match(pattern)?.[1];
+    assert.ok(webValue, `Web should define --${token}`);
+    assert.ok(miniValue, `mini-program should define --${token}`);
+    assert.equal(normalizeCssValue(miniValue), normalizeCssValue(webValue), `--${token} should match Web`);
+  }
+
+  assert.match(webGlobal, /--card-inline-gap:\s*12px/u);
+  assert.match(webGlobal, /--card-stack-gap:\s*16px/u);
+  assert.match(miniGlobal, /--card-inline-gap:\s*12px/u);
+  assert.match(miniGlobal, /--card-stack-gap:\s*16px/u);
+  assert.match(miniGlobal, /page-arrive 620ms var\(--ease-out\)/u);
+
+  for (const [name, duration] of [
+    ["answer-sheet-rise", "260ms"],
+    ["answer-mark-stamp", "420ms"],
+    ["choice-land", "320ms"],
+    ["choice-nudge", "340ms"],
+    ["choice-parts-in", "220ms"],
+  ]) {
+    assert.match(webChallenge, new RegExp(`${name} ${duration}`, "u"));
+    assert.match(miniPractice, new RegExp(`${name} ${duration}`, "u"));
+  }
+
+  assert.match(miniPractice, /celebration-fade 220ms/u);
+  assert.match(miniPractice, /celebration-pop 420ms/u);
+  assert.match(miniPractice, /celebration-fly-left 1600ms/u);
+  assert.match(miniPractice, /celebration-fly-right 1600ms/u);
+  assert.match(miniPractice, /celebration-seal 1600ms/u);
+  assert.match(miniPractice, /celebration-ring 1600ms/u);
+  assert.match(miniCharacter, /narration-character-cue 180ms/u);
+  assert.match(miniCharacter, /narration-equalizer 520ms/u);
+  assert.match(miniReader, /recording-heartbeat 1150ms/u);
+  assert.match(miniComponents, /sheet-fade 220ms/u);
+  assert.match(miniComponents, /transform 260ms var\(--ease-out\)/u);
+});

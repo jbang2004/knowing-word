@@ -4,9 +4,9 @@
   </view>
 
   <view class="lesson-tabs">
-    <button class="{{activeView === 'guide' ? 'active' : ''}}" data-view="guide" bindtap="switchView"><view class="lesson-tab-icon tab-icon-guide"></view><strong>课文导读</strong></button>
-    <button class="{{activeView === 'words' ? 'active' : ''}}" data-view="words" bindtap="switchView"><view class="lesson-tab-icon tab-icon-list"></view><strong>生字表</strong></button>
-    <button class="{{activeView === 'practice' ? 'active' : ''}}" data-view="practice" bindtap="switchView"><view class="lesson-tab-icon tab-icon-practice"></view><strong>复习巩固</strong></button>
+    <button class="{{activeView === 'guide' ? 'active' : ''}}" data-view="guide" bindtap="switchView" hover-class="is-pressed"><view class="lesson-tab-icon tab-icon-guide"></view><strong>课文导读</strong></button>
+    <button class="{{activeView === 'words' ? 'active' : ''}}" data-view="words" bindtap="switchView" hover-class="is-pressed"><view class="lesson-tab-icon tab-icon-list"></view><strong>生字表</strong></button>
+    <button class="{{activeView === 'practice' ? 'active' : ''}}" data-view="practice" bindtap="switchView" hover-class="is-pressed"><view class="lesson-tab-icon tab-icon-practice"></view><strong>复习巩固</strong></button>
   </view>
 
   <view wx:if="{{loading}}" class="loading-wrap"><view class="skeleton"></view></view>
@@ -19,7 +19,7 @@
         <text>{{document.eyebrow || ('《' + lesson.title + '》课文导读')}}</text>
         <view class="guide-title">{{document.title || ('读《' + lesson.title + '》')}}</view>
         <view class="guide-dek">{{document.dek || ('带着三条线索打开课本，把本课 ' + total + ' 个重点词放回真实阅读过程。')}}</view>
-        <view class="source-note"><text>✣</text><view><strong>{{document.rights.label || '原创课文导读'}}</strong><text>{{document.rights.note || '围绕阅读方法独立编写，不展示教材正文，也不提供课文替代文本。'}}</text></view></view>
+        <view class="source-note"><view class="source-spark" aria-hidden="true"></view><view><strong>{{document.rights.label || '原创课文导读'}}</strong><text>{{document.rights.note || '围绕阅读方法独立编写，不展示教材正文，也不提供课文替代文本。'}}</text></view></view>
       </view>
 
       <view class="guide-body">
@@ -31,12 +31,12 @@
           <view wx:if="{{item.focusCharacters.length}}" class="focus-area">
             <view class="focus-head"><strong>本段重点词</strong><text>点击彩色生字进入字卡</text></view>
             <view class="focus-grid">
-              <view wx:for="{{item.focusCharacters}}" wx:for-item="character" wx:key="id" class="focus-word press-card {{character.done ? 'done' : ''}}" data-id="{{character.id}}" bindtap="openCharacter" role="button" hover-class="is-pressed"><strong>{{character.word}}</strong><text>{{character.pinyin}}</text><i>{{character.done ? '✓' : '›'}}</i></view>
+              <view wx:for="{{item.focusCharacters}}" wx:for-item="character" wx:key="id" class="focus-word press-card {{character.done ? 'done' : ''}}" data-id="{{character.id}}" bindtap="openCharacter" role="button" hover-class="is-pressed"><strong>{{character.word}}</strong><text>{{character.pinyin}}</text><i class="ui-icon {{character.done ? 'ui-icon-check' : 'ui-icon-chevron-right'}}" aria-hidden="true"></i></view>
             </view>
           </view>
         </view>
       </view>
-      <view class="guide-finish"><view>读</view><view><text>本课识字进度</text><strong>已经认识 {{completed}} / {{total}} 个字</strong><small>完成导读后，请回到纸质课本阅读全文，再用字卡和练习巩固。</small></view><button data-view="words" bindtap="switchView">查看生字表</button><button class="primary" data-view="practice" bindtap="switchView">按需复习　→</button></view>
+      <view class="guide-finish"><view>读</view><view><text>本课识字进度</text><strong>已经认识 {{completed}} / {{total}} 个字</strong><small>完成导读后，请回到纸质课本阅读全文，再用字卡和练习巩固。</small></view><button data-view="words" bindtap="switchView">查看生字表</button><button class="primary" data-view="practice" bindtap="switchView"><text>按需复习</text><view class="ui-icon ui-icon-arrow-right" aria-hidden="true"></view></button></view>
     </view>
   </view>
 
@@ -53,7 +53,7 @@
           <text class="word-label">{{group.word}}</text>
           <view class="word-chip-row">
             <view wx:for="{{group.characters}}" wx:key="id" wx:for-item="character" class="word-chip press-card {{character.done ? 'done' : ''}}" data-id="{{character.id}}" bindtap="openCharacter" role="button" hover-class="is-pressed">
-              <strong class="kai">{{character.hanzi}}</strong><text>{{character.pinyin}}</text><i>{{character.done ? '✓' : (character.curriculumRole === 'write' ? '写' : character.curriculumRole === 'polyphonic' ? '多' : '认')}}</i>
+              <strong class="kai">{{character.hanzi}}</strong><text>{{character.pinyin}}</text><i wx:if="{{character.done}}" class="ui-icon ui-icon-check" aria-hidden="true"></i><i wx:else>{{character.curriculumRole === 'write' ? '写' : character.curriculumRole === 'polyphonic' ? '多' : '认'}}</i>
             </view>
           </view>
         </view>
@@ -66,7 +66,7 @@
           <text class="word-label">{{group.word}}</text>
           <view class="word-chip-row">
             <view wx:for="{{group.characters}}" wx:key="id" wx:for-item="character" class="word-chip is-extension press-card {{character.done ? 'done' : ''}}" data-id="{{character.id}}" bindtap="openCharacter" role="button" hover-class="is-pressed">
-              <strong class="kai">{{character.hanzi}}</strong><text>{{character.pinyin}}</text><i>{{character.done ? '✓' : '拓'}}</i>
+              <strong class="kai">{{character.hanzi}}</strong><text>{{character.pinyin}}</text><i wx:if="{{character.done}}" class="ui-icon ui-icon-check" aria-hidden="true"></i><i wx:else>拓</i>
             </view>
           </view>
         </view>
@@ -87,6 +87,6 @@
     </view>
   </view>
 
-  <view wx:if="{{activeView === 'guide'}}" class="lesson-progress-pill"><view><text>本课重点字</text><strong>{{completed}}/{{total}} 已完成</strong></view><text>⌄</text></view>
+  <view wx:if="{{activeView === 'guide'}}" class="lesson-progress-pill"><view><text>本课重点字</text><strong>{{completed}}/{{total}} 已完成</strong></view><view class="lesson-chevron-down" aria-hidden="true"></view></view>
   <bottom-navigation active="course" theme="{{theme}}" />
 </view>

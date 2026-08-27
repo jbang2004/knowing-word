@@ -10,6 +10,7 @@ import { getSessionStatus } from "../../services/session";
 let recorder: WechatMiniprogram.RecorderManager | null = null;
 let player: WechatMiniprogram.InnerAudioContext | null = null;
 let sentencePlayer: WechatMiniprogram.InnerAudioContext | null = null;
+let documentRequestVersion = 0;
 
 function minimumReadingDurationMs(text = "") {
   const readableCharacters = Array.from(text).filter((character) => /[\p{L}\p{N}]/u.test(character)).length;
@@ -83,6 +84,7 @@ Page({
     void this.loadDocument();
   },
   onUnload() {
+    documentRequestVersion += 1;
     if (this.data.recording) recorder?.stop();
     player?.destroy();
     player = null;
@@ -90,8 +92,11 @@ Page({
     sentencePlayer = null;
   },
   async loadDocument() {
+    const requestVersion = ++documentRequestVersion;
+    const lessonId = this.data.lessonId;
     try {
-      const content = await getLessonContent(this.data.lessonId);
+      const content = await getLessonContent(lessonId);
+      if (requestVersion !== documentRequestVersion || this.data.lessonId !== lessonId) return;
       this.setData({
         lesson: content.lesson,
         document: content.document,
@@ -99,6 +104,7 @@ Page({
         loading: false,
       });
     } catch (error) {
+      if (requestVersion !== documentRequestVersion || this.data.lessonId !== lessonId) return;
       this.setData({ loading: false, error: error instanceof Error ? error.message : "朗读内容加载失败" });
     }
   },
@@ -131,10 +137,17 @@ Page({
     const preview = wx.createInnerAudioContext({ useWebAudioImplement: false });
     sentencePlayer = preview;
     preview.src = `${API_BASE_URL}/audio/reading/${this.data.lessonId}.m4a`;
-    preview.onPlay(() => this.setData({ speaking: true }));
-    preview.onEnded(() => this.setData({ speaking: false }));
-    preview.onStop(() => this.setData({ speaking: false }));
+    preview.onPlay(() => {
+      if (sentencePlayer === preview) this.setData({ speaking: true });
+    });
+    preview.onEnded(() => {
+      if (sentencePlayer === preview) this.setData({ speaking: false });
+    });
+    preview.onStop(() => {
+      if (sentencePlayer === preview) this.setData({ speaking: false });
+    });
     preview.onError(() => {
+      if (sentencePlayer !== preview) return;
       this.setData({ speaking: false });
       wx.showToast({ title: "范读暂时无法播放", icon: "none" });
     });

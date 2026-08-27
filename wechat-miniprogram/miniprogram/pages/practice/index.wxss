@@ -137,9 +137,12 @@
   .choice-grid.is-visual.no-visual-captions { grid-template-columns:1fr; }
   .choice-grid.is-visual.no-visual-captions .choice-card { display:block; }
 }
+@media (min-width:761px) {
+  .challenge-page { width:min(1000px,calc(100% - 40px)); margin-right:auto; margin-left:auto; }
+}
 @media (prefers-reduced-motion:reduce) {
-  .answer-sheet,.answer-sheet-mark,.challenge-streak,.choice-parts,.choice-card.correct,.choice-card.wrong,.celebration-card,.celebration-glyph { animation:none; }
-  .challenge-progress-value { transition:none; }
+  .answer-sheet,.answer-sheet-mark,.challenge-streak,.choice-parts,.choice-card.correct,.choice-card.wrong,.meaning-match-badge,.celebration-overlay,.celebration-card,.celebration-glyph { animation:none; }
+  .challenge-progress i { transition:none; }
   .celebration-fly,.celebration-ring { animation:none; opacity:0; }
 }
 
@@ -157,3 +160,7 @@
 @keyframes celebration-fly-right { 0% { opacity:0; transform:translateX(118px) scale(.8); } 18%,44% { opacity:1; transform:translateX(74px) scale(1); } 64%,100% { opacity:0; transform:translateX(0) scale(.42); } }
 @keyframes celebration-seal { 0%,52% { opacity:0; transform:scale(.4) rotate(-13deg); } 74% { opacity:1; transform:scale(1.09) rotate(3deg); } 100% { opacity:1; transform:none; } }
 @keyframes celebration-ring { 0%,58% { opacity:0; transform:scale(.62); } 70% { opacity:.55; } 92%,100% { opacity:0; transform:scale(1.55); } }
+
+.game-button.primary { color:var(--action-ink); }
+.meaning-match-badge { display:flex; align-items:center; gap:3px; }
+.text-button { display:flex; align-items:center; gap:5px; }
