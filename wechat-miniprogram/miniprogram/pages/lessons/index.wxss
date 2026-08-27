@@ -1,12 +1,30 @@
-.page { padding-bottom: calc(150rpx + env(safe-area-inset-bottom)); }
-.lesson-list { display: flex; flex-direction: column; gap: 22rpx; margin-top: 34rpx; }
-.lesson-row { display: flex; min-height: 220rpx; overflow: hidden; }
-.lesson-row:active { transform: translateY(7rpx); box-shadow: none; }
-.cover { flex: none; width: 196rpx; height: 220rpx; background: var(--sky-deep); }
-.lesson-info { flex: 1; min-width: 0; padding: 24rpx; }
-.meta { display: flex; align-items: center; justify-content: space-between; color: var(--radical-text); font-size: 21rpx; font-weight: 850; }
-.status { color: var(--ink-soft); }.status-100 { color: var(--action-text); }
-.name { margin-top: 10rpx; color: var(--navy); font-size: 37rpx; font-weight: 900; }
-.context { display: -webkit-box; margin-top: 8rpx; overflow: hidden; color: var(--ink-soft); font-size: 22rpx; line-height: 1.5; -webkit-box-orient: vertical; -webkit-line-clamp: 2; }
-.progress-row { display: flex; align-items: center; gap: 12rpx; margin-top: 17rpx; color: var(--ink-soft); font-size: 20rpx; font-weight: 800; }
-.progress-row .progress-track { flex: 1; background: var(--action-soft); }.progress-row .progress-value { background: var(--action); }
+.course-page { min-height:100vh; padding-right:14px; padding-bottom:calc(104px + env(safe-area-inset-bottom)); padding-left:14px; }
+.page-heading { margin-bottom:25px; padding-bottom:22px; border-bottom:1px solid var(--line); }
+.kicker { display:block; margin:0 0 6px; color:var(--radical-text); font-size:11px; font-weight:900; letter-spacing:.17em; }
+.heading-title { color:var(--navy); font-size:30px; font-weight:900; line-height:1.16; letter-spacing:-1px; }
+.heading-copy { margin-top:10px; color:var(--ink-soft); font-size:14px; line-height:1.7; }
+.unit-nav { position:sticky; z-index:12; top:0; width:100%; margin:-5px 0 26px; padding:9px; border:1px solid var(--line); border-radius:17px; background:rgba(255,255,255,.94); box-shadow:0 3px 0 var(--line-deep); white-space:nowrap; }
+.unit-nav-inner { display:flex; gap:7px; }
+.unit-nav-inner>view { display:inline-flex; min-height:44px; flex:none; align-items:center; justify-content:center; padding:8px 14px; border-radius:12px; color:var(--ink-soft); background:var(--paper-soft); font-size:12px; font-weight:800; }
+.course-units { display:grid; gap:42px; }
+.course-unit { padding-top:19px; border-top:1px solid var(--line); }
+.unit-head { display:flex; align-items:flex-start; justify-content:space-between; gap:18px; margin-bottom:17px; }
+.unit-head>view { display:flex; flex-direction:column; }
+.unit-head>view text { color:var(--radical-text); font-size:12px; font-weight:900; letter-spacing:.12em; }
+.unit-head strong { margin-top:4px; color:var(--navy); font-size:22px; }
+.unit-head>text { color:var(--ink-soft); font-size:12px; font-weight:700; }
+.lesson-route { display:grid; gap:17px; }
+.lesson-card { display:grid; grid-template-columns:112px minmax(0,1fr) 26px; min-height:104px; align-items:center; gap:14px; padding:14px; overflow:hidden; border:2px solid var(--line); border-radius:22px; background:white; box-shadow:0 4px 0 var(--line); }
+.lesson-card.skimming { border-style:dashed; }
+.route-scene { position:relative; width:112px; height:64px; overflow:hidden; border-radius:12px; background:var(--paper-soft); }
+.route-scene image { width:100%; height:100%; }
+.glyph-cloud { position:absolute; z-index:2; right:7px; bottom:7px; display:flex; align-items:center; justify-content:center; gap:2px; }
+.glyph-cloud text { display:flex; width:21px; height:24px; align-items:center; justify-content:center; border-radius:8px 8px 8px 3px; color:#0f1614; background:rgba(23,182,134,.92); font-family:"Kaiti SC",serif; font-size:13px; font-weight:800; }
+.glyph-cloud text:nth-child(even) { transform:translateY(-4px); }
+.route-copy { min-width:0; }
+.route-copy>strong { display:block; overflow:hidden; color:var(--navy); font-size:21px; font-weight:900; white-space:nowrap; text-overflow:ellipsis; }
+.route-copy>view { display:flex; flex-wrap:wrap; gap:2px 12px; margin-top:6px; color:var(--ink-soft); font-size:13px; line-height:1.5; }
+.route-arrow { display:flex; width:26px; height:26px; align-items:center; justify-content:center; border-radius:50%; color:var(--ink-faint); background:var(--paper-soft); }
+.method-card { display:flex; align-items:center; gap:17px; margin-top:42px; padding:18px 23px; border:1px dashed var(--part-edge); border-radius:19px; background:rgba(255,255,255,.75); }
+.method-card strong { color:var(--part-text); font-size:30px; }
+.method-card text { color:var(--ink-soft); font-size:14px; line-height:1.7; }

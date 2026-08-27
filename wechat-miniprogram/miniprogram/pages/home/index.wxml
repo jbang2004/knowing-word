@@ -1,5 +1,5 @@
 <view class="page home-page">
-  <view class="status-row">
+  <view class="status-row" style="height: {{navHeight}}px; padding-top: {{navTop}}px; padding-right: {{capsuleInset}}px;">
     <view class="avatar" bindtap="openAccount">{{initial}}</view>
     <view class="status-spacer"></view>
     <view class="metric streak"><text class="metric-icon">火</text><strong>{{streak}}</strong></view>
@@ -18,14 +18,14 @@
     <view class="lesson-button"><view class="book-mark">册</view><text>课文</text></view>
   </view>
 
-  <view class="focus-card card" wx:if="{{nextCharacter}}">
-    <view class="focus-glyph">{{nextCharacter.hanzi}}</view>
+  <view class="focus-card" wx:if="{{dueReview}}">
+    <view class="focus-glyph">{{dueReview.hanzi}}</view>
     <view class="focus-copy">
-      <text>今天接着学 · 当前任务</text>
-      <strong>从“{{nextCharacter.hanzi}}”继续学习</strong>
-      <view>看懂字义、认清字形，再亲手写一遍。</view>
+      <text>今天先复习 · {{dueReviewCount}} 个字已到期</text>
+      <strong>先从“{{dueReview.hanzi}}”独立回想</strong>
+      <view>旧字优先，完成到期提取后再学习今天的新字。</view>
     </view>
-    <button bindtap="continueLearning">开始学习</button>
+    <button bindtap="reviewDue">↻　开始复习</button>
   </view>
 
   <view class="path-map">
@@ -52,13 +52,18 @@
   </view>
 
   <view class="practice-plan card">
-    <view class="practice-head"><text>完成 {{lessonCompleted}}/{{lessonTotal}} 个识字小测后解锁</text><strong>整课巩固 · 选做</strong><view>哪里还不牢，就选择结构、拆字或红蓝再练一次。</view></view>
+    <view class="practice-head"><text>完成 {{lessonCompleted}}/{{lessonTotal}} 个识字小测后解锁</text><strong>整课巩固 · 选做</strong><view>哪里还不牢，就选择结构、拆字或红蓝再练一次；不影响本课完成。</view></view>
     <view class="practice-list">
       <view wx:for="{{reviewTracks}}" wx:key="id" class="practice-row" data-track="{{item.id}}" bindtap="openTrack">
         <view class="practice-icon track-{{item.id}}">{{item.glyph}}</view>
         <view><strong>{{item.title}}</strong><text>{{lessonCompleted === lessonTotal ? item.copy : '学完本课生字后解锁'}}</text></view>
         <text class="practice-arrow">›</text>
       </view>
+    </view>
+    <view class="practice-row read-row {{lessonCompleted === lessonTotal ? '' : 'disabled'}}" bindtap="openReader">
+      <view class="practice-icon track-read">读</view>
+      <view><strong>朗读收尾</strong><text>{{lessonCompleted === lessonTotal ? '听范读，再完整读一遍' : '学完本课生字后解锁'}}</text></view>
+      <text class="practice-arrow">›</text>
     </view>
   </view>
 </view>

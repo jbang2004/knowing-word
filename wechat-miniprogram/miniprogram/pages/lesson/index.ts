@@ -1,22 +1,42 @@
-import { charactersForLesson, getLessonContent, lessonCover, lessonIndex } from "../../services/catalog";
+import { getLessonContent, lessonCover, lessonIndex } from "../../services/catalog";
 import { loadProfile } from "../../services/profile";
-import type { CatalogLesson, LessonContent } from "../../types/models";
+import type { CatalogCharacter, CatalogLesson, LessonContent, TrackId } from "../../types/models";
+
+type ViewCharacter = CatalogCharacter & { done: boolean; roleLabel: string };
+type GuideSection = NonNullable<LessonContent["document"]>["sections"][number] & { focusCharacters: ViewCharacter[] };
 
 Page({
   data: {
     lessonId: lessonIndex[0].id,
     lesson: { ...lessonIndex[0], visual: { src: lessonCover(lessonIndex[0]), label: "", alt: "" } } as CatalogLesson,
-    characters: [] as Array<LessonContent["characters"][number] & { done: boolean; roleLabel: string }>,
+    document: null as LessonContent["document"],
+    guideSections: [] as GuideSection[],
+    characters: [] as ViewCharacter[],
+    activeView: "guide" as "guide" | "words" | "practice",
     loading: true,
     error: "",
     completed: 0,
     total: 0,
     percent: 0,
+    navTop: 0,
+    navHeight: 52,
+    capsuleInset: 0,
   },
   onLoad(options: Record<string, string | undefined>) {
     const lessonId = options.lessonId || lessonIndex[0].id;
     const summary = lessonIndex.find((lesson) => lesson.id === lessonId) ?? lessonIndex[0];
-    this.setData({ lessonId: summary.id, lesson: { ...summary, visual: { src: lessonCover(summary), label: summary.title, alt: summary.title } } });
+    const activeView = options.view === "words" || options.view === "practice" ? options.view : "guide";
+    const menu = wx.getMenuButtonBoundingClientRect();
+    const info = wx.getWindowInfo();
+    const navTop = Math.max(info.statusBarHeight ?? 0, menu.top || 0);
+    this.setData({
+      lessonId: summary.id,
+      lesson: { ...summary, visual: { src: lessonCover(summary), label: summary.title, alt: summary.title } },
+      activeView,
+      navTop,
+      navHeight: navTop + 52,
+      capsuleInset: Math.max(0, info.windowWidth - menu.left + 8),
+    });
     void this.loadLesson();
   },
   onShow() {
@@ -30,13 +50,25 @@ Page({
     this.setData({ loading: true, error: "" });
     try {
       const content = await getLessonContent(this.data.lessonId, refresh);
-      const characters = content.characters.map((character) => ({
-        ...character,
-        done: false,
-        roleLabel: character.curriculumRole === "write" ? "会写" : character.curriculumRole === "recognize" ? "会认" : character.curriculumRole === "polyphonic" ? "多音字" : "拓展",
-      }));
-      wx.setNavigationBarTitle({ title: `第 ${content.lesson.position} 课 · ${content.lesson.title}` });
-      this.setData({ lesson: content.lesson, characters, loading: false });
+      const characters = content.characters
+        .filter((character) => character.ready && character.primary)
+        .map((character) => ({
+          ...character,
+          done: false,
+          roleLabel: character.curriculumRole === "write" ? "会写" : character.curriculumRole === "recognize" ? "会认" : character.curriculumRole === "polyphonic" ? "多音字" : "拓展",
+        }));
+      const guideSections = (content.document?.sections ?? []).map((section) => {
+        const seen = new Set<string>();
+        const focusCharacters = (section.focusWords ?? []).flatMap((word) => characters.filter((character) =>
+          word.includes(character.hanzi) || character.word === word
+        )).filter((character) => {
+          if (seen.has(character.id)) return false;
+          seen.add(character.id);
+          return true;
+        });
+        return { ...section, focusCharacters };
+      });
+      this.setData({ lesson: content.lesson, document: content.document, guideSections, characters, loading: false });
       this.applyProgress();
     } catch (error) {
       this.setData({ loading: false, error: error instanceof Error ? error.message : "课程加载失败" });
@@ -45,21 +77,25 @@ Page({
   applyProgress() {
     const completedIds = new Set(loadProfile().completed.words);
     const characters = this.data.characters.map((character) => ({ ...character, done: completedIds.has(character.id) }));
+    const guideSections = this.data.guideSections.map((section) => ({
+      ...section,
+      focusCharacters: section.focusCharacters.map((character) => ({ ...character, done: completedIds.has(character.id) })),
+    }));
     const completed = characters.filter((character) => character.done).length;
-    this.setData({
-      characters,
-      completed,
-      total: characters.length,
-      percent: characters.length ? Math.round(completed / characters.length * 100) : 0,
-    });
+    this.setData({ characters, guideSections, completed, total: characters.length, percent: characters.length ? Math.round(completed / characters.length * 100) : 0 });
   },
   retry() { void this.loadLesson(true); },
+  goBack() { wx.navigateBack({ fail: () => wx.switchTab({ url: "/pages/lessons/index" }) }); },
+  switchView(event: WechatMiniprogram.BaseEvent) {
+    this.setData({ activeView: event.currentTarget.dataset.view as "guide" | "words" | "practice" });
+    wx.pageScrollTo({ scrollTop: 0, duration: 180 });
+  },
   openCharacter(event: WechatMiniprogram.BaseEvent) {
     wx.navigateTo({ url: `/pages/character/index?lessonId=${this.data.lessonId}&characterId=${event.currentTarget.dataset.id}` });
   },
-  startPractice() {
+  startPractice(event?: WechatMiniprogram.BaseEvent) {
+    const track = (event?.currentTarget.dataset.track ?? "words") as TrackId;
     const first = this.data.characters.find((character) => !character.done) ?? this.data.characters[0];
-    wx.navigateTo({ url: `/pages/practice/index?track=words&lessonId=${this.data.lessonId}${first ? `&characterId=${first.id}` : ""}` });
+    wx.navigateTo({ url: `/pages/practice/index?track=${track}&lessonId=${this.data.lessonId}${first ? `&characterId=${first.id}` : ""}` });
   },
-  openReader() { wx.navigateTo({ url: `/pages/reader/index?lessonId=${this.data.lessonId}` }); },
 });

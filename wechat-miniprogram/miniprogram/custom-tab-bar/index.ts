@@ -4,7 +4,7 @@ Component({
     list: [
       { pagePath: "/pages/home/index", text: "学习", icon: "home" },
       { pagePath: "/pages/lessons/index", text: "课本", icon: "book" },
-      { pagePath: "/pages/records/index", text: "记录", icon: "grid" },
+      { pagePath: "/pages/practice-hub/index", text: "练习", icon: "grid" },
       { pagePath: "/pages/account/index", text: "我的", icon: "person" }
     ]
   },

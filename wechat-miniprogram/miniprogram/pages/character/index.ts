@@ -1,5 +1,6 @@
 import { componentIndex, getLessonContent } from "../../services/catalog";
 import { loadProfile, saveProfile } from "../../services/profile";
+import { masteryQuestionsFor } from "../../services/practice";
 import type { CatalogCharacter, LessonContent } from "../../types/models";
 
 let audio: WechatMiniprogram.InnerAudioContext | null = null;
@@ -17,9 +18,25 @@ Page({
     siblingIndex: 0,
     hasPrevious: false,
     hasNext: false,
+    navTop: 0,
+    navHeight: 52,
+    capsuleInset: 0,
+    drawerOpen: false,
+    masteryCount: 0,
+    sceneSize: 225,
   },
   onLoad(options: Record<string, string | undefined>) {
-    this.setData({ lessonId: options.lessonId ?? "", characterId: options.characterId ?? "" });
+    const menu = wx.getMenuButtonBoundingClientRect();
+    const info = wx.getWindowInfo();
+    const navTop = Math.max(info.statusBarHeight ?? 0, menu.top || 0);
+    this.setData({
+      lessonId: options.lessonId ?? "",
+      characterId: options.characterId ?? "",
+      navTop,
+      navHeight: navTop + 52,
+      capsuleInset: Math.max(0, info.windowWidth - menu.left + 8),
+      sceneSize: Math.max(128, Math.min(info.windowWidth, info.windowHeight - (navTop + 52) - 553)),
+    });
     void this.loadCharacter();
   },
   onUnload() {
@@ -41,9 +58,9 @@ Page({
         hasPrevious: siblingIndex > 0,
         hasNext: siblingIndex < content.characters.length - 1,
         favorite: loadProfile().favorites.includes(character.id),
+        masteryCount: masteryQuestionsFor(character).length,
         loading: false,
       });
-      this.clearWriting();
     } catch (error) {
       this.setData({ loading: false, error: error instanceof Error ? error.message : "识字卡加载失败" });
     }
@@ -87,6 +104,14 @@ Page({
   startPractice() {
     wx.navigateTo({ url: `/pages/practice/index?track=words&lessonId=${this.data.lessonId}&characterId=${this.data.characterId}` });
   },
+  openReader() {
+    wx.navigateTo({ url: `/pages/reader/index?lessonId=${this.data.lessonId}` });
+  },
+  goBack() {
+    wx.navigateBack({ fail: () => wx.switchTab({ url: "/pages/lessons/index" }) });
+  },
+  openDrawer() { this.setData({ drawerOpen: true }); },
+  closeDrawer() { this.setData({ drawerOpen: false }); },
   openComponent(event: WechatMiniprogram.BaseEvent) {
     const glyph = event.currentTarget.dataset.glyph as string;
     const component = componentIndex.find((item) => item.glyph === glyph || item.title === glyph);
@@ -100,33 +125,5 @@ Page({
     audio = null;
     this.setData({ characterId: character.id, playing: false });
     void this.loadCharacter();
-  },
-  writingStart(event: WechatMiniprogram.TouchEvent) {
-    const point = event.touches[0] as WechatMiniprogram.TouchDetail & { x?: number; y?: number };
-    const x = point.x ?? point.clientX;
-    const y = point.y ?? point.clientY;
-    const context = wx.createCanvasContext("writingCanvas", this);
-    context.setStrokeStyle("#27251f");
-    context.setLineWidth(9);
-    context.setLineCap("round");
-    context.setLineJoin("round");
-    context.moveTo(x, y);
-    (this as unknown as { writingContext?: WechatMiniprogram.CanvasContext }).writingContext = context;
-  },
-  writingMove(event: WechatMiniprogram.TouchEvent) {
-    const context = (this as unknown as { writingContext?: WechatMiniprogram.CanvasContext }).writingContext;
-    const point = event.touches[0] as WechatMiniprogram.TouchDetail & { x?: number; y?: number };
-    if (!context || !point) return;
-    const x = point.x ?? point.clientX;
-    const y = point.y ?? point.clientY;
-    context.lineTo(x, y);
-    context.stroke();
-    context.draw(true);
-    context.moveTo(x, y);
-  },
-  clearWriting() {
-    const context = wx.createCanvasContext("writingCanvas", this);
-    context.clearRect(0, 0, 1000, 1000);
-    context.draw();
   },
 });

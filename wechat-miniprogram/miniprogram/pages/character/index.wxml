@@ -1,62 +1,57 @@
-<view class="page paper-texture">
-  <view wx:if="{{loading}}" class="skeleton"></view>
-  <view wx:elif="{{error}}" class="card empty"><view>{{error}}</view><button class="secondary-button retry" bindtap="retry">重新加载</button></view>
-  <block wx:elif="{{character}}">
-    <view class="character-hero card">
-      <view class="hero-top">
-        <text class="pill">{{character.curriculumRole === 'write' ? '写字表' : character.curriculumRole === 'recognize' ? '识字表' : '拓展学习'}}</text>
-        <button class="favorite {{favorite ? 'active' : ''}}" bindtap="toggleFavorite">{{favorite ? '★' : '☆'}}</button>
-      </view>
-      <view class="hero-body">
-        <view class="hanzi-box"><view class="grid-line horizontal"></view><view class="grid-line vertical"></view><text>{{character.hanzi}}</text></view>
-        <view class="hero-detail">
-          <view class="pinyin">{{character.pinyin}}</view>
-          <view class="word">{{character.word}}</view>
-          <view class="type">{{character.charType}} · {{character.decomposition}}</view>
-          <button class="audio-button" bindtap="playNarration">{{playing ? '暂停范读' : '听范读'}}</button>
+<view class="study-shell">
+  <view class="study-topbar" style="height: {{navHeight}}px; padding-top: {{navTop}}px; padding-right: {{capsuleInset}}px;">
+    <button bindtap="goBack">‹</button>
+    <view class="breadcrumb"><text>{{character.word}}</text><i></i><text>{{character.word}}</text></view>
+    <button class="favorite {{favorite ? 'active' : ''}}" bindtap="toggleFavorite">{{favorite ? '★' : '☆'}}</button>
+  </view>
+
+  <view wx:if="{{loading}}" class="loading-wrap"><view class="skeleton"></view></view>
+  <view wx:elif="{{error}}" class="error-wrap"><view>{{error}}</view><button bindtap="retry">重新加载</button></view>
+  <view wx:elif="{{character}}" class="study-body">
+    <view class="study-scene" style="width: {{sceneSize}}px; height: {{sceneSize}}px;">
+      <image wx:if="{{character.media.visual}}" src="{{character.media.visual.src}}" mode="aspectFit" />
+      <view wx:else class="scene-fallback">{{character.hanzi}}</view>
+      <view class="scene-fade"></view>
+      <view class="scene-caption">✣　画面本身就是字形</view>
+    </view>
+
+    <view class="study-furniture">
+      <view class="study-identity">
+        <view class="study-glyph">{{character.hanzi}}</view>
+        <view class="identity-copy">
+          <view class="reading"><strong>{{character.pinyin}}</strong><button bindtap="playNarration">{{playing ? 'Ⅱ' : '♪'}}</button></view>
+          <view class="tags"><text class="role">{{character.curriculumRole === 'write' ? '课内会写' : character.curriculumRole === 'recognize' ? '课内会认' : '拓展学习'}}</text><text>{{character.charType}}</text><text>{{character.decomposition}}</text></view>
         </view>
       </view>
+      <view class="study-meaning">本课词语「{{character.word}}」：{{character.originalMeaning}}</view>
+
+      <view class="study-launch">
+        <button class="listen-button" bindtap="playNarration"><view class="equalizer"><i></i><i></i><i></i><i></i><i></i></view><view><strong>{{playing ? '暂停字义讲解' : '听字义讲解'}}</strong><text>{{character.media.narration.transcript.length}} 字 · 留在画面边看边听</text></view><text>→</text></button>
+        <button class="action-wide" bindtap="openDrawer"><text>✣</text><view><strong>物象四步</strong><text>看意象 · 找部首 · 找部件 · 合成字</text></view><text>›</text></button>
+        <view class="action-grid">
+          <button class="action primary" bindtap="startPractice"><text>▱</text><view><strong>单字过关</strong><text>0 / {{masteryCount}} 题</text></view></button>
+          <button class="action" bindtap="openReader"><text>♩</text><view><strong>朗读录音</strong><text>读一遍本课词语</text></view></button>
+        </view>
+        <button class="detail-handle" bindtap="openDrawer">部件来历、字形演变与语境　›</button>
+      </view>
     </view>
+  </view>
 
-    <image wx:if="{{character.media.visual}}" class="visual card" src="{{character.media.visual.src}}" mode="widthFix" />
-
-    <view class="section card">
-      <text class="eyebrow">从画面记住字</text>
-      <view class="section-title">{{character.media.visual.label || character.word}}</view>
-      <view class="section-copy">{{character.media.scene.scene}}</view>
-      <view class="cue-list"><view wx:for="{{character.media.scene.cues}}" wx:key="*this"><text>{{index + 1}}</text><view>{{item}}</view></view></view>
-    </view>
-
-    <view class="section card">
-      <text class="eyebrow">字义与语境</text>
-      <view class="meaning">{{character.originalMeaning}}</view>
-      <view class="section-copy">{{character.description}}</view>
-      <view wx:if="{{character.originalText}}" class="context-quote">{{character.originalText}}</view>
-    </view>
-
-    <view wx:if="{{character.parts.length}}" class="section card">
-      <text class="eyebrow">拆开看部件</text>
+  <block wx:if="{{character}}">
+    <view wx:if="{{drawerOpen}}" class="drawer-backdrop" bindtap="closeDrawer" catchtouchmove="closeDrawer"></view>
+    <view class="details {{drawerOpen ? 'open' : ''}}">
+      <view class="drawer-grip" bindtap="closeDrawer"></view>
+      <view class="drawer-title">部件来历</view>
       <view class="part-list">
-        <view wx:for="{{character.parts}}" wx:key="char" class="part" data-glyph="{{item.char}}" bindtap="openComponent">
+        <view wx:for="{{character.parts}}" wx:key="char" class="part {{item.radical ? 'radical' : 'component'}}" data-glyph="{{item.char}}" bindtap="openComponent">
           <view class="part-glyph {{item.radical ? 'radical' : ''}}">{{item.char}}</view>
-          <view><strong>{{item.radical ? '表意部首' : (item.role || '字形部件')}}</strong><text>{{item.functionText || '点开去部件馆查看更多例字'}}</text></view>
+          <view><strong>{{item.char}} · {{item.radical ? '表意部首' : '形音部件'}}</strong><text>{{item.functionText || '点开去部件馆查看更多例字'}}</text></view>
         </view>
       </view>
+      <view class="drawer-title">字形演变</view>
+      <view class="drawer-note"><text>⌁</text><view><strong>本字暂无可靠的古文字图版</strong><text>保留现代楷书，不虚构演变形态。</text></view></view>
+      <view class="drawer-title">本课主题语境</view>
+      <view class="drawer-theme">{{character.originalText || character.originalMeaning}}</view>
     </view>
-
-    <view class="section card writing-section">
-      <text class="eyebrow">亲手写一遍</text>
-      <view class="writing-wrap">
-        <view class="writing-guide">{{character.hanzi}}</view>
-        <canvas class="writing-canvas" canvas-id="writingCanvas" disable-scroll="true" bindtouchstart="writingStart" bindtouchmove="writingMove"></canvas>
-      </view>
-      <button class="ghost-button clear" bindtap="clearWriting">清空重写</button>
-    </view>
-
-    <view class="button-row sibling-row">
-      <button class="ghost-button" disabled="{{!hasPrevious}}" data-offset="-1" bindtap="goSibling">上一个字</button>
-      <button class="ghost-button" disabled="{{!hasNext}}" data-offset="1" bindtap="goSibling">下一个字</button>
-    </view>
-    <button class="primary-button practice" bindtap="startPractice">开始“{{character.hanzi}}”的完整练习</button>
   </block>
 </view>

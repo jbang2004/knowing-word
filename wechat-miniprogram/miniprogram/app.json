@@ -2,6 +2,7 @@
   "pages": [
     "pages/home/index",
     "pages/lessons/index",
+    "pages/practice-hub/index",
     "pages/lesson/index",
     "pages/character/index",
     "pages/practice/index",
@@ -24,9 +25,9 @@
     "backgroundColor": "#FFFFFF",
     "borderStyle": "white",
     "list": [
-      { "pagePath": "pages/home/index", "text": "今日" },
+      { "pagePath": "pages/home/index", "text": "学习" },
       { "pagePath": "pages/lessons/index", "text": "课本" },
-      { "pagePath": "pages/records/index", "text": "记录" },
+      { "pagePath": "pages/practice-hub/index", "text": "练习" },
       { "pagePath": "pages/account/index", "text": "我的" }
     ]
   },

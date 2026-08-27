@@ -1,38 +1,63 @@
-<view class="page paper-texture">
-  <view class="lesson-hero card">
-    <image wx:if="{{lesson.visual.src}}" src="{{lesson.visual.src}}" mode="aspectFill" class="hero-image" />
-    <view class="hero-overlay"></view>
-    <view class="hero-copy">
-      <text class="pill">第 {{lesson.position}} 课 · {{lesson.mode}}</text>
-      <view class="hero-title">{{lesson.title}}</view>
-      <view class="hero-context">{{lesson.context}}</view>
+<view class="lesson-page">
+  <view class="lesson-topbar" style="height: {{navHeight}}px; padding-top: {{navTop}}px; padding-right: {{capsuleInset}}px;">
+    <button bindtap="goBack">‹</button><view>{{lesson.title}}</view>
+  </view>
+
+  <view class="lesson-tabs">
+    <button class="{{activeView === 'guide' ? 'active' : ''}}" data-view="guide" bindtap="switchView"><text>▣</text><strong>课文导读</strong></button>
+    <button class="{{activeView === 'words' ? 'active' : ''}}" data-view="words" bindtap="switchView"><text>☷</text><strong>生字表</strong></button>
+    <button class="{{activeView === 'practice' ? 'active' : ''}}" data-view="practice" bindtap="switchView"><text>⌘</text><strong>复习巩固</strong></button>
+  </view>
+
+  <view wx:if="{{loading}}" class="loading-wrap"><view class="skeleton"></view></view>
+  <view wx:elif="{{error}}" class="error-wrap"><view>{{error}}</view><button bindtap="retry">重新加载</button></view>
+
+  <view wx:elif="{{activeView === 'guide'}}" class="guide-layout">
+    <view class="guide-paper">
+      <view class="guide-masthead">
+        <view class="accent"></view>
+        <text>{{document.eyebrow || ('《' + lesson.title + '》课文导读')}}</text>
+        <view class="guide-title">{{document.title || ('读《' + lesson.title + '》')}}</view>
+        <view class="guide-dek">{{document.dek || ('带着三条线索打开课本，把本课 ' + total + ' 个重点词放回真实阅读过程。')}}</view>
+        <view class="source-note"><text>✣</text><view><strong>{{document.rights.label || '原创课文导读'}}</strong><text>{{document.rights.note || '围绕阅读方法独立编写，不展示教材正文，也不提供课文替代文本。'}}</text></view></view>
+      </view>
+
+      <view class="guide-body">
+        <view wx:if="{{document.intro}}" class="guide-intro"><text>先带着问题读</text><view>{{document.intro}}</view><small>▣　请打开纸质课本第 {{lesson.position}} 课</small></view>
+        <view wx:for="{{guideSections}}" wx:key="id" class="guide-section">
+          <view class="section-head"><i>{{item.number || index + 1}}</i><strong>{{item.title}}</strong></view>
+          <view wx:for="{{item.paragraphs}}" wx:for-item="paragraph" wx:key="id" class="guide-paragraph">{{paragraph.text}}</view>
+          <view wx:if="{{item.question}}" class="guide-question"><text>想一想</text><view>{{item.question}}</view></view>
+          <view wx:if="{{item.focusCharacters.length}}" class="focus-area">
+            <view class="focus-head"><strong>本段重点词</strong><text>点击彩色生字进入字卡</text></view>
+            <view class="focus-grid">
+              <button wx:for="{{item.focusCharacters}}" wx:for-item="character" wx:key="id" class="focus-word {{character.done ? 'done' : ''}}" data-id="{{character.id}}" bindtap="openCharacter"><strong>{{character.word}}</strong><text>{{character.pinyin}}</text><i>{{character.done ? '✓' : '›'}}</i></button>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="guide-finish"><view>读</view><view><text>本课识字进度</text><strong>已经认识 {{completed}} / {{total}} 个字</strong><small>完成导读后，请回到纸质课本阅读全文，再用字卡和练习巩固。</small></view><button data-view="words" bindtap="switchView">查看生字表</button><button class="primary" data-view="practice" bindtap="switchView">按需复习　→</button></view>
     </view>
   </view>
 
-  <view wx:if="{{lesson.learningPath.length}}" class="section card">
-    <view class="section-title">这节课怎么学</view>
-    <view class="path-list"><view wx:for="{{lesson.learningPath}}" wx:key="*this" class="path-item"><text>{{index + 1}}</text><view>{{item}}</view></view></view>
+  <view wx:elif="{{activeView === 'words'}}" class="words-panel">
+    <text class="panel-kicker">第 {{lesson.position}} 课 · 生字表</text><view class="panel-title">{{lesson.title}}</view><view class="panel-copy">{{lesson.skimming ? '会认字' : '识字写字表'}} · {{completed}} / {{total}} 个课内字已完成单字过关</view>
+    <view class="character-grid"><button wx:for="{{characters}}" wx:key="id" class="character-card {{item.done ? 'done' : ''}}" data-id="{{item.id}}" bindtap="openCharacter"><text>{{item.roleLabel}}</text><strong>{{item.hanzi}}</strong><small>{{item.pinyin}} · {{item.word}}</small><i>{{item.done ? '✓' : '›'}}</i></button></view>
   </view>
 
-  <view class="progress-card card">
-    <view><text>生字进度</text><strong>{{completed}} / {{total}}</strong></view>
-    <view class="progress-track"><view class="progress-value" style="width: {{percent}}%"></view></view>
+  <view wx:else class="practice-panel">
+    <text class="panel-kicker">本课复习方式</text><view class="panel-title">完成单字过关后，按需要选择专项复习</view><view class="panel-copy">四条路线共用同一套学习记录，可以随时切换。</view>
+    <button class="practice-route action" data-track="words" bindtap="startPractice"><i>字</i><view><strong>单字过关</strong><text>字义、读音、语境与独立提取</text></view><text>›</text></button>
+    <button class="practice-route part" data-track="split" bindtap="startPractice"><i>拆</i><view><strong>拆字复习</strong><text>把部件拆开，再按位置搭回来</text></view><text>›</text></button>
+    <button class="practice-route radical" data-track="honglan" bindtap="startPractice"><i>部</i><view><strong>部首辨认</strong><text>分清表意部首与其他部件</text></view><text>›</text></button>
+    <button class="practice-route wrong" data-track="structure" bindtap="startPractice"><i>格</i><view><strong>结构复习</strong><text>判断汉字的空间结构</text></view><text>›</text></button>
   </view>
 
-  <view wx:if="{{loading}}" class="skeleton section"></view>
-  <view wx:elif="{{error}}" class="card empty"><view>{{error}}</view><button class="secondary-button retry" bindtap="retry">重新加载</button></view>
-  <view wx:else class="character-grid">
-    <view wx:for="{{characters}}" wx:key="id" class="character-card card {{item.done ? 'is-done' : ''}}" data-id="{{item.id}}" bindtap="openCharacter">
-      <text class="role">{{item.roleLabel}}</text>
-      <view class="hanzi">{{item.hanzi}}</view>
-      <view class="pinyin">{{item.pinyin}}</view>
-      <view class="word">{{item.word}}</view>
-      <view wx:if="{{item.done}}" class="done">✓</view>
-    </view>
-  </view>
-
-  <view class="sticky-actions">
-    <button class="secondary-button" bindtap="openReader">课文朗读</button>
-    <button class="primary-button" bindtap="startPractice">{{completed ? '继续识字' : '开始识字'}}</button>
+  <view class="lesson-progress-pill"><view><text>本课重点字</text><strong>{{completed}}/{{total}} 已完成</strong></view><text>⌄</text></view>
+  <view class="lesson-bottom-nav">
+    <navigator open-type="switchTab" url="/pages/home/index" class="nav-item"><view class="nav-icon icon-home"></view><text>学习</text></navigator>
+    <navigator open-type="switchTab" url="/pages/lessons/index" class="nav-item active"><view class="nav-icon icon-book"></view><text>课本</text></navigator>
+    <navigator open-type="switchTab" url="/pages/practice-hub/index" class="nav-item"><view class="nav-icon icon-grid"></view><text>练习</text></navigator>
+    <navigator open-type="switchTab" url="/pages/account/index" class="nav-item"><view class="nav-icon icon-person"></view><text>我的</text></navigator>
   </view>
 </view>

@@ -1,16 +1,23 @@
-<view class="page paper-texture">
-  <text class="eyebrow">统编版 · 五年级上册</text>
-  <view class="title">二十六课，一条学习路</view>
-  <view class="subtitle">沿着课文情境认识生字，一课一课积累自己的学习地图。</view>
-  <view class="lesson-list">
-    <view wx:for="{{lessons}}" wx:key="id" class="lesson-row card" data-id="{{item.id}}" bindtap="openLesson">
-      <image wx:if="{{item.cover}}" class="cover" src="{{item.cover}}" mode="aspectFill" lazy-load="true" />
-      <view class="lesson-info">
-        <view class="meta"><text>第 {{item.position}} 课</text><text class="status status-{{item.percent}}">{{item.status}}</text></view>
-        <view class="name">{{item.title}}</view>
-        <view class="context">{{item.context}}</view>
-        <view class="progress-row"><view class="progress-track"><view class="progress-value" style="width: {{item.percent}}%"></view></view><text>{{item.count}} / {{item.total}}</text></view>
+<view class="page course-page" style="padding-top: {{contentTop}}px;">
+  <view class="page-heading">
+    <text class="kicker">课程地图</text>
+    <view class="heading-title">语文 · 五年级上册</view>
+    <view class="heading-copy">新版五年级上册共 26 课：按官方会认、会写和多音字清单学习，再用专项关卡反复巩固。</view>
+  </view>
+  <scroll-view class="unit-nav" scroll-x enhanced show-scrollbar="false">
+    <view class="unit-nav-inner"><view wx:for="{{units}}" wx:key="id" data-id="{{item.id}}" bindtap="jumpUnit">{{item.label}}</view></view>
+  </scroll-view>
+  <view class="course-units">
+    <view wx:for="{{units}}" wx:key="id" wx:for-item="unit" id="{{unit.id}}" class="course-unit">
+      <view class="unit-head"><view><text>{{unit.label}}</text><strong>第 {{unit.start}}—{{unit.end}} 课</strong></view><text>已认识 {{unit.completed}}/{{unit.total}} 个字</text></view>
+      <view class="lesson-route">
+        <view wx:for="{{unit.lessons}}" wx:key="id" wx:for-item="lesson" class="lesson-card {{lesson.skimming ? 'skimming' : ''}}" data-id="{{lesson.id}}" bindtap="openLesson">
+          <view class="route-scene"><image src="{{lesson.cover}}" mode="aspectFill" lazy-load="true" /><view class="glyph-cloud"><text wx:for="{{lesson.glyphs}}" wx:key="*this" wx:for-item="glyph">{{glyph}}</text></view></view>
+          <view class="route-copy"><strong>{{lesson.title}}</strong><view><text>课内 {{lesson.total}} 字</text><text>已完成 {{lesson.count}}</text></view></view>
+          <view class="route-arrow">→</view>
+        </view>
       </view>
     </view>
   </view>
+  <view class="method-card"><strong>26</strong><text>精读课分会认、会写与多音字；略读课以会认和理解为主。教材正文不复制，所有讲解和练习都经过重新组织。</text></view>
 </view>

@@ -7,12 +7,13 @@ const root = new URL("../wechat-miniprogram/", import.meta.url);
 
 test("native mini-program uses a bounded set of page templates for the complete catalog", async () => {
   const app = JSON.parse(await readFile(new URL("miniprogram/app.json", root), "utf8"));
-  assert.equal(app.pages.length, 9);
+  assert.equal(app.pages.length, 10);
   assert.equal(lessons.length, 26);
   assert.equal(characters.length, 430);
   assert.equal(components.length, 401);
   assert.ok(app.pages.includes("pages/character/index"));
   assert.ok(app.pages.includes("pages/practice/index"));
+  assert.ok(app.pages.includes("pages/practice-hub/index"));
 
   for (const page of app.pages) {
     const template = await readFile(new URL(`miniprogram/${page}.wxml`, root), "utf8");
@@ -44,6 +45,9 @@ test("native mini-program shares the Web visual language instead of the retired 
   const globalStyles = await readFile(new URL("miniprogram/app.wxss", root), "utf8");
   const homeTemplate = await readFile(new URL("miniprogram/pages/home/index.wxml", root), "utf8");
   const homeStyles = await readFile(new URL("miniprogram/pages/home/index.wxss", root), "utf8");
+  const lessonTemplate = await readFile(new URL("miniprogram/pages/lesson/index.wxml", root), "utf8");
+  const characterTemplate = await readFile(new URL("miniprogram/pages/character/index.wxml", root), "utf8");
+  const practiceHubTemplate = await readFile(new URL("miniprogram/pages/practice-hub/index.wxml", root), "utf8");
   const tabTemplate = await readFile(new URL("miniprogram/custom-tab-bar/index.wxml", root), "utf8");
 
   assert.equal(app.tabBar.custom, true);
@@ -54,6 +58,12 @@ test("native mini-program shares the Web visual language instead of the retired 
   assert.doesNotMatch(globalStyles, /#f5eedd|#a6472b/iu);
   assert.match(homeTemplate, /class="lesson-banner"/u);
   assert.match(homeTemplate, /class="path-map"/u);
-  assert.match(homeStyles, /box-shadow:\s*0 10rpx 0 var\(--action-deep\)/u);
+  assert.match(homeStyles, /box-shadow:\s*0 5px 0 var\(--action-deep\)/u);
+  assert.match(lessonTemplate, /课文导读/u);
+  assert.match(lessonTemplate, /生字表/u);
+  assert.match(lessonTemplate, /复习巩固/u);
+  assert.match(characterTemplate, /class="details/u);
+  assert.match(characterTemplate, /\{\{masteryCount\}\}/u);
+  assert.match(practiceHubTemplate, /class="route-card/u);
   assert.match(tabTemplate, /icon-\{\{item\.icon\}\}/u);
 });

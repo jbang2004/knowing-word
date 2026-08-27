@@ -1,0 +1,29 @@
+<view class="page practice-hub-page" style="padding-top: {{contentTop}}px;">
+  <view class="page-heading">
+    <view class="heading-title">先逐字过关，再按需要复习</view>
+  </view>
+
+  <view class="context-band">
+    <view>
+      <text>当前建议</text>
+      <view class="context-title">练习第 {{lesson.position}} 课《{{lesson.title}}》</view>
+      <view class="context-copy">本课识字已完成 {{lessonCompleted}}/{{lessonTotal}} 个；专项只会出现已经学过的字。</view>
+      <button bindtap="continueRecommended">继续识字 · {{nextCharacter.hanzi}}　→</button>
+    </view>
+    <view class="context-glyph">{{nextCharacter.hanzi}}</view>
+  </view>
+
+  <view class="route-grid">
+    <view wx:for="{{routes}}" wx:key="id" class="route-card {{item.tone}}">
+      <view class="route-top"><view class="route-glyph">{{item.glyph}}</view><view><text>{{item.eyebrow}}</text><strong>{{item.label}}</strong></view><text>{{item.number}}</text></view>
+      <view class="route-progress"><text>本课 {{item.lessonCompleted}}/{{item.lessonTotal}}</text><text>全册 {{item.totalCompleted}}/{{item.total}}</text></view>
+      <view class="route-actions"><button data-track="{{item.id}}" bindtap="openRoute">{{item.action}}　→</button><text bindtap="openLessons">全部课程</text></view>
+    </view>
+  </view>
+
+  <view class="sequence-note">
+    <view class="spark">✦</view><view><text>可选复习</text><strong>哪里还不牢，就从哪里再练一次。</strong></view>
+    <view class="sequence">完整过关　→　结构复习　→　拆字复习　→　红蓝复习　→　自由朗读</view>
+    <button bindtap="openReader">读　自由朗读</button>
+  </view>
+</view>

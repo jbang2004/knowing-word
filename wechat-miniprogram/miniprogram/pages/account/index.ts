@@ -11,14 +11,22 @@ function accountView() {
     initial: (profile.name || "学").slice(0, 1),
     connected: session.connected,
     completed: profile.completed.words.length,
-    total: characterIndex.filter((character) => character.ready).length,
+    total: characterIndex.filter((character) => character.ready && character.primary).length,
     components: profile.learnedComponents.length,
     favorites: profile.favorites.length,
+    grade: profile.grade,
+    theme: profile.theme,
   };
 }
 
 Page({
-  data: accountView(),
+  data: { ...accountView(), contentTop: 70 },
+  onLoad() {
+    const menu = wx.getMenuButtonBoundingClientRect();
+    const info = wx.getWindowInfo();
+    const top = Math.max(info.statusBarHeight ?? 0, menu.top || 0);
+    this.setData({ contentTop: top + Math.max(44, menu.height || 0) + 18 });
+  },
   onShow() {
     this.getTabBar?.()?.setData({ selected: 3 });
     this.setData(accountView());
@@ -31,6 +39,14 @@ Page({
     saveProfile(profile, true);
     this.setData(accountView());
     wx.showToast({ title: "昵称已保存", icon: "success" });
+  },
+  toggleTheme() {
+    const profile = loadProfile();
+    profile.theme = profile.theme === "night" ? "light" : "night";
+    profile.preferenceUpdatedAt = { ...profile.preferenceUpdatedAt, theme: new Date().toISOString() };
+    saveProfile(profile, true);
+    this.setData(accountView());
+    wx.showToast({ title: profile.theme === "night" ? "已切换夜读模式" : "已切换日间模式", icon: "none" });
   },
   async reconnect() {
     wx.showLoading({ title: "连接微信同步" });

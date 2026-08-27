@@ -1,26 +1,45 @@
-<view class="page paper-texture">
-  <text class="eyebrow">学习不是打卡数字</text>
-  <view class="title">看见自己积累的证据</view>
-  <view class="summary-grid">
-    <view class="card stat"><strong>{{attempts}}</strong><text>练习次数</text></view>
-    <view class="card stat"><strong>{{readSessions}}</strong><text>朗读次数</text></view>
-    <view class="card stat"><strong>{{days}}</strong><text>学习天数</text></view>
+<view class="records-page" style="padding-top: {{contentTop}}px;">
+  <view class="records-heading"><button bindtap="goBack">‹</button><view>看见自己一步一步学会的过程</view></view>
+
+  <view class="record-stat-row">
+    <view class="achievement"><text>已完成</text><strong>{{completed}}</strong><small>个本关字</small></view>
+    <view><text>累计作答</text><strong>{{attempts}}</strong><small>次</small></view>
+    <view><text>答对次数</text><strong>{{correct}}</strong><small>次</small></view>
   </view>
-  <view class="section card"><view class="section-title">四条路径</view><view class="track-record" wx:for="{{tracks}}" wx:key="id"><text>{{item.label}}</text><strong>{{item.completed}} 个字</strong></view></view>
-  <view class="section card">
-    <view class="section-title">课次进度</view>
-    <block wx:if="{{lessons.length}}">
-      <view class="lesson-record" wx:for="{{lessons}}" wx:key="id" data-id="{{item.id}}" bindtap="openLesson"><view><text>第 {{item.position}} 课 · {{item.title}}</text><strong>{{item.completed}} / {{item.total}}</strong></view><view class="progress-track"><view class="progress-value" style="width: {{item.percent}}%"></view></view></view>
-    </block>
-    <view wx:else class="empty">完成第一个字后，这里会出现你的课次进度。</view>
+
+  <view class="record-tabs">
+    <button wx:for="{{tracks}}" wx:key="id" class="{{item.active ? 'active' : ''}}" data-id="{{item.id}}" bindtap="switchTrack">{{item.label}}</button>
   </view>
-  <view class="section card">
-    <view class="section-title">朗读录音</view>
-    <view wx:if="{{!cloudConnected}}" class="empty">正式微信登录连接后，云端录音会显示在这里。本机学习不受影响。</view>
-    <view wx:elif="{{cloudLoading}}" class="skeleton mini"></view>
-    <block wx:elif="{{recordings.length}}">
-      <view class="recording-row" wx:for="{{recordings}}" wx:key="id"><view><strong>{{item.lessonTitle}}</strong><text>{{item.dateText}} · {{item.byteSizeText}}</text></view><button data-id="{{item.id}}" bindtap="playRecording">{{playingId === item.id ? '停止' : '回听'}}</button></view>
+
+  <view wx:if="{{recentCount}}" class="record-recent">
+    <view class="recent-head"><view><text>最近练习</text><strong>从刚才学到的地方继续</strong></view><text>最近 {{recentCount}} 个字</text></view>
+    <view class="recent-list">
+      <button wx:for="{{recent}}" wx:key="id" data-id="{{item.id}}" data-lesson-id="{{item.lessonId}}" bindtap="openCharacter"><strong>{{item.hanzi}}</strong><view><text>{{item.status}}</text><small>{{item.attempts}} 次作答 · {{item.dateText}}</small></view></button>
+    </view>
+  </view>
+
+  <view class="record-scope-bar">
+    <view><strong>{{activeLessonCount}} 课有记录</strong><text>{{showAllLessons ? ('正在显示全部 ' + allLessonCount + ' 课') : '默认隐藏尚未开始的课次'}}</text></view>
+    <button bindtap="toggleAllLessons">{{showAllLessons ? '只看有记录' : ('显示全部 ' + allLessonCount + ' 课')}}</button>
+  </view>
+
+  <view class="record-lessons">
+    <block wx:if="{{hasLessons}}">
+      <view wx:for="{{visibleLessons}}" wx:key="id" class="record-lesson {{item.active ? '' : 'empty-lesson'}}">
+        <view class="lesson-head"><view><text>第 {{item.position}} 课</text><strong>{{item.title}}</strong></view><text>{{item.completed}}/{{item.total}} 已完成</text></view>
+        <view wx:if="{{item.recorded.length}}" class="lesson-characters">
+          <button wx:for="{{item.recorded}}" wx:for-item="character" wx:key="id" data-id="{{character.id}}" data-lesson-id="{{character.lessonId}}" bindtap="openCharacter"><strong>{{character.hanzi}}</strong><view><text>{{character.status}}</text><small>{{character.attempts}} 次作答</small></view><text>查看 →</text></button>
+        </view>
+        <view wx:else class="lesson-empty">尚未开始本路线</view>
+      </view>
     </block>
-    <view wx:else class="empty">完成一次朗读录音后，这里会保留最近 12 条。</view>
+    <view wx:else class="record-zero-state"><text>✦</text><strong>还没有{{activeTrackLabel}}记录</strong><view>完成第一次闯关后，最近练习与课次记录会自动整理在这里。</view><button bindtap="startPractice">开始第一次练习</button></view>
+  </view>
+
+  <view class="records-bottom-nav">
+    <navigator class="nav-item" open-type="switchTab" url="/pages/home/index"><view class="nav-icon icon-home"></view><text>学习</text></navigator>
+    <navigator class="nav-item" open-type="switchTab" url="/pages/lessons/index"><view class="nav-icon icon-book"></view><text>课本</text></navigator>
+    <navigator class="nav-item" open-type="switchTab" url="/pages/practice-hub/index"><view class="nav-icon icon-grid"></view><text>练习</text></navigator>
+    <navigator class="nav-item active" open-type="switchTab" url="/pages/account/index"><view class="nav-icon icon-person"></view><text>我的</text></navigator>
   </view>
 </view>

@@ -1,87 +1,119 @@
-import { apiRequest, downloadRecording } from "../../services/api";
 import { characterIndex, lessonIndex } from "../../services/catalog";
 import { loadProfile, syncProfile } from "../../services/profile";
-import { getSessionStatus } from "../../services/session";
 import type { StudyProfile, TrackId } from "../../types/models";
 
-let recordingPlayer: WechatMiniprogram.InnerAudioContext | null = null;
-const trackLabels: Record<TrackId, string> = { words: "完整识字", split: "拆字复习", honglan: "部首辨认", structure: "结构复习" };
+const trackLabels: Record<TrackId, string> = {
+  words: "识字",
+  split: "拆字复习",
+  honglan: "红蓝复习",
+  structure: "结构复习",
+};
+const trackIds = Object.keys(trackLabels) as TrackId[];
 
-function summary(profile: StudyProfile) {
-  const tracks = (Object.keys(trackLabels) as TrackId[]).map((id) => ({ id, label: trackLabels[id], completed: profile.completed[id].length }));
-  const attempts = Object.values(profile.daily).reduce((sum, day) => sum + day.attempts, 0);
-  const readSessions = Object.values(profile.daily).reduce((sum, day) => sum + day.readSessions, 0);
-  const days = Object.keys(profile.daily).length;
-  const completedWords = new Set(profile.completed.words);
-  const lessons = lessonIndex.map((lesson) => {
-    const candidates = characterIndex.filter((character) => character.lessonId === lesson.id && character.ready);
-    const completed = candidates.filter((character) => completedWords.has(character.id)).length;
-    return { id: lesson.id, title: lesson.title, position: lesson.position, completed, total: candidates.length, percent: candidates.length ? Math.round(completed / candidates.length * 100) : 0 };
-  }).filter((lesson) => lesson.completed > 0);
-  return { tracks, attempts, readSessions, days, lessons };
+function formatDate(value: string) {
+  const date = new Date(value);
+  return `${date.getMonth() + 1}/${date.getDate()} ${String(date.getHours()).padStart(2, "0")}:${String(date.getMinutes()).padStart(2, "0")}`;
+}
+
+function recordView(profile: StudyProfile, track: TrackId, showAllLessons = false) {
+  const candidates = characterIndex.filter((character) => character.ready && character.primary);
+  const candidateIds = new Set(candidates.map((character) => character.id));
+  const answersByCharacter = new Map<string, Array<StudyProfile["answers"][string]>>();
+  const marker = `-${track}-`;
+
+  for (const [questionId, answer] of Object.entries(profile.answers)) {
+    const markerIndex = questionId.indexOf(marker);
+    if (markerIndex < 0) continue;
+    const characterId = questionId.slice(0, markerIndex);
+    if (!candidateIds.has(characterId)) continue;
+    answersByCharacter.set(characterId, [...(answersByCharacter.get(characterId) ?? []), answer]);
+  }
+
+  const allAnswers = [...answersByCharacter.values()].flat();
+  const attempts = allAnswers.reduce((sum, answer) => sum + answer.attempts, 0);
+  const correct = allAnswers.reduce((sum, answer) => sum + answer.correct, 0);
+  const completedIds = new Set(profile.completed[track]);
+  const recent = candidates
+    .map((character) => {
+      const answers = answersByCharacter.get(character.id) ?? [];
+      const latestAt = answers.reduce((latest, answer) => answer.lastAt > latest ? answer.lastAt : latest, "");
+      return {
+        id: character.id,
+        lessonId: character.lessonId,
+        hanzi: character.hanzi,
+        status: completedIds.has(character.id) ? "已完成" : "正在练习",
+        attempts: answers.reduce((sum, answer) => sum + answer.attempts, 0),
+        latestAt,
+        dateText: latestAt ? formatDate(latestAt) : "",
+      };
+    })
+    .filter((item) => item.latestAt)
+    .sort((left, right) => right.latestAt.localeCompare(left.latestAt))
+    .slice(0, 6);
+
+  const allLessons = lessonIndex.map((lesson) => {
+    const lessonCandidates = candidates.filter((character) => character.lessonId === lesson.id);
+    const recorded = lessonCandidates.filter((character) => answersByCharacter.has(character.id)).map((character) => ({
+      id: character.id,
+      lessonId: lesson.id,
+      hanzi: character.hanzi,
+      status: completedIds.has(character.id) ? "已完成" : "正在练习",
+      attempts: (answersByCharacter.get(character.id) ?? []).reduce((sum, answer) => sum + answer.attempts, 0),
+    }));
+    const completed = lessonCandidates.filter((character) => completedIds.has(character.id)).length;
+    return { id: lesson.id, title: lesson.title, position: lesson.position, completed, total: lessonCandidates.length, recorded, active: recorded.length > 0 || completed > 0 };
+  });
+  const activeLessons = allLessons.filter((lesson) => lesson.active);
+  const visibleLessons = showAllLessons ? allLessons : activeLessons;
+
+  return {
+    activeTrack: track,
+    activeTrackLabel: trackLabels[track],
+    tracks: trackIds.map((id) => ({ id, label: trackLabels[id], active: id === track })),
+    completed: profile.completed[track].length,
+    attempts,
+    correct,
+    recent,
+    recentCount: recent.length,
+    activeLessonCount: activeLessons.length,
+    allLessonCount: allLessons.length,
+    showAllLessons,
+    visibleLessons,
+    hasLessons: visibleLessons.length > 0,
+  };
 }
 
 Page({
-  data: {
-    ...summary(loadProfile()),
-    recordings: [] as Array<{ id: string; lessonId: string; lessonTitle: string; byteSizeText: string; dateText: string }>,
-    cloudConnected: getSessionStatus().connected,
-    cloudLoading: false,
-    playingId: "",
+  data: { contentTop: 70, ...recordView(loadProfile(), "words") },
+  onLoad() {
+    const menu = wx.getMenuButtonBoundingClientRect();
+    const info = wx.getWindowInfo();
+    const top = Math.max(info.statusBarHeight ?? 0, menu.top || 0);
+    this.setData({ contentTop: top + Math.max(44, menu.height || 0) + 10 });
   },
   onShow() {
-    this.getTabBar?.()?.setData({ selected: 2 });
-    this.setData({ ...summary(loadProfile()), cloudConnected: getSessionStatus().connected });
-    void this.loadRecordings();
+    this.setData(recordView(loadProfile(), this.data.activeTrack, this.data.showAllLessons));
   },
-  onUnload() { recordingPlayer?.destroy(); recordingPlayer = null; },
   async onPullDownRefresh() {
     const profile = await syncProfile();
-    this.setData(summary(profile));
-    await this.loadRecordings();
+    this.setData(recordView(profile, this.data.activeTrack, this.data.showAllLessons));
     wx.stopPullDownRefresh();
   },
-  async loadRecordings() {
-    if (!getSessionStatus().connected) return;
-    this.setData({ cloudLoading: true });
-    try {
-      const response = await apiRequest<{ recordings: Array<{ id: string; lessonId: string; byteSize: number; createdAt: string }> }>("/api/recordings");
-      this.setData({
-        recordings: response.recordings.map((recording) => ({
-          ...recording,
-          lessonTitle: lessonIndex.find((lesson) => lesson.id === recording.lessonId)?.title ?? recording.lessonId,
-          byteSizeText: `${Math.max(1, Math.round(recording.byteSize / 1024))} KB`,
-          dateText: new Date(recording.createdAt).toLocaleString("zh-CN", { month: "numeric", day: "numeric", hour: "2-digit", minute: "2-digit" }),
-        })),
-      });
-    } catch (error) {
-      console.info("Cloud recordings unavailable", error);
-    } finally {
-      this.setData({ cloudLoading: false });
-    }
+  goBack() { wx.navigateBack({ fail: () => wx.switchTab({ url: "/pages/account/index" }) }); },
+  switchTrack(event: WechatMiniprogram.BaseEvent) {
+    const track = event.currentTarget.dataset.id as TrackId;
+    this.setData(recordView(loadProfile(), track, false));
   },
-  openLesson(event: WechatMiniprogram.BaseEvent) { wx.navigateTo({ url: `/pages/lesson/index?lessonId=${event.currentTarget.dataset.id}` }); },
-  async playRecording(event: WechatMiniprogram.BaseEvent) {
-    const id = event.currentTarget.dataset.id as string;
-    if (recordingPlayer && this.data.playingId === id) {
-      recordingPlayer.stop();
-      return;
-    }
-    wx.showLoading({ title: "正在取回录音" });
-    try {
-      const path = await downloadRecording(id);
-      recordingPlayer?.destroy();
-      recordingPlayer = wx.createInnerAudioContext();
-      recordingPlayer.src = path;
-      recordingPlayer.onPlay(() => this.setData({ playingId: id }));
-      recordingPlayer.onEnded(() => this.setData({ playingId: "" }));
-      recordingPlayer.onStop(() => this.setData({ playingId: "" }));
-      recordingPlayer.onError(() => { this.setData({ playingId: "" }); wx.showToast({ title: "录音无法播放", icon: "none" }); });
-      recordingPlayer.play();
-    } catch (error) {
-      wx.showToast({ title: error instanceof Error ? error.message : "录音下载失败", icon: "none" });
-    } finally {
-      wx.hideLoading();
-    }
+  toggleAllLessons() {
+    this.setData(recordView(loadProfile(), this.data.activeTrack, !this.data.showAllLessons));
+  },
+  openCharacter(event: WechatMiniprogram.BaseEvent) {
+    const { id, lessonId } = event.currentTarget.dataset as { id: string; lessonId: string };
+    wx.navigateTo({ url: `/pages/character/index?lessonId=${lessonId}&characterId=${id}` });
+  },
+  startPractice() {
+    const candidate = characterIndex.find((character) => character.ready && character.primary);
+    if (!candidate) return;
+    wx.navigateTo({ url: `/pages/practice/index?track=${this.data.activeTrack}&lessonId=${candidate.lessonId}&characterId=${candidate.id}` });
   },
 });

@@ -1,12 +1,12 @@
-.tab-shell { position: fixed; z-index: 100; left: 0; right: 0; bottom: 0; display: grid; grid-template-columns: repeat(4,1fr); min-height: 104rpx; padding: 12rpx 18rpx calc(10rpx + env(safe-area-inset-bottom)); border-top: 2rpx solid #e5dfd2; background: rgba(255,255,255,.98); }
-.tab-item { display: flex; min-width: 0; flex-direction: column; align-items: center; justify-content: center; gap: 4rpx; color: #5e6e68; font-size: 21rpx; font-weight: 700; }
+.tab-shell { position: fixed; z-index: 100; left: 0; right: 0; bottom: 0; display: grid; grid-template-columns: repeat(4,1fr); height: calc(72px + env(safe-area-inset-bottom)); padding: 0 0 env(safe-area-inset-bottom); border-top: 2px solid #e5dfd2; background: #fff; }
+.tab-item { display: flex; min-width: 0; flex-direction: column; align-items: center; justify-content: center; gap: 4px; color: #70695d; font-size: 13px; font-weight: 800; }
 .tab-item.active { color: #0b7654; }
-.tab-icon { position: relative; width: 42rpx; height: 42rpx; color: currentColor; }
-.icon-home::before { position: absolute; left: 8rpx; top: 5rpx; width: 24rpx; height: 24rpx; border-top: 5rpx solid currentColor; border-left: 5rpx solid currentColor; transform: rotate(45deg); content: ""; }
-.icon-home::after { position: absolute; left: 10rpx; bottom: 3rpx; width: 22rpx; height: 22rpx; border: 5rpx solid currentColor; border-top: 0; border-radius: 2rpx; content: ""; }
-.icon-book::before,.icon-book::after { position: absolute; top: 6rpx; width: 17rpx; height: 29rpx; border: 4rpx solid currentColor; content: ""; }
-.icon-book::before { left: 3rpx; border-radius: 7rpx 2rpx 2rpx 7rpx; }
-.icon-book::after { right: 3rpx; border-radius: 2rpx 7rpx 7rpx 2rpx; }
-.icon-grid::before { position: absolute; left: 5rpx; top: 5rpx; width: 12rpx; height: 12rpx; border: 4rpx solid currentColor; border-radius: 5rpx; box-shadow: 20rpx 0 0 -4rpx #fff,20rpx 0 0 0 currentColor,0 20rpx 0 -4rpx #fff,0 20rpx 0 0 currentColor,20rpx 20rpx 0 -4rpx #fff,20rpx 20rpx 0 0 currentColor; content: ""; }
-.icon-person::before { position: absolute; left: 13rpx; top: 3rpx; width: 14rpx; height: 14rpx; border: 4rpx solid currentColor; border-radius: 50%; content: ""; }
-.icon-person::after { position: absolute; left: 7rpx; bottom: 2rpx; width: 26rpx; height: 18rpx; border: 4rpx solid currentColor; border-bottom: 0; border-radius: 18rpx 18rpx 0 0; content: ""; }
+.tab-icon { position: relative; width: 26px; height: 26px; color: currentColor; }
+.icon-home::before { position: absolute; left: 5px; top: 3px; width: 15px; height: 15px; border-top: 2.2px solid currentColor; border-left: 2.2px solid currentColor; transform: rotate(45deg); content: ""; }
+.icon-home::after { position: absolute; left: 6px; bottom: 2px; width: 14px; height: 14px; border: 2.2px solid currentColor; border-top: 0; border-radius: 1px; content: ""; }
+.icon-book::before,.icon-book::after { position: absolute; top: 4px; width: 10px; height: 18px; border: 2.2px solid currentColor; content: ""; }
+.icon-book::before { left: 2px; border-radius: 4px 1px 1px 4px; }
+.icon-book::after { right: 2px; border-radius: 1px 4px 4px 1px; }
+.icon-grid::before { position: absolute; left: 3px; top: 3px; width: 7px; height: 7px; border: 2.2px solid currentColor; border-radius: 2.5px; box-shadow: 13px 0 0 -2.2px #fff,13px 0 0 0 currentColor,0 13px 0 -2.2px #fff,0 13px 0 0 currentColor,13px 13px 0 -2.2px #fff,13px 13px 0 0 currentColor; content: ""; }
+.icon-person::before { position: absolute; left: 8px; top: 2px; width: 9px; height: 9px; border: 2.2px solid currentColor; border-radius: 50%; content: ""; }
+.icon-person::after { position: absolute; left: 4px; bottom: 1px; width: 17px; height: 12px; border: 2.2px solid currentColor; border-bottom: 0; border-radius: 12px 12px 0 0; content: ""; }

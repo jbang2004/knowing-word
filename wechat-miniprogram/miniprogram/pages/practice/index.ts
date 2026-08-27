@@ -1,6 +1,7 @@
 import { getLessonContent } from "../../services/catalog";
 import { sendAnswerEvent } from "../../services/events";
 import { loadProfile, recordAnswer } from "../../services/profile";
+import { masteryQuestionsFor } from "../../services/practice";
 import type { CatalogCharacter, Exercise, TrackId } from "../../types/models";
 
 const trackMeta: Record<TrackId, { title: string; eyebrow: string; copy: string }> = {
@@ -14,7 +15,7 @@ type ViewOption = Exercise["options"][number] & { state: string; image: string; 
 
 function questionsFor(character: CatalogCharacter, track: TrackId) {
   const exercises = character.exercises ?? [];
-  if (track === "words") return exercises;
+  if (track === "words") return masteryQuestionsFor(character);
   const selected = exercises.filter((exercise) => {
     const text = `${exercise.questionType}${exercise.prompt}${exercise.origin}`;
     if (track === "split") return exercise.kind === "components" || /拆|部件/u.test(text);
@@ -65,7 +66,7 @@ Page({
     try {
       const content = await getLessonContent(this.data.lessonId);
       const profile = loadProfile();
-      const characters = content.characters.filter((character) => character.ready && (character.exercises?.length ?? 0) > 0);
+      const characters = content.characters.filter((character) => character.ready && character.primary && (character.exercises?.length ?? 0) > 0);
       let characterIndex = this.data.requestedCharacterId
         ? characters.findIndex((character) => character.id === this.data.requestedCharacterId)
         : characters.findIndex((character) => !profile.completed[this.data.track].includes(character.id));

@@ -34,6 +34,7 @@ export type Exercise = {
   dimension?: string;
   answerMode?: string;
   cueLevel?: 0 | 1 | 2 | 3;
+  concealTarget?: boolean;
 };
 
 export type CatalogCharacter = {
@@ -69,8 +70,19 @@ export type LessonContent = {
   lesson: CatalogLesson;
   document: {
     format: "reading" | "guide";
+    title?: string;
+    eyebrow?: string;
+    dek?: string;
     intro?: string;
-    sections: Array<{ title?: string; paragraphs: Array<{ text: string }> }>;
+    rights?: { label?: string; note?: string };
+    sections: Array<{
+      id?: string;
+      number?: string;
+      title?: string;
+      paragraphs: Array<{ id?: string; text: string }>;
+      question?: string;
+      focusWords?: string[];
+    }>;
   } | null;
   characters: CatalogCharacter[];
 };

@@ -4,9 +4,9 @@ import type { StudyProfile, TrackId } from "../../types/models";
 
 const trackDetails: Array<{ id: TrackId; glyph: string; title: string; copy: string }> = [
   { id: "words", glyph: "字", title: "完整识字", copy: "字义、字形与书写连续过关" },
-  { id: "split", glyph: "拆", title: "拆字复习", copy: "找部件，再把字搭回来" },
-  { id: "honglan", glyph: "红蓝", title: "部首辨认", copy: "分清表意部首与其他部件" },
   { id: "structure", glyph: "构", title: "结构复习", copy: "看清左右、上下与包围关系" },
+  { id: "split", glyph: "拆", title: "拆字复习", copy: "找部件，再把字搭回来" },
+  { id: "honglan", glyph: "红蓝", title: "红蓝复习", copy: "分清表意部首与其他部件" },
 ];
 
 const segmentMeta = [
@@ -31,7 +31,7 @@ function makePathSegments(
           : character.id === nextCharacterId
             ? "current"
             : "locked",
-        offsetClass: ["is-left", "is-right", "is-center", "is-left-soft"][index % 4],
+        offsetClass: ["offset-0", "offset-1", "offset-2", "offset-3"][index % 4],
       }));
     const hasCurrent = characters.some((character) => character.state === "current");
     const allDone = characters.length > 0 && characters.every((character) => character.state === "done");
@@ -44,14 +44,46 @@ function makePathSegments(
   }).filter((segment) => segment.characters.length > 0);
 }
 
+function currentStreak(daily: StudyProfile["daily"]) {
+  const active = new Set(Object.keys(daily).filter((day) => {
+    const item = daily[day];
+    return item && item.attempts + item.readSessions > 0;
+  }));
+  let streak = 0;
+  const cursor = new Date();
+  while (active.has(learningDayKey(cursor))) {
+    streak += 1;
+    cursor.setDate(cursor.getDate() - 1);
+  }
+  return streak;
+}
+
+function dueTimestamp(value: unknown) {
+  if (!value || typeof value !== "object" || Array.isArray(value)) return Number.POSITIVE_INFINITY;
+  const dimensions = Object.values(value as Record<string, unknown>);
+  return dimensions.reduce<number>((earliest, dimension) => {
+    if (!dimension || typeof dimension !== "object" || Array.isArray(dimension)) return earliest;
+    const state = dimension as { status?: unknown; dueAt?: unknown };
+    if (state.status === "new" || typeof state.dueAt !== "string") return earliest;
+    const timestamp = Date.parse(state.dueAt);
+    return Number.isNaN(timestamp) ? earliest : Math.min(earliest, timestamp);
+  }, Number.POSITIVE_INFINITY);
+}
+
 function makeView(profile: StudyProfile) {
-  const readyCharacters = characterIndex.filter((character) => character.ready);
+  const readyCharacters = characterIndex.filter((character) => character.ready && character.primary);
   const completedWords = new Set(profile.completed.words);
   const nextCharacter = readyCharacters.find((character) => !completedWords.has(character.id)) ?? readyCharacters[0];
   const nextLesson = lessonIndex.find((lesson) => lesson.id === nextCharacter?.lessonId) ?? lessonIndex[0];
   const lessonCharacters = readyCharacters.filter((character) => character.lessonId === nextLesson.id);
   const lessonCompleted = lessonCharacters.filter((character) => completedWords.has(character.id)).length;
   const today = profile.daily[learningDayKey()] ?? { attempts: 0, correct: 0, skips: 0, readSessions: 0 };
+  const reviewedToday = new Set(profile.reviewedByDay[learningDayKey()] ?? []);
+  const dueCharacters = readyCharacters
+    .filter((character) => completedWords.has(character.id) && !reviewedToday.has(character.id))
+    .map((character) => ({ character, dueAt: dueTimestamp(profile.memory[character.id]) }))
+    .filter((item) => item.dueAt <= Date.now())
+    .sort((left, right) => left.dueAt - right.dueAt);
   return {
     name: profile.name || "小探险家",
     initial: (profile.name || "小").slice(0, 1),
@@ -61,7 +93,9 @@ function makeView(profile: StudyProfile) {
     lessonCompleted,
     lessonTotal: lessonCharacters.length,
     lessonProgress: lessonCharacters.length ? Math.round(lessonCompleted / lessonCharacters.length * 100) : 0,
-    streak: Object.keys(profile.daily).length,
+    streak: currentStreak(profile.daily),
+    dueReview: dueCharacters[0]?.character ?? null,
+    dueReviewCount: dueCharacters.length,
     pathSegments: makePathSegments(lessonCharacters, completedWords, nextCharacter?.id),
     tracks: trackDetails.map((track) => ({
       ...track,
@@ -86,9 +120,24 @@ Page({
     lessonTotal: 0,
     lessonProgress: 0,
     streak: 0,
+    dueReview: null as typeof characterIndex[number] | null,
+    dueReviewCount: 0,
+    navTop: 0,
+    navHeight: 52,
+    capsuleInset: 0,
     pathSegments: [] as ReturnType<typeof makeView>["pathSegments"],
     tracks: [] as ReturnType<typeof makeView>["tracks"],
     reviewTracks: trackDetails.slice(1),
+  },
+  onLoad() {
+    const menu = wx.getMenuButtonBoundingClientRect();
+    const info = wx.getWindowInfo();
+    const navTop = Math.max(info.statusBarHeight ?? 0, menu.top || 0);
+    this.setData({
+      navTop,
+      navHeight: navTop + 52,
+      capsuleInset: Math.max(0, info.windowWidth - menu.left + 8),
+    });
   },
   onShow() {
     this.getTabBar?.()?.setData({ selected: 0 });
@@ -122,8 +171,22 @@ Page({
       url: `/pages/practice/index?track=words&lessonId=${this.data.nextLesson.id}${characterId ? `&characterId=${characterId}` : ""}`,
     });
   },
+  reviewDue() {
+    const character = this.data.dueReview;
+    if (!character) return;
+    wx.navigateTo({
+      url: `/pages/practice/index?track=words&lessonId=${character.lessonId}&characterId=${character.id}&review=due`,
+    });
+  },
   openTrack(event: WechatMiniprogram.BaseEvent) {
     const track = event.currentTarget.dataset.track as TrackId;
     wx.navigateTo({ url: `/pages/practice/index?track=${track}&lessonId=${this.data.nextLesson.id}` });
+  },
+  openReader() {
+    if (this.data.lessonCompleted !== this.data.lessonTotal) {
+      wx.showToast({ title: "学完本课生字后解锁", icon: "none" });
+      return;
+    }
+    wx.navigateTo({ url: `/pages/reader/index?lessonId=${this.data.nextLesson.id}` });
   },
 });
