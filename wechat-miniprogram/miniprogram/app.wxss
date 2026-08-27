@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Knowing Kai";
-  src: url("https://knowing-word.jbang2004.chatgpt.site/fonts/lxgw-wenkai-mini-v1.woff2") format("woff2");
+  src: url("https://knowing-word.jbang2004.chatgpt.site/api/mini-font/v1/lxgw-wenkai.woff2") format("woff2");
   font-weight: 400 500;
   font-style: normal;
 }

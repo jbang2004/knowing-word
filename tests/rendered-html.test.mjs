@@ -889,6 +889,29 @@ test("mini-program font assets expose immutable CORS-safe responses", async () =
   assert.equal(response.headers.get("cache-control"), "public, max-age=31536000, immutable");
 });
 
+test("mini-program font endpoint returns the font through the Worker", async () => {
+  const workerUrl = new URL("../dist/server/index.js", import.meta.url);
+  workerUrl.searchParams.set("test", "mini-font-endpoint-suite");
+  workerPromise ||= import(workerUrl.href).then((module) => module.default);
+  const worker = await workerPromise;
+  let assetPath = "";
+  const response = await worker.fetch(
+    new Request("http://localhost/api/mini-font/v1/lxgw-wenkai.woff2"),
+    {
+      ASSETS: {
+        fetch(request) {
+          assetPath = new URL(request.url).pathname;
+          return Promise.resolve(new Response("font"));
+        },
+      },
+    },
+    { waitUntil() {}, passThroughOnException() {} },
+  );
+  assert.equal(assetPath, "/fonts/lxgw-wenkai-subset.woff2");
+  assert.equal(response.headers.get("access-control-allow-origin"), "*");
+  assert.equal(response.headers.get("content-type"), "font/woff2");
+});
+
 test("R2 narration delivery supports immutable byte ranges", async () => {
   const workerUrl = new URL("../dist/server/index.js", import.meta.url);
   workerUrl.searchParams.set("test", "media-suite");

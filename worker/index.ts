@@ -12,6 +12,8 @@ const IMMUTABLE_CACHE = "public, max-age=31536000, immutable";
 const NARRATION_SOURCE_COMMIT = "0e30da7f66f68b92bc06dcfed857cfc31a64b89d";
 const NARRATION_SOURCE_ORIGIN = "https://raw.githubusercontent.com/jbang2004/knowing-word";
 const MAX_NARRATION_BYTES = 2 * 1024 * 1024;
+const MINI_FONT_PATH = "/api/mini-font/v1/lxgw-wenkai.woff2";
+const MINI_FONT_ASSET_PATH = "/fonts/lxgw-wenkai-subset.woff2";
 
 function narrationRequestPath(pathname: string) {
   const match = /^\/media\/narration\/(v\d+)\/([a-z0-9-]+\/(?:audio\.(?:webm|m4a)|audio-marks\.json))$/.exec(pathname);
@@ -218,6 +220,17 @@ function isDeliveryAsset(pathname: string) {
 const worker = {
   async fetch(request: Request, env: RuntimeEnv, ctx: ExecutionContext): Promise<Response> {
     const url = new URL(request.url);
+
+    if (url.pathname === MINI_FONT_PATH) {
+      if (request.method !== "GET" && request.method !== "HEAD") {
+        return new Response("Method not allowed", { status: 405, headers: { allow: "GET, HEAD" } });
+      }
+      if (!env.ASSETS) return new Response("Font unavailable", { status: 503 });
+      const assetUrl = new URL(MINI_FONT_ASSET_PATH, request.url);
+      const asset = await env.ASSETS.fetch(new Request(assetUrl, { method: request.method }));
+      if (!asset.ok) return new Response("Font unavailable", { status: asset.status });
+      return withDeliveryCache(asset, MINI_FONT_ASSET_PATH);
+    }
 
     const narrationPath = narrationRequestPath(url.pathname);
     if (narrationPath) {
