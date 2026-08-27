@@ -50,6 +50,14 @@ test("native mini-program routes functional icons through local WeChat-compatibl
   }
 });
 
+test("native mini-program never blocks first paint on WeChat login", async () => {
+  const appScript = await readFile(new URL("miniprogram/app.ts", root), "utf8");
+  assert.match(appScript, /onLaunch\(\) \{/u);
+  assert.doesNotMatch(appScript, /async onLaunch\(\)/u);
+  assert.doesNotMatch(appScript, /await ensureWechatSession\(\)/u);
+  assert.match(appScript, /void ensureWechatSession\(\)\.then\(\(\) => syncProfile\(\)\)/u);
+});
+
 test("mini-program ships a compact index and keeps full lesson content behind the Sites API", async () => {
   const catalogStat = await stat(new URL("miniprogram/data/catalog.ts", root));
   const config = await readFile(new URL("miniprogram/config.ts", root), "utf8");
