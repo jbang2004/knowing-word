@@ -46,6 +46,7 @@ Page({
     ...makeView(loadProfile()),
     theme: loadProfile().theme,
     contentTop: 70,
+    pageMotion: "page-arrive-a",
   },
   onLoad() {
     this.setData(navigationLayout());
@@ -53,7 +54,11 @@ Page({
   onShow() {
     const profile = loadProfile();
     this.getTabBar?.()?.setData({ selected: 2, theme: profile.theme });
-    this.setData({ ...makeView(profile), theme: profile.theme });
+    this.setData({
+      ...makeView(profile),
+      theme: profile.theme,
+      pageMotion: this.data.pageMotion === "page-arrive-a" ? "page-arrive-b" : "page-arrive-a",
+    });
   },
   async onPullDownRefresh() {
     this.setData(makeView(await syncProfile()));

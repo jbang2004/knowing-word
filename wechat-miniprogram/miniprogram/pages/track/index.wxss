@@ -32,3 +32,4 @@
 .track-lesson-empty button { color:var(--action-ink); }
 .track-hero button { display:flex; align-items:center; justify-content:center; gap:5px; }
 .track-character .track-done-icon { justify-self:center; color:var(--action-text); }
+@media (prefers-reduced-motion:reduce) { .track-page { animation:none; } }

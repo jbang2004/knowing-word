@@ -99,3 +99,10 @@
 .action-wide>.sparkles-icon { width:18px; min-width:18px; flex:none; }
 .action-wide>.ui-icon { display:inline-block; width:16px; min-width:16px; height:16px; flex:none; color:var(--ink-faint); }
 .memory-arrow { display:flex; width:30px; height:30px; align-items:center; justify-content:center; }
+.listen-button { transition:transform 160ms var(--ease-out); }
+.details { visibility:hidden; pointer-events:none; transition:transform 280ms var(--ease-out),visibility 0s linear 280ms; }
+.details.open { visibility:visible; pointer-events:auto; transition-delay:0s; }
+.memory-stage-chips button { transition:border-color 200ms ease,background-color 200ms ease; }
+@media (prefers-reduced-motion:reduce) {
+  .listen-button,.details,.memory-stage-chips button { transition:none; }
+}

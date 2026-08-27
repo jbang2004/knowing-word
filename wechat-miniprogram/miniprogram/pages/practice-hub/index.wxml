@@ -1,4 +1,4 @@
-<view class="page practice-hub-page theme-{{theme}}" style="padding-top: {{contentTop}}px;">
+<view class="page practice-hub-page theme-{{theme}} {{pageMotion}}" style="padding-top: {{contentTop}}px;">
   <view class="page-heading">
     <view class="heading-title">先逐字过关，再按需要复习</view>
   </view>
@@ -8,7 +8,7 @@
       <text>当前建议</text>
       <view class="context-title">练习第 {{lesson.position}} 课《{{lesson.title}}》</view>
       <view class="context-copy">本课识字已完成 {{lessonCompleted}}/{{lessonTotal}} 个；专项只会出现已经学过的字。</view>
-      <button bindtap="continueRecommended"><text>继续识字 · {{nextCharacter.hanzi}}</text><view class="ui-icon ui-icon-arrow-right" aria-hidden="true"></view></button>
+      <button class="press-card" bindtap="continueRecommended" hover-class="is-pressed"><text>继续识字 · {{nextCharacter.hanzi}}</text><view class="ui-icon ui-icon-arrow-right" aria-hidden="true"></view></button>
     </view>
     <view class="context-glyph">{{nextCharacter.hanzi}}</view>
   </view>
@@ -17,7 +17,7 @@
     <view wx:for="{{routes}}" wx:key="id" class="route-card {{item.tone}}">
       <view class="route-top"><view class="route-glyph">{{item.glyph}}</view><view><text>{{item.eyebrow}}</text><strong>{{item.label}}</strong></view><text>{{item.number}}</text></view>
       <view class="route-progress"><text>本课 {{item.lessonCompleted}}/{{item.lessonTotal}}</text><text>全册 {{item.totalCompleted}}/{{item.total}}</text></view>
-      <view class="route-actions"><button data-track="{{item.id}}" bindtap="openRoute"><text>{{item.action}}</text><view class="ui-icon ui-icon-arrow-right" aria-hidden="true"></view></button><text bindtap="openLessons">全部课程</text></view>
+      <view class="route-actions"><button class="press-card" data-track="{{item.id}}" bindtap="openRoute" hover-class="is-pressed"><text>{{item.action}}</text><view class="ui-icon ui-icon-arrow-right" aria-hidden="true"></view></button><text bindtap="openLessons">全部课程</text></view>
     </view>
   </view>
 

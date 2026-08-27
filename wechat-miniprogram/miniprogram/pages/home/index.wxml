@@ -1,4 +1,4 @@
-<view class="page home-page theme-{{theme}}">
+<view class="page home-page theme-{{theme}} {{pageMotion}}">
   <view class="path-workspace">
   <view class="path-rail">
   <view class="status-row" style="height: {{navHeight}}px; padding-top: {{navTop}}px; padding-right: {{capsuleInset}}px;">

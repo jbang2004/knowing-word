@@ -35,6 +35,7 @@ type AssemblySlot = {
 };
 
 type CelebrationPart = {
+  key: string;
   char: string;
   tone: "radical" | "part";
   side: "from-left" | "from-right";
@@ -174,6 +175,8 @@ Page({
     answered: false,
     correct: false,
     resultCopy: "",
+    resultAnswer: "",
+    resultAnswerIsGlyph: false,
     resultTitle: "",
     resultNote: "",
     remediationTitle: "",
@@ -255,6 +258,7 @@ Page({
     const celebrationLabel = this.data.track === "words"
       ? "单字过关"
       : this.data.trackInfo.title;
+    const sessionSalt = `${Date.now()}-${Math.random()}`;
     this.setData({
       character,
       questions,
@@ -264,8 +268,9 @@ Page({
       passedQuestionIds: [],
       streak: 0,
       currentAttempts: 0,
-      sessionSalt: `${Date.now()}-${Math.random()}`,
+      sessionSalt,
       celebrationParts: parts.slice(0, 2).map((part, index) => ({
+        key: `${part.char}-${index}-${sessionSalt}`,
         char: part.char,
         tone: part.radical ? "radical" : "part",
         side: index === 0 ? "from-left" : "from-right",
@@ -317,6 +322,8 @@ Page({
       correct: false,
       currentAttempts: preserveAttempts ? this.data.currentAttempts : 0,
       resultCopy: "",
+      resultAnswer: "",
+      resultAnswerIsGlyph: false,
       resultTitle: "",
       resultNote: "",
       remediationTitle: "",
@@ -555,7 +562,9 @@ Page({
         ? "已按你的对照自查记录为正确（未经过客观识别）；范字会保留到下一题。"
         : correct
           ? (question.explanation || "记住这个线索，再去下一题。")
-          : `正确答案是：${correctAnswer}`,
+          : "",
+      resultAnswer: correct ? "" : correctAnswer,
+      resultAnswerIsGlyph: !correct && Array.from(correctAnswer).length <= 6,
       resultNote: correct ? "" : remediation.instruction,
       assemblySlots: assemblySlots(question, character, correctIds, selectedIds, true),
       viewOptions: this.data.viewOptions.map((option) => ({
@@ -608,6 +617,7 @@ Page({
   },
   replayCharacter() {
     playLearningSound("start");
+    const sessionSalt = `${Date.now()}-${Math.random()}`;
     this.setData({
       finished: false,
       questionIndex: 0,
@@ -615,7 +625,11 @@ Page({
       passedQuestionIds: [],
       streak: 0,
       currentAttempts: 0,
-      sessionSalt: `${Date.now()}-${Math.random()}`,
+      sessionSalt,
+      celebrationParts: this.data.celebrationParts.map((part, index) => ({
+        ...part,
+        key: `${part.char}-${index}-${sessionSalt}`,
+      })),
       firstTryRate: 100,
       perfect: true,
     });

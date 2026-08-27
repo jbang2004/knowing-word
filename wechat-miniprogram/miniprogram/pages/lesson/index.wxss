@@ -87,3 +87,5 @@
   .source-note { margin-top:14px; }
 }
 .guide-finish button { display:flex; align-items:center; justify-content:center; gap:5px; }
+.lesson-tabs button { transition:color 180ms ease,background-color 180ms ease,border-color 180ms ease,box-shadow 180ms ease,transform 180ms var(--ease-out); }
+@media (prefers-reduced-motion:reduce) { .lesson-tabs button { transition:none; } }

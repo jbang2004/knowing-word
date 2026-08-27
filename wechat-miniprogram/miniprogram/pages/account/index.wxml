@@ -1,4 +1,4 @@
-<view class="account-page theme-{{theme}}" style="padding-top: {{contentTop}}px;">
+<view class="account-page theme-{{theme}} {{pageMotion}}" style="padding-top: {{contentTop}}px;">
   <view class="account-heading">
     <text class="account-kicker">我的账户</text>
     <text class="account-title">这是属于你的学习空间</text>

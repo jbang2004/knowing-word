@@ -36,14 +36,17 @@ function accountView() {
 }
 
 Page({
-  data: { ...accountView(), contentTop: 70 },
+  data: { ...accountView(), contentTop: 70, pageMotion: "page-arrive-a" },
   onLoad() {
     this.setData(navigationLayout());
   },
   onShow() {
     const view = accountView();
     this.getTabBar?.()?.setData({ selected: 3, theme: view.theme });
-    this.setData(view);
+    this.setData({
+      ...view,
+      pageMotion: this.data.pageMotion === "page-arrive-a" ? "page-arrive-b" : "page-arrive-a",
+    });
     applyThemeChrome(view.theme);
   },
   onNameInput(event: WechatMiniprogram.Input) { this.setData({ name: event.detail.value.slice(0, 18) }); },

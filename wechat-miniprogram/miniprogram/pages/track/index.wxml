@@ -16,7 +16,7 @@
         <view class="track-hero">
           <view class="track-symbol kai">{{trackInfo.glyph}}</view>
           <view class="hero-copy"><text>上次学到</text><strong>{{hasNext ? ('「' + next.hanzi + '」') : '尚未解锁'}}</strong><small>{{hasNext ? ('来自第 ' + nextLesson.position + ' 课 · ' + nextLesson.title) : '先完成单字过关，再开始专项巩固'}}</small></view>
-          <button bindtap="continueTrack"><text>{{hasNext ? trackInfo.action : '先学本课生字'}}</text><view class="ui-icon ui-icon-arrow-right" aria-hidden="true"></view></button>
+          <button class="press-card" bindtap="continueTrack" hover-class="is-pressed"><text>{{hasNext ? trackInfo.action : '先学本课生字'}}</text><view class="ui-icon ui-icon-arrow-right" aria-hidden="true"></view></button>
         </view>
         <view class="track-method-card"><text>这项练习在训练什么</text><strong>{{trackInfo.eyebrow}}</strong><view>{{trackInfo.copy}}</view></view>
       </view>
@@ -29,7 +29,7 @@
       <view wx:if="{{hasEligible}}" class="track-character-grid">
         <view wx:for="{{eligible}}" wx:key="id" class="track-character press-card {{item.done ? 'is-complete' : ''}}" data-id="{{item.id}}" bindtap="openCharacter" hover-class="is-pressed"><small>{{item.sequence}}</small><strong class="kai">{{item.hanzi}}</strong><i wx:if="{{item.done}}" class="ui-icon ui-icon-check track-done-icon" aria-label="已完成"></i><i wx:else>开始</i></view>
       </view>
-      <view wx:else class="track-lesson-empty"><strong>先认识本课生字</strong><text>专项练习只会使用已经完成单字过关的字，避免提前遇到陌生内容。</text><button bindtap="openWordLesson">打开本课字表</button></view>
+      <view wx:else class="track-lesson-empty"><strong>先认识本课生字</strong><text>专项练习只会使用已经完成单字过关的字，避免提前遇到陌生内容。</text><button class="press-card" bindtap="openWordLesson" hover-class="is-pressed">打开本课字表</button></view>
     </view>
   </block>
 

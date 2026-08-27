@@ -16,7 +16,7 @@
 .recording-result { display:grid; grid-template-columns:33px minmax(0,1fr); align-items:center; gap:11px; margin-top:14px; padding:13px; border:2px solid var(--line); border-radius:22px; background:var(--paper); box-shadow:0 4px 0 var(--line); }.result-mark { display:flex; width:29px; height:29px; align-items:center; justify-content:center; border-radius:50%; color:#0f1614; background:var(--action); }.result-check { width:12px; height:7px; border-bottom:2px solid currentColor; border-left:2px solid currentColor; transform:translateY(-1px) rotate(-45deg); }.recording-result>view:nth-child(2) { display:flex; flex-direction:column; }.recording-result strong { color:var(--navy); font-size:13px; }.recording-result view text { margin-top:3px; color:var(--ink-soft); font-size:13px; line-height:1.45; }.play-recording { grid-column:1/-1; min-height:44px; margin:0; border:2px solid var(--line); border-radius:14px; color:var(--navy); background:var(--paper); box-shadow:0 3px 0 var(--line); font-weight:800; }.play-recording:active,.recording-assessment button:active { transform:translateY(3px); box-shadow:none; }
 .recording-assessment { grid-column:1/-1; display:flex; flex-direction:column; gap:8px; }.recording-assessment button { min-height:48px; margin:0; padding:10px 14px; border-radius:16px; color:#0f1614; background:var(--action); box-shadow:0 4px 0 var(--action-deep); font-size:13px; font-weight:900; }.recording-assessment button.ghost { border:2px solid var(--line); color:var(--navy); background:var(--paper); box-shadow:0 4px 0 var(--line); }
 .recording-check-gate { grid-column:1/-1; margin:0; padding:11px 13px; border:1px solid var(--line); border-radius:13px; color:var(--ink-soft); background:var(--paper-soft); font-size:12px; font-weight:700; line-height:1.5; }
-@keyframes recording-heartbeat { 0%,100% { box-shadow:0 var(--press) 0 #9e193d,0 0 0 0 rgba(231,72,98,0); } 50% { box-shadow:0 var(--press) 0 #9e193d,0 0 0 8px rgba(231,72,98,.16); } }
+@keyframes recording-heartbeat { 50% { box-shadow:0 0 0 8px rgba(231,72,98,.16); } }
 @media (prefers-reduced-motion:reduce) { .record-launch.recording { animation:none; }.sentence-card,.sentence-action,.play-recording,.recording-assessment button { transition:none; } }
 
 /* Final pill and feedback states from the Web reader cascade. */
@@ -27,6 +27,9 @@
 .result-mark,.recording-assessment button { color:var(--action-ink); }
 .recording-check-gate { padding:0; border:0; border-radius:0; color:var(--wrong-text); background:none; font-weight:750; line-height:1.6; }
 .read-lesson-position { display:none; }
+.record-launch { transition:transform 220ms var(--ease-out),box-shadow 220ms ease,background-color 220ms ease,border-color 220ms ease; }
+.sentence-card { transition:transform 90ms ease,box-shadow 90ms ease,border-color 140ms ease,background-color 140ms ease; }
+@media (prefers-reduced-motion:reduce) { .record-launch,.sentence-card { transition:none; } }
 @media (min-width:761px) {
   .read-lesson-picker { min-height:0; grid-template-columns:44px minmax(0,1fr) auto 44px; gap:10px; border-radius:18px; }
   .read-lesson-position { display:block; padding:7px 10px; border-radius:999px; color:var(--ink-soft); background:var(--paper-soft); font-size:11px; font-weight:750; white-space:nowrap; }

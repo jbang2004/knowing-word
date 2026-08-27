@@ -16,6 +16,7 @@ export function playLearningSound(id: LearningSoundId) {
   activeSound?.destroy();
   const audio = wx.createInnerAudioContext({ useWebAudioImplement: true });
   activeSound = audio;
+  audio.volume = 0.78;
   audio.autoplay = true;
   audio.src = soundUrls[id];
   const dispose = () => {

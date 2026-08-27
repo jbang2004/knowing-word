@@ -69,12 +69,12 @@
     <view wx:if="{{writingReview}}" class="answer-sheet writing-assessment">
       <view class="answer-sheet-head"><view class="answer-sheet-mark is-check" aria-hidden="true"><i></i></view><strong class="answer-sheet-title">逐部件对照后，选择最符合的一项</strong></view>
       <view class="answer-copy">先看部件、位置和笔画；这是你的对照自查，不等于系统客观识别。</view>
-      <view class="writing-assessment-grid"><view class="game-button primary press-card" data-assessment="correct" bindtap="selfAssess" hover-class="is-pressed">我对照后认为一致</view><view class="game-button ghost press-card" data-assessment="component-error" bindtap="selfAssess" hover-class="is-pressed">部件错</view><view class="game-button ghost press-card" data-assessment="position-error" bindtap="selfAssess" hover-class="is-pressed">位置错</view><view class="game-button ghost press-card" data-assessment="stroke-error" bindtap="selfAssess" hover-class="is-pressed">漏多笔</view></view>
+      <view class="challenge-actions-row"><view class="game-button primary press-card" data-assessment="correct" bindtap="selfAssess" hover-class="is-pressed">我对照后认为一致</view><view class="game-button ghost press-card" data-assessment="component-error" bindtap="selfAssess" hover-class="is-pressed">部件错</view><view class="game-button ghost press-card" data-assessment="position-error" bindtap="selfAssess" hover-class="is-pressed">位置错</view><view class="game-button ghost press-card" data-assessment="stroke-error" bindtap="selfAssess" hover-class="is-pressed">漏多笔</view></view>
     </view>
 
     <view wx:elif="{{answered}}" class="answer-sheet {{correct ? 'is-correct' : 'is-wrong'}}">
       <view class="answer-sheet-head"><view class="answer-sheet-mark {{correct ? 'is-check' : 'is-retry'}}" aria-hidden="true"><i></i></view><strong class="answer-sheet-title">{{resultTitle}}</strong><small class="answer-sheet-attempts">已尝试 {{currentAttempts}} 次</small></view>
-      <view class="answer-copy">{{resultCopy}}</view>
+      <view class="answer-copy"><text wx:if="{{resultAnswer}}">正确答案是：</text><text wx:if="{{resultAnswer}}" class="answer-sheet-answer {{resultAnswerIsGlyph ? 'is-glyph' : ''}}">{{resultAnswer}}</text><text wx:else>{{resultCopy}}</text></view>
       <small wx:if="{{resultNote}}" class="answer-sheet-note">{{resultNote}}</small>
       <view class="game-button primary answer-next press-card {{correct ? '' : 'wrong'}}" bindtap="nextQuestion" role="button" hover-class="is-pressed">{{correct ? (passedQuestionIds.length === questions.length ? '查看成绩' : '继续') : '知道了'}}</view>
     </view>
@@ -83,7 +83,7 @@
   <view wx:if="{{finished}}" class="celebration-overlay" role="dialog" aria-label="完整通关">
     <view class="celebration-card track-{{track}}">
       <view class="celebration-assembly {{hasCelebrationParts ? 'is-assembling' : ''}}">
-        <view wx:for="{{celebrationParts}}" wx:key="char" class="celebration-fly is-{{item.tone}} {{item.side}}">{{item.char}}</view>
+        <block wx:if="{{hasCelebrationParts}}"><view wx:for="{{celebrationParts}}" wx:key="key" class="celebration-fly is-{{item.tone}} {{item.side}}">{{item.char}}</view></block>
         <view class="celebration-ring"></view>
         <view class="celebration-glyph kai">{{character.hanzi}}</view>
       </view>
@@ -94,9 +94,9 @@
         <view class="celebration-lesson-copy"><text wx:if="{{radicalChar}}" class="celebration-radical kai">{{radicalChar}}</text><text wx:if="{{radicalChar}}">是表意部首</text><text wx:if="{{hasBothParts}}">；</text><text wx:if="{{shapeChar}}" class="celebration-part kai">{{shapeChar}}</text><text wx:if="{{shapeChar}}">{{shapeRole}}</text><text>。{{character.decomposition}}</text></view>
       </view>
       <view class="celebration-stats">
-        <view class="celebration-stat"><text class="celebration-stat-value">{{questions.length}}</text><small class="celebration-stat-label">题目</small></view>
-        <view class="celebration-stat"><text class="celebration-stat-value">{{sessionResults.length}}</text><small class="celebration-stat-label">尝试</small></view>
-        <view class="celebration-stat"><text class="celebration-stat-value">{{firstTryRate}}%</text><small class="celebration-stat-label">首次答对</small></view>
+        <view class="celebration-stat"><small class="celebration-stat-label">题目</small><text class="celebration-stat-value">{{questions.length}}</text></view>
+        <view class="celebration-stat"><small class="celebration-stat-label">尝试</small><text class="celebration-stat-value">{{sessionResults.length}}</text></view>
+        <view class="celebration-stat"><small class="celebration-stat-label">首次答对</small><text class="celebration-stat-value">{{firstTryRate}}%</text></view>
       </view>
       <view class="celebration-actions">
         <button class="game-button primary celebration-primary press-card" bindtap="nextCharacter" hover-class="is-pressed">{{nextActionLabel}}</button>

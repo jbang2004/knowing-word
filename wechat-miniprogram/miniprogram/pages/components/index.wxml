@@ -1,12 +1,12 @@
 <view class="components-page theme-{{theme}}" style="padding-top: {{navHeight + 18}}px;">
   <view class="utility-heading"><button class="nav-back" bindtap="goBack" aria-label="返回"><view class="nav-back-icon"></view></button><strong>从常见部件入手，识字更轻松</strong></view>
 
-  <view wx:if="{{recent}}" class="component-resume"><text>上次学到</text><strong class="kai">{{recent.glyph}}</strong><view>{{recent.title}}</view><button data-id="{{recent.id}}" bindtap="selectComponent"><text>继续</text><view class="ui-icon ui-icon-arrow-right" aria-hidden="true"></view></button></view>
+  <view wx:if="{{recent}}" class="component-resume"><text>上次学到</text><strong class="kai">{{recent.glyph}}</strong><view>{{recent.title}}</view><button class="press-card" data-id="{{recent.id}}" bindtap="selectComponent" hover-class="is-pressed"><text>继续</text><view class="ui-icon ui-icon-arrow-right" aria-hidden="true"></view></button></view>
 
   <view class="component-layout">
   <view class="component-browser">
     <view class="component-browser-toolbar">
-      <view class="component-sort-tabs"><button class="{{sortMode === 'frequency' ? 'active' : ''}}" data-mode="frequency" bindtap="chooseSortMode">常用部件</button><button class="{{sortMode === 'recent' ? 'active' : ''}}" data-mode="recent" bindtap="chooseSortMode">最近学习</button></view>
+      <view class="component-sort-tabs"><button class="press-card {{sortMode === 'frequency' ? 'active' : ''}}" data-mode="frequency" bindtap="chooseSortMode" hover-class="is-pressed">常用部件</button><button class="press-card {{sortMode === 'recent' ? 'active' : ''}}" data-mode="recent" bindtap="chooseSortMode" hover-class="is-pressed">最近学习</button></view>
       <view class="component-search"><view class="search-icon"></view><input value="{{query}}" bindinput="onSearch" placeholder="搜部件或例字" /></view>
     </view>
     <view class="component-browser-summary"><strong>{{summaryTitle}}</strong><text>{{summaryCount}}</text></view>
@@ -18,7 +18,7 @@
         <small>课内 {{item.count}} 次</small>
       </view>
     </view>
-    <view wx:else class="component-empty"><strong>{{sortMode === 'recent' ? '还没有最近学习的部件' : '没有找到匹配的部件'}}</strong><text>{{sortMode === 'recent' ? '打开一个常用部件后，它会出现在这里。' : '可以换一个部件名称或例字再试。'}}</text><button wx:if="{{sortMode === 'recent'}}" data-mode="frequency" bindtap="chooseSortMode">查看常用部件</button></view>
+    <view wx:else class="component-empty"><strong>{{sortMode === 'recent' ? '还没有最近学习的部件' : '没有找到匹配的部件'}}</strong><text>{{sortMode === 'recent' ? '打开一个常用部件后，它会出现在这里。' : '可以换一个部件名称或例字再试。'}}</text><button wx:if="{{sortMode === 'recent'}}" class="press-card" data-mode="frequency" bindtap="chooseSortMode" hover-class="is-pressed">查看常用部件</button></view>
     <view wx:if="{{hasMore}}" class="component-load-more press-card" bindtap="loadMore" role="button" hover-class="is-pressed">再显示 {{nextCount}} 个</view>
   </view>
 

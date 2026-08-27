@@ -36,7 +36,7 @@
           </view>
         </view>
       </view>
-      <view class="guide-finish"><view>读</view><view><text>本课识字进度</text><strong>已经认识 {{completed}} / {{total}} 个字</strong><small>完成导读后，请回到纸质课本阅读全文，再用字卡和练习巩固。</small></view><button data-view="words" bindtap="switchView">查看生字表</button><button class="primary" data-view="practice" bindtap="switchView"><text>按需复习</text><view class="ui-icon ui-icon-arrow-right" aria-hidden="true"></view></button></view>
+      <view class="guide-finish"><view>读</view><view><text>本课识字进度</text><strong>已经认识 {{completed}} / {{total}} 个字</strong><small>完成导读后，请回到纸质课本阅读全文，再用字卡和练习巩固。</small></view><button class="press-card" data-view="words" bindtap="switchView" hover-class="is-pressed">查看生字表</button><button class="primary press-card" data-view="practice" bindtap="switchView" hover-class="is-pressed"><text>按需复习</text><view class="ui-icon ui-icon-arrow-right" aria-hidden="true"></view></button></view>
     </view>
   </view>
 

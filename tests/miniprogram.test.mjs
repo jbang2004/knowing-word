@@ -81,14 +81,40 @@ test("native mini-program shares the Web visual language instead of the retired 
   assert.match(practiceHubTemplate, /class="route-card/u);
   assert.match(practiceTemplate, /class="celebration-overlay"/u);
   assert.match(practiceTemplate, /class="celebration-assembly/u);
+  assert.match(practiceTemplate, /wx:key="key" class="celebration-fly/u);
   assert.match(practiceTemplate, /这一关记住了/u);
   assert.match(practiceStyles, /@keyframes celebration-fly-left/u);
   assert.match(practiceStyles, /@keyframes celebration-seal/u);
   assert.match(practiceStyles, /@keyframes answer-sheet-rise/u);
   assert.match(practiceStyles, /@keyframes choice-nudge/u);
   assert.match(practiceScript, /currentAttempts: this\.data\.currentAttempts \+ 1/u);
+  assert.match(practiceScript, /key: `\$\{part\.char\}-\$\{index\}-\$\{sessionSalt\}`/u);
+  assert.match(practiceScript, /celebrationParts: this\.data\.celebrationParts\.map/u);
   assert.match(practiceScript, /this\.prepareQuestion\(true\)/u);
   assert.match(tabTemplate, /icon-\{\{item\.icon\}\}/u);
+});
+
+test("native practice keeps the Web mobile answer and completion geometry", async () => {
+  const [template, styles, script] = await Promise.all([
+    readFile(new URL("miniprogram/pages/practice/index.wxml", root), "utf8"),
+    readFile(new URL("miniprogram/pages/practice/index.wxss", root), "utf8"),
+    readFile(new URL("miniprogram/pages/practice/index.ts", root), "utf8"),
+  ]);
+
+  assert.match(template, /class="answer-sheet writing-assessment"[\s\S]*class="challenge-actions-row"/u);
+  assert.doesNotMatch(template, /writing-assessment-grid/u);
+  assert.match(template, /class="answer-sheet-answer \{\{resultAnswerIsGlyph/u);
+  assert.match(template, /celebration-stat-label">题目<\/small><text class="celebration-stat-value"/u);
+  assert.match(script, /resultAnswerIsGlyph:\s*!correct && Array\.from\(correctAnswer\)\.length <= 6/u);
+
+  assert.match(styles, /\.choice-card \{[^}]*gap:13px;[^}]*padding:12px 15px;[^}]*border-radius:18px;/u);
+  assert.match(styles, /\.challenge-actions-row \{[^}]*min-height:44px;[^}]*gap:12px;/u);
+  assert.match(styles, /\.answer-sheet \{[^}]*gap:12px;[^}]*margin-right:-20px;[^}]*margin-left:-20px;[^}]*border-radius:28px 28px 0 0;/u);
+  assert.match(styles, /\.answer-sheet-note \{[^}]*margin-top:-4px;[^}]*font-size:13px;[^}]*line-height:1\.65;/u);
+  assert.match(styles, /\.writing-assessment \.game-button \{[^}]*width:auto !important;[^}]*min-height:48px;[^}]*padding:11px 18px;[^}]*border-radius:14px;[^}]*font-size:14px;/u);
+  assert.match(styles, /\.celebration-card \{[^}]*width:calc\(100% - 32px\);[^}]*max-width:420px;[^}]*max-height:92vh;[^}]*gap:14px;[^}]*padding:26px 22px calc\(24px \+ env\(safe-area-inset-bottom\)\);[^}]*border-radius:30px;/u);
+  assert.match(styles, /\.celebration-actions \{[^}]*flex-direction:column;[^}]*gap:9px;[^}]*margin-top:2px;/u);
+  assert.match(styles, /\.celebration-actions \.game-button\.primary\.celebration-primary \{[^}]*min-height:48px;[^}]*border-radius:14px;[^}]*font-size:14px;/u);
 });
 
 test("native mini-program pins the Web design tokens, rhythm, and motion timings", async () => {
@@ -122,6 +148,7 @@ test("native mini-program pins the Web design tokens, rhythm, and motion timings
   assert.match(webGlobal, /--card-stack-gap:\s*16px/u);
   assert.match(miniGlobal, /--card-inline-gap:\s*12px/u);
   assert.match(miniGlobal, /--card-stack-gap:\s*16px/u);
+  assert.match(miniGlobal, /font-display:\s*swap/u);
   assert.match(miniGlobal, /page-arrive 620ms var\(--ease-out\)/u);
 
   for (const [name, duration] of [
@@ -141,9 +168,71 @@ test("native mini-program pins the Web design tokens, rhythm, and motion timings
   assert.match(miniPractice, /celebration-fly-right 1600ms/u);
   assert.match(miniPractice, /celebration-seal 1600ms/u);
   assert.match(miniPractice, /celebration-ring 1600ms/u);
+  assert.match(miniPractice, /\.celebration-lesson-copy \{ color:var\(--ink-soft\)/u);
+  assert.match(miniPractice, /\.celebration-radical \{ color:var\(--radical-ink\)/u);
+  assert.match(miniPractice, /\.celebration-part \{ color:var\(--part-ink\)/u);
+  assert.match(miniPractice, /\.answer-sheet-title \{ color:inherit; font-weight:900; \}/u);
+  assert.match(miniPractice, /\.celebration-stat-value \{ font-variant-numeric:tabular-nums; \}/u);
+  assert.match(miniPractice, /\.celebration-stat-label \{ opacity:\.9; \}/u);
   assert.match(miniCharacter, /narration-character-cue 180ms/u);
   assert.match(miniCharacter, /narration-equalizer 520ms/u);
   assert.match(miniReader, /recording-heartbeat 1150ms/u);
   assert.match(miniComponents, /sheet-fade 220ms/u);
   assert.match(miniComponents, /transform 260ms var\(--ease-out\)/u);
+});
+
+test("native mini-program replays navigation, question, and completion motion without stale keyed nodes", async () => {
+  const [
+    globalStyles,
+    homeTemplate,
+    homeScript,
+    homeStyles,
+    lessonsScript,
+    lessonTemplate,
+    practiceHubScript,
+    practiceHubTemplate,
+    accountScript,
+    lessonStyles,
+    practiceStyles,
+    practiceScript,
+    characterStyles,
+    readerStyles,
+    learningSounds,
+  ] = await Promise.all([
+    readFile(new URL("miniprogram/app.wxss", root), "utf8"),
+    readFile(new URL("miniprogram/pages/home/index.wxml", root), "utf8"),
+    readFile(new URL("miniprogram/pages/home/index.ts", root), "utf8"),
+    readFile(new URL("miniprogram/pages/home/index.wxss", root), "utf8"),
+    readFile(new URL("miniprogram/pages/lessons/index.ts", root), "utf8"),
+    readFile(new URL("miniprogram/pages/lesson/index.wxml", root), "utf8"),
+    readFile(new URL("miniprogram/pages/practice-hub/index.ts", root), "utf8"),
+    readFile(new URL("miniprogram/pages/practice-hub/index.wxml", root), "utf8"),
+    readFile(new URL("miniprogram/pages/account/index.ts", root), "utf8"),
+    readFile(new URL("miniprogram/pages/lesson/index.wxss", root), "utf8"),
+    readFile(new URL("miniprogram/pages/practice/index.wxss", root), "utf8"),
+    readFile(new URL("miniprogram/pages/practice/index.ts", root), "utf8"),
+    readFile(new URL("miniprogram/pages/character/index.wxss", root), "utf8"),
+    readFile(new URL("miniprogram/pages/reader/index.wxss", root), "utf8"),
+    readFile(new URL("miniprogram/services/learning-sounds.ts", root), "utf8"),
+  ]);
+
+  assert.match(globalStyles, /page-arrive-a 620ms var\(--ease-out\)/u);
+  assert.match(globalStyles, /page-arrive-b 620ms var\(--ease-out\)/u);
+  assert.match(homeTemplate, /\{\{pageMotion\}\}/u);
+  for (const script of [homeScript, lessonsScript, practiceHubScript, accountScript]) {
+    assert.match(script, /pageMotion: this\.data\.pageMotion === "page-arrive-a" \? "page-arrive-b" : "page-arrive-a"/u);
+  }
+  assert.match(homeStyles, /transition:transform 120ms ease,box-shadow 120ms ease/u);
+  assert.match(lessonTemplate, /class="primary press-card"[^>]*hover-class="is-pressed"/u);
+  assert.match(practiceHubTemplate, /class="press-card"[^>]*bindtap="continueRecommended"[^>]*hover-class="is-pressed"/u);
+  assert.match(practiceHubTemplate, /class="press-card"[^>]*bindtap="openRoute"[^>]*hover-class="is-pressed"/u);
+  assert.match(lessonStyles, /transform 180ms var\(--ease-out\)/u);
+  assert.match(practiceStyles, /question-enter-a 220ms var\(--ease-out\)/u);
+  assert.match(practiceStyles, /question-enter-b 220ms var\(--ease-out\)/u);
+  assert.match(practiceStyles, /celebration-assembly\.is-assembling \.celebration-fly\.from-left[^}]*animation:none/u);
+  assert.match(practiceScript, /key: `\$\{part\.char\}-\$\{index\}-\$\{sessionSalt\}`/u);
+  assert.match(characterStyles, /\.listen-button \{ transition:transform 160ms var\(--ease-out\)/u);
+  assert.match(characterStyles, /\.memory-stage-chips button \{ transition:border-color 200ms ease,background-color 200ms ease/u);
+  assert.match(readerStyles, /\.sentence-card \{ transition:transform 90ms ease,box-shadow 90ms ease,border-color 140ms ease,background-color 140ms ease/u);
+  assert.match(learningSounds, /audio\.volume = 0\.78/u);
 });

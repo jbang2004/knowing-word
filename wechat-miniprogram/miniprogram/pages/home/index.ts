@@ -99,7 +99,6 @@ function makeView(profile: StudyProfile) {
       progressLabel: allWordsComplete
         ? `${completedCount} / ${total} 已通关`
         : "学完本课生字后解锁",
-      trailingLabel: complete ? "✓" : "›",
     };
   });
   return {
@@ -136,6 +135,7 @@ function makeView(profile: StudyProfile) {
 Page({
   data: {
     theme: loadProfile().theme,
+    pageMotion: "page-arrive-a",
     name: "小探险家",
     initial: "小",
     today: { attempts: 0, correct: 0, skips: 0, readSessions: 0 },
@@ -164,7 +164,11 @@ Page({
   onShow() {
     const profile = loadProfile();
     this.getTabBar?.()?.setData({ selected: 0, theme: profile.theme });
-    this.setData({ ...makeView(profile), theme: profile.theme });
+    this.setData({
+      ...makeView(profile),
+      theme: profile.theme,
+      pageMotion: this.data.pageMotion === "page-arrive-a" ? "page-arrive-b" : "page-arrive-a",
+    });
   },
   async onPullDownRefresh() {
     const profile = await syncProfile();

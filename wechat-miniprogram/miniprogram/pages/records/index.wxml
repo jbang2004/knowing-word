@@ -8,19 +8,19 @@
   </view>
 
   <view class="record-tabs">
-    <button wx:for="{{tracks}}" wx:key="id" class="{{item.active ? 'active' : ''}}" data-id="{{item.id}}" bindtap="switchTrack">{{item.label}}</button>
+    <button wx:for="{{tracks}}" wx:key="id" class="press-card {{item.active ? 'active' : ''}}" data-id="{{item.id}}" bindtap="switchTrack" hover-class="is-pressed">{{item.label}}</button>
   </view>
 
   <view wx:if="{{recentCount}}" class="record-recent">
     <view class="recent-head"><view><text>最近练习</text><strong>从刚才学到的地方继续</strong></view><text>最近 {{recentCount}} 个字</text></view>
     <view class="recent-list">
-      <button wx:for="{{recent}}" wx:key="id" data-id="{{item.id}}" data-lesson-id="{{item.lessonId}}" bindtap="openCharacter"><strong>{{item.hanzi}}</strong><view><text>{{item.status}}</text><small>{{item.attempts}} 次作答 · {{item.dateText}}</small></view></button>
+      <button wx:for="{{recent}}" wx:key="id" class="press-card" data-id="{{item.id}}" data-lesson-id="{{item.lessonId}}" bindtap="openCharacter" hover-class="is-pressed"><strong>{{item.hanzi}}</strong><view><text>{{item.status}}</text><small>{{item.attempts}} 次作答 · {{item.dateText}}</small></view></button>
     </view>
   </view>
 
   <view class="record-scope-bar">
     <view><strong>{{activeLessonCount}} 课有记录</strong><text>{{showAllLessons ? ('正在显示全部 ' + allLessonCount + ' 课') : '默认隐藏尚未开始的课次'}}</text></view>
-    <button bindtap="toggleAllLessons">{{showAllLessons ? '只看有记录' : ('显示全部 ' + allLessonCount + ' 课')}}</button>
+    <button class="press-card" bindtap="toggleAllLessons" hover-class="is-pressed">{{showAllLessons ? '只看有记录' : ('显示全部 ' + allLessonCount + ' 课')}}</button>
   </view>
 
   <view class="record-lessons">
@@ -28,12 +28,12 @@
       <view wx:for="{{visibleLessons}}" wx:key="id" class="record-lesson {{item.active ? '' : 'empty-lesson'}}">
         <view class="lesson-head"><view><text>第 {{item.position}} 课</text><strong>{{item.title}}</strong></view><text>{{item.completed}}/{{item.total}} 已完成</text></view>
         <view wx:if="{{item.recorded.length}}" class="lesson-characters">
-          <button wx:for="{{item.recorded}}" wx:for-item="character" wx:key="id" data-id="{{character.id}}" data-lesson-id="{{character.lessonId}}" bindtap="openCharacter"><strong>{{character.hanzi}}</strong><view><text>{{character.status}}</text><small>{{character.attempts}} 次作答</small></view><view class="record-view-action"><text>查看</text><view class="ui-icon ui-icon-arrow-right" aria-hidden="true"></view></view></button>
+          <button wx:for="{{item.recorded}}" wx:for-item="character" wx:key="id" class="press-card" data-id="{{character.id}}" data-lesson-id="{{character.lessonId}}" bindtap="openCharacter" hover-class="is-pressed"><strong>{{character.hanzi}}</strong><view><text>{{character.status}}</text><small>{{character.attempts}} 次作答</small></view><view class="record-view-action"><text>查看</text><view class="ui-icon ui-icon-arrow-right" aria-hidden="true"></view></view></button>
         </view>
         <view wx:else class="lesson-empty">尚未开始本路线</view>
       </view>
     </block>
-    <view wx:else class="record-zero-state"><view class="record-spark" aria-hidden="true"></view><strong>还没有{{activeTrackLabel}}记录</strong><view class="record-zero-copy">完成第一次闯关后，最近练习与课次记录会自动整理在这里。</view><button bindtap="startPractice">开始第一次练习</button></view>
+    <view wx:else class="record-zero-state"><view class="record-spark" aria-hidden="true"></view><strong>还没有{{activeTrackLabel}}记录</strong><view class="record-zero-copy">完成第一次闯关后，最近练习与课次记录会自动整理在这里。</view><button class="press-card" bindtap="startPractice" hover-class="is-pressed">开始第一次练习</button></view>
   </view>
 
   <bottom-navigation active="profile" theme="{{theme}}" />
