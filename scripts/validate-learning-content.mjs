@@ -1,6 +1,6 @@
 import { resolve } from "node:path";
 import { pathToFileURL } from "node:url";
-import { grade5Characters } from "../app/data/grade5-volume1-generated.ts";
+import { grade5Characters } from "../app/data/generated/grade5-volume1/all-characters.ts";
 import { grade5ExtensionCharacters } from "../app/data/generated/grade5-volume1/extension-learning.ts";
 import { grade5SemanticGold } from "./grade5-semantic-gold.mjs";
 

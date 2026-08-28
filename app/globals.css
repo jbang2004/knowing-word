@@ -1,13 +1,5 @@
-/* 楷体 is the model children copy for the 220 写字 targets; the system Kaiti
-   stacks are absent on Android and most Windows installs, so ship a subset.
-   Rebuild with `npm run build:kai`. */
-@font-face {
-  font-family: "Knowing Kai";
-  src: url("/fonts/lxgw-wenkai-subset.woff2?v=90") format("woff2");
-  font-weight: 400 500;
-  font-style: normal;
-  font-display: swap;
-}
+/* The generated import carries a content-addressed URL for the teaching font. */
+@import "./generated-font.css";
 
 :root {
   /* Four semantic roles, each with a base, a "deep" edge for the pressed

@@ -111,7 +111,7 @@ Page({
     wx.navigateTo({ url: `/pages/character/index?lessonId=${lessonId}&characterId=${id}` });
   },
   startPractice() {
-    const candidate = characterIndex.find((character) => character.ready && character.primary);
+    const candidate = characterIndex.find(isCoreCharacter);
     if (!candidate) return;
     wx.navigateTo({ url: `/pages/practice/index?track=${this.data.activeTrack}&lessonId=${candidate.lessonId}&characterId=${candidate.id}` });
   },

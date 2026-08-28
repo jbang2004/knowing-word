@@ -1,13 +1,14 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 import { characters, lessons } from "../app/data/catalog.ts";
-import { grade5Characters } from "../app/data/grade5-volume1-generated.ts";
+import { grade5Characters } from "../app/data/generated/grade5-volume1/all-characters.ts";
 import { loadLessonContent } from "../app/data/lesson-content.ts";
 import { getPracticeSteps, practiceDimension } from "../app/domain/practice.ts";
 import { isIndependentAttempt } from "../app/domain/learning-state.ts";
 import { narrationMedia } from "../app/domain/narration-media.ts";
 import { validateLearningContent } from "../scripts/validate-learning-content.mjs";
 import { grade5SemanticGold } from "../scripts/grade5-semantic-gold.mjs";
+import { inspectDisplayGlyphs } from "../scripts/lib/teaching-glyphs.mjs";
 
 test("all official records carry explicit component and exercise evidence", () => {
   const report = validateLearningContent({ strictExtensions: true });
@@ -101,29 +102,7 @@ test("component variants preserve the visible glyph and normalize the evidence",
 });
 
 test("all runtime teaching strings are well-formed and 嵌 uses portable visible components", () => {
-  const malformed = [];
-  const inspect = (value, path) => {
-    if (typeof value === "string") {
-      if (value.includes("\uFFFD")) malformed.push(`${path} contains U+FFFD`);
-      for (let index = 0; index < value.length; index += 1) {
-        const unit = value.charCodeAt(index);
-        if (unit >= 0xd800 && unit <= 0xdbff) {
-          const low = value.charCodeAt(index + 1);
-          if (!(low >= 0xdc00 && low <= 0xdfff)) malformed.push(`${path} contains an unpaired high surrogate`);
-          else index += 1;
-        } else if (unit >= 0xdc00 && unit <= 0xdfff) {
-          malformed.push(`${path} contains an unpaired low surrogate`);
-        }
-      }
-      return;
-    }
-    if (Array.isArray(value)) return value.forEach((item, index) => inspect(item, `${path}[${index}]`));
-    if (value && typeof value === "object") {
-      for (const [key, item] of Object.entries(value)) inspect(item, `${path}.${key}`);
-    }
-  };
-  inspect(characters, "characters");
-  assert.deepEqual(malformed, []);
+  assert.deepEqual(inspectDisplayGlyphs(characters, "characters").invalid, []);
 
   const embedded = characters.find((item) => item.id === "g5v1-l01-c03-u5d4c");
   assert.ok(embedded);

@@ -43,7 +43,7 @@ function normalizedClaim(claim, sourcePath) {
       text,
       kind: "structure",
       evidenceGrade: "C",
-      source: "app/data/grade5-volume1-generated.ts",
+      source: "app/data/generated/grade5-volume1/all-characters.ts",
     };
   }
   return { text, kind: "meaning", evidenceGrade: "C", source: `artifacts/narration-v3/${sourcePath}` };

@@ -2,7 +2,7 @@ import { componentIndex, getLessonContent } from "../../services/catalog";
 import { navigationLayout } from "../../services/layout";
 import { narrationView, previousPhraseStart, type NarrationMark, type NarrationTokenView } from "../../services/narration";
 import { loadProfile, saveProfile } from "../../services/profile";
-import { masteryQuestionsFor } from "../../services/practice";
+import { masteryStepsFor } from "../../services/practice";
 import type { CatalogCharacter, LessonContent } from "../../types/models";
 
 let audio: WechatMiniprogram.InnerAudioContext | null = null;
@@ -119,7 +119,7 @@ Page({
       if (!character) throw new Error("这张识字卡不存在");
       const siblingIndex = content.characters.findIndex((item) => item.id === character.id);
       const profile = loadProfile();
-      const masteryQuestions = masteryQuestionsFor(character);
+      const masteryQuestions = masteryStepsFor(character).map(({ exercise }) => exercise);
       wx.setNavigationBarTitle({ title: `${character.hanzi} · ${character.word}` });
       this.setData({
         character,

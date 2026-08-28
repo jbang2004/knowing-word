@@ -1,12 +1,13 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 import { GET } from "../app/api/catalog/route.ts";
+import { catalogSchemaVersion } from "../app/domain/catalog-contract.ts";
 
 test("mini-program catalog endpoint exposes all lesson templates and one bounded lesson shard", async () => {
   const indexResponse = await GET(new Request("https://knowing.example/api/catalog"));
   const index = await indexResponse.json();
   assert.equal(indexResponse.status, 200);
-  assert.equal(index.schemaVersion, 2);
+  assert.equal(index.schemaVersion, catalogSchemaVersion);
   assert.equal(index.lessons.length, 26);
   assert.match(indexResponse.headers.get("cache-control"), /public/u);
 

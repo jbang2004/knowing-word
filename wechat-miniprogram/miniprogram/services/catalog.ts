@@ -1,13 +1,20 @@
-import { characters, lessons, components, course } from "../data/catalog";
-import { CATALOG_SCHEMA_VERSION, assetUrl } from "../config";
+import {
+  characters,
+  lessons,
+  components,
+  course,
+} from "../data/catalog";
+import { catalogContentVersion, catalogSchemaVersion } from "../data/runtime-contract";
+import { assetUrl } from "../config";
 import type { CatalogCharacter, CatalogLesson, LessonContent } from "../types/models";
 import { publicRequest } from "./api";
 
-// v4 invalidates lesson shards whose component exercises could still contain
-// the non-portable Extension-B lower component previously used for 嵌.
-const CACHE_PREFIX = "knowing-word:lesson-cache:v4:";
-const CACHE_INDEX_KEY = "knowing-word:lesson-cache-index:v4";
+const CACHE_FAMILY_PREFIX = "knowing-word:lesson-cache";
+const CACHE_NAMESPACE = `${CACHE_FAMILY_PREFIX}:${catalogSchemaVersion}:${catalogContentVersion}`;
+const CACHE_PREFIX = `${CACHE_NAMESPACE}:lesson:`;
+const CACHE_INDEX_KEY = `${CACHE_NAMESPACE}:index`;
 const MAX_CACHED_LESSONS = 10;
+let cachePrepared = false;
 
 export const courseIndex = course;
 export const lessonIndex = lessons as CatalogLesson[];
@@ -31,14 +38,37 @@ export function findCharacter(characterId: string) {
   return characterIndex.find((character) => character.id === characterId);
 }
 
+function prepareLessonCache() {
+  if (cachePrepared) return;
+  cachePrepared = true;
+  try {
+    for (const key of wx.getStorageInfoSync().keys) {
+      if (key.startsWith(CACHE_FAMILY_PREFIX) && !key.startsWith(`${CACHE_NAMESPACE}:`)) {
+        wx.removeStorageSync(key);
+      }
+    }
+  } catch {
+    // Storage cleanup is opportunistic; the current content-addressed cache
+    // remains safe even when an older client cannot enumerate its keys.
+  }
+}
+
+function isCurrentLessonContent(value: unknown): value is LessonContent {
+  if (!value || typeof value !== "object") return false;
+  const candidate = value as Partial<LessonContent>;
+  return candidate.schemaVersion === catalogSchemaVersion
+    && Boolean(candidate.lesson && typeof candidate.lesson.id === "string")
+    && Array.isArray(candidate.characters);
+}
+
 function readCachedLesson(lessonId: string): LessonContent | null {
-  const cached = wx.getStorageSync<LessonContent>(`${CACHE_PREFIX}${lessonId}`);
-  if (cached?.schemaVersion !== CATALOG_SCHEMA_VERSION) return null;
-  if (cached.characters.some((character) => character.media?.narration.audio && character.media.narration.marks === undefined)) return null;
-  return JSON.stringify(cached).includes('"http://') ? null : cached;
+  prepareLessonCache();
+  const cached = wx.getStorageSync<unknown>(`${CACHE_PREFIX}${lessonId}`);
+  return isCurrentLessonContent(cached) ? cached : null;
 }
 
 function rememberLesson(lessonId: string, content: LessonContent) {
+  prepareLessonCache();
   try {
     wx.setStorageSync(`${CACHE_PREFIX}${lessonId}`, content);
     const previous = wx.getStorageSync<string[]>(CACHE_INDEX_KEY) || [];
@@ -55,8 +85,8 @@ function rememberLesson(lessonId: string, content: LessonContent) {
 export async function getLessonContent(lessonId: string, refresh = false): Promise<LessonContent> {
   const cached = !refresh ? readCachedLesson(lessonId) : null;
   if (cached) return cached;
-  const content = await publicRequest<LessonContent>(`/api/catalog?lessonId=${encodeURIComponent(lessonId)}`);
-  if (content.schemaVersion !== CATALOG_SCHEMA_VERSION) throw new Error("课程数据版本不兼容，请更新小程序");
+  const content = await publicRequest<unknown>(`/api/catalog?lessonId=${encodeURIComponent(lessonId)}`);
+  if (!isCurrentLessonContent(content)) throw new Error("课程数据版本不兼容，请更新小程序");
   rememberLesson(lessonId, content);
   return content;
 }

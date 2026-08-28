@@ -574,7 +574,8 @@ test("mnemonic artwork is never cropped or hidden by its caption", async () => {
 
 test("the public learning catalog preserves the course and practice-route structure", async () => {
   const publicCatalogSources = await Promise.all([
-    "../app/data/grade5-volume1-generated.ts",
+    "../app/data/generated/grade5-volume1/all-characters.ts",
+    "../app/data/generated/grade5-volume1/components.ts",
     "../app/data/extension-characters.ts",
     "../app/data/extension-components.ts",
     "../app/data/generated/grade5-volume1/lessons/g5v1-l01.ts",

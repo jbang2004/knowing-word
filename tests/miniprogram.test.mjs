@@ -1,9 +1,26 @@
 import assert from "node:assert/strict";
+import { createHash } from "node:crypto";
 import { readFile, stat } from "node:fs/promises";
 import test from "node:test";
+import { characters as runtimeCharacters } from "../app/data/catalog.ts";
+import { getPracticeSteps, getTrackExercises } from "../app/domain/practice.ts";
 import { characters, components, lessons } from "../wechat-miniprogram/miniprogram/data/catalog.ts";
+import {
+  catalogContentVersion,
+  catalogOrigin,
+  catalogSchemaVersion,
+  learningTrackIds,
+  skillDimensions,
+  trackOrigins,
+} from "../wechat-miniprogram/miniprogram/data/runtime-contract.ts";
+import { createPracticeSelectors } from "../wechat-miniprogram/miniprogram/services/practice-selection.ts";
 
 const root = new URL("../wechat-miniprogram/", import.meta.url);
+const { masteryStepsFor, trackStepsFor } = createPracticeSelectors({
+  learningTrackIds,
+  skillDimensions,
+  trackOrigins,
+});
 
 test("native mini-program uses a bounded set of page templates for the complete catalog", async () => {
   const app = JSON.parse(await readFile(new URL("miniprogram/app.json", root), "utf8"));
@@ -72,13 +89,36 @@ test("mini-program ships a compact index and keeps full lesson content behind th
   const config = await readFile(new URL("miniprogram/config.ts", root), "utf8");
   const catalogService = await readFile(new URL("miniprogram/services/catalog.ts", root), "utf8");
   assert.ok(catalogStat.size < 500_000);
-  assert.match(config, /https:\/\/knowing-word\.jbang2004\.chatgpt\.site/u);
+  assert.equal(catalogOrigin, "https://knowing-word.jbang2004.chatgpt.site");
+  assert.equal(catalogSchemaVersion, 2);
+  assert.match(catalogContentVersion, /^[a-f0-9]{16}$/u);
+  assert.match(config, /import \{ catalogOrigin \} from "\.\/data\/runtime-contract"/u);
   assert.match(config, /platform === "devtools"[\s\S]*http:\/\/localhost:3000/u);
-  assert.match(config, /return `\$\{PRODUCTION_ASSET_BASE_URL\}/u);
+  assert.match(config, /return `\$\{catalogOrigin\}/u);
   assert.match(catalogService, /\/api\/catalog\?lessonId=/u);
   assert.match(catalogService, /MAX_CACHED_LESSONS = 10/u);
-  assert.match(catalogService, /lesson-cache:v4/u);
-  assert.ok(catalogService.includes(`includes('"http://')`));
+  assert.match(catalogService, /catalogSchemaVersion.*catalogContentVersion/su);
+  assert.match(catalogService, /getStorageInfoSync/u);
+  assert.doesNotMatch(catalogService, /lesson-cache:v\d/u);
+  assert.doesNotMatch(catalogService, /JSON\.stringify\(cached\)/u);
+});
+
+test("native and Web practice selectors stay behaviorally identical", () => {
+  const tracks = ["words", "split", "honglan", "structure"];
+  for (const character of runtimeCharacters) {
+    assert.deepEqual(
+      masteryStepsFor(character).map((step) => `${step.track}:${step.exercise.id}`),
+      getPracticeSteps(character, "words", "mastery").map((step) => `${step.track}:${step.exercise.id}`),
+      `mastery drift for ${character.id}`,
+    );
+    for (const track of tracks) {
+      assert.deepEqual(
+        trackStepsFor(character, track).map((step) => step.exercise.id),
+        getTrackExercises(character, track).map((exercise) => exercise.id),
+        `${track} drift for ${character.id}`,
+      );
+    }
+  }
 });
 
 test("mini-program ships one real reading model for every lesson", async () => {
@@ -91,6 +131,9 @@ test("mini-program ships one real reading model for every lesson", async () => {
 test("native mini-program shares the Web visual language instead of the retired paper theme", async () => {
   const app = JSON.parse(await readFile(new URL("miniprogram/app.json", root), "utf8"));
   const globalStyles = await readFile(new URL("miniprogram/app.wxss", root), "utf8");
+  const generatedFontStyles = await readFile(new URL("miniprogram/generated-font.wxss", root), "utf8");
+  const fontBytes = await readFile(new URL("../public/fonts/lxgw-wenkai-subset.woff2", import.meta.url));
+  const fontHash = createHash("sha256").update(fontBytes).digest("hex").slice(0, 16);
   const homeTemplate = await readFile(new URL("miniprogram/pages/home/index.wxml", root), "utf8");
   const homeStyles = await readFile(new URL("miniprogram/pages/home/index.wxss", root), "utf8");
   const lessonTemplate = await readFile(new URL("miniprogram/pages/lesson/index.wxml", root), "utf8");
@@ -105,6 +148,8 @@ test("native mini-program shares the Web visual language instead of the retired 
   const iconStyles = await readFile(new URL("miniprogram/components/knowing-icon/index.wxss", root), "utf8");
 
   assert.equal(app.tabBar.custom, true);
+  assert.match(globalStyles, /@import "\.\/generated-font\.wxss"/u);
+  assert.match(generatedFontStyles, new RegExp(`mini-font/v1/lxgw-wenkai\\.woff2\\?h=${fontHash}`, "u"));
   assert.match(globalStyles, /--action:\s*#17b686/u);
   assert.match(globalStyles, /--radical:\s*#ff5b34/u);
   assert.match(globalStyles, /--part:\s*#2fa8e0/u);
@@ -196,10 +241,11 @@ test("correct feedback blooms without borrowing the retry shake", async () => {
 });
 
 test("native mini-program pins the Web design tokens, rhythm, and motion timings", async () => {
-  const [webGlobal, webChallenge, miniGlobal, miniPractice, miniCharacter, miniReader, miniComponents] = await Promise.all([
+  const [webGlobal, webChallenge, miniGlobal, miniFont, miniPractice, miniCharacter, miniReader, miniComponents] = await Promise.all([
     readFile(new URL("../app/globals.css", import.meta.url), "utf8"),
     readFile(new URL("../app/challenge.css", import.meta.url), "utf8"),
     readFile(new URL("miniprogram/app.wxss", root), "utf8"),
+    readFile(new URL("miniprogram/generated-font.wxss", root), "utf8"),
     readFile(new URL("miniprogram/pages/practice/index.wxss", root), "utf8"),
     readFile(new URL("miniprogram/pages/character/index.wxss", root), "utf8"),
     readFile(new URL("miniprogram/pages/reader/index.wxss", root), "utf8"),
@@ -226,7 +272,7 @@ test("native mini-program pins the Web design tokens, rhythm, and motion timings
   assert.match(webGlobal, /--card-stack-gap:\s*16px/u);
   assert.match(miniGlobal, /--card-inline-gap:\s*12px/u);
   assert.match(miniGlobal, /--card-stack-gap:\s*16px/u);
-  assert.match(miniGlobal, /font-display:\s*swap/u);
+  assert.match(miniFont, /font-display:\s*swap/u);
   assert.match(miniGlobal, /page-arrive 620ms var\(--ease-out\)/u);
 
   for (const [name, duration] of [
@@ -354,7 +400,7 @@ test("native mini-program keeps the final Web cascade across page families", asy
   ]);
 
   assert.match(globalStyles, /\.theme-night \{[\s\S]*--shadow-sheet:0 -16px 44px rgba\(0,0,0,\.5\);/u);
-  assert.match(globalStyles, /mini-font\/v1\/lxgw-wenkai\.woff2\?v=90/u);
+  assert.match(globalStyles, /@import "\.\/generated-font\.wxss"/u);
   assert.match(globalStyles, /button:active \{ transform:translateY\(var\(--press\)\); box-shadow:none; \}/u);
   assert.match(globalStyles, /button\[disabled\]:active \{ transform:none; \}/u);
   assert.match(globalStyles, /button \{ min-width: 0; max-width:100%;/u);

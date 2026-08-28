@@ -3,7 +3,7 @@ import { sendAnswerEvent } from "../../services/events";
 import { navigationLayout } from "../../services/layout";
 import { playLearningSound, stopLearningSound } from "../../services/learning-sounds";
 import { loadProfile, recordAnswer } from "../../services/profile";
-import { masteryStepsFor, type PracticeStep } from "../../services/practice";
+import { masteryStepsFor, trackStepsFor, type PracticeStep } from "../../services/practice";
 import type { CatalogCharacter, Exercise, TrackId } from "../../types/models";
 
 let writingContext: WechatMiniprogram.CanvasContext | null = null;
@@ -126,16 +126,7 @@ function assemblySlots(
 }
 
 function questionsFor(character: CatalogCharacter, track: TrackId) {
-  const exercises = character.exercises ?? [];
-  if (track === "words") return masteryStepsFor(character);
-  const selected = exercises.filter((exercise) => {
-    const text = `${exercise.questionType}${exercise.prompt}${exercise.origin}`;
-    if (track === "split") return exercise.kind === "components" || /拆|部件/u.test(text);
-    if (track === "honglan") return exercise.options.some((option) => option.radical) || /部首|表意/u.test(text);
-    return exercise.kind === "structure" || /结构|空间/u.test(text);
-  });
-  return (selected.length ? selected : exercises.slice(0, Math.min(4, exercises.length)))
-    .map((exercise): PracticeStep => ({ exercise, track }));
+  return track === "words" ? masteryStepsFor(character) : trackStepsFor(character, track);
 }
 
 Page({

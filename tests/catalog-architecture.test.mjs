@@ -1,4 +1,5 @@
 import assert from "node:assert/strict";
+import { createHash } from "node:crypto";
 import { readdir, readFile, stat } from "node:fs/promises";
 import test from "node:test";
 
@@ -12,12 +13,27 @@ test("the runtime curriculum is split into one bounded module per lesson", async
     assert.ok(shardStat.size < 300_000, `${shardName} is too large to remain a route-level content shard`);
   }
 
-  const compatibilitySource = await readFile(
-    new URL("../app/data/grade5-volume1-generated.ts", import.meta.url),
+  const catalogSource = await readFile(
+    new URL("../app/data/catalog.ts", import.meta.url),
     "utf8",
   );
-  assert.ok(compatibilitySource.length < 1_000);
-  assert.doesNotMatch(compatibilitySource, /"exercises"\s*:/);
+  assert.match(catalogSource, /generated\/grade5-volume1\/all-characters\.ts/u);
+  assert.doesNotMatch(catalogSource, /grade5-volume1-generated/u);
+  await assert.rejects(
+    stat(new URL("../app/data/grade5-volume1-generated.ts", import.meta.url)),
+    { code: "ENOENT" },
+  );
+});
+
+test("teaching-font cache keys are generated from the font bytes", async () => {
+  const [globalStyles, generatedStyles, fontBytes] = await Promise.all([
+    readFile(new URL("../app/globals.css", import.meta.url), "utf8"),
+    readFile(new URL("../app/generated-font.css", import.meta.url), "utf8"),
+    readFile(new URL("../public/fonts/lxgw-wenkai-subset.woff2", import.meta.url)),
+  ]);
+  const contentHash = createHash("sha256").update(fontBytes).digest("hex").slice(0, 16);
+  assert.match(globalStyles, /@import "\.\/generated-font\.css"/u);
+  assert.match(generatedStyles, new RegExp(`lxgw-wenkai-subset\\.woff2\\?h=${contentHash}`, "u"));
 });
 
 test("lesson loading keeps official and extension records in the canonical order", async () => {

@@ -27,7 +27,8 @@ export default async function PracticeRoutePage({
   ]);
   const character = content?.characters.find((item) => item.id === characterId);
   const media = lessonMedia?.[characterId];
-  if (!content || !character || !media || !getPracticeSteps(character, track, mode).length) notFound();
+  const steps = character ? getPracticeSteps(character, track, mode) : [];
+  if (!content || !character || !media || !steps.length) notFound();
   const candidateIds = content.characters
     .filter((item) => item.primary && item.official !== false && getPracticeSteps(item, track, mode).length > 0)
     .map((item) => item.id);
@@ -35,7 +36,7 @@ export default async function PracticeRoutePage({
   const parsedIndex = typeof rawIndex === "string" && /^\d{1,2}$/u.test(rawIndex)
     ? Number(rawIndex)
     : undefined;
-  const initialQuestionIndex = parsedIndex !== undefined && parsedIndex < getPracticeSteps(character, track, mode).length
+  const initialQuestionIndex = parsedIndex !== undefined && parsedIndex < steps.length
     ? parsedIndex
     : undefined;
   const rawReturnTo = Array.isArray(query.returnTo) ? query.returnTo[0] : query.returnTo;

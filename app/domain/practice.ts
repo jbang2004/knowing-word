@@ -7,7 +7,7 @@ import {
 } from "./learning-state.ts";
 import type { TrackId } from "../lib/profile-model";
 import { diagnoseErrors, type RemediationActivity } from "./error-diagnosis.ts";
-import { learningTrackIds } from "./tracks.ts";
+import { learningTrackIds, trackMeta } from "./tracks.ts";
 
 export type PracticeMode = "track" | "mastery";
 
@@ -32,16 +32,9 @@ export const writingSelfAssessments = [
 export type WritingSelfAssessment = typeof writingSelfAssessments[number];
 export type WritingPhase = "draft" | "review" | "rewrite";
 
-const exerciseOrigin: Record<TrackId, string> = {
-  words: "识字小测",
-  split: "拆一拆",
-  honglan: "红蓝字",
-  structure: "空间结构",
-};
-
 export function getTrackExercises(character: CharacterItem, track: TrackId) {
   return character.exercises.filter((exercise) => {
-    const belongsToTrack = exercise.origin === exerciseOrigin[track] ||
+    const belongsToTrack = exercise.origin === trackMeta[track].origin ||
       (track === "words" && exercise.origin === "科学复习") ||
       (track === "split" &&
         exercise.origin === "科学复习" &&

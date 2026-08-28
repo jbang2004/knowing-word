@@ -2,19 +2,17 @@ import { course, lessons } from "../../data/catalog.ts";
 import { loadLessonContent } from "../../data/lesson-content.ts";
 import { loadLessonMedia } from "../../data/lesson-media.ts";
 import { lessonVisuals } from "../../data/illustrations.ts";
+import { catalogOrigin, catalogSchemaVersion } from "../../domain/catalog-contract.ts";
 import { narrationMedia } from "../../domain/narration-media.ts";
 
 export const dynamic = "force-dynamic";
-
-const CATALOG_SCHEMA_VERSION = 2;
-const PRODUCTION_ASSET_ORIGIN = "https://knowing-word.jbang2004.chatgpt.site";
 
 function absoluteAsset(request: Request, source?: string) {
   if (!source) return "";
   const requestUrl = new URL(request.url);
   const base = requestUrl.protocol === "https:"
     ? requestUrl.origin
-    : PRODUCTION_ASSET_ORIGIN;
+    : catalogOrigin;
   const asset = new URL(source, base);
   if (asset.origin === base && asset.pathname.startsWith("/illustrations/")) {
     return new URL(`/api/mini-asset/v1${asset.pathname}`, base).toString();
@@ -39,7 +37,7 @@ export async function GET(request: Request) {
   const lessonId = new URL(request.url).searchParams.get("lessonId")?.trim();
   if (!lessonId) {
     return jsonCatalog({
-      schemaVersion: CATALOG_SCHEMA_VERSION,
+      schemaVersion: catalogSchemaVersion,
       course,
       lessons: lessons.map((lesson) => ({
         ...lesson,
@@ -63,7 +61,7 @@ export async function GET(request: Request) {
 
   const visual = lessonVisuals[lessonId];
   return jsonCatalog({
-    schemaVersion: CATALOG_SCHEMA_VERSION,
+    schemaVersion: catalogSchemaVersion,
     course,
     lesson: {
       ...content.lesson,

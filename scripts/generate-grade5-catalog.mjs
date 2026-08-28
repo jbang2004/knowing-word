@@ -21,7 +21,6 @@ const dictionaryUrl = "https://raw.githubusercontent.com/skishore/makemeahanzi/m
 const generatedCatalogRoot = join(root, "app/data/generated/grade5-volume1");
 const generatedLessonRoot = join(generatedCatalogRoot, "lessons");
 const generatedReviewLessonRoot = join(generatedCatalogRoot, "review-lessons");
-const outputModule = join(root, "app/data/grade5-volume1-generated.ts");
 const visualModule = join(root, "app/data/grade5-volume1-visuals.generated.ts");
 const mnemonicModule = join(root, "app/data/grade5-volume1-mnemonics.generated.ts");
 const promptModule = join(root, "scripts/generated/grade5-volume1-image-prompts.generated.ts");
@@ -1611,10 +1610,6 @@ await writeFile(
 await writeFile(
   extensionLearningModule,
   serialize("grade5ExtensionCharacters", enrichedExtensionCharacters, 0),
-);
-await writeFile(
-  outputModule,
-  `/* Generated compatibility surface. Runtime routes should load lesson shards directly. */\nexport { grade5Course, grade5Lessons } from "./generated/grade5-volume1/course.ts";\nexport { grade5Characters } from "./generated/grade5-volume1/all-characters.ts";\nexport { grade5Components } from "./generated/grade5-volume1/components.ts";\n`,
 );
 await writeFile(visualModule, `${serialize("grade5CharacterVisuals", visuals)}\n${serialize("grade5LessonVisuals", Object.fromEntries(grade5Volume1Lessons.map((lesson) => [lessonId(lesson.position), { src: `/illustrations/lessons/g5-${String(lesson.position).padStart(2, "0")}.webp`, label: lesson.title, alt: lesson.visual }])))}`);
 await writeFile(mnemonicModule, serialize("grade5MnemonicScenes", scenes));
