@@ -1,11 +1,22 @@
 import type { LearningEvent } from "../../domain/learning-event.ts";
 
+export const MAX_LEARNING_EVENTS_PER_DAY = 5_000;
+
 export async function saveLearningEvent(
   db: D1Database,
   userId: string,
   payload: LearningEvent,
   createdAt: string = new Date().toISOString(),
 ) {
+  const dayStart = `${createdAt.slice(0, 10)}T00:00:00.000Z`;
+  const dayEnd = new Date(Date.parse(dayStart) + 24 * 60 * 60 * 1_000).toISOString();
+  const usage = await db.prepare(
+    `SELECT COUNT(*) AS count FROM learning_events
+     WHERE user_id = ?1 AND created_at >= ?2 AND created_at < ?3`,
+  ).bind(userId, dayStart, dayEnd).first<{ count: number }>();
+  if (Number(usage?.count ?? 0) >= MAX_LEARNING_EVENTS_PER_DAY) {
+    return { status: "quota" as const, id: payload.eventId };
+  }
   await db.prepare(
       `INSERT OR IGNORE INTO learning_events
        (id, user_id, action, track, lesson_id, character_id, question_id, correct, selection_json, dimension, cue_level, answer_mode, latency_ms, error_tags_json, created_at)
@@ -32,5 +43,5 @@ export async function saveLearningEvent(
       createdAt,
     )
     .run();
-  return { id: payload.eventId };
+  return { status: "saved" as const, id: payload.eventId };
 }

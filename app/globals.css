@@ -1,139 +1,6 @@
 /* The generated import carries a content-addressed URL for the teaching font. */
 @import "./generated-font.css";
-
-:root {
-  /* Four semantic roles, each with a base, a "deep" edge for the pressed
-     shadow, a soft fill and a light edge. Everything else is neutral.
-     The decorative hues below are aliases so the palette collapses to these
-     four without a sweep through every selector. */
-  --action: #17b686;
-  --action-deep: #0f8c64;
-  --action-soft: #e2f7ef;
-  --action-edge: #bfe8d9;
-  --action-ink: #0f1614;
-  --action-text: #0b7654;
-
-  --radical: #ff5b34;
-  --radical-deep: #d93c18;
-  --radical-soft: #ffeae3;
-  --radical-edge: #ffc9b8;
-  --radical-ink: #30150e;
-  --radical-text: #bd3214;
-
-  --part: #2fa8e0;
-  --part-deep: #1e82b4;
-  --part-soft: #e3f4fd;
-  --part-edge: #b9e2f7;
-  --part-ink: #0f1614;
-  --part-text: #176d99;
-
-  --wrong: #ffb020;
-  --wrong-deep: #d98c00;
-  --wrong-soft: #fff3d9;
-  --wrong-edge: #f2dfb0;
-  --wrong-ink: #4a3000;
-  --wrong-text: #4a3000;
-
-  /* These stay dark in both themes for controls that intentionally keep a
-     literal white surface (image overlays and result sheets). */
-  --action-on-white: #0b7654;
-  --radical-on-white: #bd3214;
-  --part-on-white: #176d99;
-  --wrong-on-white: #4a3000;
-  --ink-on-white: #22302c;
-  --ink-soft-on-white: #5e6e68;
-  --navy-on-white: #123c33;
-
-  --sky: #fffcf6;
-  --sky-deep: #f2ece0;
-  --paper: #ffffff;
-  --paper-soft: #faf6ee;
-  --ink: #22302c;
-  --ink-soft: #5e6e68;
-  --ink-faint: #5e6e68;
-  --disabled-ink: #70695d;
-  --line: #e5dfd2;
-  --line-deep: #d5cdba;
-  --navy: #123c33;
-
-  /* Retired decorative hues. Kept as aliases so existing selectors keep
-     working while the palette reads as four roles. */
-  --coral: var(--radical);
-  --coral-soft: var(--radical-soft);
-  --saffron: var(--wrong);
-  --saffron-soft: var(--wrong-soft);
-  --violet: var(--part);
-  --violet-soft: var(--part-soft);
-  --lapis: var(--part);
-  --lapis-soft: var(--part-soft);
-  --jade: var(--action);
-  --jade-soft: var(--action-soft);
-  --rose: var(--radical);
-
-  /* Solid-block depth. Every tappable thing has thickness and sinks 4px when
-     pressed; only lifted sheets keep a soft shadow. */
-  --shadow-xs: 0 2px 0 var(--line);
-  --shadow: 0 3px 0 var(--line);
-  --shadow-lift: 0 5px 0 var(--line-deep);
-  --shadow-sheet: 0 -16px 44px rgba(34, 48, 44, 0.26);
-  --press: 4px;
-  --card-inline-gap: 12px;
-  --card-stack-gap: 16px;
-
-  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
-  --kai: "Knowing Kai", "Kaiti SC", "STKaiti", KaiTi, "Songti SC", STSong, serif;
-  --serif: "Iowan Old Style", "Source Han Serif SC", "Noto Serif CJK SC", "Songti SC", STSong, Georgia, serif;
-  --sans: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", system-ui, sans-serif;
-  /* Numerals and Latin only; CJK has no reliable rounded system face. */
-  --round: ui-rounded, "SF Pro Rounded", "Hiragino Maru Gothic ProN", var(--sans);
-}
-
-html[data-theme="night"] {
-  --action: #35c295;
-  --action-deep: #1d8f6b;
-  --action-soft: #1f3a33;
-  --action-edge: #1d8f6b;
-  --action-ink: #0f1614;
-  --action-text: #70d9b6;
-
-  --radical: #ff7a52;
-  --radical-deep: #c9502c;
-  --radical-soft: #3c2924;
-  --radical-edge: #c9502c;
-  --radical-ink: #0f1614;
-  --radical-text: #ff9a7d;
-
-  --part: #5fb4dc;
-  --part-deep: #3c7fa3;
-  --part-soft: #22343a;
-  --part-edge: #3c7fa3;
-  --part-ink: #0f1614;
-  --part-text: #8bcceb;
-
-  --wrong: #e9b04a;
-  --wrong-deep: #b3822a;
-  --wrong-soft: #39311f;
-  --wrong-edge: #b3822a;
-  --wrong-ink: #0f1614;
-  --wrong-text: #f5c86d;
-
-  --sky: #111b19;
-  --sky-deep: #172521;
-  --paper: #192521;
-  --paper-soft: #1d2b27;
-  --ink: #f4f0e8;
-  --ink-soft: #b9c1bc;
-  --ink-faint: #a6b3ad;
-  --disabled-ink: #8f9a94;
-  --line: #34443e;
-  --line-deep: #22302c;
-  --navy: #eff3ed;
-
-  --shadow-xs: 0 2px 0 var(--line);
-  --shadow: 0 3px 0 var(--line);
-  --shadow-lift: 0 5px 0 var(--line-deep);
-  --shadow-sheet: 0 -16px 44px rgba(0, 0, 0, 0.5);
-}
+@import "./design-tokens.generated.css";
 
 * {
   box-sizing: border-box;
@@ -840,14 +707,14 @@ canvas:focus-visible {
   min-width: 86px;
   padding: 8px 10px;
   border-radius: 12px;
-  color: #fff;
+  color: var(--part-ink);
   text-align: left;
-  background: rgba(255, 255, 255, 0.13);
+  background: rgba(15, 22, 20, 0.08);
   transition: transform 160ms ease, background 160ms ease;
 }
 
 .practice-strip-items :is(button, a):hover {
-  background: rgba(255, 255, 255, 0.23);
+  background: rgba(15, 22, 20, 0.15);
   transform: translateY(-3px);
 }
 
@@ -862,7 +729,8 @@ canvas:focus-visible {
 }
 
 .practice-strip-items :is(button, a) small {
-  color: rgba(255, 255, 255, 0.76);
+  color: inherit;
+  opacity: 0.72;
   font-size: 0.8125rem;
 }
 

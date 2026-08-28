@@ -213,7 +213,7 @@ export function ReadAloudRoute({
   return (
     <LearningPageShell active="practice" name={profile.name}>
       <div className="page read-page">
-        <PageHeading density="utility" kicker="日日朗读" title="先听一遍，再把句子读出来" copy={`已完成 ${totalReadSessions(profile.daily)} 次朗读练习。登录状态下，录音可跨设备回听。`} backHref={returnTo} />
+        <PageHeading density="utility" kicker="日日朗读" title="先听一遍，再把句子读出来" copy={`已完成 ${totalReadSessions(profile.daily)} 次朗读练习。登录状态下，录音可跨设备回听，每课保留最近 3 次。`} backHref={returnTo} />
         <div className="read-lesson-picker">
           <button disabled={lessonIndex <= 0} aria-label="上一课" onClick={() => selectLesson(grade5Lessons[lessonIndex - 1]?.id)}><ChevronLeft aria-hidden="true" /></button>
           <label>

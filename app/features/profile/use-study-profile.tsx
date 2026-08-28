@@ -42,9 +42,14 @@ export function StudyProfileProvider({ children }: { children: ReactNode }) {
   const lastSaved = useRef(JSON.stringify(webProfileClient.empty()));
   const queuedSave = useRef<string | null>(null);
   const saveTask = useRef<Promise<void> | null>(null);
+  const saveTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const active = useRef(true);
 
   const flushQueuedSave = useCallback(() => {
+    if (saveTimer.current) {
+      clearTimeout(saveTimer.current);
+      saveTimer.current = null;
+    }
     if (saveTask.current) return saveTask.current;
     const task = (async () => {
       while (active.current && queuedSave.current) {
@@ -84,6 +89,14 @@ export function StudyProfileProvider({ children }: { children: ReactNode }) {
     return task;
   }, []);
 
+  const scheduleQueuedSave = useCallback(() => {
+    if (saveTimer.current) clearTimeout(saveTimer.current);
+    saveTimer.current = setTimeout(() => {
+      saveTimer.current = null;
+      void flushQueuedSave();
+    }, 700);
+  }, [flushQueuedSave]);
+
   useEffect(() => {
     active.current = true;
     const controller = new AbortController();
@@ -117,25 +130,47 @@ export function StudyProfileProvider({ children }: { children: ReactNode }) {
     return () => {
       active.current = false;
       controller.abort();
+      if (saveTimer.current) clearTimeout(saveTimer.current);
     };
   }, []);
 
   useEffect(() => {
     document.documentElement.dataset.theme = profile.theme;
     if (!hydrated) return;
-    webProfileClient.writeCache(profile);
+    try {
+      webProfileClient.writeCache(profile);
+    } catch {
+      // A denied or full local cache must not interrupt the authoritative
+      // server save that follows this best-effort browser write.
+    }
     const serialized = JSON.stringify(profile);
     if (serialized === lastSaved.current) return;
     queuedSave.current = serialized;
-    void flushQueuedSave();
-  }, [flushQueuedSave, hydrated, profile]);
+    scheduleQueuedSave();
+  }, [hydrated, profile, scheduleQueuedSave]);
 
   useEffect(() => {
     return webProfileClient.onOnline(() => void flushQueuedSave());
   }, [flushQueuedSave]);
 
+  useEffect(() => {
+    const flushWhenHidden = () => {
+      if (document.visibilityState === "hidden") void flushQueuedSave();
+    };
+    window.addEventListener("pagehide", flushWhenHidden);
+    document.addEventListener("visibilitychange", flushWhenHidden);
+    return () => {
+      window.removeEventListener("pagehide", flushWhenHidden);
+      document.removeEventListener("visibilitychange", flushWhenHidden);
+    };
+  }, [flushQueuedSave]);
+
   const resetProfile = useCallback(async () => {
     const next = { ...webProfileClient.empty(), theme: profile.theme };
+    if (saveTimer.current) {
+      clearTimeout(saveTimer.current);
+      saveTimer.current = null;
+    }
     queuedSave.current = null;
     setSyncState("loading");
     try {

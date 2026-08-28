@@ -26,21 +26,32 @@ test("runtime bindings remain isolated across concurrent requests", async () => 
 test("a failed recording transaction removes its newly written R2 object", async () => {
   const deleted = [];
   const media = {
-    async put() {},
+    async put(_key, body) { await new Response(body).arrayBuffer(); },
     async delete(key) { deleted.push(key); },
   };
   const db = {
-    prepare() {
+    prepare(sql) {
       return {
         bind() {
-          return { async run() { throw new Error("simulated D1 failure"); } };
+          return {
+            async first() { return { byte_size: 0 }; },
+            async all() { return { results: [] }; },
+            async run() {
+              if (sql.includes("INSERT INTO recordings")) throw new Error("simulated D1 failure");
+              return { meta: { changes: 1 } };
+            },
+          };
         },
       };
     },
   };
   const request = new Request("https://example.test/api/recordings?lessonId=g5v1-l01", {
     method: "POST",
-    headers: { "content-type": "audio/webm; codecs=opus" },
+    headers: {
+      "content-type": "audio/webm; codecs=opus",
+      "content-length": "3",
+      "oai-authenticated-user-id": "runtime-test-user",
+    },
     body: new Uint8Array([1, 2, 3]),
   });
   const originalError = console.error;

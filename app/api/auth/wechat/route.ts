@@ -1,11 +1,13 @@
 import { getDb, jsonWithIdentity, type RequestIdentity } from "../../../lib/server-store.ts";
 import { getRuntimeEnv } from "../../../lib/runtime-env.ts";
+import { readBoundedJson } from "../../../lib/request-body.ts";
 import {
   exchangeWechatCode,
   WechatLoginError,
 } from "../../../server/services/wechat-auth-service.ts";
 
 export const dynamic = "force-dynamic";
+const MAX_WECHAT_LOGIN_REQUEST_BYTES = 2 * 1024;
 
 const anonymousIdentity: RequestIdentity = {
   userId: "wechat:pending",
@@ -15,13 +17,17 @@ const anonymousIdentity: RequestIdentity = {
 };
 
 export async function POST(request: Request) {
-  let code = "";
-  try {
-    const payload = await request.json() as { code?: unknown };
-    code = typeof payload.code === "string" ? payload.code.trim() : "";
-  } catch {
+  const payload = await readBoundedJson(request, MAX_WECHAT_LOGIN_REQUEST_BYTES);
+  if (payload.status === "too-large") {
+    return jsonWithIdentity(anonymousIdentity, { error: "微信登录请求过大" }, { status: 413 });
+  }
+  if (payload.status !== "ok") {
     return jsonWithIdentity(anonymousIdentity, { error: "微信登录请求不是有效的 JSON" }, { status: 400 });
   }
+  const codeValue = payload.value && typeof payload.value === "object" && !Array.isArray(payload.value)
+    ? (payload.value as { code?: unknown }).code
+    : undefined;
+  const code = typeof codeValue === "string" ? codeValue.trim() : "";
 
   try {
     const env = getRuntimeEnv();

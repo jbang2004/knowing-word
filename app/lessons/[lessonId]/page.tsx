@@ -15,10 +15,22 @@ export default async function LessonPage({
   const content = await loadLessonContent(lessonId);
   if (!content) notFound();
   const view: LessonView = viewParam === "words" || viewParam === "practice" ? viewParam : "read";
+  const characters = content.characters.map((character) => ({
+    id: character.id,
+    lessonId: character.lessonId,
+    word: character.word,
+    wordPosition: character.wordPosition,
+    hanzi: character.hanzi,
+    primary: character.primary,
+    pinyin: character.pinyin,
+    curriculumRole: character.curriculumRole,
+    polyphonic: character.polyphonic,
+    official: character.official,
+  }));
   return (
     <LessonRoute
       lesson={content.lesson}
-      characters={content.characters}
+      characters={characters}
       document={content.document}
       view={view}
     />

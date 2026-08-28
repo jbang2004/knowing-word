@@ -4,6 +4,12 @@ import { navigationLayout } from "../../services/layout";
 import { playLearningSound, stopLearningSound } from "../../services/learning-sounds";
 import { loadProfile, recordAnswer } from "../../services/profile";
 import { masteryStepsFor, trackStepsFor, type PracticeStep } from "../../services/practice";
+import {
+  dueDimensions,
+  practiceAnswerMode,
+  practiceDimension,
+  practiceErrorTags,
+} from "../../services/learning-core";
 import type { CatalogCharacter, Exercise, TrackId } from "../../types/models";
 
 let writingContext: WechatMiniprogram.CanvasContext | null = null;
@@ -135,6 +141,7 @@ Page({
     track: "words" as TrackId,
     trackInfo: trackMeta.words,
     lessonId: "",
+    reviewDue: false,
     requestedCharacterId: "",
     characters: [] as CatalogCharacter[],
     characterIndex: 0,
@@ -206,6 +213,7 @@ Page({
       track,
       trackInfo: trackMeta[track],
       lessonId: options.lessonId ?? "g5v1-l01",
+      reviewDue: options.review === "due",
       requestedCharacterId: options.characterId ?? "",
       ...navigationLayout(0),
     });
@@ -240,7 +248,14 @@ Page({
       this.setData({ finished: true });
       return;
     }
-    const questions = questionsFor(character, this.data.track);
+    const allQuestions = questionsFor(character, this.data.track);
+    const due = this.data.reviewDue
+      ? new Set(dueDimensions(loadProfile(), character.id))
+      : null;
+    const dueQuestions = due
+      ? allQuestions.filter((step) => due.has(practiceDimension(step.exercise, step.track)))
+      : [];
+    const questions = dueQuestions.length ? dueQuestions : allQuestions;
     const parts = character.parts?.length
       ? character.parts
       : [{ char: character.hanzi, radical: true }];
@@ -468,6 +483,10 @@ Page({
         ? correctIds.length === selectedIds.length && correctIds.every((id, index) => selectedIds[index] === id)
         : JSON.stringify([...selectedIds].sort()) === JSON.stringify([...correctIds].sort());
     const latencyMs = Date.now() - (this as unknown as { questionStartedAt: number }).questionStartedAt;
+    const errorTags = correct ? [] : practiceErrorTags(question, this.data.questionTrack, selectedIds, writingAssessment);
+    const cueLevel = Math.max(question.cueLevel ?? 0, this.data.currentAttempts > 0 ? 2 : 0) as 0 | 1 | 2 | 3;
+    const dimension = practiceDimension(question, this.data.questionTrack);
+    const answerMode = practiceAnswerMode(question);
     const nextPassedQuestionIds = correct && !this.data.passedQuestionIds.includes(question.id)
       ? [...this.data.passedQuestionIds, question.id]
       : this.data.passedQuestionIds;
@@ -479,7 +498,14 @@ Page({
       questionId: question.id,
       correct,
       questionIndex: this.data.questionIndex,
+      questionCount: this.data.questions.length,
       completed: correct && nextPassedQuestionIds.length === this.data.questions.length,
+      reviewDue: this.data.reviewDue,
+      dimension,
+      answerMode,
+      cueLevel,
+      latencyMs,
+      errorTags,
     });
     sendAnswerEvent({
       track: this.data.questionTrack,
@@ -488,10 +514,11 @@ Page({
       questionId: question.id,
       correct,
       selected: selectedIds,
-      dimension: question.dimension,
-      answerMode: question.answerMode ?? (question.kind === "write" ? "self-check" : "choice"),
-      cueLevel: question.cueLevel ?? 0,
+      dimension,
+      answerMode,
+      cueLevel,
       latencyMs,
+      errorTags,
     });
     const sessionResults = [...this.data.sessionResults, correct];
     const streak = correct ? this.data.streak + 1 : 0;

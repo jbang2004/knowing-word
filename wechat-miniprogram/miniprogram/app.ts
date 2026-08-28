@@ -1,5 +1,6 @@
 import { ensureWechatSession } from "./services/session";
-import { syncProfile } from "./services/profile";
+import { ensureProfileActor, syncProfile } from "./services/profile";
+import { flushLearningEvents } from "./services/events";
 
 App({
   globalData: {
@@ -11,9 +12,15 @@ App({
     // request domains or server credentials are configured, so it must never
     // hold the initial render hostage.
     this.globalData.sessionReady = true;
-    void ensureWechatSession().then(() => syncProfile());
+    void ensureProfileActor();
+    void ensureWechatSession().then(async () => {
+      await syncProfile();
+      await flushLearningEvents();
+    });
   },
   onShow() {
-    if (this.globalData.sessionReady) void syncProfile();
+    if (this.globalData.sessionReady) {
+      void syncProfile().then(() => flushLearningEvents());
+    }
   },
 });

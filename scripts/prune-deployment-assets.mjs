@@ -51,6 +51,7 @@ const counts = {
   ),
   starter: 0,
   stagedNarration: 0,
+  unusedFonts: 0,
 };
 
 const stagedNarration = join(clientRoot, "media/narration");
@@ -64,6 +65,16 @@ for (const name of ["file.svg", "globe.svg", "window.svg"]) {
   if (await exists(path)) {
     await rm(path);
     counts.starter += 1;
+  }
+}
+
+for (const path of [
+  join(clientRoot, "fonts/lxgw-wenkai-mini-v1.woff2"),
+  join(clientRoot, "assets/_vinext_fonts"),
+]) {
+  if (await exists(path)) {
+    await rm(path, { recursive: true });
+    counts.unusedFonts += 1;
   }
 }
 
@@ -98,5 +109,6 @@ process.stdout.write(
   `Deployment assets pruned: ${counts.heritage} legacy heritage files, ` +
   `${counts.mnemonicSvg} unused mnemonic SVGs, ` +
   `${counts.starter} starter icons, ` +
-  `${counts.stagedNarration} staged narration tree; enabled cache-header routing.\n`,
+  `${counts.stagedNarration} staged narration tree, ` +
+  `${counts.unusedFonts} unused font bundles; enabled cache-header routing.\n`,
 );

@@ -107,7 +107,13 @@ test("native mini-program never blocks first paint on WeChat login", async () =>
   assert.match(appScript, /onLaunch\(\) \{/u);
   assert.doesNotMatch(appScript, /async onLaunch\(\)/u);
   assert.doesNotMatch(appScript, /await ensureWechatSession\(\)/u);
-  assert.match(appScript, /void ensureWechatSession\(\)\.then\(\(\) => syncProfile\(\)\)/u);
+  assert.ok(
+    appScript.indexOf("this.globalData.sessionReady = true") < appScript.indexOf("void ensureWechatSession().then"),
+    "the local session must be ready before remote authentication starts",
+  );
+  assert.match(appScript, /void ensureWechatSession\(\)\.then/u);
+  assert.match(appScript, /await syncProfile\(\)/u);
+  assert.match(appScript, /await flushLearningEvents\(\)/u);
 });
 
 test("mini-program ships a compact index and keeps full lesson content behind the Sites API", async () => {
@@ -156,7 +162,9 @@ test("mini-program ships one real reading model for every lesson", async () => {
 
 test("native mini-program shares the Web visual language instead of the retired paper theme", async () => {
   const app = JSON.parse(await readFile(new URL("miniprogram/app.json", root), "utf8"));
-  const globalStyles = await readFile(new URL("miniprogram/app.wxss", root), "utf8");
+  const appStyles = await readFile(new URL("miniprogram/app.wxss", root), "utf8");
+  const tokenStyles = await readFile(new URL("miniprogram/design-tokens.generated.wxss", root), "utf8");
+  const globalStyles = `${appStyles}\n${tokenStyles}`;
   const generatedFontStyles = await readFile(new URL("miniprogram/generated-font.wxss", root), "utf8");
   const fontBytes = await readFile(new URL("../public/fonts/lxgw-wenkai-subset.woff2", import.meta.url));
   const fontHash = createHash("sha256").update(fontBytes).digest("hex").slice(0, 16);
@@ -174,7 +182,8 @@ test("native mini-program shares the Web visual language instead of the retired 
   const iconStyles = await readFile(new URL("miniprogram/components/knowing-icon/index.wxss", root), "utf8");
 
   assert.equal(app.tabBar.custom, true);
-  assert.match(globalStyles, /@import "\.\/generated-font\.wxss"/u);
+  assert.match(appStyles, /@import "\.\/generated-font\.wxss"/u);
+  assert.match(appStyles, /@import "\.\/design-tokens\.generated\.wxss"/u);
   assert.match(generatedFontStyles, new RegExp(`mini-font/v1/lxgw-wenkai\\.woff2\\?h=${fontHash}`, "u"));
   assert.match(globalStyles, /--action:\s*#17b686/u);
   assert.match(globalStyles, /--radical:\s*#ff5b34/u);
@@ -267,10 +276,11 @@ test("correct feedback blooms without borrowing the retry shake", async () => {
 });
 
 test("native mini-program pins the Web design tokens, rhythm, and motion timings", async () => {
-  const [webGlobal, webChallenge, miniGlobal, miniFont, miniPractice, miniCharacter, miniReader, miniComponents] = await Promise.all([
-    readFile(new URL("../app/globals.css", import.meta.url), "utf8"),
+  const [webTokens, webChallenge, miniGlobal, miniTokens, miniFont, miniPractice, miniCharacter, miniReader, miniComponents] = await Promise.all([
+    readFile(new URL("../app/design-tokens.generated.css", import.meta.url), "utf8"),
     readFile(new URL("../app/challenge.css", import.meta.url), "utf8"),
     readFile(new URL("miniprogram/app.wxss", root), "utf8"),
+    readFile(new URL("miniprogram/design-tokens.generated.wxss", root), "utf8"),
     readFile(new URL("miniprogram/generated-font.wxss", root), "utf8"),
     readFile(new URL("miniprogram/pages/practice/index.wxss", root), "utf8"),
     readFile(new URL("miniprogram/pages/character/index.wxss", root), "utf8"),
@@ -287,17 +297,17 @@ test("native mini-program pins the Web design tokens, rhythm, and motion timings
     "sky", "sky-deep", "paper", "paper-soft", "ink", "ink-soft", "line", "line-deep", "navy",
   ]) {
     const pattern = new RegExp(`--${token}:\\s*([^;]+);`, "u");
-    const webValue = webGlobal.match(pattern)?.[1];
-    const miniValue = miniGlobal.match(pattern)?.[1];
+    const webValue = webTokens.match(pattern)?.[1];
+    const miniValue = miniTokens.match(pattern)?.[1];
     assert.ok(webValue, `Web should define --${token}`);
     assert.ok(miniValue, `mini-program should define --${token}`);
     assert.equal(normalizeCssValue(miniValue), normalizeCssValue(webValue), `--${token} should match Web`);
   }
 
-  assert.match(webGlobal, /--card-inline-gap:\s*12px/u);
-  assert.match(webGlobal, /--card-stack-gap:\s*16px/u);
-  assert.match(miniGlobal, /--card-inline-gap:\s*12px/u);
-  assert.match(miniGlobal, /--card-stack-gap:\s*16px/u);
+  assert.match(webTokens, /--card-inline-gap:\s*12px/u);
+  assert.match(webTokens, /--card-stack-gap:\s*16px/u);
+  assert.match(miniTokens, /--card-inline-gap:\s*12px/u);
+  assert.match(miniTokens, /--card-stack-gap:\s*16px/u);
   assert.match(miniFont, /font-display:\s*swap/u);
   assert.match(miniGlobal, /page-arrive 620ms var\(--ease-out\)/u);
 
@@ -392,7 +402,8 @@ test("native mini-program replays navigation, question, and completion motion wi
 
 test("native mini-program keeps the final Web cascade across page families", async () => {
   const [
-    globalStyles,
+    appStyles,
+    tokenStyles,
     homeTemplate,
     homeStyles,
     trackStyles,
@@ -409,6 +420,7 @@ test("native mini-program keeps the final Web cascade across page families", asy
     recordStyles,
   ] = await Promise.all([
     readFile(new URL("miniprogram/app.wxss", root), "utf8"),
+    readFile(new URL("miniprogram/design-tokens.generated.wxss", root), "utf8"),
     readFile(new URL("miniprogram/pages/home/index.wxml", root), "utf8"),
     readFile(new URL("miniprogram/pages/home/index.wxss", root), "utf8"),
     readFile(new URL("miniprogram/pages/track/index.wxss", root), "utf8"),
@@ -425,8 +437,11 @@ test("native mini-program keeps the final Web cascade across page families", asy
     readFile(new URL("miniprogram/pages/records/index.wxss", root), "utf8"),
   ]);
 
-  assert.match(globalStyles, /\.theme-night \{[\s\S]*--shadow-sheet:0 -16px 44px rgba\(0,0,0,\.5\);/u);
-  assert.match(globalStyles, /@import "\.\/generated-font\.wxss"/u);
+  const globalStyles = `${appStyles}\n${tokenStyles}`;
+
+  assert.match(globalStyles, /\.theme-night \{[\s\S]*--shadow-sheet:\s*0 -16px 44px rgba\(0,\s*0,\s*0,\s*0\.5\);/u);
+  assert.match(appStyles, /@import "\.\/generated-font\.wxss"/u);
+  assert.match(appStyles, /@import "\.\/design-tokens\.generated\.wxss"/u);
   assert.match(globalStyles, /button:active \{ transform:translateY\(var\(--press\)\); box-shadow:none; \}/u);
   assert.match(globalStyles, /button\[disabled\]:active \{ transform:none; \}/u);
   assert.match(globalStyles, /button \{ min-width: 0; max-width:100%;/u);

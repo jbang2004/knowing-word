@@ -84,8 +84,11 @@ export async function saveProfile(
     const updatedAt = now();
     const shardByBucket = new Map(stored.shardRows.map((row) => [row.bucket, row]));
     let shardConflict = false;
+    let shardChanged = false;
     for (let bucket = 0; bucket < PROFILE_ANSWER_BUCKETS; bucket += 1) {
       const existing = shardByBucket.get(bucket);
+      if (existing?.answers_json === serializedShards[bucket]) continue;
+      if (!existing && serializedShards[bucket] === "{}") continue;
       const result = existing
         ? await db.prepare(
             `UPDATE profile_answer_shards
@@ -105,8 +108,19 @@ export async function saveProfile(
         shardConflict = true;
         break;
       }
+      shardChanged = true;
     }
     if (shardConflict) continue;
+
+    const baseChanged = stored.baseRow?.payload_json !== serializedBase;
+    if (stored.baseRow && !baseChanged && !shardChanged) {
+      return {
+        status: "saved" as const,
+        updatedAt: stored.baseRow.updated_at,
+        revision: stored.baseRow.revision,
+        profile: merged,
+      };
+    }
 
     const nextRevision = (stored.baseRow?.revision ?? 0) + 1;
     const baseResult = stored.baseRow

@@ -18,6 +18,68 @@
   overflow: clip;
 }
 
+.route-state {
+  display: grid;
+  width: min(560px, calc(100% - 32px));
+  min-height: 100dvh;
+  align-content: center;
+  justify-items: start;
+  gap: 10px;
+  margin: 0 auto;
+  padding: 48px 0;
+}
+
+.route-state > span {
+  display: grid;
+  width: 72px;
+  height: 72px;
+  place-items: center;
+  margin-bottom: 8px;
+  border: 2px solid var(--action-deep);
+  border-radius: 24px;
+  color: var(--action-ink);
+  font-family: var(--kai);
+  font-size: 2.5rem;
+  background: var(--action);
+  box-shadow: var(--shadow-lift);
+}
+
+.route-state h1,
+.route-state p {
+  margin: 0;
+}
+
+.route-state h1 {
+  color: var(--navy);
+  font-family: var(--serif);
+  font-size: clamp(1.8rem, 7vw, 2.7rem);
+}
+
+.route-state > p:not(.kicker) {
+  max-width: 44ch;
+  color: var(--ink-soft);
+  line-height: 1.7;
+}
+
+.route-state > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.route-state.is-loading > span {
+  animation: route-state-pulse 1.2s var(--ease-out) infinite alternate;
+}
+
+@keyframes route-state-pulse {
+  to { transform: translateY(-6px); box-shadow: 0 11px 0 var(--action-deep); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .route-state.is-loading > span { animation: none; }
+}
+
 /* Bottom tab bar (phones) ---------------------------------------------- */
 
 .app-tabbar {

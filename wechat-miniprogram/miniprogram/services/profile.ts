@@ -1,5 +1,6 @@
-import type { StudyProfile, TrackId } from "../types/models";
+import type { AnswerMode, ErrorTag, SkillDimension, StudyProfile, TrackId } from "../types/models";
 import { apiRequest } from "./api";
+import { applyAnswerTransition } from "./learning-core";
 import { getSessionToken } from "./session";
 
 const PROFILE_KEY = "knowing-word:course-progress:v5";
@@ -74,30 +75,133 @@ export function loadProfile() {
   return normalizeProfile(wx.getStorageSync<unknown>(PROFILE_KEY));
 }
 
-function laterAnswer<T extends { lastAt: string }>(left: T | undefined, right: T | undefined) {
-  if (!left) return right;
-  if (!right) return left;
-  return Date.parse(right.lastAt) >= Date.parse(left.lastAt) ? right : left;
+function laterTimestamp(left?: string | null, right?: string | null) {
+  const leftTime = left ? Date.parse(left) : Number.NEGATIVE_INFINITY;
+  const rightTime = right ? Date.parse(right) : Number.NEGATIVE_INFINITY;
+  return rightTime >= leftTime ? "right" : "left";
+}
+
+function preferenceSource(server: StudyProfile, local: StudyProfile, field: "name" | "grade" | "courseId" | "theme" | "favorites") {
+  const serverAt = server.preferenceUpdatedAt[field];
+  const localAt = local.preferenceUpdatedAt[field];
+  if (serverAt || localAt) return laterTimestamp(serverAt, localAt);
+  const localHasIntent = field === "name" ? local.name.length > 0
+    : field === "grade" ? local.grade !== 5
+      : field === "courseId" ? local.courseId !== "chinese-grade-5-volume-1"
+        : field === "theme" ? local.theme !== "light"
+          : local.favorites.length > 0;
+  return localHasIntent ? "right" : "left";
 }
 
 export function mergeProfiles(serverValue: unknown, localValue: unknown) {
   const server = normalizeProfile(serverValue);
   const local = normalizeProfile(localValue);
   const merged = normalizeProfile({ ...server, ...local });
+  const nameSource = preferenceSource(server, local, "name");
+  const gradeSource = preferenceSource(server, local, "grade");
+  const courseSource = preferenceSource(server, local, "courseId");
+  const themeSource = preferenceSource(server, local, "theme");
+  const favoritesSource = preferenceSource(server, local, "favorites");
+  merged.name = nameSource === "right" ? local.name : server.name;
+  merged.grade = gradeSource === "right" ? local.grade : server.grade;
+  merged.courseId = courseSource === "right" ? local.courseId : server.courseId;
+  merged.theme = themeSource === "right" ? local.theme : server.theme;
+  merged.favorites = favoritesSource === "right" ? local.favorites : server.favorites;
+  merged.preferenceUpdatedAt = {};
+  for (const [field, source] of [
+    ["name", nameSource],
+    ["grade", gradeSource],
+    ["courseId", courseSource],
+    ["theme", themeSource],
+    ["favorites", favoritesSource],
+  ] as const) {
+    const updatedAt = source === "right" ? local.preferenceUpdatedAt[field] : server.preferenceUpdatedAt[field];
+    if (updatedAt) merged.preferenceUpdatedAt[field] = updatedAt;
+  }
   const tracks: TrackId[] = ["words", "split", "honglan", "structure"];
   for (const track of tracks) {
     merged.completed[track] = [...new Set([...server.completed[track], ...local.completed[track]])];
     merged.last[track] = local.last[track] ?? server.last[track];
   }
-  merged.favorites = [...new Set([...server.favorites, ...local.favorites])];
   merged.learnedComponents = [...new Set([...server.learnedComponents, ...local.learnedComponents])];
   merged.readLessons = [...new Set([...server.readLessons, ...local.readLessons])];
   merged.answers = {};
   for (const id of new Set([...Object.keys(server.answers), ...Object.keys(local.answers)])) {
-    const answer = laterAnswer(server.answers[id], local.answers[id]);
-    if (answer) merged.answers[id] = answer;
+    const left = server.answers[id];
+    const right = local.answers[id];
+    if (!left && right) merged.answers[id] = right;
+    else if (left && !right) merged.answers[id] = left;
+    else if (left && right) {
+      const latest = laterTimestamp(left.lastAt, right.lastAt) === "right" ? right : left;
+      const leftCounts = left.actorCounts ?? { legacy: { attempts: left.attempts, correct: left.correct } };
+      const rightCounts = right.actorCounts ?? { legacy: { attempts: right.attempts, correct: right.correct } };
+      const actorCounts: NonNullable<typeof latest.actorCounts> = {};
+      for (const actorId of new Set([...Object.keys(leftCounts), ...Object.keys(rightCounts)])) {
+        const leftActor = leftCounts[actorId] ?? { attempts: 0, correct: 0 };
+        const rightActor = rightCounts[actorId] ?? { attempts: 0, correct: 0 };
+        actorCounts[actorId] = {
+          attempts: Math.max(leftActor.attempts, rightActor.attempts),
+          correct: Math.max(leftActor.correct, rightActor.correct),
+        };
+      }
+      merged.answers[id] = {
+        ...latest,
+        actorCounts,
+        attempts: Object.values(actorCounts).reduce((sum, count) => sum + count.attempts, 0),
+        correct: Object.values(actorCounts).reduce((sum, count) => sum + count.correct, 0),
+      };
+    }
   }
-  merged.daily = { ...server.daily, ...local.daily };
+  merged.memory = {};
+  for (const characterId of new Set([...Object.keys(server.memory), ...Object.keys(local.memory)])) {
+    const dimensions = { ...(server.memory[characterId] ?? {}) };
+    for (const [dimension, right] of Object.entries(local.memory[characterId] ?? {})) {
+      const key = dimension as keyof typeof dimensions;
+      const left = dimensions[key];
+      if (!left || laterTimestamp(left.lastAt, right?.lastAt) === "right") dimensions[key] = right;
+    }
+    merged.memory[characterId] = dimensions;
+  }
+  merged.errorCounts = { ...server.errorCounts };
+  for (const [tag, count] of Object.entries(local.errorCounts)) {
+    const key = tag as keyof StudyProfile["errorCounts"];
+    merged.errorCounts[key] = Math.max(merged.errorCounts[key] ?? 0, count ?? 0);
+  }
+  merged.daily = {};
+  for (const day of new Set([...Object.keys(server.daily), ...Object.keys(local.daily)])) {
+    const left = server.daily[day] ?? { attempts: 0, correct: 0, skips: 0, readSessions: 0 };
+    const right = local.daily[day] ?? { attempts: 0, correct: 0, skips: 0, readSessions: 0 };
+    merged.daily[day] = {
+      attempts: Math.max(left.attempts, right.attempts),
+      correct: Math.max(left.correct, right.correct),
+      skips: Math.max(left.skips, right.skips),
+      readSessions: Math.max(left.readSessions, right.readSessions),
+    };
+  }
+  merged.introducedByDay = mergeDailyIds(server.introducedByDay, local.introducedByDay);
+  merged.reviewedByDay = mergeDailyIds(server.reviewedByDay, local.reviewedByDay);
+  merged.readingEvidence = { ...server.readingEvidence };
+  for (const [lessonId, right] of Object.entries(local.readingEvidence)) {
+    const left = merged.readingEvidence[lessonId];
+    if (!left) merged.readingEvidence[lessonId] = right;
+    else {
+      const latest = laterTimestamp(left.lastAt, right.lastAt) === "right" ? right : left;
+      merged.readingEvidence[lessonId] = {
+        ...latest,
+        attempts: Math.max(left.attempts, right.attempts),
+        accurate: Math.max(left.accurate, right.accurate),
+        needsPractice: Math.max(left.needsPractice, right.needsPractice),
+      };
+    }
+  }
+  return merged;
+}
+
+function mergeDailyIds(left: Record<string, string[]>, right: Record<string, string[]>) {
+  const merged: Record<string, string[]> = {};
+  for (const day of new Set([...Object.keys(left), ...Object.keys(right)])) {
+    merged[day] = [...new Set([...(left[day] ?? []), ...(right[day] ?? [])])];
+  }
   return merged;
 }
 
@@ -152,9 +256,25 @@ export async function syncProfile() {
 function actorId() {
   const stored = wx.getStorageSync<string>(ACTOR_KEY);
   if (/^[a-zA-Z0-9_-]{8,32}$/u.test(stored)) return stored;
-  const created = `wx${Math.random().toString(36).slice(2, 14)}`;
+  const created = `wx${Date.now().toString(36)}`;
   wx.setStorageSync(ACTOR_KEY, created);
   return created;
+}
+
+export function ensureProfileActor() {
+  const stored = wx.getStorageSync<string>(ACTOR_KEY);
+  if (/^[a-zA-Z0-9_-]{8,32}$/u.test(stored)) return Promise.resolve(stored);
+  return new Promise<string>((resolve) => {
+    wx.getRandomValues({
+      length: 10,
+      success: (result) => {
+        const created = `wx${Array.from(new Uint8Array(result.randomValues), (value) => value.toString(16).padStart(2, "0")).join("")}`;
+        wx.setStorageSync(ACTOR_KEY, created);
+        resolve(created);
+      },
+      fail: () => resolve(actorId()),
+    });
+  });
 }
 
 export function learningDayKey(date = new Date()) {
@@ -173,6 +293,13 @@ export function recordAnswer({
   correct,
   questionIndex,
   completed,
+  questionCount,
+  reviewDue = false,
+  dimension,
+  answerMode,
+  cueLevel,
+  latencyMs,
+  errorTags,
 }: {
   profile: StudyProfile;
   track: TrackId;
@@ -182,38 +309,61 @@ export function recordAnswer({
   correct: boolean;
   questionIndex: number;
   completed: boolean;
+  questionCount: number;
+  reviewDue?: boolean;
+  dimension: SkillDimension;
+  answerMode: AnswerMode;
+  cueLevel: 0 | 1 | 2 | 3;
+  latencyMs: number;
+  errorTags: ErrorTag[];
 }) {
   const now = new Date().toISOString();
-  const previous = profile.answers[questionId];
-  const actorCounts = { ...(previous?.actorCounts ?? {}) };
-  const actor = actorCounts[actorId()] ?? { attempts: 0, correct: 0 };
-  actorCounts[actorId()] = { attempts: actor.attempts + 1, correct: actor.correct + Number(correct) };
-  const day = learningDayKey();
-  const daily = profile.daily[day] ?? { attempts: 0, correct: 0, skips: 0, readSessions: 0 };
-  const next = normalizeProfile(profile);
-  next.answers = {
-    ...profile.answers,
-    [questionId]: {
-      attempts: Object.values(actorCounts).reduce((sum, count) => sum + count.attempts, 0),
-      correct: Object.values(actorCounts).reduce((sum, count) => sum + count.correct, 0),
-      lastCorrect: correct,
-      lastAt: now,
-      actorCounts,
-    },
-  };
-  next.last = { ...profile.last, [track]: { lessonId, characterId, questionIndex } };
-  next.daily = { ...profile.daily, [day]: { ...daily, attempts: daily.attempts + 1, correct: daily.correct + Number(correct) } };
-  if (completed && !next.completed[track].includes(characterId)) {
-    next.completed[track] = [...next.completed[track], characterId];
-  }
-  return saveProfile(next);
+  return saveProfile(applyAnswerTransition(normalizeProfile(profile), {
+    actorId: actorId(),
+    track,
+    lessonId,
+    characterId,
+    questionId,
+    correct,
+    questionIndex,
+    questionCount,
+    completed,
+    reviewDue,
+    dimension,
+    answerMode,
+    cueLevel,
+    latencyMs,
+    errorTags,
+    occurredAt: now,
+    day: learningDayKey(),
+  }));
 }
 
 export function recordReading(lessonId: string, accurate: boolean) {
   const profile = loadProfile();
   const day = learningDayKey();
+  const now = new Date().toISOString();
   const daily = profile.daily[day] ?? { attempts: 0, correct: 0, skips: 0, readSessions: 0 };
   profile.daily = { ...profile.daily, [day]: { ...daily, readSessions: daily.readSessions + 1 } };
+  const previous = profile.readingEvidence[lessonId] ?? {
+    attempts: 0,
+    accurate: 0,
+    needsPractice: 0,
+    lastAt: now,
+    lastAccuracy: "needs-practice" as const,
+    verificationSource: "self" as const,
+  };
+  profile.readingEvidence = {
+    ...profile.readingEvidence,
+    [lessonId]: {
+      attempts: previous.attempts + 1,
+      accurate: previous.accurate + Number(accurate),
+      needsPractice: previous.needsPractice + Number(!accurate),
+      lastAt: now,
+      lastAccuracy: accurate ? "accurate" : "needs-practice",
+      verificationSource: "self",
+    },
+  };
   if (accurate && !profile.readLessons.includes(lessonId)) profile.readLessons = [...profile.readLessons, lessonId];
   return saveProfile(profile, true);
 }

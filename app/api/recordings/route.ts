@@ -25,6 +25,11 @@ export async function GET(request: Request) {
   if (lessonId && !isGrade5LessonId(lessonId)) {
     return jsonWithIdentity(identity, { error: "课次编号无效" }, { status: 400 });
   }
+  if (identity.mode === "device") {
+    return id
+      ? jsonWithIdentity(identity, { error: "登录后才可读取云端录音" }, { status: 403 })
+      : jsonWithIdentity(identity, { recordings: [] });
+  }
   try {
     const db = getDb();
     if (!id) {
@@ -48,6 +53,9 @@ export async function GET(request: Request) {
 export async function POST(request: Request) {
   const identity = await resolveApiIdentity(request);
   if (identity instanceof Response) return identity;
+  if (identity.mode === "device") {
+    return jsonWithIdentity(identity, { error: "登录后才可同步录音；当前录音仍保存在本机" }, { status: 403 });
+  }
   const lessonId = new URL(request.url).searchParams.get("lessonId");
   if (!lessonId || !isGrade5LessonId(lessonId)) {
     return jsonWithIdentity(identity, { error: "课次编号无效" }, { status: 400 });
@@ -56,24 +64,41 @@ export async function POST(request: Request) {
   if (!recordingExtension(contentType)) {
     return jsonWithIdentity(identity, { error: "录音格式不受支持" }, { status: 415 });
   }
-  const declaredLength = Number(request.headers.get("content-length"));
-  if (Number.isFinite(declaredLength) && declaredLength > MAX_RECORDING_BYTES) {
+  const declaredLengthHeader = request.headers.get("content-length");
+  if (!declaredLengthHeader) {
+    return jsonWithIdentity(identity, { error: "录音请求缺少内容长度" }, { status: 411 });
+  }
+  const declaredLength = Number(declaredLengthHeader);
+  if (!Number.isFinite(declaredLength) || declaredLength <= 0 || declaredLength > MAX_RECORDING_BYTES) {
     return jsonWithIdentity(identity, { error: "录音需要小于 12MB" }, { status: 413 });
   }
   try {
+    if (!request.body) {
+      return jsonWithIdentity(identity, { error: "录音内容为空" }, { status: 400 });
+    }
     const result = await saveRecording({
       db: getDb(),
       media: getMedia(),
       userId: identity.userId,
       lessonId,
       contentType,
-      bytes: await request.arrayBuffer(),
+      body: request.body,
+      declaredLength,
     });
     if (result.status === "unsupported") {
       return jsonWithIdentity(identity, { error: "录音格式不受支持" }, { status: 415 });
     }
     if (result.status === "too-large") {
       return jsonWithIdentity(identity, { error: "录音需要小于 12MB" }, { status: 413 });
+    }
+    if (result.status === "length-required") {
+      return jsonWithIdentity(identity, { error: "录音请求缺少内容长度" }, { status: 411 });
+    }
+    if (result.status === "invalid-length") {
+      return jsonWithIdentity(identity, { error: "录音内容长度不一致" }, { status: 400 });
+    }
+    if (result.status === "quota") {
+      return jsonWithIdentity(identity, { error: "云端录音空间已满，请保留更短的录音后重试" }, { status: 413 });
     }
     return jsonWithIdentity(identity, { recording: result.recording }, { status: 201 });
   } catch (error) {

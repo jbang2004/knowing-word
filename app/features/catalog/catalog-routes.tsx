@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Mic2, Sparkles } from "lucide-react";
-import type { CharacterItem, LessonItem } from "../../data/catalog-types";
+import type { CharacterItem, LessonCharacterSummary, LessonItem } from "../../data/catalog-types";
 import { grade5Course, grade5Lessons } from "../../data/generated/grade5-volume1/course";
 import { lessonVisuals } from "../../data/illustrations";
 import type { LessonDocument } from "../../data/lesson-documents";
@@ -39,8 +39,8 @@ const courseUnits = [
   { label: "第八单元", start: 25, end: 26 },
 ] as const;
 
-function wordGroups(characters: CharacterItem[], extension: boolean) {
-  const groups = new Map<string, CharacterItem[]>();
+function wordGroups(characters: LessonCharacterSummary[], extension: boolean) {
+  const groups = new Map<string, LessonCharacterSummary[]>();
   for (const character of characters.filter(
     (item) => item.primary && (item.official === false) === extension,
   )) {
@@ -209,7 +209,7 @@ export function LessonRoute({
   view = "read",
 }: {
   lesson: LessonItem;
-  characters: CharacterItem[];
+  characters: LessonCharacterSummary[];
   document?: LessonDocument;
   view?: LessonView;
 }) {
@@ -325,7 +325,7 @@ function WordBoard({
   extension,
   returnTo,
 }: {
-  groups: CharacterItem[][];
+  groups: LessonCharacterSummary[][];
   completed: Set<string>;
   extension: boolean;
   returnTo: string;

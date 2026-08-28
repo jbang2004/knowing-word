@@ -226,6 +226,18 @@ function withDeliveryCache(response: Response, pathname: string) {
   });
 }
 
+function withApplicationSecurityHeaders(response: Response) {
+  const headers = new Headers(response.headers);
+  headers.set("permissions-policy", "camera=(), geolocation=(), microphone=(self)");
+  headers.set("referrer-policy", "strict-origin-when-cross-origin");
+  headers.set("x-content-type-options", "nosniff");
+  return new Response(response.body, {
+    status: response.status,
+    statusText: response.statusText,
+    headers,
+  });
+}
+
 function isDeliveryAsset(pathname: string) {
   return pathname.startsWith("/assets/") ||
     pathname.startsWith("/fonts/") ||
@@ -306,7 +318,7 @@ const worker = {
     }
 
     const response = await runWithRuntimeEnv(env, () => handler.fetch(request, env, ctx));
-    return withDeliveryCache(response, url.pathname);
+    return withApplicationSecurityHeaders(withDeliveryCache(response, url.pathname));
   },
 };
 

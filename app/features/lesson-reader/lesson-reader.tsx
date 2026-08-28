@@ -9,7 +9,7 @@ import {
   ListChecks,
   Sparkles,
 } from "lucide-react";
-import type { CharacterItem, LessonItem } from "../../data/catalog-types";
+import type { LessonCharacterSummary, LessonItem } from "../../data/catalog-types";
 import type { LessonDocument } from "../../data/lesson-documents";
 import type { lessonVisuals } from "../../data/illustrations";
 import { withReturnTo } from "../../lib/navigation";
@@ -65,7 +65,7 @@ export function LessonViewNavigation({
   );
 }
 
-function documentOccurrences(document: LessonDocument, characters: CharacterItem[]) {
+function documentOccurrences(document: LessonDocument, characters: LessonCharacterSummary[]) {
   const anchors = new Map<string, string>();
   for (const section of document.sections) {
     const sectionAnchor = section.paragraphs[0]?.id;
@@ -114,7 +114,7 @@ function paragraphSegments(text: string, words: readonly string[]): ParagraphSeg
   return segments;
 }
 
-function characterHref(character: CharacterItem, paragraphId: string) {
+function characterHref(character: LessonCharacterSummary, paragraphId: string) {
   const returnTo = `/lessons/${character.lessonId}#${paragraphId}`;
   return withReturnTo(
     `/lessons/${character.lessonId}/words/${character.id}`,
@@ -129,7 +129,7 @@ function FocusWords({
   paragraphId,
 }: {
   words: readonly string[];
-  characters: CharacterItem[];
+  characters: LessonCharacterSummary[];
   completed: Set<string>;
   paragraphId: string;
 }) {
@@ -180,7 +180,7 @@ function TargetCharacter({
   occurrence,
   complete,
 }: {
-  character: CharacterItem;
+  character: LessonCharacterSummary;
   paragraphId: string;
   contextWord: string;
   occurrence: "first" | "repeat";
@@ -209,7 +209,7 @@ function WordIndex({
   anchors,
   compact = false,
 }: {
-  characters: CharacterItem[];
+  characters: LessonCharacterSummary[];
   completed: Set<string>;
   anchors: Map<string, string>;
   compact?: boolean;
@@ -244,7 +244,7 @@ export function LessonReader({
 }: {
   lesson: LessonItem;
   document: LessonDocument;
-  characters: CharacterItem[];
+  characters: LessonCharacterSummary[];
   completed: Set<string>;
   illustration: LessonVisual;
 }) {

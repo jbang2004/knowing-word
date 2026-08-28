@@ -9,6 +9,16 @@ export type RequestIdentity = {
   cookie?: string;
 };
 
+function apiHeaders(init?: HeadersInit) {
+  const headers = new Headers(init);
+  headers.set("cache-control", "no-store");
+  headers.set("content-type", "application/json; charset=utf-8");
+  headers.set("permissions-policy", "camera=(), geolocation=(), microphone=(self)");
+  headers.set("referrer-policy", "strict-origin-when-cross-origin");
+  headers.set("x-content-type-options", "nosniff");
+  return headers;
+}
+
 const DEVICE_COOKIE = "knowing_word_device";
 const DEVICE_PATTERN = /^[a-f0-9-]{20,64}$/i;
 
@@ -87,10 +97,7 @@ export function jsonUnauthorized(request: Request) {
   const requestId = request.headers.get("cf-ray")?.slice(0, 80) || crypto.randomUUID();
   return new Response(JSON.stringify({ error: "登录状态已失效，请重新进入小程序", requestId }), {
     status: 401,
-    headers: {
-      "content-type": "application/json; charset=utf-8",
-      "cache-control": "no-store",
-    },
+    headers: apiHeaders(),
   });
 }
 
@@ -105,10 +112,7 @@ export function jsonIdentityError(request: Request, error: unknown) {
   }));
   return new Response(JSON.stringify({ error: "暂时无法验证登录状态", requestId }), {
     status: 503,
-    headers: {
-      "content-type": "application/json; charset=utf-8",
-      "cache-control": "no-store",
-    },
+    headers: apiHeaders(),
   });
 }
 
@@ -121,9 +125,7 @@ export async function resolveApiIdentity(request: Request): Promise<RequestIdent
 }
 
 export function jsonWithIdentity(identity: RequestIdentity, body: unknown, init?: ResponseInit) {
-  const headers = new Headers(init?.headers);
-  headers.set("content-type", "application/json; charset=utf-8");
-  headers.set("cache-control", "no-store");
+  const headers = apiHeaders(init?.headers);
   if (identity.cookie) headers.append("set-cookie", identity.cookie);
   return new Response(JSON.stringify(body), { ...init, headers });
 }

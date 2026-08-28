@@ -69,6 +69,21 @@ export type CharacterItem = {
   tier?: "curriculum" | "extension";
 };
 
+/** Minimal character shape serialized into lesson overview/read routes. */
+export type LessonCharacterSummary = Pick<
+  CharacterItem,
+  | "id"
+  | "lessonId"
+  | "word"
+  | "wordPosition"
+  | "hanzi"
+  | "primary"
+  | "pinyin"
+  | "curriculumRole"
+  | "polyphonic"
+  | "official"
+>;
+
 export type LessonItem = {
   id: string;
   title: string;

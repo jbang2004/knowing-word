@@ -159,7 +159,9 @@ test("dense pages keep progressive and shareable responsive contracts", async ()
   assert.equal((courseHtml.match(/id="course-unit-/g) ?? []).length, 8);
 
   const layoutSource = await readFile(new URL("../app/layout.tsx", import.meta.url), "utf8");
-  const globalCss = await readFile(new URL("../app/globals.css", import.meta.url), "utf8");
+  const globalSource = await readFile(new URL("../app/globals.css", import.meta.url), "utf8");
+  const tokenCss = await readFile(new URL("../app/design-tokens.generated.css", import.meta.url), "utf8");
+  const globalCss = `${globalSource}\n${tokenCss}`;
   const homeCss = await readFile(new URL("../app/home-path.css", import.meta.url), "utf8");
   const catalogCss = await readFile(new URL("../app/catalog.css", import.meta.url), "utf8");
   const utilityCss = await readFile(new URL("../app/utility-pages.css", import.meta.url), "utf8");

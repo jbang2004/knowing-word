@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import test from "node:test";
-import { answerBucket, DELETE, GET, PUT, PROFILE_ANSWER_BUCKETS } from "../app/api/profile/route.ts";
+import { answerBucket, DELETE, GET, PUT } from "../app/api/profile/route.ts";
 import { runWithRuntimeEnv } from "../app/lib/runtime-env.ts";
 import { emptyProfile, recordAnswerAttempt } from "../app/lib/profile-model.ts";
 
@@ -122,7 +122,7 @@ test("profile PUT retries a base revision race and preserves both devices' evide
   assert.deepEqual(payload.profile.completed.words, ["server-char", "concurrent-char", "incoming-char"]);
   assert.deepEqual(JSON.parse(db.base.payload_json).completed.words, payload.profile.completed.words);
   assert.deepEqual(JSON.parse(db.base.payload_json).answers, {});
-  assert.equal(db.shards.size, PROFILE_ANSWER_BUCKETS);
+  assert.equal(db.shards.size, 0);
 });
 
 test("legacy base answers migrate into shards and GET reconstructs all actor counters", async () => {
@@ -143,7 +143,7 @@ test("legacy base answers migrate into shards and GET reconstructs all actor cou
   const put = await runWithRuntimeEnv({ DB: db }, () => PUT(profileRequest(incoming)));
   assert.equal(put.status, 200);
   assert.deepEqual(JSON.parse(db.base.payload_json).answers, {});
-  assert.equal(db.shards.size, PROFILE_ANSWER_BUCKETS);
+  assert.equal(db.shards.size, 1);
 
   const get = await runWithRuntimeEnv({ DB: db }, () => GET(profileRequest(null, "GET")));
   assert.equal(get.status, 200);
@@ -192,7 +192,7 @@ test("profile DELETE clears the base and every answer shard", async () => {
   const db = profileDb(profile);
   const put = await runWithRuntimeEnv({ DB: db }, () => PUT(profileRequest(profile)));
   assert.equal(put.status, 200);
-  assert.equal(db.shards.size, PROFILE_ANSWER_BUCKETS);
+  assert.equal(db.shards.size, 1);
 
   const response = await runWithRuntimeEnv(
     { DB: db, MEDIA: { delete: async () => undefined } },

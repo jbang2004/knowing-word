@@ -1,4 +1,5 @@
 import { getDb, getMedia, jsonError, jsonWithIdentity, resolveApiIdentity } from "../../lib/server-store.ts";
+import { readBoundedText } from "../../lib/request-body.ts";
 import {
   answerBucket,
   deleteProfile,
@@ -26,6 +27,14 @@ export {
 export async function GET(request: Request) {
   const identity = await resolveApiIdentity(request);
   if (identity instanceof Response) return identity;
+  if (identity.mode === "device") {
+    return jsonWithIdentity(identity, {
+      identity: { displayName: identity.displayName, email: null, mode: identity.mode },
+      profile: null,
+      updatedAt: null,
+      revision: 0,
+    });
+  }
   try {
     const snapshot = await getProfileSnapshot(getDb(), identity.userId);
     return jsonWithIdentity(identity, {
@@ -46,16 +55,29 @@ export async function PUT(request: Request) {
   if (identity instanceof Response) return identity;
   let payload: unknown;
   try {
-    const raw = await request.text();
-    if (encodedProfileBytes(raw) > MAX_PROFILE_REQUEST_BYTES) {
+    const result = await readBoundedText(request, MAX_PROFILE_REQUEST_BYTES);
+    if (result.status === "too-large") {
       return jsonWithIdentity(identity, { error: "学习档案过大" }, { status: 413 });
     }
-    payload = JSON.parse(raw);
+    if (result.status !== "ok") throw new Error("invalid body");
+    if (encodedProfileBytes(result.text) > MAX_PROFILE_REQUEST_BYTES) {
+      return jsonWithIdentity(identity, { error: "学习档案过大" }, { status: 413 });
+    }
+    payload = JSON.parse(result.text);
   } catch {
     return jsonWithIdentity(identity, { error: "学习档案不是有效的 JSON" }, { status: 400 });
   }
   if (!payload || typeof payload !== "object" || Array.isArray(payload)) {
     return jsonWithIdentity(identity, { error: "学习档案格式无效" }, { status: 400 });
+  }
+  if (identity.mode === "device") {
+    return jsonWithIdentity(identity, {
+      ok: true,
+      updatedAt: null,
+      revision: 0,
+      profile: payload,
+      storage: "device",
+    });
   }
   try {
     const result = await saveProfile(getDb(), identity.userId, payload);
@@ -79,6 +101,7 @@ export async function PUT(request: Request) {
 export async function DELETE(request: Request) {
   const identity = await resolveApiIdentity(request);
   if (identity instanceof Response) return identity;
+  if (identity.mode === "device") return jsonWithIdentity(identity, { ok: true, storage: "device" });
   try {
     await deleteProfile(getDb(), getMedia(), identity.userId);
     return jsonWithIdentity(identity, { ok: true });

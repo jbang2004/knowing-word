@@ -1,4 +1,25 @@
 export type TrackId = "words" | "split" | "honglan" | "structure";
+export type SkillDimension = "recognition" | "phonology" | "semantics" | "generation" | "discrimination" | "context";
+export type AnswerMode = "choice" | "speech" | "handwriting" | "self-check";
+export type ErrorTag =
+  | "pronunciation-initial" | "pronunciation-final" | "pronunciation-tone"
+  | "meaning-unknown" | "semantic-component" | "phonetic-component"
+  | "component-missing" | "component-extra" | "component-position"
+  | "stroke-missing" | "stroke-extra" | "homophone-confusion"
+  | "lookalike-confusion" | "context-misuse" | "writing-unverified";
+
+export type DimensionMemory = {
+  status: "new" | "learning" | "review" | "stable";
+  dueAt: string;
+  intervalDays: number;
+  lapses: number;
+  correctStreak: number;
+  independentStreak: number;
+  lastAt: string | null;
+  lastIndependentCorrectAt: string | null;
+};
+
+export type CharacterMemory = Record<SkillDimension, DimensionMemory>;
 
 export type CatalogLesson = {
   id: string;
@@ -31,10 +52,11 @@ export type Exercise = {
   prompt: string;
   options: ExerciseOption[];
   explanation: string;
-  dimension?: string;
-  answerMode?: string;
+  dimension?: SkillDimension;
+  answerMode?: AnswerMode;
   cueLevel?: 0 | 1 | 2 | 3;
   concealTarget?: boolean;
+  optionErrorTags?: Record<string, ErrorTag[]>;
 };
 
 export type CatalogCharacter = {
@@ -105,14 +127,24 @@ export type StudyProfile = {
     correct: number;
     lastCorrect: boolean;
     lastAt: string;
+    lastLatencyMs?: number;
+    lastCueLevel?: 0 | 1 | 2 | 3;
+    lastErrorTags?: ErrorTag[];
     actorCounts?: Record<string, { attempts: number; correct: number }>;
   }>;
-  memory: Record<string, unknown>;
-  errorCounts: Record<string, number>;
+  memory: Record<string, Partial<CharacterMemory>>;
+  errorCounts: Partial<Record<ErrorTag, number>>;
   learnedComponents: string[];
   recentComponents: string[];
   readLessons: string[];
-  readingEvidence: Record<string, unknown>;
+  readingEvidence: Record<string, {
+    attempts: number;
+    accurate: number;
+    needsPractice: number;
+    lastAt: string;
+    lastAccuracy: "accurate" | "needs-practice";
+    verificationSource: "self";
+  }>;
   introducedByDay: Record<string, string[]>;
   reviewedByDay: Record<string, string[]>;
   daily: Record<string, { attempts: number; correct: number; skips: number; readSessions: number }>;

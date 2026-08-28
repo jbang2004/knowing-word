@@ -1,0 +1,33 @@
+{
+  "light": {
+    "sky": "#fffcf6", "sky-deep": "#f2ece0", "paper": "#ffffff", "paper-soft": "#faf6ee",
+    "ink": "#22302c", "ink-soft": "#5e6e68", "ink-faint": "#5e6e68", "disabled-ink": "#70695d",
+    "line": "#e5dfd2", "line-deep": "#d5cdba", "navy": "#123c33",
+    "action": "#17b686", "action-deep": "#0f8c64", "action-soft": "#e2f7ef", "action-edge": "#bfe8d9", "action-ink": "#0f1614", "action-text": "#0b7654",
+    "radical": "#ff5b34", "radical-deep": "#d93c18", "radical-soft": "#ffeae3", "radical-edge": "#ffc9b8", "radical-ink": "#30150e", "radical-text": "#bd3214",
+    "part": "#2fa8e0", "part-deep": "#1e82b4", "part-soft": "#e3f4fd", "part-edge": "#b9e2f7", "part-ink": "#0f1614", "part-text": "#176d99",
+    "wrong": "#ffb020", "wrong-deep": "#d98c00", "wrong-soft": "#fff3d9", "wrong-edge": "#f2dfb0", "wrong-ink": "#4a3000", "wrong-text": "#4a3000",
+    "action-on-white": "#0b7654", "radical-on-white": "#bd3214", "part-on-white": "#176d99", "wrong-on-white": "#4a3000",
+    "ink-on-white": "#22302c", "ink-soft-on-white": "#5e6e68", "navy-on-white": "#123c33"
+  },
+  "dark": {
+    "sky": "#111b19", "sky-deep": "#172521", "paper": "#192521", "paper-soft": "#1d2b27",
+    "ink": "#f4f0e8", "ink-soft": "#b9c1bc", "ink-faint": "#a6b3ad", "disabled-ink": "#8f9a94",
+    "line": "#34443e", "line-deep": "#22302c", "navy": "#eff3ed",
+    "action": "#35c295", "action-deep": "#1d8f6b", "action-soft": "#1f3a33", "action-edge": "#1d8f6b", "action-ink": "#0f1614", "action-text": "#70d9b6",
+    "radical": "#ff7a52", "radical-deep": "#c9502c", "radical-soft": "#3c2924", "radical-edge": "#c9502c", "radical-ink": "#0f1614", "radical-text": "#ff9a7d",
+    "part": "#5fb4dc", "part-deep": "#3c7fa3", "part-soft": "#22343a", "part-edge": "#3c7fa3", "part-ink": "#0f1614", "part-text": "#8bcceb",
+    "wrong": "#e9b04a", "wrong-deep": "#b3822a", "wrong-soft": "#39311f", "wrong-edge": "#b3822a", "wrong-ink": "#0f1614", "wrong-text": "#f5c86d"
+  },
+  "aliases": {
+    "coral": "var(--radical)", "coral-soft": "var(--radical-soft)", "saffron": "var(--wrong)", "saffron-soft": "var(--wrong-soft)",
+    "violet": "var(--part)", "violet-soft": "var(--part-soft)", "lapis": "var(--part)", "lapis-soft": "var(--part-soft)",
+    "jade": "var(--action)", "jade-soft": "var(--action-soft)", "rose": "var(--radical)"
+  },
+  "shared": {
+    "shadow-xs": "0 2px 0 var(--line)", "shadow": "0 3px 0 var(--line)", "shadow-lift": "0 5px 0 var(--line-deep)",
+    "shadow-sheet": "0 -16px 44px rgba(34, 48, 44, 0.26)", "press": "4px", "card-inline-gap": "12px", "card-stack-gap": "16px",
+    "ease-out": "cubic-bezier(0.16, 1, 0.3, 1)"
+  },
+  "darkShared": { "shadow-sheet": "0 -16px 44px rgba(0, 0, 0, 0.5)" }
+}
