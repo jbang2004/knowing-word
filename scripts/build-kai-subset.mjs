@@ -16,7 +16,7 @@
 
 import { createHash } from "node:crypto";
 import { mkdir, readFile, readdir, stat, writeFile } from "node:fs/promises";
-import { join, resolve } from "node:path";
+import { join, relative, resolve, sep } from "node:path";
 import { execFile, spawn } from "node:child_process";
 
 const projectRoot = resolve(import.meta.dirname, "..");
@@ -38,10 +38,15 @@ const EXTRA_CHARS = [
 
 function isTeachingGlyph(codePoint) {
   return (
+    // Radicals, ideographic description characters, CJK punctuation and
+    // stroke symbols all appear in component, structure and writing options.
+    // Depending on an Android/WeChat fallback font for these made otherwise
+    // valid choices turn into tofu on some devices.
+    (codePoint >= 0x2e80 && codePoint <= 0x33ff) ||
     (codePoint >= 0x3400 && codePoint <= 0x9fff) ||
     (codePoint >= 0xf900 && codePoint <= 0xfaff) ||
-    // Plane 2. Ten teaching components in the course live in extension B and
-    // above (𠃜 𡗗 𡱒 𢀖 𢦏 𣎆 𥫗 𦐇 𧴪 …); without this they subset out and
+    // Plane 2. Several teaching components in the course live in extension B
+    // and above; without this they subset out and
     // every component card, 红蓝 option and etymology line renders them blank.
     (codePoint >= 0x20000 && codePoint <= 0x2ebef)
   );
@@ -53,7 +58,13 @@ async function collectCharacters() {
   for (const entry of entries) {
     if (!entry.isFile()) continue;
     if (!/\.(ts|json)$/.test(entry.name)) continue;
-    const source = await readFile(join(entry.parentPath ?? dataDir, entry.name), "utf8");
+    const filePath = join(entry.parentPath ?? dataDir, entry.name);
+    // narration-v3 is an authoring archive, not a runtime display surface. Its
+    // frozen reviewed books can retain historic evidence names even after the
+    // UI adopts a more portable modern teaching split. Runtime narration is
+    // collected from the released transcript modules outside this directory.
+    if (relative(dataDir, filePath).split(sep).includes("narration-v3")) continue;
+    const source = await readFile(filePath, "utf8");
     for (const char of source) {
       if (isTeachingGlyph(char.codePointAt(0))) glyphs.add(char);
     }
@@ -141,12 +152,13 @@ async function main() {
 
   // A character the upstream face does not carry subsets out silently and then
   // renders as nothing at all — an empty component title, an empty pair of
-  // quotation marks mid-sentence. Name them here rather than in the UI.
+  // quotation marks mid-sentence. A release must stop here instead of relying
+  // on platform-specific fallback behavior.
   const missing = await uncoveredCharacters(characters);
   if (missing.length) {
-    console.warn(
-      `warning: ${missing.length} teaching character(s) have no glyph in LXGW WenKai and will render blank: ` +
-        missing.map((char) => `${char} (U+${char.codePointAt(0).toString(16).toUpperCase()})`).join(", "),
+    throw new Error(
+      `${missing.length} teaching character(s) have no glyph in LXGW WenKai: ` +
+      missing.map((char) => `${char} (U+${char.codePointAt(0).toString(16).toUpperCase()})`).join(", "),
     );
   }
 

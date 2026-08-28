@@ -10,7 +10,7 @@ test("native mini-program uses a bounded set of page templates for the complete 
   assert.equal(app.pages.length, 11);
   assert.equal(lessons.length, 26);
   assert.equal(characters.length, 430);
-  assert.equal(components.length, 401);
+  assert.equal(components.length, 400);
   assert.ok(app.pages.includes("pages/character/index"));
   assert.ok(app.pages.includes("pages/practice/index"));
   assert.ok(app.pages.includes("pages/practice-hub/index"));
@@ -25,6 +25,15 @@ test("native mini-program uses a bounded set of page templates for the complete 
       `${page}.wxml should not mix conditional branches and loops on one node`,
     );
   }
+});
+
+test("native mini-program ships only renderable components for 嵌", () => {
+  const embedded = characters.find((record) => record.hanzi === "嵌");
+  assert.ok(embedded);
+  assert.equal(embedded.charType, "现代字形字");
+  assert.doesNotMatch(JSON.stringify({ characters, components }), /𣢟/u);
+  assert.ok(components.some((component) => component.glyph === "甘"));
+  assert.ok(components.some((component) => component.glyph === "欠"));
 });
 
 test("native mini-program routes functional icons through local WeChat-compatible assets", async () => {
@@ -68,7 +77,7 @@ test("mini-program ships a compact index and keeps full lesson content behind th
   assert.match(config, /return `\$\{PRODUCTION_ASSET_BASE_URL\}/u);
   assert.match(catalogService, /\/api\/catalog\?lessonId=/u);
   assert.match(catalogService, /MAX_CACHED_LESSONS = 10/u);
-  assert.match(catalogService, /lesson-cache:v3/u);
+  assert.match(catalogService, /lesson-cache:v4/u);
   assert.ok(catalogService.includes(`includes('"http://')`));
 });
 
@@ -345,6 +354,7 @@ test("native mini-program keeps the final Web cascade across page families", asy
   ]);
 
   assert.match(globalStyles, /\.theme-night \{[\s\S]*--shadow-sheet:0 -16px 44px rgba\(0,0,0,\.5\);/u);
+  assert.match(globalStyles, /mini-font\/v1\/lxgw-wenkai\.woff2\?v=90/u);
   assert.match(globalStyles, /button:active \{ transform:translateY\(var\(--press\)\); box-shadow:none; \}/u);
   assert.match(globalStyles, /button\[disabled\]:active \{ transform:none; \}/u);
   assert.match(globalStyles, /button \{ min-width: 0; max-width:100%;/u);

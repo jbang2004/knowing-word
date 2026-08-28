@@ -13,7 +13,7 @@ export const grade5CharacterVisuals = {
   "嵌": {
     "src": "/illustrations/mnemonics-v2/g5-u5d4c.webp",
     "label": "镶嵌",
-    "alt": "镶嵌是把材料妥帖装入空隙中；白鹭立在水田中，宛如被精巧地镶嵌进大自然的画框 图中“山”与“𣢟”按上下结构自然长成“嵌”。"
+    "alt": "镶嵌是把材料妥帖装入空隙中；白鹭立在水田中，宛如被精巧地镶嵌进大自然的画框 图中“山”与“甘”与“欠”按上下结构自然长成“嵌”。"
   },
   "匣": {
     "src": "/illustrations/mnemonics-v2/g5-u5323.webp",

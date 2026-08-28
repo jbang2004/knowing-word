@@ -111,18 +111,38 @@ export const grade5Components = [
     "sequence": 604
   },
   {
-    "id": "g5-component-u2389f",
-    "title": "𣢟",
-    "glyph": "𣢟",
+    "id": "g5-component-u7518",
+    "title": "甘",
+    "glyph": "甘",
     "examples": [
-      "嵌"
+      "嵌",
+      "某"
     ],
-    "description": "槽口与托架“𣢟”严丝合缝地闭合。它在字形中作为“𣢟”部件，轮廓舒展、位置清晰。",
+    "description": "下方左侧方正石槽围出“甘”。它在字形中作为“甘”部件，轮廓舒展、位置清晰。",
     "characterSet": [
-      "嵌"
+      "嵌",
+      "某"
     ],
     "group": 605,
     "sequence": 605
+  },
+  {
+    "id": "g5-component-u6b20",
+    "title": "欠",
+    "glyph": "欠",
+    "examples": [
+      "嵌",
+      "炊",
+      "歇"
+    ],
+    "description": "身形收成“欠”。它在字形中作为“欠”部件，轮廓舒展、位置清晰。",
+    "characterSet": [
+      "嵌",
+      "炊",
+      "歇"
+    ],
+    "group": 606,
+    "sequence": 606
   },
   {
     "id": "g5-component-u531a",
@@ -135,8 +155,8 @@ export const grade5Components = [
     "characterSet": [
       "匣"
     ],
-    "group": 606,
-    "sequence": 606
+    "group": 607,
+    "sequence": 607
   },
   {
     "id": "g5-component-u7532",
@@ -149,8 +169,8 @@ export const grade5Components = [
     "characterSet": [
       "匣"
     ],
-    "group": 607,
-    "sequence": 607
+    "group": 608,
+    "sequence": 608
   },
   {
     "id": "g5-component-u53e3",
@@ -215,8 +235,8 @@ export const grade5Components = [
       "呻",
       "喻"
     ],
-    "group": 608,
-    "sequence": 608
+    "group": 609,
+    "sequence": 609
   },
   {
     "id": "g5-component-u8006",
@@ -229,8 +249,8 @@ export const grade5Components = [
     "characterSet": [
       "嗜"
     ],
-    "group": 609,
-    "sequence": 609
+    "group": 610,
+    "sequence": 610
   },
   {
     "id": "g5-component-u5b80",
@@ -255,8 +275,8 @@ export const grade5Components = [
       "宴",
       "寇"
     ],
-    "group": 610,
-    "sequence": 610
+    "group": 611,
+    "sequence": 611
   },
   {
     "id": "g5-component-u4e14",
@@ -269,8 +289,8 @@ export const grade5Components = [
     "characterSet": [
       "宜"
     ],
-    "group": 611,
-    "sequence": 611
+    "group": 612,
+    "sequence": 612
   },
   {
     "id": "g5-component-u96ba",
@@ -283,8 +303,8 @@ export const grade5Components = [
     "characterSet": [
       "鹤"
     ],
-    "group": 612,
-    "sequence": 612
+    "group": 613,
+    "sequence": 613
   },
   {
     "id": "g5-component-u672a",
@@ -297,8 +317,8 @@ export const grade5Components = [
     "characterSet": [
       "朱"
     ],
-    "group": 613,
-    "sequence": 613
+    "group": 614,
+    "sequence": 614
   },
   {
     "id": "g5-component-u31d2",
@@ -311,8 +331,8 @@ export const grade5Components = [
     "characterSet": [
       "朱"
     ],
-    "group": 614,
-    "sequence": 614
+    "group": 615,
+    "sequence": 615
   },
   {
     "id": "g5-component-u6728",
@@ -371,8 +391,8 @@ export const grade5Components = [
       "某",
       "朴"
     ],
-    "group": 615,
-    "sequence": 615
+    "group": 616,
+    "sequence": 616
   },
   {
     "id": "g5-component-u5321",
@@ -387,8 +407,8 @@ export const grade5Components = [
       "框",
       "筐"
     ],
-    "group": 616,
-    "sequence": 616
+    "group": 617,
+    "sequence": 617
   },
   {
     "id": "g5-component-u8096",
@@ -411,8 +431,8 @@ export const grade5Components = [
       "梢",
       "悄"
     ],
-    "group": 617,
-    "sequence": 617
+    "group": 618,
+    "sequence": 618
   },
   {
     "id": "g5-component-u56e0",
@@ -425,8 +445,8 @@ export const grade5Components = [
     "characterSet": [
       "恩"
     ],
-    "group": 618,
-    "sequence": 618
+    "group": 619,
+    "sequence": 619
   },
   {
     "id": "g5-component-u5fc3",
@@ -449,8 +469,8 @@ export const grade5Components = [
       "忍",
       "愁"
     ],
-    "group": 619,
-    "sequence": 619
+    "group": 620,
+    "sequence": 620
   },
   {
     "id": "g5-component-u97f3",
@@ -465,8 +485,8 @@ export const grade5Components = [
       "韵",
       "竟"
     ],
-    "group": 620,
-    "sequence": 620
+    "group": 621,
+    "sequence": 621
   },
   {
     "id": "g5-component-u5300",
@@ -479,8 +499,8 @@ export const grade5Components = [
     "characterSet": [
       "韵"
     ],
-    "group": 621,
-    "sequence": 621
+    "group": 622,
+    "sequence": 622
   },
   {
     "id": "g5-component-u4ea0",
@@ -497,8 +517,8 @@ export const grade5Components = [
       "亭",
       "享"
     ],
-    "group": 622,
-    "sequence": 622
+    "group": 623,
+    "sequence": 623
   },
   {
     "id": "g5-component-u7530",
@@ -521,8 +541,8 @@ export const grade5Components = [
       "累",
       "甸"
     ],
-    "group": 623,
-    "sequence": 623
+    "group": 624,
+    "sequence": 624
   },
   {
     "id": "g5-component-u5206",
@@ -537,8 +557,8 @@ export const grade5Components = [
       "吩",
       "岔"
     ],
-    "group": 624,
-    "sequence": 624
+    "group": 625,
+    "sequence": 625
   },
   {
     "id": "g5-component-u7a84",
@@ -551,8 +571,8 @@ export const grade5Components = [
     "characterSet": [
       "榨"
     ],
-    "group": 625,
-    "sequence": 625
+    "group": 626,
+    "sequence": 626
   },
   {
     "id": "g5-component-u7559",
@@ -567,8 +587,8 @@ export const grade5Components = [
       "榴",
       "溜"
     ],
-    "group": 626,
-    "sequence": 626
+    "group": 627,
+    "sequence": 627
   },
   {
     "id": "g5-component-u77e2",
@@ -585,8 +605,8 @@ export const grade5Components = [
       "矫",
       "矣"
     ],
-    "group": 627,
-    "sequence": 627
+    "group": 628,
+    "sequence": 628
   },
   {
     "id": "g5-component-u59d4",
@@ -599,8 +619,8 @@ export const grade5Components = [
     "characterSet": [
       "矮"
     ],
-    "group": 628,
-    "sequence": 628
+    "group": 629,
+    "sequence": 629
   },
   {
     "id": "g5-component-u624c",
@@ -655,8 +675,8 @@ export const grade5Components = [
       "抑",
       "抛"
     ],
-    "group": 629,
-    "sequence": 629
+    "group": 630,
+    "sequence": 630
   },
   {
     "id": "g5-component-u756a",
@@ -669,8 +689,8 @@ export const grade5Components = [
     "characterSet": [
       "播"
     ],
-    "group": 630,
-    "sequence": 630
+    "group": 631,
+    "sequence": 631
   },
   {
     "id": "g5-component-u6c35",
@@ -709,8 +729,8 @@ export const grade5Components = [
       "津",
       "沥"
     ],
-    "group": 631,
-    "sequence": 631
+    "group": 632,
+    "sequence": 632
   },
   {
     "id": "g5-component-u5c27",
@@ -725,8 +745,8 @@ export const grade5Components = [
       "浇",
       "跷"
     ],
-    "group": 632,
-    "sequence": 632
+    "group": 633,
+    "sequence": 633
   },
   {
     "id": "g5-component-u4ed8",
@@ -739,8 +759,8 @@ export const grade5Components = [
     "characterSet": [
       "咐"
     ],
-    "group": 633,
-    "sequence": 633
+    "group": 634,
+    "sequence": 634
   },
   {
     "id": "g5-component-u5196",
@@ -763,8 +783,8 @@ export const grade5Components = [
       "冤",
       "寝"
     ],
-    "group": 634,
-    "sequence": 634
+    "group": 635,
+    "sequence": 635
   },
   {
     "id": "g5-component-u4e01",
@@ -781,8 +801,8 @@ export const grade5Components = [
       "叮",
       "钉"
     ],
-    "group": 635,
-    "sequence": 635
+    "group": 636,
+    "sequence": 636
   },
   {
     "id": "g5-component-u83ab",
@@ -795,8 +815,8 @@ export const grade5Components = [
     "characterSet": [
       "慕"
     ],
-    "group": 636,
-    "sequence": 636
+    "group": 637,
+    "sequence": 637
   },
   {
     "id": "g5-component-u2e97",
@@ -809,8 +829,8 @@ export const grade5Components = [
     "characterSet": [
       "慕"
     ],
-    "group": 637,
-    "sequence": 637
+    "group": 638,
+    "sequence": 638
   },
   {
     "id": "g5-component-u8ba0",
@@ -845,8 +865,8 @@ export const grade5Components = [
       "谓",
       "诵"
     ],
-    "group": 638,
-    "sequence": 638
+    "group": 639,
+    "sequence": 639
   },
   {
     "id": "g5-component-u708e",
@@ -859,8 +879,8 @@ export const grade5Components = [
     "characterSet": [
       "谈"
     ],
-    "group": 639,
-    "sequence": 639
+    "group": 640,
+    "sequence": 640
   },
   {
     "id": "g5-component-u2eae",
@@ -887,8 +907,8 @@ export const grade5Components = [
       "筷",
       "籍"
     ],
-    "group": 640,
-    "sequence": 640
+    "group": 641,
+    "sequence": 641
   },
   {
     "id": "g5-component-u7f57",
@@ -901,8 +921,8 @@ export const grade5Components = [
     "characterSet": [
       "箩"
     ],
-    "group": 641,
-    "sequence": 641
+    "group": 642,
+    "sequence": 642
   },
   {
     "id": "g5-component-u4ea2",
@@ -915,8 +935,8 @@ export const grade5Components = [
     "characterSet": [
       "杭"
     ],
-    "group": 642,
-    "sequence": 642
+    "group": 643,
+    "sequence": 643
   },
   {
     "id": "g5-component-u5fc4",
@@ -949,8 +969,8 @@ export const grade5Components = [
       "悄",
       "悟"
     ],
-    "group": 643,
-    "sequence": 643
+    "group": 644,
+    "sequence": 644
   },
   {
     "id": "g5-component-u8463",
@@ -963,8 +983,8 @@ export const grade5Components = [
     "characterSet": [
       "懂"
     ],
-    "group": 644,
-    "sequence": 644
+    "group": 645,
+    "sequence": 645
   },
   {
     "id": "g5-component-u4e37",
@@ -977,8 +997,8 @@ export const grade5Components = [
     "characterSet": [
       "兰"
     ],
-    "group": 645,
-    "sequence": 645
+    "group": 646,
+    "sequence": 646
   },
   {
     "id": "g5-component-u4e09",
@@ -993,8 +1013,8 @@ export const grade5Components = [
       "兰",
       "承"
     ],
-    "group": 646,
-    "sequence": 646
+    "group": 647,
+    "sequence": 647
   },
   {
     "id": "g5-component-u6ce2",
@@ -1007,8 +1027,8 @@ export const grade5Components = [
     "characterSet": [
       "婆"
     ],
-    "group": 647,
-    "sequence": 647
+    "group": 648,
+    "sequence": 648
   },
   {
     "id": "g5-component-u7c73",
@@ -1025,8 +1045,8 @@ export const grade5Components = [
       "粮",
       "糖"
     ],
-    "group": 648,
-    "sequence": 648
+    "group": 649,
+    "sequence": 649
   },
   {
     "id": "g5-component-u7f94",
@@ -1039,8 +1059,8 @@ export const grade5Components = [
     "characterSet": [
       "糕"
     ],
-    "group": 649,
-    "sequence": 649
+    "group": 650,
+    "sequence": 650
   },
   {
     "id": "g5-component-u9963",
@@ -1057,8 +1077,8 @@ export const grade5Components = [
       "饥",
       "馈"
     ],
-    "group": 650,
-    "sequence": 650
+    "group": 651,
+    "sequence": 651
   },
   {
     "id": "g5-component-u5e76",
@@ -1071,8 +1091,8 @@ export const grade5Components = [
     "characterSet": [
       "饼"
     ],
-    "group": 651,
-    "sequence": 651
+    "group": 652,
+    "sequence": 652
   },
   {
     "id": "g5-component-u5f50",
@@ -1091,8 +1111,8 @@ export const grade5Components = [
       "妻",
       "寝"
     ],
-    "group": 652,
-    "sequence": 652
+    "group": 653,
+    "sequence": 653
   },
   {
     "id": "g5-component-u53c8",
@@ -1113,8 +1133,8 @@ export const grade5Components = [
       "权",
       "寝"
     ],
-    "group": 653,
-    "sequence": 653
+    "group": 654,
+    "sequence": 654
   },
   {
     "id": "g5-component-u7e9f",
@@ -1141,8 +1161,8 @@ export const grade5Components = [
       "纠",
       "统"
     ],
-    "group": 654,
-    "sequence": 654
+    "group": 655,
+    "sequence": 655
   },
   {
     "id": "g5-component-u3886",
@@ -1155,8 +1175,8 @@ export const grade5Components = [
     "characterSet": [
       "缠"
     ],
-    "group": 655,
-    "sequence": 655
+    "group": 656,
+    "sequence": 656
   },
   {
     "id": "g5-component-u8279",
@@ -1187,8 +1207,8 @@ export const grade5Components = [
       "茧",
       "葛"
     ],
-    "group": 656,
-    "sequence": 656
+    "group": 657,
+    "sequence": 657
   },
   {
     "id": "g5-component-u4eba",
@@ -1203,8 +1223,8 @@ export const grade5Components = [
       "茶",
       "亥"
     ],
-    "group": 657,
-    "sequence": 657
+    "group": 658,
+    "sequence": 658
   },
   {
     "id": "g5-component-u4f65",
@@ -1221,8 +1241,8 @@ export const grade5Components = [
       "睑",
       "俭"
     ],
-    "group": 658,
-    "sequence": 658
+    "group": 659,
+    "sequence": 659
   },
   {
     "id": "g5-component-u66fc",
@@ -1235,8 +1255,8 @@ export const grade5Components = [
     "characterSet": [
       "蔓"
     ],
-    "group": 659,
-    "sequence": 659
+    "group": 660,
+    "sequence": 660
   },
   {
     "id": "g5-component-u5e7a",
@@ -1249,8 +1269,8 @@ export const grade5Components = [
     "characterSet": [
       "幽"
     ],
-    "group": 660,
-    "sequence": 660
+    "group": 661,
+    "sequence": 661
   },
   {
     "id": "g5-component-u91c6",
@@ -1263,8 +1283,8 @@ export const grade5Components = [
     "characterSet": [
       "悉"
     ],
-    "group": 661,
-    "sequence": 661
+    "group": 662,
+    "sequence": 662
   },
   {
     "id": "g5-component-u520d",
@@ -1279,8 +1299,8 @@ export const grade5Components = [
       "雏",
       "煞"
     ],
-    "group": 662,
-    "sequence": 662
+    "group": 663,
+    "sequence": 663
   },
   {
     "id": "g5-component-u96b9",
@@ -1297,8 +1317,8 @@ export const grade5Components = [
       "焦",
       "锥"
     ],
-    "group": 663,
-    "sequence": 663
+    "group": 664,
+    "sequence": 664
   },
   {
     "id": "g5-component-u7ea6",
@@ -1311,8 +1331,8 @@ export const grade5Components = [
     "characterSet": [
       "哟"
     ],
-    "group": 664,
-    "sequence": 664
+    "group": 665,
+    "sequence": 665
   },
   {
     "id": "g5-component-u5de8",
@@ -1327,8 +1347,8 @@ export const grade5Components = [
       "柜",
       "拒"
     ],
-    "group": 665,
-    "sequence": 665
+    "group": 666,
+    "sequence": 666
   },
   {
     "id": "g5-component-u5b50",
@@ -1343,8 +1363,8 @@ export const grade5Components = [
       "享",
       "孙"
     ],
-    "group": 666,
-    "sequence": 666
+    "group": 667,
+    "sequence": 667
   },
   {
     "id": "g5-component-u961d",
@@ -1367,8 +1387,8 @@ export const grade5Components = [
       "陵",
       "限"
     ],
-    "group": 667,
-    "sequence": 667
+    "group": 668,
+    "sequence": 668
   },
   {
     "id": "g5-component-u5485",
@@ -1381,8 +1401,8 @@ export const grade5Components = [
     "characterSet": [
       "陪"
     ],
-    "group": 668,
-    "sequence": 668
+    "group": 669,
+    "sequence": 669
   },
   {
     "id": "g5-component-u2eca",
@@ -1397,8 +1417,8 @@ export const grade5Components = [
       "趴",
       "跷"
     ],
-    "group": 669,
-    "sequence": 669
+    "group": 670,
+    "sequence": 670
   },
   {
     "id": "g5-component-u516b",
@@ -1413,8 +1433,8 @@ export const grade5Components = [
       "趴",
       "典"
     ],
-    "group": 670,
-    "sequence": 670
+    "group": 671,
+    "sequence": 671
   },
   {
     "id": "g5-component-u76ee",
@@ -1437,8 +1457,8 @@ export const grade5Components = [
       "盾",
       "眉"
     ],
-    "group": 671,
-    "sequence": 671
+    "group": 672,
+    "sequence": 672
   },
   {
     "id": "g5-component-u725f",
@@ -1451,8 +1471,8 @@ export const grade5Components = [
     "characterSet": [
       "眸"
     ],
-    "group": 672,
-    "sequence": 672
+    "group": 673,
+    "sequence": 673
   },
   {
     "id": "g5-component-u531d",
@@ -1465,8 +1485,8 @@ export const grade5Components = [
     "characterSet": [
       "咂"
     ],
-    "group": 673,
-    "sequence": 673
+    "group": 674,
+    "sequence": 674
   },
   {
     "id": "g5-component-u5342",
@@ -1479,8 +1499,8 @@ export const grade5Components = [
     "characterSet": [
       "汛"
     ],
-    "group": 674,
-    "sequence": 674
+    "group": 675,
+    "sequence": 675
   },
   {
     "id": "g5-component-u514d",
@@ -1495,8 +1515,8 @@ export const grade5Components = [
       "挽",
       "勉"
     ],
-    "group": 675,
-    "sequence": 675
+    "group": 676,
+    "sequence": 676
   },
   {
     "id": "g5-component-u95e8",
@@ -1511,8 +1531,8 @@ export const grade5Components = [
       "间",
       "闯"
     ],
-    "group": 676,
-    "sequence": 676
+    "group": 677,
+    "sequence": 677
   },
   {
     "id": "g5-component-u65e5",
@@ -1531,8 +1551,8 @@ export const grade5Components = [
       "暇",
       "鲁"
     ],
-    "group": 677,
-    "sequence": 677
+    "group": 678,
+    "sequence": 678
   },
   {
     "id": "g5-component-u5de6",
@@ -1545,8 +1565,8 @@ export const grade5Components = [
     "characterSet": [
       "惰"
     ],
-    "group": 678,
-    "sequence": 678
+    "group": 679,
+    "sequence": 679
   },
   {
     "id": "g5-component-u6708",
@@ -1567,8 +1587,8 @@ export const grade5Components = [
       "腼",
       "腆"
     ],
-    "group": 679,
-    "sequence": 679
+    "group": 680,
+    "sequence": 680
   },
   {
     "id": "g5-component-u5f73",
@@ -1583,8 +1603,8 @@ export const grade5Components = [
       "衡",
       "御"
     ],
-    "group": 680,
-    "sequence": 680
+    "group": 681,
+    "sequence": 681
   },
   {
     "id": "g5-component-u5927",
@@ -1599,8 +1619,8 @@ export const grade5Components = [
       "衡",
       "奔"
     ],
-    "group": 681,
-    "sequence": 681
+    "group": 682,
+    "sequence": 682
   },
   {
     "id": "g5-component-u4e8d",
@@ -1613,8 +1633,8 @@ export const grade5Components = [
     "characterSet": [
       "衡"
     ],
-    "group": 682,
-    "sequence": 682
+    "group": 683,
+    "sequence": 683
   },
   {
     "id": "g5-component-u5341",
@@ -1633,8 +1653,8 @@ export const grade5Components = [
       "盾",
       "毕"
     ],
-    "group": 683,
-    "sequence": 683
+    "group": 684,
+    "sequence": 684
   },
   {
     "id": "g5-component-u529e",
@@ -1647,8 +1667,8 @@ export const grade5Components = [
     "characterSet": [
       "协"
     ],
-    "group": 684,
-    "sequence": 684
+    "group": 685,
+    "sequence": 685
   },
   {
     "id": "g5-component-u5353",
@@ -1663,8 +1683,8 @@ export const grade5Components = [
       "绰",
       "罩"
     ],
-    "group": 685,
-    "sequence": 685
+    "group": 686,
+    "sequence": 686
   },
   {
     "id": "g5-component-u5171",
@@ -1679,8 +1699,8 @@ export const grade5Components = [
       "洪",
       "拱"
     ],
-    "group": 686,
-    "sequence": 686
+    "group": 687,
+    "sequence": 687
   },
   {
     "id": "g5-component-u65b9",
@@ -1695,8 +1715,8 @@ export const grade5Components = [
       "访",
       "妨"
     ],
-    "group": 687,
-    "sequence": 687
+    "group": 688,
+    "sequence": 688
   },
   {
     "id": "g5-component-u9769",
@@ -1709,8 +1729,8 @@ export const grade5Components = [
     "characterSet": [
       "鞋"
     ],
-    "group": 688,
-    "sequence": 688
+    "group": 689,
+    "sequence": 689
   },
   {
     "id": "g5-component-u572d",
@@ -1725,8 +1745,8 @@ export const grade5Components = [
       "鞋",
       "哇"
     ],
-    "group": 689,
-    "sequence": 689
+    "group": 690,
+    "sequence": 690
   },
   {
     "id": "g5-component-u9b32",
@@ -1739,8 +1759,8 @@ export const grade5Components = [
     "characterSet": [
       "隔"
     ],
-    "group": 690,
-    "sequence": 690
+    "group": 691,
+    "sequence": 691
   },
   {
     "id": "g5-component-u8d56",
@@ -1753,8 +1773,8 @@ export const grade5Components = [
     "characterSet": [
       "懒"
     ],
-    "group": 691,
-    "sequence": 691
+    "group": 692,
+    "sequence": 692
   },
   {
     "id": "g5-component-u79be",
@@ -1771,8 +1791,8 @@ export const grade5Components = [
       "秀",
       "委"
     ],
-    "group": 692,
-    "sequence": 692
+    "group": 693,
+    "sequence": 693
   },
   {
     "id": "g5-component-u6025",
@@ -1785,8 +1805,8 @@ export const grade5Components = [
     "characterSet": [
       "稳"
     ],
-    "group": 693,
-    "sequence": 693
+    "group": 694,
+    "sequence": 694
   },
   {
     "id": "g5-component-u2e88",
@@ -1799,8 +1819,8 @@ export const grade5Components = [
     "characterSet": [
       "免"
     ],
-    "group": 694,
-    "sequence": 694
+    "group": 695,
+    "sequence": 695
   },
   {
     "id": "g5-component-u513f",
@@ -1815,8 +1835,8 @@ export const grade5Components = [
       "免",
       "竟"
     ],
-    "group": 695,
-    "sequence": 695
+    "group": 696,
+    "sequence": 696
   },
   {
     "id": "g5-component-u8f9f",
@@ -1831,8 +1851,8 @@ export const grade5Components = [
       "璧",
       "僻"
     ],
-    "group": 696,
-    "sequence": 696
+    "group": 697,
+    "sequence": 697
   },
   {
     "id": "g5-component-u7389",
@@ -1845,8 +1865,8 @@ export const grade5Components = [
     "characterSet": [
       "璧"
     ],
-    "group": 697,
-    "sequence": 697
+    "group": 698,
+    "sequence": 698
   },
   {
     "id": "g5-component-u81e3",
@@ -1859,8 +1879,8 @@ export const grade5Components = [
     "characterSet": [
       "臣"
     ],
-    "group": 698,
-    "sequence": 698
+    "group": 699,
+    "sequence": 699
   },
   {
     "id": "g5-component-u5f13",
@@ -1875,8 +1895,8 @@ export const grade5Components = [
       "强",
       "疆"
     ],
-    "group": 699,
-    "sequence": 699
+    "group": 700,
+    "sequence": 700
   },
   {
     "id": "g5-component-u867d",
@@ -1889,8 +1909,8 @@ export const grade5Components = [
     "characterSet": [
       "强"
     ],
-    "group": 700,
-    "sequence": 700
+    "group": 701,
+    "sequence": 701
   },
   {
     "id": "g5-component-u82e5",
@@ -1903,8 +1923,8 @@ export const grade5Components = [
     "characterSet": [
       "诺"
     ],
-    "group": 701,
-    "sequence": 701
+    "group": 702,
+    "sequence": 702
   },
   {
     "id": "g5-component-u6208",
@@ -1917,8 +1937,8 @@ export const grade5Components = [
     "characterSet": [
       "划"
     ],
-    "group": 702,
-    "sequence": 702
+    "group": 703,
+    "sequence": 703
   },
   {
     "id": "g5-component-u5202",
@@ -1937,8 +1957,8 @@ export const grade5Components = [
       "剔",
       "刊"
     ],
-    "group": 703,
-    "sequence": 703
+    "group": 704,
+    "sequence": 704
   },
   {
     "id": "g5-component-u66f2",
@@ -1951,8 +1971,8 @@ export const grade5Components = [
     "characterSet": [
       "典"
     ],
-    "group": 704,
-    "sequence": 704
+    "group": 705,
+    "sequence": 705
   },
   {
     "id": "g5-component-u7f52",
@@ -1969,8 +1989,8 @@ export const grade5Components = [
       "置",
       "罩"
     ],
-    "group": 705,
-    "sequence": 705
+    "group": 706,
+    "sequence": 706
   },
   {
     "id": "g5-component-u975e",
@@ -1985,8 +2005,8 @@ export const grade5Components = [
       "罪",
       "辈"
     ],
-    "group": 706,
-    "sequence": 706
+    "group": 707,
+    "sequence": 707
   },
   {
     "id": "g5-component-u5e7f",
@@ -2003,8 +2023,8 @@ export const grade5Components = [
       "唐",
       "席"
     ],
-    "group": 707,
-    "sequence": 707
+    "group": 708,
+    "sequence": 708
   },
   {
     "id": "g5-component-u6c10",
@@ -2017,8 +2037,8 @@ export const grade5Components = [
     "characterSet": [
       "抵"
     ],
-    "group": 708,
-    "sequence": 708
+    "group": 709,
+    "sequence": 709
   },
   {
     "id": "g5-component-u5378",
@@ -2031,8 +2051,8 @@ export const grade5Components = [
     "characterSet": [
       "御"
     ],
-    "group": 709,
-    "sequence": 709
+    "group": 710,
+    "sequence": 710
   },
   {
     "id": "g5-component-u820c",
@@ -2047,8 +2067,8 @@ export const grade5Components = [
       "辞",
       "聒"
     ],
-    "group": 710,
-    "sequence": 710
+    "group": 711,
+    "sequence": 711
   },
   {
     "id": "g5-component-u8f9b",
@@ -2061,8 +2081,8 @@ export const grade5Components = [
     "characterSet": [
       "辞"
     ],
-    "group": 711,
-    "sequence": 711
+    "group": 712,
+    "sequence": 712
   },
   {
     "id": "g5-component-u8fb0",
@@ -2075,8 +2095,8 @@ export const grade5Components = [
     "characterSet": [
       "辱"
     ],
-    "group": 712,
-    "sequence": 712
+    "group": 713,
+    "sequence": 713
   },
   {
     "id": "g5-component-u5bf8",
@@ -2091,8 +2111,8 @@ export const grade5Components = [
       "辱",
       "寺"
     ],
-    "group": 713,
-    "sequence": 713
+    "group": 714,
+    "sequence": 714
   },
   {
     "id": "g5-component-u4eb6",
@@ -2105,8 +2125,8 @@ export const grade5Components = [
     "characterSet": [
       "擅"
     ],
-    "group": 714,
-    "sequence": 714
+    "group": 715,
+    "sequence": 715
   },
   {
     "id": "g5-component-u5348",
@@ -2119,8 +2139,8 @@ export const grade5Components = [
     "characterSet": [
       "缶"
     ],
-    "group": 715,
-    "sequence": 715
+    "group": 716,
+    "sequence": 716
   },
   {
     "id": "g5-component-u536f",
@@ -2133,8 +2153,8 @@ export const grade5Components = [
     "characterSet": [
       "卿"
     ],
-    "group": 716,
-    "sequence": 716
+    "group": 717,
+    "sequence": 717
   },
   {
     "id": "g5-component-u8864",
@@ -2149,8 +2169,8 @@ export const grade5Components = [
       "袍",
       "褐"
     ],
-    "group": 717,
-    "sequence": 717
+    "group": 718,
+    "sequence": 718
   },
   {
     "id": "g5-component-u5305",
@@ -2163,8 +2183,8 @@ export const grade5Components = [
     "characterSet": [
       "袍"
     ],
-    "group": 718,
-    "sequence": 718
+    "group": 719,
+    "sequence": 719
   },
   {
     "id": "g5-component-u5200",
@@ -2177,8 +2197,8 @@ export const grade5Components = [
     "characterSet": [
       "召"
     ],
-    "group": 719,
-    "sequence": 719
+    "group": 720,
+    "sequence": 720
   },
   {
     "id": "g5-component-u4e49",
@@ -2191,8 +2211,8 @@ export const grade5Components = [
     "characterSet": [
       "议"
     ],
-    "group": 720,
-    "sequence": 720
+    "group": 721,
+    "sequence": 721
   },
   {
     "id": "g5-component-u7f36",
@@ -2207,8 +2227,8 @@ export const grade5Components = [
       "缺",
       "瑶"
     ],
-    "group": 721,
-    "sequence": 721
+    "group": 722,
+    "sequence": 722
   },
   {
     "id": "g5-component-u592c",
@@ -2221,8 +2241,8 @@ export const grade5Components = [
     "characterSet": [
       "缺"
     ],
-    "group": 722,
-    "sequence": 722
+    "group": 723,
+    "sequence": 723
   },
   {
     "id": "g5-component-u5415",
@@ -2235,8 +2255,8 @@ export const grade5Components = [
     "characterSet": [
       "宫"
     ],
-    "group": 723,
-    "sequence": 723
+    "group": 724,
+    "sequence": 724
   },
   {
     "id": "g5-component-u5357",
@@ -2249,8 +2269,8 @@ export const grade5Components = [
     "characterSet": [
       "献"
     ],
-    "group": 724,
-    "sequence": 724
+    "group": 725,
+    "sequence": 725
   },
   {
     "id": "g5-component-u72ac",
@@ -2265,8 +2285,8 @@ export const grade5Components = [
       "献",
       "狱"
     ],
-    "group": 725,
-    "sequence": 725
+    "group": 726,
+    "sequence": 726
   },
   {
     "id": "g5-component-u6c36",
@@ -2279,8 +2299,8 @@ export const grade5Components = [
     "characterSet": [
       "承"
     ],
-    "group": 726,
-    "sequence": 726
+    "group": 727,
+    "sequence": 727
   },
   {
     "id": "g5-component-u5c11",
@@ -2295,8 +2315,8 @@ export const grade5Components = [
       "抄",
       "纱"
     ],
-    "group": 727,
-    "sequence": 727
+    "group": 728,
+    "sequence": 728
   },
   {
     "id": "g5-component-u53bb",
@@ -2309,8 +2329,8 @@ export const grade5Components = [
     "characterSet": [
       "怯"
     ],
-    "group": 728,
-    "sequence": 728
+    "group": 729,
+    "sequence": 729
   },
   {
     "id": "g5-component-u5211",
@@ -2323,8 +2343,8 @@ export const grade5Components = [
     "characterSet": [
       "荆"
     ],
-    "group": 729,
-    "sequence": 729
+    "group": 730,
+    "sequence": 730
   },
   {
     "id": "g5-component-u5b83",
@@ -2337,8 +2357,8 @@ export const grade5Components = [
     "characterSet": [
       "鸵"
     ],
-    "group": 730,
-    "sequence": 730
+    "group": 731,
+    "sequence": 731
   },
   {
     "id": "g5-component-u23386",
@@ -2351,8 +2371,8 @@ export const grade5Components = [
     "characterSet": [
       "赢"
     ],
-    "group": 731,
-    "sequence": 731
+    "group": 732,
+    "sequence": 732
   },
   {
     "id": "g5-component-u8d1d",
@@ -2369,8 +2389,8 @@ export const grade5Components = [
       "贾",
       "琐"
     ],
-    "group": 732,
-    "sequence": 732
+    "group": 733,
+    "sequence": 733
   },
   {
     "id": "g5-component-u3774",
@@ -2383,8 +2403,8 @@ export const grade5Components = [
     "characterSet": [
       "冠"
     ],
-    "group": 733,
-    "sequence": 733
+    "group": 734,
+    "sequence": 734
   },
   {
     "id": "g5-component-u4ebb",
@@ -2413,8 +2433,8 @@ export const grade5Components = [
       "传",
       "偿"
     ],
-    "group": 734,
-    "sequence": 734
+    "group": 735,
+    "sequence": 735
   },
   {
     "id": "g5-component-u5e9c",
@@ -2427,8 +2447,8 @@ export const grade5Components = [
     "characterSet": [
       "俯"
     ],
-    "group": 735,
-    "sequence": 735
+    "group": 736,
+    "sequence": 736
   },
   {
     "id": "g5-component-u8d32",
@@ -2441,8 +2461,8 @@ export const grade5Components = [
     "characterSet": [
       "喷"
     ],
-    "group": 736,
-    "sequence": 736
+    "group": 737,
+    "sequence": 737
   },
   {
     "id": "g5-component-u2e99",
@@ -2455,8 +2475,8 @@ export const grade5Components = [
     "characterSet": [
       "枚"
     ],
-    "group": 737,
-    "sequence": 737
+    "group": 738,
+    "sequence": 738
   },
   {
     "id": "g5-component-u524d",
@@ -2469,8 +2489,8 @@ export const grade5Components = [
     "characterSet": [
       "箭"
     ],
-    "group": 738,
-    "sequence": 738
+    "group": 739,
+    "sequence": 739
   },
   {
     "id": "g5-component-u544a",
@@ -2485,8 +2505,8 @@ export const grade5Components = [
       "浩",
       "酷"
     ],
-    "group": 739,
-    "sequence": 739
+    "group": 740,
+    "sequence": 740
   },
   {
     "id": "g5-component-u540c",
@@ -2499,8 +2519,8 @@ export const grade5Components = [
     "characterSet": [
       "筒"
     ],
-    "group": 740,
-    "sequence": 740
+    "group": 741,
+    "sequence": 741
   },
   {
     "id": "g5-component-u8d64",
@@ -2513,8 +2533,8 @@ export const grade5Components = [
     "characterSet": [
       "赤"
     ],
-    "group": 741,
-    "sequence": 741
+    "group": 742,
+    "sequence": 742
   },
   {
     "id": "g5-component-u56d7",
@@ -2527,8 +2547,8 @@ export const grade5Components = [
     "characterSet": [
       "圈"
     ],
-    "group": 742,
-    "sequence": 742
+    "group": 743,
+    "sequence": 743
   },
   {
     "id": "g5-component-u5377",
@@ -2541,8 +2561,8 @@ export const grade5Components = [
     "characterSet": [
       "圈"
     ],
-    "group": 743,
-    "sequence": 743
+    "group": 744,
+    "sequence": 744
   },
   {
     "id": "g5-component-u76f4",
@@ -2557,8 +2577,8 @@ export const grade5Components = [
       "置",
       "殖"
     ],
-    "group": 744,
-    "sequence": 744
+    "group": 745,
+    "sequence": 745
   },
   {
     "id": "g5-component-u5404",
@@ -2571,8 +2591,8 @@ export const grade5Components = [
     "characterSet": [
       "略"
     ],
-    "group": 745,
-    "sequence": 745
+    "group": 746,
+    "sequence": 746
   },
   {
     "id": "g5-component-u53bd",
@@ -2585,8 +2605,8 @@ export const grade5Components = [
     "characterSet": [
       "垒"
     ],
-    "group": 746,
-    "sequence": 746
+    "group": 747,
+    "sequence": 747
   },
   {
     "id": "g5-component-u571f",
@@ -2613,8 +2633,8 @@ export const grade5Components = [
       "寺",
       "塔"
     ],
-    "group": 747,
-    "sequence": 747
+    "group": 748,
+    "sequence": 748
   },
   {
     "id": "g5-component-u58ec",
@@ -2627,8 +2647,8 @@ export const grade5Components = [
     "characterSet": [
       "任"
     ],
-    "group": 748,
-    "sequence": 748
+    "group": 749,
+    "sequence": 749
   },
   {
     "id": "g5-component-u65a4",
@@ -2643,8 +2663,8 @@ export const grade5Components = [
       "丘",
       "斩"
     ],
-    "group": 749,
-    "sequence": 749
+    "group": 750,
+    "sequence": 750
   },
   {
     "id": "g5-component-u4e00",
@@ -2665,8 +2685,8 @@ export const grade5Components = [
       "览",
       "鉴"
     ],
-    "group": 750,
-    "sequence": 750
+    "group": 751,
+    "sequence": 751
   },
   {
     "id": "g5-component-u9601",
@@ -2679,8 +2699,8 @@ export const grade5Components = [
     "characterSet": [
       "搁"
     ],
-    "group": 751,
-    "sequence": 751
+    "group": 752,
+    "sequence": 752
   },
   {
     "id": "g5-component-u81fd",
@@ -2693,8 +2713,8 @@ export const grade5Components = [
     "characterSet": [
       "陷"
     ],
-    "group": 752,
-    "sequence": 752
+    "group": 753,
+    "sequence": 753
   },
   {
     "id": "g5-component-u53e6",
@@ -2707,8 +2727,8 @@ export const grade5Components = [
     "characterSet": [
       "拐"
     ],
-    "group": 753,
-    "sequence": 753
+    "group": 754,
+    "sequence": 754
   },
   {
     "id": "g5-component-u5de9",
@@ -2721,8 +2741,8 @@ export const grade5Components = [
     "characterSet": [
       "筑"
     ],
-    "group": 754,
-    "sequence": 754
+    "group": 755,
+    "sequence": 755
   },
   {
     "id": "g5-component-u4fdd",
@@ -2735,8 +2755,8 @@ export const grade5Components = [
     "characterSet": [
       "堡"
     ],
-    "group": 755,
-    "sequence": 755
+    "group": 756,
+    "sequence": 756
   },
   {
     "id": "g5-component-u9fb8",
@@ -2749,8 +2769,8 @@ export const grade5Components = [
     "characterSet": [
       "党"
     ],
-    "group": 756,
-    "sequence": 756
+    "group": 757,
+    "sequence": 757
   },
   {
     "id": "g5-component-u5144",
@@ -2763,8 +2783,8 @@ export const grade5Components = [
     "characterSet": [
       "党"
     ],
-    "group": 757,
-    "sequence": 757
+    "group": 758,
+    "sequence": 758
   },
   {
     "id": "g5-component-u655d",
@@ -2777,8 +2797,8 @@ export const grade5Components = [
     "characterSet": [
       "蔽"
     ],
-    "group": 758,
-    "sequence": 758
+    "group": 759,
+    "sequence": 759
   },
   {
     "id": "g5-component-u9149",
@@ -2799,8 +2819,8 @@ export const grade5Components = [
       "酸",
       "酵"
     ],
-    "group": 759,
-    "sequence": 759
+    "group": 760,
+    "sequence": 760
   },
   {
     "id": "g5-component-u5dde",
@@ -2813,8 +2833,8 @@ export const grade5Components = [
     "characterSet": [
       "酬"
     ],
-    "group": 760,
-    "sequence": 760
+    "group": 761,
+    "sequence": 761
   },
   {
     "id": "g5-component-u6298",
@@ -2827,8 +2847,8 @@ export const grade5Components = [
     "characterSet": [
       "誓"
     ],
-    "group": 761,
-    "sequence": 761
+    "group": 762,
+    "sequence": 762
   },
   {
     "id": "g5-component-u8a00",
@@ -2843,8 +2863,8 @@ export const grade5Components = [
       "誓",
       "誊"
     ],
-    "group": 762,
-    "sequence": 762
+    "group": 763,
+    "sequence": 763
   },
   {
     "id": "g5-component-u8352",
@@ -2857,8 +2877,8 @@ export const grade5Components = [
     "characterSet": [
       "谎"
     ],
-    "group": 763,
-    "sequence": 763
+    "group": 764,
+    "sequence": 764
   },
   {
     "id": "g5-component-u725b",
@@ -2871,8 +2891,8 @@ export const grade5Components = [
     "characterSet": [
       "牺"
     ],
-    "group": 764,
-    "sequence": 764
+    "group": 765,
+    "sequence": 765
   },
   {
     "id": "g5-component-u897f",
@@ -2885,8 +2905,8 @@ export const grade5Components = [
     "characterSet": [
       "牺"
     ],
-    "group": 765,
-    "sequence": 765
+    "group": 766,
+    "sequence": 766
   },
   {
     "id": "g5-component-u738b",
@@ -2915,8 +2935,8 @@ export const grade5Components = [
       "枉",
       "琐"
     ],
-    "group": 766,
-    "sequence": 766
+    "group": 767,
+    "sequence": 767
   },
   {
     "id": "g5-component-u3431",
@@ -2929,8 +2949,8 @@ export const grade5Components = [
     "characterSet": [
       "珍"
     ],
-    "group": 767,
-    "sequence": 767
+    "group": 768,
+    "sequence": 768
   },
   {
     "id": "g5-component-u5c5e",
@@ -2943,8 +2963,8 @@ export const grade5Components = [
     "characterSet": [
       "嘱"
     ],
-    "group": 768,
-    "sequence": 768
+    "group": 769,
+    "sequence": 769
   },
   {
     "id": "g5-component-u26407",
@@ -2957,8 +2977,8 @@ export const grade5Components = [
     "characterSet": [
       "塌"
     ],
-    "group": 769,
-    "sequence": 769
+    "group": 770,
+    "sequence": 770
   },
   {
     "id": "g5-component-u706c",
@@ -2975,8 +2995,8 @@ export const grade5Components = [
       "煮",
       "煞"
     ],
-    "group": 770,
-    "sequence": 770
+    "group": 771,
+    "sequence": 771
   },
   {
     "id": "g5-component-u5ef4",
@@ -2989,8 +3009,8 @@ export const grade5Components = [
     "characterSet": [
       "延"
     ],
-    "group": 771,
-    "sequence": 771
+    "group": 772,
+    "sequence": 772
   },
   {
     "id": "g5-component-u4e3f",
@@ -3009,8 +3029,8 @@ export const grade5Components = [
       "览",
       "鉴"
     ],
-    "group": 772,
-    "sequence": 772
+    "group": 773,
+    "sequence": 773
   },
   {
     "id": "g5-component-u6b62",
@@ -3027,8 +3047,8 @@ export const grade5Components = [
       "歧",
       "耻"
     ],
-    "group": 773,
-    "sequence": 773
+    "group": 774,
+    "sequence": 774
   },
   {
     "id": "g5-component-u706b",
@@ -3047,8 +3067,8 @@ export const grade5Components = [
       "烬",
       "炊"
     ],
-    "group": 774,
-    "sequence": 774
+    "group": 775,
+    "sequence": 775
   },
   {
     "id": "g5-component-u6bcf",
@@ -3063,8 +3083,8 @@ export const grade5Components = [
       "悔",
       "诲"
     ],
-    "group": 775,
-    "sequence": 775
+    "group": 776,
+    "sequence": 776
   },
   {
     "id": "g5-component-u592b",
@@ -3077,8 +3097,8 @@ export const grade5Components = [
     "characterSet": [
       "扶"
     ],
-    "group": 776,
-    "sequence": 776
+    "group": 777,
+    "sequence": 777
   },
   {
     "id": "g5-component-u53df",
@@ -3091,8 +3111,8 @@ export const grade5Components = [
     "characterSet": [
       "嫂"
     ],
-    "group": 777,
-    "sequence": 777
+    "group": 778,
+    "sequence": 778
   },
   {
     "id": "g5-component-u826e",
@@ -3107,8 +3127,8 @@ export const grade5Components = [
       "恳",
       "限"
     ],
-    "group": 778,
-    "sequence": 778
+    "group": 779,
+    "sequence": 779
   },
   {
     "id": "g5-component-u5e08",
@@ -3121,8 +3141,8 @@ export const grade5Components = [
     "characterSet": [
       "筛"
     ],
-    "group": 779,
-    "sequence": 779
+    "group": 780,
+    "sequence": 780
   },
   {
     "id": "g5-component-u5915",
@@ -3137,8 +3157,8 @@ export const grade5Components = [
       "歹",
       "桨"
     ],
-    "group": 780,
-    "sequence": 780
+    "group": 781,
+    "sequence": 781
   },
   {
     "id": "g5-component-u2eb3",
@@ -3151,8 +3171,8 @@ export const grade5Components = [
     "characterSet": [
       "罕"
     ],
-    "group": 781,
-    "sequence": 781
+    "group": 782,
+    "sequence": 782
   },
   {
     "id": "g5-component-u5e72",
@@ -3167,8 +3187,8 @@ export const grade5Components = [
       "罕",
       "刊"
     ],
-    "group": 782,
-    "sequence": 782
+    "group": 783,
+    "sequence": 783
   },
   {
     "id": "g5-component-u590b",
@@ -3183,8 +3203,8 @@ export const grade5Components = [
       "梭",
       "酸"
     ],
-    "group": 783,
-    "sequence": 783
+    "group": 784,
+    "sequence": 784
   },
   {
     "id": "g5-component-u3022",
@@ -3201,8 +3221,8 @@ export const grade5Components = [
       "览",
       "鉴"
     ],
-    "group": 784,
-    "sequence": 784
+    "group": 785,
+    "sequence": 785
   },
   {
     "id": "g5-component-u4e36",
@@ -3221,8 +3241,8 @@ export const grade5Components = [
       "勺",
       "鉴"
     ],
-    "group": 785,
-    "sequence": 785
+    "group": 786,
+    "sequence": 786
   },
   {
     "id": "g5-component-u76bf",
@@ -3235,8 +3255,8 @@ export const grade5Components = [
     "characterSet": [
       "监"
     ],
-    "group": 786,
-    "sequence": 786
+    "group": 787,
+    "sequence": 787
   },
   {
     "id": "g5-component-u72ad",
@@ -3251,8 +3271,8 @@ export const grade5Components = [
       "狱",
       "狭"
     ],
-    "group": 787,
-    "sequence": 787
+    "group": 788,
+    "sequence": 788
   },
   {
     "id": "g5-component-u826f",
@@ -3269,8 +3289,8 @@ export const grade5Components = [
       "郎",
       "粮"
     ],
-    "group": 788,
-    "sequence": 788
+    "group": 789,
+    "sequence": 789
   },
   {
     "id": "g5-component-u76cd",
@@ -3283,8 +3303,8 @@ export const grade5Components = [
     "characterSet": [
       "瞌"
     ],
-    "group": 789,
-    "sequence": 789
+    "group": 790,
+    "sequence": 790
   },
   {
     "id": "g5-component-u6d1b",
@@ -3297,8 +3317,8 @@ export const grade5Components = [
     "characterSet": [
       "落"
     ],
-    "group": 790,
-    "sequence": 790
+    "group": 791,
+    "sequence": 791
   },
   {
     "id": "g5-component-u660f",
@@ -3311,8 +3331,8 @@ export const grade5Components = [
     "characterSet": [
       "婚"
     ],
-    "group": 791,
-    "sequence": 791
+    "group": 792,
+    "sequence": 792
   },
   {
     "id": "g5-component-u7236",
@@ -3325,8 +3345,8 @@ export const grade5Components = [
     "characterSet": [
       "爹"
     ],
-    "group": 792,
-    "sequence": 792
+    "group": 793,
+    "sequence": 793
   },
   {
     "id": "g5-component-u591a",
@@ -3339,8 +3359,8 @@ export const grade5Components = [
     "characterSet": [
       "爹"
     ],
-    "group": 793,
-    "sequence": 793
+    "group": 794,
+    "sequence": 794
   },
   {
     "id": "g5-component-u8f66",
@@ -3357,8 +3377,8 @@ export const grade5Components = [
       "辈",
       "斩"
     ],
-    "group": 794,
-    "sequence": 794
+    "group": 795,
+    "sequence": 795
   },
   {
     "id": "g5-component-u4e24",
@@ -3373,8 +3393,8 @@ export const grade5Components = [
       "辆",
       "瞒"
     ],
-    "group": 795,
-    "sequence": 795
+    "group": 796,
+    "sequence": 796
   },
   {
     "id": "g5-component-u8d70",
@@ -3387,8 +3407,8 @@ export const grade5Components = [
     "characterSet": [
       "趟"
     ],
-    "group": 796,
-    "sequence": 796
+    "group": 797,
+    "sequence": 797
   },
   {
     "id": "g5-component-u5c1a",
@@ -3401,8 +3421,8 @@ export const grade5Components = [
     "characterSet": [
       "趟"
     ],
-    "group": 797,
-    "sequence": 797
+    "group": 798,
+    "sequence": 798
   },
   {
     "id": "g5-component-u4e47",
@@ -3415,8 +3435,8 @@ export const grade5Components = [
     "characterSet": [
       "托"
     ],
-    "group": 798,
-    "sequence": 798
+    "group": 799,
+    "sequence": 799
   },
   {
     "id": "g5-component-u77e3",
@@ -3429,8 +3449,8 @@ export const grade5Components = [
     "characterSet": [
       "挨"
     ],
-    "group": 799,
-    "sequence": 799
+    "group": 800,
+    "sequence": 800
   },
   {
     "id": "g5-component-u767d",
@@ -3449,8 +3469,8 @@ export const grade5Components = [
       "泊",
       "皎"
     ],
-    "group": 800,
-    "sequence": 800
+    "group": 801,
+    "sequence": 801
   },
   {
     "id": "g5-component-u754f",
@@ -3463,8 +3483,8 @@ export const grade5Components = [
     "characterSet": [
       "偎"
     ],
-    "group": 801,
-    "sequence": 801
+    "group": 802,
+    "sequence": 802
   },
   {
     "id": "g5-component-u8870",
@@ -3477,8 +3497,8 @@ export const grade5Components = [
     "characterSet": [
       "衰"
     ],
-    "group": 802,
-    "sequence": 802
+    "group": 803,
+    "sequence": 803
   },
   {
     "id": "g5-component-u518c",
@@ -3491,8 +3511,8 @@ export const grade5Components = [
     "characterSet": [
       "珊"
     ],
-    "group": 803,
-    "sequence": 803
+    "group": 804,
+    "sequence": 804
   },
   {
     "id": "g5-component-u80e1",
@@ -3505,8 +3525,8 @@ export const grade5Components = [
     "characterSet": [
       "瑚"
     ],
-    "group": 804,
-    "sequence": 804
+    "group": 805,
+    "sequence": 805
   },
   {
     "id": "g5-component-u77f3",
@@ -3523,8 +3543,8 @@ export const grade5Components = [
       "碌",
       "磁"
     ],
-    "group": 805,
-    "sequence": 805
+    "group": 806,
+    "sequence": 806
   },
   {
     "id": "g5-component-u7126",
@@ -3537,8 +3557,8 @@ export const grade5Components = [
     "characterSet": [
       "礁"
     ],
-    "group": 806,
-    "sequence": 806
+    "group": 807,
+    "sequence": 807
   },
   {
     "id": "g5-component-u5e7c",
@@ -3551,8 +3571,8 @@ export const grade5Components = [
     "characterSet": [
       "拗"
     ],
-    "group": 807,
-    "sequence": 807
+    "group": 808,
+    "sequence": 808
   },
   {
     "id": "g5-component-u4e43",
@@ -3567,8 +3587,8 @@ export const grade5Components = [
       "乃",
       "秀"
     ],
-    "group": 808,
-    "sequence": 808
+    "group": 809,
+    "sequence": 809
   },
   {
     "id": "g5-component-u718f",
@@ -3581,8 +3601,8 @@ export const grade5Components = [
     "characterSet": [
       "熏"
     ],
-    "group": 809,
-    "sequence": 809
+    "group": 810,
+    "sequence": 810
   },
   {
     "id": "g5-component-u5bfa",
@@ -3595,8 +3615,8 @@ export const grade5Components = [
     "characterSet": [
       "恃"
     ],
-    "group": 810,
-    "sequence": 810
+    "group": 811,
+    "sequence": 811
   },
   {
     "id": "g5-component-u6570",
@@ -3609,8 +3629,8 @@ export const grade5Components = [
     "characterSet": [
       "擞"
     ],
-    "group": 811,
-    "sequence": 811
+    "group": 812,
+    "sequence": 812
   },
   {
     "id": "g5-component-u793a",
@@ -3623,8 +3643,8 @@ export const grade5Components = [
     "characterSet": [
       "祭"
     ],
-    "group": 812,
-    "sequence": 812
+    "group": 813,
+    "sequence": 813
   },
   {
     "id": "g5-component-u8863",
@@ -3637,8 +3657,8 @@ export const grade5Components = [
     "characterSet": [
       "哀"
     ],
-    "group": 813,
-    "sequence": 813
+    "group": 814,
+    "sequence": 814
   },
   {
     "id": "g5-component-u53e5",
@@ -3651,8 +3671,8 @@ export const grade5Components = [
     "characterSet": [
       "拘"
     ],
-    "group": 814,
-    "sequence": 814
+    "group": 815,
+    "sequence": 815
   },
   {
     "id": "g5-component-u5199",
@@ -3665,8 +3685,8 @@ export const grade5Components = [
     "characterSet": [
       "泻"
     ],
-    "group": 815,
-    "sequence": 815
+    "group": 816,
+    "sequence": 816
   },
   {
     "id": "g5-component-u9c7c",
@@ -3681,8 +3701,8 @@ export const grade5Components = [
       "鳞",
       "鲁"
     ],
-    "group": 816,
-    "sequence": 816
+    "group": 817,
+    "sequence": 817
   },
   {
     "id": "g5-component-u7ca6",
@@ -3695,8 +3715,8 @@ export const grade5Components = [
     "characterSet": [
       "鳞"
     ],
-    "group": 817,
-    "sequence": 817
+    "group": 818,
+    "sequence": 818
   },
   {
     "id": "g5-component-u7687",
@@ -3711,8 +3731,8 @@ export const grade5Components = [
       "惶",
       "煌"
     ],
-    "group": 818,
-    "sequence": 818
+    "group": 819,
+    "sequence": 819
   },
   {
     "id": "g5-component-u53f0",
@@ -3725,8 +3745,8 @@ export const grade5Components = [
     "characterSet": [
       "胎"
     ],
-    "group": 819,
-    "sequence": 819
+    "group": 820,
+    "sequence": 820
   },
   {
     "id": "g5-component-u5c38",
@@ -3743,8 +3763,8 @@ export const grade5Components = [
       "尾",
       "屑"
     ],
-    "group": 820,
-    "sequence": 820
+    "group": 821,
+    "sequence": 821
   },
   {
     "id": "g5-component-u5fa9",
@@ -3757,8 +3777,8 @@ export const grade5Components = [
     "characterSet": [
       "履"
     ],
-    "group": 821,
-    "sequence": 821
+    "group": 822,
+    "sequence": 822
   },
   {
     "id": "g5-component-u2298f",
@@ -3771,8 +3791,8 @@ export const grade5Components = [
     "characterSet": [
       "哉"
     ],
-    "group": 822,
-    "sequence": 822
+    "group": 823,
+    "sequence": 823
   },
   {
     "id": "g5-component-u66ff",
@@ -3785,8 +3805,8 @@ export const grade5Components = [
     "characterSet": [
       "潜"
     ],
-    "group": 823,
-    "sequence": 823
+    "group": 824,
+    "sequence": 824
   },
   {
     "id": "g5-component-u5f0f",
@@ -3799,8 +3819,8 @@ export const grade5Components = [
     "characterSet": [
       "试"
     ],
-    "group": 824,
-    "sequence": 824
+    "group": 825,
+    "sequence": 825
   },
   {
     "id": "g5-component-u4ece",
@@ -3813,8 +3833,8 @@ export const grade5Components = [
     "characterSet": [
       "纵"
     ],
-    "group": 825,
-    "sequence": 825
+    "group": 826,
+    "sequence": 826
   },
   {
     "id": "g5-component-u757a",
@@ -3827,8 +3847,8 @@ export const grade5Components = [
     "characterSet": [
       "疆"
     ],
-    "group": 826,
-    "sequence": 826
+    "group": 827,
+    "sequence": 827
   },
   {
     "id": "g5-component-u53e4",
@@ -3841,8 +3861,8 @@ export const grade5Components = [
     "characterSet": [
       "估"
     ],
-    "group": 827,
-    "sequence": 827
+    "group": 828,
+    "sequence": 828
   },
   {
     "id": "g5-component-u9f99",
@@ -3857,8 +3877,8 @@ export const grade5Components = [
       "珑",
       "咙"
     ],
-    "group": 828,
-    "sequence": 828
+    "group": 829,
+    "sequence": 829
   },
   {
     "id": "g5-component-u6613",
@@ -3871,8 +3891,8 @@ export const grade5Components = [
     "characterSet": [
       "剔"
     ],
-    "group": 829,
-    "sequence": 829
+    "group": 830,
+    "sequence": 830
   },
   {
     "id": "g5-component-u9611",
@@ -3885,8 +3905,8 @@ export const grade5Components = [
     "characterSet": [
       "澜"
     ],
-    "group": 830,
-    "sequence": 830
+    "group": 831,
+    "sequence": 831
   },
   {
     "id": "g5-component-u722b",
@@ -3901,8 +3921,8 @@ export const grade5Components = [
       "瑶",
       "舀"
     ],
-    "group": 831,
-    "sequence": 831
+    "group": 832,
+    "sequence": 832
   },
   {
     "id": "g5-component-u590c",
@@ -3915,8 +3935,8 @@ export const grade5Components = [
     "characterSet": [
       "陵"
     ],
-    "group": 832,
-    "sequence": 832
+    "group": 833,
+    "sequence": 833
   },
   {
     "id": "g5-component-u53b7",
@@ -3929,8 +3949,8 @@ export const grade5Components = [
     "characterSet": [
       "宏"
     ],
-    "group": 833,
-    "sequence": 833
+    "group": 834,
+    "sequence": 834
   },
   {
     "id": "g5-component-u215d7",
@@ -3943,8 +3963,8 @@ export const grade5Components = [
     "characterSet": [
       "奉"
     ],
-    "group": 834,
-    "sequence": 834
+    "group": 835,
+    "sequence": 835
   },
   {
     "id": "g5-component-u5c3d",
@@ -3957,8 +3977,8 @@ export const grade5Components = [
     "characterSet": [
       "烬"
     ],
-    "group": 835,
-    "sequence": 835
+    "group": 836,
+    "sequence": 836
   },
   {
     "id": "g5-component-u81fc",
@@ -3975,8 +3995,8 @@ export const grade5Components = [
       "舀",
       "舅"
     ],
-    "group": 836,
-    "sequence": 836
+    "group": 837,
+    "sequence": 837
   },
   {
     "id": "g5-component-u5de5",
@@ -3991,8 +4011,8 @@ export const grade5Components = [
       "毁",
       "差"
     ],
-    "group": 837,
-    "sequence": 837
+    "group": 838,
+    "sequence": 838
   },
   {
     "id": "g5-component-u6bb3",
@@ -4007,8 +4027,8 @@ export const grade5Components = [
       "毁",
       "殿"
     ],
-    "group": 838,
-    "sequence": 838
+    "group": 839,
+    "sequence": 839
   },
   {
     "id": "g5-component-u5458",
@@ -4021,8 +4041,8 @@ export const grade5Components = [
     "characterSet": [
       "损"
     ],
-    "group": 839,
-    "sequence": 839
+    "group": 840,
+    "sequence": 840
   },
   {
     "id": "g5-component-u5149",
@@ -4039,8 +4059,8 @@ export const grade5Components = [
       "恍",
       "耀"
     ],
-    "group": 840,
-    "sequence": 840
+    "group": 841,
+    "sequence": 841
   },
   {
     "id": "g5-component-u519b",
@@ -4053,8 +4073,8 @@ export const grade5Components = [
     "characterSet": [
       "辉"
     ],
-    "group": 841,
-    "sequence": 841
+    "group": 842,
+    "sequence": 842
   },
   {
     "id": "g5-component-u21c52",
@@ -4067,8 +4087,8 @@ export const grade5Components = [
     "characterSet": [
       "殿"
     ],
-    "group": 842,
-    "sequence": 842
+    "group": 843,
+    "sequence": 843
   },
   {
     "id": "g5-component-u89c1",
@@ -4081,8 +4101,8 @@ export const grade5Components = [
     "characterSet": [
       "览"
     ],
-    "group": 843,
-    "sequence": 843
+    "group": 844,
+    "sequence": 844
   },
   {
     "id": "g5-component-u7adf",
@@ -4095,8 +4115,8 @@ export const grade5Components = [
     "characterSet": [
       "境"
     ],
-    "group": 844,
-    "sequence": 844
+    "group": 845,
+    "sequence": 845
   },
   {
     "id": "g5-component-u8080",
@@ -4109,8 +4129,8 @@ export const grade5Components = [
     "characterSet": [
       "唐"
     ],
-    "group": 845,
-    "sequence": 845
+    "group": 846,
+    "sequence": 846
   },
   {
     "id": "g5-component-u9a6c",
@@ -4125,8 +4145,8 @@ export const grade5Components = [
       "闯",
       "驯"
     ],
-    "group": 846,
-    "sequence": 846
+    "group": 847,
+    "sequence": 847
   },
   {
     "id": "g5-component-u9485",
@@ -4143,8 +4163,8 @@ export const grade5Components = [
       "锥",
       "钉"
     ],
-    "group": 847,
-    "sequence": 847
+    "group": 848,
+    "sequence": 848
   },
   {
     "id": "g5-component-u6216",
@@ -4157,8 +4177,8 @@ export const grade5Components = [
     "characterSet": [
       "域"
     ],
-    "group": 848,
-    "sequence": 848
+    "group": 849,
+    "sequence": 849
   },
   {
     "id": "g5-component-u821f",
@@ -4171,8 +4191,8 @@ export const grade5Components = [
     "characterSet": [
       "艇"
     ],
-    "group": 849,
-    "sequence": 849
+    "group": 850,
+    "sequence": 850
   },
   {
     "id": "g5-component-u5ef7",
@@ -4185,8 +4205,8 @@ export const grade5Components = [
     "characterSet": [
       "艇"
     ],
-    "group": 850,
-    "sequence": 850
+    "group": 851,
+    "sequence": 851
   },
   {
     "id": "g5-component-u77db",
@@ -4199,8 +4219,8 @@ export const grade5Components = [
     "characterSet": [
       "矛"
     ],
-    "group": 851,
-    "sequence": 851
+    "group": 852,
+    "sequence": 852
   },
   {
     "id": "g5-component-u2e81",
@@ -4213,8 +4233,8 @@ export const grade5Components = [
     "characterSet": [
       "盾"
     ],
-    "group": 852,
-    "sequence": 852
+    "group": 853,
+    "sequence": 853
   },
   {
     "id": "g5-component-u5feb",
@@ -4226,22 +4246,6 @@ export const grade5Components = [
     "description": "手腕和筷影“快”排列。它在字形中作为“快”部件，轮廓舒展、位置清晰。",
     "characterSet": [
       "筷"
-    ],
-    "group": 853,
-    "sequence": 853
-  },
-  {
-    "id": "g5-component-u6b20",
-    "title": "欠",
-    "glyph": "欠",
-    "examples": [
-      "炊",
-      "歇"
-    ],
-    "description": "右边人物张口轻吹、身体后仰沿“欠”站好。它在字形中作为“欠”部件，轮廓舒展、位置清晰。",
-    "characterSet": [
-      "炊",
-      "歇"
     ],
     "group": 854,
     "sequence": 854
@@ -5859,20 +5863,6 @@ export const grade5Components = [
     "sequence": 966
   },
   {
-    "id": "g5-component-u7518",
-    "title": "甘",
-    "glyph": "甘",
-    "examples": [
-      "某"
-    ],
-    "description": "上方甜味标记和隐藏名牌沿“甘”遮住身份。它在字形中作为“甘”部件，轮廓舒展、位置清晰。",
-    "characterSet": [
-      "某"
-    ],
-    "group": 967,
-    "sequence": 967
-  },
-  {
     "id": "g5-component-u807f",
     "title": "聿",
     "glyph": "聿",
@@ -5883,8 +5873,8 @@ export const grade5Components = [
     "characterSet": [
       "津"
     ],
-    "group": 968,
-    "sequence": 968
+    "group": 967,
+    "sequence": 967
   },
   {
     "id": "g5-component-u5145",
@@ -5897,8 +5887,8 @@ export const grade5Components = [
     "characterSet": [
       "统"
     ],
-    "group": 969,
-    "sequence": 969
+    "group": 968,
+    "sequence": 968
   },
   {
     "id": "g5-component-u535c",
@@ -5911,8 +5901,8 @@ export const grade5Components = [
     "characterSet": [
       "朴"
     ],
-    "group": 970,
-    "sequence": 970
+    "group": 969,
+    "sequence": 969
   },
   {
     "id": "g5-component-u2eb6",
@@ -5925,8 +5915,8 @@ export const grade5Components = [
     "characterSet": [
       "差"
     ],
-    "group": 971,
-    "sequence": 971
+    "group": 970,
+    "sequence": 970
   },
   {
     "id": "g5-component-u9690",
@@ -5939,8 +5929,8 @@ export const grade5Components = [
     "characterSet": [
       "瘾"
     ],
-    "group": 972,
-    "sequence": 972
+    "group": 971,
+    "sequence": 971
   },
   {
     "id": "g5-component-u5349",
@@ -5953,8 +5943,8 @@ export const grade5Components = [
     "characterSet": [
       "奔"
     ],
-    "group": 973,
-    "sequence": 973
+    "group": 972,
+    "sequence": 972
   },
   {
     "id": "g5-component-u8024",
@@ -5967,8 +5957,8 @@ export const grade5Components = [
     "characterSet": [
       "籍"
     ],
-    "group": 974,
-    "sequence": 974
+    "group": 973,
+    "sequence": 973
   },
   {
     "id": "g5-component-u5c1d",
@@ -5981,8 +5971,8 @@ export const grade5Components = [
     "characterSet": [
       "偿"
     ],
-    "group": 975,
-    "sequence": 975
+    "group": 974,
+    "sequence": 974
   },
   {
     "id": "g5-component-u543e",
@@ -5995,8 +5985,8 @@ export const grade5Components = [
     "characterSet": [
       "悟"
     ],
-    "group": 976,
-    "sequence": 976
+    "group": 975,
+    "sequence": 975
   },
   {
     "id": "g5-component-u8d35",
@@ -6009,8 +5999,8 @@ export const grade5Components = [
     "characterSet": [
       "馈"
     ],
-    "group": 977,
-    "sequence": 977
+    "group": 976,
+    "sequence": 976
   },
   {
     "id": "g5-component-u5179",
@@ -6023,8 +6013,8 @@ export const grade5Components = [
     "characterSet": [
       "磁"
     ],
-    "group": 978,
-    "sequence": 978
+    "group": 977,
+    "sequence": 977
   },
   {
     "id": "g5-component-u5b5d",
@@ -6037,8 +6027,8 @@ export const grade5Components = [
     "characterSet": [
       "酵"
     ],
-    "group": 979,
-    "sequence": 979
+    "group": 978,
+    "sequence": 978
   },
   {
     "id": "g5-component-u4ea4",
@@ -6051,8 +6041,8 @@ export const grade5Components = [
     "characterSet": [
       "皎"
     ],
-    "group": 980,
-    "sequence": 980
+    "group": 979,
+    "sequence": 979
   },
   {
     "id": "g5-component-u91d1",
@@ -6065,8 +6055,8 @@ export const grade5Components = [
     "characterSet": [
       "鉴"
     ],
-    "group": 981,
-    "sequence": 981
+    "group": 980,
+    "sequence": 980
   },
   {
     "id": "g5-component-u5386",
@@ -6079,7 +6069,7 @@ export const grade5Components = [
     "characterSet": [
       "沥"
     ],
-    "group": 982,
-    "sequence": 982
+    "group": 981,
+    "sequence": 981
   }
 ] as const;

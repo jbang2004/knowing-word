@@ -7033,18 +7033,35 @@ export const components = [
     "sequence": 306
   },
   {
-    "id": "g5-component-u2389f",
-    "title": "𣢟",
-    "glyph": "𣢟",
+    "id": "019f1c14-f83b-725a-823b-9519989286fc",
+    "title": "甘",
+    "glyph": "甘",
     "examples": [
+      "甜",
+      "某",
       "嵌"
     ],
-    "description": "槽口与托架“𣢟”严丝合缝地闭合。它在字形中作为“𣢟”部件，轮廓舒展、位置清晰。",
+    "description": "“甘”是指事字，古时候的“甘”字从“口”，口里的一横指出这是好吃的东西。“甘”的本义就是嘴里食物的味道甜美。",
+    "characterSet": [],
+    "group": 97,
+    "sequence": 113
+  },
+  {
+    "id": "019f1c14-f83b-725a-823e-2d3f8289284f",
+    "title": "欠",
+    "glyph": "欠",
+    "examples": [
+      "吹",
+      "软",
+      "掀",
+      "资"
+    ],
+    "description": "“欠”是象形字，甲骨文就像一个人张着嘴打哈欠。“欠”的本义就是打哈欠。",
     "characterSet": [
-      "嵌"
+      "欣"
     ],
-    "group": 605,
-    "sequence": 605
+    "group": 243,
+    "sequence": 279
   },
   {
     "id": "g5-component-u531a",
@@ -7057,8 +7074,8 @@ export const components = [
     "characterSet": [
       "匣"
     ],
-    "group": 606,
-    "sequence": 606
+    "group": 607,
+    "sequence": 607
   },
   {
     "id": "g5-component-u7532",
@@ -7071,8 +7088,8 @@ export const components = [
     "characterSet": [
       "匣"
     ],
-    "group": 607,
-    "sequence": 607
+    "group": 608,
+    "sequence": 608
   },
   {
     "id": "019f1c14-f83b-725a-823c-f267379bc484",
@@ -7107,8 +7124,8 @@ export const components = [
     "characterSet": [
       "嗜"
     ],
-    "group": 609,
-    "sequence": 609
+    "group": 610,
+    "sequence": 610
   },
   {
     "id": "019f1c14-f83b-725a-823a-06ea5c814758",
@@ -7136,8 +7153,8 @@ export const components = [
     "characterSet": [
       "宜"
     ],
-    "group": 611,
-    "sequence": 611
+    "group": 612,
+    "sequence": 612
   },
   {
     "id": "g5-component-u96ba",
@@ -7150,8 +7167,8 @@ export const components = [
     "characterSet": [
       "鹤"
     ],
-    "group": 612,
-    "sequence": 612
+    "group": 613,
+    "sequence": 613
   },
   {
     "id": "g5-component-u672a",
@@ -7164,8 +7181,8 @@ export const components = [
     "characterSet": [
       "朱"
     ],
-    "group": 613,
-    "sequence": 613
+    "group": 614,
+    "sequence": 614
   },
   {
     "id": "g5-component-u31d2",
@@ -7178,8 +7195,8 @@ export const components = [
     "characterSet": [
       "朱"
     ],
-    "group": 614,
-    "sequence": 614
+    "group": 615,
+    "sequence": 615
   },
   {
     "id": "019f1c14-f83b-725a-823d-a8ef9d5b3d70",
@@ -7212,8 +7229,8 @@ export const components = [
       "框",
       "筐"
     ],
-    "group": 616,
-    "sequence": 616
+    "group": 617,
+    "sequence": 617
   },
   {
     "id": "g5-component-u8096",
@@ -7236,8 +7253,8 @@ export const components = [
       "梢",
       "悄"
     ],
-    "group": 617,
-    "sequence": 617
+    "group": 618,
+    "sequence": 618
   },
   {
     "id": "g5-component-u56e0",
@@ -7250,8 +7267,8 @@ export const components = [
     "characterSet": [
       "恩"
     ],
-    "group": 618,
-    "sequence": 618
+    "group": 619,
+    "sequence": 619
   },
   {
     "id": "019f1c14-f83b-725a-8240-2cf0e5d2ea8e",
@@ -7281,8 +7298,8 @@ export const components = [
       "韵",
       "竟"
     ],
-    "group": 620,
-    "sequence": 620
+    "group": 621,
+    "sequence": 621
   },
   {
     "id": "g5-component-u5300",
@@ -7295,8 +7312,8 @@ export const components = [
     "characterSet": [
       "韵"
     ],
-    "group": 621,
-    "sequence": 621
+    "group": 622,
+    "sequence": 622
   },
   {
     "id": "g5-component-u4ea0",
@@ -7313,8 +7330,8 @@ export const components = [
       "亭",
       "享"
     ],
-    "group": 622,
-    "sequence": 622
+    "group": 623,
+    "sequence": 623
   },
   {
     "id": "019f1c14-f83b-725a-823f-7cbb09b6e8bc",
@@ -7344,8 +7361,8 @@ export const components = [
       "吩",
       "岔"
     ],
-    "group": 624,
-    "sequence": 624
+    "group": 625,
+    "sequence": 625
   },
   {
     "id": "g5-component-u7a84",
@@ -7358,8 +7375,8 @@ export const components = [
     "characterSet": [
       "榨"
     ],
-    "group": 625,
-    "sequence": 625
+    "group": 626,
+    "sequence": 626
   },
   {
     "id": "g5-component-u7559",
@@ -7374,8 +7391,8 @@ export const components = [
       "榴",
       "溜"
     ],
-    "group": 626,
-    "sequence": 626
+    "group": 627,
+    "sequence": 627
   },
   {
     "id": "g5-component-u77e2",
@@ -7392,8 +7409,8 @@ export const components = [
       "矫",
       "矣"
     ],
-    "group": 627,
-    "sequence": 627
+    "group": 628,
+    "sequence": 628
   },
   {
     "id": "g5-component-u59d4",
@@ -7406,8 +7423,8 @@ export const components = [
     "characterSet": [
       "矮"
     ],
-    "group": 628,
-    "sequence": 628
+    "group": 629,
+    "sequence": 629
   },
   {
     "id": "019f1c14-f83b-725a-823f-08227f1ea8d9",
@@ -7438,8 +7455,8 @@ export const components = [
     "characterSet": [
       "播"
     ],
-    "group": 630,
-    "sequence": 630
+    "group": 631,
+    "sequence": 631
   },
   {
     "id": "019f1c14-f83b-725a-823f-492a568fef89",
@@ -7472,8 +7489,8 @@ export const components = [
       "浇",
       "跷"
     ],
-    "group": 632,
-    "sequence": 632
+    "group": 633,
+    "sequence": 633
   },
   {
     "id": "g5-component-u4ed8",
@@ -7486,8 +7503,8 @@ export const components = [
     "characterSet": [
       "咐"
     ],
-    "group": 633,
-    "sequence": 633
+    "group": 634,
+    "sequence": 634
   },
   {
     "id": "g5-component-u5196",
@@ -7510,8 +7527,8 @@ export const components = [
       "冤",
       "寝"
     ],
-    "group": 634,
-    "sequence": 634
+    "group": 635,
+    "sequence": 635
   },
   {
     "id": "g5-component-u4e01",
@@ -7528,8 +7545,8 @@ export const components = [
       "叮",
       "钉"
     ],
-    "group": 635,
-    "sequence": 635
+    "group": 636,
+    "sequence": 636
   },
   {
     "id": "g5-component-u83ab",
@@ -7542,8 +7559,8 @@ export const components = [
     "characterSet": [
       "慕"
     ],
-    "group": 636,
-    "sequence": 636
+    "group": 637,
+    "sequence": 637
   },
   {
     "id": "g5-component-u2e97",
@@ -7556,8 +7573,8 @@ export const components = [
     "characterSet": [
       "慕"
     ],
-    "group": 637,
-    "sequence": 637
+    "group": 638,
+    "sequence": 638
   },
   {
     "id": "g5-component-u8ba0",
@@ -7592,8 +7609,8 @@ export const components = [
       "谓",
       "诵"
     ],
-    "group": 638,
-    "sequence": 638
+    "group": 639,
+    "sequence": 639
   },
   {
     "id": "g5-component-u708e",
@@ -7606,8 +7623,8 @@ export const components = [
     "characterSet": [
       "谈"
     ],
-    "group": 639,
-    "sequence": 639
+    "group": 640,
+    "sequence": 640
   },
   {
     "id": "g5-component-u2eae",
@@ -7634,8 +7651,8 @@ export const components = [
       "筷",
       "籍"
     ],
-    "group": 640,
-    "sequence": 640
+    "group": 641,
+    "sequence": 641
   },
   {
     "id": "g5-component-u7f57",
@@ -7648,8 +7665,8 @@ export const components = [
     "characterSet": [
       "箩"
     ],
-    "group": 641,
-    "sequence": 641
+    "group": 642,
+    "sequence": 642
   },
   {
     "id": "g5-component-u4ea2",
@@ -7662,8 +7679,8 @@ export const components = [
     "characterSet": [
       "杭"
     ],
-    "group": 642,
-    "sequence": 642
+    "group": 643,
+    "sequence": 643
   },
   {
     "id": "019f1c14-f83b-725a-8240-36b8c6fcfe34",
@@ -7690,8 +7707,8 @@ export const components = [
     "characterSet": [
       "懂"
     ],
-    "group": 644,
-    "sequence": 644
+    "group": 645,
+    "sequence": 645
   },
   {
     "id": "g5-component-u4e37",
@@ -7704,8 +7721,8 @@ export const components = [
     "characterSet": [
       "兰"
     ],
-    "group": 645,
-    "sequence": 645
+    "group": 646,
+    "sequence": 646
   },
   {
     "id": "g5-component-u4e09",
@@ -7720,8 +7737,8 @@ export const components = [
       "兰",
       "承"
     ],
-    "group": 646,
-    "sequence": 646
+    "group": 647,
+    "sequence": 647
   },
   {
     "id": "g5-component-u6ce2",
@@ -7734,8 +7751,8 @@ export const components = [
     "characterSet": [
       "婆"
     ],
-    "group": 647,
-    "sequence": 647
+    "group": 648,
+    "sequence": 648
   },
   {
     "id": "g5-component-u7c73",
@@ -7752,8 +7769,8 @@ export const components = [
       "粮",
       "糖"
     ],
-    "group": 648,
-    "sequence": 648
+    "group": 649,
+    "sequence": 649
   },
   {
     "id": "g5-component-u7f94",
@@ -7766,8 +7783,8 @@ export const components = [
     "characterSet": [
       "糕"
     ],
-    "group": 649,
-    "sequence": 649
+    "group": 650,
+    "sequence": 650
   },
   {
     "id": "019f1c14-f83b-725a-823e-d90eb89c345d",
@@ -7795,8 +7812,8 @@ export const components = [
     "characterSet": [
       "饼"
     ],
-    "group": 651,
-    "sequence": 651
+    "group": 652,
+    "sequence": 652
   },
   {
     "id": "g5-component-u5f50",
@@ -7815,8 +7832,8 @@ export const components = [
       "妻",
       "寝"
     ],
-    "group": 652,
-    "sequence": 652
+    "group": 653,
+    "sequence": 653
   },
   {
     "id": "019f1c14-f83b-725a-8241-046ca4539ef4",
@@ -7864,8 +7881,8 @@ export const components = [
     "characterSet": [
       "缠"
     ],
-    "group": 655,
-    "sequence": 655
+    "group": 656,
+    "sequence": 656
   },
   {
     "id": "019f1c14-f83b-725a-823a-52280035a1b6",
@@ -7918,8 +7935,8 @@ export const components = [
       "睑",
       "俭"
     ],
-    "group": 658,
-    "sequence": 658
+    "group": 659,
+    "sequence": 659
   },
   {
     "id": "g5-component-u66fc",
@@ -7932,8 +7949,8 @@ export const components = [
     "characterSet": [
       "蔓"
     ],
-    "group": 659,
-    "sequence": 659
+    "group": 660,
+    "sequence": 660
   },
   {
     "id": "g5-component-u5e7a",
@@ -7946,8 +7963,8 @@ export const components = [
     "characterSet": [
       "幽"
     ],
-    "group": 660,
-    "sequence": 660
+    "group": 661,
+    "sequence": 661
   },
   {
     "id": "g5-component-u91c6",
@@ -7960,8 +7977,8 @@ export const components = [
     "characterSet": [
       "悉"
     ],
-    "group": 661,
-    "sequence": 661
+    "group": 662,
+    "sequence": 662
   },
   {
     "id": "g5-component-u520d",
@@ -7976,8 +7993,8 @@ export const components = [
       "雏",
       "煞"
     ],
-    "group": 662,
-    "sequence": 662
+    "group": 663,
+    "sequence": 663
   },
   {
     "id": "019f1c14-f83b-725a-8241-cfb3c6df69b5",
@@ -8005,8 +8022,8 @@ export const components = [
     "characterSet": [
       "哟"
     ],
-    "group": 664,
-    "sequence": 664
+    "group": 665,
+    "sequence": 665
   },
   {
     "id": "g5-component-u5de8",
@@ -8021,8 +8038,8 @@ export const components = [
       "柜",
       "拒"
     ],
-    "group": 665,
-    "sequence": 665
+    "group": 666,
+    "sequence": 666
   },
   {
     "id": "019f1c14-f83b-725a-8241-d79da2183568",
@@ -8067,8 +8084,8 @@ export const components = [
     "characterSet": [
       "陪"
     ],
-    "group": 668,
-    "sequence": 668
+    "group": 669,
+    "sequence": 669
   },
   {
     "id": "g5-component-u2eca",
@@ -8083,8 +8100,8 @@ export const components = [
       "趴",
       "跷"
     ],
-    "group": 669,
-    "sequence": 669
+    "group": 670,
+    "sequence": 670
   },
   {
     "id": "g5-component-u516b",
@@ -8099,8 +8116,8 @@ export const components = [
       "趴",
       "典"
     ],
-    "group": 670,
-    "sequence": 670
+    "group": 671,
+    "sequence": 671
   },
   {
     "id": "019f1c14-f83b-725a-823d-af101ee16490",
@@ -8128,8 +8145,8 @@ export const components = [
     "characterSet": [
       "眸"
     ],
-    "group": 672,
-    "sequence": 672
+    "group": 673,
+    "sequence": 673
   },
   {
     "id": "g5-component-u531d",
@@ -8142,8 +8159,8 @@ export const components = [
     "characterSet": [
       "咂"
     ],
-    "group": 673,
-    "sequence": 673
+    "group": 674,
+    "sequence": 674
   },
   {
     "id": "g5-component-u5342",
@@ -8156,8 +8173,8 @@ export const components = [
     "characterSet": [
       "汛"
     ],
-    "group": 674,
-    "sequence": 674
+    "group": 675,
+    "sequence": 675
   },
   {
     "id": "g5-component-u514d",
@@ -8172,8 +8189,8 @@ export const components = [
       "挽",
       "勉"
     ],
-    "group": 675,
-    "sequence": 675
+    "group": 676,
+    "sequence": 676
   },
   {
     "id": "019f1c14-f83b-725a-823d-883b57bb0074",
@@ -8210,8 +8227,8 @@ export const components = [
       "暇",
       "鲁"
     ],
-    "group": 677,
-    "sequence": 677
+    "group": 678,
+    "sequence": 678
   },
   {
     "id": "g5-component-u5de6",
@@ -8224,8 +8241,8 @@ export const components = [
     "characterSet": [
       "惰"
     ],
-    "group": 678,
-    "sequence": 678
+    "group": 679,
+    "sequence": 679
   },
   {
     "id": "019f1c14-f83b-725a-8241-37e8289e4847",
@@ -8254,8 +8271,8 @@ export const components = [
       "衡",
       "御"
     ],
-    "group": 680,
-    "sequence": 680
+    "group": 681,
+    "sequence": 681
   },
   {
     "id": "019f1c14-f83b-725a-823a-ccd9f8eb985f",
@@ -8283,8 +8300,8 @@ export const components = [
     "characterSet": [
       "衡"
     ],
-    "group": 682,
-    "sequence": 682
+    "group": 683,
+    "sequence": 683
   },
   {
     "id": "g5-component-u5341",
@@ -8303,8 +8320,8 @@ export const components = [
       "盾",
       "毕"
     ],
-    "group": 683,
-    "sequence": 683
+    "group": 684,
+    "sequence": 684
   },
   {
     "id": "g5-component-u529e",
@@ -8317,8 +8334,8 @@ export const components = [
     "characterSet": [
       "协"
     ],
-    "group": 684,
-    "sequence": 684
+    "group": 685,
+    "sequence": 685
   },
   {
     "id": "g5-component-u5353",
@@ -8333,8 +8350,8 @@ export const components = [
       "绰",
       "罩"
     ],
-    "group": 685,
-    "sequence": 685
+    "group": 686,
+    "sequence": 686
   },
   {
     "id": "g5-component-u5171",
@@ -8349,8 +8366,8 @@ export const components = [
       "洪",
       "拱"
     ],
-    "group": 686,
-    "sequence": 686
+    "group": 687,
+    "sequence": 687
   },
   {
     "id": "g5-component-u65b9",
@@ -8365,8 +8382,8 @@ export const components = [
       "访",
       "妨"
     ],
-    "group": 687,
-    "sequence": 687
+    "group": 688,
+    "sequence": 688
   },
   {
     "id": "g5-component-u9769",
@@ -8379,8 +8396,8 @@ export const components = [
     "characterSet": [
       "鞋"
     ],
-    "group": 688,
-    "sequence": 688
+    "group": 689,
+    "sequence": 689
   },
   {
     "id": "g5-component-u572d",
@@ -8395,8 +8412,8 @@ export const components = [
       "鞋",
       "哇"
     ],
-    "group": 689,
-    "sequence": 689
+    "group": 690,
+    "sequence": 690
   },
   {
     "id": "g5-component-u9b32",
@@ -8409,8 +8426,8 @@ export const components = [
     "characterSet": [
       "隔"
     ],
-    "group": 690,
-    "sequence": 690
+    "group": 691,
+    "sequence": 691
   },
   {
     "id": "g5-component-u8d56",
@@ -8423,8 +8440,8 @@ export const components = [
     "characterSet": [
       "懒"
     ],
-    "group": 691,
-    "sequence": 691
+    "group": 692,
+    "sequence": 692
   },
   {
     "id": "019f1c14-f83b-725a-823b-ec73d17a3f53",
@@ -8452,8 +8469,8 @@ export const components = [
     "characterSet": [
       "稳"
     ],
-    "group": 693,
-    "sequence": 693
+    "group": 694,
+    "sequence": 694
   },
   {
     "id": "g5-component-u2e88",
@@ -8466,8 +8483,8 @@ export const components = [
     "characterSet": [
       "免"
     ],
-    "group": 694,
-    "sequence": 694
+    "group": 695,
+    "sequence": 695
   },
   {
     "id": "g5-component-u513f",
@@ -8482,8 +8499,8 @@ export const components = [
       "免",
       "竟"
     ],
-    "group": 695,
-    "sequence": 695
+    "group": 696,
+    "sequence": 696
   },
   {
     "id": "g5-component-u8f9f",
@@ -8498,8 +8515,8 @@ export const components = [
       "璧",
       "僻"
     ],
-    "group": 696,
-    "sequence": 696
+    "group": 697,
+    "sequence": 697
   },
   {
     "id": "g5-component-u7389",
@@ -8512,8 +8529,8 @@ export const components = [
     "characterSet": [
       "璧"
     ],
-    "group": 697,
-    "sequence": 697
+    "group": 698,
+    "sequence": 698
   },
   {
     "id": "g5-component-u81e3",
@@ -8526,8 +8543,8 @@ export const components = [
     "characterSet": [
       "臣"
     ],
-    "group": 698,
-    "sequence": 698
+    "group": 699,
+    "sequence": 699
   },
   {
     "id": "019f1c14-f83b-725a-823b-b99111252c71",
@@ -8557,8 +8574,8 @@ export const components = [
     "characterSet": [
       "强"
     ],
-    "group": 700,
-    "sequence": 700
+    "group": 701,
+    "sequence": 701
   },
   {
     "id": "g5-component-u82e5",
@@ -8571,8 +8588,8 @@ export const components = [
     "characterSet": [
       "诺"
     ],
-    "group": 701,
-    "sequence": 701
+    "group": 702,
+    "sequence": 702
   },
   {
     "id": "019f1c14-f83b-725a-823b-9f68a9c0d3af",
@@ -8617,8 +8634,8 @@ export const components = [
     "characterSet": [
       "典"
     ],
-    "group": 704,
-    "sequence": 704
+    "group": 705,
+    "sequence": 705
   },
   {
     "id": "019f1c14-f83b-725a-823d-64b091f78980",
@@ -8676,8 +8693,8 @@ export const components = [
     "characterSet": [
       "抵"
     ],
-    "group": 708,
-    "sequence": 708
+    "group": 709,
+    "sequence": 709
   },
   {
     "id": "g5-component-u5378",
@@ -8690,8 +8707,8 @@ export const components = [
     "characterSet": [
       "御"
     ],
-    "group": 709,
-    "sequence": 709
+    "group": 710,
+    "sequence": 710
   },
   {
     "id": "019f1c14-f83b-725a-823e-b1734689b24e",
@@ -8719,8 +8736,8 @@ export const components = [
     "characterSet": [
       "辞"
     ],
-    "group": 711,
-    "sequence": 711
+    "group": 712,
+    "sequence": 712
   },
   {
     "id": "g5-component-u8fb0",
@@ -8733,8 +8750,8 @@ export const components = [
     "characterSet": [
       "辱"
     ],
-    "group": 712,
-    "sequence": 712
+    "group": 713,
+    "sequence": 713
   },
   {
     "id": "019f1c14-f83b-725a-823a-c89a69ddc181",
@@ -8766,8 +8783,8 @@ export const components = [
     "characterSet": [
       "擅"
     ],
-    "group": 714,
-    "sequence": 714
+    "group": 715,
+    "sequence": 715
   },
   {
     "id": "g5-component-u5348",
@@ -8780,8 +8797,8 @@ export const components = [
     "characterSet": [
       "缶"
     ],
-    "group": 715,
-    "sequence": 715
+    "group": 716,
+    "sequence": 716
   },
   {
     "id": "g5-component-u536f",
@@ -8794,8 +8811,8 @@ export const components = [
     "characterSet": [
       "卿"
     ],
-    "group": 716,
-    "sequence": 716
+    "group": 717,
+    "sequence": 717
   },
   {
     "id": "019f1c14-f83b-725a-8240-bd5556f029a4",
@@ -8822,8 +8839,8 @@ export const components = [
     "characterSet": [
       "袍"
     ],
-    "group": 718,
-    "sequence": 718
+    "group": 719,
+    "sequence": 719
   },
   {
     "id": "g5-component-u5200",
@@ -8836,8 +8853,8 @@ export const components = [
     "characterSet": [
       "召"
     ],
-    "group": 719,
-    "sequence": 719
+    "group": 720,
+    "sequence": 720
   },
   {
     "id": "g5-component-u4e49",
@@ -8850,8 +8867,8 @@ export const components = [
     "characterSet": [
       "议"
     ],
-    "group": 720,
-    "sequence": 720
+    "group": 721,
+    "sequence": 721
   },
   {
     "id": "g5-component-u7f36",
@@ -8866,8 +8883,8 @@ export const components = [
       "缺",
       "瑶"
     ],
-    "group": 721,
-    "sequence": 721
+    "group": 722,
+    "sequence": 722
   },
   {
     "id": "g5-component-u592c",
@@ -8880,8 +8897,8 @@ export const components = [
     "characterSet": [
       "缺"
     ],
-    "group": 722,
-    "sequence": 722
+    "group": 723,
+    "sequence": 723
   },
   {
     "id": "g5-component-u5415",
@@ -8894,8 +8911,8 @@ export const components = [
     "characterSet": [
       "宫"
     ],
-    "group": 723,
-    "sequence": 723
+    "group": 724,
+    "sequence": 724
   },
   {
     "id": "g5-component-u5357",
@@ -8908,8 +8925,8 @@ export const components = [
     "characterSet": [
       "献"
     ],
-    "group": 724,
-    "sequence": 724
+    "group": 725,
+    "sequence": 725
   },
   {
     "id": "g5-component-u72ac",
@@ -8924,8 +8941,8 @@ export const components = [
       "献",
       "狱"
     ],
-    "group": 725,
-    "sequence": 725
+    "group": 726,
+    "sequence": 726
   },
   {
     "id": "g5-component-u6c36",
@@ -8938,8 +8955,8 @@ export const components = [
     "characterSet": [
       "承"
     ],
-    "group": 726,
-    "sequence": 726
+    "group": 727,
+    "sequence": 727
   },
   {
     "id": "g5-component-u5c11",
@@ -8954,8 +8971,8 @@ export const components = [
       "抄",
       "纱"
     ],
-    "group": 727,
-    "sequence": 727
+    "group": 728,
+    "sequence": 728
   },
   {
     "id": "g5-component-u53bb",
@@ -8968,8 +8985,8 @@ export const components = [
     "characterSet": [
       "怯"
     ],
-    "group": 728,
-    "sequence": 728
+    "group": 729,
+    "sequence": 729
   },
   {
     "id": "g5-component-u5211",
@@ -8982,8 +8999,8 @@ export const components = [
     "characterSet": [
       "荆"
     ],
-    "group": 729,
-    "sequence": 729
+    "group": 730,
+    "sequence": 730
   },
   {
     "id": "g5-component-u5b83",
@@ -8996,8 +9013,8 @@ export const components = [
     "characterSet": [
       "鸵"
     ],
-    "group": 730,
-    "sequence": 730
+    "group": 731,
+    "sequence": 731
   },
   {
     "id": "g5-component-u23386",
@@ -9010,8 +9027,8 @@ export const components = [
     "characterSet": [
       "赢"
     ],
-    "group": 731,
-    "sequence": 731
+    "group": 732,
+    "sequence": 732
   },
   {
     "id": "019f1c14-f83b-725a-823a-0d4b8b47d5e0",
@@ -9042,8 +9059,8 @@ export const components = [
     "characterSet": [
       "冠"
     ],
-    "group": 733,
-    "sequence": 733
+    "group": 734,
+    "sequence": 734
   },
   {
     "id": "019f1c14-f83b-725a-823e-67f7d21400e7",
@@ -9075,8 +9092,8 @@ export const components = [
     "characterSet": [
       "俯"
     ],
-    "group": 735,
-    "sequence": 735
+    "group": 736,
+    "sequence": 736
   },
   {
     "id": "g5-component-u8d32",
@@ -9089,8 +9106,8 @@ export const components = [
     "characterSet": [
       "喷"
     ],
-    "group": 736,
-    "sequence": 736
+    "group": 737,
+    "sequence": 737
   },
   {
     "id": "g5-component-u2e99",
@@ -9103,8 +9120,8 @@ export const components = [
     "characterSet": [
       "枚"
     ],
-    "group": 737,
-    "sequence": 737
+    "group": 738,
+    "sequence": 738
   },
   {
     "id": "g5-component-u524d",
@@ -9117,8 +9134,8 @@ export const components = [
     "characterSet": [
       "箭"
     ],
-    "group": 738,
-    "sequence": 738
+    "group": 739,
+    "sequence": 739
   },
   {
     "id": "g5-component-u544a",
@@ -9133,8 +9150,8 @@ export const components = [
       "浩",
       "酷"
     ],
-    "group": 739,
-    "sequence": 739
+    "group": 740,
+    "sequence": 740
   },
   {
     "id": "g5-component-u540c",
@@ -9147,8 +9164,8 @@ export const components = [
     "characterSet": [
       "筒"
     ],
-    "group": 740,
-    "sequence": 740
+    "group": 741,
+    "sequence": 741
   },
   {
     "id": "g5-component-u8d64",
@@ -9161,8 +9178,8 @@ export const components = [
     "characterSet": [
       "赤"
     ],
-    "group": 741,
-    "sequence": 741
+    "group": 742,
+    "sequence": 742
   },
   {
     "id": "g5-component-u56d7",
@@ -9175,8 +9192,8 @@ export const components = [
     "characterSet": [
       "圈"
     ],
-    "group": 742,
-    "sequence": 742
+    "group": 743,
+    "sequence": 743
   },
   {
     "id": "g5-component-u5377",
@@ -9189,8 +9206,8 @@ export const components = [
     "characterSet": [
       "圈"
     ],
-    "group": 743,
-    "sequence": 743
+    "group": 744,
+    "sequence": 744
   },
   {
     "id": "g5-component-u76f4",
@@ -9205,8 +9222,8 @@ export const components = [
       "置",
       "殖"
     ],
-    "group": 744,
-    "sequence": 744
+    "group": 745,
+    "sequence": 745
   },
   {
     "id": "g5-component-u5404",
@@ -9219,8 +9236,8 @@ export const components = [
     "characterSet": [
       "略"
     ],
-    "group": 745,
-    "sequence": 745
+    "group": 746,
+    "sequence": 746
   },
   {
     "id": "g5-component-u53bd",
@@ -9233,8 +9250,8 @@ export const components = [
     "characterSet": [
       "垒"
     ],
-    "group": 746,
-    "sequence": 746
+    "group": 747,
+    "sequence": 747
   },
   {
     "id": "019f1c14-f83b-725a-823f-9363ba637cd7",
@@ -9265,8 +9282,8 @@ export const components = [
     "characterSet": [
       "任"
     ],
-    "group": 748,
-    "sequence": 748
+    "group": 749,
+    "sequence": 749
   },
   {
     "id": "g5-component-u65a4",
@@ -9281,8 +9298,8 @@ export const components = [
       "丘",
       "斩"
     ],
-    "group": 749,
-    "sequence": 749
+    "group": 750,
+    "sequence": 750
   },
   {
     "id": "g5-component-u4e00",
@@ -9303,8 +9320,8 @@ export const components = [
       "览",
       "鉴"
     ],
-    "group": 750,
-    "sequence": 750
+    "group": 751,
+    "sequence": 751
   },
   {
     "id": "g5-component-u9601",
@@ -9317,8 +9334,8 @@ export const components = [
     "characterSet": [
       "搁"
     ],
-    "group": 751,
-    "sequence": 751
+    "group": 752,
+    "sequence": 752
   },
   {
     "id": "g5-component-u81fd",
@@ -9331,8 +9348,8 @@ export const components = [
     "characterSet": [
       "陷"
     ],
-    "group": 752,
-    "sequence": 752
+    "group": 753,
+    "sequence": 753
   },
   {
     "id": "g5-component-u53e6",
@@ -9345,8 +9362,8 @@ export const components = [
     "characterSet": [
       "拐"
     ],
-    "group": 753,
-    "sequence": 753
+    "group": 754,
+    "sequence": 754
   },
   {
     "id": "g5-component-u5de9",
@@ -9359,8 +9376,8 @@ export const components = [
     "characterSet": [
       "筑"
     ],
-    "group": 754,
-    "sequence": 754
+    "group": 755,
+    "sequence": 755
   },
   {
     "id": "g5-component-u4fdd",
@@ -9373,8 +9390,8 @@ export const components = [
     "characterSet": [
       "堡"
     ],
-    "group": 755,
-    "sequence": 755
+    "group": 756,
+    "sequence": 756
   },
   {
     "id": "g5-component-u9fb8",
@@ -9387,8 +9404,8 @@ export const components = [
     "characterSet": [
       "党"
     ],
-    "group": 756,
-    "sequence": 756
+    "group": 757,
+    "sequence": 757
   },
   {
     "id": "g5-component-u5144",
@@ -9401,8 +9418,8 @@ export const components = [
     "characterSet": [
       "党"
     ],
-    "group": 757,
-    "sequence": 757
+    "group": 758,
+    "sequence": 758
   },
   {
     "id": "g5-component-u655d",
@@ -9415,8 +9432,8 @@ export const components = [
     "characterSet": [
       "蔽"
     ],
-    "group": 758,
-    "sequence": 758
+    "group": 759,
+    "sequence": 759
   },
   {
     "id": "019f1c14-f83b-725a-8241-0367d1f9c407",
@@ -9444,8 +9461,8 @@ export const components = [
     "characterSet": [
       "酬"
     ],
-    "group": 760,
-    "sequence": 760
+    "group": 761,
+    "sequence": 761
   },
   {
     "id": "g5-component-u6298",
@@ -9458,8 +9475,8 @@ export const components = [
     "characterSet": [
       "誓"
     ],
-    "group": 761,
-    "sequence": 761
+    "group": 762,
+    "sequence": 762
   },
   {
     "id": "g5-component-u8a00",
@@ -9474,8 +9491,8 @@ export const components = [
       "誓",
       "誊"
     ],
-    "group": 762,
-    "sequence": 762
+    "group": 763,
+    "sequence": 763
   },
   {
     "id": "g5-component-u8352",
@@ -9488,8 +9505,8 @@ export const components = [
     "characterSet": [
       "谎"
     ],
-    "group": 763,
-    "sequence": 763
+    "group": 764,
+    "sequence": 764
   },
   {
     "id": "019f1c14-f83b-725a-823d-da3802e1c5cb",
@@ -9517,8 +9534,8 @@ export const components = [
     "characterSet": [
       "牺"
     ],
-    "group": 765,
-    "sequence": 765
+    "group": 766,
+    "sequence": 766
   },
   {
     "id": "019f1c14-f83b-725a-823f-ac52b8e91193",
@@ -9546,8 +9563,8 @@ export const components = [
     "characterSet": [
       "珍"
     ],
-    "group": 767,
-    "sequence": 767
+    "group": 768,
+    "sequence": 768
   },
   {
     "id": "g5-component-u5c5e",
@@ -9560,8 +9577,8 @@ export const components = [
     "characterSet": [
       "嘱"
     ],
-    "group": 768,
-    "sequence": 768
+    "group": 769,
+    "sequence": 769
   },
   {
     "id": "g5-component-u26407",
@@ -9574,8 +9591,8 @@ export const components = [
     "characterSet": [
       "塌"
     ],
-    "group": 769,
-    "sequence": 769
+    "group": 770,
+    "sequence": 770
   },
   {
     "id": "019f1c14-f83b-725a-823c-37f6aa600556",
@@ -9605,8 +9622,8 @@ export const components = [
     "characterSet": [
       "延"
     ],
-    "group": 771,
-    "sequence": 771
+    "group": 772,
+    "sequence": 772
   },
   {
     "id": "g5-component-u4e3f",
@@ -9625,8 +9642,8 @@ export const components = [
       "览",
       "鉴"
     ],
-    "group": 772,
-    "sequence": 772
+    "group": 773,
+    "sequence": 773
   },
   {
     "id": "019f1c14-f83b-725a-8241-7df1fe8b9f40",
@@ -9671,8 +9688,8 @@ export const components = [
       "悔",
       "诲"
     ],
-    "group": 775,
-    "sequence": 775
+    "group": 776,
+    "sequence": 776
   },
   {
     "id": "g5-component-u592b",
@@ -9685,8 +9702,8 @@ export const components = [
     "characterSet": [
       "扶"
     ],
-    "group": 776,
-    "sequence": 776
+    "group": 777,
+    "sequence": 777
   },
   {
     "id": "g5-component-u53df",
@@ -9699,8 +9716,8 @@ export const components = [
     "characterSet": [
       "嫂"
     ],
-    "group": 777,
-    "sequence": 777
+    "group": 778,
+    "sequence": 778
   },
   {
     "id": "g5-component-u826e",
@@ -9715,8 +9732,8 @@ export const components = [
       "恳",
       "限"
     ],
-    "group": 778,
-    "sequence": 778
+    "group": 779,
+    "sequence": 779
   },
   {
     "id": "g5-component-u5e08",
@@ -9729,8 +9746,8 @@ export const components = [
     "characterSet": [
       "筛"
     ],
-    "group": 779,
-    "sequence": 779
+    "group": 780,
+    "sequence": 780
   },
   {
     "id": "g5-component-u5915",
@@ -9745,8 +9762,8 @@ export const components = [
       "歹",
       "桨"
     ],
-    "group": 780,
-    "sequence": 780
+    "group": 781,
+    "sequence": 781
   },
   {
     "id": "g5-component-u2eb3",
@@ -9759,8 +9776,8 @@ export const components = [
     "characterSet": [
       "罕"
     ],
-    "group": 781,
-    "sequence": 781
+    "group": 782,
+    "sequence": 782
   },
   {
     "id": "g5-component-u5e72",
@@ -9775,8 +9792,8 @@ export const components = [
       "罕",
       "刊"
     ],
-    "group": 782,
-    "sequence": 782
+    "group": 783,
+    "sequence": 783
   },
   {
     "id": "g5-component-u590b",
@@ -9791,8 +9808,8 @@ export const components = [
       "梭",
       "酸"
     ],
-    "group": 783,
-    "sequence": 783
+    "group": 784,
+    "sequence": 784
   },
   {
     "id": "g5-component-u3022",
@@ -9809,8 +9826,8 @@ export const components = [
       "览",
       "鉴"
     ],
-    "group": 784,
-    "sequence": 784
+    "group": 785,
+    "sequence": 785
   },
   {
     "id": "g5-component-u4e36",
@@ -9829,8 +9846,8 @@ export const components = [
       "勺",
       "鉴"
     ],
-    "group": 785,
-    "sequence": 785
+    "group": 786,
+    "sequence": 786
   },
   {
     "id": "019f1c14-f83b-725a-823d-9dcb59ff942f",
@@ -9876,8 +9893,8 @@ export const components = [
       "郎",
       "粮"
     ],
-    "group": 788,
-    "sequence": 788
+    "group": 789,
+    "sequence": 789
   },
   {
     "id": "g5-component-u76cd",
@@ -9890,8 +9907,8 @@ export const components = [
     "characterSet": [
       "瞌"
     ],
-    "group": 789,
-    "sequence": 789
+    "group": 790,
+    "sequence": 790
   },
   {
     "id": "g5-component-u6d1b",
@@ -9904,8 +9921,8 @@ export const components = [
     "characterSet": [
       "落"
     ],
-    "group": 790,
-    "sequence": 790
+    "group": 791,
+    "sequence": 791
   },
   {
     "id": "g5-component-u660f",
@@ -9918,8 +9935,8 @@ export const components = [
     "characterSet": [
       "婚"
     ],
-    "group": 791,
-    "sequence": 791
+    "group": 792,
+    "sequence": 792
   },
   {
     "id": "g5-component-u7236",
@@ -9932,8 +9949,8 @@ export const components = [
     "characterSet": [
       "爹"
     ],
-    "group": 792,
-    "sequence": 792
+    "group": 793,
+    "sequence": 793
   },
   {
     "id": "g5-component-u591a",
@@ -9946,8 +9963,8 @@ export const components = [
     "characterSet": [
       "爹"
     ],
-    "group": 793,
-    "sequence": 793
+    "group": 794,
+    "sequence": 794
   },
   {
     "id": "019f1c14-f83b-725a-823a-7702a055c78c",
@@ -9977,8 +9994,8 @@ export const components = [
       "辆",
       "瞒"
     ],
-    "group": 795,
-    "sequence": 795
+    "group": 796,
+    "sequence": 796
   },
   {
     "id": "g5-component-u8d70",
@@ -9991,8 +10008,8 @@ export const components = [
     "characterSet": [
       "趟"
     ],
-    "group": 796,
-    "sequence": 796
+    "group": 797,
+    "sequence": 797
   },
   {
     "id": "g5-component-u5c1a",
@@ -10005,8 +10022,8 @@ export const components = [
     "characterSet": [
       "趟"
     ],
-    "group": 797,
-    "sequence": 797
+    "group": 798,
+    "sequence": 798
   },
   {
     "id": "g5-component-u4e47",
@@ -10019,8 +10036,8 @@ export const components = [
     "characterSet": [
       "托"
     ],
-    "group": 798,
-    "sequence": 798
+    "group": 799,
+    "sequence": 799
   },
   {
     "id": "g5-component-u77e3",
@@ -10033,8 +10050,8 @@ export const components = [
     "characterSet": [
       "挨"
     ],
-    "group": 799,
-    "sequence": 799
+    "group": 800,
+    "sequence": 800
   },
   {
     "id": "g5-component-u767d",
@@ -10053,8 +10070,8 @@ export const components = [
       "泊",
       "皎"
     ],
-    "group": 800,
-    "sequence": 800
+    "group": 801,
+    "sequence": 801
   },
   {
     "id": "g5-component-u754f",
@@ -10067,8 +10084,8 @@ export const components = [
     "characterSet": [
       "偎"
     ],
-    "group": 801,
-    "sequence": 801
+    "group": 802,
+    "sequence": 802
   },
   {
     "id": "g5-component-u8870",
@@ -10081,8 +10098,8 @@ export const components = [
     "characterSet": [
       "衰"
     ],
-    "group": 802,
-    "sequence": 802
+    "group": 803,
+    "sequence": 803
   },
   {
     "id": "g5-component-u518c",
@@ -10095,8 +10112,8 @@ export const components = [
     "characterSet": [
       "珊"
     ],
-    "group": 803,
-    "sequence": 803
+    "group": 804,
+    "sequence": 804
   },
   {
     "id": "g5-component-u80e1",
@@ -10109,8 +10126,8 @@ export const components = [
     "characterSet": [
       "瑚"
     ],
-    "group": 804,
-    "sequence": 804
+    "group": 805,
+    "sequence": 805
   },
   {
     "id": "019f1c14-f83b-725a-823e-d36360b915b8",
@@ -10142,8 +10159,8 @@ export const components = [
     "characterSet": [
       "礁"
     ],
-    "group": 806,
-    "sequence": 806
+    "group": 807,
+    "sequence": 807
   },
   {
     "id": "g5-component-u5e7c",
@@ -10156,8 +10173,8 @@ export const components = [
     "characterSet": [
       "拗"
     ],
-    "group": 807,
-    "sequence": 807
+    "group": 808,
+    "sequence": 808
   },
   {
     "id": "g5-component-u4e43",
@@ -10172,8 +10189,8 @@ export const components = [
       "乃",
       "秀"
     ],
-    "group": 808,
-    "sequence": 808
+    "group": 809,
+    "sequence": 809
   },
   {
     "id": "g5-component-u718f",
@@ -10186,8 +10203,8 @@ export const components = [
     "characterSet": [
       "熏"
     ],
-    "group": 809,
-    "sequence": 809
+    "group": 810,
+    "sequence": 810
   },
   {
     "id": "g5-component-u5bfa",
@@ -10200,8 +10217,8 @@ export const components = [
     "characterSet": [
       "恃"
     ],
-    "group": 810,
-    "sequence": 810
+    "group": 811,
+    "sequence": 811
   },
   {
     "id": "g5-component-u6570",
@@ -10214,8 +10231,8 @@ export const components = [
     "characterSet": [
       "擞"
     ],
-    "group": 811,
-    "sequence": 811
+    "group": 812,
+    "sequence": 812
   },
   {
     "id": "g5-component-u793a",
@@ -10228,8 +10245,8 @@ export const components = [
     "characterSet": [
       "祭"
     ],
-    "group": 812,
-    "sequence": 812
+    "group": 813,
+    "sequence": 813
   },
   {
     "id": "019f1c14-f83b-725a-8240-b42cabd9b7b0",
@@ -10257,8 +10274,8 @@ export const components = [
     "characterSet": [
       "拘"
     ],
-    "group": 814,
-    "sequence": 814
+    "group": 815,
+    "sequence": 815
   },
   {
     "id": "g5-component-u5199",
@@ -10271,8 +10288,8 @@ export const components = [
     "characterSet": [
       "泻"
     ],
-    "group": 815,
-    "sequence": 815
+    "group": 816,
+    "sequence": 816
   },
   {
     "id": "g5-component-u9c7c",
@@ -10287,8 +10304,8 @@ export const components = [
       "鳞",
       "鲁"
     ],
-    "group": 816,
-    "sequence": 816
+    "group": 817,
+    "sequence": 817
   },
   {
     "id": "g5-component-u7ca6",
@@ -10301,8 +10318,8 @@ export const components = [
     "characterSet": [
       "鳞"
     ],
-    "group": 817,
-    "sequence": 817
+    "group": 818,
+    "sequence": 818
   },
   {
     "id": "g5-component-u7687",
@@ -10317,8 +10334,8 @@ export const components = [
       "惶",
       "煌"
     ],
-    "group": 818,
-    "sequence": 818
+    "group": 819,
+    "sequence": 819
   },
   {
     "id": "g5-component-u53f0",
@@ -10331,8 +10348,8 @@ export const components = [
     "characterSet": [
       "胎"
     ],
-    "group": 819,
-    "sequence": 819
+    "group": 820,
+    "sequence": 820
   },
   {
     "id": "019f1c14-f83b-725a-823e-c497c01cb796",
@@ -10360,8 +10377,8 @@ export const components = [
     "characterSet": [
       "履"
     ],
-    "group": 821,
-    "sequence": 821
+    "group": 822,
+    "sequence": 822
   },
   {
     "id": "g5-component-u2298f",
@@ -10374,8 +10391,8 @@ export const components = [
     "characterSet": [
       "哉"
     ],
-    "group": 822,
-    "sequence": 822
+    "group": 823,
+    "sequence": 823
   },
   {
     "id": "g5-component-u66ff",
@@ -10388,8 +10405,8 @@ export const components = [
     "characterSet": [
       "潜"
     ],
-    "group": 823,
-    "sequence": 823
+    "group": 824,
+    "sequence": 824
   },
   {
     "id": "g5-component-u5f0f",
@@ -10402,8 +10419,8 @@ export const components = [
     "characterSet": [
       "试"
     ],
-    "group": 824,
-    "sequence": 824
+    "group": 825,
+    "sequence": 825
   },
   {
     "id": "g5-component-u4ece",
@@ -10416,8 +10433,8 @@ export const components = [
     "characterSet": [
       "纵"
     ],
-    "group": 825,
-    "sequence": 825
+    "group": 826,
+    "sequence": 826
   },
   {
     "id": "g5-component-u757a",
@@ -10430,8 +10447,8 @@ export const components = [
     "characterSet": [
       "疆"
     ],
-    "group": 826,
-    "sequence": 826
+    "group": 827,
+    "sequence": 827
   },
   {
     "id": "g5-component-u53e4",
@@ -10444,8 +10461,8 @@ export const components = [
     "characterSet": [
       "估"
     ],
-    "group": 827,
-    "sequence": 827
+    "group": 828,
+    "sequence": 828
   },
   {
     "id": "g5-component-u9f99",
@@ -10460,8 +10477,8 @@ export const components = [
       "珑",
       "咙"
     ],
-    "group": 828,
-    "sequence": 828
+    "group": 829,
+    "sequence": 829
   },
   {
     "id": "g5-component-u6613",
@@ -10474,8 +10491,8 @@ export const components = [
     "characterSet": [
       "剔"
     ],
-    "group": 829,
-    "sequence": 829
+    "group": 830,
+    "sequence": 830
   },
   {
     "id": "g5-component-u9611",
@@ -10488,8 +10505,8 @@ export const components = [
     "characterSet": [
       "澜"
     ],
-    "group": 830,
-    "sequence": 830
+    "group": 831,
+    "sequence": 831
   },
   {
     "id": "g5-component-u722b",
@@ -10504,8 +10521,8 @@ export const components = [
       "瑶",
       "舀"
     ],
-    "group": 831,
-    "sequence": 831
+    "group": 832,
+    "sequence": 832
   },
   {
     "id": "g5-component-u590c",
@@ -10518,8 +10535,8 @@ export const components = [
     "characterSet": [
       "陵"
     ],
-    "group": 832,
-    "sequence": 832
+    "group": 833,
+    "sequence": 833
   },
   {
     "id": "g5-component-u53b7",
@@ -10532,8 +10549,8 @@ export const components = [
     "characterSet": [
       "宏"
     ],
-    "group": 833,
-    "sequence": 833
+    "group": 834,
+    "sequence": 834
   },
   {
     "id": "g5-component-u215d7",
@@ -10546,8 +10563,8 @@ export const components = [
     "characterSet": [
       "奉"
     ],
-    "group": 834,
-    "sequence": 834
+    "group": 835,
+    "sequence": 835
   },
   {
     "id": "g5-component-u5c3d",
@@ -10560,8 +10577,8 @@ export const components = [
     "characterSet": [
       "烬"
     ],
-    "group": 835,
-    "sequence": 835
+    "group": 836,
+    "sequence": 836
   },
   {
     "id": "g5-component-u81fc",
@@ -10578,8 +10595,8 @@ export const components = [
       "舀",
       "舅"
     ],
-    "group": 836,
-    "sequence": 836
+    "group": 837,
+    "sequence": 837
   },
   {
     "id": "g5-component-u5de5",
@@ -10594,8 +10611,8 @@ export const components = [
       "毁",
       "差"
     ],
-    "group": 837,
-    "sequence": 837
+    "group": 838,
+    "sequence": 838
   },
   {
     "id": "g5-component-u6bb3",
@@ -10610,8 +10627,8 @@ export const components = [
       "毁",
       "殿"
     ],
-    "group": 838,
-    "sequence": 838
+    "group": 839,
+    "sequence": 839
   },
   {
     "id": "g5-component-u5458",
@@ -10624,8 +10641,8 @@ export const components = [
     "characterSet": [
       "损"
     ],
-    "group": 839,
-    "sequence": 839
+    "group": 840,
+    "sequence": 840
   },
   {
     "id": "g5-component-u5149",
@@ -10642,8 +10659,8 @@ export const components = [
       "恍",
       "耀"
     ],
-    "group": 840,
-    "sequence": 840
+    "group": 841,
+    "sequence": 841
   },
   {
     "id": "g5-component-u519b",
@@ -10656,8 +10673,8 @@ export const components = [
     "characterSet": [
       "辉"
     ],
-    "group": 841,
-    "sequence": 841
+    "group": 842,
+    "sequence": 842
   },
   {
     "id": "g5-component-u21c52",
@@ -10670,8 +10687,8 @@ export const components = [
     "characterSet": [
       "殿"
     ],
-    "group": 842,
-    "sequence": 842
+    "group": 843,
+    "sequence": 843
   },
   {
     "id": "g5-component-u89c1",
@@ -10684,8 +10701,8 @@ export const components = [
     "characterSet": [
       "览"
     ],
-    "group": 843,
-    "sequence": 843
+    "group": 844,
+    "sequence": 844
   },
   {
     "id": "g5-component-u7adf",
@@ -10698,8 +10715,8 @@ export const components = [
     "characterSet": [
       "境"
     ],
-    "group": 844,
-    "sequence": 844
+    "group": 845,
+    "sequence": 845
   },
   {
     "id": "g5-component-u8080",
@@ -10712,8 +10729,8 @@ export const components = [
     "characterSet": [
       "唐"
     ],
-    "group": 845,
-    "sequence": 845
+    "group": 846,
+    "sequence": 846
   },
   {
     "id": "019f1c14-f83b-725a-823d-6bb372303b54",
@@ -10745,8 +10762,8 @@ export const components = [
       "锥",
       "钉"
     ],
-    "group": 847,
-    "sequence": 847
+    "group": 848,
+    "sequence": 848
   },
   {
     "id": "g5-component-u6216",
@@ -10759,8 +10776,8 @@ export const components = [
     "characterSet": [
       "域"
     ],
-    "group": 848,
-    "sequence": 848
+    "group": 849,
+    "sequence": 849
   },
   {
     "id": "019f1c14-f83b-725a-8241-a5f1159c420b",
@@ -10787,8 +10804,8 @@ export const components = [
     "characterSet": [
       "艇"
     ],
-    "group": 850,
-    "sequence": 850
+    "group": 851,
+    "sequence": 851
   },
   {
     "id": "g5-component-u77db",
@@ -10801,8 +10818,8 @@ export const components = [
     "characterSet": [
       "矛"
     ],
-    "group": 851,
-    "sequence": 851
+    "group": 852,
+    "sequence": 852
   },
   {
     "id": "g5-component-u2e81",
@@ -10815,8 +10832,8 @@ export const components = [
     "characterSet": [
       "盾"
     ],
-    "group": 852,
-    "sequence": 852
+    "group": 853,
+    "sequence": 853
   },
   {
     "id": "g5-component-u5feb",
@@ -10829,25 +10846,8 @@ export const components = [
     "characterSet": [
       "筷"
     ],
-    "group": 853,
-    "sequence": 853
-  },
-  {
-    "id": "019f1c14-f83b-725a-823e-2d3f8289284f",
-    "title": "欠",
-    "glyph": "欠",
-    "examples": [
-      "吹",
-      "软",
-      "掀",
-      "资"
-    ],
-    "description": "“欠”是象形字，甲骨文就像一个人张着嘴打哈欠。“欠”的本义就是打哈欠。",
-    "characterSet": [
-      "欣"
-    ],
-    "group": 243,
-    "sequence": 279
+    "group": 854,
+    "sequence": 854
   },
   {
     "id": "g5-component-u4ea8",
@@ -12460,20 +12460,6 @@ export const components = [
     "sequence": 966
   },
   {
-    "id": "019f1c14-f83b-725a-823b-9519989286fc",
-    "title": "甘",
-    "glyph": "甘",
-    "examples": [
-      "甜",
-      "某",
-      "嵌"
-    ],
-    "description": "“甘”是指事字，古时候的“甘”字从“口”，口里的一横指出这是好吃的东西。“甘”的本义就是嘴里食物的味道甜美。",
-    "characterSet": [],
-    "group": 97,
-    "sequence": 113
-  },
-  {
     "id": "g5-component-u807f",
     "title": "聿",
     "glyph": "聿",
@@ -12484,8 +12470,8 @@ export const components = [
     "characterSet": [
       "津"
     ],
-    "group": 968,
-    "sequence": 968
+    "group": 967,
+    "sequence": 967
   },
   {
     "id": "g5-component-u5145",
@@ -12498,8 +12484,8 @@ export const components = [
     "characterSet": [
       "统"
     ],
-    "group": 969,
-    "sequence": 969
+    "group": 968,
+    "sequence": 968
   },
   {
     "id": "019f1c14-f83b-725a-823a-3ffab92fa255",
@@ -12526,8 +12512,8 @@ export const components = [
     "characterSet": [
       "差"
     ],
-    "group": 971,
-    "sequence": 971
+    "group": 970,
+    "sequence": 970
   },
   {
     "id": "g5-component-u9690",
@@ -12540,8 +12526,8 @@ export const components = [
     "characterSet": [
       "瘾"
     ],
-    "group": 972,
-    "sequence": 972
+    "group": 971,
+    "sequence": 971
   },
   {
     "id": "g5-component-u5349",
@@ -12554,8 +12540,8 @@ export const components = [
     "characterSet": [
       "奔"
     ],
-    "group": 973,
-    "sequence": 973
+    "group": 972,
+    "sequence": 972
   },
   {
     "id": "g5-component-u8024",
@@ -12568,8 +12554,8 @@ export const components = [
     "characterSet": [
       "籍"
     ],
-    "group": 974,
-    "sequence": 974
+    "group": 973,
+    "sequence": 973
   },
   {
     "id": "g5-component-u5c1d",
@@ -12582,8 +12568,8 @@ export const components = [
     "characterSet": [
       "偿"
     ],
-    "group": 975,
-    "sequence": 975
+    "group": 974,
+    "sequence": 974
   },
   {
     "id": "g5-component-u543e",
@@ -12596,8 +12582,8 @@ export const components = [
     "characterSet": [
       "悟"
     ],
-    "group": 976,
-    "sequence": 976
+    "group": 975,
+    "sequence": 975
   },
   {
     "id": "g5-component-u8d35",
@@ -12610,8 +12596,8 @@ export const components = [
     "characterSet": [
       "馈"
     ],
-    "group": 977,
-    "sequence": 977
+    "group": 976,
+    "sequence": 976
   },
   {
     "id": "g5-component-u5179",
@@ -12624,8 +12610,8 @@ export const components = [
     "characterSet": [
       "磁"
     ],
-    "group": 978,
-    "sequence": 978
+    "group": 977,
+    "sequence": 977
   },
   {
     "id": "g5-component-u5b5d",
@@ -12638,8 +12624,8 @@ export const components = [
     "characterSet": [
       "酵"
     ],
-    "group": 979,
-    "sequence": 979
+    "group": 978,
+    "sequence": 978
   },
   {
     "id": "g5-component-u4ea4",
@@ -12652,8 +12638,8 @@ export const components = [
     "characterSet": [
       "皎"
     ],
-    "group": 980,
-    "sequence": 980
+    "group": 979,
+    "sequence": 979
   },
   {
     "id": "g5-component-u91d1",
@@ -12666,8 +12652,8 @@ export const components = [
     "characterSet": [
       "鉴"
     ],
-    "group": 981,
-    "sequence": 981
+    "group": 980,
+    "sequence": 980
   },
   {
     "id": "g5-component-u5386",
@@ -12680,8 +12666,8 @@ export const components = [
     "characterSet": [
       "沥"
     ],
-    "group": 982,
-    "sequence": 982
+    "group": 981,
+    "sequence": 981
   },
   {
     "id": "019f1c14-f83b-725a-823a-7058e812d35e",

@@ -141,7 +141,7 @@ test("the lesson guide connects reading clues to cards and back", async () => {
 test("dense pages keep progressive and shareable responsive contracts", async () => {
   const componentResponse = await render("/bujian");
   const componentHtml = await componentResponse.text();
-  assert.match(componentHtml, /显示 36 \/ 401/);
+  assert.match(componentHtml, /显示 36 \/ 400/);
   assert.match(componentHtml, /component-load-more/);
 
   const recordsResponse = await render("/records/words");

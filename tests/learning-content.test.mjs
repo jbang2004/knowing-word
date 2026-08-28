@@ -100,6 +100,37 @@ test("component variants preserve the visible glyph and normalize the evidence",
   assert.equal(meat.parts.find((part) => part.char === "月")?.role, "semantic");
 });
 
+test("all runtime teaching strings are well-formed and 嵌 uses portable visible components", () => {
+  const malformed = [];
+  const inspect = (value, path) => {
+    if (typeof value === "string") {
+      if (value.includes("\uFFFD")) malformed.push(`${path} contains U+FFFD`);
+      for (let index = 0; index < value.length; index += 1) {
+        const unit = value.charCodeAt(index);
+        if (unit >= 0xd800 && unit <= 0xdbff) {
+          const low = value.charCodeAt(index + 1);
+          if (!(low >= 0xdc00 && low <= 0xdfff)) malformed.push(`${path} contains an unpaired high surrogate`);
+          else index += 1;
+        } else if (unit >= 0xdc00 && unit <= 0xdfff) {
+          malformed.push(`${path} contains an unpaired low surrogate`);
+        }
+      }
+      return;
+    }
+    if (Array.isArray(value)) return value.forEach((item, index) => inspect(item, `${path}[${index}]`));
+    if (value && typeof value === "object") {
+      for (const [key, item] of Object.entries(value)) inspect(item, `${path}.${key}`);
+    }
+  };
+  inspect(characters, "characters");
+  assert.deepEqual(malformed, []);
+
+  const embedded = characters.find((item) => item.id === "g5v1-l01-c03-u5d4c");
+  assert.ok(embedded);
+  assert.deepEqual(embedded.parts.map((part) => part.char), ["山", "甘", "欠"]);
+  assert.doesNotMatch(JSON.stringify(embedded), /𣢟/u);
+});
+
 test("independent writing cues do not expose the target in visible or spoken text", () => {
   const writingRecords = grade5Characters.filter((item) =>
     item.curriculumRole === "write"

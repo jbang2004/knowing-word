@@ -29,6 +29,7 @@
     "migrate:narration-listening-v4": "node scripts/migrate-qwen3-human-listening-v4.mjs",
     "validate:narration-qwen3-release": "node scripts/validate-qwen3-narration-release.mjs",
     "build:kai": "node scripts/build-kai-subset.mjs",
+    "audit:glyphs": "node scripts/audit-display-glyphs.mjs",
     "clean:assets": "node scripts/clean-source-assets.mjs",
     "preseed:narration": "node scripts/preseed-narration-media.mjs",
     "prepare:miniprogram-audio": "node scripts/prepare-miniprogram-narration.mjs",
@@ -41,7 +42,7 @@
     "check:vinext": "vinext check",
     "check:bundle": "node scripts/check-production-budgets.mjs",
     "check": "npm run lint && npm run typecheck && npm run check:vinext",
-    "verify": "npm run generate:miniprogram && npm run check && npm run typecheck:miniprogram && npm run test && npm run check:bundle",
+    "verify": "npm run generate:miniprogram && npm run check && npm run typecheck:miniprogram && npm run test && npm run check:bundle && npm run audit:glyphs",
     "lint": "eslint . --ignore-pattern dist --ignore-pattern .next"
   },
   "dependencies": {

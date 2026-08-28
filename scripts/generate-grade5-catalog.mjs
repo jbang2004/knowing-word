@@ -248,6 +248,11 @@ const structureOverrides = {
 };
 
 const componentOverrides = {
+  // Make Me a Hanzi groups 甘 + 欠 into the Extension-B component 𣢟.
+  // That glyph is absent even from the bundled LXGW WenKai source face and
+  // renders as tofu or U+FFFD in WeChat. The visible modern teaching split is
+  // the same shape expressed with the portable components children can read.
+  嵌: ["山", "甘", "欠"],
   亭: ["亠", "口", "冖", "丁"], 享: ["亠", "口", "子"], 免: ["⺈", "口", "儿"],
   唐: ["广", "肀", "口"], 疆: ["弓", "土", "畺"], 浸: ["氵", "彐", "冖", "又"], 茶: ["艹", "人", "木"], 惰: ["忄", "左", "月"],
   衡: ["彳", "田", "大", "亍"], 臣: ["臣"], 赤: ["赤"], 侵: ["亻", "彐", "冖", "又"],
@@ -379,6 +384,20 @@ function componentEvidenceMatch(part, evidence) {
 }
 
 function componentRole(part, record, character) {
+  if (character === "嵌") {
+    // 甘 and 欠 are exposed here only to express the visible lower shape with
+    // portable glyphs. They are not independent top-level etymological
+    // evidence, so do not promote the nested 欠 shape to a verified sound
+    // component or teach an unsupported phonetic rule.
+    return {
+      char: part,
+      role: "graphic",
+      normalizedChar: part,
+      functionText: `“${part}”在这里负责构成现代字形，不能只凭它推断字义或读音。`,
+      confidence: "verified",
+      source: "project portable visible component override",
+    };
+  }
   if (character === "间" && (part === "门" || part === "日")) {
     return {
       char: part,

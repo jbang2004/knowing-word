@@ -3,8 +3,10 @@ import { CATALOG_SCHEMA_VERSION, assetUrl } from "../config";
 import type { CatalogCharacter, CatalogLesson, LessonContent } from "../types/models";
 import { publicRequest } from "./api";
 
-const CACHE_PREFIX = "knowing-word:lesson-cache:v3:";
-const CACHE_INDEX_KEY = "knowing-word:lesson-cache-index:v3";
+// v4 invalidates lesson shards whose component exercises could still contain
+// the non-portable Extension-B lower component previously used for 嵌.
+const CACHE_PREFIX = "knowing-word:lesson-cache:v4:";
+const CACHE_INDEX_KEY = "knowing-word:lesson-cache-index:v4";
 const MAX_CACHED_LESSONS = 10;
 
 export const courseIndex = course;

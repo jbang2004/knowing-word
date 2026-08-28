@@ -3,7 +3,7 @@
    Rebuild with `npm run build:kai`. */
 @font-face {
   font-family: "Knowing Kai";
-  src: url("/fonts/lxgw-wenkai-subset.woff2") format("woff2");
+  src: url("/fonts/lxgw-wenkai-subset.woff2?v=90") format("woff2");
   font-weight: 400 500;
   font-style: normal;
   font-display: swap;
