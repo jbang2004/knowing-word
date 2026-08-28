@@ -216,6 +216,7 @@
 .answer-sheet.is-correct {
   color: var(--action-ink);
   background: var(--action);
+  animation: answer-sheet-success 360ms ease-out both;
 }
 
 .answer-sheet.is-wrong {
@@ -240,8 +241,20 @@
 }
 
 .answer-sheet.is-correct .answer-sheet-mark {
+  position: relative;
   color: var(--action-on-white);
   background: #fff;
+  animation: answer-mark-success 460ms var(--ease-out) both;
+}
+
+.answer-sheet.is-correct .answer-sheet-mark::after {
+  position: absolute;
+  inset: -7px;
+  border: 2px solid rgba(255, 255, 255, 0.72);
+  border-radius: 50%;
+  content: "";
+  pointer-events: none;
+  animation: answer-success-ring 520ms ease-out both;
 }
 
 .answer-sheet.is-wrong .answer-sheet-mark {
@@ -289,6 +302,23 @@
 @keyframes answer-sheet-rise {
   from { transform: translateY(14px); opacity: 0; }
   to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes answer-sheet-success {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes answer-mark-success {
+  0% { opacity: 0; transform: scale(0.58); }
+  62% { opacity: 1; transform: scale(1.14); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes answer-success-ring {
+  0% { opacity: 0; transform: scale(0.62); }
+  38% { opacity: 0.82; }
+  100% { opacity: 0; transform: scale(1.42); }
 }
 
 /* Touch input --------------------------------------------------------- */
@@ -464,7 +494,10 @@
 
 @media (prefers-reduced-motion: reduce) {
   .answer-sheet,
+  .answer-sheet.is-correct,
   .answer-sheet-mark,
+  .answer-sheet.is-correct .answer-sheet-mark,
+  .answer-sheet.is-correct .answer-sheet-mark::after,
   .challenge-streak,
   .choice-parts,
   .choice-card.is-correct,

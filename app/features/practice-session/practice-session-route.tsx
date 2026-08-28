@@ -339,7 +339,7 @@ function HydratedPracticeSession({
     playLearningSound(correct
       ? nextStreak >= 3 ? "streak" : "correct"
       : "retry");
-    pulseHaptic(correct ? "success" : "light");
+    pulseHaptic(correct ? "success" : "retry");
     const now = new Date().toISOString();
     const attempt: LearningAttempt = {
       characterId: character.id,

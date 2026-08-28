@@ -147,6 +147,7 @@ test("native practice keeps the Web mobile answer and completion geometry", asyn
   assert.match(template, /class="answer-sheet-answer \{\{resultAnswerIsGlyph/u);
   assert.match(template, /celebration-stat-label">题目<\/small><text class="celebration-stat-value"/u);
   assert.match(script, /resultAnswerIsGlyph:\s*!correct && Array\.from\(correctAnswer\)\.length <= 6/u);
+  assert.match(script, /type: correct \? "light" : "medium"/u);
 
   assert.match(styles, /\.choice-card \{[^}]*gap:13px;[^}]*padding:12px 15px;[^}]*border-radius:18px;/u);
   assert.match(styles, /\.challenge-actions-row \{[^}]*min-height:44px;[^}]*gap:12px;/u);
@@ -156,6 +157,30 @@ test("native practice keeps the Web mobile answer and completion geometry", asyn
   assert.match(styles, /\.celebration-card \{[^}]*width:calc\(100% - 32px\);[^}]*max-width:420px;[^}]*max-height:92vh;[^}]*gap:14px;[^}]*padding:26px 22px calc\(24px \+ env\(safe-area-inset-bottom\)\);[^}]*border-radius:30px;/u);
   assert.match(styles, /\.celebration-actions \{[^}]*flex-direction:column;[^}]*gap:9px;[^}]*margin-top:2px;/u);
   assert.match(styles, /\.celebration-actions \.game-button\.primary\.celebration-primary \{[^}]*min-height:48px;[^}]*border-radius:14px;[^}]*font-size:14px;/u);
+});
+
+test("correct feedback blooms without borrowing the retry shake", async () => {
+  const [webStyles, webHaptics, miniStyles, miniScript] = await Promise.all([
+    readFile(new URL("../app/challenge.css", import.meta.url), "utf8"),
+    readFile(new URL("../app/infrastructure/browser/haptics.ts", import.meta.url), "utf8"),
+    readFile(new URL("miniprogram/pages/practice/index.wxss", root), "utf8"),
+    readFile(new URL("miniprogram/pages/practice/index.ts", root), "utf8"),
+  ]);
+
+  for (const styles of [webStyles, miniStyles]) {
+    assert.match(styles, /\.answer-sheet\.is-correct \{[^}]*animation:\s*answer-sheet-success 360ms ease-out both;/u);
+    assert.match(styles, /\.answer-sheet\.is-correct \.answer-sheet-mark[^\{]*\{[^}]*animation:\s*answer-mark-success 460ms var\(--ease-out\) both;/u);
+    assert.match(styles, /\.answer-sheet\.is-correct \.answer-sheet-mark::after[^\{]*\{[^}]*animation:\s*answer-success-ring 520ms ease-out both;/u);
+    for (const name of ["answer-sheet-success", "answer-mark-success", "answer-success-ring"]) {
+      const start = styles.indexOf(`@keyframes ${name}`);
+      const end = styles.indexOf("@keyframes", start + 11);
+      const positiveMotion = styles.slice(start, end < 0 ? styles.length : end);
+      assert.doesNotMatch(positiveMotion, /translateX|rotate/u);
+    }
+  }
+
+  assert.match(webHaptics, /pattern === "success" \? 10 : 22/u);
+  assert.match(miniScript, /type: correct \? "light" : "medium"/u);
 });
 
 test("native mini-program pins the Web design tokens, rhythm, and motion timings", async () => {
@@ -194,7 +219,10 @@ test("native mini-program pins the Web design tokens, rhythm, and motion timings
 
   for (const [name, duration] of [
     ["answer-sheet-rise", "260ms"],
+    ["answer-sheet-success", "360ms"],
     ["answer-mark-stamp", "420ms"],
+    ["answer-mark-success", "460ms"],
+    ["answer-success-ring", "520ms"],
     ["choice-land", "320ms"],
     ["choice-nudge", "340ms"],
     ["choice-parts-in", "220ms"],
