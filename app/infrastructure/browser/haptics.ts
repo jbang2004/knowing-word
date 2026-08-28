@@ -1,8 +1,7 @@
-/* Vibration patterns for immediate practice feedback. */
+/* A physical pulse is reserved for corrective feedback. Success already has
+   sound and positive visual motion, so vibrating there reads like an error. */
 
-export type HapticPattern = "success" | "retry";
-
-export function pulseHaptic(pattern: HapticPattern = "success") {
+export function pulseRetryHaptic() {
   if (typeof navigator === "undefined" || typeof navigator.vibrate !== "function") return;
-  navigator.vibrate(pattern === "success" ? 10 : 22);
+  navigator.vibrate(22);
 }

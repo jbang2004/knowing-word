@@ -505,7 +505,7 @@ Page({
     const sessionResults = [...this.data.sessionResults, correct];
     const streak = correct ? this.data.streak + 1 : 0;
     playLearningSound(correct ? (streak >= 3 ? "streak" : "correct") : "retry");
-    wx.vibrateShort({ type: correct ? "light" : "medium", fail: () => undefined });
+    if (!correct) wx.vibrateShort({ type: "medium", fail: () => undefined });
     if (!showResult && question.kind === "write") {
       const remediation = writingRemediation(writingAssessment);
       this.setData({

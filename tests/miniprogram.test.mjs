@@ -147,7 +147,7 @@ test("native practice keeps the Web mobile answer and completion geometry", asyn
   assert.match(template, /class="answer-sheet-answer \{\{resultAnswerIsGlyph/u);
   assert.match(template, /celebration-stat-label">题目<\/small><text class="celebration-stat-value"/u);
   assert.match(script, /resultAnswerIsGlyph:\s*!correct && Array\.from\(correctAnswer\)\.length <= 6/u);
-  assert.match(script, /type: correct \? "light" : "medium"/u);
+  assert.match(script, /if \(!correct\) wx\.vibrateShort\(\{ type: "medium"/u);
 
   assert.match(styles, /\.choice-card \{[^}]*gap:13px;[^}]*padding:12px 15px;[^}]*border-radius:18px;/u);
   assert.match(styles, /\.challenge-actions-row \{[^}]*min-height:44px;[^}]*gap:12px;/u);
@@ -179,8 +179,11 @@ test("correct feedback blooms without borrowing the retry shake", async () => {
     }
   }
 
-  assert.match(webHaptics, /pattern === "success" \? 10 : 22/u);
-  assert.match(miniScript, /type: correct \? "light" : "medium"/u);
+  assert.match(webHaptics, /export function pulseRetryHaptic\(\)/u);
+  assert.match(webHaptics, /navigator\.vibrate\(22\)/u);
+  assert.doesNotMatch(webHaptics, /success/u);
+  assert.match(miniScript, /if \(!correct\) wx\.vibrateShort\(\{ type: "medium"/u);
+  assert.doesNotMatch(miniScript, /type: correct \?/u);
 });
 
 test("native mini-program pins the Web design tokens, rhythm, and motion timings", async () => {

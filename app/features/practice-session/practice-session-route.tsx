@@ -43,7 +43,7 @@ import {
   type StudyProfile,
   type TrackId,
 } from "../../lib/profile-model";
-import { pulseHaptic } from "../../infrastructure/browser/haptics";
+import { pulseRetryHaptic } from "../../infrastructure/browser/haptics";
 import { playLearningSound } from "../../infrastructure/browser/learning-audio";
 import { queueLearningEvent } from "../../infrastructure/browser/learning-event-outbox";
 import { getProfileActorId } from "../../infrastructure/browser/profile-actor";
@@ -339,7 +339,7 @@ function HydratedPracticeSession({
     playLearningSound(correct
       ? nextStreak >= 3 ? "streak" : "correct"
       : "retry");
-    pulseHaptic(correct ? "success" : "retry");
+    if (!correct) pulseRetryHaptic();
     const now = new Date().toISOString();
     const attempt: LearningAttempt = {
       characterId: character.id,
