@@ -1,5 +1,5 @@
 import { componentIndex, getLessonContent } from "../../services/catalog";
-import { navigationLayout } from "../../services/layout";
+import { fittedSceneSize, navigationLayout } from "../../services/layout";
 import { narrationView, previousPhraseStart, type NarrationMark, type NarrationTokenView } from "../../services/narration";
 import { loadProfile, saveProfile } from "../../services/profile";
 import { masteryStepsFor } from "../../services/practice";
@@ -78,7 +78,7 @@ Page({
     masteryCount: 0,
     masteryCompleted: 0,
     masteryActionLabel: "单字过关",
-    sceneSize: 225,
+    sceneSize: 128,
     memorySceneSize: 390,
     memoryOpen: false,
     memoryStage: 0,
@@ -99,10 +99,13 @@ Page({
       lessonId: options.lessonId ?? "",
       characterId: options.characterId ?? "",
       ...nav,
-      sceneSize: Math.min(info.windowWidth, 520, Math.max(128, info.windowHeight - nav.navHeight - 591)),
+      sceneSize: Math.min(info.windowWidth, 128),
       memorySceneSize: Math.min(info.windowWidth, 520),
     });
     void this.loadCharacter();
+  },
+  onResize() {
+    wx.nextTick(() => this.fitSceneToViewport());
   },
   onUnload() {
     narrationRequestVersion += 1;
@@ -132,13 +135,29 @@ Page({
         masteryCompleted: masteryQuestions.filter((question) => profile.answers[question.id]?.lastCorrect).length,
         masteryActionLabel: profile.completed.words.includes(character.id) ? "再练一轮" : "单字过关",
         loading: false,
-      });
+      }, () => this.fitSceneToViewport());
       void this.loadNarrationTimeline(character);
     } catch (error) {
       this.setData({ loading: false, error: error instanceof Error ? error.message : "识字卡加载失败" });
     }
   },
   retry() { void this.loadCharacter(); },
+  fitSceneToViewport() {
+    const info = wx.getWindowInfo();
+    wx.createSelectorQuery()
+      .select(".study-furniture")
+      .boundingClientRect((furniture) => {
+        if (!furniture || Array.isArray(furniture)) return;
+        const sceneSize = fittedSceneSize({
+          windowWidth: info.windowWidth,
+          windowHeight: info.windowHeight,
+          navHeight: this.data.navHeight,
+          furnitureHeight: furniture.height,
+        });
+        if (sceneSize !== this.data.sceneSize) this.setData({ sceneSize });
+      })
+      .exec();
+  },
   toggleFavorite() {
     const character = this.data.character;
     if (!character) return;
@@ -210,7 +229,10 @@ Page({
       wx.showToast({ title: "这张卡暂无范读", icon: "none" });
       return;
     }
-    this.setData({ narrationOpen: true, transcriptOpen: false });
+    this.setData(
+      { narrationOpen: true, transcriptOpen: false },
+      () => this.fitSceneToViewport(),
+    );
     if (audio) {
       if (this.data.playing) audio.pause();
       else {
@@ -304,7 +326,10 @@ Page({
   collapseNarration() {
     audio?.pause();
     clearNarrationSampling();
-    this.setData({ playing: false, narrationOpen: false, transcriptOpen: false });
+    this.setData(
+      { playing: false, narrationOpen: false, transcriptOpen: false },
+      () => this.fitSceneToViewport(),
+    );
   },
   previousNarrationPhrase() {
     if (!audio) return;

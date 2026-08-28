@@ -5,6 +5,25 @@ export type NavigationLayout = {
   contentTop: number;
 };
 
+type SceneLayout = {
+  windowWidth: number;
+  windowHeight: number;
+  navHeight: number;
+  furnitureHeight: number;
+};
+
+/**
+ * Give a square teaching image every pixel left after the real page furniture
+ * is laid out. A small floor keeps it useful on short screens; the page's
+ * compact media query is responsible for making that floor fit.
+ */
+export function fittedSceneSize(
+  { windowWidth, windowHeight, navHeight, furnitureHeight }: SceneLayout,
+) {
+  const availableHeight = Math.floor(windowHeight - navHeight - furnitureHeight - 4);
+  return Math.max(96, Math.min(520, windowWidth, availableHeight));
+}
+
 /**
  * One source of truth for custom-navigation pages.
  *

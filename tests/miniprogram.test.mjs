@@ -14,6 +14,7 @@ import {
   trackOrigins,
 } from "../wechat-miniprogram/miniprogram/data/runtime-contract.ts";
 import { createPracticeSelectors } from "../wechat-miniprogram/miniprogram/services/practice-selection.ts";
+import { fittedSceneSize } from "../wechat-miniprogram/miniprogram/services/layout.ts";
 
 const root = new URL("../wechat-miniprogram/", import.meta.url);
 const { masteryStepsFor, trackStepsFor } = createPracticeSelectors({
@@ -42,6 +43,31 @@ test("native mini-program uses a bounded set of page templates for the complete 
       `${page}.wxml should not mix conditional branches and loops on one node`,
     );
   }
+});
+
+test("character artwork fills the measured viewport without forcing a page scroll", async () => {
+  assert.equal(fittedSceneSize({
+    windowWidth: 390,
+    windowHeight: 844,
+    navHeight: 96,
+    furnitureHeight: 490,
+  }), 254);
+  assert.equal(fittedSceneSize({
+    windowWidth: 320,
+    windowHeight: 568,
+    navHeight: 72,
+    furnitureHeight: 430,
+  }), 96);
+
+  const [pageSource, pageStyles] = await Promise.all([
+    readFile(new URL("miniprogram/pages/character/index.ts", root), "utf8"),
+    readFile(new URL("miniprogram/pages/character/index.wxss", root), "utf8"),
+  ]);
+  assert.match(pageSource, /select\("\.study-furniture"\)/u);
+  assert.doesNotMatch(pageSource, /windowHeight - nav\.navHeight - \d+/u);
+  assert.doesNotMatch(pageStyles, /min-height:180px/u);
+  assert.match(pageStyles, /\.study-furniture \{[^}]*\}\.study-identity \{ display:flex; align-items:center;/u);
+  assert.match(pageStyles, /\.study-scene \{[^}]*flex:none;/u);
 });
 
 test("native mini-program ships only renderable components for 嵌", () => {
