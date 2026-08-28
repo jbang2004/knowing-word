@@ -3,7 +3,7 @@
     <button class="nav-back" bindtap="goBack" aria-label="返回"><ki-icon name="arrow-left" size="22" /></button><view>{{lesson.title}}</view>
   </view>
 
-  <view class="lesson-tabs">
+  <view class="lesson-tabs" style="top: {{navHeight}}px;">
     <button class="{{activeView === 'guide' ? 'active' : ''}}" data-view="guide" bindtap="switchView" hover-class="is-pressed"><ki-icon name="book-open" size="17" /><strong>课文导读</strong></button>
     <button class="{{activeView === 'words' ? 'active' : ''}}" data-view="words" bindtap="switchView" hover-class="is-pressed"><ki-icon name="list" size="17" /><strong>生字表</strong></button>
     <button class="{{activeView === 'practice' ? 'active' : ''}}" data-view="practice" bindtap="switchView" hover-class="is-pressed"><ki-icon name="grid" size="17" /><strong>复习巩固</strong></button>

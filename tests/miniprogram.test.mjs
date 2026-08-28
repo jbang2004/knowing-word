@@ -316,6 +316,7 @@ test("native mini-program keeps the final Web cascade across page families", asy
   assert.match(globalStyles, /\.theme-night \{[\s\S]*--shadow-sheet:0 -16px 44px rgba\(0,0,0,\.5\);/u);
   assert.match(globalStyles, /button:active \{ transform:translateY\(var\(--press\)\); box-shadow:none; \}/u);
   assert.match(globalStyles, /button\[disabled\]:active \{ transform:none; \}/u);
+  assert.match(globalStyles, /button \{ min-width: 0; max-width:100%;/u);
   assert.match(globalStyles, /max-width:1244px;[\s\S]*@media \(min-width:1481px\)[\s\S]*margin-left:calc\(\(100% - 1008px\) \/ 2\)/u);
 
   assert.match(homeTemplate, /class="read-mic"/u);
@@ -327,9 +328,13 @@ test("native mini-program keeps the final Web cascade across page families", asy
 
   assert.match(lessonTemplate, /class="reader-mobile-index \{\{mobileIndexOpen/u);
   assert.match(lessonTemplate, /id="guide-section-\{\{item\.id\}\}"/u);
+  assert.match(lessonTemplate, /class="lesson-tabs" style="top: \{\{navHeight\}\}px;"/u);
   assert.match(lessonScript, /showPendingGuideAnchor\(\)/u);
   assert.match(lessonScript, /duration: 220/u);
   assert.match(lessonStyles, /\.guide-section\.is-highlighted/u);
+  assert.match(lessonStyles, /\.lesson-topbar \{[^}]*position:sticky;[^}]*z-index:18;[^}]*background:var\(--sky\);/u);
+  assert.match(lessonStyles, /\.lesson-tabs \{[^}]*margin:8px 0 22px;/u);
+  assert.match(lessonStyles, /\.lesson-tabs button \{[^}]*width:100%;[^}]*max-width:100%;[^}]*overflow:hidden;/u);
   assert.match(lessonStyles, /grid-template-columns:minmax\(0,744px\) minmax\(250px,304px\)/u);
   assert.match(lessonsStyles, /@media \(min-width:981px\) \{ \.lesson-route \{ grid-template-columns:repeat\(2,minmax\(0,1fr\)\); \} \}/u);
 

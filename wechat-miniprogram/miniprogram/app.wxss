@@ -115,7 +115,7 @@ page {
 .kai { font-family: var(--font-kai); }
 
 view, text, image, button, input, canvas, scroll-view { box-sizing: border-box; }
-button { min-width: 0; font: inherit; transition:transform 90ms ease,box-shadow 90ms ease; }
+button { min-width: 0; max-width:100%; font: inherit; transition:transform 90ms ease,box-shadow 90ms ease; }
 button::after { border: 0; }
 button:active { transform:translateY(var(--press)); box-shadow:none; }
 button[disabled]:active { transform:none; }
