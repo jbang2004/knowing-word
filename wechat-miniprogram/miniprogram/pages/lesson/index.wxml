@@ -26,12 +26,21 @@
         <view wx:if="{{document.intro}}" class="guide-intro"><text>先带着问题读</text><view>{{document.intro}}</view><small><ki-icon name="book-open" size="15" />请打开纸质课本第 {{lesson.position}} 课</small></view>
         <view wx:for="{{guideSections}}" wx:key="id" id="guide-section-{{item.id}}" class="guide-section {{highlightedSectionId === item.id ? 'is-highlighted' : ''}}">
           <view class="section-head"><i>{{item.number || index + 1}}</i><strong>{{item.title}}</strong></view>
-          <view wx:for="{{item.paragraphs}}" wx:for-item="paragraph" wx:key="id" class="guide-paragraph">{{paragraph.text}}</view>
+          <view wx:for="{{item.paragraphs}}" wx:for-item="paragraph" wx:key="id" id="{{paragraph.id}}" class="guide-paragraph">
+            <block wx:for="{{paragraph.segments}}" wx:for-item="segment" wx:key="key">
+              <text wx:if="{{segment.targetId}}" class="reader-target is-{{segment.state}} {{segment.done ? 'is-complete' : ''}}" data-id="{{segment.targetId}}" bindtap="openCharacter" role="button" aria-label="{{segment.targetWord}}里的{{segment.text}}，进入字卡" hover-class="is-pressed">{{segment.text}}<text wx:if="{{segment.done}}" class="reader-target-check">✓</text></text>
+              <text wx:else>{{segment.text}}</text>
+            </block>
+          </view>
           <view wx:if="{{item.question}}" class="guide-question"><text>想一想</text><view>{{item.question}}</view></view>
-          <view wx:if="{{item.focusCharacters.length}}" class="focus-area">
+          <view wx:if="{{item.focusWordItems.length}}" class="focus-area">
             <view class="focus-head"><strong>本段重点词</strong><text>点击彩色生字进入字卡</text></view>
             <view class="focus-grid">
-              <view wx:for="{{item.focusCharacters}}" wx:for-item="character" wx:key="id" class="focus-word press-card {{character.done ? 'done' : ''}}" data-id="{{character.id}}" bindtap="openCharacter" role="button" hover-class="is-pressed"><strong>{{character.word}}</strong><text>{{character.pinyin}}</text><view class="focus-word-icon"><ki-icon name="{{character.done ? 'check' : 'chevron-right'}}" size="15" /></view></view>
+              <view wx:for="{{item.focusWordItems}}" wx:for-item="focusWord" wx:key="key" class="focus-word {{focusWord.done ? 'done' : ''}} {{focusWord.wide ? 'is-wide' : ''}}">
+                <strong><block wx:for="{{focusWord.glyphs}}" wx:for-item="glyph" wx:key="key"><text wx:if="{{glyph.targetId}}" class="reader-focus-glyph {{glyph.done ? 'is-complete' : ''}}" data-id="{{glyph.targetId}}" bindtap="openCharacter" role="button" aria-label="{{focusWord.word}}里的{{glyph.text}}，进入字卡" hover-class="is-pressed">{{glyph.text}}</text><text wx:else>{{glyph.text}}</text></block></strong>
+                <text>{{focusWord.pinyin}}</text>
+                <view wx:if="{{focusWord.done}}" class="focus-word-icon"><ki-icon name="check" size="15" /></view>
+              </view>
             </view>
           </view>
         </view>

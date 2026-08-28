@@ -4,7 +4,41 @@ import { loadProfile } from "../../services/profile";
 import type { CatalogCharacter, CatalogLesson, LessonContent, TrackId } from "../../types/models";
 
 type ViewCharacter = CatalogCharacter & { done: boolean; roleLabel: string; guideSectionId?: string };
-type GuideSection = Omit<NonNullable<LessonContent["document"]>["sections"][number], "id"> & { id: string; focusCharacters: ViewCharacter[] };
+type GuideInlineSegment = {
+  key: string;
+  text: string;
+  targetId: string;
+  targetWord: string;
+  state: "plain" | "first" | "repeat";
+  done: boolean;
+};
+type GuideParagraph = {
+  id: string;
+  text: string;
+  segments: GuideInlineSegment[];
+};
+type GuideFocusGlyph = {
+  key: string;
+  text: string;
+  targetId: string;
+  done: boolean;
+};
+type GuideFocusWord = {
+  key: string;
+  word: string;
+  pinyin: string;
+  glyphs: GuideFocusGlyph[];
+  targetIds: string[];
+  done: boolean;
+  wide: boolean;
+};
+type GuideSectionSource = NonNullable<LessonContent["document"]>["sections"][number];
+type GuideSection = Omit<GuideSectionSource, "id" | "paragraphs"> & {
+  id: string;
+  paragraphs: GuideParagraph[];
+  focusCharacters: ViewCharacter[];
+  focusWordItems: GuideFocusWord[];
+};
 type ViewWordGroup = { key: string; word: string; characters: ViewCharacter[] };
 type PracticeItem = { track: TrackId; glyph: string; menu: string; completed: number; total: number };
 
@@ -25,6 +59,99 @@ function groupCharactersByWord(characters: ViewCharacter[]) {
     groups.set(key, [...(groups.get(key) ?? []), character]);
   }
   return [...groups].map(([key, items]) => ({ key, word: items[0].word, characters: items }));
+}
+
+function wordMatches(text: string, words: readonly string[]) {
+  const matches: Array<{ start: number; end: number; word: string }> = [];
+  for (const word of words) {
+    let from = 0;
+    while (from < text.length) {
+      const start = text.indexOf(word, from);
+      if (start === -1) break;
+      matches.push({ start, end: start + word.length, word });
+      from = start + word.length;
+    }
+  }
+  matches.sort((left, right) => left.start - right.start || right.end - left.end);
+  return matches;
+}
+
+function decorateGuideParagraph(
+  paragraph: GuideSectionSource["paragraphs"][number],
+  paragraphIndex: number,
+  words: readonly string[],
+  characterByHanzi: Map<string, ViewCharacter>,
+  seenCharacterIds: Set<string>,
+): GuideParagraph {
+  const segments: GuideInlineSegment[] = [];
+  let cursor = 0;
+  let segmentIndex = 0;
+  const pushPlain = (text: string) => {
+    if (!text) return;
+    segments.push({
+      key: `plain-${segmentIndex++}`,
+      text,
+      targetId: "",
+      targetWord: "",
+      state: "plain",
+      done: false,
+    });
+  };
+
+  for (const match of wordMatches(paragraph.text, words)) {
+    if (match.start < cursor) continue;
+    pushPlain(paragraph.text.slice(cursor, match.start));
+    for (const glyph of Array.from(paragraph.text.slice(match.start, match.end))) {
+      const character = characterByHanzi.get(glyph);
+      if (!character) {
+        pushPlain(glyph);
+        continue;
+      }
+      const state = seenCharacterIds.has(character.id) ? "repeat" : "first";
+      seenCharacterIds.add(character.id);
+      segments.push({
+        key: `target-${character.id}-${segmentIndex++}`,
+        text: glyph,
+        targetId: character.id,
+        targetWord: match.word,
+        state,
+        done: false,
+      });
+    }
+    cursor = match.end;
+  }
+  pushPlain(paragraph.text.slice(cursor));
+
+  return {
+    id: paragraph.id ?? `lesson-paragraph-${paragraphIndex + 1}`,
+    text: paragraph.text,
+    segments,
+  };
+}
+
+function decorateFocusWords(words: readonly string[], characters: ViewCharacter[]): GuideFocusWord[] {
+  return words.map((word, wordIndex) => {
+    const targets = characters.filter((character) => character.word === word);
+    const targetByHanzi = new Map(targets.map((character) => [character.hanzi, character]));
+    const glyphs = Array.from(word).map((glyph, glyphIndex) => {
+      const character = targetByHanzi.get(glyph);
+      return {
+        key: `${wordIndex}-${glyphIndex}`,
+        text: glyph,
+        targetId: character?.id ?? "",
+        done: false,
+      };
+    });
+    return {
+      key: `${wordIndex}-${word}`,
+      word,
+      pinyin: targets.map((character) => character.pinyin).join(" · "),
+      glyphs,
+      targetIds: targets.map((character) => character.id),
+      done: false,
+      wide: Array.from(word).length >= 5,
+    };
+  });
 }
 
 function decorateCharacter(character: CatalogCharacter): ViewCharacter {
@@ -116,16 +243,34 @@ Page({
         .filter((character) => character.ready && character.primary)
         .map(decorateCharacter);
       const extensionCharacters = viewCharacters.filter((character) => character.official === false || character.tier === "extension");
+      const coreCharacters = viewCharacters.filter(isCoreCharacter);
+      const paragraphWords = [...new Set(coreCharacters.map((character) => character.word))];
+      const characterByHanzi = new Map(coreCharacters.map((character) => [character.hanzi, character]));
+      const seenCharacterIds = new Set<string>();
+      let paragraphIndex = 0;
       const guideSections = (content.document?.sections ?? []).map((section, sectionIndex) => {
         const seen = new Set<string>();
-        const focusCharacters = (section.focusWords ?? []).flatMap((word) => viewCharacters.filter((character) =>
-          word.includes(character.hanzi) || character.word === word
+        const focusCharacters = (section.focusWords ?? []).flatMap((word) => coreCharacters.filter((character) =>
+          character.word === word
         )).filter((character) => {
           if (seen.has(character.id)) return false;
           seen.add(character.id);
           return true;
         });
-        return { ...section, id: section.id ?? `lesson-section-${sectionIndex + 1}`, focusCharacters };
+        const paragraphs = section.paragraphs.map((paragraph) => decorateGuideParagraph(
+          paragraph,
+          paragraphIndex++,
+          paragraphWords,
+          characterByHanzi,
+          seenCharacterIds,
+        ));
+        return {
+          ...section,
+          id: section.id ?? `lesson-section-${sectionIndex + 1}`,
+          paragraphs,
+          focusCharacters,
+          focusWordItems: decorateFocusWords(section.focusWords ?? [], coreCharacters),
+        };
       });
       const sectionByCharacterId = new Map<string, string>();
       for (const section of guideSections) {
@@ -134,9 +279,7 @@ Page({
         }
       }
       const fallbackSectionId = guideSections[0]?.id ?? "";
-      const characters = viewCharacters
-        .filter(isCoreCharacter)
-        .map((character) => ({
+      const characters = coreCharacters.map((character) => ({
           ...character,
           guideSectionId: sectionByCharacterId.get(character.id) ?? fallbackSectionId,
         }));
@@ -165,6 +308,21 @@ Page({
     const guideSections = this.data.guideSections.map((section) => ({
       ...section,
       focusCharacters: section.focusCharacters.map((character) => ({ ...character, done: completedIds.has(character.id) })),
+      paragraphs: section.paragraphs.map((paragraph) => ({
+        ...paragraph,
+        segments: paragraph.segments.map((segment) => ({
+          ...segment,
+          done: Boolean(segment.targetId) && completedIds.has(segment.targetId),
+        })),
+      })),
+      focusWordItems: section.focusWordItems.map((word) => ({
+        ...word,
+        glyphs: word.glyphs.map((glyph) => ({
+          ...glyph,
+          done: Boolean(glyph.targetId) && completedIds.has(glyph.targetId),
+        })),
+        done: word.targetIds.length > 0 && word.targetIds.every((id) => completedIds.has(id)),
+      })),
     }));
     const wordGroups = groupCharactersByWord(characters);
     const extensionWordGroups = groupCharactersByWord(extensionCharacters);
