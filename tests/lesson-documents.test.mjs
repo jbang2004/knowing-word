@@ -101,6 +101,39 @@ test("every focus word resolves to every official target card exactly once", asy
   }
 });
 
+test("every focus-word pinyin can be placed under its exact target glyph", async () => {
+  let focusWordCount = 0;
+  let nonInitialTargetCount = 0;
+  let multipleTargetCount = 0;
+  let repeatedTargetGlyphCount = 0;
+
+  for (const document of Object.values(lessonDocuments)) {
+    const content = await loadLessonContent(document.lessonId);
+    assert.ok(content, `${document.lessonId} has no lesson content`);
+    const targets = content.characters.filter((item) => item.primary && item.official !== false);
+    for (const section of document.sections) {
+      for (const word of section.focusWords ?? []) {
+        focusWordCount += 1;
+        const glyphs = Array.from(word);
+        const wordTargets = targets.filter((character) => character.word === word);
+        if (wordTargets.length > 1) multipleTargetCount += 1;
+        for (const character of wordTargets) {
+          const positions = glyphs.flatMap((glyph, index) => glyph === character.hanzi ? [index] : []);
+          assert.ok(positions.length > 0, `${document.lessonId} ${word} cannot place ${character.pinyin} under ${character.hanzi}`);
+          assert.ok(character.pinyin.length > 0, `${document.lessonId} ${word} has an empty pinyin label for ${character.hanzi}`);
+          if (positions.some((position) => position > 0)) nonInitialTargetCount += 1;
+          if (positions.length > 1) repeatedTargetGlyphCount += 1;
+        }
+      }
+    }
+  }
+
+  assert.equal(focusWordCount, 341);
+  assert.ok(nonInitialTargetCount > 150);
+  assert.equal(multipleTargetCount, 25);
+  assert.equal(repeatedTargetGlyphCount, 9);
+});
+
 test("the rights gate blocks unverified and metadata-only documents", () => {
   const base = structuredClone(lessonDocuments["g5v1-l01"]);
   assert.equal(

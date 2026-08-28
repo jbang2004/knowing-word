@@ -37,8 +37,10 @@
             <view class="focus-head"><strong>本段重点词</strong><text>点击彩色生字进入字卡</text></view>
             <view class="focus-grid">
               <view wx:for="{{item.focusWordItems}}" wx:for-item="focusWord" wx:key="key" class="focus-word {{focusWord.done ? 'done' : ''}} {{focusWord.wide ? 'is-wide' : ''}}">
-                <strong><block wx:for="{{focusWord.glyphs}}" wx:for-item="glyph" wx:key="key"><text wx:if="{{glyph.targetId}}" class="reader-focus-glyph {{glyph.done ? 'is-complete' : ''}}" data-id="{{glyph.targetId}}" bindtap="openCharacter" role="button" aria-label="{{focusWord.word}}里的{{glyph.text}}，进入字卡" hover-class="is-pressed">{{glyph.text}}</text><text wx:else>{{glyph.text}}</text></block></strong>
-                <text>{{focusWord.pinyin}}</text>
+                <view class="focus-spelling"><block wx:for="{{focusWord.glyphs}}" wx:for-item="glyph" wx:key="key">
+                  <view wx:if="{{glyph.targetId}}" class="focus-cell {{glyph.done ? 'is-complete' : ''}}" data-id="{{glyph.targetId}}" bindtap="openCharacter" role="button" aria-label="{{focusWord.word}}里的{{glyph.text}}，进入字卡" hover-class="is-pressed"><text class="reader-focus-glyph">{{glyph.text}}</text><text class="focus-pinyin">{{glyph.pinyin}}</text></view>
+                  <view wx:else class="focus-cell"><text class="focus-plain-glyph">{{glyph.text}}</text><text class="focus-pinyin is-empty">　</text></view>
+                </block></view>
                 <view wx:if="{{focusWord.done}}" class="focus-word-icon"><ki-icon name="check" size="15" /></view>
               </view>
             </view>

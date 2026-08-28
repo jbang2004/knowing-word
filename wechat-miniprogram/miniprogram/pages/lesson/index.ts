@@ -21,12 +21,12 @@ type GuideFocusGlyph = {
   key: string;
   text: string;
   targetId: string;
+  pinyin: string;
   done: boolean;
 };
 type GuideFocusWord = {
   key: string;
   word: string;
-  pinyin: string;
   glyphs: GuideFocusGlyph[];
   targetIds: string[];
   done: boolean;
@@ -139,13 +139,13 @@ function decorateFocusWords(words: readonly string[], characters: ViewCharacter[
         key: `${wordIndex}-${glyphIndex}`,
         text: glyph,
         targetId: character?.id ?? "",
+        pinyin: character?.pinyin ?? "",
         done: false,
       };
     });
     return {
       key: `${wordIndex}-${word}`,
       word,
-      pinyin: targets.map((character) => character.pinyin).join(" · "),
       glyphs,
       targetIds: targets.map((character) => character.id),
       done: false,

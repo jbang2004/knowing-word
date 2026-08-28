@@ -368,7 +368,11 @@ test("native mini-program keeps the final Web cascade across page families", asy
   assert.match(lessonTemplate, /paragraph\.segments/u);
   assert.match(lessonTemplate, /class="reader-target is-\{\{segment\.state\}\}/u);
   assert.match(lessonTemplate, /class="reader-focus-glyph/u);
+  assert.match(lessonTemplate, /class="focus-pinyin">\{\{glyph\.pinyin\}\}/u);
+  assert.doesNotMatch(lessonTemplate, /focusWord\.pinyin/u);
+  assert.match(lessonScript, /pinyin: character\?\.pinyin \?\? ""/u);
   assert.match(lessonStyles, /\.reader-target \{[^}]*border-bottom:2px solid var\(--radical\);[^}]*background:linear-gradient/u);
+  assert.match(lessonStyles, /\.focus-cell \{[^}]*grid-template-rows:24px 14px/u);
   assert.match(lessonStyles, /\.reader-focus-glyph \{[^}]*background:var\(--radical-soft\)/u);
   assert.match(lessonStyles, /\.lesson-topbar \{[^}]*position:sticky;[^}]*z-index:18;[^}]*background:var\(--sky\);/u);
   assert.match(lessonStyles, /\.lesson-tabs \{[^}]*margin:8px 0 22px;/u);

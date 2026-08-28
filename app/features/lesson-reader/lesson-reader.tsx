@@ -143,22 +143,27 @@ function FocusWords({
           const complete = targets.length > 0 && targets.every((character) => completed.has(character.id));
           return (
             <div className={`reader-focus-word${word.length >= 5 ? " is-wide" : ""}${complete ? " is-complete" : ""}`} key={word}>
-              <strong>
+              <div className="reader-focus-spelling">
                 {Array.from(word).map((glyph, index) => {
                   const character = targetByHanzi.get(glyph);
                   return character ? (
                     <Link
-                      className="reader-focus-glyph"
+                      className="reader-focus-cell is-target"
                       href={characterHref(character, paragraphId)}
                       aria-label={`${word}里的${glyph}，进入字卡`}
                       key={`${character.id}-${index}`}
                     >
-                      {glyph}
+                      <span className="reader-focus-glyph">{glyph}</span>
+                      <small className="reader-focus-pinyin">{character.pinyin}</small>
                     </Link>
-                  ) : <span key={`${glyph}-${index}`}>{glyph}</span>;
+                  ) : (
+                    <span className="reader-focus-cell" key={`${glyph}-${index}`}>
+                      <span className="reader-focus-plain-glyph">{glyph}</span>
+                      <small className="reader-focus-pinyin is-empty" aria-hidden="true">&nbsp;</small>
+                    </span>
+                  );
                 })}
-              </strong>
-              <small>{targets.map((character) => character.pinyin).join(" · ")}</small>
+              </div>
               {complete && <Check aria-label="首次学习已完成" />}
             </div>
           );

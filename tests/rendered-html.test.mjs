@@ -90,6 +90,18 @@ test("the lesson guide connects reading clues to cards and back", async () => {
   assert.match(lessonHtml, /lesson-paragraph-1/);
   assert.match(lessonHtml, /returnTo=%2Flessons%2Fg5v1-l01%23lesson-paragraph-1/);
 
+  const positionedPinyinResponse = await render("/lessons/g5v1-l02");
+  assert.equal(positionedPinyinResponse.status, 200);
+  const positionedPinyinHtml = await positionedPinyinResponse.text();
+  assert.match(
+    positionedPinyinHtml,
+    /reader-focus-plain-glyph">爱<\/span>[\s\S]*?reader-focus-glyph">慕<\/span><small class="reader-focus-pinyin">mù<\/small>/u,
+  );
+  assert.doesNotMatch(
+    positionedPinyinHtml,
+    /reader-focus-plain-glyph">爱<\/span><small class="reader-focus-pinyin">mù<\/small>/u,
+  );
+
   const practiceResponse = await render("/lessons/g5v1-l01?view=practice");
   const practiceHtml = await practiceResponse.text();
   assert.match(practiceHtml, /本课复习方式/);
