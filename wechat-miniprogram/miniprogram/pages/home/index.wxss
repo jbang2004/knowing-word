@@ -6,7 +6,7 @@
 .path-rail .focus-card { margin-bottom:0; }
 .status-row { display: flex; align-items: center; gap: 9px; width: 100%; min-height: 52px; }
 .status-spacer { flex: 1; }
-.avatar { display: flex; width: 40px; height: 40px; flex: none; align-items: center; justify-content: center; border-radius: 14px 14px 14px 4px; color: var(--radical-ink); background: var(--radical); box-shadow: 0 3px 0 var(--radical-deep); font-family: var(--font-kai); font-size: 18px; font-weight:500; }
+.avatar { display: flex; width: 44px; height: 44px; flex: none; align-items: center; justify-content: center; border-radius: 14px 14px 14px 4px; color: var(--radical-ink); background: var(--radical); box-shadow: 0 3px 0 var(--radical-deep); font-family: var(--font-kai); font-size: 18px; font-weight:500; }
 .metric { display: flex; min-height: 36px; flex: none; align-items: center; gap: 6px; padding: 6px 13px; border-radius: 999px; font-size: 15px; }
 .metric strong { font-family: var(--font-round); font-weight: 900; font-variant-numeric: tabular-nums; }
 .metric.streak { color: var(--wrong-text); background: var(--wrong-soft); box-shadow: 0 3px 0 var(--wrong-edge); }

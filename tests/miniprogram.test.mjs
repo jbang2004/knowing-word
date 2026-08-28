@@ -433,10 +433,13 @@ test("native mini-program keeps the final Web cascade across page families", asy
   assert.match(globalStyles, /max-width:1244px;[\s\S]*@media \(min-width:1481px\)[\s\S]*margin-left:calc\(\(100% - 1008px\) \/ 2\)/u);
 
   assert.match(homeTemplate, /class="read-mic"/u);
+  assert.match(homeStyles, /\.avatar \{[^}]*width: 44px;[^}]*height: 44px;/u);
   assert.match(homeStyles, /\.read-row \{[^}]*min-height:58px;[^}]*gap:12px;[^}]*border-radius:19px;[^}]*box-shadow:0 3px 0 var\(--wrong-edge\)/u);
   assert.match(homeStyles, /\.read-row\.disabled \{ opacity:\.62; box-shadow:none; \}/u);
   assert.match(trackStyles, /\.track-method-card \{ border:2px solid var\(--line\); border-radius:22px;/u);
   assert.match(trackStyles, /\.track-lesson-empty \{[^}]*border:2px dashed var\(--line-deep\);[^}]*border-radius:20px;[^}]*text-align:left;/u);
+  assert.match(trackStyles, /@media \(max-width:420px\) \{\s*\.level-row \{ grid-template-columns:64px minmax\(0,1fr\) auto 20px; gap:8px; padding:11px 12px; \}\s*\}/u);
+  assert.match(characterStyles, /\.detail-handle \{[^}]*min-height:44px;/u);
   assert.match(accountStyles, /\.danger-row>ki-icon \{ color:var\(--radical-text\); \}\.danger-row strong \{ color:var\(--ink\); \}/u);
 
   assert.match(lessonTemplate, /class="reader-mobile-index \{\{mobileIndexOpen/u);

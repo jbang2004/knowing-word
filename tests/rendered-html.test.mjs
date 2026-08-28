@@ -161,6 +161,7 @@ test("dense pages keep progressive and shareable responsive contracts", async ()
   const layoutSource = await readFile(new URL("../app/layout.tsx", import.meta.url), "utf8");
   const globalCss = await readFile(new URL("../app/globals.css", import.meta.url), "utf8");
   const homeCss = await readFile(new URL("../app/home-path.css", import.meta.url), "utf8");
+  const catalogCss = await readFile(new URL("../app/catalog.css", import.meta.url), "utf8");
   const utilityCss = await readFile(new URL("../app/utility-pages.css", import.meta.url), "utf8");
   const readerCss = await readFile(new URL("../app/lesson-reader.css", import.meta.url), "utf8");
   const solidBlocksCss = await readFile(new URL("../app/solid-blocks.css", import.meta.url), "utf8");
@@ -176,6 +177,8 @@ test("dense pages keep progressive and shareable responsive contracts", async ()
   assert.match(globalCss, /--part: #2fa8e0/);
   assert.match(globalCss, /--wrong: #ffb020/);
   assert.match(globalCss, /--coral: var\(--radical\)/);
+  assert.match(homeCss, /\.path-avatar \{[^}]*width: 44px;[^}]*height: 44px;/s);
+  assert.match(catalogCss, /\.practice-read-aloud \{[^}]*min-height: 44px;/s);
   // Solid blocks: depth comes from a hard bottom edge, not a blur.
   assert.match(globalCss, /--shadow: 0 3px 0 var\(--line\)/);
   assert.match(globalCss, /\.record-detail-summary\.action \{\s*--track: var\(--action\)/);
@@ -296,7 +299,10 @@ test("character pages render the complete picture-to-character memory flow", asy
   // browser zoom. Purposeful chip rails keep their own horizontal scrolling.
   assert.match(globalCss, /html \{[^}]*overflow-x: clip;/s);
   assert.match(globalCss, /body \{[^}]*min-width: 0;[^}]*overflow-x: clip;/s);
+  assert.match(globalCss, /\.level-list strong \{[^}]*min-width: 0;[^}]*overflow: hidden;[^}]*text-overflow: ellipsis;[^}]*white-space: nowrap;/s);
+  assert.match(globalCss, /@media \(max-width: 420px\) \{[\s\S]*\.level-list :is\(button, a\) \{[^}]*grid-template-columns: 64px minmax\(0, 1fr\) auto 20px;[^}]*gap: 8px;[^}]*padding: 11px 12px;/s);
   assert.match(studyCss, /\.study-shell \{[^}]*max-width: 100%;[^}]*overflow-x: clip;/s);
+  assert.match(studyCss, /\.study-drawer-handle \{[^}]*min-height: 44px;/s);
   assert.match(studyCss, /scroll-margin-block:[^;]*safe-area-inset-bottom/);
   assert.match(studyCss, /@media \(max-width: 899px\) and \(max-height: 760px\)/);
   assert.match(studyCss, /@media \(max-width: 899px\) and \(max-height: 620px\)/);
