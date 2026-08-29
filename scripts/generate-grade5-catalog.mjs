@@ -1238,7 +1238,7 @@ function exerciseSet(character, index, lesson, parts, partDetails, radical, stru
     const recallPrompt = `看词语线索“${safeWord}”和读音 ${pinyinText}，独立写出空格中的字。`;
     const spokenPrompt = `听提示：课文词语是“${safeWord}”，空格里的字读 ${pinyinText}。请独立写出这个字。`;
     list.splice(4, 0, { id: `${base}-words-write`, origin: "识字小测", kind: "write", questionType: "write_full_word", prompt: `在田字格里写一遍“${character}”。`, options: [], explanation: `先看整体结构，再写关键部件。` });
-    list.push({ id: `${base}-split-write`, origin: "拆一拆", kind: "write", questionType: "write_full_word_empty", prompt: recallPrompt, spokenPrompt, concealTarget: true, options: [], explanation: `写完后再揭示范字，对照部件位置自查。` });
+    list.push({ id: `${base}-split-write`, origin: "拆一拆", kind: "write", questionType: "write_full_word_empty", prompt: recallPrompt, spokenPrompt, concealTarget: true, options: [], explanation: `系统会逐笔检查位置、形状、笔顺和方向；全部通过才算正确。` });
   }
   return list.map((exercise) => {
     const annotated = annotateExercise(exercise);

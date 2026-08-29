@@ -11,7 +11,8 @@
     "build": "WRANGLER_LOG_PATH=.wrangler/wrangler.log vinext build && node scripts/prune-deployment-assets.mjs",
     "start": "WRANGLER_LOG_PATH=.wrangler/wrangler.log vinext start",
     "generate:grade5": "node scripts/generate-grade5-catalog.mjs && node scripts/generate-home-index.mjs && node scripts/generate-lesson-media.mjs",
-    "generate:miniprogram": "node scripts/generate-design-tokens.mjs && node scripts/generate-miniprogram-catalog.mjs",
+    "generate:hanzi-data": "node scripts/generate-hanzi-writer-data.mjs",
+    "generate:miniprogram": "node scripts/generate-design-tokens.mjs && node scripts/generate-miniprogram-catalog.mjs && npm run generate:hanzi-data",
     "check:design-tokens": "node scripts/generate-design-tokens.mjs --check",
     "check:styles": "npm run check:design-tokens && node scripts/check-style-contracts.mjs",
     "typecheck:miniprogram": "tsc -p wechat-miniprogram/tsconfig.json --noEmit",
@@ -49,6 +50,8 @@
     "lint": "eslint . --ignore-pattern dist --ignore-pattern .next"
   },
   "dependencies": {
+    "hanzi-writer": "^3.7.3",
+    "hanzi-writer-wechatmini": "^3.0.2",
     "lucide-react": "^0.468.0",
     "next": "16.3.3",
     "react": "19.2.8",
@@ -65,6 +68,7 @@
     "eslint": "9.39.4",
     "eslint-config-next": "16.3.3",
     "hanzi": "^2.2.1",
+    "hanzi-writer-data": "^2.0.1",
     "miniprogram-api-typings": "^4.0.4",
     "pinyin-pro": "^3.28.1",
     "react-server-dom-webpack": "19.2.8",

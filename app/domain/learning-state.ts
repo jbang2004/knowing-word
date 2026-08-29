@@ -86,8 +86,8 @@ export function isIndependentAttempt(
   attempt: Pick<LearningAttempt, "cueLevel" | "correct" | "answerMode">,
 ) {
   // Independent evidence must be both unprompted and objectively checkable.
-  // A handwriting self-check is useful practice, but the app cannot verify
-  // the glyph and therefore must never promote it to long-term stable mastery.
+  // Legacy handwriting self-checks remain non-independent. New handwriting
+  // attempts are accepted only after objective per-stroke verification.
   return attempt.correct === true &&
     attempt.cueLevel === 0 &&
     attempt.answerMode !== "self-check";

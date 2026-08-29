@@ -6,9 +6,12 @@ import {
   practiceCueLevel,
   stableOptionOrder,
   updatePracticeSelection,
-  writingAssessmentErrorTags,
   writingRetrievalText,
 } from "../app/domain/practice.ts";
+import {
+  handwritingErrorTags,
+  isHandwritingCorrect,
+} from "../app/domain/handwriting.ts";
 
 const writeQuestion = {
   id: "write-egret",
@@ -104,32 +107,72 @@ test("split assembly can reuse a component when the written form repeats it", ()
   assert.equal(isPracticeAnswerCorrect(repeatedQuestion, repeatedCharacter, "split", selected, false), true);
 });
 
-test("ink is never treated as a correct handwriting answer without explicit self-assessment", () => {
+test("handwriting is correct only after every expected stroke passes objective validation", () => {
+  const correctAttempt = {
+    acceptedStrokes: 8,
+    expectedStrokes: 8,
+    mistakes: 0,
+    backwardsMistakes: 0,
+    complete: true,
+  };
   assert.equal(isPracticeAnswerCorrect(writeQuestion, character, "split", [], true), false);
   assert.equal(
-    isPracticeAnswerCorrect(writeQuestion, character, "split", [], true, "component-error"),
+    isPracticeAnswerCorrect(writeQuestion, character, "split", [], true, {
+      ...correctAttempt,
+      acceptedStrokes: 7,
+      complete: false,
+    }),
     false,
   );
   assert.equal(
-    isPracticeAnswerCorrect(writeQuestion, character, "split", [], false, "correct"),
+    isPracticeAnswerCorrect(writeQuestion, character, "split", [], true, {
+      ...correctAttempt,
+      mistakes: 1,
+    }),
     false,
   );
   assert.equal(
-    isPracticeAnswerCorrect(writeQuestion, character, "split", [], true, "correct"),
-    true,
+    isPracticeAnswerCorrect(writeQuestion, character, "split", [], true, {
+      ...correctAttempt,
+      backwardsMistakes: 1,
+    }),
+    false,
   );
+  assert.equal(isPracticeAnswerCorrect(writeQuestion, character, "split", [], false, correctAttempt), false);
+  assert.equal(isPracticeAnswerCorrect(writeQuestion, character, "split", [], true, correctAttempt), true);
+  assert.equal(isHandwritingCorrect(correctAttempt), true);
 });
 
-test("writing self-assessment records specific error tags", () => {
-  assert.deepEqual(writingAssessmentErrorTags("correct"), []);
+test("verified handwriting failures record stroke-specific error tags", () => {
   assert.deepEqual(
-    writingAssessmentErrorTags("component-error"),
-    ["component-missing", "component-extra"],
+    handwritingErrorTags({
+      acceptedStrokes: 4,
+      expectedStrokes: 8,
+      mistakes: 0,
+      backwardsMistakes: 0,
+      complete: false,
+    }),
+    ["stroke-missing"],
   );
-  assert.deepEqual(writingAssessmentErrorTags("position-error"), ["component-position"]);
   assert.deepEqual(
-    writingAssessmentErrorTags("stroke-error"),
+    handwritingErrorTags({
+      acceptedStrokes: 4,
+      expectedStrokes: 8,
+      mistakes: 2,
+      backwardsMistakes: 0,
+      complete: false,
+    }),
     ["stroke-missing", "stroke-extra"],
+  );
+  assert.deepEqual(
+    handwritingErrorTags({
+      acceptedStrokes: 8,
+      expectedStrokes: 8,
+      mistakes: 0,
+      backwardsMistakes: 1,
+      complete: true,
+    }),
+    ["stroke-extra"],
   );
 });
 

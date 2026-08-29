@@ -193,7 +193,11 @@ async function serveNarration(
 function withDeliveryCache(response: Response, pathname: string) {
   if (!response.ok) return response;
   const headers = new Headers(response.headers);
-  if (pathname.startsWith("/assets/") || pathname.startsWith("/fonts/")) {
+  if (
+    pathname.startsWith("/assets/") ||
+    pathname.startsWith("/fonts/") ||
+    pathname.startsWith("/hanzi-data/")
+  ) {
     headers.set("cache-control", IMMUTABLE_CACHE);
   } else if (
     pathname.startsWith("/illustrations/") ||
@@ -213,6 +217,7 @@ function withDeliveryCache(response: Response, pathname: string) {
     : pathname.endsWith(".m4a") ? "audio/mp4"
     : pathname.endsWith(".mp3") ? "audio/mpeg"
     : pathname.endsWith(".wav") ? "audio/wav"
+    : pathname.endsWith(".json") ? "application/json; charset=utf-8"
     : null;
   if (contentType) headers.set("content-type", contentType);
   if (pathname.startsWith("/fonts/")) {
@@ -241,6 +246,7 @@ function withApplicationSecurityHeaders(response: Response) {
 function isDeliveryAsset(pathname: string) {
   return pathname.startsWith("/assets/") ||
     pathname.startsWith("/fonts/") ||
+    pathname.startsWith("/hanzi-data/") ||
     pathname.startsWith("/illustrations/") ||
     pathname.startsWith("/heritage/") ||
     pathname.startsWith("/sfx/") ||

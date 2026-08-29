@@ -30,7 +30,7 @@ const dimensionMeta: Record<SkillDimension, { label: string; copy: string }> = {
   recognition: { label: "认读", copy: "看到字，能独立认出来" },
   phonology: { label: "读音", copy: "看到字，能读准字音" },
   semantics: { label: "字义", copy: "理解字义和常用词义" },
-  generation: { label: "字形重构", copy: "不看答案，能按部件组出；手写自查不等于客观核验" },
+  generation: { label: "字形重构", copy: "不看答案，能按部件组出；手写由系统逐笔检查" },
   discrimination: { label: "辨析", copy: "分清形近字和同音字" },
   context: { label: "情境", copy: "能在新词句中正确使用" },
 };

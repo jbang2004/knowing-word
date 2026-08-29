@@ -877,6 +877,7 @@ test("versioned assets run through the cache-header worker path", async () => {
   assert.deepEqual(config.assets.run_worker_first, [
     "/assets/*",
     "/fonts/*",
+    "/hanzi-data/*",
     "/illustrations/*",
     "/heritage/*",
     "/media/narration/*",
@@ -885,6 +886,28 @@ test("versioned assets run through the cache-header worker path", async () => {
   ]);
   const assetHeaders = await readFile(new URL("../dist/client/_headers", import.meta.url), "utf8");
   assert.match(assetHeaders, /\/fonts\/\*[\s\S]*Access-Control-Allow-Origin: \*/u);
+});
+
+test("Hanzi Writer data is delivered as immutable local JSON", async () => {
+  const workerUrl = new URL("../dist/server/index.js", import.meta.url);
+  workerUrl.searchParams.set("test", "hanzi-writer-data-suite");
+  workerPromise ||= import(workerUrl.href).then((module) => module.default);
+  const worker = await workerPromise;
+  const response = await worker.fetch(
+    new Request("http://localhost/hanzi-data/u54c0.json"),
+    {
+      ASSETS: {
+        fetch() {
+          return Promise.resolve(new Response('{"strokes":[],"medians":[]}', {
+            headers: { "content-type": "application/octet-stream" },
+          }));
+        },
+      },
+    },
+    { waitUntil() {}, passThroughOnException() {} },
+  );
+  assert.equal(response.headers.get("content-type"), "application/json; charset=utf-8");
+  assert.equal(response.headers.get("cache-control"), "public, max-age=31536000, immutable");
 });
 
 test("mini-program font assets expose immutable CORS-safe responses", async () => {

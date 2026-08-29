@@ -10,7 +10,6 @@ export const remediationActivities = [
   "homophone-contrast",
   "lookalike-contrast",
   "context-transfer",
-  "writing-self-check",
 ] as const;
 
 export type RemediationActivity = typeof remediationActivities[number];
@@ -91,7 +90,7 @@ export const errorDiagnosisByTag = {
   },
   "writing-unverified": {
     targetDimension: "generation",
-    activity: "writing-self-check",
+    activity: "guided-rewrite",
   },
 } as const satisfies Record<
   ErrorTag,
@@ -154,11 +153,6 @@ const remediationCopy: Record<
     cue: "放回句子里再看看",
     title: "放回新句子判断",
     instruction: "先读完整句意，再用字义和搭配排除不合适的字，不靠字卡位置猜。",
-  },
-  "writing-self-check": {
-    cue: "按部件再核对一遍",
-    title: "按部件逐项自查",
-    instruction: "依次检查部件、位置和笔画；不能确认时不记为答对，先对照再重写。",
   },
 };
 

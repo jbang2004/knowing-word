@@ -152,10 +152,14 @@ export function practiceDimension(question: Exercise, track: TrackId): SkillDime
 }
 
 export function practiceAnswerMode(question: Exercise): AnswerMode {
-  return question.answerMode ?? (question.kind === "write" ? "self-check" : "choice");
+  return question.answerMode ?? (question.kind === "write" ? "handwriting" : "choice");
 }
 
 export function practiceErrorTags(question: Exercise, track: TrackId, selected: string[], writingAssessment = "") {
+  if (writingAssessment === "verified-incomplete-mistake") return ["stroke-missing", "stroke-extra"] as ErrorTag[];
+  if (writingAssessment === "verified-incomplete") return ["stroke-missing"] as ErrorTag[];
+  if (writingAssessment === "verified-mistake" || writingAssessment === "verified-backwards") return ["stroke-extra"] as ErrorTag[];
+  // Legacy values are retained so older queued attempts remain readable.
   if (writingAssessment === "component-error") return ["component-missing", "component-extra"] as ErrorTag[];
   if (writingAssessment === "position-error") return ["component-position"] as ErrorTag[];
   if (writingAssessment === "stroke-error") return ["stroke-missing", "stroke-extra"] as ErrorTag[];

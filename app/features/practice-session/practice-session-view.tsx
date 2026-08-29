@@ -11,8 +11,8 @@ import {
   stableOptionOrder,
   writingRetrievalText,
   type WritingPhase,
-  type WritingSelfAssessment,
 } from "../../domain/practice";
+import type { HandwritingAttempt } from "../../domain/handwriting";
 import { trackMeta } from "../../domain/tracks";
 import type { StudyProfile, TrackId } from "../../lib/profile-model";
 import { MnemonicSceneFocus } from "../character-study/mnemonic-scene-focus";
@@ -136,9 +136,9 @@ export function ChallengeRoom({
   onBack,
   onChoose,
   onRemove,
-  onWrite,
+  onWritingProgress,
+  onWritingComplete,
   onClearWrite,
-  onAssessWriting,
   onCheck,
   onNext,
   onPrevious,
@@ -161,9 +161,9 @@ export function ChallengeRoom({
   onBack: () => void;
   onChoose: (id: string) => void;
   onRemove: (id: string, index: number) => void;
-  onWrite: () => void;
+  onWritingProgress: (attempt: HandwritingAttempt) => void;
+  onWritingComplete: (attempt: HandwritingAttempt) => void;
   onClearWrite: () => void;
-  onAssessWriting: (assessment: WritingSelfAssessment) => void;
   onCheck: () => void;
   onNext: () => void;
   onPrevious: () => void;
@@ -187,8 +187,7 @@ export function ChallengeRoom({
   const record = profile.answers[question.id];
   const remediation = remediationGuidanceFor(record?.lastErrorTags ?? []);
   const independentWriting = question.kind === "write" && question.concealTarget === true;
-  const writingReview = question.kind === "write" && writingPhase === "review" && result === null;
-  const concealWritingTarget = independentWriting && !writingReview && result === null;
+  const concealWritingTarget = independentWriting && result === null;
   const writingText = writingRetrievalText(question, character, !concealWritingTarget);
 
   return (
@@ -244,10 +243,10 @@ export function ChallengeRoom({
             key={`${question.id}:${writingRevision}`}
             character={character.hanzi}
             guided={!independentWriting}
-            revealAnswer={writingReview || result !== null}
             retrying={writingPhase === "rewrite"}
             canvasLabel={writingText.canvasLabel}
-            onWrite={onWrite}
+            onProgress={onWritingProgress}
+            onComplete={onWritingComplete}
             onClear={onClearWrite}
           />
         ) : question.kind === "components" && track === "split" ? (
@@ -291,12 +290,10 @@ export function ChallengeRoom({
 
       </section>
 
-      {writingReview ? (
-        <WritingAssessment onAssess={onAssessWriting} />
-      ) : result === null ? (
+      {result === null ? (
         <div className="challenge-actions">
           <button className="game-button primary" disabled={!ready} onClick={onCheck}>
-            {question.kind === "write" ? "显示范字并对照" : "核对答案"}
+            {question.kind === "write" ? "写完了，检查" : "核对答案"}
           </button>
           <div className="challenge-actions-row">
             <button
@@ -310,7 +307,7 @@ export function ChallengeRoom({
               {writingPhase === "rewrite"
                 ? "先完成这次纠错重写"
                 : question.kind === "write"
-                ? <>写完后按 <kbd>Enter</kbd> 显示范字</>
+                ? <>系统会逐笔检查 · 写完后按 <kbd>Enter</kbd> 确认</>
                 : <>按 <kbd>A</kbd>–<kbd>D</kbd> 选择 · <kbd>Enter</kbd> 确认</>}
             </span>
             <button className="text-button" disabled={writingPhase === "rewrite"} onClick={onSkip}>
@@ -328,7 +325,7 @@ export function ChallengeRoom({
             </span>
             <strong>
               {question.kind === "write" && result
-                ? "自查通过"
+                ? "系统判定正确"
                 : result
                 ? "答对了"
                 : remediation?.cue ?? "再看一眼"}
@@ -337,7 +334,7 @@ export function ChallengeRoom({
           </div>
           <p>
             {question.kind === "write" && result
-              ? "已按你的对照自查记录为正确（未经过客观识别）；范字会保留到下一题。"
+              ? "笔顺、方向和位置均已通过逐笔检测，这次书写会记入掌握度。"
               : result
               ? question.explanation || (finalStep ? "这一关完成了，回到地图看看下一站。" : "记住这个线索，再去下一题。")
               : <>正确答案是：<b
@@ -353,28 +350,6 @@ export function ChallengeRoom({
         </div>
       )}
     </main>
-  );
-}
-
-function WritingAssessment({
-  onAssess,
-}: {
-  onAssess: (assessment: WritingSelfAssessment) => void;
-}) {
-  return (
-    <div className="answer-sheet" role="group" aria-labelledby="writing-assessment-title">
-      <div className="answer-sheet-head">
-        <span className="answer-sheet-mark" aria-hidden="true"><CheckCircle2 size={24} /></span>
-        <strong id="writing-assessment-title">逐部件对照后，选择最符合的一项</strong>
-      </div>
-      <p>先看部件、位置和笔画；这是你的对照自查，不等于系统客观识别。</p>
-      <div className="challenge-actions-row">
-        <button className="game-button primary" onClick={() => onAssess("correct")}>我对照后认为一致</button>
-        <button className="game-button ghost" onClick={() => onAssess("component-error")}>部件错</button>
-        <button className="game-button ghost" onClick={() => onAssess("position-error")}>位置错</button>
-        <button className="game-button ghost" onClick={() => onAssess("stroke-error")}>漏多笔</button>
-      </div>
-    </div>
   );
 }
 

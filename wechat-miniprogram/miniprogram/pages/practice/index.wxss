@@ -82,8 +82,7 @@
 .redblue-options>view.is-red text { color:var(--radical-text); }.redblue-options>view.is-blue text { color:var(--part-text); }
 .redblue-options text { font-size:26px; font-weight:900; }
 .writing-board { position:relative; width:100%; max-width:610px; padding:0; overflow:hidden; border:1px solid #bdcee2; border-radius:21px; text-align:left; background:linear-gradient(45deg,transparent 49.8%,rgba(85,128,177,.16) 50%,transparent 50.2%),linear-gradient(-45deg,transparent 49.8%,rgba(85,128,177,.16) 50%,transparent 50.2%),linear-gradient(90deg,transparent 49.8%,rgba(85,128,177,.16) 50%,transparent 50.2%),linear-gradient(transparent 49.8%,rgba(85,128,177,.16) 50%,transparent 50.2%),var(--paper); box-shadow:none; }
-.writing-glyph { position:absolute; z-index:0; inset:0 0 45px; display:flex; align-items:center; justify-content:center; color:rgba(67,117,232,.12); font-family:var(--font-kai); font-size:176px; font-weight:900; pointer-events:none; }
-.writing-canvas { position:relative; z-index:1; display:block; width:100%; height:240px; }
+.writing-canvas { position:relative; z-index:1; display:block; width:100%; height:560rpx; max-height:360px; }
 .writing-footer { position:relative; z-index:2; display:flex; min-height:45px; align-items:center; justify-content:space-between; gap:10px; padding:10px 14px; border-top:1px solid #d4e0ee; background:var(--paper); }
 .writing-footer text { min-width:0; color:var(--ink-soft); font-size:13px; line-height:1.45; }.writing-footer text.has-ink { color:var(--action-text); font-weight:780; }
 .writing-footer button { flex:none; margin:0; padding:4px 7px; color:var(--radical-text); background:transparent; font-size:13px; font-weight:800; }
@@ -98,7 +97,6 @@
 .answer-sheet-head { display:flex; align-items:center; gap:12px; }.answer-sheet-mark { position:relative; display:flex; width:42px; height:42px; flex:none; align-items:center; justify-content:center; border-radius:50%; color:var(--action-on-white); background:white; animation:answer-mark-stamp 420ms var(--ease-out) both; }.answer-sheet.is-correct .answer-sheet-mark { animation:answer-mark-success 460ms var(--ease-out) both; }.answer-sheet.is-correct .answer-sheet-mark::after { position:absolute; inset:-7px; border:2px solid rgba(255,255,255,.72); border-radius:50%; content:""; pointer-events:none; animation:answer-success-ring 520ms ease-out both; }.answer-sheet-mark.is-retry { color:var(--wrong-on-white); }.answer-sheet-title { font-size:21px; }.answer-sheet-attempts { margin-left:auto; padding:6px 12px; border-radius:999px; background:rgba(255,255,255,.24); font-size:13px; font-weight:800; }.answer-copy { font-size:15px; font-weight:500; line-height:1.7; }.answer-sheet .game-button.primary.answer-next { align-self:stretch; border:0; color:var(--action-on-white); background:white; box-shadow:0 4px 0 rgba(15,22,20,.18); }.answer-sheet .game-button.primary.answer-next.wrong { color:var(--wrong-on-white); }
 .answer-sheet-answer { font-weight:800; }.answer-sheet-answer.is-glyph { font-family:var(--font-kai); font-size:20px; font-weight:500; }
 .answer-sheet-note { display:block; margin-top:-4px; font-size:13px; font-weight:600; line-height:1.65; opacity:.82; }
-.writing-assessment { color:var(--ink); background:var(--sky); }.writing-assessment .answer-sheet-mark { color:var(--action-text); background:transparent; }.writing-assessment .challenge-actions-row { align-items:center; justify-content:space-between; gap:12px; }.writing-assessment .game-button { width:auto !important; min-height:48px; padding:11px 18px; border-radius:14px; font-size:14px; }
 /* Completion mirrors the Web reward exactly: the answered question stays
    underneath, two parts fly together, then the finished glyph lands as a seal. */
 .celebration-overlay { position:fixed; z-index:90; inset:0; display:grid; place-items:center; padding:22px; background:rgba(208,213,207,.78); -webkit-backdrop-filter:blur(9px); backdrop-filter:blur(9px); animation:celebration-fade 220ms ease both; }
@@ -180,7 +178,6 @@
 .redblue-exercise { border:0; border-radius:0; background:none; box-shadow:none; }
 .redblue-word { border:2px solid var(--line); border-radius:20px; background:var(--paper); box-shadow:0 var(--press) 0 var(--line); }
 .theme-night .targeted-remediation { border-color:rgba(245,200,109,.24); }
-.writing-assessment .answer-sheet-mark { color:inherit; }
 .answer-sheet-title { color:inherit; font-weight:900; }
 .answer-sheet-note { color:inherit; font-weight:600; }
 .celebration-glyph,.celebration-radical,.celebration-part { font-family:var(--font-kai); }

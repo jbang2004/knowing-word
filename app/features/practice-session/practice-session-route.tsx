@@ -17,12 +17,15 @@ import {
   selectRemediationStep,
   stableOptionOrder,
   updatePracticeSelection,
-  writingAssessmentErrorTags,
   type PracticeMode,
   type PracticeStep,
   type WritingPhase,
-  type WritingSelfAssessment,
 } from "../../domain/practice";
+import {
+  emptyHandwritingAttempt,
+  handwritingErrorTags,
+  type HandwritingAttempt,
+} from "../../domain/handwriting";
 import { buildDailyLearningPlan } from "../../domain/daily-plan";
 import { learningDayKey } from "../../domain/learning-day";
 import type { ErrorTag, LearningAttempt } from "../../domain/learning-state";
@@ -173,15 +176,16 @@ function HydratedPracticeSession({
   );
   const [selectedOptions, setSelectedOptions] = useState<string[]>([]);
   const [wrote, setWrote] = useState(false);
+  const [handwritingAttempt, setHandwritingAttempt] = useState<HandwritingAttempt>(emptyHandwritingAttempt);
   const [result, setResult] = useState<boolean | null>(null);
   const [writingPhase, setWritingPhase] = useState<WritingPhase>("draft");
   const [writingRevision, setWritingRevision] = useState(0);
-  const [writingRevealCount, setWritingRevealCount] = useState(0);
   const [cueFloor, setCueFloor] = useState<0 | 1 | 2 | 3>(0);
   const [sessionSalt, setSessionSalt] = useState(() =>
     globalThis.crypto?.randomUUID?.() ?? `${Date.now()}-${Math.random()}`,
   );
   const attemptStartedAt = useRef(Date.now());
+  const writingSubmissionRef = useRef(false);
   const initialPassedQuestionIds = mode === "mastery" || review === "due"
     ? []
     : steps
@@ -216,9 +220,9 @@ function HydratedPracticeSession({
     setQuestionIndex(Math.min(Math.max(index, 0), steps.length - 1));
     setSelectedOptions([]);
     setWrote(false);
+    setHandwritingAttempt(emptyHandwritingAttempt);
     setResult(null);
     setWritingPhase("draft");
-    setWritingRevealCount(0);
     setCueFloor(0);
     setWritingRevision((previous) => previous + 1);
     attemptStartedAt.current = Date.now();
@@ -244,9 +248,9 @@ function HydratedPracticeSession({
         setQueuedRemediation(null);
         setSelectedOptions([]);
         setWrote(false);
+        setHandwritingAttempt(emptyHandwritingAttempt);
         setResult(null);
         setWritingPhase("draft");
-        setWritingRevealCount(0);
         setCueFloor(0);
         setWritingRevision((previous) => previous + 1);
         attemptStartedAt.current = Date.now();
@@ -255,6 +259,7 @@ function HydratedPracticeSession({
       }
       setSelectedOptions([]);
       setWrote(false);
+      setHandwritingAttempt(emptyHandwritingAttempt);
       setResult(null);
       setCueFloor(2);
       attemptStartedAt.current = Date.now();
@@ -265,9 +270,9 @@ function HydratedPracticeSession({
       setQueuedRemediation(null);
       setSelectedOptions([]);
       setWrote(false);
+      setHandwritingAttempt(emptyHandwritingAttempt);
       setResult(null);
       setWritingPhase("draft");
-      setWritingRevealCount(0);
       setCueFloor(2);
       setWritingRevision((previous) => previous + 1);
       attemptStartedAt.current = Date.now();
@@ -290,6 +295,10 @@ function HydratedPracticeSession({
   }
 
   useEffect(() => {
+    writingSubmissionRef.current = false;
+  }, [currentQuestion?.id, writingRevision]);
+
+  useEffect(() => {
     if (celebration || !currentQuestion) return;
     const onKeyDown = (event: KeyboardEvent) => {
       if (event.target instanceof HTMLInputElement || event.target instanceof HTMLTextAreaElement) return;
@@ -297,7 +306,7 @@ function HydratedPracticeSession({
         event.preventDefault();
         if (result === null) {
           const ready = currentQuestion.kind === "write"
-            ? wrote && writingPhase !== "review"
+            ? wrote
             : selectedOptions.length > 0;
           if (ready) checkAnswer();
         } else {
@@ -469,9 +478,8 @@ function HydratedPracticeSession({
   function checkAnswer() {
     if (!currentQuestion || result !== null) return;
     if (currentQuestion.kind === "write") {
-      if (!wrote || writingPhase === "review") return;
-      setWritingPhase("review");
-      setWritingRevealCount((previous) => previous + 1);
+      if (!wrote) return;
+      gradeHandwriting(handwritingAttempt);
       return;
     }
     const correct = isPracticeAnswerCorrect(
@@ -488,31 +496,47 @@ function HydratedPracticeSession({
     });
   }
 
-  function assessWriting(assessment: WritingSelfAssessment) {
-    if (!currentQuestion || currentQuestion.kind !== "write" || writingPhase !== "review") return;
+  function gradeHandwriting(attempt: HandwritingAttempt) {
+    if (!currentQuestion || currentQuestion.kind !== "write" || result !== null) return;
+    if (writingSubmissionRef.current) return;
+    writingSubmissionRef.current = true;
+    const attempted = attempt.acceptedStrokes + attempt.mistakes > 0;
     const correct = isPracticeAnswerCorrect(
       currentQuestion,
       character,
       currentTrack,
       selectedOptions,
-      wrote,
-      assessment,
+      attempted,
+      attempt,
     );
-    const errorTags = writingAssessmentErrorTags(assessment);
-    const cueLevel = practiceCueLevel(currentQuestion, writingRevealCount > 1);
+    const errorTags = handwritingErrorTags(attempt);
+    const cueLevel = practiceCueLevel(
+      currentQuestion,
+      cueFloor >= 2 || writingPhase === "rewrite",
+    );
     recordAnswer({
       correct,
       errorTags,
       cueLevel,
-      answerMode: "self-check",
-      recordedSelection: [assessment],
+      answerMode: "handwriting",
+      recordedSelection: [
+        `strokes:${attempt.acceptedStrokes}/${attempt.expectedStrokes}`,
+        `mistakes:${attempt.mistakes}`,
+        `backwards:${attempt.backwardsMistakes}`,
+      ],
       showResult: correct,
     });
     if (correct) return;
     setWritingPhase("rewrite");
     setWrote(false);
+    setHandwritingAttempt(emptyHandwritingAttempt);
     setWritingRevision((previous) => previous + 1);
     attemptStartedAt.current = Date.now();
+  }
+
+  function updateHandwriting(attempt: HandwritingAttempt) {
+    setHandwritingAttempt(attempt);
+    setWrote(attempt.acceptedStrokes + attempt.mistakes > 0);
   }
 
   function skipStep() {
@@ -718,9 +742,13 @@ function HydratedPracticeSession({
         onRemove={(_id, index) => result === null && setSelectedOptions((items) =>
           items.filter((_, itemIndex) => itemIndex !== index)
         )}
-        onWrite={() => setWrote(true)}
-        onClearWrite={() => setWrote(false)}
-        onAssessWriting={assessWriting}
+        onWritingProgress={updateHandwriting}
+        onWritingComplete={gradeHandwriting}
+        onClearWrite={() => {
+          writingSubmissionRef.current = false;
+          setWrote(false);
+          setHandwritingAttempt(emptyHandwritingAttempt);
+        }}
         onCheck={checkAnswer}
         onNext={nextStep}
         onPrevious={() => questionIndex > 0 && setStep(questionIndex - 1)}

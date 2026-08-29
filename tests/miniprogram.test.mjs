@@ -224,25 +224,31 @@ test("native mini-program shares the Web visual language instead of the retired 
   assert.match(homeStyles, /\.node-badge \{[^}]*overflow:visible;/u);
 });
 
-test("native practice keeps the Web mobile answer and completion geometry", async () => {
+test("native practice uses objective Hanzi Writer validation with the Web mobile geometry", async () => {
   const [template, styles, script] = await Promise.all([
     readFile(new URL("miniprogram/pages/practice/index.wxml", root), "utf8"),
     readFile(new URL("miniprogram/pages/practice/index.wxss", root), "utf8"),
     readFile(new URL("miniprogram/pages/practice/index.ts", root), "utf8"),
   ]);
 
-  assert.match(template, /class="answer-sheet writing-assessment"[\s\S]*class="challenge-actions-row"/u);
-  assert.doesNotMatch(template, /writing-assessment-grid/u);
+  assert.match(template, /<canvas type="2d" id="writingCanvas"/u);
+  assert.match(template, /写完了，检查/u);
+  assert.doesNotMatch(template, /writing-assessment|selfAssess|我对照后认为一致/u);
   assert.match(template, /class="answer-sheet-answer \{\{resultAnswerIsGlyph/u);
   assert.match(template, /celebration-stat-label">题目<\/small><text class="celebration-stat-value"/u);
   assert.match(script, /resultAnswerIsGlyph:\s*!correct && Array\.from\(correctAnswer\)\.length <= 6/u);
   assert.match(script, /if \(!correct\) wx\.vibrateShort\(\{ type: "medium"/u);
+  assert.match(script, /HanziWriter\.create\(canvas, character\.hanzi/u);
+  assert.match(script, /charDataLoader: loadHanziWriterData/u);
+  assert.match(script, /acceptBackwardsStrokes: false/u);
+  assert.match(script, /markStrokeCorrectAfterMisses: false/u);
+  assert.match(script, /attempt\.mistakes === 0[\s\S]*attempt\.backwardsMistakes === 0/u);
 
   assert.match(styles, /\.choice-card \{[^}]*gap:13px;[^}]*padding:12px 15px;[^}]*border-radius:18px;/u);
   assert.match(styles, /\.challenge-actions-row \{[^}]*min-height:44px;[^}]*gap:12px;/u);
   assert.match(styles, /\.answer-sheet \{[^}]*gap:12px;[^}]*margin-right:-20px;[^}]*margin-left:-20px;[^}]*border-radius:28px 28px 0 0;/u);
   assert.match(styles, /\.answer-sheet-note \{[^}]*margin-top:-4px;[^}]*font-size:13px;[^}]*line-height:1\.65;/u);
-  assert.match(styles, /\.writing-assessment \.game-button \{[^}]*width:auto !important;[^}]*min-height:48px;[^}]*padding:11px 18px;[^}]*border-radius:14px;[^}]*font-size:14px;/u);
+  assert.match(styles, /\.writing-canvas \{[^}]*width:100%;[^}]*height:560rpx;[^}]*max-height:360px;/u);
   assert.match(styles, /\.celebration-card \{[^}]*width:calc\(100% - 32px\);[^}]*max-width:420px;[^}]*max-height:92vh;[^}]*gap:14px;[^}]*padding:26px 22px calc\(24px \+ env\(safe-area-inset-bottom\)\);[^}]*border-radius:30px;/u);
   assert.match(styles, /\.celebration-actions \{[^}]*flex-direction:column;[^}]*gap:9px;[^}]*margin-top:2px;/u);
   assert.match(styles, /\.celebration-actions \.game-button\.primary\.celebration-primary \{[^}]*min-height:48px;[^}]*border-radius:14px;[^}]*font-size:14px;/u);

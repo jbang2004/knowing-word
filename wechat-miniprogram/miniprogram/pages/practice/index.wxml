@@ -20,9 +20,8 @@
       </view>
 
       <view wx:if="{{showWritingBoard}}" class="writing-board">
-        <view wx:if="{{!independentWriting || writingReview || answered}}" class="writing-glyph kai">{{character.hanzi}}</view>
-        <canvas canvas-id="writingCanvas" id="writingCanvas" class="writing-canvas" disable-scroll="{{true}}" bindtouchstart="startWriting" bindtouchmove="moveWriting" bindtouchend="endWriting" bindtouchcancel="endWriting" aria-label="书写{{character.hanzi}}"></canvas>
-        <view class="writing-footer"><text class="{{strokeCount ? 'has-ink' : ''}}">{{writingReview || answered ? '规范字已显示：请逐部件对照是否漏笔、错位' : (strokeCount ? '已记录 ' + strokeCount + ' 笔，继续把字写完整' : (writingRewrite ? '范字已隐藏并清空：根据刚才发现的问题重新写完整' : (independentWriting ? '空白书写：写完后再显示范字对照' : '沿着浅色字形认真描写，轻点一下不会算作完成')))}}</text><button wx:if="{{answered ? false : !writingReview}}" bindtap="clearWriting">重新写</button></view>
+        <canvas type="2d" id="writingCanvas" class="writing-canvas" disable-scroll="{{true}}" bindtouchstart="startWriting" bindtouchmove="moveWriting" bindtouchend="endWriting" bindtouchcancel="endWriting" aria-label="按规范笔顺书写{{character.hanzi}}"></canvas>
+        <view class="writing-footer"><text class="{{acceptedStrokeCount || writingMistakes ? 'has-ink' : ''}}">{{writingStatus}}</text><button wx:if="{{!answered}}" bindtap="clearWriting">重新写</button></view>
       </view>
 
       <view wx:elif="{{splitAssembly}}" class="assembly-exercise">
@@ -62,17 +61,11 @@
     </view>
 
     <view wx:if="{{showPendingActions}}" class="challenge-actions">
-      <view class="game-button primary press-card {{ready ? '' : 'disabled'}}" bindtap="checkAnswer" role="button" hover-class="{{ready ? 'is-pressed' : 'none'}}">{{isWriting ? '显示范字并对照' : '核对答案'}}</view>
+      <view class="game-button primary press-card {{ready ? '' : 'disabled'}}" bindtap="checkAnswer" role="button" hover-class="{{ready ? 'is-pressed' : 'none'}}">{{isWriting ? '写完了，检查' : '核对答案'}}</view>
       <view class="challenge-actions-row"><button class="text-button {{questionIndex === 0 || writingRewrite ? 'disabled' : ''}}" disabled="{{questionIndex === 0 || writingRewrite}}" bindtap="previousQuestion"><ki-icon name="arrow-left" size="16" /><text>上一题</text></button><button class="text-button {{writingRewrite ? 'disabled' : ''}}" disabled="{{writingRewrite}}" bindtap="skipQuestion"><text>跳过这一题</text><ki-icon name="arrow-right" size="16" /></button></view>
     </view>
 
-    <view wx:if="{{writingReview}}" class="answer-sheet writing-assessment">
-      <view class="answer-sheet-head"><view class="answer-sheet-mark is-check" aria-hidden="true"><ki-icon name="check-circle" size="23" /></view><strong class="answer-sheet-title">逐部件对照后，选择最符合的一项</strong></view>
-      <view class="answer-copy">先看部件、位置和笔画；这是你的对照自查，不等于系统客观识别。</view>
-      <view class="challenge-actions-row"><view class="game-button primary press-card" data-assessment="correct" bindtap="selfAssess" hover-class="is-pressed">我对照后认为一致</view><view class="game-button ghost press-card" data-assessment="component-error" bindtap="selfAssess" hover-class="is-pressed">部件错</view><view class="game-button ghost press-card" data-assessment="position-error" bindtap="selfAssess" hover-class="is-pressed">位置错</view><view class="game-button ghost press-card" data-assessment="stroke-error" bindtap="selfAssess" hover-class="is-pressed">漏多笔</view></view>
-    </view>
-
-    <view wx:elif="{{answered}}" class="answer-sheet {{correct ? 'is-correct' : 'is-wrong'}}">
+    <view wx:if="{{answered}}" class="answer-sheet {{correct ? 'is-correct' : 'is-wrong'}}">
       <view class="answer-sheet-head"><view class="answer-sheet-mark {{correct ? 'is-check' : 'is-retry'}}" aria-hidden="true"><ki-icon name="{{correct ? 'check-circle' : 'replay'}}" size="23" /></view><strong class="answer-sheet-title">{{resultTitle}}</strong><small class="answer-sheet-attempts">已尝试 {{currentAttempts}} 次</small></view>
       <view class="answer-copy"><text wx:if="{{resultAnswer}}">正确答案是：</text><text wx:if="{{resultAnswer}}" class="answer-sheet-answer {{resultAnswerIsGlyph ? 'is-glyph' : ''}}">{{resultAnswer}}</text><text wx:else>{{resultCopy}}</text></view>
       <small wx:if="{{resultNote}}" class="answer-sheet-note">{{resultNote}}</small>

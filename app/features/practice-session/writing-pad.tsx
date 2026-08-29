@@ -1,144 +1,246 @@
 "use client";
 
+import { useEffect, useRef, useState } from "react";
+import type HanziWriter from "hanzi-writer";
+import type { CharacterJson, StrokeData } from "hanzi-writer";
 import {
-  type PointerEvent as ReactPointerEvent,
-  useEffect,
-  useRef,
-  useState,
-} from "react";
+  emptyHandwritingAttempt,
+  hanziWriterDataPath,
+  type HandwritingAttempt,
+} from "../../domain/handwriting";
+
+const characterDataCache = new Map<string, Promise<CharacterJson>>();
+
+function loadCharacterData(character: string) {
+  const cached = characterDataCache.get(character);
+  if (cached) return cached;
+  const request = fetch(hanziWriterDataPath(character), {
+    cache: "force-cache",
+    headers: { accept: "application/json" },
+  }).then(async (response) => {
+    if (!response.ok) throw new Error(`笔画数据加载失败（${response.status}）`);
+    const data = await response.json() as CharacterJson;
+    if (!data.strokes?.length || data.strokes.length !== data.medians?.length) {
+      throw new Error("笔画数据不完整");
+    }
+    return data;
+  }).catch((error) => {
+    characterDataCache.delete(character);
+    throw error;
+  });
+  characterDataCache.set(character, request);
+  return request;
+}
+
+function expectedStrokeCount(data: StrokeData, fallback: number) {
+  return fallback || data.strokeNum + data.strokesRemaining + 1;
+}
 
 export function WritingPad({
   character,
   guided,
-  revealAnswer,
   retrying,
   canvasLabel,
-  onWrite,
+  onProgress,
+  onComplete,
   onClear,
 }: {
   character: string;
   guided: boolean;
-  revealAnswer: boolean;
   retrying: boolean;
   canvasLabel: string;
-  onWrite: () => void;
+  onProgress: (attempt: HandwritingAttempt) => void;
+  onComplete: (attempt: HandwritingAttempt) => void;
   onClear: () => void;
 }) {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
-  const drawingRef = useRef(false);
-  const lastPointRef = useRef<{ x: number; y: number } | null>(null);
-  const strokeLengthRef = useRef(0);
-  const acceptedRef = useRef(false);
-  const [strokeCount, setStrokeCount] = useState(0);
+  const targetRef = useRef<HTMLDivElement>(null);
+  const writerRef = useRef<HanziWriter | null>(null);
+  const expectedRef = useRef(0);
+  const backwardsRef = useRef(0);
+  const callbacksRef = useRef({ onProgress, onComplete });
+  const [attempt, setAttempt] = useState<HandwritingAttempt>(emptyHandwritingAttempt);
+  const [loadState, setLoadState] = useState<"loading" | "ready" | "error">("loading");
+  const [lastMistakeBackwards, setLastMistakeBackwards] = useState(false);
+  const [setupRevision, setSetupRevision] = useState(0);
 
   useEffect(() => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
-    const setup = () => {
-      const context = canvas.getContext("2d");
-      if (!context) return;
-      const rect = canvas.getBoundingClientRect();
-      const ratio = window.devicePixelRatio || 1;
-      canvas.width = Math.max(1, Math.round(rect.width * ratio));
-      canvas.height = Math.max(1, Math.round(rect.height * ratio));
-      context.scale(ratio, ratio);
-      context.strokeStyle = "#263b64";
-      context.lineWidth = 5;
-      context.lineCap = "round";
-      context.lineJoin = "round";
-    };
-    setup();
-    const observer = new ResizeObserver(setup);
-    observer.observe(canvas);
-    return () => observer.disconnect();
-  }, []);
+    callbacksRef.current = { onProgress, onComplete };
+  }, [onComplete, onProgress]);
 
-  function position(event: ReactPointerEvent<HTMLCanvasElement>) {
-    const rect = event.currentTarget.getBoundingClientRect();
-    return { x: event.clientX - rect.left, y: event.clientY - rect.top };
-  }
+  useEffect(() => {
+    const target = targetRef.current;
+    if (!target) return;
+    let disposed = false;
+    let starting = false;
+    let writer: HanziWriter | null = null;
 
-  function start(event: ReactPointerEvent<HTMLCanvasElement>) {
-    if (revealAnswer) return;
-    const context = canvasRef.current?.getContext("2d");
-    if (!context) return;
-    const point = position(event);
-    drawingRef.current = true;
-    lastPointRef.current = point;
-    strokeLengthRef.current = 0;
-    event.currentTarget.setPointerCapture(event.pointerId);
-    context.beginPath();
-    context.moveTo(point.x, point.y);
-  }
+    expectedRef.current = 0;
+    backwardsRef.current = 0;
+    setAttempt(emptyHandwritingAttempt);
+    setLoadState("loading");
+    setLastMistakeBackwards(false);
+    target.replaceChildren();
 
-  function draw(event: ReactPointerEvent<HTMLCanvasElement>) {
-    if (!drawingRef.current) return;
-    const context = canvasRef.current?.getContext("2d");
-    if (!context) return;
-    const point = position(event);
-    const previous = lastPointRef.current;
-    if (previous) {
-      strokeLengthRef.current += Math.hypot(point.x - previous.x, point.y - previous.y);
+    function publish(next: HandwritingAttempt, completed = false) {
+      if (disposed) return;
+      setAttempt(next);
+      callbacksRef.current.onProgress(next);
+      if (completed) callbacksRef.current.onComplete(next);
     }
-    lastPointRef.current = point;
-    context.lineTo(point.x, point.y);
-    context.stroke();
-  }
 
-  function stop() {
-    if (drawingRef.current && strokeLengthRef.current >= 7) {
-      setStrokeCount((count) => count + 1);
-      // A meaningful stroke enables comparison with the model character. It
-      // never marks the answer correct; the explicit self-assessment does.
-      if (!acceptedRef.current) {
-        acceptedRef.current = true;
-        onWrite();
+    async function ensureWriter(width: number, height: number) {
+      if (writer || starting || width < 80 || height < 80) return;
+      starting = true;
+      try {
+        const { default: HanziWriterClass } = await import("hanzi-writer");
+        if (disposed) return;
+        writer = HanziWriterClass.create(target!, character, {
+          width,
+          height,
+          padding: Math.max(10, Math.round(Math.min(width, height) * 0.045)),
+          renderer: "svg",
+          showCharacter: false,
+          showOutline: guided || retrying,
+          outlineColor: "#b9c8db",
+          strokeColor: "#263b64",
+          drawingColor: "#263b64",
+          highlightColor: "#ef8f43",
+          drawingWidth: 7,
+          strokeWidth: 3,
+          outlineWidth: 2,
+          charDataLoader: (requestedCharacter) => loadCharacterData(requestedCharacter),
+          onLoadCharDataSuccess: (data) => {
+            expectedRef.current = data.strokes.length;
+            setLoadState("ready");
+            publish({
+              ...emptyHandwritingAttempt,
+              expectedStrokes: data.strokes.length,
+            });
+          },
+          onLoadCharDataError: () => setLoadState("error"),
+        });
+        writerRef.current = writer;
+        await writer.quiz({
+          leniency: 1.25,
+          averageDistanceThreshold: 350,
+          showHintAfterMisses: 2,
+          highlightOnComplete: false,
+          acceptBackwardsStrokes: false,
+          markStrokeCorrectAfterMisses: false,
+          onMistake: (data) => {
+            const expected = expectedStrokeCount(data, expectedRef.current);
+            if (data.isBackwards) backwardsRef.current += 1;
+            setLastMistakeBackwards(data.isBackwards);
+            publish({
+              acceptedStrokes: expected - data.strokesRemaining,
+              expectedStrokes: expected,
+              mistakes: data.totalMistakes,
+              backwardsMistakes: backwardsRef.current,
+              complete: false,
+            });
+          },
+          onCorrectStroke: (data) => {
+            const expected = expectedStrokeCount(data, expectedRef.current);
+            setLastMistakeBackwards(false);
+            publish({
+              acceptedStrokes: expected - data.strokesRemaining,
+              expectedStrokes: expected,
+              mistakes: data.totalMistakes,
+              backwardsMistakes: backwardsRef.current,
+              complete: data.strokesRemaining === 0,
+            });
+          },
+          onComplete: (summary) => {
+            const expected = expectedRef.current;
+            publish({
+              acceptedStrokes: expected,
+              expectedStrokes: expected,
+              mistakes: summary.totalMistakes,
+              backwardsMistakes: backwardsRef.current,
+              complete: true,
+            }, true);
+          },
+        });
+      } catch {
+        if (!disposed) setLoadState("error");
+      } finally {
+        starting = false;
       }
     }
-    drawingRef.current = false;
-    lastPointRef.current = null;
-    strokeLengthRef.current = 0;
-  }
+
+    const observer = new ResizeObserver(([entry]) => {
+      const width = Math.round(entry.contentRect.width);
+      const height = Math.round(entry.contentRect.height);
+      if (writer) {
+        writer.updateDimensions({
+          width,
+          height,
+          padding: Math.max(10, Math.round(Math.min(width, height) * 0.045)),
+        });
+      } else {
+        void ensureWriter(width, height);
+      }
+    });
+    observer.observe(target);
+    const rect = target.getBoundingClientRect();
+    void ensureWriter(Math.round(rect.width), Math.round(rect.height));
+
+    return () => {
+      disposed = true;
+      observer.disconnect();
+      writer?.cancelQuiz();
+      if (writerRef.current === writer) writerRef.current = null;
+      target.replaceChildren();
+    };
+  }, [character, guided, retrying, setupRevision]);
 
   function clear() {
-    const canvas = canvasRef.current;
-    const context = canvas?.getContext("2d");
-    if (!canvas || !context) return;
-    context.clearRect(0, 0, canvas.width, canvas.height);
-    drawingRef.current = false;
-    lastPointRef.current = null;
-    strokeLengthRef.current = 0;
-    acceptedRef.current = false;
-    setStrokeCount(0);
+    writerRef.current?.cancelQuiz();
+    expectedRef.current = 0;
+    backwardsRef.current = 0;
+    setAttempt(emptyHandwritingAttempt);
+    setLastMistakeBackwards(false);
     onClear();
+    setSetupRevision((value) => value + 1);
   }
 
+  const attemptedStrokes = attempt.acceptedStrokes + attempt.mistakes;
+  const status = loadState === "loading"
+    ? "正在准备规范笔画…"
+    : loadState === "error"
+      ? "规范笔画加载失败，请重新加载"
+      : attempt.complete
+        ? `已完成 ${attempt.expectedStrokes} 笔，正在判定`
+        : attempt.mistakes > 0
+          ? lastMistakeBackwards
+            ? `第 ${attempt.acceptedStrokes + 1} 笔方向反了，请按正确方向重写`
+            : `第 ${attempt.acceptedStrokes + 1} 笔的位置、形状或笔顺不对，请重写这一笔`
+          : attempt.acceptedStrokes > 0
+            ? `已正确完成 ${attempt.acceptedStrokes} / ${attempt.expectedStrokes} 笔`
+            : retrying
+              ? "按系统提示重新写，规范笔画会逐笔检查"
+              : guided
+                ? "沿规范轮廓按笔顺书写，系统会逐笔检查"
+                : "空白书写：系统会逐笔检查笔顺、方向和位置";
+
   return (
-    <div className={`writing-board${guided ? "" : " is-unguided"}${revealAnswer ? " is-answer-revealed" : ""}`}>
-      {(guided || revealAnswer) && <div className="writing-guide" aria-hidden="true">{character}</div>}
-      <canvas
-        ref={canvasRef}
+    <div className={`writing-board${guided ? "" : " is-unguided"}${retrying ? " is-retrying" : ""}`}>
+      <div
+        ref={targetRef}
+        className="hanzi-writer-surface"
+        role="application"
         aria-label={canvasLabel}
-        aria-disabled={revealAnswer}
-        onPointerDown={start}
-        onPointerMove={draw}
-        onPointerUp={stop}
-        onPointerLeave={stop}
-        onPointerCancel={stop}
+        aria-busy={loadState === "loading"}
       />
       <div className="writing-footer">
-        <span className={strokeCount ? "writing-status has-ink" : "writing-status"}>
-          {revealAnswer
-            ? "规范字已显示：请逐部件对照是否漏笔、错位"
-            : strokeCount
-              ? `已记录 ${strokeCount} 笔，继续把字写完整`
-              : retrying
-                ? "范字已隐藏并清空：根据刚才发现的问题重新写完整"
-                : guided
-                  ? "沿着浅色字形认真描写，轻点一下不会算作完成"
-                  : "空白书写：写完后再显示范字对照"}
+        <span
+          className={attemptedStrokes ? "writing-status has-ink" : "writing-status"}
+          role="status"
+          aria-live="polite"
+        >
+          {status}
         </span>
-        {!revealAnswer && <button onClick={clear}>重新写</button>}
+        <button onClick={clear}>{loadState === "error" ? "重新加载" : "重新写"}</button>
       </div>
     </div>
   );

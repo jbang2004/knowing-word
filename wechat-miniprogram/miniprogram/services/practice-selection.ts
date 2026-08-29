@@ -11,7 +11,7 @@ type PracticeContract = {
 /** Pure practice selection; kept free of wx and generated-module imports for contract testing. */
 export function createPracticeSelectors(contract: PracticeContract) {
   function answerMode(exercise: Exercise) {
-    return exercise.answerMode ?? (exercise.kind === "write" ? "self-check" : "choice");
+    return exercise.answerMode ?? (exercise.kind === "write" ? "handwriting" : "choice");
   }
 
   function dimension(exercise: Exercise, track: TrackId) {

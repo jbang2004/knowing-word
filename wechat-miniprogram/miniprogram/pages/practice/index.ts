@@ -4,6 +4,7 @@ import { navigationLayout } from "../../services/layout";
 import { playLearningSound, stopLearningSound } from "../../services/learning-sounds";
 import { loadProfile, recordAnswer } from "../../services/profile";
 import { masteryStepsFor, trackStepsFor, type PracticeStep } from "../../services/practice";
+import { loadHanziWriterData } from "../../services/hanzi-writer-data";
 import {
   dueDimensions,
   practiceAnswerMode,
@@ -11,8 +12,43 @@ import {
   practiceErrorTags,
 } from "../../services/learning-core";
 import type { CatalogCharacter, Exercise, TrackId } from "../../types/models";
+import HanziWriter = require("../../vendor/hanzi-writer");
 
-let writingContext: WechatMiniprogram.CanvasContext | null = null;
+type WritingAttempt = {
+  acceptedStrokes: number;
+  expectedStrokes: number;
+  mistakes: number;
+  backwardsMistakes: number;
+  complete: boolean;
+};
+
+type WritingCanvasNode = {
+  width: number;
+  height: number;
+};
+
+let writingWriter: HanziWriter.Instance | null = null;
+let writingRenderTarget: HanziWriter.Instance["target"] | null = null;
+let writingScale = 1;
+let writingSession = 0;
+let writingExpected = 0;
+let writingAccepted = 0;
+let writingMistakes = 0;
+let writingBackwards = 0;
+let writingSubmitted = false;
+
+function cancelWritingSession() {
+  writingSession += 1;
+  writingWriter?.cancelQuiz();
+  writingWriter = null;
+  writingRenderTarget = null;
+  writingScale = 1;
+  writingExpected = 0;
+  writingAccepted = 0;
+  writingMistakes = 0;
+  writingBackwards = 0;
+  writingSubmitted = false;
+}
 
 const trackMeta: Record<TrackId, { title: string; eyebrow: string; copy: string }> = {
   words: { title: "完整识字", eyebrow: "字义 · 字形 · 结构 · 书写", copy: "围绕一个字连续完成整套练习。" },
@@ -48,9 +84,10 @@ type CelebrationPart = {
 };
 
 function writingRemediation(assessment = "") {
-  if (assessment === "component-error") return { title: "重新搭一次字形", cue: "部件没有排对", instruction: "看清缺少或多出的部件，说出结构后，收起答案重新写一遍。" };
-  if (assessment === "position-error") return { title: "看清部件位置", cue: "部件位置差了一点", instruction: "先说出左右、上下或包围关系，再按正确位置重新写一遍。" };
-  return { title: "只改错的笔画", cue: "笔画差了一点", instruction: "找出漏笔或多笔，沿正确字形空书一次，然后遮住范字重新写。" };
+  if (assessment === "verified-incomplete") return { title: "把这个字写完整", cue: "还有笔画没有完成", instruction: "按浅色轮廓继续观察笔顺，从第一笔开始把整个字重新写完整。" };
+  if (assessment === "verified-backwards") return { title: "改正笔画方向", cue: "笔画方向反了", instruction: "看清提示笔画的起点和方向，再从第一笔开始按正确方向重写。" };
+  if (assessment === "verified-incomplete-mistake") return { title: "按规范笔顺重新写", cue: "有错笔，而且字还没有写完", instruction: "跟着提示确认下一笔的位置、形状与方向，再完整重写一次。" };
+  return { title: "按规范笔顺重新写", cue: "有笔画没有通过检查", instruction: "看清提示笔画的位置、形状与方向，再从第一笔开始完整重写。" };
 }
 
 function remediationFor(question: Exercise, track: TrackId) {
@@ -164,11 +201,14 @@ Page({
     assemblySlots: [] as AssemblySlot[],
     isWriting: false,
     showWritingBoard: false,
-    writingReview: false,
     writingRewrite: false,
     showWritingRemediation: false,
     independentWriting: false,
-    strokeCount: 0,
+    writingLoadState: "idle" as "idle" | "loading" | "ready" | "error",
+    writingStatus: "正在准备规范笔画…",
+    acceptedStrokeCount: 0,
+    expectedStrokeCount: 0,
+    writingMistakes: 0,
     showPendingActions: false,
     answered: false,
     correct: false,
@@ -220,6 +260,7 @@ Page({
     void this.loadSession();
   },
   onUnload() {
+    cancelWritingSession();
     stopLearningSound();
   },
   async loadSession() {
@@ -296,6 +337,7 @@ Page({
     this.prepareQuestion();
   },
   prepareQuestion(preserveAttempts = false) {
+    cancelWritingSession();
     const step = this.data.questions[this.data.questionIndex];
     if (!step) {
       this.setData({ finished: true });
@@ -320,11 +362,14 @@ Page({
       questionTrack,
       selectedIds: [],
       answered: false,
-      writingReview: false,
       writingRewrite: false,
       showWritingRemediation: false,
       independentWriting: question.kind === "write" && question.concealTarget === true,
-      strokeCount: 0,
+      writingLoadState: question.kind === "write" ? "loading" : "idle",
+      writingStatus: question.kind === "write" ? "正在准备规范笔画…" : "",
+      acceptedStrokeCount: 0,
+      expectedStrokeCount: 0,
+      writingMistakes: 0,
       correct: false,
       currentAttempts: preserveAttempts ? this.data.currentAttempts : 0,
       resultCopy: "",
@@ -364,11 +409,7 @@ Page({
     });
     (this as unknown as { questionStartedAt: number }).questionStartedAt = Date.now();
     if (question.kind === "write") {
-      wx.nextTick(() => {
-        writingContext = wx.createCanvasContext("writingCanvas", this);
-        writingContext.clearRect(0, 0, 640, 640);
-        writingContext.draw();
-      });
+      wx.nextTick(() => this.initWritingWriter());
     }
   },
   chooseOption(event: WechatMiniprogram.BaseEvent) {
@@ -412,10 +453,169 @@ Page({
       viewOptions: this.data.viewOptions.map((option) => ({ ...option, state: selectedIds.includes(option.id) ? "is-picked" : "" })),
     });
   },
+  initWritingWriter() {
+    const character = this.data.character;
+    const question = this.data.question;
+    if (!character || question?.kind !== "write") return;
+    cancelWritingSession();
+    const session = writingSession;
+    this.setData({
+      writingLoadState: "loading",
+      writingStatus: "正在准备规范笔画…",
+      acceptedStrokeCount: 0,
+      expectedStrokeCount: 0,
+      writingMistakes: 0,
+      ready: false,
+    });
+    wx.createSelectorQuery()
+      .in(this)
+      .select("#writingCanvas")
+      .fields({ node: true, size: true })
+      .exec((results) => {
+        if (session !== writingSession) return;
+        const result = results[0] as unknown as {
+          node?: WritingCanvasNode;
+          width?: number;
+          height?: number;
+        };
+        const canvas = result?.node;
+        const cssWidth = Math.round(result?.width ?? 0);
+        const cssHeight = Math.round(result?.height ?? 0);
+        if (!canvas || cssWidth < 80 || cssHeight < 80) {
+          this.setData({
+            writingLoadState: "error",
+            writingStatus: "书写板初始化失败，请点“重新写”再试",
+          });
+          return;
+        }
+        const dpr = Math.max(1, wx.getSystemInfoSync().pixelRatio || 1);
+        const width = Math.round(cssWidth * dpr);
+        const height = Math.round(cssHeight * dpr);
+        canvas.width = width;
+        canvas.height = height;
+        writingScale = dpr;
+        try {
+          const writer = HanziWriter.create(canvas, character.hanzi, {
+            renderer: "canvas",
+            width,
+            height,
+            padding: Math.max(12, Math.round(Math.min(width, height) * 0.05)),
+            showCharacter: false,
+            showOutline: !this.data.independentWriting || this.data.writingRewrite,
+            outlineColor: "#b9c8db",
+            strokeColor: "#263b64",
+            drawingColor: "#263b64",
+            highlightColor: "#ef8f43",
+            drawingWidth: Math.max(7, Math.round(7 * dpr)),
+            strokeWidth: Math.max(3, Math.round(3 * dpr)),
+            outlineWidth: Math.max(2, Math.round(2 * dpr)),
+            charDataLoader: loadHanziWriterData,
+            onLoadCharDataSuccess: (data: HanziWriter.CharacterData) => {
+              if (session !== writingSession) return;
+              writingExpected = data.strokes.length;
+              this.setData({
+                writingLoadState: "ready",
+                writingStatus: this.data.writingRewrite
+                  ? `按规范笔顺重新写，共 ${writingExpected} 笔`
+                  : `请从第一笔开始，共 ${writingExpected} 笔`,
+                expectedStrokeCount: writingExpected,
+              });
+            },
+            onLoadCharDataError: () => {
+              if (session !== writingSession) return;
+              this.setData({
+                writingLoadState: "error",
+                writingStatus: "规范笔画加载失败，请点“重新写”再试",
+              });
+            },
+          });
+          writingWriter = writer;
+          writingRenderTarget = writer.target;
+          void writer.quiz({
+            leniency: 1.25,
+            averageDistanceThreshold: 350,
+            showHintAfterMisses: 2,
+            highlightOnComplete: false,
+            acceptBackwardsStrokes: false,
+            markStrokeCorrectAfterMisses: false,
+            onMistake: (data) => {
+              if (session !== writingSession) return;
+              const expected = writingExpected || data.strokeNum + data.strokesRemaining + 1;
+              writingExpected = expected;
+              writingAccepted = expected - data.strokesRemaining;
+              writingMistakes = data.totalMistakes;
+              if (data.isBackwards) writingBackwards += 1;
+              this.setData({
+                acceptedStrokeCount: writingAccepted,
+                expectedStrokeCount: expected,
+                writingMistakes,
+                ready: true,
+                writingStatus: data.isBackwards
+                  ? `第 ${writingAccepted + 1} 笔方向反了，请按正确方向重写这一笔`
+                  : `第 ${writingAccepted + 1} 笔的位置、形状或笔顺不对，请重写这一笔`,
+              });
+            },
+            onCorrectStroke: (data) => {
+              if (session !== writingSession) return;
+              const expected = writingExpected || data.strokeNum + data.strokesRemaining + 1;
+              writingExpected = expected;
+              writingAccepted = expected - data.strokesRemaining;
+              writingMistakes = data.totalMistakes;
+              this.setData({
+                acceptedStrokeCount: writingAccepted,
+                expectedStrokeCount: expected,
+                writingMistakes,
+                ready: true,
+                writingStatus: data.strokesRemaining === 0
+                  ? `已完成 ${expected} 笔，正在检查…`
+                  : `已正确完成 ${writingAccepted} / ${expected} 笔`,
+              });
+            },
+            onComplete: (summary) => {
+              if (session !== writingSession) return;
+              const attempt: WritingAttempt = {
+                acceptedStrokes: writingExpected,
+                expectedStrokes: writingExpected,
+                mistakes: summary.totalMistakes,
+                backwardsMistakes: writingBackwards,
+                complete: true,
+              };
+              writingAccepted = writingExpected;
+              writingMistakes = summary.totalMistakes;
+              this.setData({
+                acceptedStrokeCount: writingExpected,
+                expectedStrokeCount: writingExpected,
+                writingMistakes,
+                writingStatus: `已完成 ${writingExpected} 笔，系统正在判定`,
+              });
+              this.gradeWriting(attempt);
+            },
+          }).catch(() => {
+            if (session !== writingSession) return;
+            this.setData({
+              writingLoadState: "error",
+              writingStatus: "规范笔画加载失败，请点“重新写”再试",
+            });
+          });
+        } catch {
+          if (session !== writingSession) return;
+          this.setData({
+            writingLoadState: "error",
+            writingStatus: "书写板初始化失败，请点“重新写”再试",
+          });
+        }
+      });
+  },
   checkAnswer() {
     if (this.data.isWriting) {
       if (!this.data.ready) return;
-      this.setData({ writingReview: true, showPendingActions: false });
+      this.gradeWriting({
+        acceptedStrokes: writingAccepted,
+        expectedStrokes: writingExpected,
+        mistakes: writingMistakes,
+        backwardsMistakes: writingBackwards,
+        complete: writingExpected > 0 && writingAccepted === writingExpected,
+      });
       return;
     }
     if (!this.data.ready || !this.data.selectedIds.length) return;
@@ -428,49 +628,40 @@ Page({
     }
     this.evaluate(this.data.selectedIds);
   },
-  selfAssess(event: WechatMiniprogram.BaseEvent) {
-    this.setData({ writingReview: false });
-    const assessment = event.currentTarget.dataset.assessment as string;
-    this.evaluate([], assessment === "correct", assessment === "correct", assessment);
+  gradeWriting(attempt: WritingAttempt) {
+    if (this.data.question?.kind !== "write" || this.data.answered || writingSubmitted) return;
+    writingSubmitted = true;
+    const correct = attempt.complete
+      && attempt.expectedStrokes > 0
+      && attempt.acceptedStrokes === attempt.expectedStrokes
+      && attempt.mistakes === 0
+      && attempt.backwardsMistakes === 0;
+    const assessment = correct
+      ? ""
+      : !attempt.complete
+        ? attempt.mistakes > 0 ? "verified-incomplete-mistake" : "verified-incomplete"
+        : attempt.backwardsMistakes > 0
+          ? "verified-backwards"
+          : "verified-mistake";
+    this.evaluate([], correct, correct, assessment);
   },
   startWriting(event: WechatMiniprogram.TouchEvent) {
-    if (this.data.writingReview || this.data.answered) return;
-    const touch = event.touches[0] as unknown as { x?: number; y?: number; clientX: number; clientY: number };
-    const point = { x: touch.x ?? touch.clientX, y: touch.y ?? touch.clientY };
-    (this as unknown as { writingPoint: typeof point; writingLength: number; writingActive: boolean }).writingPoint = point;
-    (this as unknown as { writingPoint: typeof point; writingLength: number; writingActive: boolean }).writingLength = 0;
-    (this as unknown as { writingPoint: typeof point; writingLength: number; writingActive: boolean }).writingActive = true;
+    if (this.data.answered || this.data.writingLoadState !== "ready") return;
+    const touch = event.touches[0] as unknown as { x: number; y: number };
+    writingRenderTarget?.emitTouchStart(touch.x * writingScale, touch.y * writingScale);
   },
   moveWriting(event: WechatMiniprogram.TouchEvent) {
-    const state = this as unknown as { writingPoint?: { x: number; y: number }; writingLength?: number; writingActive?: boolean };
-    if (!state.writingActive || !state.writingPoint || !writingContext) return;
-    const touch = event.touches[0] as unknown as { x?: number; y?: number; clientX: number; clientY: number };
-    const point = { x: touch.x ?? touch.clientX, y: touch.y ?? touch.clientY };
-    state.writingLength = (state.writingLength ?? 0) + Math.hypot(point.x - state.writingPoint.x, point.y - state.writingPoint.y);
-    writingContext.beginPath();
-    writingContext.setStrokeStyle("#263b64");
-    writingContext.setLineWidth(5);
-    writingContext.setLineCap("round");
-    writingContext.setLineJoin("round");
-    writingContext.moveTo(state.writingPoint.x, state.writingPoint.y);
-    writingContext.lineTo(point.x, point.y);
-    writingContext.stroke();
-    writingContext.draw(true);
-    state.writingPoint = point;
+    if (this.data.answered || this.data.writingLoadState !== "ready") return;
+    const touch = event.touches[0] as unknown as { x: number; y: number };
+    writingRenderTarget?.emitTouchMove(touch.x * writingScale, touch.y * writingScale);
   },
   endWriting() {
-    const state = this as unknown as { writingPoint?: { x: number; y: number }; writingLength?: number; writingActive?: boolean };
-    if (state.writingActive && (state.writingLength ?? 0) >= 7) {
-      this.setData({ strokeCount: this.data.strokeCount + 1, ready: true });
-    }
-    state.writingActive = false;
-    state.writingPoint = undefined;
-    state.writingLength = 0;
+    if (this.data.answered || this.data.writingLoadState !== "ready") return;
+    writingRenderTarget?.emitTouchEnd();
   },
   clearWriting() {
-    writingContext?.clearRect(0, 0, 640, 640);
-    writingContext?.draw();
-    this.setData({ strokeCount: 0, ready: false });
+    if (this.data.answered) return;
+    this.initWritingWriter();
   },
   evaluate(selectedIds: string[], selfCorrect?: boolean, showResult = true, writingAssessment = "") {
     const question = this.data.question;
@@ -529,11 +720,14 @@ Page({
       this.setData({
         answered: false,
         ready: false,
-        writingReview: false,
         writingRewrite: true,
         showWritingRemediation: true,
         showPendingActions: true,
-        strokeCount: 0,
+        writingLoadState: "loading",
+        writingStatus: "正在准备重新书写…",
+        acceptedStrokeCount: 0,
+        expectedStrokeCount: 0,
+        writingMistakes: 0,
         correct: false,
         sessionResults,
         passedQuestionIds: nextPassedQuestionIds,
@@ -544,11 +738,7 @@ Page({
         remediationTitle: remediation.title,
         remediationNote: remediation.instruction,
       });
-      wx.nextTick(() => {
-        writingContext = wx.createCanvasContext("writingCanvas", this);
-        writingContext.clearRect(0, 0, 640, 640);
-        writingContext.draw();
-      });
+      wx.nextTick(() => this.initWritingWriter());
       return;
     }
     const remediation = remediationFor(question, this.data.questionTrack);
@@ -575,9 +765,9 @@ Page({
       currentAttempts: this.data.currentAttempts + 1,
       firstTryRate: Math.min(100, Math.round(this.data.questions.length * 100 / Math.max(sessionResults.length, this.data.questions.length))),
       perfect: sessionResults.length === this.data.questions.length,
-      resultTitle: question.kind === "write" && correct ? "自查通过" : correct ? "答对了" : remediation.cue,
+      resultTitle: question.kind === "write" && correct ? "系统判定正确" : correct ? "答对了" : remediation.cue,
       resultCopy: question.kind === "write" && correct
-        ? "已按你的对照自查记录为正确（未经过客观识别）；范字会保留到下一题。"
+        ? `已按规范笔顺完成 ${writingExpected} 笔，笔画位置、形状与方向均通过检查。`
         : correct
           ? (question.explanation || "记住这个线索，再去下一题。")
           : "",

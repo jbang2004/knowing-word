@@ -85,6 +85,7 @@ wranglerConfig.assets = {
   run_worker_first: [
     "/assets/*",
     "/fonts/*",
+    "/hanzi-data/*",
     "/illustrations/*",
     "/heritage/*",
     "/media/narration/*",

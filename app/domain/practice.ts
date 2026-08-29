@@ -7,6 +7,10 @@ import {
 } from "./learning-state.ts";
 import type { TrackId } from "../lib/profile-model";
 import { diagnoseErrors, type RemediationActivity } from "./error-diagnosis.ts";
+import {
+  isHandwritingCorrect,
+  type HandwritingAttempt,
+} from "./handwriting.ts";
 import { learningTrackIds, trackMeta } from "./tracks.ts";
 
 export type PracticeMode = "track" | "mastery";
@@ -22,15 +26,7 @@ export type RemediationStep = {
   activity: RemediationActivity;
 };
 
-export const writingSelfAssessments = [
-  "correct",
-  "component-error",
-  "position-error",
-  "stroke-error",
-] as const;
-
-export type WritingSelfAssessment = typeof writingSelfAssessments[number];
-export type WritingPhase = "draft" | "review" | "rewrite";
+export type WritingPhase = "draft" | "rewrite";
 
 export function getTrackExercises(character: CharacterItem, track: TrackId) {
   return character.exercises.filter((exercise) => {
@@ -245,15 +241,6 @@ export function writingRetrievalText(
   };
 }
 
-export function writingAssessmentErrorTags(
-  assessment: WritingSelfAssessment,
-): ErrorTag[] {
-  if (assessment === "component-error") return ["component-missing", "component-extra"];
-  if (assessment === "position-error") return ["component-position"];
-  if (assessment === "stroke-error") return ["stroke-missing", "stroke-extra"];
-  return [];
-}
-
 export function practiceDimension(
   question: Exercise,
   track: TrackId,
@@ -269,7 +256,7 @@ export function practiceDimension(
 
 export function practiceAnswerMode(question: Exercise): AnswerMode {
   if (question.answerMode) return question.answerMode;
-  return question.kind === "write" ? "self-check" : "choice";
+  return question.kind === "write" ? "handwriting" : "choice";
 }
 
 export function practiceCueLevel(
@@ -343,12 +330,14 @@ export function isPracticeAnswerCorrect(
   track: TrackId,
   selected: string[],
   wrote: boolean,
-  writingAssessment?: WritingSelfAssessment,
+  handwritingAttempt?: HandwritingAttempt,
 ) {
-  // Ink only proves that the learner attempted the prompt. Handwriting is
-  // graded after the model character is revealed and the learner explicitly
-  // compares components, placement and strokes.
-  if (question.kind === "write") return wrote && writingAssessment === "correct";
+  // Ink only proves that the learner attempted the prompt. A writing answer is
+  // correct only after Hanzi Writer verifies every expected stroke without a
+  // rejected, backwards or out-of-order stroke.
+  if (question.kind === "write") {
+    return wrote && Boolean(handwritingAttempt) && isHandwritingCorrect(handwritingAttempt!);
+  }
   const expected = expectedAnswerIds(question, character, track);
   if (track === "split" && question.kind === "components") {
     return expected.length === selected.length && expected.every((id, index) => selected[index] === id);
