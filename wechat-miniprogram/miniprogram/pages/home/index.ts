@@ -86,6 +86,14 @@ function makeView(profile: StudyProfile) {
     .filter((item) => item.dueAt <= Date.now())
     .sort((left, right) => left.dueAt - right.dueAt);
   const allWordsComplete = lessonCharacters.length > 0 && lessonCompleted === lessonCharacters.length;
+  const pendingReadingLesson = [...lessonIndex].reverse().find((lesson) => {
+    const wordIds = readyCharacters
+      .filter((character) => character.lessonId === lesson.id)
+      .map((character) => character.id);
+    return wordIds.length > 0
+      && wordIds.every((id) => completedWords.has(id))
+      && !profile.readLessons.includes(lesson.id);
+  }) ?? null;
   const reviewTracks = trackDetails.slice(1).map((track) => {
     const completed = new Set(profile.completed[track.id]);
     const completedCount = lessonCharacters.filter((character) => completed.has(character.id)).length;
@@ -113,6 +121,7 @@ function makeView(profile: StudyProfile) {
     allWordsComplete,
     allReviewsComplete: allWordsComplete && reviewTracks.every((track) => track.state === "complete"),
     readCompleted: profile.readLessons.includes(nextLesson.id),
+    pendingReadingLesson,
     practiceStatus: allWordsComplete
       ? "本课生字已经学完"
       : `完成 ${lessonCompleted}/${lessonCharacters.length} 个识字小测后解锁`,
@@ -147,6 +156,7 @@ Page({
     allWordsComplete: false,
     allReviewsComplete: false,
     readCompleted: false,
+    pendingReadingLesson: null as typeof lessonIndex[number] | null,
     practiceStatus: "完成识字小测后解锁",
     streak: 0,
     dueReview: null as typeof characterIndex[number] | null,
@@ -220,5 +230,10 @@ Page({
       return;
     }
     wx.navigateTo({ url: `/pages/reader/index?lessonId=${this.data.nextLesson.id}` });
+  },
+  openPendingReader() {
+    const lesson = this.data.pendingReadingLesson;
+    if (!lesson) return;
+    wx.navigateTo({ url: `/pages/reader/index?lessonId=${lesson.id}` });
   },
 });

@@ -160,6 +160,31 @@ test("mini-program ships one real reading model for every lesson", async () => {
   }
 });
 
+test("native reading practice is optional, non-evaluative, and never gates lesson progress", async () => {
+  const [readerTemplate, readerScript, profileSource, eventSource, homeTemplate, homeScript] = await Promise.all([
+    readFile(new URL("miniprogram/pages/reader/index.wxml", root), "utf8"),
+    readFile(new URL("miniprogram/pages/reader/index.ts", root), "utf8"),
+    readFile(new URL("miniprogram/services/profile.ts", root), "utf8"),
+    readFile(new URL("miniprogram/services/events.ts", root), "utf8"),
+    readFile(new URL("miniprogram/pages/home/index.wxml", root), "utf8"),
+    readFile(new URL("miniprogram/pages/home/index.ts", root), "utf8"),
+  ]);
+
+  assert.match(readerTemplate, /不自动评判对错；录音为选做/u);
+  assert.match(readerTemplate, /我已经大声读了一遍/u);
+  assert.match(readerTemplate, /这不是对错评分/u);
+  assert.match(readerTemplate, /开始录音（选做）/u);
+  assert.doesNotMatch(readerTemplate, /每个字都读准|有字读错/u);
+  assert.match(readerScript, /recordReadingPractice/u);
+  assert.doesNotMatch(readerScript, /minimumReadingDurationMs|lessonLearningComplete|canAssess/u);
+  assert.match(profileSource, /if \(!profile\.readLessons\.includes\(lessonId\)\)/u);
+  assert.match(eventSource, /readingReflection/u);
+  assert.doesNotMatch(eventSource, /readingAccuracy/u);
+  assert.match(homeTemplate, /不会阻塞新课进度/u);
+  assert.match(homeScript, /pendingReadingLesson/u);
+  assert.match(homeScript, /readyCharacters\.find\(\(character\) => !completedWords\.has\(character\.id\)\)/u);
+});
+
 test("native mini-program shares the Web visual language instead of the retired paper theme", async () => {
   const app = JSON.parse(await readFile(new URL("miniprogram/app.json", root), "utf8"));
   const appStyles = await readFile(new URL("miniprogram/app.wxss", root), "utf8");

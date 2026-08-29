@@ -1,5 +1,5 @@
 <view class="read-page theme-{{theme}}" style="padding-top: {{navHeight + 18}}px;">
-  <view class="utility-heading"><button class="nav-back" bindtap="goBack" aria-label="返回"><ki-icon name="arrow-left" size="22" /></button><view class="utility-heading-content"><strong>先听一遍，再把句子读出来</strong><text>已完成 {{readingSessions}} 次朗读练习。登录状态下，录音可跨设备回听。</text></view></view>
+  <view class="utility-heading"><button class="nav-back" bindtap="goBack" aria-label="返回"><ki-icon name="arrow-left" size="22" /></button><view class="utility-heading-content"><strong>先听一遍，再把句子读出来</strong><text>已完成 {{readingSessions}} 次朗读练习。这里只记录练习和感受，不自动评判对错；录音为选做。</text></view></view>
 
   <view wx:if="{{loading}}" class="read-loading"><view class="skeleton"></view></view>
   <view wx:elif="{{error}}" class="read-empty">{{error}}</view>
@@ -15,8 +15,8 @@
 
     <view class="read-studio">
       <view class="read-mascot"><text>读</text></view>
-      <view class="studio-copy"><text>跟读小任务</text><strong>{{lesson.title}}</strong><view>先听范读，再按下录音键读一遍。</view></view>
-      <view class="record-launch press-card {{recording ? 'recording' : ''}}" bindtap="toggleRecording" role="button" hover-class="is-pressed"><ki-icon name="{{recording ? 'stop-circle' : 'microphone'}}" size="19" />{{recording ? '结束录音' : '开始录音'}}</view>
+      <view class="studio-copy"><text>跟读小任务</text><strong>{{lesson.title}}</strong><view>先听范读，再自己大声读一遍；不需要录音也能完成练习。</view></view>
+      <view class="record-launch press-card" bindtap="markRead" role="button" hover-class="is-pressed"><ki-icon name="check" size="19" />我已经大声读了一遍</view>
     </view>
 
     <view class="sentence-list">
@@ -26,12 +26,22 @@
       </view>
     </view>
 
+    <view class="reading-reflection {{readingReflection ? 'is-recorded' : ''}}">
+      <view class="result-mark" aria-label="朗读练习"><ki-icon name="check" size="18" /></view>
+      <view class="reflection-copy"><strong>{{readingReflection === 'comfortable' ? '这次读得比较顺' : (readingReflection === 'needs-practice' ? '已经记下还想再练' : '读完后，记下这次的感受')}}</strong><text>这不是对错评分，只帮助你决定要不要再听、再读一遍。</text></view>
+      <view wx:if="{{readyToReflect}}" class="reflection-actions"><button data-reflection="comfortable" bindtap="reflect">读得比较顺</button><button class="ghost" data-reflection="needs-practice" bindtap="reflect">有几个字还不熟</button></view>
+      <button wx:else class="reflection-again" bindtap="markRead">{{readingReflection ? '再读一遍' : '我读完了'}}</button>
+    </view>
+
+    <view class="optional-recording">
+      <view><text>选做 · 听见自己的变化</text><strong>想回听时，再录下来</strong><view>录音只用于自己回听，不参与课程通关，也不判断读得对不对。</view></view>
+      <view class="record-toggle press-card {{recording ? 'recording' : ''}}" bindtap="toggleRecording" role="button" hover-class="is-pressed"><ki-icon name="{{recording ? 'stop-circle' : 'microphone'}}" size="19" />{{recording ? '结束录音' : '开始录音（选做）'}}</view>
+    </view>
+
     <view wx:if="{{tempFilePath}}" class="recording-result">
       <view class="result-mark" aria-label="录音完成"><ki-icon name="check" size="18" /></view>
-      <view><strong>{{readingAssessment === 'accurate' ? '朗读自查已记录' : (readingAssessment === 'needs-practice' ? '已经找到需要重读的地方' : (cloudStatus || '先回听，再判断是否读准'))}}</strong><text>{{readingAssessment === 'accurate' ? '这是回听后的自评记录；先保持读准，再比较是否更流利。' : (readingAssessment === 'needs-practice' ? '回到范读听清读错的字，再录一次，不追求速度。' : '完整听一遍自己的录音，再如实做自我评估。')}}</text></view>
+      <view><strong>{{cloudSaving ? '正在保存录音…' : '录音已经准备好'}}</strong><text>{{cloudStatus ? cloudStatus : '回听时只和刚才的自己比较，不需要给对错分数。'}}</text></view>
       <button class="play-recording" bindtap="playRecording">{{playing ? '停止回听' : '回听录音'}} · {{durationText}}</button>
-      <view wx:if="{{showRecordingGate}}" class="recording-check-gate" role="status">{{recordingGateMessage}}</view>
-      <view wx:if="{{showRecordingAssessment}}" class="recording-assessment"><button data-accurate="{{true}}" bindtap="assess">我回听后自评：每个字都读准了</button><button class="ghost" data-accurate="{{false}}" bindtap="assess">有字读错，再练一次</button></view>
     </view>
   </block>
   <bottom-navigation active="practice" theme="{{theme}}" />

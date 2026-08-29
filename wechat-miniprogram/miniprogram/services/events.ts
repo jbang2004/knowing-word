@@ -1,4 +1,4 @@
-import type { AnswerMode, ErrorTag, SkillDimension, TrackId } from "../types/models";
+import type { AnswerMode, ErrorTag, ReadingReflection, SkillDimension, TrackId } from "../types/models";
 import { ApiError, apiRequest } from "./api";
 import { getSessionToken } from "./session";
 import { appendOutboxEvent, shouldDiscardFailedEvent } from "./event-outbox-core";
@@ -20,7 +20,7 @@ type LearningEventPayload = {
   cueLevel?: 0 | 1 | 2 | 3;
   latencyMs?: number;
   errorTags?: ErrorTag[];
-  readingAccuracy?: "accurate" | "needs-practice";
+  readingReflection?: ReadingReflection;
 };
 
 let pendingFlush: Promise<void> | null = null;
@@ -107,10 +107,10 @@ export function sendAnswerEvent(input: {
   void enqueue({ action: "answer", ...input }).catch((error) => console.info("Unable to queue learning event", error));
 }
 
-export function sendReadingEvent(lessonId: string, accurate: boolean) {
+export function sendReadingEvent(lessonId: string, readingReflection: ReadingReflection) {
   void enqueue({
     action: "read",
     lessonId,
-    readingAccuracy: accurate ? "accurate" : "needs-practice",
+    readingReflection,
   }).catch((error) => console.info("Unable to queue reading event", error));
 }

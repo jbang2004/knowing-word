@@ -1,29 +1,17 @@
 import { API_BASE_URL } from "../../config";
-import { characterIndex, getLessonContent, isCoreCharacter, lessonIndex } from "../../services/catalog";
+import { getLessonContent, lessonIndex } from "../../services/catalog";
 import { sendReadingEvent } from "../../services/events";
 import { navigationLayout } from "../../services/layout";
 import { playLearningSound } from "../../services/learning-sounds";
-import { loadProfile, recordReading } from "../../services/profile";
+import { loadProfile, recordReadingPractice } from "../../services/profile";
 import { uploadRecording } from "../../services/api";
 import { getSessionStatus } from "../../services/session";
+import type { ReadingReflection } from "../../types/models";
 
 let recorder: WechatMiniprogram.RecorderManager | null = null;
 let player: WechatMiniprogram.InnerAudioContext | null = null;
 let sentencePlayer: WechatMiniprogram.InnerAudioContext | null = null;
 let documentRequestVersion = 0;
-
-function minimumReadingDurationMs(text = "") {
-  const readableCharacters = Array.from(text).filter((character) => /[\p{L}\p{N}]/u.test(character)).length;
-  return Math.max(3_000, readableCharacters * 150);
-}
-
-function lessonLearningComplete(lessonId: string) {
-  const profile = loadProfile();
-  const wordIds = characterIndex
-    .filter((character) => character.lessonId === lessonId && isCoreCharacter(character))
-    .map((character) => character.id);
-  return wordIds.length > 0 && wordIds.every((id) => profile.completed.words.includes(id));
-}
 
 function totalReadingSessions() {
   return Object.values(loadProfile().daily).reduce((total, day) => total + day.readSessions, 0);
@@ -40,13 +28,8 @@ Page({
     recording: false,
     tempFilePath: "",
     durationText: "",
-    recordingDurationMs: 0,
-    recordingListenedToEnd: false,
-    canAssess: false,
-    showRecordingGate: false,
-    showRecordingAssessment: false,
-    recordingGateMessage: "请先完整回听录音，再判断每个字是否读准。",
-    readingAssessment: "",
+    readyToReflect: false,
+    readingReflection: "",
     playing: false,
     speaking: false,
     readingSessions: totalReadingSessions(),
@@ -63,7 +46,7 @@ Page({
     recorder.onStart(() => {
       player?.stop();
       sentencePlayer?.stop();
-      this.setData({ recording: true, tempFilePath: "", durationText: "", recordingDurationMs: 0, recordingListenedToEnd: false, canAssess: false, showRecordingGate: false, showRecordingAssessment: false, readingAssessment: "", cloudStatus: "", cloudSaving: false });
+      this.setData({ recording: true, tempFilePath: "", durationText: "", cloudStatus: "", cloudSaving: false });
     });
     recorder.onStop((result) => {
       const durationMs = Math.max(0, result.duration ?? 0);
@@ -71,14 +54,6 @@ Page({
         recording: false,
         tempFilePath: result.tempFilePath,
         durationText: `${Math.max(1, Math.round(durationMs / 1000))} 秒`,
-        recordingDurationMs: durationMs,
-        recordingListenedToEnd: false,
-        canAssess: false,
-        showRecordingGate: !getSessionStatus().connected,
-        showRecordingAssessment: false,
-        recordingGateMessage: durationMs < minimumReadingDurationMs(this.data.lesson.context)
-          ? "这段录音太短，可能没有读完整；请重新录完全文。"
-          : "请先完整回听录音，再判断每个字是否读准。",
       });
       if (getSessionStatus().connected) void this.saveCloud(result.tempFilePath);
     });
@@ -130,7 +105,7 @@ Page({
     player?.stop();
     sentencePlayer?.destroy();
     sentencePlayer = null;
-    this.setData({ lessonId, loading: true, error: "", tempFilePath: "", durationText: "", recordingDurationMs: 0, recordingListenedToEnd: false, canAssess: false, showRecordingGate: false, showRecordingAssessment: false, readingAssessment: "", playing: false, speaking: false, cloudStatus: "", cloudSaving: false });
+    this.setData({ lessonId, loading: true, error: "", tempFilePath: "", durationText: "", readyToReflect: false, readingReflection: "", playing: false, speaking: false, cloudStatus: "", cloudSaving: false });
     void this.loadDocument();
   },
   previewSentence() {
@@ -181,37 +156,39 @@ Page({
     player?.destroy();
     player = wx.createInnerAudioContext();
     player.src = this.data.tempFilePath;
-    player.onPlay(() => this.setData({ playing: true, recordingListenedToEnd: false, canAssess: false, showRecordingGate: !this.data.cloudSaving, showRecordingAssessment: false, recordingGateMessage: this.data.recordingDurationMs < minimumReadingDurationMs(this.data.lesson.context) ? "这段录音太短，可能没有读完整；请重新录完全文。" : "请先完整回听录音，再判断每个字是否读准。" }));
-    player.onEnded(() => {
-      const canAssess = this.data.recordingDurationMs >= minimumReadingDurationMs(this.data.lesson.context);
-      this.setData({ playing: false, recordingListenedToEnd: true, canAssess, showRecordingGate: !canAssess && !this.data.cloudSaving, showRecordingAssessment: canAssess && !this.data.cloudSaving, recordingGateMessage: canAssess ? "" : "这段录音太短，可能没有读完整；请重新录完全文。" });
-    });
-    player.onStop(() => this.setData({ playing: false, recordingListenedToEnd: false, canAssess: false, showRecordingGate: !this.data.cloudSaving, showRecordingAssessment: false }));
+    player.onPlay(() => this.setData({ playing: true }));
+    player.onEnded(() => this.setData({ playing: false }));
+    player.onStop(() => this.setData({ playing: false }));
     player.onError(() => { this.setData({ playing: false }); wx.showToast({ title: "录音无法播放", icon: "none" }); });
     player.play();
   },
   async saveCloud(path: string) {
-    this.setData({ cloudStatus: "正在保存到云端…", cloudSaving: true, showRecordingGate: false, showRecordingAssessment: false });
+    this.setData({ cloudStatus: "正在保存到云端…", cloudSaving: true });
     try {
       await uploadRecording(this.data.lessonId, path, "audio/mpeg");
-      this.setData({ cloudStatus: "已保存，可在记录页跨设备回听", cloudSaving: false, showRecordingGate: !this.data.canAssess, showRecordingAssessment: this.data.canAssess });
+      this.setData({ cloudStatus: "已保存，可在记录页跨设备回听", cloudSaving: false });
     } catch (error) {
-      this.setData({ cloudStatus: error instanceof Error ? error.message : "云端保存失败，本机录音仍可回听", cloudSaving: false, showRecordingGate: !this.data.canAssess, showRecordingAssessment: this.data.canAssess });
+      this.setData({ cloudStatus: error instanceof Error ? error.message : "云端保存失败，本机录音仍可回听", cloudSaving: false });
     }
   },
-  assess(event: WechatMiniprogram.BaseEvent) {
-    if (!this.data.canAssess) {
-      wx.showToast({ title: this.data.recordingGateMessage || "请先完整回听录音", icon: "none" });
-      return;
-    }
-    const accurate = event.currentTarget.dataset.accurate === true || event.currentTarget.dataset.accurate === "true";
-    const profile = loadProfile();
-    const firstAccurateCompletion = accurate && !profile.readLessons.includes(this.data.lessonId) && lessonLearningComplete(this.data.lessonId);
-    recordReading(this.data.lessonId, accurate);
-    sendReadingEvent(this.data.lessonId, accurate);
-    if (firstAccurateCompletion) playLearningSound("dailyComplete");
-    this.setData({ readingAssessment: accurate ? "accurate" : "needs-practice", readingSessions: totalReadingSessions(), canAssess: false, showRecordingGate: false, showRecordingAssessment: false });
-    wx.showToast({ title: accurate ? "已完成本课朗读" : "已加入复习计划", icon: accurate ? "success" : "none" });
+  markRead() {
+    this.setData({ readyToReflect: true, readingReflection: "" });
+  },
+  reflect(event: WechatMiniprogram.BaseEvent) {
+    const reflection = event.currentTarget.dataset.reflection;
+    if (reflection !== "comfortable" && reflection !== "needs-practice") return;
+    recordReadingPractice(this.data.lessonId, reflection as ReadingReflection);
+    sendReadingEvent(this.data.lessonId, reflection as ReadingReflection);
+    playLearningSound("encourage");
+    this.setData({
+      readingReflection: reflection,
+      readyToReflect: false,
+      readingSessions: totalReadingSessions(),
+    });
+    wx.showToast({
+      title: reflection === "comfortable" ? "已记录这次朗读" : "下次再听再读",
+      icon: reflection === "comfortable" ? "success" : "none",
+    });
   },
   goBack() { wx.navigateBack({ fail: () => wx.switchTab({ url: "/pages/practice-hub/index" }) }); },
 });

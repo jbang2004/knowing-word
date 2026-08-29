@@ -8,6 +8,8 @@ export type ErrorTag =
   | "stroke-missing" | "stroke-extra" | "homophone-confusion"
   | "lookalike-confusion" | "context-misuse" | "writing-unverified";
 
+export type ReadingReflection = "comfortable" | "needs-practice";
+
 export type DimensionMemory = {
   status: "new" | "learning" | "review" | "stable";
   dueAt: string;
@@ -138,12 +140,15 @@ export type StudyProfile = {
   recentComponents: string[];
   readLessons: string[];
   readingEvidence: Record<string, {
-    attempts: number;
-    accurate: number;
+    sessions: number;
+    comfortable: number;
     needsPractice: number;
     lastAt: string;
-    lastAccuracy: "accurate" | "needs-practice";
-    verificationSource: "self";
+    lastReflection: ReadingReflection;
+    /** @deprecated Compatibility only for older installed clients. */
+    attempts: number;
+    /** @deprecated New reading practice never increments this counter. */
+    accurate: number;
   }>;
   introducedByDay: Record<string, string[]>;
   reviewedByDay: Record<string, string[]>;

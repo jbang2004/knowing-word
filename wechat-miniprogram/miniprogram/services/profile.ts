@@ -1,4 +1,4 @@
-import type { AnswerMode, ErrorTag, SkillDimension, StudyProfile, TrackId } from "../types/models";
+import type { AnswerMode, ErrorTag, ReadingReflection, SkillDimension, StudyProfile, TrackId } from "../types/models";
 import { apiRequest } from "./api";
 import { applyAnswerTransition } from "./learning-core";
 import { getSessionToken } from "./session";
@@ -11,6 +11,39 @@ function uniqueStrings(value: unknown) {
   return Array.isArray(value)
     ? [...new Set(value.filter((item): item is string => typeof item === "string" && item.length > 0))]
     : [];
+}
+
+function countValue(value: unknown) {
+  return typeof value === "number" && Number.isFinite(value) && value >= 0
+    ? Math.floor(value)
+    : 0;
+}
+
+function normalizeReadingEvidence(value: unknown): StudyProfile["readingEvidence"] {
+  if (!value || typeof value !== "object" || Array.isArray(value)) return {};
+  const normalized: StudyProfile["readingEvidence"] = {};
+  for (const [lessonId, entry] of Object.entries(value)) {
+    if (!lessonId || lessonId.length > 32 || !entry || typeof entry !== "object" || Array.isArray(entry)) continue;
+    const raw = entry as Record<string, unknown>;
+    const lastReflection = raw.lastReflection === "comfortable" || raw.lastReflection === "needs-practice"
+      ? raw.lastReflection
+      : raw.lastAccuracy === "accurate"
+        ? "comfortable"
+        : raw.lastAccuracy === "needs-practice"
+          ? "needs-practice"
+          : null;
+    if (!lastReflection || typeof raw.lastAt !== "string") continue;
+    normalized[lessonId] = {
+      sessions: countValue(raw.sessions ?? raw.attempts),
+      comfortable: countValue(raw.comfortable ?? raw.accurate),
+      needsPractice: countValue(raw.needsPractice),
+      lastAt: raw.lastAt,
+      lastReflection,
+      attempts: countValue(raw.attempts),
+      accurate: countValue(raw.accurate),
+    };
+  }
+  return normalized;
 }
 
 export function emptyProfile(): StudyProfile {
@@ -42,6 +75,7 @@ export function normalizeProfile(value: unknown): StudyProfile {
   if (!value || typeof value !== "object" || Array.isArray(value)) return base;
   const raw = value as Partial<StudyProfile>;
   const completed = raw.completed ?? base.completed;
+  const readingEvidence = normalizeReadingEvidence(raw.readingEvidence);
   return {
     ...base,
     ...raw,
@@ -63,8 +97,8 @@ export function normalizeProfile(value: unknown): StudyProfile {
     errorCounts: raw.errorCounts ?? {},
     learnedComponents: uniqueStrings(raw.learnedComponents),
     recentComponents: uniqueStrings(raw.recentComponents).slice(0, 24),
-    readLessons: uniqueStrings(raw.readLessons),
-    readingEvidence: raw.readingEvidence ?? {},
+    readLessons: [...new Set([...uniqueStrings(raw.readLessons), ...Object.keys(readingEvidence)])],
+    readingEvidence,
     introducedByDay: raw.introducedByDay ?? {},
     reviewedByDay: raw.reviewedByDay ?? {},
     daily: raw.daily ?? {},
@@ -188,9 +222,11 @@ export function mergeProfiles(serverValue: unknown, localValue: unknown) {
       const latest = laterTimestamp(left.lastAt, right.lastAt) === "right" ? right : left;
       merged.readingEvidence[lessonId] = {
         ...latest,
+        sessions: Math.max(left.sessions, right.sessions),
+        comfortable: Math.max(left.comfortable, right.comfortable),
+        needsPractice: Math.max(left.needsPractice, right.needsPractice),
         attempts: Math.max(left.attempts, right.attempts),
         accurate: Math.max(left.accurate, right.accurate),
-        needsPractice: Math.max(left.needsPractice, right.needsPractice),
       };
     }
   }
@@ -339,32 +375,35 @@ export function recordAnswer({
   }));
 }
 
-export function recordReading(lessonId: string, accurate: boolean) {
+export function recordReadingPractice(lessonId: string, reflection: ReadingReflection) {
   const profile = loadProfile();
   const day = learningDayKey();
   const now = new Date().toISOString();
   const daily = profile.daily[day] ?? { attempts: 0, correct: 0, skips: 0, readSessions: 0 };
   profile.daily = { ...profile.daily, [day]: { ...daily, readSessions: daily.readSessions + 1 } };
   const previous = profile.readingEvidence[lessonId] ?? {
-    attempts: 0,
-    accurate: 0,
+    sessions: 0,
+    comfortable: 0,
     needsPractice: 0,
     lastAt: now,
-    lastAccuracy: "needs-practice" as const,
-    verificationSource: "self" as const,
+    lastReflection: "needs-practice" as const,
+    attempts: 0,
+    accurate: 0,
   };
   profile.readingEvidence = {
     ...profile.readingEvidence,
     [lessonId]: {
-      attempts: previous.attempts + 1,
-      accurate: previous.accurate + Number(accurate),
-      needsPractice: previous.needsPractice + Number(!accurate),
+      sessions: previous.sessions + 1,
+      comfortable: previous.comfortable + Number(reflection === "comfortable"),
+      needsPractice: previous.needsPractice + Number(reflection === "needs-practice"),
       lastAt: now,
-      lastAccuracy: accurate ? "accurate" : "needs-practice",
-      verificationSource: "self",
+      lastReflection: reflection,
+      // Preserve rollout aliases without creating a new accuracy claim.
+      attempts: previous.attempts,
+      accurate: previous.accurate,
     },
   };
-  if (accurate && !profile.readLessons.includes(lessonId)) profile.readLessons = [...profile.readLessons, lessonId];
+  if (!profile.readLessons.includes(lessonId)) profile.readLessons = [...profile.readLessons, lessonId];
   return saveProfile(profile, true);
 }
 
