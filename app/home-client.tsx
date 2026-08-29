@@ -86,14 +86,13 @@ export default function HomeLanding() {
 
   const today = profile.daily[learningDayKey()] || { attempts: 0, correct: 0, skips: 0, readSessions: 0 };
   const streak = currentStreak(profile.daily);
-  const nextWord = nextTrackCandidate("words", profile);
   const guidedLessonId = recommendedLessonId(profile);
   const currentLesson =
     homeCourse.lessons.find((lesson) => lesson.id === guidedLessonId) || homeCourse.lessons[0];
   const pendingReadingId = pendingReadingLessonId(profile);
   const pendingReadingLesson = homeCourse.lessons.find((lesson) => lesson.id === pendingReadingId);
   const lessonProgress = trackProgress(profile, "words", currentLesson.id);
-  const pathNodes = buildLessonPath(profile, currentLesson.id, nextWord?.id);
+  const pathNodes = buildLessonPath(profile, currentLesson.id);
   const segments = segmentLessonPath(pathNodes);
   const foundCurrentSegment = segments.findIndex((segment) =>
     segment.characters.some((node) => node.state === "current"),
@@ -420,13 +419,12 @@ type PathSegment = {
 // lesson instead of interrupting a chunk with the whole lesson's question set.
 const GATE_EVERY = 4;
 
-function buildLessonPath(profile: StudyProfile, lessonId: string, currentId: string | undefined) {
+function buildLessonPath(profile: StudyProfile, lessonId: string) {
   const lessonWords = homeCandidates.words.filter((candidate) => candidate.lessonId === lessonId);
   const nodes: PathNode[] = [];
   const states = candidatePathStates(
     lessonWords.map((candidate) => candidate.id),
     profile.completed.words,
-    currentId,
   );
 
   lessonWords.forEach((candidate, index) => {

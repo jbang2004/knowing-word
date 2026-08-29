@@ -10,17 +10,17 @@ import {
   updateCompletion,
 } from "../app/lib/progress-model.ts";
 
-test("a lesson path has exactly one current item even when resume skips an unfinished item", () => {
+test("a lesson path always unlocks the first unfinished item", () => {
   assert.deepEqual(
-    candidatePathStates(["鹭", "嫌", "嵌", "匣"], [], "嵌"),
-    { 鹭: "locked", 嫌: "locked", 嵌: "current", 匣: "locked" },
+    candidatePathStates(["亩", "吩", "榨", "榴", "矮", "播"], ["亩", "吩"]),
+    { 亩: "done", 吩: "done", 榨: "current", 榴: "locked", 矮: "locked", 播: "locked" },
   );
   assert.deepEqual(
-    candidatePathStates(["鹭", "嫌", "嵌"], ["鹭"], "missing"),
+    candidatePathStates(["鹭", "嫌", "嵌"], ["鹭"]),
     { 鹭: "done", 嫌: "current", 嵌: "locked" },
   );
   assert.deepEqual(
-    candidatePathStates(["鹭", "嫌"], ["鹭", "嫌"], "嫌"),
+    candidatePathStates(["鹭", "嫌"], ["鹭", "嫌"]),
     { 鹭: "done", 嫌: "done" },
   );
 });

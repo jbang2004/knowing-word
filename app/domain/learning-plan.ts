@@ -26,8 +26,6 @@ export function isLessonLearningComplete(profile: StudyProfile, lessonId: string
 
 export function recommendedLessonId(profile: StudyProfile) {
   const lastLessonId = profile.last.words?.lessonId;
-  if (lastLessonId && !isLessonLearningComplete(profile, lastLessonId)) return lastLessonId;
-
   const nextWord = homeCandidates.words.find(
     (candidate) => !profile.completed.words.includes(candidate.id),
   );
@@ -94,12 +92,9 @@ export function nextLessonActivity(
   lessonId: string,
 ): LearningRecommendation {
   const wordCandidates = candidatesForLesson("words", lessonId);
-  const preferredWordId = profile.last.words?.lessonId === lessonId
-    ? profile.last.words.characterId
-    : undefined;
   const nextWord = wordCandidates.find(
-    (candidate) => candidate.id === preferredWordId && !profile.completed.words.includes(candidate.id),
-  ) ?? wordCandidates.find((candidate) => !profile.completed.words.includes(candidate.id));
+    (candidate) => !profile.completed.words.includes(candidate.id),
+  );
   if (nextWord) return { track: "words", candidate: nextWord };
 
   return { track: null, candidate: null };

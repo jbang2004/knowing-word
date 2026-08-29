@@ -9,6 +9,7 @@ import {
   recommendedLessonId,
 } from "../app/domain/learning-plan.ts";
 import { getPracticeSteps, getTrackExercises } from "../app/domain/practice.ts";
+import { nextTrackCandidate } from "../app/domain/catalog-progress.ts";
 import { loadLessonContent } from "../app/data/lesson-content.ts";
 import { characters } from "../app/data/catalog.ts";
 import { emptyProfile } from "../app/lib/profile-model.ts";
@@ -49,6 +50,31 @@ test("lesson learning completes when every character passes the full mastery rou
 
   profile.completed.words = words.map((candidate) => candidate.id);
   assert.equal(isLessonLearningComplete(profile, firstLessonId), true);
+});
+
+test("a stale resume pointer cannot skip unfinished words or lessons", () => {
+  const profile = emptyProfile();
+  const firstLessonWords = homeCandidates.words.filter((candidate) => candidate.lessonId === firstLessonId);
+  const secondLessonWords = homeCandidates.words.filter((candidate) => candidate.lessonId === "g5v1-l02");
+
+  profile.completed.words = firstLessonWords.map((candidate) => candidate.id);
+  profile.completed.words.push(secondLessonWords[0].id, secondLessonWords[1].id);
+  profile.last.words = {
+    lessonId: "g5v1-l02",
+    characterId: secondLessonWords[5].id,
+    questionIndex: 2,
+  };
+
+  assert.equal(recommendedLessonId(profile), "g5v1-l02");
+  assert.equal(nextTrackCandidate("words", profile)?.id, secondLessonWords[2].id);
+  assert.deepEqual(nextLessonActivity(profile, "g5v1-l02"), {
+    track: "words",
+    candidate: secondLessonWords[2],
+  });
+
+  profile.completed.words = [];
+  assert.equal(recommendedLessonId(profile), firstLessonId);
+  assert.equal(nextTrackCandidate("words", profile)?.id, firstLessonWords[0].id);
 });
 
 test("specialist progress contains learned characters only", () => {

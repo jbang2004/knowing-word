@@ -23,7 +23,11 @@ export function nextTrackCandidate(track: TrackId, profile: StudyProfile): HomeC
   const id = nextCandidateId(
     candidates.map((candidate) => candidate.id),
     profile.completed[track],
-    profile.last[track]?.characterId,
+    // Complete literacy follows the authored course order. A stale resume
+    // pointer or a direct visit to a later word must never skip an unfinished
+    // word on the required path. Optional specialist tracks may still resume
+    // where the learner last stopped.
+    track === "words" ? undefined : profile.last[track]?.characterId,
   );
   return candidates.find((candidate) => candidate.id === id);
 }
