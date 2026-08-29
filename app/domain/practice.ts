@@ -333,8 +333,8 @@ export function isPracticeAnswerCorrect(
   handwritingAttempt?: HandwritingAttempt,
 ) {
   // Ink only proves that the learner attempted the prompt. A writing answer is
-  // correct only after Hanzi Writer verifies every expected stroke without a
-  // rejected, backwards or out-of-order stroke.
+  // correct only after Hanzi Writer accepts the complete expected stroke
+  // sequence. Rejected traces stay on the same stroke and may be retried.
   if (question.kind === "write") {
     return wrote && Boolean(handwritingAttempt) && isHandwritingCorrect(handwritingAttempt!);
   }

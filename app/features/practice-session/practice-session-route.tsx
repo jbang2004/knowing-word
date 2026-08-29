@@ -24,6 +24,7 @@ import {
 import {
   emptyHandwritingAttempt,
   handwritingErrorTags,
+  isHandwritingComplete,
   type HandwritingAttempt,
 } from "../../domain/handwriting";
 import { buildDailyLearningPlan } from "../../domain/daily-plan";
@@ -498,6 +499,10 @@ function HydratedPracticeSession({
 
   function gradeHandwriting(attempt: HandwritingAttempt) {
     if (!currentQuestion || currentQuestion.kind !== "write" || result !== null) return;
+    // A rejected stroke is an instruction to retry that one stroke, not a
+    // submission of the whole character. Preserve the mounted writer until
+    // Hanzi Writer has accepted every expected stroke.
+    if (!isHandwritingComplete(attempt)) return;
     if (writingSubmissionRef.current) return;
     writingSubmissionRef.current = true;
     const attempted = attempt.acceptedStrokes + attempt.mistakes > 0;
@@ -536,7 +541,7 @@ function HydratedPracticeSession({
 
   function updateHandwriting(attempt: HandwritingAttempt) {
     setHandwritingAttempt(attempt);
-    setWrote(attempt.acceptedStrokes + attempt.mistakes > 0);
+    setWrote(attempt.complete && attempt.acceptedStrokes === attempt.expectedStrokes);
   }
 
   function skipStep() {

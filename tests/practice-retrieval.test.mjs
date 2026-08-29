@@ -10,6 +10,7 @@ import {
 } from "../app/domain/practice.ts";
 import {
   handwritingErrorTags,
+  isHandwritingComplete,
   isHandwritingCorrect,
 } from "../app/domain/handwriting.ts";
 
@@ -107,7 +108,7 @@ test("split assembly can reuse a component when the written form repeats it", ()
   assert.equal(isPracticeAnswerCorrect(repeatedQuestion, repeatedCharacter, "split", selected, false), true);
 });
 
-test("handwriting is correct only after every expected stroke passes objective validation", () => {
+test("handwriting is correct after every expected stroke is eventually accepted", () => {
   const correctAttempt = {
     acceptedStrokes: 8,
     expectedStrokes: 8,
@@ -129,18 +130,21 @@ test("handwriting is correct only after every expected stroke passes objective v
       ...correctAttempt,
       mistakes: 1,
     }),
-    false,
+    true,
   );
   assert.equal(
     isPracticeAnswerCorrect(writeQuestion, character, "split", [], true, {
       ...correctAttempt,
       backwardsMistakes: 1,
     }),
-    false,
+    true,
   );
   assert.equal(isPracticeAnswerCorrect(writeQuestion, character, "split", [], false, correctAttempt), false);
   assert.equal(isPracticeAnswerCorrect(writeQuestion, character, "split", [], true, correctAttempt), true);
   assert.equal(isHandwritingCorrect(correctAttempt), true);
+  assert.equal(isHandwritingCorrect({ ...correctAttempt, mistakes: 2, backwardsMistakes: 1 }), true);
+  assert.equal(isHandwritingComplete({ ...correctAttempt, acceptedStrokes: 7, complete: false }), false);
+  assert.equal(isHandwritingComplete({ ...correctAttempt, mistakes: 2, backwardsMistakes: 1 }), true);
 });
 
 test("verified handwriting failures record stroke-specific error tags", () => {
@@ -164,16 +168,13 @@ test("verified handwriting failures record stroke-specific error tags", () => {
     }),
     ["stroke-missing", "stroke-extra"],
   );
-  assert.deepEqual(
-    handwritingErrorTags({
-      acceptedStrokes: 8,
-      expectedStrokes: 8,
-      mistakes: 0,
-      backwardsMistakes: 1,
-      complete: true,
-    }),
-    ["stroke-extra"],
-  );
+  assert.deepEqual(handwritingErrorTags({
+    acceptedStrokes: 8,
+    expectedStrokes: 8,
+    mistakes: 2,
+    backwardsMistakes: 1,
+    complete: true,
+  }), []);
 });
 
 test("an immediate retry after seeing the answer is never stored as independent evidence", () => {

@@ -24,15 +24,21 @@ export function hanziWriterDataPath(character: string) {
   return `/hanzi-data/u${codePoints.join("-")}.json`;
 }
 
-export function isHandwritingCorrect(attempt: HandwritingAttempt) {
+export function isHandwritingComplete(attempt: HandwritingAttempt) {
   return attempt.complete &&
     attempt.expectedStrokes > 0 &&
-    attempt.acceptedStrokes === attempt.expectedStrokes &&
-    attempt.mistakes === 0 &&
-    attempt.backwardsMistakes === 0;
+    attempt.acceptedStrokes === attempt.expectedStrokes;
+}
+
+export function isHandwritingCorrect(attempt: HandwritingAttempt) {
+  return isHandwritingComplete(attempt);
 }
 
 export function handwritingErrorTags(attempt: HandwritingAttempt): ErrorTag[] {
+  // Hanzi Writer only advances after the current stroke is accepted. Once all
+  // strokes are complete, earlier rejected traces are retry history rather
+  // than missing or extra strokes in the finished character.
+  if (isHandwritingComplete(attempt)) return [];
   const tags: ErrorTag[] = [];
   if (!attempt.complete || attempt.acceptedStrokes < attempt.expectedStrokes) {
     tags.push("stroke-missing");

@@ -549,7 +549,7 @@ Page({
                 acceptedStrokeCount: writingAccepted,
                 expectedStrokeCount: expected,
                 writingMistakes,
-                ready: true,
+                ready: false,
                 writingStatus: data.isBackwards
                   ? `第 ${writingAccepted + 1} 笔方向反了，请按正确方向重写这一笔`
                   : `第 ${writingAccepted + 1} 笔的位置、形状或笔顺不对，请重写这一笔`,
@@ -565,7 +565,7 @@ Page({
                 acceptedStrokeCount: writingAccepted,
                 expectedStrokeCount: expected,
                 writingMistakes,
-                ready: true,
+                ready: data.strokesRemaining === 0,
                 writingStatus: data.strokesRemaining === 0
                   ? `已完成 ${expected} 笔，正在检查…`
                   : `已正确完成 ${writingAccepted} / ${expected} 笔`,
@@ -630,20 +630,15 @@ Page({
   },
   gradeWriting(attempt: WritingAttempt) {
     if (this.data.question?.kind !== "write" || this.data.answered || writingSubmitted) return;
+    // Do not turn an unfinished stroke into a whole-character submission.
+    // Hanzi Writer keeps all accepted strokes mounted while this stroke is
+    // retried, including when the rejected stroke is the final one.
+    if (!attempt.complete || attempt.expectedStrokes <= 0 || attempt.acceptedStrokes !== attempt.expectedStrokes) return;
     writingSubmitted = true;
-    const correct = attempt.complete
-      && attempt.expectedStrokes > 0
-      && attempt.acceptedStrokes === attempt.expectedStrokes
-      && attempt.mistakes === 0
-      && attempt.backwardsMistakes === 0;
-    const assessment = correct
-      ? ""
-      : !attempt.complete
-        ? attempt.mistakes > 0 ? "verified-incomplete-mistake" : "verified-incomplete"
-        : attempt.backwardsMistakes > 0
-          ? "verified-backwards"
-          : "verified-mistake";
-    this.evaluate([], correct, correct, assessment);
+    // Rejected traces never advance the current stroke. Reaching completion
+    // therefore proves that the final stroke sequence was accepted, even if
+    // one or more strokes needed a retry along the way.
+    this.evaluate([], true, true, "");
   },
   startWriting(event: WechatMiniprogram.TouchEvent) {
     if (this.data.answered || this.data.writingLoadState !== "ready") return;

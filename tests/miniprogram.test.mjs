@@ -267,7 +267,9 @@ test("native practice uses objective Hanzi Writer validation with the Web mobile
   assert.match(script, /charDataLoader: loadHanziWriterData/u);
   assert.match(script, /acceptBackwardsStrokes: false/u);
   assert.match(script, /markStrokeCorrectAfterMisses: false/u);
-  assert.match(script, /attempt\.mistakes === 0[\s\S]*attempt\.backwardsMistakes === 0/u);
+  assert.match(script, /ready: data\.strokesRemaining === 0/u);
+  assert.match(script, /if \(!attempt\.complete[\s\S]*attempt\.acceptedStrokes !== attempt\.expectedStrokes\) return/u);
+  assert.doesNotMatch(script, /attempt\.mistakes === 0[\s\S]*attempt\.backwardsMistakes === 0/u);
 
   assert.match(styles, /\.choice-card \{[^}]*gap:13px;[^}]*padding:12px 15px;[^}]*border-radius:18px;/u);
   assert.match(styles, /\.challenge-actions-row \{[^}]*min-height:44px;[^}]*gap:12px;/u);
