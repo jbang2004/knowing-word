@@ -5,6 +5,7 @@ import {
   isLessonLearningComplete,
   learningTrackProgress,
   nextLessonActivity,
+  pendingReadingLessonId,
   recommendedLessonId,
 } from "../app/domain/learning-plan.ts";
 import { getPracticeSteps, getTrackExercises } from "../app/domain/practice.ts";
@@ -27,17 +28,19 @@ test("the guided plan treats full-character mastery as the required lesson path"
   profile.completed.words = words.map((candidate) => candidate.id);
   profile.last.words = { lessonId: firstLessonId, characterId: words.at(-1).id, questionIndex: 1 };
   assert.deepEqual(nextLessonActivity(profile, firstLessonId), { track: null, candidate: null });
-  assert.equal(recommendedLessonId(profile), firstLessonId);
+  assert.equal(recommendedLessonId(profile), "g5v1-l02");
+  assert.equal(pendingReadingLessonId(profile), firstLessonId);
 
   // Optional specialist reviews keep independent progress without becoming a
-  // gate between the mastered words and the lesson reading finish.
+  // gate between mastered words and the next lesson.
   profile.completed.structure = [...profile.completed.words];
   profile.completed.split = [...profile.completed.words];
   profile.completed.honglan = [...profile.completed.words];
   assert.deepEqual(nextLessonActivity(profile, firstLessonId), { track: null, candidate: null });
-  assert.equal(recommendedLessonId(profile), firstLessonId);
+  assert.equal(recommendedLessonId(profile), "g5v1-l02");
   profile.readLessons = [firstLessonId];
   assert.equal(recommendedLessonId(profile), "g5v1-l02");
+  assert.equal(pendingReadingLessonId(profile), undefined);
 });
 
 test("lesson learning completes when every character passes the full mastery round", () => {

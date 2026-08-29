@@ -226,7 +226,8 @@
 
 .path-main { min-width: 0; }
 
-.path-due-review {
+.path-due-review,
+.path-reading-practice {
   display: grid;
   grid-template-columns: auto minmax(0, 1fr);
   align-items: center;
@@ -239,6 +240,11 @@
   box-shadow: var(--shadow);
 }
 
+.path-reading-practice {
+  border-color: color-mix(in srgb, var(--part-text) 28%, var(--line));
+  background: color-mix(in srgb, var(--part-soft) 58%, var(--paper));
+}
+
 .path-due-review-glyph {
   display: grid;
   width: 58px;
@@ -246,6 +252,18 @@
   place-items: center;
   border-radius: 19px 19px 19px 7px;
   color: var(--wrong-text);
+  font-family: var(--kai);
+  font-size: 2rem;
+  background: var(--paper);
+}
+
+.path-reading-practice-glyph {
+  display: grid;
+  width: 58px;
+  height: 58px;
+  place-items: center;
+  border-radius: 19px 19px 19px 7px;
+  color: var(--part-text);
   font-family: var(--kai);
   font-size: 2rem;
   background: var(--paper);
@@ -268,6 +286,25 @@
   background: var(--wrong-text);
   grid-column: 1 / -1;
   justify-content: center;
+}
+
+.path-reading-practice > div { display: flex; min-width: 0; flex-direction: column; gap: 2px; }
+.path-reading-practice small { color: var(--part-text); font-weight: 900; }
+.path-reading-practice strong { color: var(--navy); font-size: 1rem; }
+.path-reading-practice p { margin: 0; color: var(--ink-soft); font-size: .82rem; line-height: 1.55; }
+.path-reading-practice button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 11px 14px;
+  border: 0;
+  border-radius: 14px;
+  color: white;
+  font-weight: 900;
+  white-space: nowrap;
+  background: var(--part-text);
+  grid-column: 1 / -1;
 }
 
 .path-track,
@@ -616,8 +653,10 @@
 /* Wide screens ------------------------------------------------------- */
 
 @media (min-width: 900px) {
-  .path-due-review { grid-template-columns: auto minmax(0, 1fr) auto; }
-  .path-due-review button { grid-column: auto; }
+  .path-due-review,
+  .path-reading-practice { grid-template-columns: auto minmax(0, 1fr) auto; }
+  .path-due-review button,
+  .path-reading-practice button { grid-column: auto; }
   .path-home { padding-top: 26px; }
 
   .path-workspace {

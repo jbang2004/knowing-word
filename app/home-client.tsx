@@ -23,6 +23,7 @@ import { nextTrackCandidate, trackProgress } from "./domain/catalog-progress";
 import { buildDailyLearningPlan } from "./domain/daily-plan";
 import {
   learningTrackProgress,
+  pendingReadingLessonId,
   recommendedLessonId,
 } from "./domain/learning-plan";
 import { learningDayKey } from "./domain/learning-day";
@@ -89,6 +90,8 @@ export default function HomeLanding() {
   const guidedLessonId = recommendedLessonId(profile);
   const currentLesson =
     homeCourse.lessons.find((lesson) => lesson.id === guidedLessonId) || homeCourse.lessons[0];
+  const pendingReadingId = pendingReadingLessonId(profile);
+  const pendingReadingLesson = homeCourse.lessons.find((lesson) => lesson.id === pendingReadingId);
   const lessonProgress = trackProgress(profile, "words", currentLesson.id);
   const pathNodes = buildLessonPath(profile, currentLesson.id, nextWord?.id);
   const segments = segmentLessonPath(pathNodes);
@@ -171,6 +174,19 @@ export default function HomeLanding() {
                 </div>
                 <button onClick={() => navigate(dueReviewPath(dueReview.candidate))}>
                   <RotateCcw aria-hidden="true" size={18} />开始复习
+                </button>
+              </section>
+            )}
+            {pendingReadingLesson && (
+              <section className="path-reading-practice" aria-label="推荐朗读练习">
+                <span className="path-reading-practice-glyph" aria-hidden="true">读</span>
+                <div>
+                  <small>语境朗读 · 推荐练习</small>
+                  <strong>第 {pendingReadingLesson.position} 课生字已过关，读一遍《{pendingReadingLesson.title}》</strong>
+                  <p>听范读后大声读一遍，记下感受即可；不会阻塞新课进度。</p>
+                </div>
+                <button onClick={() => navigate(`/read-aloud?lessonId=${encodeURIComponent(pendingReadingLesson.id)}&returnTo=%2F`)}>
+                  <Mic2 aria-hidden="true" size={18} />去朗读
                 </button>
               </section>
             )}
@@ -291,7 +307,7 @@ export default function HomeLanding() {
                 onClick={() => navigate(`/read-aloud?lessonId=${encodeURIComponent(currentLesson.id)}&returnTo=%2F`)}
               >
                 <Mic2 aria-hidden="true" />
-                <span><strong>朗读收尾</strong><small>{profile.readLessons.includes(currentLesson.id) ? "本课已朗读" : allWordsComplete ? "听范读，再完整读一遍" : "学完本课生字后解锁"}</small></span>
+                <span><strong>语境朗读 · 推荐</strong><small>{profile.readLessons.includes(currentLesson.id) ? "本课已经练习过，也可以再读一次" : allWordsComplete ? "大声读一遍，不影响新课进度" : "学完本课生字后开放"}</small></span>
                 <ArrowRight aria-hidden="true" size={19} />
               </button>
               {allReviewsComplete && <p className="path-practice-complete">三项选做复习均已完成</p>}

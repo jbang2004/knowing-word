@@ -10,7 +10,7 @@ import {
 } from "./learning-state.ts";
 
 export type LearningEventAction = "answer" | "skip" | "read";
-export type ReadingAccuracy = "accurate" | "needs-practice";
+export type ReadingReflection = "comfortable" | "needs-practice";
 
 export type LearningEvent = {
   eventId: string;
@@ -26,7 +26,7 @@ export type LearningEvent = {
   answerMode?: AnswerMode;
   latencyMs?: number;
   errorTags?: ErrorTag[];
-  readingAccuracy?: ReadingAccuracy;
+  readingReflection?: ReadingReflection;
 };
 
 export type LearningEventInput = Omit<LearningEvent, "eventId">;
@@ -67,9 +67,15 @@ export function parseLearningEvent(value: unknown): LearningEvent | null {
   const parsedErrorTags = Array.isArray(raw.errorTags)
     ? [...new Set(raw.errorTags.filter((item): item is ErrorTag => errorTags.includes(item as ErrorTag)))].slice(0, 8)
     : [];
-  const readingAccuracy = raw.readingAccuracy === "accurate" || raw.readingAccuracy === "needs-practice"
-    ? raw.readingAccuracy
-    : undefined;
+  // Accept queued events from the former self-accuracy UI, but normalize them
+  // into a non-evaluative reflection before they reach storage.
+  const readingReflection = raw.readingReflection === "comfortable" || raw.readingReflection === "needs-practice"
+    ? raw.readingReflection
+    : raw.readingAccuracy === "accurate"
+      ? "comfortable"
+      : raw.readingAccuracy === "needs-practice"
+        ? "needs-practice"
+        : undefined;
 
   if (!eventId || !eventIdPattern.test(eventId)) return null;
   if (action !== "answer" && action !== "skip" && action !== "read") return null;
@@ -81,7 +87,7 @@ export function parseLearningEvent(value: unknown): LearningEvent | null {
       eventId,
       action,
       lessonId,
-      ...(readingAccuracy ? { readingAccuracy } : {}),
+      ...(readingReflection ? { readingReflection } : {}),
       ...(latencyMs === undefined ? {} : { latencyMs }),
     };
   }

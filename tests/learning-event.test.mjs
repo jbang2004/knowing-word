@@ -40,14 +40,25 @@ test("learning events require a known lesson-character pair and bounded payload"
     eventId,
     action: "read",
     lessonId: "g5v1-l01",
-    readingAccuracy: "needs-practice",
+    readingReflection: "needs-practice",
     latencyMs: 12_000,
   }), {
     eventId,
     action: "read",
     lessonId: "g5v1-l01",
-    readingAccuracy: "needs-practice",
+    readingReflection: "needs-practice",
     latencyMs: 12_000,
+  });
+  assert.deepEqual(parseLearningEvent({
+    eventId,
+    action: "read",
+    lessonId: "g5v1-l01",
+    readingAccuracy: "accurate",
+  }), {
+    eventId,
+    action: "read",
+    lessonId: "g5v1-l01",
+    readingReflection: "comfortable",
   });
   assert.equal(parseLearningEvent({
     eventId,

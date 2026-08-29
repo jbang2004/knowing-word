@@ -1,4 +1,8 @@
-import { homeCandidates, type HomeCandidate } from "../data/home-index.generated.ts";
+import {
+  homeCandidates,
+  homeCourse,
+  type HomeCandidate,
+} from "../data/home-index.generated.ts";
 import type { StudyProfile, TrackId } from "../lib/profile-model.ts";
 
 export type LearningRecommendation = {
@@ -20,18 +24,30 @@ export function isLessonLearningComplete(profile: StudyProfile, lessonId: string
   return wordIds.length > 0 && wordIds.every((id) => profile.completed.words.includes(id));
 }
 
-function lessonIsComplete(profile: StudyProfile, lessonId: string) {
-  return isLessonLearningComplete(profile, lessonId) && profile.readLessons.includes(lessonId);
-}
-
 export function recommendedLessonId(profile: StudyProfile) {
   const lastLessonId = profile.last.words?.lessonId;
-  if (lastLessonId && !lessonIsComplete(profile, lastLessonId)) return lastLessonId;
+  if (lastLessonId && !isLessonLearningComplete(profile, lastLessonId)) return lastLessonId;
 
   const nextWord = homeCandidates.words.find(
     (candidate) => !profile.completed.words.includes(candidate.id),
   );
   return nextWord?.lessonId ?? lastLessonId ?? homeCandidates.words[0]?.lessonId;
+}
+
+/**
+ * Reading is useful retrieval in context, but it is participation rather than
+ * a machine-verified mastery result. Keep the newest practiced-later lesson as
+ * a recommendation without letting it hold the required word-learning cursor.
+ */
+export function pendingReadingLessonId(profile: StudyProfile) {
+  for (let index = homeCourse.lessons.length - 1; index >= 0; index -= 1) {
+    const lessonId = homeCourse.lessons[index].id;
+    if (
+      isLessonLearningComplete(profile, lessonId) &&
+      !profile.readLessons.includes(lessonId)
+    ) return lessonId;
+  }
+  return undefined;
 }
 
 export function learnedTrackCandidates(

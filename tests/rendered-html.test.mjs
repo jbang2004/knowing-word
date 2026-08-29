@@ -37,7 +37,7 @@ test("server-renders the task-first Knowing Word learning experience", async () 
   assert.match(html, /红蓝复习/);
   assert.match(html, /结构复习/);
   assert.match(html, /整课巩固 · 选做/);
-  assert.match(html, /本课生字后解锁/);
+  assert.match(html, /语境朗读 · 推荐/);
   assert.match(html, /path-workspace/);
   // One seal per character, carrying the glyph and its state only.
   assert.match(html, /path-node is-current/);
@@ -153,6 +153,8 @@ test("dense pages keep progressive and shareable responsive contracts", async ()
   const readHtml = await readResponse.text();
   assert.match(readHtml, /read-lesson-picker/);
   assert.match(readHtml, /value="g5v1-l05" selected=""/);
+  assert.match(readHtml, /不自动评判对错/);
+  assert.match(readHtml, /录音为选做/);
 
   const courseResponse = await render("/lessons");
   const courseHtml = await courseResponse.text();

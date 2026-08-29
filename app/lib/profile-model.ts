@@ -33,12 +33,15 @@ export type DailyActivity = {
 };
 
 export type ReadingEvidence = {
-  attempts: number;
-  accurate: number;
+  sessions: number;
+  comfortable: number;
   needsPractice: number;
   lastAt: string;
-  lastAccuracy: "accurate" | "needs-practice";
-  verificationSource: "self";
+  lastReflection: "comfortable" | "needs-practice";
+  /** @deprecated Read-only rollout aliases for older mini-program clients. */
+  attempts: number;
+  /** @deprecated New Web reading practice never increments this counter. */
+  accurate: number;
 };
 
 export type ProfilePreference = "name" | "grade" | "courseId" | "theme" | "favorites";
@@ -266,17 +269,25 @@ function normalizeReadingEvidence(value: unknown) {
   for (const [lessonId, entry] of Object.entries(recordValue(value))) {
     if (!lessonId || lessonId.length > 32) continue;
     const raw = recordValue(entry);
-    if (
-      (raw.lastAccuracy !== "accurate" && raw.lastAccuracy !== "needs-practice") ||
-      typeof raw.lastAt !== "string"
-    ) continue;
+    const lastReflection = raw.lastReflection === "comfortable" || raw.lastReflection === "needs-practice"
+      ? raw.lastReflection
+      : raw.lastAccuracy === "accurate"
+        ? "comfortable"
+        : raw.lastAccuracy === "needs-practice"
+          ? "needs-practice"
+          : null;
+    if (!lastReflection || typeof raw.lastAt !== "string") continue;
     normalized[lessonId] = {
-      attempts: countValue(raw.attempts),
-      accurate: countValue(raw.accurate),
+      sessions: countValue(raw.sessions ?? raw.attempts),
+      comfortable: countValue(raw.comfortable ?? raw.accurate),
       needsPractice: countValue(raw.needsPractice),
       lastAt: raw.lastAt,
-      lastAccuracy: raw.lastAccuracy,
-      verificationSource: "self",
+      lastReflection,
+      // Keep the old counters on the wire until installed mini-program clients
+      // have all moved to the reflection model. Web practice never increments
+      // them, so no new accuracy claim is produced.
+      attempts: countValue(raw.attempts),
+      accurate: countValue(raw.accurate),
     };
   }
   return normalized;
@@ -323,6 +334,12 @@ export function normalizeProfile(value: unknown): StudyProfile {
     profile.last[track] = normalizeResume(last[track]);
   }
 
+  const readingEvidence = normalizeReadingEvidence(raw.readingEvidence);
+  const readLessons = unionStrings(
+    stringList(raw.readLessons),
+    Object.keys(readingEvidence),
+  );
+
   return {
     ...profile,
     name: typeof raw.name === "string" ? raw.name.slice(0, 18) : "",
@@ -340,8 +357,8 @@ export function normalizeProfile(value: unknown): StudyProfile {
     errorCounts: normalizeErrorCounts(raw.errorCounts),
     learnedComponents: stringList(raw.learnedComponents),
     recentComponents: stringList(raw.recentComponents, 24),
-    readLessons: stringList(raw.readLessons),
-    readingEvidence: normalizeReadingEvidence(raw.readingEvidence),
+    readLessons,
+    readingEvidence,
     introducedByDay: normalizeIntroducedByDay(raw.introducedByDay),
     reviewedByDay: normalizeIntroducedByDay(raw.reviewedByDay),
     daily: normalizeDaily(raw.daily),
@@ -511,9 +528,11 @@ export function mergeStudyProfiles(
     const latest = laterTimestamp(left.lastAt, right.lastAt) === "right" ? right : left;
     merged.readingEvidence[lessonId] = {
       ...latest,
+      sessions: Math.max(left.sessions, right.sessions),
+      comfortable: Math.max(left.comfortable, right.comfortable),
+      needsPractice: Math.max(left.needsPractice, right.needsPractice),
       attempts: Math.max(left.attempts, right.attempts),
       accurate: Math.max(left.accurate, right.accurate),
-      needsPractice: Math.max(left.needsPractice, right.needsPractice),
     };
   }
 

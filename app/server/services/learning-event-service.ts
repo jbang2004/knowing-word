@@ -31,10 +31,10 @@ export async function saveLearningEvent(
       payload.questionId || null,
       payload.action === "answer"
         ? (payload.correct ? 1 : 0)
-        : payload.action === "read" && payload.readingAccuracy
-          ? (payload.readingAccuracy === "accurate" ? 1 : 0)
-          : null,
-      JSON.stringify(payload.selected || []),
+        : null,
+      JSON.stringify(payload.action === "read" && payload.readingReflection
+        ? [payload.readingReflection]
+        : payload.selected || []),
       payload.dimension || null,
       payload.cueLevel ?? null,
       payload.answerMode || (payload.action === "read" ? "speech" : null),

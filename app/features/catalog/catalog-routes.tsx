@@ -63,7 +63,7 @@ export function PracticeHubRoute() {
       : `/read-aloud?lessonId=${encodeURIComponent(currentLesson.id)}&returnTo=%2Fpractice`;
   const recommendationLabel = recommendation.track
     ? `继续${trackMeta[recommendation.track].menu} · ${recommendation.candidate.hanzi}`
-    : "完成本课朗读";
+    : "自由朗读 · 推荐练习";
 
   return (
     <LearningPageShell active="practice" name={profile.name}>
@@ -71,7 +71,7 @@ export function PracticeHubRoute() {
         <PageHeading
           kicker="巩固练习"
           title="先逐字过关，再按需要复习"
-          copy="单字完整过关后，可以按需要复习空间结构、拆字重组与部件功能，再回到课文朗读。"
+          copy="单字完整过关后，可以按需要复习空间结构、拆字重组与部件功能，也可以回到课文做一次朗读练习。"
         />
         <section className="practice-context-band" aria-label="当前课程">
           <div>

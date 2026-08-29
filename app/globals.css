@@ -2320,6 +2320,61 @@ canvas:focus-visible {
   height: 15px;
 }
 
+.reading-reflection,
+.optional-recording {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  gap: 13px;
+  align-items: center;
+  max-width: 840px;
+  margin-top: 14px;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: var(--paper);
+  box-shadow: var(--shadow-xs);
+}
+
+.reading-reflection {
+  border-color: color-mix(in srgb, var(--action) 38%, var(--line));
+  background: color-mix(in srgb, var(--action-soft) 48%, var(--paper));
+}
+
+.reading-reflection > span {
+  display: grid;
+  width: 38px;
+  height: 38px;
+  place-items: center;
+  border-radius: 13px 13px 13px 5px;
+  color: var(--action-text);
+  background: var(--action-soft);
+}
+
+.reading-reflection > span svg { width: 20px; height: 20px; }
+.reading-reflection > div,
+.optional-recording > div { display: grid; gap: 3px; }
+.reading-reflection strong,
+.optional-recording strong { color: var(--navy); font-size: .9rem; }
+.reading-reflection p,
+.optional-recording p { margin: 0; color: var(--ink-soft); font-size: .8rem; line-height: 1.55; }
+.reading-reflection.is-recorded { border-color: var(--action-edge); }
+
+.reading-reflection > .reading-reflection-actions {
+  display: flex;
+  grid-column: 2 / -1;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.reading-reflection .game-button,
+.optional-recording .game-button {
+  min-height: 42px;
+  padding: 9px 13px;
+  font-size: .8rem;
+}
+
+.optional-recording small { color: var(--part-text); font-size: .75rem; font-weight: 850; }
+
 .recording-result {
   display: grid;
   grid-template-columns: 33px minmax(0, 1fr) minmax(170px, 0.7fr);
@@ -2916,6 +2971,20 @@ canvas:focus-visible {
   .recording-result {
     grid-template-columns: 33px minmax(0, 1fr);
   }
+
+  .reading-reflection,
+  .optional-recording {
+    grid-template-columns: auto minmax(0, 1fr);
+  }
+
+  .reading-reflection > .game-button,
+  .optional-recording > .game-button,
+  .reading-reflection-actions {
+    grid-column: 1 / -1;
+    width: 100%;
+  }
+
+  .reading-reflection-actions .game-button { flex: 1 1 180px; }
 
   .recording-result audio {
     grid-column: 1 / -1;

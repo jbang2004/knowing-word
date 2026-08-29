@@ -101,7 +101,15 @@ test("normalization keeps current data valid and adds learning evidence", () => 
   assert.deepEqual(profile.learnedComponents, ["木", "圭"]);
   assert.equal(profile.recentComponents.length, 24);
   assert.deepEqual(profile.readLessons, ["g5v1-l01", "g5v1-l02"]);
-  assert.equal(profile.readingEvidence["g5v1-l01"].lastAccuracy, "accurate");
+  assert.deepEqual(profile.readingEvidence["g5v1-l01"], {
+    sessions: 2,
+    comfortable: 1,
+    needsPractice: 1,
+    lastAt: "2026-08-23T00:00:00Z",
+    lastReflection: "comfortable",
+    attempts: 2,
+    accurate: 1,
+  });
   assert.deepEqual(profile.daily["2026-08-23"], {
     attempts: 3,
     correct: 2,
