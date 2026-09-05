@@ -274,6 +274,7 @@ export default function HomeLanding() {
                 );
               })}
             </ol>
+            <button className="home-battle-entry" onClick={() => navigate(`/card-battle?lesson=${currentLesson.id}`)}><span>✦ 字灵秘境</span><strong>用知识施法，挑战秘境 Boss</strong><small>卡牌冒险 →</small></button>
             <section className={`path-practice-plan${allWordsComplete ? " is-ready" : " is-locked"}`} aria-label="本课可选复习">
               <header>
                 <small>{allWordsComplete ? "本课生字已经学完" : `完成 ${lessonProgress.completed}/${lessonProgress.total} 个识字小测后解锁`}</small>

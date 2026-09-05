@@ -73,6 +73,9 @@ export function PracticeHubRoute() {
           title="先逐字过关，再按需要复习"
           copy="单字完整过关后，可以按需要复习空间结构、拆字重组与部件功能，也可以回到课文做一次朗读练习。"
         />
+        <Link className="practice-battle-entry" href={`/card-battle?lesson=${currentLesson.id}`}>
+          <div><span>全新玩法 · 卡牌冒险</span><h2>字灵秘境</h2><p>用课内知识唤醒法术，与三位秘境守关者对决。</p><strong>开始卡牌挑战 <ArrowRight size={17} /></strong></div>
+        </Link>
         <section className="practice-context-band" aria-label="当前课程">
           <div>
             <span>当前建议</span>
