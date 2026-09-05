@@ -9,5 +9,7 @@ export default async function CardBattlePage({ searchParams }: { searchParams: P
   const { lesson: requested } = await searchParams;
   const content = await loadLessonContent(requested ?? "g5v1-l01") ?? await loadLessonContent("g5v1-l01");
   const questions = buildBattleQuestions(content?.characters ?? []);
+  // Vinext combines imported route CSS; a React-managed stylesheet keeps the shared bundle within its budget.
+  // eslint-disable-next-line @next/next/no-css-tags
   return <><link rel="stylesheet" href="/card-battle/battle.css" precedence="card-battle" /><CardBattle key={content?.lesson.id} questions={questions} lessonId={content?.lesson.id ?? "g5v1-l01"} lessonTitle={content?.lesson.title ?? "白鹭"} lessons={grade5Lessons.map(({ id, title, position }) => ({ id, title, position }))} /></>;
 }
